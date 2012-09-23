@@ -28,8 +28,36 @@ projects[date][subdir] = contrib
 projects[ds][version] = "1.5"
 projects[ds][subdir] = contrib
 
+projects[captcha][type] = module
+projects[captcha][subdir] = contrib
+projects[captcha][download][type] = "git"
+projects[captcha][download][url] = "http://git.drupal.org/project/captcha.git"
+projects[captcha][download][branch] = "(no branch)"
+projects[captcha][download][revision] = "b69026c71cbb7779e55bc0877b4a363524804a7a"
+
+projects[recaptcha][version] = "1.7"
+projects[recaptcha][subdir] = contrib
+
+projects[xmlsitemap][version] = "2.0-rc1"
+projects[xmlsitemap][subdir] = contrib
+
+projects[htmlpurifier][version] = "1.0-rc1"
+projects[htmlpurifier][subdir] = contrib
+
+projects[entityreference][version] = "1.0-rc3"
+projects[entityreference][subdir] = contrib
+
+projects[entitycache][version] = "1.1"
+projects[entitycache][subdir] = contrib
+
+projects[entitycache_flush][version] = "1.1"
+projects[entitycache_flush][subdir] = contrib
+
 projects[entity][version] = "1.0-rc3"
 projects[entity][subdir] = contrib
+
+projects[config_perms][version] = "2.0"
+projects[config_perms][subdir] = contrib
 
 projects[extlink][version] = "1.12"
 projects[extlink][subdir] = contrib
@@ -83,9 +111,6 @@ projects[link][subdir] = contrib
 projects[menu_per_role][version] = "1.x-dev"
 projects[menu_per_role][subdir] = contrib
 
-projects[module_filter][version] = "1.7"
-projects[module_filter][subdir] = contrib
-
 projects[nodequeue][version] = "2.0-beta1"
 projects[nodequeue][subdir] = contrib
 
@@ -125,6 +150,19 @@ projects[wysiwyg][download][type] = "git"
 projects[wysiwyg][download][url] = "http://git.drupal.org/project/wysiwyg.git"
 projects[wysiwyg][download][branch] = "(no branch)"
 projects[wysiwyg][download][revision] = "6e6431e12eaef1cac3077361db80d729321a71f5"
+
+; Development Modules
+projects[module_filter][version] = "1.7"
+projects[module_filter][subdir] = dev
+
+projects[coder][version] = "1.1"
+projects[coder][subdir] = dev
+
+projects[devel][version] = "1.3"
+projects[devel][subdir] = dev
+
+;projects[examples][version] = ""
+projects[examples][subdir] = dev
 
 ; Themes
 projects[bh_bootstrap][type] = theme

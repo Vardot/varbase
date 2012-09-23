@@ -59,7 +59,6 @@ dependencies[] = transliteration
 dependencies[] = panels
 dependencies[] = globalredirect
 dependencies[] = googleanalytics
-dependencies[] = ckeditor
 dependencies[] = extlink
 dependencies[] = jquery_update
 dependencies[] = pdir
@@ -69,7 +68,6 @@ dependencies[] = views_ui
 dependencies[] = webform
 dependencies[] = module_filter
 dependencies[] = persistent_login
-dependencies[] = htmlpurifier
 
 
 ; VarBase Modules
