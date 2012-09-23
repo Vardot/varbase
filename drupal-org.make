@@ -67,8 +67,12 @@ libraries[htmlpurifier][type] = "library"
 projects[insert][version] = "1.2"
 projects[insert][subdir] = contrib
 
-projects[jquery_update][version] = "2.1+9-dev"
+projects[jquery_update][type] = module
 projects[jquery_update][subdir] = contrib
+projects[jquery_update][download][type] = "git"
+projects[jquery_update][download][url] = "http://git.drupal.org/project/jquery_update.git"
+projects[jquery_update][download][branch] = "(no branch)"
+projects[jquery_update][download][revision] = "5d2a4b2e07cd6332d9da84a967867e4c9f25b105"
 
 projects[libraries][version] = "2.0"
 projects[libraries][subdir] = contrib
@@ -115,11 +119,19 @@ projects[views][subdir] = contrib
 projects[webform][version] = "3.18"
 projects[webform][subdir] = contrib
 
-projects[wysiwyg][version] = "2.1+37-dev"
+projects[wysiwyg][type] = module
 projects[wysiwyg][subdir] = contrib
+projects[wysiwyg][download][type] = "git"
+projects[wysiwyg][download][url] = "http://git.drupal.org/project/wysiwyg.git"
+projects[wysiwyg][download][branch] = "(no branch)"
+projects[wysiwyg][download][revision] = "6e6431e12eaef1cac3077361db80d729321a71f5"
 
 ; Themes
-projects[bh_bootstrap][version] = "2.2+2-dev"
+projects[bh_bootstrap][type] = theme
+projects[bh_bootstrap][download][type] = "git"
+projects[bh_bootstrap][download][url] = "http://git.drupal.org/project/bh_bootstrap.git"
+projects[bh_bootstrap][download][branch] = "(no branch)"
+projects[bh_bootstrap][download][revision] = "2246cc2902c27f72811a077fa023a7daf435febe"
 
 projects[rubik][version] = "4.0-beta8"
 projects[rubik][subdir] = admin
