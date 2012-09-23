@@ -87,7 +87,7 @@ projects[googlenews][subdir] = contrib
 ; Please fill the following out. Type may be one of get, git, bzr or svn,
 ; and url is the url of the download.
 libraries[htmlpurifier][download][type] = "get"
-libraries[htmlpurifier][download][url] = "http://htmlpurifier.org/releases/htmlpurifier-4.4.0.tar.gz"
+libraries[htmlpurifier][download][url] = "http://htmlpurifier.org/releases/htmlpurifier-4.4.0.zip"
 libraries[htmlpurifier][directory_name] = "htmlpurifier"
 libraries[htmlpurifier][type] = "library"
 

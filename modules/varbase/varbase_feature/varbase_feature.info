@@ -14,6 +14,7 @@ dependencies[] = htmlpurifier
 dependencies[] = image
 dependencies[] = menu_per_role
 dependencies[] = module_filter
+dependencies[] = libraries
 dependencies[] = nodequeue
 dependencies[] = panels
 dependencies[] = pathauto
