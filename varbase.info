@@ -1,1 +1,77 @@
-name = VarBase Profile
+name = Vardot Base
+description = The base website template from Vardot
+core = 7.x
+
+
+; Core/Contrib Modules
+
+dependencies[] = menu_per_role
+dependencies[] = ctools
+dependencies[] = context
+dependencies[] = context_layouts
+dependencies[] = context_ui
+dependencies[] = block
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = toolbar
+dependencies[] = update
+dependencies[] = user
+dependencies[] = date
+dependencies[] = date_api
+dependencies[] = date_popup
+dependencies[] = ds
+dependencies[] = features
+dependencies[] = field_group
+dependencies[] = filefield_paths
+dependencies[] = link
+dependencies[] = title
+dependencies[] = file_entity
+dependencies[] = nodequeue
+dependencies[] = backup_migrate
+dependencies[] = entity
+dependencies[] = googlenews
+dependencies[] = insert
+dependencies[] = libraries
+dependencies[] = pathauto
+dependencies[] = quicktabs
+dependencies[] = token
+dependencies[] = transliteration
+dependencies[] = panels
+dependencies[] = globalredirect
+dependencies[] = googleanalytics
+dependencies[] = ckeditor
+dependencies[] = extlink
+dependencies[] = jquery_update
+dependencies[] = pdir
+dependencies[] = wysiwyg
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = webform
+dependencies[] = module_filter
+dependencies[] = persistent_login
+dependencies[] = htmlpurifier
+
+
+; VarBase Modules
+
+dependencies[] = varbase_feature

@@ -1,0 +1,25 @@
+; Basic information
+name = Vardot Theme
+description = The base Vardot theme.
+base theme = bh_bootstrap
+package = Core
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+; Stylesheets
+stylesheets[all][] = css/vartheme.css
+stylesheets[print][] = css/print.css
+
+; Javascript
+scripts[] = js/vartheme.js
+
+; Regions
+regions[content] = Content
+regions[footer] = Footer
+regions[header] = Header
+regions[help] = Help
+regions[highlighted] = Highlighted Region
+;regions[row_post_content] = Post-content Row
+regions[sidebar_first] = First Sidebar
+regions[sidebar_second] = Second Sidebar
