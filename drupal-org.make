@@ -44,7 +44,7 @@ projects[xmlsitemap][subdir] = contrib
 projects[htmlpurifier][version] = "1.0-rc1"
 projects[htmlpurifier][subdir] = contrib
 
-projects[entityreference][version] = "1.0-rc3"
+projects[entityreference][version] = "1.0-rc4"
 projects[entityreference][subdir] = contrib
 
 projects[entitycache][version] = "1.1"
