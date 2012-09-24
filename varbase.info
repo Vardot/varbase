@@ -68,6 +68,7 @@ dependencies[] = views_ui
 dependencies[] = webform
 dependencies[] = module_filter
 dependencies[] = persistent_login
+dependencies[] = htmlpurifier
 
 
 ; VarBase Modules
