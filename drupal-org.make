@@ -132,7 +132,7 @@ projects[quicktabs][subdir] = contrib
 projects[title][version] = "1.0-alpha4"
 projects[title][subdir] = contrib
 
-projects[token][version] = "1.3"
+projects[token][version] = "1.4"
 projects[token][subdir] = contrib
 
 projects[transliteration][version] = "3.1"
