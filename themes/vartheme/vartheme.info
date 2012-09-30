@@ -1,25 +1,33 @@
 ; Basic information
 name = Vardot Theme
-description = The base Vardot theme.
-base theme = bh_bootstrap
+description = The base <a href="http://www.vardot.com/">Vardot</a> theme.
+base theme = twitter_bootstrap
 package = Core
 version = VERSION
 core = 7.x
 engine = phptemplate
 
 ; Stylesheets
-stylesheets[all][] = css/vartheme.css
+; Stylesheet are add through template.inc.php.
+stylesheets[all][] = css/default.css
 stylesheets[print][] = css/print.css
 
 ; Javascript
-scripts[] = js/vartheme.js
+scripts[] = js/script.js
 
 ; Regions
-regions[content] = Content
-regions[footer] = Footer
-regions[header] = Header
-regions[help] = Help
-regions[highlighted] = Highlighted Region
-;regions[row_post_content] = Post-content Row
-regions[sidebar_first] = First Sidebar
-regions[sidebar_second] = Second Sidebar
+regions[content_top] = Top Content
+regions[content_bottom] = Bottom Content
+
+regions[header]         = 'Header'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary Sidebar'
+regions[sidebar_second] = 'Secondary Sidebar'
+regions[footer]         = 'Footer'
+
+; Settings
+settings[vartheme_fixed_layout] = 0;Fixed layout grid 960, that will stop media query
+settings[toggle_name] = 0
+settings[toggle_search] = 0

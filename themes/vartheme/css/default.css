@@ -1,0 +1,31 @@
+/* Don't edit this file, this is the default css for the vartheme, and not meant to be edited,
+ * if you want to edit styles, you can override styles used hear in the other stylesheets. */
+
+body {
+	padding-top: 100px;
+}
+
+@media(min-width: 980px) {
+  body.toolbar {
+  	padding-top: 130px !important;
+  }
+  body.toolbar-drawer {
+  	padding-top: 165px !important;
+  }
+}
+
+@media(max-width: 979px) {
+	body {
+		padding-top: 0 !important;
+	}
+}
+
+/* general page elements */
+
+.unpublished {
+	float: right;
+}
+
+html.js fieldset.collapsed {
+	height: auto;
+}
