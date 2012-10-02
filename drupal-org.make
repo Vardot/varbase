@@ -13,9 +13,6 @@ api = 2
 projects[backup_migrate][version] = "2.4"
 projects[backup_migrate][subdir] = contrib
 
-projects[bh_bootstrapextras][version] = "1.0-beta2"
-projects[bh_bootstrapextras][subdir] = contrib
-
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = contrib
 
@@ -127,17 +124,13 @@ projects[wysiwyg][download][branch] = "(no branch)"
 projects[wysiwyg][download][revision] = "6e6431e12eaef1cac3077361db80d729321a71f5"
 
 ; Themes
-projects[bh_bootstrap][type] = theme
-projects[bh_bootstrap][download][type] = "git"
-projects[bh_bootstrap][download][url] = "http://git.drupal.org/project/bh_bootstrap.git"
-projects[bh_bootstrap][download][branch] = "(no branch)"
-projects[bh_bootstrap][download][revision] = "2246cc2902c27f72811a077fa023a7daf435febe"
-
 projects[rubik][version] = "4.0-beta8"
 projects[rubik][subdir] = admin
 
 projects[tao][version] = "3.0-beta4"
 projects[tao][subdir] = admin
+
+projects[twitter_bootstrap][version] = "2.0-beta1"
 
 ; Modules
 ; Please fill the following out. Type may be one of get, git, bzr or svn,
@@ -149,10 +142,6 @@ projects[tao][subdir] = admin
 ; Libraries
 ; Please fill the following out. Type may be one of get, git, bzr or svn,
 ; and url is the url of the download.
-;libraries[bootstrap][download][type] = "git"
-;libraries[bootstrap][download][url] = "https://github.com/twitter/bootstrap.git"
-;libraries[bootstrap][directory_name] = "bootstrap"
-;libraries[bootstrap][type] = "library"
 
 ; Please fill the following out. Type may be one of get, git, bzr or svn,
 ; and url is the url of the download.
@@ -160,5 +149,4 @@ libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.4/ckeditor_3.6.4.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
-
 

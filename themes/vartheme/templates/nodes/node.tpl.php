@@ -8,10 +8,6 @@
       <?php endif; ?>
       <?php print render($title_suffix); ?>
 
-      <?php if (!$status): ?>
-        <p class="unpublished label label-warning"><?php print t('Unpublished'); ?></p>
-      <?php endif; ?>
-
       <?php if ($display_submitted): ?>
         <p class="submitted">
           <?php print $user_picture; ?>

@@ -40,7 +40,7 @@ function varbase_install() {
   menu_rebuild();
 
   /** VarBase: Themes **/
-  theme_enable(array('tao', 'rubik', 'bh_bootstrap', 'vartheme'));
+  theme_enable(array('tao', 'rubik', 'twitter_bootstrap', 'vartheme'));
   variable_set('theme_default', 'vartheme');
   variable_set('admin_theme', 'rubik');
   variable_set('node_admin_theme', '1');
