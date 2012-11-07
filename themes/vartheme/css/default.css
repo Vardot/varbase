@@ -16,7 +16,7 @@ body {
 
 @media(max-width: 979px) {
 	body {
-		padding-top: 0 !important;
+		padding-top: 0;
 	}
 }
 

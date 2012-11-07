@@ -12,4 +12,12 @@
 function varbase_form_install_configure_form_alter(&$form, $form_state) {
   // Pre-populate the site name with the server name.
   $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
+  $form['site_information']['site_mail']['#field_prefix'] = 'noreply@';
+  $form['site_information']['site_mail']['#element_validate'] = array('_varbase_install_configure_sitemail_validate');
+  $form['admin_account']['account']['name']['#value'] = 'webmaster';
+  $form['admin_account']['account']['name']['#disabled'] = TRUE;
+}
+
+function _varbase_install_configure_sitemail_validate($element, &$form_state, $form) {
+  $form_state['values']['site_mail'] = 'noreply@' . $form_state['values']['site_mail'];
 }
