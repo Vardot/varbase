@@ -10,7 +10,7 @@ projects[backup_migrate][subdir] = contrib
 projects[ctools][version] = "1.2"
 projects[ctools][subdir] = contrib
 
-projects[coder][version] = "1.1"
+projects[coder][version] = "1.2"
 projects[coder][subdir] = dev
 
 projects[context][version] = "3.0-beta4"
@@ -55,8 +55,8 @@ projects[media][subdir] = contrib
 projects[filefield_paths][version] = "1.0-beta3"
 projects[filefield_paths][subdir] = contrib
 
-;projects[globalredirect][version] = "1.5"
-;projects[globalredirect][subdir] = contrib
+projects[redirect][version] = "1.0-rc1"
+projects[redirect][subdir] = contrib
 
 projects[google_analytics][version] = "1.3"
 projects[google_analytics][subdir] = contrib
@@ -70,12 +70,8 @@ projects[htmlpurifier][subdir] = contrib
 projects[i18n][version] = "1.7"
 projects[i18n][subdir] = contrib
 
-projects[jquery_update][type] = module
+projects[jquery_update][version] = "2.x-dev"
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][download][type] = "git"
-projects[jquery_update][download][url] = "http://git.drupal.org/project/jquery_update.git"
-projects[jquery_update][download][branch] = "(no branch)"
-projects[jquery_update][download][revision] = "baff5d15a438cfa8216997e067518f3c1a28bd5e"
 
 projects[l10n_client][version] = "1.1"
 projects[l10n_client][subdir] = contrib
@@ -100,6 +96,9 @@ projects[menu_per_role][subdir] = contrib
 
 projects[module_filter][version] = "1.7"
 projects[module_filter][subdir] = dev
+
+projects[metatag][version] = "1.0-beta2"
+projects[metatag][subdir] = contrib
 
 projects[nodequeue][version] = "2.0-beta1"
 projects[nodequeue][subdir] = contrib
