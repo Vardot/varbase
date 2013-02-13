@@ -1,7 +1,7 @@
 ; Basic information
 name = Vardot Theme
 description = The base <a href="http://www.vardot.com/">Vardot</a> theme.
-base theme = twitter_bootstrap
+base theme = bootstrap
 package = Core
 version = VERSION
 core = 7.x
