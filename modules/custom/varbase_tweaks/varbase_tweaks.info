@@ -1,0 +1,5 @@
+name = Vardot Tweaks
+description = Applies some tweaks for a more usable and standardized Drupal site.
+package = Vardot
+version = VERSION
+core = 7.x

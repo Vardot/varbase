@@ -35,8 +35,8 @@ function varbase_install() {
     ->condition('name', 'seven')
     ->execute();
   variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '1');
-  
+  variable_set('node_admin_theme', '0');
+
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'Super admin';

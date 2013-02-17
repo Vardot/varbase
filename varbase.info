@@ -1,19 +1,25 @@
 name = Vardot Base
-description = The base website template from Vardot
+description = The base website template from <a href="http://vardot.com">Vardot</a>.
 core = 7.x
 
-; Core/Contrib Modules
-
+; Core/contrib modules
+dependencies[] = admin_views
 dependencies[] = block
 dependencies[] = ctools
+dependencies[] = config_perms
+dependencies[] = context
+dependencies[] = context_ui
 dependencies[] = contextual
 dependencies[] = dashboard
 dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_popup
+dependencies[] = date_views
 dependencies[] = ds
+dependencies[] = ds_ui
 dependencies[] = entity
 dependencies[] = entityreference
+dependencies[] = entity_token
 dependencies[] = extlink
 dependencies[] = features
 dependencies[] = field
@@ -21,7 +27,6 @@ dependencies[] = field_group
 dependencies[] = field_sql_storage
 dependencies[] = field_ui
 dependencies[] = file
-dependencies[] = file_entity
 dependencies[] = filefield_paths
 dependencies[] = filter
 dependencies[] = image
@@ -29,9 +34,11 @@ dependencies[] = jquery_update
 dependencies[] = libraries
 dependencies[] = link
 dependencies[] = list
-dependencies[] = media
+dependencies[] = mail_edit
+dependencies[] = masquerade
+dependencies[] = maxlength
 dependencies[] = menu
-dependencies[] = menu_per_role
+dependencies[] = menu_attributes
 dependencies[] = node
 dependencies[] = nodequeue
 dependencies[] = number
@@ -40,8 +47,6 @@ dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = path
 dependencies[] = pathauto
-dependencies[] = quicktabs
-dependencies[] = quicktabs_tabstyles
 dependencies[] = remember_me
 dependencies[] = rdf
 dependencies[] = search
@@ -57,8 +62,11 @@ dependencies[] = update
 dependencies[] = user
 dependencies[] = user_registrationpassword
 dependencies[] = views
+dependencies[] = views_bulk_operations
 dependencies[] = views_content
 dependencies[] = views_ui
 dependencies[] = webform
 
-; VarBase Modules
+; Varbase Modules
+;dependencies[] = varbase_textformats
+dependencies[] = varbase_tweaks

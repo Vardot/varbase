@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Applies some tweaks for a more usable and standardized Drupal site.
+ */
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Allows the profile to alter the site configuration form.
+ */
+function varbase_tweaks_form_system_site_information_settings_alter(&$form, $form_state) {
+  global $user;
+
+  if ($user->uid != 1) {
+    $form['front_page']['#access'] = FALSE;
+  }
+}
