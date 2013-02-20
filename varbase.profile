@@ -17,7 +17,7 @@ function varbase_form_install_configure_form_alter(&$form, $form_state) {
   $form['admin_account']['account']['name']['#value'] = 'webmaster';
   $form['admin_account']['account']['name']['#disabled'] = TRUE;
   $form['admin_account']['account']['mail']['#default_value'] = 'webmaster@vardot.com';
-  $form['admin_account']['account']['mail']['#description'] = t('In most case, and for <a href="@link">Vardot</a> specific use, we recommend this is always set to <em>webmaster@vardot.com</em>.', array('@link' => 'http://vardot.com'));
+  $form['admin_account']['account']['mail']['#description'] = t('In most case, and for <a href="@link">Vardot</a> specific use, we recommend this is always be <em>webmaster@vardot.com</em>.', array('@link' => 'http://vardot.com'));
 }
 
 function _varbase_install_configure_sitemail_validate($element, &$form_state, $form) {

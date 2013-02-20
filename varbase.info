@@ -68,5 +68,5 @@ dependencies[] = views_ui
 dependencies[] = webform
 
 ; Varbase Modules
-;dependencies[] = varbase_textformats
 dependencies[] = varbase_tweaks
+dependencies[] = varbase_ckeditor
