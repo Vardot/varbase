@@ -5,7 +5,7 @@ include_once 'template.inc.php';
 function vartheme_preprocess_html(&$vars, $hook) {
   //This is where Vardot base theme do it's stuff, you can write code bellow.
   _vartheme_preprocess_html($vars, $hook);
-  
+
   //Here goes your code.
 }
 

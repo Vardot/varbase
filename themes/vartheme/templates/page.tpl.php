@@ -1,47 +1,36 @@
-<header id="navbar" role="banner" class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+<header role="banner" id="page-header">
+  <div class="container">   
+    <?php if ($logo): ?>
+      <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
-      
-      <?php if ($logo): ?>
-        <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
+    <?php endif; ?>
 
-      <?php if ($site_name || $site_slogan): ?>
-        <hgroup id="site-name-slogan">
-          <?php if ($site_name): ?>
-          <h1>
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="brand"><?php print $site_name; ?></a>
-          </h1>
-          <?php endif; ?>
-        </hgroup>
+    <?php if ($site_name || $site_slogan): ?>
+      <hgroup id="site-name-slogan">
+        <?php if ($site_name): ?>
+        <h1>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="brand"><?php print $site_name; ?></a>
+        </h1>
+        <?php endif; ?>
+      </hgroup>
+    <?php endif; ?>
+    
+    <div class="header-top-links">
+      <?php if ($secondary_menu): ?>
+        <div id="secondary-menu" class="navigation pull-right">
+          <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu-links', 'class' => array('links', 'inline', 'clearfix')))); ?>
+        </div> <!-- /#secondary-menu -->
       <?php endif; ?>
-      
-      <div class="nav-collapse">
-        <nav role="navigation">
-          <?php if ($primary_nav): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          
-          <?php if (isset($search)): ?>
-            <?php print render($search); ?>
-          <?php endif; ?>
-          
-          <?php if ($secondary_nav): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-        </nav>
-      </div>         
-    </div>
+      <?php if (isset($search)): ?>
+        <div class="search pull-right">
+          <?php print render($search); ?>
+        </div>
+      <?php endif; ?>
+      <div class="clearfix"></div>
+    </div>    
   </div>
-</header>
+</header> <!-- /#header -->
 
 <div class="container">
 
@@ -53,8 +42,7 @@
     <?php print render($page['header']); ?>
   </header> <!-- /#header -->
   
-  <div class="row">
-    
+  <div class="row">  
     <?php if ($page['sidebar_first']): ?>
       <aside class="span3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
@@ -90,8 +78,8 @@
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
-
   </div>
+
   <footer class="footer container">
     <?php print render($page['footer']); ?>
   </footer>

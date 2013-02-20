@@ -1,31 +1,49 @@
-/* Don't edit this file, this is the default css for the vartheme, and not meant to be edited,
- * if you want to edit styles, you can override styles used hear in the other stylesheets. */
-
-body {
-	padding-top: 100px;
+body.html {
+  padding-top: 0px;
 }
 
-@media(min-width: 980px) {
-  body.toolbar {
-  	padding-top: 130px !important;
-  }
-  body.toolbar-drawer {
-  	padding-top: 165px !important;
-  }
+body.toolbar {
+  padding-top: 30px !important;
 }
 
-@media(max-width: 979px) {
-	body {
-		padding-top: 0;
-	}
+body.toolbar-drawer {
+  padding-top: 65px !important;
 }
 
-/* general page elements */
-
-.unpublished {
-	float: right;
+.clearfix {
+  clear: both;
 }
 
-html.js fieldset.collapsed {
-	height: auto;
+.row {
+  margin-left: -30px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 30px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 1000px;
+}
+.span12 {
+  width: 1000px;
+}
+.span11 {
+  width: 970;
+}
+.span10 {
+  width: 930px;
 }
