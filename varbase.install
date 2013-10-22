@@ -28,20 +28,33 @@ function varbase_install() {
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
 
-  // Enable the admin theme.
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'seven')
+  // Projects to disable.
+  $dis_module = array("toolbar","overlay");
+  // Disable Projects.
+      db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('name', $dis_module, 'IN')
     ->execute();
-  variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '0');
 
+  //themes to enable
+  $en_theme = array('ember','bootstrap','vartheme');
+  theme_enable($en_theme);
+
+  // Set admin theme
+  variable_set('admin_theme', 'ember');
+  variable_set('node_admin_theme', '1');
+  // Set default theme
+  variable_set('theme_default', 'bootstrap');
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'Super admin';
   $admin_role->weight = 4;
-  user_role_save($admin_role);
+  if($role = user_role_load_by_name($admin_role->name)){
+    $admin_role = $role;
+  }else{
+    user_role_save($admin_role);
+  }
+  
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
@@ -50,29 +63,26 @@ function varbase_install() {
   $content_role = new stdClass();
   $content_role->name = 'Content admin';
   $content_role->weight = 2;
-  user_role_save($content_role);
+  if(!($role = user_role_load_by_name($content_role->name))){
+   user_role_save($content_role);
+  }
+
   $site_admin_role = new stdClass();
   $site_admin_role->name = 'Site admin';
   $site_admin_role->weight = 3;
-  user_role_save($site_admin_role);
+  if(!($role = user_role_load_by_name($site_admin_role->name))){
+   user_role_save($content_role);
+  }
 
   // Assign user 1 the "administrator" role.
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
   
-  /** VarBase: Themes **/
-  db_update('system')
-    ->fields(array('status' => 1))
-    ->condition('type', 'theme')
-    ->condition('name', 'vartheme')
-    ->execute();
-  variable_set('theme_default', 'vartheme');
-  
 
   /** VarBase: Module Configs **/
   // jQuery Update
-  variable_set('jquery_update_jquery_version', '1.7');
+  variable_set('jquery_update_jquery_version', '1.8');
   variable_set('jquery_update_jquery_cdn', 'jquery');
   // External Links Config
   variable_set('extlink_class', '0');

@@ -66,7 +66,12 @@ dependencies[] = views_bulk_operations
 dependencies[] = views_content
 dependencies[] = views_ui
 dependencies[] = webform
+dependencies[] = navbar
+dependencies[] = breakpoints
+dependencies[] = module_filter
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks
 dependencies[] = varbase_ckeditor
+
+
