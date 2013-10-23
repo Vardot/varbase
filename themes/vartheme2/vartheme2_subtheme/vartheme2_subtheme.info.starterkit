@@ -1,0 +1,47 @@
+name = Vartheme2 Sub-theme
+description = A Vartheme2 Sub-theme.
+core = 7.x
+base theme = vartheme2
+
+; Regions
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+
+; Stylesheets
+stylesheets[all][] = css/style.css
+
+;**********************************
+; METHOD 1: Bootstrap Source Files
+;**********************************
+;
+; ; Stylesheets
+;
+; stylesheets[all][] = assets/bootstrap/js/bootstrap.min.css
+; stylesheets[all][] = assets/bootstrap/js/bootstrap-theme.min.css
+;
+; ; Scripts
+; 
+; scripts[] = 'assets/bootstrap/js/bootstrap.min.js'
+;
+; ; Settings inherited by base theme, uncomment to override.
+; ;settings[toggle_name] = 0
+; ;settings[toggle_search] = 1
+; ; Disable the CDN as we are using our own source files.
+; settings[bootstrap_cdn] = ''
+
+
+;*************************
+; METHOD 2: Bootstrap CDN
+;*************************
+; 
+; ; Settings inherited by base theme, uncomment to override.
+; ;settings[toggle_name] = 0
+; ;settings[toggle_search] = 1
+; ;settings[cdn_bootstrap] = 1
+; ;settings[bootstrap_cdn] = 3.0.0
