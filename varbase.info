@@ -1,6 +1,7 @@
 name = Vardot Base
 description = The base website template from <a href="http://vardot.com">Vardot</a>.
 core = 7.x
+exclusive = TRUE
 
 ; Core/contrib modules
 dependencies[] = admin_views
@@ -69,9 +70,8 @@ dependencies[] = webform
 dependencies[] = navbar
 dependencies[] = breakpoints
 dependencies[] = module_filter
+dependencies[] = transliteration
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks
 dependencies[] = varbase_ckeditor
-
-

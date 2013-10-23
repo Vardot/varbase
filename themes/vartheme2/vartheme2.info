@@ -14,7 +14,11 @@ regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 
 ; Stylesheets
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/overrides.css
+stylesheets[print][] = css/print.css
+
+; Excludes
+exclude[css][] = 'sites/all/modules/contrib/custom_pagers/custom_pagers.css'
 
 ;**********************************
 ; METHOD 1: Bootstrap Source Files
@@ -22,18 +26,18 @@ stylesheets[all][] = css/style.css
 ;
 ; ; Stylesheets
 ;
-; stylesheets[all][] = assets/bootstrap/js/bootstrap.min.css
-; stylesheets[all][] = assets/bootstrap/js/bootstrap-theme.min.css
+stylesheets[all][] = assets/bootstrap/js/bootstrap.min.css
+stylesheets[all][] = assets/bootstrap/js/bootstrap-theme.min.css
 ;
 ; ; Scripts
 ; 
-; scripts[] = 'assets/bootstrap/js/bootstrap.min.js'
+scripts[] = 'assets/bootstrap/js/bootstrap.min.js'
 ;
 ; ; Settings inherited by base theme, uncomment to override.
 ; ;settings[toggle_name] = 0
 ; ;settings[toggle_search] = 1
 ; ; Disable the CDN as we are using our own source files.
-; settings[bootstrap_cdn] = ''
+settings[bootstrap_cdn] = ''
 
 
 ;*************************
