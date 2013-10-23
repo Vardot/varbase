@@ -37,14 +37,14 @@ function varbase_install() {
     ->execute();
 
   //themes to enable
-  $en_theme = array('ember','bootstrap','vartheme');
+  $en_theme = array('ember','bootstrap','vartheme2');
   theme_enable($en_theme);
 
   // Set admin theme
   variable_set('admin_theme', 'ember');
   variable_set('node_admin_theme', '1');
   // Set default theme
-  variable_set('theme_default', 'bootstrap');
+  variable_set('theme_default', 'vartheme2');
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'Super admin';
