@@ -12,6 +12,8 @@ function vartheme2_css_alter(&$css) {
     'every_page' => TRUE,
     'media' => 'all',
     'preprocess' => TRUE,
-    'group' => CSS_DEFAULT,
+    'group' => CSS_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => 0
   );
 }

@@ -1,7 +1,7 @@
-name = Vartheme2 Sub-theme
-description = A Vartheme2 Sub-theme.
+name = Vartheme2
+description = The new base theme for vardot, based on bootstrap3
 core = 7.x
-base theme = vartheme2
+base theme = bootstrap
 
 ; Regions
 regions[navigation]     = 'Navigation'
@@ -9,43 +9,20 @@ regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
-regions[sidebar_first]  = 'Primary'
-regions[sidebar_second] = 'Secondary'
+regions[sidebar_first]  = 'First Side Bar'
+regions[sidebar_second] = 'Second Side Bar'
 regions[footer]         = 'Footer'
 
 ; Stylesheets
 stylesheets[all][] = css/overrides.css
 stylesheets[print][] = css/print.css
+stylesheets[all][] = assets/bootstrap/css/bootstrap.min.css
+stylesheets[all][] = assets/bootstrap/css/bootstrap-theme.min.css
 
 ; Excludes
 exclude[css][] = 'sites/all/modules/contrib/custom_pagers/custom_pagers.css'
 
-;**********************************
-; METHOD 1: Bootstrap Source Files
-;**********************************
-;
-; ; Stylesheets
-;
-stylesheets[all][] = assets/bootstrap/js/bootstrap.min.css
-stylesheets[all][] = assets/bootstrap/js/bootstrap-theme.min.css
-;
-; ; Scripts
-; 
-scripts[] = 'assets/bootstrap/js/bootstrap.min.js'
-;
-; ; Settings inherited by base theme, uncomment to override.
-; ;settings[toggle_name] = 0
-; ;settings[toggle_search] = 1
-; ; Disable the CDN as we are using our own source files.
+
+; Disable the CDN as we are using our own source files.
 settings[bootstrap_cdn] = ''
 
-
-;*************************
-; METHOD 2: Bootstrap CDN
-;*************************
-; 
-; ; Settings inherited by base theme, uncomment to override.
-; ;settings[toggle_name] = 0
-; ;settings[toggle_search] = 1
-; ;settings[cdn_bootstrap] = 1
-; ;settings[bootstrap_cdn] = 3.0.0

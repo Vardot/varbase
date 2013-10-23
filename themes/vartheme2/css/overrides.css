@@ -1,0 +1,40 @@
+.print{
+  display: none;
+}
+
+#main_menu{
+  margin-top: 32px;
+  position: static;
+  width: auto;
+  background: none;
+  border-radius: none;
+  border:0px none;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+#page-header{
+  background: none repeat scroll 0 0 #EBEBEB;
+  padding: 23px 0;
+}
+
+.row section {
+    -webkit-transition: width 0.2s ease, margin 0.5s ease;
+    -moz-transition: width 0.2s ease, margin 0.5s ease;
+    -o-transition: width 0.2s ease, margin 0.5s ease;
+    transition: width 0.2s ease, margin 0.5s ease;
+}
+
+section{
+  overflow: hidden;
+}
+
+.visuallyhidden{
+  border: 0 none;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

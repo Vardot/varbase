@@ -2,7 +2,7 @@
   <!--this is the login for the user-->
   <nav class="user clearfix">
     <?php if ($secondary_menu): ?>
-    <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu-links', 'class' => array('links', 'inline', 'pull-left')))); ?>
+    <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu-links', 'class' => array('links', 'inline', 'pull-right')))); ?>
     <?php endif; ?>
   </nav>
   <!--close user nav-->
@@ -13,17 +13,25 @@
 </section>
 
 <header role="banner" id="page-header" class="header clearfix">
-  <img src="<?php print $logo; ?>" class="print logo" alt="<?php print $site_name; ?>" />
+  <img src="<?php print $print_logo; ?>" class="print logo" alt="<?php print $site_name; ?>" />
 
   <div class="container">
-    <div id="logo">
+    <div id="logo" class="pull-left">
       <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Go to Homepage'); ?>">
-        <img src="<?php print base_path() . path_to_theme() . '/logo-white.png'; ?>" alt="<?php print $site_name; ?>" />
+        <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
       </a>
     </div>
     <?php if ($main_menu): ?>
-    <nav id="main_menu">
-    <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('links', 'primary_menu')))); ?>
+    <nav id="main_menu" class="pull-right navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-menu-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('links', 'primary-menu','nav','nav-pills','collapse','navbar-collapse','navbar-primary-menu-collapse','nav-justified')))); ?>
     </nav>
     <?php endif; ?>
   </div>
@@ -73,25 +81,29 @@
       *   sidebar-left, sidebar-right, reverse-order, holy-grail, contemp-three-cols
       */
     ?>
-    <div class="row <?php print _vartheme2_body_layout($page); ?>">
+    <div class="row">
+
+
       <!-- first things first -->
-      <div class="primary-column <?php print _vartheme2_content_span($columns); ?>">
+      <section class="<?php print $content_column_class; ?> primary-column">
         <?php if ($tabs): ?>
         <?php print render($tabs); ?>
         <?php endif; ?>
         <?php print render($page['content']); ?>
-      </div>
+      </section>
 
       <?php if ($page['sidebar_first']): ?>
-      <section class="span3 sidebar tertiary-column" role="complementary" id="tertiary-nav">
-        <?php print render($page['sidebar_first']); ?>
-      </section>  <!-- /#sidebar-first -->
+        <section class="<?php print $first_sidebar_column_class; ?> col-md-3 col-sm-3 col-xs-12 sidebar tertiary-column" role="complementary" id="tertiary-nav">
+          <?php print render($page['sidebar_first']); ?>
+        </section>  
+        <!-- /#sidebar-first -->
       <?php endif; ?>
 
       <?php if ($page['sidebar_second']): ?>
-      <section class="span3 secondary-column sidebar" role="complementary" id="secondary-nav">
-        <?php print render($page['sidebar_second']); ?>
-      </section>  <!-- /#sidebar-second -->
+        <section class="<?php print $second_sidebar_column_class; ?> col-md-3 col-xs-12 secondary-column sidebar clearfix" role="complementary" id="secondary-nav">
+          <?php print render($page['sidebar_second']); ?>
+        </section>  
+        <!-- /#sidebar-second -->
       <?php endif; ?>
 
     </div>
@@ -109,7 +121,7 @@
         <div class="clearfix text-center">
           <p>&copy; <?php print date('Y') . ' ' . t('Vardot. All rights reserved.'); ?></p>
           <p>
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img style="display: inline;" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Vardot Blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://vardot.com" property="cc:attributionName" rel="cc:attributionURL">Vardot</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://vardot.com/blog" rel="dct:source">http://vardot.com/blog</a>.
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img style="display: inline;" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Varbase</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://vardot.com" property="cc:attributionName" rel="cc:attributionURL">Vardot</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://vardot.com" rel="dct:source">http://vardot.com</a>.
           </p>
         </div>
       </div>
