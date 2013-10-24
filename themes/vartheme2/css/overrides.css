@@ -1,8 +1,12 @@
-.print{
+.print {
   display: none;
 }
 
-#main_menu{
+.vertical-margin {
+  margin: 15px 0 0;
+}
+
+#nav {
   margin-top: 32px;
   position: static;
   width: auto;
@@ -13,28 +17,38 @@
   font-size: 14px;
 }
 
-#page-header{
+#page-header {
   background: none repeat scroll 0 0 #EBEBEB;
   padding: 23px 0;
 }
 
 .row section {
-    -webkit-transition: width 0.2s ease, margin 0.5s ease;
-    -moz-transition: width 0.2s ease, margin 0.5s ease;
-    -o-transition: width 0.2s ease, margin 0.5s ease;
-    transition: width 0.2s ease, margin 0.5s ease;
+  -webkit-transition: width 0.2s ease, margin 0.5s ease;
+     -moz-transition: width 0.2s ease, margin 0.5s ease;
+       -o-transition: width 0.2s ease, margin 0.5s ease;
+          transition: width 0.2s ease, margin 0.5s ease;
 }
 
-section{
+section {
   overflow: hidden;
 }
 
-.visuallyhidden{
-  border: 0 none;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+#skip-links a,
+#skip-links a:link,
+#skip-links a:visited,
+#skip-links a:hover {
+  height:1px;
+  left:0;
+  overflow:hidden;
+  position:absolute;
+  top:-500px;
+  width:1px;
+}
+
+#skip-links a:active,
+#skip-links a:focus {
+  position:static;
+  height:auto;
+  width:auto;
+  display: block;
 }

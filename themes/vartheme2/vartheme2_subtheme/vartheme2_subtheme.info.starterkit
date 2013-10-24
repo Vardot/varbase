@@ -1,5 +1,5 @@
-name = Vartheme2 Sub-theme
-description = A Vartheme2 Sub-theme.
+name = {Type in theme name here}
+description = {Type in theme description here.}
 core = 7.x
 base theme = vartheme2
 

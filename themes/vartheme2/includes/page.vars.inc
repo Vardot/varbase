@@ -32,4 +32,9 @@ function vartheme2_preprocess_page(&$variables) {
     $variables['first_sidebar_column_class'] = '';
     $variables['second_sidebar_column_class'] = '';
   }
+
+  // Unset the page title if no_title context is set
+  if (context_isset('context', 'no_title')) {
+    $variables['title'] = '';
+  }
 }

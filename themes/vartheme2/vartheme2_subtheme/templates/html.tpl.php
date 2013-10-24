@@ -10,13 +10,13 @@
     /*
     <!-- Icons ================ -->
     <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="<?php print base_path() . path_to_theme() . 'images/icons/'; ?>apple-touch-icon-precomposed.png" />
     <!-- For first- and second-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php print base_path() . path_to_theme() . 'images/icons/'; ?>apple-touch-icon-72x72-precomposed.png" />
     <!-- For iPhone with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php print base_path() . path_to_theme() . 'images/icons/'; ?>apple-touch-icon-114x114-precomposed.png" />
     <!-- For third-generation iPad with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php print base_path() . path_to_theme() . 'images/icons/'; ?>apple-touch-icon-144x144-precomposed.png" />
     */
     ?>
     <?php print $styles; ?>

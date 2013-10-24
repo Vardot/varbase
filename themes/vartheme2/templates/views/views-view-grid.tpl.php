@@ -12,9 +12,9 @@
         $columns_count = count($columns);
         $span_number = round(12 / $columns_count);
        ?>
-      <div <?php if ($row_classes[$row_number]) { print 'class="row-fluid ' . $row_classes[$row_number] .'"';  } ?>>
+      <div <?php if ($row_classes[$row_number]) { print 'class="row ' . $row_classes[$row_number] .'"';  } ?>>
         <?php foreach ($columns as $column_number => $item): ?>
-          <div <?php if ($column_classes[$row_number][$column_number]) { print 'class="span' . $span_number . ' ' . $column_classes[$row_number][$column_number] .'"';  } ?>>
+          <div <?php if ($column_classes[$row_number][$column_number]) { print 'class="col-sm-' . $span_number . ' ' . $column_classes[$row_number][$column_number] .'"';  } ?>>
             <?php print $item; ?>
           </div>
         <?php endforeach; ?>

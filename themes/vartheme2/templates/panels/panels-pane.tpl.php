@@ -27,7 +27,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    <h3 class="short_headline"><span><?php print $title; ?></span></h3>
+    <h3 class="pane-title"><span><?php print $title; ?></span></h3>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 

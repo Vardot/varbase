@@ -2,7 +2,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    <h5<?php print $title_attributes; ?>><span><?php print $title; ?></span></h5>
+    <h4<?php print $title_attributes; ?>><span><?php print $title; ?></span></h4>
   <?php endif;?>
   <?php print render($title_suffix); ?>
 

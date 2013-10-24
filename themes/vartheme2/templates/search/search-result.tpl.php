@@ -64,13 +64,13 @@
  * @ingroup themeable
  */
 ?>
-<li class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
-  <h3 class="title"<?php print $title_attributes; ?>>
-    <a href="<?php print $url; ?>"><?php print $title; ?></a>
-  </h3>
+  <dt class="title"<?php print $title_attributes; ?>>
+    <h4><a href="<?php print $url; ?>"><?php print $title; ?></a></h4>
+  </dt>
   <?php print render($title_suffix); ?>
-  <div class="search-snippet-info">
+  <dd class="search-snippet-info">
     <?php if ($snippet): ?>
       <p class="search-snippet"<?php print $content_attributes; ?>><?php print $snippet; ?></p>
     <?php endif; ?>
@@ -84,5 +84,5 @@
         <?php endif; ?>
       </p>
     <?php endif; ?>
-  </div>
-</li>
+  </dd>
+</div>
