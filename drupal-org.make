@@ -2,6 +2,7 @@
 core = 7.x
 api = 2
 
+
 ; Modules (stable brnaches)
 projects[ctools][subdir] = "contrib"
 projects[user_registrationpassword][subdir] = "contrib"
@@ -41,13 +42,10 @@ projects[admin_views][subdir] = "contrib"
 projects[navbar][subdir] = "contrib"
 projects[ds_bootstrap_layouts][subdir] = "contrib"
 projects[panels_bootstrap_layouts][subdir] = "contrib"
-projects[tmgmt][subdir] = "contrib"
 projects[taxonomy_manager][subdir] = "contrib"
 projects[context_admin][subdir] = "contrib"
 projects[acquia_connector][subdir] = "contrib"
 projects[fences][subdir] = "contrib"
-projects[migrate][subdir] = "contrib"
-projects[devel][subdir] = "contrib"
 projects[uuid_features][subdir] = "contrib"
 projects[diff][subdir] = "contrib"
 projects[module_filter][subdir] = "contrib"

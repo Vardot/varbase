@@ -71,6 +71,14 @@ dependencies[] = navbar
 dependencies[] = breakpoints
 dependencies[] = module_filter
 dependencies[] = transliteration
+dependencies[] = bean
+dependencies[] = bean_admin_ui
+dependencies[] = ds_bootstrap_layouts
+dependencies[] = fences
+dependencies[] = linkit
+dependencies[] = panels_bootstrap_layouts
+dependencies[] = responsive_preview
+dependencies[] = menu_position
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks
