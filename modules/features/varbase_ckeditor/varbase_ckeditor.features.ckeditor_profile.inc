@@ -54,7 +54,7 @@ function varbase_ckeditor_ckeditor_profile_defaults() {
         'css_mode' => 'theme',
         'css_path' => '',
         'css_style' => 'self',
-        'styles_path' => '%hprofiles/varbase/themes/vartheme/js/ckeditor.styles.js',
+        'styles_path' => '',
         'filebrowser' => 'none',
         'filebrowser_image' => '',
         'filebrowser_flash' => '',

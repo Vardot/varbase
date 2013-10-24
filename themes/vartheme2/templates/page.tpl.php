@@ -29,7 +29,7 @@
       </div>
       <!-- main navigation -->
       <div class="collapse navbar-collapse navbar-primary-menu-collapse">
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('links', 'primary-menu', 'nav', 'navbar-nav', 'nav-pills')))); ?>
+        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('class' => array('links', 'primary-menu', 'nav', 'nav-pills')))); ?>
       </div>
     </nav>
     <?php endif; ?>
@@ -113,7 +113,7 @@
   <!-- end main content area -->
 </div>
 
-<footer id="footer" class="clearfix">
+<footer id="footer" class="clearfix vertical-margin">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
