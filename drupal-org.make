@@ -68,10 +68,11 @@ projects[webform][subdir] = "contrib"
 ; Themes
 projects[] = "ember"
 projects[bootstrap][version] = "3.0-rc2"
-projects[openframework][download][type] = "get"
-projects[openframework][download][url] = "http://github.com/SU-SWS/open_framework/archive/7.x-2.06.zip"
-projects[openframework][directory_name] = "openframework"
-projects[openframework][type] = "theme"
+;need to remove openframework as drupal.org won't support any project that is not contributed to drupal.org and have official releases.
+;projects[openframework][download][type] = "get"
+;projects[openframework][download][url] = "http://github.com/SU-SWS/open_framework/archive/7.x-2.06.zip"
+;projects[openframework][directory_name] = "openframework"
+;projects[openframework][type] = "theme"
 
 
 ; Libraries
