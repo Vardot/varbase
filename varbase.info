@@ -3,7 +3,7 @@ description = The base website template from <a href="http://vardot.com">Vardot<
 core = 7.x
 exclusive = TRUE
 
-; Core/contrib modules
+;Core/contrib modules
 dependencies[] = admin_views
 dependencies[] = block
 dependencies[] = ctools
