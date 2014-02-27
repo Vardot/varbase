@@ -1,5 +1,6 @@
 ; A make file to specify Varbase distro
 core = 7.x
+projects[] = "drupal"
 api = 2
 
 
@@ -62,11 +63,11 @@ projects[media][version] = "2.0-alpha3"
 projects[media][subdir] = "contrib"
 projects[webform][version] = "4.0-beta3"
 projects[webform][subdir] = "contrib"
-projects[views_bootstrap][version] = "7.x-3.0"
+projects[views_bootstrap][version] = "3.0"
 projects[views_bootstrap][subdir] = "contrib"
-projects[ds_bootstrap_layouts][version] = "7.x-3.x-dev"
+projects[ds_bootstrap_layouts][version] = "3.x-dev"
 projects[ds_bootstrap_layouts][subdir] = "contrib"
-projects[panels_bootstrap_layouts][version] = "7.x-3.x-dev"
+projects[panels_bootstrap_layouts][version] = "3.x-dev"
 projects[panels_bootstrap_layouts][subdir] = "contrib"
 
 
