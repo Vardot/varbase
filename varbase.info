@@ -79,6 +79,7 @@ dependencies[] = linkit
 dependencies[] = panels_bootstrap_layouts
 dependencies[] = responsive_preview
 dependencies[] = menu_position
+dependencies[] = views_bootstrap
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks
