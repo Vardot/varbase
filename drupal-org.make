@@ -1,6 +1,5 @@
 ; A make file to specify Varbase distro
 core = 7.x
-projects[] = "drupal"
 api = 2
 
 
