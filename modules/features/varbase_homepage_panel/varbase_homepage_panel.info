@@ -1,0 +1,13 @@
+name = Varbase Homepage Panel
+core = 7.x
+package = Vardot
+version = 7.x-1.0
+project = varbase_homepage_panel
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = panels_bootstrap_layouts
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = frontpage
+project path = profiles/varbase/modules/features

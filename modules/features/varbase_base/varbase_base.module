@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Base feature.
+ */
+
+include_once 'varbase_base.features.inc';

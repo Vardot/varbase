@@ -13,19 +13,19 @@ function varbase_ckeditor_user_default_roles() {
   // Exported role: Content admin.
   $roles['Content admin'] = array(
     'name' => 'Content admin',
-    'weight' => '2',
+    'weight' => 2,
   );
 
   // Exported role: Site admin.
   $roles['Site admin'] = array(
     'name' => 'Site admin',
-    'weight' => '3',
+    'weight' => 3,
   );
 
   // Exported role: Super admin.
   $roles['Super admin'] = array(
     'name' => 'Super admin',
-    'weight' => '4',
+    'weight' => 4,
   );
 
   return $roles;

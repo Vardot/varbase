@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Homepage Panel feature.
+ */
+
+include_once 'varbase_homepage_panel.features.inc';

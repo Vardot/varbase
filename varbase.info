@@ -92,4 +92,6 @@ dependencies[] = pm_existing_pages
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks
+dependencies[] = varbase_base
 dependencies[] = varbase_ckeditor
+dependencies[] = varbase_homepage_panel
