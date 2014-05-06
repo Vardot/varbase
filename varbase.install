@@ -23,13 +23,13 @@ function varbase_install() {
 
   // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_ADMINISTRATORS_ONLY);
-  
+
   // Enable default permissions for system roles.
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
 
   // Projects to disable.
-  $dis_module = array("toolbar","overlay");
+  $dis_module = array("toolbar", "overlay");
   // Disable Projects.
       db_update('system')
     ->fields(array('status' => 0))
@@ -37,11 +37,11 @@ function varbase_install() {
     ->execute();
 
   //themes to enable
-  $en_theme = array('ember','bootstrap','vartheme2');
+  $en_theme = array('ember', 'bootstrap', 'vartheme2');
   theme_enable($en_theme);
 
   // Set admin theme
-  variable_set('admin_theme', 'ember');
+  variable_set('admin_theme', 'shiny');
   variable_set('node_admin_theme', '1');
   // Set default theme
   variable_set('theme_default', 'vartheme2');
@@ -54,11 +54,11 @@ function varbase_install() {
   }else{
     user_role_save($admin_role);
   }
-  
+
   user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
-  
+
   //Create a other roles for specific site administration tasks.
   $content_role = new stdClass();
   $content_role->name = 'Content admin';
@@ -100,7 +100,7 @@ function varbase_install() {
   }
 
 
-  /** VarBase: Module Configs **/
+  /** Varbase: Module Configs **/
   // jQuery Update
   variable_set('jquery_update_jquery_version', '1.8');
   variable_set('jquery_update_jquery_cdn', 'jquery');

@@ -55,13 +55,21 @@ section {
   display: block;
 }
 
-#responsive-preview-navbar-tab .options{
+#responsive-preview-navbar-tab .options {
   min-width: 111px;
   position: absolute;
   right: 0;
   display: none;
 }
 
-#responsive-preview-navbar-tab.open .options{
+#responsive-preview-navbar-tab.open .options {
   display: block;
+}
+
+.tabs-wrapper {
+  margin-bottom: 15px;
+}
+
+.input-group, .form-control {
+  max-width: 400px;
 }

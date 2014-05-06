@@ -60,6 +60,7 @@ projects[total_control][subdir] = "contrib"
 projects[better_exposed_filters][subdir] = "contrib"
 projects[features_override][subdir] = "contrib"
 projects[smart_trim][subdir] = "contrib"
+projects[pm_existing_pages][subdir] = "contrib" 
 
 
 ; Modules (non-stable branches)
@@ -91,12 +92,22 @@ libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 
 libraries[backbone][download][type] = "get"
-libraries[backbone][download][url] = "https://github.com/jashkenas/backbone/archive/master.zip"
+libraries[backbone][download][url] = "https://github.com/jashkenas/backbone/archive/1.1.0.zip"
 libraries[backbone][directory_name] = "backbone"
 libraries[backbone][type] = "library"
 
 libraries[underscore][download][type] = "get"
-libraries[underscore][download][url] = "https://github.com/jashkenas/underscore/archive/master.zip"
+libraries[underscore][download][url] = "https://github.com/jashkenas/underscore/archive/1.5.2.zip"
 libraries[underscore][directory_name] = "underscore"
 libraries[underscore][type] = "library"
 
+libraries[modernizr][download][type] = "get"
+libraries[modernizr][download][url] = "https://github.com/Modernizr/Modernizr/archive/v2.8.1.zip"
+libraries[modernizr][directory_name] = "modernizr"
+libraries[modernizr][type] = "library"
+
+libraries[plupload][download][type] = "get"
+libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
+; Remove plupload library examples folder for Drupal distribution
+; http://drupal.org/node/1903850
+libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"

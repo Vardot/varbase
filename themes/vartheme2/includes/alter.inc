@@ -17,18 +17,4 @@ function vartheme2_css_alter(&$css) {
     'browsers' => array('IE' => TRUE, '!IE' => TRUE),
     'weight' => 0
   );
-
-  // Add bootstrap overrides.
-
-  $theme_css = $theme_path . '/css/overrides.css';
-  $css[$theme_css] = array(
-    'data' => $theme_css,
-    'type' => 'file',
-    'every_page' => TRUE,
-    'media' => 'all',
-    'preprocess' => TRUE,
-    'group' => CSS_THEME,
-    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
-    'weight' => 0
-  );
 }

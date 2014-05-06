@@ -14,12 +14,17 @@ regions[sidebar_second] = 'Second Side Bar'
 regions[footer]         = 'Footer'
 
 ; Stylesheets
-
-stylesheets[print][] = css/print.css
 stylesheets[all][] = assets/bootstrap/css/bootstrap.min.css
 ;stylesheets[all][] = assets/bootstrap/css/bootstrap-theme.min.css
 stylesheets[all][] = assets/font-awesome/css/font-awesome.min.css
+stylesheets[all][] = css/overrides.css
+stylesheets[print][] = css/print.css
+
+
+; Scripts
 scripts[] = assets/bootstrap/js/bootstrap.min.js
+
+
 ; Excludes
 exclude[css][] = 'sites/all/modules/contrib/custom_pagers/custom_pagers.css'
 
