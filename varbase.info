@@ -89,6 +89,8 @@ dependencies[] = total_control
 dependencies[] = better_exposed_filters
 dependencies[] = smart_trim
 dependencies[] = pm_existing_pages
+dependencies[] = escape_admin
+dependencies[] = rules
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks

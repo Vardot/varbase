@@ -1,5 +1,5 @@
 name = Vartheme2
-description = The new base theme for vardot, based on bootstrap3
+description = The new base theme for Vardot standard websites. Based on Bootstrap 3
 core = 7.x
 base theme = bootstrap
 
