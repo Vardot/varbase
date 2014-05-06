@@ -29,6 +29,7 @@ scripts[] = assets/bootstrap/js/bootstrap.min.js
 exclude[css][] = 'sites/all/modules/contrib/custom_pagers/custom_pagers.css'
 
 
-; Disable the CDN as we are using our own source files.
+; Theme settings
 settings[bootstrap_cdn] = ''
-settungs[bootstrap_tooltip_enabled] = 0
+settings[bootstrap_tooltip_enabled] = '0'
+settings[bootstrap_tooltip_descriptions] = '0'

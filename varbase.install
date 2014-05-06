@@ -69,4 +69,20 @@ function varbase_install() {
   db_insert('users_roles')
     ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
     ->execute();
+
+
+  //* @todo: investigate further this problem below to the end of the function
+  /**
+   * For some reason rdf throws a "Base table of view not found" error on installation if made through dependendices[]
+   * for some another freaky reason diff always appears as non-existing when trying to install.
+   * 
+   * This is a workaround to enable these module after the batch install is done.
+   */
+  $modules_to_enable = array('rdf', 'diff');
+  module_enable($modules_to_enable);
+
+  // For some reason the feature varbase_ckeditor keeps getting overriden when enabled. Here's a quick workaround
+  if (module_exists('varbase_ckeditor')) {
+    features_revert(array('varbase_ckeditor' => array('ckeditor_profile')));
+  }
 }

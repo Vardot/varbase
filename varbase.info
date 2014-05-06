@@ -3,7 +3,7 @@ description = The base website template from <a href="http://vardot.com">Vardot<
 ;core = 7.x
 exclusive = TRUE
 
-;Core/contrib modules
+; Core/contrib modules
 dependencies[] = admin_views
 dependencies[] = block
 dependencies[] = ctools
@@ -51,7 +51,6 @@ dependencies[] = panels
 dependencies[] = path
 dependencies[] = pathauto
 dependencies[] = remember_me
-dependencies[] = rdf
 dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = strongarm
@@ -91,6 +90,12 @@ dependencies[] = smart_trim
 dependencies[] = pm_existing_pages
 dependencies[] = escape_admin
 dependencies[] = rules
+dependencies[] = rules_admin
+dependencies[] = ctools_custom_content
+dependencies[] = context_admin
+dependencies[] = media_internet
+dependencies[] = panels_mini
+;dependencies[] = rdf
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks

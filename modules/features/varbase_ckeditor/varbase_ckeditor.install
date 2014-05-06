@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_enable().
+ */
+function varbase_ckeditor_enable() {
+  features_revert(array('varbase_ckeditor' => array('ckeditor_profile')));
+}
