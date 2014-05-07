@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Varbase CKEditor feature.
  */
+
+include_once 'varbase_ckeditor.features.inc';

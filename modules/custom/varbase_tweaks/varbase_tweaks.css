@@ -1,0 +1,11 @@
+/**
+ * Workaround for Media browser tabs bug
+ */
+#media-browser-page-wrapper .ui-tabs .ui-tabs-panel.ui-tabs-hide {
+  display: none;
+}
+
+#media-browser-page-wrapper select.form-select {
+  padding: 6px 35px 6px 5px;
+  margin: 1px;
+}

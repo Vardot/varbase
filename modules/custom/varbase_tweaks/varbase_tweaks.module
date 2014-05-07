@@ -24,6 +24,7 @@ function varbase_tweaks_init() {
   if (arg(0) == 'node' && arg(1) == NULL && variable_get('site_frontpage', 'node') != 'node') {
     drupal_goto('<front>', array(), 301);
   }
+  drupal_add_css(drupal_get_path('module', 'varbase_tweaks') . '/varbase_tweaks.css');
 }
 
 /**
