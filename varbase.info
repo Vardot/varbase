@@ -95,6 +95,7 @@ dependencies[] = ctools_custom_content
 dependencies[] = context_admin
 dependencies[] = media_internet
 dependencies[] = panels_mini
+dependencies[] = node_edit_protection
 ;dependencies[] = rdf
 
 ; Varbase Modules

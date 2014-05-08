@@ -5,3 +5,33 @@
  */
 
 include_once 'varbase_base.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * 
+ * We will remove all exportables that we don't want to save in features by mistake,
+ * this is to remove them from the UI only.
+ * If there was a need to remove the export totaly llok at hook_features_export_alter.
+ */
+function varbase_base_form_features_export_form_alter(&$form, &$form_state, $form_id) {
+  // Disable not needed Strongarm (variables)
+  unset($form['export']['variable']['sources']['selected']['#options']['cron_key']);
+  unset($form['export']['variable']['sources']['selected']['#options']['cron_last']);
+  unset($form['export']['variable']['sources']['selected']['#options']['css_js_query_string']);
+  unset($form['export']['variable']['sources']['selected']['#options']['email__active_tab']);
+  unset($form['export']['variable']['sources']['selected']['#options']['features_codecache']);
+  unset($form['export']['variable']['sources']['selected']['#options']['install_time']);
+  unset($form['export']['variable']['sources']['selected']['#options']['install_task']);
+  unset($form['export']['variable']['sources']['selected']['#options']['maintenance_mode']);
+  unset($form['export']['variable']['sources']['selected']['#options']['path_alias_whitelist']);
+  unset($form['export']['variable']['sources']['selected']['#options']['update_last_check']);
+  unset($form['export']['variable']['sources']['selected']['#options']['ctools_last_cron']);
+  unset($form['export']['variable']['sources']['selected']['#options']['drupal_http_request_fails']);
+  unset($form['export']['variable']['sources']['selected']['#options']['views_block_hashes']);
+  unset($form['export']['variable']['sources']['selected']['#options']['module_filter_recent_modules']);
+  unset($form['export']['variable']['sources']['selected']['#options']['advanced__active_tab']);  
+  unset($form['export']['variable']['sources']['selected']['#options']['cron_safe_threshold']);
+  unset($form['export']['variable']['sources']['selected']['#options']['entity_cache_tables_created']);
+  unset($form['export']['variable']['sources']['selected']['#options']['array_filter']);
+  unset($form['export']['variable']['sources']['selected']['#options']['tabs__active_tab']);
+}

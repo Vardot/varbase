@@ -63,9 +63,12 @@ projects[smart_trim][subdir] = "contrib"
 projects[pm_existing_pages][subdir] = "contrib"
 projects[escape_admin][subdir] = "contrib"
 projects[rules][subdir] = "contrib"
+projects[node_edit_protection][subdir] = "contrib"
 
 
 ; Modules (non-stable branches)
+projects[linkit][subdir] = "contrib"
+projects[linkit][patch][2207651] = "https://drupal.org/files/issues/2207651-linkit-undefined-fields-5.patch"
 projects[config_perms][version] = "2.x-dev"
 projects[config_perms][patch][1274800] = "http://drupal.org/files/config_perms-hook-menu-alter-non-object-1274800-8.patch"
 projects[config_perms][subdir] = "contrib"
