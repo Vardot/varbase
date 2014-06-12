@@ -5,6 +5,7 @@ api = 2
 
 ; Modules (stable brnaches)
 projects[ctools][subdir] = "contrib"
+projects[ctools][patch][1565782] = "http://drupal.org/files/1565782-obey-view-display-defaults-5.patch"
 projects[user_registrationpassword][subdir] = "contrib"
 projects[context][subdir] = "contrib"
 projects[date][subdir] = "contrib"
@@ -29,6 +30,7 @@ projects[token][subdir] = "contrib"
 projects[transliteration][subdir] = "contrib"
 projects[menu_position][subdir] = "contrib"
 projects[panels][subdir] = "contrib"
+projects[panels][patch][2120849] = "http://drupal.org/files/issues/panels-ipe-save-2120849-27.patch"
 projects[captcha][subdir] = "contrib"
 projects[recaptcha][subdir] = "contrib"
 projects[extlink][subdir] = "contrib"
@@ -58,11 +60,9 @@ projects[pathologic][subdir] = "contrib"
 projects[redirect][subdir] = "contrib"
 projects[total_control][subdir] = "contrib"
 projects[better_exposed_filters][subdir] = "contrib"
-projects[features_override][subdir] = "contrib"
 projects[smart_trim][subdir] = "contrib"
 projects[pm_existing_pages][subdir] = "contrib"
 projects[escape_admin][subdir] = "contrib"
-projects[rules][subdir] = "contrib"
 projects[node_edit_protection][subdir] = "contrib"
 
 
@@ -116,3 +116,4 @@ libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/arch
 ; Remove plupload library examples folder for Drupal distribution
 ; http://drupal.org/node/1903850
 libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"
+
