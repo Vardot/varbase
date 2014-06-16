@@ -92,6 +92,5 @@ dependencies[] = node_edit_protection
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks
-dependencies[] = varbase_base
 dependencies[] = varbase_ckeditor
 dependencies[] = varbase_homepage_panel
