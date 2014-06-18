@@ -1,0 +1,15 @@
+{
+  "srcPath" :{
+    "bootstrap": "../src/bootstrap",
+    "fontawesome": "../src/font-awesome",
+    "fonts" : "../src/fonts",
+    "less": "../src/less",
+    "js" : "../src/js"
+  },
+  "compilePath": {
+    "js": "../js",
+    "css": "../css",
+    "fonts": "../fonts"
+  },
+  "banner": "/*!\n * Varless and Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n * Copyright 2011-<%= grunt.template.today(\"yyyy\") %> <%= pkg.author %>\n * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n  */\n"
+}

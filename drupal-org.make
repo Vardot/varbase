@@ -87,7 +87,7 @@ projects[panels_bootstrap_layouts][subdir] = "contrib"
 ; Themes
 projects[] = "ember"
 projects[] = "shiny"
-projects[] = "bootstrap"
+projects[bootstrap][version] = "7.x-3.1-beta1"
 
 
 ; Libraries
