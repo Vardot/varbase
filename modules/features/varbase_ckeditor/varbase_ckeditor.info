@@ -24,4 +24,3 @@ features[user_permission][] = use text format visual_editor
 features[user_role][] = Content admin
 features[user_role][] = Site admin
 features[user_role][] = Super admin
-project path = profiles/varbase/modules/features
