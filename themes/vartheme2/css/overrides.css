@@ -1110,3 +1110,47 @@ textarea.form-control {
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
+
+.resizable-textarea .counter {
+  text-align: right;
+  font-size: 10px;
+  background: #eee;
+  border: 1px solid #ddd;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0 10px;
+}
+
+.media-widget a.button {
+  margin-right: 10px;
+}
+
+dt {
+  font-size: 120%;
+}
+
+dd {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+div.image-widget-data {
+  float: none;
+}
+
+.form-type-managed-file input[type="file"] {
+  float: left;
+}
+
+.image-widget .image-preview img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}

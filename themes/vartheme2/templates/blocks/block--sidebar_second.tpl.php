@@ -1,4 +1,4 @@
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> widget clearfix"<?php print $attributes; ?>>
+<aside id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> widget clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -8,4 +8,4 @@
 
   <?php print $content ?>
   
-</section> <!-- /.block -->
+</aside> <!-- /.block -->

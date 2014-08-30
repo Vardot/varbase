@@ -1,0 +1,20 @@
+name = {Type in theme name here}
+description = {Type in theme description here.}
+core = 7.x
+base theme = vartheme2
+
+; Regions
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'First Side Bar'
+regions[sidebar_second] = 'Second Side Bar'
+regions[footer]         = 'Footer'
+
+; Stylesheets
+stylesheets[all][] = css/style.css
+
+; Scripts
+scripts[] = js/script.js
