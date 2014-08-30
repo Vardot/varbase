@@ -88,7 +88,6 @@ dependencies[] = context_admin
 dependencies[] = media_internet
 dependencies[] = panels_mini
 dependencies[] = node_edit_protection
-;dependencies[] = diff // see varbase.install
 
 ; Varbase Modules
 dependencies[] = varbase_tweaks

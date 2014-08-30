@@ -60,9 +60,11 @@ projects[pathologic][subdir] = "contrib"
 projects[redirect][subdir] = "contrib"
 projects[total_control][subdir] = "contrib"
 projects[better_exposed_filters][subdir] = "contrib"
+projects[features_override][subdir] = "contrib"
 projects[smart_trim][subdir] = "contrib"
 projects[pm_existing_pages][subdir] = "contrib"
 projects[escape_admin][subdir] = "contrib"
+projects[rules][subdir] = "contrib"
 projects[node_edit_protection][subdir] = "contrib"
 
 
