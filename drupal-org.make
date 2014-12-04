@@ -72,7 +72,6 @@ projects[node_edit_protection][subdir] = "contrib"
 
 ; Modules (non-stable branches)
 projects[config_perms][version] = "2.x-dev"
-projects[config_perms][patch][1274800] = "http://drupal.org/files/config_perms-hook-menu-alter-non-object-1274800-8.patch"
 projects[config_perms][subdir] = "contrib"
 projects[media][version] = "2.0-alpha4"
 projects[media][subdir] = "contrib"
