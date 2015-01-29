@@ -5,7 +5,6 @@ api = 2
 
 ; Modules (stable brnaches)
 projects[ctools][subdir] = "contrib"
-projects[ctools][patch][1565782] = "http://drupal.org/files/1565782-obey-view-display-defaults-5.patch"
 projects[user_registrationpassword][subdir] = "contrib"
 projects[context][subdir] = "contrib"
 projects[date][subdir] = "contrib"
@@ -30,7 +29,6 @@ projects[token][subdir] = "contrib"
 projects[transliteration][subdir] = "contrib"
 projects[menu_position][subdir] = "contrib"
 projects[panels][subdir] = "contrib"
-projects[panels][patch][2120849] = "http://drupal.org/files/issues/panels-ipe-save-2120849-27.patch"
 projects[captcha][subdir] = "contrib"
 projects[recaptcha][subdir] = "contrib"
 projects[extlink][subdir] = "contrib"
