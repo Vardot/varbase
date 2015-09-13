@@ -49,6 +49,7 @@ projects[uuid_features][subdir] = "contrib"
 projects[diff][subdir] = "contrib"
 projects[module_filter][subdir] = "contrib"
 projects[mollom][subdir] = "contrib"
+projects[media][subdir] = "contrib"
 projects[linkit][subdir] = "contrib"
 projects[sharethis][subdir] = "contrib"
 projects[responsive_preview][subdir] = "contrib"
@@ -71,8 +72,6 @@ projects[node_edit_protection][subdir] = "contrib"
 ; Modules (non-stable branches)
 projects[config_perms][version] = "2.x-dev"
 projects[config_perms][subdir] = "contrib"
-projects[media][version] = "2.0-alpha4"
-projects[media][subdir] = "contrib"
 projects[ds_bootstrap_layouts][version] = "3.x-dev"
 projects[ds_bootstrap_layouts][subdir] = "contrib"
 projects[panels_bootstrap_layouts][version] = "3.x-dev"
@@ -82,7 +81,7 @@ projects[panels_bootstrap_layouts][subdir] = "contrib"
 ; Themes
 projects[] = "ember"
 projects[] = "shiny"
-projects[] = "bootstrap"
+projects[bootstrap][version] = 3.0
 
 
 ; Libraries
@@ -91,20 +90,22 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 
+libraries[widget][download][type] = "get"
+libraries[widget][download][url] = "http://download.ckeditor.com/widget/releases/widget_4.5.3.zip"
+libraries[widget][destination] = "modules/contrib/ckeditor/plugins/"
+
+libraries[lineutils][download][type] = "get"
+libraries[lineutils][download][url] = "http://download.ckeditor.com/lineutils/releases/lineutils_4.5.3.zip"
+libraries[lineutils][destination] = "modules/contrib/ckeditor/plugins/"
+
 libraries[backbone][download][type] = "get"
 libraries[backbone][download][url] = "http://github.com/jashkenas/backbone/archive/1.1.2.tar.gz"
-libraries[backbone][directory_name] = "backbone"
-libraries[backbone][type] = "library"
 
 libraries[underscore][download][type] = "get"
 libraries[underscore][download][url] = "http://github.com/jashkenas/underscore/archive/1.5.2.tar.gz"
-libraries[underscore][directory_name] = "underscore"
-libraries[underscore][type] = "library"
 
 libraries[modernizr][download][type] = "get"
 libraries[modernizr][download][url] = "http://github.com/Modernizr/Modernizr/archive/v2.8.3.tar.gz"
-libraries[modernizr][directory_name] = "modernizr"
-libraries[modernizr][type] = "library"
 
 libraries[json2][download][type] = get
 libraries[json2][download][url] = "http://github.com/douglascrockford/JSON-js/archive/3d7767b6b1f3da363c625ff54e63bbf20e9e83ac.zip"
@@ -113,5 +114,4 @@ libraries[plupload][download][type] = "get"
 libraries[plupload][download][url] = "https://github.com/moxiecode/plupload/archive/v1.5.8.zip"
 ; Remove plupload library examples folder for Drupal distribution
 ; http://drupal.org/node/1903850
-libraries[plupload][patch][1903850] = "http://drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-16.patch"
-
+libraries[plupload][patch][1903850] = "http://www.drupal.org/files/issues/plupload-1_5_8-rm_examples-1903850-21.patch"
