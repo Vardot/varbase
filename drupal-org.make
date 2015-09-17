@@ -381,9 +381,8 @@ projects[memcache][subdir] = performance
 ;; Varbase features
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[varbase_editor][version] = "7.x-3.0-alpha1"
+projects[varbase_editor][version] = 3.0-alpha1
 projects[varbase_editor][subdir] = features
-
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Base theme
@@ -405,9 +404,6 @@ projects[bootstrap][patch][2404405] = "http://www.drupal.org/files/issues/bootst
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;
-
-libraries[ace][download][type] = "get"
-libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.2.0.tar.gz"
 
 libraries[backbone][download][type] = "get"
 libraries[backbone][download][url] = "http://github.com/jashkenas/backbone/archive/1.1.2.tar.gz"
