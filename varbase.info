@@ -1,0 +1,35 @@
+name = Vardot Base
+description = The base website template from <a target="_blank" href="http://vardot.com">Vardot</a>.
+core = 7.x
+
+; System Requirements
+php = 5.3
+php_memory_limit = 256M
+
+; Core Modules
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = field
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = syslog
+dependencies[] = taxonomy
+dependencies[] = translation
+
+
+; Contrib Modules
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = strongarm
+dependencies[] = defaultconfig
+
+; Varbase Modules
+dependencies[] = varbase_core

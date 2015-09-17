@@ -1,0 +1,53 @@
+name = Vartheme
+description = The new base theme for Vardot standard websites. Based on Bootstrap 3 and lesscss
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation_top] = 'Navigation top'
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[help]           = 'Help'
+regions[content_top]    = 'Content Top'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[content_bottom] = 'Content Bottom'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Vartheme Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'js/vartheme.js'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Bootstrap Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+settings[toggle_name] = 0
+settings[toggle_slogan] = 0
+settings[toggle_secondary_menu] = 0
+settings[bootstrap_tooltip_enabled] = 0
+settings[bootstrap_region_well-sidebar_first] = 'None'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Drupal Theme Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = favicon
+
+
+; Disable BootstrapCDN so the compiled LESS source files can be used.
+; settings[bootstrap_cdn] = ''

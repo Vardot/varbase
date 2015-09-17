@@ -1,0 +1,8 @@
+name = Varbase Support
+description = This is add support and alter functionality to Varbase profile
+core = 7.x
+package = Varbase
+version = 7.x-3.0
+dependencies[] = ds
+dependencies[] = media
+dependencies[] = entity_token

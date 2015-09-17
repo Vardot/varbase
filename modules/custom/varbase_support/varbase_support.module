@@ -1,0 +1,68 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Support Module.
+ */
+
+include_once dirname(__FILE__) . '/varbase_support.inc';
+include_once dirname(__FILE__) . '/includes/system.inc';
+include_once dirname(__FILE__) . '/includes/form.inc';
+include_once dirname(__FILE__) . '/includes/preprocess.inc';
+
+/**
+ * Implements hook_init().
+ *
+ * @todo find a better way to make this and check the rss.xml path
+ */
+function varbase_support_init() {
+  if (arg(0) == 'node' && arg(1) == NULL && variable_get('site_frontpage', 'node') != 'node') {
+    drupal_goto('<front>', array(), 301);
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_support_theme($existing, $type, $theme, $path) {
+  return array(
+    'varbase_time' => array(
+      'variables' => array('date' => NULL, 'isodate' => NULL),
+      'file' => 'theme/theme.inc',
+    ),
+    'varbase_neutral_tree' => array(
+      'render element' => 'tree',
+      'file' => 'theme/theme.inc',
+    ),
+  );
+}
+
+/**
+ * Implements hook_init().
+ */
+function varbase_support_page_build(&$page) {
+  global $user;
+  $module_path = drupal_get_path('module', 'varbase_support');
+
+  if ($user->uid) {
+    drupal_add_css($module_path . '/css/admin-ui.css');
+  }
+}
+
+/**
+ * Implements hook_admin_paths().
+ */
+function varbase_support_admin_paths_alter(&$paths) {
+  $paths['user'] = FALSE;
+  $paths['user/*'] = FALSE;
+}
+
+/**
+ * Implements hook_ds_fields_info_alter().
+ */
+function varbase_support_ds_fields_info_alter(&$fields, $entity_type) {
+  foreach ($fields as $field_name => &$field) {
+    if (isset($field['function']) && $field['function'] == 'ds_render_date_field') {
+      $field['function'] = '_varbase_support_render_date_field';
+    }
+  }
+}

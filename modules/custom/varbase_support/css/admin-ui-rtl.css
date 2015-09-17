@@ -1,0 +1,9 @@
+div#panels-ipe-control-container {
+  right: auto;
+  left: 0;
+}
+
+div.panels-ipe-control .form-submit,
+div.panels-ipe-pseudobutton-container {
+  margin: 0 0 0 10px;
+}

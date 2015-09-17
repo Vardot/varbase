@@ -1,0 +1,154 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase FPP (Fieldable Panels Panes) feature.
+ */
+
+include_once 'varbase_fpp.features.inc';
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * We will remove all exportables that we don't want to save in features by mistake,
+ * this is to remove them from the UI only.
+ * If there was a need to remove the export totaly look at hook_features_export_alter.
+ */
+function varbase_fpp_form_features_export_form_alter(&$form, &$form_state, $form_id) {
+  $component = array(
+    'variable' => '',
+    'defaultconfig' => 'strongarm__58__'
+  );
+  foreach ($component as $key => $prefix) {
+    // Disable strongarm variables that have no purpose
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'flexslider_version']);
+  }
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function varbase_fpp_entity_info_alter(&$entity_info) {
+  unset($entity_info['fieldable_panels_pane']['bundles']['fieldable_panels_pane']);
+
+  // Slider fieldable panel pane
+  $entity_info['fieldable_panels_pane']['bundles']['slideshow'] = array(
+    'label' => t('Slideshow'),
+    'pane category' => t('Content'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'varbase_content_panes') . '/images/icons/slideshow.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // HTML fieldable panel pane
+  $entity_info['fieldable_panels_pane']['bundles']['raw_html'] = array(
+    'label' => t('HTML'),
+    'pane category' => t('Page elements'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'varbase_content_panes') . '/images/icons/html.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/raw_html',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+  // WYSIWYG fieldable panel pane
+  $entity_info['fieldable_panels_pane']['bundles']['wysiwyg'] = array(
+    'label' => t('Text Block'),
+    'pane category' => t('Page elements'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'varbase_content_panes') . '/images/icons/text.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/wysiwyg',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function varbase_fpp_entity_view($entity, $type, $view_mode, $langcode) {
+  if($type == 'fieldable_panels_pane' && $entity->bundle == 'slideshow') {
+    $items = field_get_items('fieldable_panels_pane', $entity, 'field_fpp_slides', $entity->language);
+    $id = array();
+    foreach($items as $value) {
+      $id[] = $value['value'];
+    }
+    $args = implode('+', $id);
+    $entity->content['varbase_fpp_slideshow']['#markup'] = views_embed_view('varbase_fpp_slideshow', $entity->conf['views_diplay'], $args);
+  }
+}
+
+/**
+ * Implements hook_form_alter()
+ */
+function varbase_fpp_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    // Fieldable panels pane have two veriants of forms
+    case 'fieldable_panels_panes_entity_edit_form':
+    case 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form':
+      _varbase_fpp_fieldable_panel_pane_form_alter($form, $form_state, $form_id);
+      break;
+  }
+}
+
+/**
+ * We need to catch all fieldable_panels_panes entity form, they have differant ids
+ *
+ */
+function _varbase_fpp_fieldable_panel_pane_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_state['entity']->bundle) {
+    case 'slideshow':
+      _varbase_slideshow_form_alter($form, $form_state);
+      break;
+  }
+}
+
+function _varbase_slideshow_form_alter(&$form, &$form_state) {
+  $conf = &$form_state['conf'];
+
+  // @todo find a reasonable way to share this with Administrative title or another use case for it.
+  $form['title']['#description'] = t('This will be displayed in Admin interface only. <br /> please fill the title to be able to find the Slideshow in Admin content listing.');
+
+  $form['view_mode']['#access'] = FALSE;
+  $form['link']['#access'] = FALSE;
+
+  $views_diplay = _varbase_magic_get_views_display('varbase_fpp_slideshow');
+
+  // Add an option select to what display to use
+  $form['views_diplay'] = array(
+    '#type' => 'select',
+    '#title' => t('Slider Type'),
+    '#options' => $views_diplay,
+    '#default_value' => !empty($conf['views_diplay']) ? $conf['views_diplay'] : '',
+    '#weight' => -4,
+  );
+
+  // Add a custom submit handler to our custom option
+  $form['#submit'][] = 'varbase_fpp_content_type_modal_submit';
+}
+
+/**
+ * Custom submit handler to save panels pane configuration for styling
+ */
+function varbase_fpp_content_type_modal_submit(&$form, &$form_state) {
+  // Options that we have to added to views_panes form alter
+  $form_elements = array('views_diplay');
+
+  // Add the options to conf will save them with pane settings
+  foreach ($form_elements as $element) {
+    if (isset($form_state['values'][$element])) {
+      $form_state['conf'][$element] = $form_state['values'][$element];
+    }
+  }
+}

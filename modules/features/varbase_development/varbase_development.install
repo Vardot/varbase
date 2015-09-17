@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * Array of modules that are considered development modules only.
+ *
+ */
+function _varbase_development_enable_requirements() {
+  return array(
+    'field_ui',
+    'feeds_ui',
+    'views_ui',
+    'context_ui',
+    'ds_ui',
+    'dblog',
+    'devel',
+    'masquerade',
+    'module_filter',
+    'rules_admin',
+    'search_krumo',
+    'variable_admin',
+  );
+}
+
+/**
+ * Implements hook_enable().
+ */
+function varbase_development_enable() {
+  // Enable modules that we want.
+  // @todo need to check avilable module first and enable them all in one bulk through a batch operation.
+  foreach (_varbase_development_enable_requirements() as $module_name) {
+    module_enable(array($module_name));
+  }
+
+  // Views UI need a clear cache all to work with already views in code.
+  cache_clear_all();
+}
+
+/**
+ * Implements hook_disable().
+ */
+function varbase_development_disable() {
+  // Delete varibales set by this feature
+  require_once 'varbase_development.strongarm.inc';
+  $development_variables = varbase_development_strongarm();
+  foreach($development_variables as $key => &$variable) {
+    variable_del($variable->name);
+  }
+
+  // Disable modules enabled by the development feature.
+  foreach (_varbase_development_enable_requirements() as $module_name) {
+    if (module_exists($module_name)) {
+      $module_disableable[] = $module_name;
+    }
+  }
+  module_disable($module_disableable);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function varbase_development_uninstall() {
+  // Uninstall modules enabled by the development feature.
+  //drupal_uninstall_modules(_varbase_development_enable_requirements());
+}
+

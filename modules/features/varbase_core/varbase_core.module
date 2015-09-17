@@ -1,0 +1,201 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Core feature.
+ */
+
+include_once 'varbase_core.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * We will remove all exportables that we don't want to save in features by mistake,
+ * this is to remove them from the UI only.
+ * If there was a need to remove the export totaly look at hook_features_export_alter.
+ */
+function varbase_core_form_features_export_form_alter(&$form, &$form_state, $form_id) {
+  $component = array(
+    'variable' => '',
+    'defaultconfig' => 'strongarm__58__'
+  );
+  foreach ($component as $key => $prefix) {
+    // Disable strongarm variables that are only for the site
+    // @todo see what can we do with these variables and site_specific_confige feature
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'date_default_timezone']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'diff_theme']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'file_temporary_path']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'install_profile']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'install_profiles']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'site_mail']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'site_name']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'site_default_country']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'site_slogan']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'theme_default']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'update_notify_emails']);
+
+    // This is in the settings.php and should never be exposed or saved
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'drupal_private_key']);
+
+    // Disable not needed strongarm variables
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'array_filter']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'cron_key']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'cron_last']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'ctools_last_cron']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'context_block_rebuild_needed']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'cache_class_cache_ctools_css']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'css_js_query_string']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'date_api_version']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'date_db_tz_support']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'default_field_group']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'drupal_http_request_fails']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'email__active_tab']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'entity_cache_tables_created']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'entityreference_58_base-tables']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'features_codecache']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'features_semaphore']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'install_task']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'install_time']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'install_current_batch']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'javascript_parsed']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'maintenance_mode']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'menu_expanded']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'menu_masks']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'variable_module_list']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'node_cron_last']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'path_alias_whitelist']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'update_last_check']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'views_block_hashes']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'views_defaults']);
+
+    // Remove common strongarm variables that we don't need to save
+    foreach($form['export'][$key]['sources']['selected']['#options'] as $option => $value) {
+      switch (true) {
+        case strpos($option, 'additional_settings__active_tab_') !== FALSE:
+        case strpos($option, 'save_continue_') !== FALSE:
+        case strpos($option, '__active_tab') !== FALSE:
+        /* Memecache stores all cache info in variables table, this will impact the performance
+         * of the site.
+         *
+         * @todo check a soloution for memcache cache variables
+         * For more information see:
+         * https://www.drupal.org/node/2373811
+         * https://www.drupal.org/node/973436
+         */
+        case strpos($option, 'cache_flush_cache') !== FALSE:
+        case strpos($option, 'cache_content_flush_') !== FALSE:
+        case strpos($option, 'cache_temporary_flush_') !== FALSE:
+          unset($form['export'][$key]['sources']['selected']['#options'][$option]);
+          break;
+      }
+    }
+  }
+
+  /* Remove Admin views from features they can't be saved through features
+   * and they cause a problem if they are saved
+   */
+  unset($form['export']['views_view']['sources']['selected']['#options']['admin_views_file']);
+  unset($form['export']['views_view']['sources']['selected']['#options']['admin_views_node']);
+  unset($form['export']['views_view']['sources']['selected']['#options']['admin_views_taxonomy_term']);
+  unset($form['export']['views_view']['sources']['selected']['#options']['admin_views_user']);
+}
+
+/**
+ * Implements hook_permission().
+ */
+function varbase_core_permission() {
+  return array(
+    'varbase administer user role' => array(
+      'title' => t('Administer users roles.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_directory()
+ */
+function varbase_core_ctools_plugin_directory($module, $plugin) {
+  if ($module == "panels" && in_array($plugin, array('layouts'))) {
+    return "plugins/$plugin";
+  }
+}
+
+/**
+ * Implements hook_field_widget_form_alter()
+ */
+function varbase_core_field_widget_form_alter(&$element, &$form_state, $context) {
+  // Add machine name settings to machine_name field.
+  if ($context['field']['field_name'] == 'field_machine_name') {
+    $element['value']['#type'] = 'machine_name';
+    $element['value']['#machine_name'] = array(
+      // @todo need to validate that our machine name is unique
+      'exists' => '_varbase_core_machine_name_if_exist',
+      'source' => array('name'),
+    );
+  }
+}
+
+function _varbase_core_machine_name_if_exist($machine_name) {
+  return FALSE;
+}
+
+/**
+ * Implements template_preprocess()
+ * @todo check do we still need this.
+ */
+function varbase_core_preprocess(&$variables, $hook) {
+  switch ($hook) {
+    case 'left_sidebar':
+      // Added in preprocess rather than the template to allow overrides
+      $variables['content_class_array'] = array('col-sm-9', 'col-sm-push-3');
+      $variables['left_class_array'] = array('col-sm-3', 'col-sm-pull-9');
+      break;
+    case 'right_sidebar':
+      // Added in preprocess rather than the template to allow overrides
+      $variables['content_class_array'] = array('col-sm-9');
+      $variables['right_class_array'] = array('col-sm-3');
+      break;
+  }
+}
+
+/**
+ * Implements template_preprocess().
+ * @todo check do we still need this.
+ */
+function varbase_core_process(&$variables, $hook) {
+  switch ($hook) {
+    case 'left_sidebar':
+      $variables['content_class'] = implode(' ', $variables['content_class_array']);
+      $variables['left_class'] = implode(' ', $variables['left_class_array']);
+      break;
+    case 'right_sidebar':
+      $variables['content_class'] = implode(' ', $variables['content_class_array']);
+      $variables['right_class'] = implode(' ', $variables['right_class_array']);
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function varbase_core_form_block_admin_display_form_alter(&$form, $form_state, $form_id) {
+  unset($form['blocks']['system_powered-by']);
+  unset($form['blocks']['node_syndicate']);
+  unset($form['blocks']['shortcut_shortcuts']);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function varbase_core_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_profile_form':
+    case 'user_register_form':
+      if (isset($form['account']['roles']['#options'])  && !empty($form['account']['roles']['#options']) &&
+          !user_access('administer permissions') && user_access('varbase administer user role')) {
+        $form['account']['roles']['#access'] = TRUE;
+        //unset($form['account']['roles']['#options']);
+        $form['account']['roles']['#options'] = array_diff($form['account']['roles']['#options'], array('Super Admin'));
+      }
+      break;
+  }
+}

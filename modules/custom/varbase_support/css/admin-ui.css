@@ -1,0 +1,31 @@
+div#panels-ipe-control-container {
+  max-width: 380px;
+  right: 0;
+}
+
+div.panels-ipe-button-container {
+  margin: 0;
+}
+
+div.panels-ipe-pseudobutton-container,
+div.panels-ipe-control .form-submit {
+  margin: 0 10px 0 0;
+}
+
+div.panels-ipe-pseudobutton-container a {
+  font-size: 12px;
+}
+
+#l10n-client {
+  right: 45%;
+  left: auto;
+}
+
+/**
+ * @todo this is a temp fix but Media Popup settings (admin/config/media/browser)
+ * are not working with bootsrap theme.
+ * [2052927], [2497253]
+ */
+.ui-dialog.media-wrapper {
+  z-index: 1002;
+}

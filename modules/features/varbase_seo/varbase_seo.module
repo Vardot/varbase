@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase SEO feature.
+ */
+
+include_once 'varbase_seo.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_seo_form_features_export_form_alter(&$form, &$form_state, $form_id) {
+  $component = array(
+    'variable' => '',
+    'defaultconfig' => 'strongarm__58__'
+  );
+  foreach ($component as $key => $prefix) {
+    // Disable strongarm variables that are only for the site
+    // @todo see what can we do with these variables and site_specific_confige feature
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'xmlsitemap_regenerate_needed']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'metatag_schema_installed']);
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ *
+ */
+function varbase_seo_token_info() {
+  $info['tokens']['site']['root_url'] = array(
+    'name' => t('Root URL'),
+    'description' => t('The root URL of the host, excluding the path.'),
+  );
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ *
+ */
+function varbase_seo_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+  $sanitize = !empty($options['sanitize']);
+
+  if ($type == 'site') {
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'root_url':
+          $replacements[$original] = $GLOBALS['base_root'];
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}

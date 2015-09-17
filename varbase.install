@@ -1,0 +1,128 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the News install profile.
+ */
+
+/**
+ * Implements hook_install_tasks().
+ *
+ */
+function varbase_install_tasks() {
+  // Increase maximum function nesting level to prevent install errors if you have xdebug installed.
+  $max_nesting_level = ini_get('xdebug.max_nesting_level');
+  if ($max_nesting_level > 0 && $max_nesting_level <= '200') {
+    ini_set('xdebug.max_nesting_level', 200);
+  }
+}
+
+/**
+ * Implements hook_install_tasks_alter().
+ *
+ */
+function varbase_install_tasks_alter(&$tasks, $install_state) {
+  $needs_translations = count($install_state['locales']) > 1 && !empty($install_state['parameters']['locale']) && $install_state['parameters']['locale'] != 'en';
+
+  // Add Extra dependency and options
+  if ($install_state['parameters']['profile'] == 'varbase') {
+    $varbase_install_load_profile_extra = array(
+      'varbase_install_load_profile_extra' => array(
+        'run' => INSTALL_TASK_RUN_IF_REACHED,
+      ),
+    );
+    _array_splice_assoc($tasks, 3, 0, $varbase_install_load_profile_extra);
+  }
+
+  $tasks['install_finished']['function'] = 'varbase_install_finished';
+  $tasks['install_finished']['type'] = 'batch';
+  $tasks['install_finished']['display'] = TRUE;
+}
+
+/**
+ * Installation step callback.
+ *
+ * @param $install_state
+ *   An array of information about the current installation state.
+ */
+function varbase_install_load_profile_extra(&$install_state) {
+  // Add varbase_default_settings feature as a dependancey only if the installation profile is varbase
+  $install_state['profile_info']['dependencies'][] = 'varbase_default_settings';
+}
+
+/**
+ * Finishes importing files at end of installation.
+ *
+ * @param $install_state
+ *   An array of information about the current installation state.
+ *
+ * @return
+ *   A message informing the user that the installation is complete.
+ */
+function varbase_install_finished(&$install_state) {
+  drupal_static_reset();
+  drupal_get_schema(NULL, TRUE);
+
+  // Remember the profile which was used.
+  variable_set('install_profile', drupal_get_profile());
+
+  // Installation profiles are always loaded last
+  db_update('system')->fields(array('weight' => 1000))->condition('type', 'module')->condition('name', drupal_get_profile())->execute();
+
+  $batch = _varbase_install_batch_finished();
+  return $batch;
+}
+
+function _varbase_install_batch_finished() {
+  $operations = array();
+  // Define finishing step
+  $operations[] = array('_varbase_install_rebuild_features_keys', array());
+  $operations[] = array('_varbase_install_rebuild_features_defaultconfig_rebuild', array());
+  $operations[] = array('_varbase_install_rebuild_features_all', array());
+  $operations[] = array('_varbase_install_drupal_cc_all', array());
+
+  $batch = array(
+    'operations' => $operations,
+    'finished' => '_varbase_install_finished_batch_finished',
+    'title' => t('Finishing install'),
+    'init_message' => t('please wait for until we finalize your installation.'),
+    'progress_message' => t('Finalizing installation.'),
+    'error_message' => t('Installtion have encountered error please contact the site admin as your database maybe corrupted.'),
+    'file' => drupal_get_path('profile', 'varbase') . '/varbase_batch.inc',
+  );
+  return $batch;
+}
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function varbase_install() {
+  //themes to enable and disable
+  theme_enable(array('vartheme_admin', 'vartheme', 'adminimal'));
+  theme_disable(array('bartik'));
+
+  variable_set('theme_default', 'vartheme');
+  variable_set('admin_theme', 'vartheme_admin');
+}
+
+/**
+ * Replace array element and keeping the order and the inserted key
+ *
+ */
+function _array_splice_assoc(&$input, $offset, $length, $replacement) {
+    $replacement = (array) $replacement;
+    $key_indices = array_flip(array_keys($input));
+    if (isset($input[$offset]) && is_string($offset)) {
+            $offset = $key_indices[$offset];
+    }
+    if (isset($input[$length]) && is_string($length)) {
+            $length = $key_indices[$length] - $offset;
+    }
+
+    $input = array_slice($input, 0, $offset, TRUE)
+            + $replacement
+            + array_slice($input, $offset + $length, NULL, TRUE);
+}

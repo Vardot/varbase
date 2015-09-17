@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Performance Improvement feature.
+ */
+
+include_once 'varbase_performance.features.inc';

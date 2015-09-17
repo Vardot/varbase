@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Admin feature.
+ */
+
+include_once 'varbase_admin.features.inc';
+
+ /**
+  * Implements hook_permission()
+  */
+ function varbase_admin_permission() {
+   return array(
+     'access fieldable pane overview' => array(
+       'title' => t('Access the Fieldable pane overview page'),
+       'description' => t('Get an overview of <a href="@url">fieldable panes</a>.', array('@url' => url('admin/content/fieldable_pane_entity'))),
+     ),
+   );
+ }

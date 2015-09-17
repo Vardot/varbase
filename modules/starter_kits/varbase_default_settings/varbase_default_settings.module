@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Default Settings feature.
+ */
+
+include_once 'varbase_default_settings.features.inc';

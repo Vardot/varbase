@@ -1,0 +1,55 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Development Environment feature.
+ */
+
+include_once 'varbase_development.features.inc';
+/**
+ * @file
+ * Code for the Varbase core feature.
+ */
+
+
+/**
+ * Implements hook_init().
+ * 
+ */
+function varbase_development_init() {
+  // Increase maximum function nesting level to prevent install errors if you have xdebug installed.
+  ini_set('xdebug.max_nesting_level', 200);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * 
+ * We will remove all exportables that we don't want to save in features by mistake,
+ * this is to remove them from the UI only.
+ * If there was a need to remove the export totaly llok at hook_features_export_alter.
+ */
+function varbase_development_form_features_export_form_alter(&$form, &$form_state, $form_id) {
+  $component = array(
+    'variable' => '',
+    'defaultconfig' => 'strongarm__58__'
+  );
+  foreach ($component as $key => $prefix) {
+    // Disable not needed strongarm variables
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'advanced__active_tab']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'module_filter_recent_modules']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'wipe_rebuild']);
+    
+    // No need to save devel settings, every developer have his taste
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_krumo_skin']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_xhprof_enabled']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_xhprof_url']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_execution']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_page_alter']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_query_display']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_query_sort']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_raw_names']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_redirect_page']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_xhprof_directory']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_use_uncompressed_jquery']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'devel_rebuild_theme_registry']);
+  }
+}

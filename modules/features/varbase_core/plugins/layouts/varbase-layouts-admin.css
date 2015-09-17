@@ -1,0 +1,83 @@
+.page-admin .panels-dnd .panel-region-content {
+  width: 75%;
+  float: left;
+}
+
+.page-admin .panels-dnd .panel-region-right {
+  width: 25%;
+  float: right;
+}
+
+.page-admin .panels-dnd .panel-region-left {
+  width: 25%;
+  float: left;
+}
+
+.page-admin .panel-varbase-with-primary .panel-region-content {
+  width: 75%;
+  float: right;
+}
+
+.page-admin .panel-region-top,
+.page-admin .panel-region-bottom {
+  clear: both;
+}
+
+.page-admin .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.page-admin .region-bootstrap-panel {
+  position: relative;
+  min-height: 1px;
+  float: left;
+}
+
+.page-admin .col-sm-12 {
+  width: 100%;
+}
+
+.page-admin .col-sm-11 {
+  width: 91.66666667%;
+}
+
+.page-admin .col-sm-10 {
+  width: 83.33333333%;
+}
+
+.page-admin .col-sm-9 {
+  width: 75%;
+}
+
+.page-admin .col-sm-8 {
+  width: 66.66666667%;
+}
+
+.page-admin .col-sm-7 {
+  width: 58.33333333%;
+}
+
+.page-admin .col-sm-6 {
+  width: 50%;
+}
+
+.page-admin .col-sm-5 {
+  width: 41.66666667%;
+}
+
+.page-admin .col-sm-4 {
+  width: 33.33333333%;
+}
+
+.page-admin .col-sm-3 {
+  width: 25%;
+}
+
+.page-admin .col-sm-2 {
+  width: 16.66666667%;
+}
+
+.page-admin .col-sm-1 {
+  width: 8.33333333%;
+}

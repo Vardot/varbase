@@ -1,0 +1,8 @@
+name = Varbase Magic
+description = Varbase Magic does all the magic realy.
+package = Varbase
+core = 7.x
+dependencies[] = views_content
+
+
+files[] = includes/common.inc

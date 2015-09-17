@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase Landing feature.
+ */
+
+include_once 'varbase_landing.features.inc';

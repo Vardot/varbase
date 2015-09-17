@@ -1,0 +1,78 @@
+name = Vartheme Subtheme
+description = The new base theme for Vardot standard websites. Based on Bootstrap 3 and lesscss
+core = 7.x
+base theme = vartheme
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation_top] = 'Navigation top'
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[help]           = 'Help'
+regions[content_top]    = 'Content Top'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[content_bottom] = 'Content Bottom'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = 'css/style.css'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+; scripts[] = 'bootstrap/js/affix.js'
+scripts[] = 'bootstrap/js/alert.js'
+scripts[] = 'bootstrap/js/button.js'
+; scripts[] = 'bootstrap/js/carousel.js'
+scripts[] = 'bootstrap/js/collapse.js'
+scripts[] = 'bootstrap/js/dropdown.js'
+scripts[] = 'bootstrap/js/modal.js'
+scripts[] = 'bootstrap/js/tooltip.js'
+scripts[] = 'bootstrap/js/popover.js'
+scripts[] = 'bootstrap/js/scrollspy.js'
+scripts[] = 'bootstrap/js/tab.js'
+scripts[] = 'bootstrap/js/transition.js'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Custom JS
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'js/script.js'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Theme Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+settings[toggle_name] = 0
+settings[toggle_slogan] = 0
+settings[toggle_secondary_menu] = 0
+settings[bootstrap_tooltip_enabled] = 0
+settings[bootstrap_region_well-sidebar_first] = 'None'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Drupal Theme Features
+;;;;;;;;;;;;;;;;;;;;;
+; redefining the features to disabled the uneeded defaults
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = favicon
+
+; Disable BootstrapCDN so the compiled LESS source files can be used.
+settings[bootstrap_cdn] = ''

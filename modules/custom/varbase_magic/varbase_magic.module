@@ -1,0 +1,208 @@
+<?php
+/**
+ * @file
+ * The magical module file
+ */
+
+/**
+ * Custom Include files
+ */
+include_once __DIR__ . '/includes/common.inc';
+include_once __DIR__ . '/includes/views_content_ds.inc';
+include_once __DIR__ . '/includes/views_content_panes.inc';
+include_once __DIR__ . '/includes/views_bootstrap_grid_plugin_style.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory()
+ */
+function varbase_magic_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'page_manager' || $module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implementation of hook_ctools_render_alter()
+ */
+function varbase_magic_ctools_render_alter(&$info, &$page, &$context) {
+  /* Prevent ctools from removing the title from head when page manager
+   * setting is "No title"
+   * e.x: see panel "Title type" setting in content tab
+   */
+  if (empty($info['title']) && drupal_get_title()) {
+    $head_title_name = &drupal_static(__FUNCTION__);
+    $head_title_name = drupal_get_title();
+  }
+}
+
+/**
+ * Implements hook_preprocess_html()
+ */
+function varbase_magic_preprocess_html(&$variables, $hook) {
+  // Re-add the title when it is removed by ctools
+  if(!drupal_is_front_page() && $head_title_name = &drupal_static('varbase_magic_ctools_render_alter')) {
+    $head_title = array(
+      'title' => strip_tags($head_title_name),
+      'name' => $variables['head_title_array']['name'],
+    );
+
+    $variables['head_title_array'] = $head_title;
+    $variables['head_title'] = implode(' | ', $head_title);
+  }
+}
+
+/**
+ * Implements hook_form_alter()
+ */
+function varbase_magic_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    // Fieldable panels pane have two veriants of forms
+    case 'fieldable_panels_panes_entity_edit_form':
+    case 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form':
+      _varbase_magic_fieldable_panel_pane_form_alter($form, $form_state, $form_id);
+      break;
+  }
+}
+
+/**
+ * We need to catch all fieldable_panels_panes entity form, they have differant ids
+ */
+function _varbase_magic_fieldable_panel_pane_form_alter(&$form, &$form_state, $form_id) {
+  $entity = $form_state['entity'];
+  $entity_info = entity_get_info('fieldable_panels_pane');
+
+  if (isset($form['view_mode']['#options'])) {
+    // Allow only the enabled view modes to be selected
+    $view_mode_available_options = $form['view_mode']['#options'];
+    $view_mode_settings = field_view_mode_settings('fieldable_panels_pane', $entity->bundle);
+
+    // Rebuild the available view mode options array
+    $form['view_mode']['#options'] = array();
+    foreach ($view_mode_settings as $view_mode => $view_mode_setting) {
+      if ($view_mode_setting['custom_settings'] === TRUE)
+        $form['view_mode']['#options'][$view_mode] = $view_mode_available_options[$view_mode];
+    }
+  }
+
+  // Set default value to category for reusable panes
+  if (isset($form['reusable']['category']['#default_value']) && empty($form['reusable']['category']['#default_value'])) {
+    $form['reusable']['category']['#default_value'] = $entity_info['bundles'][$entity->bundle]['pane category'];
+  }
+  if (isset($form['reusable']['admin_title']['#default_value']) && empty($form['reusable']['admin_title']['#default_value'])) {
+    if ($form['title']['#default_value']) {
+      $form['reusable']['admin_title']['#default_value'] = $form['title']['#default_value'];
+    }
+    else {
+      $form['reusable']['admin_title']['#default_value'] = $entity_info['bundles'][$entity->bundle]['label'];
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Alter all views_content_views_panes_content_type forms.
+ */
+function varbase_magic_form_views_content_views_panes_content_type_edit_form_alter(&$form, &$form_state, $form_id) {
+  $view = &$form_state['view'];
+  $view_options = &$view->display_handler->options;
+
+  // I have access to this view result and it is panel pane
+  if (!$view->display_handler->access($GLOBALS['user']) || empty($view->display_handler->panel_pane_display)) {
+    return;
+  }
+  // We allways try to save varbase_magic settings at once.
+  $form['varbase_magic']["#tree"] = TRUE;
+
+  // Genrall form alter for views content panes.
+  _varbase_magic_views_panes_form_alter($form, $form_state);
+
+  // Alter views pane config form based on views row Style
+  switch ($view_options['row_plugin']) {
+    case 'ds':
+      _varbase_magic_views_content_views_panes_form_alter_ds($form, $form_state, $form_id);
+      break;
+  }
+
+  // Alter views pane config form based on views display style
+  switch ($view->display_handler->options['style_plugin']) {
+    case 'views_bootstrap_grid_plugin_style':
+      _varbase_magic_views_content_views_panes_form_alter_bootstrap_grid($form, $form_state, $form_id);
+      break;
+  }
+
+  $form['#submit'][] = '_varbase_magic_views_content_views_panes_submit_config';
+}
+
+/**
+ * All varbase magic config should be procced here.
+ */
+function _varbase_magic_views_content_views_panes_submit_config(&$form, &$form_state) {
+  // @todo make every config in varbase_magic
+  $form_elements = array('varbase_magic', 'ds_view_mode_settings', 'ds_rows', 'alternating');
+
+  // Add the options to conf will save them with pane settings
+  foreach ($form_elements as $element) {
+    if (isset($form_state['values'][$element])) {
+      $form_state['conf'][$element] = $form_state['values'][$element];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_panels_pane
+ */
+function varbase_magic_preprocess_panels_pane(&$variables) {
+  $conf = &$variables['pane']->configuration;
+  $magic_conf = &$conf['varbase_magic'];
+
+  // Proccess views content pane more link.
+  if (isset($magic_conf['view_more']['view_more_enabled']) && !empty($magic_conf['view_more']['view_more_enabled'])) {
+    _varbase_magic_preprocess_panels_pane_more_link($variables);
+  }
+}
+
+/**
+ * Implements hook_views_pre_view()
+ *
+ * This will alter each row
+ */
+function varbase_magic_views_pre_view(&$view) {
+  $view_options = &$view->display_handler->options;
+
+  // Set varbase magic array if it is not set.
+  if (isset($view_options['pane_conf']['varbase_magic'])) {
+    $magic_conf = $view_options['pane_conf']['varbase_magic'];
+  } else {
+    $magic_conf = $view_options['pane_conf']['varbase_magic'] = array();
+  }
+
+  // Check if there is pane configuration
+  if (isset($view_options['pane_conf'])) {
+    // switch pager type.
+    if (isset($view_options['pane_conf']['use_pager']) && !empty($view_options['pane_conf']['use_pager']) && isset($magic_conf['pager']) && !empty($magic_conf['pager'])) {
+      _varbase_magic_views_pre_view_pager($view);
+    }
+
+    /**
+     * Alter views render based on the row based since our forms are
+     * altered based on row style.
+     * see: varbase_magic_form_views_content_views_panes_content_type_edit_form_alter
+     */
+    switch ($view->display_handler->options['row_plugin']) {
+      case 'ds':
+        _varbase_magic_views_pre_view_ds($view);
+        break;
+    }
+
+    /**
+     * Alter views style based on style Format used.
+     * see: varbase_magic_form_views_content_views_panes_content_type_edit_form_alter
+     */
+    switch ($view->display_handler->options['style_plugin']) {
+      case 'views_bootstrap_grid_plugin_style':
+        _varbase_magic_views_pre_bootstrap_grid($view);
+        break;
+    }
+  }
+}
