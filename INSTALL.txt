@@ -1,0 +1,3 @@
+Please check the installation documentation for more information (This is a must read there is extra installation steps).
+https://www.drupal.org/node/2570843
+
