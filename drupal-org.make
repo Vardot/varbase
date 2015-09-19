@@ -98,7 +98,7 @@ projects[file_entity][version] = 2.0-beta2
 projects[file_entity][subdir] = contrib
 projects[file_entity][patch][2533816] = "http://www.drupal.org/files/issues/file_entity-notice_undefined_offset_menu_translate-2533816-4.patch"
 
-projects[filefield_paths][version] = 1.0-beta4
+projects[filefield_paths][version] = 1.0-rc1
 projects[filefield_paths][subdir] = contrib
 
 projects[flexslider][version] = 2.0-rc1
@@ -241,6 +241,7 @@ projects[i18nviews][version] = "3.x-dev"
 projects[i18nviews][download][type] = "git"
 projects[i18nviews][download][url] = "http://git.drupal.org/project/i18nviews.git"
 projects[i18nviews][download][revision] = "fdc8c33f91d4e8161cec5a857da4eec95bf8843e"
+projects[i18nviews][download][branch] = "7.x-3.x"
 projects[i18nviews][subdir] = internationalization
 
 projects[l10n_update][version] = 2.0
@@ -319,13 +320,13 @@ projects[xmlsitemap][subdir] = seo
 ;; Search contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[search_api][version] = 1.15
+projects[search_api][version] = 1.16
 projects[search_api][subdir] = search
 
-projects[search_api_db][version] = 1.4
+projects[search_api_db][version] = 1.5
 projects[search_api_db][subdir] = search
 
-projects[search_api_solr][version] = 1.8
+projects[search_api_solr][version] = 1.9
 projects[search_api_solr][subdir] = search
 
 
@@ -350,7 +351,7 @@ projects[search_krumo][subdir] = development
 ;; Performance improvement contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[advagg][version] = 2.14
+projects[advagg][version] = 2.16
 projects[advagg][subdir] = performance
 
 projects[cache_actions][version] = "2.x-dev"
