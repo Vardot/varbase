@@ -153,6 +153,13 @@ function varbase_default_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'fontawesome_use_cdn';
+  $strongarm->value = 1;
+  $export['fontawesome_use_cdn'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'genpass_algorithm';
   $strongarm->value = 'genpass';
   $export['genpass_algorithm'] = $strongarm;

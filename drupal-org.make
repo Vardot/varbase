@@ -106,6 +106,7 @@ projects[flexslider][subdir] = contrib
 
 projects[fontawesome][version] = 2.1
 projects[fontawesome][subdir] = contrib
+projects[fontawesome][patch][2427075] = "http://www.drupal.org/files/issues/add_support_for_cdn-2427075-7.patch"
 projects[fontawesome][patch][2550149] = "http://www.drupal.org/files/issues/fontawesome-2550149-1.patch"
 
 projects[genpass][version] = 1.0

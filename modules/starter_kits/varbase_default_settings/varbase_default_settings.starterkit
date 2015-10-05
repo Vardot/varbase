@@ -47,6 +47,7 @@ features[variable][] = extlink_include
 features[variable][] = extlink_mailto_class
 features[variable][] = extlink_subdomains
 features[variable][] = extlink_target
+features[variable][] = fontawesome_use_cdn
 features[variable][] = genpass_algorithm
 features[variable][] = genpass_display
 features[variable][] = genpass_entropy
