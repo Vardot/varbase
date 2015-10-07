@@ -384,7 +384,7 @@ projects[memcache][subdir] = performance
 ;; Varbase features
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[varbase_editor][version] = 3.0-alpha1
+projects[varbase_editor][version] = "3.x-dev"
 projects[varbase_editor][subdir] = features
 
 ;;;;;;;;;;;;;;;;;;;;;
