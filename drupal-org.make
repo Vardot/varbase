@@ -97,6 +97,7 @@ projects[fieldable_panels_panes][subdir] = contrib
 projects[file_entity][version] = 2.0-beta2
 projects[file_entity][subdir] = contrib
 projects[file_entity][patch][2533816] = "http://www.drupal.org/files/issues/file_entity-notice_undefined_offset_menu_translate-2533816-4.patch"
+projects[file_entity][patch][1901566] = "http://www.drupal.org/files/issues/resolve_the_allowed-1901566-16.patch"
 
 projects[filefield_paths][version] = 1.0-rc1
 projects[filefield_paths][subdir] = contrib
