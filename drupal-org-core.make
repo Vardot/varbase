@@ -15,4 +15,4 @@ projects[drupal][patch][2339447] = "http://www.drupal.org/files/issues/D7_improv
 projects[drupal][patch][2456025] = "http://www.drupal.org/files/issues/php_warnings_in_php_5_6-2456025-21.patch"
 
 ; Varbase core patches (custom patches for varbase installation profile)
-projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-7.patch"
+projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-8.patch"
