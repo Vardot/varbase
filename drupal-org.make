@@ -33,10 +33,7 @@ projects[context][subdir] = contrib
 projects[date][version] = 2.9
 projects[date][subdir] = contrib
 
-projects[defaultconfig][version] = "1.x-dev"
-projects[defaultconfig][download][type] = "git"
-projects[defaultconfig][download][url] = "http://git.drupal.org/project/defaultconfig.git"
-projects[defaultconfig][download][revision] = "6314345d801ca0cbb3cdd9ca3e36f6a1a83ec196"
+projects[defaultconfig][version] = 1.0-alpha11
 projects[defaultconfig][subdir] = contrib
 projects[defaultconfig][patch][1900574] =  "http://www.drupal.org/files/issues/1900574.defaultconfig.undefinedindex_13.patch"
 projects[defaultconfig][patch][2008178] =  "http://www.drupal.org/files/issues/defaultconfig-rebuild-2008178-14.patch"
@@ -74,14 +71,14 @@ projects[extlink][subdir] = contrib
 projects[features][version] = "2.x-dev"
 projects[features][download][type] = "git"
 projects[features][download][url] = "http://git.drupal.org/project/features.git"
-projects[features][download][revision] = "938a7c527c0265a1e263a303d20732ba8a2b1c37"
+projects[features][download][revision] = "4184b9b169c150f712f15b2cf51686cd56894927"
 projects[features][subdir] = contrib
 projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/features-2324973-undefined_property_status-1_0.patch"
 
 projects[features_extra][version] = 1.0
 projects[features_extra][subdir] = contrib
 
-projects[features_override][version] = 2.0-rc2
+projects[features_override][version] = 2.0-rc3
 projects[features_override][subdir] = contrib
 
 projects[field_collection][version] = 1.0-beta8
@@ -216,7 +213,7 @@ projects[views_bootstrap][subdir] = contrib
 projects[views_bulk_operations][version] = 3.3
 projects[views_bulk_operations][subdir] = contrib
 
-projects[webform][version] = 4.10
+projects[webform][version] = 4.11
 projects[webform][subdir] = contrib
 
 projects[workbench][version] = 1.2
