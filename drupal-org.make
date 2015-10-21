@@ -32,6 +32,7 @@ projects[context][subdir] = contrib
 
 projects[date][version] = 2.9
 projects[date][subdir] = contrib
+projects[date][patch][2469189] =  "http://www.drupal.org/files/issues/date-show_remaining_days_notice-2469189-1.patch"
 
 projects[defaultconfig][version] = 1.0-alpha11
 projects[defaultconfig][subdir] = contrib
