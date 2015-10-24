@@ -82,7 +82,7 @@ projects[features_extra][subdir] = contrib
 projects[features_override][version] = 2.0-rc3
 projects[features_override][subdir] = contrib
 
-projects[field_collection][version] = 1.0-beta8
+projects[field_collection][version] = 1.0-beta10
 projects[field_collection][subdir] = contrib
 projects[field_collection][patch][1063434] =  "http://www.drupal.org/files/issues/field_collection-feeds-1063434-153.patch"
 
@@ -103,10 +103,9 @@ projects[filefield_paths][subdir] = contrib
 projects[flexslider][version] = 2.0-rc1
 projects[flexslider][subdir] = contrib
 
-projects[fontawesome][version] = 2.1
+projects[fontawesome][version] = 2.4
 projects[fontawesome][subdir] = contrib
-projects[fontawesome][patch][2427075] = "http://www.drupal.org/files/issues/add_support_for_cdn-2427075-7.patch"
-projects[fontawesome][patch][2550149] = "http://www.drupal.org/files/issues/fontawesome-2550149-1.patch"
+projects[fontawesome][patch][2427075] = "http://www.drupal.org/files/issues/add_support_for_cdn-2427075-12.patch"
 
 projects[genpass][version] = 1.0
 projects[genpass][subdir] = contrib
@@ -118,7 +117,7 @@ projects[image_resize_filter][version] = 1.16
 projects[image_resize_filter][subdir] = contrib
 projects[image_resize_filter][patch][2554507] = "http://www.drupal.org/files/issues/problem_handling_images-2554507-2.patch"
 
-projects[jquery_update][version] = 3.0-alpha2
+projects[jquery_update][version] = 3.0-alpha3
 projects[jquery_update][subdir] = contrib
 
 projects[job_scheduler][version] = 2.0-alpha3
@@ -261,7 +260,7 @@ projects[apps][subdir] = admin
 projects[admin_views][version] = 1.5
 projects[admin_views][subdir] = admin
 
-projects[environment_indicator][version] = 2.7
+projects[environment_indicator][version] = 2.8
 projects[environment_indicator][subdir] = admin
 
 projects[escape_admin][version] = 1.2
@@ -300,12 +299,12 @@ projects[imagecache_token][subdir] = seo
 projects[metatag][version] = 1.7
 projects[metatag][subdir] = seo
 
-projects[pathauto][version] = 1.2
+projects[pathauto][version] = 1.3
 projects[pathauto][subdir] = seo
 
-projects[pathauto_persist][version] = 1.3
+# This will be deleted in the next release.
+projects[pathauto_persist][version] = 1.4
 projects[pathauto_persist][subdir] = seo
-projects[pathauto_persist][patch][2107365] = "http://www.drupal.org/files/issues/pathauto_persist-2489284-illegal-string-offset-4-alt_0.patch"
 
 projects[redirect][version] = 1.0-rc3
 projects[redirect][subdir] = seo
@@ -390,7 +389,7 @@ projects[varbase_editor][subdir] = features
 ;; Base theme
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[adminimal_theme][version] = 1.22
+projects[adminimal_theme][version] = 1.23
 projects[adminimal_theme][subdir] = contrib
 
 projects[bootstrap][version] = 3.1-beta2
