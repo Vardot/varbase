@@ -21,7 +21,7 @@
   <?php print $pane_prefix; ?>
 <?php endif; ?>
 <div class="<?php print $classes; ?>" <?php print $id; ?> <?php print $attributes; ?>>
-  <div class="container">
+  <div class="<?php print $container_classes; ?>">
     <div class="pane-wrapper">
       <?php if ($admin_links): ?>
         <?php print $admin_links; ?>
