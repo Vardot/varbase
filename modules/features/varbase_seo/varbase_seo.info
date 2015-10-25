@@ -10,7 +10,6 @@ dependencies[] = metatag
 dependencies[] = metatag_opengraph
 dependencies[] = path
 dependencies[] = pathauto
-dependencies[] = pathauto_persist
 dependencies[] = rdf
 dependencies[] = redirect
 dependencies[] = transliteration
