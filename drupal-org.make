@@ -377,6 +377,12 @@ projects[httprl][subdir] = performance
 projects[memcache][version] = 1.5
 projects[memcache][subdir] = performance
 
+;;;;;;;;;;;;;;;;;;;;;
+;; Security contributed modules
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[username_enumeration_prevention][version] = 1.1
+projects[username_enumeration_prevention][subdir] = performance
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase features

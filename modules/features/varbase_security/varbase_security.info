@@ -1,0 +1,9 @@
+name = Varbase security
+description = This feature should not be updated or changed, if there is a need to override anything use features override.
+core = 7.x
+package = Varbase
+version = 7.x-3.0
+dependencies[] = username_enumeration_prevention
+dependencies[] = varbase_core
+features[features_api][] = api:2
+project path = profiles/varbase/modules/features
