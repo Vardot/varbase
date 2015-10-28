@@ -97,15 +97,14 @@ projects[file_entity][subdir] = contrib
 projects[file_entity][patch][2533816] = "http://www.drupal.org/files/issues/file_entity-notice_undefined_offset_menu_translate-2533816-4.patch"
 projects[file_entity][patch][1901566] = "http://www.drupal.org/files/issues/resolve_the_allowed-1901566-16.patch"
 
-projects[filefield_paths][version] = 1.0-rc1
+projects[filefield_paths][version] = 1.0-rc2
 projects[filefield_paths][subdir] = contrib
 
 projects[flexslider][version] = 2.0-rc1
 projects[flexslider][subdir] = contrib
 
-projects[fontawesome][version] = 2.4
+projects[fontawesome][version] = 2.5
 projects[fontawesome][subdir] = contrib
-projects[fontawesome][patch][2427075] = "http://www.drupal.org/files/issues/add_support_for_cdn-2427075-12.patch"
 
 projects[genpass][version] = 1.0
 projects[genpass][subdir] = contrib
@@ -249,6 +248,9 @@ projects[l10n_update][subdir] = internationalization
 projects[l10n_client][version] = 1.3
 projects[l10n_client][subdir] = internationalization
 
+projects[i18n_contrib][version] = 1.0-alpha2
+projects[i18n_contrib][subdir] = internationalization
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Administration contributed modules (Admin UI Component)
@@ -382,7 +384,7 @@ projects[memcache][subdir] = performance
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[username_enumeration_prevention][version] = 1.1
-projects[username_enumeration_prevention][subdir] = performance
+projects[username_enumeration_prevention][subdir] = security
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase features
