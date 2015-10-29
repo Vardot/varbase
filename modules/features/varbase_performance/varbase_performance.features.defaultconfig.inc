@@ -10,72 +10,137 @@
 function varbase_performance_defaultconfig_features() {
   return array(
     'varbase_performance' => array(
-      'strongarm' => 'strongarm',
+      'default_elysia_cron_rules' => 'default_elysia_cron_rules',
     ),
   );
 }
 
 /**
- * Implements hook_defaultconfig_strongarm().
+ * Implements hook_defaultconfig_default_elysia_cron_rules().
  */
-function varbase_performance_defaultconfig_strongarm() {
-  $export = array();
+function varbase_performance_defaultconfig_default_elysia_cron_rules() {
+  $cron_rules = array();
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'cron_safe_threshold';
-  $strongarm->value = '0';
-  $export['cron_safe_threshold'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'ctools_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '*/30 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['ctools_cron'] = $cron_rule;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'httprl_background_callback';
-  $strongarm->value = 1;
-  $export['httprl_background_callback'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'dblog_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['dblog_cron'] = $cron_rule;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'httprl_connect_timeout';
-  $strongarm->value = '10';
-  $export['httprl_connect_timeout'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'field_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '*/30 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['field_cron'] = $cron_rule;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'httprl_dns_timeout';
-  $strongarm->value = '5';
-  $export['httprl_dns_timeout'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'httprl_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['httprl_cron'] = $cron_rule;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'httprl_global_timeout';
-  $strongarm->value = '120';
-  $export['httprl_global_timeout'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'l10n_update_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 4 */2 * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['l10n_update_cron'] = $cron_rule;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'httprl_server_addr';
-  $strongarm->value = '-1';
-  $export['httprl_server_addr'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'masquerade_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['masquerade_cron'] = $cron_rule;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'httprl_timeout';
-  $strongarm->value = '40';
-  $export['httprl_timeout'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'node_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '*/30 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['node_cron'] = $cron_rule;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'httprl_ttfb_timeout';
-  $strongarm->value = '30';
-  $export['httprl_ttfb_timeout'] = $strongarm;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'redirect_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['redirect_cron'] = $cron_rule;
 
-  return $export;
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'system_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '15/30 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['system_cron'] = $cron_rule;
+
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'update_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 4 * * 0';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['update_cron'] = $cron_rule;
+
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'views_bulk_operations_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 * * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['views_bulk_operations_cron'] = $cron_rule;
+
+  $cron_rule = new stdClass;
+  $cron_rule->disabled = FALSE; /* Edit this to true to make a default cron_rule disabled initially */
+  $cron_rule->api_version = 1;
+  $cron_rule->name = 'xmlsitemap_cron';
+  $cron_rule->disable = NULL;
+  $cron_rule->rule = '0 */3 * * *';
+  $cron_rule->weight = NULL;
+  $cron_rule->context = NULL;
+  $cron_rules['xmlsitemap_cron'] = $cron_rule;
+
+  return $cron_rules;
+
 }

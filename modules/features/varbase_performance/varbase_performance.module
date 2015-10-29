@@ -5,3 +5,20 @@
  */
 
 include_once 'varbase_performance.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_performance_form_features_export_form_alter(&$form, &$form_state, $form_id) {
+  $component = array(
+    'variable' => '',
+    'defaultconfig' => 'strongarm__58__'
+  );
+  foreach ($component as $key => $prefix) {
+    // Disable strongarm variables that are only for the site
+    // @todo see what can we do with these variables and site_specific_confige feature
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'elysia_cron_last_context']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'elysia_cron_last_run']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'elysia_cron_version']);
+  }
+}
