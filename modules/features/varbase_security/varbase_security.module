@@ -1,5 +1,25 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Varbase security feature.
  */
+
+include_once 'varbase_security.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * We will remove all exportables that we don't want to save in features by mistake,
+ * this is to remove them from the UI only.
+ * If there was a need to remove the export totaly llok at hook_features_export_alter.
+ */
+function varbase_security_form_features_export_form_alter(&$form, &$form_state, $form_id) {
+  $component = array(
+    'variable' => '',
+    'defaultconfig' => 'strongarm__58__'
+  );
+  foreach ($component as $key => $prefix) {
+    // Disable not needed strongarm variables
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'security_review_last_run']);
+  }
+}

@@ -85,6 +85,7 @@ projects[features_override][subdir] = contrib
 projects[field_collection][version] = 1.0-beta10
 projects[field_collection][subdir] = contrib
 projects[field_collection][patch][1063434] =  "http://www.drupal.org/files/issues/field_collection-feeds-1063434-153.patch"
+projects[field_collection][patch][2599248] =  "http://www.drupal.org/files/issues/field-collection-2599248-2.patch"
 
 projects[field_group][version] = 1.4
 projects[field_group][subdir] = contrib
@@ -105,9 +106,6 @@ projects[flexslider][subdir] = contrib
 
 projects[fontawesome][version] = 2.5
 projects[fontawesome][subdir] = contrib
-
-projects[genpass][version] = 1.0
-projects[genpass][subdir] = contrib
 
 projects[icon][version] = 1.0-beta6
 projects[icon][subdir] = contrib
@@ -385,6 +383,16 @@ projects[memcache][subdir] = performance
 
 projects[username_enumeration_prevention][version] = 1.1
 projects[username_enumeration_prevention][subdir] = security
+
+projects[genpass][version] = 1.0
+projects[genpass][subdir] = security
+
+projects[security_review][version] = 1.2
+projects[security_review][subdir] = security
+
+projects[seckit][version] = 1.9
+projects[seckit][subdir] = security
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase features
