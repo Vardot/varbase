@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Enable i18n_entityreference sub-module from i18n_contrib module. 
+ */
+function varbase_internationalization_update_7001(&$sandbox) {
+  module_enable(array('i18n_entityreference'));
+}
