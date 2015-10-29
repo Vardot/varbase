@@ -10,7 +10,7 @@
 function varbase_fpp_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_fpp_slides'
+  // Exported field_base: 'field_fpp_slides'.
   $field_bases['field_fpp_slides'] = array(
     'active' => 1,
     'cardinality' => -1,

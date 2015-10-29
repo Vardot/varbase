@@ -13,6 +13,13 @@ function varbase_internationalization_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_hide_translation_links';
+  $strongarm->value = 1;
+  $export['i18n_hide_translation_links'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'l10n_update_check_disabled';
   $strongarm->value = 0;
   $export['l10n_update_check_disabled'] = $strongarm;
@@ -51,6 +58,13 @@ function varbase_internationalization_strongarm() {
   $strongarm->name = 'l10n_update_rebuild_projects';
   $strongarm->value = 1;
   $export['l10n_update_rebuild_projects'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'views_localization_plugin';
+  $strongarm->value = 'i18nstrings';
+  $export['views_localization_plugin'] = $strongarm;
 
   return $export;
 }
