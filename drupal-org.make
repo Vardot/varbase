@@ -302,7 +302,7 @@ projects[metatag][subdir] = seo
 projects[pathauto][version] = 1.3
 projects[pathauto][subdir] = seo
 
-# This will be deleted in the next release.
+; This will be deleted in the next release.
 projects[pathauto_persist][version] = 1.4
 projects[pathauto_persist][subdir] = seo
 
