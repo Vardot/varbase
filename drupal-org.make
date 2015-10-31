@@ -57,11 +57,12 @@ projects[email][subdir] = contrib
 projects[entity][version] = 1.6
 projects[entity][subdir] = contrib
 
+projects[entityreference][type] = module
+projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.x-dev"
 projects[entityreference][download][type] = "git"
 projects[entityreference][download][url] = "http://git.drupal.org/project/entityreference.git"
 projects[entityreference][download][revision] = "ab62b9a1d2e8390a85e7df29441c68e624ce76e8"
-projects[entityreference][subdir] = contrib
 
 projects[epsacrop][version] = 2.3
 projects[epsacrop][subdir] = contrib
@@ -69,11 +70,12 @@ projects[epsacrop][subdir] = contrib
 projects[extlink][version] = 1.18
 projects[extlink][subdir] = contrib
 
+projects[features][type] = module
+projects[features][subdir] = contrib
 projects[features][version] = "2.x-dev"
 projects[features][download][type] = "git"
 projects[features][download][url] = "http://git.drupal.org/project/features.git"
 projects[features][download][revision] = "4184b9b169c150f712f15b2cf51686cd56894927"
-projects[features][subdir] = contrib
 projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/features-2324973-undefined_property_status-1_0.patch"
 
 projects[features_extra][version] = 1.0
@@ -133,11 +135,12 @@ projects[linkit][subdir] = contrib
 projects[maxlength][version] = 3.2
 projects[maxlength][subdir] = contrib
 
+projects[media][type] = module
+projects[media][subdir] = contrib
 projects[media][version] = "2.x-dev"
 projects[media][download][type] = "git"
 projects[media][download][url] = "http://git.drupal.org/project/media.git"
 projects[media][download][revision] = "844baf0432c7d8c9ce27a813b38100d6b94e2f6c"
-projects[media][subdir] = contrib
 projects[media][patch][2062721] = "http://www.drupal.org/files/issues/media-wysiwyg-override-white-list-2062721-83.patch"
 projects[media][patch][2126697] = "http://www.drupal.org/files/issues/media-wysiwyg-alt-title-handling-2126697-64.patch"
 projects[media][patch][2148641] = "http://www.drupal.org/files/issues/media-wysiwyg-images-lose-ckeditor-styles-2148641-1.patch"
@@ -155,11 +158,12 @@ projects[node_edit_protection][patch][2262093] = "http://www.drupal.org/files/is
 projects[override_node_options][version] = 1.13
 projects[override_node_options][subdir] = contrib
 
+projects[panelizer][type] = module
+projects[panelizer][subdir] = contrib
 projects[panelizer][version] = "3.x-dev"
 projects[panelizer][download][type] = "git"
 projects[panelizer][download][url] = "http://git.drupal.org/project/panelizer.git"
 projects[panelizer][download][revision] = "2632dae19c5d25a2adb519613828d7a6fedbbd04"
-projects[panelizer][subdir] = contrib
 projects[panelizer][patch][2382879] = "http://www.drupal.org/files/issues/can_t_save-2382879-4.patch"
 projects[panelizer][patch][2445769] = "http://www.drupal.org/files/issues/panelizer-n2445769-3.patch"
 
@@ -167,11 +171,12 @@ projects[panels][version] = 3.5
 projects[panels][subdir] = contrib
 projects[panels][patch][2427917] = "http://www.drupal.org/files/issues/panels-mini_panels_blocks_contextual_links-2427917.patch"
 
+projects[panels_bootstrap_layouts][type] = module
+projects[panels_bootstrap_layouts][subdir] = contrib
 projects[panels_bootstrap_layouts][version] = "3.x-dev"
 projects[panels_bootstrap_layouts][download][type] = "git"
 projects[panels_bootstrap_layouts][download][url] = "http://git.drupal.org/project/panels_bootstrap_layouts.git"
 projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd5cf149cdddd97d9148"
-projects[panels_bootstrap_layouts][subdir] = contrib
 
 projects[recaptcha][version] = 1.12
 projects[recaptcha][subdir] = contrib
@@ -201,11 +206,12 @@ projects[views][subdir] = contrib
 projects[views][patch][1685144] = "http://www.drupal.org/files/views-1685144-localization-bug_1.patch"
 projects[views][patch][1809958] = "http://www.drupal.org/files/issues/views_with_exposed-1809958-28.patch"
 
+projects[views_bootstrap][type] = module
+projects[views_bootstrap][subdir] = contrib
 projects[views_bootstrap][version] = "3.x-dev"
 projects[views_bootstrap][download][type] = "git"
 projects[views_bootstrap][download][url] = "http://git.drupal.org/project/views_bootstrap.git"
 projects[views_bootstrap][download][revision] = "8025e821a0450a7535cf7257870efe9a37a5713d"
-projects[views_bootstrap][subdir] = contrib
 
 projects[views_bulk_operations][version] = 3.3
 projects[views_bulk_operations][subdir] = contrib
@@ -233,12 +239,13 @@ projects[entity_translation][subdir] = internationalization
 projects[i18n][version] = 1.13
 projects[i18n][subdir] = internationalization
 
+projects[i18nviews][type] = module
+projects[i18nviews][subdir] = internationalization
 projects[i18nviews][version] = "3.x-dev"
 projects[i18nviews][download][type] = "git"
 projects[i18nviews][download][url] = "http://git.drupal.org/project/i18nviews.git"
 projects[i18nviews][download][revision] = "fdc8c33f91d4e8161cec5a857da4eec95bf8843e"
 projects[i18nviews][download][branch] = "7.x-3.x"
-projects[i18nviews][subdir] = internationalization
 
 projects[l10n_update][version] = 2.0
 projects[l10n_update][subdir] = internationalization
@@ -302,7 +309,7 @@ projects[metatag][subdir] = seo
 projects[pathauto][version] = 1.3
 projects[pathauto][subdir] = seo
 
-; This will be deleted in the next release.
+; This will be deleted in the next releases.
 projects[pathauto_persist][version] = 1.4
 projects[pathauto_persist][subdir] = seo
 
@@ -353,26 +360,29 @@ projects[search_krumo][subdir] = development
 projects[advagg][version] = 2.16
 projects[advagg][subdir] = performance
 
+projects[cache_actions][type] = module
+projects[cache_actions][subdir] = performance
 projects[cache_actions][version] = "2.x-dev"
 projects[cache_actions][download][type] = "git"
 projects[cache_actions][download][url] = "http://git.drupal.org/project/cache_actions.git"
 projects[cache_actions][download][revision] = "62dd96e4147a0c86ec05027cba1f147f87e13182"
-projects[cache_actions][subdir] = performance
 
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = performance
 
+projects[fast_404][type] = module
+projects[fast_404][subdir] = performance
 projects[fast_404][version] = "1.x-dev"
 projects[fast_404][download][type] = "git"
 projects[fast_404][download][url] = "http://git.drupal.org/project/fast_404.git"
 projects[fast_404][download][revision] = "1df70876b82e3eaa8c56608ea9ebb6b7d8c7cacb"
-projects[fast_404][subdir] = performance
 
+projects[httprl][type] = module
+projects[httprl][subdir] = performance
 projects[httprl][version] = "1.x-dev"
 projects[httprl][download][type] = "git"
 projects[httprl][download][url] = "http://git.drupal.org/project/httprl.git"
 projects[httprl][download][revision] = "0c6e226c86266da3db590e7a15b45a421ade3ed7"
-projects[httprl][subdir] = performance
 
 projects[memcache][version] = 1.5
 projects[memcache][subdir] = performance
@@ -398,6 +408,7 @@ projects[seckit][subdir] = security
 ;; Varbase features
 ;;;;;;;;;;;;;;;;;;;;;
 
+projects[varbase_editor][type] = module
 projects[varbase_editor][version] = "3.x-dev"
 projects[varbase_editor][subdir] = features
 
@@ -405,11 +416,13 @@ projects[varbase_editor][subdir] = features
 ;; Base theme
 ;;;;;;;;;;;;;;;;;;;;;
 
+projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.23
 projects[adminimal_theme][subdir] = contrib
 
-projects[bootstrap][version] = 3.1-beta2
+projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = contrib
+projects[bootstrap][version] = 3.1-beta2
 projects[bootstrap][patch][2250349] = "http://www.drupal.org/files/issues/add_new_variables_to-2250349-8.patch"
 projects[bootstrap][patch][2407245] = "http://www.drupal.org/files/issues/bootstrap_breadcrumb-2407245-1.patch"
 projects[bootstrap][patch][2316655] = "http://www.drupal.org/files/issues/password_strength-2316655-5.patch"
