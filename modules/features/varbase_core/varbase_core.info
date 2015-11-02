@@ -129,4 +129,5 @@ features[field_base][] = field_machine_name
 features[field_base][] = field_text
 features[field_base][] = field_varbase_title
 features[variable][] = ds_extras_field_template
+features[variable][] = maxlength_always_for_uid1
 project path = profiles/varbase/modules/features

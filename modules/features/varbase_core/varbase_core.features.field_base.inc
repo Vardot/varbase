@@ -10,7 +10,7 @@
 function varbase_core_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_attachment'
+  // Exported field_base: 'field_attachment'.
   $field_bases['field_attachment'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -54,7 +54,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_date'
+  // Exported field_base: 'field_date'.
   $field_bases['field_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -83,7 +83,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_email'
+  // Exported field_base: 'field_email'.
   $field_bases['field_email'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -98,7 +98,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_image'
+  // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -120,7 +120,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_link'
+  // Exported field_base: 'field_link'.
   $field_bases['field_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -149,7 +149,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_machine_name'
+  // Exported field_base: 'field_machine_name'.
   $field_bases['field_machine_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -170,7 +170,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_text'
+  // Exported field_base: 'field_text'.
   $field_bases['field_text'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -189,7 +189,7 @@ function varbase_core_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_varbase_title'
+  // Exported field_base: 'field_varbase_title'.
   $field_bases['field_varbase_title'] = array(
     'active' => 1,
     'cardinality' => 1,
