@@ -144,7 +144,7 @@ projects[media][download][revision] = "cba92a0c1e5e4bb55e96c39cd37eeead2095d6b9"
 projects[media][patch][2018075] = "http://www.drupal.org/files/issues/media_filter_float_delegate-2018075-18.patch"
 projects[media][patch][2062721] = "http://www.drupal.org/files/issues/media-wysiwyg-override-white-list-2062721-83.patch"
 projects[media][patch][2126697] = "http://www.drupal.org/files/issues/media-wysiwyg-alt-title-handling-2126697-64.patch"
-projects[media][patch][2148641] = "http://www.drupal.org/files/issues/media-wysiwyg-images-lose-ckeditor-styles-2148641-1.patch"
+projects[media][patch][2148641] = "http://www.drupal.org/files/issues/media-wysiwyg-images-lose-ckeditor-styles-2148641-8.patch"
 
 
 projects[menu_block][version] = 2.7
