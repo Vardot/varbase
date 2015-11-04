@@ -180,7 +180,7 @@ projects[panels_bootstrap_layouts][download][type] = "git"
 projects[panels_bootstrap_layouts][download][url] = "http://git.drupal.org/project/panels_bootstrap_layouts.git"
 projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd5cf149cdddd97d9148"
 
-projects[recaptcha][version] = 1.12
+projects[recaptcha][version] = 2.0
 projects[recaptcha][subdir] = contrib
 
 projects[remember_me][version] = 1.0
