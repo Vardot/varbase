@@ -98,7 +98,8 @@ projects[fieldable_panels_panes][subdir] = contrib
 projects[file_entity][version] = 2.0-beta2
 projects[file_entity][subdir] = contrib
 projects[file_entity][patch][2533816] = "http://www.drupal.org/files/issues/file_entity-notice_undefined_offset_menu_translate-2533816-4.patch"
-projects[file_entity][patch][1901566] = "http://www.drupal.org/files/issues/resolve_the_allowed-1901566-16.patch"
+projects[file_entity][patch][1901566] = "http://www.drupal.org/files/issues/resolve_the_allowed-1901566-18.patch"
+projects[file_entity][patch][2312603] = "http://www.drupal.org/files/issues/fix_entity_api_create_access-2312603-8.patch"
 
 projects[filefield_paths][version] = 1.0-rc2
 projects[filefield_paths][subdir] = contrib
@@ -145,7 +146,8 @@ projects[media][patch][2018075] = "http://www.drupal.org/files/issues/media_filt
 projects[media][patch][2062721] = "http://www.drupal.org/files/issues/media-wysiwyg-override-white-list-2062721-83.patch"
 projects[media][patch][2126697] = "http://www.drupal.org/files/issues/media-wysiwyg-alt-title-handling-2126697-64.patch"
 projects[media][patch][2148641] = "http://www.drupal.org/files/issues/media-wysiwyg-images-lose-ckeditor-styles-2148641-8.patch"
-
+projects[media][patch][2609244] = "http://www.drupal.org/files/issues/notice_on_file_types-2609244-2.patch"
+projects[media][patch][2610058] = "http://www.drupal.org/files/issues/media_internet_fails_to-2610058-2.patch"
 
 projects[menu_block][version] = 2.7
 projects[menu_block][subdir] = contrib
