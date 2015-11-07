@@ -1,0 +1,36 @@
+name: Varbase
+type: profile
+description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
+version: 8.x-4.x
+core: 8.x
+dependencies:
+  - node
+  - block
+  - breakpoint
+  - ckeditor
+  - config
+  - contextual
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - taxonomy
+  - dblog
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+themes:
+  - bartik
+  - seven
