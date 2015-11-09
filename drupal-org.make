@@ -348,6 +348,9 @@ projects[search_api_solr][subdir] = search
 projects[devel][version] = 1.5
 projects[devel][subdir] = development
 
+projects[imagecache_defaults][version] = 1.0-beta4
+projects[imagecache_defaults][subdir] = development
+
 projects[masquerade][version] = 1.0-rc7
 projects[masquerade][subdir] = development
 

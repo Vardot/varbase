@@ -8,6 +8,7 @@ function _varbase_development_enable_requirements() {
   return array(
     'field_ui',
     'feeds_ui',
+    'imagecache_defaults',
     'views_ui',
     'context_ui',
     'ds_ui',
@@ -62,4 +63,3 @@ function varbase_development_uninstall() {
   // Uninstall modules enabled by the development feature.
   //drupal_uninstall_modules(_varbase_development_enable_requirements());
 }
-
