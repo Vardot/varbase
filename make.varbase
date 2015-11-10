@@ -18,8 +18,7 @@ projects[drupal][patch][2456025] = "http://www.drupal.org/files/issues/php_warni
 projects[drupal][patch][2514136] = "http://www.drupal.org/files/issues/2514136-D7-23.patch"
 
 ; Varbase core patches (custom patches for varbase installation profile)
-projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-8.patch"
-
+projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-9.patch"
 
 ; Varbase profile
 projects[varbase][type] = profile

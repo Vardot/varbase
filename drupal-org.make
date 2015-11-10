@@ -340,6 +340,9 @@ projects[search_api_db][subdir] = search
 projects[search_api_solr][version] = 1.9
 projects[search_api_solr][subdir] = search
 
+projects[search_api_override][version] = 1.0-rc1
+projects[search_api_override][subdir] = search
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contributed modules
