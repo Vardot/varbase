@@ -36,6 +36,7 @@ projects[date][patch][2469189] =  "http://www.drupal.org/files/issues/date-show_
 
 projects[defaultconfig][version] = 1.0-alpha11
 projects[defaultconfig][subdir] = contrib
+projects[defaultconfig][patch][1844748] =  "http://www.drupal.org/files/issues/defaultconfig-index-fix-1844748-4.patch"
 projects[defaultconfig][patch][1900574] =  "http://www.drupal.org/files/issues/1900574.defaultconfig.undefinedindex_13.patch"
 projects[defaultconfig][patch][2008178] =  "http://www.drupal.org/files/issues/defaultconfig-rebuild-2008178-14.patch"
 
