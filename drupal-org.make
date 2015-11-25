@@ -63,7 +63,7 @@ projects[entityreference][subdir] = contrib
 projects[entityreference][version] = "1.x-dev"
 projects[entityreference][download][type] = "git"
 projects[entityreference][download][url] = "http://git.drupal.org/project/entityreference.git"
-projects[entityreference][download][revision] = "ab62b9a1d2e8390a85e7df29441c68e624ce76e8"
+projects[entityreference][download][revision] = "b5009cd1406f72a4fbc1103642ddc69a28d26c5a"
 
 projects[epsacrop][version] = 2.3
 projects[epsacrop][subdir] = contrib
@@ -101,6 +101,7 @@ projects[file_entity][subdir] = contrib
 projects[file_entity][patch][2533816] = "http://www.drupal.org/files/issues/file_entity-notice_undefined_offset_menu_translate-2533816-4.patch"
 projects[file_entity][patch][1901566] = "http://www.drupal.org/files/issues/resolve_the_allowed-1901566-18.patch"
 projects[file_entity][patch][2312603] = "http://www.drupal.org/files/issues/fix_entity_api_create_access-2312603-8.patch"
+projects[file_entity][patch][2461209] = "http://www.drupal.org/files/issues/file_entity-upload_archive_permission-2462309-1.patch"
 
 projects[filefield_paths][version] = 1.0-rc2
 projects[filefield_paths][subdir] = contrib
@@ -197,7 +198,7 @@ projects[smart_trim][patch][2041053] = "http://www.drupal.org/files/issues/strip
 projects[strongarm][version] = 2.0
 projects[strongarm][subdir] = contrib
 
-projects[taxonomy_access_fix][version] = 2.2
+projects[taxonomy_access_fix][version] = 2.3
 projects[taxonomy_access_fix][subdir] = contrib
 
 projects[token][version] = 1.6
@@ -206,22 +207,21 @@ projects[token][subdir] = contrib
 projects[variable][version] = 2.5
 projects[variable][subdir] = contrib
 
-projects[views][version] = 3.11
+projects[views][version] = 3.13
 projects[views][subdir] = contrib
 projects[views][patch][1685144] = "http://www.drupal.org/files/views-1685144-localization-bug_1.patch"
-projects[views][patch][1809958] = "http://www.drupal.org/files/issues/views_with_exposed-1809958-28.patch"
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][subdir] = contrib
 projects[views_bootstrap][version] = "3.x-dev"
 projects[views_bootstrap][download][type] = "git"
 projects[views_bootstrap][download][url] = "http://git.drupal.org/project/views_bootstrap.git"
-projects[views_bootstrap][download][revision] = "8025e821a0450a7535cf7257870efe9a37a5713d"
+projects[views_bootstrap][download][revision] = "48730807d7a25381b05bbabf3a4dc8fa5da49e90"
 
 projects[views_bulk_operations][version] = 3.3
 projects[views_bulk_operations][subdir] = contrib
 
-projects[webform][version] = 4.11
+projects[webform][version] = 4.12
 projects[webform][subdir] = contrib
 
 projects[workbench][version] = 1.2
@@ -394,7 +394,7 @@ projects[httprl][subdir] = performance
 projects[httprl][version] = "1.x-dev"
 projects[httprl][download][type] = "git"
 projects[httprl][download][url] = "http://git.drupal.org/project/httprl.git"
-projects[httprl][download][revision] = "0c6e226c86266da3db590e7a15b45a421ade3ed7"
+projects[httprl][download][revision] = "468c8d4bcab8a94cf2040ab3967867a14fb5007c"
 
 projects[memcache][version] = 1.5
 projects[memcache][subdir] = performance
