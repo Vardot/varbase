@@ -21,5 +21,6 @@ function varbase_security_form_features_export_form_alter(&$form, &$form_state, 
   foreach ($component as $key => $prefix) {
     // Disable not needed strongarm variables
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'security_review_last_run']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'password_policy_install_time']);
   }
 }

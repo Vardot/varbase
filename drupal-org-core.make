@@ -17,5 +17,9 @@ projects[drupal][patch][2456025] = "http://www.drupal.org/files/issues/php_warni
 ; Add default clickjacking defense to core - https://www.drupal.org/node/2514136
 projects[drupal][patch][2514136] = "http://www.drupal.org/files/issues/2514136-D7-23.patch"
 
+; Use a random seed instead of the session_id for CSRF token generation - https://www.drupal.org/node/2245003
+; This is needed by securepages module.
+projects[drupal][patch][2245003] = http://www.drupal.org/files/issues/2245003-use-random-seed-instead-of-session-id-for-csrf-token-d7_2.patch
+
 ; Varbase core patches (custom patches for varbase installation profile)
 projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-9.patch"

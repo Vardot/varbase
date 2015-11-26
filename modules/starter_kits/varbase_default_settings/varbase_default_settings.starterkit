@@ -17,6 +17,7 @@ dependencies[] = remember_me
 dependencies[] = varbase_admin
 dependencies[] = varbase_core
 dependencies[] = varbase_editor
+dependencies[] = varbase_default_settings
 dependencies[] = varbase_fpp
 dependencies[] = varbase_landing
 dependencies[] = varbase_page

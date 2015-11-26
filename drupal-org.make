@@ -403,11 +403,11 @@ projects[memcache][subdir] = performance
 ;; Security contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[username_enumeration_prevention][version] = 1.1
-projects[username_enumeration_prevention][subdir] = security
-
 projects[genpass][version] = 1.0
 projects[genpass][subdir] = security
+
+projects[password_policy][version] = 2.0-alpha5
+projects[password_policy][subdir] = security
 
 projects[security_review][version] = 1.2
 projects[security_review][subdir] = security
@@ -415,6 +415,11 @@ projects[security_review][subdir] = security
 projects[seckit][version] = 1.9
 projects[seckit][subdir] = security
 
+projects[securepages][version] = 1.0-beta2
+projects[securepages][subdir] = security
+
+projects[username_enumeration_prevention][version] = 1.1
+projects[username_enumeration_prevention][subdir] = security
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase features
