@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Enable i18n_entityreference sub-module from i18n_contrib module.
+ */
+function varbase_security_update_7001(&$sandbox) {
+  module_enable(array('password_policy'));
+}
