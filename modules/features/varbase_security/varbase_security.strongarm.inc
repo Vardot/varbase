@@ -35,7 +35,7 @@ function varbase_security_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'genpass_length';
-  $strongarm->value = '8';
+  $strongarm->value = '25';
   $export['genpass_length'] = $strongarm;
 
   $strongarm = new stdClass();
