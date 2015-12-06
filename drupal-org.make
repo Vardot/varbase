@@ -210,6 +210,7 @@ projects[variable][subdir] = contrib
 projects[views][version] = 3.13
 projects[views][subdir] = contrib
 projects[views][patch][1685144] = "http://www.drupal.org/files/views-1685144-localization-bug_1.patch"
+projects[views][patch][339384] = "http://cgit.drupalcode.org/views/patch/?id=e5c8b65610fbfb93215466c2f234ec7aa825a1ba"
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][subdir] = contrib
