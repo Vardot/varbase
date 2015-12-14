@@ -285,7 +285,7 @@ projects[fpa][subdir] = admin
 projects[mail_edit][version] = 1.1
 projects[mail_edit][subdir] = admin
 
-projects[navbar][version] = 1.6
+projects[navbar][version] = 1.7
 projects[navbar][subdir] = admin
 
 projects[responsive_preview][version] = 1.1
