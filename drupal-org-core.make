@@ -22,4 +22,4 @@ projects[drupal][patch][2514136] = "http://www.drupal.org/files/issues/2514136-D
 projects[drupal][patch][2245003] = http://www.drupal.org/files/issues/2245003-use-random-seed-instead-of-session-id-for-csrf-token-d7_2.patch
 
 ; Varbase core patches (custom patches for varbase installation profile)
-projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-10.patch"
+projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-11.patch"
