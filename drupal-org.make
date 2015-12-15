@@ -207,10 +207,13 @@ projects[token][subdir] = contrib
 projects[variable][version] = 2.5
 projects[variable][subdir] = contrib
 
-projects[views][version] = 3.13
+projects[views][type] = module
 projects[views][subdir] = contrib
+projects[views][version] = "3.x-dev"
+projects[views][download][type] = "git"
+projects[views][download][url] = "http://git.drupal.org/project/views.git"
+projects[views][download][revision] = "88b7108b2af12cc29577fbad202ea344251cc219"
 projects[views][patch][1685144] = "http://www.drupal.org/files/views-1685144-localization-bug_1.patch"
-projects[views][patch][339384] = "http://cgit.drupalcode.org/views/patch/?id=e5c8b65610fbfb93215466c2f234ec7aa825a1ba"
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][subdir] = contrib
