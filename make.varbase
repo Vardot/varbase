@@ -22,6 +22,5 @@ projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_impr
 
 ; Varbase profile
 projects[varbase][type] = profile
-projects[varbase][download][type] = git
-projects[varbase][download][branch] = 7.x-3.x
-projects[varbase][download][url] = "http://git.drupal.org/project/varbase.git"
+projects[varbase][subdir] = contrib
+projects[varbase][version] = "3.0-alpha4"
