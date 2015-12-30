@@ -11,10 +11,10 @@ core = 7.x
 projects[better_exposed_filters][version] = 3.2
 projects[better_exposed_filters][subdir] = contrib
 
-projects[block_class][version] = 2.1
+projects[block_class][version] = 2.3
 projects[block_class][subdir] = contrib
 
-projects[breakpoints][version] = 1.3
+projects[breakpoints][version] = 1.4
 projects[breakpoints][subdir] = contrib
 
 projects[captcha][version] = 1.3
@@ -103,7 +103,7 @@ projects[file_entity][patch][1901566] = "http://www.drupal.org/files/issues/reso
 projects[file_entity][patch][2312603] = "http://www.drupal.org/files/issues/fix_entity_api_create_access-2312603-8.patch"
 projects[file_entity][patch][2461209] = "http://www.drupal.org/files/issues/file_entity-upload_archive_permission-2462309-1.patch"
 
-projects[filefield_paths][version] = 1.0-rc2
+projects[filefield_paths][version] = 1.0
 projects[filefield_paths][subdir] = contrib
 
 projects[flexslider][version] = 2.0-rc1
@@ -212,7 +212,7 @@ projects[views][subdir] = contrib
 projects[views][version] = "3.x-dev"
 projects[views][download][type] = "git"
 projects[views][download][url] = "http://git.drupal.org/project/views.git"
-projects[views][download][revision] = "88b7108b2af12cc29577fbad202ea344251cc219"
+projects[views][download][revision] = "6e352ed834e0cc23a1202443f3a653ac65b6d14b"
 projects[views][patch][1685144] = "http://www.drupal.org/files/views-1685144-localization-bug_1.patch"
 
 projects[views_bootstrap][type] = module
@@ -376,13 +376,6 @@ projects[search_krumo][subdir] = development
 projects[advagg][version] = 2.16
 projects[advagg][subdir] = performance
 
-projects[cache_actions][type] = module
-projects[cache_actions][subdir] = performance
-projects[cache_actions][version] = "2.x-dev"
-projects[cache_actions][download][type] = "git"
-projects[cache_actions][download][url] = "http://git.drupal.org/project/cache_actions.git"
-projects[cache_actions][download][revision] = "62dd96e4147a0c86ec05027cba1f147f87e13182"
-
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = performance
 
@@ -430,7 +423,7 @@ projects[username_enumeration_prevention][subdir] = security
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = "3.0-alpha4"
+projects[varbase_editor][version] = "3.x-dev"
 projects[varbase_editor][subdir] = features
 
 ;;;;;;;;;;;;;;;;;;;;;
