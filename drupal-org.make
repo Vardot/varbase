@@ -43,7 +43,7 @@ projects[defaultconfig][patch][2008178] =  "http://www.drupal.org/files/issues/d
 projects[diff][version] = 3.2
 projects[diff][subdir] = contrib
 
-projects[ds][version] = 2.11
+projects[ds][version] = 2.12
 projects[ds][subdir] = contrib
 
 projects[ds_bootstrap_layouts][version] = 3.1
@@ -77,7 +77,7 @@ projects[features][version] = "2.x-dev"
 projects[features][download][type] = "git"
 projects[features][download][url] = "http://git.drupal.org/project/features.git"
 projects[features][download][revision] = "4184b9b169c150f712f15b2cf51686cd56894927"
-projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/features-2324973-undefined_property_status-1_0.patch"
+projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/features-2324973-undefined_property_status-10.patch"
 
 projects[features_extra][version] = 1.0
 projects[features_extra][subdir] = contrib
@@ -89,8 +89,9 @@ projects[field_collection][version] = 1.0-beta10
 projects[field_collection][subdir] = contrib
 projects[field_collection][patch][1063434] =  "http://www.drupal.org/files/issues/field_collection-feeds-1063434-153.patch"
 projects[field_collection][patch][2599248] =  "http://www.drupal.org/files/issues/field-collection-2599248-2.patch"
+projects[field_collection][patch][2382089] =  "http://www.drupal.org/files/issues/2382089-16.field_collection.fetchHostDetails_logic_for_revision_id.patch"
 
-projects[field_group][version] = 1.4
+projects[field_group][version] = 1.5
 projects[field_group][subdir] = contrib
 
 projects[fieldable_panels_panes][version] = 1.7
@@ -129,10 +130,10 @@ projects[libraries][version] = 2.2
 projects[libraries][subdir] = contrib
 projects[libraries][patch][1783598] = "http://www.drupal.org/files/issues/inherited-profiles-1783598-5.patch"
 
-projects[link][version] = 1.3
+projects[link][version] = 1.4
 projects[link][subdir] = contrib
 
-projects[linkit][version] = 3.4
+projects[linkit][version] = 3.5
 projects[linkit][subdir] = contrib
 
 projects[maxlength][version] = 3.2
@@ -154,12 +155,15 @@ projects[media][patch][2610058] = "http://www.drupal.org/files/issues/media_inte
 projects[menu_block][version] = 2.7
 projects[menu_block][subdir] = contrib
 
-projects[menu_position][version] = 1.1
+projects[menu_position][version] = 1.2
 projects[menu_position][subdir] = contrib
 
-projects[node_edit_protection][version] = 1.1
+projects[node_edit_protection][type] = module
 projects[node_edit_protection][subdir] = contrib
-projects[node_edit_protection][patch][2262093] = "http://www.drupal.org/files/issues/warning_appears_when_clicking_submit_some_themes-2262093-1.patch"
+projects[node_edit_protection][version] = "1.x-dev"
+projects[node_edit_protection][download][type] = "git"
+projects[node_edit_protection][download][url] = "http://git.drupal.org/project/node_edit_protection.git"
+projects[node_edit_protection][download][revision] = "e17dc41f5891689c517b228391b56aa56d391d65"
 
 projects[override_node_options][version] = 1.13
 projects[override_node_options][subdir] = contrib
@@ -313,7 +317,7 @@ projects[google_analytics][subdir] = seo
 projects[imagecache_token][version] = 1.0-rc1
 projects[imagecache_token][subdir] = seo
 
-projects[metatag][version] = 1.7
+projects[metatag][version] = 1.10
 projects[metatag][subdir] = seo
 
 projects[pathauto][version] = 1.3
@@ -373,7 +377,7 @@ projects[search_krumo][subdir] = development
 ;; Performance improvement contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[advagg][version] = 2.16
+projects[advagg][version] = 2.17
 projects[advagg][subdir] = performance
 
 projects[elysia_cron][version] = 2.1
@@ -391,7 +395,7 @@ projects[httprl][subdir] = performance
 projects[httprl][version] = "1.x-dev"
 projects[httprl][download][type] = "git"
 projects[httprl][download][url] = "http://git.drupal.org/project/httprl.git"
-projects[httprl][download][revision] = "468c8d4bcab8a94cf2040ab3967867a14fb5007c"
+projects[httprl][download][revision] = "0450bdebbb1d9a132373c33b74d06b41ca5d2664"
 
 projects[memcache][version] = 1.5
 projects[memcache][subdir] = performance
@@ -403,7 +407,7 @@ projects[memcache][subdir] = performance
 projects[genpass][version] = 1.0
 projects[genpass][subdir] = security
 
-projects[password_policy][version] = 2.0-alpha5
+projects[password_policy][version] = 2.0-alpha6
 projects[password_policy][subdir] = security
 
 projects[security_review][version] = 1.2
@@ -415,7 +419,7 @@ projects[seckit][subdir] = security
 projects[securepages][version] = 1.0-beta2
 projects[securepages][subdir] = security
 
-projects[username_enumeration_prevention][version] = 1.1
+projects[username_enumeration_prevention][version] = 1.2
 projects[username_enumeration_prevention][subdir] = security
 
 ;;;;;;;;;;;;;;;;;;;;;
