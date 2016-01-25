@@ -172,6 +172,20 @@ function varbase_default_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'httprl_server_hostname';
+  $strongarm->value = '';
+  $export['httprl_server_hostname'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'httprl_server_port';
+  $strongarm->value = '';
+  $export['httprl_server_port'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_compression_type';
   $strongarm->value = 'min';
   $export['jquery_update_compression_type'] = $strongarm;
@@ -747,6 +761,32 @@ function varbase_default_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'theme_seven_settings';
+  $strongarm->value = array(
+    'default_logo' => 1,
+    'logo_path' => '',
+    'default_favicon' => 1,
+    'favicon_path' => '',
+    'favicon_mimetype' => 'image/vnd.microsoft.icon',
+    'toggle_logo' => 1,
+    'toggle_favicon' => 1,
+    'toggle_name' => 1,
+    'toggle_slogan' => 1,
+    'toggle_node_user_picture' => 1,
+    'toggle_comment_user_picture' => 1,
+    'toggle_comment_user_verification' => 1,
+    'toggle_main_menu' => 1,
+    'toggle_secondary_menu' => 1,
+    'shortcut_module_link' => '1',
+    'logo' => 'http://varbase.local/themes/seven/logo.png',
+    'favicon' => 'http://varbase.local/misc/favicon.ico',
+    'jquery_update_jquery_version' => 'default',
+  );
+  $export['theme_seven_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'theme_vartheme_admin_settings';
   $strongarm->value = array(
     'toggle_logo' => 1,
@@ -775,6 +815,13 @@ function varbase_default_settings_strongarm() {
     'jquery_update_jquery_version' => '1.7',
   );
   $export['theme_vartheme_admin_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'update_check_frequency';
+  $strongarm->value = '7';
+  $export['update_check_frequency'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

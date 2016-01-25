@@ -41,13 +41,19 @@ function varbase_magic_ctools_render_alter(&$info, &$page, &$context) {
 function varbase_magic_preprocess_html(&$variables, $hook) {
   // Re-add the title when it is removed by ctools
   if(!drupal_is_front_page() && $head_title_name = &drupal_static('varbase_magic_ctools_render_alter')) {
-    $head_title = array(
-      'title' => strip_tags($head_title_name),
-      'name' => $variables['head_title_array']['name'],
-    );
+    $page_title = trim($variables['head_title']);
+    $empty_title_paterns = trim('| ' . $variables['head_title_array']['name']);
 
-    $variables['head_title_array'] = $head_title;
-    $variables['head_title'] = implode(' | ', $head_title);
+    // check if the title is empty or the only the sitename is present.
+    if (empty($page_title) || stripos($page_title, $empty_title_paterns) === 0) {
+      $head_title = array(
+        'title' => strip_tags($head_title_name),
+        'name' => $variables['head_title_array']['name'],
+      );
+
+      $variables['head_title_array'] = $head_title;
+      $variables['head_title'] = implode(' | ', $head_title);
+    }
   }
 }
 

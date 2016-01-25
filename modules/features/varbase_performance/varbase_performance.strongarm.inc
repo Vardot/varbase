@@ -106,7 +106,7 @@ function varbase_performance_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'httprl_server_addr';
-  $strongarm->value = '-1';
+  $strongarm->value = '';
   $export['httprl_server_addr'] = $strongarm;
 
   $strongarm = new stdClass();

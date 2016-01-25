@@ -59,7 +59,7 @@ function varbase_security_strongarm() {
   $strongarm->value = array(
     'x_frame' => '1',
     'x_frame_allow_from' => '',
-    'js_css_noscript' => 1,
+    'js_css_noscript' => 0,
     'noscript_message' => 'Sorry, you need to enable JavaScript to visit this website.',
   );
   $export['seckit_clickjacking'] = $strongarm;
