@@ -38,7 +38,6 @@ features[features_api][] = api:2
 features[variable][] = l10n_update_check_disabled
 features[variable][] = l10n_update_check_frequency
 features[variable][] = l10n_update_check_mode
-features[variable][] = l10n_update_download_store
 features[variable][] = l10n_update_import_mode
 features[variable][] = l10n_update_rebuild_projects
 features[variable][] = views_localization_plugin

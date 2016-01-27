@@ -34,13 +34,6 @@ function varbase_internationalization_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'l10n_update_download_store';
-  $strongarm->value = 'sites/all/translations';
-  $export['l10n_update_download_store'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'l10n_update_import_mode';
   $strongarm->value = '2';
   $export['l10n_update_import_mode'] = $strongarm;

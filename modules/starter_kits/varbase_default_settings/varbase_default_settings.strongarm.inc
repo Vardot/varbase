@@ -242,6 +242,13 @@ function varbase_default_settings_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'l10n_update_download_store';
+  $strongarm->value = 'sites/default/files/translations';
+  $export['l10n_update_download_store'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'page_manager_node_view_disabled';
   $strongarm->value = '0';
   $export['page_manager_node_view_disabled'] = $strongarm;

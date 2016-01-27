@@ -45,6 +45,7 @@ projects[diff][subdir] = contrib
 
 projects[ds][version] = 2.12
 projects[ds][subdir] = contrib
+projects[ds][patch][2503653] =  "http://www.drupal.org/files/issues/2503653-15.patch"
 
 projects[ds_bootstrap_layouts][version] = 3.1
 projects[ds_bootstrap_layouts][subdir] = contrib
@@ -190,6 +191,7 @@ projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd
 
 projects[recaptcha][version] = 2.0
 projects[recaptcha][subdir] = contrib
+projects[recaptcha][patch][2493183] = "http://www.drupal.org/files/issues/2493183-recaptcha-use-behaviors-51.patch"
 
 projects[remember_me][version] = 1.0
 projects[remember_me][subdir] = contrib

@@ -61,6 +61,7 @@ features[variable][] = jquery_update_jquery_migrate_enable
 features[variable][] = jquery_update_jquery_migrate_trace
 features[variable][] = jquery_update_jquery_migrate_warnings
 features[variable][] = jquery_update_jquery_version
+features[variable][] = l10n_update_download_store
 features[variable][] = page_manager_node_view_disabled
 features[variable][] = panels_page_allowed_layouts
 features[variable][] = panels_page_allowed_types
