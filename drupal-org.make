@@ -68,6 +68,7 @@ projects[entityreference][download][revision] = "b5009cd1406f72a4fbc1103642ddc69
 
 projects[epsacrop][version] = 2.3
 projects[epsacrop][subdir] = contrib
+projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/epsacrop-fix-manage-image-crops-button-for-unlimited-media-fields-2506721-1.patch"
 
 projects[extlink][version] = 1.18
 projects[extlink][subdir] = contrib
