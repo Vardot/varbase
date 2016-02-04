@@ -34,6 +34,9 @@ projects[date][version] = 2.9
 projects[date][subdir] = contrib
 projects[date][patch][2469189] =  "http://www.drupal.org/files/issues/date-show_remaining_days_notice-2469189-1.patch"
 
+projects[date_popup_authored][version] = 1.2
+projects[date_popup_authored][subdir] = contrib
+
 projects[defaultconfig][version] = 1.0-alpha11
 projects[defaultconfig][subdir] = contrib
 projects[defaultconfig][patch][1844748] =  "http://www.drupal.org/files/issues/defaultconfig-index-fix-1844748-4.patch"
@@ -68,7 +71,7 @@ projects[entityreference][download][revision] = "b5009cd1406f72a4fbc1103642ddc69
 
 projects[epsacrop][version] = 2.3
 projects[epsacrop][subdir] = contrib
-projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/epsacrop-fix-manage-image-crops-button-for-unlimited-media-fields-2506721-1.patch"
+projects[epsacrop][patch][2506721] =  "http://www.drupal.org/files/issues/epsacrop-fix-manage-image-crops-button-for-unlimited-media-fields-2506721-1.patch"
 
 projects[extlink][version] = 1.18
 projects[extlink][subdir] = contrib
@@ -255,19 +258,15 @@ projects[entity_translation][subdir] = internationalization
 projects[i18n][version] = 1.13
 projects[i18n][subdir] = internationalization
 
-projects[i18nviews][type] = module
+projects[i18nviews][version] = 3.0-alpha1
 projects[i18nviews][subdir] = internationalization
-projects[i18nviews][version] = "3.x-dev"
-projects[i18nviews][download][type] = "git"
-projects[i18nviews][download][url] = "http://git.drupal.org/project/i18nviews.git"
-projects[i18nviews][download][revision] = "fdc8c33f91d4e8161cec5a857da4eec95bf8843e"
-projects[i18nviews][download][branch] = "7.x-3.x"
 
 projects[l10n_update][version] = 2.0
 projects[l10n_update][subdir] = internationalization
 
 projects[l10n_client][version] = 1.3
 projects[l10n_client][subdir] = internationalization
+projects[l10n_client][patch][2191771] = "http://cgit.drupalcode.org/l10n_client/patch/?id=980e1ddaf267578f9722d42ac489f47d2bbc8267"
 
 projects[i18n_contrib][version] = 1.0-alpha2
 projects[i18n_contrib][subdir] = internationalization
@@ -320,7 +319,7 @@ projects[google_analytics][subdir] = seo
 projects[imagecache_token][version] = 1.0-rc1
 projects[imagecache_token][subdir] = seo
 
-projects[metatag][version] = 1.10
+projects[metatag][version] = 1.11
 projects[metatag][subdir] = seo
 
 projects[pathauto][version] = 1.3
