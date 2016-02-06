@@ -266,7 +266,7 @@ projects[l10n_update][subdir] = internationalization
 
 projects[l10n_client][version] = 1.3
 projects[l10n_client][subdir] = internationalization
-projects[l10n_client][patch][2191771] = "http://cgit.drupalcode.org/l10n_client/patch/?id=980e1ddaf267578f9722d42ac489f47d2bbc8267"
+projects[l10n_client][patch][2191771] = "http://www.drupal.org/files/issues/l10n_client-browser_is_undefined_jquery_gt_19-2191771-3.patch"
 
 projects[i18n_contrib][version] = 1.0-alpha2
 projects[i18n_contrib][subdir] = internationalization
