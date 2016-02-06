@@ -417,6 +417,7 @@ projects[security_review][subdir] = security
 
 projects[seckit][version] = 1.9
 projects[seckit][subdir] = security
+projects[seckit][patch][2661644] = "http://www.drupal.org/files/issues/seckit-integrate-with-core-setting-2661644-2.patch"
 
 projects[securepages][version] = 1.0-beta2
 projects[securepages][subdir] = security
