@@ -19,6 +19,7 @@ projects[breakpoints][subdir] = contrib
 
 projects[captcha][version] = 1.3
 projects[captcha][subdir] = contrib
+projects[captcha][patch][1395184] = "http://www.drupal.org/files/issues/1395184_31.patch"
 
 projects[ctools][version] = 1.9
 projects[ctools][subdir] = contrib
