@@ -1,6 +1,3 @@
-// Bootstrap variables.
-@import 'variables';
-
 // Media query variables.
 @tablet:  ~"screen and (min-width: @{screen-sm-min})";
 @normal:  ~"screen and (min-width: @{screen-md-min})";
@@ -108,18 +105,24 @@ body {
 }
 
 // Default navbar.
-.navbar.container {
-  @media @tablet {
-    max-width: ((@container-sm - @grid-gutter-width));
+.navbar {
+  &.container {
+    @media @tablet {
+      max-width: ((@container-sm - @grid-gutter-width));
+    }
+    @media @normal {
+      max-width: ((@container-md - @grid-gutter-width));
+    }
+    @media @wide {
+      max-width: ((@container-lg - @grid-gutter-width));
+    }
   }
-  @media @normal {
-    max-width: ((@container-md - @grid-gutter-width));
+  &.container,
+  &.container-fluid {
+    margin-top: 20px;
   }
-  @media @wide {
-    max-width: ((@container-lg - @grid-gutter-width));
-  }
-  margin-top: 20px;
-  > .container {
+  &.container > .container,
+  &.container-fluid > .container-fluid {
     margin: 0;
     padding: 0;
     width: auto;
@@ -221,6 +224,10 @@ form#search-block-form {
   @media @normal {
     float: right;
   }
+
+  .input-group-btn {
+    width: auto;
+  }
 }
 .navbar-search .control-group {
   margin-bottom:0px;
@@ -278,8 +285,51 @@ fieldset .panel-heading a.panel-title {
 .form-actions{
   clear: both;
 }
+.managed-files.table {
+  td:first-child {
+    width: 100%;
+  }
+}
+div.image-widget-data {
+  float: none;
+  overflow: hidden;
+}
+table.sticky-header {
+  z-index: 1;
+}
 .resizable-textarea textarea {
   border-radius: @border-radius-base @border-radius-base 0 0;
+}
+.text-format-wrapper {
+  // Use same value as .form-group.
+  margin-bottom: 15px;
+  > .form-type-textarea,
+  .filter-wrapper {
+    margin-bottom: 0;
+  }
+}
+.filter-wrapper {
+  border-radius: 0 0 @border-radius-base @border-radius-base;
+  .panel-body {
+    padding: 7px;
+  }
+  .form-type-select {
+    min-width: 30%;
+    .filter-list {
+      width: 100%;
+    }
+  }
+}
+.filter-help {
+  margin-top: 5px;
+  text-align: center;
+  @media @tablet {
+    float: right;
+  }
+  .glyphicon {
+    margin: 0 5px 0 0;
+    vertical-align: text-top;
+  }
 }
 .radio, .checkbox {
   &:first-child {
@@ -352,20 +402,23 @@ ul li.leaf {
 // Password strength/match.
 .form-type-password-confirm {
   position: relative;
-  .form-type-password {
-    clear: left;
-  }
   label {
     display: block;
     .label {
       float: right;
     }
   }
-  .help-block {
-    border-left: 1px solid @table-border-color;
-    display: inline-block;
-    margin-left: 2em;
+  .password-help {
     padding-left: 2em;
+    @media (min-width: @screen-sm-min) {
+      border-left: 1px solid @table-border-color;
+      left: percentage((6/12));
+      margin-left: (@grid-gutter-width / 2);
+      position: absolute;
+    }
+    @media (min-width: @screen-md-min) {
+      left: percentage((4/12));
+    }
   }
   .progress {
     background: transparent;
@@ -376,13 +429,19 @@ ul li.leaf {
     height: 4px;
     margin: -5px 0px 0;
   }
+  .form-type-password {
+    clear: left;
+  }
   .form-control-feedback {
     right: 15px;
+  }
+  .help-block {
+    clear: both;
   }
 }
 
 // Views AJAX pager.
-.pagination ul > li > a {
+ul.pagination li > a {
   &.progress-disabled {
     float: left;
   }
@@ -402,11 +461,24 @@ ul li.leaf {
   }
 }
 
-// AJAX "Throbber".
-.ajax-progress {
-  .glyphicon {
-    font-size: 90%;
-    margin: 0 -.25em 0 0.5em;
+// AJAX "Progress bar".
+.ajax-progress-bar {
+  border-radius: 0 0 @border-radius-base @border-radius-base;
+  border: 1px solid @input-group-addon-border-color;
+  margin: -1px 0 0;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  width: 100%;
+  .progress {
+    height: 8px;
+    margin: 0;
+  }
+  .percentage,
+  .message {
+    color: @text-muted;
+    font-size: @font-size-small;
+    line-height: 1em;
+    margin: 5px 0 0;
+    padding: 0;
   }
 }
 
@@ -460,14 +532,6 @@ a .glyphicon-spin {
   100% {
     transform: rotate(359deg);
   }
-}
-
-.glyphicon-refresh {
-  -webkit-transform-origin: 50% 45%;
-  -moz-transform-origin: 50% 45%;
-  -ms-transform-origin: 50% 45%;
-  -o-transform-origin: 50% 45%;
-  transform-origin: 50% 45%;
 }
 
 /**
@@ -738,4 +802,38 @@ div.features-export-list {
       margin-top: 0;
     }
   }
+}
+
+// Navbar module.
+body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top {
+  top: 79px;
+}
+body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top {
+  top: 39px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top {
+  left: 240px;
+  left: 24rem;
+  }
+}
+.navbar-administration #navbar-administration.navbar-oriented .navbar-bar{
+  z-index: 1032;
+}
+.navbar-administration #navbar-administration .navbar-tray {
+  z-index: 1031;
+}
+body.navbar-is-fixed-top.navbar-administration {
+  padding-top: 103px!important;
+}
+body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open {
+  padding-top: 143px!important;
+}
+body.navbar-tray-open.navbar-vertical.navbar-fixed {
+  margin-left: 240px;
+  margin-left: 24rem;
+}
+#navbar-administration.navbar-oriented .navbar-tray-vertical {
+  width: 24rem;
 }
