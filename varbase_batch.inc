@@ -1,8 +1,10 @@
 <?php
 
 function _varbase_install_finished_batch_finished() {
-  // Finally go to homepage
-  drupal_goto('<front>');
+  // Finally go to homepage if not running in drush
+  if (!drupal_is_cli()) {
+    drupal_goto('<front>');
+  }
 }
 
 function _varbase_installer_install($module, $module_name, &$context) {
