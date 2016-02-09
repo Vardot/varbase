@@ -511,41 +511,6 @@ function varbase_core_defaultconfig_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'epsacrop administer available crops'.
-  $permissions['epsacrop administer available crops'] = array(
-    'name' => 'epsacrop administer available crops',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'epsacrop',
-  );
-
-  // Exported permission: 'epsacrop create crops'.
-  $permissions['epsacrop create crops'] = array(
-    'name' => 'epsacrop create crops',
-    'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'epsacrop',
-  );
-
-  // Exported permission: 'epsacrop delete all crops'.
-  $permissions['epsacrop delete all crops'] = array(
-    'name' => 'epsacrop delete all crops',
-    'roles' => array(),
-    'module' => 'epsacrop',
-  );
-
-  // Exported permission: 'epsacrop edit all crops'.
-  $permissions['epsacrop edit all crops'] = array(
-    'name' => 'epsacrop edit all crops',
-    'roles' => array(),
-    'module' => 'epsacrop',
-  );
-
   // Exported permission: 'revert revisions'.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',

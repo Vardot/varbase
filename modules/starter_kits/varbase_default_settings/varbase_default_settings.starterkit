@@ -7,6 +7,7 @@ project = varbase_default_settings
 dependencies[] = config_perms
 dependencies[] = ds
 dependencies[] = ds_extras
+dependencies[] = epsacrop
 dependencies[] = environment_indicator
 dependencies[] = extlink
 dependencies[] = fontawesome

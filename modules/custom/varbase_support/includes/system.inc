@@ -6,6 +6,7 @@
 function varbase_support_date_format_types() {
   return array(
     'varbase_date_and_time' => t('Date & time'),
+    'varbase_files_date' => t('Files date'),
     'varbase_time' => t('Time'),
   );
 }
@@ -33,6 +34,11 @@ function varbase_support_date_formats() {
     array(
       'type' => 'short',
       'format' => 'j F, Y',
+      'locales' => array(),
+    ),
+    array(
+      'type' => 'varbase_files_date',
+      'format' => 'Y-m-d-H-i',
       'locales' => array(),
     ),
   );

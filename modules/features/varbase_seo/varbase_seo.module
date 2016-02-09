@@ -17,6 +17,7 @@ function varbase_seo_form_features_export_form_alter(&$form, &$form_state, $form
   foreach ($component as $key => $prefix) {
     // Disable strongarm variables that are only for the site
     // @todo see what can we do with these variables and site_specific_confige feature
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'xmlsitemap_generated_last']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'xmlsitemap_regenerate_needed']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'metatag_schema_installed']);
   }

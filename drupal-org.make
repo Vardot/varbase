@@ -116,6 +116,9 @@ projects[filefield_paths][subdir] = contrib
 projects[flexslider][version] = 2.0-rc1
 projects[flexslider][subdir] = contrib
 
+projects[focal_point][version] = 1.0-beta6
+projects[focal_point][subdir] = contrib
+
 projects[fontawesome][version] = 2.5
 projects[fontawesome][subdir] = contrib
 
@@ -125,6 +128,9 @@ projects[icon][subdir] = contrib
 projects[image_resize_filter][version] = 1.16
 projects[image_resize_filter][subdir] = contrib
 projects[image_resize_filter][patch][2554507] = "http://www.drupal.org/files/issues/problem_handling_images-2554507-2.patch"
+
+projects[imagemagick][version] = 1.0
+projects[imagemagick][subdir] = contrib
 
 projects[jquery_update][version] = 3.0-alpha3
 projects[jquery_update][subdir] = contrib
@@ -197,6 +203,9 @@ projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd
 projects[recaptcha][version] = 2.0
 projects[recaptcha][subdir] = contrib
 projects[recaptcha][patch][2493183] = "http://www.drupal.org/files/issues/2493183-recaptcha-use-behaviors-51.patch"
+
+projects[retina_images][version] = 1.0-beta4
+projects[retina_images][subdir] = contrib
 
 projects[remember_me][version] = 1.0
 projects[remember_me][subdir] = contrib
@@ -320,7 +329,7 @@ projects[google_analytics][subdir] = seo
 projects[imagecache_token][version] = 1.0-rc1
 projects[imagecache_token][subdir] = seo
 
-projects[metatag][version] = 1.11
+projects[metatag][version] = 1.13
 projects[metatag][subdir] = seo
 
 projects[pathauto][version] = 1.3

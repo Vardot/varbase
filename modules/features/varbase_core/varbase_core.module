@@ -23,6 +23,8 @@ function varbase_core_form_features_export_form_alter(&$form, &$form_state, $for
     // @todo see what can we do with these variables and site_specific_confige feature
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'date_default_timezone']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'diff_theme']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'features_modules_changed']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'features_ignored_orphans']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'file_temporary_path']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'install_profile']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'install_profiles']);
