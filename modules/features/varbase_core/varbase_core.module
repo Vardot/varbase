@@ -66,6 +66,8 @@ function varbase_core_form_features_export_form_alter(&$form, &$form_state, $for
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'node_cron_last']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'path_alias_whitelist']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'update_last_check']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'update_last_email_notification']);
+    unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'update_notification_threshold']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'views_block_hashes']);
     unset($form['export'][$key]['sources']['selected']['#options'][$prefix.'views_defaults']);
 

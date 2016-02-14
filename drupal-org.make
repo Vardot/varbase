@@ -47,9 +47,8 @@ projects[defaultconfig][patch][2008178] =  "http://www.drupal.org/files/issues/d
 projects[diff][version] = 3.2
 projects[diff][subdir] = contrib
 
-projects[ds][version] = 2.12
+projects[ds][version] = 2.13
 projects[ds][subdir] = contrib
-projects[ds][patch][2503653] =  "http://www.drupal.org/files/issues/2503653-15.patch"
 
 projects[ds_bootstrap_layouts][version] = 3.1
 projects[ds_bootstrap_layouts][subdir] = contrib
@@ -91,10 +90,9 @@ projects[features_extra][subdir] = contrib
 projects[features_override][version] = 2.0-rc3
 projects[features_override][subdir] = contrib
 
-projects[field_collection][version] = 1.0-beta10
+projects[field_collection][version] = 1.0-beta11
 projects[field_collection][subdir] = contrib
 projects[field_collection][patch][1063434] =  "http://www.drupal.org/files/issues/field_collection-feeds-1063434-153.patch"
-projects[field_collection][patch][2599248] =  "http://www.drupal.org/files/issues/field-collection-2599248-2.patch"
 projects[field_collection][patch][2382089] =  "http://www.drupal.org/files/issues/2382089-16.field_collection.fetchHostDetails_logic_for_revision_id.patch"
 
 projects[field_group][version] = 1.5
@@ -156,7 +154,7 @@ projects[media][subdir] = contrib
 projects[media][version] = "2.x-dev"
 projects[media][download][type] = "git"
 projects[media][download][url] = "http://git.drupal.org/project/media.git"
-projects[media][download][revision] = "cba92a0c1e5e4bb55e96c39cd37eeead2095d6b9"
+projects[media][download][revision] = "89287f76df1ff24409b3ec474c59218929385733"
 projects[media][patch][2018075] = "http://www.drupal.org/files/issues/media_filter_float_delegate-2018075-18.patch"
 projects[media][patch][2062721] = "http://www.drupal.org/files/issues/media-wysiwyg-override-white-list-2062721-83.patch"
 projects[media][patch][2126697] = "http://www.drupal.org/files/issues/media-wysiwyg-alt-title-handling-2126697-64.patch"
@@ -204,8 +202,9 @@ projects[recaptcha][version] = 2.0
 projects[recaptcha][subdir] = contrib
 projects[recaptcha][patch][2493183] = "http://www.drupal.org/files/issues/2493183-recaptcha-use-behaviors-51.patch"
 
-projects[retina_images][version] = 1.0-beta4
+projects[retina_images][version] = 1.0-beta5
 projects[retina_images][subdir] = contrib
+projects[retina_images][patch][2274303] = "http://www.drupal.org/files/issues/focal_point_support-2274303-2.patch"
 
 projects[remember_me][version] = 1.0
 projects[remember_me][subdir] = contrib
@@ -448,7 +447,7 @@ projects[varbase_editor][subdir] = features
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[adminimal_theme][type] = theme
-projects[adminimal_theme][version] = 1.23
+projects[adminimal_theme][version] = 1.24
 projects[adminimal_theme][subdir] = contrib
 
 projects[bootstrap][type] = theme

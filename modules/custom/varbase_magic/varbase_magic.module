@@ -36,6 +36,34 @@ function varbase_magic_ctools_render_alter(&$info, &$page, &$context) {
 }
 
 /**
+ * Implements hook_panels_panes_prepared_alter().
+ *
+ * Sort the array of panes to be rendered in the order they are defined in the
+ * layout, this is very usfull for modules like views_exclude_previous.
+ */
+function varbase_magic_panels_panes_prepared_alter(&$vars, $context) {
+  $region_weight = $context->plugins['layout']['regions'];
+  $index = 0;
+
+  if (empty($region_weight) || empty($vars)) {
+    return;
+  }
+
+  foreach($region_weight as $key => $value) {
+    $region_weight[$key] = $index * 100;
+    $index++;
+  }
+
+  foreach($vars as $pid => $pane) {
+    $vars[$pid]->render_weight = $region_weight[$pane->panel] + $pane->position;
+  }
+
+  uasort($vars, function ($item1, $item2) {
+    return $item1->render_weight - $item2->render_weight;
+  });
+}
+
+/**
  * Implements hook_preprocess_html()
  */
 function varbase_magic_preprocess_html(&$variables, $hook) {

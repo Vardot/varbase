@@ -48,6 +48,9 @@ features[] = slogan
 features[] = mission
 features[] = favicon
 
+; jQuery Update
+; --------------
+settings[jquery_update_jquery_version] = 1.8
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
 ; settings[bootstrap_cdn] = ''
