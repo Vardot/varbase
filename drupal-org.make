@@ -254,7 +254,7 @@ projects[workbench][patch][1727284] = "http://www.drupal.org/files/1727284-workb
 projects[workbench_moderation][version] = 1.4
 projects[workbench_moderation][subdir] = contrib
 projects[workbench_moderation][patch][2308095] = "http://www.drupal.org/files/issues/workbench_moderation-pathauto_alias_issue-2308095-20.patch"
-projects[workbench_moderation][patch][1470528] = "http://www.drupal.org/files/issues/workbench_moderation-state-feeds-mapper-1470528-14_0.patch"
+projects[workbench_moderation][patch][1470528] = "http://www.drupal.org/files/issues/feeds_mapper_for-1470528-20.patch"
 
 
 ;;;;;;;;;;;;;;;;;;;;;
