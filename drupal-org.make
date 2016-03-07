@@ -24,6 +24,7 @@ projects[captcha][patch][1395184] = "http://www.drupal.org/files/issues/1395184_
 projects[ctools][version] = 1.9
 projects[ctools][subdir] = contrib
 projects[ctools][patch][1910608] = "http://www.drupal.org/files/issues/views_content-keyword-substitution-1910608-33.patch"
+projects[ctools][patch][2679747] = "http://www.drupal.org/files/issues/modal-rtl-css.patch"
 
 projects[config_perms][version] = 2.1
 projects[config_perms][subdir] = contrib
@@ -31,9 +32,8 @@ projects[config_perms][subdir] = contrib
 projects[context][version] = 3.6
 projects[context][subdir] = contrib
 
-projects[date][version] = 2.9
+projects[date][version] = 2.10-beta1
 projects[date][subdir] = contrib
-projects[date][patch][2469189] =  "http://www.drupal.org/files/issues/date-show_remaining_days_notice-2469189-1.patch"
 
 projects[date_popup_authored][version] = 1.2
 projects[date_popup_authored][subdir] = contrib
@@ -72,6 +72,7 @@ projects[entityreference][download][revision] = "b5009cd1406f72a4fbc1103642ddc69
 projects[epsacrop][version] = 2.3
 projects[epsacrop][subdir] = contrib
 projects[epsacrop][patch][2506721] =  "http://www.drupal.org/files/issues/epsacrop-fix-manage-image-crops-button-for-unlimited-media-fields-2506721-1.patch"
+projects[epsacrop][patch][2656058] = "http://www.drupal.org/files/issues/epsacrop-media-browser-fix-2656058-3-d7.patch"
 
 projects[extlink][version] = 1.18
 projects[extlink][subdir] = contrib
@@ -98,7 +99,7 @@ projects[field_collection][patch][2382089] =  "http://www.drupal.org/files/issue
 projects[field_group][version] = 1.5
 projects[field_group][subdir] = contrib
 
-projects[fieldable_panels_panes][version] = 1.7
+projects[fieldable_panels_panes][version] = 1.8
 projects[fieldable_panels_panes][subdir] = contrib
 
 projects[file_entity][version] = 2.0-beta2
@@ -197,6 +198,9 @@ projects[panels_bootstrap_layouts][version] = "3.x-dev"
 projects[panels_bootstrap_layouts][download][type] = "git"
 projects[panels_bootstrap_layouts][download][url] = "http://git.drupal.org/project/panels_bootstrap_layouts.git"
 projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd5cf149cdddd97d9148"
+
+projects[picture][version] = 2.13
+projects[picture][subdir] = contrib
 
 projects[recaptcha][version] = 2.0
 projects[recaptcha][subdir] = contrib
@@ -325,7 +329,7 @@ projects[globalredirect][patch][2385415] = "http://www.drupal.org/files/issues/g
 projects[google_analytics][version] = 2.1
 projects[google_analytics][subdir] = seo
 
-projects[imagecache_token][version] = 1.0-rc1
+projects[imagecache_token][version] = 1.0-rc2
 projects[imagecache_token][subdir] = seo
 
 projects[metatag][version] = 1.13
@@ -368,7 +372,8 @@ projects[search_api_override][subdir] = search
 ;; Development contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[devel][version] = 1.5
+projects[devel][type] = module
+projects[devel][version] = "1.x-dev"
 projects[devel][subdir] = development
 
 projects[imagecache_defaults][version] = 1.0-beta4
@@ -449,6 +454,8 @@ projects[varbase_editor][subdir] = features
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.24
 projects[adminimal_theme][subdir] = contrib
+projects[adminimal_theme][patch][2668936] = "http://www.drupal.org/files/issues/adminimal_theme-box_sizing_breaks_contrib_css-2668936-2.patch"
+projects[adminimal_theme][patch][2679535] = "http://www.drupal.org/files/issues/default-style-rtl.patch"
 
 projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = contrib
