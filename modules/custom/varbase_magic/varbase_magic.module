@@ -119,7 +119,7 @@ function _varbase_magic_fieldable_panel_pane_form_alter(&$form, &$form_state, $f
   }
 
   // Set default value to category for reusable panes
-  if (isset($form['reusable']['category']['#default_value']) && empty($form['reusable']['category']['#default_value'])) {
+  if (empty($form['reusable']['category']['#default_value']) && !empty($entity_info['bundles'][$entity->bundle]['pane category'])) {
     $form['reusable']['category']['#default_value'] = $entity_info['bundles'][$entity->bundle]['pane category'];
   }
   if (isset($form['reusable']['admin_title']['#default_value']) && empty($form['reusable']['admin_title']['#default_value'])) {
