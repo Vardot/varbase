@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Varbase hero slider feature.
+ */
+
+include_once 'varbase_hero_slider.features.inc';
