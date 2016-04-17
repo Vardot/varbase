@@ -25,4 +25,4 @@ projects[drupal][patch][2245003] = http://www.drupal.org/files/issues/2245003-us
 projects[drupal][patch][1232416] = "http://www.drupal.org/files/issues/drupal_alerts_an_ajax-1232416-274.patch"
 
 ; Varbase core patches (custom patches for varbase installation profile)
-projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-11.patch"
+projects[drupal][patch][2531762] = "http://www.drupal.org/files/issues/misc_improvement_for-2531762-13.patch"
