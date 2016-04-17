@@ -14,8 +14,6 @@ div.vertical-tabs ul li.vertical-tab-button a {
 }
 
 fieldset {
-  border: solid 1px #ddd;
-  border-top: 3px solid #0074BD;
   padding: 12px;
   margin: 0 0 20px;
 }
