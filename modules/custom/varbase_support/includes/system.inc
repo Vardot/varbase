@@ -8,6 +8,8 @@ function varbase_support_date_format_types() {
     'varbase_date_and_time' => t('Date & time'),
     'varbase_files_date' => t('Files date'),
     'varbase_time' => t('Time'),
+    'varbase_iso_8601' => t('ISO 8601 date'),
+    'varbase_rfc822' => t('RFC822'),
   );
 }
 
@@ -39,6 +41,16 @@ function varbase_support_date_formats() {
     array(
       'type' => 'varbase_files_date',
       'format' => 'Y-m-d-H-i',
+      'locales' => array(),
+    ),
+    array(
+      'type' => 'varbase_iso_8601',
+      'format' => 'c',
+      'locales' => array(),
+    ),
+    array(
+      'type' => 'varbase_rfc822',
+      'format' => 'r',
       'locales' => array(),
     ),
   );
