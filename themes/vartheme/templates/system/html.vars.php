@@ -7,11 +7,12 @@
  * Most of this code is from zen theme, written by JohnAlbin.
  */
 function vartheme_preprocess_html(&$variables, $hook) {
-  global $theme_path, $base_path;
+  global $theme_path, $base_path, $theme;
   // Attributes for html element.
   $variables['html_attributes_array'] = array(
     'lang' => $variables['language']->language,
     'dir' => $variables['language']->dir,
+    'class' => array(drupal_html_class($theme)),
   );
 
   // Send X-UA-Compatible HTTP header to force IE to use the most recent
