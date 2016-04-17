@@ -11,6 +11,7 @@ function vartheme_preprocess_panels_pane(&$variables) {
   // This view mode have been added to varbase_fpp starter_kit features.
   if (!empty($variables['content']['#view_mode']) && $variables['content']['#view_mode'] == 'varbase_full_screen') {
     $variables['container_classes_array'] = array_diff($variables['container_classes_array'], array('container'));
+    $variables['title_attributes_array']['class'][] = 'container';
   }
 }
 
