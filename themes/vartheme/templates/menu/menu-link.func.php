@@ -24,5 +24,5 @@ function vartheme_menu_link__menu_block(array $variables) {
 
   $element['#attributes']['class'][] = 'item-level-'. $depth;
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>";
 }
