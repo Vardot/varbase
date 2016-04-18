@@ -17,13 +17,16 @@ projects[block_class][subdir] = contrib
 projects[breakpoints][version] = 1.4
 projects[breakpoints][subdir] = contrib
 
+projects[captcha_webform][version] = 1.2
+projects[captcha_webform][subdir] = contrib
+
 projects[captcha][version] = 1.3
 projects[captcha][subdir] = contrib
 projects[captcha][patch][1395184] = "http://www.drupal.org/files/issues/1395184_31.patch"
 
 projects[ctools][version] = 1.9
 projects[ctools][subdir] = contrib
-projects[ctools][patch][1910608] = "http://www.drupal.org/files/issues/views_content-keyword-substitution-1910608-33.patch"
+projects[ctools][patch][1910608] = "http://www.drupal.org/files/issues/views_content-keyword-substitution-1910608-36.patch"
 projects[ctools][patch][2679747] = "http://www.drupal.org/files/issues/modal-rtl-css.patch"
 
 projects[config_perms][version] = 2.1
@@ -34,6 +37,7 @@ projects[context][subdir] = contrib
 
 projects[date][version] = 2.10-beta1
 projects[date][subdir] = contrib
+projects[date][patch][2339119] =  "http://www.drupal.org/files/issues/date-fix_undefine_in_date_text_element_process-2339119-14.patch"
 
 projects[date_popup_authored][version] = 1.2
 projects[date_popup_authored][subdir] = contrib
@@ -59,7 +63,7 @@ projects[elements][subdir] = contrib
 projects[email][version] = 1.3
 projects[email][subdir] = contrib
 
-projects[entity][version] = 1.6
+projects[entity][version] = 1.7
 projects[entity][subdir] = contrib
 
 projects[entityreference][type] = module
@@ -77,12 +81,8 @@ projects[epsacrop][patch][2656058] = "http://www.drupal.org/files/issues/epsacro
 projects[extlink][version] = 1.18
 projects[extlink][subdir] = contrib
 
-projects[features][type] = module
 projects[features][subdir] = contrib
-projects[features][version] = "2.x-dev"
-projects[features][download][type] = "git"
-projects[features][download][url] = "http://git.drupal.org/project/features.git"
-projects[features][download][revision] = "4184b9b169c150f712f15b2cf51686cd56894927"
+projects[features][version] = 2.9
 projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/features-2324973-undefined_property_status-10.patch"
 
 projects[features_extra][version] = 1.0
@@ -95,6 +95,7 @@ projects[field_collection][version] = 1.0-beta11
 projects[field_collection][subdir] = contrib
 projects[field_collection][patch][1063434] =  "http://www.drupal.org/files/issues/field_collection-feeds-1063434-153.patch"
 projects[field_collection][patch][2382089] =  "http://www.drupal.org/files/issues/2382089-16.field_collection.fetchHostDetails_logic_for_revision_id.patch"
+projects[field_collection][patch][1937866] =  "http://www.drupal.org/files/issues/1937866-field_collection-metadata-setter-6.patch"
 
 projects[field_group][version] = 1.5
 projects[field_group][subdir] = contrib
@@ -163,6 +164,9 @@ projects[media][patch][2148641] = "http://www.drupal.org/files/issues/media-wysi
 projects[media][patch][2609244] = "http://www.drupal.org/files/issues/notice_on_file_types-2609244-2.patch"
 projects[media][patch][2610058] = "http://www.drupal.org/files/issues/media_internet_fails_to-2610058-2.patch"
 
+projects[menu_admin_per_menu][version] = 1.1
+projects[menu_admin_per_menu][subdir] = contrib
+
 projects[menu_block][version] = 2.7
 projects[menu_block][subdir] = contrib
 
@@ -201,6 +205,7 @@ projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd
 
 projects[picture][version] = 2.13
 projects[picture][subdir] = contrib
+projects[picture][patch][2331023] = "http://cgit.drupalcode.org/picture/patch/?id=5cc9e8296ad6c02ab1bf9e2e50c2c977405ac44a"
 
 projects[recaptcha][version] = 2.0
 projects[recaptcha][subdir] = contrib
@@ -264,6 +269,10 @@ projects[workbench_moderation][patch][1470528] = "http://www.drupal.org/files/is
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Internationalization contributed modules (Internationalization dependencies)
 ;;;;;;;;;;;;;;;;;;;;;
+
+projects[admin_language][version] = 1.0-beta1
+projects[admin_language][subdir] = internationalization
+projects[admin_language][patch][1952154] = "http://www.drupal.org/files/issues/admin_language-prevent-language-set-to-NULL-1952154-5.patch"
 
 projects[entity_translation][version] = 1.0-beta4
 projects[entity_translation][subdir] = internationalization
@@ -332,7 +341,7 @@ projects[google_analytics][subdir] = seo
 projects[imagecache_token][version] = 1.0-rc2
 projects[imagecache_token][subdir] = seo
 
-projects[metatag][version] = 1.13
+projects[metatag][version] = 1.14
 projects[metatag][subdir] = seo
 
 projects[pathauto][version] = 1.3
@@ -355,13 +364,13 @@ projects[xmlsitemap][subdir] = seo
 ;; Search contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[search_api][version] = 1.16
+projects[search_api][version] = 1.17
 projects[search_api][subdir] = search
 
 projects[search_api_db][version] = 1.5
 projects[search_api_db][subdir] = search
 
-projects[search_api_solr][version] = 1.9
+projects[search_api_solr][version] = 1.10
 projects[search_api_solr][subdir] = search
 
 projects[search_api_override][version] = 1.0-rc1
@@ -393,8 +402,12 @@ projects[search_krumo][subdir] = development
 ;; Performance improvement contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[advagg][version] = 2.17
+projects[advagg][type] = module
 projects[advagg][subdir] = performance
+projects[advagg][version] = "2.x-dev"
+projects[advagg][download][type] = "git"
+projects[advagg][download][url] = "http://git.drupal.org/project/advagg.git"
+projects[advagg][download][revision] = "a319f4af5232d5edfe5dfc495f0353e82f8c9bef"
 
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = performance
@@ -459,13 +472,8 @@ projects[adminimal_theme][patch][2679535] = "http://www.drupal.org/files/issues/
 
 projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = contrib
-projects[bootstrap][version] = 3.1-beta2
-projects[bootstrap][patch][2250349] = "http://www.drupal.org/files/issues/add_new_variables_to-2250349-8.patch"
-projects[bootstrap][patch][2407245] = "http://www.drupal.org/files/issues/bootstrap_breadcrumb-2407245-1.patch"
-projects[bootstrap][patch][2316655] = "http://www.drupal.org/files/issues/password_strength-2316655-5.patch"
-projects[bootstrap][patch][2416485] = "http://www.drupal.org/files/issues/preg_grep_in-2416485-1.patch"
+projects[bootstrap][version] = 3.5
 projects[bootstrap][patch][2470115] = "http://www.drupal.org/files/issues/exclude_rtl_css_files-2470115-1.patch"
-projects[bootstrap][patch][2404405] = "http://www.drupal.org/files/issues/bootstrap-modal-nav-offset-jslint-2404405-2.patch"
 
 
 ;;;;;;;;;;;;;;;;;;;;;
