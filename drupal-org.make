@@ -82,7 +82,7 @@ projects[extlink][version] = 1.18
 projects[extlink][subdir] = contrib
 
 projects[features][subdir] = contrib
-projects[features][version] = 2.9
+projects[features][version] = 2.10
 projects[features][patch][2324973] =  "http://www.drupal.org/files/issues/features-2324973-undefined_property_status-10.patch"
 
 projects[features_extra][version] = 1.0
@@ -205,9 +205,9 @@ projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd
 
 projects[picture][version] = 2.13
 projects[picture][subdir] = contrib
-projects[picture][patch][2331023] = "http://cgit.drupalcode.org/picture/patch/?id=5cc9e8296ad6c02ab1bf9e2e50c2c977405ac44a"
+projects[picture][patch][2331023] = "http://www.drupal.org/files/issues/an_error_in-2331023-11.patch"
 
-projects[recaptcha][version] = 2.0
+projects[recaptcha][version] = 2.1
 projects[recaptcha][subdir] = contrib
 projects[recaptcha][patch][2493183] = "http://www.drupal.org/files/issues/2493183-recaptcha-use-behaviors-51.patch"
 
@@ -335,7 +335,7 @@ projects[globalredirect][version] = 1.5
 projects[globalredirect][subdir] = seo
 projects[globalredirect][patch][2385415] = "http://www.drupal.org/files/issues/globalredirect-prevent_missing_define-2385415.patch"
 
-projects[google_analytics][version] = 2.1
+projects[google_analytics][version] = 2.2
 projects[google_analytics][subdir] = seo
 
 projects[imagecache_token][version] = 1.0-rc2
@@ -364,7 +364,7 @@ projects[xmlsitemap][subdir] = seo
 ;; Search contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[search_api][version] = 1.17
+projects[search_api][version] = 1.18
 projects[search_api][subdir] = search
 
 projects[search_api_db][version] = 1.5
@@ -407,7 +407,7 @@ projects[advagg][subdir] = performance
 projects[advagg][version] = "2.x-dev"
 projects[advagg][download][type] = "git"
 projects[advagg][download][url] = "http://git.drupal.org/project/advagg.git"
-projects[advagg][download][revision] = "a319f4af5232d5edfe5dfc495f0353e82f8c9bef"
+projects[advagg][download][revision] = "764f62c20c137c5f4a23760aaed06e1e5ffbdf06"
 
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = performance
