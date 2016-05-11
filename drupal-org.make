@@ -5,11 +5,16 @@ core = 8.x
 ;; Utilities contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[config_update][type] = "module"
-projects[config_update][version] = "1.x-dev"
+projects[config_update][type] = module
+projects[config_update][download][type] = git
+projects[config_update][download][url] = https://git.drupal.org/project/config_update.git
+projects[config_update][download][tag] = 8.x-1.1
 projects[config_update][subdir] = "contrib/utilities"
-projects[config_update][download][type] = "git"
-projects[config_update][download][branch] = "8.x-1.x"
+
+projects[ctools][type] = module
+projects[ctools][download][type] = git
+projects[ctools][download][url] = https://git.drupal.org/project/ctools
+projects[ctools][download][tag] = 8.x-3.0-alpha26
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules

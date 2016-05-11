@@ -3,7 +3,12 @@ type: profile
 description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
 version: 8.x-4.x
 core: 8.x
+distribution:
+  name: Varbase
+
+# Required modules
 dependencies:
+  # core
   - node
   - block
   - breakpoint
@@ -25,6 +30,13 @@ dependencies:
   - file
   - rdf
   - views
+
+  # contrib
+  - metatag
+
+  # Our own core functionality.
+
+
 themes:
   - bartik
   - seven
