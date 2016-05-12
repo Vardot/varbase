@@ -4,7 +4,7 @@ description: 'Varbase is an enhanced Drupal distribution with a lot of necessiti
 version: 8.x-4.x
 core: 8.x
 distribution:
-  name: Varbase
+  name: Varbase: Drupal Bundled with Necessities | by Vardot
 
 # Required modules
 dependencies:
@@ -32,7 +32,7 @@ dependencies:
   - views
 
   # contrib
-  - metatag
+
 
   # Our own core functionality.
 
