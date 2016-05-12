@@ -9,27 +9,40 @@ distribution:
 # Required modules
 dependencies:
   # core
-  - node
+  - automated_cron
   - block
-  - breakpoint
-  - config
-  - contextual
-  - menu_link_content
-  - datetime
   - block_content
-  - editor
-  - help
-  - image
-  - menu_ui
-  - options
-  - path
+  - breakpoint
+  - ckeditor
+  - color
+  - comment
+  - config
+  - contact
+  - contextual
+  - datetime
+  - dblog
   - dynamic_page_cache
-  - taxonomy
-  - shortcut
-  - toolbar
+  - editor
+  - field_ui
   - file
+  - help
+  - history
+  - image
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - quickedit
   - rdf
+  - search
+  - shortcut
+  - taxonomy
+  - toolbar
+  - tour
   - views
+  - views_ui
 
   # contrib
 

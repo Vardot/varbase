@@ -4,7 +4,6 @@
  * Enables modules and site configuration for a Varbase site installation.
  */
 
-use Drupal\contact\Entity\ContactForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -13,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Allows the profile to alter the site configuration form.
  */
 function varbase_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
-// Add a placeholder as example that one can choose an arbitrary site name.
+  // Add a placeholder as example that one can choose an arbitrary site name.
   $form['site_information']['site_name']['#attributes']['placeholder'] = t('My Official Site Name');
 
   // Default email to start with noreply@ (the site can not send emails back).
