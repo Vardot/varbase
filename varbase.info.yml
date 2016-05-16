@@ -14,19 +14,19 @@ dependencies:
   - block_content
   - breakpoint
   - ckeditor
-  - color
-  - comment
+  #- color
+  #- comment
   - config
-  - contact
+  #- contact
   - contextual
   - datetime
-  - dblog
+  #- dblog
   - dynamic_page_cache
   - editor
   - field_ui
   - file
   - help
-  - history
+  #- history
   - image
   - menu_link_content
   - menu_ui
@@ -36,16 +36,29 @@ dependencies:
   - path
   - quickedit
   - rdf
+  - responsive_image
   - search
   - shortcut
+  - syslog
   - taxonomy
+  - telephone
   - toolbar
   - tour
   - views
   - views_ui
 
   # contrib
-
+  #- field_group
+  #- focal_point
+  #- embed
+  #- entity_embed
+  #- inline_entity_form
+  #- linkit
+  #- metatag
+  #- media_entity
+  #- scheduler
+  #- pathauto
+  #- paragraphs
 
   # Our own core functionality.
 

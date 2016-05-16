@@ -2,19 +2,21 @@ api = 2
 core = 8.x
 
 ;;;;;;;;;;;;;;;;;;;;;
-;; Utilities contrib modules
+;; Contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[config_update][type] = module
+projects[config_update][subdir] = "contrib"
 projects[config_update][download][type] = git
 projects[config_update][download][url] = https://git.drupal.org/project/config_update.git
 projects[config_update][download][tag] = 8.x-1.1
-projects[config_update][subdir] = "contrib/utilities"
 
 projects[ctools][type] = module
+projects[ctools][subdir] = "contrib"
 projects[ctools][download][type] = git
 projects[ctools][download][url] = https://git.drupal.org/project/ctools
 projects[ctools][download][tag] = 8.x-3.0-alpha26
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
