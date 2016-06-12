@@ -397,6 +397,9 @@ projects[module_filter][subdir] = development
 projects[search_krumo][version] = 1.6
 projects[search_krumo][subdir] = development
 
+projects[coffee][version] = 2.2
+projects[coffee][subdir] = development
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Performance improvement contributed modules

@@ -18,6 +18,7 @@ function _varbase_development_enable_requirements() {
     'module_filter',
     'rules_admin',
     'search_krumo',
+    'coffee',
     'variable_admin',
   );
 }
