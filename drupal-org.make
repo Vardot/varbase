@@ -73,10 +73,8 @@ projects[entityreference][download][type] = "git"
 projects[entityreference][download][url] = "http://git.drupal.org/project/entityreference.git"
 projects[entityreference][download][revision] = "b5009cd1406f72a4fbc1103642ddc69a28d26c5a"
 
-projects[epsacrop][version] = 2.3
+projects[epsacrop][version] = 2.4
 projects[epsacrop][subdir] = contrib
-projects[epsacrop][patch][2506721] =  "http://www.drupal.org/files/issues/epsacrop-fix-manage-image-crops-button-for-unlimited-media-fields-2506721-1.patch"
-projects[epsacrop][patch][2656058] = "http://www.drupal.org/files/issues/epsacrop-media-browser-fix-2656058-3-d7.patch"
 
 projects[extlink][version] = 1.18
 projects[extlink][subdir] = contrib
