@@ -339,7 +339,7 @@ projects[google_analytics][subdir] = seo
 projects[imagecache_token][version] = 1.0-rc2
 projects[imagecache_token][subdir] = seo
 
-projects[metatag][version] = 1.14
+projects[metatag][version] = 1.16
 projects[metatag][subdir] = seo
 
 projects[pathauto][version] = 1.3
