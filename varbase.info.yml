@@ -14,10 +14,10 @@ dependencies:
   - block_content
   - breakpoint
   - ckeditor
-  #- color
-  #- comment
+  - color
+  - comment
   - config
-  #- contact
+  - contact
   - contextual
   - datetime
   #- dblog
@@ -26,7 +26,7 @@ dependencies:
   - field_ui
   - file
   - help
-  #- history
+  - history
   - image
   - menu_link_content
   - menu_ui

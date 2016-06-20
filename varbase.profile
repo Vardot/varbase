@@ -18,7 +18,6 @@ function varbase_form_install_configure_form_alter(&$form, FormStateInterface $f
   // Default email to start with noreply@ (the site can not send emails back).
   $form['site_information']['site_mail']['#field_prefix'] = 'noreply@';
   $form['site_information']['site_mail']['#attributes']['style'] = 'width: 25em;';
-  //die(print_r($form['site_information']));
   $form['site_information']['site_mail']['#type'] = 'textfield';
   $form['site_information']['site_mail']['#default_value'] = $_SERVER['SERVER_NAME'];
   $form['site_information']['site_mail']['#element_validate'] = array('_varbase_install_configure_sitemail_validate');
