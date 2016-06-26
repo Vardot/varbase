@@ -48,7 +48,6 @@ projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
 projects[panels][download][tag] = 8.x-3.0-beta4
-projects[panels][patch][] = https://www.drupal.org/files/issues/panels--beta4-4c4a3a7--2747739-2.patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/2667754-3.patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/bandaid.patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/2697587-42.patch
