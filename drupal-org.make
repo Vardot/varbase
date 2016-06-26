@@ -22,6 +22,7 @@ projects[ctools][subdir] = "contrib"
 projects[ctools][download][type] = git
 projects[ctools][download][url] = https://git.drupal.org/project/ctools
 projects[ctools][download][tag] = 8.x-3.0-alpha26
+projects[ctools][patch][] = https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch
 
 projects[token][type] = module
 projects[token][subdir] = "contrib"
@@ -40,18 +41,27 @@ projects[page_manager][subdir] = "contrib"
 projects[page_manager][download][type] = git
 projects[page_manager][download][url] = https://git.drupal.org/project/page_manager
 projects[page_manager][download][tag] = 8.x-1.0-alpha23
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch
 
 projects[panels][type] = module
 projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
 projects[panels][download][tag] = 8.x-3.0-beta4
+projects[panels][patch][] = https://www.drupal.org/files/issues/panels--beta4-4c4a3a7--2747739-2.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/2667754-3.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/bandaid.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/2697587-42.patch
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
 projects[panelizer][download][type] = git
 projects[panelizer][download][url] = https://git.drupal.org/project/panelizer
 projects[panelizer][download][tag] = 8.x-3.0-alpha2
+projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch
+projects[panelizer][patch][] = https://www.drupal.org/files/issues/2701349-2.patch
+projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
+projects[panelizer][patch][] = https://www.drupal.org/files/issues/2664682-45.patch
 
 projects[ds][type] = module
 projects[ds][subdir] = "contrib"
