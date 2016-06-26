@@ -49,24 +49,23 @@ dependencies:
 
   # contrib modules
   - config_update
-  - ctools
   - composer_manager
+  - ctools
+  - token
+  - pathauto
   - page_manager
-  - page_manager_ui
   - panels
-  - panels_ipe
+  - panelizer
   - ds
-  - ds_extras
   - field_group
   - smart_trim
   - advanced_text_formatter
-  - flexslider
-  - flexslider_views
   - block_class
   - metatag
-  - simplesitemap
+  - simple_sitemap
   - google_analytics
   - extlink
+  - features
 
   
   # contrib libraries
