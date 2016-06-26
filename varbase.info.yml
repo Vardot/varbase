@@ -47,22 +47,35 @@ dependencies:
   - views
   - views_ui
 
-  # contrib
-  #- field_group
-  #- focal_point
-  #- embed
-  #- entity_embed
-  #- inline_entity_form
-  #- linkit
-  #- metatag
-  #- media_entity
-  #- scheduler
-  #- pathauto
-  #- paragraphs
+  # contrib modules
+  - config_update
+  - ctools
+  - composer_manager
+  - page_manager
+  - page_manager_ui
+  - panels
+  - panels_ipe
+  - ds
+  - ds_extras
+  - field_group
+  - smart_trim
+  - advanced_text_formatter
+  - flexslider
+  - flexslider_views
+  - block_class
+  - metatag
+  - simplesitemap
+  - google_analytics
+  - extlink
+
+  
+  # contrib libraries
+
 
   # Our own core functionality.
 
 
 themes:
-  - bartik
-  - seven
+  # contrib themes
+  - bootstrap
+  - adminimal_theme
