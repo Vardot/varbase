@@ -62,6 +62,18 @@ projects[panelizer][patch][] = https://www.drupal.org/files/issues/2701349-2.pat
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/2664682-45.patch
 
+projects[layout_plugin][type] = module
+projects[layout_plugin][subdir] = "contrib"
+projects[layout_plugin][download][type] = git
+projects[layout_plugin][download][url] = https://git.drupal.org/project/layout_plugin
+projects[layout_plugin][download][tag] = 8.x-1.0-alpha22
+
+projects[bootstrap_layouts][type] = module
+projects[bootstrap_layouts][subdir] = "contrib"
+projects[bootstrap_layouts][download][type] = git
+projects[bootstrap_layouts][download][url] = https://git.drupal.org/project/bootstrap_layouts
+projects[bootstrap_layouts][download][tag] = 8.x-3.1
+
 projects[ds][type] = module
 projects[ds][subdir] = "contrib"
 projects[ds][download][type] = git
