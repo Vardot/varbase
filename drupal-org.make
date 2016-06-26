@@ -67,9 +67,9 @@ projects[field_group][download][tag] = 8.x-1.0-rc4
 
 projects[smart_trim][type] = module
 projects[smart_trim][subdir] = "contrib"
+projects[smart_trim][version] = "8.x-1.0"
 projects[smart_trim][download][type] = git
-projects[smart_trim][download][url] = https://git.drupal.org/project/smart_trim
-projects[smart_trim][download][tag] = 8.x-1.0-rc4
+projects[smart_trim][download][branch] = 8.x-1.x
 
 projects[advanced_text_formatter][type] = module
 projects[advanced_text_formatter][subdir] = "contrib"
@@ -79,9 +79,9 @@ projects[advanced_text_formatter][download][tag] = 8.x-1.0-beta3
 
 projects[block_class][type] = module
 projects[block_class][subdir] = "contrib"
+projects[block_class][version] = "8.x-1.x-dev"
 projects[block_class][download][type] = git
-projects[block_class][download][url] = https://git.drupal.org/project/block_class
-projects[block_class][download][tag] = 8.x-1.x-dev
+projects[block_class][download][branch] = 8.x-1.x
 
 projects[metatag][type] = module
 projects[metatag][subdir] = "contrib"
@@ -89,11 +89,11 @@ projects[metatag][download][type] = git
 projects[metatag][download][url] = https://git.drupal.org/project/metatag
 projects[metatag][download][tag] = 8.x-1.0-beta4
 
-projects[simplesitemap][type] = module
-projects[simplesitemap][subdir] = "contrib"
-projects[simplesitemap][download][type] = git
-projects[simplesitemap][download][url] = https://git.drupal.org/project/simplesitemap
-projects[simplesitemap][download][tag] = 8.x-2.5
+projects[simple_sitemap][type] = module
+projects[simple_sitemap][subdir] = "contrib"
+projects[simple_sitemap][download][type] = git
+projects[simple_sitemap][download][url] = https://git.drupal.org/project/simplesitemap
+projects[simple_sitemap][download][tag] = 8.x-2.5
 
 projects[google_analytics][type] = module
 projects[google_analytics][subdir] = "contrib"
