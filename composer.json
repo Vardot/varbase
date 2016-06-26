@@ -1,0 +1,59 @@
+{
+  "name": "vardot/varbase",
+  "description": "Drupal Bundled with Necessities | by Vardot",
+  "type": "drupal-profile",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+      "drush/drush": "^9.0",
+      "drupal/drupal-extension": "3.1.5",
+      "phpunit/phpunit": "~4.8",
+      "symfony/css-selector": "~2.8",
+      "drupal/devel": "^8.0.0"
+  },
+  "repositories": [
+      {
+          "type": "composer",
+          "url": "https://packagist.drupal-composer.org"
+      }
+  ],
+  "extra": {
+      "installer-paths": {
+          "docroot/core": [
+              "drupal/core"
+          ],
+          "modules/contrib/{$name}": [
+              "type:drupal-module"
+          ],
+          "themes/contrib/{$name}": [
+              "type:drupal-theme"
+          ]
+      }
+  },
+  "require": {
+      "cweagans/composer-patches": "^1.5.0",
+      "composer/installers": "^1.0",
+      "drupal/core": "^8.1.0",
+      "drupal/config_update": "8.x-1.1",
+      "drupal/composer_manager": "8.x-1.0-rc2",
+      "drupal/ctools": "8.x-3.0-alpha26",
+      "drupal/token": "8.x-1.0-alpha2",
+      "drupal/pathauto": "8.x-1.0-alpha3",
+      "drupal/page_manager": "8.x-1.0-alpha23",
+      "drupal/panels": "8.x-3.0-beta4",
+      "drupal/panelizer": "8.x-3.0-alpha2",
+      "drupal/ds": "8.x-2.5",
+      "drupal/field_group": "8.x-1.0-rc4",
+      "drupal/smart_trim": "8.x-1.0-rc4",
+      "drupal/advanced_text_formatter": "8.x-1.0-beta3",
+      "drupal/block_class": "8.x-1.x-dev",
+      "drupal/metatag": "8.x-1.0-beta4",
+      "drupal/simplesitemap": "8.x-2.5",
+      "drupal/google_analytics": "8.x-2.0",
+      "drupal/extlink": "8.x-1.0-alpha2",
+      "drupal/features": "8.x-3.x-dev",
+      "drupal/bootstrap": "8.x-3.0-beta3",
+      "drupal/adminimal_theme": "8.x-1.1"
+  }
+}
