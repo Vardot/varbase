@@ -14,49 +14,51 @@
   },
   "repositories": [
       {
-          "type": "composer",
-          "url": "https://packagist.drupal-composer.org"
+        "type": "composer",
+        "url": "https://packagist.drupal-composer.org"
       }
   ],
   "extra": {
     "installer-paths": {
         "modules/contrib/{$name}": [
-            "type:drupal-module"
+          "type:drupal-module"
         ],
         "themes/contrib/{$name}": [
-            "type:drupal-theme"
+          "type:drupal-theme"
         ]
     },
     "patches": {
         "drupal/ctools": {
-            "2747739 - Mega patch":
-            "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch"
+          "2747739 - Mega patch":
+          "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch",
+          "2672110 - EntityFieldDeriver naive about field info, throws PHP warnings":
+          "https://www.drupal.org/files/issues/ctools_2672110_16.patch"
         },
         "drupal/page_manager": {
-            "2747739 - Mega Patch":
-            "https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch"
+          "2747739 - Mega Patch":
+          "https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch"
         },
         "drupal/panelizer": {
-            "2747739 - Mega Patch":
-            "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
-            "2701349 - Generate new UUIDs for displays when switching from default to field storage":
-            "https://www.drupal.org/files/issues/2701349-2.patch",
-            "2700597 - Explicitly set the Panels IPE URL root when saving in Panelizer":
-            "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
-            "2664682 - Implement admin UI for editing Panelizer defaults":
-            "https://www.drupal.org/files/issues/2664682-45.patch"
+          "2747739 - Mega Patch":
+          "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
+          "2701349 - Generate new UUIDs for displays when switching from default to field storage":
+          "https://www.drupal.org/files/issues/2701349-2.patch",
+          "2700597 - Explicitly set the Panels IPE URL root when saving in Panelizer":
+          "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
+          "2664682 - Implement admin UI for editing Panelizer defaults":
+          "https://www.drupal.org/files/issues/2664682-45.patch"
         },
         "drupal/panels": {
-            "2667754 - Allow other modules to disable the IPE based on custom logic":
-            "https://www.drupal.org/files/issues/2667754-3.patch",
-            "Bandaid tempstore patch":
-            "https://www.drupal.org/files/issues/bandaid.patch",
-            "2697587 - Wizard API integration":
-            "https://www.drupal.org/files/issues/2697587-42.patch"
+          "2667754 - Allow other modules to disable the IPE based on custom logic":
+          "https://www.drupal.org/files/issues/2667754-3.patch",
+          "Bandaid tempstore patch":
+          "https://www.drupal.org/files/issues/bandaid.patch",
+          "2697587 - Wizard API integration":
+          "https://www.drupal.org/files/issues/2697587-42.patch"
         },
         "drush/drush": {
-            "Adding composer.json support to make-convert command":
-            "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
+          "Adding composer.json support to make-convert command":
+          "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
         }
     } 
   },
