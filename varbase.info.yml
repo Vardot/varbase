@@ -51,6 +51,7 @@ dependencies:
   - config_update
   - composer_manager
   - ctools
+  - ctools_block
   - token
   - pathauto
   - page_manager
@@ -59,6 +60,7 @@ dependencies:
   - layout_plugin
   - bootstrap_layouts
   - ds
+  - ds_extras
   - field_group
   - smart_trim
   - advanced_text_formatter
@@ -78,5 +80,5 @@ dependencies:
 
 themes:
   # contrib themes
-  - bootstrap
   - adminimal_theme
+  - vartheme

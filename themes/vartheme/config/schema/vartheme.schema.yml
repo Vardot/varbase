@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the Vartheme theme.
+
+vartheme.settings:
+  type: theme_settings
+  label: 'Vartheme settings'

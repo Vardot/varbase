@@ -4,10 +4,10 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_branding
-theme: bartik
-region: header
+    - vartheme
+id: vartheme_branding
+theme: vartheme
+region: navigation
 weight: 0
 provider: null
 plugin: system_branding_block
@@ -18,5 +18,5 @@ settings:
   label_display: '0'
   use_site_logo: true
   use_site_name: true
-  use_site_slogan: true
+  use_site_slogan: false
 visibility: {  }

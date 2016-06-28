@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - seven
-id: seven_local_actions
-theme: seven
-region: content
-weight: -10
+    - vartheme
+id: vartheme_local_actions
+theme: vartheme
+region: header
+weight: 20
 provider: null
 plugin: local_actions_block
 settings:

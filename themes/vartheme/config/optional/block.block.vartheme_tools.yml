@@ -6,10 +6,10 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_tools
-theme: bartik
-region: sidebar_first
+    - vartheme
+id: vartheme_tools
+theme: vartheme
+region: sidebar_second
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

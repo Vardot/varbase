@@ -4,11 +4,11 @@ dependencies:
   module:
     - help
   theme:
-    - seven
-id: seven_help
-theme: seven
+    - vartheme
+id: vartheme_help
+theme: vartheme
 region: help
-weight: 0
+weight: -30
 provider: null
 plugin: help_block
 settings:

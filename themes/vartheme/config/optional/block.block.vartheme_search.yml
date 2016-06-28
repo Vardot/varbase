@@ -4,10 +4,10 @@ dependencies:
   module:
     - search
   theme:
-    - bartik
-id: bartik_search
-theme: bartik
-region: sidebar_first
+    - vartheme
+id: vartheme_search
+theme: vartheme
+region: sidebar_second
 weight: -1
 provider: null
 plugin: search_form_block

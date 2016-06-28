@@ -4,11 +4,11 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_messages
-theme: bartik
-region: highlighted
-weight: 0
+    - vartheme
+id: vartheme_messages
+theme: vartheme
+region: header
+weight: -50
 provider: null
 plugin: system_messages_block
 settings:

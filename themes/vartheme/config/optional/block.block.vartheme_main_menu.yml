@@ -6,11 +6,11 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_main_menu
-theme: bartik
-region: primary_menu
-weight: 0
+    - vartheme
+id: vartheme_main_menu
+theme: vartheme
+region: navigation_collapsible
+weight: 10
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -19,5 +19,5 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 2
 visibility: {  }

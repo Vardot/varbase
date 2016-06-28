@@ -6,10 +6,10 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
-id: bartik_footer
-theme: bartik
-region: footer_fifth
+    - vartheme
+id: vartheme_footer
+theme: vartheme
+region: footer
 weight: 0
 provider: null
 plugin: 'system_menu_block:footer'
