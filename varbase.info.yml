@@ -41,6 +41,7 @@ dependencies:
   - telephone
   - toolbar
   - tour
+  - update
   - views
   - views_ui
 
@@ -49,9 +50,11 @@ dependencies:
   - composer_manager
   - ctools
   - ctools_block
+  - ctools_views
   - token
   - pathauto
   - page_manager
+  - page_manager_ui
   - panels
   - panelizer
   - layout_plugin
@@ -67,6 +70,7 @@ dependencies:
   - google_analytics
   - extlink
   - features
+  - features_ui
 
   
   # contrib libraries
