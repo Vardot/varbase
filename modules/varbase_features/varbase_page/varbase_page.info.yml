@@ -1,0 +1,16 @@
+name: 'Varbase Basic page'
+description: 'Provides Basic page content type and related configuration. Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - node
+  - page_manager
+  - path
+  - rdf
+  - text
+  - user
+  - varbase_landing
+  - varbase_site
+version: 8.x-1.0
+package: Varbase
