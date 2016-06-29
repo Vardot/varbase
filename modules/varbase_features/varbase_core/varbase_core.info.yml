@@ -1,0 +1,16 @@
+name: 'Varbase Core'
+description: 'Provides core components required by other features.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - field
+  - file
+  - image
+  - menu_link_content
+  - node
+  - taxonomy
+  - user
+version: 8.x-1.0
+package: Varbase
