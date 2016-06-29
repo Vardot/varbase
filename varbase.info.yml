@@ -72,14 +72,24 @@ dependencies:
   - features
   - features_ui
 
-  
+
   # contrib libraries
 
 
-  # Our own core functionality.
+  # Varbase core functionality.
+  - varbase_core
+  - varbase_page
+  - varbase_landing
+
+  # Varbase site functionality.
+  - varbase_site
+  - varbase_user
 
 
 themes:
   # contrib themes
   - adminimal_theme
+  - bootstrap
+  
+  # custom themes
   - vartheme
