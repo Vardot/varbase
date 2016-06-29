@@ -1,0 +1,13 @@
+name: 'Varbase User'
+description: 'Provide User related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - file
+  - image
+  - path
+  - user
+  - varbase_site
+version: 8.x-1.0
+package: Varbase
