@@ -1,0 +1,16 @@
+name: 'Varbase Site'
+description: 'Provides site components.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - ckeditor
+  - editor
+  - field
+  - filter
+  - node
+  - taxonomy
+  - text
+  - user
+version: 8.x-1.0
+package: Varbase
