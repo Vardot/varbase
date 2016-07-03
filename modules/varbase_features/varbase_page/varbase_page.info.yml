@@ -3,10 +3,17 @@ description: 'Provides Basic page content type and related configuration.'
 type: module
 core: 8.x
 dependencies:
+  - ds
+  - features
   - field
   - node
+  - page
   - page_manager
+  - panelizer
+  - path
   - rdf
+  - smart_trim
   - text
+  - user
 version: 8.x-1.0
 package: Varbase
