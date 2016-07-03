@@ -4,10 +4,8 @@ type: module
 core: 8.x
 dependencies:
   - ds
-  - features
   - field
   - node
-  - page
   - page_manager
   - panelizer
   - path
@@ -15,5 +13,6 @@ dependencies:
   - smart_trim
   - text
   - user
+  - varbase_site
 version: 8.x-1.0
 package: Varbase
