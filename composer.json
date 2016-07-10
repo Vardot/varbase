@@ -85,7 +85,7 @@
     "drupal/simple_sitemap": "8.2.5",
     "drupal/google_analytics": "8.2.0",
     "drupal/extlink": "8.1.0-alpha2",
-    "drupal/features": "8.3.x-dev",
+    "drupal/features": "8.x-3.0-beta6",
     "drupal/bootstrap": "8.3.0-rc1",
     "drupal/adminimal_theme": "8.1.1"
   }

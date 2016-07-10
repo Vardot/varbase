@@ -140,7 +140,7 @@ projects[devel][download][type] = "git"
 projects[devel][download][branch] = "8.x-1.x"
 
 projects[features][type] = "module"
-projects[features][version] = "3.x-dev"
+projects[features][version] = "8.x-3.0-beta6"
 projects[features][subdir] = "contrib/development"
 projects[features][download][type] = "git"
 projects[features][download][branch] = "8.x-3.x"
