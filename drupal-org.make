@@ -150,7 +150,7 @@ projects[features][download][branch] = "8.x-3.x"
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = "8.x-3.0-beta3"
+projects[bootstrap][version] = "8.3.0-rc1"
 projects[bootstrap][subdir] = "contrib"
 projects[bootstrap][download][type] = "git"
 projects[bootstrap][download][branch] = "8.x-3.x"
