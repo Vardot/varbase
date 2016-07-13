@@ -98,7 +98,7 @@ projects[field_collection][patch][1937866] =  "http://www.drupal.org/files/issue
 projects[field_group][version] = 1.5
 projects[field_group][subdir] = contrib
 
-projects[fieldable_panels_panes][version] = 1.8
+projects[fieldable_panels_panes][version] = 1.10
 projects[fieldable_panels_panes][subdir] = contrib
 
 projects[file_entity][version] = 2.0-beta2
@@ -235,11 +235,7 @@ projects[variable][subdir] = contrib
 
 projects[views][type] = module
 projects[views][subdir] = contrib
-projects[views][version] = "3.x-dev"
-projects[views][download][type] = "git"
-projects[views][download][url] = "http://git.drupal.org/project/views.git"
-projects[views][download][revision] = "6e352ed834e0cc23a1202443f3a653ac65b6d14b"
-projects[views][patch][1685144] = "http://www.drupal.org/files/views-1685144-localization-bug_1.patch"
+projects[views][version] = 3.14
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][subdir] = contrib
@@ -355,7 +351,7 @@ projects[redirect][subdir] = seo
 projects[transliteration][version] = 3.2
 projects[transliteration][subdir] = seo
 
-projects[xmlsitemap][version] = 2.2
+projects[xmlsitemap][version] = 2.3
 projects[xmlsitemap][subdir] = seo
 
 ;;;;;;;;;;;;;;;;;;;;;
