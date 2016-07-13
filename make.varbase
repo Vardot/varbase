@@ -1,7 +1,7 @@
 api = 2
 core = 7.x
 projects[drupal][type] = core
-projects[drupal][version] = 7.43
+projects[drupal][version] = 7.44
 
 ; Patches for core
 
@@ -13,9 +13,6 @@ projects[drupal][patch][2339447] = "http://www.drupal.org/files/issues/D7_improv
 
 ; PHP warnings in PHP 5.6 because of always_populate_raw_post_data ini setting - http://www.drupal.org/node/2456025
 projects[drupal][patch][2456025] = "http://www.drupal.org/files/issues/php_warnings_in_php_5_6-2456025-21.patch"
-
-; Add default clickjacking defense to core - https://www.drupal.org/node/2514136
-projects[drupal][patch][2514136] = "http://www.drupal.org/files/issues/2514136-D7-23.patch"
 
 ; Use a random seed instead of the session_id for CSRF token generation - https://www.drupal.org/node/2245003
 ; This is needed by securepages module.
