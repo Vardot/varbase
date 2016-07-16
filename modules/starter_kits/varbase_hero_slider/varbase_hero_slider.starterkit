@@ -1,5 +1,5 @@
-name = Varbase hero slider
-description = Hero slider
+name = Varbase Hero Slider
+description = Have a hero slider feature.
 core = 7.x
 package = Varbase: Starter Kit
 version = 7.x-3.0
