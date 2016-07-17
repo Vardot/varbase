@@ -129,6 +129,18 @@ projects[extlink][download][type] = git
 projects[extlink][download][url] = https://git.drupal.org/project/extlink
 projects[extlink][download][tag] = 8.x-1.0-alpha2
 
+projects[linkit][type] = module
+projects[linkit][subdir] = "contrib"
+projects[linkit][download][type] = git
+projects[linkit][download][url] = https://git.drupal.org/project/linkit
+projects[linkit][download][tag] = 8.x-4.1
+
+projects[anchor_link][type] = module
+projects[anchor_link][subdir] = "contrib"
+projects[anchor_link][download][type] = git
+projects[anchor_link][download][url] = https://git.drupal.org/project/anchor_link
+projects[anchor_link][download][tag] = 8.x-1.0-alpha1
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
@@ -160,3 +172,13 @@ projects[adminimal_theme][version] = "8.x-1.1"
 projects[adminimal_theme][subdir] = "contrib"
 projects[adminimal_theme][download][type] = "git"
 projects[adminimal_theme][download][branch] = "8.x-1.x"
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Varbase public contrib features
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[varbase_editor][type] = "module"
+projects[varbase_editor][version] = "8.x-4.x-dev"
+projects[varbase_editor][subdir] = "varbase_features"
+projects[varbase_editor][download][type] = "git"
+projects[varbase_editor][download][branch] = "8.x-4.x"

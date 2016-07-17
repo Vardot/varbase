@@ -71,6 +71,8 @@ dependencies:
   - extlink
   - features
   - features_ui
+  - linkit
+  - anchor_link
 
 
   # contrib libraries
@@ -80,6 +82,7 @@ dependencies:
   - varbase_core
   - varbase_page
   - varbase_landing
+  - varbase_editor
 
   # Varbase site functionality.
   - varbase_site

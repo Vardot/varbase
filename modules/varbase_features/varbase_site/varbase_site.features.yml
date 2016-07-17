@@ -1,1 +1,8 @@
 bundle: varbase
+excluded:
+  - editor.editor.basic_html
+  - editor.editor.full_html
+  - filter.format.basic_html
+  - filter.format.full_html
+  - filter.format.restricted_html
+required: true

@@ -4,10 +4,7 @@ type: module
 core: 8.x
 dependencies:
   - block_content
-  - ckeditor
-  - editor
   - field
-  - filter
   - node
   - taxonomy
   - text
