@@ -36,7 +36,7 @@ function varbase_fpp_entity_info_alter(&$entity_info) {
     'label' => t('Slideshow'),
     'pane category' => t('Content'),
     'pane top level' => TRUE,
-    'pane icon' => drupal_get_path('module', 'varbase_content_panes') . '/images/icons/slideshow.png',
+    'pane icon' => drupal_get_path('module', 'varbase_fpp') . '/images/icons/slideshow.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
@@ -50,7 +50,7 @@ function varbase_fpp_entity_info_alter(&$entity_info) {
     'label' => t('HTML'),
     'pane category' => t('Page elements'),
     'pane top level' => TRUE,
-    'pane icon' => drupal_get_path('module', 'varbase_content_panes') . '/images/icons/html.png',
+    'pane icon' => drupal_get_path('module', 'varbase_fpp') . '/images/icons/html.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
@@ -64,7 +64,7 @@ function varbase_fpp_entity_info_alter(&$entity_info) {
     'label' => t('Text Block'),
     'pane category' => t('Page elements'),
     'pane top level' => TRUE,
-    'pane icon' => drupal_get_path('module', 'varbase_content_panes') . '/images/icons/text.png',
+    'pane icon' => drupal_get_path('module', 'varbase_fpp') . '/images/icons/text.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
