@@ -111,12 +111,6 @@ projects[metatag][download][type] = git
 projects[metatag][download][url] = https://git.drupal.org/project/metatag
 projects[metatag][download][tag] = 8.x-1.0-beta9
 
-projects[simple_sitemap][type] = module
-projects[simple_sitemap][subdir] = "contrib"
-projects[simple_sitemap][download][type] = git
-projects[simple_sitemap][download][url] = https://git.drupal.org/project/simple_sitemap
-projects[simple_sitemap][download][tag] = 8.x-2.5
-
 projects[google_analytics][type] = module
 projects[google_analytics][subdir] = "contrib"
 projects[google_analytics][download][type] = git
