@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - video_embed_media
+id: video
+label: Video
+description: 'A Video file is a moving visual recording. It could be a YouTube, Vimeo,  Facebook, or other Video sharing services.'
+type: video_embed_field
+queue_thumbnail_downloads: true
+new_revision: true
+type_configuration:
+  source_field: field_media_video_embed_field
+field_map: {  }

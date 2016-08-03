@@ -203,6 +203,12 @@ projects[media_entity_image][download][type] = git
 projects[media_entity_image][download][url] = https://git.drupal.org/project/media_entity_image
 projects[media_entity_image][download][tag] = 8.x-1.1
 
+projects[media_entity_audio][type] = module
+projects[media_entity_audio][subdir] = "contrib"
+projects[media_entity_audio][download][type] = git
+projects[media_entity_audio][download][url] = https://git.drupal.org/project/media_entity_audio
+projects[media_entity_audio][download][tag] = 8.x-1.0-beta3
+
 projects[video_embed_field][type] = module
 projects[video_embed_field][subdir] = "contrib"
 projects[video_embed_field][download][type] = git

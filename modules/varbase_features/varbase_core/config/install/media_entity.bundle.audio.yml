@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_audio
+id: audio
+label: Audio
+description: 'An Audio file is a sound recording.'
+type: audio
+queue_thumbnail_downloads: true
+new_revision: true
+type_configuration:
+  source_field: ''
+field_map: {  }

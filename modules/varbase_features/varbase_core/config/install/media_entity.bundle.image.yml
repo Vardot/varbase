@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+id: image
+label: Image
+description: 'An Image file is a still visual.'
+type: image
+queue_thumbnail_downloads: true
+new_revision: true
+type_configuration:
+  source_field: ''
+  gather_exif: false
+field_map: {  }
