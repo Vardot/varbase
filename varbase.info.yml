@@ -6,77 +6,7 @@ core: 8.x
 distribution:
   name: Varbase
 
-# Required modules
 dependencies:
-  # core
-  - automated_cron
-  - block
-  - block_content
-  - breakpoint
-  - ckeditor
-  - color
-  - config
-  - contextual
-  - datetime
-  - dynamic_page_cache
-  - editor
-  - field_ui
-  - file
-  - help
-  - history
-  - image
-  - menu_link_content
-  - menu_ui
-  - node
-  - options
-  - page_cache
-  - path
-  - quickedit
-  - rdf
-  - responsive_image
-  - search
-  - shortcut
-  - syslog
-  - taxonomy
-  - telephone
-  - toolbar
-  - tour
-  - update
-  - views
-  - views_ui
-
-  # contrib modules
-  - config_update
-  - composer_manager
-  - ctools
-  - ctools_block
-  - ctools_views
-  - token
-  - pathauto
-  - page_manager
-  - page_manager_ui
-  - panels
-  - panelizer
-  - layout_plugin
-  - bootstrap_layouts
-  - ds
-  - ds_extras
-  - field_group
-  - smart_trim
-  - advanced_text_formatter
-  - block_class
-  - metatag
-  - google_analytics
-  - extlink
-  - features
-  - features_ui
-  - linkit
-  - anchor_link
-
-
-  # contrib libraries
-
-
   # Varbase core functionality.
   - varbase_core
   - varbase_page
@@ -89,9 +19,9 @@ dependencies:
 
 
 themes:
-  # contrib themes
+  # Contrib themes.
   - adminimal_theme
   - bootstrap
   
-  # custom themes
+  # Custom themes.
   - vartheme
