@@ -29,33 +29,42 @@
     },
     "patches": {
       "drupal/ctools": {
-        "2747739 - Mega patch":
+        "Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases":
         "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch",
-        "2672110 - EntityFieldDeriver naive about field info, throws PHP warnings":
+        "Issue #2672110 : EntityFieldDeriver naive about field info, throws PHP warnings":
         "https://www.drupal.org/files/issues/ctools_2672110_16.patch"
       },
       "drupal/page_manager": {
-        "2747739 - Mega Patch":
+        "Issue #2747739 : [page_manager] Create and host mega patches until the Panels ecosystem stabilizes and releases":
         "https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch"
       },
-      "drupal/panelizer": {
-        "2747739 - Mega Patch":
-        "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
-        "2701349 - Generate new UUIDs for displays when switching from default to field storage":
-        "https://www.drupal.org/files/issues/2701349-2.patch",
-        "2700597 - Explicitly set the Panels IPE URL root when saving in Panelizer":
-        "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
-        "2664682 - Implement admin UI for editing Panelizer defaults":
-        "https://www.drupal.org/files/issues/2664682-45.patch"
-      },
       "drupal/panels": {
-        "2667754 - Allow other modules to disable the IPE based on custom logic":
+        "Issue #2667754 : Allow other modules to disable the IPE based on custom logic":
         "https://www.drupal.org/files/issues/2667754-3.patch",
         "Bandaid tempstore patch":
         "https://www.drupal.org/files/issues/bandaid.patch",
-        "2697587 - Wizard API integration":
+        "Issue #2697587 : Wizard API integration":
         "https://www.drupal.org/files/issues/2697587-42.patch"
       },
+      "drupal/panelizer": {
+        "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
+        "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
+        "Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage":
+        "https://www.drupal.org/files/issues/2701349-2.patch",
+        "Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer":
+        "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
+        "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
+        "https://www.drupal.org/files/issues/2664682-45.patch"
+      },
+      "drupal/views_infinite_scroll": {
+          "Issue #2701881 : View No results area doesn't appear even view has no results":
+          "https://www.drupal.org/files/issues/no-wrapper-empty-rows-2701881-2.patch"
+      },
+      "drupal/entity_browser": {
+          "Issue #2738843 : The view widget should support radio buttons":
+          "https://www.drupal.org/files/issues/2738843-7.patch"
+      },
+
       "drush/drush": {
         "Adding composer.json support to make-convert command":
         "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
@@ -86,9 +95,19 @@
     "drupal/extlink": "8.1.0-alpha2",
     "drupal/linkit": "8.4.1",
     "drupal/anchor_link": "8.1.0-alpha1",
-    "drupal/varbase_editor": "8.4.x-dev",
     "drupal/features": "8.3.0-beta6",
+    "drupal/views_infinite_scroll": "8.x-1.2",
+    "drupal/embed": "8.1.0-rc3",
+    "drupal/entity": "8.1.0-alpha3",
+    "drupal/entity_browser": "8.1.0-alpha6",
+    "drupal/entity_embed": "8.1.0",
+    "drupal/inline_entity_form": "8.1.0",
+    "drupal/media_entity": "8.1.0",
+    "drupal/media_entity_document": "8.x-1.0",
+    "drupal/media_entity_image": "8.x-1.1",
+    "drupal/video_embed_field": "8.x-1.2",
     "drupal/bootstrap": "8.3.0-rc1",
-    "drupal/adminimal_theme": "8.1.1"
+    "drupal/adminimal_theme": "8.1.1",
+    "drupal/varbase_editor": "8.4.x-dev"
   }
 }

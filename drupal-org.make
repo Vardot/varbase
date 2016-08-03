@@ -22,7 +22,9 @@ projects[ctools][subdir] = "contrib"
 projects[ctools][download][type] = git
 projects[ctools][download][url] = https://git.drupal.org/project/ctools
 projects[ctools][download][tag] = 8.x-3.0-alpha26
+;; Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases
 projects[ctools][patch][] = https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch
+;; Issue #2672110 : EntityFieldDeriver naive about field info, throws PHP warnings
 projects[ctools][patch][] = https://www.drupal.org/files/issues/ctools_2672110_16.patch
 
 projects[token][type] = module
@@ -42,6 +44,7 @@ projects[page_manager][subdir] = "contrib"
 projects[page_manager][download][type] = git
 projects[page_manager][download][url] = https://git.drupal.org/project/page_manager
 projects[page_manager][download][tag] = 8.x-1.0-alpha23
+;; Issue #2747739 : [page_manager] Create and host mega patches until the Panels ecosystem stabilizes and releases
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch
 
 projects[panels][type] = module
@@ -49,8 +52,11 @@ projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
 projects[panels][download][tag] = 8.x-3.0-beta4
+;; Issue #2667754 : Allow other modules to disable the IPE based on custom logic
 projects[panels][patch][] = https://www.drupal.org/files/issues/2667754-3.patch
+;; Bandaid tempstore patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/bandaid.patch
+;; Issue #2697587 : Wizard API integration
 projects[panels][patch][] = https://www.drupal.org/files/issues/2697587-42.patch
 
 projects[panelizer][type] = module
@@ -58,9 +64,13 @@ projects[panelizer][subdir] = "contrib"
 projects[panelizer][download][type] = git
 projects[panelizer][download][url] = https://git.drupal.org/project/panelizer
 projects[panelizer][download][tag] = 8.x-3.0-alpha2
+;; Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch
+;; Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/2701349-2.patch
+;; Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
+;; Issue #2664682 : Implement admin UI for editing Panelizer defaults
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/2664682-45.patch
 
 projects[layout_plugin][type] = module
@@ -135,6 +145,69 @@ projects[anchor_link][download][type] = git
 projects[anchor_link][download][url] = https://git.drupal.org/project/anchor_link
 projects[anchor_link][download][tag] = 8.x-1.0-alpha1
 
+projects[views_infinite_scroll][type] = module
+projects[views_infinite_scroll][download][type] = git
+projects[views_infinite_scroll][download][url] = https://git.drupal.org/project/views_infinite_scroll
+projects[views_infinite_scroll][download][tag] = 8.x-1.0
+;; Issue #2701881 : View No results area doesn't appear even view has no results
+projects[views_infinite_scroll][patch][] = https://www.drupal.org/files/issues/no-wrapper-empty-rows-2701881-2.patch
+
+projects[embed][type] = module
+projects[embed][subdir] = "contrib"
+projects[embed][download][type] = git
+projects[embed][download][url] = https://git.drupal.org/project/embed
+projects[embed][download][tag] = 8.x-1.0-rc3
+
+projects[entity][type] = module
+projects[entity][subdir] = "contrib"
+projects[entity][download][type] = git
+projects[entity][download][url] = https://git.drupal.org/project/entity
+projects[entity][download][tag] = 8.x-1.0-alpha3
+
+projects[entity_browser][type] = module
+projects[entity_browser][subdir] = "contrib"
+projects[entity_browser][download][type] = git
+projects[entity_browser][download][url] = https://git.drupal.org/project/entity_browser
+projects[entity_browser][download][tag] = 8.x-1.0-alpha6
+;; Issue #2738843 : The view widget should support radio buttons
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2738843-7.patch
+
+projects[entity_embed][type] = module
+projects[entity_embed][subdir] = "contrib"
+projects[entity_embed][download][type] = git
+projects[entity_embed][download][url] = https://git.drupal.org/project/entity_embed
+projects[entity_embed][download][tag] = 8.x-1.0-alpha2
+
+projects[inline_entity_form][type] = module
+projects[inline_entity_form][subdir] = "contrib"
+projects[inline_entity_form][download][type] = git
+projects[inline_entity_form][download][url] = https://git.drupal.org/project/inline_entity_form
+projects[inline_entity_form][download][tag] = 8.x-1.0-alpha6
+
+projects[media_entity][type] = module
+projects[media_entity][subdir] = "contrib"
+projects[media_entity][download][type] = git
+projects[media_entity][download][url] = https://git.drupal.org/project/media_entity
+projects[media_entity][download][tag] = 8.x-1.2
+
+projects[media_entity_document][type] = module
+projects[media_entity_document][subdir] = "contrib"
+projects[media_entity_document][download][type] = git
+projects[media_entity_document][download][url] = https://git.drupal.org/project/media_entity_document
+projects[media_entity_document][download][tag] = 8.x-1.0
+
+projects[media_entity_image][type] = module
+projects[media_entity_image][subdir] = "contrib"
+projects[media_entity_image][download][type] = git
+projects[media_entity_image][download][url] = https://git.drupal.org/project/media_entity_image
+projects[media_entity_image][download][tag] = 8.x-1.1
+
+projects[video_embed_field][type] = module
+projects[video_embed_field][subdir] = "contrib"
+projects[video_embed_field][download][type] = git
+projects[video_embed_field][download][url] = https://git.drupal.org/project/video_embed_field
+projects[video_embed_field][download][tag] = 8.x-1.2
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
@@ -172,7 +245,7 @@ projects[adminimal_theme][download][branch] = "8.x-1.x"
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = "module"
-projects[varbase_editor][version] = "8.x-4.x-dev"
 projects[varbase_editor][subdir] = "varbase_features"
+projects[varbase_editor][version] = "8.x-4.x-dev"
 projects[varbase_editor][download][type] = "git"
 projects[varbase_editor][download][branch] = "8.x-4.x"

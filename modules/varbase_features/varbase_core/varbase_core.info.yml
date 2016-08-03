@@ -3,14 +3,83 @@ description: 'Provides core components required by other features.'
 type: module
 core: 8.x
 dependencies:
+  # core
+  - automated_cron
   - block
   - block_content
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - contextual
+  - datetime
+  - dynamic_page_cache
+  - editor
+  - filter
+  - entity_reference
   - field
+  - field_ui
   - file
+  - help
+  - history
   - image
   - menu_link_content
+  - menu_ui
   - node
+  - options
+  - page_cache
+  - path
+  - quickedit
+  - rdf
+  - responsive_image
+  - search
+  - shortcut
+  - syslog
   - taxonomy
+  - telephone
+  - toolbar
+  - tour
+  - update
+  - views
+  - views_ui
   - user
-version: 8.x-1.0
+
+  # contrib modules
+  - config_update
+  - composer_manager
+  - ctools
+  - ctools_block
+  - ctools_views
+  - token
+  - pathauto
+  - page_manager
+  - page_manager_ui
+  - panels
+  - panelizer
+  - layout_plugin
+  - bootstrap_layouts
+  - ds
+  - ds_extras
+  - field_group
+  - smart_trim
+  - advanced_text_formatter
+  - block_class
+  - metatag
+  - google_analytics
+  - extlink
+  - features
+  - features_ui
+  - linkit
+  - anchor_link
+  - views_infinite_scroll
+  - embed
+  - entity_browser
+  - entity_embed
+  - inline_entity_form
+  - media_entity
+  - media_entity_document
+  - media_entity_image
+  - video_embed_media
+  
+version: 8.x-4.0
 package: Varbase
