@@ -20,10 +20,10 @@
   ],
   "extra": {
     "installer-paths": {
-      "modules/contrib/{$name}": [
+      "profile/varbase/modules/contrib/{$name}": [
         "type:drupal-module"
       ],
-      "themes/contrib/{$name}": [
+      "profile/varbase/themes/contrib/{$name}": [
         "type:drupal-theme"
       ]
     },
@@ -103,9 +103,9 @@
     "drupal/entity_embed": "8.1.0",
     "drupal/inline_entity_form": "8.1.0",
     "drupal/media_entity": "8.1.0",
-    "drupal/media_entity_document": "8.x-1.0",
-    "drupal/media_entity_image": "8.x-1.1",
-    "drupal/video_embed_field": "8.x-1.2",
+    "drupal/media_entity_document": "8.1.0",
+    "drupal/media_entity_image": "8.1.1",
+    "drupal/video_embed_field": "8.1.2",
     "drupal/bootstrap": "8.3.0-rc1",
     "drupal/adminimal_theme": "8.1.1",
     "drupal/varbase_editor": "8.4.x-dev"
