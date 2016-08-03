@@ -146,6 +146,7 @@ projects[anchor_link][download][url] = https://git.drupal.org/project/anchor_lin
 projects[anchor_link][download][tag] = 8.x-1.0-alpha1
 
 projects[views_infinite_scroll][type] = module
+projects[views_infinite_scroll][subdir] = "contrib"
 projects[views_infinite_scroll][download][type] = git
 projects[views_infinite_scroll][download][url] = https://git.drupal.org/project/views_infinite_scroll
 projects[views_infinite_scroll][download][tag] = 8.x-1.0
