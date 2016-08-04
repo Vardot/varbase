@@ -35,7 +35,6 @@ install:
 
   # MySQL Configurations
   - mysql -e 'SET GLOBAL wait_timeout = 5400;'
-  - mysql -e 'SET max_allowed_packet = 32M;'
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
