@@ -149,9 +149,7 @@ projects[views_infinite_scroll][type] = module
 projects[views_infinite_scroll][subdir] = "contrib"
 projects[views_infinite_scroll][download][type] = git
 projects[views_infinite_scroll][download][url] = https://git.drupal.org/project/views_infinite_scroll
-projects[views_infinite_scroll][download][tag] = 8.x-1.0
-;; Issue #2701881 : View No results area doesn't appear even view has no results
-projects[views_infinite_scroll][patch][] = https://www.drupal.org/files/issues/no-wrapper-empty-rows-2701881-2.patch
+projects[views_infinite_scroll][download][tag] = 8.x-1.2
 
 projects[embed][type] = module
 projects[embed][subdir] = "contrib"
@@ -177,7 +175,7 @@ projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
 projects[entity_embed][download][type] = git
 projects[entity_embed][download][url] = https://git.drupal.org/project/entity_embed
-projects[entity_embed][download][tag] = 8.x-1.0-alpha2
+projects[entity_embed][download][tag] = 8.x-1.0-alpha3
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][subdir] = "contrib"

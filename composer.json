@@ -31,17 +31,6 @@
       "url": "https://packagist.drupal-composer.org"
     }
   ],
-  "scripts": {
-    "post-install-cmd": [
-        "PhantomInstaller\\Installer::installPhantomJS",
-        "@composer drupal-scaffold",
-        "./bin/phing push"
-    ],
-    "post-update-cmd": [
-        "./bin/phing push"
-    ],
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-  },
   "extra": {
     "installer-paths": {
         "docroot/core": [
@@ -80,20 +69,15 @@
         "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
         "https://www.drupal.org/files/issues/2664682-45.patch"
       },
-      "drupal/views_infinite_scroll": {
-        "Issue #2701881 : View No results area doesn't appear even view has no results":
-        "https://www.drupal.org/files/issues/no-wrapper-empty-rows-2701881-2.patch"
-      },
       "drupal/entity_browser": {
         "Issue #2738843 : The view widget should support radio buttons":
         "https://www.drupal.org/files/issues/2738843-7.patch"
       },
-
       "drush/drush": {
         "Adding composer.json support to make-convert command":
         "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
       }
-    } 
+    }
   },
   "require": {
     "cweagans/composer-patches": "^1.5.0",
@@ -124,8 +108,8 @@
     "drupal/embed": "8.1.0-rc3",
     "drupal/entity": "8.1.0-alpha3",
     "drupal/entity_browser": "8.1.0-alpha6",
-    "drupal/entity_embed": "8.1.0",
-    "drupal/inline_entity_form": "8.1.0",
+    "drupal/entity_embed": "8.1.0-alpha3",
+    "drupal/inline_entity_form": "8.1.0-alpha6",
     "drupal/media_entity": "8.1.0",
     "drupal/media_entity_document": "8.1.0",
     "drupal/media_entity_image": "8.1.1",
