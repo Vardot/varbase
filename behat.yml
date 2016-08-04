@@ -1,4 +1,6 @@
 default:
+  autoload:
+   '': %paths.base%/tests/bootstrap
   suites:
     default:
       paths:
@@ -20,7 +22,7 @@ default:
         alias: self
       subcontexts:
         paths:
-          - tests/features/bootstrap
+          - %paths.base%/tests/features
         autoload: false
 imports:
   - behat.local.yml
