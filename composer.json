@@ -31,14 +31,25 @@
       "url": "https://packagist.drupal-composer.org"
     }
   ],
+  "scripts": {
+    "post-install-cmd": [
+        "PhantomInstaller\\Installer::installPhantomJS",
+        "@composer drupal-scaffold",
+        "./bin/phing push"
+    ],
+    "post-update-cmd": [
+        "./bin/phing push"
+    ],
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+  },
   "extra": {
     "installer-paths": {
-      "profile/varbase/modules/contrib/{$name}": [
-        "type:drupal-module"
-      ],
-      "profile/varbase/themes/contrib/{$name}": [
-        "type:drupal-theme"
-      ]
+        "docroot/core": [
+            "drupal/core"
+        ],
+        "modules/contrib/{$name}": [
+            "type:drupal-module"
+        ]
     },
     "patches": {
       "drupal/ctools": {
