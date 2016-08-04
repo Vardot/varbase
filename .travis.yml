@@ -23,6 +23,7 @@ before_install:
   - phpenv config-rm xdebug.ini
   - composer self-update
   - composer --version
+  - apt-get install curl
 
 install:
   # Add Composer's local bin directory to the PATH so that we will be running
