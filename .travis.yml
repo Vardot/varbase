@@ -1,0 +1,74 @@
+language: php
+cache:
+  bundler: true
+  apt: true
+  directories:
+    - "$HOME/.composer/cache"
+    - "$HOME/.drush/cache"
+    - "$HOME/.npm"
+php:
+  - 5.6
+  - 7.1
+env:
+  - VERSION=HEAD
+  - VERSION=8.x-4.x
+
+sudo: false
+
+mysql:
+  database: drupal
+  username: root
+  encoding: utf8
+
+before_install:
+  - phpenv config-rm xdebug.ini
+  - composer self-update
+  - composer --version
+
+install:
+  # Add Composer's local bin directory to the PATH so that we will be running
+  # our installed versions of Drush, PHPCS, Behat, PhantomJS, etc.
+  - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
+
+  # Composer install should fail on bad patches.
+  - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
+
+  # MySQL Configurations
+  - mysql -e 'SET GLOBAL wait_timeout = 5400;'
+  - mysql -e 'SET max_allowed_packet = 32M;'
+  - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
+
+  # PHP Configurations.
+  - echo 'max_execution_time = 300' >> drupal.php.ini;
+  - echo 'max_input_time = 180' >> drupal.php.ini;
+  - echo 'max_input_vars = 10000' >> drupal.php.ini;
+  - echo 'memory_limit = 512M' >> drupal.php.ini;
+  - echo 'error_reporting = E_ALL' >> drupal.php.ini;
+  - echo 'post_max_size = 64M' >> drupal.php.ini;
+  - echo 'upload_max_filesize = 32M' >> drupal.php.ini;
+  - echo 'max_file_uploads = 40' >> drupal.php.ini;
+  - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
+  - phpenv config-add drupal.php.ini
+  - phpenv rehash
+
+  # Build Varbase.
+  - composer global require phing/phing
+  - phing build -Dversion=$VERSION -Dbranch=$TRAVIS_COMMIT
+
+  # Install Varbase.
+  - phing install -Ddb.database=drupal
+  # Execute database updates if we're not building from HEAD.
+  - if [ $VERSION != "HEAD" ]; then phing update; fi
+
+before_script:
+  - cd docroot
+  - drush runserver --default-server=builtin 8080 &>/dev/null &
+  - phantomjs --webdriver=4444 > /dev/null &
+  - sleep 5
+
+script:
+  - cd ./profiles/varbase
+  - behat --strict
+
+matrix:
+  fast_finish: true

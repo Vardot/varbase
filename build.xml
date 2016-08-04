@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Varbase" default="env">
+
+  <property name="drush" value="${project.basedir}/bin/drush" />
+  <property name="composer" value="/usr/local/bin/composer" />
+  <property name="npm" value="/usr/local/bin/npm" />
+  <property name="rsync" value="/usr/bin/rsync" />
+  <property name="db.type" value="mysql" />
+  <property name="db.host" value="localhost" />
+  <property name="db.user" value="root" />
+  <property name="db.password" value="" />
+  <property name="db.database" value="varbase" />
+  <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
+  <property name="docroot" value="docroot" />
+  <property name="profile" value="${docroot}/profiles/varbase" />
+  <property name="site" value="${docroot}/sites/default" />
+  <property name="version" value="HEAD" />
+
+  <!-- Finds Composer, NPM, and rsync. -->
+  <target name="env">
+    <if>
+      <not>
+        <available file="${drush}" property="drush.exists" />
+      </not>
+      <then>
+        <exec command="which drush" outputProperty="drush" />
+      </then>
+    </if>
+    <exec command="which composer" outputProperty="composer" />
+    <exec command="which npm" outputProperty="npm" />
+    <exec command="which rsync" outputProperty="rsync" />
+
+    <echo message="Found Drush: ${drush}" />
+    <echo message="Found Composer: ${composer}" />
+    <echo message="Found NPM: ${npm}" />
+    <echo message="Found rsync: ${rsync}" />
+  </target>
+
+  <!-- Syncs the Lightning profile into the Drupal code base. -->
+  <target name="push" depends="env">
+    <!-- Create the destination if it doesn't exist. -->
+    <mkdir dir="${profile}" />
+
+    <!--
+    bower.json may have changed, so reinstall front-end dependencies using
+    the version of Bower installed locally in node_modules. The
+    install-libraries script lives in package.json.
+    -->
+    <exec command="${npm} run install-libraries" passthru="true" />
+
+    <!-- rsync the profile, excluding developer flotsam. -->
+    <filesync destinationDir="${profile}" rsyncPath="${rsync}" sourceDir="." verbose="false" exclude=".idea,bin,build.xml,.git,.gitignore,${docroot},karma.conf.js,*.make,node_modules,.travis.yml,vendor" />
+
+    <!-- JS libraries and contrib modules were copied over by the file sync. -->
+    <delete dir="libraries" failonerror="true" quiet="true" />
+    <delete dir="modules/contrib" failonerror="true" quiet="true" />
+  </target>
+
+  <target name="pull" depends="env">
+    <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
+  </target>
+
+  <!-- Builds a Lightning code base using Composer. -->
+  <target name="build" depends="env">
+    <if>
+      <equals arg1="${version}" arg2="HEAD" />
+      <then>
+        <exec command="${composer} install" passthru="true" />
+      </then>
+      <else>
+        <if>
+          <not>
+            <isset property="branch" />
+          </not>
+          <then>
+            <exec command="git rev-parse --abbrev-ref HEAD" outputProperty="branch" />
+          </then>
+        </if>
+        <exec command="git checkout ${version}" />
+        <exec command="${composer} install" passthru="true" />
+        <exec command="git checkout ${branch}" />
+      </else>
+    </if>
+  </target>
+
+  <!-- Installs Lightning and sets it up for development. -->
+  <target name="install" depends="env">
+    <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
+    <exec command="${drush} site-install varbase --yes --account-pass=admin --db-url=${db.url}" dir="${docroot}" passthru="true" />
+    <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${docroot}" />
+    <exec command="${drush} config-set system.performance js.preprocess 0 --yes --format=boolean" dir="${docroot}" />
+    <exec command="${drush} config-set system.logging error_level all --yes" dir="${docroot}" />
+  </target>
+
+  <!-- Builds the Lightning code base from HEAD, overwriting docroot, and
+  executes all database updates. -->
+  <target name="update" depends="env">
+    <phingcall target="build" />
+    <exec command="${drush} cache-rebuild" />
+    <exec command="${drush} updatedb --yes" dir="${docroot}" passthru="true" />
+    <!-- TODO: Execute manual update steps as needed. -->
+  </target>
+
+  <!-- Prepares Lightning for the drupal.org packaging system. -->
+  <target name="package">
+    <!-- Create a symlink to the installed libraries so that the packaging script can scan 'em. -->
+    <symlink target="${profile}/libraries" link="libraries" />
+    <exec command="./package" />
+    <delete file="libraries" />
+  </target>
+
+  <!-- Builds a Lightning code base from legacy Drush make files. -->
+  <target name="build-legacy" depends="env">
+    <if>
+      <available file="${docroot}" property="docroot.exists" />
+      <then>
+        <phingcall target="package" />
+        <delete dir="${docroot}" />
+      </then>
+    </if>
+
+    <exec command="${drush} make drupal-org-core.make ${docroot} --yes" />
+    <exec command="${drush} make drupal-org.make ${docroot} --no-core --yes" />
+    <exec command="${composer} require drush/drush" dir="${docroot}" />
+
+    <phingcall target="push" />
+  </target>
+
+  <!-- Destroys the Drupal installation, but leaves the code base intact. -->
+  <target name="uninstall">
+    <if>
+      <available file="${site}" property="site.exists" />
+      <then>
+        <chmod file="${site}" mode="0755" />
+        <delete failonerror="true" includeemptydirs="true">
+          <fileset dir="${site}">
+            <include name="settings.php" />
+            <include name="files/**" />
+          </fileset>
+        </delete>
+      </then>
+    </if>
+    <!-- TODO: Delete the database and recreate it? -->
+  </target>
+
+  <!-- Destroys the installed code base. -->
+  <target name="destroy" depends="uninstall">
+    <delete failonerror="true" includeemptydirs="true">
+      <fileset dir="." defaultexcludes="false">
+        <include name="bin/**" />
+        <include name="${docroot}/**" />
+        <include name="node_modules/**" />
+        <include name="vendor/**" />
+      </fileset>
+    </delete>
+  </target>
+
+</project>
