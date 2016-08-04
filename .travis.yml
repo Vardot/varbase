@@ -65,7 +65,7 @@ before_script:
   - sleep 5
 
 script:
-  - cd ../profiles/varbase
+  - cd ..
   - behat --strict
 
 matrix:
