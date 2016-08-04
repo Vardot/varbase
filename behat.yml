@@ -1,6 +1,6 @@
 default:
   autoload:
-   '': %paths.base%/tests/bootstrap
+   '': %paths.base%/tests/features/bootstrap
   suites:
     default:
       paths:
