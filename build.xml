@@ -9,7 +9,7 @@
   <property name="db.host" value="localhost" />
   <property name="db.user" value="root" />
   <property name="db.password" value="" />
-  <property name="db.database" value="drupal" />
+  <property name="db.database" value="varbase" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
   <property name="docroot" value="docroot" />
   <property name="profile" value="${docroot}/profiles/varbase" />
@@ -36,7 +36,7 @@
     <echo message="Found rsync: ${rsync}" />
   </target>
 
-  <!-- Syncs the Lightning profile into the Drupal code base. -->
+  <!-- Syncs the Varbase profile into the Drupal code base. -->
   <target name="push" depends="env">
     <!-- Create the destination if it doesn't exist. -->
     <mkdir dir="${profile}" />
@@ -60,7 +60,7 @@
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
   </target>
 
-  <!-- Builds a Lightning code base using Composer. -->
+  <!-- Builds Varbase with Composer. -->
   <target name="build" depends="env">
     <if>
       <equals arg1="${version}" arg2="HEAD" />
@@ -83,7 +83,34 @@
     </if>
   </target>
 
-  <!-- Installs Lightning and sets it up for development. -->
+  <!-- Prepares the docroot for installation via the UI. -->
+  <target name="preinstall" depends="uninstall">
+    <if>
+      <not>
+        <isset property="www.user" />
+      </not>
+      <then>
+        <exec command="whoami" outputProperty="www.user" />
+      </then>
+    </if>
+
+    <copy file="${site}/default.settings.php" tofile="${site}/settings.php" />
+    <chmod file="${site}/settings.php" mode="0775" />
+    <mkdir dir="${site}/files" mode="0775" />
+
+    <if>
+      <and>
+        <isset property="www.user" />
+        <isset property="www.group" />
+      </and>
+      <then>
+        <chown file="${site}/settings.php" user="${www.user}" group="${www.group}" />
+        <chown file="${site}/files" user="${www.user}" group="${www.group}" />
+      </then>
+    </if>
+  </target>
+
+  <!-- Installs Varbase and sets it up for development. -->
   <target name="install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
     <exec command="${drush} site-install varbase --yes --account-pass=admin --db-url=${db.url}" dir="${docroot}" passthru="true" />
@@ -92,7 +119,7 @@
     <exec command="${drush} config-set system.logging error_level all --yes" dir="${docroot}" />
   </target>
 
-  <!-- Builds the Lightning code base from HEAD, overwriting docroot, and
+  <!-- Builds the Varbase code base from HEAD, overwriting docroot, and
   executes all database updates. -->
   <target name="update" depends="env">
     <phingcall target="build" />
@@ -101,7 +128,7 @@
     <!-- TODO: Execute manual update steps as needed. -->
   </target>
 
-  <!-- Prepares Lightning for the drupal.org packaging system. -->
+  <!-- Prepares Varbase for the drupal.org packaging system. -->
   <target name="package">
     <!-- Create a symlink to the installed libraries so that the packaging script can scan 'em. -->
     <symlink target="${profile}/libraries" link="libraries" />
