@@ -8,9 +8,9 @@ cache:
     - "$HOME/.npm"
 php:
   - 5.6
+  - 7.0
   - 7.1
 env:
-  - VERSION=HEAD
   - VERSION=8.x-4.x
 
 sudo: false
