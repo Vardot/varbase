@@ -17,7 +17,11 @@
       "jcalderonzumba/gastonjs": "~1.0.2",
       "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
       "mikey179/vfsStream": "~1.2",
+      "behat/mink-zombie-driver": "@stable",
+      "behat/mink-sahi-driver": "@stable",
+      "behatch/contexts": "*",
       "phpunit/phpunit": "~4.8",
+      "emuse/behat-html-formatter": "@stable",
       "symfony/css-selector": "~2.8",
       "drupal/devel": "^8.0.0",
       "squizlabs/php_codesniffer": "2.*"

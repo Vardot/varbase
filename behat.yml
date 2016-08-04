@@ -4,6 +4,7 @@ default:
       paths:
         - %paths.base%/tests/features
       contexts:
+        - VarbaseContext
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MessageContext
