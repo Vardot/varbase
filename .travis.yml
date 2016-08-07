@@ -7,11 +7,12 @@ cache:
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
 php:
+  - 5.5
   - 5.6
   - 7.0
 env:
   - VERSION=8.x-4.x
-
+  
 sudo: false
 
 mysql:
@@ -25,14 +26,10 @@ before_install:
   - composer --version
 
 install:
-  # Add Composer's local bin directory to the PATH so that we will be running
-  # our installed versions of Drush, PHPCS, Behat, PhantomJS, etc.
   - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
 
-  # Composer install should fail on bad patches.
   - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
 
-  # MySQL Configurations
   - mysql -e 'SET GLOBAL wait_timeout = 5400;'
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
@@ -49,13 +46,10 @@ install:
   - phpenv config-add drupal.php.ini
   - phpenv rehash
 
-  # Build Varbase.
   - composer global require phing/phing
   - phing build -Dversion=$VERSION -Dbranch=$TRAVIS_COMMIT
 
-  # Install Varbase.
   - phing install -Ddb.database=drupal
-  # Execute database updates if we're not building from HEAD.
   - if [ $VERSION != "HEAD" ]; then phing update; fi
 
 before_script:
@@ -67,6 +61,6 @@ before_script:
 script:
   - cd ./profiles/varbase
   - behat --strict
-  
+
 matrix:
   fast_finish: true

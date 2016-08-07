@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "install-libraries": "npm install && bower install"
+  },
+  "dependencies": {
+    "bower": "1.7.x"
+  },
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Vardot/varbase.git"
+  }
+}

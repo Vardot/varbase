@@ -32,58 +32,63 @@
       "url": "https://packagist.drupal-composer.org"
     }
   ],
+  "scripts": {
+      "post-install-cmd": [
+          "PhantomInstaller\\Installer::installPhantomJS",
+          "@composer drupal-scaffold",
+          "./bin/phing push"
+      ],
+      "post-update-cmd": [
+          "./bin/phing push"
+      ],
+      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+  },
   "extra": {
-    "installer-paths": {
-        "docroot": [
-            "drupal/drupal"
-        ],
-        "docroot/profiles/{$name}": [
-            "type:drupal-profile"
-        ],
-        "docroot/profiles/varbase/modules/contrib/{$name}": [
-            "type:drupal-module"
-        ],
-        "docroot/profiles/varbase/themes/contrib/{$name}": [
-            "type:drupal-theme"
-        ]
+     "installer-paths": {
+         "docroot": [
+             "drupal/drupal"
+         ],
+         "modules/contrib/{$name}": [
+             "type:drupal-module"
+         ]
+     }
+   },
+  "patches": {
+    "drupal/ctools": {
+      "Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases":
+      "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch",
+      "Issue #2672110 : EntityFieldDeriver naive about field info, throws PHP warnings":
+      "https://www.drupal.org/files/issues/ctools_2672110_16.patch"
     },
-    "patches": {
-      "drupal/ctools": {
-        "Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-        "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch",
-        "Issue #2672110 : EntityFieldDeriver naive about field info, throws PHP warnings":
-        "https://www.drupal.org/files/issues/ctools_2672110_16.patch"
-      },
-      "drupal/page_manager": {
-        "Issue #2747739 : [page_manager] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-        "https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch"
-      },
-      "drupal/panels": {
-        "Issue #2667754 : Allow other modules to disable the IPE based on custom logic":
-        "https://www.drupal.org/files/issues/2667754-3.patch",
-        "Bandaid tempstore patch":
-        "https://www.drupal.org/files/issues/bandaid.patch",
-        "Issue #2697587 : Wizard API integration":
-        "https://www.drupal.org/files/issues/2697587-42.patch"
-      },
-      "drupal/panelizer": {
-        "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-        "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
-        "Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage":
-        "https://www.drupal.org/files/issues/2701349-2.patch",
-        "Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer":
-        "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
-        "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
-        "https://www.drupal.org/files/issues/2664682-45.patch"
-      },
-      "drupal/entity_browser": {
-        "Issue #2738843 : The view widget should support radio buttons":
-        "https://www.drupal.org/files/issues/2738843-7.patch"
-      },
-      "drush/drush": {
-        "Adding composer.json support to make-convert command":
-        "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
-      }
+    "drupal/page_manager": {
+      "Issue #2747739 : [page_manager] Create and host mega patches until the Panels ecosystem stabilizes and releases":
+      "https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch"
+    },
+    "drupal/panels": {
+      "Issue #2667754 : Allow other modules to disable the IPE based on custom logic":
+      "https://www.drupal.org/files/issues/2667754-3.patch",
+      "Bandaid tempstore patch":
+      "https://www.drupal.org/files/issues/bandaid.patch",
+      "Issue #2697587 : Wizard API integration":
+      "https://www.drupal.org/files/issues/2697587-42.patch"
+    },
+    "drupal/panelizer": {
+      "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
+      "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
+      "Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage":
+      "https://www.drupal.org/files/issues/2701349-2.patch",
+      "Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer":
+      "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
+      "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
+      "https://www.drupal.org/files/issues/2664682-45.patch"
+    },
+    "drupal/entity_browser": {
+      "Issue #2738843 : The view widget should support radio buttons":
+      "https://www.drupal.org/files/issues/2738843-7.patch"
+    },
+    "drush/drush": {
+      "Adding composer.json support to make-convert command":
+      "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
     }
   },
   "require": {
