@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \VarbaseContext.
+ * Contains \FeatureContext.
  */
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
@@ -11,7 +11,7 @@ use Behat\Behat\Context\SnippetAcceptingContext;
 /**
  * Defines application features from the specific context.
  */
-class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext {
+class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
 
   /**
    * #varbase : To authenticat a user with a gavin username and password on the spot.
