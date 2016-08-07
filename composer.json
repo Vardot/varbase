@@ -37,13 +37,13 @@
         "docroot": [
             "drupal/drupal"
         ],
-        "profiles/{$name}": [
+        "docroot/profiles/{$name}": [
             "type:drupal-profile"
         ],
-        "modules/contrib/{$name}": [
+        "docroot/profiles/varbase/modules/contrib/{$name}": [
             "type:drupal-module"
         ],
-        "themes/contrib/{$name}": [
+        "docroot/profiles/varbase/themes/contrib/{$name}": [
             "type:drupal-theme"
         ]
     },
