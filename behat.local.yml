@@ -1,7 +1,7 @@
 default:
   extensions:
     Behat\MinkExtension:
-      base_url: 'http://127.0.0.1'
+      base_url: 'http://127.0.0.1:8080'
     Drupal\DrupalExtension:
       drupal:
         drupal_root: '../../'

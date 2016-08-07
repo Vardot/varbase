@@ -60,12 +60,12 @@ install:
 
 before_script:
   - cd docroot
-  - drush rs 80 &>/dev/null &
+  - drush runserver --default-server=builtin 8080 &>/dev/null &
   - phantomjs --webdriver=4444 > /dev/null &
   - sleep 5
 
 script:
-  - cd ..
+  - cd ./profiles/varbase
   - behat --strict
   
 matrix:
