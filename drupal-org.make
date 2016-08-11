@@ -235,7 +235,7 @@ projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = "contrib"
 projects[bootstrap][download][type] = git
 projects[bootstrap][download][url] = https://git.drupal.org/project/bootstrap
-projects[bootstrap][download][tag] = 8.3.0-rc2
+projects[bootstrap][download][tag] = 8.x-3.0-rc2
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][subdir] = "contrib"
