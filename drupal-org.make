@@ -99,9 +99,9 @@ projects[field_group][download][tag] = 8.x-1.0-rc4
 
 projects[smart_trim][type] = module
 projects[smart_trim][subdir] = "contrib"
-projects[smart_trim][version] = "8.x-1.0"
 projects[smart_trim][download][type] = git
-projects[smart_trim][download][branch] = 8.x-1.x
+projects[smart_trim][download][url] = https://git.drupal.org/project/smart_trim
+projects[smart_trim][download][tag] = 8.x-1.0
 
 projects[advanced_text_formatter][type] = module
 projects[advanced_text_formatter][subdir] = "contrib"
@@ -221,27 +221,27 @@ projects[devel][subdir] = "contrib/development"
 projects[devel][download][type] = "git"
 projects[devel][download][branch] = "8.x-1.x"
 
-projects[features][type] = "module"
-projects[features][version] = "8.x-3.0-beta7"
-projects[features][subdir] = "contrib/development"
-projects[features][download][type] = "git"
-projects[features][download][branch] = "8.x-3.x"
+projects[features][type] = module
+projects[features][subdir] = "contrib"
+projects[features][download][type] = git
+projects[features][download][url] = https://git.drupal.org/project/features
+projects[features][download][tag] = 8.x-3.0-beta7
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = "8.3.0-rc1"
 projects[bootstrap][subdir] = "contrib"
-projects[bootstrap][download][type] = "git"
-projects[bootstrap][download][branch] = "8.x-3.x"
+projects[bootstrap][download][type] = git
+projects[bootstrap][download][url] = https://git.drupal.org/project/bootstrap
+projects[bootstrap][download][tag] = 8.3.0-rc2
 
 projects[adminimal_theme][type] = theme
-projects[adminimal_theme][version] = "8.x-1.1"
 projects[adminimal_theme][subdir] = "contrib"
-projects[adminimal_theme][download][type] = "git"
-projects[adminimal_theme][download][branch] = "8.x-1.x"
+projects[adminimal_theme][download][type] = git
+projects[adminimal_theme][download][url] = https://git.drupal.org/project/adminimal_theme
+projects[adminimal_theme][download][tag] = 8.x-1.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features
