@@ -215,17 +215,17 @@ projects[video_embed_field][download][tag] = 8.x-1.2
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[devel][type] = "module"
-projects[devel][version] = "1.x-dev"
-projects[devel][subdir] = "contrib/development"
-projects[devel][download][type] = "git"
-projects[devel][download][branch] = "8.x-1.x"
-
 projects[features][type] = module
 projects[features][subdir] = "contrib"
 projects[features][download][type] = git
 projects[features][download][url] = https://git.drupal.org/project/features
 projects[features][download][tag] = 8.x-3.0-beta7
+
+projects[devel][type] = module
+projects[devel][subdir] = "contrib"
+projects[devel][download][type] = git
+projects[devel][download][url] = https://git.drupal.org/project/devel
+projects[devel][download][tag] = 8.x-1.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
