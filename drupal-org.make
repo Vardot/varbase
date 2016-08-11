@@ -247,8 +247,8 @@ projects[adminimal_theme][download][tag] = 8.x-1.1
 ;; Varbase public contrib features
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[varbase_editor][type] = "module"
-projects[varbase_editor][subdir] = "varbase_features"
-projects[varbase_editor][version] = "8.x-4.0-alpha1"
-projects[varbase_editor][download][type] = "git"
-projects[varbase_editor][download][branch] = "8.x-4.x"
+projects[varbase_editor][type] = module
+projects[varbase_editor][subdir] = "contrib"
+projects[varbase_editor][download][type] = git
+projects[varbase_editor][download][url] = https://git.drupal.org/project/varbase_editor
+projects[varbase_editor][download][tag] = 8.x-4.0-alpha1
