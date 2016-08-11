@@ -31,7 +31,7 @@ projects[token][type] = module
 projects[token][subdir] = "contrib"
 projects[token][download][type] = git
 projects[token][download][url] = https://git.drupal.org/project/token
-projects[token][download][tag] = 8.x-1.0-alpha2
+projects[token][download][tag] = 8.x-1.0-beta1
 
 projects[pathauto][type] = module
 projects[pathauto][subdir] = "contrib"
@@ -167,7 +167,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][download][type] = git
 projects[entity_browser][download][url] = https://git.drupal.org/project/entity_browser
-projects[entity_browser][download][tag] = 8.x-1.0-alpha6
+projects[entity_browser][download][tag] = 8.x-1.0-alpha7
 ;; Issue #2738843 : The view widget should support radio buttons
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2738843-7.patch
 
@@ -187,19 +187,19 @@ projects[media_entity][type] = module
 projects[media_entity][subdir] = "contrib"
 projects[media_entity][download][type] = git
 projects[media_entity][download][url] = https://git.drupal.org/project/media_entity
-projects[media_entity][download][tag] = 8.x-1.2
+projects[media_entity][download][tag] = 8.x-1.3
 
 projects[media_entity_document][type] = module
 projects[media_entity_document][subdir] = "contrib"
 projects[media_entity_document][download][type] = git
 projects[media_entity_document][download][url] = https://git.drupal.org/project/media_entity_document
-projects[media_entity_document][download][tag] = 8.x-1.0
+projects[media_entity_document][download][tag] = 8.x-1.1
 
 projects[media_entity_image][type] = module
 projects[media_entity_image][subdir] = "contrib"
 projects[media_entity_image][download][type] = git
 projects[media_entity_image][download][url] = https://git.drupal.org/project/media_entity_image
-projects[media_entity_image][download][tag] = 8.x-1.1
+projects[media_entity_image][download][tag] = 8.x-1.2
 
 projects[media_entity_audio][type] = module
 projects[media_entity_audio][subdir] = "contrib"
@@ -224,7 +224,7 @@ projects[devel][download][type] = "git"
 projects[devel][download][branch] = "8.x-1.x"
 
 projects[features][type] = "module"
-projects[features][version] = "8.x-3.0-beta6"
+projects[features][version] = "8.x-3.0-beta7"
 projects[features][subdir] = "contrib/development"
 projects[features][download][type] = "git"
 projects[features][download][branch] = "8.x-3.x"
