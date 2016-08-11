@@ -82,10 +82,6 @@
       "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
       "https://www.drupal.org/files/issues/2664682-45.patch"
     },
-    "drupal/entity_browser": {
-      "Issue #2738843 : The view widget should support radio buttons":
-      "https://www.drupal.org/files/issues/2738843-7.patch"
-    },
     "drush/drush": {
       "Adding composer.json support to make-convert command":
       "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"

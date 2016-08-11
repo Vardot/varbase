@@ -168,8 +168,6 @@ projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][download][type] = git
 projects[entity_browser][download][url] = https://git.drupal.org/project/entity_browser
 projects[entity_browser][download][tag] = 8.x-1.0-alpha7
-;; Issue #2738843 : The view widget should support radio buttons
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2738843-7.patch
 
 projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
