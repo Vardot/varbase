@@ -249,6 +249,6 @@ projects[adminimal_theme][download][branch] = "8.x-1.x"
 
 projects[varbase_editor][type] = "module"
 projects[varbase_editor][subdir] = "varbase_features"
-projects[varbase_editor][version] = "8.x-4.x-dev"
+projects[varbase_editor][version] = "8.x-4.0-alpha1"
 projects[varbase_editor][download][type] = "git"
 projects[varbase_editor][download][branch] = "8.x-4.x"

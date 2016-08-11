@@ -125,6 +125,6 @@
     "drupal/video_embed_field": "8.1.2",
     "drupal/bootstrap": "8.3.0-rc1",
     "drupal/adminimal_theme": "8.1.1",
-    "drupal/varbase_editor": "8.4.x-dev"
+    "drupal/varbase_editor": "8.4.0-alpha1"
   }
 }
