@@ -8,8 +8,5 @@ dependencies:
   - node
   - panelizer
   - path
-  - user
-  - varbase_page
-  - varbase_site
 version: 8.x-4.0
 package: Varbase

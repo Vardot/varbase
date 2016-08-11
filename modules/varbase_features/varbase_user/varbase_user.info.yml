@@ -8,6 +8,5 @@ dependencies:
   - image
   - path
   - user
-  - varbase_site
 version: 8.x-4.0
 package: Varbase

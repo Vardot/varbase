@@ -13,6 +13,5 @@ dependencies:
   - smart_trim
   - text
   - user
-  - varbase_site
 version: 8.x-4.0
 package: Varbase

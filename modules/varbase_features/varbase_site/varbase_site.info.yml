@@ -9,5 +9,6 @@ dependencies:
   - taxonomy
   - text
   - user
+  - views
 version: 8.x-4.0
 package: Varbase

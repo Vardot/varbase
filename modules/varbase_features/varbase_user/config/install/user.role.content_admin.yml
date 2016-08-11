@@ -5,4 +5,3 @@ id: content_admin
 label: 'Content Admin'
 weight: 3
 is_admin: null
-permissions: {  }

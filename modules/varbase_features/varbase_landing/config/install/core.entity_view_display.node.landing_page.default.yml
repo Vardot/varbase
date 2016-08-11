@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
     - panelizer

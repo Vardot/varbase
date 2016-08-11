@@ -1,9 +1,9 @@
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - block_content
-id: block_content.full
-label: Full
+id: block_content.token
+label: Token
 targetEntityType: block_content
 cache: true

@@ -59,6 +59,9 @@ before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - phantomjs --webdriver=4444 > /dev/null &
   - sleep 5
+  
+  - php profiles/varbase/modules/contrib/composer_manager/scripts/init.php
+  # composer drupal-update -vvv
 
 script:
   - cd ./profiles/varbase
