@@ -125,7 +125,7 @@ projects[google_analytics][type] = module
 projects[google_analytics][subdir] = "contrib"
 projects[google_analytics][download][type] = git
 projects[google_analytics][download][url] = https://git.drupal.org/project/google_analytics
-projects[google_analytics][download][tag] = 8.x-2.0
+projects[google_analytics][download][tag] = 8.x-2.1
 
 projects[extlink][type] = module
 projects[extlink][subdir] = "contrib"
