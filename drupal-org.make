@@ -259,6 +259,8 @@ projects[workbench_moderation][subdir] = contrib
 projects[workbench_moderation][patch][2308095] = "http://www.drupal.org/files/issues/workbench_moderation-pathauto_alias_issue-2308095-20.patch"
 projects[workbench_moderation][patch][1470528] = "http://www.drupal.org/files/issues/feeds_mapper_for-1470528-20.patch"
 
+projects[nodequeue][version] = 2.1
+projects[nodequeue][subdir] = contrib
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Internationalization contributed modules (Internationalization dependencies)
