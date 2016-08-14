@@ -11,6 +11,7 @@ include_once __DIR__ . '/includes/common.inc';
 include_once __DIR__ . '/includes/views_content_ds.inc';
 include_once __DIR__ . '/includes/views_content_panes.inc';
 include_once __DIR__ . '/includes/views_bootstrap_grid_plugin_style.inc';
+include_once __DIR__ . '/includes/views_nodequeue.inc';
 
 /**
  * Implements hook_ctools_plugin_directory()
@@ -163,6 +164,12 @@ function varbase_magic_form_views_content_views_panes_content_type_edit_form_alt
     case 'views_bootstrap_grid_plugin_style':
       _varbase_magic_views_content_views_panes_form_alter_bootstrap_grid($form, $form_state, $form_id);
       break;
+  }
+
+  //Check if there is nodequeue subqueue id contexual filter,
+  //then alter it to be drop down with all available nodequeues
+  if(isset($form['arguments']['sqid'])) {
+    _varbase_magic_views_content_views_panes_form_alter_nodequeue($form, $form_state, $form_id);
   }
 
   $form['#submit'][] = '_varbase_magic_views_content_views_panes_submit_config';
