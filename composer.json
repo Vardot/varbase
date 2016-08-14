@@ -94,7 +94,6 @@
     "drupal/composer_manager": "8.1.0-rc2",
     "drupal/ctools": "8.3.0-alpha26",
     "drupal/token": "8.1.0-beta1",
-    "drupal/pathauto": "8.1.0-alpha3",
     "drupal/page_manager": "8.1.0-alpha23",
     "drupal/panels": "8.3.0-beta4",
     "drupal/panelizer": "8.3.0-alpha2",
@@ -105,13 +104,12 @@
     "drupal/smart_trim": "8.1.0",
     "drupal/advanced_text_formatter": "8.1.0-beta3",
     "drupal/block_class": "8.1.x-dev",
-    "drupal/metatag": "8.1.0-beta9",
-    "drupal/google_analytics": "8.2.1",
     "drupal/extlink": "8.1.0-alpha2",
     "drupal/linkit": "8.4.1",
     "drupal/anchor_link": "8.1.0-alpha1",
     "drupal/features": "8.3.0-beta7",
     "drupal/views_infinite_scroll": "8.1.2",
+    
     "drupal/embed": "8.1.0-rc3",
     "drupal/entity": "8.1.0-alpha3",
     "drupal/entity_browser": "8.1.0-alpha7",
@@ -122,8 +120,19 @@
     "drupal/media_entity_image": "8.1.2",
     "drupal/media_entity_audio": "8.1.0-beta3",
     "drupal/video_embed_field": "8.1.2",
+    
+    "drupal/pathauto": "8.1.0-alpha3",
+    "drupal/redirect": "8.1.0-alpha1",
+    "drupal/metatag": "8.1.0-beta9",
+    "drupal/robotstxt": "8.1.0",
+    "drupal/search404": "8.1.0-beta1",
+    "drupal/sitemap": "8.1.0",
+    "drupal/xmlsitemap": "8.1.0-alpha2",
+    "drupal/google_analytics": "8.2.1",
+    
     "drupal/bootstrap": "8.3.0-rc2",
     "drupal/adminimal_theme": "8.1.1",
+    
     "drupal/varbase_editor": "8.4.0-alpha1"
   }
 }

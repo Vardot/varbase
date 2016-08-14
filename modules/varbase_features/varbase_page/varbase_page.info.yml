@@ -9,6 +9,7 @@ dependencies:
   - page_manager
   - panelizer
   - path
+  - pathauto
   - rdf
   - smart_trim
   - text

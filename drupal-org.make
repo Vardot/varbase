@@ -33,12 +33,6 @@ projects[token][download][type] = git
 projects[token][download][url] = https://git.drupal.org/project/token
 projects[token][download][tag] = 8.x-1.0-beta1
 
-projects[pathauto][type] = module
-projects[pathauto][subdir] = "contrib"
-projects[pathauto][download][type] = git
-projects[pathauto][download][url] = https://git.drupal.org/project/pathauto
-projects[pathauto][download][tag] = 8.x-1.0-alpha3
-
 projects[page_manager][type] = module
 projects[page_manager][subdir] = "contrib"
 projects[page_manager][download][type] = git
@@ -114,18 +108,6 @@ projects[block_class][subdir] = "contrib"
 projects[block_class][version] = "8.x-1.x-dev"
 projects[block_class][download][type] = git
 projects[block_class][download][branch] = 8.x-1.x
-
-projects[metatag][type] = module
-projects[metatag][subdir] = "contrib"
-projects[metatag][download][type] = git
-projects[metatag][download][url] = https://git.drupal.org/project/metatag
-projects[metatag][download][tag] = 8.x-1.0-beta9
-
-projects[google_analytics][type] = module
-projects[google_analytics][subdir] = "contrib"
-projects[google_analytics][download][type] = git
-projects[google_analytics][download][url] = https://git.drupal.org/project/google_analytics
-projects[google_analytics][download][tag] = 8.x-2.1
 
 projects[extlink][type] = module
 projects[extlink][subdir] = "contrib"
@@ -210,6 +192,58 @@ projects[video_embed_field][subdir] = "contrib"
 projects[video_embed_field][download][type] = git
 projects[video_embed_field][download][url] = https://git.drupal.org/project/video_embed_field
 projects[video_embed_field][download][tag] = 8.x-1.2
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Contrib modules for Varbase SEO.
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[pathauto][type] = module
+projects[pathauto][subdir] = "contrib"
+projects[pathauto][download][type] = git
+projects[pathauto][download][url] = https://git.drupal.org/project/pathauto
+projects[pathauto][download][tag] = 8.x-1.0-alpha3
+
+projects[redirect][type] = module
+projects[redirect][subdir] = "contrib"
+projects[redirect][download][type] = git
+projects[redirect][download][url] = https://git.drupal.org/project/redirect
+projects[redirect][download][tag] = 8.x-1.0-alpha1
+
+projects[metatag][type] = module
+projects[metatag][subdir] = "contrib"
+projects[metatag][download][type] = git
+projects[metatag][download][url] = https://git.drupal.org/project/metatag
+projects[metatag][download][tag] = 8.x-1.0-beta9
+
+projects[robotstxt][type] = module
+projects[robotstxt][subdir] = "contrib"
+projects[robotstxt][download][type] = git
+projects[robotstxt][download][url] = https://git.drupal.org/project/robotstxt
+projects[robotstxt][download][tag] = 8.x-1.0
+
+projects[search404][type] = module
+projects[search404][subdir] = "contrib"
+projects[search404][download][type] = git
+projects[search404][download][url] = https://git.drupal.org/project/search404
+projects[search404][download][tag] = 8.x-1.0-beta1
+
+projects[sitemap][type] = module
+projects[sitemap][subdir] = "contrib"
+projects[sitemap][download][type] = git
+projects[sitemap][download][url] = https://git.drupal.org/project/sitemap
+projects[sitemap][download][tag] = 8.x-1.0
+
+projects[xmlsitemap][type] = module
+projects[xmlsitemap][subdir] = "contrib"
+projects[xmlsitemap][download][type] = git
+projects[xmlsitemap][download][url] = https://git.drupal.org/project/xmlsitemap
+projects[xmlsitemap][download][tag] = 8.x-1.0-alpha2
+
+projects[google_analytics][type] = module
+projects[google_analytics][subdir] = "contrib"
+projects[google_analytics][download][type] = git
+projects[google_analytics][download][url] = https://git.drupal.org/project/google_analytics
+projects[google_analytics][download][tag] = 8.x-2.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules

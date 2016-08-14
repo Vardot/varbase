@@ -1,0 +1,32 @@
+page_title: Sitemap
+message:
+  value: ''
+  format: restricted_html
+show_front: true
+show_titles: true
+show_books: {  }
+books_expanded: true
+show_menus:
+  footer: footer
+  main: main
+  account: '0'
+  admin: '0'
+  tools: '0'
+show_menus_hidden: false
+show_vocabularies: {  }
+show_description: true
+show_count: true
+vocabulary_depth: -1
+term_threshold: 0
+forum_threshold: -1
+rss_front: rss.xml
+show_rss_links: 1
+rss_taxonomy: -1
+css: true
+order:
+  front: -50
+  menus_account: -50
+  menus_admin: -50
+  menus_footer: -50
+  menus_main: -50
+  menus_tools: -50

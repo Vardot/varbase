@@ -8,5 +8,7 @@ dependencies:
   - node
   - panelizer
   - path
+  - pathauto
+  - user
 version: 8.x-4.0
 package: Varbase

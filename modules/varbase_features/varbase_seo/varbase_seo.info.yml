@@ -1,0 +1,10 @@
+name: 'Varbase SEO'
+description: 'Provide SEO Core features and settings.'
+type: module
+core: 8.x
+dependencies:
+  - rdf
+  - user
+  - xmlsitemap
+version: 8.x-4.0
+package: Varbase
