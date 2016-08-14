@@ -5,6 +5,11 @@ core: 8.x
 dependencies:
   - rdf
   - user
+  - pathauto
+  - redirect
+  - metatag
+  - robotstxt
+  - sitemap
   - xmlsitemap
 version: 8.x-4.0
 package: Varbase

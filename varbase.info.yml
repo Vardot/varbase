@@ -85,22 +85,12 @@ dependencies:
   - video_embed_media
   - video_embed_wysiwyg
   
-  # Contrib modules for Varbase SEO.
-  - pathauto
-  - redirect
-  - metatag
-  - robotstxt
-  - search404
-  - sitemap
-  - xmlsitemap
-  - google_analytics
-  
   # Varbase core functionality.
   - varbase_core
+  - varbase_seo
   - varbase_page
   - varbase_landing
   - varbase_editor
-  - varbase_seo
 
   # Varbase site functionality.
   - varbase_site

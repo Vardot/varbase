@@ -125,7 +125,6 @@
     "drupal/redirect": "8.1.0-alpha1",
     "drupal/metatag": "8.1.0-beta9",
     "drupal/robotstxt": "8.1.0",
-    "drupal/search404": "8.1.0-beta1",
     "drupal/sitemap": "8.1.0",
     "drupal/xmlsitemap": "8.1.0-alpha2",
     "drupal/google_analytics": "8.2.1",
