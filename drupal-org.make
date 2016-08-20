@@ -472,8 +472,7 @@ projects[adminimal_theme][patch][2679535] = "http://www.drupal.org/files/issues/
 
 projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = contrib
-projects[bootstrap][version] = 3.5
-projects[bootstrap][patch][2470115] = "http://www.drupal.org/files/issues/exclude_rtl_css_files-2470115-1.patch"
+projects[bootstrap][version] = 7.x-3.6
 
 
 ;;;;;;;;;;;;;;;;;;;;;
