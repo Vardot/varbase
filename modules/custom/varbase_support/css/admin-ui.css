@@ -29,3 +29,12 @@ div.panels-ipe-pseudobutton-container a {
 .ui-dialog.media-wrapper {
   z-index: 1002;
 }
+
+.panels-add-content-modal .content-type-button img {
+  float: left;
+}
+
+.panels-add-content-modal .content-type-button div,
+.panels-add-content-modal .content-type-button span {
+  top: 5px;
+}

@@ -7,3 +7,7 @@ div.panels-ipe-control .form-submit,
 div.panels-ipe-pseudobutton-container {
   margin: 0 0 0 10px;
 }
+
+.panels-add-content-modal .content-type-button img {
+  float: right;
+}
