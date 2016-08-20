@@ -183,23 +183,15 @@ projects[override_node_options][subdir] = contrib
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = contrib
-projects[panelizer][version] = "3.x-dev"
-projects[panelizer][download][type] = "git"
-projects[panelizer][download][url] = "http://git.drupal.org/project/panelizer.git"
-projects[panelizer][download][revision] = "2632dae19c5d25a2adb519613828d7a6fedbbd04"
-projects[panelizer][patch][2382879] = "http://www.drupal.org/files/issues/can_t_save-2382879-4.patch"
-projects[panelizer][patch][2445769] = "http://www.drupal.org/files/issues/panelizer-n2445769-3.patch"
+projects[panelizer][version] = 3.4
 
-projects[panels][version] = 3.5
+projects[panels][version] = 3.6
 projects[panels][subdir] = contrib
 projects[panels][patch][2427917] = "http://www.drupal.org/files/issues/panels-mini_panels_blocks_contextual_links-2427917.patch"
 
 projects[panels_bootstrap_layouts][type] = module
 projects[panels_bootstrap_layouts][subdir] = contrib
-projects[panels_bootstrap_layouts][version] = "3.x-dev"
-projects[panels_bootstrap_layouts][download][type] = "git"
-projects[panels_bootstrap_layouts][download][url] = "http://git.drupal.org/project/panels_bootstrap_layouts.git"
-projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd5cf149cdddd97d9148"
+projects[panels_bootstrap_layouts][version] = 3.0
 
 projects[picture][version] = 2.13
 projects[picture][subdir] = contrib
@@ -298,7 +290,7 @@ projects[i18n_contrib][subdir] = internationalization
 projects[apps][version] = 1.0
 projects[apps][subdir] = admin
 
-projects[admin_views][version] = 1.5
+projects[admin_views][version] = 1.6
 projects[admin_views][subdir] = admin
 
 projects[environment_indicator][version] = 2.8
