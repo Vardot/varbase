@@ -22,7 +22,7 @@ function varbase_fpp_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'flexslider_full',
         ),
         'type' => 'image',
         'weight' => 1,
