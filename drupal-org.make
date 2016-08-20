@@ -24,7 +24,7 @@ projects[captcha][version] = 1.3
 projects[captcha][subdir] = contrib
 projects[captcha][patch][1395184] = "http://www.drupal.org/files/issues/1395184_31.patch"
 
-projects[ctools][version] = 1.9
+projects[ctools][version] = 1.10
 projects[ctools][subdir] = contrib
 projects[ctools][patch][1910608] = "http://www.drupal.org/files/issues/views_content-keyword-substitution-1910608-36.patch"
 projects[ctools][patch][2679747] = "http://www.drupal.org/files/issues/modal-rtl-css.patch"
@@ -32,12 +32,11 @@ projects[ctools][patch][2679747] = "http://www.drupal.org/files/issues/modal-rtl
 projects[config_perms][version] = 2.1
 projects[config_perms][subdir] = contrib
 
-projects[context][version] = 3.6
+projects[context][version] = 3.7
 projects[context][subdir] = contrib
 
-projects[date][version] = 2.10-beta1
+projects[date][version] = 2.10-rc1
 projects[date][subdir] = contrib
-projects[date][patch][2339119] =  "http://www.drupal.org/files/issues/date-fix_undefine_in_date_text_element_process-2339119-14.patch"
 
 projects[date_popup_authored][version] = 1.2
 projects[date_popup_authored][subdir] = contrib
@@ -51,7 +50,7 @@ projects[defaultconfig][patch][2008178] =  "http://www.drupal.org/files/issues/d
 projects[diff][version] = 3.2
 projects[diff][subdir] = contrib
 
-projects[ds][version] = 2.13
+projects[ds][version] = 2.14
 projects[ds][subdir] = contrib
 
 projects[ds_bootstrap_layouts][version] = 3.1
@@ -136,7 +135,7 @@ projects[jquery_update][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
 projects[job_scheduler][subdir] = contrib
 
-projects[libraries][version] = 2.2
+projects[libraries][version] = 2.3
 projects[libraries][subdir] = contrib
 projects[libraries][patch][1783598] = "http://www.drupal.org/files/issues/inherited-profiles-1783598-5.patch"
 
@@ -330,7 +329,7 @@ projects[google_analytics][subdir] = seo
 projects[imagecache_token][version] = 1.0-rc2
 projects[imagecache_token][subdir] = seo
 
-projects[metatag][version] = 1.16
+projects[metatag][version] = 1.17
 projects[metatag][subdir] = seo
 
 projects[pathauto][version] = 1.3
@@ -449,7 +448,7 @@ projects[username_enumeration_prevention][subdir] = security
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = "3.x-dev"
+projects[varbase_editor][version] = 3.0-alpha5
 projects[varbase_editor][subdir] = features
 
 ;;;;;;;;;;;;;;;;;;;;;
