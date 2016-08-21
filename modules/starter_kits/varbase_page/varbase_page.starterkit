@@ -8,7 +8,6 @@ dependencies[] = ctools
 dependencies[] = ds
 dependencies[] = node
 dependencies[] = text
-dependencies[] = uber_publisher_varbarse_overrides
 dependencies[] = varbase_core
 features[ctools][] = ds:ds:1
 features[ctools][] = strongarm:strongarm:1
