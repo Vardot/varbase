@@ -14,6 +14,7 @@ function varbase_fpp_user_default_permissions() {
   $permissions['administer fieldable panels panes'] = array(
     'name' => 'administer fieldable panels panes',
     'roles' => array(
+      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'fieldable_panels_panes',
@@ -22,7 +23,9 @@ function varbase_fpp_user_default_permissions() {
   // Exported permission: 'administer flexslider'.
   $permissions['administer flexslider'] = array(
     'name' => 'administer flexslider',
-    'roles' => array(),
+    'roles' => array(
+      'Super Admin' => 'Super Admin',
+    ),
     'module' => 'flexslider',
   );
 
@@ -31,6 +34,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'create fieldable raw_html',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -42,6 +46,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'create fieldable slideshow',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -53,6 +58,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'create fieldable wysiwyg',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -64,6 +70,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'delete fieldable raw_html',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -75,6 +82,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'delete fieldable slideshow',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -86,6 +94,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'delete fieldable wysiwyg',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -97,6 +106,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'edit fieldable raw_html',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -108,6 +118,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'edit fieldable slideshow',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -119,6 +130,7 @@ function varbase_fpp_user_default_permissions() {
     'name' => 'edit fieldable wysiwyg',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -128,7 +140,12 @@ function varbase_fpp_user_default_permissions() {
   // Exported permission: 'show format selection for fieldable_panels_pane'.
   $permissions['show format selection for fieldable_panels_pane'] = array(
     'name' => 'show format selection for fieldable_panels_pane',
-    'roles' => array(),
+    'roles' => array(
+      'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
+      'Site Admin' => 'Site Admin',
+      'Super Admin' => 'Super Admin',
+    ),
     'module' => 'better_formats',
   );
 
