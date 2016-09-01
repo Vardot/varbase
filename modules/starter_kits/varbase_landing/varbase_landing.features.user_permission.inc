@@ -14,6 +14,8 @@ function varbase_landing_user_default_permissions() {
   $permissions['administer panelizer node landing_page content'] = array(
     'name' => 'administer panelizer node landing_page content',
     'roles' => array(
+      'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -24,6 +26,7 @@ function varbase_landing_user_default_permissions() {
   $permissions['administer panelizer node landing_page context'] = array(
     'name' => 'administer panelizer node landing_page context',
     'roles' => array(
+      'Content Admin' => 'Content Admin',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -34,7 +37,6 @@ function varbase_landing_user_default_permissions() {
   $permissions['administer panelizer node landing_page defaults'] = array(
     'name' => 'administer panelizer node landing_page defaults',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panelizer',
@@ -44,6 +46,7 @@ function varbase_landing_user_default_permissions() {
   $permissions['administer panelizer node landing_page layout'] = array(
     'name' => 'administer panelizer node landing_page layout',
     'roles' => array(
+      'Content Admin' => 'Content Admin',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -54,7 +57,6 @@ function varbase_landing_user_default_permissions() {
   $permissions['administer panelizer node landing_page overview'] = array(
     'name' => 'administer panelizer node landing_page overview',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panelizer',
@@ -64,6 +66,7 @@ function varbase_landing_user_default_permissions() {
   $permissions['administer panelizer node landing_page settings'] = array(
     'name' => 'administer panelizer node landing_page settings',
     'roles' => array(
+      'Content Admin' => 'Content Admin',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),

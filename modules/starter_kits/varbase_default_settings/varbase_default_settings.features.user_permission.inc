@@ -15,22 +15,11 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Site Admin' => 'Site Admin',
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'system',
-  );
-
-  // Exported permission: 'access coffee'.
-  $permissions['access coffee'] = array(
-    'name' => 'access coffee',
-    'roles' => array(
-      'Content Admin' => 'Content Admin',
       'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
-    'module' => 'coffee',
+    'module' => 'system',
   );
 
   // Exported permission: 'access content'.
@@ -63,21 +52,9 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'contextual',
-  );
-
-  // Exported permission: 'access devel information'.
-  $permissions['access devel information'] = array(
-    'name' => 'access devel information',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'devel',
   );
 
   // Exported permission: 'access environment indicator'.
@@ -204,24 +181,6 @@ function varbase_default_settings_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'access_visual_test_reports'.
-  $permissions['access_visual_test_reports'] = array(
-    'name' => 'access_visual_test_reports',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'drulenium_visual_regression',
-  );
-
-  // Exported permission: 'admin_classes'.
-  $permissions['admin_classes'] = array(
-    'name' => 'admin_classes',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'ds_ui',
-  );
-
   // Exported permission: 'admin_display_suite'.
   $permissions['admin_display_suite'] = array(
     'name' => 'admin_display_suite',
@@ -231,29 +190,10 @@ function varbase_default_settings_user_default_permissions() {
     'module' => 'ds',
   );
 
-  // Exported permission: 'admin_fields'.
-  $permissions['admin_fields'] = array(
-    'name' => 'admin_fields',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'ds_ui',
-  );
-
-  // Exported permission: 'admin_view_modes'.
-  $permissions['admin_view_modes'] = array(
-    'name' => 'admin_view_modes',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'ds_ui',
-  );
-
   // Exported permission: 'administer account settings'.
   $permissions['administer account settings'] = array(
     'name' => 'administer account settings',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'config_perms',
@@ -272,7 +212,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer advanced pane settings'] = array(
     'name' => 'administer advanced pane settings',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panels',
@@ -283,7 +222,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'administer block classes',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -294,8 +232,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -306,9 +242,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer ckeditor'] = array(
     'name' => 'administer ckeditor',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'ckeditor',
@@ -322,18 +255,6 @@ function varbase_default_settings_user_default_permissions() {
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'config_perms',
-  );
-
-  // Exported permission: 'administer coffee'.
-  $permissions['administer coffee'] = array(
-    'name' => 'administer coffee',
-    'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'coffee',
   );
 
   // Exported permission: 'administer content translations'.
@@ -358,7 +279,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer custom permissions'] = array(
     'name' => 'administer custom permissions',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'config_perms',
@@ -368,7 +288,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer date-time'] = array(
     'name' => 'administer date-time',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'config_perms',
@@ -396,7 +315,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer error reporting'] = array(
     'name' => 'administer error reporting',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'config_perms',
@@ -442,7 +360,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer file system'] = array(
     'name' => 'administer file system',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'config_perms',
@@ -461,6 +378,8 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer files'] = array(
     'name' => 'administer files',
     'roles' => array(
+      'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -507,9 +426,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer linkit'] = array(
     'name' => 'administer linkit',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'linkit',
@@ -522,15 +438,6 @@ function varbase_default_settings_user_default_permissions() {
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'mail_edit',
-  );
-
-  // Exported permission: 'administer masquerade'.
-  $permissions['administer masquerade'] = array(
-    'name' => 'administer masquerade',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'masquerade',
   );
 
   // Exported permission: 'administer media browser'.
@@ -575,9 +482,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer nodequeue'] = array(
     'name' => 'administer nodequeue',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'nodequeue',
@@ -587,6 +491,8 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
+      'Content Admin' => 'Content Admin',
+      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'node',
@@ -605,7 +511,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer pane access'] = array(
     'name' => 'administer pane access',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panels',
@@ -615,7 +520,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer panelizer'] = array(
     'name' => 'administer panelizer',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panelizer',
@@ -635,7 +539,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer panels styles'] = array(
     'name' => 'administer panels styles',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panels',
@@ -655,7 +558,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'user',
@@ -665,7 +567,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer redirects'] = array(
     'name' => 'administer redirects',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'redirect',
@@ -742,6 +643,7 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['administer total control'] = array(
     'name' => 'administer total control',
     'roles' => array(
+      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'total_control',
@@ -775,15 +677,6 @@ function varbase_default_settings_user_default_permissions() {
     'module' => 'xmlsitemap',
   );
 
-  // Exported permission: 'administer_drulenium_vr'.
-  $permissions['administer_drulenium_vr'] = array(
-    'name' => 'administer_drulenium_vr',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'drulenium_visual_regression',
-  );
-
   // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
@@ -808,6 +701,7 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
     'roles' => array(
+      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'file_entity',
@@ -846,7 +740,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'change layouts in place editing',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -867,9 +760,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['configure ace editor'] = array(
     'name' => 'configure ace editor',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'ace_editor',
@@ -892,7 +782,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -903,9 +792,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['customize ckeditor'] = array(
     'name' => 'customize ckeditor',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'ckeditor',
@@ -925,7 +811,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete any audio files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -937,7 +822,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete any document files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -949,7 +833,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete any image files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -961,7 +844,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete any video files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -973,7 +855,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete own audio files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -985,7 +866,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete own document files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -997,7 +877,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete own image files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1009,7 +888,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'delete own video files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1158,7 +1036,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'edit any audio files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1170,7 +1047,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'edit any document files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1182,7 +1058,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'edit any image files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1194,7 +1069,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'edit any video files',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1205,9 +1079,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['edit meta tags'] = array(
     'name' => 'edit meta tags',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'metatag',
@@ -1265,6 +1136,7 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['epsacrop administer available crops'] = array(
     'name' => 'epsacrop administer available crops',
     'roles' => array(
+      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'epsacrop',
@@ -1274,9 +1146,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['epsacrop create crops'] = array(
     'name' => 'epsacrop create crops',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'epsacrop',
@@ -1295,21 +1164,9 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['epsacrop edit all crops'] = array(
     'name' => 'epsacrop edit all crops',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'epsacrop',
-  );
-
-  // Exported permission: 'execute php code'.
-  $permissions['execute php code'] = array(
-    'name' => 'execute php code',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'devel',
   );
 
   // Exported permission: 'generate features'.
@@ -1344,7 +1201,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'manipulate all queues',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1356,38 +1212,10 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'manipulate queues',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'nodequeue',
-  );
-
-  // Exported permission: 'masquerade as admin'.
-  $permissions['masquerade as admin'] = array(
-    'name' => 'masquerade as admin',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'masquerade',
-  );
-
-  // Exported permission: 'masquerade as any user'.
-  $permissions['masquerade as any user'] = array(
-    'name' => 'masquerade as any user',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'masquerade',
-  );
-
-  // Exported permission: 'masquerade as user'.
-  $permissions['masquerade as user'] = array(
-    'name' => 'masquerade as user',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'masquerade',
   );
 
   // Exported permission: 'rename features'.
@@ -1410,20 +1238,10 @@ function varbase_default_settings_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'run_visual_tests'.
-  $permissions['run_visual_tests'] = array(
-    'name' => 'run_visual_tests',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'drulenium_visual_regression',
-  );
-
   // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'user',
@@ -1433,9 +1251,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['show format selection for field_collection_item'] = array(
     'name' => 'show format selection for field_collection_item',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'better_formats',
@@ -1469,9 +1284,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['show format selection for taxonomy_term'] = array(
     'name' => 'show format selection for taxonomy_term',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'better_formats',
@@ -1481,9 +1293,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['show format selection for user'] = array(
     'name' => 'show format selection for user',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'better_formats',
@@ -1522,21 +1331,10 @@ function varbase_default_settings_user_default_permissions() {
     'module' => 'shortcut',
   );
 
-  // Exported permission: 'switch users'.
-  $permissions['switch users'] = array(
-    'name' => 'switch users',
-    'roles' => array(
-      'Super Admin' => 'Super Admin',
-    ),
-    'module' => 'devel',
-  );
-
   // Exported permission: 'translate admin strings'.
   $permissions['translate admin strings'] = array(
     'name' => 'translate admin strings',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1570,8 +1368,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['translate user-defined strings'] = array(
     'name' => 'translate user-defined strings',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1582,9 +1378,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['use ctools import'] = array(
     'name' => 'use ctools import',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'ctools',
@@ -1594,8 +1387,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['use ipe with page manager'] = array(
     'name' => 'use ipe with page manager',
     'roles' => array(
-      'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1606,7 +1397,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'page_manager',
@@ -1616,7 +1406,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['use panels caching features'] = array(
     'name' => 'use panels caching features',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panels',
@@ -1626,7 +1415,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['use panels dashboard'] = array(
     'name' => 'use panels dashboard',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panels',
@@ -1637,7 +1425,6 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'use panels in place editing',
     'roles' => array(
       'Content Admin' => 'Content Admin',
-      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1648,7 +1435,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['use panels locks'] = array(
     'name' => 'use panels locks',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panels',
@@ -1715,6 +1501,7 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['view icons'] = array(
     'name' => 'view icons',
     'roles' => array(
+      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'icon',
@@ -1749,6 +1536,7 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
@@ -1759,7 +1547,6 @@ function varbase_default_settings_user_default_permissions() {
   $permissions['view pane admin links'] = array(
     'name' => 'view pane admin links',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panels',
@@ -1782,6 +1569,7 @@ function varbase_default_settings_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'Content Admin' => 'Content Admin',
+      'Editor' => 'Editor',
       'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),

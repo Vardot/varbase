@@ -36,7 +36,7 @@ function varbase_default_settings_defaultconfig_strongarm() {
     'default_favicon' => 1,
     'favicon_path' => '',
     'favicon_upload' => '',
-    'bootstrap__active_tab' => 'edit-javascript',
+    'bootstrap__active_tab' => 'edit-general',
     'bootstrap_fluid_container' => 0,
     'bootstrap_button_size' => '',
     'bootstrap_button_colorize' => 1,
@@ -108,9 +108,9 @@ function varbase_default_settings_defaultconfig_strongarm() {
     'bootstrap_cdn_custom_css_min' => 'https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css',
     'bootstrap_cdn_custom_js' => 'https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.js',
     'bootstrap_cdn_custom_js_min' => 'https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js',
-    'bootstrap_cdn_jsdelivr_version' => '3.3.5',
+    'bootstrap_cdn_jsdelivr_version' => '3.3.7',
     'bootstrap_cdn_jsdelivr_theme' => 'bootstrap',
-    'jquery_update_jquery_version' => '1.9',
+    'jquery_update_jquery_version' => '1.11',
   );
   $export['theme_vartheme_settings'] = $strongarm;
 

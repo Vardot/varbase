@@ -14,7 +14,6 @@ function varbase_page_user_default_permissions() {
   $permissions['administer panelizer node page defaults'] = array(
     'name' => 'administer panelizer node page defaults',
     'roles' => array(
-      'Site Admin' => 'Site Admin',
       'Super Admin' => 'Super Admin',
     ),
     'module' => 'panelizer',
