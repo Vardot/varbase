@@ -85,6 +85,9 @@ dependencies:
   - video_embed_media
   - video_embed_wysiwyg
   
+  # Admin contrib modules.
+  - coffee
+  
   # Varbase core functionality.
   - varbase_core
   - varbase_seo
