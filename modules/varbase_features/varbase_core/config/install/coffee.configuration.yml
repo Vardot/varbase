@@ -1,0 +1,4 @@
+coffee_menus:
+  admin: admin
+  tools: tools
+max_results: 7
