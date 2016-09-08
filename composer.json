@@ -55,9 +55,7 @@
   "patches": {
     "drupal/ctools": {
       "Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-      "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch",
-      "Issue #2672110 : EntityFieldDeriver naive about field info, throws PHP warnings":
-      "https://www.drupal.org/files/issues/ctools_2672110_16.patch"
+      "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch"
     },
     "drupal/page_manager": {
       "Issue #2747739 : [page_manager] Create and host mega patches until the Panels ecosystem stabilizes and releases":
@@ -92,7 +90,7 @@
     "drupal/core": "8.1.9",
     "drupal/config_update": "8.1.1",
     "drupal/composer_manager": "8.1.0-rc2",
-    "drupal/ctools": "8.3.0-alpha26",
+    "drupal/ctools": "8.3.0-alpha27",
     "drupal/token": "8.1.0-beta1",
     "drupal/page_manager": "8.1.0-alpha23",
     "drupal/panels": "8.3.0-beta4",

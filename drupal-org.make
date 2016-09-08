@@ -21,11 +21,9 @@ projects[ctools][type] = module
 projects[ctools][subdir] = "contrib"
 projects[ctools][download][type] = git
 projects[ctools][download][url] = https://git.drupal.org/project/ctools
-projects[ctools][download][tag] = 8.x-3.0-alpha26
+projects[ctools][download][tag] = 8.x-3.0-alpha27
 ;; Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases
 projects[ctools][patch][] = https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch
-;; Issue #2672110 : EntityFieldDeriver naive about field info, throws PHP warnings
-projects[ctools][patch][] = https://www.drupal.org/files/issues/ctools_2672110_16.patch
 
 projects[token][type] = module
 projects[token][subdir] = "contrib"
