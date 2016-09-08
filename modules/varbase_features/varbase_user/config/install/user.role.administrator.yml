@@ -5,3 +5,4 @@ id: administrator
 label: 'Super Admin'
 weight: 5
 is_admin: true
+permissions: {  }

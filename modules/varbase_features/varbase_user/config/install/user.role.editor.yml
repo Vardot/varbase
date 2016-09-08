@@ -5,3 +5,20 @@ id: editor
 label: Editor
 weight: 2
 is_admin: null
+permissions:
+  - 'access files overview'
+  - 'access media overview'
+  - 'update media'
+  - 'view media'
+  - 'create page content'
+  - 'delete own page content'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'administer panelizer node landing_page content'
+  - 'use ipe with page manager'
+  - 'access panels in-place editing'
+  - 'create url aliases'
+  - 'access in-place editing'
+  - 'access administration pages'
+  - 'access site in maintenance mode'
+  - 'access user profiles'
