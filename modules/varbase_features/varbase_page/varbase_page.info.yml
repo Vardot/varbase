@@ -1,4 +1,4 @@
-name: 'Varbase page'
+name: 'Varbase Page'
 description: 'Provides Basic page content type and related configuration.'
 type: module
 core: 8.x
