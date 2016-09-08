@@ -193,6 +193,12 @@ projects[video_embed_field][download][type] = git
 projects[video_embed_field][download][url] = https://git.drupal.org/project/video_embed_field
 projects[video_embed_field][download][tag] = 8.x-1.2
 
+projects[poll][type] = module
+projects[poll][subdir] = "contrib"
+projects[poll][download][type] = git
+projects[poll][download][url] = https://git.drupal.org/project/poll
+projects[poll][download][tag] = 8.x-1.0
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
