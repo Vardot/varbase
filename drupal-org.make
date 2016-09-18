@@ -161,7 +161,7 @@ projects[media_entity][type] = module
 projects[media_entity][subdir] = "contrib"
 projects[media_entity][download][type] = git
 projects[media_entity][download][url] = https://git.drupal.org/project/media_entity
-projects[media_entity][download][tag] = 8.x-1.3
+projects[media_entity][download][tag] = 8.x-1.5
 
 projects[media_entity_document][type] = module
 projects[media_entity_document][subdir] = "contrib"
