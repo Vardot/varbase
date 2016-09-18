@@ -9,5 +9,6 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'search content'
+  - 'use text format basic_html'
   - 'access sitemap'
   - 'access user profiles'

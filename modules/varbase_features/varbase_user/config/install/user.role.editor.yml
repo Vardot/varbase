@@ -22,3 +22,5 @@ permissions:
   - 'access administration pages'
   - 'access site in maintenance mode'
   - 'access user profiles'
+  - 'use text format basic_html'
+  - 'use text format full_html'
