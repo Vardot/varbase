@@ -121,6 +121,12 @@ projects[anchor_link][download][type] = git
 projects[anchor_link][download][url] = https://git.drupal.org/project/anchor_link
 projects[anchor_link][download][tag] = 8.x-1.0-alpha1
 
+projects[codesnippet][type] = module
+projects[codesnippet][subdir] = "contrib"
+projects[codesnippet][download][type] = git
+projects[codesnippet][download][url] = https://git.drupal.org/project/codesnippet
+projects[codesnippet][download][tag] = 8.x-1.6
+
 projects[views_infinite_scroll][type] = module
 projects[views_infinite_scroll][subdir] = "contrib"
 projects[views_infinite_scroll][download][type] = git
@@ -281,9 +287,3 @@ projects[varbase_editor][download][type] = git
 projects[varbase_editor][download][url] = https://git.drupal.org/project/varbase_editor
 projects[varbase_editor][download][tag] = 8.x-4.0-alpha3
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Libraries
-;;;;;;;;;;;;;;;;;;;;;
-
-libraries[codesnippet][download][type] = "get"
-libraries[codesnippet][download][url] = "http://download.ckeditor.com/codesnippet/releases/codesnippet_4.5.11.zip"
