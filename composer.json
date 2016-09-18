@@ -53,14 +53,6 @@
      }
    },
   "patches": {
-    "drupal/ctools": {
-      "Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-      "https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch"
-    },
-    "drupal/page_manager": {
-      "Issue #2747739 : [page_manager] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-      "https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch"
-    },
     "drupal/panels": {
       "Issue #2667754 : Allow other modules to disable the IPE based on custom logic":
       "https://www.drupal.org/files/issues/2667754-3.patch",
@@ -92,7 +84,7 @@
     "drupal/composer_manager": "8.1.0-rc2",
     "drupal/ctools": "8.3.0-alpha27",
     "drupal/token": "8.1.0-beta1",
-    "drupal/page_manager": "8.1.0-alpha23",
+    "drupal/page_manager": "8.1.0-alpha24",
     "drupal/panels": "8.3.0-beta4",
     "drupal/panelizer": "8.3.0-alpha2",
     "drupal/layout_plugin": "8.1.0-alpha22",

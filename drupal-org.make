@@ -22,8 +22,6 @@ projects[ctools][subdir] = "contrib"
 projects[ctools][download][type] = git
 projects[ctools][download][url] = https://git.drupal.org/project/ctools
 projects[ctools][download][tag] = 8.x-3.0-alpha27
-;; Issue #2747739 : [ctools] Create and host mega patches until the Panels ecosystem stabilizes and releases
-projects[ctools][patch][] = https://www.drupal.org/files/issues/ctools--8.x-3.0-alpha26--1fe3649.patch
 
 projects[token][type] = module
 projects[token][subdir] = "contrib"
@@ -35,9 +33,7 @@ projects[page_manager][type] = module
 projects[page_manager][subdir] = "contrib"
 projects[page_manager][download][type] = git
 projects[page_manager][download][url] = https://git.drupal.org/project/page_manager
-projects[page_manager][download][tag] = 8.x-1.0-alpha23
-;; Issue #2747739 : [page_manager] Create and host mega patches until the Panels ecosystem stabilizes and releases
-projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager--alpha23-09e79ff--2747739-3.patch
+projects[page_manager][download][tag] = 8.x-1.0-alpha24
 
 projects[panels][type] = module
 projects[panels][subdir] = "contrib"
