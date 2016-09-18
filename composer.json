@@ -47,7 +47,7 @@
          "docroot": [
              "drupal/drupal"
          ],
-         "profiles/varbase/modules/contrib/{$name}": [
+         "modules/contrib/{$name}": [
              "type:drupal-module"
          ]
      }
