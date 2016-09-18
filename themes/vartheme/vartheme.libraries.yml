@@ -1,0 +1,5 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+    #  css/style-rtl.css: {} // Uncomment to have Right To Left styling.
