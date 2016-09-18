@@ -107,7 +107,7 @@ projects[extlink][type] = module
 projects[extlink][subdir] = "contrib"
 projects[extlink][download][type] = git
 projects[extlink][download][url] = https://git.drupal.org/project/extlink
-projects[extlink][download][tag] = 8.x-1.0-alpha2
+projects[extlink][download][tag] = 8.x-1.0-alpha3
 
 projects[linkit][type] = module
 projects[linkit][subdir] = "contrib"
@@ -149,13 +149,13 @@ projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][download][type] = git
 projects[entity_browser][download][url] = https://git.drupal.org/project/entity_browser
-projects[entity_browser][download][tag] = 8.x-1.0-alpha7
+projects[entity_browser][download][tag] = 8.x-1.0-alpha9
 
 projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
 projects[entity_embed][download][type] = git
 projects[entity_embed][download][url] = https://git.drupal.org/project/entity_embed
-projects[entity_embed][download][tag] = 8.x-1.0-alpha3
+projects[entity_embed][download][tag] = 8.x-1.0-beta1
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][subdir] = "contrib"
@@ -191,7 +191,7 @@ projects[video_embed_field][type] = module
 projects[video_embed_field][subdir] = "contrib"
 projects[video_embed_field][download][type] = git
 projects[video_embed_field][download][url] = https://git.drupal.org/project/video_embed_field
-projects[video_embed_field][download][tag] = 8.x-1.2
+projects[video_embed_field][download][tag] = 8.x-1.3
 
 projects[poll][type] = module
 projects[poll][subdir] = "contrib"
@@ -219,7 +219,7 @@ projects[metatag][type] = module
 projects[metatag][subdir] = "contrib"
 projects[metatag][download][type] = git
 projects[metatag][download][url] = https://git.drupal.org/project/metatag
-projects[metatag][download][tag] = 8.x-1.0-beta9
+projects[metatag][download][tag] = 8.x-1.0-beta10
 
 projects[robotstxt][type] = module
 projects[robotstxt][subdir] = "contrib"
@@ -231,7 +231,7 @@ projects[sitemap][type] = module
 projects[sitemap][subdir] = "contrib"
 projects[sitemap][download][type] = git
 projects[sitemap][download][url] = https://git.drupal.org/project/sitemap
-projects[sitemap][download][tag] = 8.x-1.0
+projects[sitemap][download][tag] = 8.x-1.2
 
 projects[xmlsitemap][type] = module
 projects[xmlsitemap][subdir] = "contrib"
@@ -286,4 +286,11 @@ projects[varbase_editor][subdir] = "contrib"
 projects[varbase_editor][download][type] = git
 projects[varbase_editor][download][url] = https://git.drupal.org/project/varbase_editor
 projects[varbase_editor][download][tag] = 8.x-4.0-alpha3
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Libraries
+;;;;;;;;;;;;;;;;;;;;;
+
+libraries[codesnippet][download][type] = "get"
+libraries[codesnippet][download][url] = "http://download.ckeditor.com/codesnippet/releases/codesnippet_4.5.11.zip"
 
