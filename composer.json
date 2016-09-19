@@ -121,6 +121,7 @@
     "drupal/google_analytics": "8.2.1",
     
     "drupal/coffee": "8.1.0-beta1",
+    "drupal/diff": "8.1.0-beta1",
     
     "drupal/bootstrap": "8.3.0-rc2",
     "drupal/adminimal_theme": "8.1.1",

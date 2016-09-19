@@ -87,6 +87,7 @@ dependencies:
   
   # Admin contrib modules.
   - coffee
+  - diff
   
   # Varbase core functionality.
   - varbase_core
