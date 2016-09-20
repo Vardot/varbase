@@ -64,6 +64,7 @@ dependencies:
   - bootstrap_layouts
   - ds
   - ds_extras
+  - ds_switch_view_mode
   - field_group
   - smart_trim
   - advanced_text_formatter
