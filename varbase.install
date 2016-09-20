@@ -6,6 +6,7 @@
 
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
+use Drupal\shortcut\Entity\Shortcut;
 
 /**
  * Implements hook_install().
@@ -28,6 +29,47 @@ function varbase_install() {
 
   // Allow authenticated users to use shortcuts.
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access shortcuts']);
+  
+  // Populate the default shortcut set.
+  $shortcut = Shortcut::create(array(
+    'shortcut_set' => 'default',
+    'title' => t('Add content'),
+    'weight' => 0,
+    'link' => array('uri' => 'internal:/node/add'),
+  ));
+  $shortcut->save();
+
+  $shortcut = Shortcut::create(array(
+    'shortcut_set' => 'default',
+    'title' => t('All content'),
+    'weight' => 1,
+    'link' => array('uri' => 'internal:/admin/content'),
+  ));
+  $shortcut->save();
+
+  $shortcut = Shortcut::create(array(
+    'shortcut_set' => 'default',
+    'title' => t('All media'),
+    'weight' => 2,
+    'link' => array('uri' => 'internal:/admin/content/media'),
+  ));
+  $shortcut->save();
+
+  $shortcut = Shortcut::create(array(
+    'shortcut_set' => 'default',
+    'title' => t('Taxonomy'),
+    'weight' => 3,
+    'link' => array('uri' => 'internal:/admin/structure/taxonomy'),
+  ));
+  $shortcut->save();
+
+  $shortcut = Shortcut::create(array(
+    'shortcut_set' => 'default',
+    'title' => t('Permissions'),
+    'weight' => 4,
+    'link' => array('uri' => 'internal:/admin/people/permissions'),
+  ));
+  $shortcut->save();
 
   // Allow all users to use search.
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array('search content'));
