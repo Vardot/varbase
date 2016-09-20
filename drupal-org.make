@@ -209,18 +209,6 @@ projects[metatag][download][type] = git
 projects[metatag][download][url] = https://git.drupal.org/project/metatag
 projects[metatag][download][tag] = 8.x-1.0-beta10
 
-projects[robotstxt][type] = module
-projects[robotstxt][subdir] = "contrib"
-projects[robotstxt][download][type] = git
-projects[robotstxt][download][url] = https://git.drupal.org/project/robotstxt
-projects[robotstxt][download][tag] = 8.x-1.0
-
-projects[sitemap][type] = module
-projects[sitemap][subdir] = "contrib"
-projects[sitemap][download][type] = git
-projects[sitemap][download][url] = https://git.drupal.org/project/sitemap
-projects[sitemap][download][tag] = 8.x-1.2
-
 projects[xmlsitemap][type] = module
 projects[xmlsitemap][subdir] = "contrib"
 projects[xmlsitemap][download][type] = git

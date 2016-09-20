@@ -1,12 +1,12 @@
-canonical: true
+canonical: false
 auto_redirect: true
 default_status_code: 301
 passthrough_querystring: true
 warning: false
 nonclean_to_clean: true
-ignore_admin_path: false
+ignore_admin_path: true
 frontpage_redirect: true
-deslash: false
+deslash: true
 access_check: true
 normalize_aliases: true
 content_location_header: false
