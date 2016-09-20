@@ -27,20 +27,8 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 5
+    settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -57,4 +45,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true

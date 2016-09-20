@@ -3,19 +3,19 @@ status: true
 dependencies:
   module:
     - node
-id: landing_page_pattern
-label: 'Landing Page pattern'
+id: hierarchical_paths_for_landing_pages
+label: 'Hierarchical paths for landing pages'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
-  1446c726-29a1-4042-b3db-b855722dda30:
+  c9a11b79-2468-47b8-9eed-4e4b98c0f757:
     id: node_type
     bundles:
       landing_page: landing_page
     negate: false
     context_mapping:
       node: node
-    uuid: 1446c726-29a1-4042-b3db-b855722dda30
+    uuid: c9a11b79-2468-47b8-9eed-4e4b98c0f757
 selection_logic: and
 weight: -5
 relationships: {  }

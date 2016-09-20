@@ -3,19 +3,19 @@ status: true
 dependencies:
   module:
     - node
-id: basic_page_pattern
-label: 'Basic page pattern'
+id: hierarchical_paths_for_basic_pages
+label: 'Hierarchical paths for basic pages'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
-  dcf19e26-d8d0-4d53-8a5d-9d3c48916467:
+  e8a66397-ab44-4e98-b407-ef082a104e4e:
     id: node_type
     bundles:
       page: page
     negate: false
     context_mapping:
       node: node
-    uuid: dcf19e26-d8d0-4d53-8a5d-9d3c48916467
+    uuid: e8a66397-ab44-4e98-b407-ef082a104e4e
 selection_logic: and
 weight: -5
 relationships: {  }
