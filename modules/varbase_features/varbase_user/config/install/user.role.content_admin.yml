@@ -6,7 +6,6 @@ label: 'Content Admin'
 weight: 3
 is_admin: null
 permissions:
-  - 'access coffee'
   - 'access files overview'
   - 'use text format basic_html'
   - 'access media overview'
@@ -36,7 +35,6 @@ permissions:
   - 'access panels in-place editing'
   - 'create url aliases'
   - 'access in-place editing'
-  - 'switch shortcut sets'
   - 'administer menu'
   - 'access administration pages'
   - 'access site in maintenance mode'
@@ -47,3 +45,12 @@ permissions:
   - 'use text format basic_html'
   - 'use text format restricted_html'
   - 'use text format full_html'
+  - 'customize shortcut links'
+  - 'access shortcuts'
+  - 'access content overview'
+  - 'revert all revisions'
+  - 'view all revisions'
+  - 'access contextual links'
+  - 'create media'
+  - 'update any media'
+  - 'ds switch view mode'
