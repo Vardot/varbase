@@ -21,3 +21,6 @@ regions:
 
 libraries:
   - 'vartheme_subtheme/global-styling'
+  
+ckeditor_stylesheets:
+  - css/style.css
