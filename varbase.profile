@@ -15,6 +15,10 @@ function varbase_form_install_configure_form_alter(&$form, FormStateInterface $f
   // Add a placeholder as example that one can choose an arbitrary site name.
   $form['site_information']['site_name']['#attributes']['placeholder'] = t('My Official Site Name');
 
+  // Default site email noreply@vardot.com .
+  $form['site_information']['site_mail']['#default_value'] = 'noreply@vardot.com';
+  $form['site_information']['site_mail']['#attributes']['style'] = 'width: 25em;'
+  
   // Default user 1 username should be 'webmaster'.
   $form['admin_account']['account']['name']['#default_value'] = 'webmaster';
   $form['admin_account']['account']['name']['#attributes']['disabled'] = TRUE;
