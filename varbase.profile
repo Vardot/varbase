@@ -17,7 +17,7 @@ function varbase_form_install_configure_form_alter(&$form, FormStateInterface $f
 
   // Default site email noreply@vardot.com .
   $form['site_information']['site_mail']['#default_value'] = 'noreply@vardot.com';
-  $form['site_information']['site_mail']['#attributes']['style'] = 'width: 25em;'
+  $form['site_information']['site_mail']['#attributes']['style'] = 'width: 25em;';
   
   // Default user 1 username should be 'webmaster'.
   $form['admin_account']['account']['name']['#default_value'] = 'webmaster';
