@@ -24,7 +24,6 @@ dependencies:
   - field
   - field_ui
   - file
-  - help
   - history
   - image
   - menu_link_content
