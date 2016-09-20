@@ -91,6 +91,7 @@ dependencies:
   
   # Varbase core functionality.
   - varbase_core
+  - varbase_admin
   - varbase_seo
   - varbase_page
   - varbase_landing
