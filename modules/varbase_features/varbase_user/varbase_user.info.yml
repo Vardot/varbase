@@ -3,9 +3,6 @@ description: 'Provide User related configuration.'
 type: module
 core: 8.x
 dependencies:
-  - field
-  - file
-  - image
   - path
   - user
 version: 8.x-4.0

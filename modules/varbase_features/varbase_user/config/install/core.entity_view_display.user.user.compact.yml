@@ -3,10 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - image
     - user
 id: user.user.compact
 targetEntityType: user
