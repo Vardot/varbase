@@ -77,4 +77,9 @@ function varbase_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+  
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // The following changes were detected in the entity type and field definitions.
+  \Drupal::entityDefinitionUpdateManager()->applyUpdates();
+
 }
