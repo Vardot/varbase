@@ -201,7 +201,7 @@ projects[pathauto][type] = module
 projects[pathauto][subdir] = "contrib"
 projects[pathauto][download][type] = git
 projects[pathauto][download][url] = https://git.drupal.org/project/pathauto
-projects[pathauto][download][tag] = 8.x-1.0-alpha3
+projects[pathauto][download][tag] = 8.x-1.0-beta1
 
 projects[redirect][type] = module
 projects[redirect][subdir] = "contrib"
