@@ -40,12 +40,14 @@ projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
 projects[panels][download][tag] = 8.x-3.0-beta4
+;; Issue #2747739 : [panels] Create and host mega patches until the Panels ecosystem stabilizes and releases
+projects[panels][patch][] = https://www.drupal.org/files/issues/panels--beta4-4c4a3a7--2747739-17--binary.patch
 ;; Issue #2667754 : Allow other modules to disable the IPE based on custom logic
 projects[panels][patch][] = https://www.drupal.org/files/issues/2667754-3.patch
 ;; Bandaid tempstore patch
 projects[panels][patch][] = https://www.drupal.org/files/issues/bandaid.patch
 ;; Issue #2697587 : Wizard API integration
-projects[panels][patch][] = https://www.drupal.org/files/issues/2697587-42.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/2697587-48.patch
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
@@ -59,7 +61,7 @@ projects[panelizer][patch][] = https://www.drupal.org/files/issues/2701349-2.pat
 ;; Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
 ;; Issue #2664682 : Implement admin UI for editing Panelizer defaults
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/2664682-45.patch
+projects[panelizer][patch][] = https://www.drupal.org/files/issues/2664682-55.patch
 
 projects[layout_plugin][type] = module
 projects[layout_plugin][subdir] = "contrib"
