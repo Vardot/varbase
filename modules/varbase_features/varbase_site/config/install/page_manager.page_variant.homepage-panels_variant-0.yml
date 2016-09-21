@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.homepage
+    - views.view.frontpage
+  module:
+    - panels
+    - views
+id: homepage-panels_variant-0
+label: Homepage
+variant: panels_variant
+variant_settings:
+  blocks:
+    1d476cf7-e736-4eb9-9a6b-ec0b08885e84:
+      id: 'views_block:frontpage-frontpage_block'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      context_mapping: {  }
+      region: main
+      uuid: 1d476cf7-e736-4eb9-9a6b-ec0b08885e84
+      weight: 1
+  id: panels_variant
+  uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8
+  label: null
+  weight: 0
+  layout: booststrap-12
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: homepage-panels_variant-0
+  builder: ipe
+page: homepage
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

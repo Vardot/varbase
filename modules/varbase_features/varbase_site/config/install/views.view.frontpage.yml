@@ -56,9 +56,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
           empty: true
           title: 'Welcome to [site:name]'
+          label: ''
           plugin_id: title
       exposed_form:
         type: basic
@@ -253,7 +253,7 @@ display:
     display_plugin: feed
     id: feed_1
     display_title: Feed
-    position: 2
+    position: 3
     display_options:
       sitename_title: true
       path: rss.xml
@@ -284,10 +284,80 @@ display:
         - user.permissions
       max-age: -1
       tags: {  }
+  frontpage_block:
+    display_plugin: block
+    id: frontpage_block
+    display_title: Block
+    position: 2
+    display_options:
+      display_extenders: {  }
+      enabled: true
+      title: ''
+      defaults:
+        title: false
+        header: false
+        empty: false
+      allow:
+        items_per_page: true
+        pager: pager
+        sort_fields: sort_fields
+        configure_sorts: configure_sorts
+        offset: '0'
+        hide_fields: '0'
+        disable_filters: '0'
+      block_description: 'Frontpage block'
+      block_category: 'Lists (Views)'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: true
+          content:
+            value: '<h1>Welcome to [site:name]</h1>'
+            format: restricted_html
+          plugin_id: text
+      empty:
+        area_text_custom:
+          admin_label: ''
+          content: 'No front page content has been created yet.'
+          empty: true
+          field: area_text_custom
+          group_type: group
+          id: area_text_custom
+          label: ''
+          relationship: none
+          table: views
+          tokenize: false
+          plugin_id: text_custom
+        node_listing_empty:
+          admin_label: ''
+          empty: true
+          field: node_listing_empty
+          group_type: group
+          id: node_listing_empty
+          label: ''
+          relationship: none
+          table: node
+          plugin_id: node_listing_empty
+          entity_type: node
+    cache_metadata:
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      max-age: -1
+      tags: {  }
   page_1:
     display_options:
       path: node
       display_extenders: {  }
+      enabled: false
     display_plugin: page
     display_title: Page
     id: page_1

@@ -6,6 +6,8 @@ dependencies:
   - block_content
   - field
   - node
+  - page_manager
+  - panels
   - taxonomy
   - text
   - user
