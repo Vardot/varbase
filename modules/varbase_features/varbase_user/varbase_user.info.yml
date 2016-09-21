@@ -3,7 +3,6 @@ description: 'Provide User related configuration.'
 type: module
 core: 8.x
 dependencies:
-  - path
   - user
 version: 8.x-4.0
 package: Varbase
