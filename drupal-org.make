@@ -27,7 +27,7 @@ projects[token][type] = module
 projects[token][subdir] = "contrib"
 projects[token][download][type] = git
 projects[token][download][url] = https://git.drupal.org/project/token
-projects[token][download][tag] = 8.x-1.0-beta1
+projects[token][download][tag] = 8.x-1.0-beta2
 
 projects[page_manager][type] = module
 projects[page_manager][subdir] = "contrib"
