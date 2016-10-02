@@ -237,7 +237,7 @@ projects[features][type] = module
 projects[features][subdir] = "contrib"
 projects[features][download][type] = git
 projects[features][download][url] = https://git.drupal.org/project/features
-projects[features][download][tag] = 8.x-3.0-beta9
+projects[features][download][tag] = 8.x-3.0-rc1
 
 projects[coffee][type] = module
 projects[coffee][subdir] = "contrib"
