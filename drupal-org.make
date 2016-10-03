@@ -39,15 +39,10 @@ projects[panels][type] = module
 projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
-projects[panels][download][tag] = 8.x-3.0-beta4
+projects[panels][download][tag] = 8.x-3.0-beta5
 ;; Issue #2747739 : [panels] Create and host mega patches until the Panels ecosystem stabilizes and releases
-projects[panels][patch][] = https://www.drupal.org/files/issues/panels--beta4-4c4a3a7--2747739-17--binary.patch
-;; Issue #2667754 : Allow other modules to disable the IPE based on custom logic
-projects[panels][patch][] = https://www.drupal.org/files/issues/2667754-3.patch
-;; Bandaid tempstore patch
-projects[panels][patch][] = https://www.drupal.org/files/issues/bandaid.patch
-;; Issue #2697587 : Wizard API integration
-projects[panels][patch][] = https://www.drupal.org/files/issues/2697587-48.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/panels-beta4-75131285.patch
+
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
