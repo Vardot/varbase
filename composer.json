@@ -53,10 +53,6 @@
      }
    },
   "patches": {
-    "drupal/panels": {
-      "Issue #2747739 : [panels] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-      "https://www.drupal.org/files/issues/panels-beta4-75131285.patch"
-    },
     "drupal/panelizer": {
       "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
       "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
