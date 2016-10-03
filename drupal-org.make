@@ -40,6 +40,10 @@ projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
 projects[panels][download][tag] = 8.x-3.0-beta5
+;; Issue #2747739 : Mega Patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/panels-beta4-75131285.patch
+;; Issue #2793801 : Allow modules to influence the IPE tempstore ID
+projects[panels][patch][] = https://www.drupal.org/files/issues/2793801-9.patch
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
