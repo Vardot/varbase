@@ -74,7 +74,7 @@ projects[ds][type] = module
 projects[ds][subdir] = "contrib"
 projects[ds][download][type] = git
 projects[ds][download][url] = https://git.drupal.org/project/ds
-projects[ds][download][tag] = 8.x-2.5
+projects[ds][download][tag] = 8.x-2.6
 
 projects[field_group][type] = module
 projects[field_group][subdir] = "contrib"
