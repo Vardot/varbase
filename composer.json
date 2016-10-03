@@ -55,13 +55,7 @@
   "patches": {
     "drupal/panels": {
       "Issue #2747739 : [panels] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-      "https://www.drupal.org/files/issues/panels--beta4-4c4a3a7--2747739-17--binary.patch",
-      "Issue #2667754 : Allow other modules to disable the IPE based on custom logic":
-      "https://www.drupal.org/files/issues/2667754-3.patch",
-      "Bandaid tempstore patch":
-      "https://www.drupal.org/files/issues/bandaid.patch",
-      "Issue #2697587 : Wizard API integration":
-      "https://www.drupal.org/files/issues/2697587-48.patch"
+      "https://www.drupal.org/files/issues/panels-beta4-75131285.patch"
     },
     "drupal/panelizer": {
       "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
