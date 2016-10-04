@@ -40,6 +40,10 @@ projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
 projects[panels][download][tag] = 8.x-3.0-beta5
+;; Issue #2810533 : Advanced panels 8.x-3.x based on the work of Lightning profile
+projects[panels][patch][] = https://www.drupal.org/files/issues/panels--8-x-3-0-beta5---2810533-10.patch
+;; Issue #2793801 : Allow modules to influence the IPE tempstore ID
+projects[panels][patch][] = https://www.drupal.org/files/issues/2793801-9.patch
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"

@@ -53,6 +53,12 @@
      }
    },
   "patches": {
+    "drupal/panels": {
+      "Issue #2810533 : Advanced panels 8.x-3.x based on the work of Lightning profile":
+      "https://www.drupal.org/files/issues/panels--8-x-3-0-beta5---2810533-10.patch",
+      "Issue #2793801 : Allow modules to influence the IPE tempstore ID":
+      "https://www.drupal.org/files/issues/2793801-9.patch"
+    },
     "drupal/panelizer": {
       "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
       "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
