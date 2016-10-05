@@ -91,7 +91,7 @@
     "drupal/field_group": "8.1.0-rc4",
     "drupal/smart_trim": "8.1.0",
     "drupal/advanced_text_formatter": "8.1.0-beta3",
-    "drupal/block_class": "8.1.x-dev",
+    "drupal/block_class": "8.1.0-alpha1",
     "drupal/extlink": "8.1.0-alpha3",
     "drupal/linkit": "8.4.1",
     "drupal/anchor_link": "8.1.0-alpha1",
