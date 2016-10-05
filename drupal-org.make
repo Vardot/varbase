@@ -97,9 +97,9 @@ projects[advanced_text_formatter][download][tag] = 8.x-1.0-beta3
 
 projects[block_class][type] = module
 projects[block_class][subdir] = "contrib"
-projects[block_class][version] = "8.x-1.x-dev"
 projects[block_class][download][type] = git
-projects[block_class][download][branch] = 8.x-1.x
+projects[block_class][download][url] = https://git.drupal.org/project/block_class
+projects[block_class][download][tag] = 8.x-1.0-alpha1
 
 projects[extlink][type] = module
 projects[extlink][subdir] = "contrib"
