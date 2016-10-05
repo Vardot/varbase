@@ -25,7 +25,7 @@ before_install:
   - composer self-update
   - composer --version
   - composer remove drupal/core
-  - composer require drupal/drupal 8.1.10
+  - composer require drupal/drupal 8.2.0
 
 install:
   - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
