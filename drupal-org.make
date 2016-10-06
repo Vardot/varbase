@@ -451,7 +451,7 @@ projects[username_enumeration_prevention][subdir] = security
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 3.0-alpha5
+projects[varbase_editor][version] = 3.0
 projects[varbase_editor][subdir] = features
 
 ;;;;;;;;;;;;;;;;;;;;;
