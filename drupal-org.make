@@ -184,7 +184,7 @@ projects[panelizer][type] = module
 projects[panelizer][subdir] = contrib
 projects[panelizer][version] = 3.4
 
-projects[panels][version] = 3.6
+projects[panels][version] = 3.7
 projects[panels][subdir] = contrib
 projects[panels][patch][2427917] = "http://www.drupal.org/files/issues/panels-mini_panels_blocks_contextual_links-2427917.patch"
 
