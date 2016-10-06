@@ -40,8 +40,6 @@ projects[panels][subdir] = "contrib"
 projects[panels][download][type] = git
 projects[panels][download][url] = https://git.drupal.org/project/panels
 projects[panels][download][tag] = 8.x-3.0-beta5
-;; Issue #2810533 : Advanced panels 8.x-3.x based on the work of Lightning profile
-projects[panels][patch][] = https://www.drupal.org/files/issues/panels--8-x-3-0-beta5---2810533-10.patch
 ;; Issue #2793801 : Allow modules to influence the IPE tempstore ID
 projects[panels][patch][] = https://www.drupal.org/files/issues/2793801-9.patch
 
@@ -58,12 +56,16 @@ projects[panelizer][patch][] = https://www.drupal.org/files/issues/2701349-2.pat
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
 ;; Issue #2664682 : Implement admin UI for editing Panelizer defaults
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/2664682-55.patch
+;; Issue #2793841 - Properly integrate with Panels IPE
+projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
 
 projects[layout_plugin][type] = module
 projects[layout_plugin][subdir] = "contrib"
 projects[layout_plugin][download][type] = git
 projects[layout_plugin][download][url] = https://git.drupal.org/project/layout_plugin
 projects[layout_plugin][download][tag] = 8.x-1.0-alpha22
+;; Issue #2811423 : Add public getLayout() method to LayoutBase - via mega patch
+projects[layout_plugin][patch][] = https://www.drupal.org/files/issues/2747739-26--layout_plugin-alpha22-to-96a5cf90.patch
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][subdir] = "contrib"

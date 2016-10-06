@@ -14,13 +14,13 @@
       "phing/phing": "^2.14",
       "behat/mink": "~1.7",
       "behat/mink-goutte-driver": "~1.2",
-      "jcalderonzumba/gastonjs": "~1.0.2",
-      "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
       "mikey179/vfsStream": "~1.2",
       "phpunit/phpunit": "~4.8",
       "guzzlehttp/guzzle": "^6.1",
       "symfony/css-selector": "~2.8",
-      "squizlabs/php_codesniffer": "2.*"
+      "squizlabs/php_codesniffer": "2.*",
+      "behatch/contexts": "*",
+      "emuse/behat-html-formatter": "@stable"
   },
   "config": {
       "bin-dir": "bin/"
@@ -54,8 +54,6 @@
    },
   "patches": {
     "drupal/panels": {
-      "Issue #2810533 : Advanced panels 8.x-3.x based on the work of Lightning profile":
-      "https://www.drupal.org/files/issues/panels--8-x-3-0-beta5---2810533-10.patch",
       "Issue #2793801 : Allow modules to influence the IPE tempstore ID":
       "https://www.drupal.org/files/issues/2793801-9.patch"
     },
@@ -67,11 +65,23 @@
       "Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer":
       "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
       "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
-      "https://www.drupal.org/files/issues/2664682-55.patch"
+      "https://www.drupal.org/files/issues/2664682-55.patch",
+      "Issue #2793841 : Properly integrate with Panels IPE":
+      "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
+    },
+    "drupal/layout_plugin": {
+      "Issue #2811423 : Add public getLayout() method to LayoutBase - via mega patch":
+      "https://www.drupal.org/files/issues/2747739-26--layout_plugin-alpha22-to-96a5cf90.patch"
+    },
+    "drupal/metatag": {
+      "Issue #2786795 : DrupalConsole integration breaks Drush":
+      "https://www.drupal.org/files/issues/metatag-deactivate_drupalconsole_services_0.patch"
     },
     "drush/drush": {
       "Adding composer.json support to make-convert command":
-      "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch"
+      "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
+      "The batch table may not exist by the time _drush_backend_batch_process() is called in 8.x-1.x":
+      "https://github.com/drush-ops/drush/commit/c389aebb7d3e26ff0f544684d8b3ec3528107e55.diff"
     }
   },
   "require": {
