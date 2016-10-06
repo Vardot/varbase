@@ -273,4 +273,4 @@ projects[varbase_editor][type] = module
 projects[varbase_editor][subdir] = "contrib"
 projects[varbase_editor][download][type] = git
 projects[varbase_editor][download][url] = https://git.drupal.org/project/varbase_editor
-projects[varbase_editor][download][tag] = 8.x-4.0-beta1
+projects[varbase_editor][download][tag] = 8.x-4.0
