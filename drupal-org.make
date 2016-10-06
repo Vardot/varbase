@@ -420,7 +420,7 @@ projects[httprl][download][revision] = "0450bdebbb1d9a132373c33b74d06b41ca5d2664
 projects[memcache][version] = 1.5
 projects[memcache][subdir] = performance
 
-projects[ajax_error_behavior][version] = 7.1.1
+projects[ajax_error_behavior][version] = 1.1
 projects[ajax_error_behavior][subdir] = performance
 
 ;;;;;;;;;;;;;;;;;;;;;
