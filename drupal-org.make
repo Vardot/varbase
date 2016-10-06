@@ -1,5 +1,5 @@
-api = 2
 core = 8.x
+api = 2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules
@@ -89,7 +89,7 @@ projects[anchor_link] = 1.0-alpha1
 
 projects[views_infinite_scroll][type] = module
 projects[views_infinite_scroll][subdir] = "contrib"
-projects[views_infinite_scroll][version] = 8.x-1.2
+projects[views_infinite_scroll][version] = 1.2
 
 projects[embed][type] = module
 projects[embed][subdir] = "contrib"
@@ -117,7 +117,7 @@ projects[media_entity][version] = 1.5
 
 projects[media_entity_document][type] = module
 projects[media_entity_document][subdir] = "contrib"
-projects[media_entity_document][version] = 8.x-1.1
+projects[media_entity_document][version] = 1.1
 
 projects[media_entity_image][type] = module
 projects[media_entity_image][subdir] = "contrib"
@@ -193,4 +193,4 @@ projects[adminimal_theme][version] = 1.1
 
 projects[varbase_editor][type] = module
 projects[varbase_editor][subdir] = "contrib"
-projects[varbase_editor][version] = 8.x-4.0
+projects[varbase_editor][version] = 4.0
