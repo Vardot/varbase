@@ -1,0 +1,8 @@
+imports:
+  - behat.varbase.yml
+
+default:
+  suites:
+    default:
+      paths:
+        features: %paths.base%/tests/tools

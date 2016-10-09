@@ -1,0 +1,9 @@
+css:
+  test name selector: '#test .css.selector'
+  about us block: "body.about-us-page .block .about-us-block"
+xpath:
+  test xpath selector: '//*[@id="test-xpath-selector"]'
+
+# This will be only for one page or one feature in the site.
+# So that we do not add it to all selectors of the site.
+# Only we can load this file in the needed features.

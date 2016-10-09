@@ -1,0 +1,4 @@
+css:
+  copyright: 'footer#footer .copyright'
+xpath:
+  main navigation menu: '//nav[@id="main_menu"]'

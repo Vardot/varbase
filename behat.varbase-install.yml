@@ -1,0 +1,68 @@
+default:
+  suites:
+    default:
+      autoload:
+        '': %paths.base%/tests/features/bootstrap
+      contexts:
+        - VarbaseContext:
+            parameters:
+              varbase_users:
+                webmaster: { email: 'webmaster@vardot.com', password: 'dD.123123ddd' }
+        - SelectorsContext:
+           parameters:
+             files_path: "%paths.base%/selectors/"
+             files:
+               - "varbase/installation-selectors.yml"
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\DrushContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MarkupContext
+        - Drupal\DrupalExtension\Context\BatchContext
+        - behatch:browser:
+            timeout: 1
+        - behatch:debug:
+            screenshotDir: "%paths.base%/tests/screenshots/"
+        - behatch:json:
+            evaluationMode: javascript
+        - behatch:rest
+        - behatch:system:
+            root: "../../"
+        - behatch:table
+        - behatch:xml
+      filters:
+        tags: "@install"
+      paths:
+        features: %paths.base%/tests/tools
+        bootstrap: %paths.base%/tests/features/bootstrap
+  formatters:
+    pretty:
+    html:
+      output_path: "%paths.base%/tests/reports/"
+  extensions:
+    Behat\MinkExtension:
+      files_path: "%paths.base%/tests/assets/"
+      goutte: ~
+      zombie: ~
+      selenium2:
+        wd_host: 127.0.0.1:4445/wd/hub
+        capabilities:
+          browser: 'firefox'
+          # browser: 'chrome'
+          # browser: 'phantomjs'
+          nativeEvents: true
+      base_url: http://127.0.0.1:8080
+      browser_name: 'firefox'
+      # browser_name: 'chrome'
+      # browser_name: 'phantomjs'
+      javascript_session: selenium2
+    Drupal\DrupalExtension:
+      blackbox: ~
+    Sanpi\Behatch\Extension: ~
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: false
+      print_outp: false
+      loop_break: false

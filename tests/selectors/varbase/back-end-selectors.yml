@@ -1,0 +1,5 @@
+css:
+  Primary tabs: '#navigation .tabs.primary'
+  Primary tabs first link: '#navigation .tabs.primary > ul > li:nth-child(1) > a'
+xpath:
+  Preview page layout: '//*[@id="responsive-preview-navbar-tab"]/button'
