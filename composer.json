@@ -6,23 +6,23 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require-dev": {
-      "drush/drush": "^9.0",
-      "drupal/drupal-extension": "^3.2",
-      "jakoch/phantomjs-installer": "1.9.8",
-      "behat/behat": "^3.0",
-      "drupal/coder": "8.*",
-      "phing/phing": "^2.14",
-      "behat/mink": "~1.7",
-      "behat/mink-goutte-driver": "~1.2",
-      "behat/mink-zombie-driver": "@stable",
-      "behat/mink-selenium2-driver":  "~1.3",
-      "mikey179/vfsStream": "~1.2",
-      "phpunit/phpunit": "~4.8",
-      "guzzlehttp/guzzle": "^6.1",
-      "symfony/css-selector": "~2.8",
-      "squizlabs/php_codesniffer": "2.*",
-      "behatch/contexts": "*",
-      "emuse/behat-html-formatter": "@stable"
+    "drush/drush": "^9.0",
+    "drupal/drupal-extension": "^3.2",
+    "jakoch/phantomjs-installer": "1.9.8",
+    "behat/behat": "^3.0",
+    "drupal/coder": "8.*",
+    "phing/phing": "^2.14",
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "behat/mink-zombie-driver": "@stable",
+    "behat/mink-selenium2-driver":  "~1.3",
+    "mikey179/vfsStream": "~1.2",
+    "phpunit/phpunit": "~4.8",
+    "guzzlehttp/guzzle": "^6.1",
+    "symfony/css-selector": "~2.8",
+    "squizlabs/php_codesniffer": "2.*",
+    "behatch/contexts": "*",
+    "emuse/behat-html-formatter": "@stable"
   },
   "config": {
       "bin-dir": "bin/"
@@ -35,22 +35,22 @@
   ],
   "scripts": {
       "post-install-cmd": [
-          "PhantomInstaller\\Installer::installPhantomJS",
-          "@composer drupal-scaffold",
-          "./bin/phing push"
+        "PhantomInstaller\\Installer::installPhantomJS",
+        "@composer drupal-scaffold",
+        "./bin/phing push"
       ],
       "post-update-cmd": [
-          "./bin/phing push"
+        "./bin/phing push"
       ],
       "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
   "extra": {
      "installer-paths": {
          "docroot": [
-             "drupal/drupal"
+            "drupal/drupal"
          ],
          "modules/contrib/{$name}": [
-             "type:drupal-module"
+            "type:drupal-module"
          ]
      }
    },
@@ -87,7 +87,7 @@
     }
   },
   "require": {
-    "cweagans/composer-patches": "^1.5.0",
+    "cweagans/composer-patches": "~1.0",
     "composer/installers": "^1.0",
     "drupal/core": "8.2.0",
     "drupal/config_update": "8.1.1",
@@ -129,7 +129,7 @@
     "drupal/google_analytics": "8.2.1",
     
     "drupal/coffee": "8.1.0-beta1",
-    "drupal/diff": "8.1.0-beta1",
+    "drupal/diff": "8.1.0-beta1", "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     
     "drupal/bootstrap": "8.3.0-rc2",
     "drupal/adminimal_theme": "8.1.1",
