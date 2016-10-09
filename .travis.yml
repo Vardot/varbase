@@ -10,11 +10,22 @@ php:
   - 5.5
   - 5.6
   - 7.0
+jdk: oraclejdk8
 env:
   - VERSION=8.x-4.x
   
 sudo: false
 
+addons:  
+  firefox: latest
+  apt:
+    packages:
+      - xvfb
+      - x11-xkb-utils
+      - xfonts-100dpi
+      - xfonts-75dpi
+      - xfonts-scalable
+  
 mysql:
   database: drupal
   username: root
@@ -26,6 +37,7 @@ before_install:
   - composer --version
   - composer remove drupal/core
   - composer require drupal/drupal 8.2.0
+
 
 install:
   - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
@@ -47,7 +59,22 @@ install:
   - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
   - phpenv config-add drupal.php.ini
   - phpenv rehash
-
+  
+  # Configure the display.
+  - export DISPLAY=:0
+  - sh -e /etc/init.d/xvfb start
+  - Xvfb :0 -ac -screen 0 1960x2000x24 &
+  - sleep 3 # give xvfb some time to start
+  
+  # Print firefox version.
+  - firefox --version
+  
+  # Run selenium standalone server.
+  - echo "Getting selenium server standalone 2.53.1\n"
+  - wget -O $HOME/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+  - java -jar $HOME/selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
+  - echo "[  OK  ] Starting Selenium on the 4445 port ..."
+  
   - composer global require phing/phing
   - phing build -Dversion=$VERSION -Dbranch=$TRAVIS_COMMIT
 
@@ -57,15 +84,15 @@ install:
 before_script:
   - cd docroot
   - drush runserver --default-server=builtin 8080 &>/dev/null &
-  - phantomjs --webdriver=4444 > /dev/null &
   - sleep 5
-  
+   
   - php profiles/varbase/modules/contrib/composer_manager/scripts/init.php
   # composer drupal-update -vvv
 
 script:
   - cd ./profiles/varbase
-  - behat --strict
+  - behat --strict tests/features/varbase/step1-init-tests/
+  - behat --strict tests/features/varbase/step2-apply-tests/
 
 matrix:
   fast_finish: true
