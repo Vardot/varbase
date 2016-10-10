@@ -323,7 +323,7 @@ projects[globalredirect][version] = 1.5
 projects[globalredirect][subdir] = seo
 projects[globalredirect][patch][2385415] = "http://www.drupal.org/files/issues/globalredirect-prevent_missing_define-2385415.patch"
 
-projects[google_analytics][version] = 2.2
+projects[google_analytics][version] = 2.3
 projects[google_analytics][subdir] = seo
 
 projects[imagecache_token][version] = 1.0-rc2
