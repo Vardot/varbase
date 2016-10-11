@@ -78,4 +78,5 @@ content:
       more_class: more-link
     third_party_settings: {  }
 hidden:
+  langcode: true
   links: true

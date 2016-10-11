@@ -48,6 +48,8 @@ dependencies:
   - views_ui
   - user
   - text
+  - language
+  - content_translation
 
   # contrib modules
   - config_update

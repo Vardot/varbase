@@ -38,3 +38,4 @@ permissions:
   - 'create media'
   - 'update any media'
   - 'ds switch view mode'
+  - 'translate page node'

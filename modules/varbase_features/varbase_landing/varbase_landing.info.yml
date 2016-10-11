@@ -1,14 +1,18 @@
 name: 'Varbase Landing'
 description: 'Landing page content type and related configurations.'
 type: module
-core: 8.x
 dependencies:
+  - content_translation
   - field
+  - language
   - menu_ui
   - node
   - panelizer
   - path
   - pathauto
   - user
-version: 8.x-4.0
 package: Varbase
+version: 8.x-4.0
+core: 8.x
+project: varbase
+datestamp: 1476014041

@@ -1,13 +1,15 @@
 name: 'Varbase SEO'
 description: 'Provide SEO Core features and settings.'
 type: module
-core: 8.x
 dependencies:
-  - rdf
-  - user
-  - pathauto
-  - redirect
   - metatag
+  - pathauto
+  - rdf
+  - redirect
+  - user
   - xmlsitemap
-version: 8.x-4.0
 package: Varbase
+version: 8.x-4.0
+core: 8.x
+project: varbase
+datestamp: 1476014041

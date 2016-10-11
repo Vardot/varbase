@@ -1,10 +1,12 @@
 name: 'Varbase Admin'
 description: 'Manage administration configurations.'
 type: module
-core: 8.x
 dependencies:
   - node
   - user
   - views
-version: 8.x-4.0
 package: Varbase
+version: 8.x-4.0
+core: 8.x
+project: varbase
+datestamp: 1476014041

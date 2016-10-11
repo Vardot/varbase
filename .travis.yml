@@ -10,7 +10,6 @@ php:
   - 5.5
   - 5.6
   - 7.0
-jdk: oraclejdk8
 env:
   - VERSION=8.x-4.x
   
@@ -18,13 +17,18 @@ sudo: false
 
 addons:  
   firefox: latest
+  xfonts-cyrillic: latest
   apt:
     packages:
+      - firefox
+      - xorg
       - xvfb
+      - dbus-x11
       - x11-xkb-utils
       - xfonts-100dpi
       - xfonts-75dpi
       - xfonts-scalable
+      - xserver-xorg-core
   
 mysql:
   database: drupal
@@ -63,7 +67,7 @@ install:
   # Configure the display.
   - export DISPLAY=:0
   - sh -e /etc/init.d/xvfb start
-  - Xvfb :0 -ac -screen 0 1960x2000x24 &
+  - Xvfb :0 -ac -screen 0 1366x768x24 &
   - sleep 3 # give xvfb some time to start
   
   # Print firefox version.

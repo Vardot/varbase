@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.document
+id: media.document.status
+field_name: status
+entity_type: media
+bundle: document
+label: 'Publishing status'
+description: 'A boolean indicating whether the media is published.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

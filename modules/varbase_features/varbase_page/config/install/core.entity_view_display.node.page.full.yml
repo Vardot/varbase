@@ -27,4 +27,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  langcode: true
   links: true
