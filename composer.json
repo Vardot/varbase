@@ -89,7 +89,7 @@
   "require": {
     "cweagans/composer-patches": "~1.0",
     "composer/installers": "^1.0",
-    "drupal/core": "8.2.0",
+    "drupal/core": "8.2.1",
     "drupal/config_update": "8.1.1",
     "drupal/composer_manager": "8.1.0-rc2",
     "drupal/ctools": "8.3.0-alpha27",

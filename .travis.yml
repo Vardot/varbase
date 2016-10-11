@@ -40,7 +40,7 @@ before_install:
   - composer self-update
   - composer --version
   - composer remove drupal/core
-  - composer require drupal/drupal 8.2.0
+  - composer require drupal/drupal 8.2.1
 
 
 install:
