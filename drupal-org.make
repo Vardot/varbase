@@ -119,7 +119,7 @@ projects[anchor_link][type] = module
 projects[anchor_link][subdir] = "contrib"
 projects[anchor_link][download][type] = git
 projects[anchor_link][download][url] = https://git.drupal.org/project/anchor_link
-projects[anchor_link][download][tag] = 8.x-1.0
+projects[anchor_link][download][tag] = 8.x-1.2
 
 projects[views_infinite_scroll][type] = module
 projects[views_infinite_scroll][subdir] = "contrib"
