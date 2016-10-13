@@ -51,6 +51,7 @@ dependencies[] = views
 dependencies[] = views_bootstrap
 dependencies[] = views_bulk_operations
 dependencies[] = views_content
+dependencies[] = ajax_error_behavior
 features[ctools][] = strongarm:strongarm:1
 features[defaultconfig][] = user_default_permissions:access content
 features[defaultconfig][] = user_default_permissions:access content overview
