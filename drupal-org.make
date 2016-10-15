@@ -193,6 +193,13 @@ projects[entityqueue][download][type] = git
 projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue
 projects[entityqueue][download][tag] = 8.x-1.0-alpha4
 
+projects[entityqueue][type] = module
+projects[entityqueue][subdir] = "contrib"
+projects[entityqueue][download][url] = http://git.drupal.org/project/entityqueue.git
+projects[entityqueue][download][revision] = 1e33d7d90bea473718f8b17f358923e19c833cd5
+projects[entityqueue][download][branch] = 8.x-1.x
+
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
