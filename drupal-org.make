@@ -247,7 +247,7 @@ projects[diff][type] = module
 projects[diff][subdir] = "contrib"
 projects[diff][download][type] = git
 projects[diff][download][url] = https://git.drupal.org/project/diff
-projects[diff][download][tag] = 8.x-1.0-beta1
+projects[diff][download][tag] = 8.x-1.0-beta2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
