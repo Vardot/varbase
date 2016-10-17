@@ -60,7 +60,7 @@ projects[elements][subdir] = contrib
 projects[email][version] = 1.3
 projects[email][subdir] = contrib
 
-projects[entity][version] = 1.7
+projects[entity][version] = 1.8
 projects[entity][subdir] = contrib
 
 projects[entityreference][type] = module
