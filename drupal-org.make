@@ -113,7 +113,7 @@ projects[flexslider][subdir] = contrib
 projects[focal_point][version] = 1.0-beta6
 projects[focal_point][subdir] = contrib
 
-projects[fontawesome][version] = 2.5
+projects[fontawesome][version] = 2.6
 projects[fontawesome][subdir] = contrib
 
 projects[icon][version] = 1.0-beta6
