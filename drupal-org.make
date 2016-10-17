@@ -187,7 +187,10 @@ projects[panels][patch][2427917] = "http://www.drupal.org/files/issues/panels-mi
 
 projects[panels_bootstrap_layouts][type] = module
 projects[panels_bootstrap_layouts][subdir] = contrib
-projects[panels_bootstrap_layouts][version] = 3.0
+projects[panels_bootstrap_layouts][version] = "3.x-dev"
+projects[panels_bootstrap_layouts][download][type] = "git"
+projects[panels_bootstrap_layouts][download][url] = "http://git.drupal.org/project/panels_bootstrap_layouts.git"
+projects[panels_bootstrap_layouts][download][revision] = "33cb6cdc318bb3073422cd5cf149cdddd97d9148"
 
 projects[picture][version] = 2.13
 projects[picture][subdir] = contrib
