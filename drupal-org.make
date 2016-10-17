@@ -24,10 +24,8 @@ projects[captcha][version] = 1.3
 projects[captcha][subdir] = contrib
 projects[captcha][patch][1395184] = "http://www.drupal.org/files/issues/1395184_31.patch"
 
-projects[ctools][version] = 1.10
+projects[ctools][version] = 1.11
 projects[ctools][subdir] = contrib
-projects[ctools][patch][1910608] = "http://www.drupal.org/files/issues/views_content-keyword-substitution-1910608-36.patch"
-projects[ctools][patch][2679747] = "http://www.drupal.org/files/issues/modal-rtl-css.patch"
 
 projects[config_perms][version] = 2.1
 projects[config_perms][subdir] = contrib
