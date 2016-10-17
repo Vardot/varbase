@@ -98,9 +98,8 @@ projects[field_group][subdir] = contrib
 projects[fieldable_panels_panes][version] = 1.10
 projects[fieldable_panels_panes][subdir] = contrib
 
-projects[file_entity][version] = 2.0-beta2
+projects[file_entity][version] = 2.0-beta3
 projects[file_entity][subdir] = contrib
-projects[file_entity][patch][2533816] = "http://www.drupal.org/files/issues/file_entity-notice_undefined_offset_menu_translate-2533816-4.patch"
 projects[file_entity][patch][1901566] = "http://www.drupal.org/files/issues/resolve_the_allowed-1901566-18.patch"
 projects[file_entity][patch][2312603] = "http://www.drupal.org/files/issues/fix_entity_api_create_access-2312603-8.patch"
 projects[file_entity][patch][2461209] = "http://www.drupal.org/files/issues/file_entity-upload_archive_permission-2462309-1.patch"
