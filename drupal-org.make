@@ -63,9 +63,7 @@ projects[layout_plugin][type] = module
 projects[layout_plugin][subdir] = "contrib"
 projects[layout_plugin][download][type] = git
 projects[layout_plugin][download][url] = https://git.drupal.org/project/layout_plugin
-projects[layout_plugin][download][tag] = 8.x-1.0-alpha22
-;; Issue #2811423 : Add public getLayout() method to LayoutBase - via mega patch
-projects[layout_plugin][patch][] = https://www.drupal.org/files/issues/2747739-26--layout_plugin-alpha22-to-96a5cf90.patch
+projects[layout_plugin][download][tag] = 8.x-1.0-alpha23
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][subdir] = "contrib"

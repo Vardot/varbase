@@ -71,10 +71,6 @@
       "Issue #2793841 : Properly integrate with Panels IPE":
       "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
     },
-    "drupal/layout_plugin": {
-      "Issue #2811423 : Add public getLayout() method to LayoutBase - via mega patch":
-      "https://www.drupal.org/files/issues/2747739-26--layout_plugin-alpha22-to-96a5cf90.patch"
-    },
     "drupal/metatag": {
       "Issue #2786795 : DrupalConsole integration breaks Drush":
       "https://www.drupal.org/files/issues/metatag-deactivate_drupalconsole_services_0.patch"
@@ -97,7 +93,7 @@
     "drupal/page_manager": "8.1.0-alpha24",
     "drupal/panels": "8.3.0-beta5",
     "drupal/panelizer": "8.3.0-alpha2",
-    "drupal/layout_plugin": "8.1.0-alpha22",
+    "drupal/layout_plugin": "8.1.0-alpha23",
     "drupal/bootstrap_layouts": "8.3.1",
     "drupal/ds": "8.2.6",
     "drupal/field_group": "8.1.0-rc4",
