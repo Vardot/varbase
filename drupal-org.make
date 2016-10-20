@@ -149,7 +149,7 @@ projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
 projects[entity_embed][download][type] = git
 projects[entity_embed][download][url] = https://git.drupal.org/project/entity_embed
-projects[entity_embed][download][tag] = 8.x-1.0-beta1
+projects[entity_embed][download][tag] = 8.x-1.0-beta2
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][subdir] = "contrib"
