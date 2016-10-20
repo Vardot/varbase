@@ -264,7 +264,7 @@ projects[adminimal_theme][type] = theme
 projects[adminimal_theme][subdir] = "contrib"
 projects[adminimal_theme][download][type] = git
 projects[adminimal_theme][download][url] = https://git.drupal.org/project/adminimal_theme
-projects[adminimal_theme][download][tag] = 8.x-1.1
+projects[adminimal_theme][download][tag] = 8.x-1.2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features
