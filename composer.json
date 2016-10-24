@@ -130,6 +130,6 @@
     "drupal/bootstrap": "8.3.0-rc2",
     "drupal/adminimal_theme": "8.1.2",
     
-    "drupal/varbase_editor": "8.4.0"
+    "drupal/varbase_editor": "8.4.1"
   }
 }
