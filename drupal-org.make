@@ -188,8 +188,12 @@ projects[video_embed_field][download][tag] = 8.x-1.3
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
 projects[entityqueue][download][url] = http://git.drupal.org/project/entityqueue.git
-projects[entityqueue][download][revision] = 1e33d7d90bea473718f8b17f358923e19c833cd5
+projects[entityqueue][download][revision] = 0359af5f0a229b61b46b2944d09c06739a52da5c
 projects[entityqueue][download][branch] = 8.x-1.x
+;; Issue #2478685 by josebc: Reverse order in admin view option
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-reverse_order_in_admin-2478685-3.patch
+;; Issue #2821631 by josebc: Queue is always required when using  Limit to a specific entity queue
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-moved_queue_condition_to_join-2821631-5.patch
 
 
 ;;;;;;;;;;;;;;;;;;;;;
