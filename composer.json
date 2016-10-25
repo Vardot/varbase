@@ -8,6 +8,7 @@
   "require-dev": {
     "drush/drush": "^9.0",
     "drupal/drupal-extension": "^3.2",
+    "drupal-composer/drupal-scaffold": "^2.0.0",
     "jakoch/phantomjs-installer": "1.9.8",
     "behat/behat": "^3.0",
     "drupal/coder": "8.*",
@@ -35,56 +36,56 @@
   ],
   "scripts": {
       "post-install-cmd": [
-        "@composer drupal-scaffold",
-        "./bin/phing push"
+          "@composer drupal-scaffold",
+          "./bin/phing push"
       ],
       "post-update-cmd": [
-        "./bin/phing push"
+          "./bin/phing push"
       ],
       "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
   "extra": {
-     "installer-paths": {
-         "docroot": [
-            "drupal/drupal"
-         ],
-         "modules/contrib/{$name}": [
-            "type:drupal-module"
-         ]
-     }
-   },
-  "patches": {
-    "drupal/panels": {
-      "Issue #2793801 : Allow modules to influence the IPE tempstore ID":
-      "https://www.drupal.org/files/issues/2793801-9.patch"
-    },
-    "drupal/panelizer": {
-      "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-      "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
-      "Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage":
-      "https://www.drupal.org/files/issues/2701349-2.patch",
-      "Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer":
-      "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
-      "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
-      "https://www.drupal.org/files/issues/2664682-55.patch",
-      "Issue #2793841 : Properly integrate with Panels IPE":
-      "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
-    },
-    "drupal/metatag": {
-      "Issue #2786795 : DrupalConsole integration breaks Drush":
-      "https://www.drupal.org/files/issues/metatag-deactivate_drupalconsole_services_0.patch"
-    },
-    "drupal/entityqueue": {
-      "Issue #2478685 by josebc: Reverse order in admin view option":
-      "https://www.drupal.org/files/issues/entityqueue-reverse_order_in_admin-2478685-3.patch",
-      "Issue #2821631 by josebc: Queue is always required when using  Limit to a specific entity queue":
-      "https://www.drupal.org/files/issues/entityqueue-moved_queue_condition_to_join-2821631-5.patch"
-    },
-    "drush/drush": {
-      "Adding composer.json support to make-convert command":
-      "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
-      "The batch table may not exist by the time _drush_backend_batch_process() is called in 8.x-1.x":
-      "https://github.com/drush-ops/drush/commit/c389aebb7d3e26ff0f544684d8b3ec3528107e55.diff"
+      "installer-paths": {
+          "docroot/core": [
+              "drupal/core"
+          ],
+          "modules/contrib/{$name}": [
+              "type:drupal-module"
+          ]
+      },
+    "patches": {
+      "drupal/panels": {
+        "Issue #2793801 : Allow modules to influence the IPE tempstore ID":
+        "https://www.drupal.org/files/issues/2793801-9.patch"
+      },
+      "drupal/panelizer": {
+        "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
+        "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
+        "Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage":
+        "https://www.drupal.org/files/issues/2701349-2.patch",
+        "Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer":
+        "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
+        "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
+        "https://www.drupal.org/files/issues/2664682-55.patch",
+        "Issue #2793841 : Properly integrate with Panels IPE":
+        "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
+      },
+      "drupal/metatag": {
+        "Issue #2786795 : DrupalConsole integration breaks Drush":
+        "https://www.drupal.org/files/issues/metatag-deactivate_drupalconsole_services_0.patch"
+      },
+      "drupal/entityqueue": {
+        "Issue #2478685 by josebc: Reverse order in admin view option":
+        "https://www.drupal.org/files/issues/entityqueue-reverse_order_in_admin-2478685-3.patch",
+        "Issue #2821631 by josebc: Queue is always required when using  Limit to a specific entity queue":
+        "https://www.drupal.org/files/issues/entityqueue-moved_queue_condition_to_join-2821631-5.patch"
+      },
+      "drush/drush": {
+        "Adding composer.json support to make-convert command":
+        "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
+        "The batch table may not exist by the time _drush_backend_batch_process() is called in 8.x-1.x":
+        "https://github.com/drush-ops/drush/commit/c389aebb7d3e26ff0f544684d8b3ec3528107e55.diff"
+      }
     }
   },
   "require": {
@@ -121,7 +122,7 @@
     "drupal/media_entity_image": "8.1.2",
     "drupal/media_entity_audio": "8.1.0-beta3",
     "drupal/video_embed_field": "8.1.3",
-    "drupal/entityqueue": "dev-8.x-1.x#0359af5f0a229b61b46b2944d09c06739a52da5c",
+    "drupal/entityqueue": "8.1.x-dev#0359af5f0a229b61b46b2944d09c06739a52da5c",
     
     "drupal/pathauto": "8.1.0-beta1",
     "drupal/redirect": "8.1.0-alpha1",

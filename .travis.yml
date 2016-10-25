@@ -6,8 +6,8 @@ cache:
     - "$HOME/.composer/cache"
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
+    
 php:
-  - 5.5
   - 5.6
   - 7.0
 env:
@@ -34,10 +34,10 @@ mysql:
   encoding: utf8
 
 before_install:
+  - phpenv config-rm xdebug.ini
+  - phpenv rehash
   - composer self-update
   - composer --version
-  - composer remove drupal/core
-  - composer require drupal/drupal 8.2.1
 
 
 install:
@@ -60,7 +60,7 @@ install:
   - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
   - phpenv config-add drupal.php.ini
   - phpenv rehash
-  
+   
   # Configure the display.
   - export DISPLAY=:0
   - sh -e /etc/init.d/xvfb start
@@ -84,6 +84,7 @@ install:
 
 before_script:
   - cd docroot
+   
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - sleep 5
    
@@ -91,7 +92,7 @@ before_script:
   # composer drupal-update -vvv
   
   # Install entityqueue module.
-  - drush en entityqueue -y
+  - drush -y en entityqueue -vvv
 
 script:
   - cd ./profiles/varbase
