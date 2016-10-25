@@ -875,7 +875,37 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
       }
     }
+  }
+  
+ /**
+  * #varbase: To check if we do have a text in the input element.
+  *
+  * Example 1: And I should see "your text" value in the "edit-items-2-target-id" input element
+  * Example 2: And I should see "Location property" value in the "edit-name" input element
+  *
+ * @Then /^I should see "(?P<text>[^"]*)" value in the "(?P<selector>[^"]*)" input element$/
+  */
+  public function iShouldSeeValueInTheInputElement($text, $selector) {
 
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//input[@id='{$selector}']");
+    if (empty($elements)) {
+      throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
+    }
+
+    $found = FALSE;
+    foreach ($elements as $element) {
+      $elementTextValue = $element->getValue();
+      $actual = preg_replace('/\s+/u', ' ', $elementTextValue);
+      $regex = "/" . preg_quote($text, '/') . "/";
+
+      if (preg_match($regex, $actual)) {
+        $found = TRUE;
+        break;
+      }
+    }
+    if (!$found) {
+      throw new \Exception(sprintf('"%s" value was not found in the "%s" input element', $text, $selector));
+    }
   }
 
   /**
