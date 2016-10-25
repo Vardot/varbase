@@ -16,11 +16,9 @@ env:
 sudo: false
 
 addons:  
-  firefox: latest
-  xfonts-cyrillic: latest
+  firefox: 46.0.1
   apt:
     packages:
-      - firefox
       - xorg
       - xvfb
       - dbus-x11
@@ -36,7 +34,6 @@ mysql:
   encoding: utf8
 
 before_install:
-  - phpenv config-rm xdebug.ini
   - composer self-update
   - composer --version
   - composer remove drupal/core
@@ -92,6 +89,9 @@ before_script:
    
   - php profiles/varbase/modules/contrib/composer_manager/scripts/init.php
   # composer drupal-update -vvv
+  
+  # Install entityqueue module.
+  - drush en entityqueue -y
 
 script:
   - cd ./profiles/varbase
