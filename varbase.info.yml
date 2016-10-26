@@ -79,6 +79,7 @@ dependencies:
   - views_infinite_scroll
   - embed
   - entity_browser
+  - entity_browser_enhanced
   - entity_embed
   - inline_entity_form
   - media_entity

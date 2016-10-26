@@ -143,6 +143,12 @@ projects[entity_browser][download][type] = git
 projects[entity_browser][download][url] = https://git.drupal.org/project/entity_browser
 projects[entity_browser][download][tag] = 8.x-1.0-alpha9
 
+projects[entity_browser_enhanced][type] = module
+projects[entity_browser_enhanced][subdir] = "contrib"
+projects[entity_browser_enhanced][download][type] = git
+projects[entity_browser_enhanced][download][url] = https://git.drupal.org/project/entity_browser_enhanced
+projects[entity_browser_enhanced][download][tag] = 8.x-1.0-beta1
+
 projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
 projects[entity_embed][download][type] = git
