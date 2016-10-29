@@ -28,14 +28,12 @@
   "config": {
       "bin-dir": "bin/"
   },
-  { 
-    "repositories": { 
-      "drupal": {
-        "type": "composer",
-        "url": "https://packages.drupal.org/8" 
-      }
+  "repositories": { 
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8" 
     }
-  } 
+  }
   "scripts": {
       "post-install-cmd": [
           "@composer drupal-scaffold",
@@ -116,7 +114,7 @@
     
     "drupal/embed": "8.1.0-rc3",
     "drupal/entity": "8.1.0-alpha3",
-    "drupal/entity_browser": "8.1.0-alpha9",
+    "drupal/entity_browser": "8.1.0-alpha10",
     "drupal/entity_browser_enhanced": "8.1.0-beta1",
     "drupal/entity_embed": "8.1.0-beta2",
     "drupal/inline_entity_form": "8.1.0-alpha6",

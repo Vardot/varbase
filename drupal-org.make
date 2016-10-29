@@ -141,7 +141,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][download][type] = git
 projects[entity_browser][download][url] = https://git.drupal.org/project/entity_browser
-projects[entity_browser][download][tag] = 8.x-1.0-alpha9
+projects[entity_browser][download][tag] = 8.x-1.0-alpha10
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"
