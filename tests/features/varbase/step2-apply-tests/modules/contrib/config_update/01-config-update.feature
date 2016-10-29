@@ -4,7 +4,7 @@ When I update a module, and it has either changed default config that it provide
 So that I will be able to import the new items, view the differences between the site config and the changed config, and possibly "revert" (or it may be an update) to the newly-provided default config.
 
 @javascript @check @local @development @staging @production
-Scenario: Check if we do have the Coffee module installed in the system.
+Scenario: Check if we do have the [Configuration Update Manager] module installed in the system.
   Given I am a logged in user with the "webmaster" user
    When I go to "/admin/modules"
     And I wait
