@@ -31,7 +31,7 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://packages.drupal.org/8"
+      "url": "https://packagist.drupal-composer.org"
     }
   ],
   "scripts": {
