@@ -9,7 +9,7 @@ projects[config_update][type] = module
 projects[config_update][subdir] = "contrib"
 projects[config_update][download][type] = git
 projects[config_update][download][url] = https://git.drupal.org/project/config_update
-projects[config_update][download][tag] = 8.x-1.1
+projects[config_update][download][tag] = 8.x-1.2
 
 projects[composer_manager][type] = module
 projects[composer_manager][subdir] = "contrib"
@@ -141,7 +141,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][download][type] = git
 projects[entity_browser][download][url] = https://git.drupal.org/project/entity_browser
-projects[entity_browser][download][tag] = 8.x-1.0-alpha9
+projects[entity_browser][download][tag] = 8.x-1.0-alpha10
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"
@@ -250,7 +250,7 @@ projects[coffee][type] = module
 projects[coffee][subdir] = "contrib"
 projects[coffee][download][type] = git
 projects[coffee][download][url] = https://git.drupal.org/project/coffee
-projects[coffee][download][tag] = 8.x-1.0-beta1
+projects[coffee][download][tag] = 8.x-1.0-beta2
 
 projects[diff][type] = module
 projects[diff][subdir] = "contrib"
@@ -266,7 +266,7 @@ projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = "contrib"
 projects[bootstrap][download][type] = git
 projects[bootstrap][download][url] = https://git.drupal.org/project/bootstrap
-projects[bootstrap][download][tag] = 8.x-3.0-rc2
+projects[bootstrap][download][tag] = 8.x-3.0
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][subdir] = "contrib"

@@ -92,7 +92,7 @@
     "cweagans/composer-patches": "~1.0",
     "composer/installers": "^1.0",
     "drupal/core": "8.2.1",
-    "drupal/config_update": "8.1.1",
+    "drupal/config_update": "8.1.2",
     "drupal/composer_manager": "8.1.0-rc2",
     "drupal/ctools": "8.3.0-alpha27",
     "drupal/token": "8.1.0-beta2",
@@ -114,7 +114,7 @@
     
     "drupal/embed": "8.1.0-rc3",
     "drupal/entity": "8.1.0-alpha3",
-    "drupal/entity_browser": "8.1.0-alpha9",
+    "drupal/entity_browser": "8.1.0-alpha10",
     "drupal/entity_browser_enhanced": "8.1.0-beta1",
     "drupal/entity_embed": "8.1.0-beta2",
     "drupal/inline_entity_form": "8.1.0-alpha6",
@@ -131,10 +131,10 @@
     "drupal/xmlsitemap": "8.1.0-alpha2",
     "drupal/google_analytics": "8.2.1",
     
-    "drupal/coffee": "8.1.0-beta1",
+    "drupal/coffee": "8.1.0-beta2",
     "drupal/diff": "8.1.0-beta2", "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     
-    "drupal/bootstrap": "8.3.0-rc2",
+    "drupal/bootstrap": "8.3.0",
     "drupal/adminimal_theme": "8.1.2",
     
     "drupal/varbase_editor": "8.4.1"
