@@ -250,7 +250,7 @@ projects[coffee][type] = module
 projects[coffee][subdir] = "contrib"
 projects[coffee][download][type] = git
 projects[coffee][download][url] = https://git.drupal.org/project/coffee
-projects[coffee][download][tag] = 8.x-1.0-beta1
+projects[coffee][download][tag] = 8.x-1.0-beta2
 
 projects[diff][type] = module
 projects[diff][subdir] = "contrib"
