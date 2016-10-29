@@ -9,7 +9,7 @@ projects[config_update][type] = module
 projects[config_update][subdir] = "contrib"
 projects[config_update][download][type] = git
 projects[config_update][download][url] = https://git.drupal.org/project/config_update
-projects[config_update][download][tag] = 8.x-1.1
+projects[config_update][download][tag] = 8.x-1.2
 
 projects[composer_manager][type] = module
 projects[composer_manager][subdir] = "contrib"
