@@ -1,7 +1,8 @@
-Feature: Default [Coffee] module testing permissions and configuration.
+Feature: Module Requirements - Standard Back-End Navigation - Navigate through the Drupal admin with the keyboard for faster access
 As a site admin
-I want to be able to navigate through the Drupal admin with with the keyboard
+I want to be able to navigate through the Drupal admin with the keyboard
 So that I will have a faster access to administration pages in the site.
+
 
 @javascript @check @local @development @staging @production
 Scenario: Check if we do have the Coffee module installed in the system.
