@@ -216,7 +216,7 @@ projects[metatag][type] = module
 projects[metatag][subdir] = "contrib"
 projects[metatag][download][type] = git
 projects[metatag][download][url] = https://git.drupal.org/project/metatag
-projects[metatag][download][tag] = 8.x-1.0-beta10
+projects[metatag][download][tag] = 8.x-1.0-beta11
 
 projects[xmlsitemap][type] = module
 projects[xmlsitemap][subdir] = "contrib"
