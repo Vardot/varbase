@@ -153,7 +153,7 @@ projects[inline_entity_form][type] = module
 projects[inline_entity_form][subdir] = "contrib"
 projects[inline_entity_form][download][type] = git
 projects[inline_entity_form][download][url] = https://git.drupal.org/project/inline_entity_form
-projects[inline_entity_form][download][tag] = 8.x-1.0-alpha6
+projects[inline_entity_form][download][tag] = 8.x-1.0-beta1
 
 projects[media_entity][type] = module
 projects[media_entity][subdir] = "contrib"
