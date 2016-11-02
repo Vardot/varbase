@@ -87,9 +87,6 @@ before_script:
    
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - sleep 5
-   
-  - php profiles/varbase/modules/contrib/composer_manager/scripts/init.php
-  # composer drupal-update -vvv
   
   # Install entityqueue module.
   - drush -y en entityqueue -vvv
@@ -98,6 +95,7 @@ script:
   - cd ./profiles/varbase
   - behat --strict tests/features/varbase/step1-init-tests/
   - behat --strict tests/features/varbase/step2-apply-tests/
+#  - behat --strict tests/features/varbase/step3-cleanup-tests/  # no need as we build every time.
 
 matrix:
   fast_finish: true
