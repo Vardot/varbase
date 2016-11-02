@@ -11,12 +11,6 @@ projects[config_update][download][type] = git
 projects[config_update][download][url] = https://git.drupal.org/project/config_update
 projects[config_update][download][tag] = 8.x-1.2
 
-projects[composer_manager][type] = module
-projects[composer_manager][subdir] = "contrib"
-projects[composer_manager][download][type] = git
-projects[composer_manager][download][url] = https://git.drupal.org/project/composer_manager
-projects[composer_manager][download][tag] = 8.x-1.0-rc2
-
 projects[ctools][type] = module
 projects[ctools][subdir] = "contrib"
 projects[ctools][download][type] = git
