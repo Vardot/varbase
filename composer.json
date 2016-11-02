@@ -28,12 +28,12 @@
   "config": {
       "bin-dir": "bin/"
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packagist.drupal-composer.org"
-    }
-  ],
+  "repositories": {
+      "drupal": {
+          "type": "composer",
+          "url":  "https://packages.drupal.org/8"
+      }
+  },
   "scripts": {
       "post-install-cmd": [
           "@composer drupal-scaffold",
