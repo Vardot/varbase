@@ -129,6 +129,7 @@
     "drupal/coffee": "1.0-beta2",
     "drupal/diff": "1.0-beta2",
     "drupal/masquerade": "1.0-beta1",
+    "drupal/libraries": "3.x-dev#08a46ab12b573f1f48e9d160ed21a36417b5f749",
     
     "drupal/bootstrap": "3.0",
     "drupal/adminimal_theme": "1.2",

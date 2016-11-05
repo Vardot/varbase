@@ -258,6 +258,12 @@ projects[masquerade][download][type] = git
 projects[masquerade][download][url] = https://git.drupal.org/project/masquerade
 projects[masquerade][download][tag] = 8.x-1.0-beta1
 
+projects[libraries][type] = module
+projects[masquerade][subdir] = "contrib"
+projects[libraries][download][url] = https://git.drupal.org/project/libraries.git
+projects[libraries][download][revision] = 08a46ab12b573f1f48e9d160ed21a36417b5f749
+projects[libraries][download][branch] = 8.x-3.x
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
 ;;;;;;;;;;;;;;;;;;;;;
