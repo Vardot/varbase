@@ -236,9 +236,7 @@ projects[google_analytics][download][tag] = 8.x-2.1
 
 projects[features][type] = module
 projects[features][subdir] = "contrib"
-projects[features][download][type] = git
-projects[features][download][url] = https://git.drupal.org/project/features
-projects[features][download][tag] = 8.x-3.0-rc1
+projects[features][version] = 3.0
 
 projects[coffee][type] = module
 projects[coffee][subdir] = "contrib"
@@ -265,6 +263,7 @@ projects[libraries][download][revision] = 08a46ab12b573f1f48e9d160ed21a36417b5f7
 projects[libraries][download][branch] = 8.x-3.x
 
 projects[libraries_ui][type] = module
+projects[libraries_ui][subdir] = "contrib"
 projects[libraries_ui][version] = 1.0
 
 ;;;;;;;;;;;;;;;;;;;;;
