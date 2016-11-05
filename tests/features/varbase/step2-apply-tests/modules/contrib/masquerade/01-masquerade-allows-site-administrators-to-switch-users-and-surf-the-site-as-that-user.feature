@@ -1,7 +1,7 @@
-Feature: Support Requirements - Standard Support Navigation - Allows site administrators to switch users and surf the site as that user.
+Feature: Support Requirements - Standard Support Navigation - Allow site administrators to switch users and surf the site as that user.
 As a site admin
 I want to be able to switch users and surf the site as that user with no password required
-So that I can see what is the selected user is seening in the site then switch back to my own user account at any time.
+So that I can see what is the selected user is seeing in the site then switch back to my own user account at any time.
 
 @javascript @check @local @development @staging @production
 Scenario: Check if we do have the Masquerade module installed in the system.
