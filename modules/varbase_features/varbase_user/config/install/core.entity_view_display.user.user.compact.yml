@@ -10,6 +10,8 @@ targetEntityType: user
 bundle: user
 mode: compact
 content:
+  masquerade:
+    weight: 50
   user_picture:
     type: image
     weight: 0

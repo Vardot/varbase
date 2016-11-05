@@ -8,6 +8,8 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  masquerade:
+    weight: 50
   member_for:
     weight: 5
   user_picture:
