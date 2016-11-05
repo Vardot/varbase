@@ -91,6 +91,8 @@ dependencies:
   - coffee
   - diff
   - masquerade
+  - libraries
+  - libraries_ui
   
   # Varbase core functionality.
   - varbase_core
