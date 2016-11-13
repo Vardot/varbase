@@ -44,6 +44,9 @@
       ],
       "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
+  "replace": {
+	  "drupal/link-link": "*"
+  },
   "extra": {
       "installer-paths": {
           "docroot/core": [
