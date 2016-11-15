@@ -1,0 +1,25 @@
+bundle: varbase
+required:
+  - core.entity_form_display.media.video.default
+  - core.entity_form_display.media.image.default
+  - core.entity_view_display.media.video.default
+  - core.entity_view_display.media.image.browser_teaser
+  - core.entity_view_display.media.image.default
+  - core.entity_view_display.media.image.form_teaser
+  - core.entity_view_display.media.image.teaser
+  - core.entity_view_display.media.image.token
+  - entity_browser.browser.editor_media_browser
+  - entity_browser.browser.image_browser
+  - entity_browser.browser.images_browser
+  - field.field.media.video.field_media_video_embed_field
+  - field.field.media.image.field_image
+  - field.storage.media.field_media_video_embed_field
+  - field.storage.media.field_image
+  - views.view.browser
+  - embed.button.media
+  - media_entity.bundle.audio
+  - media_entity.bundle.document
+  - media_entity.bundle.image
+  - media_entity.bundle.video
+  - core.entity_view_mode.media.form_teaser
+  - core.entity_view_mode.media.teaser

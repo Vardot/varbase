@@ -10,6 +10,6 @@ type: image
 queue_thumbnail_downloads: true
 new_revision: true
 type_configuration:
-  source_field: ''
+  source_field: field_image
   gather_exif: false
 field_map: {  }

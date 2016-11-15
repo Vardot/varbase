@@ -1,26 +1,17 @@
+uuid: 1ea51360-d906-4a6e-a21e-37c5475fe270
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
-    - file
-    - image
+    - media_entity
 id: block_content.field_images
 field_name: field_images
 entity_type: block_content
-type: image
+type: entity_reference
 settings:
-  uri_scheme: public
-  default_image:
-    uuid: ''
-    alt: ''
-    title: ''
-    width: null
-    height: null
-  target_type: file
-  display_field: false
-  display_default: false
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: -1
 translatable: true

@@ -4,10 +4,10 @@ dependencies:
   module:
     - file
     - image
-    - taxonomy
-id: taxonomy_term.field_image
+    - media_entity
+id: media.field_image
 field_name: field_image
-entity_type: taxonomy_term
+entity_type: media
 type: image
 settings:
   uri_scheme: public

@@ -9,18 +9,14 @@ dependencies:
   - file
   - image
   - language
-  - media_entity
-  - media_entity_audio
-  - media_entity_document
-  - media_entity_image
   - menu_link_content
   - node
   - taxonomy
   - user
-  - video_embed_field
-  - video_embed_media
+  - varbase_user
+  - views
 package: Varbase
 version: 8.x-4.0
 core: 8.x
 project: varbase
-datestamp: 1476014041
+datestamp: 1479070523

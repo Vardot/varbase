@@ -101,6 +101,7 @@ dependencies:
   - varbase_page
   - varbase_landing
   - varbase_editor
+  - varbase_media
 
   # Varbase site functionality.
   - varbase_site
