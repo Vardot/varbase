@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser
+    - field.field.media.image.field_image
+    - image.style.large
+    - media_entity.bundle.image
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: onecol
+      path: profiles/varbase/modules/contrib/panels/layouts/onecol
+      library: layout_plugin/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      middle:
+        - field_image
+id: media.image.teaser
+targetEntityType: media
+bundle: image
+mode: teaser
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

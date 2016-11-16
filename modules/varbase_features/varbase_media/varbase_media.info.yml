@@ -1,0 +1,7 @@
+name: 'Varbase Media'
+description: 'Manages type of media contents and entity browsers in the site.'
+type: module
+core: 8.x
+version: 8.x-4.0
+package: Varbase
+dependencies:

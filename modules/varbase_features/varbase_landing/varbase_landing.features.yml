@@ -1,2 +1,17 @@
 bundle: varbase
-required: true
+required:
+  - core.base_field_override.node.landing_page.changed
+  - core.base_field_override.node.landing_page.created
+  - core.base_field_override.node.landing_page.menu_link
+  - core.base_field_override.node.landing_page.promote
+  - core.base_field_override.node.landing_page.status
+  - core.base_field_override.node.landing_page.sticky
+  - core.base_field_override.node.landing_page.uid
+  - core.entity_form_display.node.landing_page.default
+  - core.entity_view_display.node.landing_page.default
+  - core.entity_view_display.node.landing_page.full
+  - field.field.node.landing_page.panelizer
+  - field.storage.node.panelizer
+  - language.content_settings.node.landing_page
+  - node.type.landing_page
+  - pathauto.pattern.hierarchical_paths_for_landing_pages

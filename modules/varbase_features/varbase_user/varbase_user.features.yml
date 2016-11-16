@@ -1,2 +1,12 @@
 bundle: varbase
-required: true
+required:
+  - core.entity_form_display.user.user.default
+  - core.entity_view_display.user.user.compact
+  - core.entity_view_display.user.user.default
+  - core.entity_view_mode.user.token
+  - user.role.administrator
+  - user.role.anonymous
+  - user.role.authenticated
+  - user.role.content_admin
+  - user.role.editor
+  - user.role.site_admin
