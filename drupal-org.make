@@ -376,12 +376,8 @@ projects[coffee][subdir] = development
 ;; Performance improvement contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[advagg][type] = module
+projects[advagg][version] = 2.19
 projects[advagg][subdir] = performance
-projects[advagg][version] = "2.x-dev"
-projects[advagg][download][type] = "git"
-projects[advagg][download][url] = "http://git.drupal.org/project/advagg.git"
-projects[advagg][download][revision] = "764f62c20c137c5f4a23760aaed06e1e5ffbdf06"
 
 projects[elysia_cron][version] = 2.1
 projects[elysia_cron][subdir] = performance
