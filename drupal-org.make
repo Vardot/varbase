@@ -228,7 +228,7 @@ projects[views_bootstrap][download][revision] = "ef9820ce0b1658e3056554aec60429f
 projects[views_bulk_operations][version] = 3.3
 projects[views_bulk_operations][subdir] = contrib
 
-projects[webform][version] = 4.12
+projects[webform][version] = 4.14
 projects[webform][subdir] = contrib
 
 projects[workbench][version] = 1.2
