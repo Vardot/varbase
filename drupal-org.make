@@ -322,10 +322,6 @@ projects[metatag][subdir] = seo
 projects[pathauto][version] = 1.3
 projects[pathauto][subdir] = seo
 
-; This will be deleted in the next releases.
-projects[pathauto_persist][version] = 1.4
-projects[pathauto_persist][subdir] = seo
-
 projects[redirect][version] = 1.0-rc3
 projects[redirect][subdir] = seo
 
