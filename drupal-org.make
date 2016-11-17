@@ -145,15 +145,9 @@ projects[linkit][subdir] = contrib
 projects[maxlength][version] = 3.2
 projects[maxlength][subdir] = contrib
 
-projects[media][type] = module
+projects[media][version] = 2.0-beta7
 projects[media][subdir] = contrib
-projects[media][version] = "2.x-dev"
-projects[media][download][type] = "git"
-projects[media][download][url] = "http://git.drupal.org/project/media.git"
-projects[media][download][revision] = "89287f76df1ff24409b3ec474c59218929385733"
-projects[media][patch][2018075] = "http://www.drupal.org/files/issues/media_filter_float_delegate-2018075-18.patch"
-projects[media][patch][2062721] = "http://www.drupal.org/files/issues/media-wysiwyg-override-white-list-2062721-83.patch"
-projects[media][patch][2126697] = "http://www.drupal.org/files/issues/media-wysiwyg-alt-title-handling-2126697-64.patch"
+projects[media][patch][2018075] = "https://www.drupal.org/files/issues/media_filter_float_delegate-2018075-26.patch"
 projects[media][patch][2148641] = "http://www.drupal.org/files/issues/media-wysiwyg-images-lose-ckeditor-styles-2148641-8.patch"
 projects[media][patch][2609244] = "http://www.drupal.org/files/issues/notice_on_file_types-2609244-2.patch"
 projects[media][patch][2610058] = "http://www.drupal.org/files/issues/media_internet_fails_to-2610058-2.patch"
