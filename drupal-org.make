@@ -259,7 +259,7 @@ projects[admin_language][patch][1952154] = "http://www.drupal.org/files/issues/a
 projects[entity_translation][version] = 1.0-beta4
 projects[entity_translation][subdir] = internationalization
 
-projects[i18n][version] = 1.13
+projects[i18n][version] = 1.14
 projects[i18n][subdir] = internationalization
 
 projects[i18nviews][version] = 3.0-alpha1
