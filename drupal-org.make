@@ -249,7 +249,7 @@ projects[nodequeue][version] = 2.1
 projects[admin_language][version] = 1.0-beta4
 projects[admin_language][subdir] = internationalization
 
-projects[entity_translation][version] = 1.0-beta4
+projects[entity_translation][version] = 1.0-beta5
 projects[entity_translation][subdir] = internationalization
 
 projects[i18n][version] = 1.14
