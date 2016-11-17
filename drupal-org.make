@@ -341,7 +341,7 @@ projects[search_api][subdir] = search
 projects[search_api_db][version] = 1.5
 projects[search_api_db][subdir] = search
 
-projects[search_api_solr][version] = 1.10
+projects[search_api_solr][version] = 1.11
 projects[search_api_solr][subdir] = search
 
 projects[search_api_override][version] = 1.0-rc1
