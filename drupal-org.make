@@ -106,7 +106,7 @@ projects[filefield_paths][subdir] = contrib
 projects[flexslider][version] = 2.0-rc1
 projects[flexslider][subdir] = contrib
 
-projects[focal_point][version] = 1.0-beta6
+projects[focal_point][version] = 1.0
 projects[focal_point][subdir] = contrib
 
 projects[fontawesome][version] = 2.6
