@@ -335,7 +335,7 @@ projects[xmlsitemap][subdir] = seo
 ;; Search contributed modules
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[search_api][version] = 1.18
+projects[search_api][version] = 1.20
 projects[search_api][subdir] = search
 
 projects[search_api_db][version] = 1.5
