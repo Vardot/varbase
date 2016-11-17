@@ -186,7 +186,7 @@ projects[picture][version] = 2.13
 projects[picture][subdir] = contrib
 projects[picture][patch][2331023] = "http://www.drupal.org/files/issues/an_error_in-2331023-11.patch"
 
-projects[recaptcha][version] = 2.1
+projects[recaptcha][version] = 2.2
 projects[recaptcha][subdir] = contrib
 projects[recaptcha][patch][2493183] = "http://www.drupal.org/files/issues/2493183-recaptcha-use-behaviors-51.patch"
 
