@@ -460,7 +460,7 @@ projects[adminimal_theme][patch][2679535] = "http://www.drupal.org/files/issues/
 
 projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = contrib
-projects[bootstrap][version] = 3.6
+projects[bootstrap][version] = 3.8
 
 
 ;;;;;;;;;;;;;;;;;;;;;
