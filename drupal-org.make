@@ -227,7 +227,7 @@ projects[views_bootstrap][subdir] = contrib
 projects[views_bootstrap][version] = "3.x-dev"
 projects[views_bootstrap][download][type] = "git"
 projects[views_bootstrap][download][url] = "http://git.drupal.org/project/views_bootstrap.git"
-projects[views_bootstrap][download][revision] = "48730807d7a25381b05bbabf3a4dc8fa5da49e90"
+projects[views_bootstrap][download][revision] = "ef9820ce0b1658e3056554aec60429fb5baaf075"
 
 projects[views_bulk_operations][version] = 3.3
 projects[views_bulk_operations][subdir] = contrib
