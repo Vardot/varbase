@@ -95,7 +95,7 @@ projects[field_collection][patch][1937866] =  "http://www.drupal.org/files/issue
 projects[field_group][version] = 1.5
 projects[field_group][subdir] = contrib
 
-projects[fieldable_panels_panes][version] = 1.10
+projects[fieldable_panels_panes][version] = 1.11
 projects[fieldable_panels_panes][subdir] = contrib
 
 projects[file_entity][version] = 2.0-beta3
