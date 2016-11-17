@@ -63,12 +63,8 @@ projects[email][subdir] = contrib
 projects[entity][version] = 1.8
 projects[entity][subdir] = contrib
 
-projects[entityreference][type] = module
+projects[entityreference][version] = 1.2
 projects[entityreference][subdir] = contrib
-projects[entityreference][version] = "1.x-dev"
-projects[entityreference][download][type] = "git"
-projects[entityreference][download][url] = "http://git.drupal.org/project/entityreference.git"
-projects[entityreference][download][revision] = "b5009cd1406f72a4fbc1103642ddc69a28d26c5a"
 
 projects[epsacrop][version] = 2.4
 projects[epsacrop][subdir] = contrib
