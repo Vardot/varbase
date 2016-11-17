@@ -246,9 +246,8 @@ projects[nodequeue][version] = 2.1
 ;; Internationalization contributed modules (Internationalization dependencies)
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[admin_language][version] = 1.0-beta1
+projects[admin_language][version] = 1.0-beta4
 projects[admin_language][subdir] = internationalization
-projects[admin_language][patch][1952154] = "http://www.drupal.org/files/issues/admin_language-prevent-language-set-to-NULL-1952154-5.patch"
 
 projects[entity_translation][version] = 1.0-beta4
 projects[entity_translation][subdir] = internationalization
