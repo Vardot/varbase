@@ -101,7 +101,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][version] = 1.0-beta1
 ;; Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/make_field_widget-2809659-11.patch
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/make_field_widget-2809659-11.patch
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"
