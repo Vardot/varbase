@@ -24,7 +24,6 @@ dependencies:
   - text
   - user
   - varbase_core
-  - varbase_news_i
   - video_embed_field
   - video_embed_media
   - views
