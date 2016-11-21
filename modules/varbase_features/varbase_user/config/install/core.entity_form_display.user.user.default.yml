@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - path
     - user
 id: user.user.default
 targetEntityType: user
