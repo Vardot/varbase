@@ -7,8 +7,8 @@ name: editor_media_browser
 label: 'Editor Media Browser'
 display: iframe
 display_configuration:
-  width: '650'
-  height: '500'
+  width: '450'
+  height: '35'
   link_text: 'Select media'
   auto_open: true
 selection_display: no_display

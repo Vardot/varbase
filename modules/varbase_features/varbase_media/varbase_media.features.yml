@@ -2,12 +2,14 @@ bundle: varbase
 required:
   - core.entity_form_display.media.video.default
   - core.entity_form_display.media.image.default
+  - core.entity_form_display.node.news_i.default
   - core.entity_view_display.media.video.default
   - core.entity_view_display.media.image.browser_teaser
   - core.entity_view_display.media.image.default
   - core.entity_view_display.media.image.form_teaser
   - core.entity_view_display.media.image.teaser
   - core.entity_view_display.media.image.token
+  - core.entity_view_display.node.news_i.default
   - entity_browser.browser.editor_media_browser
   - entity_browser.browser.image_browser
   - entity_browser.browser.images_browser
@@ -15,6 +17,8 @@ required:
   - field.field.media.image.field_image
   - field.storage.media.field_media_video_embed_field
   - field.storage.media.field_image
+  - field.storage.node.field_image
+  - field.storage.node.field_images
   - views.view.browser
   - embed.button.media
   - media_entity.bundle.audio

@@ -8,9 +8,10 @@ name: image_browser
 label: 'Image Browser'
 display: modal
 display_configuration:
-  width: '650'
-  height: '500'
+  width: '450'
+  height: '350'
   link_text: 'Select an image'
+  auto_open: false
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs

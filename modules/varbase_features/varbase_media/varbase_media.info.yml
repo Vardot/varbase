@@ -1,7 +1,35 @@
 name: 'Varbase Media'
 description: 'Manages type of media contents and entity browsers in the site.'
 type: module
-core: 8.x
-version: 8.x-4.0
 package: Varbase
 dependencies:
+  - content_translation
+  - ds
+  - embed
+  - entity_browser
+  - entity_embed
+  - field
+  - file
+  - image
+  - language
+  - media_entity
+  - media_entity_audio
+  - media_entity_document
+  - media_entity_image
+  - menu_ui
+  - node
+  - panelizer
+  - path
+  - responsive_image
+  - text
+  - user
+  - varbase_core
+  - varbase_news_i
+  - video_embed_field
+  - video_embed_media
+  - views
+  - views_infinite_scroll
+version: 8.x-4.0
+core: 8.x
+project: varbase
+datestamp: 1479650945
