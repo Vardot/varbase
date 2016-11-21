@@ -21,6 +21,7 @@ dependencies:
   - filter
   - entity_reference
   - field
+  - field_ui
   - file
   - help
   - history
