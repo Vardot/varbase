@@ -2,10 +2,11 @@ name: 'Varbase Development'
 description: 'Development Environment Modules and Features, make sure to disable this feature in production.'
 type: module
 dependencies:
-  - views_ui
-  - features
   - features_ui
   - libraries_ui
-core: 8.x
-version: 8.x-4.0
+  - views_ui
 package: Varbase
+version: 8.x-4.0
+core: 8.x
+project: varbase
+datestamp: 1479733744

@@ -1,5 +1,2 @@
 bundle: varbase
-required:
-  - pathauto.settings
-  - redirect.settings
-  - rdf.mapping.user.user
+required: true

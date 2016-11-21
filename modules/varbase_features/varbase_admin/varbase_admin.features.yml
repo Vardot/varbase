@@ -1,3 +1,2 @@
 bundle: varbase
-required:
-  - views.view.content
+required: true

@@ -69,6 +69,7 @@ dependencies:
   - advanced_text_formatter
   - block_class
   - extlink
+  - features
   - linkit
   - anchor_link
   - views_infinite_scroll

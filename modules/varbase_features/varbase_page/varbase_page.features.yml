@@ -1,18 +1,2 @@
 bundle: varbase
-required:
-  - core.base_field_override.node.page.changed
-  - core.base_field_override.node.page.created
-  - core.base_field_override.node.page.promote
-  - core.base_field_override.node.page.status
-  - core.base_field_override.node.page.sticky
-  - core.base_field_override.node.page.uid
-  - core.entity_form_display.node.page.default
-  - core.entity_view_display.node.page.default
-  - core.entity_view_display.node.page.full
-  - core.entity_view_display.node.page.teaser
-  - core.entity_view_mode.page_variant.token
-  - field.field.node.page.body
-  - language.content_settings.node.page
-  - node.type.page
-  - pathauto.pattern.hierarchical_paths_for_basic_pages
-  - rdf.mapping.node.page
+required: true

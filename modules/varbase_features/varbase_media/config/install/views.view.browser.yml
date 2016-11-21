@@ -343,12 +343,12 @@ display:
         - url.query_args
         - user.permissions
       tags:
-        - 'config:core.entity_view_display.media.image.teaser'
-        - 'config:core.entity_view_display.media.image.token'
-        - 'config:core.entity_view_display.media.video.default'
         - 'config:core.entity_view_display.media.image.browser_teaser'
         - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.form_teaser'
+        - 'config:core.entity_view_display.media.image.teaser'
+        - 'config:core.entity_view_display.media.image.token'
+        - 'config:core.entity_view_display.media.video.default'
   browser_block:
     display_plugin: block
     id: browser_block
