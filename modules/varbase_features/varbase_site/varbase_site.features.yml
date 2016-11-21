@@ -5,16 +5,4 @@ excluded:
   - filter.format.basic_html
   - filter.format.full_html
   - filter.format.restricted_html
-required:
-  - block_content.type.basic
-  - core.base_field_override.block_content.basic.changed
-  - core.base_field_override.block_content.basic.info
-  - core.entity_form_display.block_content.basic.default
-  - core.entity_view_display.block_content.basic.default
-  - field.field.block_content.basic.body
-  - language.content_settings.block_content.basic
-  - page_manager.page.homepage
-  - page_manager.page_variant.homepage-panels_variant-0
-  - views.view.archive
-  - views.view.frontpage
-  - views.view.taxonomy_term
+required: true
