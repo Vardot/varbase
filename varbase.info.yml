@@ -21,7 +21,6 @@ dependencies:
   - filter
   - entity_reference
   - field
-  - field_ui
   - file
   - help
   - history
@@ -44,7 +43,6 @@ dependencies:
   - tour
   - update
   - views
-  - views_ui
   - user
   - text
   - language
@@ -70,8 +68,6 @@ dependencies:
   - advanced_text_formatter
   - block_class
   - extlink
-  - features
-  - features_ui
   - linkit
   - anchor_link
   - views_infinite_scroll
@@ -92,7 +88,6 @@ dependencies:
   - diff
   - masquerade
   - libraries
-  - libraries_ui
   
   # Varbase core functionality.
   - varbase_core
