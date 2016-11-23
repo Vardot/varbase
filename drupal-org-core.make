@@ -10,5 +10,4 @@ projects[drupal][version] = "8.2.3"
 ;;;;;;;;;;;;;;;;;;;;;
 
 libraries[dropzone][download][type] = "get"
-libraries[dropzone][subdir] = "libraries"
 libraries[dropzone][download][url] = "https://github.com/enyo/dropzone/archive/v4.3.0.tar.gz"
