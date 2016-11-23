@@ -99,7 +99,7 @@ projects[entity][version] = 1.0-alpha3
 
 projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
-projects[entity_browser][download][url] = http://git.drupal.org/project/entity_browser.git
+projects[entity_browser][download][url] = http://git.drupal.org/project/entity_browser
 projects[entity_browser][download][revision] = b21ea1dae48fd18991f51ade07804c7cc59c3b4b
 projects[entity_browser][download][branch] = 8.x-1.x
 ;; Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface
@@ -143,7 +143,7 @@ projects[video_embed_field][version] = 1.3
 
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
-projects[entityqueue][download][url] = http://git.drupal.org/project/entityqueue.git
+projects[entityqueue][download][url] = http://git.drupal.org/project/entityqueue
 projects[entityqueue][download][revision] = 0359af5f0a229b61b46b2944d09c06739a52da5c
 projects[entityqueue][download][branch] = 8.x-1.x
 ;; Issue #2478685 by josebc: Reverse order in admin view option
@@ -236,4 +236,4 @@ projects[varbase_editor][version] = 4.1
 
 libraries[dropzone][type] = library
 libraries[dropzone][download][type] = get
-libraries[dropzone][download][url] = https://github.com/enyo/dropzone/archive/v4.3.0.tar.gz"
+libraries[dropzone][download][url] = "https://github.com/enyo/dropzone/archive/v4.3.0.tar.gz"
