@@ -83,10 +83,6 @@
         "Issue #2825773 by josebc: Make [Contextual links] work for views using Entityqueue":
         "https://www.drupal.org/files/issues/entityqueue-fix_contexual_links-2825773-6.patch"
       },
-      "drupal/entity_browser": {
-        "Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface":
-        "https://www.drupal.org/files/issues/make_field_widget-2809659-11.patch"
-      },
       "drush/drush": {
         "Adding composer.json support to make-convert command":
         "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",

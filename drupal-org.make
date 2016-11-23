@@ -99,7 +99,7 @@ projects[entity][version] = 1.0-alpha3
 
 projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
-projects[entity_browser][download][url] = http://git.drupal.org/project/entityqueue.git
+projects[entity_browser][download][url] = http://git.drupal.org/project/entity_browser.git
 projects[entity_browser][download][revision] = b21ea1dae48fd18991f51ade07804c7cc59c3b4b
 projects[entity_browser][download][branch] = 8.x-1.x
 ;; Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface
