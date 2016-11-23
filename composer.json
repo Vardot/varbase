@@ -53,7 +53,7 @@
         "modules/contrib/{$name}": ["type:drupal-module"],
         "themes/contrib/{$name}": ["type:drupal-theme"],
         "profiles/contrib/{$name}": ["type:drupal-profile"],
-        "libraries/{$name}": ["enyo/dropzone"]
+        "docroot/libraries/{$name}": ["enyo/dropzone"]
       },
     "patches": {
       "drupal/panels": {
