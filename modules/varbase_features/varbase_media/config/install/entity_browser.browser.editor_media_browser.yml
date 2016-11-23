@@ -1,7 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - media_entity.bundle.image
   module:
+    - dropzonejs_eb_widget
+    - media_entity
     - views
 name: editor_media_browser
 label: 'Editor Media Browser'
@@ -22,14 +26,18 @@ widgets:
       view_display: editor_media_browser
       submit_text: 'Select media'
     uuid: 0ce5dbdc-76cf-4c4e-a020-03328ef20f1c
-    weight: 1
+    weight: -9
     label: Library
     id: view
-  57cfc877-f12a-44fd-8b5a-c1033f397dea:
+  6f017ab9-9cbd-43e3-8af6-9dc1e19c38c7:
     settings:
-      upload_location: 'public://'
-      submit_text: 'Select files'
-    uuid: 57cfc877-f12a-44fd-8b5a-c1033f397dea
-    weight: 2
-    label: upload
-    id: upload
+      media_entity_bundle: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      submit_text: 'Select media'
+    uuid: 6f017ab9-9cbd-43e3-8af6-9dc1e19c38c7
+    weight: -10
+    label: Upload
+    id: dropzonejs_media_entity

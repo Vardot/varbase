@@ -122,6 +122,7 @@
     "drupal/entity": "1.0-alpha3",
     "drupal/entity_browser": "1.x-dev#b21ea1dae48fd18991f51ade07804c7cc59c3b4b",
     "drupal/entity_browser_enhanced": "1.0-beta1",
+    "drupal/dropzonejs": "1.0-alpha3",
     "drupal/entity_embed": "1.0-beta2",
     "drupal/inline_entity_form": "1.0-beta1",
     "drupal/media_entity": "1.5",

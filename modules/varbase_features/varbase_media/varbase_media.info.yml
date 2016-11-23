@@ -4,6 +4,7 @@ type: module
 package: Varbase
 dependencies:
   - content_translation
+  - dropzonejs_eb_widget
   - ds
   - embed
   - entity_browser
@@ -31,4 +32,4 @@ dependencies:
 version: 8.x-4.0
 core: 8.x
 project: varbase
-datestamp: 1479733744
+datestamp: 1479738851

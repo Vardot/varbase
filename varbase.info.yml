@@ -50,6 +50,7 @@ dependencies:
   - content_translation
 
   # contrib modules
+  - libraries
   - config_update
   - ctools
   - ctools_block
@@ -76,6 +77,8 @@ dependencies:
   - embed
   - entity_browser
   - entity_browser_enhanced
+  - dropzonejs
+  - dropzonejs_eb_widget
   - entity_embed
   - inline_entity_form
   - media_entity
@@ -89,7 +92,6 @@ dependencies:
   - coffee
   - diff
   - masquerade
-  - libraries
   
   # Varbase core functionality.
   - varbase_core

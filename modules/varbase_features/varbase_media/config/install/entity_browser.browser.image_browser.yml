@@ -1,8 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - media_entity.bundle.image
   module:
-    - media_entity_image
+    - dropzonejs_eb_widget
+    - media_entity
     - views
 name: image_browser
 label: 'Image Browser'
@@ -17,16 +20,6 @@ selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  04f187e8-8c55-42d9-b8ef-3df1af8b24d1:
-    settings:
-      extensions: 'jpg jpeg png gif'
-      media_bundle: image
-      upload_location: 'public://'
-      submit_text: 'Select files'
-    uuid: 04f187e8-8c55-42d9-b8ef-3df1af8b24d1
-    weight: 1
-    label: Upload
-    id: media_entity_image_upload
   c9e40862-4975-43fc-9e06-64c1bc53e9a4:
     settings:
       view: browser
@@ -36,3 +29,15 @@ widgets:
     weight: 2
     label: Library
     id: view
+  f71e3128-5112-4b12-9593-e981f35ba988:
+    settings:
+      media_entity_bundle: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop image files here to upload them'
+      max_filesize: 32M
+      extensions: 'jpg jpeg gif png'
+      submit_text: 'Select Image'
+    uuid: f71e3128-5112-4b12-9593-e981f35ba988
+    weight: -10
+    label: Upload
+    id: dropzonejs_media_entity
