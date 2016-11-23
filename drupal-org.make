@@ -141,11 +141,11 @@ projects[linkit][subdir] = contrib
 projects[maxlength][version] = 3.2
 projects[maxlength][subdir] = contrib
 
-projects[media][version] = 2.0-beta7
+projects[media][version] = 2.0-beta9
 projects[media][subdir] = contrib
 projects[media][patch][2018075] = "https://www.drupal.org/files/issues/media_filter_float_delegate-2018075-26.patch"
 projects[media][patch][2148641] = "http://www.drupal.org/files/issues/media-wysiwyg-images-lose-ckeditor-styles-2148641-8.patch"
-projects[media][patch][2609244] = "http://www.drupal.org/files/issues/notice_on_file_types-2609244-2.patch"
+projects[media][patch][2609244] = "https://www.drupal.org/files/issues/2609244-7.patch"
 projects[media][patch][2610058] = "http://www.drupal.org/files/issues/media_internet_fails_to-2610058-2.patch"
 
 projects[menu_admin_per_menu][version] = 1.1
