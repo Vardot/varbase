@@ -49,12 +49,11 @@
   },
   "extra": {
       "installer-paths": {
-          "docroot/core": [
-              "drupal/core"
-          ],
-          "modules/contrib/{$name}": [
-              "type:drupal-module"
-          ]
+        "docroot/core": ["drupal/core"],
+        "modules/contrib/{$name}": ["type:drupal-module"],
+        "themes/contrib/{$name}": ["type:drupal-theme"],
+        "profiles/contrib/{$name}": ["type:drupal-profile"],
+        "modules/{$name}": ["enyo/dropzone"]
       },
     "patches": {
       "drupal/panels": {
@@ -149,6 +148,8 @@
     
     "drupal/varbase_editor": "4.1",
     
-    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8"
+
+    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
+    "enyo/dropzone": "4.3.0"
   }
 }
