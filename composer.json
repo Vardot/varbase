@@ -48,13 +48,22 @@
 	  "drupal/link-link": "*"
   },
   "extra": {
-      "installer-paths": {
-        "docroot/core": ["drupal/core"],
-        "modules/contrib/{$name}": ["type:drupal-module"],
-        "themes/contrib/{$name}": ["type:drupal-theme"],
-        "profiles/contrib/{$name}": ["type:drupal-profile"],
-        "docroot/libraries/dropzone": ["enyo/dropzone"]
-      },
+    "installer-paths": {
+      "docroot/core": ["drupal/core"],
+      "modules/contrib/{$name}": ["type:drupal-module"],
+      "themes/contrib/{$name}": ["type:drupal-theme"],
+      "profiles/contrib/{$name}": ["type:drupal-profile"],
+      "docroot/libraries/dropzone": ["drupal-library"]
+    },
+    "drupal-libraries": {
+      "library-directory": "docroot/libraries",
+      "libraries": [
+        {
+          "name": "dropzone",
+          "package": "enyo/dropzone"
+        }
+      ]
+    },
     "patches": {
       "drupal/panels": {
         "Issue #2793801 : Allow modules to influence the IPE tempstore ID":
@@ -150,6 +159,8 @@
     
 
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
-    "enyo/dropzone": "v4.3.0"
+    
+    "drupal/drupal-library-installer-plugin": "~0.3",
+    "enyo/dropzone": "4.3.0"
   }
 }
