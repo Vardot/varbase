@@ -100,10 +100,10 @@ projects[entity][version] = 1.0-alpha3
 projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][download][url] = http://git.drupal.org/project/entity_browser
-projects[entity_browser][download][revision] = b21ea1dae48fd18991f51ade07804c7cc59c3b4b
+projects[entity_browser][download][revision] = 403612b620ecf41f31e5ff2eaa424d151d3257ef
 projects[entity_browser][download][branch] = 8.x-1.x
 ;; Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/make_field_widget-2809659-11.patch
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/make_field_widget-2809659-17.patch
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"

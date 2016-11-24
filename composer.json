@@ -44,9 +44,6 @@
       ],
       "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
-  "replace": {
-	  "drupal/link-link": "*"
-  },
   "extra": {
     "installer-paths": {
       "docroot/core": ["drupal/core"],
@@ -93,7 +90,7 @@
       },
       "drupal/entity_browser": {
         "Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface":
-        "https://www.drupal.org/files/issues/make_field_widget-2809659-11.patch"
+        "https://www.drupal.org/files/issues/make_field_widget-2809659-17.patch"
       },
       "drush/drush": {
         "Adding composer.json support to make-convert command":
@@ -128,7 +125,7 @@
     
     "drupal/embed": "1.0-rc3",
     "drupal/entity": "1.0-alpha3",
-    "drupal/entity_browser": "1.x-dev#b21ea1dae48fd18991f51ade07804c7cc59c3b4b",
+    "drupal/entity_browser": "1.x-dev#403612b620ecf41f31e5ff2eaa424d151d3257ef",
     "drupal/entity_browser_enhanced": "1.0-beta1",
     "drupal/dropzonejs": "1.0-alpha3",
     "drupal/entity_embed": "1.0-beta2",
