@@ -49,8 +49,7 @@
       "docroot/core": ["drupal/core"],
       "modules/contrib/{$name}": ["type:drupal-module"],
       "themes/contrib/{$name}": ["type:drupal-theme"],
-      "profiles/contrib/{$name}": ["type:drupal-profile"],
-      "docroot/libraries/dropzone": ["drupal-library"]
+      "profiles/contrib/{$name}": ["type:drupal-profile"]
     },
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
