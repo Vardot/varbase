@@ -25,3 +25,4 @@ required:
   - media_entity.bundle.video
   - core.entity_view_mode.media.form_teaser
   - core.entity_view_mode.media.teaser
+  - entity_browser_enhanced.widgets

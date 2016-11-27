@@ -11,8 +11,8 @@ name: image_browser
 label: 'Image Browser'
 display: modal
 display_configuration:
-  width: '450'
-  height: '350'
+  width: '550'
+  height: '450'
   link_text: 'Select an image'
   auto_open: false
 selection_display: no_display
@@ -26,7 +26,7 @@ widgets:
       view_display: image_browser
       submit_text: 'Select an image'
     uuid: c9e40862-4975-43fc-9e06-64c1bc53e9a4
-    weight: 2
+    weight: -10
     label: Library
     id: view
   f71e3128-5112-4b12-9593-e981f35ba988:
@@ -38,6 +38,6 @@ widgets:
       extensions: 'jpg jpeg gif png'
       submit_text: 'Select Image'
     uuid: f71e3128-5112-4b12-9593-e981f35ba988
-    weight: -10
+    weight: -9
     label: Upload
     id: dropzonejs_media_entity

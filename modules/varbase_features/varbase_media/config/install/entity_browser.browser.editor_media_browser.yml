@@ -11,8 +11,8 @@ name: editor_media_browser
 label: 'Editor Media Browser'
 display: iframe
 display_configuration:
-  width: '450'
-  height: '35'
+  width: '550'
+  height: '450'
   link_text: 'Select media'
   auto_open: true
 selection_display: no_display
@@ -26,7 +26,7 @@ widgets:
       view_display: editor_media_browser
       submit_text: 'Select media'
     uuid: 0ce5dbdc-76cf-4c4e-a020-03328ef20f1c
-    weight: -9
+    weight: -10
     label: Library
     id: view
   6f017ab9-9cbd-43e3-8af6-9dc1e19c38c7:
@@ -38,6 +38,6 @@ widgets:
       extensions: 'jpg jpeg gif png'
       submit_text: 'Select media'
     uuid: 6f017ab9-9cbd-43e3-8af6-9dc1e19c38c7
-    weight: -10
+    weight: -9
     label: Upload
     id: dropzonejs_media_entity
