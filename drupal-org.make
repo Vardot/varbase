@@ -199,7 +199,7 @@ projects[masquerade][version] = 1.0-beta1
 projects[libraries][type] = module
 projects[libraries][subdir] = "contrib"
 projects[libraries][download][url] = https://git.drupal.org/project/libraries.git
-projects[libraries][download][revision] = bc427ef087382a04ac1ae3620183c915cb239324
+projects[libraries][download][revision] = 08a46ab12b573f1f48e9d160ed21a36417b5f749
 projects[libraries][download][branch] = 8.x-3.x
 
 projects[libraries_ui][type] = module
