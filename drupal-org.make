@@ -144,16 +144,12 @@ projects[video_embed_field][version] = 1.3
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
 projects[entityqueue][download][url] = http://git.drupal.org/project/entityqueue
-projects[entityqueue][download][revision] = 0359af5f0a229b61b46b2944d09c06739a52da5c
+projects[entityqueue][download][revision] = f755d8cbc7039eaa3b5d056648a8ef3956a83c1e
 projects[entityqueue][download][branch] = 8.x-1.x
-;; Issue #2478685 by josebc: Reverse order in admin view option
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-reverse_order_in_admin-2478685-3.patch
 ;; Issue #2821631 by josebc: Queue is always required when using  Limit to a specific entity queue
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-moved_queue_condition_to_join-2821631-5.patch
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2821631-8.patch
 ;; Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-9.patch
-;; Issue #2825773 by josebc: Make [Contextual links] work for views using Entityqueue
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-fix_contexual_links-2825773-6.patch
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch
 
 
 ;;;;;;;;;;;;;;;;;;;;;
