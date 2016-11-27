@@ -112,6 +112,8 @@ projects[entity_browser_enhanced][version] = 1.0-beta1
 projects[dropzonejs][type] = module
 projects[dropzonejs][subdir] = "contrib"
 projects[dropzonejs][version] = 1.0-alpha3
+;; Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] so it will work If the library is not in the installation profile path too
+projects[dropzonejs][patch][2830862] = https://www.drupal.org/files/issues/2830862-4.patch
 
 projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
@@ -225,3 +227,10 @@ projects[adminimal_theme][version] = 1.2
 projects[varbase_editor][type] = module
 projects[varbase_editor][subdir] = "contrib"
 projects[varbase_editor][version] = 4.1
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Libraries
+;;;;;;;;;;;;;;;;;;;;;
+
+libraries[dropzone][download][type] = get
+libraries[dropzone][download][url] = "https://github.com/enyo/dropzone/archive/v4.3.0.tar.gz"
