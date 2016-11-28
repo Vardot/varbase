@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the THEMETITLE theme.
+
+VARTHEME_SUBTHEME.settings:
+  type: theme_settings
+  label: 'VARTHEME_SUBTHEME settings'

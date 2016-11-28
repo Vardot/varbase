@@ -1,0 +1,24 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+    #  css/style-rtl.css: {} // Uncomment to have Right To Left styling.
+global-scripts:
+  js:
+    js/script.js: {}
+
+bootstrap-scripts:
+  js:
+    bootstrap/js/affix.js: {}
+    bootstrap/js/alert.js: {}
+    bootstrap/js/button.js: {}
+    bootstrap/js/carousel.js: {}
+    bootstrap/js/collapse.js: {}
+    bootstrap/js/dropdown.js: {}
+    bootstrap/js/modal.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/popover.js: {}
+    bootstrap/js/scrollspy.js: {}
+    bootstrap/js/tab.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/transition.js: {}

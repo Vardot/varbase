@@ -1,9 +1,9 @@
 core: 8.x
 type: theme
-base theme: bootstrap
+base theme: vartheme
 
-name: Vartheme
-description: Base theme for Vardot standard websites. Based on Bootstrap 3 and less css
+name: 'Vartheme Sub-Theme (LESS)'
+description: 'Uses the Bootstrap framework LESS source files and must be compiled (not for beginners).'
 package: 'Varbase'
 
 regions:
@@ -20,8 +20,9 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'vartheme/global-styling'
-  - 'vartheme/global-scripts'
+  - 'VARTHEME_SUBTHEME/global-styling'
+  - 'VARTHEME_SUBTHEME/global-scripts'
+  - 'VARTHEME_SUBTHEME/bootstrap-scripts'
 
 ckeditor_stylesheets:
   - css/style.css

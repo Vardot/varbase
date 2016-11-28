@@ -3,3 +3,6 @@ global-styling:
     theme:
       css/style.css: {}
     #  css/style-rtl.css: {} // Uncomment to have Right To Left styling.
+global-scripts:
+  js:
+    js/script.js: {}
