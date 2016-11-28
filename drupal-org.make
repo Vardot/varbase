@@ -56,7 +56,7 @@ projects[ds][version] = 2.6
 
 projects[field_group][type] = module
 projects[field_group][subdir] = "contrib"
-projects[field_group][version] = 1.0-rc4
+projects[field_group][version] = 1.0-rc5
 
 projects[smart_trim][type] = module
 projects[smart_trim][subdir] = "contrib"
