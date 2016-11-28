@@ -23,27 +23,24 @@ projects[page_manager][version] = 1.0-alpha24
 
 projects[panels][type] = module
 projects[panels][subdir] = "contrib"
-projects[panels][download][type] = git
-projects[panels][download][url] = https://git.drupal.org/project/panels
+projects[panels][version] = 3.0-beta5
 projects[panels][download][tag] = 8.x-3.0-beta5
 ;; Issue #2793801 : Allow modules to influence the IPE tempstore ID
-projects[panels][patch][] = https://www.drupal.org/files/issues/2793801-9.patch
+projects[panels][patch][2793801] = https://www.drupal.org/files/issues/2793801-9.patch
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
-projects[panelizer][download][type] = git
-projects[panelizer][download][url] = https://git.drupal.org/project/panelizer
-projects[panelizer][download][tag] = 8.x-3.0-alpha2
+projects[panelizer][version] = 3.0-alpha2
 ;; Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch
+projects[panelizer][patch][2747739] = https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch
 ;; Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/2701349-2.patch
+projects[panelizer][patch][2701349] = https://www.drupal.org/files/issues/2701349-2.patch
 ;; Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
+projects[panelizer][patch][2700597] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
 ;; Issue #2664682 : Implement admin UI for editing Panelizer defaults
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/2664682-55.patch
+projects[panelizer][patch][2664682] = https://www.drupal.org/files/issues/2664682-55.patch
 ;; Issue #2793841 - Properly integrate with Panels IPE
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
+projects[panelizer][patch][2793841] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
 
 projects[layout_plugin][type] = module
 projects[layout_plugin][subdir] = "contrib"
@@ -99,11 +96,7 @@ projects[entity][version] = 1.0-alpha3
 
 projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
-projects[entity_browser][download][url] = http://git.drupal.org/project/entity_browser
-projects[entity_browser][download][revision] = 403612b620ecf41f31e5ff2eaa424d151d3257ef
-projects[entity_browser][download][branch] = 8.x-1.x
-;; Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/make_field_widget-2809659-17.patch
+projects[entity_browser][version] = 1.0-beta2
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"

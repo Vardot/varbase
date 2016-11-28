@@ -83,10 +83,6 @@
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages":
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch"
       },
-      "drupal/entity_browser": {
-        "Issue #2809659 by CTaPByK, ruloweb: Make field widget display plugins implement ConfigurablePluginInterface":
-        "https://www.drupal.org/files/issues/make_field_widget-2809659-17.patch"
-      },
       "drupal/dropzonejs": {
         "Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] so it will work If the library is not in the installation profile path too":
         "https://www.drupal.org/files/issues/2830862-4.patch"
@@ -124,7 +120,7 @@
     
     "drupal/embed": "1.0-rc3",
     "drupal/entity": "1.0-alpha3",
-    "drupal/entity_browser": "1.x-dev#403612b620ecf41f31e5ff2eaa424d151d3257ef",
+    "drupal/entity_browser": "1.0-beta2",
     "drupal/entity_browser_enhanced": "1.0-beta1",
     "drupal/dropzonejs": "1.0-alpha3",
     "drupal/entity_embed": "1.0-beta2",
