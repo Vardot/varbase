@@ -125,7 +125,7 @@
     "drupal/dropzonejs": "1.0-alpha3",
     "drupal/entity_embed": "1.0-beta2",
     "drupal/inline_entity_form": "1.0-beta1",
-    "drupal/media_entity": "1.5",
+    "drupal/media_entity": "1.6",
     "drupal/media_entity_document": "1.1",
     "drupal/media_entity_image": "1.2",
     "drupal/media_entity_audio": "1.0-beta3",

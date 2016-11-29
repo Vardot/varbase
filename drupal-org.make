@@ -118,7 +118,7 @@ projects[inline_entity_form][version] = 1.0-beta1
 
 projects[media_entity][type] = module
 projects[media_entity][subdir] = "contrib"
-projects[media_entity][version] = 1.5
+projects[media_entity][version] = 1.6
 
 projects[media_entity_document][type] = module
 projects[media_entity_document][subdir] = "contrib"
