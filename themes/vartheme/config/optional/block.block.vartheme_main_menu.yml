@@ -10,7 +10,7 @@ dependencies:
 id: vartheme_main_menu
 theme: vartheme
 region: navigation_collapsible
-weight: 10
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:

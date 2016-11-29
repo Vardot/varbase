@@ -1,5 +1,5 @@
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.tools
@@ -10,7 +10,7 @@ dependencies:
 id: vartheme_tools
 theme: vartheme
 region: sidebar_second
-weight: 0
+weight: -5
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

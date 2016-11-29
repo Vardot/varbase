@@ -8,7 +8,7 @@ dependencies:
 id: vartheme_help
 theme: vartheme
 region: help
-weight: -30
+weight: -7
 provider: null
 plugin: help_block
 settings:

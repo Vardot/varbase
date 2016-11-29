@@ -10,5 +10,5 @@
 # @see \Drupal\bootstrap\Plugin\SettingManager
 # @see \Drupal\bootstrap\Plugin\Form\SystemThemeSettings
 # @see \Drupal\bootstrap\ThemeSettings
-cdn_provider: ''
+cdn_jsdelivr_version: 3.3.7
 modal_enabled: 0

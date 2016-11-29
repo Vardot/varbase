@@ -8,7 +8,7 @@ dependencies:
 id: vartheme_branding
 theme: vartheme
 region: navigation
-weight: 0
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
