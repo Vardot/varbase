@@ -100,7 +100,7 @@ projects[entity_browser][version] = 1.0-beta2
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"
-projects[entity_browser_enhanced][version] = 1.0-beta1
+projects[entity_browser_enhanced][version] = 1.0-beta2
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][subdir] = "contrib"
