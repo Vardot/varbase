@@ -144,7 +144,7 @@
     "drupal/libraries": "3.x-dev#08a46ab12b573f1f48e9d160ed21a36417b5f749",
     "drupal/libraries_ui": "1.0",
     
-    "drupal/bootstrap": "3.0",
+    "drupal/bootstrap": "3.1",
     "drupal/adminimal_theme": "1.2",
     
     "drupal/varbase_editor": "4.1",

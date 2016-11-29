@@ -207,7 +207,7 @@ projects[libraries_ui][version] = 1.0
 
 projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = "contrib"
-projects[bootstrap][version] = 3.0
+projects[bootstrap][version] = 3.1
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][subdir] = "contrib"
