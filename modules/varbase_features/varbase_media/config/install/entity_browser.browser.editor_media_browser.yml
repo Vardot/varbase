@@ -11,8 +11,8 @@ name: editor_media_browser
 label: 'Editor Media Browser'
 display: iframe
 display_configuration:
-  width: '550'
-  height: '450'
+  width: '700'
+  height: '500'
   link_text: 'Select media'
   auto_open: true
 selection_display: no_display
