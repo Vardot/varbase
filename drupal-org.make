@@ -211,7 +211,7 @@ projects[bootstrap][version] = 3.1
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][subdir] = "contrib"
-projects[adminimal_theme][version] = 1.2
+projects[adminimal_theme][version] = 1.3
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features
