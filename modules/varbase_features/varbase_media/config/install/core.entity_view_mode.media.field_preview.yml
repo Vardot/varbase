@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - media_entity
-id: media.form_teaser
-label: 'Form Teaser'
+id: media.field_preview
+label: 'Field Preview'
 targetEntityType: media
 cache: true

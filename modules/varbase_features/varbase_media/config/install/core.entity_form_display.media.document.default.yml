@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_media_video_embed_field
-    - media_entity.bundle.video
+    - field.field.media.document.field_document_file
+    - media_entity.bundle.document
   module:
-    - video_embed_field
-id: media.video.default
+    - file
+id: media.document.default
 targetEntityType: media
-bundle: video
+bundle: document
 mode: default
 content:
   created:
@@ -16,11 +16,12 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-  field_media_video_embed_field:
-    type: video_embed_field_textfield
+  field_document_file:
     weight: 1
-    settings: {  }
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
+    type: file_generic
   langcode:
     type: language_select
     weight: 2

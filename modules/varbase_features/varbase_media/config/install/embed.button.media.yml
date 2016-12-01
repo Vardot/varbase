@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.audio
     - media_entity.bundle.document
     - media_entity.bundle.image
     - media_entity.bundle.video
@@ -15,7 +14,6 @@ type_id: entity
 type_settings:
   entity_type: media
   bundles:
-    - audio
     - document
     - image
     - video

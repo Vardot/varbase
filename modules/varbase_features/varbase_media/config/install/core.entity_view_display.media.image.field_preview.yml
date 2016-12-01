@@ -2,28 +2,34 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.teaser
+    - core.entity_view_mode.media.field_preview
     - field.field.media.image.field_image
-    - image.style.large
+    - image.style.field_preview
     - media_entity.bundle.image
   module:
     - image
-id: media.image.teaser
+id: media.image.field_preview
 targetEntityType: media
 bundle: image
-mode: teaser
+mode: field_preview
 content:
   field_image:
     weight: 0
     label: hidden
     settings:
-      image_style: large
-      image_link: ''
+      image_style: field_preview
+      image_link: file
     third_party_settings: {  }
     type: image
+  name:
+    label: hidden
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
   langcode: true
-  name: true
   thumbnail: true
   uid: true

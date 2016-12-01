@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: field_preview
+label: 'Field Preview (150xAuto)'
+effects:
+  b47e1086-f344-4e57-a14c-d3770290988f:
+    uuid: b47e1086-f344-4e57-a14c-d3770290988f
+    id: image_scale
+    weight: 1
+    data:
+      width: 150
+      height: null
+      upscale: false

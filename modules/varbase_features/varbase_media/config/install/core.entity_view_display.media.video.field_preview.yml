@@ -2,24 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.field_preview
     - field.field.media.video.field_media_video_embed_field
+    - image.style.field_preview
     - media_entity.bundle.video
   module:
     - video_embed_field
-id: media.video.default
+id: media.video.field_preview
 targetEntityType: media
 bundle: video
-mode: default
+mode: field_preview
 content:
   field_media_video_embed_field:
-    type: video_embed_field_video
+    type: video_embed_field_thumbnail
     weight: 0
     label: hidden
     settings:
-      responsive: true
-      width: 854
-      height: 480
-      autoplay: false
+      image_style: field_preview
+      link_image_to: provider
     third_party_settings: {  }
 hidden:
   created: true

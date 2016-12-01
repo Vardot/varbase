@@ -3,24 +3,24 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.browser_teaser
-    - field.field.media.image.field_image
-    - image.style.medium
-    - media_entity.bundle.image
+    - field.field.media.video.field_media_video_embed_field
+    - image.style.field_preview
+    - media_entity.bundle.video
   module:
-    - image
-id: media.image.browser_teaser
+    - video_embed_field
+id: media.video.browser_teaser
 targetEntityType: media
-bundle: image
+bundle: video
 mode: browser_teaser
 content:
-  field_image:
+  field_media_video_embed_field:
+    type: video_embed_field_thumbnail
     weight: 0
     label: hidden
     settings:
-      image_style: medium
-      image_link: ''
+      image_style: field_preview
+      link_image_to: ''
     third_party_settings: {  }
-    type: image
 hidden:
   created: true
   langcode: true

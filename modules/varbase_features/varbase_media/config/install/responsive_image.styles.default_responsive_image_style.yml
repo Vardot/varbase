@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+  theme:
+    - bootstrap
+id: default_responsive_image_style
+label: 'Default Responsive Image style'
+image_style_mappings: {  }
+breakpoint_group: bootstrap
+fallback_image_style: large

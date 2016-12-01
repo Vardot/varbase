@@ -5,7 +5,6 @@ required:
   - core.entity_view_display.media.video.default
   - core.entity_view_display.media.image.browser_teaser
   - core.entity_view_display.media.image.default
-  - core.entity_view_display.media.image.form_teaser
   - core.entity_view_display.media.image.teaser
   - core.entity_view_display.media.image.token
   - entity_browser.browser.editor_media_browser
@@ -19,10 +18,12 @@ required:
   - field.storage.node.field_images
   - views.view.browser
   - embed.button.media
-  - media_entity.bundle.audio
   - media_entity.bundle.document
   - media_entity.bundle.image
   - media_entity.bundle.video
-  - core.entity_view_mode.media.form_teaser
   - core.entity_view_mode.media.teaser
   - entity_browser_enhanced.widgets
+  - system.action.media_delete_action
+  - system.action.media_publish_action
+  - system.action.media_save_action
+  - system.action.media_unpublish_action

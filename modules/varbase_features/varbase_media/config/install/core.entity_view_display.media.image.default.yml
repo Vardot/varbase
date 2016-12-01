@@ -3,45 +3,20 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_image
+    - image.style.field_preview
     - media_entity.bundle.image
   module:
-    - ds
     - image
-    - user
-third_party_settings:
-  ds:
-    layout:
-      id: onecol
-      path: profiles/varbase/modules/contrib/panels/layouts/onecol
-      library: layout_plugin/onecol
-      disable_css: false
-      entity_classes: all_classes
-      settings: {  }
-    regions:
-      middle:
-        - field_image
-        - name
-        - created
-        - uid
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
-  created:
-    type: timestamp
-    weight: 2
-    label: hidden
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
   field_image:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: field_preview
       image_link: file
     third_party_settings: {  }
     type: image
@@ -50,14 +25,10 @@ content:
     type: string
     weight: 1
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  uid:
-    type: author
-    weight: 3
-    label: hidden
-    settings: {  }
+      link_to_entity: true
     third_party_settings: {  }
 hidden:
+  created: true
   langcode: true
   thumbnail: true
+  uid: true

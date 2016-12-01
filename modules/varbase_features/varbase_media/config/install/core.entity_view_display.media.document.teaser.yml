@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser
+    - field.field.media.document.field_document_file
+    - image.style.field_preview
+    - media_entity.bundle.document
+  module:
+    - file
+    - image
+id: media.document.teaser
+targetEntityType: media
+bundle: document
+mode: teaser
+content:
+  field_document_file:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+  name:
+    label: hidden
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: field_preview
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  uid: true
