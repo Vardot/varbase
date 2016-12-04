@@ -80,7 +80,7 @@ projects[linkit][version] = 4.1
 
 projects[anchor_link][type] = module
 projects[anchor_link][subdir] = "contrib"
-projects[anchor_link][version] = 1.2
+projects[anchor_link][version] = 1.3
 
 projects[views_infinite_scroll][type] = module
 projects[views_infinite_scroll][subdir] = "contrib"

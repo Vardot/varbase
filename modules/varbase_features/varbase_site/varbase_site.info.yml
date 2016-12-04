@@ -13,7 +13,7 @@ dependencies:
   - text
   - user
   - views
+package: Varbase
 version: 8.x-4.0
 core: 8.x
-project: varbase
-datestamp: 1480426389
+datestamp: 1480603687
