@@ -48,11 +48,7 @@ projects[layout_plugin][version] = 1.0-alpha23
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][subdir] = "contrib"
-projects[bootstrap_layouts][download][url] = http://git.drupal.org/project/bootstrap_layouts
-projects[bootstrap_layouts][download][revision] = db1d927b75a475656c62673f1a21b3a3e536dcd0
-projects[bootstrap_layouts][download][branch] = 8.x-3.x
-;; Issue #2784265 by markcarver, Ahmad Abbad: Refactor module to be plugin based and allow template settings
-projects[bootstrap_layouts][patch][2784265] = https://www.drupal.org/files/issues/refactor_module_to_be-2784265-9.patch
+projects[bootstrap_layouts][version] = 3.1
 
 projects[ds][type] = module
 projects[ds][subdir] = "contrib"
