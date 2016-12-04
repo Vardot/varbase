@@ -87,6 +87,10 @@
         "Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] so it will work If the library is not in the installation profile path too":
         "https://www.drupal.org/files/issues/2830862-4.patch"
       },
+      "drupal/bootstrap_layouts": {
+        "Issue #2784265 by markcarver, Ahmad Abbad: Refactor module to be plugin based and allow template setting":
+        "https://www.drupal.org/files/issues/refactor_module_to_be-2784265-9.patch"
+      },
       "drush/drush": {
         "Adding composer.json support to make-convert command":
         "https://github.com/drush-ops/drush/commit/ce82b946d49b09cd33da5ca84feb24a6c35f8f8e.patch",
@@ -106,7 +110,7 @@
     "drupal/panels": "3.0-beta5",
     "drupal/panelizer": "3.0-alpha2",
     "drupal/layout_plugin": "1.0-alpha23",
-    "drupal/bootstrap_layouts": "3.1",
+    "drupal/bootstrap_layouts": "3.x-dev#db1d927b75a475656c62673f1a21b3a3e536dcd0",
     "drupal/ds": "2.6",
     "drupal/field_group": "1.0-rc6",
     "drupal/smart_trim": "1.0",
