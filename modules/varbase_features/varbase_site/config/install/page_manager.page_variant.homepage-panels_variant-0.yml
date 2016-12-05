@@ -27,7 +27,7 @@ variant_settings:
   uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8
   label: null
   weight: 0
-  layout: booststrap-12
+  layout: bs_1col
   layout_settings: {  }
   page_title: ''
   storage_type: page_manager
