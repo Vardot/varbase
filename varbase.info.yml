@@ -51,6 +51,7 @@ dependencies:
   - outside_in
 
   # contrib modules
+  - entity
   - libraries
   - config_update
   - ctools
