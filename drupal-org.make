@@ -48,7 +48,7 @@ projects[layout_plugin][version] = 1.0-alpha23
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][subdir] = "contrib"
-projects[bootstrap_layouts][version] = 3.1
+projects[bootstrap_layouts][version] = 4.0
 
 projects[ds][type] = module
 projects[ds][subdir] = "contrib"

@@ -101,7 +101,7 @@
     "drupal/panels": "3.0-beta5",
     "drupal/panelizer": "3.0-alpha2",
     "drupal/layout_plugin": "1.0-alpha23",
-    "drupal/bootstrap_layouts": "3.1",
+    "drupal/bootstrap_layouts": "4.0",
     "drupal/ds": "2.6",
     "drupal/field_group": "1.0-rc6",
     "drupal/smart_trim": "1.0",
