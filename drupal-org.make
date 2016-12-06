@@ -219,7 +219,7 @@ projects[adminimal_theme][version] = 1.3
 
 projects[varbase_editor][type] = module
 projects[varbase_editor][subdir] = "contrib"
-projects[varbase_editor][version] = 4.1
+projects[varbase_editor][version] = 4.2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
