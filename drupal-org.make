@@ -128,10 +128,6 @@ projects[media_entity_image][type] = module
 projects[media_entity_image][subdir] = "contrib"
 projects[media_entity_image][version] = 1.2
 
-projects[media_entity_audio][type] = module
-projects[media_entity_audio][subdir] = "contrib"
-projects[media_entity_audio][version] = 1.0-beta3
-
 projects[video_embed_field][type] = module
 projects[video_embed_field][subdir] = "contrib"
 projects[video_embed_field][version] = 1.3

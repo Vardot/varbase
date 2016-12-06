@@ -123,7 +123,6 @@
     "drupal/media_entity": "1.6",
     "drupal/media_entity_document": "1.1",
     "drupal/media_entity_image": "1.2",
-    "drupal/media_entity_audio": "1.0-beta3",
     "drupal/video_embed_field": "1.3",
     "drupal/entityqueue": "1.x-dev#f755d8cbc7039eaa3b5d056648a8ef3956a83c1e",
     

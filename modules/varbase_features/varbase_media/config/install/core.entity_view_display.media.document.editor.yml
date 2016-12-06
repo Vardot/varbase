@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.editor
+    - field.field.media.document.field_document_file
+    - media_entity.bundle.document
+  module:
+    - file
+id: media.document.editor
+targetEntityType: media
+bundle: document
+mode: editor
+content:
+  field_document_file:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -22,6 +22,7 @@ required:
   - media_entity.bundle.image
   - media_entity.bundle.video
   - core.entity_view_mode.media.teaser
+  - core.entity_view_mode.media.editor
   - entity_browser_enhanced.widgets
   - system.action.media_delete_action
   - system.action.media_publish_action

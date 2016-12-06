@@ -2,9 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.document
     - media_entity.bundle.image
-    - media_entity.bundle.video
   module:
     - entity_embed
     - media_entity
@@ -14,11 +12,9 @@ type_id: entity
 type_settings:
   entity_type: media
   bundles:
-    - document
     - image
-    - video
   display_plugins:
-    - 'entity_reference:media_thumbnail'
+    - 'view_mode:media.editor'
   entity_browser: editor_media_browser
   entity_browser_settings:
     display_review: true

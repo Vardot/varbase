@@ -16,4 +16,5 @@ dependencies:
 package: Varbase
 version: 8.x-4.0
 core: 8.x
-datestamp: 1480603687
+project: varbase
+datestamp: 1480949897

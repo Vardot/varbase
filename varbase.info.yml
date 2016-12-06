@@ -86,7 +86,6 @@ dependencies:
   - media_entity
   - media_entity_document
   - media_entity_image
-  - media_entity_audio
   - video_embed_media
   - video_embed_wysiwyg
   
