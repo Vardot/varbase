@@ -60,3 +60,6 @@ permissions:
   - 'translate any entity'
   - 'translate page node'
   - 'translate landing_page node'
+  - 'access editor_media_browser entity browser pages'
+  - 'access image_browser entity browser pages'
+  - 'access images_browser entity browser pages'
