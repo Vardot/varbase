@@ -151,7 +151,7 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
    Then I should see "test_editor"
    When I click "test_editor"
     And I wait
-   Then I should see "Masquerade as test_editor"
+   Then I should not see "Masquerade as test_editor"
 
   # Check if a site admin user can NOT masquerade as a content admin user.
    When I go to "/admin/people"
@@ -162,7 +162,7 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
    Then I should see "test_content_admin"
    When I click "test_content_admin"
     And I wait
-   Then I should see "Masquerade as test_content_admin"
+   Then I should not see "Masquerade as test_content_admin"
 
 @javascript @check @local @development @staging @production
 Scenario: Check if a content admin user can NOT masquerade as the super user (UID 1) "webmaster".
