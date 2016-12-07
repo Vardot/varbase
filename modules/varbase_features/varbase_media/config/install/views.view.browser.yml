@@ -367,10 +367,7 @@ display:
         - 'config:core.entity_view_display.media.document.editor'
         - 'config:core.entity_view_display.media.document.field_preview'
         - 'config:core.entity_view_display.media.document.teaser'
-        - 'config:core.entity_view_display.media.image.browser_teaser'
-        - 'config:core.entity_view_display.media.image.default'
         - 'config:core.entity_view_display.media.image.editor'
-        - 'config:core.entity_view_display.media.image.field_preview'
         - 'config:core.entity_view_display.media.image.teaser'
         - 'config:core.entity_view_display.media.image.token'
         - 'config:core.entity_view_display.media.video.browser_teaser'
@@ -378,6 +375,9 @@ display:
         - 'config:core.entity_view_display.media.video.editor'
         - 'config:core.entity_view_display.media.video.field_preview'
         - 'config:core.entity_view_display.media.video.teaser'
+        - 'config:core.entity_view_display.media.image.browser_teaser'
+        - 'config:core.entity_view_display.media.image.default'
+        - 'config:core.entity_view_display.media.image.field_preview'
   editor_media_browser:
     display_plugin: entity_browser
     id: editor_media_browser
@@ -524,7 +524,7 @@ display:
           perm: 'access editor_media_browser entity browser pages'
       css_class: editor-media-browser
       pager:
-        type: infinite_scroll
+        type: full
         options:
           items_per_page: 8
           offset: 0
@@ -533,6 +533,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: true
             items_per_page_label: Items
@@ -541,9 +543,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: 'Skip first'
-          views_infinite_scroll:
-            button_text: 'More Media'
-            automatically_load_content: false
+          quantity: 9
       filters:
         status:
           id: status
@@ -926,7 +926,7 @@ display:
           perm: 'access image_browser entity browser pages'
       css_class: image-browser
       pager:
-        type: infinite_scroll
+        type: full
         options:
           items_per_page: 8
           offset: 0
@@ -935,6 +935,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: true
             items_per_page_label: Items
@@ -943,9 +945,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: 'Skip first'
-          views_infinite_scroll:
-            button_text: 'More Images'
-            automatically_load_content: false
+          quantity: 9
       empty:
         area_text_custom:
           id: area_text_custom
@@ -1242,7 +1242,7 @@ display:
           perm: 'access images_browser entity browser pages'
       css_class: images-browser
       pager:
-        type: infinite_scroll
+        type: full
         options:
           items_per_page: 8
           offset: 0
@@ -1251,6 +1251,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: true
             items_per_page_label: Items
@@ -1259,9 +1261,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: 'Skip first'
-          views_infinite_scroll:
-            button_text: 'More Images'
-            automatically_load_content: false
+          quantity: 9
       empty:
         area_text_custom:
           id: area_text_custom

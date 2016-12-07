@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - media_entity.bundle.image
-  content:
-    - 'file:file:2bde56eb-75df-46de-9b15-51f9bf542d42'
   module:
     - entity_embed
     - media_entity
@@ -19,5 +17,5 @@ type_settings:
     - 'view_mode:media.editor'
   entity_browser: editor_media_browser
   entity_browser_settings:
-    display_review: true
-icon_uuid: 2bde56eb-75df-46de-9b15-51f9bf542d42
+    display_review: false
+icon_uuid: null
