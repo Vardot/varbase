@@ -4,7 +4,7 @@ dependencies:
   config:
     - media_entity.bundle.image
   content:
-    - 'file:file:6bca7e16-775a-45a7-ad24-6d3988ec0861'
+    - 'file:file:2bde56eb-75df-46de-9b15-51f9bf542d42'
   module:
     - entity_embed
     - media_entity
@@ -20,4 +20,4 @@ type_settings:
   entity_browser: editor_media_browser
   entity_browser_settings:
     display_review: true
-icon_uuid: 6bca7e16-775a-45a7-ad24-6d3988ec0861
+icon_uuid: 2bde56eb-75df-46de-9b15-51f9bf542d42

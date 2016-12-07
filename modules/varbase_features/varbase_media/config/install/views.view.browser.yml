@@ -310,17 +310,31 @@ display:
           id: created
           table: media_field_data
           field: created
-          order: DESC
-          entity_type: media
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          order: DESC
+          exposed: true
           expose:
-            label: ''
+            label: Created
           granularity: second
+          entity_type: media
+          entity_field: created
+          plugin_id: date
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Name
+          entity_type: media
+          entity_field: name
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty:
@@ -344,6 +358,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.document.browser_teaser'
@@ -482,6 +498,8 @@ display:
         filters: false
         filter_groups: false
         empty: false
+        cache: false
+        exposed_form: false
       style:
         type: grid
         options:
@@ -503,7 +521,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access media overview'
+          perm: 'access editor_media_browser entity browser pages'
       css_class: editor-media-browser
       pager:
         type: infinite_scroll
@@ -517,11 +535,11 @@ display:
             next: ››
           expose:
             items_per_page: true
-            items_per_page_label: 'Items per page'
+            items_per_page_label: Items
             items_per_page_options: '4, 8, 12, 16, 24'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
-            offset: true
+            offset: false
             offset_label: 'Skip first'
           views_infinite_scroll:
             button_text: 'More Media'
@@ -624,12 +642,27 @@ display:
           tokenize: false
           content: 'There are no media items to display. Add new media content.'
           plugin_id: text_custom
+      cache:
+        type: none
+        options: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.document.browser_teaser'
@@ -768,6 +801,8 @@ display:
         css_class: false
         pager: false
         empty: false
+        cache: false
+        exposed_form: false
       style:
         type: grid
         options:
@@ -888,7 +923,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access media overview'
+          perm: 'access image_browser entity browser pages'
       css_class: image-browser
       pager:
         type: infinite_scroll
@@ -902,11 +937,11 @@ display:
             next: ››
           expose:
             items_per_page: true
-            items_per_page_label: 'Items per page'
+            items_per_page_label: Items
             items_per_page_options: '4, 8, 12, 16, 24'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
-            offset: true
+            offset: false
             offset_label: 'Skip first'
           views_infinite_scroll:
             button_text: 'More Images'
@@ -923,12 +958,27 @@ display:
           tokenize: false
           content: 'There are no images to display. Upload images from your computer.'
           plugin_id: text_custom
+      cache:
+        type: none
+        options: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.document.browser_teaser'
@@ -1067,6 +1117,8 @@ display:
         css_class: false
         pager: false
         empty: false
+        cache: false
+        exposed_form: false
       style:
         type: grid
         options:
@@ -1187,7 +1239,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access media overview'
+          perm: 'access images_browser entity browser pages'
       css_class: images-browser
       pager:
         type: infinite_scroll
@@ -1201,11 +1253,11 @@ display:
             next: ››
           expose:
             items_per_page: true
-            items_per_page_label: 'Items per page'
+            items_per_page_label: Items
             items_per_page_options: '4, 8, 12, 16, 24'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- All -'
-            offset: true
+            offset: false
             offset_label: 'Skip first'
           views_infinite_scroll:
             button_text: 'More Images'
@@ -1222,12 +1274,27 @@ display:
           tokenize: false
           content: 'There are no images to display. Upload images from your computer.'
           plugin_id: text_custom
+      cache:
+        type: none
+        options: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - user.permissions
       tags:
         - 'config:core.entity_view_display.media.document.browser_teaser'
