@@ -142,6 +142,9 @@ projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2821631-8.p
 ;; Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch
 
+projects[imagemagick][type] = module
+projects[imagemagick][subdir] = "contrib"
+projects[imagemagick][version] = 1.0-alpha4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
