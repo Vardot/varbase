@@ -74,4 +74,3 @@ permissions:
   - 'translate any entity'
   - 'translate page node'
   - 'translate landing_page node'
-  - 'masquerade as any user'
