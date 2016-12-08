@@ -92,7 +92,7 @@ projects[embed][version] = 1.0-rc3
 
 projects[entity][type] = module
 projects[entity][subdir] = "contrib"
-projects[entity][version] = 1.0-alpha3
+projects[entity][version] = 1.0-alpha4
 
 projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
