@@ -144,7 +144,7 @@ projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue
 
 projects[imagemagick][type] = module
 projects[imagemagick][subdir] = "contrib"
-projects[imagemagick][version] = 1.0-alpha4
+projects[imagemagick][version] = 1.0-alpha5
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
