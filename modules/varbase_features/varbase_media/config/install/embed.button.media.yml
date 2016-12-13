@@ -14,8 +14,19 @@ type_settings:
   bundles:
     - image
   display_plugins:
-    - 'view_mode:media.editor'
+    - 'view_mode:media.d1'
+    - 'view_mode:media.d10'
+    - 'view_mode:media.d11'
+    - 'view_mode:media.d12'
+    - 'view_mode:media.d2'
+    - 'view_mode:media.d3'
+    - 'view_mode:media.d4'
+    - 'view_mode:media.d5'
+    - 'view_mode:media.d6'
+    - 'view_mode:media.d7'
+    - 'view_mode:media.d8'
+    - 'view_mode:media.d9'
   entity_browser: editor_media_browser
   entity_browser_settings:
-    display_review: false
+    display_review: true
 icon_uuid: null

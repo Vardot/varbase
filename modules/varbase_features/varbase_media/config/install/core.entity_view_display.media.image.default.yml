@@ -17,7 +17,7 @@ content:
     label: hidden
     settings:
       image_style: field_preview
-      image_link: file
+      image_link: content
     third_party_settings: {  }
     type: image
   name:

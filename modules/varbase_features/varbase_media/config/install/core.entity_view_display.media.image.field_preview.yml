@@ -18,7 +18,7 @@ content:
     label: hidden
     settings:
       image_style: field_preview
-      image_link: file
+      image_link: content
     third_party_settings: {  }
     type: image
   name:
@@ -26,7 +26,7 @@ content:
     type: string
     weight: 1
     settings:
-      link_to_entity: false
+      link_to_entity: true
     third_party_settings: {  }
 hidden:
   created: true
