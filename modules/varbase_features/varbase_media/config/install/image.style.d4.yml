@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d4
+label: 'Display 4 (370xAuto)'
+effects:
+  6f277f09-917a-4e9c-84e8-f22bdb06aed5:
+    uuid: 6f277f09-917a-4e9c-84e8-f22bdb06aed5
+    id: image_scale
+    weight: 1
+    data:
+      width: 370
+      height: null
+      upscale: false

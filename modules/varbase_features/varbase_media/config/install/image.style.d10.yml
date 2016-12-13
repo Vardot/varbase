@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d10
+label: 'Display wide 10 (970xAuto)'
+effects:
+  13c0474a-655c-4fcb-8bc7-3229688831b8:
+    uuid: 13c0474a-655c-4fcb-8bc7-3229688831b8
+    id: image_scale
+    weight: 1
+    data:
+      width: 970
+      height: null
+      upscale: false

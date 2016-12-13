@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d1
+label: 'Display 1 (70xAuto)'
+effects:
+  5b61a041-35c4-49fd-9ef1-2a69f3685db1:
+    uuid: 5b61a041-35c4-49fd-9ef1-2a69f3685db1
+    id: image_scale
+    weight: 1
+    data:
+      width: 70
+      height: null
+      upscale: false

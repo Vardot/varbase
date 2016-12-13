@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d7
+label: 'Display mid 7 (670xAuto)'
+effects:
+  9134983f-ec14-415e-926f-b98523ffb7ba:
+    uuid: 9134983f-ec14-415e-926f-b98523ffb7ba
+    id: image_scale
+    weight: 1
+    data:
+      width: 670
+      height: null
+      upscale: false

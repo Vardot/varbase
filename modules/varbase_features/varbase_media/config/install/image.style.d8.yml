@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d8
+label: 'Display mid 8 (770xAuto)'
+effects:
+  fdd23faf-5640-4db5-8d95-d18134c25ef0:
+    uuid: fdd23faf-5640-4db5-8d95-d18134c25ef0
+    id: image_scale
+    weight: 1
+    data:
+      width: 770
+      height: null
+      upscale: false

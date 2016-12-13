@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.d8
+label: 'Display mid 8'
+targetEntityType: media
+cache: true

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d2
+label: 'Display 2 (170xAuto)'
+effects:
+  18a36955-4245-415d-b073-6ae036f8c739:
+    uuid: 18a36955-4245-415d-b073-6ae036f8c739
+    id: image_scale
+    weight: 1
+    data:
+      width: 170
+      height: null
+      upscale: false

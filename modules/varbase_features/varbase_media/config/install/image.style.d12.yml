@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d12
+label: 'Display wide 12 (1170xAuto)'
+effects:
+  338f2292-ffb2-4c87-b3e0-62f03f86f1d2:
+    uuid: 338f2292-ffb2-4c87-b3e0-62f03f86f1d2
+    id: image_scale
+    weight: 1
+    data:
+      width: 1170
+      height: null
+      upscale: false

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d11
+label: 'Display wide 11 (1070xAuto)'
+effects:
+  51c2de27-675d-460c-81d3-c9b1b64fe066:
+    uuid: 51c2de27-675d-460c-81d3-c9b1b64fe066
+    id: image_scale
+    weight: 1
+    data:
+      width: 1070
+      height: null
+      upscale: false

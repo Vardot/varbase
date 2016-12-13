@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d3
+label: 'Display 3 (270xAuto)'
+effects:
+  1b7720d9-818c-4348-9ba4-41162ba4187f:
+    uuid: 1b7720d9-818c-4348-9ba4-41162ba4187f
+    id: image_scale
+    weight: 1
+    data:
+      width: 270
+      height: null
+      upscale: false

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.d9
+    - field.field.media.image.field_image
+    - image.style.d9
+    - media_entity.bundle.image
+  module:
+    - image
+id: media.image.d9
+targetEntityType: media
+bundle: image
+mode: d9
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: d9
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

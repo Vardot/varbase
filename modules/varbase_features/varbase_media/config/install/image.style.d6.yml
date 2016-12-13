@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: d6
+label: 'Display mid 6 (570xAuto)'
+effects:
+  db20a7f4-5f9d-45d3-b420-286324cdcb91:
+    uuid: db20a7f4-5f9d-45d3-b420-286324cdcb91
+    id: image_scale
+    weight: 1
+    data:
+      width: 570
+      height: null
+      upscale: false
