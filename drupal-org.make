@@ -176,7 +176,7 @@ projects[google_analytics][version] = 2.1
 
 projects[features][type] = module
 projects[features][subdir] = "contrib"
-projects[features][version] = 3.1
+projects[features][version] = 3.2
 
 projects[coffee][type] = module
 projects[coffee][subdir] = "contrib"
