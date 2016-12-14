@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media_entity
-id: media.d2
-label: 'Display 2'
-targetEntityType: media
-cache: true

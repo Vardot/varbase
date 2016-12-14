@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - media_entity
-id: media.d11
-label: 'Display wide 11'
+id: media.full
+label: Full
 targetEntityType: media
 cache: true

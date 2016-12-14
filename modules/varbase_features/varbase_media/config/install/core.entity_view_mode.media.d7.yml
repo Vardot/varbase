@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media_entity
-id: media.d7
-label: 'Display mid 7'
-targetEntityType: media
-cache: true

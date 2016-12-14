@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - media_entity
-id: media.d4
-label: 'Display 4'
+id: media.medium
+label: Medium
 targetEntityType: media
 cache: true

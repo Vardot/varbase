@@ -2,22 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.d3
+    - core.entity_view_mode.media.full
     - field.field.media.image.field_image
-    - image.style.d3
+    - image.style.d12
     - media_entity.bundle.image
   module:
     - image
-id: media.image.d3
+id: media.image.full
 targetEntityType: media
 bundle: image
-mode: d3
+mode: full
 content:
   field_image:
     weight: 0
     label: hidden
     settings:
-      image_style: d3
+      image_style: d12
       image_link: ''
     third_party_settings: {  }
     type: image

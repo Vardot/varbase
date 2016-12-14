@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - media_entity
-id: media.editor
-label: Editor
+id: media.small
+label: Small
 targetEntityType: media
 cache: true
