@@ -3,4 +3,4 @@ api = 2
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.2.3"
+projects[drupal][version] = "8.2.4"
