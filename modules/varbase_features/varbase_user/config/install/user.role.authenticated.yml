@@ -12,3 +12,4 @@ permissions:
   - 'use text format basic_html'
   - 'access sitemap'
   - 'access user profiles'
+  - 'view media'

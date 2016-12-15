@@ -42,3 +42,5 @@ permissions:
   - 'access editor_media_browser entity browser pages'
   - 'access image_browser entity browser pages'
   - 'access images_browser entity browser pages'
+  - 'delete media'
+  - 'dropzone upload files'
