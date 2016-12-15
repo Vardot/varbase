@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_media.module.
+ */
+
+ /**
+  * Implements hook_page_attachments().
+  */
+function varbase_media_page_attachments(array &$page) {
+  // Attached the varbase media common library.
+  $page['#attached']['library'][] = 'varbase_media/common';
+
+  if (!(\Drupal::currentUser()->isAnonymous())) {
+    // Attached the varbase media common logged in users library.
+    $page['#attached']['library'][] = 'varbase_media/common_logged';
+  }
+}

@@ -1,0 +1,14 @@
+common:
+  version: VERSION
+  css:
+    theme:
+      css/varbase_media.common.css: { every_page: 1 }
+  dependencies:
+    - system/base
+common_logged:
+  version: VERSION
+  css:
+    theme:
+      css/varbase_media.common_logged.css: { every_page: 1 }
+  dependencies:
+    - system/base

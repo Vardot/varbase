@@ -1,0 +1,13 @@
+/**
+ * Varbase media common library style.
+ */
+
+ /**
+  * Alignment classes for embedded entities.
+  */
+.embedded-entity.align-center * {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
