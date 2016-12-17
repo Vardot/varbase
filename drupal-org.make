@@ -31,8 +31,6 @@ projects[panels][patch][2793801] = https://www.drupal.org/files/issues/2793801-9
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
 projects[panelizer][version] = 3.0-alpha3
-;; Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases
-projects[panelizer][patch][2747739] = https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch
 ;; Issue #2793841 - Properly integrate with Panels IPE
 projects[panelizer][patch][2793841] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
 

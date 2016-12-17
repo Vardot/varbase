@@ -66,8 +66,6 @@
         "https://www.drupal.org/files/issues/2793801-9.patch"
       },
       "drupal/panelizer": {
-        "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
-        "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
         "Issue #2793841 : Properly integrate with Panels IPE":
         "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
       },
