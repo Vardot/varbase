@@ -134,11 +134,7 @@ projects[video_embed_field][version] = 1.3
 
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
-projects[entityqueue][download][url] = http://git.drupal.org/project/entityqueue
-projects[entityqueue][download][revision] = f755d8cbc7039eaa3b5d056648a8ef3956a83c1e
-projects[entityqueue][download][branch] = 8.x-1.x
-;; Issue #2821631 by josebc: Queue is always required when using  Limit to a specific entity queue
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2821631-8.patch
+projects[entityqueue][version] = 1.0-alpha5
 ;; Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch
 
