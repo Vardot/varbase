@@ -152,7 +152,7 @@ projects[pathauto][version] = 1.0-beta1
 
 projects[redirect][type] = module
 projects[redirect][subdir] = "contrib"
-projects[redirect][version] = 1.0-alpha1
+projects[redirect][version] = 1.0-alpha2
 
 projects[metatag][type] = module
 projects[metatag][subdir] = "contrib"
