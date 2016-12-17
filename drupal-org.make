@@ -135,6 +135,8 @@ projects[video_embed_field][version] = 1.3
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
 projects[entityqueue][version] = 1.0-alpha5
+;; Issue #2836962 by amateescu: Bring back compatibility with Drupal 8.2.x
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2836962-13.patch
 ;; Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch
 

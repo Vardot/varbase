@@ -78,6 +78,8 @@
         "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
       },
       "drupal/entityqueue": {
+        "Issue #2836962 by amateescu: Bring back compatibility with Drupal 8.2.x":
+        "https://www.drupal.org/files/issues/2836962-13.patch",
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages":
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch"
       },
