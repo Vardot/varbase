@@ -72,7 +72,7 @@ projects[block_class][version] = 1.0-alpha1
 
 projects[extlink][type] = module
 projects[extlink][subdir] = "contrib"
-projects[extlink][version] = 1.0-alpha3
+projects[extlink][version] = 1.0
 
 projects[linkit][type] = module
 projects[linkit][subdir] = "contrib"
