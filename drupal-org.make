@@ -30,15 +30,9 @@ projects[panels][patch][2793801] = https://www.drupal.org/files/issues/2793801-9
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
-projects[panelizer][version] = 3.0-alpha2
+projects[panelizer][version] = 3.0-alpha3
 ;; Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases
 projects[panelizer][patch][2747739] = https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch
-;; Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage
-projects[panelizer][patch][2701349] = https://www.drupal.org/files/issues/2701349-2.patch
-;; Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer
-projects[panelizer][patch][2700597] = https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch
-;; Issue #2664682 : Implement admin UI for editing Panelizer defaults
-projects[panelizer][patch][2664682] = https://www.drupal.org/files/issues/2664682-55.patch
 ;; Issue #2793841 - Properly integrate with Panels IPE
 projects[panelizer][patch][2793841] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
 

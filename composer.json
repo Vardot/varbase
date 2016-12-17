@@ -68,12 +68,6 @@
       "drupal/panelizer": {
         "Issue #2747739 : [panelizer] Create and host mega patches until the Panels ecosystem stabilizes and releases":
         "https://www.drupal.org/files/issues/panelizer--alpha2-1ddfa61--2747739-5.patch",
-        "Issue #2701349 : Generate new UUIDs for displays when switching from default to field storage":
-        "https://www.drupal.org/files/issues/2701349-2.patch",
-        "Issue #2700597 : Explicitly set the Panels IPE URL root when saving in Panelizer":
-        "https://www.drupal.org/files/issues/panelizer-ipe-url-root-handling.patch",
-        "Issue #2664682 : Implement admin UI for editing Panelizer defaults":
-        "https://www.drupal.org/files/issues/2664682-55.patch",
         "Issue #2793841 : Properly integrate with Panels IPE":
         "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
       },
@@ -99,7 +93,7 @@
     "drupal/token": "1.0-beta2",
     "drupal/page_manager": "1.0-alpha24",
     "drupal/panels": "3.0-beta5",
-    "drupal/panelizer": "3.0-alpha2",
+    "drupal/panelizer": "3.0-alpha3",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/bootstrap_layouts": "4.1",
     "drupal/ds": "2.6",
