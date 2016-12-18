@@ -5,9 +5,22 @@
  /**
   * Alignment classes for embedded entities.
   */
-.embedded-entity.align-center * {
+.embedded-entity.align-center *,
+figure.align-center * {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+.embedded-entity.align-right,
+figure.align-right {
+  margin: 0 0 8px 8px;
+  text-align: center;
+}
+
+.embedded-entity.align-left,
+figure.align-left {
+  margin: 0 8px 8px 0;
+  text-align: center;
 }

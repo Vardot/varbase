@@ -5,6 +5,8 @@
  * Contains varbase_media.module.
  */
 
+ use Drupal\editor\Entity\Editor;
+
  /**
   * Implements hook_page_attachments().
   */
@@ -16,4 +18,11 @@ function varbase_media_page_attachments(array &$page) {
     // Attached the varbase media common logged in users library.
     $page['#attached']['library'][] = 'varbase_media/common_logged';
   }
+}
+
+/**
+ * Implements hook_ckeditor_css_alter().
+ */
+function varbase_media_ckeditor_css_alter(array &$css, Editor $editor) {
+  $css[] = drupal_get_path('module', 'varbase_media') . '/css/varbase_media.common.css';
 }
