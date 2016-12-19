@@ -5,22 +5,50 @@
  /**
   * Alignment classes for embedded entities.
   */
-.embedded-entity.align-center *,
-figure.align-center * {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+/* Image align center style */
+.embedded-entity.align-center,
+figure.align-center,
+img.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.embedded-entity.align-right,
-figure.align-right {
-  margin: 0 0 8px 8px;
+/* Image caption align center style */
+.embedded-entity.align-center figcaption,
+figure.align-center figcaption {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
+/* Image align right style */
+.embedded-entity.align-right,
+figure.align-right,
+picture.align-right,
+img.align-right {
+  margin: 0 0 8px 8px;
+}
+
+/* Image caption align right style */
+.embedded-entity.align-right figcaption,
+figure.align-right figcaption,
+picture.align-right figcaption {
+  text-align: center;
+}
+
+/* Image align left style */
 .embedded-entity.align-left,
-figure.align-left {
+figure.align-left,
+picture.align-left,
+img.align-left {
   margin: 0 8px 8px 0;
+}
+
+/* Image caption align left style */
+.embedded-entity.align-left figcaption,
+figure.align-left figcaption,
+picture.align-left figcaption {
   text-align: center;
 }

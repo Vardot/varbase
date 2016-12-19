@@ -24,5 +24,10 @@ function varbase_media_page_attachments(array &$page) {
  * Implements hook_ckeditor_css_alter().
  */
 function varbase_media_ckeditor_css_alter(array &$css, Editor $editor) {
+
+  // Attached the varbase media common style.
   $css[] = drupal_get_path('module', 'varbase_media') . '/css/varbase_media.common.css';
+  
+  // Attached the varbase media common logged in users style.
+  $css[] = drupal_get_path('module', 'varbase_media') . '/css/varbase_media.common_logged.css';
 }
