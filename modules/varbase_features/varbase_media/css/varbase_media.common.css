@@ -6,8 +6,8 @@
   * Alignment classes for embedded entities.
   */
 /* Image align center style */
-.embedded-entity.align-center,
-figure.align-center,
+.embedded-entity.align-center img,
+figure.align-center img,
 img.align-center {
   display: block;
   margin-left: auto;
