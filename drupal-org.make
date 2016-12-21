@@ -27,6 +27,8 @@ projects[panels][version] = 3.0-beta5
 projects[panels][download][tag] = 8.x-3.0-beta5
 ;; Issue #2793801 : Allow modules to influence the IPE tempstore ID
 projects[panels][patch][2793801] = https://www.drupal.org/files/issues/2793801-9.patch
+;; Issue #2832876 by abu-zakham: Need RTL completely support
+projects[panels][patch][2832876] = https://www.drupal.org/files/issues/ipe_rtl_css_support-2832876-2.patch"
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
