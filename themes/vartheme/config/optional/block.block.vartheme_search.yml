@@ -7,7 +7,7 @@ dependencies:
     - vartheme
 id: vartheme_search
 theme: vartheme
-region: sidebar_second
+region: '-1'
 weight: -6
 provider: null
 plugin: search_form_block

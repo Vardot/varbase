@@ -9,7 +9,7 @@ dependencies:
     - vartheme
 id: vartheme_tools
 theme: vartheme
-region: sidebar_second
+region: '-1'
 weight: -5
 provider: null
 plugin: 'system_menu_block:tools'

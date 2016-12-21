@@ -1018,8 +1018,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../../bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('../../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -3498,7 +3498,7 @@ select[multiple].input-sm {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
+  line-height: 1.33;
   border-radius: 6px;
 }
 select.input-lg {
@@ -3513,7 +3513,7 @@ select[multiple].input-lg {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
+  line-height: 1.33;
   border-radius: 6px;
 }
 .form-group-lg select.form-control {
@@ -3529,7 +3529,7 @@ select[multiple].input-lg {
   min-height: 38px;
   padding: 11px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
+  line-height: 1.33;
 }
 .has-feedback {
   position: relative;
@@ -4196,7 +4196,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-lg > .btn {
   padding: 10px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
+  line-height: 1.33;
   border-radius: 6px;
 }
 .btn-sm,
@@ -4599,7 +4599,7 @@ tbody.collapse.in {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
+  line-height: 1.33;
   border-radius: 6px;
 }
 select.input-group-lg > .form-control,
@@ -5535,7 +5535,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination-lg > li > span {
   padding: 10px 16px;
   font-size: 18px;
-  line-height: 1.3333333;
+  line-height: 1.33;
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -6628,7 +6628,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 1040;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -7508,12 +7508,6 @@ button.close {
     display: none !important;
   }
 }
-/**
- * Variable Overrides.
- *
- * Modify this file to override the Bootstrap Framework variables. You can copy
- * these variables directly from ../bootstrap/less/variables.less to this file.
- */
 .region-navigation {
   clear: both;
 }
@@ -7771,6 +7765,28 @@ dd {
 .bs-callout-info h4 {
   color: #5bc0de;
 }
+/*
+ * Bootstrap callouts right to left.
+ *
+ */
+/* Common styles for all types */
+[dir="rtl"] .bs-callout {
+  border-left-width: 1px;
+  border-right-width: 5px;
+}
+/* Variations */
+[dir="rtl"] .bs-callout-danger {
+  border-left-color: #eeeeee;
+  border-right-color: #d9534f;
+}
+[dir="rtl"] .bs-callout-warning {
+  border-left-color: #eeeeee;
+  border-right-color: #f0ad4e;
+}
+[dir="rtl"] .bs-callout-info {
+  border-left-color: #eeeeee;
+  border-right-color: #5bc0de;
+}
 .ui-dialog-offcanvas .form-type-checkbox label {
   padding: 0px;
 }
@@ -7912,3 +7928,9 @@ dd {
   position: static;
   margin-right: 0;
 }
+/**
+ * Variable Overrides.
+ *
+ * Modify this file to override the Bootstrap Framework variables. You can copy
+ * these variables directly from ../bootstrap/less/variables.less to this file.
+ */

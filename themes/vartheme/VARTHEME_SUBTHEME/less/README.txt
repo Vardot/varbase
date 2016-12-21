@@ -4,8 +4,8 @@ them if you update the Bootstrap framework by copying them from that framework
 again. Just make sure to modify the import paths to reference the
 `./bootstrap/less` folder:
 ```
-./less/bootstrap.less
-./less/responsive.less
+./less/base/bootstrap.less
+./less/base/responsive.less
 ./less/variables.less
 ```
 
@@ -21,9 +21,9 @@ The following files are relatively blank (they may contain some code for the
 inital sub-theme), but this is where you will actually spend most of your time
 specifying specific styling for your sites configuration.
 ```
-./less/header.less
-./less/content.less
-./less/footer.less
+./less/theme/header.less
+./less/theme/content.less
+./less/theme/footer.less
 ```
 
 And finally, the `./less/style.less` file is the glue that holds it all

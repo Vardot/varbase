@@ -9,7 +9,7 @@ dependencies:
     - vartheme
 id: vartheme_account_menu
 theme: vartheme
-region: navigation_collapsible
+region: '-1'
 weight: -5
 provider: null
 plugin: 'system_menu_block:account'

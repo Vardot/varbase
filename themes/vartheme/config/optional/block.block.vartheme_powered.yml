@@ -7,7 +7,7 @@ dependencies:
     - vartheme
 id: vartheme_powered
 theme: vartheme
-region: footer
+region: '-1'
 weight: -5
 provider: null
 plugin: system_powered_by_block
