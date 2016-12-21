@@ -2,7 +2,10 @@ global-styling:
   css:
     theme:
       css/style.css: {}
-    #  css/style-rtl.css: {} // Uncomment to have Right To Left styling.
+global-styling-rtl:
+  css:
+    theme:
+      css/style-rtl.css: {}
 global-scripts:
   js:
     js/script.js: {}

@@ -46,3 +46,31 @@
 .bs-callout-info h4 {
   color: @brand-info;
 }
+
+/*
+ * Bootstrap callouts right to left.
+ *
+ */
+
+/* Common styles for all types */
+[dir="rtl"] .bs-callout {
+  border-left-width: 1px;
+  border-right-width: 5px;
+}
+
+
+/* Variations */
+[dir="rtl"] .bs-callout-danger {
+  border-left-color: @gray-lighter;
+  border-right-color: @brand-danger;
+}
+
+[dir="rtl"] .bs-callout-warning {
+  border-left-color: @gray-lighter;
+  border-right-color: @brand-warning;
+}
+
+[dir="rtl"] .bs-callout-info {
+  border-left-color: @gray-lighter;
+  border-right-color: @brand-info;
+}
