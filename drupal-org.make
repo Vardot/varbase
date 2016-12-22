@@ -128,11 +128,11 @@ projects[video_embed_field][version] = 1.3
 
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
-projects[entityqueue][version] = 1.0-alpha6
-;; Issue #2837841 by ytsurk, amateescu: Subqueue views relation: Doubled/redundant entries
-projects[entityqueue][patch][2837841] = https://www.drupal.org/files/issues/subqueue_relation_query-2837841-11.patch
-;; Issue #2836404 by amateescu: Subqueues should not have a canonical link in order for them to be exportable through REST 
-projects[entityqueue][patch][2836404] = https://www.drupal.org/files/issues/2836404.patch
+projects[entityqueue][download][url] = https://git.drupal.org/project/libraries.git
+projects[entityqueue][download][revision] = 7587e2462693df818b74207a27f18c9bcf07af38
+projects[entityqueue][download][branch] = 8.x-1.x
+;; Issue #2145441 by josebc : Option to create Entityqueue tab on Entity pages
+projects[entityqueue][patch][2145441] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch
 
 projects[imagemagick][type] = module
 projects[imagemagick][subdir] = "contrib"
