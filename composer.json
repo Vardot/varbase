@@ -73,7 +73,11 @@
       },
       "drupal/entityqueue": {
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages":
-        "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch"
+        "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch",
+        "Issue #2837841 by ytsurk, amateescu: Subqueue views relation: Doubled/redundant entries":
+        "https://www.drupal.org/files/issues/subqueue_relation_query-2837841-11.patch",
+        "Issue #2836404 by amateescu: Subqueues should not have a canonical link in order for them to be exportable through REST":
+        "https://www.drupal.org/files/issues/2836404.patch"
       },
       "drupal/dropzonejs": {
         "Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] so it will work If the library is not in the installation profile path too":
