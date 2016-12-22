@@ -128,7 +128,7 @@ projects[video_embed_field][version] = 1.3
 
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
-projects[entityqueue][download][url] = https://git.drupal.org/project/libraries.git
+projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue.git
 projects[entityqueue][download][revision] = 7587e2462693df818b74207a27f18c9bcf07af38
 projects[entityqueue][download][branch] = 8.x-1.x
 ;; Issue #2145441 by josebc : Option to create Entityqueue tab on Entity pages
