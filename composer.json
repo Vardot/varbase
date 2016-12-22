@@ -78,6 +78,12 @@
       "drupal/dropzonejs": {
         "Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] so it will work If the library is not in the installation profile path too":
         "https://www.drupal.org/files/issues/2830862-4.patch"
+      },
+      "drupal/coffee": {
+        "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
+        "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
+        "Issue #2728387 by martin107: coffee.js input parameters mismatch":
+        "https://www.drupal.org/files/issues/params-0.patch"
       }
     }
   },
