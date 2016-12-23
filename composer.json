@@ -76,8 +76,10 @@
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch"
       },
       "drupal/dropzonejs": {
-        "Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] so it will work If the library is not in the installation profile path too":
-        "https://www.drupal.org/files/issues/2830862-4.patch"
+        "Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] to make it work if the library was in the installation profile.":
+        "https://www.drupal.org/files/issues/2830862-7.patch",
+        "Issue #2696853 by Dimiter: Media upload box problems":
+        "https://www.drupal.org/files/issues/dropzonejs-media-upload-box-problems-2696853-19-D8.patch"
       },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
