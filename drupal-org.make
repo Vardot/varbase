@@ -177,8 +177,6 @@ projects[coffee][subdir] = "contrib"
 projects[coffee][version] = 1.0-beta2
 ;; Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8
 projects[coffee][patch][] = https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch
-;; Issue #2728387 by martin107: coffee.js input parameters mismatch
-projects[coffee][patch][] = https://www.drupal.org/files/issues/params-0.patch
 
 projects[diff][type] = module
 projects[diff][subdir] = "contrib"
