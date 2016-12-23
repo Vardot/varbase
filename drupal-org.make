@@ -26,15 +26,15 @@ projects[panels][subdir] = "contrib"
 projects[panels][version] = 3.0-beta5
 projects[panels][download][tag] = 8.x-3.0-beta5
 ;; Issue #2793801 : Allow modules to influence the IPE tempstore ID
-projects[panels][patch][2793801] = https://www.drupal.org/files/issues/2793801-9.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/2793801-9.patch
 ;; Issue #2832876 by abu-zakham: Need RTL completely support
-projects[panels][patch][2832876] = https://www.drupal.org/files/issues/ipe_rtl_css_support-2832876-2.patch
+projects[panels][patch][] = https://www.drupal.org/files/issues/ipe_rtl_css_support-2832876-2.patch
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
 projects[panelizer][version] = 3.0-alpha3
 ;; Issue #2793841 - Properly integrate with Panels IPE
-projects[panelizer][patch][2793841] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
+projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
 
 projects[layout_plugin][type] = module
 projects[layout_plugin][subdir] = "contrib"
@@ -100,9 +100,9 @@ projects[dropzonejs][type] = module
 projects[dropzonejs][subdir] = "contrib"
 projects[dropzonejs][version] = 1.0-alpha3
 ;; Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] to make it work if the library was in the installation profile.
-projects[dropzonejs][patch][2830862] = https://www.drupal.org/files/issues/2830862-7.patch
+projects[dropzonejs][patch][] = https://www.drupal.org/files/issues/2830862-7.patch
 ;; Issue #2696853 by Dimiter: Media upload box problems and enhancement.
-projects[dropzonejs][patch][2830862] = https://www.drupal.org/files/issues/dropzonejs-media-upload-box-problems-2696853-19-D8.patch
+projects[dropzonejs][patch][] = https://www.drupal.org/files/issues/dropzonejs-media-upload-box-problems-2696853-19-D8.patch
 
 projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
@@ -176,9 +176,9 @@ projects[coffee][type] = module
 projects[coffee][subdir] = "contrib"
 projects[coffee][version] = 1.0-beta2
 ;; Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8
-projects[coffee][patch][2815381] = https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch
+projects[coffee][patch][] = https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch
 ;; Issue #2728387 by martin107: coffee.js input parameters mismatch
-projects[coffee][patch][2728387] =https://www.drupal.org/files/issues/params-0.patch
+projects[coffee][patch][] = https://www.drupal.org/files/issues/params-0.patch
 
 projects[diff][type] = module
 projects[diff][subdir] = "contrib"
