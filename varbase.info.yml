@@ -88,6 +88,7 @@ dependencies:
   - media_entity_image
   - video_embed_media
   - video_embed_wysiwyg
+  - pathologic
   
   # Admin contrib modules.
   - coffee

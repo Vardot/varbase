@@ -18,3 +18,4 @@ required:
   - views.view.archive
   - views.view.frontpage
   - views.view.taxonomy_term
+  - pathologic.settings

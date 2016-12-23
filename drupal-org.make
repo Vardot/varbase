@@ -128,6 +128,12 @@ projects[video_embed_field][type] = module
 projects[video_embed_field][subdir] = "contrib"
 projects[video_embed_field][version] = 1.3
 
+projects[pathologic][type] = module
+projects[pathologic][subdir] = "contrib"
+projects[pathologic][download][url] = https://git.drupal.org/project/pathologic.git
+projects[pathologic][download][revision] = e0473546e51cbeaa3acb34e3208a0c503ca85613
+projects[pathologic][download][branch] = 8.x-1.x
+
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
 projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue.git

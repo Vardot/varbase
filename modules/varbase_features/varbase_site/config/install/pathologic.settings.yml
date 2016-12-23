@@ -1,0 +1,7 @@
+scheme_whitelist:
+  - http
+  - https
+  - files
+  - internal
+protocol_style: path
+local_paths: ''
