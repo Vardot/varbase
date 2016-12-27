@@ -116,3 +116,4 @@ themes:
   
   # Custom themes.
   - vartheme
+  - vartheme_admin

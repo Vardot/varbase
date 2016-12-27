@@ -1,0 +1,25 @@
+input[type="text"] {
+  max-width: 100%;
+}
+
+#branding {
+  background-color: #F9F9F9;
+  border-bottom: 1px solid #EEE;
+}
+
+#branding h1.page-title {
+  color: #444;
+}
+
+div.breadcrumb a:hover {
+  color: #333;
+}
+
+div.vertical-tabs ul li.first a {
+  border-top: 2px solid #0074BD;
+}
+
+/* @todo Fix problem in checboxes with adminimal theme + fpa */
+.page-admin-people-permissions .dummy-checkbox {
+  display: none !important;
+}

@@ -1,0 +1,24 @@
+core: 8.x
+type: theme
+base theme: adminimal_theme
+
+name: Vartheme Admin
+description: A simple one-column, tableless, minimalist administration theme
+package: 'Varbase'
+
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+
+libraries:
+  - 'vartheme_admin/global-admin-styling'
+  - 'vartheme_admin/global-admin-scripts'

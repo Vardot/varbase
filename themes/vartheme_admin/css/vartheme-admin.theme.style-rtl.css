@@ -1,0 +1,42 @@
+div.vertical-tabs ul li.vertical-tab-button.selected a,
+div.vertical-tabs ul li.vertical-tab-button.selected a:hover,
+div.vertical-tabs ul li.vertical-tab-button.selected a:focus,
+div.vertical-tabs ul li.vertical-tab-button.selected a:active {
+  border-left: 0 none;
+  border-right: 5px solid #0074BD;
+  margin-left: 0px;
+  margin-right: -1px;
+}
+
+div.vertical-tabs ul li.vertical-tab-button a {
+  border-left: 1px solid #CCCCCC;
+  border-right: 0px;
+}
+
+fieldset {
+  padding: 12px;
+  margin: 0 0 20px;
+}
+
+html.js input.form-autocomplete {
+  background-position: 7px 7px;
+}
+
+input.form-autocomplete, select.form-select {
+  background-position: left 50%;
+}
+
+.style-checkboxes input[type=checkbox], .style-checkboxes input[type=radio] {
+  margin-right: 0;
+  margin-left: 0.25em;
+}
+
+.form-item {
+  padding: 0 0 0 1em;
+}
+
+input#edit-submit,
+input#edit-preview-changes,
+input#edit-delete {
+  margin-right: 0px;
+}
