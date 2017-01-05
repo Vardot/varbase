@@ -93,7 +93,7 @@
     "drupal/drupal-library-installer-plugin": "~0.3",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     "enyo/dropzone": "4.3.0",
-    "drupal/core": "8.2.4",
+    "drupal/core": "8.2.5",
     "drupal/config_update": "1.2",
     "drupal/ctools": "3.0-alpha27",
     "drupal/token": "1.0-rc1",
