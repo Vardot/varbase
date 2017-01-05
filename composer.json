@@ -96,7 +96,7 @@
     "drupal/core": "8.2.4",
     "drupal/config_update": "1.2",
     "drupal/ctools": "3.0-alpha27",
-    "drupal/token": "1.0-beta2",
+    "drupal/token": "1.0-rc1",
     "drupal/page_manager": "1.0-alpha24",
     "drupal/panels": "3.0-beta5",
     "drupal/panelizer": "3.0-alpha3",

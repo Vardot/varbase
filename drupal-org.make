@@ -15,7 +15,7 @@ projects[ctools][version] = 3.0-alpha27
 
 projects[token][type] = module
 projects[token][subdir] = "contrib"
-projects[token][version] = 1.0-beta2
+projects[token][version] = 1.0-rc1
 
 projects[page_manager][type] = module
 projects[page_manager][subdir] = "contrib"
