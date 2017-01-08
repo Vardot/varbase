@@ -12,7 +12,7 @@ permissions:
   - 'administer entity browsers'
   - 'access files overview'
   - 'use text format basic_html'
-  - 'acess media overview'
+  - 'access media overview'
   - 'update media'
   - 'view media'
   - 'administer meta tags'
