@@ -137,10 +137,8 @@ projects[pathologic][download][branch] = 8.x-1.x
 projects[entityqueue][type] = module
 projects[entityqueue][subdir] = "contrib"
 projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue.git
-projects[entityqueue][download][revision] = 472876610a4b8624de751d7dbac815784b5d69cc
+projects[entityqueue][download][revision] = 0ec6234ee8d25e6e0374ca4147a67acd6c36e81b
 projects[entityqueue][download][branch] = 8.x-1.x
-;; Issue #2145441 by josebc : Option to create Entityqueue tab on Entity pages
-projects[entityqueue][patch][2145441] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-17.patch
 
 projects[imagemagick][type] = module
 projects[imagemagick][subdir] = "contrib"
