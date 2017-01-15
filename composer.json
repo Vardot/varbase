@@ -122,7 +122,7 @@
     "drupal/media_entity": "1.6",
     "drupal/media_entity_document": "1.1",
     "drupal/media_entity_image": "1.2",
-    "drupal/video_embed_field": "1.3",
+    "drupal/video_embed_field": "1.4",
     "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
     "drupal/entityqueue": "1.x-dev#0ec6234ee8d25e6e0374ca4147a67acd6c36e81b",
     "drupal/imagemagick": "1.0-alpha5",

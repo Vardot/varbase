@@ -126,7 +126,7 @@ projects[media_entity_image][version] = 1.2
 
 projects[video_embed_field][type] = module
 projects[video_embed_field][subdir] = "contrib"
-projects[video_embed_field][version] = 1.3
+projects[video_embed_field][version] = 1.4
 
 projects[pathologic][type] = module
 projects[pathologic][subdir] = "contrib"
