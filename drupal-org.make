@@ -90,7 +90,7 @@ projects[entity][version] = 1.0-alpha4
 
 projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
-projects[entity_browser][version] = 1.0-beta2
+projects[entity_browser][version] = 1.0-beta3
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"
