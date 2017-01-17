@@ -186,7 +186,7 @@ projects[coffee][patch][] = https://www.drupal.org/files/issues/coffee-coffee_br
 
 projects[diff][type] = module
 projects[diff][subdir] = "contrib"
-projects[diff][version] = 1.0-beta2
+projects[diff][version] = 1.0-rc1
 
 projects[masquerade][type] = module
 projects[masquerade][subdir] = "contrib"
