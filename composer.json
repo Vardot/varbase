@@ -47,9 +47,10 @@
   "extra": {
     "installer-paths": {
       "docroot/core": ["drupal/core"],
+      "profiles/{$name}": ["type:drupal-profile"],
       "modules/contrib/{$name}": ["type:drupal-module"],
       "themes/contrib/{$name}": ["type:drupal-theme"],
-      "profiles/contrib/{$name}": ["type:drupal-profile"]
+      "libraries/{$name}": ["type:drupal-library"] 
     },
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
