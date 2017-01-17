@@ -1,9 +1,15 @@
-(function ($, Drupal, window, document, undefined) {
+/**
+ * @file
+ * Behaviors for the vartheme theme.
+ */
+
+(function ($, _, Drupal, drupalSettings) {
+  'use strict';
 
   Drupal.behaviors.vartheme = {
-    attach: function (context, settings) {
+    attach: function (context) {
       // Vartheme JavaScript behaviors goes here.
     }
   };
 
-})(jQuery, Drupal, this, this.document);
+})(window.jQuery, window._, window.Drupal, window.drupalSettings);
