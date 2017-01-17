@@ -81,6 +81,10 @@
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch"
       },
+      "drupal/entity_browser": {
+        "Issue #2820132 by matthieuscarset, marcoscano: getDisplay() on null Entity Browser reference.":
+        "https://www.drupal.org/files/issues/ElementPatch_0.patch"
+      },
       "drupal/core": {
         "Issue #2479377 by edurenye, tstoeckler, andypost, mgifford: content_translation_page_attachments() should check for a canonical link before generating a URL to it":
         "https://www.drupal.org/files/issues/2479377-8.patch"
