@@ -23,6 +23,23 @@ libraries:
   - 'VARTHEME_SUBTHEME/global-styling'
   - 'VARTHEME_SUBTHEME/global-scripts'
   - 'VARTHEME_SUBTHEME/bootstrap-scripts'
+  
+# OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
+# Javascript files.
+# Uncomment these lines to exclude css and js files from vartheme.
+# libraries-override:
+#   vartheme/global-styling:
+#     css:
+#       theme:
+#         css/style.css: false
+#   vartheme/global-scripts:
+#     js:
+#       js/script.js: false
+#   # Uncomment the following lines only for right to left.
+#   # vartheme/global-styling-rtl:
+#   #   css:
+#   #     theme:
+#   #       css/style-rtl.css: false
 
 ckeditor_stylesheets:
   - css/style.css
