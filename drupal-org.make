@@ -7,7 +7,7 @@ api = 2
 
 projects[config_update][type] = module
 projects[config_update][subdir] = "contrib"
-projects[config_update][version] = 1.2
+projects[config_update][version] = 1.3
 
 projects[ctools][type] = module
 projects[ctools][subdir] = "contrib"
