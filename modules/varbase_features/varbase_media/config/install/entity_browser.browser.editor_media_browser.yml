@@ -25,6 +25,7 @@ widgets:
       view: browser
       view_display: editor_media_browser
       submit_text: 'Select media'
+      auto_select: false
     uuid: 0ce5dbdc-76cf-4c4e-a020-03328ef20f1c
     weight: -10
     label: Library

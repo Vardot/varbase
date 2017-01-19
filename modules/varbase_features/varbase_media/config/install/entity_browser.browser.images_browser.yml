@@ -25,6 +25,7 @@ widgets:
       view: browser
       view_display: images_browser
       submit_text: 'Select Images'
+      auto_select: false
     uuid: c5fb0857-c353-41b5-a553-407d7b906e83
     weight: -10
     label: Library
