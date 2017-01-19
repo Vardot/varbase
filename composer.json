@@ -84,7 +84,9 @@
       },
       "drupal/entity_browser": {
         "Issue #2820132 by matthieuscarset, marcoscano: getDisplay() on null Entity Browser reference.":
-        "https://www.drupal.org/files/issues/ElementPatch_0.patch"
+        "https://www.drupal.org/files/issues/ElementPatch_0.patch",
+        "Issue #2845037 by RajabNatshah: Fixed the issue of Call to a member function getConfigDependencyKey() on null on [Widget view], and [SelectionDisplay view]":
+        "https://www.drupal.org/files/issues/2845037-4.patch"
       },
       "drupal/core": {
         "Issue #2479377 by edurenye, tstoeckler, andypost, mgifford: content_translation_page_attachments() should check for a canonical link before generating a URL to it":

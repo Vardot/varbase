@@ -93,6 +93,8 @@ projects[entity_browser][subdir] = "contrib"
 projects[entity_browser][version] = 1.0-beta4
 ;; Issue #2820132 by matthieuscarset, marcoscano: getDisplay() on null Entity Browser reference.
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/ElementPatch_0.patch
+;; Issue #2845037 by RajabNatshah: Fixed the issue of Call to a member function getConfigDependencyKey() on null on [Widget view], and [SelectionDisplay view].
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2845037-4.patch
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"
