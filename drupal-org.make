@@ -90,7 +90,7 @@ projects[entity][version] = 1.0-alpha4
 
 projects[entity_browser][type] = module
 projects[entity_browser][subdir] = "contrib"
-projects[entity_browser][version] = 1.0-beta3
+projects[entity_browser][version] = 1.0-beta4
 ;; Issue #2820132 by matthieuscarset, marcoscano: getDisplay() on null Entity Browser reference.
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/ElementPatch_0.patch
 
