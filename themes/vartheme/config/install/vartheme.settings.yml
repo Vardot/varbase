@@ -12,3 +12,4 @@
 # @see \Drupal\bootstrap\ThemeSettings
 cdn_jsdelivr_version: 3.3.7
 modal_enabled: 0
+forms_smart_descriptions: 0

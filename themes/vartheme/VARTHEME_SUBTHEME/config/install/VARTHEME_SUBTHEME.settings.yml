@@ -14,3 +14,4 @@
 # Disable the CDN provider so compiled LESS source files can be used.
 cdn_provider: ''
 modal_enabled: 0
+forms_smart_descriptions: 0
