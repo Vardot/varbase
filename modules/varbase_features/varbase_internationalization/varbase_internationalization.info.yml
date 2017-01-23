@@ -1,0 +1,13 @@
+name: 'Varbase Internationalization'
+description: 'Varbase internationalization, languages, and translation support.'
+type: module
+dependencies:
+  - language
+  - locale
+  - content_translation
+  - config_translation
+package: Varbase
+version: 8.x-4.0
+core: 8.x
+project: varbase
+datestamp: 1479733744
