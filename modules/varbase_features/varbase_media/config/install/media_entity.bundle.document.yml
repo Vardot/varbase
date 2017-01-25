@@ -7,8 +7,8 @@ id: document
 label: Document
 description: 'A Document file is written information like PDF,  Document.'
 type: document
-queue_thumbnail_downloads: true
-new_revision: true
+queue_thumbnail_downloads: false
+new_revision: false
 type_configuration:
-  source_field: ''
+  source_field: field_document_file
 field_map: {  }

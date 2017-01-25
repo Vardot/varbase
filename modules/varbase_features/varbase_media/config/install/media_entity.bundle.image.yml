@@ -7,8 +7,8 @@ id: image
 label: Image
 description: 'An Image file is a still visual.'
 type: image
-queue_thumbnail_downloads: true
-new_revision: true
+queue_thumbnail_downloads: false
+new_revision: false
 type_configuration:
   source_field: field_image
   gather_exif: false
