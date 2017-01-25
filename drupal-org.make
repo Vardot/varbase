@@ -98,7 +98,7 @@ projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2845037-
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][subdir] = "contrib"
-projects[entity_browser_enhanced][version] = 1.0-beta3
+projects[entity_browser_enhanced][version] = 1.0-beta4
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][subdir] = "contrib"
