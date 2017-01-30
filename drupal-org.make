@@ -156,7 +156,7 @@ projects[imagemagick][version] = 1.0-alpha5
 
 projects[pathauto][type] = module
 projects[pathauto][subdir] = "contrib"
-projects[pathauto][version] = 1.0-beta2
+projects[pathauto][version] = 1.0-rc1
 
 projects[redirect][type] = module
 projects[redirect][subdir] = "contrib"
