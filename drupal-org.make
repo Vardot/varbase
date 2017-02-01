@@ -164,7 +164,7 @@ projects[redirect][version] = 1.0-alpha2
 
 projects[metatag][type] = module
 projects[metatag][subdir] = "contrib"
-projects[metatag][version] = 1.0-beta12
+projects[metatag][version] = 1.0
 
 projects[xmlsitemap][type] = module
 projects[xmlsitemap][subdir] = "contrib"

@@ -139,7 +139,7 @@
     "drupal/imagemagick": "1.0-alpha5",
     "drupal/pathauto": "1.0-rc1",
     "drupal/redirect": "1.0-alpha2",
-    "drupal/metatag": "1.0-beta12",
+    "drupal/metatag": "1.0",
     "drupal/xmlsitemap": "1.0-alpha2",
     "drupal/google_analytics": "2.1",
     "drupal/coffee": "1.0-beta2",
