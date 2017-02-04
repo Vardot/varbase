@@ -138,7 +138,7 @@
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
     "drupal/imagemagick": "1.0-alpha5",
     "drupal/pathauto": "1.0-rc1",
-    "drupal/redirect": "1.0-alpha2",
+    "drupal/redirect": "1.0-alpha3",
     "drupal/metatag": "1.0",
     "drupal/xmlsitemap": "1.0-alpha2",
     "drupal/google_analytics": "2.1",
