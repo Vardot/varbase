@@ -7,4 +7,4 @@ Grid systems should be thought of as shelves. They contain content but are not
 content in themselves. You put up your shelves then fill them with your stuff
 [i.e. components]. – Harry Roberts, CSS Guidelines
 
-https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8
+https://drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8

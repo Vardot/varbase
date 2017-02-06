@@ -6,13 +6,12 @@ use Drupal\Core\Extension\ExtensionDiscovery;
 use Drupal\Core\Extension\InfoParserInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Render\Element;
 use Drupal\Core\StringTranslation\TranslationInterface;
-use Drupal\varbase\Form\AssemblerFormHelper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\varbase\Config\ConfigBit;
 
 /**
- * Defines a form for selecting Varbase's extra compoennts for the assembler to install.
+ * Defines form for selecting extra compoennts for the assembler to install.
  */
 class AssemblerForm extends FormBase {
 
@@ -38,24 +37,22 @@ class AssemblerForm extends FormBase {
   protected $formHelper;
 
   /**
-   * AssemblerForm constructor.
+   * Assembler Form constructor.
    *
-   * @param \Drupal\varbase\Extender $extender
-   *   The Varbase extender configuration object.
    * @param string $root
    *   The Drupal application root.
-   * @param \Drupal\Core\Extension\InfoParserInterface $info_parser
+   * @param InfoParserInterface $info_parser
    *   The info parser service.
-   * @param \Drupal\Core\StringTranslation\TranslationInterface $translator
+   * @param TranslationInterface $translator
    *   The string translation service.
-   * @param \Drupal\varbase\FormHelper $form_helper
+   * @param \Drupal\varbase\Form\FormHelper $form_helper
    *   The form helper.
    */
-  public function __construct($root, InfoParserInterface $info_parser, TranslationInterface $translator, AssemblerFormHelper $assembler_form_helper) {
+  public function __construct($root, InfoParserInterface $info_parser, TranslationInterface $translator, FormHelper $form_helper) {
     $this->root = $root;
     $this->infoParser = $info_parser;
     $this->stringTranslation = $translator;
-    $this->formHelper = $assembler_form_helper;
+    $this->formHelper = $form_helper;
   }
 
   /**
@@ -66,7 +63,7 @@ class AssemblerForm extends FormBase {
     $container->get('app.root'),
     $container->get('info_parser'),
     $container->get('string_translation'),
-    $container->get('varbase.assembler_form_helper')
+    $container->get('varbase.form_helper')
     );
   }
 
@@ -79,16 +76,18 @@ class AssemblerForm extends FormBase {
 
   /**
    * Get info for each of Varbase's Extra Components.
+   *
    * And make sure that we do have the extra component in the files.
    */
   protected function getExtraComponentsInfo() {
     $component_discovery = new ExtensionDiscovery($this->root);
-    $extra_components_to_assemble = array(
-      'varbase_development',
-    );
 
+    // Extra Varbase components, which could be selected to be installed.
+    $extra_components_to_assemble = ConfigBit::getList('extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies');
+
+    // Combine default Varbase components and selected extra varbase components.
     $combined_extra_components = array_combine($extra_components_to_assemble, $extra_components_to_assemble);
-    $extra_components = array_intersect_key($component_discovery->scan('module'),$combined_extra_components);
+    $extra_components = array_intersect_key($component_discovery->scan('module'), $combined_extra_components);
 
     foreach ($extra_components as $key => $extra_component) {
       $extra_component_info = $this->infoParser->parse($extra_component->getPathname());
@@ -121,14 +120,12 @@ class AssemblerForm extends FormBase {
       '#weight' => 5,
     ];
 
-
     foreach ($this->getExtraComponentsInfo() as $key => $info) {
       $form['extra_components']['#options'][$key] = $info['name'];
     }
 
     return $form;
   }
-
 
   /**
    * {@inheritdoc}

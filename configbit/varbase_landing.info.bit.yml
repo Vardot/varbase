@@ -1,0 +1,21 @@
+# ==============================================================================
+# Remove dependencies when varbase internationalization is OFF.
+# ==============================================================================
+config_bit:
+  type: action
+  for: /profiles/varbase/modules/varbase_features/varbase_landing/varbase_landing.info.yml
+  action:
+    remove:
+      when:
+        enable_multilingual: false
+      target: dependencies
+      dependencies:
+        - language
+        - content_translation
+    add:
+      when:
+        enable_multilingual: true
+      target: dependencies
+      dependencies:
+        - language
+        - content_translation

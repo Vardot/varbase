@@ -4,20 +4,17 @@ type: module
 dependencies:
   - block
   - block_content
-  - content_translation
+  - coffee
+  - diff
+  - extlink
   - field
   - file
-  - image
-  - language
   - media_entity
   - menu_link_content
   - node
   - taxonomy
-  - user
-  - varbase_user
-  - views
 package: Varbase
 version: 8.x-4.0
 core: 8.x
 project: varbase
-datestamp: 1479733744
+datestamp: 1485353296

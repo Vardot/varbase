@@ -2,9 +2,7 @@ name: Varbase
 type: profile
 description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
 core: 8.x
-distribution:
-  name: Varbase
-
+version: 8.4.0
 dependencies:
   # core
   - automated_cron
@@ -46,8 +44,6 @@ dependencies:
   - views
   - user
   - text
-  - language
-  - content_translation
   - outside_in
 
   # contrib modules
@@ -71,7 +67,6 @@ dependencies:
   - smart_trim
   - advanced_text_formatter
   - block_class
-  - extlink
   - features
   - linkit
   - anchor_link
@@ -89,31 +84,15 @@ dependencies:
   - video_embed_media
   - video_embed_wysiwyg
   - pathologic
-  
-  # Admin contrib modules.
-  - coffee
-  - diff
-  - masquerade
-  
-  # Varbase core functionality.
-  - varbase_core
-  - varbase_admin
-  - varbase_seo
-  - varbase_page
-  - varbase_landing
-  - varbase_editor
-  - varbase_media
-
-  # Varbase site functionality.
-  - varbase_site
-  - varbase_user
-
 
 themes:
   # Contrib themes.
   - adminimal_theme
   - bootstrap
-  
+
   # Custom themes.
   - vartheme
   - vartheme_admin
+distribution:
+  name: Varbase
+features: true

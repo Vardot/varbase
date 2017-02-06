@@ -1,0 +1,12 @@
+# ==============================================================================
+# List of extra varbase components, which they will be listed in the
+# Extra components form, when we install varbase.
+# ==============================================================================
+config_bit:
+  type: list
+  for: /profiles/varbase/varbase.info.yml
+  when:
+    show_extra_components: true
+    list:
+      dependencies:
+        - varbase_development

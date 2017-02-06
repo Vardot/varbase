@@ -1,0 +1,18 @@
+# ==============================================================================
+# List of default varbase components, which they will be installed
+# when we install varbase.
+# ==============================================================================
+config_bit:
+  type: list
+  for: /profiles/varbase/varbase.info.yml
+  when:
+    install_default_components: true
+    list:
+      dependencies:
+        - varbase_core
+        - varbase_admin
+        - varbase_seo
+        - varbase_editor
+        - varbase_media
+        - varbase_page
+        - varbase_landing

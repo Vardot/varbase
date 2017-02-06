@@ -8,4 +8,4 @@ simplest possible appearance of each element. For example, the simplest
 usage of the ul element may be completely unstyled, removing list markers
 and indents and relying on a component class for other applications.
 
-https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8
+https://drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8

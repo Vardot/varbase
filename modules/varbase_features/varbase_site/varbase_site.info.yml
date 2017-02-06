@@ -1,18 +1,7 @@
 name: 'Varbase Site'
 description: 'Provides site components.'
 type: module
-dependencies:
-  - block_content
-  - content_translation
-  - field
-  - language
-  - node
-  - page_manager
-  - panels
-  - taxonomy
-  - text
-  - user
-  - views
+dependencies: {}
 package: Varbase
 version: 8.x-4.0
 core: 8.x

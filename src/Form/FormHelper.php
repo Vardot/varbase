@@ -5,9 +5,9 @@ namespace Drupal\varbase\Form;
 use Drupal\Core\Render\ElementInfoManagerInterface;
 
 /**
- * Assembler form helper.
+ * Form helper.
  */
-class AssemblerFormHelper {
+class FormHelper {
 
   /**
    * The element info plugin manager.
@@ -17,7 +17,7 @@ class AssemblerFormHelper {
   protected $elementInfo;
 
   /**
-   * AssemblerFormHelper constructor.
+   * FormHelper constructor.
    *
    * @param \Drupal\Core\Render\ElementInfoManagerInterface $element_info
    *   Element info plugin manager.
@@ -27,7 +27,7 @@ class AssemblerFormHelper {
   }
 
   /**
-   * Applies standard process for elements in the assembler form.
+   * Applies standard process for elements in the form.
    *
    * @param array $element
    *   Form element.

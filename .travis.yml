@@ -88,6 +88,19 @@ before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - sleep 5
   
+  # Install Varbase internationalization.
+  - drush -y en varbase_internationalization -vvv
+  
+  # Install default Varbase components, which they will be installed
+  # when we install varbase.
+  - drush -y en varbase_core -vvv
+  - drush -y en varbase_admin -vvv
+  - drush -y en varbase_seo -vvv
+  - drush -y en varbase_editor -vvv
+  - drush -y en varbase_media -vvv
+  - drush -y en varbase_page -vvv
+  - drush -y en varbase_landing -vvv
+  
   # Install Varbase Development feature.
   # Development Environment Modules and Features, make sure to disable this feature in production.
   - drush -y en varbase_development -vvv

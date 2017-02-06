@@ -3,7 +3,6 @@ description: 'Manages type of media contents and entity browsers in the site.'
 type: module
 package: Varbase
 dependencies:
-  - content_translation
   - dropzonejs_eb_widget
   - ds
   - embed
@@ -12,24 +11,21 @@ dependencies:
   - field
   - file
   - image
-  - language
   - media_entity
   - media_entity_document
   - media_entity_image
-  - menu_ui
   - node
-  - panelizer
-  - path
   - responsive_image
   - system
-  - text
   - user
   - varbase_core
   - video_embed_field
   - video_embed_media
   - views
   - views_infinite_scroll
+  - language
+  - content_translation
 version: 8.x-4.0
 core: 8.x
 project: varbase
-datestamp: 1481737092
+datestamp: 1485353296

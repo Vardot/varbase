@@ -1,17 +1,2 @@
 bundle: varbase
-excluded:
-  - language.content_settings.media.audio
-  - language.content_settings.media.document
-  - language.content_settings.media.image
-  - language.content_settings.media.video
-  - core.entity_form_display.media.video.default
-  - core.entity_view_display.media.video.default
-  - core.entity_view_display.media.image.default
-  - field.field.media.video.field_media_video_embed_field
-  - field.storage.media.field_media_video_embed_field
-  - media_entity.bundle.audio
-  - media_entity.bundle.document
-  - media_entity.bundle.image
-  - media_entity.bundle.video
-  - views.view.browser
 required: true

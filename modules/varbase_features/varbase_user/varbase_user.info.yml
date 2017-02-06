@@ -1,9 +1,7 @@
 name: 'Varbase User'
 description: 'Provide User related configuration.'
 type: module
-dependencies:
-  - path
-  - user
+dependencies: {}
 package: Varbase
 version: 8.x-4.0
 core: 8.x

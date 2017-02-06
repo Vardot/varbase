@@ -5,9 +5,7 @@
  * Contains install and update for Varbase Media.
  */
 
-use Drupal\editor\Entity\Editor;
 use Drupal\embed\Entity\EmbedButton;
-use Drupal\entity_browser\Entity\EntityBrowser;
 use Drupal\file\Entity\File;
 
 /**

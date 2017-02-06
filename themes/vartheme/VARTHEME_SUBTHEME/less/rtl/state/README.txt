@@ -14,4 +14,4 @@ HTML attributes with state semantics, such as details[open];
 media queries: styles that alter appearance based on the immediate browser 
 environment.
 
-https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8nes
+https://drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8

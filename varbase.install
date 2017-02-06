@@ -24,12 +24,12 @@ function varbase_install() {
   $user->roles[] = 'administrator';
   $user->save();
 
-  // Restrict user registration to admin role creation
+  // Restrict user registration to admin role creation.
   \Drupal::configFactory()->getEditable('user.settings')->set('register', USER_REGISTER_ADMINISTRATORS_ONLY)->save(TRUE);
 
   // Allow authenticated users to use shortcuts.
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access shortcuts']);
-  
+
   // Populate the default shortcut set.
   $shortcut = Shortcut::create(array(
     'shortcut_set' => 'default',
@@ -77,9 +77,35 @@ function varbase_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
-  
+
   // Entity updates to clear up any mismatched entity and/or field definitions
-  // The following changes were detected in the entity type and field definitions.
+  // And Fix changes were detected in the entity type and field definitions.
   \Drupal::entityDefinitionUpdateManager()->applyUpdates();
+
+}
+
+/**
+ * Uninstall not needed feature modules as they had been moved to the profile.
+ *
+ * - varbase_user: Provide User related configuration. configs moved to profile.
+ * - varbase_site: Provides site components. configs moved to profile.
+ */
+function varbase_update_8001() {
+
+  // Read the extension configuration.
+  $modules_data = \Drupal::config('core.extension')->get('module');
+
+  // Unset the varbase_user feature module.
+  if (isset($modules_data['varbase_user'])) {
+    unset($modules_data['varbase_user']);
+  }
+
+  // Unset the varbase_site feature module.
+  if (isset($modules_data['varbase_site'])) {
+    unset($modules_data['varbase_site']);
+  }
+
+  // Save the configuration.
+  \Drupal::configFactory()->getEditable('core.extension')->set('module', $modules_data)->save();
 
 }

@@ -1,5 +1,9 @@
 services:
-  varbase.assembler_form_helper:
-    class: '\Drupal\varbase\Form\AssemblerFormHelper'
+  varbase.form_helper:
+    class: '\Drupal\varbase\Form\FormHelper'
+    arguments:
+      - '@element_info'
+  varbase.config_bit:
+    class: '\Drupal\varbase\Config\ConfigBit'
     arguments:
       - '@element_info'

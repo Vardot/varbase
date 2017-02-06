@@ -2,10 +2,8 @@ name: 'Varbase Page'
 description: 'Provides Basic page content type and related configuration.'
 type: module
 dependencies:
-  - content_translation
   - ds
   - field
-  - language
   - menu_ui
   - node
   - page_manager
@@ -16,8 +14,10 @@ dependencies:
   - smart_trim
   - text
   - user
+  - language
+  - content_translation
 package: Varbase
 version: 8.x-4.0
 core: 8.x
 project: varbase
-datestamp: 1479733744
+datestamp: 1485353296
