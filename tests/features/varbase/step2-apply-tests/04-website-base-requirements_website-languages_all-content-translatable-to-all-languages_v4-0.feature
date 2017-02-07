@@ -37,7 +37,7 @@ So that I will be able to create a content then I will have the option to transl
      Then I should see "Create عربية translation of Test English Basic page"
      When I fill in "تجربة صفحة بسيطة عربية العنوان" for "العنوان"
       And I fill in the rich text editor field "المتن" with "تجربة صفحة بسيطة عربية المحتوى"
-      And I press "Save"
+      And I press "Save and keep published (all translations)"
       And I wait
      Then I should see "تجربة صفحة بسيطة عربية العنوان"
      When I click "Translate"
@@ -49,7 +49,7 @@ So that I will be able to create a content then I will have the option to transl
      Then I should see "Traduire e en Français"
      When I fill in "La page test d'anglais de base" for "Titre"
       And I fill in the rich text editor field "Corps" with "Corps de la page test d'anglais de base"
-      And I press "Save"
+      And I press "Enregistrer et laisser publié (toutes les traductions)"
       And I wait
      Then I should see "La page test d'anglais de base"
      When I click "Translate"
