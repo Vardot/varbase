@@ -37,23 +37,21 @@ So that I will be able to create a content then I will have the option to transl
      Then I should see "Create عربية translation of Test English Basic page"
      When I fill in "تجربة صفحة بسيطة عربية العنوان" for "العنوان"
       And I fill in the rich text editor field "المتن" with "تجربة صفحة بسيطة عربية المحتوى"
-      And I press "Save and keep published (all translations)"
+      And I press the "op" button
       And I wait
      Then I should see "تجربة صفحة بسيطة عربية العنوان"
-     When I click "Translate"
+     When I click "ترجمة"
       And I wait
      Then I should see "Test English Basic page"
-      And I should see "Not translated" in the "French" row
-     When I click "Add" in the "French" row
+      And I should see "غير مترجم" in the "French" row
+     When I click "إضافة" in the "French" row
       And I wait
-     Then I should see "Traduire e en Français"
+     Then I should see "Traduire Test English Basic page en Français"
      When I fill in "La page test d'anglais de base" for "Titre"
       And I fill in the rich text editor field "Corps" with "Corps de la page test d'anglais de base"
-      And I press "Enregistrer et laisser publié (toutes les traductions)"
+      And I press "op"
       And I wait
      Then I should see "La page test d'anglais de base"
      When I click "Translate"
       And I wait
      Then I should see "Test English Basic page"
-
-  
