@@ -34,7 +34,7 @@ So that I will be able to create a content then I will have the option to transl
       And I should see "Not translated" in the "Arabic" row
      When I click "Add" in the "Arabic" row
       And I wait
-     Then I should see "Create Arabic translation"
+     Then I should see "Create عربية translation of Test English Basic page"
      When I fill in "تجربة صفحة بسيطة عربية العنوان" for "Title"
       And I fill in the rich text editor field "Body" with "تجربة صفحة بسيطة عربية المحتوى"
       And I press "Save"
@@ -46,7 +46,7 @@ So that I will be able to create a content then I will have the option to transl
       And I should see "Not translated" in the "French" row
      When I click "Add" in the "French" row
       And I wait
-     Then I should see "Create French translation"
+     Then I should see "Traduire e en Français"
      When I fill in "La page test d'anglais de base" for "Title"
       And I fill in the rich text editor field "Body" with "Corps de la page test d'anglais de base"
       And I press "Save"
