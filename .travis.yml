@@ -10,6 +10,7 @@ cache:
 php:
   - 5.6
   - 7.0
+  - 7.1
 env:
   - VERSION=8.x-4.x
   
@@ -49,7 +50,7 @@ install:
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
-  - echo 'max_execution_time = 600' >> drupal.php.ini;
+  - echo 'max_execution_time = 300' >> drupal.php.ini;
   - echo 'max_input_time = 180' >> drupal.php.ini;
   - echo 'max_input_vars = 10000' >> drupal.php.ini;
   - echo 'memory_limit = 512M' >> drupal.php.ini;
