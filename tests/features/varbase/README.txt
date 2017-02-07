@@ -1,9 +1,9 @@
   Varbase Gherkin features.
   ------------------------------------------------------------------------------
-  A list of features and scenarios to have a full test over Varbase 7.x-3.x
+  A list of features and scenarios to have a full test over Varbase 8.x-4.x
 
   If you want to run all Gherkin Features over a new Varbase site.
-  You will need to create the list of Testing users, and Add French, and Arabic
+  You will need to create the list of Testing users, Arabic
   languages to the site.
 
   # --------------------------------------------------------------------------
@@ -32,7 +32,6 @@ Feature: Create default testing users.
 # test_super_admin: { email: 'super.admin.test@vardot.com', password: 'dD.123123ddd' }
 
 Feature: Add Arabic language if we do not have it to languages in the system.
-Feature: Add French language if we do not have it to languages in the system.
 
 
 
@@ -50,4 +49,3 @@ Feature: Delete default testing users.
          test_super_admin
 
 Feature: Delete Arabic language from the system.
-Feature: Delete French language from the system.
