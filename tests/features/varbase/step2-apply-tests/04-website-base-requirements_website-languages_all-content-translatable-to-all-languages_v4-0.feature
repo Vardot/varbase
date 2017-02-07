@@ -49,9 +49,9 @@ So that I will be able to create a content then I will have the option to transl
      Then I should see "Traduire Test English Basic page en Français"
      When I fill in "La page test d'anglais de base" for "Titre"
       And I fill in the rich text editor field "Corps" with "Corps de la page test d'anglais de base"
-      And I press the "Enregistrer et laisser publié" 
+      And I press the "Enregistrer et laisser publié" button
       And I wait
-     Then I should see "La page test d'anglais de base" button
+     Then I should see "La page test d'anglais de base"
      When I click "Translate"
       And I wait
      Then I should see "Test English Basic page"
