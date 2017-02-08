@@ -32,7 +32,7 @@ projects[panels][patch][] = https://www.drupal.org/files/issues/ipe_rtl_css_supp
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
-projects[panelizer][version] = 3.0-alpha3
+projects[panelizer][version] = 3.0-beta1
 ;; Issue #2793841 - Properly integrate with Panels IPE
 projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
 

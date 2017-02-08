@@ -110,7 +110,7 @@
     "drupal/token": "1.0-rc1",
     "drupal/page_manager": "1.0-alpha24",
     "drupal/panels": "3.0-beta5",
-    "drupal/panelizer": "3.0-alpha3",
+    "drupal/panelizer": "3.0-beta1",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/bootstrap_layouts": "4.1",
     "drupal/ds": "2.6",
