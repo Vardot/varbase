@@ -1,4 +1,4 @@
-
+# Selenium Server
 # Installing and configuring selenium server to work for each automated testing session #
 
 Some time I do test using some internal or external selenium server, but they
@@ -23,10 +23,17 @@ $ sudo apt-get install openjdk-8-jre
 ================================================================================
 
 
-Run the following command to install selenium server:
+Run the following command to install selenium server 2.53.1:
 ================================================================================
 
 $  sh ./install-selenium-server-2.53.1.sh
+
+================================================================================
+
+Run the following command to install selenium server 3.0.1:
+================================================================================
+
+$  sh ./install-selenium-server-3.0.1.sh
 
 ================================================================================
 

@@ -32,12 +32,12 @@ So that I will be able to create a content then I will have the option to transl
       And I should see "Not translated" in the "Arabic" row
      When I click "Add" in the "Arabic" row
       And I wait
-     Then I should see "Create عربية translation of Test English Basic page"
-     When I fill in "تجربة صفحة بسيطة عربية العنوان" for "العنوان"
-      And I fill in the rich text editor field "المتن" with "تجربة صفحة بسيطة عربية المحتوى"
+     Then I should see "Create Arabic translation of Test English Basic page"
+     When I fill in "تجربة صفحة بسيطة عربية العنوان" for "Title"
+      And I fill in the rich text editor field "Body" with "تجربة صفحة بسيطة عربية المحتوى"
       And I press the "op" button
       And I wait
      Then I should see "تجربة صفحة بسيطة عربية العنوان"
-     When I click "ترجمة"
+     When I click "Translate"
       And I wait
      Then I should see "Test English Basic page"

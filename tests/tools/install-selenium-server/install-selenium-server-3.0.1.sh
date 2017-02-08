@@ -5,10 +5,10 @@ if [ ! -d "/usr/lib/selenium" ]; then
 
   echo "Created selenium directory in /usr/lib.\n"
 
-  echo "Getting selenium server standalone 3.0.0-beta3\n"
-  sudo wget http://selenium-release.storage.googleapis.com/3.0-beta3/selenium-server-standalone-3.0.0-beta3.jar
-  sudo mv selenium-server-standalone-3.0.0-beta3.jar /usr/lib/selenium/selenium-server-standalone-3.0.0-beta3.jar
-  sudo ln -s /usr/lib/selenium/selenium-server-standalone-3.0.0-beta3.jar /usr/lib/selenium/selenium-server-standalone.jar
+  echo "Getting selenium server standalone 3.0.1\n"
+  sudo wget http://selenium-release.storage.googleapis.com/3.0-beta3/selenium-server-standalone-3.0.1.jar
+  sudo mv selenium-server-standalone-3.0.1.jar /usr/lib/selenium/selenium-server-standalone-3.0.1.jar
+  sudo ln -s /usr/lib/selenium/selenium-server-standalone-3.0.1.jar /usr/lib/selenium/selenium-server-standalone.jar
   echo "The selenium server standalone is ready in the server.\n"
 
   sudo mkdir -p /var/log/selenium
