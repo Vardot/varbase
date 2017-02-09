@@ -8,8 +8,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Language\LanguageManager;
-use Symfony\Component\HttpFoundation\Request;
-use Drupal\Component\Utility\UserAgent;
 
 /**
  * Defines form for selecting Varbase's Multiligual configuration options form.
@@ -90,19 +88,18 @@ class ConfigureMultilingualForm extends FormBase {
     }
 
     asort($select_options);
-    $request = Request::createFromGlobals();
-    $browser_langcode = UserAgent::getBestMatchingLangcode($request->server->get('HTTP_ACCEPT_LANGUAGE'), $browser_options);
+    $default_langcode = \Drupal::configFactory()->getEditable('system.site')->get('default_langcode');
 
     // Save the default language name.
-    $default_language_name = $select_options[$browser_langcode];
+    $default_language_name = $select_options[$default_langcode];
 
     // Remove the default language from the list of multilingual languages.
-    if (isset($select_options[$browser_langcode])) {
-      unset($select_options[$browser_langcode]);
+    if (isset($select_options[$default_langcode])) {
+      unset($select_options[$default_langcode]);
     }
 
-    if (isset($browser_options[$browser_langcode])) {
-      unset($browser_options[$browser_langcode]);
+    if (isset($browser_options[$default_langcode])) {
+      unset($browser_options[$default_langcode]);
     }
 
     $form['#title'] = $this->t('Multilingual configuration');
@@ -142,6 +139,7 @@ class ConfigureMultilingualForm extends FormBase {
       'continue' => [
         '#type' => 'submit',
         '#value' => $this->t('Save and continue'),
+        '#button_type' => 'primary',
       ],
       '#type' => 'actions',
       '#weight' => 5,
