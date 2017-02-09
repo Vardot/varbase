@@ -70,7 +70,7 @@ class ConfigureMultilingualForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'varbase_multilingual_configration';
+    return 'varbase_multilingual_configuration';
   }
 
   /**
@@ -103,7 +103,7 @@ class ConfigureMultilingualForm extends FormBase {
     }
 
     $form['#title'] = $this->t('Multilingual configuration');
-    $form['multilingual_configration_introduction'] = array(
+    $form['multilingual_configuration_introduction'] = array(
       '#weight' => -1,
       '#prefix' => '<p>',
       '#markup' => '<b>' . $default_language_name . '</b> ' . $this->t("is the default language."),

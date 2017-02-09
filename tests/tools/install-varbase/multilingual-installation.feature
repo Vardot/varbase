@@ -1,14 +1,15 @@
-Feature: Installation - Varbase - Default installation.
+Feature: Installation - Varbase - Multilingual installation.
 As an Application site Builder
 I want to be able to install Varbase for a selected client
 So that I will be able to initiate the site with the default installation
 
   @javascript @tools @install @local @development
-  Scenario: Default installation for Varbase 8.x-4.x
+  Scenario: Multilingual installation for Varbase 8.x-4.x
     Given I go to "/core/install.php"
       And I wait
      Then I should see "Choose language"
-     When I press "Save and continue"
+     When I select "en" from "langcode"
+      And I press "Save and continue"
       And I wait
      Then I should see "Database configuration"
      When I fill in "test_varbase4" for "Database name"
@@ -27,9 +28,14 @@ So that I will be able to initiate the site with the default installation
       And I press "Save and continue"
       And I wait for the batch job to finish
      Then I should see "Multilingual configuration"
+     When I check the box "Enable multiple languages for this site"
+     Then I should see "Please select your site's other language(s)"
+     When I select "ar" from "multilingual_languages[]"
+      And I select "fr" from "multilingual_languages[]"
      When I press "Save and continue"
       And I wait for the batch job to finish
      Then I should see "Extra components"
+     When I check the box "Varbase development"
      When I press "Save and continue"
       And I wait for the batch job to finish
      Then I should see "Welcome to Varbase4"
