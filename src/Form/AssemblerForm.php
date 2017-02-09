@@ -115,6 +115,7 @@ class AssemblerForm extends FormBase {
       'continue' => [
         '#type' => 'submit',
         '#value' => $this->t('Assemble and install'),
+        '#button_type' => 'primary',
       ],
       '#type' => 'actions',
       '#weight' => 5,
