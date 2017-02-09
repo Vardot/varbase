@@ -35,4 +35,4 @@ So that I will be able to initiate the site with the default installation
      When I check the box "Varbase development"
       And I press "حفظ ومتابعة"
       And I wait for the batch job to finish
-     Then I should see "Welcome to Varbase4"
+     Then I should see "Welcome to موقع عربي"

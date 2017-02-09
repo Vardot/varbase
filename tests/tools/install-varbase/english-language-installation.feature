@@ -4,7 +4,7 @@ I want to be able to install Varbase for a selected client
 So that I will be able to initiate the site with the default installation
 
   @javascript @tools @install @local @development
-  Scenario: English installation for Varbase 7.x-8.x
+  Scenario: English installation for Varbase 8.x-4.x
     Given I go to "/core/install.php"
       And I wait
      Then I should see "Choose language"
