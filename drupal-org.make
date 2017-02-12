@@ -184,11 +184,11 @@ projects[blazy][version] = 1.0-rc1
 
 projects[slick][type] = module
 projects[slick][subdir] = "contrib"
-projects[slick][version] = 1.0-beta6
+projects[slick][version] = 1.0-rc2
 
 projects[slick_views][type] = module
 projects[slick_views][subdir] = "contrib"
-projects[slick_views][version] = 1.0-beta5
+projects[slick_views][version] = 1.0-rc2
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][subdir] = "contrib"
