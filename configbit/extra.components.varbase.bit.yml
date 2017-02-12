@@ -10,3 +10,4 @@ config_bit:
     list:
       dependencies:
         - varbase_development
+        - varbase_heroslider_media

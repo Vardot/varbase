@@ -175,6 +175,26 @@ projects[google_analytics][subdir] = "contrib"
 projects[google_analytics][version] = 2.1
 
 ;;;;;;;;;;;;;;;;;;;;;
+;; Contrib modules for Varbase hero slider media
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[blazy][type] = module
+projects[blazy][subdir] = "contrib"
+projects[blazy][version] = 1.0-rc1
+
+projects[slick][type] = module
+projects[slick][subdir] = "contrib"
+projects[slick][version] = 1.0-beta6
+
+projects[slick_views][type] = module
+projects[slick_views][subdir] = "contrib"
+projects[slick_views][version] = 1.0-beta5
+
+projects[inline_entity_form][type] = module
+projects[inline_entity_form][subdir] = "contrib"
+projects[inline_entity_form][version] = 1.0-beta1
+
+;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
 
@@ -226,9 +246,19 @@ projects[varbase_editor][type] = module
 projects[varbase_editor][subdir] = "contrib"
 projects[varbase_editor][version] = 4.5
 
+projects[varbase_heroslider_media][type] = module
+projects[varbase_heroslider_media][subdir] = "contrib"
+projects[varbase_heroslider_media][version] = 4.0-alpha3
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;
 
 libraries[dropzone][download][type] = get
 libraries[dropzone][download][url] = "https://github.com/enyo/dropzone/archive/v4.3.0.tar.gz"
+
+libraries[blazy][download][type] = get
+libraries[blazy][download][url] = "https://github.com/dinbror/blazy/archive/1.8.2.tar.gz"
+
+libraries[slick][download][type] = get
+libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.6.0.tar.gz"
