@@ -195,6 +195,14 @@ projects[inline_entity_form][subdir] = "contrib"
 projects[inline_entity_form][version] = 1.0-beta1
 
 ;;;;;;;;;;;;;;;;;;;;;
+;; Contrib modules for varbase carousels.
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[slick_media][type] = module
+projects[slick_media][subdir] = "contrib"
+projects[slick_media][version] = 1.0-rc1
+
+;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
 
@@ -249,6 +257,10 @@ projects[varbase_editor][version] = 4.5
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][subdir] = "contrib"
 projects[varbase_heroslider_media][version] = 4.0-alpha3
+
+projects[varbase_carousels][type] = module
+projects[varbase_carousels][subdir] = "contrib"
+projects[varbase_carousels][version] = 4.0-alpha2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
