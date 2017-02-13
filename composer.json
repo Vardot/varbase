@@ -193,7 +193,7 @@
     "drupal/slick": "1.0-rc2",
     "drupal/slick_views": "1.0-rc2",
     "drupal/inline_entity_form": "1.0-beta1",
-    "drupal/varbase_heroslider_media": "4.0-alpha3",
+    "drupal/varbase_heroslider_media": "4.0-alpha4",
     "drupal/slick_media": "1.0-rc1",
     "drupal/varbase_carousels": "4.0-alpha2"
   }

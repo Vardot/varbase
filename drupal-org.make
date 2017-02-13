@@ -256,7 +256,7 @@ projects[varbase_editor][version] = 4.5
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][subdir] = "contrib"
-projects[varbase_heroslider_media][version] = 4.0-alpha3
+projects[varbase_heroslider_media][version] = 4.0-alpha4
 
 projects[varbase_carousels][type] = module
 projects[varbase_carousels][subdir] = "contrib"
