@@ -150,6 +150,10 @@ projects[imagemagick][type] = module
 projects[imagemagick][subdir] = "contrib"
 projects[imagemagick][version] = 1.0-alpha5
 
+projects[ultimate_cron][type] = module
+projects[ultimate_cron][subdir] = "contrib"
+projects[ultimate_cron][version] = 2.0-alpha1
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
