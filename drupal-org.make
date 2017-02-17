@@ -162,6 +162,10 @@ projects[userprotect][type] = module
 projects[userprotect][subdir] = "contrib"
 projects[userprotect][version] = 1.0
 
+projects[roleassign][type] = module
+projects[roleassign][subdir] = "contrib"
+projects[roleassign][version] = 1.0-alpha2
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;

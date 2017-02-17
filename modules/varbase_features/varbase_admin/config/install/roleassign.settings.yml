@@ -1,0 +1,5 @@
+roleassign_roles:
+  editor: editor
+  content_admin: content_admin
+  site_admin: site_admin
+  administrator: '0'

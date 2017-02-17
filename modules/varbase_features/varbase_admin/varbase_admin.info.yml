@@ -6,6 +6,7 @@ dependencies:
   - node
   - user
   - userprotect
+  - roleassign
   - views
 package: Varbase
 version: 8.x-4.0

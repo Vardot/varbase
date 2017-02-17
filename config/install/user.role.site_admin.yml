@@ -81,3 +81,4 @@ permissions:
   - 'delete media'
   - 'dropzone upload files'
   - userprotect.protected_site_admin.bypass
+  - 'assign roles'
