@@ -13,3 +13,6 @@ permissions:
   - 'access sitemap'
   - 'access user profiles'
   - 'view media'
+  - userprotect.mail.edit
+  - userprotect.pass.edit
+  - userprotect.account.edit

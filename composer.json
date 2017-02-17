@@ -178,6 +178,7 @@
     "drupal/imagemagick": "1.0-alpha5",
     "drupal/ultimate_cron": "2.0-alpha1",
     "drupal/persistent_login": "1.0-alpha2",
+    "drupal/userprotect": "1.0",
     "drupal/pathauto": "1.0-rc1",
     "drupal/redirect": "1.0-alpha4",
     "drupal/metatag": "1.0",

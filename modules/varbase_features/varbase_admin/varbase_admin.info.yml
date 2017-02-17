@@ -5,6 +5,7 @@ dependencies:
   - masquerade
   - node
   - user
+  - userprotect
   - views
 package: Varbase
 version: 8.x-4.0

@@ -158,6 +158,10 @@ projects[persistent_login][type] = module
 projects[persistent_login][subdir] = "contrib"
 projects[persistent_login][version] = 1.0-alpha2
 
+projects[userprotect][type] = module
+projects[userprotect][subdir] = "contrib"
+projects[userprotect][version] = 1.0
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
