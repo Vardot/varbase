@@ -109,12 +109,6 @@
         "Issue #2793841 : Properly integrate with Panels IPE":
         "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
       },
-      "drupal/dropzonejs": {
-        "Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] to make it work if the library was in the installation profile.":
-        "https://www.drupal.org/files/issues/2830862-7.patch",
-        "Issue #2696853 by Dimiter: Media upload box problems":
-        "https://www.drupal.org/files/issues/dropzonejs-media-upload-box-problems-2696853-19-D8.patch"
-      },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch"
@@ -166,7 +160,7 @@
     "drupal/entity": "1.0-alpha4",
     "drupal/entity_browser": "1.0-rc1",
     "drupal/entity_browser_enhanced": "1.0-beta4",
-    "drupal/dropzonejs": "1.0-alpha3",
+    "drupal/dropzonejs": "1.0-alpha4",
     "drupal/entity_embed": "1.0-beta2",
     "drupal/inline_entity_form": "1.0-beta1",
     "drupal/media_entity": "1.6",

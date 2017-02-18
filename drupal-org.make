@@ -102,11 +102,7 @@ projects[entity_browser_enhanced][version] = 1.0-beta4
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][subdir] = "contrib"
-projects[dropzonejs][version] = 1.0-alpha3
-;; Issue #2830862 by RajabNatshah: Updated the requirements on installation for [dropzonejs] to make it work if the library was in the installation profile.
-projects[dropzonejs][patch][] = https://www.drupal.org/files/issues/2830862-7.patch
-;; Issue #2696853 by Dimiter: Media upload box problems and enhancement.
-projects[dropzonejs][patch][] = https://www.drupal.org/files/issues/dropzonejs-media-upload-box-problems-2696853-19-D8.patch
+projects[dropzonejs][version] = 1.0-alpha4
 
 projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
