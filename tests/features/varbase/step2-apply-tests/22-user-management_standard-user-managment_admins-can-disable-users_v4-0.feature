@@ -28,6 +28,7 @@ So that they will be disabled and not be able to use the site.
      Then I should see "test_authenticated"
      When I click "Edit"
       And I wait
+     Then I should see "Status"
      When I select the radio button "Blocked"
       And I press "Save"
       And I wait

@@ -20,4 +20,4 @@ So that I can reset my password for the account
      When I fill in "not.existing.email@vardot.com" for "Username or email address"
       And I press the "Submit" button
       And I wait
-     Then I should see "not.existing.email@vardot.com is not recognized as a username or an email address."
+     Then I should see "Further instructions have been sent to your e-mail address."
