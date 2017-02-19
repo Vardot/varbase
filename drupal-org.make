@@ -210,6 +210,14 @@ projects[security_review][download][url] = https://git.drupal.org/project/securi
 projects[security_review][download][revision] = 35ebae445bb260e961e47c4c58efe7c50c228999
 projects[security_review][download][branch] = 8.x-1.x
 
+projects[captcha][type] = module
+projects[captcha][subdir] = "contrib"
+projects[captcha][version] = 1.0-beta1
+
+projects[recaptcha][type] = module
+projects[recaptcha][subdir] = "contrib"
+projects[recaptcha][version] = 2.2
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase hero slider media
 ;;;;;;;;;;;;;;;;;;;;;
