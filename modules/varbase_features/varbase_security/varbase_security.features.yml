@@ -1,0 +1,8 @@
+bundle: varbase
+excluded:
+  - field.field.user.user.field_last_password_reset
+  - field.field.user.user.field_password_expiration
+  - field.storage.user.field_last_password_reset
+  - field.storage.user.field_password_expiration
+  - core.entity_form_display.user.user.default
+required: true

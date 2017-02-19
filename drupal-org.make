@@ -187,6 +187,30 @@ projects[google_analytics][subdir] = "contrib"
 projects[google_analytics][version] = 2.1
 
 ;;;;;;;;;;;;;;;;;;;;;
+;; Contrib modules for Varbase security.
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[username_enumeration_prevention][type] = module
+projects[username_enumeration_prevention][subdir] = "contrib"
+projects[username_enumeration_prevention][version] = 1.0-beta1
+
+projects[password_policy][type] = module
+projects[password_policy][subdir] = "contrib"
+projects[password_policy][download][url] = https://git.drupal.org/project/security_review.git
+projects[password_policy][download][revision] = bba8e0bd1542ffde651d0b8ff95ff5cea69d06ba
+projects[password_policy][download][branch] = 8.x-3.x
+
+projects[seckit][type] = module
+projects[seckit][subdir] = "contrib"
+projects[seckit][version] = 1.0-alpha2
+
+projects[security_review][type] = module
+projects[security_review][subdir] = "contrib"
+projects[security_review][download][url] = https://git.drupal.org/project/security_review.git
+projects[security_review][download][revision] = 35ebae445bb260e961e47c4c58efe7c50c228999
+projects[security_review][download][branch] = 8.x-1.x
+
+;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase hero slider media
 ;;;;;;;;;;;;;;;;;;;;;
 
@@ -201,10 +225,6 @@ projects[slick][version] = 1.0-rc2
 projects[slick_views][type] = module
 projects[slick_views][subdir] = "contrib"
 projects[slick_views][version] = 1.0-rc2
-
-projects[inline_entity_form][type] = module
-projects[inline_entity_form][subdir] = "contrib"
-projects[inline_entity_form][version] = 1.0-beta1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for varbase carousels.

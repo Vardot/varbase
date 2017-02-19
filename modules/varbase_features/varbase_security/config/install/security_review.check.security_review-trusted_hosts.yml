@@ -1,0 +1,3 @@
+id: security_review-trusted_hosts
+settings:
+  method: token

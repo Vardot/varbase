@@ -1,0 +1,14 @@
+name: 'Varbase security'
+description: 'Manages general security configurations, with password policy, username enumeration prevention, security kit and review.'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - field
+  - password_policy
+  - seckit
+  - security_review
+  - user
+  - username_enumeration_prevention
+version: 8.x-4.0
+package: Varbase
