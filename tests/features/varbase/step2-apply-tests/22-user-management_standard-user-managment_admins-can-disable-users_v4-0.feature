@@ -3,7 +3,7 @@ As a site admin user
 I want to be able Block user accounts
 So that they will be disabled and not be able to use the site.
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check if the "test_authenticated" user is not blocked. and can login.
     Given I am on "user/login"
       And I wait
@@ -13,7 +13,7 @@ So that they will be disabled and not be able to use the site.
       And I wait
      Then I should see "test_authenticated"
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check if the site admin can Administer users and disable a User account "test_authenticated" from accessing the site.
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/admin/people"
@@ -28,14 +28,14 @@ So that they will be disabled and not be able to use the site.
      Then I should see "test_authenticated"
      When I click "Edit"
       And I wait
-     Then I should see "Status"
+     Then I should see "test_authenticated"
      When I select the radio button "Blocked"
       And I press "Save"
       And I wait
      Then I should see "The changes have been saved."
       And the "Blocked" checkbox should be checked
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check if the blocked user with user id of <Test Blocked User ID> can or can not login.
     Given I am on "user/login"
       And I wait
@@ -43,5 +43,4 @@ So that they will be disabled and not be able to use the site.
       And I fill in "dD.123123ddd" for "Password"
       And I press "Log in"
       And I wait
-     Then I should not see "Edit"
-      But I should see "The username test_authenticated has not been activated or is blocked."
+     Then I should see "The username test_authenticated has not been activated or is blocked."
