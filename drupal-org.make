@@ -102,7 +102,7 @@ projects[entity_browser_enhanced][version] = 1.0-beta4
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][subdir] = "contrib"
-projects[dropzonejs][version] = 1.0-alpha4
+projects[dropzonejs][version] = 1.0-alpha5
 
 projects[entity_embed][type] = module
 projects[entity_embed][subdir] = "contrib"
