@@ -101,9 +101,7 @@
     "patches": {
       "drupal/panels": {
         "Issue #2793801 : Allow modules to influence the IPE tempstore ID":
-        "https://www.drupal.org/files/issues/2793801-9.patch",
-        "Issue #2832876 by abu-zakham: Need RTL completely support":
-        "https://www.drupal.org/files/issues/ipe_rtl_css_support-2832876-2.patch"
+        "https://www.drupal.org/files/issues/2793801-13.patch"
       },
       "drupal/panelizer": {
         "Issue #2793841 : Properly integrate with Panels IPE":
@@ -142,7 +140,7 @@
     "drupal/ctools": "3.0-alpha27",
     "drupal/token": "1.0-rc1",
     "drupal/page_manager": "1.0-alpha24",
-    "drupal/panels": "3.0-beta5",
+    "drupal/panels": "3.0-beta6",
     "drupal/panelizer": "3.0-beta1",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/bootstrap_layouts": "4.1",
