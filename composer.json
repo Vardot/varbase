@@ -145,6 +145,7 @@
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/bootstrap_layouts": "4.1",
     "drupal/ds": "2.6",
+    "drupal/views_bootstrap": "3.x-dev#b34caf9ede249c2a9c90ee5dfb8a9020f5048858",
     "drupal/field_group": "1.0-rc6",
     "drupal/smart_trim": "1.0",
     "drupal/advanced_text_formatter": "1.0-beta3",

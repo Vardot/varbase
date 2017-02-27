@@ -45,6 +45,12 @@ projects[ds][type] = module
 projects[ds][subdir] = "contrib"
 projects[ds][version] = 2.6
 
+projects[views_bootstrap][type] = module
+projects[views_bootstrap][subdir] = "contrib"
+projects[views_bootstrap][download][url] = https://git.drupal.org/project/views_bootstrap.git
+projects[views_bootstrap][download][revision] = b34caf9ede249c2a9c90ee5dfb8a9020f5048858
+projects[views_bootstrap][download][branch] = 8.x-3.x
+
 projects[field_group][type] = module
 projects[field_group][subdir] = "contrib"
 projects[field_group][version] = 1.0-rc6
