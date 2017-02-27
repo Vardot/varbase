@@ -189,7 +189,7 @@
     "drupal/slick_views": "1.0-rc2",
     "drupal/slick_media": "1.0-rc1",
     "drupal/username_enumeration_prevention": "1.0-beta1",
-    "drupal/password_policy": "3.x-dev#bba8e0bd1542ffde651d0b8ff95ff5cea69d06ba",
+    "drupal/password_policy": "3.0-alpha3",
     "drupal/seckit": "1.0-alpha2",
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/captcha": "1.0-beta1",

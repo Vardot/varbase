@@ -193,9 +193,7 @@ projects[username_enumeration_prevention][version] = 1.0-beta1
 
 projects[password_policy][type] = module
 projects[password_policy][subdir] = "contrib"
-projects[password_policy][download][url] = https://git.drupal.org/project/password_policy.git
-projects[password_policy][download][revision] = bba8e0bd1542ffde651d0b8ff95ff5cea69d06ba
-projects[password_policy][download][branch] = 8.x-3.x
+projects[password_policy][version] = 3.0-alpha3
 
 projects[seckit][type] = module
 projects[seckit][subdir] = "contrib"
