@@ -131,6 +131,14 @@ projects[video_embed_field][type] = module
 projects[video_embed_field][subdir] = "contrib"
 projects[video_embed_field][version] = 1.4
 
+projects[crop][type] = module
+projects[crop][subdir] = "contrib"
+projects[crop][version] = 1.0
+
+projects[focal_point][type] = module
+projects[focal_point][subdir] = "contrib"
+projects[focal_point][version] = 1.0-beta4
+
 projects[pathologic][type] = module
 projects[pathologic][subdir] = "contrib"
 projects[pathologic][download][url] = https://git.drupal.org/project/pathologic.git

@@ -84,6 +84,8 @@ dependencies:
   - media_entity_image
   - video_embed_media
   - video_embed_wysiwyg
+  - crop
+  - focal_point
   - pathologic
   - persistent_login
 
