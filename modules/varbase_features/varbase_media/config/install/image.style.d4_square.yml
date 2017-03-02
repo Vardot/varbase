@@ -1,0 +1,16 @@
+uuid: bd350177-18cf-4558-9fb6-e06bd12136c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d4_square
+label: 'Display 4 (370xSquare 1:1)'
+effects:
+  e0e9be76-fed5-4051-bac5-5402f5b8ec34:
+    uuid: e0e9be76-fed5-4051-bac5-5402f5b8ec34
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 370
+      height: 370

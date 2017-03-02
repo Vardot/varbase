@@ -1,0 +1,16 @@
+uuid: dc541c12-6722-4296-a5a6-95b4e0dfcbff
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d1_standard
+label: 'Display 1 (70xStandard 16:9)'
+effects:
+  9fd3bf58-7906-416e-b85e-c24b6d3539d7:
+    uuid: 9fd3bf58-7906-416e-b85e-c24b6d3539d7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 70
+      height: 40

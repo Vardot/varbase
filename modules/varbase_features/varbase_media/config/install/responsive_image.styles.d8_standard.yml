@@ -1,0 +1,23 @@
+uuid: 17c09cd4-1634-4920-9767-712fe8feee55
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d8_standard
+  theme:
+    - bootstrap
+id: d8_standard
+label: 'Display 8 responsive standard 16:9'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_standard
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ''
+breakpoint_group: bootstrap
+fallback_image_style: d8_standard

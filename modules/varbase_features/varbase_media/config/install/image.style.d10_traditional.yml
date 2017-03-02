@@ -1,0 +1,16 @@
+uuid: ee357902-7d39-4184-bc0f-7c215b1ff24c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d10_traditional
+label: 'Display wide 10 (970xTraditional 4:3)'
+effects:
+  47523cc9-5c0f-4112-836f-997f33667888:
+    uuid: 47523cc9-5c0f-4112-836f-997f33667888
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 970
+      height: 727

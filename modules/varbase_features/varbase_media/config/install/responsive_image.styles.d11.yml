@@ -1,0 +1,24 @@
+uuid: adba5289-579c-4d0b-ac99-5653c65ee182
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d10
+    - image.style.d11
+  theme:
+    - bootstrap
+id: d11
+label: 'Display 11 responsive auto'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d10
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d11
+breakpoint_group: bootstrap
+fallback_image_style: d11

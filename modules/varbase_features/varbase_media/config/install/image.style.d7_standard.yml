@@ -1,0 +1,16 @@
+uuid: 1f16cc72-9dd8-469a-ac0e-4488ec595b30
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d7_standard
+label: 'Display mid 7 (670xStandard 16:9)'
+effects:
+  564ca3fb-a335-44f8-8220-1087afa3f8fd:
+    uuid: 564ca3fb-a335-44f8-8220-1087afa3f8fd
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 670
+      height: 377

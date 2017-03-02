@@ -1,0 +1,30 @@
+uuid: 0d1b7a52-f894-4c65-a1af-5ba1d277f67c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d10_square
+    - image.style.d11_square
+    - image.style.d8_square
+  theme:
+    - bootstrap
+id: d11_square
+label: 'Display 11 responsive square 1:1'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_square
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d10_square
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d11_square
+breakpoint_group: bootstrap
+fallback_image_style: d11_square

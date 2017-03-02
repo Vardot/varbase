@@ -4,10 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.media.medium
     - field.field.media.image.field_image
-    - image.style.d6
     - media_entity.bundle.image
+    - responsive_image.styles.d6
   module:
-    - image
+    - responsive_image
 id: media.image.medium
 targetEntityType: media
 bundle: image
@@ -17,10 +17,10 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: d6
+      responsive_image_style: d6
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
 hidden:
   created: true
   langcode: true

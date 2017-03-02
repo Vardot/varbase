@@ -1,0 +1,18 @@
+uuid: 776d8799-4047-4f61-8a38-ce21a9469013
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d2_standard
+  theme:
+    - bootstrap
+id: d2_standard
+label: 'Display 2 responsive standard 16:9'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d2_standard
+breakpoint_group: bootstrap
+fallback_image_style: d2_standard

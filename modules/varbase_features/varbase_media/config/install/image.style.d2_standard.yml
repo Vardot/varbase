@@ -1,0 +1,16 @@
+uuid: 2c88f465-79eb-41f7-9bbf-22cacb3ff656
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d2_standard
+label: 'Display 2 (170xStandard 16:9)'
+effects:
+  bcdbed62-73b1-442b-96d8-17520e3b324a:
+    uuid: bcdbed62-73b1-442b-96d8-17520e3b324a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 170
+      height: 96

@@ -1,0 +1,16 @@
+uuid: 65c8a317-01e8-43b9-9720-810701c18ab6
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d12_standard
+label: 'Display wide 12 (1170xStandard 16:9)'
+effects:
+  35395831-6f5d-42bc-ae6c-4d65b59f75c3:
+    uuid: 35395831-6f5d-42bc-ae6c-4d65b59f75c3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1170
+      height: 658

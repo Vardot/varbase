@@ -1,0 +1,18 @@
+uuid: 2983d697-de46-496d-8130-c5c09fb0afb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d8_traditional
+  theme:
+    - bootstrap
+id: d8_traditional
+label: 'Display 8 responsive traditional 4:3'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_traditional
+breakpoint_group: bootstrap
+fallback_image_style: d8_traditional

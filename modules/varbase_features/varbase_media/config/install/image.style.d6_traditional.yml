@@ -1,0 +1,16 @@
+uuid: 333accdc-15d6-42b0-9710-a78952078474
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d6_traditional
+label: 'Display mid 6 (570xTraditional 4:3)'
+effects:
+  f2459ce7-b38a-49a5-88a4-0d26c0d56bc0:
+    uuid: f2459ce7-b38a-49a5-88a4-0d26c0d56bc0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 570
+      height: 427

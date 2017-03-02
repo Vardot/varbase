@@ -1,0 +1,16 @@
+uuid: d6d3be58-432f-4d1e-94a3-82a98a4394a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d2_square
+label: 'Display 2 (170xSquare 1:1)'
+effects:
+  c6e9e082-4830-4c15-a79f-af656a5afd4a:
+    uuid: c6e9e082-4830-4c15-a79f-af656a5afd4a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 170
+      height: 170

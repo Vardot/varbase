@@ -1,0 +1,18 @@
+uuid: 6377dffd-17b1-4fbc-87b3-609f0c8ebe2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d5
+  theme:
+    - bootstrap
+id: d5
+label: 'Display 5 responsive auto'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d5
+breakpoint_group: bootstrap
+fallback_image_style: d5

@@ -2,7 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - crop
     - media_entity_document
+third_party_settings:
+  crop:
+    image_field: field_document_file
 id: document
 label: Document
 description: 'A Document file is written information like PDF,  Document.'

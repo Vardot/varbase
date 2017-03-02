@@ -1,0 +1,18 @@
+uuid: 7526bcb1-456e-44e6-81e7-b35eb405cb10
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d8_square
+  theme:
+    - bootstrap
+id: d8_square
+label: 'Display 8 responsive square 1:1'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_square
+breakpoint_group: bootstrap
+fallback_image_style: d8_square

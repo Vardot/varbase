@@ -1,0 +1,16 @@
+uuid: df331d10-38d3-4d67-8fe1-04dc63d88141
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d12_square
+label: 'Display wide 12 (1170xSquare 1:1)'
+effects:
+  b87c3c96-3671-4b74-971f-0a2bb90f3521:
+    uuid: b87c3c96-3671-4b74-971f-0a2bb90f3521
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1170
+      height: 1170

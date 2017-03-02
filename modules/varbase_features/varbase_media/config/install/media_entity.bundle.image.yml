@@ -2,7 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - crop
     - media_entity_image
+third_party_settings:
+  crop:
+    image_field: field_image
 id: image
 label: Image
 description: 'An Image file is a still visual.'

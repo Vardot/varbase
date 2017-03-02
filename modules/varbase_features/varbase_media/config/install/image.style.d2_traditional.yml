@@ -1,0 +1,16 @@
+uuid: 111d851f-eeda-4c1e-960d-bbfbd87d4c2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d2_traditional
+label: 'Display 2 (170xTraditional 4:3)'
+effects:
+  c0326178-af99-4c55-aabf-918acbd07f64:
+    uuid: c0326178-af99-4c55-aabf-918acbd07f64
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 170
+      height: 127

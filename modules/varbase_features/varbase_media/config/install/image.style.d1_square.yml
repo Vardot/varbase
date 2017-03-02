@@ -1,0 +1,16 @@
+uuid: f6c067f4-c405-4f00-9c16-7caf0f463be8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d1_square
+label: 'Display 1 (70xSquare 1:1)'
+effects:
+  fa44cb56-fc93-429e-ad94-5c3aa97df73a:
+    uuid: fa44cb56-fc93-429e-ad94-5c3aa97df73a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 70
+      height: 70

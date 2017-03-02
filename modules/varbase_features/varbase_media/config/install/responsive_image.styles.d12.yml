@@ -1,0 +1,25 @@
+uuid: f6b3ea5e-a168-497f-944a-061002b1fec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d10
+    - image.style.d12
+    - image.style.d8
+  theme:
+    - bootstrap
+id: d12
+label: 'Display 12 responsive auto'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d10
+breakpoint_group: bootstrap
+fallback_image_style: d12

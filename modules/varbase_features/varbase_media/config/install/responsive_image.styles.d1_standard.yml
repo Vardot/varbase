@@ -1,0 +1,18 @@
+uuid: 243a0dd1-9099-420d-9eac-597144a1aabd
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d1_standard
+  theme:
+    - bootstrap
+id: d1_standard
+label: 'Display 1 responsive standard 16:9'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d1_standard
+breakpoint_group: bootstrap
+fallback_image_style: d1_standard

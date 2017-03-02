@@ -1,0 +1,16 @@
+uuid: 2257a6fc-2314-4f4a-9310-ec9dccd4fbd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d4_standard
+label: 'Display 4 (370xStandard 16:9)'
+effects:
+  3d9a74d2-82a0-4399-aedc-c9b6a46e7aa1:
+    uuid: 3d9a74d2-82a0-4399-aedc-c9b6a46e7aa1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 370
+      height: 208

@@ -1,0 +1,16 @@
+uuid: e7e23736-b0f7-4781-8797-c40159b19f8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d5_square
+label: 'Display mid 5 (470xSquare 1:1)'
+effects:
+  fe196166-3c7d-465d-90eb-73aee1889e03:
+    uuid: fe196166-3c7d-465d-90eb-73aee1889e03
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 470
+      height: 470

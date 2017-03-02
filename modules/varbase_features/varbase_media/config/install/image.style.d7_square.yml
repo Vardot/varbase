@@ -1,0 +1,16 @@
+uuid: 39b26586-ab35-409f-9c1f-fc9be373de3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d7_square
+label: 'Display mid 7 (670xSquare 1:1)'
+effects:
+  39fa288e-052c-4b96-8dbe-81311fe0b7ab:
+    uuid: 39fa288e-052c-4b96-8dbe-81311fe0b7ab
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 670
+      height: 670

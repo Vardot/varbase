@@ -1,0 +1,18 @@
+uuid: de648777-ac40-40dc-9707-20feae969350
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d6
+  theme:
+    - bootstrap
+id: d6
+label: 'Display 6 responsive auto'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d6
+breakpoint_group: bootstrap
+fallback_image_style: d6

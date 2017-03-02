@@ -1,0 +1,24 @@
+uuid: f5bf5426-bdf1-42f5-b9de-01b8f2caf273
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d10_standard
+    - image.style.d8_standard
+  theme:
+    - bootstrap
+id: d10_standard
+label: 'Display 10 responsive standard 16:9'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_standard
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d10_standard
+breakpoint_group: bootstrap
+fallback_image_style: d10_standard

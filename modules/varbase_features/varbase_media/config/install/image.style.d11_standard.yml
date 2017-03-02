@@ -1,0 +1,16 @@
+uuid: 19ce1669-aef8-4d1d-a78f-0e9821268b1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d11_standard
+label: 'Display wide 11 (1070xStandard 16:9)'
+effects:
+  03b56a30-4d9f-44de-8090-987bbadb546c:
+    uuid: 03b56a30-4d9f-44de-8090-987bbadb546c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1070
+      height: 602

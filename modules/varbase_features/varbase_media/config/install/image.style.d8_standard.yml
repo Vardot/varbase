@@ -1,0 +1,16 @@
+uuid: 9bb941e1-7bdc-4ecb-adae-4ba364ee273b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d8_standard
+label: 'Display mid 8 (770xStandard 16:9)'
+effects:
+  2d6ba768-6055-4f9c-8fea-647e0931fcec:
+    uuid: 2d6ba768-6055-4f9c-8fea-647e0931fcec
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 770
+      height: 433

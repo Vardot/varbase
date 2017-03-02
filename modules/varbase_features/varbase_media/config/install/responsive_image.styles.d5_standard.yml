@@ -1,0 +1,18 @@
+uuid: 8943cbdd-c0c0-4cdb-8f6f-dc36c69d0e04
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d5_standard
+  theme:
+    - bootstrap
+id: d5_standard
+label: 'Display 5 responsive standard 16:9'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d5_standard
+breakpoint_group: bootstrap
+fallback_image_style: d5_standard

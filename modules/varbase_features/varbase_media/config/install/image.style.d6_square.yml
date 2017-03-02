@@ -1,0 +1,16 @@
+uuid: ecef21e7-1f61-4bbc-8f89-81df55ea842f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d6_square
+label: 'Display mid 6 (570xSquare 1:1)'
+effects:
+  f1533d32-4241-48e5-9c54-51573722f121:
+    uuid: f1533d32-4241-48e5-9c54-51573722f121
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 570
+      height: 570

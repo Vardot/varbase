@@ -1,0 +1,16 @@
+uuid: c9ad1610-9602-4c54-81f4-631cbd283ac1
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d3_square
+label: 'Display 3 (270xSquare 1:1)'
+effects:
+  d813a3a7-213c-4cb8-9707-7261ade1b49c:
+    uuid: d813a3a7-213c-4cb8-9707-7261ade1b49c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 270
+      height: 270

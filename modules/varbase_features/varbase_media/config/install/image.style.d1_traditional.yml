@@ -1,0 +1,16 @@
+uuid: 28c0108d-5fa4-4c3a-8831-e10104717303
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d1_traditional
+label: 'Display 1 (70xTraditional 4:3)'
+effects:
+  06af1336-b167-442e-97d5-cb59693f41c0:
+    uuid: 06af1336-b167-442e-97d5-cb59693f41c0
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 70
+      height: 52

@@ -1,0 +1,16 @@
+uuid: 31f6b162-e41f-4938-b6af-29a5e3fa62bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d3_traditional
+label: 'Display 3 (270xTraditional 4:3)'
+effects:
+  b54380e2-8632-41d0-bdb1-670f8b1b271a:
+    uuid: b54380e2-8632-41d0-bdb1-670f8b1b271a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 270
+      height: 202

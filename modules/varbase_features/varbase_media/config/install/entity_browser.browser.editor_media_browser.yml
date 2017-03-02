@@ -38,6 +38,7 @@ widgets:
       max_filesize: 32M
       extensions: 'jpg jpeg gif png'
       submit_text: 'Select media'
+      auto_select: false
     uuid: 6f017ab9-9cbd-43e3-8af6-9dc1e19c38c7
     weight: -9
     label: Upload

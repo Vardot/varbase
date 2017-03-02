@@ -1,0 +1,16 @@
+uuid: 71398ce5-a5cd-4bed-bf3c-eeb8f7f09977
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d11_square
+label: 'Display wide 11 (1070xSquare 1:1)'
+effects:
+  57f6c4fb-7aff-49bc-b0b9-cf3a17a59d37:
+    uuid: 57f6c4fb-7aff-49bc-b0b9-cf3a17a59d37
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1070
+      height: 1070

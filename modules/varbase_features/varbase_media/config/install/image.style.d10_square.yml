@@ -1,0 +1,16 @@
+uuid: 9d53c002-1261-48f7-ac6b-c8ce6dbd91b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: d10_square
+label: 'Display wide 10 (970xSquare 1:1)'
+effects:
+  0ad7ffcc-777f-4747-a8e5-7b9b71aaee6b:
+    uuid: 0ad7ffcc-777f-4747-a8e5-7b9b71aaee6b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 970
+      height: 970

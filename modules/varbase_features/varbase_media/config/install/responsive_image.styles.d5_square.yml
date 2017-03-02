@@ -1,0 +1,18 @@
+uuid: 3c25802f-c005-48a1-b7e8-e7a38e056149
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d5_square
+  theme:
+    - bootstrap
+id: d5_square
+label: 'Display 5 responsive square 1:1'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d5_square
+breakpoint_group: bootstrap
+fallback_image_style: d5_square
