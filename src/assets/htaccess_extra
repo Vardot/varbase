@@ -1,0 +1,6 @@
+
+  # This will rewrite robots.txt on non-production environments to robots-staging.txt to disallow robots from indexing.
+  # Example: http://stg.example.com/robots.txt will be rewritten to http://stg.example.com/robots-staging.txt
+  # Uncomment the following two lines and change www.example.com to your production URL:
+  # RewriteCond %{HTTP_HOST} !^www.example.com$
+  # RewriteRule ^robots.txt$ robots-staging.txt [L]

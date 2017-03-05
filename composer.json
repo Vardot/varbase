@@ -28,6 +28,11 @@
   "config": {
       "bin-dir": "bin/"
   },
+  "autoload": {
+    "classmap": [
+      "src/composer/ScriptHandler.php"
+    ]
+  },
   "repositories": [
     {
       "type": "composer",
@@ -67,6 +72,9 @@
       ],
       "post-update-cmd": [
           "./bin/phing push"
+      ],
+      "post-drupal-scaffold-cmd": [
+        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
       ],
       "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
   },
