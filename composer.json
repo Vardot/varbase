@@ -172,7 +172,7 @@
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
     "drupal/imagemagick": "1.0-alpha5",
     "drupal/ultimate_cron": "2.0-alpha1",
-    "drupal/persistent_login": "1.0-alpha2",
+    "drupal/persistent_login": "1.0-alpha3",
     "drupal/userprotect": "1.0",
     "drupal/roleassign": "1.0-alpha2",
     "drupal/pathauto": "1.0-rc1",

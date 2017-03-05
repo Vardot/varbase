@@ -163,7 +163,7 @@ projects[ultimate_cron][version] = 2.0-alpha1
 
 projects[persistent_login][type] = module
 projects[persistent_login][subdir] = "contrib"
-projects[persistent_login][version] = 1.0-alpha2
+projects[persistent_login][version] = 1.0-alpha3
 
 projects[userprotect][type] = module
 projects[userprotect][subdir] = "contrib"
