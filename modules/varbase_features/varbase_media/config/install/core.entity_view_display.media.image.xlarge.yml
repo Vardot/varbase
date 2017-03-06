@@ -2,22 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.xlarge
     - field.field.media.image.field_image
     - media_entity.bundle.image
-    - responsive_image.styles.d12_standard
+    - responsive_image.styles.d8_standard
   module:
     - responsive_image
-id: media.image.full
+id: media.image.xlarge
 targetEntityType: media
 bundle: image
-mode: full
+mode: xlarge
 content:
   field_image:
     weight: 0
     label: hidden
     settings:
-      responsive_image_style: d12_standard
+      responsive_image_style: d8_standard
       image_link: ''
     third_party_settings: {  }
     type: responsive_image

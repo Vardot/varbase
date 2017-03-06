@@ -121,5 +121,11 @@ assignments:
         filter_format: filter_format
     enabled: true
     weight: -11
+  alter:
+    enabled: true
+    weight: 0
+    core: 1
+    uuid: 1
+    user_permissions: 0
 profile_name: varbase
 is_profile: false

@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - media_entity
-id: media.small
-label: 'Small (3 cols)'
+id: media.large
+label: 'Large (6 cols)'
 targetEntityType: media
 cache: true

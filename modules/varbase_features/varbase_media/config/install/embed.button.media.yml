@@ -15,8 +15,11 @@ type_settings:
     - image
   display_plugins:
     - 'view_mode:media.full'
+    - 'view_mode:media.large'
     - 'view_mode:media.medium'
     - 'view_mode:media.small'
+    - 'view_mode:media.xlarge'
+    - 'view_mode:media.xsmall'
   entity_browser: editor_media_browser
   entity_browser_settings:
     display_review: false
