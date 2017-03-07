@@ -18,7 +18,7 @@ content:
     label: hidden
     settings:
       responsive_image_style: d6_standard
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
     type: responsive_image
 hidden:
