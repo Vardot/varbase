@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.cropped_medium
+    - field.field.media.video.field_media_video_embed_field
+    - media_entity.bundle.video
+    - responsive_image.styles.d4_standard
+  module:
+    - responsive_image
+id: media.video.cropped_medium
+targetEntityType: media
+bundle: video
+mode: cropped_medium
+content:
+  thumbnail:
+    type: responsive_image
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: d4_standard
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_video_embed_field: true
+  langcode: true
+  name: true
+  uid: true

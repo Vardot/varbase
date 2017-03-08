@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.medium
     - field.field.media.image.field_image
     - media_entity.bundle.image
-    - responsive_image.styles.d4_standard
+    - responsive_image.styles.d4
   module:
     - responsive_image
 id: media.image.medium
@@ -17,7 +17,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      responsive_image_style: d4_standard
+      responsive_image_style: d4
       image_link: ''
     third_party_settings: {  }
     type: responsive_image

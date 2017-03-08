@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.xsmall
     - field.field.media.image.field_image
     - media_entity.bundle.image
-    - responsive_image.styles.d2_standard
+    - responsive_image.styles.d2
   module:
     - responsive_image
 id: media.image.xsmall
@@ -17,7 +17,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      responsive_image_style: d2_standard
+      responsive_image_style: d2
       image_link: ''
     third_party_settings: {  }
     type: responsive_image

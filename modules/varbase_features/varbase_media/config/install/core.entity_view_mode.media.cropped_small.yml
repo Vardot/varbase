@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.cropped_small
+label: 'Cropped Small (3 cols'
+targetEntityType: media
+cache: true
