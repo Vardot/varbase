@@ -178,7 +178,7 @@
     "drupal/focal_point": "1.0-beta4",
     "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
-    "drupal/imagemagick": "1.0-alpha5",
+    "drupal/imagemagick": "1.0-alpha6",
     "drupal/ultimate_cron": "2.0-alpha1",
     "drupal/persistent_login": "1.0-alpha3",
     "drupal/userprotect": "1.0",

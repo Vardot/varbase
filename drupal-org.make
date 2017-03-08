@@ -155,7 +155,7 @@ projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue
 
 projects[imagemagick][type] = module
 projects[imagemagick][subdir] = "contrib"
-projects[imagemagick][version] = 1.0-alpha5
+projects[imagemagick][version] = 1.0-alpha6
 
 projects[ultimate_cron][type] = module
 projects[ultimate_cron][subdir] = "contrib"
