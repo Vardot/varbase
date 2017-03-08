@@ -257,7 +257,7 @@ projects[slick_media][version] = 1.0-rc1
 
 projects[features][type] = module
 projects[features][subdir] = "contrib"
-projects[features][version] = 3.4
+projects[features][version] = 3.5
 
 projects[coffee][type] = module
 projects[coffee][subdir] = "contrib"
