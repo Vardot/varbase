@@ -15,5 +15,5 @@ dependencies:
   - security_review
   - user
   - username_enumeration_prevention
-version: 8.x-4.0
+version: 8.x-4.x-dev
 package: Varbase

@@ -12,7 +12,6 @@ dependencies:
   - language
   - content_translation
 package: Varbase
-version: 8.x-4.0
+version: 8.x-4.x-dev
 core: 8.x
 project: varbase
-datestamp: 1485353296
