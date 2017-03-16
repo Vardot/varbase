@@ -185,6 +185,10 @@ projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][subdir] = "contrib"
 projects[adminimal_admin_toolbar][version] = 1.3
 
+projects[responsive_preview][type] = module
+projects[responsive_preview][subdir] = "contrib"
+projects[responsive_preview][version] = 1.0-alpha4
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;

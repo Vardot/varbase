@@ -10,6 +10,7 @@ dependencies:
   - views
   - admin_toolbar
   - adminimal_admin_toolbar
+  - responsive_preview
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x
