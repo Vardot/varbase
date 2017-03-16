@@ -11,4 +11,4 @@ Scenario: Check if we do have the [Configuration Update Manager] module installe
    Then I should see "Configuration Update Base"
     And I should see "Configuration Update Reports"
     And the "Configuration Update Base" checkbox should be checked
-    And the "Configuration Update Reports" checkbox should not be checked
+    And the "Configuration Update Reports" checkbox should be checked
