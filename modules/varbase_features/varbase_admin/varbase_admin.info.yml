@@ -8,6 +8,8 @@ dependencies:
   - userprotect
   - roleassign
   - views
+  - admin_toolbar
+  - adminimal_admin_toolbar
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x
