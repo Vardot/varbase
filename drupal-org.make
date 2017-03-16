@@ -67,6 +67,10 @@ projects[block_class][type] = module
 projects[block_class][subdir] = "contrib"
 projects[block_class][version] = 1.0-alpha1
 
+projects[menu_block][type] = module
+projects[menu_block][subdir] = "contrib"
+projects[menu_block][version] = 1.4
+
 projects[extlink][type] = module
 projects[extlink][subdir] = "contrib"
 projects[extlink][version] = 1.0

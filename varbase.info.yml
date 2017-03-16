@@ -68,6 +68,7 @@ dependencies:
   - smart_trim
   - advanced_text_formatter
   - block_class
+  - menu_block
   - features
   - linkit
   - anchor_link

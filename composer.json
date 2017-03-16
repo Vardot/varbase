@@ -158,6 +158,7 @@
     "drupal/smart_trim": "1.0",
     "drupal/advanced_text_formatter": "1.0-beta3",
     "drupal/block_class": "1.0-alpha1",
+    "drupal/menu_block": "1.4",
     "drupal/extlink": "1.0",
     "drupal/linkit": "4.2",
     "drupal/anchor_link": "1.3",
