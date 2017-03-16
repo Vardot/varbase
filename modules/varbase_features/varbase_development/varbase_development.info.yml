@@ -5,6 +5,7 @@ dependencies:
   - features_ui
   - libraries_ui
   - views_ui
+  - config_update_ui
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x
