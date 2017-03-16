@@ -89,6 +89,7 @@ dependencies:
   - focal_point
   - pathologic
   - persistent_login
+  - ultimate_cron
 
 themes:
   # Contrib themes.
