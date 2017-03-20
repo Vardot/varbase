@@ -2,15 +2,15 @@ name: 'Varbase Admin'
 description: 'Manage administration configurations.'
 type: module
 dependencies:
-  - masquerade
-  - node
-  - user
-  - userprotect
-  - roleassign
-  - views
   - admin_toolbar
   - adminimal_admin_toolbar
+  - masquerade
+  - node
   - responsive_preview
+  - roleassign
+  - user
+  - userprotect
+  - views
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x

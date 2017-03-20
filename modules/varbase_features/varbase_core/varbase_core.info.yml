@@ -5,7 +5,9 @@ dependencies:
   - block
   - block_content
   - coffee
+  - crop
   - diff
+  - entityqueue
   - extlink
   - field
   - file
