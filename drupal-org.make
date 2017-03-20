@@ -189,6 +189,10 @@ projects[responsive_preview][type] = module
 projects[responsive_preview][subdir] = "contrib"
 projects[responsive_preview][version] = 1.0-alpha4
 
+projects[webform][type] = module
+projects[webform][subdir] = "contrib"
+projects[webform][version] = 5.0-beta9
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
