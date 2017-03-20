@@ -1,0 +1,3 @@
+content_lock_timeout_minutes: '30'
+content_lock_timeout_on_edit: 1
+content_lock_timeout: null

@@ -193,6 +193,10 @@ projects[webform][type] = module
 projects[webform][subdir] = "contrib"
 projects[webform][version] = 5.0-beta9
 
+projects[content_lock][type] = module
+projects[content_lock][subdir] = "contrib"
+projects[content_lock][version] = 1.0-alpha1
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
