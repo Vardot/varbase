@@ -31,7 +31,6 @@ dependencies:
   - page_cache
   - path
   - quickedit
-  - rdf
   - responsive_image
   - search
   - shortcut
