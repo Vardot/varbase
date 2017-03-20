@@ -13,6 +13,7 @@ dependencies:
   - pathauto
   - rdf
   - redirect
+  - redirect_404
   - user
   - simple_sitemap
   - google_analytics
