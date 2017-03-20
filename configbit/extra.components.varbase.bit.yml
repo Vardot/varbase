@@ -10,5 +10,6 @@ config_bit:
     list:
       dependencies:
         - varbase_development
+        - varbase_webform
         - varbase_heroslider_media
         - varbase_carousels
