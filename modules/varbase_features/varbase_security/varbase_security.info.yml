@@ -1,4 +1,4 @@
-name: 'Varbase security'
+name: 'Varbase Security'
 description: 'Manages general security configurations, with password policy, username enumeration prevention, security kit and review.'
 type: module
 core: 8.x
@@ -15,5 +15,7 @@ dependencies:
   - security_review
   - user
   - username_enumeration_prevention
+  - captcha
+  - recaptcha
 version: 8.x-4.x-dev
 package: Varbase
