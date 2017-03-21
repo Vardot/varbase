@@ -30,31 +30,32 @@ class ScriptHandler {
   public static function postDrupalScaffoldProcedure(\Composer\EventDispatcher\Event $event) {
 
     $fs = new Filesystem();
-    $root = static::getDrupalRoot(getcwd());
-
-    if ($fs->exists($root . '/profiles/varbase/src/assets/robots-staging.txt')) {
-      //Create staging robots file
-      copy($root . '/profiles/varbase/src/assets/robots-staging.txt', $root . '/robots-staging.txt');
+    $drupal_root = static::getDrupalRoot(getcwd());
+     
+    if ($fs->exists(getcwd() . '/src/assets/robots-staging.txt')) {
+      // Create staging robots file.
+      copy(getcwd() . '/src/assets/robots-staging.txt', $drupal_root . '/robots-staging.txt');
     }
 
-    if ($fs->exists($root . '/.htaccess')) {
-      //Alter .htaccess file
-      $htaccess_path = $root . '/.htaccess';
+    if ($fs->exists($drupal_root . '/.htaccess')
+      && $fs->exists($drupal_root . '/profiles/varbase/src/assets/htaccess_extra')) {
+
+      // Alter .htaccess file.
+      $htaccess_path = $drupal_root . '/.htaccess';
       $htaccess_lines = file($htaccess_path);
       $lines = [];
       foreach ($htaccess_lines as $line) {
         $lines[] = $line;
-        if (strpos($line, "RewriteEngine on") !== FALSE
-          && $fs->exists($root . '/profiles/varbase/src/assets/htaccess_extra')) {
-          $lines = array_merge($lines, file($root . '/profiles/varbase/src/assets/htaccess_extra'));
+        if (strpos($line, "RewriteEngine on") !== FALSE) {
+          $lines = array_merge($lines, file(getcwd() . '/src/assets/htaccess_extra'));
         }
       }
       file_put_contents($htaccess_path, $lines);
     }
-    
-    if ($fs->exists($root . '/profiles/varbase/src/assets/development.services.yml')) {
+
+    if ($fs->exists(getcwd() . '/src/assets/development.services.yml')) {
       // Alter development.services.yml to have Varbase's Local development services.
-      copy($root . '/profiles/varbase/src/assets/development.services.yml', $root . '/sites/development.services.yml');
+      copy(getcwd() . '/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
   }
 }
