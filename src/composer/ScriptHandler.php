@@ -54,7 +54,7 @@ class ScriptHandler {
     
     if ($fs->exists($root . '/profiles/varbase/src/assets/development.services.yml')) {
       // Alter development.services.yml to have Varbase's Local development services.
-      copy($root . '/profiles/varbase/src/assets/development.services.yml', $root . '/development.services.yml');
+      copy($root . '/profiles/varbase/src/assets/development.services.yml', $root . '/sites/development.services.yml');
     }
   }
 }
