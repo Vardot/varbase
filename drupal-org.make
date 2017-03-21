@@ -334,6 +334,16 @@ projects[adminimal_theme][subdir] = "contrib"
 projects[adminimal_theme][version] = 1.3
 
 ;;;;;;;;;;;;;;;;;;;;;
+;; Varbase public contrib modules
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[vmi][type] = module
+projects[vmi][subdir] = "contrib"
+projects[vmi][download][url] = https://git.drupal.org/project/vmi.git
+projects[vmi][download][revision] = 594dc1dd4a6dec7c5d40cacb284a1381d7902d78
+projects[vmi][download][branch] = 8.x-1.x
+
+;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features
 ;;;;;;;;;;;;;;;;;;;;;
 

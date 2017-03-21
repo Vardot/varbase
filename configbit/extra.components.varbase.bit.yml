@@ -9,7 +9,10 @@ config_bit:
     show_extra_components: true
     list:
       dependencies:
+        - vmi
         - varbase_development
         - varbase_webform
         - varbase_heroslider_media
         - varbase_carousels
+      selected:
+        - vmi

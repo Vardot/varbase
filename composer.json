@@ -214,6 +214,7 @@
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/captcha": "1.0-beta1",
     "drupal/recaptcha": "2.2",
+    "drupal/vmi": "1.x-dev#594dc1dd4a6dec7c5d40cacb284a1381d7902d78",
     "drupal/varbase_editor": "4.5",
     "drupal/varbase_heroslider_media": "4.0-alpha4",
     "drupal/varbase_carousels": "4.0-alpha2"
