@@ -105,7 +105,7 @@ display:
           operator: '='
           relationship: none
           table: node_field_data
-          value: true
+          value: '1'
           plugin_id: boolean
           entity_type: node
           entity_field: promote
@@ -116,7 +116,7 @@ display:
           group: 1
           id: status
           table: node_field_data
-          value: true
+          value: '1'
           plugin_id: boolean
           entity_type: node
           entity_field: status
@@ -323,28 +323,17 @@ display:
           plugin_id: text
       empty:
         area_text_custom:
-          admin_label: ''
-          content: 'No front page content has been created yet.'
-          empty: true
-          field: area_text_custom
-          group_type: group
           id: area_text_custom
-          label: ''
-          relationship: none
           table: views
-          tokenize: false
-          plugin_id: text_custom
-        node_listing_empty:
+          field: area_text_custom
+          relationship: none
+          group_type: group
           admin_label: ''
           empty: true
-          field: node_listing_empty
-          group_type: group
-          id: node_listing_empty
+          tokenize: false
+          content: "<p>No front page content has been created yet. This page is created through \"Panels\" module.</p>\n<p>You can edit it from \"Manage Content\" at the bottom of the page, or enable \"Page Manager UI\" module to edit it from Administration \\ Structure.</p>"
           label: ''
-          relationship: none
-          table: node
-          plugin_id: node_listing_empty
-          entity_type: node
+          plugin_id: text_custom
     cache_metadata:
       contexts:
         - 'languages:language_interface'
