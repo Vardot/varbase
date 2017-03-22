@@ -77,7 +77,7 @@ projects[extlink][version] = 1.0
 
 projects[linkit][type] = module
 projects[linkit][subdir] = "contrib"
-projects[linkit][version] = 4.2
+projects[linkit][version] = 4.3
 
 projects[anchor_link][type] = module
 projects[anchor_link][subdir] = "contrib"
