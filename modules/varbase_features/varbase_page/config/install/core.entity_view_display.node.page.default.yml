@@ -3,8 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
+    - metatag
     - panelizer
     - text
     - user
@@ -25,6 +28,19 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+  field_yoast_seo:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
 hidden:
   langcode: true
   links: true

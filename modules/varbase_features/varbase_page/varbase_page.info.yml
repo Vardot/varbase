@@ -2,9 +2,12 @@ name: 'Varbase Page'
 description: 'Provides Basic page content type and related configuration.'
 type: module
 dependencies:
+  - content_translation
   - ds
   - field
+  - language
   - menu_ui
+  - metatag
   - node
   - page_manager
   - panelizer
@@ -14,8 +17,8 @@ dependencies:
   - smart_trim
   - text
   - user
-  - language
-  - content_translation
+  - varbase_seo
+  - yoast_seo
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x

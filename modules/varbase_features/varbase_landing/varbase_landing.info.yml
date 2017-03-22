@@ -2,16 +2,19 @@ name: 'Varbase Landing'
 description: 'Landing page content type and related configurations.'
 type: module
 dependencies:
+  - content_translation
   - field
+  - language
   - menu_ui
+  - metatag
   - node
   - panelizer
   - panelizer_quickedit
   - path
   - pathauto
   - user
-  - language
-  - content_translation
+  - varbase_seo
+  - yoast_seo
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x

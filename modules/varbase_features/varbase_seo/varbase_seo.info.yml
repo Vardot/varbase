@@ -2,21 +2,23 @@ name: 'Varbase SEO'
 description: 'Provide SEO Core features and settings.'
 type: module
 dependencies:
+  - field
+  - google_analytics
   - metatag
   - metatag_facebook
-  - metatag_open_graph
-  - metatag_verification
-  - metatag_twitter_cards
   - metatag_google_plus
-  - metatag_mobile
   - metatag_hreflang
+  - metatag_mobile
+  - metatag_open_graph
+  - metatag_twitter_cards
+  - metatag_verification
+  - node
   - pathauto
   - rdf
   - redirect
   - redirect_404
-  - user
   - simple_sitemap
-  - google_analytics
+  - user
   - yoast_seo
 package: Varbase
 version: 8.x-4.x-dev

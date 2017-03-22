@@ -3,10 +3,14 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
+    - metatag
     - path
     - text
+    - yoast_seo
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -25,6 +29,17 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+  field_yoast_seo:
+    weight: 27
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
   langcode:
     type: language_select
     weight: 0

@@ -2,9 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_yoast_seo
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - metatag
     - panelizer
     - user
 third_party_settings:
@@ -62,11 +65,18 @@ bundle: landing_page
 mode: default
 content:
   field_meta_tags:
-    weight: 101
+    weight: 102
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+  field_yoast_seo:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   links:
     weight: 100
     settings: {  }

@@ -3,9 +3,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
+    - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - metatag
     - panelizer
     - user
 third_party_settings:

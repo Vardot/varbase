@@ -2,11 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.field_yoast_seo
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - metatag
     - panelizer
     - path
+    - yoast_seo
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -18,10 +22,16 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_meta_tags:
-    weight: 26
+    weight: 27
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+  field_yoast_seo:
+    weight: 28
+    settings:
+      body: body
+    third_party_settings: {  }
+    type: yoast_seo_widget
   langcode:
     type: language_select
     weight: 0
