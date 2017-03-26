@@ -137,7 +137,7 @@ projects[video_embed_field][version] = 1.4
 
 projects[crop][type] = module
 projects[crop][subdir] = "contrib"
-projects[crop][version] = 1.0
+projects[crop][version] = 1.1
 
 projects[focal_point][type] = module
 projects[focal_point][subdir] = "contrib"

@@ -175,7 +175,7 @@
     "drupal/media_entity_document": "1.1",
     "drupal/media_entity_image": "1.2",
     "drupal/video_embed_field": "1.4",
-    "drupal/crop": "1.0",
+    "drupal/crop": "1.1",
     "drupal/focal_point": "1.0-beta4",
     "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
