@@ -271,7 +271,7 @@ projects[blazy][version] = 1.0-rc1
 
 projects[slick][type] = module
 projects[slick][subdir] = "contrib"
-projects[slick][version] = 1.0-rc2
+projects[slick][version] = 1.0-rc3
 
 projects[slick_views][type] = module
 projects[slick_views][subdir] = "contrib"
