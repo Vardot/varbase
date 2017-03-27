@@ -92,7 +92,7 @@ dependencies:
   - ultimate_cron
   - content_lock
   - content_lock_timeout
-  - fast_404
+  - fast404
   - imagemagick
   - imageapi_optimize
 

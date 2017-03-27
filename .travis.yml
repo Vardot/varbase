@@ -92,9 +92,6 @@ before_script:
   # Install Varbase Development feature.
   # Development Environment Modules and Features, make sure to disable this feature in production.
   - drush -y en varbase_development -vvv
-  
-  # Install entityqueue module.
-  - drush -y en entityqueue -vvv
 
 script:
   - cd ./profiles/varbase
