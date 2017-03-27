@@ -207,6 +207,10 @@ projects[content_lock][type] = module
 projects[content_lock][subdir] = "contrib"
 projects[content_lock][version] = 1.0-alpha1
 
+projects[rabbit_hole][type] = module
+projects[rabbit_hole][subdir] = "contrib"
+projects[rabbit_hole][version] = 1.0-beta2
+
 projects[fast_404][type] = module
 projects[fast_404][subdir] = "contrib"
 projects[fast_404][version] = 1.0-alpha2

@@ -13,6 +13,7 @@ dependencies:
   - panelizer
   - path
   - pathauto
+  - rabbit_hole
   - rdf
   - smart_trim
   - text

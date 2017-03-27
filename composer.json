@@ -199,6 +199,7 @@
     "drupal/responsive_preview": "1.0-alpha4",
     "drupal/webform": "5.0-beta9",
     "drupal/content_lock": "1.0-alpha1",
+    "drupal/rabbit_hole": "1.0-beta2",
     "drupal/fast_404": "1.0-alpha2",
     "drupal/diff": "1.0-rc1",
     "drupal/masquerade": "1.0-beta1",

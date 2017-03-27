@@ -12,6 +12,7 @@ dependencies:
   - panelizer_quickedit
   - path
   - pathauto
+  - rabbit_hole
   - user
   - varbase_seo
   - yoast_seo

@@ -92,6 +92,9 @@ dependencies:
   - ultimate_cron
   - content_lock
   - content_lock_timeout
+  - rabbit_hole
+  - rh_node
+  - rh_taxonomy
   - fast404
   - imagemagick
   - imageapi_optimize
