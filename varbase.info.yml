@@ -93,6 +93,7 @@ dependencies:
   - content_lock
   - content_lock_timeout
   - imagemagick
+  - imageapi_optimize
 
 themes:
   # Contrib themes.
