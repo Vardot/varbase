@@ -98,6 +98,8 @@ dependencies:
   - fast404
   - imagemagick
   - imageapi_optimize
+  - mailsystem
+  - smtp
 
 themes:
   # Contrib themes.
