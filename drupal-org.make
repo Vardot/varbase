@@ -215,6 +215,14 @@ projects[fast_404][type] = module
 projects[fast_404][subdir] = "contrib"
 projects[fast_404][version] = 1.0-alpha2
 
+projects[mailsystem][type] = module
+projects[mailsystem[subdir] = "contrib"
+projects[mailsystem][version] = 4.1
+
+projects[smtp][type] = module
+projects[smtp[subdir] = "contrib"
+projects[smtp][version] = 1.0-beta2
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
