@@ -82,3 +82,5 @@ permissions:
   - 'dropzone upload files'
   - userprotect.protected_site_admin.bypass
   - 'assign roles'
+  - 'rabbit hole bypass node'
+  - 'rabbit hole bypass taxonomy_term'

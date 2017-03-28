@@ -65,3 +65,5 @@ permissions:
   - 'access images_browser entity browser pages'
   - 'delete media'
   - 'dropzone upload files'
+  - 'rabbit hole bypass node'
+  - 'rabbit hole bypass taxonomy_term'
