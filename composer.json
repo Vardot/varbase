@@ -220,7 +220,7 @@
     "drupal/recaptcha": "2.2",
     "drupal/vmi": "1.x-dev#594dc1dd4a6dec7c5d40cacb284a1381d7902d78",
     "drupal/varbase_editor": "4.6",
-    "drupal/varbase_heroslider_media": "4.0-alpha5",
+    "drupal/varbase_heroslider_media": "4.0-alpha6",
     "drupal/varbase_carousels": "4.0-alpha2"
   }
 }
