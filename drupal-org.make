@@ -11,7 +11,7 @@ projects[config_update][version] = 1.3
 
 projects[ctools][type] = module
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = 3.0-alpha27
+projects[ctools][version] = 3.0-beta1
 
 projects[token][type] = module
 projects[token][subdir] = "contrib"
