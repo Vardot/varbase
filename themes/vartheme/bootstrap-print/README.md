@@ -1,4 +1,4 @@
-Bootstrap Print 3.1.4
+Bootstrap Print 3.1.5
 ====================
  
  Bootstrap print for Bootstrap v3.
@@ -123,6 +123,8 @@ Avoid page break inside the element (if possible).
 .avoid-page-break-inside
 .avoid-pbi
 ```
+
+All link's href URLs will be hidden in print media too.
 
 Install with the composer
 

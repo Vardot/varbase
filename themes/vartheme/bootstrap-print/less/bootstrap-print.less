@@ -1,5 +1,5 @@
 /**
- *  Bootstrap print 3.1.4 for Bootstrap v3.
+ *  Bootstrap print 3.1.5 for Bootstrap v3.
  *
  *  Mange grids using Bootstrap v3 for printed media.
  *  This will help controlling grid columns size on printed pages.
@@ -105,6 +105,11 @@
   .avoid-pbi {
     page-break-inside: avoid;
     width: 3;
+  }
+  
+  /* Hide link's href URL in print. */
+  a[href]:after {
+    content: none !important;
   }
 
 }
