@@ -1,0 +1,18 @@
+{
+  "name": "vardot/bootstrap-print",
+  "description": "Bootstrap print for Bootstrap v3. Mange grids using Bootstrap v3 for printed media.",
+  "type": "library",
+  "homepage": "https://github.com/Vardot/bootstrap-print",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rajab Natshah",
+      "homepage": "https://github.com/Natshah",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/Vardot/bootstrap-print/issues",
+    "source": "https://github.com/Vardot/bootstrap-print.git"
+  }
+}

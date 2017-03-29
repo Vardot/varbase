@@ -2,6 +2,8 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      bootstrap-print/css/bootstrap-print.css: { media: print }
+      bootstrap-print/css/bootstrap-print-sm.css: { media: print }
 global-styling-rtl:
   css:
     theme:
