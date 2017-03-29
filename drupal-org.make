@@ -95,7 +95,7 @@ projects[views_infinite_scroll][version] = 1.3
 
 projects[embed][type] = module
 projects[embed][subdir] = "contrib"
-projects[embed][version] = 1.0-rc3
+projects[embed][version] = 1.0
 
 projects[entity][type] = module
 projects[entity][subdir] = "contrib"
