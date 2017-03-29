@@ -245,9 +245,7 @@ projects[xmlsitemap][version] = 1.0-alpha2
 
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][subdir] = "contrib"
-projects[simple_sitemap][download][url] = https://git.drupal.org/project/simple_sitemap.git
-projects[simple_sitemap][download][revision] = a2318abc61162b917f1705030f02a397087adb3c
-projects[simple_sitemap][download][branch] = 8.x-2.x
+projects[simple_sitemap][version] = 2.9
 
 projects[google_analytics][type] = module
 projects[google_analytics][subdir] = "contrib"

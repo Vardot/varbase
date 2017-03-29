@@ -192,7 +192,7 @@
     "drupal/redirect": "1.0-alpha4",
     "drupal/metatag": "1.0",
     "drupal/xmlsitemap": "1.0-alpha2",
-    "drupal/simple_sitemap": "2.x-dev#a2318abc61162b917f1705030f02a397087adb3c",
+    "drupal/simple_sitemap": "2.9",
     "drupal/google_analytics": "2.1",
     "drupal/yoast_seo": "1.1",
     "drupal/coffee": "1.0-beta2",
