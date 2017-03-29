@@ -1,12 +1,11 @@
-Bootstrap Print 3.1.3
+Bootstrap Print 3.1.4
 ====================
-
- Bootstrap print for Bootstrap v3.
  
+ Bootstrap print for Bootstrap v3.
+
  Mange grids using Bootstrap v3 for printed media.
 -
- This will help controlling grid columns size on printed pages.
--
+ This will help controlling grid columns size on printed pages. with RTL (right to left).
 
 
 ## We do style most of our bootstrap theme sites based on the Small devices (sm).
@@ -61,7 +60,7 @@ For Example:
       <!-- In print media the p print will override the sm Small devices -->
       <div class="row">
         <div class="left col-sm-8 col-p-6"></div>
-        <div class="right col-sm-4 col-pm-6"></div>
+        <div class="right col-sm-4 col-p-6"></div>
       </div>
     </div>
   </body>
@@ -71,52 +70,62 @@ For Example:
  And you have a list of helper CSS classes.
 -
 
-   - Always insert a page break after the element.
--
-   - .always-page-break-after .
-   - .always-pba .
+Always insert a page break after the element.
+```
+.always-page-break-after
+.always-pba
+```
 
-   - Avoid page break after the element (if possible).
--
-   - .avoid-page-break-after .
-   - .avoid-pba .
+Avoid page break after the element (if possible).
+```
+.avoid-page-break-after
+.avoid-pba
+```
 
-   - Insert page breaks after the element so that the next page is formatted as a left page.
--
-   - .left-page-break-after .
-   - .left-pba .
+Insert page breaks after the element so that the next page is formatted as a left page.
+```
+.left-page-break-after
+.left-pba
+```
 
-   - Insert page breaks after the element so that the next page is formatted as a right page.
--
-   - .right-page-break-after .
-   - .right-pba .
+Insert page breaks after the element so that the next page is formatted as a right page.
+```
+.right-page-break-after
+.right-pba
+```
 
-   - Always insert a page break before the element.
--
-   - .always-page-break-before .
-   - .always-pbb .
+Always insert a page break before the element.
+```
+.always-page-break-before
+.always-pbb
+```
 
-   - Avoid page break before the element (if possible).
--
-   - .avoid-page-break-before .
-   - .avoid-pbb .
+Avoid page break before the element (if possible).
+```
+.avoid-page-break-before
+.avoid-pbb
+```
 
-   - Insert page breaks before the element so that the next page is formatted as a left page.
--
-   - .left-page-break-before .
-   - .left-pbb .
+Insert page breaks before the element so that the next page is formatted as a left page.
+```
+.left-page-break-before
+.left-pbb
+```
 
-   - Insert page breaks before the element so that the next page is formatted as a right page.
--
-   - .right-page-break-before .
-   - .right-pbb .
+Insert page breaks before the element so that the next page is formatted as a right page.
+```
+.right-page-break-before
+.right-pbb
+```
 
-   - Avoid page break inside the element (if possible).
--
-   - .avoid-page-break-inside .
-   - .avoid-pbi .
-  
-      
+Avoid page break inside the element (if possible).
+```
+.avoid-page-break-inside
+.avoid-pbi
+```
+
+Install with the composer
+
 ```
 composer require vardot/bootstrap-print
 ```   
@@ -178,4 +187,23 @@ CSS
 ```
 ../bootstrap-print/css/bootstrap-print.css
 ../bootstrap-print/css/bootstrap-print-xs.css
+```
+
+-
+
+# For right to left:
+
+LESS
+```
+  @import '../bootstrap/less/variables';
+  @import '../bootstrap/less/mixins/grid-framework-rtl';
+  @import '../bootstrap/less/mixins/grid-rtl';
+  @import '../bootstrap-print/less/bootstrap-print-rtl.less';
+  @import '../bootstrap-print/less/bootstrap-print-rtl-sm.less';
+```
+
+CSS
+```
+../bootstrap-print/css/rtl/bootstrap-print-rtl.css
+../bootstrap-print/css/rtl/bootstrap-print-rtl-sm.css
 ```

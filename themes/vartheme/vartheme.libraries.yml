@@ -2,12 +2,20 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+global-print:
+  css:
+    theme:
       bootstrap-print/css/bootstrap-print.css: { media: print }
-      bootstrap-print/css/bootstrap-print-sm.css: { media: print }
+      bootstrap-print/css/bootstrap-print-sm.css: { media: print } 
 global-styling-rtl:
   css:
     theme:
       css/style-rtl.css: {}
+global-print-rtl:
+  css:
+    theme:
+      bootstrap-print/css/rtl/bootstrap-print-rtl.css: { media: print }
+      bootstrap-print/css/rtl/bootstrap-print-rtl-sm.css: { media: print }
 global-scripts:
   js:
     js/script.js: {}

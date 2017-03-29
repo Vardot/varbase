@@ -22,6 +22,7 @@ regions:
 libraries:
   - 'vartheme/global-styling'
   - 'vartheme/global-scripts'
+  - 'vartheme/global-print'
 
 ckeditor_stylesheets:
   - css/style.css

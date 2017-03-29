@@ -1,12 +1,14 @@
 /**
- *  Bootstrap print 3.1.3 for Bootstrap v3.
+ *  Bootstrap print 3.1.4 for Bootstrap v3.
  *
- *  Use Small devices (sm) style in print. 
- *  
+ *  Use Small devices (sm) style in print.
+ *
  *  Mange grids using Bootstrap v3 for printed media.
  *  This will help controlling grid columns size on printed pages.
  *  https://github.com/Vardot/bootstrap-print
  *
+ *  Require:
+ *    - twbs/bootstrap: https://github.com/twbs/bootstrap
  */
 @media print {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {

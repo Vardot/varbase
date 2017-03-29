@@ -63,6 +63,7 @@
     {# attache global styling RTL (right to left) if the html tag has dir=rtl #}
     {% if html_attributes['dir'] == 'rtl' %}
       {{ attach_library('vartheme/global-styling-rtl') }}
+      {{ attach_library('vartheme/global-print-rtl') }}
     {%- endif -%}
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
