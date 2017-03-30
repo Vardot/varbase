@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+
+<header class="page-header" role="banner">
+  <div class="{{ container }}">
+    <div class="row">
+      {# Header #}
+      {%
+        set header_classes = ['primary-column',
+          'col-sm-8',
+          'col-sm-offset-2',
+          'text-center',
+          'vertical-margin'
+        ]
+      %}
+      <section{{ content_attributes.addClass(header_classes) }}>
+      {% if logo %}
+        <a href="{{ front_page }}" title="{{ site_name }}" rel="home">
+          <img src="{{ logo }}" alt="{{ site_name }}"/>
+        </a>
+      {% endif %}
+      </section>
+    </div>
+  </div>
+</header>
+
+{# Main #}
+<main role="main" class="main-container {{ container }}">
+  <div class="row">
+    {# Content #}
+    {%
+      set content_classes = ['primary-column',
+        'col-sm-8',
+        'col-sm-offset-2',
+        'text-center',
+        'vertical-margin'
+      ]
+    %}
+    <section{{ content_attributes.addClass(content_classes) }}>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          {% if title %}
+            <h1>{{ title }}</h1>
+          {% endif %}
+        </div>
+        <div class="panel-body">
+          {# Highlighted #}
+          {% if page.highlighted %}
+            {% block highlighted %}
+              <div class="highlighted">{{ page.highlighted }}</div>
+            {% endblock %}
+          {% endif %}
+
+          {# Content #}
+          {% block content %}
+            <a id="main-content"></a>
+            {{ page.content }}
+          {% endblock %}
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer {{ container }}" role="contentinfo">
+  <div class="row">
+    {# Footer #}
+    {%
+      set foter_classes = ['col-sm-12',
+        'clearfix',
+        'text-center'
+      ]
+    %}
+    <section{{ content_attributes.addClass(foter_classes) }}>
+      <div class="footer-credits">
+        <p>&copy; {{ "now"|date("Y") }} {{ site_name }}.  {{ 'All rights reserved.'|t }}</p>
+      </div>
+    </section>
+  </div>
+</footer>
