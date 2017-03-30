@@ -89,6 +89,8 @@ dependencies:
   - focal_point
   - pathologic
   - persistent_login
+  - captcha
+  - recaptcha
   - ultimate_cron
   - content_lock
   - content_lock_timeout
