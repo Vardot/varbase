@@ -255,6 +255,12 @@ projects[yoast_seo][type] = module
 projects[yoast_seo][subdir] = "contrib"
 projects[yoast_seo][version] = 1.1
 
+projects[l10n_client][type] = module
+projects[l10n_client][subdir] = "contrib"
+projects[l10n_client][download][url] = https://git.drupal.org/project/l10n_client.git
+projects[l10n_client][download][revision] = 9bf8d597732870bdca301512c71b6e5d74d48db2
+projects[l10n_client][download][branch] = 8.x-1.x
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase security.
 ;;;;;;;;;;;;;;;;;;;;;
