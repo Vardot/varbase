@@ -130,6 +130,8 @@
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
       },
       "drupal/core": {
+        "Issue #1356276: Allow profiles to provide a base/parent profile and load them in the correct order.":
+        "https://www.drupal.org/files/issues/1356276-291.patch",
         "Issue #2479377: content_translation_page_attachments() should check for a canonical link before generating a URL to it":
         "https://www.drupal.org/files/issues/content-translation-canonical-2479377-30.patch"
       }
