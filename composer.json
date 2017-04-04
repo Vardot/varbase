@@ -84,7 +84,7 @@
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/{$name}": ["type:drupal-library"] 
+      "docroot/libraries/{$name}": ["type:drupal-library"]
     },
     "branch-alias": {
       "dev-8.x-4.x": "8.4.x-dev"
@@ -107,14 +107,6 @@
       ]
     },
     "patches": {
-      "drupal/panels": {
-        "Issue #2793801 : Allow modules to influence the IPE tempstore ID":
-        "https://www.drupal.org/files/issues/2793801-13.patch"
-      },
-      "drupal/panelizer": {
-        "Issue #2793841 : Properly integrate with Panels IPE":
-        "https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch"
-      },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch"
@@ -128,10 +120,6 @@
       "drupal/entityqueue": {
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
-      },
-      "drupal/core": {
-        "Issue #2479377: content_translation_page_attachments() should check for a canonical link before generating a URL to it":
-        "https://www.drupal.org/files/issues/content-translation-canonical-2479377-30.patch"
       }
     }
   },
@@ -143,16 +131,15 @@
     "enyo/dropzone": "4.3.0",
     "dinbror/blazy": "1.8.2",
     "kenwheeler/slick": "1.6.0",
-    "drupal/core": "8.2.7",
+    "drupal/core": "8.3.0-rc2",
     "drupal/config_update": "1.3",
-    "drupal/ctools": "3.0-beta1",
+    "drupal/ctools": "3.x-dev",
     "drupal/token": "1.0-rc1",
-    "drupal/page_manager": "1.0-alpha24",
-    "drupal/panels": "3.0-beta6",
-    "drupal/panelizer": "3.0-beta1",
-    "drupal/layout_plugin": "1.0-alpha23",
-    "drupal/bootstrap_layouts": "4.1",
-    "drupal/ds": "2.6",
+    "drupal/page_manager": "1.x-dev",
+    "drupal/panels": "4.x-dev#65d23d2f4980f7526595e2b00f634f2be5ddaf3f",
+    "drupal/panelizer": "4.x-dev#0dbe4215cb0529b8901419058a5435fe35d51ef5",
+    "drupal/bootstrap_layouts": "5.x-dev#87054e702a62e1757d77da92a4e590087f6b0a95",
+    "drupal/ds": "3.0-beta1",
     "drupal/views_bootstrap": "3.x-dev#b34caf9ede249c2a9c90ee5dfb8a9020f5048858",
     "drupal/field_group": "1.0-rc6",
     "drupal/smart_trim": "1.0",
@@ -161,14 +148,12 @@
     "drupal/menu_block": "1.4",
     "drupal/extlink": "1.0",
     "drupal/linkit": "4.3",
-    "drupal/anchor_link": "1.3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
     "drupal/features": "3.5",
     "drupal/views_infinite_scroll": "1.3",
     "drupal/embed": "1.0",
     "drupal/entity": "1.0-alpha4",
     "drupal/entity_browser": "1.0-rc2",
-    "drupal/entity_browser_enhanced": "1.0-beta4",
     "drupal/dropzonejs": "1.0-alpha6",
     "drupal/entity_embed": "1.0-beta2",
     "drupal/inline_entity_form": "1.0-beta1",
@@ -191,7 +176,6 @@
     "drupal/pathauto": "1.0-rc1",
     "drupal/redirect": "1.0-alpha4",
     "drupal/metatag": "1.0",
-    "drupal/xmlsitemap": "1.0-alpha2",
     "drupal/simple_sitemap": "2.9",
     "drupal/google_analytics": "2.1",
     "drupal/yoast_seo": "1.1",
@@ -221,7 +205,11 @@
     "drupal/recaptcha": "2.2",
     "drupal/mailsystem": "4.1",
     "drupal/smtp": "1.0-beta2",
-    "drupal/vmi": "1.x-dev#594dc1dd4a6dec7c5d40cacb284a1381d7902d78",
+    "drupal/layout_plugin": "1.0-alpha23",
+    "drupal/xmlsitemap": "1.0-alpha2",
+    "drupal/anchor_link": "1.3",
+    "drupal/entity_browser_enhanced": "1.0-beta4",
+    "drupal/vmi": "1.x-dev#9d86e90591fdc72991e28ddb8c9bf6e0c2625e07",
     "drupal/varbase_editor": "4.6",
     "drupal/varbase_heroslider_media": "4.0-alpha6",
     "drupal/varbase_carousels": "4.0-alpha2"

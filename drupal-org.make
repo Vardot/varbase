@@ -11,7 +11,7 @@ projects[config_update][version] = 1.3
 
 projects[ctools][type] = module
 projects[ctools][subdir] = "contrib"
-projects[ctools][version] = 3.0-beta1
+projects[ctools][version] = 3.x-dev
 
 projects[token][type] = module
 projects[token][subdir] = "contrib"
@@ -19,31 +19,29 @@ projects[token][version] = 1.0-rc1
 
 projects[page_manager][type] = module
 projects[page_manager][subdir] = "contrib"
-projects[page_manager][version] = 1.0-alpha24
+projects[page_manager][version] = "1.x-dev
 
 projects[panels][type] = module
 projects[panels][subdir] = "contrib"
-projects[panels][version] = 3.0-beta6
-;; Issue #2793801 : Allow modules to influence the IPE tempstore ID
-projects[panels][patch][] = https://www.drupal.org/files/issues/2793801-13.patch
+projects[panels][download][url] = https://git.drupal.org/project/panels.git
+projects[panels][download][revision] = 65d23d2f4980f7526595e2b00f634f2be5ddaf3f
+projects[panels][download][branch] = 8.x-4.x
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
-projects[panelizer][version] = 3.0-beta1
-;; Issue #2793841 - Properly integrate with Panels IPE
-projects[panelizer][patch][] = https://www.drupal.org/files/issues/panelizer-panels-ipe-tempstore-id.patch
-
-projects[layout_plugin][type] = module
-projects[layout_plugin][subdir] = "contrib"
-projects[layout_plugin][version] = 1.0-alpha23
+projects[panelizer][download][url] = https://git.drupal.org/project/panelizer.git
+projects[panelizer][download][revision] = 0dbe4215cb0529b8901419058a5435fe35d51ef5
+projects[panelizer][download][branch] = 8.x-4.x
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][subdir] = "contrib"
-projects[bootstrap_layouts][version] = 4.1
+projects[bootstrap_layouts][download][url] = https://git.drupal.org/project/bootstrap_layouts.git
+projects[bootstrap_layouts][download][revision] = 87054e702a62e1757d77da92a4e590087f6b0a95
+projects[bootstrap_layouts][download][branch] = 8.x-5.x
 
 projects[ds][type] = module
 projects[ds][subdir] = "contrib"
-projects[ds][version] = 2.6
+projects[ds][version] = 3.0-beta1
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][subdir] = "contrib"
@@ -79,10 +77,6 @@ projects[linkit][type] = module
 projects[linkit][subdir] = "contrib"
 projects[linkit][version] = 4.3
 
-projects[anchor_link][type] = module
-projects[anchor_link][subdir] = "contrib"
-projects[anchor_link][version] = 1.3
-
 projects[image_resize_filter][type] = module
 projects[image_resize_filter][subdir] = "contrib"
 projects[image_resize_filter][download][url] = https://git.drupal.org/project/image_resize_filter.git
@@ -108,10 +102,6 @@ projects[entity_browser][version] = 1.0-rc2
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/ElementPatch_0.patch
 ;; Issue #2845037 by slashrsm, RajabNatshah: Fixed the issue of Call to a member function getConfigDependencyKey() on null on [Widget view], and [SelectionDisplay view]
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2845037_15.patch
-
-projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][subdir] = "contrib"
-projects[entity_browser_enhanced][version] = 1.0-beta4
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][subdir] = "contrib"
@@ -239,10 +229,6 @@ projects[metatag][type] = module
 projects[metatag][subdir] = "contrib"
 projects[metatag][version] = 1.0
 
-projects[xmlsitemap][type] = module
-projects[xmlsitemap][subdir] = "contrib"
-projects[xmlsitemap][version] = 1.0-alpha2
-
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][subdir] = "contrib"
 projects[simple_sitemap][version] = 2.9
@@ -364,17 +350,41 @@ projects[adminimal_theme][subdir] = "contrib"
 projects[adminimal_theme][version] = 1.3
 
 ;;;;;;;;;;;;;;;;;;;;;
-;; Varbase public contrib modules
+;; Legacy Contrib mdoules
+;;  - Not used, but kept for projects which still using them
+;;  - As a step to update or migrate and use new selected modules. 
 ;;;;;;;;;;;;;;;;;;;;;
+
+;; Layout plugin is in Drupal 8.3.x core under the name of [Layout Discovery]
+projects[layout_plugin][type] = module
+projects[layout_plugin][subdir] = "contrib"
+projects[layout_plugin][version] = 1.0-alpha23
+
+;; Switched to use [simple sitemap] as the default for sitemap.
+projects[xmlsitemap][type] = module
+projects[xmlsitemap][subdir] = "contrib"
+projects[xmlsitemap][version] = 1.0-alpha2
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Varbase public contrib modules.
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[anchor_link][type] = module
+projects[anchor_link][subdir] = "contrib"
+projects[anchor_link][version] = 1.3
+
+projects[entity_browser_enhanced][type] = module
+projects[entity_browser_enhanced][subdir] = "contrib"
+projects[entity_browser_enhanced][version] = 1.0-beta4
 
 projects[vmi][type] = module
 projects[vmi][subdir] = "contrib"
 projects[vmi][download][url] = https://git.drupal.org/project/vmi.git
-projects[vmi][download][revision] = 594dc1dd4a6dec7c5d40cacb284a1381d7902d78
+projects[vmi][download][revision] = 9d86e90591fdc72991e28ddb8c9bf6e0c2625e07
 projects[vmi][download][branch] = 8.x-1.x
 
 ;;;;;;;;;;;;;;;;;;;;;
-;; Varbase public contrib features
+;; Varbase public contrib features.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module

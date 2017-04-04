@@ -44,6 +44,7 @@ dependencies:
   - user
   - text
   - outside_in
+  - layout_discovery
 
   # contrib modules
   - entity
@@ -57,7 +58,6 @@ dependencies:
   - page_manager_ui
   - panels
   - panelizer
-  - layout_plugin
   - bootstrap_layouts
   - ds
   - ds_extras

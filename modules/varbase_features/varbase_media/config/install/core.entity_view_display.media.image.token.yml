@@ -15,7 +15,7 @@ third_party_settings:
     layout:
       id: onecol
       path: profiles/varbase/modules/contrib/panels/layouts/onecol
-      library: layout_plugin/onecol
+      library: layout_discovery/onecol
       disable_css: false
       entity_classes: all_classes
       settings: {  }

@@ -109,3 +109,17 @@ function varbase_update_8001() {
   \Drupal::configFactory()->getEditable('core.extension')->set('module', $modules_data)->save();
 
 }
+
+/**
+ * Uninstall Layout plugin, then enables Layout Discovery.
+ */
+function varbase_update_8002() {
+  if (\Drupal::moduleHandler()->moduleExists('layout_plugin')) {
+    \Drupal::service('module_installer')->uninstall(['layout_plugin'], FALSE);
+
+  }
+  
+  if (!\Drupal::moduleHandler()->moduleExists('layout_discovery')) {
+    \Drupal::service('module_installer')->install(['layout_discovery'], FALSE);
+  }
+}
