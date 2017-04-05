@@ -140,7 +140,7 @@
     "drupal/ctools": "3.x-dev",
     "drupal/token": "1.0-rc1",
     "drupal/page_manager": "1.x-dev",
-    "drupal/panels": "4.x-dev#65d23d2f4980f7526595e2b00f634f2be5ddaf3f",
+    "drupal/panels": "4.0-alpha1",
     "drupal/panelizer": "4.0-beta2",
     "drupal/bootstrap_layouts": "5.x-dev#87054e702a62e1757d77da92a4e590087f6b0a95",
     "drupal/ds": "3.0-beta1",

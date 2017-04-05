@@ -23,9 +23,7 @@ projects[page_manager][version] = "1.x-dev
 
 projects[panels][type] = module
 projects[panels][subdir] = "contrib"
-projects[panels][download][url] = https://git.drupal.org/project/panels.git
-projects[panels][download][revision] = 65d23d2f4980f7526595e2b00f634f2be5ddaf3f
-projects[panels][download][branch] = 8.x-4.x
+projects[panels][version] = 4.0-alpha1
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
