@@ -182,7 +182,7 @@
     "drupal/l10n_client": "1.x-dev#9bf8d597732870bdca301512c71b6e5d74d48db2",
     "drupal/coffee": "1.0-beta2",
     "drupal/responsive_preview": "1.0-alpha4",
-    "drupal/webform": "5.0-beta9",
+    "drupal/webform": "5.0-beta10",
     "drupal/content_lock": "1.0-alpha1",
     "drupal/rabbit_hole": "1.0-beta2",
     "drupal/fast_404": "1.0-alpha2",

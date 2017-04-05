@@ -191,7 +191,7 @@ projects[responsive_preview][version] = 1.0-alpha4
 
 projects[webform][type] = module
 projects[webform][subdir] = "contrib"
-projects[webform][version] = 5.0-beta9
+projects[webform][version] = 5.0-beta10
 
 projects[content_lock][type] = module
 projects[content_lock][subdir] = "contrib"
