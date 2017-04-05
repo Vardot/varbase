@@ -29,9 +29,7 @@ projects[panels][download][branch] = 8.x-4.x
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
-projects[panelizer][download][url] = https://git.drupal.org/project/panelizer.git
-projects[panelizer][download][revision] = 0dbe4215cb0529b8901419058a5435fe35d51ef5
-projects[panelizer][download][branch] = 8.x-4.x
+projects[panelizer][version] = 4.0-beta2
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][subdir] = "contrib"
