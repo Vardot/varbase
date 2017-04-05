@@ -109,7 +109,7 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base/parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/1356276-291.patch"
+        "https://www.drupal.org/files/issues/1356276-290.patch"
       },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":

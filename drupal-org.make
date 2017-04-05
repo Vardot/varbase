@@ -19,7 +19,7 @@ projects[token][version] = 1.0-rc1
 
 projects[page_manager][type] = module
 projects[page_manager][subdir] = "contrib"
-projects[page_manager][version] = "1.x-dev
+projects[page_manager][version] = 1.x-dev
 
 projects[panels][type] = module
 projects[panels][subdir] = "contrib"
