@@ -120,6 +120,10 @@
       "drupal/entityqueue": {
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
+      },
+      "drupal/l10n_client": {
+        "Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0":
+        "https://www.drupal.org/files/issues/2867460-2.patch"
       }
     }
   },

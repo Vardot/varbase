@@ -242,6 +242,8 @@ projects[l10n_client][subdir] = "contrib"
 projects[l10n_client][download][url] = https://git.drupal.org/project/l10n_client.git
 projects[l10n_client][download][revision] = 9bf8d597732870bdca301512c71b6e5d74d48db2
 projects[l10n_client][download][branch] = 8.x-1.x
+;; Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0
+projects[l10n_client][patch][] = https://www.drupal.org/files/issues/2867460-2.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase security.
