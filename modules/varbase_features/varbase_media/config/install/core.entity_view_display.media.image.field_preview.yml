@@ -21,15 +21,10 @@ content:
       image_link: content
     third_party_settings: {  }
     type: image
-  name:
-    label: hidden
-    type: string
-    weight: 1
-    settings:
-      link_to_entity: true
-    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   langcode: true
+  name: true
   thumbnail: true
   uid: true

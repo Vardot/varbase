@@ -20,6 +20,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: file_url_plain
+    region: content
   name:
     label: hidden
     type: string
@@ -27,6 +28,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   thumbnail:
     type: image
     weight: 0
@@ -35,6 +37,7 @@ content:
       image_style: field_preview
       image_link: ''
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   langcode: true

@@ -1,12 +1,13 @@
 name: 'Varbase Webform'
 description: 'Provide webforms features and settings.'
 type: module
-core: 8.x
-version: 8.x-4.x-dev
-package: Varbase
 dependencies:
   - ultimate_cron
   - webform
   - webform_node
   - webform_templates
   - webform_ui
+package: Varbase
+version: 8.x-4.x-dev
+core: 8.x
+project: varbase

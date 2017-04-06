@@ -39,6 +39,7 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+    region: content
   field_image:
     weight: 0
     label: above
@@ -47,6 +48,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   langcode:
     type: language
     weight: 0
@@ -55,6 +57,7 @@ content:
       link_to_entity: false
       native_language: false
     third_party_settings: {  }
+    region: content
   name:
     label: hidden
     type: string
@@ -62,6 +65,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   thumbnail:
     type: responsive_image
     weight: 0
@@ -70,10 +74,12 @@ content:
       responsive_image_style: ''
       image_link: ''
     third_party_settings: {  }
+    region: content
   uid:
     label: hidden
     type: author
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }

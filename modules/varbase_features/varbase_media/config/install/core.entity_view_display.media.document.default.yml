@@ -23,12 +23,14 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+    region: content
   field_document_file:
     weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: file_default
+    region: content
   name:
     label: hidden
     type: string
@@ -36,6 +38,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   thumbnail:
     type: image
     weight: 1
@@ -44,11 +47,13 @@ content:
       image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
+    region: content
   uid:
     label: hidden
     type: author
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   langcode: true

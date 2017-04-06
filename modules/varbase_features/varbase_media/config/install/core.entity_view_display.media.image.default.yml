@@ -20,6 +20,7 @@ content:
       image_link: content
     third_party_settings: {  }
     type: image
+    region: content
   name:
     label: hidden
     type: string
@@ -27,6 +28,7 @@ content:
     settings:
       link_to_entity: true
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   langcode: true

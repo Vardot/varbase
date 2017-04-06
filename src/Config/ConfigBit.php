@@ -174,7 +174,7 @@ class ConfigBit {
       $configs_to_add = $config_bit_data['action']['add'][$target];
       foreach ($configs_to_add as $config_to_add) {
         if (!in_array($config_to_add, $config_target_data[$target])) {
-          $config_target_data[$target][] = $config_to_add;
+          $config_target_data[$target][] = (string)$config_to_add;
         }
       }
 
@@ -221,7 +221,8 @@ class ConfigBit {
 
       $configs_to_remove = $config_bit_data['action']['remove'][$target];
       foreach ($configs_to_remove as $config_to_remove) {
-        if (($config_to_remove_key = array_search($config_to_remove, $config_target_data[$target]))) {
+        $config_to_remove_key = array_search((string)$config_to_remove, $config_target_data[$target], TRUE);
+        if ($config_to_remove_key !== FALSE) {
           unset($config_target_data[$target][$config_to_remove_key]);
         }
       }

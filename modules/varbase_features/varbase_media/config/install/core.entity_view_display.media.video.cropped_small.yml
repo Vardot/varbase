@@ -21,6 +21,7 @@ content:
       responsive_image_style: d3_standard
       image_link: ''
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   field_media_video_embed_field: true

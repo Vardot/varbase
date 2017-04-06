@@ -78,6 +78,7 @@ content:
         text: text
       more_class: more-link
     third_party_settings: {  }
+    region: content
 hidden:
   field_meta_tags: true
   langcode: true

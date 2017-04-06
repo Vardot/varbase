@@ -24,32 +24,38 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_meta_tags:
     weight: 26
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
   field_yoast_seo:
     weight: 27
     settings:
       body: body
     third_party_settings: {  }
     type: yoast_seo_widget
+    region: content
   langcode:
     type: language_select
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 5
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 1
@@ -57,10 +63,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   translation:
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 3
@@ -69,6 +77,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   promote: true
   sticky: true

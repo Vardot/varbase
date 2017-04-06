@@ -13,3 +13,4 @@ effects:
     data:
       width: 70
       height: 52
+pipeline: __default__

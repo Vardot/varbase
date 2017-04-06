@@ -21,6 +21,7 @@ content:
       height: 480
       autoplay: false
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   langcode: true
