@@ -235,7 +235,7 @@ projects[google_analytics][version] = 2.1
 
 projects[yoast_seo][type] = module
 projects[yoast_seo][subdir] = "contrib"
-projects[yoast_seo][version] = 1.1
+projects[yoast_seo][version] = 1.2
 
 projects[l10n_client][type] = module
 projects[l10n_client][subdir] = "contrib"
