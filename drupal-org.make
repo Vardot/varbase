@@ -175,7 +175,7 @@ projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
 projects[admin_toolbar][subdir] = "contrib"
-projects[admin_toolbar][version] = 1.18
+projects[admin_toolbar][version] = 1.19
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][subdir] = "contrib"
