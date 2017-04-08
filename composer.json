@@ -191,7 +191,7 @@
     "drupal/rabbit_hole": "1.0-beta2",
     "drupal/fast_404": "1.0-alpha2",
     "drupal/diff": "1.0-rc1",
-    "drupal/masquerade": "1.0-beta1",
+    "drupal/masquerade": "2.0-beta1",
     "drupal/libraries": "3.x-dev#08a46ab12b573f1f48e9d160ed21a36417b5f749",
     "drupal/libraries_ui": "1.0",
     "drupal/devel": "1.0-rc1",

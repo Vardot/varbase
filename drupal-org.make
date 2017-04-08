@@ -319,7 +319,7 @@ projects[diff][version] = 1.0-rc1
 
 projects[masquerade][type] = module
 projects[masquerade][subdir] = "contrib"
-projects[masquerade][version] = 1.0-beta1
+projects[masquerade][version] = 2.0-beta1
 
 projects[libraries][type] = module
 projects[libraries][subdir] = "contrib"
