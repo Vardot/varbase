@@ -37,7 +37,7 @@ projects[bootstrap_layouts][download][branch] = 8.x-5.x
 
 projects[ds][type] = module
 projects[ds][subdir] = "contrib"
-projects[ds][version] = 3.0-beta1
+projects[ds][version] = 3.0-beta2
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][subdir] = "contrib"
