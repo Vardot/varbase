@@ -107,6 +107,10 @@
       ]
     },
     "patches": {
+      "drupal/bootstrap_layouts": {
+        "Issue #2868095 by RajabNatshah: Fix for the issue of not having plugin.manager.core.layout on update.":
+        "https://www.drupal.org/files/issues/2868095-2.patch"
+      },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch"
