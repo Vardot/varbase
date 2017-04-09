@@ -23,7 +23,7 @@ projects[page_manager][version] = 4.x-dev
 
 projects[panels][type] = module
 projects[panels][subdir] = "contrib"
-projects[panels][version] = 4.0-alpha1
+projects[panels][version] = 4.x-dev
 
 projects[panelizer][type] = module
 projects[panelizer][subdir] = "contrib"
