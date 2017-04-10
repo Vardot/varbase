@@ -60,6 +60,10 @@
                   to work with page manager updates to drupal 8.3.0
 * Issue #2868291: Added CHANGELOG.md and UPDATE.md files, And Updated
                   the README.md file.
+* Issue #2868307: Updated [Rabbit Hole] module from 8.1.0-beta2 to 8.1.0-beta3
+* Issue #2868352: Fixed an issue to have an auto configured entity browser
+                  enhanced for the Library browsing widgets used in
+                  [varbase hero slider media] and [varbase carousels] apps.
 
 ## 8.4.01
 * Issue #2862873: Have [homepage] Panel page with default text.
