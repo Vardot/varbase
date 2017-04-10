@@ -1,65 +1,65 @@
 ## 8.4.02
-Issue #2864089: Updated [Crop API] module from 8.1.0 to 8.1.1
-Issue #2864090: Updated [Slick Carousel] module from 8.1.0-rc2 to 8.1.0-rc3
-Issue #2864150: Updated [Varbase Editor] from 8.4.5 to 8.4.6
-Issue #2864258: Enable [ImageMagick] module by default for the image took kit
-Issue #2864261: Add [Image Optimize (or ImageAPI Optimize)] module
-Issue #2864292: Added [Fast 404] module
-Issue #2864315: Added [Rabbit Hole] module: Only Enabled [Rabbit Hole, Rabbit
-                Hole nodes, Rabbit Hole taxonomy] modules and basic settings
-                not to use for [page] and [landing page] content types
-Issue #2864258: Enabled [ImageMagick] module: Only Include and enabled, But not
-                configured as the default.
-Issue #2864454: Updated [Varbase Media Hero Slider] from 8.4.0-alpha4
-                to 8.4.0-alpha5
-Issue #2864606: Updated [Varbase Media Hero Slider] from 8.4.0-alpha5
-                to 8.4.0-alpha6
-Issue #2864315: Added [Rabbit Hole] module: Added Permissions to bypass for
-                [Content admin, and Site admin].
-Issue #2864624: Updated [Chaos tool suite (ctools)] module from 8.3.0-alpha27
-                to 8.3.0-beta1
-Issue #2864360: Add [Mail System, SMTP] modules
-Issue #2864360: Enabled [Mail System, SMTP] modules
-Issue #2864966: [Vartheme] Add [Varbase/bootstrap-print] less/css library in
-                base theme (vartheme)
-Issue #2864966: [Vartheme] Optimized to use only in vartheme not the subtheme,
+* Issue #2864089: Updated [Crop API] module from 8.1.0 to 8.1.1
+* Issue #2864090: Updated [Slick Carousel] module from 8.1.0-rc2 to 8.1.0-rc3
+* Issue #2864150: Updated [Varbase Editor] from 8.4.5 to 8.4.6
+* Issue #2864258: Enable [ImageMagick] module by default for the image took kit
+* Issue #2864261: Add [Image Optimize (or ImageAPI Optimize)] module
+* Issue #2864292: Added [Fast 404] module
+* Issue #2864315: Added [Rabbit Hole] module: Only Enabled [Rabbit Hole, Rabbit
+                  Hole nodes, Rabbit Hole taxonomy] modules and basic settings
+                  not to use for [page] and [landing page] content types
+* Issue #2864258: Enabled [ImageMagick] module: Only Include and enabled, But
+                  not configured as the default.
+* Issue #2864454: Updated [Varbase Media Hero Slider] from 8.4.0-alpha4
+                  to 8.4.0-alpha5
+* Issue #2864606: Updated [Varbase Media Hero Slider] from 8.4.0-alpha5
+                  to 8.4.0-alpha6
+* Issue #2864315: Added [Rabbit Hole] module: Added Permissions to bypass for
+                  [Content admin, and Site admin].
+* Issue #2864624: Updated [Chaos tool suite (ctools)] module from 8.3.0-alpha27
+                  to 8.3.0-beta1
+* Issue #2864360: Add [Mail System, SMTP] modules
+* Issue #2864360: Enabled [Mail System, SMTP] modules
+* Issue #2864966: [Vartheme] Add [Varbase/bootstrap-print] less/css library in
+                  base theme (vartheme)
+* Issue #2864966: [Vartheme] Optimized to use only in vartheme not the subtheme,
                 and Updated the varbase/bootstrap-print lib to have RTL
                 (Right to Left) in print too.
-Issue #2864966: [Vartheme] Updated the varbase/bootstrap-print lib to Hide
+* Issue #2864966: [Vartheme] Updated the varbase/bootstrap-print lib to Hide
                 link's href URL in print.
-Issue #2865176: Updated [embed] module from 8.1.0-rc3 to 8.1.0
-Issue #2865179: Updated [Simple Sitemap] module from 8.2.x-dev to 8.2.9
-Issue #2865397: [Vartheme] Themed Site maintenance page
-Issue #2865409: [Varbase Security] Reconfigured CAPTCHA
-Issue #2865464: [Varbase Internationalization] Added Localization client
+* Issue #2865176: Updated [embed] module from 8.1.0-rc3 to 8.1.0
+* Issue #2865179: Updated [Simple Sitemap] module from 8.2.x-dev to 8.2.9
+* Issue #2865397: [Vartheme] Themed Site maintenance page
+* Issue #2865409: [Varbase Security] Reconfigured CAPTCHA
+* Issue #2865464: [Varbase Internationalization] Added Localization client
                 [l10n_client] module
-Issue #2866246: Update [Drupal core] from 8.2.7 to 8.3.0-rc2
-Issue #2866733: Updated [Crop API] from 8.1.1 to 8.1.2
-Issue #2866967: Updated [Webform] module from 5.0-beta9 to 5.0-beta10
-Issue #2865977: Establishing profile inheritance for new distros: Added the
+* Issue #2866246: Update [Drupal core] from 8.2.7 to 8.3.0-rc2
+* Issue #2866733: Updated [Crop API] from 8.1.1 to 8.1.2
+* Issue #2866967: Updated [Webform] module from 5.0-beta9 to 5.0-beta10
+* Issue #2865977: Establishing profile inheritance for new distros: Added the
                 patch for Drupal 8.3.x to Allow profiles to provide a
                 base/parent profile and load them in the correct order.
-Issue #2867007: Updated [Panelizer] from 8.x-4.x-dev to 8.4.0-beta2
-Issue #2867009: Updated [panels] from 8.x-4.x-dev to 8.4.0-alpha1
-Issue #2867287: Updated [Drupal core] from 8.3.0-rc2 to 8.3.0
-Issue #2867301: Updated [Yoast seo][Real-time SEO for Drupal] module from 8.1.1
-                to 8.1.2
-Issue #2867287: Updated [Varbase features] to work with the new Drupal 8.3.x
-                config set.
-Issue #2867287: Fixed the issue of [l10n_client] Incompatible with this version
-                of Drupal core 8.3.0
-Issue #2867983: Updated [Admin Toolbar] module from 8.1.18 to 8.1.19
-Issue #2867988: Updated [Display Suite] module from 8.3.0-beta1 to 8.3.0-beta2
-Issue #2867989: Updated [Webform] module from 8.5.0-beta10 to 8.5.0-beta11
-Issue #2868006: Updated [Masquerade] module from 8.1.0-beta1 to 8.2.0-beta1
-Issue #2868067: Updated [Page Manager] from 1.x-dev to 4.x-dev
-Issue #2867287: Updated [Drupal core] from 8.3.0-rc2 to 8.3.0 : Fix for the
-                issue of not having plugin.manager.core.layout on update with
-                [bootstrap_layouts] module 8.x-5.x-dev .
-Issue #2867009: Updated [panels] module back from 8.4.0-alpha1 to 8.x-4.x-dev
-                to work with page manager updates to drupal 8.3.0
-Issue #2868291: Added CHANGELOG.md and UPDATE.md files, And Updated
-                the README.md file.
+* Issue #2867007: Updated [Panelizer] from 8.x-4.x-dev to 8.4.0-beta2
+* Issue #2867009: Updated [panels] from 8.x-4.x-dev to 8.4.0-alpha1
+* Issue #2867287: Updated [Drupal core] from 8.3.0-rc2 to 8.3.0
+* Issue #2867301: Updated [Yoast seo][Real-time SEO for Drupal] module
+                  from 8.1.1to 8.1.2
+* Issue #2867287: Updated [Varbase features] to work with the new Drupal 8.3.x
+                  config set.
+* Issue #2867287: Fixed the issue of [l10n_client] Incompatible with this
+                  version of Drupal core 8.3.0
+* Issue #2867983: Updated [Admin Toolbar] module from 8.1.18 to 8.1.19
+* Issue #2867988: Updated [Display Suite] module from 8.3.0-beta1 to 8.3.0-beta2
+* Issue #2867989: Updated [Webform] module from 8.5.0-beta10 to 8.5.0-beta11
+* Issue #2868006: Updated [Masquerade] module from 8.1.0-beta1 to 8.2.0-beta1
+* Issue #2868067: Updated [Page Manager] from 1.x-dev to 4.x-dev
+* Issue #2867287: Updated [Drupal core] from 8.3.0-rc2 to 8.3.0 : Fix for the
+                  issue of not having plugin.manager.core.layout on update with
+                  [bootstrap_layouts] module 8.x-5.x-dev .
+* Issue #2867009: Updated [panels] module back from 8.4.0-alpha1 to 8.x-4.x-dev
+                  to work with page manager updates to drupal 8.3.0
+* Issue #2868291: Added CHANGELOG.md and UPDATE.md files, And Updated
+                  the README.md file.
 
 ## 8.4.01
 * Issue #2862873: Have [homepage] Panel page with default text.
