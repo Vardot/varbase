@@ -107,6 +107,10 @@
       ]
     },
     "patches": {
+      "drupal/core": {
+        "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
+        "https://www.drupal.org/files/issues/1356276-303.patch"
+      },
       "drupal/bootstrap_layouts": {
         "Issue #2868095 by RajabNatshah: Fix for the issue of not having plugin.manager.core.layout on update.":
         "https://www.drupal.org/files/issues/2868095-2.patch"
@@ -196,7 +200,6 @@
     "drupal/fast_404": "1.0-alpha2",
     "drupal/diff": "1.0-rc1",
     "drupal/masquerade": "2.0-beta1",
-    "drupal/libraries": "3.x-dev#08a46ab12b573f1f48e9d160ed21a36417b5f749",
     "drupal/libraries_ui": "1.0",
     "drupal/devel": "1.0-rc1",
     "drupal/bootstrap": "3.3",
@@ -213,6 +216,7 @@
     "drupal/recaptcha": "2.2",
     "drupal/mailsystem": "4.1",
     "drupal/smtp": "1.0-beta2",
+    "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/xmlsitemap": "1.0-alpha2",
     "drupal/anchor_link": "1.3",

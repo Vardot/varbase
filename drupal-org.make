@@ -1,5 +1,5 @@
-core = 8.x
 api = 2
+core = 8.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules
@@ -323,12 +323,6 @@ projects[masquerade][type] = module
 projects[masquerade][subdir] = "contrib"
 projects[masquerade][version] = 2.0-beta1
 
-projects[libraries][type] = module
-projects[libraries][subdir] = "contrib"
-projects[libraries][download][url] = https://git.drupal.org/project/libraries.git
-projects[libraries][download][revision] = 08a46ab12b573f1f48e9d160ed21a36417b5f749
-projects[libraries][download][branch] = 8.x-3.x
-
 projects[libraries_ui][type] = module
 projects[libraries_ui][subdir] = "contrib"
 projects[libraries_ui][version] = 1.0
@@ -354,6 +348,12 @@ projects[adminimal_theme][version] = 1.3
 ;;  - Not used, but kept for projects which still using them
 ;;  - As a step to update or migrate and use new selected modules. 
 ;;;;;;;;;;;;;;;;;;;;;
+
+projects[libraries][type] = module
+projects[libraries][subdir] = "contrib"
+projects[libraries][download][url] = https://git.drupal.org/project/libraries.git
+projects[libraries][download][revision] = 061ead081c92a6209b09eaf23b4e3103f360946e
+projects[libraries][download][branch] = 8.x-3.x
 
 ;; Layout plugin is in Drupal 8.3.x core under the name of [Layout Discovery]
 projects[layout_plugin][type] = module
