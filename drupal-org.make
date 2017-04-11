@@ -343,7 +343,7 @@ projects[devel][version] = 1.0-rc1
 
 projects[bootstrap][type] = theme
 projects[bootstrap][subdir] = "contrib"
-projects[bootstrap][version] = 3.2
+projects[bootstrap][version] = 3.3
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][subdir] = "contrib"
