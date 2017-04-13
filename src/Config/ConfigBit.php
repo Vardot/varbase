@@ -12,21 +12,19 @@ class ConfigBit {
   /**
    * Get Config Bit file.
    *
-   * Files are located in /profiles/varbase/configbit/.
+   * Load config bit file as an array, with full file name and path. 
    *
-   * @param string $config_bit_file_name
-   *   The name of a config bit file which it will be located.
+   * @param string $full_config_bit_file_name
+   *   Config bit file name in the root configbit folder.
    *
    * @return array|int
    *   array of config bit.
    *   FALSE if we do not have the config_bit in the config bit file.
    */
-  public static function getConfigBit($config_bit_file_name) {
-
-    $full_config_bit_file_name = \Drupal::root() . '/profiles/varbase/configbit/' . $config_bit_file_name;
+  public static function getConfigBit($full_config_bit_file_name) {
 
     if (is_file($full_config_bit_file_name)) {
-      // Pars the config bit file and have it as array if it was not.
+      // Pars the config bit file and have it as an array if it was not.
       $config_bit_data = (array) Yaml::parse(file_get_contents($full_config_bit_file_name));
       if (isset($config_bit_data['config_bit'])) {
         return $config_bit_data['config_bit'];
@@ -36,7 +34,7 @@ class ConfigBit {
       }
     }
     else {
-      throw new Exception('config bit file does not exist!');
+      throw new Exception('Config bit file does not exist!');
     }
   }
 

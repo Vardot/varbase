@@ -79,11 +79,11 @@ class AssemblerForm extends FormBase {
    *
    * And make sure that we do have the extra component in the files.
    */
-  protected function getExtraComponentsInfo() {
+  protected function getExtraComponentsInfo($configbit_root) {
     $component_discovery = new ExtensionDiscovery($this->root);
 
     // Extra Varbase components, which could be selected to be installed.
-    $extra_components_to_assemble = ConfigBit::getList('extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies');
+    $extra_components_to_assemble = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies');
     
     // Combine default Varbase components and selected extra varbase components.
     $combined_extra_components = array_combine($extra_components_to_assemble, $extra_components_to_assemble);
@@ -100,9 +100,9 @@ class AssemblerForm extends FormBase {
    *
    * @return array
    */
-  protected function getSelectedExtraComponents() {
+  protected function getSelectedExtraComponents($configbit_root) {
     // Selected Extra Varbase components.
-    $selected_extra_components = ConfigBit::getList('extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'selected');
+    $selected_extra_components = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'selected');
 
     return $selected_extra_components;
   }
@@ -132,13 +132,16 @@ class AssemblerForm extends FormBase {
       '#type' => 'actions',
       '#weight' => 5,
     ];
+    
+    // Configbit root folder for varbase profile.
+    $configbit_root = \Drupal::root() . '/profiles/varbase/configbit';
 
-    foreach ($this->getExtraComponentsInfo() as $key => $info) {
+    foreach ($this->getExtraComponentsInfo($configbit_root) as $key => $info) {
       $form['extra_components']['#options'][$key] = $info['name'];
     }
     
     // Default selected extra components.
-    $form['extra_components']['#default_value'] = $this->getSelectedExtraComponents();
+    $form['extra_components']['#default_value'] = $this->getSelectedExtraComponents($configbit_root);
 
     return $form;
   }
