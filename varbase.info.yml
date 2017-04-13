@@ -97,7 +97,6 @@ dependencies:
   - rh_node
   - rh_taxonomy
   - fast404
-  - imagemagick
   - imageapi_optimize
   - mailsystem
   - smtp
