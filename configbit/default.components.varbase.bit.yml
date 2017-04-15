@@ -17,3 +17,5 @@ config_bit:
         - varbase_media
         - varbase_page
         - varbase_landing
+        # Enable listed modules in order at this installation step. 
+        - libraries
