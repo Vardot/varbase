@@ -58,7 +58,7 @@ third_party_settings:
         pattern: panelizer
         builder: ipe
         static_context: {  }
-    allow: true
+    allow: false
     default: default
   ds:
     layout:
@@ -67,31 +67,15 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
-        layout:
-          wrapper: div
-          classes:
-            row: row
-          add_layout_class: 1
-          attributes: ''
-        regions:
-          top:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-          main:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
-          bottom:
-            wrapper: div
-            classes:
-              col-sm-12: col-sm-12
-            add_region_classes: 1
-            attributes: ''
+        classes: {  }
+        wrappers:
+          top: div
+          main: div
+          bottom: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
     regions:
       top:
         - links
@@ -108,7 +92,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
-    region: top
+    region: content
   field_yoast_seo:
     weight: 103
     label: above
@@ -116,10 +100,10 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: top
+    region: content
   links:
     weight: 100
-    region: top
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
