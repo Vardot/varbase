@@ -175,7 +175,7 @@ projects[pathauto][type] = module
 projects[pathauto][version] = 1.0-rc1
 
 projects[redirect][type] = module
-projects[redirect][version] = 1.0-alpha4
+projects[redirect][version] = 1.0-alpha5
 
 projects[metatag][type] = module
 projects[metatag][version] = 1.0
