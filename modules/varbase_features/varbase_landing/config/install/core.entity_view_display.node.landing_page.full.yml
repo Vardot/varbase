@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
-    - ds
     - metatag
     - panelizer
     - user
@@ -27,7 +26,7 @@ third_party_settings:
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:default'
+        storage_id: 'node:landing_page:full:default'
         pattern: panelizer
         builder: ipe
         static_context: {  }
@@ -37,11 +36,11 @@ third_party_settings:
         uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
         label: 'Two Column'
         weight: 0
-        layout: bs_2col_stacked
+        layout: bs_2col_bricked
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:two_column'
+        storage_id: 'node:landing_page:full:two_column'
         pattern: panelizer
         builder: ipe
         static_context: {  }
@@ -55,32 +54,12 @@ third_party_settings:
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:three_column'
+        storage_id: 'node:landing_page:full:three_column'
         pattern: panelizer
         builder: ipe
         static_context: {  }
     allow: true
     default: default
-  ds:
-    layout:
-      id: bs_1col_stacked
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        classes: {  }
-        wrappers:
-          top: div
-          main: div
-          bottom: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-    regions:
-      top:
-        - links
-        - field_meta_tags
 id: node.landing_page.full
 targetEntityType: node
 bundle: landing_page

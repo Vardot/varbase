@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
-    - ds
     - metatag
     - panelizer
     - user
@@ -60,27 +59,6 @@ third_party_settings:
         static_context: {  }
     allow: false
     default: default
-  ds:
-    layout:
-      id: bs_1col_stacked
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        classes: {  }
-        wrappers:
-          top: div
-          main: div
-          bottom: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-    regions:
-      top:
-        - links
-        - field_meta_tags
-        - field_yoast_seo
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
