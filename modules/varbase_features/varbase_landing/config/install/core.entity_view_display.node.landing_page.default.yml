@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - ds
     - metatag
     - panelizer
     - user
@@ -21,7 +22,7 @@ third_party_settings:
         uuid: 1a312aa0-75a2-4467-8421-33670a7bd039
         label: 'Single Column'
         weight: 0
-        layout: onecol
+        layout: bs_1col_stacked
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
@@ -35,7 +36,7 @@ third_party_settings:
         uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
         label: 'Two Column'
         weight: 0
-        layout: twocol_stacked
+        layout: bs_2col_bricked
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
@@ -49,7 +50,7 @@ third_party_settings:
         uuid: 5af47416-fa98-4dfb-9761-fc497a47a76f
         label: 'Three Column'
         weight: 0
-        layout: threecol_25_50_25_stacked
+        layout: bs_3col_bricked
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
@@ -57,8 +58,45 @@ third_party_settings:
         pattern: panelizer
         builder: ipe
         static_context: {  }
-    allow: false
+    allow: true
     default: default
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - links
+        - field_meta_tags
+        - field_yoast_seo
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -70,7 +108,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
-    region: content
+    region: top
   field_yoast_seo:
     weight: 103
     label: above
@@ -78,12 +116,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: top
   links:
     weight: 100
+    region: top
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true
   panelizer: true

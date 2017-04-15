@@ -3,6 +3,7 @@ description: 'Landing page content type and related configurations.'
 type: module
 dependencies:
   - content_translation
+  - ds
   - field
   - language
   - menu_ui

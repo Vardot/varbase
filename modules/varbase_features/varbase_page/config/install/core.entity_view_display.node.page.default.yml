@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.page.field_yoast_seo
     - node.type.page
   module:
-    - metatag
+    - ds
     - panelizer
     - text
     - user
@@ -17,6 +17,29 @@ third_party_settings:
     custom: false
     allow: false
     default: default
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          main:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      main:
+        - body
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -28,22 +51,9 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_meta_tags:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
-  field_yoast_seo:
-    weight: 2
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
+    region: main
 hidden:
+  field_meta_tags: true
+  field_yoast_seo: true
   langcode: true
   links: true
