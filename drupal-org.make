@@ -405,12 +405,12 @@ projects[varbase_carousels][version] = 4.0-alpha2
 
 libraries[dropzone][download][type] = get
 libraries[dropzone][download][url] = "https://github.com/enyo/dropzone/archive/v4.3.0.tar.gz"
-libraries[dropzone][destination] = libraries
+libraries[dropzone][destination] = "/libraries"
 
 libraries[blazy][download][type] = get
 libraries[blazy][download][url] = "https://github.com/dinbror/blazy/archive/1.8.2.tar.gz"
-libraries[blazy][destination] = libraries
+libraries[blazy][destination] = "/libraries"
 
 libraries[slick][download][type] = get
 libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.6.0.tar.gz"
-libraries[slick][destination] = libraries
+libraries[slick][destination] = "/libraries"
