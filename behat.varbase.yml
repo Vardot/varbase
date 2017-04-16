@@ -87,7 +87,7 @@ default:
         left header: "#header-left"
         right header: "#header-right"
         right sidebar: "#aside-region"
-        field body: "#edit-body"
+        field body: "#edit-body-wrapper"
       selectors:
         message_selector: '.messages'
         error_message_selector: '.messages.error'
