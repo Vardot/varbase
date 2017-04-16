@@ -35,7 +35,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
      Then I should see "Linking to internal content #1 title"
      When I click "Linking to internal content #1 title" in the "ul" element with the "class" attribute set to "ui-autocomplete"
       And I wait for AJAX to finish
-      And I click "Save" in the "button" element with the "class" attribute set to "form-submit"
+      And I click "Save" in the "span" element with the "class" attribute set to "ui-button-text"
       And I wait for AJAX to finish
       And I append the rich text editor field "Body" with " Linking to internal content #2 body"
       And I press "Save"
