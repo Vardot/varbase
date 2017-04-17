@@ -39,11 +39,3 @@ So that will ease the work of adding internal links in the rich text editor fiel
      Then I should see "Linking to internal content #1 title"
      When I click "Linking to internal content #1 title" in the "ul" element with the "class" attribute set to "ui-autocomplete"
      Then I should not see "Linking to internal content #1 title"
-     When I click "Save" in the "button" element with the "class" attribute set to "form-submit"
-      And I wait for AJAX to finish
-      And I press "Save"
-      And I wait
-     Then I should see "Linking to internal content #2 body"
-     When I click "content-1"
-      And I wait
-     Then I should see "Linking to internal content #1 body"
