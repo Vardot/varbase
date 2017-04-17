@@ -72,9 +72,9 @@ install:
   - firefox --version
   
   # Run selenium standalone server.
-  - echo "Getting selenium server standalone 3.3.1\n"
-  - wget -O $HOME/selenium-server-standalone-3.3.1.jar http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar
-  - java -jar $HOME/selenium-server-standalone-3.3.1.jar -port 4445 > /dev/null 2>&1 &
+  - echo "Getting selenium server standalone 2.53.1\n"
+  - wget -O $HOME/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+  - java -jar $HOME/selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
   
   - composer global require phing/phing
