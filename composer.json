@@ -121,9 +121,7 @@
       },
       "drupal/entity_browser": {
         "Issue #2820132 by matthieuscarset, marcoscano: getDisplay() on null Entity Browser reference.":
-        "https://www.drupal.org/files/issues/ElementPatch_0.patch",
-        "Issue #2845037 by slashrsm, RajabNatshah: Fixed the issue of Call to a member function getConfigDependencyKey() on null on [Widget view], and [SelectionDisplay view]":
-        "https://www.drupal.org/files/issues/2845037_15.patch"
+        "https://www.drupal.org/files/issues/ElementPatch_0.patch"
       },
       "drupal/entityqueue": {
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
