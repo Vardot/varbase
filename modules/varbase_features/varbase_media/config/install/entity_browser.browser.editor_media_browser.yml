@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - media_entity.bundle.image
+    - views.view.browser
+    - views.view.media
   module:
     - dropzonejs_eb_widget
     - media_entity
