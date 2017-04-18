@@ -205,28 +205,48 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       }
   }
 
-  // Media Browser functions
+  // Editor Media Browser functions
   // ===========================================================================
+
   /**
-   * @Then /^the media browser is open$/
+   * #varbase : Click the editor media browser command button
+   *
+   * Example 1: When I click the editor media browser command button
+   *
+   * @When /^I click the editor media browser command button$/
    */
-  public function theMediaBrowserIsOpen() {
+  public function iClickTheEditorMediaBrowserCommandButton() {
+    $element = $this->getSession()->getPage();
+
+    $editorMediaBrowserButton = $this->getSession()->getPage()->find('css', '.cke_button.cke_button__media');
+
+    if (empty($editorMediaBrowserButton)) {
+      throw new Exception('The editor media browser button dose not exist.');
+    }
+
+    $editorMediaBrowserButton->click();
+  }
+
+  /**
+   * @Then /^the editor media browser should be open$/
+   */
+  public function theEitorMediaBrowserIsOpen() {
     if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper') || !$this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper .media-browser-panes')) {
-      throw new Exception('The media browser failed to open.');
+      throw new Exception('The editor media browser failed to open.');
     }
   }
 
   /**
-   * #varbase : To press a button in the filter form under the media browser.
+   * #varbase : To press a button in the filter form under the editor media browser.
    *
-   * Example 1: When I press the "Apply" button under the media browser
-   * Example 2: When I press the "Submit" button under the media browser
+   * Example 1: When I press the "Apply" button under the editor media browser
+   * Example 2: When I press the "Submit" button under the editor media browser
    *
-   * @When /^I press (?:|the )"([^"]*)" button under the media browser$/
+   * @When /^I press (?:|the )"([^"]*)" button under the editor media browser$/
    */
-  public function iPressTheButtonUnderTheMediaBrowser($button) {
-    // Switch to the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame('mediaBrowser');
+  public function iPressTheButtonUnderTheEditorMediaBrowser($button) {
+    // Switch to the "entity_browser_iframe_editor_media_browser" iframe.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
 
       try {
@@ -238,79 +258,53 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $this->getSession()->getPage()->pressButton($button);
 
-    // Switch back too the page from the "mediaBrowser" iframe.
+    // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
     $this->getSession()->switchToIFrame(null);
   }
 
   /**
-   * #varbase : To click on a media browser
+   * #varbase : To click on a link or button under the editor media browser
    *
    * Example 1: When I click "Submit" button under the media browser
    * Example 2: When I click "Submit" under media browser
    * Example 3: When I click "Upload" under the media browser
    *
-   * @When /^I click "([^"]*)" (?:|button )under (?:|the )media browser$/
+   * @When /^I click "([^"]*)" (?:|button )under (?:|the )editor media browser$/
    */
-  public function iClickButtonUnderTheMediaBrowser($text) {
+  public function iClickButtonUnderTheEditorMediaBrowser($text) {
     // Switch to the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame('mediaBrowser');
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the Tab by txt
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'button') and text() = '{$text}']");
 
     if (empty($element)) {
-      throw new Exception('The media browser dose not have [ ' . $text . ' ] button.');
+      throw new Exception('The editor media browser dose not have [ ' . $text . ' ] button.');
     }
 
     $element->click();
 
-    // Switch back too the page from the "mediaBrowser" iframe.
+    // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
     $this->getSession()->switchToIFrame(null);
   }
 
   /**
-   * #varbase : To click on a media browser style selector
+   * #varbase : To click on a tab under the editor media browser.
    *
-   * Example 1: When I click "Submit" button under the media browser style selector
-   * Example 2: When I click "Submit" under media browser style selector
-   * Example 3: When I click "Submit" under the media browser style selector
+   * Example 1: When I click on the "Library" tab under the editor media browser
+   * Example 2: When I click on the "My files" tab under the editor media browser
    *
-   * @When /^I click "([^"]*)" (?:|button )under (?:|the )media browser style selector$/
-   */
-  public function iClickButtonUnderTheMediaBrowserStyleSelector($text) {
-    // Switch to the "mediaStyleSelector" iframe.
-    $this->getSession()->switchToIFrame('mediaStyleSelector');
-
-    // Find the Tab by txt
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'button') and text() = '{$text}']");
-
-    if (empty($element)) {
-      throw new Exception('The media browser dose not have [ ' . $text . ' ] button.');
-    }
-
-    $element->click();
-
-    // Switch back too the page from the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame(null);
-  }
-
-  /**
-   * #varbase : To click on a media browser tab.
-   *
-   * Example 1: When I click on the "Library" tab under the media browser
-   * Example 2: When I click on the "My files" tab under the media browser
-   *
-   * @When /^I click on the "([^"]*)" tab under the media browser$/
+   * @When /^I click on the "([^"]*)" tab under the editor media browser$/
    */
   public function iClickOnTheTabUnderTheMediaBrowser($text) {
-    // Switch to the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame('mediaBrowser');
+    // Switch to the "entity_browser_iframe_editor_media_browser" iframe.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the Tab by txt
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'ui-tabs-anchor') and text() = '{$text}']");
 
     if (empty($element)) {
-      throw new Exception('The media browser dose not have [ ' . $text . ' ] tab.');
+      throw new Exception('The editor media browser dose not have [ ' . $text . ' ] tab.');
     }
 
     $element->click();
@@ -320,85 +314,65 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
-   * #varbase : To click on a media browser File.
+   * #varbase : select the file under the editor media browser.
    *
-   * Example 1: When I click on the "Flag Earth" file under the media browser
+   * Example 1: When I click on the "Flag Earth" file under the editor media browser
    *
-   * @When /^I select (?:|the )"([^"]*)" file under (?:|the )media browser$/
+   * @When /^I select (?:|the )"([^"]*)" file under (?:|the )editor media browser$/
    */
-  public function iSelectTheFileUnderTheMediaBrowser($text) {
-    // Switch to the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame('mediaBrowser');
+  public function iSelectTheFileUnderTheEditorMediaBrowser($text) {
+    // Switch to the "entity_browser_iframe_editor_media_browser" iframe.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the file by text.
     $element = $this->getSession()->getPage()->find('xpath', "//div[contains(@class, 'media-item') and contains(@title, '{$text}')]");
 
     if (empty($element)) {
-      throw new Exception('The media browser dose not have [ ' . $text . ' ] file.');
+      throw new Exception('The editor media browser dose not have [ ' . $text . ' ] file.');
     }
 
     $element->click();
 
-    // Switch back too the page from the "mediaBrowser" iframe.
+    // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
     $this->getSession()->switchToIFrame(null);
   }
 
   /**
   * #varbase : To fill in a form field with id|name|title|alt|value
-  *            under the media browser.
+  *            under the editor media browser.
   *
-  * Example: I fill in "flag earth" for "File name" under the media browser
+  * Example: I fill in "flag earth" for "File name" under the editor media browser
   *
-  * @When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with "(?P<value>(?:[^"]|\\")*)" under (?:|the )media browser$/
-  * @When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with: under (?:|the )media browser$/
-  * @When /^(?:|I )fill in "(?P<value>(?:[^"]|\\")*)" for "(?P<field>(?:[^"]|\\")*)" under (?:|the )media browser$/
+  * @When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with "(?P<value>(?:[^"]|\\")*)" under (?:|the )editor media browser$/
+  * @When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with: under (?:|the )editor media browser$/
+  * @When /^(?:|I )fill in "(?P<value>(?:[^"]|\\")*)" for "(?P<field>(?:[^"]|\\")*)" under (?:|the )editor media browser$/
   */
-  public function iFillInFieldUnderTheMediaBrowser($field, $value) {
-    // Switch to the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame('mediaBrowser');
+  public function iFillInFieldUnderTheEditorMediaBrowser($field, $value) {
+    // Switch to the "entity_browser_iframe_editor_media_browser" iframe.
+
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     $field = str_replace('\\"', '"', $field);
     $value = str_replace('\\"', '"', $value);
     $this->getSession()->getPage()->fillField($field, $value);
 
-    // Switch back too the page from the "mediaBrowser" iframe.
+    // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
     $this->getSession()->switchToIFrame(null);
   }
 
-  /**
-  * #varbase : To fill in a form field with id|name|title|alt|value
-  *            under the media browser style selector.
-  *
-  * Example: I fill in "flag earth" for "File name" under the media browser style selector
-  *
-  * @When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with "(?P<value>(?:[^"]|\\")*)" under (?:|the )media browser style selector$/
-  * @When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with: under (?:|the )media browser style selector$/
-  * @When /^(?:|I )fill in "(?P<value>(?:[^"]|\\")*)" for "(?P<field>(?:[^"]|\\")*)" under (?:|the )media browser style selector$/
-  */
-  public function iFillInFieldUnderTheMediaBrowserStyleSelector($field, $value) {
-    // Switch to the "mediaStyleSelector" iframe.
-    $this->getSession()->switchToIFrame('mediaStyleSelector');
-
-    $field = str_replace('\\"', '"', $field);
-    $value = str_replace('\\"', '"', $value);
-    $this->getSession()->getPage()->fillField($field, $value);
-
-    // Switch back too the page from the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame(null);
-  }
 
   /**
   * #varbase : To check if we can see a text
-  *            under the media browser.
+  *            under the editor media browser.
   *
-  * Example 1: Then I should see "this text" under media browser
-  * Example 2: Then I should see "this text" under the media browser modal window
+  * Example 1: Then I should see "this text" under editor media browser
+  * Example 2: Then I should see "this text" under the editormedia browser modal window
   *
-  * @Then /^I should see "([^"]*)" under (?:|the )media browser(?:| modal window)$/
+  * @Then /^I should see "([^"]*)" under (?:|the )editor media browser(?:| modal window)$/
   */
-  public function iShouldSeeTextUnderTheMediaBrowser($text) {
-    // Switch to the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame('mediaBrowser');
+  public function iShouldSeeTextUnderTheEditorMediaBrowser($text) {
+    // Switch to the "entity_browser_iframe_editor_media_browser" iframe.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     $actual = $this->getSession()->getPage()->getText();
     $actual = preg_replace('/\s+/u', ' ', $actual);
@@ -408,47 +382,45 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
     }
 
-    // Switch back too the page from the "mediaBrowser" iframe.
+    // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
     $this->getSession()->switchToIFrame(null);
   }
 
-   /**
-   * #varbase : To check if we can see a text
-   *            under the media browser style selector.
+
+  /**
+   * #varbase : To Find an image with the title text attribute.
    *
-   * Example 1: Then I should see "this text" under media browser style selector
-   * Example 2: Then I should see "this text" under the media browser style selector modal window
+   * Example 1: Then I should see image with the "Flag Earth" title text
    *
-   * @Then /^I should see "([^"]*)" under (?:|the )media browser style selector(?:| modal window)$/
+   * @Then /^I should see image with the "([^"]*)" title text under (?:|the )editor media browser(?:| modal window)$/
    */
-  public function iShouldSeeTextUnderTheMediaBrowserStyleSelector($text) {
-    // Switch to the "mediaStyleSelector" iframe.
-    $this->getSession()->switchToIFrame('mediaStyleSelector');
+  public function iShouldSeeImageWithTheTitleTextUnderTheEditorMediaBrowser($titleText) {
+    // Switch to the "entity_browser_iframe_editor_media_browser" iframe.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
-    $actual = $this->getSession()->getPage()->getText();
-    $actual = preg_replace('/\s+/u', ' ', $actual);
-    $regex = '/'.preg_quote($text, '/').'/ui';
+    // Find an image with the title.
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
 
-    if (!preg_match($regex, $actual)) {
-      throw new Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
+    if (empty($element)) {
+      throw new Exception('The editor media browser dose not have an image with the [ ' . $titleText . ' ] title text.');
     }
 
-    // Switch back too the page from the "mediaBrowser" iframe.
+    // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
     $this->getSession()->switchToIFrame(null);
   }
 
    /**
    * #varbase : To check if we can NOT see a text
-   *            under the media browser.
+   *            under the editor media browser.
    *
-   * Example 1: Then I should not see "this text" under media browser
-   * Example 2: Then I should not see "this text" under the media browser modal window
+   * Example 1: Then I should not see "this text" under editor media browser
+   * Example 2: Then I should not see "this text" under the editor media browser modal window
    *
-   * @Then /^I should not see "([^"]*)" under (?:|the )media browser(?:| modal window)$/
+   * @Then /^I should not see "([^"]*)" under (?:|the )editor media browser(?:| modal window)$/
    */
-  public function iShouldNotSeeTextUnderTheMediaBrowser($text) {
-    // Switch to the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame('mediaBrowser');
+  public function iShouldNotSeeTextUnderTheeEitorMediaBrowser($text) {
+    // Switch to the "entity_browser_iframe_editor_media_browser" iframe.
+    $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     $actual = $this->getSession()->getPage()->getText();
     $actual = preg_replace('/\s+/u', ' ', $actual);
@@ -458,35 +430,9 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
     }
 
-    // Switch back too the page from the "mediaBrowser" iframe.
+    // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
     $this->getSession()->switchToIFrame(null);
   }
-
-   /**
-   * #varbase : To check if we can NOT see a text
-   *            under the media browser style selector.
-   *
-   * Example 1: Then I should not see "this text" under media browser style selector
-   * Example 2: Then I should not see "this text" under the media browser style selector modal window
-   *
-   * @Then /^I should not see "([^"]*)" under (?:|the )media browser style selector(?:| modal window)$/
-   */
-  public function iShouldNotSeeTextUnderTheMediaBrowserStyleSelector($text) {
-    // Switch to the "mediaStyleSelector" iframe.
-    $this->getSession()->switchToIFrame('mediaStyleSelector');
-
-    $actual = $this->getSession()->getPage()->getText();
-    $actual = preg_replace('/\s+/u', ' ', $actual);
-    $regex = '/'.preg_quote($text, '/').'/ui';
-
-    if (preg_match($regex, $actual)) {
-      throw new Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
-    }
-
-    // Switch back too the page from the "mediaBrowser" iframe.
-    $this->getSession()->switchToIFrame(null);
-  }
-
   // ===========================================================================
 
 
@@ -677,6 +623,83 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     if (empty($element)) {
       throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] Alt Text.');
     }
+  }
+
+    /**
+    * #varbase: To double click on an image with the provided title.
+    *
+    * Example 1: I click on the image with the "Flag Earth image title" title text
+    *
+    * @Given /^I double click on the image with the "([^"]*)" title text$/
+    */
+   public function iDoubleClickOnTheImageWithTheTitleText($titleText) {
+     // Find an image with the title.
+     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+
+     if (empty($element)) {
+       throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
+     }
+
+     // Double click on the image.
+     $element->doubleClick();
+   }
+
+   /**
+   * #varbase: To click on an image with the provided title.
+   *
+   * Example 1: I click on the image with the "Flag Earth image title" title text
+   *
+   * @Given /^I click on the image with the "([^"]*)" title text$/
+   */
+  public function iClickOnTheImageWithTheTitleText($titleText) {
+    // Find an image with the title.
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+
+    if (empty($element)) {
+      throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
+    }
+
+    // Click on the image.
+    $element->click();
+  }
+
+
+    /**
+    * #varbase: To double click on an image with the provided  alt Text.
+    *
+    * Example 1: I click on the image with the "Flag Earth image title" alt text
+    *
+    * @Given /^I double click on the image with the "([^"]*)" alt text$/
+    */
+   public function iDoubleClickOnTheImageWithTheAltText($altText) {
+     // Find an image with the title.
+     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
+
+     if (empty($element)) {
+       throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
+     }
+
+     // Double click on the image.
+     $element->doubleClick();
+   }
+
+   /**
+   * #varbase: To click on an image with the provided alt.
+   *
+   * Example 1: I click on the image with the "Flag Earth image title" alt text
+   *
+   * @Given /^I click on the image with the "([^"]*)" alt text$/
+   */
+  public function iClickOnTheImageWithTheAltText($titleText) {
+    // Find an image with the title.
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$altText}')]");
+
+    if (empty($element)) {
+      throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] title text.');
+    }
+
+    // click on the image.
+    $element->click();
   }
 
   /**
@@ -876,7 +899,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       }
     }
   }
-  
+
  /**
   * #varbase: To check if we do have a text in the input element.
   *
@@ -1365,4 +1388,5 @@ JS;
       $this->_updateIDByCSS($ifreamcss, $fieldid, $prefix);
     }
   }
+
 }
