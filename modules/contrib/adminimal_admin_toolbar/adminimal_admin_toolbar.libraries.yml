@@ -1,0 +1,5 @@
+adminimal-admin-toolbar:
+  version: VERSION
+  css:
+    theme:
+      css/adminimal_admin_toolbar.css: {}

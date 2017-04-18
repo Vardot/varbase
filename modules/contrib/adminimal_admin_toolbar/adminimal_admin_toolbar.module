@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Functions to support adminimal admin toolbar.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function adminimal_admin_toolbar_preprocess_html(&$variables) {
+  // Add adminimal-admin-toolbar class to the body.
+  if (_adminimal_admin_toolbar_is_access()) {
+    $variables['attributes']['class'][] = 'adminimal-admin-toolbar';
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function adminimal_admin_toolbar_page_attachments_alter(array &$page) {
+  // Attaches css assets globally.
+  if (_adminimal_admin_toolbar_is_access()) {
+    $page['#attached']['library'][] = 'adminimal_admin_toolbar/adminimal-admin-toolbar';
+  }
+}
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function adminimal_admin_toolbar_toolbar_alter(&$items) {
+  // Add class to the user tab so it can be moved to the right.
+  if (_adminimal_admin_toolbar_is_access()) {
+    $items['user']['#wrapper_attributes']['class'] = array('user-toolbar-tab');
+  }
+}
+
+/**
+ * Helper function for checking user permission.
+ * We reallly only want to add styling and changes to toolbar when the user has
+ * access.
+ *
+ * Returns TRUE or FALSE.
+ */
+function _adminimal_admin_toolbar_is_access() {
+  $user = \Drupal::currentUser();
+  return $user->hasPermission('access toolbar');
+}

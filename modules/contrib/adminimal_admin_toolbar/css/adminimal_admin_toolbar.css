@@ -1,0 +1,393 @@
+/* Import the Open Sans webfont from Google CDN */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/uYKcPVoh6c5R0NpdEY5A-Q.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNShsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
+.adminimal-admin-toolbar .toolbar {
+  font-family: "Open Sans";
+}
+
+.adminimal-admin-toolbar.toolbar-fixed.toolbar-vertical {
+  padding-top: 32px !important;
+}
+
+.adminimal-admin-toolbar .toolbar a {
+  transition: all, 0.2s;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-bar {
+  box-shadow: none;
+  background-color: #2d2d2d;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-menu {
+  background: #333;
+}
+
+.adminimal-admin-toolbar .toolbar-tray .toolbar-menu a {
+  background: transparent;
+  color: #ccc;
+}
+
+.adminimal-admin-toolbar .toolbar-tray .toolbar-menu li {
+  background: #333;
+}
+
+.adminimal-admin-toolbar .toolbar-tray ul li.menu-item {
+  border: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal ul ul li.menu-item:first-child {
+  border: none;
+}
+
+.adminimal-admin-toolbar .toolbar-oriented .user-toolbar-tab {
+  float: right;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-vertical {
+  border: none;
+  box-shadow: none;
+}
+
+.adminimal-admin-toolbar .toolbar-tray a {
+  background: #2d2d2d;
+  color: #bbb;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal a:hover,
+.adminimal-admin-toolbar .toolbar-tray-horizontal a:active,
+.adminimal-admin-toolbar .toolbar-tray-horizontal a:focus {
+  background: #0074bd;
+  color: #fff;
+  text-decoration: none;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover > a,
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover > .toolbar-box > a {
+  background: #0074bd;
+  color: #fff !important;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-bar .toolbar-tab > .toolbar-item {
+  font-weight: 600;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-bar .toolbar-item {
+  color: #bebebe;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-bar .toolbar-tab > .toolbar-item:hover {
+  background-image: none;
+  background-color: #2d2d2d;
+  color: #fff;
+  text-decoration: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-bar .toolbar-tab > .toolbar-item.is-active,
+.adminimal-admin-toolbar .toolbar .toolbar-bar .toolbar-tab > .toolbar-item:focus {
+  background-image: none;
+  background-color: #333;
+  text-decoration: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal .menu-item + .menu-item,
+[dir="rtl"] .adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal .menu-item + .menu-item,
+.adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal .menu-item:last-child {
+  border-left: none; /* LTR */
+  border-right: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
+.adminimal-admin-toolbar .toolbar .toolbar-tray a.is-active {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-vertical .menu-item + .menu-item {
+  border: 0 none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray {
+  background-color: #333;
+  box-shadow: -2px 2px 12px rgba(0,0,0,0.85);
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal {
+  border-bottom: 1px solid #333;
+  box-shadow: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-toggle-orientation {
+  background-color: #333;
+}
+
+.toolbar .toolbar-icon:before {
+  transition: .25s;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-icon.toolbar-handle:focus {
+  background-color: transparent;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-icon.toolbar-handle:before {
+  background-image: url(../images/787878/chevron-outline-disc-down.svg);
+  transition: .25s;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-icon.toolbar-handle.open:before {
+  background-image: url(../images/ffcfcf/chevron-outline-disc-close.svg) !important;
+  transform: rotate(180deg);
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-menu .toolbar-menu .toolbar-icon.toolbar-handle:before {
+  background-image: url(../images/787878/chevron-outline-disc-down.svg);
+  background-size: 100%;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-icon.toolbar-handle:hover:before,
+.adminimal-admin-toolbar .toolbar .toolbar-menu .toolbar-menu .toolbar-icon.toolbar-handle:hover:before,
+.adminimal-admin-toolbar .toolbar .toolbar-menu .toolbar-box:hover .toolbar-icon.toolbar-handle:before {
+  background-image: url(../images/ffffff/chevron-outline-disc-down.svg);
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-menu .toolbar-menu .toolbar-icon.toolbar-handle.open:before,
+.adminimal-admin-toolbar .toolbar .toolbar-menu .toolbar-box:hover .toolbar-icon.toolbar-handle.open:before {
+  background-image: url(../images/ffffff/chevron-outline-disc-close.svg);
+  background-size: 100%;
+}
+
+.adminimal-admin-toolbar .level-1 .toolbar-handle.open,
+.adminimal-admin-toolbar .toolbar-tray-vertical .level-2 {
+  background: #3b3b3b !important;
+}
+
+.adminimal-admin-toolbar .level-2 .toolbar-handle.open,
+.adminimal-admin-toolbar .toolbar-tray-vertical .level-3 {
+  background: #434343 !important;
+}
+
+.adminimal-admin-toolbar .level-3 .toolbar-handle.open,
+.adminimal-admin-toolbar .toolbar-tray-vertical .level-4 {
+  background: #4c4c4c !important;
+}
+
+.adminimal-admin-toolbar .level-4 .toolbar-handle.open,
+.adminimal-admin-toolbar .toolbar-tray-vertical .level-5 {
+  background: #545454 !important;
+}
+
+.adminimal-admin-toolbar .toolbar-handle.open {
+  border-top-left-radius: 10px;
+}
+
+.toolbar .toolbar-tray-vertical .level-3 ul {
+  margin-left: 0 !important;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-vertical .level-3 a {
+  padding-left: 2.75em !important;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal a:focus,
+.adminimal-admin-toolbar .toolbar-box a:focus {
+  background: #333;
+  text-decoration: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-vertical .toolbar-menu a {
+  color: #bbb;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-vertical .toolbar-menu a:hover,
+.adminimal-admin-toolbar .toolbar .toolbar-tray-vertical .toolbar-menu a:focus {
+  color: #fff;
+  background: #0074BD;
+  text-decoration: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-vertical .toolbar-menu ul ul {
+  border: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal .toolbar-toggle-orientation {
+  border: none;
+}
+
+.adminimal-admin-toolbar .toolbar .menu-item:hover {
+  background-color: #333;
+}
+
+.adminimal-admin-toolbar .toolbar .menu-item:focus {
+  background: #abeae4;
+}
+
+.adminimal-admin-toolbar .toolbar .menu-item--expanded {
+  background-color: #333;
+}
+.adminimal-admin-toolbar .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded {
+  background-image: none;
+  position: relative;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .toolbar-menu ul .toolbar-icon {
+  padding: 1em 12px;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {
+  margin: -39px 0 0 200px;
+}
+
+
+
+.adminimal-admin-toolbar .toolbar .toolbar-menu .toolbar-menu a {
+  color: #bbb;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-menu .toolbar-menu a:hover {
+  color: #fff;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal ul li.menu-item {
+  border-top: none transparent;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal .menu-item:last-child {
+  border-left: none;
+  border-right: none;
+}
+
+.adminimal-admin-toolbar .toolbar .toolbar-tray-horizontal ul  ul li.menu-item:first-child {
+  border-top: 1px solid #0074bd;
+}
+
+/* Removes border top on next consecutive lists after first */
+.adminimal-admin-toolbar .toolbar-tray-horizontal ul ul li li.menu-item:first-child {
+  border-top: none !important;
+}
+
+/* Main menu icons. */
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:before {
+  background-image: url(../images/787878/drupal-8.svg);
+  margin-left: 7px;
+  padding: 0px;
+}
+
+.adminimal-admin-toolbar .toolbar-tray-vertical .toolbar-icon-admin-toolbar-tools-help:before {
+  margin-left: 0;
+}
+
+.adminimal-admin-toolbar .toolbar-icon-system-admin-content:active:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-content.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/file.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-icon-system-admin-structure:active:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-structure.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/orgchart.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-icon-system-themes-page:active:before,
+.adminimal-admin-toolbar .toolbar-icon-system-themes-page.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/paintbrush.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-icon-entity-user-collection:active:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-user-collection.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/people.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-icon-system-modules-list:active:before,
+.adminimal-admin-toolbar .toolbar-icon-system-modules-list.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/puzzlepiece.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-icon-system-admin-config:active:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-config.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/wrench.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-icon-system-admin-reports:active:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-reports.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/barchart.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-icon-help-main:active:before,
+.adminimal-admin-toolbar .toolbar-icon-help-main.is-active:before {
+  background-image: url(/core/themes/stable/images/core/icons/787878/questionmark-disc.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-admin-toolbar-tools-help:before,
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:hover:before {
+  background-image: url(../images/ffffff/drupal-8.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-content:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-content:hover:before {
+  background-image: url(../images/ffffff/file.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-structure:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-structure:hover:before {
+  background-image: url(../images/ffffff/orgchart.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-themes-page:before,
+.adminimal-admin-toolbar .toolbar-icon-system-themes-page:hover:before {
+  background-image: url(../images/ffffff/paintbrush.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-entity-user-collection:before,
+.adminimal-admin-toolbar .toolbar-icon-entity-user-collection:hover:before {
+  background-image: url(../images/ffffff/people.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-modules-list:before,
+.adminimal-admin-toolbar .toolbar-icon-system-modules-list:hover:before {
+  background-image: url(../images/ffffff/puzzlepiece.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-config:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-config:hover:before {
+  background-image: url(../images/ffffff/wrench.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-reports:before,
+.adminimal-admin-toolbar .toolbar-icon-system-admin-reports:hover:before {
+  background-image: url(../images/ffffff/barchart.svg);
+}
+
+.adminimal-admin-toolbar .menu-item--expanded:hover .toolbar-icon-help-main:before,
+.adminimal-admin-toolbar .toolbar-icon-help-main:hover:before {
+  background-image: url(../images/ffffff/questionmark-disc.svg);
+}
+
+.adminimal-admin-toolbar .toolbar-tray-vertical .toolbar-icon-admin-toolbar-tools-help {
+  text-indent: 0;
+  transition: none;
+}
+
+[dir="rtl"] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded {
+  background-position: center left;
+  background-image: url('../icons/0074bd/chevron-left.svg');
+  background-repeat: no-repeat;
+}
