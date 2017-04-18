@@ -1,0 +1,13 @@
+name: Admin Toolbar
+# core: 8.x
+description: Provides a drop-down menu interface to the core Drupal Toolbar.
+package: Administration
+type: module
+dependencies:
+  - toolbar
+
+# Information added by Drupal.org packaging script on 2017-04-06
+version: '8.x-1.19'
+core: '8.x'
+project: 'admin_toolbar'
+datestamp: 1491487686

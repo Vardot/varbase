@@ -1,0 +1,8 @@
+toolbar.tree:
+  css:
+    theme:
+      css/admin.toolbar.css: {}
+  js:
+    js/admin_toolbar.js: {}
+  dependencies:
+    - core/jquery
