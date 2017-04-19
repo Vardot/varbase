@@ -12,7 +12,7 @@ projects[config_update][type] = module
 projects[config_update][version] = 1.3
 
 projects[ctools][type] = module
-projects[ctools][version] = 3.x-dev
+projects[ctools][version] = 3.0-beta2
 
 projects[token][type] = module
 projects[token][version] = 1.0-rc1
