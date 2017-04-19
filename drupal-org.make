@@ -24,7 +24,7 @@ projects[panels][type] = module
 projects[panels][version] = 4.0-beta1
 
 projects[panelizer][type] = module
-projects[panelizer][version] = 4.0-beta2
+projects[panelizer][version] = 4.0-beta3
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][download][url] = https://git.drupal.org/project/bootstrap_layouts.git
