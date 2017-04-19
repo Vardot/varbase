@@ -111,10 +111,6 @@
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
         "https://www.drupal.org/files/issues/1356276-303.patch"
       },
-      "drupal/bootstrap_layouts": {
-        "Issue #2868095 by RajabNatshah: Fix for the issue of not having plugin.manager.core.layout on update.":
-        "https://www.drupal.org/files/issues/2868095-2.patch"
-      },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch"
@@ -148,7 +144,7 @@
     "drupal/page_manager": "4.0-beta1",
     "drupal/panels": "4.0-beta1",
     "drupal/panelizer": "4.0-beta3",
-    "drupal/bootstrap_layouts": "5.x-dev#87054e702a62e1757d77da92a4e590087f6b0a95",
+    "drupal/bootstrap_layouts": "5.x-dev#dfc2f7ab34564b245cc5253c9366283f3fac6a67",
     "drupal/ds": "3.0-beta2",
     "drupal/views_bootstrap": "3.x-dev#b34caf9ede249c2a9c90ee5dfb8a9020f5048858",
     "drupal/field_group": "1.0-rc6",

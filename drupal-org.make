@@ -28,10 +28,8 @@ projects[panelizer][version] = 4.0-beta3
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][download][url] = https://git.drupal.org/project/bootstrap_layouts.git
-projects[bootstrap_layouts][download][revision] = 87054e702a62e1757d77da92a4e590087f6b0a95
+projects[bootstrap_layouts][download][revision] = dfc2f7ab34564b245cc5253c9366283f3fac6a67
 projects[bootstrap_layouts][download][branch] = 8.x-5.x
-;; Issue #2868095 by RajabNatshah: Fix for the issue of not having plugin.manager.core.layout on update.
-projects[bootstrap_layouts][patch][] = https://www.drupal.org/files/issues/2868095-2.patch
 
 projects[ds][type] = module
 projects[ds][version] = 3.0-beta2
