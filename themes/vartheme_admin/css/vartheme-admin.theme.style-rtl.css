@@ -1,3 +1,13 @@
+
+@font-face {
+  font-family: 'DroidKufi-Bold';
+  font-style: normal;
+  font-weight: 900;
+  src:url('../fonts/DroidKufi-Bold.woff') format('woff');
+}
+
+
+}
 div.vertical-tabs ul li.vertical-tab-button.selected a,
 div.vertical-tabs ul li.vertical-tab-button.selected a:hover,
 div.vertical-tabs ul li.vertical-tab-button.selected a:focus,
@@ -39,4 +49,20 @@ input#edit-submit,
 input#edit-preview-changes,
 input#edit-delete {
   margin-right: 0px;
+}
+
+
+#coffee-q {
+
+  background-position: left 20px center;
+
+}
+
+body.adminimal {
+  font: normal 81.3%/1.538em "DroidKufi-Bold", sans-serif;
+}
+
+
+.adminimal .toolbar {
+  font-family: "DroidKufi-Bold";
 }
