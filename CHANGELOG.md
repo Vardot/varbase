@@ -1,3 +1,48 @@
+## 8.4.03
+Issue #2868568: Updated [Bootstrap] theme from 8.3.2 to 8.3.3
+Issue #2865977: Establishing profile inheritance for new distros
+Issue #2869287: Disabled [imagemagick] module on install, as some basic servers
+                do not have needed functions for imagemagick to work.
+Issue #2869329: Optimized varbase installation Config and ConfigBit engine, for
+                sub profiles integrations
+Issue #2865977: Change the location of libraries from Varbase profile folder to
+                the Drupal root of th project.
+Issue #2865977: Have libraries in the list of enabled modules in order after
+                installing Drupal core, and Varbase core and default features
+                installation step.
+Issue #2870032: Updated [Redirect] module from 8.1.0-alpha4 to 8.1.0-alpha5
+Issue #2870025: Changed Layouts of [Default, and Full Content] view modes to
+                use [Bootstrap layouts] for Landing page, and Basic Pages.
+Issue #2870172: Added [ Feature: Website Base Requirements - Website Languages
+                - English ] for Automated Functional Testing
+Issue #2870172: Added [ Feature: Content Editing - Rich Text Editor - Easy
+                linking to internal content by searching for content by its
+                titles ] for Automated Functional Testing.
+Issue #2870172: Added [ Feature: Content Editing - Rich Text Editor - Input
+                formats ] for Automated Functional Testing.
+Issue #2870172: Added [ Feature: Content Structure Features - Basic Pages
+                - Basic page ] for Automated Functional Testing.
+Issue #2870172: Added [ Feature: Content Structure Features - Basic Pages
+                - Pages with pre-defined layouts] for Automated Functional
+                Testing.
+Issue #2870172: Added [ Feature: Content Editing - Rich Text Editor - Easy
+                linking to internal content by searching for content by its
+                titles ] for Automated Functional Testing
+Issue #2870617: Removed 2845037_15.patch for the [Entity Browser] module
+Issue #2870172: Updated Behat Step definitions for [Editor Media Browser] and
+                to click, or double click on an image with the provided
+                title/alt text.
+Issue #2870172: Added [ Feature: File & Media Management - Assets Management
+                - Ability to embed existing media image library in the rich
+                text editor ] for Automated Functional Testing.
+Issue #2870969: Updated [ctools] module from 8.3.x-dev to 8.3.0-beta2
+Issue #2870974: Updated [panels] from 8.4.x-dev to 8.4.0-beta1
+Issue #2870977: Updated [Page Manager] from 8.4.x-dev to 8.4.0-beta1
+Issue #2870980: Updated [Panelizer] from 8.4.0-beta2 to 8.4.0-beta3
+Issue #2870985: Removed 2868095-2.patch for the [bootstrap layouts] module:
+                as the patch were committed.
+Issue #2871201: Updated [Drupal core] from 8.3.0 to 8.3.1
+
 ## 8.4.02
 * Issue #2864089: Updated [Crop API] module from 8.1.0 to 8.1.1
 * Issue #2864090: Updated [Slick Carousel] module from 8.1.0-rc2 to 8.1.0-rc3
