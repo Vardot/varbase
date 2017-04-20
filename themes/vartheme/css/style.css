@@ -7928,6 +7928,11 @@ dd {
   position: static;
   margin-right: 0;
 }
+[dir="rtl"] #coffee-q {
+
+  background-position: left 20px center;
+}
+
 /**
  * Variable Overrides.
  *
