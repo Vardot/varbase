@@ -93,6 +93,7 @@ dependencies:
   - ultimate_cron
   - content_lock
   - content_lock_timeout
+  - node_edit_protection
   - rabbit_hole
   - rh_node
   - rh_taxonomy

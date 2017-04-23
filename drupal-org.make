@@ -151,6 +151,11 @@ projects[webform][version] = 5.0-beta12
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha1
 
+projects[node_edit_protection][type] = module
+projects[node_edit_protection][download][url] = https://git.drupal.org/project/node_edit_protection.git
+projects[node_edit_protection][download][revision] = 902339c08222f838030c07aaea23bdc51ababebd
+projects[node_edit_protection][download][branch] = 8.x-1.x
+
 projects[rabbit_hole][type] = module
 projects[rabbit_hole][version] = 1.0-beta3
 
@@ -255,7 +260,7 @@ projects[masquerade][type] = module
 projects[masquerade][version] = 2.0-beta1
 
 projects[drd_agent][type] = module
-projects[drd_agent][version] = 2.0-beta1
+projects[drd_agent][version] = 3.0
 
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
