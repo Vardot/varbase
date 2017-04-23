@@ -254,6 +254,9 @@ projects[diff][version] = 1.0-rc1
 projects[masquerade][type] = module
 projects[masquerade][version] = 2.0-beta1
 
+projects[drd_agent][type] = module
+projects[drd_agent][version] = 2.0-beta1
+
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
 
