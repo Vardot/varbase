@@ -3,6 +3,7 @@ description: 'Manage administration configurations.'
 type: module
 dependencies:
   - admin_toolbar
+  - admin_toolbar_tools
   - adminimal_admin_toolbar
   - masquerade
   - node
