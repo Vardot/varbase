@@ -228,3 +228,13 @@ function varbase_hide_warning_and_status_messages($hide) {
     unset($_SESSION['messages']);
   }
 }
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function varbase_toolbar_alter(&$items) {
+  if (\Drupal::currentUser()->hasPermission('access toolbar')
+    && !empty($items['admin_toolbar_tools'])) {
+    $items['admin_toolbar_tools']['#attached']['library'][] = 'varbase/toolbar.icon';
+  }
+}

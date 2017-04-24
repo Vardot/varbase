@@ -1,0 +1,10 @@
+.toolbar-icon-admin-toolbar-tools-help:before,
+.toolbar-icon-admin-toolbar-tools-help:active:before,
+.toolbar-icon-admin-toolbar-tools-help.active:before,
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:before,
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:active:before,
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help.is-active:before,
+.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-admin-toolbar-tools-help:before,
+.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:hover:before {
+  background-image: url(../files/images/varbase-x-small-emblem-white.png);
+}
