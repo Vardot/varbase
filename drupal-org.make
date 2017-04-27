@@ -266,7 +266,7 @@ projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
 
 projects[devel][type] = module
-projects[devel][version] = 1.0-rc1
+projects[devel][version] = 1.0-rc2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
