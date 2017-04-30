@@ -26,7 +26,8 @@
     "emuse/behat-html-formatter": "@stable"
   },
   "config": {
-      "bin-dir": "bin/"
+      "bin-dir": "bin/",
+      "secure-http": false
   },
   "autoload": {
     "classmap": [
@@ -59,6 +60,31 @@
         "type": "drupal-library",
         "source": {
           "url": "https://github.com/dinbror/blazy",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "ckeditor/bidi",
+        "version": "4.6.2",
+        "type": "drupal-library",
+        "dist": {
+          "url": "http://download.ckeditor.com/bidi/releases/bidi_4.6.2.zip",
+          "type": "zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "ajaxorg/ace-builds",
+        "version": "1.2.6",
+        "type": "library",
+        "source": {
+          "url": "https://github.com/ajaxorg/ace-builds",
           "type": "git",
           "reference": "origin/master"
         }
@@ -103,6 +129,14 @@
         {
           "name": "slick",
           "package": "kenwheeler/slick"
+        },
+        {
+          "name": "bidi",
+          "package": "ckeditor/bidi"
+        },
+        {
+          "name": "ace",
+          "package": "ajaxorg/ace-builds"
         }
       ]
     },
@@ -123,6 +157,10 @@
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
       },
+      "drupal/ckeditor_bidi": {
+        "Issue #2874166 by RajabNatshah: Have requirements function on install, and manages to work with libraries module with drupal profiles.":
+        "https://www.drupal.org/files/issues/2874166-3.patch"
+      },
       "drupal/l10n_client": {
         "Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0":
         "https://www.drupal.org/files/issues/2867460-2.patch"
@@ -137,6 +175,8 @@
     "enyo/dropzone": "4.3.0",
     "dinbror/blazy": "1.8.2",
     "kenwheeler/slick": "1.6.0",
+    "ckeditor/bidi": "4.6.2",
+    "ajaxorg/ace-builds": "1.2.6",
     "drupal/core": "8.3.1",
     "drupal/config_update": "1.3",
     "drupal/ctools": "3.0-beta2",
@@ -170,6 +210,8 @@
     "drupal/crop": "1.2",
     "drupal/focal_point": "1.0-beta4",
     "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
+    "drupal/ckeditor_bidi": "1.x-dev#d4025c5bd22a17098a8a7769930e9a292b12b469",
+    "drupal/ace_editor": "1.x-dev#55dc97d7fcc1aba55a16176f94d72a8ba7002c72",
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
     "drupal/imagemagick": "1.0-alpha6",
     "drupal/imageapi_optimize": "2.0-alpha2",
@@ -218,7 +260,7 @@
     "drupal/anchor_link": "1.3",
     "drupal/entity_browser_enhanced": "1.0-beta4",
     "drupal/vmi": "1.x-dev#9d86e90591fdc72991e28ddb8c9bf6e0c2625e07",
-    "drupal/varbase_editor": "4.6",
+    "drupal/varbase_editor": "4.7",
     "drupal/varbase_heroslider_media": "4.0-alpha6",
     "drupal/varbase_carousels": "4.0-alpha2"
   }
