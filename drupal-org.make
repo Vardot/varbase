@@ -353,9 +353,12 @@ libraries[slick][download][type] = get
 libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.6.0.tar.gz"
 libraries[slick][destination] = "libraries"
 
-libraries[bidi][download][type] = get
-libraries[bidi][download][url] = "http://download.ckeditor.com/bidi/releases/bidi_4.6.2.zip"
-libraries[bidi][destination] = "libraries"
+;; Temp commented this library, until we have CKEditor - BiDi (Text Direction)
+;; Added to the Packaging Whitelist https://www.drupal.org/node/2874359
+;; Read more in varbase/libraries/README.md file.
+;; libraries[bidi][download][type] = get
+;; libraries[bidi][download][url] = "http://download.ckeditor.com/bidi/releases/bidi_4.6.2.zip"
+;; libraries[bidi][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
