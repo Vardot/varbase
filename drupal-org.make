@@ -15,7 +15,7 @@ projects[ctools][type] = module
 projects[ctools][version] = 3.0
 
 projects[token][type] = module
-projects[token][version] = 1.0-rc1
+projects[token][version] = 1.0
 
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta1
