@@ -320,9 +320,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-beta4
 
 projects[vmi][type] = module
-projects[vmi][download][url] = https://git.drupal.org/project/vmi.git
-projects[vmi][download][revision] = 9d86e90591fdc72991e28ddb8c9bf6e0c2625e07
-projects[vmi][download][branch] = 8.x-1.x
+projects[vmi][version] = 1.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
