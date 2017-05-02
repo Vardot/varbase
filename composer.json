@@ -182,7 +182,7 @@
     "drupal/ctools": "3.0",
     "drupal/token": "1.0",
     "drupal/page_manager": "4.0-beta2",
-    "drupal/panels": "4.0",
+    "drupal/panels": "4.1",
     "drupal/panelizer": "4.0",
     "drupal/bootstrap_layouts": "5.x-dev#dfc2f7ab34564b245cc5253c9366283f3fac6a67",
     "drupal/ds": "3.0-beta3",
