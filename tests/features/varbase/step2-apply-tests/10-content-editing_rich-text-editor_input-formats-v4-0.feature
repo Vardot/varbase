@@ -20,7 +20,7 @@ So that can use different type of rich text editors.
       And I wait for AJAX to finish
      Then I should see the "#cke_edit-body-0-value" element in the "field body"
 
-     When I select "restricted_html" from "body[0][format]"
+     When I select "code_html" from "body[0][format]"
       And I wait for AJAX to finish
      Then I should see the "#edit-body-0-value" element in the "field body"
       And I should not see the "#cke_edit-body-0-value" element in the "field body"
@@ -41,7 +41,7 @@ So that can use different type of rich text editors.
       And I wait for AJAX to finish
      Then I should see the "#cke_edit-body-0-value" element in the "field body"
 
-     When I select "restricted_html" from "body[0][format]"
+     When I select "code_html" from "body[0][format]"
       And I wait for AJAX to finish
      Then I should see the "#edit-body-0-value" element in the "field body"
       And I should not see the "#cke_edit-body-0-value" element in the "field body"
