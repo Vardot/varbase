@@ -40,3 +40,7 @@ input#edit-preview-changes,
 input#edit-delete {
   margin-right: 0px;
 }
+
+body.adminimal {
+  font: normal 81.3%/1.538em "DroidKufi-Bold", sans-serif;
+}
