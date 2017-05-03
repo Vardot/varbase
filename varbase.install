@@ -124,10 +124,23 @@ function varbase_update_8002() {
 }
 
 /**
- * Enable admin toolbar extr tools.
+ * Enable admin toolbar extr tools module.
+ * Enable adminimal admin toolbar tools module.
+ * Enable node edit protection module.
  */
 function varbase_update_8003() {
+  // Enable admin toolbar extr tools module.
   if (!\Drupal::moduleHandler()->moduleExists('admin_toolbar_tools')) {
     \Drupal::service('module_installer')->install(['admin_toolbar_tools'], FALSE);
+  }
+
+  // Enable adminimal admin toolbar tools module.
+  if (!\Drupal::moduleHandler()->moduleExists('adminimal_admin_toolbar')) {
+    \Drupal::service('module_installer')->install(['adminimal_admin_toolbar'], FALSE);
+  }
+
+  // Enable node edit protection module.
+  if (!\Drupal::moduleHandler()->moduleExists('node_edit_protection')) {
+    \Drupal::service('module_installer')->install(['node_edit_protection'], FALSE);
   }
 }
