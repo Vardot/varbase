@@ -127,6 +127,7 @@ function varbase_update_8002() {
  * Enable admin toolbar extr tools module.
  * Enable adminimal admin toolbar tools module.
  * Enable node edit protection module.
+ * Disable display suite switch view mode module.
  */
 function varbase_update_8003() {
   // Enable admin toolbar extr tools module.
@@ -143,4 +144,10 @@ function varbase_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('node_edit_protection')) {
     \Drupal::service('module_installer')->install(['node_edit_protection'], FALSE);
   }
+  
+  // Disable display suite switch view mode module.
+  if (\Drupal::moduleHandler()->moduleExists('ds_switch_view_mode')) {
+    \Drupal::service('module_installer')->uninstall(['ds_switch_view_mode'], FALSE);
+  }
+  
 }
