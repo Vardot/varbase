@@ -153,6 +153,8 @@ projects[admin_toolbar][version] = 1.19
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.3
+;; Issue #2871009 by mostafadev, RajabNatshah: CSS fixes in RTL.
+projects[adminimal_admin_toolbar][patch][] = https://www.drupal.org/files/issues/2871009-21.patch
 
 projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha4
@@ -264,6 +266,8 @@ projects[coffee][type] = module
 projects[coffee][version] = 1.0-beta2
 ;; Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8
 projects[coffee][patch][] = https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch
+;; Issue #2872093 by mostafadev: Coffee css fixes in RTL
+projects[coffee][patch][] = https://www.drupal.org/files/issues/2872093-10.patch
 
 projects[diff][type] = module
 projects[diff][version] = 1.0-rc1

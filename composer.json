@@ -147,7 +147,9 @@
       },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
-        "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch"
+        "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
+        "Issue #2872093 by mostafadev: Coffee css fixes in RTL":
+        "https://www.drupal.org/files/issues/2872093-10.patch"
       },
       "drupal/entity_browser": {
         "Issue #2820132 by matthieuscarset, RajabNatshah, marcoscano: getDisplay() on null Entity Browser reference.":
@@ -164,6 +166,10 @@
       "drupal/l10n_client": {
         "Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0":
         "https://www.drupal.org/files/issues/2867460-2.patch"
+      },
+      "drupal/adminimal_admin_toolbar": {
+        "Issue #2871009 by mostafadev, RajabNatshah: CSS fixes in RTL":
+        "https://www.drupal.org/files/issues/2871009-21.patch"
       }
     }
   },

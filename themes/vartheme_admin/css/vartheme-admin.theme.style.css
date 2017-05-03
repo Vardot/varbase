@@ -23,3 +23,8 @@ div.vertical-tabs ul li.first a {
 .page-admin-people-permissions .dummy-checkbox {
   display: none !important;
 }
+
+.adminimal .ui-dialog .ui-dialog-titlebar {
+    border-radius: 0;
+    background: #007bc6;
+}

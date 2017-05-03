@@ -1,3 +1,10 @@
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+body.adminimal,
+body.adminimal .action-links .button--primary {
+  font-family: 'Droid Arabic Kufi', sans-serif;
+}
+
 div.vertical-tabs ul li.vertical-tab-button.selected a,
 div.vertical-tabs ul li.vertical-tab-button.selected a:hover,
 div.vertical-tabs ul li.vertical-tab-button.selected a:focus,
@@ -39,4 +46,13 @@ input#edit-submit,
 input#edit-preview-changes,
 input#edit-delete {
   margin-right: 0px;
+}
+
+.adminimal select:focus,
+.adminimal select:hover {
+  background: url(../images/caret-down.svg) no-repeat 2% 64% #fcfcfa;
+}
+
+.form-item {
+  padding: 0;
 }
