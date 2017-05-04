@@ -126,30 +126,15 @@ function varbase_update_8002() {
 /**
  * Enable newly installed modules and disable not needed modules.
  */
-function varbase_update_8003() {
-  // Enable admin toolbar extr tools module.
-  if (!\Drupal::moduleHandler()->moduleExists('admin_toolbar_tools')) {
-    \Drupal::service('module_installer')->install(['admin_toolbar_tools'], FALSE);
-  }
-
-  // Enable adminimal admin toolbar tools module.
-  if (!\Drupal::moduleHandler()->moduleExists('adminimal_admin_toolbar')) {
-    \Drupal::service('module_installer')->install(['adminimal_admin_toolbar'], FALSE);
-  }
-
-  // Enable node edit protection module.
-  if (!\Drupal::moduleHandler()->moduleExists('node_edit_protection')) {
-    \Drupal::service('module_installer')->install(['node_edit_protection'], FALSE);
-  }
-  
+function varbase_update_8003() { 
   // Disable display suite switch view mode module.
   if (\Drupal::moduleHandler()->moduleExists('ds_switch_view_mode')) {
     \Drupal::service('module_installer')->uninstall(['ds_switch_view_mode'], FALSE);
   }
   
-  // Enable blazy module.
-  if (!\Drupal::moduleHandler()->moduleExists('blazy')) {
-    \Drupal::service('module_installer')->install(['blazy'], FALSE);
+  // Enable node edit protection module.
+  if (!\Drupal::moduleHandler()->moduleExists('node_edit_protection')) {
+    \Drupal::service('module_installer')->install(['node_edit_protection'], FALSE);
   }
   
   // Enable Settings Tray module.
@@ -180,11 +165,6 @@ function varbase_update_8003() {
   // Enable focal point module.
   if (!\Drupal::moduleHandler()->moduleExists('focal_point')) {
     \Drupal::service('module_installer')->install(['focal_point'], FALSE);
-  }
-
-  // Enable panelizer quick edit module.
-  if (!\Drupal::moduleHandler()->moduleExists('panelizer_quickedit')) {
-    \Drupal::service('module_installer')->install(['panelizer_quickedit'], FALSE);
   }
 
   // Enable mail system module.
@@ -222,11 +202,6 @@ function varbase_update_8003() {
     \Drupal::service('module_installer')->install(['libraries'], FALSE);
   }
   
-  // Enable Masquerade module.
-  if (!\Drupal::moduleHandler()->moduleExists('masquerade')) {
-    \Drupal::service('module_installer')->install(['masquerade'], FALSE);
-  }
-  
   // Enable Menu Block module.
   if (!\Drupal::moduleHandler()->moduleExists('menu_block')) {
     \Drupal::service('module_installer')->install(['menu_block'], FALSE);
@@ -252,114 +227,9 @@ function varbase_update_8003() {
     \Drupal::service('module_installer')->install(['rh_taxonomy'], FALSE);
   }
   
-  // Enable Redirect 404 module.
-  if (!\Drupal::moduleHandler()->moduleExists('redirect_404')) {
-    \Drupal::service('module_installer')->install(['redirect_404'], FALSE);
-  }
-
-  // Enable RoleAssign module.
-  if (!\Drupal::moduleHandler()->moduleExists('roleassign')) {
-    \Drupal::service('module_installer')->install(['roleassign'], FALSE);
-  }
-  
-  // Enable User protect module.
-  if (!\Drupal::moduleHandler()->moduleExists('userprotect')) {
-    \Drupal::service('module_installer')->install(['userprotect'], FALSE);
-  }
-  
-  // Enable Username Enumeration Prevention module.
-  if (!\Drupal::moduleHandler()->moduleExists('username_enumeration_prevention')) {
-    \Drupal::service('module_installer')->install(['username_enumeration_prevention'], FALSE);
-  }
-  
   // Enable Fast 404 module.
   if (!\Drupal::moduleHandler()->moduleExists('fast404')) {
     \Drupal::service('module_installer')->install(['fast404'], FALSE);
-  }
-  	
-  // Enable Password Policy module.
-  if (!\Drupal::moduleHandler()->moduleExists('password_policy')) {
-    \Drupal::service('module_installer')->install(['password_policy'], FALSE);
-  }
-  
-  // Enable	Password Character Length Policy module.
-  if (!\Drupal::moduleHandler()->moduleExists('password_policy_length')) {
-    \Drupal::service('module_installer')->install(['password_policy_length'], FALSE);
-  }
-  
-  // Enable Password Character Type Policy module.
-  if (!\Drupal::moduleHandler()->moduleExists('password_policy_characters')) {
-    \Drupal::service('module_installer')->install(['password_policy_characters'], FALSE);
-  }
-  
-  // Enable Password Character Types Policy module.
-  if (!\Drupal::moduleHandler()->moduleExists('password_policy_character_types')) {
-    \Drupal::service('module_installer')->install(['password_policy_character_types'], FALSE);
-  }
-  
-  // Enable Password Policy History module.
-  if (!\Drupal::moduleHandler()->moduleExists('password_policy_history')) {
-    \Drupal::service('module_installer')->install(['password_policy_history'], FALSE);
-  }
-  
-  // Enable Password Username Policy module.
-  if (!\Drupal::moduleHandler()->moduleExists('password_policy_username')) {
-    \Drupal::service('module_installer')->install(['password_policy_username'], FALSE);
-  }
-  
-  // Enable Security Kit module.
-  if (!\Drupal::moduleHandler()->moduleExists('seckit')) {
-    \Drupal::service('module_installer')->install(['seckit'], FALSE);
-  }
-  
-  // Enable Security Review module.
-  if (!\Drupal::moduleHandler()->moduleExists('security_review')) {
-    \Drupal::service('module_installer')->install(['security_review'], FALSE);
-  }
-
-  // Enable Metatag: Facebookmodule.
-  if (!\Drupal::moduleHandler()->moduleExists('metatag_facebook')) {
-    \Drupal::service('module_installer')->install(['metatag_facebook'], FALSE);
-  }
-  
-  // Enable Metatag: Google Plus module.
-  if (!\Drupal::moduleHandler()->moduleExists('metatag_google_plus')) {
-    \Drupal::service('module_installer')->install(['metatag_google_plus'], FALSE);
-  }
-  
-  // Enable Metatag: hreflang module.
-  if (!\Drupal::moduleHandler()->moduleExists('metatag_hreflang')) {
-    \Drupal::service('module_installer')->install(['metatag_hreflang'], FALSE);
-  }
-  
-  // Enable Metatag: Mobile & UI Adjustments module.
-  if (!\Drupal::moduleHandler()->moduleExists('metatag_mobile')) {
-    \Drupal::service('module_installer')->install(['metatag_mobile'], FALSE);
-  }
-  
-  // Enable Metatag: Open Graph module.
-  if (!\Drupal::moduleHandler()->moduleExists('metatag_open_graph')) {
-    \Drupal::service('module_installer')->install(['metatag_open_graph'], FALSE);
-  }
-  
-  // Enable Metatag: Twitter Cards module.
-  if (!\Drupal::moduleHandler()->moduleExists('metatag_twitter_cards')) {
-    \Drupal::service('module_installer')->install(['metatag_twitter_cards'], FALSE);
-  }
-  
-  // Enable Metatag: Verification module.
-  if (!\Drupal::moduleHandler()->moduleExists('metatag_verification')) {
-    \Drupal::service('module_installer')->install(['metatag_verification'], FALSE);
-  }
-  
-  // Enable Real-time SEO for Drupal module.
-  if (!\Drupal::moduleHandler()->moduleExists('yoast_seo')) {
-    \Drupal::service('module_installer')->install(['yoast_seo'], FALSE);
-  }
-  
-  // Enable Simple XML Sitemap module.
-  if (!\Drupal::moduleHandler()->moduleExists('simple_sitemap')) {
-    \Drupal::service('module_installer')->install(['simple_sitemap'], FALSE);
   }
   
   // Enable CAPTCHA module.
@@ -370,16 +240,6 @@ function varbase_update_8003() {
   // Enable reCAPTCHA module.
   if (!\Drupal::moduleHandler()->moduleExists('recaptcha')) {
     \Drupal::service('module_installer')->install(['recaptcha'], FALSE);
-  }
-  
-  // Enable Google Analytics module.
-  if (!\Drupal::moduleHandler()->moduleExists('google_analytics')) {
-    \Drupal::service('module_installer')->install(['google_analytics'], FALSE);
-  }
-  
-  // Enable Responsive Preview module.
-  if (!\Drupal::moduleHandler()->moduleExists('responsive_preview')) {
-    \Drupal::service('module_installer')->install(['responsive_preview'], FALSE);
   }
   
   // Enable Views Bootstrap module.
