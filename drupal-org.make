@@ -152,9 +152,7 @@ projects[admin_toolbar][type] = module
 projects[admin_toolbar][version] = 1.19
 
 projects[adminimal_admin_toolbar][type] = module
-projects[adminimal_admin_toolbar][version] = 1.3
-;; Issue #2871009 by mostafadev, RajabNatshah: CSS fixes in RTL.
-projects[adminimal_admin_toolbar][patch][] = https://www.drupal.org/files/issues/2871009-21.patch
+projects[adminimal_admin_toolbar][version] = 1.4
 
 projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha4
