@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Varbase landing module.
+ */
+
+/**
+ * Enable newly installed modules and disable not needed modules.
+ */
+function varbase_landing_update_8001() {
+  // Enable panelizer quick edit module.
+  if (!\Drupal::moduleHandler()->moduleExists('panelizer_quickedit')) {
+    \Drupal::service('module_installer')->install(['panelizer_quickedit'], FALSE);
+  }
+}

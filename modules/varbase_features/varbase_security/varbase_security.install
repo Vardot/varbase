@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Varbase Security module.
+ */
+
+/**
+ * Enable newly installed modules and disable not needed modules.
+ */
+function varbase_security_update_8001() {
+
+  // Enable Password Policy module.
+  if (!\Drupal::moduleHandler()->moduleExists('password_policy')) {
+    \Drupal::service('module_installer')->install(['password_policy'], FALSE);
+  }
+
+  // Enable	Password Character Length Policy module.
+  if (!\Drupal::moduleHandler()->moduleExists('password_policy_length')) {
+    \Drupal::service('module_installer')->install(['password_policy_length'], FALSE);
+  }
+
+  // Enable Password Character Type Policy module.
+  if (!\Drupal::moduleHandler()->moduleExists('password_policy_characters')) {
+    \Drupal::service('module_installer')->install(['password_policy_characters'], FALSE);
+  }
+
+  // Enable Password Character Types Policy module.
+  if (!\Drupal::moduleHandler()->moduleExists('password_policy_character_types')) {
+    \Drupal::service('module_installer')->install(['password_policy_character_types'], FALSE);
+  }
+
+  // Enable Password Policy History module.
+  if (!\Drupal::moduleHandler()->moduleExists('password_policy_history')) {
+    \Drupal::service('module_installer')->install(['password_policy_history'], FALSE);
+  }
+
+  // Enable Password Username Policy module.
+  if (!\Drupal::moduleHandler()->moduleExists('password_policy_username')) {
+    \Drupal::service('module_installer')->install(['password_policy_username'], FALSE);
+  }
+
+  // Enable Security Kit module.
+  if (!\Drupal::moduleHandler()->moduleExists('seckit')) {
+    \Drupal::service('module_installer')->install(['seckit'], FALSE);
+  }
+
+  // Enable Security Review module.
+  if (!\Drupal::moduleHandler()->moduleExists('security_review')) {
+    \Drupal::service('module_installer')->install(['security_review'], FALSE);
+  }
+
+  // Enable Username Enumeration Prevention module.
+  if (!\Drupal::moduleHandler()->moduleExists('username_enumeration_prevention')) {
+    \Drupal::service('module_installer')->install(['username_enumeration_prevention'], FALSE);
+  }
+}

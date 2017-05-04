@@ -1,0 +1,66 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Varbase SEO module.
+ */
+
+/**
+ * Enable newly installed modules and disable not needed modules.
+ */
+function varbase_seo_update_8001() {
+
+  // Enable Metatag: Facebookmodule.
+  if (!\Drupal::moduleHandler()->moduleExists('metatag_facebook')) {
+    \Drupal::service('module_installer')->install(['metatag_facebook'], FALSE);
+  }
+
+  // Enable Metatag: Google Plus module.
+  if (!\Drupal::moduleHandler()->moduleExists('metatag_google_plus')) {
+    \Drupal::service('module_installer')->install(['metatag_google_plus'], FALSE);
+  }
+
+  // Enable Metatag: hreflang module.
+  if (!\Drupal::moduleHandler()->moduleExists('metatag_hreflang')) {
+    \Drupal::service('module_installer')->install(['metatag_hreflang'], FALSE);
+  }
+
+  // Enable Metatag: Mobile & UI Adjustments module.
+  if (!\Drupal::moduleHandler()->moduleExists('metatag_mobile')) {
+    \Drupal::service('module_installer')->install(['metatag_mobile'], FALSE);
+  }
+
+  // Enable Metatag: Open Graph module.
+  if (!\Drupal::moduleHandler()->moduleExists('metatag_open_graph')) {
+    \Drupal::service('module_installer')->install(['metatag_open_graph'], FALSE);
+  }
+
+  // Enable Metatag: Twitter Cards module.
+  if (!\Drupal::moduleHandler()->moduleExists('metatag_twitter_cards')) {
+    \Drupal::service('module_installer')->install(['metatag_twitter_cards'], FALSE);
+  }
+
+  // Enable Metatag: Verification module.
+  if (!\Drupal::moduleHandler()->moduleExists('metatag_verification')) {
+    \Drupal::service('module_installer')->install(['metatag_verification'], FALSE);
+  }
+
+  // Enable Real-time SEO for Drupal module.
+  if (!\Drupal::moduleHandler()->moduleExists('yoast_seo')) {
+    \Drupal::service('module_installer')->install(['yoast_seo'], FALSE);
+  }
+
+  // Enable Simple XML Sitemap module.
+  if (!\Drupal::moduleHandler()->moduleExists('simple_sitemap')) {
+    \Drupal::service('module_installer')->install(['simple_sitemap'], FALSE);
+  }
+
+  // Enable Google Analytics module.
+  if (!\Drupal::moduleHandler()->moduleExists('google_analytics')) {
+    \Drupal::service('module_installer')->install(['google_analytics'], FALSE);
+  }
+
+  // Enable Redirect 404 module.
+  if (!\Drupal::moduleHandler()->moduleExists('redirect_404')) {
+    \Drupal::service('module_installer')->install(['redirect_404'], FALSE);
+  }
+}

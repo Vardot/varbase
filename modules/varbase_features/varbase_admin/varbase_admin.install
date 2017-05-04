@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the Varbase admin module.
+ */
+
+/**
+ * Enable newly installed modules and disable not needed modules.
+ */
+function varbase_admin_update_8001() {
+  // Enable admin toolbar extra tools module.
+  if (!\Drupal::moduleHandler()->moduleExists('admin_toolbar_tools')) {
+    \Drupal::service('module_installer')->install(['admin_toolbar_tools'], FALSE);
+  }
+
+  // Enable adminimal admin toolbar tools module.
+  if (!\Drupal::moduleHandler()->moduleExists('adminimal_admin_toolbar')) {
+    \Drupal::service('module_installer')->install(['adminimal_admin_toolbar'], FALSE);
+  }
+  
+  // Enable Masquerade module.
+  if (!\Drupal::moduleHandler()->moduleExists('masquerade')) {
+    \Drupal::service('module_installer')->install(['masquerade'], FALSE);
+  }
+  
+  // Enable RoleAssign module.
+  if (!\Drupal::moduleHandler()->moduleExists('roleassign')) {
+    \Drupal::service('module_installer')->install(['roleassign'], FALSE);
+  }
+  
+  // Enable User protect module.
+  if (!\Drupal::moduleHandler()->moduleExists('userprotect')) {
+    \Drupal::service('module_installer')->install(['userprotect'], FALSE);
+  }
+  
+  // Enable Responsive Preview module.
+  if (!\Drupal::moduleHandler()->moduleExists('responsive_preview')) {
+    \Drupal::service('module_installer')->install(['responsive_preview'], FALSE);
+  }
+}

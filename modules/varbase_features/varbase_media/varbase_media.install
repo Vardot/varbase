@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains install and update for Varbase Media.
+ * Contains install and update for Varbase Media mdoule.
  */
 
 use Drupal\embed\Entity\EmbedButton;
@@ -23,5 +23,15 @@ function varbase_media_install() {
     EmbedButton::load('media')
       ->set('icon_uuid', $embed_icon_file->uuid())
       ->save();
+  }
+}
+
+/**
+ * Enable newly installed modules and disable not needed modules.
+ */
+function varbase_media_update_8001() {
+  // Enable blazy module.
+  if (!\Drupal::moduleHandler()->moduleExists('blazy')) {
+    \Drupal::service('module_installer')->install(['blazy'], FALSE);
   }
 }
