@@ -256,4 +256,9 @@ function varbase_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('varbase_seo')) {
     \Drupal::service('module_installer')->install(['varbase_seo'], FALSE);
   }
+
+  // Enable Max length module.
+  if (!\Drupal::moduleHandler()->moduleExists('maxlength')) {
+    \Drupal::service('module_installer')->install(['maxlength'], FALSE);
+  }
 }

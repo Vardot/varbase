@@ -180,6 +180,9 @@ projects[mailsystem][version] = 4.1
 projects[smtp][type] = module
 projects[smtp][version] = 1.0-beta2
 
+projects[maxlength][type] = module
+projects[maxlength][version] = 1.0-beta1
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
