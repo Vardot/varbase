@@ -101,6 +101,7 @@ dependencies:
   - mailsystem
   - smtp
   - maxlength
+  - menu_position
 
 themes:
   # Contrib themes.

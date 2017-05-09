@@ -261,4 +261,9 @@ function varbase_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('maxlength')) {
     \Drupal::service('module_installer')->install(['maxlength'], FALSE);
   }
+
+  // Enable Menu position module.
+  if (!\Drupal::moduleHandler()->moduleExists('menu_position')) {
+    \Drupal::service('module_installer')->install(['menu_position'], FALSE);
+  }
 }

@@ -183,6 +183,9 @@ projects[smtp][version] = 1.0-beta2
 projects[maxlength][type] = module
 projects[maxlength][version] = 1.0-beta1
 
+projects[menu_position][type] = module
+projects[menu_position][version] = 1.x-dev
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
