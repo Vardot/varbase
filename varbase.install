@@ -266,5 +266,10 @@ function varbase_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('menu_position')) {
     \Drupal::service('module_installer')->install(['menu_position'], FALSE);
   }
+  
+  // Enable Better Exposed Filters module.
+  if (!\Drupal::moduleHandler()->moduleExists('better_exposed_filters')) {
+    \Drupal::service('module_installer')->install(['better_exposed_filters'], FALSE);
+  }
 
 }

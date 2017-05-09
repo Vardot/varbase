@@ -102,6 +102,7 @@ dependencies:
   - smtp
   - maxlength
   - menu_position
+  - better_exposed_filters
 
 themes:
   # Contrib themes.

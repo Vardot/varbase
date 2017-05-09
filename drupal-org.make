@@ -196,6 +196,9 @@ projects[mail_edit][download][branch] = 8.x-1.x
 projects[taxonomy_access_fix][type] = module
 projects[taxonomy_access_fix][version] = 2.1
 
+projects[better_exposed_filters][type] = module
+projects[better_exposed_filters][version] = 3.0-alpha2
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
