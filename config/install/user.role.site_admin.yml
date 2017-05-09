@@ -27,6 +27,7 @@ permissions:
   - 'administer block classes'
   - 'administer blocks'
   - 'administer entity browsers'
+  - 'administer mail templates'
   - 'administer menu'
   - 'administer meta tags'
   - 'administer pages'

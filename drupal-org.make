@@ -184,7 +184,14 @@ projects[maxlength][type] = module
 projects[maxlength][version] = 1.0-beta1
 
 projects[menu_position][type] = module
-projects[menu_position][version] = 1.x-dev
+projects[menu_position][download][url] = https://git.drupal.org/project/menu_position.git
+projects[menu_position][download][revision] = a337956f24053d337c399ad86c1f78d4d4235702
+projects[menu_position][download][branch] = 8.x-1.x
+
+projects[mail_edit][type] = module
+projects[mail_edit][download][url] = https://git.drupal.org/project/mail_edit.git
+projects[mail_edit][download][revision] = bcd0041830d8581b36e6211f0c8eabd8caf9652b
+projects[mail_edit][download][branch] = 8.x-1.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
