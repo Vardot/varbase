@@ -47,4 +47,10 @@ function varbase_admin_update_8001() {
   if (!\Drupal::moduleHandler()->moduleExists('taxonomy_access_fix')) {
     \Drupal::service('module_installer')->install(['taxonomy_access_fix'], FALSE);
   }
+
+  // Enable Menu Admin per Menu module.
+  if (!\Drupal::moduleHandler()->moduleExists('menu_admin_per_menu')) {
+    \Drupal::service('module_installer')->install(['menu_admin_per_menu'], FALSE);
+  }
+
 }
