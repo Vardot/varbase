@@ -240,6 +240,9 @@ projects[security_review][download][url] = https://git.drupal.org/project/securi
 projects[security_review][download][revision] = 35ebae445bb260e961e47c4c58efe7c50c228999
 projects[security_review][download][branch] = 8.x-1.x
 
+projects[honeypot][type] = module
+projects[honeypot][version] = 1.24
+
 projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta1
 

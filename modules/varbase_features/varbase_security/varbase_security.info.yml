@@ -2,18 +2,18 @@ name: 'Varbase Security'
 description: 'Manages general security configurations, with password policy, username enumeration prevention, security kit and review.'
 type: module
 dependencies:
-  - captcha
   - datetime
   - field
+  - honeypot
   - password_policy
   - password_policy_character_types
   - password_policy_characters
   - password_policy_history
   - password_policy_length
   - password_policy_username
-  - recaptcha
   - seckit
   - security_review
+  - ultimate_cron
   - user
   - username_enumeration_prevention
 package: Varbase
