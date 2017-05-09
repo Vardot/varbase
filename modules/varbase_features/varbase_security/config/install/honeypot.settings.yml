@@ -5,7 +5,7 @@ unprotected_forms:
   - views_exposed_form
   - honeypot_settings_form
 protect_all_forms: false
-log: false
+log: true
 element_name: url
 time_limit: 5
 expire: 300
