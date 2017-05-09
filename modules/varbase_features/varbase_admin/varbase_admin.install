@@ -17,32 +17,32 @@ function varbase_admin_update_8001() {
   if (!\Drupal::moduleHandler()->moduleExists('adminimal_admin_toolbar')) {
     \Drupal::service('module_installer')->install(['adminimal_admin_toolbar'], FALSE);
   }
-  
+
   // Enable Masquerade module.
   if (!\Drupal::moduleHandler()->moduleExists('masquerade')) {
     \Drupal::service('module_installer')->install(['masquerade'], FALSE);
   }
-  
+
   // Enable RoleAssign module.
   if (!\Drupal::moduleHandler()->moduleExists('roleassign')) {
     \Drupal::service('module_installer')->install(['roleassign'], FALSE);
   }
-  
+
   // Enable User protect module.
   if (!\Drupal::moduleHandler()->moduleExists('userprotect')) {
     \Drupal::service('module_installer')->install(['userprotect'], FALSE);
   }
-  
+
   // Enable Responsive Preview module.
   if (!\Drupal::moduleHandler()->moduleExists('responsive_preview')) {
     \Drupal::service('module_installer')->install(['responsive_preview'], FALSE);
   }
-  
+
   // Enable Mail Editor module.
   if (!\Drupal::moduleHandler()->moduleExists('mail_edit')) {
     \Drupal::service('module_installer')->install(['mail_edit'], FALSE);
   }
-  
+
   // Enable Taxonomy access fix module.
   if (!\Drupal::moduleHandler()->moduleExists('taxonomy_access_fix')) {
     \Drupal::service('module_installer')->install(['taxonomy_access_fix'], FALSE);
