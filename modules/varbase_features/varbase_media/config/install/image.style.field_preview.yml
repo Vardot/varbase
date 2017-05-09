@@ -1,15 +1,16 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - focal_point
 name: field_preview
-label: 'Field Preview (150xAuto)'
+label: 'Field Preview (150xTraditional 4:3)'
 effects:
-  b47e1086-f344-4e57-a14c-d3770290988f:
-    uuid: b47e1086-f344-4e57-a14c-d3770290988f
-    id: image_scale
-    weight: 1
+  8e9dc088-fb84-4183-ba85-4bb3f14003c4:
+    uuid: 8e9dc088-fb84-4183-ba85-4bb3f14003c4
+    id: focal_point_scale_and_crop
+    weight: 2
     data:
       width: 150
-      height: null
-      upscale: false
-pipeline: __default__
+      height: 113
+pipeline: ''

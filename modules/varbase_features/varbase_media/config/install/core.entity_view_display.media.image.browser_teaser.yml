@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.browser_teaser
     - field.field.media.image.field_image
-    - image.style.medium
+    - image.style.d3_traditional
     - media_entity.bundle.image
   module:
     - image
@@ -17,14 +17,21 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: medium
+      image_style: d3_traditional
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
+  name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
   langcode: true
-  name: true
   thumbnail: true
   uid: true

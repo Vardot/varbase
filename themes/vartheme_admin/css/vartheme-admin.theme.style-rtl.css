@@ -56,3 +56,11 @@ input#edit-delete {
 .form-item {
   padding: 0;
 }
+
+body ul.tips:before,
+body div.description:before,
+body .form-item .description:before,
+body .form-wrapper .counter:before {
+  margin-right: 0;
+  margin-left: 4px;
+}

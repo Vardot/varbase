@@ -47,3 +47,76 @@
 .cke_widget_wrapper.align-center figcaption {
   text-align: center;
 }
+
+/** Field type entity reference **/
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container {
+  position: relative;
+}
+
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container .field--name-name {
+  display: none;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  margin: 0;
+  background: #000;
+  opacity: 0.8;
+  font-size: 9px;
+  color: #fff;
+  word-break: break-all;
+}
+
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container:hover .field--name-name {
+  display: block;
+}
+
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input {
+  position: absolute;
+  top: 0;
+  display: none;
+  font-size: 0;
+  border: 0;
+  padding: 0;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 1;
+}
+
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-edit-button"] {
+  background-image: url("../images/pencil-square-o.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100%;
+  left: 0;
+  right: auto;
+}
+
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-remove-button"] {
+  background-image: url("../images/times-circle-o.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100%;
+  right: 0;
+  left: auto;
+}
+
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container:hover input {
+  display: block;
+}
+
+[dir=rtl] body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-edit-button"] {
+  left: auto;
+  right: 0;
+}
+
+[dir=rtl] body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-remove-button"] {
+  right: auto;
+  left: 0;
+}

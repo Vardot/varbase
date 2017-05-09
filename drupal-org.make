@@ -325,7 +325,7 @@ projects[anchor_link][type] = module
 projects[anchor_link][version] = 1.3
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.0-beta4
+projects[entity_browser_enhanced][version] = 1.0-beta5
 
 projects[vmi][type] = module
 projects[vmi][version] = 1.0-alpha1
