@@ -193,6 +193,9 @@ projects[mail_edit][download][url] = https://git.drupal.org/project/mail_edit.gi
 projects[mail_edit][download][revision] = bcd0041830d8581b36e6211f0c8eabd8caf9652b
 projects[mail_edit][download][branch] = 8.x-1.x
 
+projects[taxonomy_access_fix][type] = module
+projects[taxonomy_access_fix][version] = 2.1
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;

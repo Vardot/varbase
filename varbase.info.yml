@@ -102,7 +102,6 @@ dependencies:
   - smtp
   - maxlength
   - menu_position
-  - mail_edit
 
 themes:
   # Contrib themes.

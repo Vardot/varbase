@@ -267,8 +267,4 @@ function varbase_update_8003() {
     \Drupal::service('module_installer')->install(['menu_position'], FALSE);
   }
 
-  // Enable Mail Editor module.
-  if (!\Drupal::moduleHandler()->moduleExists('mail_edit')) {
-    \Drupal::service('module_installer')->install(['mail_edit'], FALSE);
-  }
 }

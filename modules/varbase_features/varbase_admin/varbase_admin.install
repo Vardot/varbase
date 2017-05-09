@@ -37,4 +37,14 @@ function varbase_admin_update_8001() {
   if (!\Drupal::moduleHandler()->moduleExists('responsive_preview')) {
     \Drupal::service('module_installer')->install(['responsive_preview'], FALSE);
   }
+  
+  // Enable Mail Editor module.
+  if (!\Drupal::moduleHandler()->moduleExists('mail_edit')) {
+    \Drupal::service('module_installer')->install(['mail_edit'], FALSE);
+  }
+  
+  // Enable Taxonomy access fix module.
+  if (!\Drupal::moduleHandler()->moduleExists('taxonomy_access_fix')) {
+    \Drupal::service('module_installer')->install(['taxonomy_access_fix'], FALSE);
+  }
 }

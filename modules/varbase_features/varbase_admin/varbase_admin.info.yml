@@ -5,10 +5,12 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_tools
   - adminimal_admin_toolbar
+  - mail_edit
   - masquerade
   - node
   - responsive_preview
   - roleassign
+  - taxonomy_access_fix
   - user
   - userprotect
   - views
