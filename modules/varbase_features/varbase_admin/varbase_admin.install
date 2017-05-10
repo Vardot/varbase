@@ -53,9 +53,4 @@ function varbase_admin_update_8001() {
     \Drupal::service('module_installer')->install(['menu_admin_per_menu'], FALSE);
   }
 
-  // Enable Custom Permissions module.
-  if (!\Drupal::moduleHandler()->moduleExists('config_perms')) {
-    \Drupal::service('module_installer')->install(['config_perms'], FALSE);
-  }
-
 }

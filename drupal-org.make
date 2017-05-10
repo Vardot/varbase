@@ -301,9 +301,6 @@ projects[masquerade][version] = 2.0-beta1
 projects[menu_admin_per_menu][type] = module
 projects[menu_admin_per_menu][version] = 1.0-rc1
 
-projects[config_perms][type] = module
-projects[config_perms][version] = 1.0
-
 projects[drd_agent][type] = module
 projects[drd_agent][version] = 3.0
 

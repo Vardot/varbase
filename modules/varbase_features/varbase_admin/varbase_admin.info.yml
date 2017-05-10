@@ -5,7 +5,6 @@ dependencies:
   - admin_toolbar
   - admin_toolbar_tools
   - adminimal_admin_toolbar
-  - config_perms
   - mail_edit
   - masquerade
   - menu_admin_per_menu
