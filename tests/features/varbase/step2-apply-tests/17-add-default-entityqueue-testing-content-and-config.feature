@@ -1,13 +1,5 @@
 Feature: Add default [entityqueue] module testing content and configuration.
 
-@javascript @check @local @development @staging @production
-Scenario: Check if we do have the eneityqueue module installed in the system.
-  Given I am a logged in user with the "webmaster" user
-   When I go to "/admin/modules"
-    And I wait
-   Then I should see "Entityqueue"
-    And the "Entityqueue" checkbox should be checked
-
 @javascript @init @local @development
 Scenario: Create "Test Content" content type.
   Given I am a logged in user with the "webmaster" user

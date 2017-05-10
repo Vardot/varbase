@@ -4,14 +4,6 @@ Feature: user requirements - Have persistent login options and configurations.
   So I can persistent my login session independent of setting of a long session lifetime.
 
   @javascript @check @local @development @staging @production
-  Scenario: Check if we do have the persistent Login module installed in the system.
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/modules"
-      And I wait
-     Then I should see "Persistent Login"
-      And the "Persistent Login" checkbox should be checked
-
-  @javascript @check @local @development @staging @production
   Scenario: Check the persistent login configuration.
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/system/persistent_login"

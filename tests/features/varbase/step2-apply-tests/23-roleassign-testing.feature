@@ -4,14 +4,6 @@ I will be able to assign roles to other users.
 So that only users with permission to assign roles may select which roles are available for assignment
 
   @javascript @check @local @development @staging @production
-  Scenario: Check if we do have the Role Assign module installed in the system.
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/modules"
-      And I wait
-     Then I should see "RoleAssign"
-      And the "RoleAssign" checkbox should be checked
-
-  @javascript @check @local @development @staging @production
   Scenario: Check the Role Assign configuration.
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/people/roleassign"

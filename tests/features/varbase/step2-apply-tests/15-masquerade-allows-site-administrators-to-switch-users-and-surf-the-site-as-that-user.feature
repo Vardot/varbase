@@ -4,14 +4,6 @@ I want to be able to switch users and surf the site as that user with no passwor
 So that I can see what is the selected user is seeing in the site then switch back to my own user account at any time.
 
 @javascript @check @local @development @staging @production
-Scenario: Check if we do have the Masquerade module installed in the system.
-  Given I am a logged in user with the "webmaster" user
-   When I go to "/admin/modules"
-    And I wait
-   Then I should see "Masquerade"
-    And the "Masquerade" checkbox should be checked
-
-@javascript @check @local @development @staging @production
 Scenario: Check if the webmaster user UID 1 can masquerade as any user.
   Given I am a logged in user with the "webmaster" user
 

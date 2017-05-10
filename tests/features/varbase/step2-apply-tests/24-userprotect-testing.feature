@@ -4,14 +4,6 @@ I will be allowed to fine-grained access control of user administrators
 So that the protections can be specific to a user, or applied to all users in a role.
 
   @javascript @check @local @development @staging @production
-  Scenario: Check if we do have the User protect module installed in the system.
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/modules"
-      And I wait
-     Then I should see "User protect"
-      And the "User protect" checkbox should be checked
-
-  @javascript @check @local @development @staging @production
   Scenario: Check the User protect configuration.
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/people/userprotect"
