@@ -272,4 +272,9 @@ function varbase_update_8003() {
     \Drupal::service('module_installer')->install(['better_exposed_filters'], FALSE);
   }
 
+  // Enable Link Attributes widget module.
+  if (!\Drupal::moduleHandler()->moduleExists('link_attributes')) {
+    \Drupal::service('module_installer')->install(['link_attributes'], FALSE);
+  }
+
 }

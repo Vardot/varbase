@@ -263,6 +263,7 @@
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/taxonomy_access_fix": "2.1",
     "drupal/better_exposed_filters": "3.0-alpha2",
+    "drupal/link_attributes": "1.0",
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/xmlsitemap": "1.0-alpha2",

@@ -103,6 +103,7 @@ dependencies:
   - maxlength
   - menu_position
   - better_exposed_filters
+  - link_attributes
 
 themes:
   # Contrib themes.
