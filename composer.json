@@ -240,7 +240,7 @@
     "drupal/diff": "1.0-rc1",
     "drupal/masquerade": "2.0-beta1",
     "drupal/menu_admin_per_menu": "1.0-rc1",
-    "drupal/drd_agent": "3.0",
+    "drupal/drd_agent": "3.1",
     "drupal/libraries_ui": "1.0",
     "drupal/devel": "1.0-rc2",
     "drupal/bootstrap": "3.3",
