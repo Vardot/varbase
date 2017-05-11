@@ -223,6 +223,8 @@ projects[google_analytics][version] = 2.1
 
 projects[yoast_seo][type] = module
 projects[yoast_seo][version] = 1.2
+;; Issue #2877613 by RajabNatshah: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.
+projects[yoast_seo][patch][] = https://www.drupal.org/files/issues/2877613-2_0.patch
 
 projects[l10n_client][type] = module
 projects[l10n_client][download][url] = https://git.drupal.org/project/l10n_client.git

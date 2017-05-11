@@ -166,6 +166,10 @@
       "drupal/l10n_client": {
         "Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0":
         "https://www.drupal.org/files/issues/2867460-2.patch"
+      },
+      "drupal/yoast_seo": {
+        "Issue #2877613 by RajabNatshah: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
+        "https://www.drupal.org/files/issues/2877613-2_0.patch"
       }
     }
   },
