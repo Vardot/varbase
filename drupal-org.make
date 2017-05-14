@@ -317,7 +317,7 @@ projects[devel][version] = 1.0-rc2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.3
+projects[bootstrap][version] = 3.4
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
