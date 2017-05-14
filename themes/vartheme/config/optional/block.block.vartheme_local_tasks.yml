@@ -6,7 +6,7 @@ dependencies:
 id: vartheme_local_tasks
 theme: vartheme
 region: header
-weight: -3
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

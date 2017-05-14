@@ -6,7 +6,7 @@ dependencies:
 id: vartheme_local_actions
 theme: vartheme
 region: header
-weight: -5
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

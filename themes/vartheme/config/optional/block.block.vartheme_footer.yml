@@ -10,7 +10,7 @@ dependencies:
 id: vartheme_footer
 theme: vartheme
 region: footer
-weight: -6
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

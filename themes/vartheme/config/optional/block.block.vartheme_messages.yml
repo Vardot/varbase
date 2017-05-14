@@ -8,7 +8,7 @@ dependencies:
 id: vartheme_messages
 theme: vartheme
 region: header
-weight: -4
+weight: -2
 provider: null
 plugin: system_messages_block
 settings:

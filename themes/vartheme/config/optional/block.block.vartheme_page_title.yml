@@ -6,7 +6,7 @@ dependencies:
 id: vartheme_page_title
 theme: vartheme
 region: header
-weight: -2
+weight: -1
 provider: null
 plugin: page_title_block
 settings:
