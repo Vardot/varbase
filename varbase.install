@@ -285,7 +285,7 @@ function varbase_update_8003() {
   $configs['field.storage.taxonomy_term.field_description'] = $profile_path . 'field.storage.taxonomy_term.field_description.yml';
 
   foreach ($configs as $name => $config_path) {
-    $data = Yaml::parse($config_path);
+    $data = (array) Yaml::parse($config_path);
     $config = \Drupal::configFactory()->getEditable($name);
     $config->setData($data)->save(TRUE);
   }
