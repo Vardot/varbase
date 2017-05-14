@@ -4,6 +4,7 @@
  * Install, update and uninstall functions for the Varbase installation profile.
  */
 
+use Symfony\Component\Yaml\Yaml;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\shortcut\Entity\Shortcut;
@@ -126,27 +127,27 @@ function varbase_update_8002() {
 /**
  * Enable newly installed modules and disable not needed modules.
  */
-function varbase_update_8003() { 
+function varbase_update_8003() {
   // Disable display suite switch view mode module.
   if (\Drupal::moduleHandler()->moduleExists('ds_switch_view_mode')) {
     \Drupal::service('module_installer')->uninstall(['ds_switch_view_mode'], FALSE);
   }
-  
+
   // Enable node edit protection module.
   if (!\Drupal::moduleHandler()->moduleExists('node_edit_protection')) {
     \Drupal::service('module_installer')->install(['node_edit_protection'], FALSE);
   }
-  
+
   // Enable Settings Tray module.
   if (!\Drupal::moduleHandler()->moduleExists('outside_in')) {
     \Drupal::service('module_installer')->install(['outside_in'], FALSE);
   }
-  
+
   // Enable content lock module.
   if (!\Drupal::moduleHandler()->moduleExists('content_lock')) {
     \Drupal::service('module_installer')->install(['content_lock'], FALSE);
   }
-  
+
   // Enable content lock timeout module.
   if (!\Drupal::moduleHandler()->moduleExists('content_lock_timeout')) {
     \Drupal::service('module_installer')->install(['content_lock_timeout'], FALSE);
@@ -181,77 +182,77 @@ function varbase_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('dropzonejs')) {
     \Drupal::service('module_installer')->install(['dropzonejs'], FALSE);
   }
-  
+
   // Enable DropzoneJS entity browser widget module.
   if (!\Drupal::moduleHandler()->moduleExists('dropzonejs_eb_widget')) {
     \Drupal::service('module_installer')->install(['dropzonejs_eb_widget'], FALSE);
   }
-  
+
   // Enable Enhanced Entity Browser module.
   if (!\Drupal::moduleHandler()->moduleExists('entity_browser_enhanced')) {
     \Drupal::service('module_installer')->install(['entity_browser_enhanced'], FALSE);
   }
-  
+
   // Enable Image Optimize (or ImageAPI Optimize) module.
   if (!\Drupal::moduleHandler()->moduleExists('imageapi_optimize')) {
     \Drupal::service('module_installer')->install(['imageapi_optimize'], FALSE);
   }
-  
+
   // Enable Libraries module.
   if (!\Drupal::moduleHandler()->moduleExists('libraries')) {
     \Drupal::service('module_installer')->install(['libraries'], FALSE);
   }
-  
+
   // Enable Menu Block module.
   if (!\Drupal::moduleHandler()->moduleExists('menu_block')) {
     \Drupal::service('module_installer')->install(['menu_block'], FALSE);
   }
-  
+
   // Enable Persistent Login module.
   if (!\Drupal::moduleHandler()->moduleExists('persistent_login')) {
     \Drupal::service('module_installer')->install(['persistent_login'], FALSE);
   }
-  
+
   // Enable Rabbit Hole module.
   if (!\Drupal::moduleHandler()->moduleExists('rabbit_hole')) {
     \Drupal::service('module_installer')->install(['rabbit_hole'], FALSE);
   }
-  
+
   // Enable Rabbit Hole nodes module.
   if (!\Drupal::moduleHandler()->moduleExists('rh_node')) {
     \Drupal::service('module_installer')->install(['rh_node'], FALSE);
   }
-  
+
   // Enable Rabbit Hole taxonomy module.
   if (!\Drupal::moduleHandler()->moduleExists('rh_taxonomy')) {
     \Drupal::service('module_installer')->install(['rh_taxonomy'], FALSE);
   }
-  
+
   // Enable Fast 404 module.
   if (!\Drupal::moduleHandler()->moduleExists('fast404')) {
     \Drupal::service('module_installer')->install(['fast404'], FALSE);
   }
-  
+
   // Enable CAPTCHA module.
   if (!\Drupal::moduleHandler()->moduleExists('captcha')) {
     \Drupal::service('module_installer')->install(['captcha'], FALSE);
   }
-  
+
   // Enable reCAPTCHA module.
   if (!\Drupal::moduleHandler()->moduleExists('recaptcha')) {
     \Drupal::service('module_installer')->install(['recaptcha'], FALSE);
   }
-  
+
   // Enable Views Bootstrap module.
   if (!\Drupal::moduleHandler()->moduleExists('views_bootstrap')) {
     \Drupal::service('module_installer')->install(['views_bootstrap'], FALSE);
   }
-  
+
   // Enable Varbase Security module.
   if (!\Drupal::moduleHandler()->moduleExists('varbase_security')) {
     \Drupal::service('module_installer')->install(['varbase_security'], FALSE);
   }
-  
+
   // Enable Varbase SEO module.
   if (!\Drupal::moduleHandler()->moduleExists('varbase_seo')) {
     \Drupal::service('module_installer')->install(['varbase_seo'], FALSE);
@@ -266,7 +267,7 @@ function varbase_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('menu_position')) {
     \Drupal::service('module_installer')->install(['menu_position'], FALSE);
   }
-  
+
   // Enable Better Exposed Filters module.
   if (!\Drupal::moduleHandler()->moduleExists('better_exposed_filters')) {
     \Drupal::service('module_installer')->install(['better_exposed_filters'], FALSE);
@@ -277,4 +278,15 @@ function varbase_update_8003() {
     \Drupal::service('module_installer')->install(['link_attributes'], FALSE);
   }
 
+  // Add Field Description
+  $profile_path = drupal_get_path('profile', 'varbase') . '/config/install/';
+  $configs['field.storage.block_content.field_description'] = $profile_path . 'field.storage.block_content.field_description.yml';
+  $configs['field.storage.node.field_description'] = $profile_path . 'field.storage.node.field_description.yml';
+  $configs['field.storage.taxonomy_term.field_description'] = $profile_path . 'field.storage.taxonomy_term.field_description.yml';
+
+  foreach ($configs as $name => $config_path) {
+    $data = Yaml::parse($config_path);
+    $config = \Drupal::configFactory()->getEditable($name);
+    $config->setData($data)->save(TRUE);
+  }
 }
