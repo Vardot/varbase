@@ -202,6 +202,11 @@ function varbase_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('libraries')) {
     \Drupal::service('module_installer')->install(['libraries'], FALSE);
   }
+  
+  // Enable ACE Editor module.
+  if (!\Drupal::moduleHandler()->moduleExists('ace_editor')) {
+    \Drupal::service('module_installer')->install(['ace_editor'], FALSE);
+  }
 
   // Enable Menu Block module.
   if (!\Drupal::moduleHandler()->moduleExists('menu_block')) {
@@ -231,16 +236,6 @@ function varbase_update_8003() {
   // Enable Fast 404 module.
   if (!\Drupal::moduleHandler()->moduleExists('fast404')) {
     \Drupal::service('module_installer')->install(['fast404'], FALSE);
-  }
-
-  // Enable CAPTCHA module.
-  if (!\Drupal::moduleHandler()->moduleExists('captcha')) {
-    \Drupal::service('module_installer')->install(['captcha'], FALSE);
-  }
-
-  // Enable reCAPTCHA module.
-  if (!\Drupal::moduleHandler()->moduleExists('recaptcha')) {
-    \Drupal::service('module_installer')->install(['recaptcha'], FALSE);
   }
 
   // Enable Views Bootstrap module.
