@@ -252,7 +252,7 @@ projects[security_review][download][revision] = 35ebae445bb260e961e47c4c58efe7c5
 projects[security_review][download][branch] = 8.x-1.x
 
 projects[honeypot][type] = module
-projects[honeypot][version] = 1.24
+projects[honeypot][version] = 1.25
 
 projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta1
