@@ -15,3 +15,8 @@ function vartheme_theme_suggestions_page_alter(array &$suggestions, array $varia
     $suggestions[] = 'page__' . $content_type;
   }
 }
+
+//Get the container values. but it inside $variables['container_header'] wich will be used in the if condition inside page.html.twig
+function vartheme_preprocess_page(&$variables) {
+	$variables['container_header'] = theme_get_setting('vartheme_header_container');
+}
