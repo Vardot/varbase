@@ -1,3 +1,4 @@
+@import 'variables';
 // Media query variables.
 @tablet:  ~"screen and (min-width: @{screen-sm-min})";
 @normal:  ~"screen and (min-width: @{screen-md-min})";
@@ -50,10 +51,6 @@ body {
   &.admin-expanded.admin-vertical.admin-nw .navbar,
   &.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 260px;
-  }
-  // Add padding to body if various toolbar or navbars are fixed on top.
-  &.navbar-is-fixed-top {
-    padding-top: 64px !important;
   }
   &.navbar-is-fixed-bottom {
     padding-bottom: 64px !important;
@@ -127,6 +124,10 @@ body {
     padding: 0;
     width: auto;
   }
+  &.header-margin {
+    margin-top: 0px;
+  }
+
 }
 
 // Adjust z-index of core components.

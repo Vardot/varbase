@@ -30,9 +30,6 @@ body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
   margin-left: 260px;
 }
-body.navbar-is-fixed-top {
-  padding-top: 64px !important;
-}
 body.navbar-is-fixed-bottom {
   padding-bottom: 64px !important;
 }
@@ -103,6 +100,9 @@ body #admin-menu .dropdown li {
   margin: 0;
   padding: 0;
   width: auto;
+}
+.navbar.header-margin {
+  margin-top: 0px;
 }
 #overlay-container,
 .overlay-modal-background,
