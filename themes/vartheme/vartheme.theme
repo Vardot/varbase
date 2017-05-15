@@ -15,10 +15,3 @@ function vartheme_theme_suggestions_page_alter(array &$suggestions, array $varia
     $suggestions[] = 'page__' . $content_type;
   }
 }
-
-/**
- * Implement hook_preprocess_page().
- */
-function vartheme_preprocess_page(&$variables) {
-	$variables['container_header'] = theme_get_setting('vartheme_header_container');
-}

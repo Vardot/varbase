@@ -1,4 +1,3 @@
-
 {#
 /**
  * @file
@@ -57,6 +56,8 @@
  * @see html.html.twig
  */
 #}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{% set header_container = theme.settings.header_container ? 'container-fluid header-margin' : 'container' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
@@ -64,14 +65,14 @@
       set navbar_classes = [
         'navbar',
         theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-        container_header ? 'container-fluid header-margin' : 'container',
+        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : header_container,
+        header_container,
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-{#      {% if not navbar_attributes.hasClass(container) %}
+      {% if not navbar_attributes.hasClass(header_container) %}
         <div class="{{ container }}">
-      {% endif %}#}
+      {% endif %}
       <div class="navbar-header">
         {{ page.navigation }}
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
@@ -91,14 +92,13 @@
           {{ page.navigation_collapsible }}
         </div>
       {% endif %}
-{#      {% if not navbar_attributes.hasClass(container) %}
+      {% if not navbar_attributes.hasClass(header_container) %}
         </div>
-      {% endif %}#}
+      {% endif %}
     </header>
   {% endblock %}
 {% endif %}
 
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
@@ -187,4 +187,3 @@
     </footer>
   {% endblock %}
 {% endif %}
-
