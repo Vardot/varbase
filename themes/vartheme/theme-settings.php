@@ -18,7 +18,7 @@ function vartheme_form_system_theme_settings_alter(&$form, FormStateInterface $f
   $form['vartheme'] = array(
     '#type' => 'vertical_tabs',
     '#prefix' => '<h2><small>' . t('Vartheme Settings') . '</small></h2>',
-    '#weight' => -10,
+    '#weight' => -20,
   );
 
   // General Vertical Tab For vartheme Settings.
