@@ -60,4 +60,8 @@ function varbase_media_update_8001() {
   $field_preview_view_mode_config_content_data = (array) Yaml::parse($field_preview_view_mode_config_content);
   $field_preview_view_mode_config->setData($field_preview_view_mode_config_content_data)->save();
 
+  // Change name of Media embed button to be “Media Library".
+  $embed_button_config = \Drupal::service('config.factory')->getEditable('embed.button.media');
+  $embed_button_config->get('label')=='media' ? $embed_button_config->set('label','Media Library')
+  ->save() :'';
 }
