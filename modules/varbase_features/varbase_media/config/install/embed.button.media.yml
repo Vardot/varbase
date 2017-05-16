@@ -6,7 +6,7 @@ dependencies:
   module:
     - entity_embed
     - media_entity
-label: 'Media Library'
+label: media
 id: media
 type_id: entity
 type_settings:
