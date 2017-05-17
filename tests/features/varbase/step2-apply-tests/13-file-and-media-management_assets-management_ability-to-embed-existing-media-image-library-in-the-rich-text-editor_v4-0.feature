@@ -1,4 +1,4 @@
-Feature: File & Media Management - Assets Management - Ability to embed existing meida image library in the rich text editor
+Feature: File & Media Management - Assets Management - Ability to embed existing media image library in the rich text editor
 As a content admin
 I want to be able to embed existing files from the library of files in the CKEditor
 So that it will show up under that rich text field without having to upload the image for each content
