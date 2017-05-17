@@ -9,13 +9,15 @@
 // Base — CSS/LESS reset/normalize plus HTML element styling.
 // -----------------------------------------------------------------------------
 @import 'base/bootstrap.less';  // Bootstrap library.
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc;
-@import 'base/overrides.less';  // Base-theme overrides.
+@import 'variables.less'; // Modify this for custom colors, font-sizes, etc;
+@import 'base/vartheme-overrides.less'; // Vartheme overrides.
+@import '../bootstrap-no-spacing/less/bootstrap-no-spacing.less';
+@import 'base/overrides.less';  // VARTHEME_SUBTHEME overrides.
 // -----------------------------------------------------------------------------
 
 // Layout — macro arrangement of a web page, including any grid systems.
 // -----------------------------------------------------------------------------
-
+// @import 'layout/edge2edge.less';  // We do have this in Vartheme.
 // -----------------------------------------------------------------------------
 
 // Component — discrete, reusable UI elements.

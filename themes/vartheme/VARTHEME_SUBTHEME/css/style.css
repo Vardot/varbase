@@ -30,6 +30,9 @@ body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
   margin-left: 260px;
 }
+body.navbar-is-fixed-top {
+  padding-top: 64px !important;
+}
 body.navbar-is-fixed-bottom {
   padding-bottom: 64px !important;
 }
@@ -734,38 +737,6 @@ div.features-export-list .form-type-checkbox {
 fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox],
 div.features-export-list .form-type-checkbox input[type=checkbox] {
   margin-top: 0;
-}
-body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top {
-  top: 79px;
-}
-body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top {
-  top: 39px;
-}
-/* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top {
-    left: 240px;
-    left: 24rem;
-  }
-}
-.navbar-administration #navbar-administration.navbar-oriented .navbar-bar {
-  z-index: 1032;
-}
-.navbar-administration #navbar-administration .navbar-tray {
-  z-index: 1031;
-}
-body.navbar-is-fixed-top.navbar-administration {
-  padding-top: 103px!important;
-}
-body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open {
-  padding-top: 143px!important;
-}
-body.navbar-tray-open.navbar-vertical.navbar-fixed {
-  margin-left: 240px;
-  margin-left: 24rem;
-}
-#navbar-administration.navbar-oriented .navbar-tray-vertical {
-  width: 24rem;
 }
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -7514,6 +7485,13 @@ button.close {
 .container {
   max-width: 100%;
 }
+.main-container .region.region-header h1,
+.main-container .region.region-header .h1 {
+  margin-top: 0;
+}
+.main-container .region.region-header .tabs {
+  margin-bottom: 10px;
+}
 .form-type-password-confirm > * {
   float: none;
 }
@@ -7720,213 +7698,479 @@ dd {
   -o-box-shadow: 0 0 0 transparent;
   box-shadow: 0 0 0 transparent;
 }
-/*
- * Bootstrap callouts.
+body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top {
+  top: 79px;
+}
+body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top {
+  top: 39px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top {
+    left: 240px;
+    left: 24rem;
+  }
+}
+.navbar-administration #navbar-administration.navbar-oriented .navbar-bar {
+  z-index: 1032;
+}
+.navbar-administration #navbar-administration .navbar-tray {
+  z-index: 1031;
+}
+body.navbar-is-fixed-top.navbar-administration {
+  margin-top: 103px!important;
+}
+body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open {
+  margin-top: 143px!important;
+}
+body.navbar-tray-open.navbar-vertical.navbar-fixed {
+  margin-left: 240px;
+  margin-left: 24rem;
+}
+#navbar-administration.navbar-oriented .navbar-tray-vertical {
+  width: 24rem;
+}
+/**
+ *  Bootstrap no spacing 3.1.2 for Twitter Bootstrap v3.
+ *  
+ *  You can use a ready CSS/LESS classes to control the spacing layout for bootstrap v3.
+ *  https://github.com/Vardot/bootstrap-no-spacing
+ *
+ *         no-spacing : no padding and no margin.
+ *      no-spacing-v  : no vertical padding and no vertical margin.
+ *      no-spacing-h  : no horizontal padding and no horizontal margin.
+ *         
+ *         no-padding : no padding
+ *       no-padding-v : no vertical padding.
+ *       no-padding-h : no horizontal padding.
+ *   no-padding-right : no right padding.
+ *    no-padding-left : no left padding.
+ *     no-padding-top : no top padding.
+ *  no-padding-bottom : no bottom padding.
+ *  
+ *          no-margin : no margin.
+ *        no-margin-v : no vertical margin.
+ *        no-margin-h : no horizontal margin.
+ *     no-margin-left : no left margin.
+ *    no-margin-right : no right margin.
+ *      no-margin-top : no top margin.
+ *   no-margin-bottom : no bottom margin.
+ *   
+ *   Add -xs, -sm, -md, -lg to the end of each class to restrict that to the selected media
  *
  */
-/* Common styles for all types */
-.bs-callout {
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid #eeeeee;
-  border-left-width: 5px;
-  border-radius: 3px;
+/** No spacing **/
+.no-spacing {
+  padding: 0;
+  margin: 0;
 }
-.bs-callout h4 {
+.no-spacing-v {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-.bs-callout p:last-child {
+.no-spacing-h {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+/** No padding **/
+.no-padding {
+  padding: 0;
+}
+.no-padding-v {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.no-padding-h {
+  padding-left: 0;
+  padding-right: 0;
+}
+.no-padding-right {
+  padding-right: 0;
+}
+.no-padding-left {
+  padding-left: 0;
+}
+.no-padding-top {
+  padding-top: 0;
+}
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+[dir="rtl"] .no-padding-right {
+  padding-right: auto;
+  padding-left: 0;
+}
+[dir="rtl"] .no-padding-left {
+  padding-left: auto;
+  padding-right: 0;
+}
+/** No margin **/
+.no-margin {
+  margin: 0;
+}
+.no-margin-v {
+  margin-top: 0;
   margin-bottom: 0;
 }
-.bs-callout code {
-  border-radius: 3px;
+.no-margin-h {
+  margin-left: 0;
+  margin-right: 0;
 }
-/* Tighten up space between multiple callouts */
-.bs-callout + .bs-callout {
-  margin-top: -5px;
+.no-margin-left {
+  margin-left: 0;
 }
-/* Variations */
-.bs-callout-danger {
-  border-left-color: #d9534f;
+.no-margin-right {
+  margin-right: 0;
 }
-.bs-callout-danger h4 {
-  color: #d9534f;
-}
-.bs-callout-warning {
-  border-left-color: #f0ad4e;
-}
-.bs-callout-warning h4 {
-  color: #f0ad4e;
-}
-.bs-callout-info {
-  border-left-color: #5bc0de;
-}
-.bs-callout-info h4 {
-  color: #5bc0de;
-}
-/*
- * Bootstrap callouts right to left.
- *
- */
-/* Common styles for all types */
-[dir="rtl"] .bs-callout {
-  border-left-width: 1px;
-  border-right-width: 5px;
-}
-/* Variations */
-[dir="rtl"] .bs-callout-danger {
-  border-left-color: #eeeeee;
-  border-right-color: #d9534f;
-}
-[dir="rtl"] .bs-callout-warning {
-  border-left-color: #eeeeee;
-  border-right-color: #f0ad4e;
-}
-[dir="rtl"] .bs-callout-info {
-  border-left-color: #eeeeee;
-  border-right-color: #5bc0de;
-}
-.ui-dialog-offcanvas .form-type-checkbox label {
-  padding: 0px;
-}
-.ui-dialog-offcanvas .form-type-checkbox label input[type="checkbox"] {
-  margin-left: 0px;
-  position: static;
-  margin-right: 10px;
-}
-.ui-dialog-offcanvas .form-control {
-  height: auto;
-  background: #ddd;
-}
-.ui-dialog-offcanvas span.glyphicon {
-  font-family: 'Glyphicons Halflings';
-}
-.ui-dialog-offcanvas .alert-warning {
-  width: 100%;
-  background-color: #fdf8ed;
-  border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
-  color: #734c00;
-  box-shadow: 8px 0 0 #e09600;
-}
-.ui-dialog-offcanvas .panel-default {
-  border: none;
-  margin: 0 -20px;
-}
-.ui-dialog-offcanvas .panel-default .panel-heading {
-  border: none;
-}
-.ui-dialog-offcanvas .panel-default .panel-heading .panel-title {
-  background-color: #333;
-  color: #ddd;
-  transition: all .5s ease;
-}
-.ui-dialog-offcanvas .panel-default .panel-heading .panel-title.collapsed {
-  background-color: #474747;
-  color: #ddd;
-  border-width: 0;
-}
-.ui-dialog-offcanvas .panel-default .panel-heading .panel-title:hover,
-.ui-dialog-offcanvas .panel-default .panel-heading .panel-title:focus {
-  background-color: #222;
-  outline: none;
-}
-.ui-dialog-offcanvas .panel-default .panel-body.collapse.in {
-  background-color: #333;
-  padding-bottom: 10px;
-}
-.ui-dialog-offcanvas .select-wrapper select {
-  display: block;
-}
-.ui-dialog-offcanvas .select-wrapper:after {
-  right: 3%;
-  left: auto;
-  top: 60%;
-  color: #3b3b3b;
-}
-.ui-dialog-offcanvas .tabledrag-toggle-weight {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  font-weight: normal;
-  color: #85bef4;
-  text-decoration: none;
-  transition: color .5s ease;
-  box-shadow: none;
-  text-shadow: none;
-}
-.ui-dialog-offcanvas .tabledrag-toggle-weight:hover,
-.ui-dialog-offcanvas .tabledrag-toggle-weight:focus {
-  outline: none;
-  color: #46a0f5;
-}
-.ui-dialog-offcanvas .table-striped tr.odd {
-  background-color: transparent;
-}
-.ui-dialog-offcanvas .table-striped tr:hover {
-  background-color: transparent;
-}
-.ui-dialog-offcanvas .table-striped tr td {
-  border: none;
-  padding: 2px 4px;
-  vertical-align: middle;
-}
-.ui-dialog-offcanvas .table-striped tr td button {
-  margin: 0;
-  border: 0;
-  color: #eee;
-  transition: background .5s ease;
-  padding: 0.1em 0.8em;
-  border-radius: 0;
-}
-.ui-dialog-offcanvas .table-striped tr td button span.icon {
-  display: none;
-}
-.ui-dialog-offcanvas .table-striped tr td.checkbox input[type="checkbox"] {
-  margin-left: 0px;
-  position: static;
-  margin-right: 10px;
-}
-.ui-dialog-offcanvas .table-striped tr td button.dropdown-toggle {
-  display: none;
-}
-.ui-dialog-offcanvas .table-striped tr td.tabledrag-hide {
-  padding: 2px 4px;
-}
-.ui-dialog-offcanvas .table-striped tr td.tabledrag-hide div.form-item {
+.no-margin-top {
   margin-top: 0;
 }
-.ui-dialog-offcanvas .table-striped tr td.menu-enabled div.menu-enabled {
-  height: 35px;
+.no-margin-bottom {
+  margin-bottom: 0;
 }
-.ui-dialog-offcanvas .table-striped thead > tr > th {
-  border-bottom: none;
-}
-.ui-dialog-offcanvas .table-responsive {
-  overflow: initial;
-  min-height: auto;
-}
-.offcanvas-lining {
-  background: inherit;
-}
-[dir="rtl"] .ui-dialog-offcanvas .form-type-checkbox label {
-  padding: 0px;
-}
-[dir="rtl"] .ui-dialog-offcanvas .form-type-checkbox label input[type="checkbox"] {
-  margin-left: 10px;
+[dir="rtl"] .no-margin-left {
+  margin-left: auto;
   margin-right: 0;
 }
-[dir="rtl"] .ui-dialog-offcanvas .select-wrapper:after {
-  left: 3%;
-  right: auto;
+[dir="rtl"] .no-margin-right {
+  margin-right: auto;
+  margin-left: 0;
 }
-[dir="rtl"] .ui-dialog-offcanvas .table-striped tr td.checkbox input[type="checkbox"] {
-  margin-left: 10px;
-  position: static;
-  margin-right: 0;
+@media (max-width: 480px) {
+  /** No spacing for xs **/
+  .no-spacing-xs {
+    padding: 0;
+    margin: 0;
+  }
+  .no-spacing-v-xs {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-spacing-h-xs {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /** No padding for xs **/
+  .no-padding-xs {
+    padding: 0;
+  }
+  .no-padding-v-xs {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-padding-h-xs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .no-padding-right-xs {
+    padding-right: 0;
+  }
+  .no-padding-left-xs {
+    padding-left: 0;
+  }
+  .no-padding-top-xs {
+    padding-top: 0;
+  }
+  .no-padding-bottom-xs {
+    padding-bottom: 0;
+  }
+  [dir="rtl"] .no-padding-right-xs {
+    padding-right: auto;
+    padding-left: 0;
+  }
+  [dir="rtl"] .no-padding-left-xs {
+    padding-left: auto;
+    padding-right: 0;
+  }
+  /** No margin for xs **/
+  .no-margin-xs {
+    margin: 0;
+  }
+  .no-margin-v-xs {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .no-margin-h-xs {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .no-margin-left-xs {
+    margin-left: 0;
+  }
+  .no-margin-right-xs {
+    margin-right: 0;
+  }
+  .no-margin-top-xs {
+    margin-top: 0;
+  }
+  .no-margin-bottom-xs {
+    margin-bottom: 0;
+  }
+  [dir="rtl"] .no-margin-left-xs {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  [dir="rtl"] .no-margin-right-xs {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  /** No spacing for sm **/
+  .no-spacing-sm {
+    padding: 0;
+    margin: 0;
+  }
+  .no-spacing-v-sm {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-spacing-h-sm {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /** No padding for sm **/
+  .no-padding-sm {
+    padding: 0;
+  }
+  .no-padding-v-sm {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-padding-h-sm {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .no-padding-right-sm {
+    padding-right: 0;
+  }
+  .no-padding-left-sm {
+    padding-left: 0;
+  }
+  .no-padding-top-sm {
+    padding-right: 0;
+  }
+  .no-padding-bottom-sm {
+    padding-left: 0;
+  }
+  [dir="rtl"] .no-padding-right-sm {
+    padding-right: auto;
+    padding-left: 0;
+  }
+  [dir="rtl"] .no-padding-left-sm {
+    padding-left: auto;
+    padding-right: 0;
+  }
+  /** No margin for sm **/
+  .no-margin-sm {
+    margin: 0;
+  }
+  .no-margin-v-sm {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .no-margin-h-sm {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .no-margin-left-sm {
+    margin-left: 0;
+  }
+  .no-margin-right-sm {
+    margin-right: 0;
+  }
+  .no-margin-top-sm {
+    margin-top: 0;
+  }
+  .no-margin-bottom-sm {
+    margin-bottom: 0;
+  }
+  [dir="rtl"] .no-margin-left-sm {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  [dir="rtl"] .no-margin-right-sm {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  /** No spacing for md **/
+  .no-spacing-md {
+    padding: 0;
+    margin: 0;
+  }
+  .no-spacing-v-md {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-spacing-h-md {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /** No padding for md **/
+  .no-padding-md {
+    padding: 0;
+  }
+  .no-padding-v-md {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-padding-h-md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .no-padding-right-md {
+    padding-right: 0;
+  }
+  .no-padding-left-md {
+    padding-left: 0;
+  }
+  .no-padding-top-md {
+    padding-right: 0;
+  }
+  .no-padding-bottom-md {
+    padding-left: 0;
+  }
+  [dir="rtl"] .no-padding-right-md {
+    padding-right: auto;
+    padding-left: 0;
+  }
+  [dir="rtl"] .no-padding-left-md {
+    padding-left: auto;
+    padding-right: 0;
+  }
+  /** No margin for md **/
+  .no-margin-md {
+    margin: 0;
+  }
+  .no-margin-v-md {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .no-margin-h-md {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .no-margin-left-md {
+    margin-left: 0;
+  }
+  .no-margin-right-md {
+    margin-right: 0;
+  }
+  .no-margin-top-md {
+    margin-top: 0;
+  }
+  .no-margin-bottom-md {
+    margin-bottom: 0;
+  }
+  [dir="rtl"] .no-margin-left-md {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  [dir="rtl"] .no-margin-right-md {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /** No spacing for lg **/
+  .no-spacing-lg {
+    padding: 0;
+    margin: 0;
+  }
+  .no-spacing-v-lg {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-spacing-h-lg {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /** No padding for lg **/
+  .no-padding-lg {
+    padding: 0;
+  }
+  .no-padding-v-lg {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .no-padding-h-lg {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .no-padding-right-lg {
+    padding-right: 0;
+  }
+  .no-padding-left-lg {
+    padding-left: 0;
+  }
+  .no-padding-top-lg {
+    padding-right: 0;
+  }
+  .no-padding-bottom-lg {
+    padding-left: 0;
+  }
+  [dir="rtl"] .no-padding-right-lg {
+    padding-right: auto;
+    padding-left: 0;
+  }
+  [dir="rtl"] .no-padding-left-lg {
+    padding-left: auto;
+    padding-right: 0;
+  }
+  /** No margin for lg **/
+  .no-margin-lg {
+    margin: 0;
+  }
+  .no-margin-v-lg {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .no-margin-h-lg {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .no-margin-left-lg {
+    margin-left: 0;
+  }
+  .no-margin-right-lg {
+    margin-right: 0;
+  }
+  .no-margin-top-lg {
+    margin-top: 0;
+  }
+  .no-margin-bottom-lg {
+    margin-bottom: 0;
+  }
+  [dir="rtl"] .no-margin-left-lg {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  [dir="rtl"] .no-margin-right-lg {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
 /**
  * Variable Overrides.

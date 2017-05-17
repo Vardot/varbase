@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap-no-spacing",
+  "version": "3.1.2",
+  "description": "Bootstrap no spacing for Twitter Bootstrap v3. You can use a ready CSS/LESS classes to control the spacing layout for bootstrap v3.",
+  "dependencies": {
+    "bootstrap": "^3.*"
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vardot/bootstrap-no-spacing.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap3",
+    "bootstrap no spacing",
+    "No spacing"
+  ],
+  "author": "Rajab Natshah <rajabn@gmail.com>",
+  "license": "MIT",
+  "homepage": "http://vardot.com"
+}
