@@ -120,3 +120,14 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
   right: auto;
   left: 0;
 }
+
+/* Embed_media_form image Preview style */
+.entity-embed-dialog-step--embed > .form-item-entity {
+  float: right;
+  text-align: center;
+}
+
+[dir="rtl"] .entity-embed-dialog-step--embed > .form-item-entity {
+  float: left;
+  text-align: center;
+}

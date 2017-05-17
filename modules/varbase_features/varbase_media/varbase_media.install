@@ -32,6 +32,7 @@ function varbase_media_install() {
  * Updated field preview image style (150xTraditional 4:3).
  * Updated browser teaser image meida view mode.
  * Updated field preview image meida view mode.
+ * Changed name of Media embed button to be "Media Library".
  */
 function varbase_media_update_8001() {
   // Enable blazy module.
@@ -60,4 +61,9 @@ function varbase_media_update_8001() {
   $field_preview_view_mode_config_content_data = (array) Yaml::parse($field_preview_view_mode_config_content);
   $field_preview_view_mode_config->setData($field_preview_view_mode_config_content_data)->save();
 
+  // Changed name of Media embed button to be "Media Library".
+  $embed_button_config = \Drupal::service('config.factory')->getEditable('embed.button.media');
+  if (strtolower($embed_button_config->get('label')) === 'media') {
+    $embed_button_config->set('label', 'Media Library')->save();
+  }
 }
