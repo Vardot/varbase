@@ -62,7 +62,9 @@ function varbase_media_update_8001() {
 
   // Change name of Media embed button to be “Media Library".
   $embed_button_config = \Drupal::service('config.factory')->getEditable('embed.button.media');
-  $embed_button_config->get('label')=='media' ? $embed_button_config->set('label','Media Library')
-  ->save() :'';
-
+  if (strtolower($embed_button_config->get('label')) === 'media')
+  {
+    $embed_button_config->set('label','Media Library')
+    ->save();
+  }
 }
