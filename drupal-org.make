@@ -32,7 +32,7 @@ projects[bootstrap_layouts][download][revision] = dfc2f7ab34564b245cc5253c936628
 projects[bootstrap_layouts][download][branch] = 8.x-5.x
 
 projects[ds][type] = module
-projects[ds][version] = 3.0-rc1
+projects[ds][version] = 3.0
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][download][url] = https://git.drupal.org/project/views_bootstrap.git
