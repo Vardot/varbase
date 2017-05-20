@@ -275,7 +275,7 @@
     "drupal/entity_browser_enhanced": "1.0-beta5",
     "drupal/vmi": "1.0-alpha1",
     "drupal/varbase_editor": "4.10",
-    "drupal/varbase_heroslider_media": "4.0-beta2",
-    "drupal/varbase_carousels": "4.0-alpha2"
+    "drupal/varbase_heroslider_media": "4.0-beta3",
+    "drupal/varbase_carousels": "4.0-beta1"
   }
 }
