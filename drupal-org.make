@@ -112,11 +112,7 @@ projects[pathologic][download][revision] = e0473546e51cbeaa3acb34e3208a0c503ca85
 projects[pathologic][download][branch] = 8.x-1.x
 
 projects[ckeditor_bidi][type] = module
-projects[ckeditor_bidi][download][url] = https://git.drupal.org/project/ckeditor_bidi.git
-projects[ckeditor_bidi][download][revision] = d4025c5bd22a17098a8a7769930e9a292b12b469
-projects[ckeditor_bidi][download][branch] = 8.x-1.x
-;; Issue #2874166 by RajabNatshah: Have requirements function on install, and manages to work with libraries module with drupal profiles.
-projects[ckeditor_bidi][patch][] = https://www.drupal.org/files/issues/2874166-3.patch
+projects[ckeditor_bidi][version] = 1.0
 
 projects[ace_editor][type] = module
 projects[ace_editor][download][url] = https://git.drupal.org/project/ace_editor.git
