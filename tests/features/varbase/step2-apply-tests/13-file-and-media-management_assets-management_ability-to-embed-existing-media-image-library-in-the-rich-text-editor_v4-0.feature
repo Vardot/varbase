@@ -77,8 +77,8 @@ So that it will show up under that rich text field without having to upload the 
       And I wait for AJAX to finish
      Then I should see "Embed media"
       And I should see "Embed Flag Earth"
-      And I should see "Embed Flag Earth in space" value in the "attributes[alt]" input element
-      And I should see "Embed Flag Earth all earth in space" value in the "attributes[title]" input element
+      And I should see "Embed Flag Earth in space" value in the "edit-items-1-target-id" input element
+      And I should see "Embed Flag Earth all earth in space" value in the "edit-items-2-target-id" input element
      When I fill in "Embed Flag Earth custom Caption text" for "Caption"
       And I fill in "Embed Flag Earth custom Alt text" for "Alternative text"
       And I fill in "Embed Flag Earth custom title" for "Title"
