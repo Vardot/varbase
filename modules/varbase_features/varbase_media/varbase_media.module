@@ -35,50 +35,68 @@ function varbase_media_ckeditor_css_alter(array &$css, Editor $editor) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function varbase_form_entity_embed_dialog_alter (&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-
+function varbase_media_form_entity_embed_dialog_alter (&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   // Only at the embed step.
   if ($form_state->get('step') == 'embed') {
+
     // Get the entity values and attributes.
-    $values = $form_state->getValues();
     $entity_element = empty($values['attributes']) ? array() : $values['attributes'];
     $entity_element += $form_state->get('entity_element');
     $form_state->set('entity_element', $entity_element);
     $entity = $form_state->get('entity');
+    
+    // Get the entity bundle type.
+    $bundle_type = $entity->bundle();
+    $values = $form_state->getValues();
+    
+    switch ($bundle_type) {
+      case "image":
 
-    // Adding the alt field to the embed dialog form.
-    $form['attributes']['alt'] = array(
-      '#title' => t('Alternative text'),
-      '#type' => 'textfield',
-      '#required' => true ,
-      '#default_value' => $entity_element['alt'],
-      '#description' => t('This text will be used by screen readers, search engines, or when the image cannot be loaded.'),
-    );
+        // Adding the alt field to the embed dialog form.
+        $form['attributes']['alt'] = array(
+          '#title' => t('Alternative text'),
+          '#type' => 'textfield',
+          '#required' => true ,
+          '#default_value' =>$entity->field_image->alt,
+          '#description' => t('This text will be used by screen readers, search engines, or when the image cannot be loaded.'),
+        );
 
-    // Adding the title field to the embed dialog form.
-    $form['attributes']['title'] = array(
-      '#title' => t('Title'),
-      '#type' => 'textfield',
-      '#default_value' => $entity_element['title'],
-      '#description' => t('The title is used as a tool tip when the user hovers the mouse over the image.'),
-    );
+        // Adding the title field to the embed dialog form.
+        $form['attributes']['title'] = array(
+          '#title' => t('Title'),
+          '#type' => 'textfield',
+          '#default_value' => $entity->field_image->title,
+          '#description' => t('The title is used as a tool tip when the user hovers the mouse over the image.'),
+        );
 
-    // Render the Embed entity.
-    $form['entity'] = array (
-      '#type' => 'item',
-      '#markup' => render(entity_view($entity)),
-    );
+        // Render the Embed entity.
+        $form['entity'] = array (
+          '#type' => 'item',
+          '#markup' => render(entity_view($entity)),
+        );
 
-    // Change the "data align" field from rado buttons to Select list.
-    $form['attributes']['data-align']['#type'] = 'select';
-    $form['attributes']['data-align']['#wrapper_attributes'] = '';
-    $form['attributes']['data-align'] += array (
-      '#description' => t('Choose the positioning of the image.'),
-    );
+        // Change the "data align" field from rado buttons to Select list.
+        $form['attributes']['data-align']['#type'] = 'select';
+        $form['attributes']['data-align']['#wrapper_attributes'] = '';
+        $form['attributes']['data-align'] += array (
+          '#description' => t('Choose the positioning of the image.'),
+        );
 
-    // Add description for the caption field. 
-    $form['attributes']['data-caption'] += array(
-      '#description' => t('A caption will be displayed under the image, to describe it in context of your content.'),
-    );
+        // Add description for the caption field. 
+        $form['attributes']['data-caption'] += array(
+          '#description' => t('A caption will be displayed under the image, to describe it in context of your content.'),
+        );
+        
+        // Adding the updated title and alt text to the media entity.
+        if (isset($entity_element['alt'])) {
+          $entity->field_image->alt=$entity_element['alt'];
+        }
+        
+        if (isset($entity_element['title'])) {
+        $entity->field_image->title=$entity_element['title'];
+        }
+        $entity->save();
+        break;
+    }
   }
 }
