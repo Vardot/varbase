@@ -35,7 +35,7 @@ function varbase_media_ckeditor_css_alter(array &$css, Editor $editor) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function varbase_form_entity_embed_dialog_alter (&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function varbase_media_form_entity_embed_dialog_alter (&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   // Only at the embed step.
   if ($form_state->get('step') == 'embed') {
 
