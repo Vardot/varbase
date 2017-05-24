@@ -85,4 +85,3 @@ So that it will show up under that rich text field without having to upload the 
      When I press "Save"
       And I wait
      Then I should see image with the "Embed Flag Earth all earth in space" title text
-
