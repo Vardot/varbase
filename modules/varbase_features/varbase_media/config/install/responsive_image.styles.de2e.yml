@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d1
+    - image.style.d10
+    - image.style.d11
+    - image.style.d12
+    - image.style.d2
+    - image.style.d3
+    - image.style.d4
+    - image.style.d5
+    - image.style.d6
+    - image.style.d7
+    - image.style.d8
+    - image.style.d9
+    - image.style.de2e
+id: de2e
+label: 'Display Edge-to-Edge responsive auto'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - d1
+        - d10
+        - d11
+        - d12
+        - d2
+        - d3
+        - d4
+        - d5
+        - d6
+        - d7
+        - d8
+        - d9
+        - de2e
+breakpoint_group: responsive_image
+fallback_image_style: de2e

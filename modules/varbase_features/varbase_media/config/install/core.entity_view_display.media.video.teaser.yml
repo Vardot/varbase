@@ -1,10 +1,9 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.media.teaser
     - field.field.media.video.field_media_video_embed_field
-    - image.style.large
     - media_entity.bundle.video
   module:
     - video_embed_field
@@ -14,12 +13,14 @@ bundle: video
 mode: teaser
 content:
   field_media_video_embed_field:
-    type: video_embed_field_thumbnail
+    type: video_embed_field_video
     weight: 0
     label: hidden
     settings:
-      image_style: large
-      link_image_to: ''
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
     third_party_settings: {  }
     region: content
 hidden:

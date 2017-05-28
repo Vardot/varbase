@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d8_square
-label: 'Display mid 8 (770xSquare 1:1)'
+label: 'Display 8 (800xSquare 1:1)'
 effects:
   a52de7f0-5694-48c1-881a-5cdff84b1683:
     uuid: a52de7f0-5694-48c1-881a-5cdff84b1683
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 770
-      height: 770
-pipeline: __default__
+      width: 800
+      height: 800
+pipeline: ''

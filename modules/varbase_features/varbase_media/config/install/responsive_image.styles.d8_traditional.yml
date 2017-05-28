@@ -7,11 +7,6 @@ dependencies:
     - bootstrap
 id: d8_traditional
 label: 'Display 8 responsive traditional 4:3'
-image_style_mappings:
-  -
-    breakpoint_id: bootstrap.screen-xs-max
-    multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: d8_traditional
+image_style_mappings: {  }
 breakpoint_group: bootstrap
 fallback_image_style: d8_traditional

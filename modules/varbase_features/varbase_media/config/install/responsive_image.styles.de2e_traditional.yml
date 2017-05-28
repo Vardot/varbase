@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d10_traditional
+    - image.style.d11_traditional
+    - image.style.d12_traditional
+    - image.style.d1_traditional
+    - image.style.d2_traditional
+    - image.style.d3_traditional
+    - image.style.d4_traditional
+    - image.style.d5_traditional
+    - image.style.d6_traditional
+    - image.style.d7_traditional
+    - image.style.d8_traditional
+    - image.style.d9_traditional
+    - image.style.de2e_traditional
+id: de2e_traditional
+label: 'Display Edge-to-Edge responsive traditional 4:3'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - d10_traditional
+        - d11_traditional
+        - d12_traditional
+        - d1_traditional
+        - d2_traditional
+        - d3_traditional
+        - d4_traditional
+        - d5_traditional
+        - d6_traditional
+        - d7_traditional
+        - d8_traditional
+        - d9_traditional
+        - de2e_traditional
+breakpoint_group: responsive_image
+fallback_image_style: de2e_traditional

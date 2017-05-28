@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.s1
+label: 'Size 1 auto'
+targetEntityType: media
+cache: true

@@ -15,14 +15,9 @@ image_style_mappings:
     image_mapping_type: image_style
     image_mapping: d8_square
   -
-    breakpoint_id: bootstrap.screen-sm-max
-    multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: d10_square
-  -
-    breakpoint_id: bootstrap.screen-md-min
+    breakpoint_id: bootstrap.screen-sm-min
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: d10_square
 breakpoint_group: bootstrap
-fallback_image_style: d10_square
+fallback_image_style: d8_square

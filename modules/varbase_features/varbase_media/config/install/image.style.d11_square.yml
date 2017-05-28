@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d11_square
-label: 'Display wide 11 (1070xSquare 1:1)'
+label: 'Display 11 (1100xSquare 1:1)'
 effects:
   57f6c4fb-7aff-49bc-b0b9-cf3a17a59d37:
     uuid: 57f6c4fb-7aff-49bc-b0b9-cf3a17a59d37
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 1070
-      height: 1070
-pipeline: __default__
+      width: 1100
+      height: 1100
+pipeline: ''

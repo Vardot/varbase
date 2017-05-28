@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.s10_square
+label: 'Size 10 square 1:1'
+targetEntityType: media
+cache: true

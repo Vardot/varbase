@@ -348,7 +348,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-beta5
 
 projects[vmi][type] = module
-projects[vmi][version] = 1.0-alpha1
+projects[vmi][version] = 1.0-alpha2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
@@ -358,10 +358,10 @@ projects[varbase_editor][type] = module
 projects[varbase_editor][version] = 4.10
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.0-beta3
+projects[varbase_heroslider_media][version] = 4.0-beta4
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 4.0-beta1
+projects[varbase_carousels][version] = 4.0-beta2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

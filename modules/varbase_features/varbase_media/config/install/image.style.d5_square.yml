@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d5_square
-label: 'Display mid 5 (470xSquare 1:1)'
+label: 'Display 5 (500xSquare 1:1)'
 effects:
   fe196166-3c7d-465d-90eb-73aee1889e03:
     uuid: fe196166-3c7d-465d-90eb-73aee1889e03
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 470
-      height: 470
-pipeline: __default__
+      width: 500
+      height: 500
+pipeline: ''

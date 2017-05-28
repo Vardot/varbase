@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d12_standard
-label: 'Display wide 12 (1170xStandard 16:9)'
+label: 'Display 12 (1200xStandard 16:9)'
 effects:
   35395831-6f5d-42bc-ae6c-4d65b59f75c3:
     uuid: 35395831-6f5d-42bc-ae6c-4d65b59f75c3
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 1170
-      height: 658
-pipeline: __default__
+      width: 1200
+      height: 675
+pipeline: ''

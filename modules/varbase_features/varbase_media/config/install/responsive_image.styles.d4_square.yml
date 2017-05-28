@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - image.style.d4_square
+    - image.style.d8_square
   theme:
     - bootstrap
 id: d4_square
@@ -10,6 +11,11 @@ label: 'Display 4 responsive square 1:1'
 image_style_mappings:
   -
     breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_square
+  -
+    breakpoint_id: bootstrap.screen-sm-min
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: d4_square

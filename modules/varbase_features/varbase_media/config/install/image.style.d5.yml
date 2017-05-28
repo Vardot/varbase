@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies: {  }
 name: d5
-label: 'Display mid 5 (470xAuto)'
+label: 'Display 5 (500xAuto)'
 effects:
   3743db1f-d650-4dd2-b23e-70ff56395891:
     uuid: 3743db1f-d650-4dd2-b23e-70ff56395891
     id: image_scale
     weight: 1
     data:
-      width: 470
+      width: 500
       height: null
       upscale: false
-pipeline: __default__
+pipeline: ''

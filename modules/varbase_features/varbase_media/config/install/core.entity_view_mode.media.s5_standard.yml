@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.s5_standard
+label: 'Size 5 standard 16:9'
+targetEntityType: media
+cache: true

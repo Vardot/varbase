@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - image.style.d7
+    - image.style.d8
   theme:
     - bootstrap
 id: d7
@@ -12,7 +13,7 @@ image_style_mappings:
     breakpoint_id: bootstrap.screen-xs-max
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: d7
+    image_mapping: d8
   -
     breakpoint_id: bootstrap.screen-sm-min
     multiplier: 1x

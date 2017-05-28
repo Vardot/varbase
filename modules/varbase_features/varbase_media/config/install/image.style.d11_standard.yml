@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d11_standard
-label: 'Display wide 11 (1070xStandard 16:9)'
+label: 'Display 11 (1100xStandard 16:9)'
 effects:
   03b56a30-4d9f-44de-8090-987bbadb546c:
     uuid: 03b56a30-4d9f-44de-8090-987bbadb546c
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 1070
-      height: 602
-pipeline: __default__
+      width: 1100
+      height: 619
+pipeline: ''

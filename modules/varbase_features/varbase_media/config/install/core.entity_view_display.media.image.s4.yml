@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.s4
+    - field.field.media.image.field_image
+    - media_entity.bundle.image
+    - responsive_image.styles.d4
+  module:
+    - responsive_image
+id: media.image.s4
+targetEntityType: media
+bundle: image
+mode: s4
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: d4
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d6_square
-label: 'Display mid 6 (570xSquare 1:1)'
+label: 'Display 6 (600xSquare 1:1)'
 effects:
   f1533d32-4241-48e5-9c54-51573722f121:
     uuid: f1533d32-4241-48e5-9c54-51573722f121
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 570
-      height: 570
-pipeline: __default__
+      width: 600
+      height: 600
+pipeline: ''

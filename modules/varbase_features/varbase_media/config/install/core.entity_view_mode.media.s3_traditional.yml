@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.s3_traditional
+label: 'Size 3 traditional 4:3'
+targetEntityType: media
+cache: true

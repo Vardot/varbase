@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - image.style.d1
+    - image.style.d3
   theme:
     - bootstrap
 id: d1
@@ -10,6 +11,11 @@ label: 'Display 1 responsive auto'
 image_style_mappings:
   -
     breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d3
+  -
+    breakpoint_id: bootstrap.screen-sm-min
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: d1

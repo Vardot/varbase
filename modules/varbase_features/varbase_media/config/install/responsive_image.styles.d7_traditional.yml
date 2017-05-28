@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - image.style.d7_traditional
+    - image.style.d8_traditional
   theme:
     - bootstrap
 id: d7_traditional
@@ -10,6 +11,11 @@ label: 'Display 7 responsive traditional 4:3'
 image_style_mappings:
   -
     breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_traditional
+  -
+    breakpoint_id: bootstrap.screen-sm-min
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: d7_traditional

@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.d10_square
+    - image.style.d11_square
+    - image.style.d12_square
+    - image.style.d1_square
+    - image.style.d2_square
+    - image.style.d3_square
+    - image.style.d4_square
+    - image.style.d5_square
+    - image.style.d6_square
+    - image.style.d7_square
+    - image.style.d8_square
+    - image.style.d9_square
+    - image.style.de2e_square
+id: de2e_square
+label: 'Display Edge-to-Edge responsive square 1:1'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - d10_square
+        - d11_square
+        - d12_square
+        - d1_square
+        - d2_square
+        - d3_square
+        - d4_square
+        - d5_square
+        - d6_square
+        - d7_square
+        - d8_square
+        - d9_square
+        - de2e_square
+breakpoint_group: responsive_image
+fallback_image_style: de2e_square

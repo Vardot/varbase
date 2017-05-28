@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d5_traditional
-label: 'Display mid 5 (470xTraditional 4:3)'
+label: 'Display 5 (500xTraditional 4:3)'
 effects:
   da980631-55f3-4f8b-8f23-ce4ee4dfa22b:
     uuid: da980631-55f3-4f8b-8f23-ce4ee4dfa22b
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 470
-      height: 352
-pipeline: __default__
+      width: 500
+      height: 375
+pipeline: ''

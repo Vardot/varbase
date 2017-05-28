@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d7_traditional
-label: 'Display mid 7 (670xTraditional 4:3)'
+label: 'Display 7 (700xTraditional 4:3)'
 effects:
   0374cf23-89c7-4545-999a-3fffaeb4be43:
     uuid: 0374cf23-89c7-4545-999a-3fffaeb4be43
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 670
-      height: 502
-pipeline: __default__
+      width: 700
+      height: 525
+pipeline: ''

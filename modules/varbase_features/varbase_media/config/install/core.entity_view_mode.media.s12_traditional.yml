@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.s12_traditional
+label: 'Size 12 traditional 4:3'
+targetEntityType: media
+cache: true

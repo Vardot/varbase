@@ -4,13 +4,19 @@ dependencies:
   config:
     - image.style.d10
     - image.style.d11
+    - image.style.d8
   theme:
     - bootstrap
 id: d11
 label: 'Display 11 responsive auto'
 image_style_mappings:
   -
-    breakpoint_id: bootstrap.screen-sm-max
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8
+  -
+    breakpoint_id: bootstrap.screen-sm-min
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: d10
@@ -20,4 +26,4 @@ image_style_mappings:
     image_mapping_type: image_style
     image_mapping: d11
 breakpoint_group: bootstrap
-fallback_image_style: d11
+fallback_image_style: d8

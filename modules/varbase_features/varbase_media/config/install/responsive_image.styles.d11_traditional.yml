@@ -4,13 +4,19 @@ dependencies:
   config:
     - image.style.d10_traditional
     - image.style.d11_traditional
+    - image.style.d8_traditional
   theme:
     - bootstrap
 id: d11_traditional
 label: 'Display 11 responsive traditional 4:3'
 image_style_mappings:
   -
-    breakpoint_id: bootstrap.screen-sm-max
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: d8_traditional
+  -
+    breakpoint_id: bootstrap.screen-sm-min
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: d10_traditional
@@ -20,4 +26,4 @@ image_style_mappings:
     image_mapping_type: image_style
     image_mapping: d11_traditional
 breakpoint_group: bootstrap
-fallback_image_style: d11_traditional
+fallback_image_style: d8_traditional

@@ -1,0 +1,31 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.s9_traditional
+    - field.field.media.video.field_media_video_embed_field
+    - media_entity.bundle.video
+  module:
+    - video_embed_field
+id: media.video.s9_traditional
+targetEntityType: media
+bundle: video
+mode: s9_traditional
+content:
+  field_media_video_embed_field:
+    type: video_embed_field_video
+    weight: 0
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

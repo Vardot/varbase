@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d9_square
-label: 'Display mid 9 (870xSquare 1:1)'
+label: 'Display 9 (900xSquare 1:1)'
 effects:
   20b3c64d-76bb-482c-9bef-b5dec0b86a17:
     uuid: 20b3c64d-76bb-482c-9bef-b5dec0b86a17
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 870
-      height: 870
-pipeline: __default__
+      width: 900
+      height: 900
+pipeline: ''

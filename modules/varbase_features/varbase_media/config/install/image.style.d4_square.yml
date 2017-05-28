@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d4_square
-label: 'Display 4 (370xSquare 1:1)'
+label: 'Display 4 (400xSquare 1:1)'
 effects:
   e0e9be76-fed5-4051-bac5-5402f5b8ec34:
     uuid: e0e9be76-fed5-4051-bac5-5402f5b8ec34
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 370
-      height: 370
-pipeline: __default__
+      width: 400
+      height: 400
+pipeline: ''

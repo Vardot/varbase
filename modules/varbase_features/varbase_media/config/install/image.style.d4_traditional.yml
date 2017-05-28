@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d4_traditional
-label: 'Display 4 (370xTraditional 4:3)'
+label: 'Display 4 (400xTraditional 4:3)'
 effects:
   b69d4b68-c158-45c4-85eb-533f1bcaac9f:
     uuid: b69d4b68-c158-45c4-85eb-533f1bcaac9f
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 370
-      height: 277
-pipeline: __default__
+      width: 400
+      height: 300
+pipeline: ''

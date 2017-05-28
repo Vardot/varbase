@@ -4,6 +4,6 @@ dependencies:
   module:
     - media_entity
 id: media.browser_teaser
-label: 'Browser Teaser'
+label: 'Entity Browser Preview'
 targetEntityType: media
 cache: true

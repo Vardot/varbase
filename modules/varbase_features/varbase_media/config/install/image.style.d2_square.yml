@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d2_square
-label: 'Display 2 (170xSquare 1:1)'
+label: 'Display 2 (200xSquare 1:1)'
 effects:
   c6e9e082-4830-4c15-a79f-af656a5afd4a:
     uuid: c6e9e082-4830-4c15-a79f-af656a5afd4a
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 170
-      height: 170
-pipeline: __default__
+      width: 200
+      height: 200
+pipeline: ''

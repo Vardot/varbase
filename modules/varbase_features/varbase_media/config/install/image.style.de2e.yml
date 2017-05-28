@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+name: de2e
+label: 'Display Edge-to-Edge auto'
+effects:
+  8310be22-3f51-419d-8e81-0be8a68e09e8:
+    uuid: 8310be22-3f51-419d-8e81-0be8a68e09e8
+    id: image_scale
+    weight: 1
+    data:
+      width: 1600
+      height: null
+      upscale: false
+pipeline: ''

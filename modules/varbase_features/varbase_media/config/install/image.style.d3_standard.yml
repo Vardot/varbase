@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d3_standard
-label: 'Display 3 (270xStandard 16:9)'
+label: 'Display 3 (300xStandard 16:9)'
 effects:
   80e049ed-f740-4da9-9b67-b429ced99e8d:
     uuid: 80e049ed-f740-4da9-9b67-b429ced99e8d
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 270
-      height: 152
-pipeline: __default__
+      width: 300
+      height: 169
+pipeline: ''

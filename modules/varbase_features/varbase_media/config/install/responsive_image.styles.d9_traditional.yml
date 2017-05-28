@@ -20,4 +20,4 @@ image_style_mappings:
     image_mapping_type: image_style
     image_mapping: d9_traditional
 breakpoint_group: bootstrap
-fallback_image_style: d9_traditional
+fallback_image_style: d8_traditional

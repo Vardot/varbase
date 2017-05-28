@@ -4,13 +4,13 @@ dependencies:
   module:
     - focal_point
 name: d7_square
-label: 'Display mid 7 (670xSquare 1:1)'
+label: 'Display 7 (700xSquare 1:1)'
 effects:
   39fa288e-052c-4b96-8dbe-81311fe0b7ab:
     uuid: 39fa288e-052c-4b96-8dbe-81311fe0b7ab
     id: focal_point_scale_and_crop
     weight: 1
     data:
-      width: 670
-      height: 670
-pipeline: __default__
+      width: 700
+      height: 700
+pipeline: ''

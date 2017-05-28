@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.s7_square
+label: 'Size 7 square 1:1'
+targetEntityType: media
+cache: true

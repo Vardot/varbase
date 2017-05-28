@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies: {  }
 name: d9
-label: 'Display mid 9 (870xAuto)'
+label: 'Display 9 (900xAuto)'
 effects:
   26e243a4-d612-42e8-ae52-ced1e0c511af:
     uuid: 26e243a4-d612-42e8-ae52-ced1e0c511af
     id: image_scale
     weight: 1
     data:
-      width: 870
+      width: 900
       height: null
       upscale: false
-pipeline: __default__
+pipeline: ''

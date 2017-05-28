@@ -14,12 +14,13 @@ type_settings:
   bundles:
     - image
   display_plugins:
-    - 'view_mode:media.full'
-    - 'view_mode:media.large'
-    - 'view_mode:media.medium'
-    - 'view_mode:media.small'
-    - 'view_mode:media.xlarge'
-    - 'view_mode:media.xsmall'
+    - 'view_mode:media.s10'
+    - 'view_mode:media.s12'
+    - 'view_mode:media.s3'
+    - 'view_mode:media.s4'
+    - 'view_mode:media.s6'
+    - 'view_mode:media.s8'
+    - 'view_mode:media.se2e'
   entity_browser: editor_media_browser
   entity_browser_settings:
     display_review: false
