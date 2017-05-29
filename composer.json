@@ -68,18 +68,6 @@
     {
       "type": "package",
       "package": {
-        "name": "ckeditor/bidi",
-        "version": "4.6.2",
-        "type": "drupal-library",
-        "dist": {
-          "url": "http://download.ckeditor.com/bidi/releases/bidi_4.6.2.zip",
-          "type": "zip"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
         "name": "ajaxorg/ace-builds",
         "version": "1.2.6",
         "type": "library",
@@ -131,10 +119,6 @@
           "package": "kenwheeler/slick"
         },
         {
-          "name": "bidi",
-          "package": "ckeditor/bidi"
-        },
-        {
           "name": "ace",
           "package": "ajaxorg/ace-builds"
         }
@@ -177,7 +161,6 @@
     "enyo/dropzone": "4.3.0",
     "dinbror/blazy": "1.8.2",
     "kenwheeler/slick": "1.6.0",
-    "ckeditor/bidi": "4.6.2",
     "ajaxorg/ace-builds": "1.2.6",
     "drupal/core": "8.3.2",
     "drupal/config_update": "1.3",
@@ -212,7 +195,7 @@
     "drupal/crop": "1.2",
     "drupal/focal_point": "1.0-beta4",
     "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
-    "drupal/ckeditor_bidi": "1.0",
+    "drupal/ckeditor_bidi": "2.0",
     "drupal/ace_editor": "1.x-dev#55dc97d7fcc1aba55a16176f94d72a8ba7002c72",
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
     "drupal/imagemagick": "1.0-alpha6",
@@ -267,7 +250,7 @@
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/xmlsitemap": "1.0-alpha2",
-    "drupal/anchor_link": "1.3",
+    "drupal/anchor_link": "1.4",
     "drupal/entity_browser_enhanced": "1.0-beta5",
     "drupal/vmi": "1.0-alpha2",
     "drupal/varbase_editor": "4.10",

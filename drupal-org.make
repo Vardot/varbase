@@ -112,7 +112,7 @@ projects[pathologic][download][revision] = e0473546e51cbeaa3acb34e3208a0c503ca85
 projects[pathologic][download][branch] = 8.x-1.x
 
 projects[ckeditor_bidi][type] = module
-projects[ckeditor_bidi][version] = 1.0
+projects[ckeditor_bidi][version] = 2.0
 
 projects[ace_editor][type] = module
 projects[ace_editor][download][url] = https://git.drupal.org/project/ace_editor.git
@@ -378,10 +378,6 @@ libraries[blazy][destination] = "libraries"
 libraries[slick][download][type] = get
 libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.6.0.tar.gz"
 libraries[slick][destination] = "libraries"
-
-libraries[bidi][download][type] = get
-libraries[bidi][download][url] = "http://download.ckeditor.com/bidi/releases/bidi_4.6.2.zip"
-libraries[bidi][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
