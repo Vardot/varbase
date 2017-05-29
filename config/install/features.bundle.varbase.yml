@@ -33,6 +33,8 @@ assignments:
   exclude:
     types:
       config:
+        ultimate_cron_job: ultimate_cron_job
+        crop_type: crop_type
         features_bundle: features_bundle
         user_role: user_role
     curated: true
