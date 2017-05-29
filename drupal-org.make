@@ -355,7 +355,7 @@ projects[vmi][version] = 1.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.10
+projects[varbase_editor][version] = 4.11
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 4.0-beta4
