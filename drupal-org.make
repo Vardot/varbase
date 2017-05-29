@@ -261,7 +261,7 @@ projects[recaptcha][version] = 2.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[blazy][type] = module
-projects[blazy][version] = 1.0-rc1
+projects[blazy][version] = 1.0-rc2
 
 projects[slick][type] = module
 projects[slick][version] = 1.0-rc3
