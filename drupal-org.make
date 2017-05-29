@@ -264,7 +264,7 @@ projects[blazy][type] = module
 projects[blazy][version] = 1.0-rc2
 
 projects[slick][type] = module
-projects[slick][version] = 1.0-rc3
+projects[slick][version] = 1.0
 
 projects[slick_views][type] = module
 projects[slick_views][version] = 1.0-rc2
