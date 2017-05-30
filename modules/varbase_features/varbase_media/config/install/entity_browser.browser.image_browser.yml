@@ -31,16 +31,16 @@ widgets:
     weight: -10
     label: Library
     id: view
-  f71e3128-5112-4b12-9593-e981f35ba988:
+  1ddfc2ef-3937-42ee-8ac8-0e79892b3127:
     settings:
+      form_mode: default
       media_entity_bundle: image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop image files here to upload them'
       max_filesize: 32M
       extensions: 'jpg jpeg gif png'
-      submit_text: 'Select Image'
-      auto_select: false
-    uuid: f71e3128-5112-4b12-9593-e981f35ba988
-    weight: -9
+      submit_text: 'Select an image'
+    uuid: 1ddfc2ef-3937-42ee-8ac8-0e79892b3127
+    weight: 3
     label: Upload
-    id: dropzonejs_media_entity
+    id: dropzonejs_media_entity_inline_entity_form
