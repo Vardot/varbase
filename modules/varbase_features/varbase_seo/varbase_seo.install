@@ -1,65 +1,104 @@
 <?php
+
 /**
  * @file
  * Install, update and uninstall functions for the Varbase SEO module.
  */
 
 /**
- * Enable newly installed modules and disable not needed modules.
+ * Enable Metatag: Facebook module.
  */
 function varbase_seo_update_8001() {
-
-  // Enable Metatag: Facebookmodule.
   if (!\Drupal::moduleHandler()->moduleExists('metatag_facebook')) {
     \Drupal::service('module_installer')->install(['metatag_facebook'], FALSE);
   }
-
-  // Enable Metatag: Google Plus module.
+}
+    
+/**
+ * Enable Metatag: Google Plus module.
+ */
+function varbase_seo_update_8002() {
   if (!\Drupal::moduleHandler()->moduleExists('metatag_google_plus')) {
     \Drupal::service('module_installer')->install(['metatag_google_plus'], FALSE);
   }
-
-  // Enable Metatag: hreflang module.
+}
+    
+/**
+ * Enable Metatag: hreflang module.
+ */
+function varbase_seo_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('metatag_hreflang')) {
     \Drupal::service('module_installer')->install(['metatag_hreflang'], FALSE);
   }
-
-  // Enable Metatag: Mobile & UI Adjustments module.
+}
+    
+/**
+ * Enable Metatag: Mobile & UI Adjustments module.
+ */
+function varbase_seo_update_8004() {
   if (!\Drupal::moduleHandler()->moduleExists('metatag_mobile')) {
     \Drupal::service('module_installer')->install(['metatag_mobile'], FALSE);
   }
-
-  // Enable Metatag: Open Graph module.
+}
+    
+/**
+ * Enable Metatag: Open Graph module.
+ */
+function varbase_seo_update_8005() {
   if (!\Drupal::moduleHandler()->moduleExists('metatag_open_graph')) {
     \Drupal::service('module_installer')->install(['metatag_open_graph'], FALSE);
   }
-
-  // Enable Metatag: Twitter Cards module.
+}
+    
+/**
+ * Enable Metatag: Twitter Cards module.
+ */
+function varbase_seo_update_8006() {
   if (!\Drupal::moduleHandler()->moduleExists('metatag_twitter_cards')) {
     \Drupal::service('module_installer')->install(['metatag_twitter_cards'], FALSE);
   }
-
-  // Enable Metatag: Verification module.
+}
+    
+/**
+ * Enable Metatag: Verification module.
+ */
+function varbase_seo_update_8007() {
   if (!\Drupal::moduleHandler()->moduleExists('metatag_verification')) {
     \Drupal::service('module_installer')->install(['metatag_verification'], FALSE);
   }
-
-  // Enable Real-time SEO for Drupal module.
+}
+    
+/**
+ * Enable Real-time SEO for Drupal module.
+ */
+function varbase_seo_update_8008() {
   if (!\Drupal::moduleHandler()->moduleExists('yoast_seo')) {
     \Drupal::service('module_installer')->install(['yoast_seo'], FALSE);
   }
-
-  // Enable Simple XML Sitemap module.
+}
+    
+/**
+ * Enable Simple XML Sitemap module.
+ */
+function varbase_seo_update_8009() {
   if (!\Drupal::moduleHandler()->moduleExists('simple_sitemap')) {
     \Drupal::service('module_installer')->install(['simple_sitemap'], FALSE);
   }
-
-  // Enable Google Analytics module.
+}
+    
+/**
+ * Enable Google Analytics module.
+ */
+function varbase_seo_update_8010() {
   if (!\Drupal::moduleHandler()->moduleExists('google_analytics')) {
     \Drupal::service('module_installer')->install(['google_analytics'], FALSE);
   }
-
-  // Enable Redirect 404 module.
+}
+    
+/**
+ * Enable Redirect 404 module.
+ */
+function varbase_seo_update_8011() {
   if (!\Drupal::moduleHandler()->moduleExists('redirect_404')) {
     \Drupal::service('module_installer')->install(['redirect_404'], FALSE);
   }

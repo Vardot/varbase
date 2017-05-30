@@ -9,4 +9,3 @@ If you want to test the any of the tools features, you will need to use the
 $ bin/behat --config=behat.varbase-tools.yml tools/google/gmail.feature
 
 $ bin/behat --config=behat.varbase-tools.yml tools/google/search.feature
-

@@ -84,7 +84,7 @@ class AssemblerForm extends FormBase {
 
     // Extra Varbase components, which could be selected to be installed.
     $extra_components_to_assemble = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies');
-    
+
     // Combine default Varbase components and selected extra varbase components.
     $combined_extra_components = array_combine($extra_components_to_assemble, $extra_components_to_assemble);
     $extra_components = array_intersect_key($component_discovery->scan('module'), $combined_extra_components);
@@ -94,7 +94,7 @@ class AssemblerForm extends FormBase {
       yield $key => $extra_component_info;
     }
   }
-  
+
   /**
    * Get selected extra varbase's components.
    *
@@ -132,14 +132,14 @@ class AssemblerForm extends FormBase {
       '#type' => 'actions',
       '#weight' => 5,
     ];
-    
+
     // Configbit root folder for varbase profile.
     $configbit_root = \Drupal::root() . '/profiles/varbase/configbit';
 
     foreach ($this->getExtraComponentsInfo($configbit_root) as $key => $info) {
       $form['extra_components']['#options'][$key] = $info['name'];
     }
-    
+
     // Default selected extra components.
     $form['extra_components']['#default_value'] = $this->getSelectedExtraComponents($configbit_root);
 

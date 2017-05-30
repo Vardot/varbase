@@ -1,56 +1,87 @@
 <?php
+
 /**
  * @file
  * Install, update and uninstall functions for the Varbase admin module.
  */
 
 /**
- * Enable newly installed modules and disable not needed modules.
+ * Enable admin toolbar extra tools module.
  */
 function varbase_admin_update_8001() {
-  // Enable admin toolbar extra tools module.
   if (!\Drupal::moduleHandler()->moduleExists('admin_toolbar_tools')) {
     \Drupal::service('module_installer')->install(['admin_toolbar_tools'], FALSE);
   }
+}
 
-  // Enable adminimal admin toolbar tools module.
+/**
+ * Enable adminimal admin toolbar tools module.
+ */
+function varbase_admin_update_8002() {
   if (!\Drupal::moduleHandler()->moduleExists('adminimal_admin_toolbar')) {
     \Drupal::service('module_installer')->install(['adminimal_admin_toolbar'], FALSE);
   }
+}
 
-  // Enable Masquerade module.
+/**
+ * Enable Masquerade module.
+ */
+function varbase_admin_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('masquerade')) {
     \Drupal::service('module_installer')->install(['masquerade'], FALSE);
   }
+}
 
-  // Enable RoleAssign module.
+/**
+ * Enable RoleAssign module.
+ */
+function varbase_admin_update_8004() {
   if (!\Drupal::moduleHandler()->moduleExists('roleassign')) {
     \Drupal::service('module_installer')->install(['roleassign'], FALSE);
   }
+}
 
-  // Enable User protect module.
+/**
+ * Enable User protect module.
+ */
+function varbase_admin_update_8005() {
   if (!\Drupal::moduleHandler()->moduleExists('userprotect')) {
     \Drupal::service('module_installer')->install(['userprotect'], FALSE);
   }
+}
 
-  // Enable Responsive Preview module.
+/**
+ * Enable Responsive Preview module.
+ */
+function varbase_admin_update_8006() {
   if (!\Drupal::moduleHandler()->moduleExists('responsive_preview')) {
     \Drupal::service('module_installer')->install(['responsive_preview'], FALSE);
   }
+}
 
-  // Enable Mail Editor module.
+/**
+ * Enable Mail Editor module.
+ */
+function varbase_admin_update_8007() {
   if (!\Drupal::moduleHandler()->moduleExists('mail_edit')) {
     \Drupal::service('module_installer')->install(['mail_edit'], FALSE);
   }
+}
 
-  // Enable Taxonomy access fix module.
+/**
+ * Enable Taxonomy access fix module.
+ */
+function varbase_admin_update_8008() {
   if (!\Drupal::moduleHandler()->moduleExists('taxonomy_access_fix')) {
     \Drupal::service('module_installer')->install(['taxonomy_access_fix'], FALSE);
   }
+}
 
-  // Enable Menu Admin per Menu module.
+/**
+ * Enable Menu Admin per Menu module.
+ */
+function varbase_admin_update_8009() {
   if (!\Drupal::moduleHandler()->moduleExists('menu_admin_per_menu')) {
     \Drupal::service('module_installer')->install(['menu_admin_per_menu'], FALSE);
   }
-
 }

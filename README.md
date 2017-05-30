@@ -26,9 +26,8 @@ instructions.
 ## Install with Composer
 
 ```
-composer create-project Vardot/varbase-build:^8.4.03 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/varbase-build:^8.4.04 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 ## Building Varbase 8.x-4.x projects with Varbase Build
 https://github.com/Vardot/varbase-build
-

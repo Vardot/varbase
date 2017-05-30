@@ -1,20 +1,19 @@
 <?php
 
-/**
- * @file
- * Contains \Varbase\composer\ScriptHandler.
- */
-
 namespace Varbase\composer;
 
 use Symfony\Component\Filesystem\Filesystem;
 
+/**
+ * Varbase Composer Script Handler.
+ */
 class ScriptHandler {
 
   /**
    * Get the Drupal root directory.
    *
-   * @param type $project_root
+   * @param string or int or object... $project_root
+   *
    * @return type
    */
   protected static function getDrupalRoot($project_root) {
@@ -107,4 +106,5 @@ class ScriptHandler {
       file_put_contents($varbase_info_file_with_root_path, $new_varbase_info);
     }
   }
+
 }

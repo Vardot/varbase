@@ -3,8 +3,8 @@ input[type="text"] {
 }
 
 #branding {
-  background-color: #F9F9F9;
-  border-bottom: 1px solid #EEE;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
 }
 
 #branding h1.page-title {
@@ -16,7 +16,7 @@ div.breadcrumb a:hover {
 }
 
 div.vertical-tabs ul li.first a {
-  border-top: 2px solid #0074BD;
+  border-top: 2px solid #0074bd;
 }
 
 /* @todo Fix problem in checboxes with adminimal theme + fpa */
@@ -44,7 +44,8 @@ body .form-wrapper .counter:before {
   margin-right: 4px;
 }
 
-ul.tips, div.description,
+ul.tips,
+div.description,
 .form-item .description,
 body .form-wrapper .counter {
   margin: 0.2em 0 0 0;
@@ -65,4 +66,3 @@ body .form-wrapper .counter {
 .adminimal .ui-dialog.ui-widget.ui-widget-content .media-image-edit-form .form-actions {
   display: none;
 }
-

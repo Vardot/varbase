@@ -46,4 +46,3 @@ equivalent to:
 ```
 drush site-install varbase --yes --site-name=Varbase4 --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=mysql://root:123___@localhost/test_varbase4 --locale=ar varbase_multilingual_configuration.enable_multilingual=false -vvv
 ```
-

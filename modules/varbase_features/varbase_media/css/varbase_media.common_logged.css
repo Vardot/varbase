@@ -134,15 +134,15 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
 
 /** Style the dropzone upload in entity browsers  **/
 .entity-browser-form div#ief-dropzone-upload > div {
-   border: 2px dashed hsla(0,0%,42%,0.65);
-   border-radius: 20px;
-   padding: 15px;
-   margin: 0 15px 15px 15px;
+  border: 2px dashed hsla(0,0%,42%,0.65);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 0 15px 15px 15px;
 }
 
 .entity-browser-form div#ief-dropzone-upload > div .image-widget-data {
-   float: left;
-   width: 70%;
+  float: left;
+  width: 70%;
 }
 
 a.entity-browser-handle.entity-browser-iframe {

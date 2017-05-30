@@ -1,3 +1,123 @@
+## 8.4.04
+* Issue #2871377: Updated [Entity Browser] module from 8.1.0-rc2 to 8.1.0 , and
+                  Updated the patch for entity browser 8.x-1.0
+* Issue #2872094: Updated [Display Suite] module from 8.3.0-beta2 to 8.3.0-beta3
+* Issue #2872095: Updated [webform] module from 8.5.0-beta11 to 8.5.0-beta12
+* Issue #2872100: Added [DRD Agent] module base code, but not enabled.
+* Issue #2872103: Added [Node Edit Protection] module.
+* Issue #2870172: Added [ Feature: Navigational Features - Other menus.
+                  - Standard menus ] for Automated Functional Testing.
+* Issue #2870172: Removed [ Feature: Navigational Features - Other
+                  menus - Standard menus ] .
+* Issue #2872284: Enabled [Admin Toolbar Extra Tools] module.
+* Issue #2872284: Added the varbase x-small emblem white logo to the admin
+                  toolbar with the varbase/toolbar.icon library.
+* Issue #2872284: Added an Updated function to nable Admin Toolbar Extra Tools
+                  module in the next update.
+* Issue #2873260: Updated [Devel] module from 8.1.0-rc1 to 8.1.0-rc2
+* Issue #2873263: Updated [video embed field] module from 8.1.4 to 8.1.5
+* Issue #2874207: Updated [Varbase Editor] feature from 8.4.6 to 8.4.7
+* Issue #2874207: Added the [CKEditor - BiDi (Text Direction)] library to to
+                  varbase code because it^s not listed in the Drupal.org
+                  Library Packaging Whitelist, we will move the command to get
+                  the library in the drupal-org.make file, until it been added
+                  to the Packaging Whitelist https://www.drupal.org/node/2874359
+* Issue #2874409: Updated [ctools] module from 8.3.0-beta2 to 8.3.0
+* Issue #2874429: Updated [Pathauto] module from 8.1.0-rc1 to 8.1.0
+* Issue #2874442: Updated [token] module from 8.1.0-rc1 to 8.1.0
+* Issue #2874479: Updated [page manager] module from 8.4.0-beta1 to 8.4.0-beta2
+* Issue #2874483: Updated [panelizer] module from 8.4.0-beta3 to 8.4.0
+* Issue #2874485: Updated [panels] module from 8.4.0-beta1 to 8.4.0
+* Issue #2874602: Updated [View Modes inventory] module
+                  from 8.1.x-dev to 8.1.0-alpha1
+* Issue #2874737: Updated [panels] module from 8.4.0 to 8.4.1
+* Issue #2874798: Updated [Varbase Hero Slider Media] feature module from
+                  8.4.0-alpha6 to 8.4.0-beta1
+* Issue #2875297: Updated [Varbase Editor] feature from 8.4.7 to 8.4.8
+* Issue #2875297: Updated [ Feature: Content Editing - Rich Text Editor -
+                  Input formats ] automated functional test.
+* Issue #2875352: Added newly installed modules in update hook (only modules
+                  that makes sense).
+* Issue #2871079: Optimization round no. 2 for varbase admin theme.
+* Issue #2875477: Disabled [ds_switch_view_mode] module.
+* Issue #2875498: Updated [Varbase Editor] feature from 8.4.8 to 8.4.9
+* Issue #2875352: Enable newly installed modules and disable not needed modules.
+                  in the update function to cover updates from far early
+                  versions.
+* Issue #2875600: Updated [Varbase Editor] feature from 8.4.9 to 8.4.10
+* Issue #2875352: Added newly installed modules in update hook (only modules
+                  that makes sense).
+* Issue #2875625: Updated [Drupal core] from 8.3.1 to 8.3.2
+* Issue #2875673: Updated [adminimal admin toolbar] from 8.1.3 to 8.1.4
+* Issue #2875677: Updated [Display Suite] module from 8.3.0-beta2 to 8.3.0-beta4
+* Issue #2871254: [Varbase Media] Optimization round no. 4 , and various
+                  admin theme enhancement.
+* Issue #2877015: Added [Mail Editor] module.
+* Issue #2877033: Added [Honeypot] module.
+* Issue #2877033: Updated [varbase security] feature: Have honeypot with log
+                  been sat to true.
+* Issue #2877053: Added [Taxonomy access fix] module.
+* Issue #2877070: Added [Better Exposed Filters] module.
+* Issue #2877079: Added [Menu Admin per Menu] module.
+* Issue #2877214: Added [Link Attributes widget] module.
+* Issue #2877221: Added [Custom Permissions] module.
+* Issue #2877228: Updated [Display Suite] module from 8.3.0-beta4 to 8.3.0-rc1
+* Issue #2877230: Removed Trivial Automated Functional tests, which needs big
+                  time from the robot.
+* Issue #2871254: [Varbase Media] Optimization round no. 4 : Added the Symfony
+                  Component Yaml namespace.
+* Issue #2877414: Removed [Custom Permissions] module
+* Issue #2877427: Updated [Varbase Hero Slider Media] feature module
+                  from 8.4.0-beta1 to 8.4.0-beta2
+* Issue #2877575: Updated [DRD Agent] from 8.3.0 to 8.3.1
+* Issue #2877702: Added the Patch for [Real-time SEO] module to have [ Text 
+                 (plain, long) ] filed type [string_log] for yoast seo to use.
+* Issue #2878288: Updated [Bootstrap] theme from 8.3.3 to 8.3.4
+* Issue #2878290: Updated [Honeypot] module from 8.1.24 to 8.1.25
+* Issue #2878292: Theme edits for Vartheme: Move title above tabs.
+* Issue #2877033: Moved capatch and recaptcha config to config/optional
+* Issue #2878296: Add field description to Varbase Core.
+* Issue #2875352: Fixed the updated function to NOT enable CAPTCHA, and
+                  reCAPTCHA, But Enable ACE Editor module.
+* Issue #2878061: Added Theme Settings for Vartheme (base theme)
+                  with header full-width option.
+* Issue #2878061: Optimization for Vartheme Settings to work with
+                  VARTHEME_SUBTHEME too.
+* Issue #2878292: Theme edits for Vartheme about edge to edge and bootstrap
+                  spacing and no spacing.
+* Issue #2879178: [Varbase Media] Media Enhancements
+* Issue #2879178: Updated [Feature: File & Media Management - Assets Management
+                  - Ability to embed existing meida image library in the rich
+                  text editor] Automated Functional Test.
+* Issue #2879251: Updated [Bootstrap] theme from 8.3.4 to 8.3.5
+* Updated .travis.yml file : Removed test matrix for PHP7.1
+* Issue #2879403: Updated [Display Suite] module from 8.3.0-rc1 to 8.3.0
+* Issue #2879645: Updated [Varbase Media] Feature: Revised naming for Entity
+                  browsers, and bettered up the upload behaviour with edit.
+* Issue #2880116: Updated [dropzonejs] module from 8.1.0-alpha6 to 8.1.0-alpha7
+* Issue #2880252: Updated [CKEditor bidi button] module from 8.1.x-dev to 8.1.0
+* Issue #2874207: Have CKEditor - BiDi (Text Direction) added to the Packaging
+                  Whitelist https://www.drupal.org/node/2874359, So we are
+                  calling it in the .make build file and composer.
+* Issue #2881032: Updated [Responsive Theme Preview] module
+                  from 8.1.0-alpha4 to 8.1.0-alpha5
+* Issue #2879178: [Varbase Media] Media Enhancements: Editing title and alt in
+                  WYSIWYG in Varbase when adding Media embed
+* Issue #2881954: Updated Media Sizing Media sizes and Responsive View Modes,
+                  Added view modes for "Media" to be same as Responsive image
+                  styles, Edited responsive image styles according to new
+                  standard, Added e2e image style (Edge to Edge) for both
+                  responsive and standard.
+* Issue #2882075: Updated [blazy] module from 8.1.0-rc1 to 8.1.0-rc2
+* Issue #2882078: Updated [Display Suite] module from 8.3.0 to 8.3.1
+* Issue #2882100: Updated [slick] module from 8.1.0-rc3 to 8.1.0
+* Issue #2882103: Updated [Slick Media] module from 8.1.0-rc1 to 8.1.0
+* Issue #2882108: Updated [CKEditor BiDi Buttons] module from 8.1.0 to 8.2.0
+* Issue #2882145: Updated [anchor link] module from 8.1.3 to 8.1.4
+* Issue #2882144: Updated [Varbase editor] feature module from 8.x-4.10 to 8.4.11
+* Issue #2882198: Updated [CHANGELOG.md, UPDATE.md] files and filtered the code
+                  for Drupal 8 Coding Standard.
+
 ## 8.4.03
 * Issue #2868568: Updated [Bootstrap] theme from 8.3.2 to 8.3.3
 * Issue #2865977: Establishing profile inheritance for new distros
@@ -48,7 +168,7 @@
 * Issue #2864090: Updated [Slick Carousel] module from 8.1.0-rc2 to 8.1.0-rc3
 * Issue #2864150: Updated [Varbase Editor] from 8.4.5 to 8.4.6
 * Issue #2864258: Enable [ImageMagick] module by default for the image took kit
-* Issue #2864261: Add [Image Optimize (or ImageAPI Optimize)] module
+* Issue #2864261: Added [Image Optimize (or ImageAPI Optimize)] module
 * Issue #2864292: Added [Fast 404] module
 * Issue #2864315: Added [Rabbit Hole] module: Only Enabled [Rabbit Hole, Rabbit
                   Hole nodes, Rabbit Hole taxonomy] modules and basic settings
@@ -63,7 +183,7 @@
                   [Content admin, and Site admin].
 * Issue #2864624: Updated [Chaos tool suite (ctools)] module from 8.3.0-alpha27
                   to 8.3.0-beta1
-* Issue #2864360: Add [Mail System, SMTP] modules
+* Issue #2864360: Added [Mail System, SMTP] modules
 * Issue #2864360: Enabled [Mail System, SMTP] modules
 * Issue #2864966: [Vartheme] Add [Varbase/bootstrap-print] less/css library in
                   base theme (vartheme)
