@@ -209,7 +209,7 @@ projects[redirect][type] = module
 projects[redirect][version] = 1.0-alpha5
 
 projects[metatag][type] = module
-projects[metatag][version] = 1.0
+projects[metatag][version] = 1.1
 
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 2.9
