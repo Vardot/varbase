@@ -154,7 +154,7 @@ projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha5
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-beta12
+projects[webform][version] = 5.0-beta13
 
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha1
