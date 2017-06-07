@@ -1,58 +1,65 @@
 /**
  * Varbase media common logged in users style.
  */
-
 /* Style the entity select and editor image dialog for images. */
-.entity-select-dialog #entity-embed-dialog-form .form-type-radio,
+.entity-select-dialog #entity-embed-dialog-form .form-type-radio {
+  display: block;
+}
+.entity-select-dialog #entity-embed-dialog-form .form-type-radio label:after {
+  content: "";
+}
+.entity-select-dialog #entity-embed-dialog-form .radio input[type="radio"],
+.entity-select-dialog #entity-embed-dialog-form .checkbox input[type="radio"] {
+  margin-right: 5px;
+}
+.entity-select-dialog #entity-embed-dialog-form .input-group .select-wrapper:first-child .form-control:first-child {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.entity-select-dialog #entity-embed-dialog-form .form-item-attributes-data-entity-embed-display .input-group-addon {
+  display: none;
+}
 .editor-image-dialog #editor-image-dialog-form .form-type-radio {
   display: block;
 }
-
-.entity-select-dialog #entity-embed-dialog-form .form-type-radio label:after,
 .editor-image-dialog #editor-image-dialog-form .form-type-radio label:after {
   content: "";
 }
-
-.entity-select-dialog #entity-embed-dialog-form .radio input[type="radio"],
-.entity-select-dialog #entity-embed-dialog-form .checkbox input[type="checkbox"],
 .editor-image-dialog #editor-image-dialog-form .radio input[type="radio"],
-.editor-image-dialog #editor-image-dialog-form .checkbox input[type="checkbox"] {
+.editor-image-dialog #editor-image-dialog-form .checkbox input[type="radio"] {
   margin-right: 5px;
 }
-
-.entity-select-dialog #entity-embed-dialog-form .input-group .select-wrapper:first-child .form-control:first-child,
 .editor-image-dialog #editor-image-dialog-form .input-group .select-wrapper:first-child .form-control:first-child {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
-
-.entity-select-dialog #entity-embed-dialog-form .form-item-attributes-data-entity-embed-display .input-group-addon,
 .editor-image-dialog #editor-image-dialog-form .form-item-attributes-data-entity-embed-display .input-group-addon {
   display: none;
 }
-
 /* Style the CKEditor widget for images. */
-.cke_widget_wrapper.align-left {
+.cke_widget_wrapper .align-left {
   margin: 0 8px 8px 0;
 }
-
-.cke_widget_wrapper.align-right {
-  margin: 0 0 8px 8px;
-}
-
-.cke_widget_wrapper.align-right figcaption,
-.cke_widget_wrapper.align-left figcaption,
-.cke_widget_wrapper.align-center figcaption {
+.cke_widget_wrapper .align-left figcaption {
   text-align: center;
 }
-
+.cke_widget_wrapper .align-right {
+  margin: 0 0 8px 8px;
+}
+.cke_widget_wrapper .align-right figcaption {
+  text-align: center;
+}
+.cke_widget_wrapper .align-center figcaption {
+  text-align: center;
+}
 /** Field type entity reference **/
 body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container {
   position: relative;
 }
-
 body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container .field--name-name {
   display: none;
   position: absolute;
@@ -67,17 +74,17 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
   color: #fff;
   word-break: break-all;
 }
-
 body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container:hover .field--name-name {
   display: block;
 }
-
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container:hover input {
+  display: block;
+}
 body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input {
   position: absolute;
   top: 0;
   display: none;
   font-size: 0;
-  border: 0;
   padding: 0;
   border: 0;
   width: 30px;
@@ -88,7 +95,6 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
   cursor: pointer;
   opacity: 1;
 }
-
 body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-edit-button"] {
   background-image: url("../images/pencil-square-o.svg");
   background-repeat: no-repeat;
@@ -97,7 +103,14 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
   left: 0;
   right: auto;
 }
-
+body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-remove-button"] {
+  background-image: url("../images/pencil-square-o.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100%;
+  left: 0;
+  right: auto;
+}
 body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-remove-button"] {
   background-image: url("../images/times-circle-o.svg");
   background-repeat: no-repeat;
@@ -106,45 +119,34 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
   right: 0;
   left: auto;
 }
-
-body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container:hover input {
-  display: block;
-}
-
-[dir=rtl] body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-edit-button"] {
+[dir="rtl"] body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-edit-button"] {
   left: auto;
   right: 0;
 }
-
-[dir=rtl] body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-remove-button"] {
+[dir="rtl"] body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container input[id*="-remove-button"] {
   right: auto;
   left: 0;
 }
-
 /* Embed_media_form image Preview style */
 .entity-embed-dialog-step--embed > .form-item-entity {
   float: right;
   text-align: center;
 }
-
 [dir="rtl"] .entity-embed-dialog-step--embed > .form-item-entity {
   float: left;
   text-align: center;
 }
-
 /** Style the dropzone upload in entity browsers  **/
 .entity-browser-form div#ief-dropzone-upload > div {
-  border: 2px dashed hsla(0,0%,42%,0.65);
+  border: 2px dashed rgba(107, 107, 107, 0.65);
   border-radius: 20px;
   padding: 15px;
   margin: 0 15px 15px 15px;
 }
-
 .entity-browser-form div#ief-dropzone-upload > div .image-widget-data {
   float: left;
   width: 70%;
 }
-
 a.entity-browser-handle.entity-browser-iframe {
   margin: 15px 0;
   padding: 15px;
@@ -156,7 +158,7 @@ a.entity-browser-handle.entity-browser-iframe {
   font-size: 1.3em;
   text-decoration: none;
 }
-
 a.entity-browser-handle.entity-browser-iframe:hover {
   text-decoration: none;
 }
+/*# sourceMappingURL=varbase_media.common_logged.css.map */

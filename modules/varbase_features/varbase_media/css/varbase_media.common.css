@@ -1,54 +1,88 @@
 /**
  * Varbase media common library style.
  */
-
 /**
  * Alignment classes for embedded entities.
  */
 /* Image align center style */
-.embedded-entity.align-center img,
-figure.align-center img,
-img.align-center {
+.embedded-entity.align-center img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
-/* Image caption align center style */
-.embedded-entity.align-center figcaption,
+.embedded-entity.align-center figcaption {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.embedded-entity.align-right {
+  margin: 0 0 8px 8px;
+}
+.embedded-entity.align-right figcaption {
+  text-align: center;
+}
+.embedded-entity.align-left {
+  margin: 0 8px 8px 0;
+}
+.embedded-entity.align-left figcaption {
+  text-align: center;
+}
+picture.align-right {
+  margin: 0 0 8px 8px;
+}
+picture.align-right figcaption {
+  text-align: center;
+}
+picture.align-left {
+  margin: 0 8px 8px 0;
+}
+picture.align-left figcaption {
+  text-align: center;
+}
+figure.align-center img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 figure.align-center figcaption {
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-
-/* Image align right style */
-.embedded-entity.align-right,
-figure.align-right,
-picture.align-right,
+figure.align-right {
+  display: table;
+  margin: 0 0 8px 8px;
+}
+figure.align-right figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+figure.align-left {
+  display: table;
+  margin: 0 8px 8px 0;
+}
+figure.align-left figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+img.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 img.align-right {
   margin: 0 0 8px 8px;
 }
-
-/* Image caption align right style */
-.embedded-entity.align-right figcaption,
+/* Image caption Right and Left style (Fit Image) */
+figure.align-right,
+figure.align-left {
+  display: table;
+}
 figure.align-right figcaption,
-picture.align-right figcaption {
-  text-align: center;
+figure.align-left figcaption {
+  display: table-caption;
+  caption-side: bottom;
 }
-
-/* Image align left style */
-.embedded-entity.align-left,
-figure.align-left,
-picture.align-left,
-img.align-left {
-  margin: 0 8px 8px 0;
-}
-
-/* Image caption align left style */
-.embedded-entity.align-left figcaption,
-figure.align-left figcaption,
-picture.align-left figcaption {
-  text-align: center;
-}
+/*# sourceMappingURL=varbase_media.common.css.map */
