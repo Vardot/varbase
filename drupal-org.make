@@ -198,6 +198,14 @@ projects[better_exposed_filters][version] = 3.0-alpha2
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.0
 
+projects[paragraphs][type] = module
+projects[paragraphs][version] = 1.1
+;; Add mode Modal Form : create a NEW paragraph 'in place' between existing ones
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/sorting_of_paragraphs-2828110-6.patch
+
+projects[viewsreference][type] = module
+projects[viewsreference][version] = 1.0-alpha8
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
