@@ -2,88 +2,51 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_description
+    - field.field.node.landing_page.field_lp_paragraphs
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.field_yoast_seo
-    - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - entity_reference_revisions
     - metatag
-    - panelizer
     - user
-third_party_settings:
-  panelizer:
-    enable: true
-    custom: true
-    displays:
-      default:
-        blocks: {  }
-        id: panels_variant
-        uuid: 1a312aa0-75a2-4467-8421-33670a7bd039
-        label: 'Single Column'
-        weight: 0
-        layout: bs_1col_stacked
-        layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:default'
-        pattern: panelizer
-        builder: ipe
-        static_context: {  }
-      two_column:
-        blocks: {  }
-        id: panels_variant
-        uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-        label: 'Two Column'
-        weight: 0
-        layout: bs_2col_bricked
-        layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:two_column'
-        pattern: panelizer
-        builder: ipe
-        static_context: {  }
-      three_column:
-        blocks: {  }
-        id: panels_variant
-        uuid: 5af47416-fa98-4dfb-9761-fc497a47a76f
-        label: 'Three Column'
-        weight: 0
-        layout: bs_3col_bricked
-        layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:three_column'
-        pattern: panelizer
-        builder: ipe
-        static_context: {  }
-    allow: false
-    default: default
+    - yoast_seo
+third_party_settings: { }
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  field_description:
+    type: basic_string
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_lp_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_meta_tags:
-    weight: 102
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_yoast_seo:
-    weight: 103
+    weight: 3
     label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    type: yoastseo_formatter
+    region: content
 hidden:
-  langcode: true
-  panelizer: true
+  links: true
