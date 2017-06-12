@@ -8,7 +8,7 @@
 /**
  * Enable viewsreference module.
  */
-function varbase_update_8001() {
+function varbase_landing_update_8001() {
   if (!\Drupal::moduleHandler()->moduleExists('viewsreference')) {
     \Drupal::service('module_installer')->install(['viewsreference'], FALSE);
   }
@@ -17,7 +17,7 @@ function varbase_update_8001() {
 /**
  * Enable paragraphs module.
  */
-function varbase_update_8002() {
+function varbase_landing_update_8002() {
   if (!\Drupal::moduleHandler()->moduleExists('paragraphs')) {
     \Drupal::service('module_installer')->install(['paragraphs'], FALSE);
   }
@@ -26,7 +26,7 @@ function varbase_update_8002() {
 /**
  * Enable varbase_bootstrap_paragraphs module.
  */
-function varbase_update_8003() {
+function varbase_landing_update_8003() {
   if (!\Drupal::moduleHandler()->moduleExists('varbase_bootstrap_paragraphs')) {
     \Drupal::service('module_installer')->install(['varbase_bootstrap_paragraphs'], FALSE);
   }
