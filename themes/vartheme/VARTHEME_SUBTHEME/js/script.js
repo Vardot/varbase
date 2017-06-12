@@ -9,7 +9,7 @@
   Drupal.behaviors.VARTHEME_SUBTHEME = {
     attach: function (context) {
       // Vartheme subtheme JavaScript behaviors goes here.
-    }
+      }
   };
 
 })(window.jQuery, window._, window.Drupal, window.drupalSettings);

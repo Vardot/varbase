@@ -1,0 +1,207 @@
+// Outside-in component.
+// -----------------------------------------------------------------------------
+// Override bootstrap styling to work with outside-in module.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // VARTHEME_SUBTHEME variables.
+@import "../mixins.less";                       // VARTHEME_SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+.ui-dialog-offcanvas {
+  .form-type-checkbox {
+    label {
+      padding: 0px;
+      input[type="checkbox"] {
+        margin-left: 0px;
+        position: static;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .form-control {
+    height:auto;
+    background: #ddd;
+  }
+
+  span.glyphicon {
+    font-family: 'Glyphicons Halflings';
+  }
+
+  .alert-warning {
+    width: 100%;
+    background-color: #fdf8ed;
+    border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
+    color: #734c00;
+    box-shadow: 8px 0 0 #e09600;
+  }
+
+  .panel-default {
+    border: none;
+    margin: 0 -20px;
+
+    .panel-heading {
+      border: none;
+
+      .panel-title {
+        background-color: #333;
+        color: #ddd;
+        transition: all .5s ease;
+
+        &.collapsed {
+          background-color: #474747;
+          color: #ddd;
+          border-width: 0;
+        }
+
+        &:hover,
+          &:focus {
+          background-color: #222;
+          outline: none;
+        }
+      }
+    }
+
+    .panel-body.collapse.in {
+      background-color: #333;
+      padding-bottom: 10px;
+    }
+  }
+
+  .select-wrapper {
+    select {
+      display: block;
+    }
+
+    &:after {
+      right: 3%;
+      left: auto;
+      top: 60%;
+      color: #3b3b3b;
+    }
+  }
+
+  .tabledrag-toggle-weight {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #85bef4;
+    text-decoration: none;
+    transition: color .5s ease;
+    box-shadow: none;
+    text-shadow: none;
+
+    &:hover,
+      &:focus {
+      outline: none;
+      color: #46a0f5;
+    }
+  }
+  .table-striped {
+    tr {
+      &.odd {
+        background-color: transparent;
+      }
+
+      &:hover {
+        background-color: transparent; 
+      }
+
+      td {
+        border: none;
+        padding: 2px 4px;
+        vertical-align: middle;
+
+        button {
+          margin: 0;
+          border: 0;
+          color: #eee;
+          transition: background .5s ease;
+          padding: 0.1em 0.8em;
+          border-radius: 0;
+
+          span.icon {
+            display: none;
+          }
+        }
+
+        &.checkbox {
+          input[type="checkbox"] {
+            margin-left: 0px;
+            position: static;
+            margin-right: 10px;
+          }
+        }
+
+        button.dropdown-toggle {
+          display: none;
+        }
+
+        &.tabledrag-hide {
+          padding: 2px 4px;
+
+          div.form-item {
+            margin-top: 0;
+          }
+        }
+        
+        &.menu-enabled {
+          div.menu-enabled {
+            height: 35px; 
+          }
+        }
+      }
+    }
+    
+    thead > tr > th {
+      border-bottom: none;
+    }
+  }
+  
+  .table-responsive {
+    overflow: initial;
+    min-height: auto;
+  }
+}
+
+// Override outside-in module background.
+.offcanvas-lining {
+  background: inherit;
+}
+
+// RTL style.
+[dir="rtl"] .ui-dialog-offcanvas {
+  .form-type-checkbox {
+    label {
+      padding: 0px;
+      input[type="checkbox"] {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+  }
+  .select-wrapper {
+    &:after {
+      left: 3%;
+      right: auto;
+    }
+  }
+  .table-striped {
+    tr {
+      td {
+        &.checkbox {
+          input[type="checkbox"] {
+            margin-left: 10px;
+            position: static;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,3 +6,14 @@ node_modules/
 bower_components/
 .sass-cache/
 .idea/
+/themes/vartheme/css/variables.css
+/themes/vartheme/css/variables.css.map
+/themes/vartheme/css/theme/theme-variables.css
+/themes/vartheme/css/theme/theme-variables.css.map
+/themes/vartheme/VARTHEME_SUBTHEME/css/variables.css
+/themes/vartheme/VARTHEME_SUBTHEME/css/variables.css.map
+/themes/vartheme/css/mixins.css
+/themes/vartheme/css/mixins.css.map
+/themes/vartheme/js/script.min.js
+/themes/vartheme/VARTHEME_SUBTHEME/css/mixins.css
+/themes/vartheme/VARTHEME_SUBTHEME/css/mixins.css.map

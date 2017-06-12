@@ -1,0 +1,62 @@
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eeeeee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+.bs-callout:before {
+  content: " ";
+  display: table;
+}
+.bs-callout:after {
+  clear: both;
+}
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  border-radius: 3px;
+}
+.bs-callout + .bs-callout {
+  margin-top: -5px;
+}
+.bs-callout-danger {
+  border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+.bs-callout-warning {
+  border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+.bs-callout-info {
+  border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
+}
+[dir="rtl"] .bs-callout {
+  border-left-width: 1px;
+  border-right-width: 5px;
+}
+[dir="rtl"] .bs-callout-danger {
+  border-left-color: #eeeeee;
+  border-right-color: #d9534f;
+}
+[dir="rtl"] .bs-callout-warning {
+  border-left-color: #eeeeee;
+  border-right-color: #f0ad4e;
+}
+[dir="rtl"] .bs-callout-info {
+  border-left-color: #eeeeee;
+  border-right-color: #5bc0de;
+}
+/*# sourceMappingURL=bs-callouts.component.css.map */

@@ -1,0 +1,26 @@
+#navbar.navbar-fixed-top.container .container {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+@media screen and (min-width: 768px) {
+  #navbar.navbar-fixed-top.container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #navbar.navbar-fixed-top.container {
+    max-width: 940px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #navbar.navbar-fixed-top.container {
+    max-width: 1140px;
+  }
+}
+#navbar.navbar-fixed-top.container-fluid > .container-fluid {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+/*# sourceMappingURL=navbar.component.css.map */

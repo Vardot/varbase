@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - vartheme
+    - VARTHEME_SUBTHEME
+id: VARTHEME_SUBTHEME_messages
+theme: VARTHEME_SUBTHEME
+region: header
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

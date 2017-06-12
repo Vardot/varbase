@@ -1,0 +1,142 @@
+.ui-dialog-offcanvas .form-type-checkbox label {
+  padding: 0px;
+}
+.ui-dialog-offcanvas .form-type-checkbox label input[type="checkbox"] {
+  margin-left: 0px;
+  position: static;
+  margin-right: 10px;
+}
+.ui-dialog-offcanvas .form-control {
+  height: auto;
+  background: #ddd;
+}
+.ui-dialog-offcanvas span.glyphicon {
+  font-family: 'Glyphicons Halflings';
+}
+.ui-dialog-offcanvas .alert-warning {
+  width: 100%;
+  background-color: #fdf8ed;
+  border-color: #f4daa6 #f4daa6 #f4daa6 transparent;
+  color: #734c00;
+  box-shadow: 8px 0 0 #e09600;
+}
+.ui-dialog-offcanvas .panel-default {
+  border: none;
+  margin: 0 -20px;
+}
+.ui-dialog-offcanvas .panel-default .panel-heading {
+  border: none;
+}
+.ui-dialog-offcanvas .panel-default .panel-heading .panel-title {
+  background-color: #333;
+  color: #ddd;
+  transition: all .5s ease;
+}
+.ui-dialog-offcanvas .panel-default .panel-heading .panel-title.collapsed {
+  background-color: #474747;
+  color: #ddd;
+  border-width: 0;
+}
+.ui-dialog-offcanvas .panel-default .panel-heading .panel-title:hover,
+.ui-dialog-offcanvas .panel-default .panel-heading .panel-title:focus {
+  background-color: #222;
+  outline: none;
+}
+.ui-dialog-offcanvas .panel-default .panel-body.collapse.in {
+  background-color: #333;
+  padding-bottom: 10px;
+}
+.ui-dialog-offcanvas .select-wrapper select {
+  display: block;
+}
+.ui-dialog-offcanvas .select-wrapper:after {
+  right: 3%;
+  left: auto;
+  top: 60%;
+  color: #3b3b3b;
+}
+.ui-dialog-offcanvas .tabledrag-toggle-weight {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #85bef4;
+  text-decoration: none;
+  transition: color .5s ease;
+  box-shadow: none;
+  text-shadow: none;
+}
+.ui-dialog-offcanvas .tabledrag-toggle-weight:hover,
+.ui-dialog-offcanvas .tabledrag-toggle-weight:focus {
+  outline: none;
+  color: #46a0f5;
+}
+.ui-dialog-offcanvas .table-striped tr.odd {
+  background-color: transparent;
+}
+.ui-dialog-offcanvas .table-striped tr:hover {
+  background-color: transparent;
+}
+.ui-dialog-offcanvas .table-striped tr td {
+  border: none;
+  padding: 2px 4px;
+  vertical-align: middle;
+}
+.ui-dialog-offcanvas .table-striped tr td button {
+  margin: 0;
+  border: 0;
+  color: #eee;
+  transition: background .5s ease;
+  padding: 0.1em 0.8em;
+  border-radius: 0;
+}
+.ui-dialog-offcanvas .table-striped tr td button span.icon {
+  display: none;
+}
+.ui-dialog-offcanvas .table-striped tr td.checkbox input[type="checkbox"] {
+  margin-left: 0px;
+  position: static;
+  margin-right: 10px;
+}
+.ui-dialog-offcanvas .table-striped tr td button.dropdown-toggle {
+  display: none;
+}
+.ui-dialog-offcanvas .table-striped tr td.tabledrag-hide {
+  padding: 2px 4px;
+}
+.ui-dialog-offcanvas .table-striped tr td.tabledrag-hide div.form-item {
+  margin-top: 0;
+}
+.ui-dialog-offcanvas .table-striped tr td.menu-enabled div.menu-enabled {
+  height: 35px;
+}
+.ui-dialog-offcanvas .table-striped thead > tr > th {
+  border-bottom: none;
+}
+.ui-dialog-offcanvas .table-responsive {
+  overflow: initial;
+  min-height: auto;
+}
+.offcanvas-lining {
+  background: inherit;
+}
+[dir="rtl"] .ui-dialog-offcanvas .form-type-checkbox label {
+  padding: 0px;
+}
+[dir="rtl"] .ui-dialog-offcanvas .form-type-checkbox label input[type="checkbox"] {
+  margin-left: 10px;
+  margin-right: 0;
+}
+[dir="rtl"] .ui-dialog-offcanvas .select-wrapper:after {
+  left: 3%;
+  right: auto;
+}
+[dir="rtl"] .ui-dialog-offcanvas .table-striped tr td.checkbox input[type="checkbox"] {
+  margin-left: 10px;
+  position: static;
+  margin-right: 0;
+}
+/*# sourceMappingURL=outside-in.component.css.map */

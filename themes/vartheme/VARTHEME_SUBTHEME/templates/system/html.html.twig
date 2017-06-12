@@ -64,7 +64,8 @@
     {% if html_attributes['dir'] == 'rtl' %}
       {{ attach_library('VARTHEME_SUBTHEME/global-styling-rtl') }}
       {{ attach_library('vartheme/global-styling-rtl') }}
-      {{ attach_library('vartheme/global-print-rtl') }}
+      {{ attach_library('vartheme/bootstrap-styling-rtl') }}
+      {{ attach_library('vartheme/bootstrap-print-rtl') }}
     {%- endif -%}
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>

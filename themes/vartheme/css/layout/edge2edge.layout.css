@@ -1,0 +1,16 @@
+.bg-edge2edge {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.bg-edge2edge:before {
+  content: " ";
+  display: table;
+}
+.bg-edge2edge:after {
+  clear: both;
+}
+/*# sourceMappingURL=edge2edge.layout.css.map */

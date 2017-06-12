@@ -1,21 +1,108 @@
-global-styling:
+# Vartheme global styling library.
+global-styles: 
   css:
+    base:
+      css/base/vartheme.base.css: {}
     theme:
-      css/style.css: {}
-global-print:
-  css:
-    theme:
-      bootstrap-print/css/bootstrap-print.css: { media: print }
-      bootstrap-print/css/bootstrap-print-sm.css: { media: print } 
+      css/theme/header.theme.css: {}
+      css/theme/content.theme.css: {}
+      css/theme/footer.theme.css: {}
+
+# Vartheme global (RTL) styling library.
 global-styling-rtl:
   css:
+    base:
+      css/rtl/base/vartheme-rtl.base.css: {}
     theme:
-      css/style-rtl.css: {}
-global-print-rtl:
-  css:
-    theme:
-      bootstrap-print/css/rtl/bootstrap-print-rtl.css: { media: print }
-      bootstrap-print/css/rtl/bootstrap-print-rtl-sm.css: { media: print }
+      css/rtl/theme/header-rtl.theme.css: {}
+      css/rtl/theme/content-rtl.theme.css: {}
+      css/rtl/theme/footer-rtl.theme.css: {}
+
+# Vartheme global scripts library.
 global-scripts:
   js:
     js/script.js: {}
+
+# Bootstrap global styling library.
+bootstrap-styling:
+  css:
+    base:
+      css/base/bootstrap.base.css: {}
+# Bootstrap global styling RTL library.
+bootstrap-styling-rtl:
+  css:
+    base:
+      css/rtl/base/bootstrap-rtl.base.css: {}
+      
+# Bootstrap global scripts library.
+bootstrap-scripts:
+  js:
+    bootstrap/js/affix.js: {}
+    bootstrap/js/alert.js: {}
+    bootstrap/js/button.js: {}
+    bootstrap/js/carousel.js: {}
+    bootstrap/js/collapse.js: {}
+    bootstrap/js/dropdown.js: {}
+    bootstrap/js/modal.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/popover.js: {}
+    bootstrap/js/scrollspy.js: {}
+    bootstrap/js/tab.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/transition.js: {}
+
+# Vartheme Bootstrap print theme library.
+bootstrap-print:
+  css:
+    theme:
+      bootstrap-print/css/bootstrap-print.css: {}
+      bootstrap-print/css/bootstrap-print-sm.css: {}
+
+# Vartheme Bootstrap print (RTL) theme library.
+bootstrap-print-rtl:
+  css:
+    theme:
+      bootstrap-print/css/rtl/bootstrap-print-rtl.css: {}
+      bootstrap-print/css/rtl/bootstrap-print-rtl-sm.css: {}
+
+# Vartheme Bootstrap no spacing layout library.
+bootstrap-no-spacing:
+  css:
+    layout:
+      bootstrap-no-spacing/css/bootstrap-no-spacing.css: {}
+
+# Vartheme Edge to Edge layout library.
+edge2edge:
+  css:
+    layout:
+      css/layout/edge2edge.layout.css: {}
+
+# Vartheme Bootstrap Callouts component library.
+bs-callouts:
+  css:
+    component:
+      css/component/bs-callouts.component.css: {}
+
+# Vartheme Bootstrap Tabs component library.
+bs-tabs:
+  css:
+    component:
+      css/component/bs-tabs.component.css: {}
+
+# Vartheme Outside in component library.
+outside-in:
+  css:
+    component:
+      css/component/outside-in.component.css: {}
+
+# Vartheme Navbar component library.
+navbar:
+  css:
+    component:
+      css/component/navbar.component.css: {}
+      
+# Vartheme Navbar Administration component library.
+navbar-admin:
+  css:
+    component:
+      css/component/navbar.admin.component.css: {}

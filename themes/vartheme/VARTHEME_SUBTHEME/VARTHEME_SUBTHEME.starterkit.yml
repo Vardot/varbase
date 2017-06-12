@@ -20,26 +20,51 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'VARTHEME_SUBTHEME/global-styling'
-  - 'VARTHEME_SUBTHEME/global-scripts'
-  - 'VARTHEME_SUBTHEME/bootstrap-scripts'
+# Bootstrap styling and scripts libraries.
+  - VARTHEME_SUBTHEME/bootstrap-styling
+  - VARTHEME_SUBTHEME/bootstrap-scripts
   
+# VARTHEME_SUBTHEME custom Vartheme styling and scripts libraries.
+  - VARTHEME_SUBTHEME/vartheme-styling
+
+# VARTHEME_SUBTHEME global styling and scripts libraries.
+  - VARTHEME_SUBTHEME/global-styling
+  - VARTHEME_SUBTHEME/global-scripts
+
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
 # Javascript files.
-# Uncomment these lines to exclude css and js files from vartheme.
-# libraries-override:
-#   vartheme/global-styling:
-#     css:
-#       theme:
-#         css/style.css: false
-#   vartheme/global-scripts:
-#     js:
-#       js/script.js: false
-#   # Uncomment the following lines only for right to left.
-#   # vartheme/global-styling-rtl:
-#   #   css:
-#   #     theme:
-#   #       css/style-rtl.css: false
+libraries-override:
+# Comment lines to keep using libraries from vartheme.
+  bootstrap_library/bootstrap-cdn: false
+  bootstrap_library/bootstrap: false
+  bootstrap_library/bootstrap-dev: false
+  vartheme/bootstrap-styling: false
+  vartheme/bootstrap-scripts: false
+  vartheme/global-styles: false
+#  vartheme/global-scripts: false
+  
+# Comment lines to use (RTL) libraries from vartheme.
+  vartheme/bootstrap-styling-rtl: false
+  vartheme/global-styling-rtl: false
+  VARTHEME_SUBTHEME/bootstrap-styling-rtl: false
+  VARTHEME_SUBTHEME/vartheme-styling-rtl: false
+  VARTHEME_SUBTHEME/global-styling-rtl: false
+
+# Uncomment lines to replace, exclude css and js files from vartheme.
+# You will need to copy less/css files from Vartheme to use theme for the
+# overriden library.
+# ------------------------------------------------------------------------------
+#  vartheme/navbar-admin: VARTHEME_SUBTHEME/navbar-admin
+#  vartheme/navbar: VARTHEME_SUBTHEME/navbar
+#  vartheme/bs-callouts: VARTHEME_SUBTHEME/bs-callouts
+#  vartheme/outside-in: VARTHEME_SUBTHEME/outside-in
+#  vartheme/edge2edge: VARTHEME_SUBTHEME/edge2edge
+#  vartheme/bs-tabs: VARTHEME_SUBTHEME/bs-tabs
 
 ckeditor_stylesheets:
-  - css/style.css
+  - css/base/bootstrap.base.css
+  - css/base/vartheme.base.css
+  - css/base/VARTHEME_SUBTHEME.base.css
+  - css/theme/content.theme.css
+  - css/layout/edge2edge.layout.css
+  - css/component/bs-callouts.component.css

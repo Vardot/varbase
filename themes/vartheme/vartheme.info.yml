@@ -20,9 +20,32 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-  - 'vartheme/global-styling'
-  - 'vartheme/global-scripts'
-  - 'vartheme/global-print'
+# Bootstrap styling and scripts libraries.
+  - vartheme/bootstrap-styling
+  - vartheme/bootstrap-scripts
+  
+# Vartheme custom libraries.
+  - vartheme/navbar-admin
+  - vartheme/navbar
+  - vartheme/bs-callouts
+  - vartheme/bs-tabs
+  - vartheme/outside-in
+  - vartheme/edge2edge
+  - vartheme/bootstrap-print
+  - vartheme/bootstrap-no-spacing
+  
+# Vartheme general global styling and scripts libraries.
+  - vartheme/global-styles
+  - vartheme/global-scripts
+
+#libraries-override:
+#  bootstrap_library/bootstrap-cdn: false
+#  bootstrap_library/bootstrap: false
+#  bootstrap_library/bootstrap-dev: false
 
 ckeditor_stylesheets:
-  - css/style.css
+  - css/base/bootstrap.base.css
+  - css/base/vartheme.base.css
+  - css/theme/content.theme.css
+  - css/layout/edge2edge.layout.css
+  - css/component/bs-callouts.component.css

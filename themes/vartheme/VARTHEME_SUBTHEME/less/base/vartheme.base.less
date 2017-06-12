@@ -1,0 +1,825 @@
+// Vartheme base, which Bootstrap overrides.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // VARTHEME_SUBTHEME variables.
+@import "../mixins.less";                       // VARTHEME_SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+html {
+  &.overlay-open .navbar-fixed-top {
+    z-index: 400;
+  }
+  &.js {
+    // Collapsible fieldsets.
+    fieldset.collapsed {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      height: auto;
+    }
+    // Throbbers.
+    input.form-autocomplete {
+      background-image: none;
+    }
+    // Autocomplete.
+    input.form-autocomplete {
+      background-image: none;
+    }
+    // Autocomplete (fallback throbber, no icon).
+    .autocomplete-throbber {
+      background-position: 100% 2px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 15px;
+      margin: 2px 0 0 2px;
+      width: 15px;
+    }
+    .autocomplete-throbber.throbbing {
+      background-position: 100% -18px;
+    }
+  }
+}
+
+// Adjust z-index of core components.
+#overlay-container,
+.overlay-modal-background,
+.overlay-element {
+  z-index: 1500;
+}
+
+#toolbar {
+  z-index: 1600;
+}
+
+// Adjust z-index of bootstrap modals
+.modal {
+  z-index: 1620;
+}
+
+.modal-dialog {
+  z-index: 1630;
+}
+
+.ctools-modal-dialog .modal-body {
+  width: 100% !important;
+  overflow: auto;
+}
+
+.modal-backdrop {
+  z-index: 1610;
+}
+
+// Element invisible fix
+.element-invisible {
+  margin: 0;
+  padding: 0;
+  width: 1px;
+}
+
+// Branding.
+.navbar .logo {
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media @tablet {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Navigation.
+ul.secondary {
+  float: left;
+
+  @media @tablet {
+    float: right;
+  }
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+// Blocks
+.block {
+  &:first-child h2.block-title {
+    margin-top: 0;
+  }
+}
+
+// Paragraphs.
+p:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: @font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+// Search form.
+form#search-block-form {
+  margin: 0;
+}
+
+.navbar #block-search-form {
+  float: none;
+  margin: 5px 0 5px 5px;
+  @media @normal {
+    float: right;
+  }
+
+  .input-group-btn {
+    width: auto;
+  }
+}
+
+.navbar-search .control-group {
+  margin-bottom:0px;
+}
+
+// Action Links
+ul.action-links {
+  margin: @padding-base-horizontal 0;
+  padding: 0;
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0 @padding-base-vertical 0 0;
+  }
+  .glyphicon {
+    padding-right: 0.5em;
+  }
+}
+
+// Form elements.
+input, textarea, select, .uneditable-input {
+  max-width: 100%;
+  width: auto;
+}
+
+input.error {
+  color: @state-danger-text;
+  border-color: @state-danger-border;
+}
+
+fieldset legend.panel-heading {
+  float: left;
+  line-height: 1em;
+  margin: 0;
+}
+
+fieldset .panel-body {
+  clear: both;
+  display: inherit;
+}
+
+fieldset .panel-heading a.panel-title {
+  color: inherit;
+  display: block;
+  margin: -10px -15px;
+  padding: 10px 15px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-actions{
+  clear: both;
+}
+
+.managed-files.table {
+  td:first-child {
+    width: 100%;
+  }
+}
+
+div.image-widget-data {
+  float: none;
+  overflow: hidden;
+}
+
+table.sticky-header {
+  z-index: 1;
+}
+
+.resizable-textarea textarea {
+  border-radius: @border-radius-base @border-radius-base 0 0;
+}
+
+.text-format-wrapper {
+  // Use same value as .form-group.
+  margin-bottom: 15px;
+  > .form-type-textarea,
+  .filter-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+.filter-wrapper {
+  border-radius: 0 0 @border-radius-base @border-radius-base;
+  .panel-body {
+    padding: 7px;
+  }
+  .form-type-select {
+    min-width: 30%;
+    .filter-list {
+      width: 100%;
+    }
+  }
+}
+
+.filter-help {
+  margin-top: 5px;
+  text-align: center;
+
+  @media @tablet {
+    float: right;
+  }
+
+  .glyphicon {
+    margin: 0 5px 0 0;
+    vertical-align: text-top;
+  }
+}
+
+.radio, .checkbox {
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.help-block, .control-group .help-inline {
+  color: @gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+}
+
+.panel-heading {
+  display: block;
+}
+
+a.tabledrag-handle .handle {
+  height: auto;
+  width: auto;
+}
+
+// Error containers.
+.error {
+  color: @state-danger-text;
+}
+
+div.error,
+table tr.error {
+  background-color: @state-danger-bg;
+  color: @state-danger-text;
+}
+
+.form-group.error,
+.form-group.has-error {
+  background: none;
+  
+  label,
+  .control-label {
+    color: @state-danger-text;
+    font-weight: 600;
+  }
+  
+  input,
+  textarea,
+  select,
+  .uneditable-input {
+    color: @input-color;
+  }
+  
+  .help-block, .help-inline {
+    color: @text-muted;
+  }
+}
+
+// Lists.
+.nav-tabs {
+  margin-bottom: 10px;
+}
+
+ul li.collapsed,
+ul li.expanded,
+ul li.leaf {
+  list-style: none;
+  list-style-image: none;
+}
+
+.tabs--secondary {
+  margin: 0 0 10px;
+}
+
+// Submitted.
+.submitted {
+  margin-bottom: 1em;
+  font-style: italic;
+  font-weight: normal;
+  color: #777;
+}
+
+// Password strength/match.
+.form-type-password-confirm {
+  position: relative;
+  
+  label {
+    display: block;
+
+    .label {
+      float: right;
+    }
+  }
+  .password-help {
+    padding-left: 2em;
+
+    @media (min-width: @screen-sm-min) {
+      border-left: 1px solid @table-border-color;
+      left: percentage((6/12));
+      margin-left: (@grid-gutter-width / 2);
+      position: absolute;
+    }
+
+    @media (min-width: @screen-md-min) {
+      left: percentage((4/12));
+    }
+  }
+  
+  .progress {
+    background: transparent;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    .box-shadow(none);
+    height: 4px;
+    margin: -5px 0px 0;
+  }
+
+  .form-type-password {
+    clear: left;
+  }
+
+  .form-control-feedback {
+    right: 15px;
+  }
+
+  .help-block {
+    clear: both;
+  }
+}
+
+// Views AJAX pager.
+ul.pagination li > a {
+  &.progress-disabled {
+    float: left;
+  }
+}
+
+// Autocomplete and throbber.
+.form-autocomplete {
+  .glyphicon {
+    color: @gray-light;
+    font-size: 120%;
+
+    &.glyphicon-spin {
+      color: @brand-primary;
+    }
+  }
+
+  .input-group-addon {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+// AJAX "Progress bar".
+.ajax-progress-bar {
+  border-radius: 0 0 @border-radius-base @border-radius-base;
+  border: 1px solid @input-group-addon-border-color;
+  margin: -1px 0 0;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  width: 100%;
+  
+  .progress {
+    height: 8px;
+    margin: 0;
+  }
+  
+  .percentage,
+  .message {
+    color: @text-muted;
+    font-size: @font-size-small;
+    line-height: 1em;
+    margin: 5px 0 0;
+    padding: 0;
+  }
+}
+
+.glyphicon-spin {
+  display: inline-block;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+a .glyphicon-spin {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
+
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+// Checkbox cell fix.
+th.checkbox,
+td.checkbox,
+th.radio,
+td.radio {
+  display: table-cell;
+}
+
+// Views UI fixes.
+.views-display-settings {
+  .label {
+    font-size: 100%;
+    color:#666666;
+  }
+
+  .footer {
+    padding:0;
+    margin:4px 0 0 0;
+  }
+}
+
+.views-exposed-form {
+  .views-exposed-widget {
+    .btn {
+      margin-top: 1.8em;
+    }
+  }
+}
+
+// Radio and checkbox in table fixes
+table {
+  .radio input[type="radio"],
+  .checkbox input[type="checkbox"] {
+    max-width: inherit;
+  }
+}
+
+// Exposed filters
+.form-horizontal .form-group label {
+  position: relative;
+  min-height: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+  padding-left:  (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+  text-align: right;
+
+  @media (min-width: @screen-sm-min) {
+    float: left;
+    width: percentage((2 / @grid-columns));
+  }
+}
+
+// Treat all links inside alert as .alert-link
+.alert a {
+  font-weight: @alert-link-font-weight;
+}
+
+.alert-success a {
+  color: darken(@alert-success-text, 10%);
+}
+
+.alert-info a {
+  color: darken(@alert-info-text, 10%);
+}
+
+.alert-warning a {
+  color: darken(@alert-warning-text, 10%);
+}
+
+.alert-danger a {
+  color: darken(@alert-danger-text, 10%);
+}
+
+// Override image module.
+div.image-style-new {
+  display: block;
+
+  div {
+    display: block;
+  }
+  
+  div.input-group {
+    display: table;
+  }
+}
+
+td.module,
+.table-striped>tbody>tr:nth-child(odd)>td.module,
+.table>tbody>tr>td.module {
+  background: @table-border-color;
+  font-weight: 700;
+}
+
+// Book module.
+.book-toc > .dropdown-menu {
+  overflow: hidden;
+
+  > .dropdown-header {
+    white-space: nowrap;
+  }
+
+  > li:nth-child(1) > a {
+    font-weight: bold;
+  }
+
+  .dropdown-menu {
+    .box-shadow(none);
+    border: 0;
+    display: block;
+    font-size: @font-size-small;
+    margin: 0;
+    padding: 0;
+    position: static;
+    width: 100%;
+
+    > li {
+      padding-left: 20px;
+
+      > a {
+        margin-left: -40px;
+        padding-left: 60px;
+      }
+    }
+  }
+}
+
+// Features module.
+#features-filter {
+  .form-item.form-type-checkbox {
+    padding-left: 20px;
+  }
+}
+
+fieldset.features-export-component {
+  font-size: @font-size-small;
+
+  html.js #features-export-form &, & {
+    margin: 0 0 (@line-height-computed / 2);
+  }
+
+  .panel-heading {
+    padding: 5px 10px;
+    a.panel-title {
+      font-size: @font-size-small;
+      font-weight: 500;
+      margin: -5px -10px;
+      padding: 5px 10px;
+    }
+  }
+  
+  .panel-body {
+    padding: 0 10px;
+  }
+}
+
+div.features-export-list {
+  margin: -11px 0 10px;
+  padding: 0 10px;
+}
+
+fieldset {
+  &.features-export-component {
+    .component-select {
+      .form-type-checkbox {
+        line-height: 1em;
+        margin: 5px 5px 5px 0 !important;
+        min-height: 0;
+        padding: 3px 3px 3px 25px !important;
+
+        input[type=checkbox] {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+div.features-export-list {
+  .form-type-checkbox {
+    line-height: 1em;
+    margin: 5px 5px 5px 0 !important;
+    min-height: 0;
+    padding: 3px 3px 3px 25px!important;
+
+    input[type=checkbox] {
+      margin-top: 0;
+    }
+  }
+}
+
+.region-navigation {
+  clear: both;
+}
+
+.container {
+  max-width: 100%;
+}
+
+// Fix page title and tabs in the region header.
+.main-container {
+  .region {
+    &.region-header {
+      h1,
+      .h1 {
+        margin-top: 0;
+      }
+
+      .tabs {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// Password policy.
+.form-type-password-confirm > * {
+  float: none;
+}
+
+// Bootstrap Overrides.
+.form-control.form-wrapper.form-group {
+  height: auto;
+}
+
+.navigation-top-wrapper {
+  padding-top: 15px;
+}
+
+// CKEditor Improvements.
+.cke_editable body {
+  background: white;
+}
+
+.cke_editable {
+  padding: 10px;
+}
+ 
+.field-collection-view {
+  padding: 0;
+  margin: 0;
+  border-bottom: 0 none;
+}
+.field-collection-container {
+  border-bottom: 0 none;
+}
+
+// Administration menu Overrides.
+#admin-menu-search {
+  float: right;
+  .form-control {
+    float: auto;
+  }
+}
+
+// Form overrides.
+.form-control {
+  max-width: 400px;
+}
+
+.form-textarea-wrapper textarea {
+  max-width: 100%;
+}
+
+// HTML elements setup.
+dt {
+  font-size: 120%;
+}
+
+dd{
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+// Overrides Panels & Content Modal.
+.ajax-progress-throbber {
+  background: transparent;
+  min-height: 0;
+  opacity: 1;
+  padding: 0;
+  width: auto;
+  vertical-align: baseline;
+}
+
+.modal-content .panels-add-content-modal {
+  background: white;
+  border-left: 1px solid @gray-lighter;
+  margin-left: 175px;
+  padding-left: 0;
+
+  .panels-modal-add-category {
+    margin-right: 5px;
+  }
+
+  .panels-section-column-body {
+    padding: 0 10px;
+  }
+}
+
+// Node styles.
+.node-unpublished {
+  background-color: #fff4f4;
+}
+
+.unpublished {
+  height: 0;
+  display: block;
+  overflow: visible;
+  background-color: transparent;
+  color: #d8d8d8;
+  font-size: 74px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word
+}
+
+.maintenance-page {
+  #page {
+    text-align: center;
+  }
+}

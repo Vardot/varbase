@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vartheme
+    - VARTHEME_SUBTHEME
+id: VARTHEME_SUBTHEME_page_title
+theme: VARTHEME_SUBTHEME
+region: header
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

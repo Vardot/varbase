@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - vartheme
+    - VARTHEME_SUBTHEME
+id: VARTHEME_SUBTHEME_help
+theme: VARTHEME_SUBTHEME
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

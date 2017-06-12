@@ -1,0 +1,100 @@
+// Bootstrap callouts component.
+// -----------------------------------------------------------------------------
+// Have the Bootstrap styling for callouts component.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // Vartheme variables.
+@import "../mixins.less";                       // Vartheme mixins.
+// -----------------------------------------------------------------------------
+
+// Common styles for all types.
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid @gray-lighter;
+  border-left-width: 5px;
+  border-radius: 3px;
+  border-radius: 3px;
+
+  &:before {
+    content: " ";
+    display: table;
+  }
+  
+  &:after {
+    clear: both;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  code {
+    border-radius: 3px;
+  }
+}
+
+// Tighten up space between multiple callouts.
+.bs-callout + .bs-callout {
+  margin-top: -5px;
+}
+
+// Variations.
+// Callout danger.
+.bs-callout-danger {
+  border-left-color: @brand-danger;
+  
+  h4 {
+    color: @brand-danger;
+  }
+}
+
+// Callout warning.
+.bs-callout-warning {
+  border-left-color: @brand-warning;
+
+  h4 {
+    color: @brand-warning;
+  }
+}
+
+// Callout info.
+.bs-callout-info {
+  border-left-color: @brand-info;
+
+  h4 {
+    color: @brand-info;
+  }
+}
+
+// Bootstrap callouts right to left.
+// Common styles for all types.
+[dir="rtl"] .bs-callout {
+  border-left-width: 1px;
+  border-right-width: 5px;
+}
+
+// Variations.
+// Callout danger.
+[dir="rtl"] .bs-callout-danger {
+  border-left-color: @gray-lighter;
+  border-right-color: @brand-danger;
+}
+
+// Callout warning.
+[dir="rtl"] .bs-callout-warning {
+  border-left-color: @gray-lighter;
+  border-right-color: @brand-warning;
+}
+
+// Callout info.
+[dir="rtl"] .bs-callout-info {
+  border-left-color: @gray-lighter;
+  border-right-color: @brand-info;
+}

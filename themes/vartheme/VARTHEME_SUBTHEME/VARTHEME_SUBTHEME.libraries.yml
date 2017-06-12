@@ -1,15 +1,53 @@
-global-styling:
+# VARTHEME_SUBTHEME global styling library.
+global-styles: 
   css:
+    base:
+      css/base/VARTHEME_SUBTHEME.base.css: {}
     theme:
-      css/style.css: {}
+      css/theme/header.theme.css: {}
+      css/theme/content.theme.css: {}
+      css/theme/footer.theme.css: {}
+
+# VARTHEME_SUBTHEME global (RTL) styling library.
 global-styling-rtl:
   css:
+    base:
+      css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css: {}
     theme:
-      css/style-rtl.css: {}
+      css/rtl/theme/header-rtl.theme.css: {}
+      css/rtl/theme/content-rtl.theme.css: {}
+      css/rtl/theme/footer-rtl.theme.css: {}
+
+# VARTHEME_SUBTHEME global scripts library.
 global-scripts:
   js:
     js/script.js: {}
     
+# VARTHEME_SUBTHEME Vartheme styling library.
+vartheme-styling:
+  css:
+    base:
+      css/base/vartheme.base.css: {}
+
+# VARTHEME_SUBTHEME Vartheme (RTL) styling library.
+vartheme-styling-rtl:
+  css:
+    base:
+      css/rtl/base/vartheme-rtl.base.css: {}
+
+# VARTHEME_SUBTHEME Bootstrap global styling library.
+bootstrap-styling:
+  css:
+    base:
+      css/base/bootstrap.base.css: {}
+
+# VARTHEME_SUBTHEME Bootstrap global (RTL) styling library.
+bootstrap-styling-rtl:
+  css:
+    base:
+      css/rtl/base/bootstrap-rtl.base.css: {}
+      
+# VARTHEME_SUBTHEME Bootstrap global scripts library.
 bootstrap-scripts:
   js:
     bootstrap/js/affix.js: {}
@@ -25,3 +63,53 @@ bootstrap-scripts:
     bootstrap/js/tab.js: {}
     bootstrap/js/tooltip.js: {}
     bootstrap/js/transition.js: {}
+    
+# Vartheme Bootstrap print theme library.
+#bootstrap-print:
+#  css:
+#    theme:
+#      bootstrap-print/css/bootstrap-print.css: {}
+#      bootstrap-print/css/bootstrap-print-sm.css: {}
+
+# Vartheme Bootstrap print (RTL) theme library.
+#bootstrap-print-rtl:
+#  css:
+#    theme:
+#      bootstrap-print/css/rtl/bootstrap-print-rtl.css: {}
+#      bootstrap-print/css/rtl/bootstrap-print-rtl-sm.css: {}
+
+# Vartheme Bootstrap no spacing layout library.
+#bootstrap-no-spacing:
+#  css:
+#    layout:
+#      bootstrap-no-spacing/css/bootstrap-no-spacing.css: {}
+
+# VARTHEME_SUBTHEME Bootstrap Callouts component library.
+#bs-callouts:
+#  css:
+#    component:
+#      css/component/bs-callouts.component.css: {}
+
+# VARTHEME_SUBTHEME Bootstrap Tabs component library.
+#bs-tabs:
+#  css:
+#    component:
+#      css/component/bs-tabs.component.css: {}
+
+# VARTHEME_SUBTHEME Outside in component library.
+#outside-in:
+#  css:
+#    component:
+#      css/component/outside-in.component.css: {}
+
+# VARTHEME_SUBTHEME Navbar Administration component library.
+#navbar-admin:
+#  css:
+#    component:
+#      css/component/navbar.admin.component.css: {}
+
+# VARTHEME_SUBTHEME Navbar component library.
+#navbar:
+#  css:
+#    component:
+#      css/component/navbar.component.css: {}
