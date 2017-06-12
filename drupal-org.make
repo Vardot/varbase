@@ -342,7 +342,7 @@ projects[xmlsitemap][version] = 1.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[anchor_link][type] = module
-projects[anchor_link][version] = 1.4
+projects[anchor_link][version] = 1.5
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-beta5
@@ -355,7 +355,7 @@ projects[vmi][version] = 1.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.12
+projects[varbase_editor][version] = 4.13
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 4.0-beta5

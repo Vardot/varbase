@@ -250,10 +250,10 @@
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/xmlsitemap": "1.0-alpha2",
-    "drupal/anchor_link": "1.4",
+    "drupal/anchor_link": "1.5",
     "drupal/entity_browser_enhanced": "1.0-beta5",
     "drupal/vmi": "1.0-alpha2",
-    "drupal/varbase_editor": "4.12",
+    "drupal/varbase_editor": "4.13",
     "drupal/varbase_heroslider_media": "4.0-beta5",
     "drupal/varbase_carousels": "4.0-beta2"
   }
