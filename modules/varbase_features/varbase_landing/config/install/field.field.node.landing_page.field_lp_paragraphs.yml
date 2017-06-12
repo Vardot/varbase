@@ -15,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.bp_simple
     - paragraphs.paragraphs_type.bp_tabs
     - paragraphs.paragraphs_type.bp_view
+    - paragraphs.paragraphs_type.bp_webform
   module:
     - entity_reference_revisions
 id: node.landing_page.field_lp_paragraphs
@@ -42,15 +43,13 @@ settings:
       bp_simple: bp_simple
       bp_tabs: bp_tabs
       bp_view: bp_view
+      bp_webform: bp_webform
     target_bundles_drag_drop:
       bp_accordion:
         enabled: true
         weight: 15
       bp_accordion_section:
         weight: 16
-        enabled: false
-      bp_blank:
-        weight: 17
         enabled: false
       bp_block:
         enabled: true
@@ -85,4 +84,7 @@ settings:
       bp_view:
         enabled: true
         weight: 28
+      bp_webform:
+        enabled: true
+        weight: 29
 field_type: entity_reference_revisions

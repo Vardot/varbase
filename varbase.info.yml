@@ -104,6 +104,8 @@ dependencies:
   - menu_position
   - better_exposed_filters
   - link_attributes
+  - paragraphs
+  - viewsreference
 
 themes:
   # Contrib themes.

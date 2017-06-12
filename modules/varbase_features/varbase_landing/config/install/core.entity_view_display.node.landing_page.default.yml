@@ -9,44 +9,23 @@ dependencies:
     - node.type.landing_page
   module:
     - entity_reference_revisions
-    - metatag
     - user
-    - yoast_seo
-third_party_settings: { }
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  field_description:
-    type: basic_string
-    weight: 0
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_lp_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 0
     region: content
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-  field_meta_tags:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
-  field_yoast_seo:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: yoastseo_formatter
-    region: content
 hidden:
+  field_description: true
+  field_meta_tags: true
+  field_yoast_seo: true
   links: true
