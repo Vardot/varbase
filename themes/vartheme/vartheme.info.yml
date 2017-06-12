@@ -36,7 +36,7 @@ libraries:
   
 # Vartheme general global styling and scripts libraries.
   - vartheme/global-styles
-  - vartheme/global-scripts
+#  - vartheme/global-scripts
 
 #libraries-override:
 #  bootstrap_library/bootstrap-cdn: false
