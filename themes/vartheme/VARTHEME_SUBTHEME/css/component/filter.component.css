@@ -1,0 +1,19 @@
+.filter-wrapper {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0;
+  padding: 10px;
+  height: 51px;
+}
+.filter-help {
+  float: right;
+  line-height: 1;
+  margin: .5em 0 0;
+}
+.nav.nav-tabs.filter-formats {
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=filter.component.css.map */

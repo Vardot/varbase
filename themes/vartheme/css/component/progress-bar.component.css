@@ -1,0 +1,18 @@
+.progress-wrapper {
+  margin-bottom: 15px;
+}
+.progress-wrapper:last-child .progress {
+  margin-bottom: 5px;
+}
+.progress-wrapper .message {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.progress-wrapper .percentage,
+.progress-wrapper .progress-label {
+  font-size: 12px;
+}
+.progress-wrapper .progress-bar {
+  min-width: 2em;
+}
+/*# sourceMappingURL=progress-bar.component.css.map */

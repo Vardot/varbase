@@ -41,7 +41,7 @@ libraries-override:
   vartheme/bootstrap-styling: false
   vartheme/bootstrap-scripts: false
   vartheme/global-styles: false
-#  vartheme/global-scripts: false
+  vartheme/global-scripts: false
   
 # Comment lines to use (RTL) libraries from vartheme.
   vartheme/bootstrap-styling-rtl: false
@@ -54,17 +54,34 @@ libraries-override:
 # You will need to copy less/css files from Vartheme to use theme for the
 # overriden library.
 # ------------------------------------------------------------------------------
-#  vartheme/navbar-admin: VARTHEME_SUBTHEME/navbar-admin
-#  vartheme/navbar: VARTHEME_SUBTHEME/navbar
 #  vartheme/bs-callouts: VARTHEME_SUBTHEME/bs-callouts
 #  vartheme/outside-in: VARTHEME_SUBTHEME/outside-in
 #  vartheme/edge2edge: VARTHEME_SUBTHEME/edge2edge
-#  vartheme/bs-tabs: VARTHEME_SUBTHEME/bs-tabs
+#  vartheme/navbar-admin: VARTHEME_SUBTHEME/navbar-admin
+# ------------------------------------------------------------------------------
+#  vartheme/ajax: VARTHEME_SUBTHEME/ajax
+#  vartheme/alert: VARTHEME_SUBTHEME/alert
+#  vartheme/field: VARTHEME_SUBTHEME/field
+#  vartheme/file: VARTHEME_SUBTHEME/file
+#  vartheme/filter: VARTHEME_SUBTHEME/filter
+#  vartheme/form: VARTHEME_SUBTHEME/form
+#  vartheme/icon: VARTHEME_SUBTHEME/icon
+#  vartheme/navbar: VARTHEME_SUBTHEME/navbar
+#  vartheme/node: VARTHEME_SUBTHEME/node
+#  vartheme/panel: VARTHEME_SUBTHEME/panel
+#  vartheme/progress-bar: VARTHEME_SUBTHEME/progress-bar
+#  vartheme/table-drag: VARTHEME_SUBTHEME/table-drag
+#  vartheme/tabs: VARTHEME_SUBTHEME/tabs
+#  vartheme/toolbar: VARTHEME_SUBTHEME/toolbar
+#  vartheme/autocomplete: VARTHEME_SUBTHEME/autocomplete
 
 ckeditor_stylesheets:
   - css/base/bootstrap.base.css
   - css/base/vartheme.base.css
   - css/base/VARTHEME_SUBTHEME.base.css
   - css/theme/content.theme.css
-  - css/layout/edge2edge.layout.css
+  - css/component/alert.component.css
+  - css/component/icon.component.css
+  - css/component/node.component.css
   - css/component/bs-callouts.component.css
+  - css/layout/edge2edge.layout.css

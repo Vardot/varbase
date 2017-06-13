@@ -24,11 +24,26 @@ libraries:
   - vartheme/bootstrap-styling
   - vartheme/bootstrap-scripts
   
-# Vartheme custom libraries.
-  - vartheme/navbar-admin
+# Boostrap component libraries.
+  - vartheme/ajax
+  - vartheme/alert
+  - vartheme/field
+  - vartheme/file
+  - vartheme/filter
+  - vartheme/form
+  - vartheme/icon
   - vartheme/navbar
+  - vartheme/node
+  - vartheme/panel
+  - vartheme/progress-bar
+  - vartheme/table-drag
+  - vartheme/tabs
+  - vartheme/toolbar
+  - vartheme/autocomplete
+
+# Vartheme custom theme, layout, and component libraries.
+  - vartheme/navbar-admin
   - vartheme/bs-callouts
-  - vartheme/bs-tabs
   - vartheme/outside-in
   - vartheme/edge2edge
   - vartheme/bootstrap-print
@@ -36,7 +51,7 @@ libraries:
   
 # Vartheme general global styling and scripts libraries.
   - vartheme/global-styles
-#  - vartheme/global-scripts
+  - vartheme/global-scripts
 
 #libraries-override:
 #  bootstrap_library/bootstrap-cdn: false
@@ -47,5 +62,8 @@ ckeditor_stylesheets:
   - css/base/bootstrap.base.css
   - css/base/vartheme.base.css
   - css/theme/content.theme.css
-  - css/layout/edge2edge.layout.css
+  - css/component/alert.component.css
+  - css/component/icon.component.css
+  - css/component/node.component.css
   - css/component/bs-callouts.component.css
+  - css/layout/edge2edge.layout.css

@@ -10,6 +10,8 @@
 # @see \Drupal\bootstrap\Plugin\SettingManager
 # @see \Drupal\bootstrap\Plugin\Form\SystemThemeSettings
 # @see \Drupal\bootstrap\ThemeSettings
-cdn_jsdelivr_version: 3.3.7
+
+# Disable the CDN provider so compiled LESS source files can be used.
+cdn_provider: ''
 modal_enabled: 0
 forms_smart_descriptions: 0

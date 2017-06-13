@@ -1,0 +1,24 @@
+.node-preview-container {
+  margin-top: -15px;
+}
+.node-preview-form-select {
+  padding: 15px;
+}
+.node-unpublished {
+  background-color: #fff4f4;
+}
+.unpublished {
+  height: 0;
+  display: block;
+  overflow: visible;
+  background-color: transparent;
+  color: #d8d8d8;
+  font-size: 74px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}
+/*# sourceMappingURL=node.component.css.map */

@@ -1,0 +1,16 @@
+.panel-title {
+  display: block;
+  margin: -10px -15px;
+  padding: 10px 15px;
+}
+.panel-title,
+.panel-title:hover,
+.panel-title:focus,
+.panel-title:hover:focus {
+  color: inherit;
+}
+.panel-title:focus,
+.panel-title:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=panel.component.css.map */

@@ -49,17 +49,6 @@ html.js .autocomplete-throbber.throbbing {
   padding: 0;
   width: 1px;
 }
-.navbar .logo {
-  margin-right: -15px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media screen and (min-width: 768px) {
-  .navbar .logo {
-    margin-right: 0;
-    padding-left: 0;
-  }
-}
 ul.secondary {
   float: left;
 }
@@ -616,23 +605,6 @@ dd {
 }
 .modal-content .panels-add-content-modal .panels-section-column-body {
   padding: 0 10px;
-}
-.node-unpublished {
-  background-color: #fff4f4;
-}
-.unpublished {
-  height: 0;
-  display: block;
-  overflow: visible;
-  background-color: transparent;
-  color: #d8d8d8;
-  font-size: 74px;
-  line-height: 1;
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  word-wrap: break-word;
 }
 .maintenance-page #page {
   text-align: center;

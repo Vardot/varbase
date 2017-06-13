@@ -82,15 +82,4 @@ body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.na
   left: 240px;
   left: 24rem;
 }
-@media (min-width: 768px) {
-  body.user-logged-in.navbar-is-fixed-top#navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top {
-    left: 0;
-  }
-}
-@media (min-width: 768px) {
-  body.user-logged-in.navbar-is-fixed-top.toolbar-vertical.toolbar-fixed.toolbar-tray-open #navbar.navbar-fixed-top {
-    margin-left: 240px;
-    margin-left: 15rem;
-  }
-}
 /*# sourceMappingURL=navbar.admin.component.css.map */

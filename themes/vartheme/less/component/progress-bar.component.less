@@ -1,0 +1,30 @@
+// Progress bar styles.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // Vartheme variables.
+@import "../mixins.less";                       // Vartheme mixins.
+// -----------------------------------------------------------------------------
+
+.progress-wrapper {
+  margin-bottom: @form-group-margin-bottom;
+
+  &:last-child .progress {
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .percentage,
+  .progress-label {
+    font-size: @font-size-small;
+  }
+
+  .progress-bar {
+    min-width: 2em;
+  }
+
+}

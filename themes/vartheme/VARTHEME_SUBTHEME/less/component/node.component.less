@@ -1,0 +1,34 @@
+// Node styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // VARTHEME_SUBTHEME variables.
+@import "../mixins.less";                       // VARTHEME_SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+.node-preview-container {
+  margin-top: -(@grid-gutter-width / 2);
+}
+
+.node-preview-form-select {
+  padding: (@grid-gutter-width / 2);
+}
+
+.node-unpublished {
+  background-color: #fff4f4;
+}
+
+.unpublished {
+  height: 0;
+  display: block;
+  overflow: visible;
+  background-color: transparent;
+  color: #d8d8d8;
+  font-size: 74px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word
+}

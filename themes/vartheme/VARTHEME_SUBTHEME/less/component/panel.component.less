@@ -1,0 +1,19 @@
+// Panel styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // VARTHEME_SUBTHEME variables.
+@import "../mixins.less";                       // VARTHEME_SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+.panel-title {
+  display: block;
+  margin: -10px -15px;
+  padding: 10px 15px;
+  &, &:hover, &:focus, &:hover:focus {
+    color: inherit;
+  }
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+}

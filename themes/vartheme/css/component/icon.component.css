@@ -1,0 +1,15 @@
+a.icon-before .glyphicon {
+  margin-right: .25em;
+}
+a.icon-after .glyphicon {
+  margin-left: .25em;
+}
+.btn.icon-before .glyphicon {
+  margin-left: -0.25em;
+  margin-right: .25em;
+}
+.btn.icon-after .glyphicon {
+  margin-left: .25em;
+  margin-right: -0.25em;
+}
+/*# sourceMappingURL=icon.component.css.map */

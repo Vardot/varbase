@@ -61,9 +61,13 @@ bootstrap-scripts:
     bootstrap/js/popover.js: {}
     bootstrap/js/scrollspy.js: {}
     bootstrap/js/tab.js: {}
-    bootstrap/js/tooltip.js: {}
+#    bootstrap/js/tooltip.js: {}
     bootstrap/js/transition.js: {}
     
+# ------------------------------------------------------------------------------
+# Vartheme custom theme, layout, and components.
+# ------------------------------------------------------------------------------
+
 # Vartheme Bootstrap print theme library.
 #bootstrap-print:
 #  css:
@@ -84,32 +88,120 @@ bootstrap-scripts:
 #    layout:
 #      bootstrap-no-spacing/css/bootstrap-no-spacing.css: {}
 
-# VARTHEME_SUBTHEME Bootstrap Callouts component library.
+# Vartheme Edge to Edge layout library.
+#edge2edge:
+#  css:
+#    layout:
+#      css/layout/edge2edge.layout.css: {}
+
+# Vartheme Bootstrap Callouts component library.
 #bs-callouts:
 #  css:
 #    component:
 #      css/component/bs-callouts.component.css: {}
 
-# VARTHEME_SUBTHEME Bootstrap Tabs component library.
-#bs-tabs:
-#  css:
-#    component:
-#      css/component/bs-tabs.component.css: {}
-
-# VARTHEME_SUBTHEME Outside in component library.
+# Vartheme Outside in component library.
 #outside-in:
 #  css:
 #    component:
 #      css/component/outside-in.component.css: {}
 
-# VARTHEME_SUBTHEME Navbar Administration component library.
+# Vartheme Navbar Administration component library.
 #navbar-admin:
 #  css:
 #    component:
 #      css/component/navbar.admin.component.css: {}
 
-# VARTHEME_SUBTHEME Navbar component library.
+# ------------------------------------------------------------------------------
+# Bootstrap starterkit components.
+# ------------------------------------------------------------------------------
+
+# Vartheme Bootstrap AJAX (throbber) styling component library.
+#ajax:
+#  css:
+#    component:
+#      css/component/ajax.component.css: {}
+
+# Vartheme Bootstrap Alert styling component library.
+#alert:
+#  css:
+#    component:
+#      css/component/alert.component.css: {}
+
+# Vartheme Bootstrap Visual styles for fields component library.
+#field:
+#  css:
+#    component:
+#      css/component/field.component.css: {}
+
+# Vartheme Bootstrap File (and Image Widget) styles component library.
+#file:
+#  css:
+#    component:
+#      css/component/file.component.css: {}
+
+# Vartheme Bootstrap Filter styles component library.
+#filter:
+#  css:
+#    component:
+#      css/component/filter.component.css: {}
+
+# Vartheme Bootstrap Form styles component library.
+#form:
+#  css:
+#    component:
+#      css/component/form.component.css: {}
+
+# Vartheme Bootstrap Icon styles component library.
+#icon:
+#  css:
+#    component:
+#      css/component/icon.component.css: {}
+
+# Vartheme Bootstrap Navbar styling component library.
 #navbar:
 #  css:
 #    component:
 #      css/component/navbar.component.css: {}
+
+# Vartheme Bootstrap Node styling component library.
+#node:
+#  css:
+#    component:
+#      css/component/node.component.css: {}
+
+# Vartheme Bootstrap Panel styling component library.
+#panel:
+#  css:
+#    component:
+#      css/component/panel.component.css: {}
+
+# Vartheme Bootstrap Progress bar styles component library.
+#progress-bar:
+#  css:
+#    component:
+#      css/component/progress-bar.component.css: {}
+
+# Vartheme Bootstrap Table drag styles component library.
+#table-drag:
+#  css:
+#    component:
+#      css/component/table-drag.component.css: {}
+
+# Vartheme Bootstrap Tabs component library.
+#tabs:
+#  css:
+#    component:
+#      css/component/tabs.component.css: {}
+
+# Vartheme Bootstrap Toolbar module styling component library.
+#toolbar:
+#  css:
+#    component:
+#      css/component/toolbar.component.css: {}
+
+# Vartheme jQuery UI autocomplete widget style overrides component library.
+#autocomplete:
+#  css:
+#    component:
+#      css/component/autocomplete.component.css: {}

@@ -1,0 +1,48 @@
+// Toolbar module styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // VARTHEME_SUBTHEME variables.
+@import "../mixins.less";                       // VARTHEME_SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+@toolbar-width: 240px;
+
+body.toolbar-fixed {
+
+  // Fix z-index.
+  .toolbar-oriented .toolbar-bar {
+    z-index: (@zindex-navbar-fixed + 1);
+  }
+
+  .navbar-fixed-top {
+    top: 39px;
+  }
+
+  // Horizontal.
+  &.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top {
+    top: 79px;
+  }
+
+  // Vertical Open.
+  &.toolbar-vertical.toolbar-tray-open {
+
+    .navbar-fixed-top {
+      left: @toolbar-width;
+    }
+
+    &.toolbar-fixed {
+      margin-left: @toolbar-width;
+
+      .toolbar-tray {
+        padding-bottom: 40px;
+        &, > .toolbar-lining:before {
+          width: @toolbar-width;
+        }
+      }
+
+    }
+
+  }
+
+}

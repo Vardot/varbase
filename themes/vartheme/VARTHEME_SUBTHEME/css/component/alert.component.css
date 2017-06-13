@@ -1,0 +1,27 @@
+.alert-sm {
+  padding: 5px 10px;
+}
+.alert a {
+  font-weight: bold;
+}
+.alert-success a,
+.alert-success a:hover,
+.alert-success a:focus {
+  color: #2b542c;
+}
+.alert-info a,
+.alert-info a:hover,
+.alert-info a:focus {
+  color: #245269;
+}
+.alert-warning a,
+.alert-warning a:hover,
+.alert-warning a:focus {
+  color: #66512c;
+}
+.alert-danger a,
+.alert-danger a:hover,
+.alert-danger a:focus {
+  color: #843534;
+}
+/*# sourceMappingURL=alert.component.css.map */
