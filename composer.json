@@ -150,6 +150,9 @@
       "drupal/yoast_seo": {
         "Issue #2877613 by RajabNatshah: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
         "https://www.drupal.org/files/issues/2877613-2_0.patch"
+      },
+      "drupal/paragraphs": {
+        "create a NEW paragraph 'in place' between existing ones": "https://www.drupal.org/files/issues/sorting_of_paragraphs-2828110-6.patch"
       }
     }
   },
@@ -255,6 +258,8 @@
     "drupal/vmi": "1.0-alpha2",
     "drupal/varbase_editor": "4.13",
     "drupal/varbase_heroslider_media": "4.0-beta5",
-    "drupal/varbase_carousels": "4.0-beta2"
+    "drupal/varbase_carousels": "4.0-beta2",
+    "drupal/paragraphs": "1.1",
+    "drupal/viewsreference": "1.0-alpha8"
   }
 }
