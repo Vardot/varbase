@@ -206,6 +206,9 @@ projects[paragraphs][version] = 1.1
 ;; Issue #2828110 by chr.fritsch, pixelmord: Sorting of paragraphs 03 - create a NEW paragraph "in place" between existing ones
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/sorting_of_paragraphs-2828110-6.patch
 
+projects[entity_reference_revisions][type] = module
+projects[entity_reference_revisions][version] = 1.3
+
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 1.0-beta1
 
