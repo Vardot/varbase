@@ -253,7 +253,7 @@
     "drupal/taxonomy_access_fix": "2.1",
     "drupal/better_exposed_filters": "3.0-alpha2",
     "drupal/link_attributes": "1.0",
-    "drupal/paragraphs": "1.x-dev#6f1109df1b6bf51ec6b4d48583b53c737ea99dd5",
+    "drupal/paragraphs": "1.1",
     "drupal/viewsreference": "1.0-beta1",
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/layout_plugin": "1.0-alpha23",
