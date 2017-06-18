@@ -48,33 +48,3 @@ So that the "Landing page" will show up in the structured menu under its parent 
       And I wait
      Then I should not see "Access denied"
       And I should not see "You are not authorized to access this page."
-
-  @javascript @local @development @staging @production
-  Scenario: Check that Site Admin users can not create a Landing page.
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "/node/add/landing_page"
-      And I wait
-     Then I should see "Create Landing page"
-     When I fill in "Test landing page by test site admin" for "Title"
-     Then I press "Save"
-      And I wait
-     When I go to "/test-landing-page-test-site-admin"
-      And I wait
-     Then I should see "Test landing page by test site admin"
-      And I should see "Manage Content"
-      And I should see "Change layout"
-
-  @javascript @local @development @staging @production
-  Scenario: Check that Super Admin users can not create a Landing page.
-    Given I am a logged in user with the "test_super_admin" user
-     When I go to "/node/add/landing_page"
-      And I wait
-     Then I should see "Create Landing page"
-     When I fill in "Test landing page by test super admin" for "Title"
-     Then I press "Save"
-      And I wait
-     When I go to "/test-landing-page-test-super-admin"
-      And I wait
-     Then I should see "Test landing page by test super admin"
-      And I should see "Manage Content"
-      And I should see "Change layout"
