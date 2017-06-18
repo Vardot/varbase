@@ -154,10 +154,10 @@
         "https://www.drupal.org/files/issues/2877613-2_0.patch"
       },
       "drupal/paragraphs": {
-        "Issue #2461695 Support translatable paragraph entity reference revision field":
-        "https://www.drupal.org/files/issues/meta_support-2461695-184.patch",
         "Issue #2828110 by chr.fritsch, pixelmord: Sorting of paragraphs 03 - create a NEW paragraph in place between existing ones":
-        "https://www.drupal.org/files/issues/sorting_of_paragraphs-2828110-6.patch"
+        "https://www.drupal.org/files/issues/sorting_of_paragraphs-2828110-6.patch",
+        "Issue #2461695 Support translatable paragraph entity reference revision field":
+        "https://www.drupal.org/files/issues/meta_support-2461695-198.patch"
       }
     }
   },
@@ -255,7 +255,7 @@
     "drupal/taxonomy_access_fix": "2.1",
     "drupal/better_exposed_filters": "3.0-alpha2",
     "drupal/link_attributes": "1.0",
-    "drupal/paragraphs": "1.1",
+    "drupal/paragraphs": "1.x-dev#6f1109df1b6bf51ec6b4d48583b53c737ea99dd5",
     "drupal/viewsreference": "1.0-beta1",
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/layout_plugin": "1.0-alpha23",
