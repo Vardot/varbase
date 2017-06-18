@@ -10,7 +10,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Landing page'
 type: landing_page
-description: 'Build landing pages to display content using custom layouts.'
+description: 'Use <em>Landing pages</em> to build multi-component pages with custom layouts to display content in a modern way.'
 help: ''
 new_revision: true
 preview_mode: 0

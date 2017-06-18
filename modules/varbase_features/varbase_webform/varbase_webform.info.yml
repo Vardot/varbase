@@ -7,6 +7,7 @@ dependencies:
   - webform_node
   - webform_templates
   - webform_ui
+  - vbp_webform
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x

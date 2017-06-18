@@ -10,7 +10,6 @@ dependencies:
   - metatag
   - node
   - page_manager
-  - panelizer
   - path
   - pathauto
   - rabbit_hole

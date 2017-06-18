@@ -198,6 +198,16 @@ projects[better_exposed_filters][version] = 3.0-alpha2
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.0
 
+projects[paragraphs][type] = module
+projects[paragraphs][version] = 1.1
+;; Issue #2461695 Support translatable paragraph entity reference revision field
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-184.patch
+;; Issue #2828110 by chr.fritsch, pixelmord: Sorting of paragraphs 03 - create a NEW paragraph "in place" between existing ones
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/sorting_of_paragraphs-2828110-6.patch
+
+projects[viewsreference][type] = module
+projects[viewsreference][version] = 1.0-beta1
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
@@ -228,6 +238,8 @@ projects[l10n_client][download][revision] = 9bf8d597732870bdca301512c71b6e5d74d4
 projects[l10n_client][download][branch] = 8.x-1.x
 ;; Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0
 projects[l10n_client][patch][] = https://www.drupal.org/files/issues/2867460-2.patch
+;; Issue #2872668 by GaëlG, Nitebreed: User error: 0 is an invalid render array key":
+projects[l10n_client][patch][] = https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase security.
@@ -362,6 +374,9 @@ projects[varbase_heroslider_media][version] = 4.0-beta5
 
 projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 4.0-beta2
+
+projects[varbase_bootstrap_paragraphs][type] = module
+projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

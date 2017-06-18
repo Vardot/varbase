@@ -11,11 +11,11 @@ So that the "Landing page" will show up in the structured menu under its parent 
      Then I should see "Landing page"
 
   @javascript @local @development @staging @production
-  Scenario: Check that "Landing page" type have its display controlled by Panelizer.
+  Scenario: Check that "Landing page" type have its display should not be controlled by Panelizer.
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/structure/types/manage/landing_page/display"
       And I wait
-      And the "Panelize this view mode" checkbox should be checked
+      And the "Panelize this view mode" checkbox should not be checked
 
   @javascript @local @development @staging @production
   Scenario: Check that Anonymous users can not create a Landing page.
