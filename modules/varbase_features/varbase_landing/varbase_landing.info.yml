@@ -17,6 +17,7 @@ dependencies:
   - rabbit_hole
   - user
   - varbase_bootstrap_paragraphs
+  - vbp_webform
   - varbase_core
   - varbase_seo
   - viewsreference
