@@ -11,7 +11,6 @@ config_bit:
       dependencies:
         - vmi
         - varbase_development
-        - varbase_webform
         - varbase_heroslider_media
         - varbase_carousels
       selected:

@@ -28,4 +28,5 @@ hidden:
   field_description: true
   field_meta_tags: true
   field_yoast_seo: true
+  langcode: true
   links: true

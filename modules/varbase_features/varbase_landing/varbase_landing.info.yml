@@ -3,10 +3,12 @@ description: 'Provides the basis for Landing Pages, which are built to include a
 type: module
 dependencies:
   - advanced_text_formatter
+  - content_translation
   - ds
   - entity_reference_revisions
   - field
   - field_group
+  - language
   - maxlength
   - menu_ui
   - metatag
@@ -17,8 +19,8 @@ dependencies:
   - rabbit_hole
   - user
   - varbase_bootstrap_paragraphs
-  - vbp_webform
   - varbase_core
+  - varbase_webform
   - varbase_seo
   - viewsreference
   - yoast_seo

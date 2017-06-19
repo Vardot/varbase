@@ -81,6 +81,12 @@ content:
     third_party_settings: {  }
     type: yoast_seo_widget
     region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 4
