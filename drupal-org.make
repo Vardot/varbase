@@ -371,7 +371,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-beta5
 
 projects[vmi][type] = module
-projects[vmi][version] = 1.0-alpha2
+projects[vmi][version] = 1.0-beta1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
