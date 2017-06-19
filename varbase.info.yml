@@ -32,7 +32,6 @@ dependencies:
   - path
   - quickedit
   - responsive_image
-  - search
   - shortcut
   - syslog
   - taxonomy

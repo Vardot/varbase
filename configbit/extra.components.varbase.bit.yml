@@ -13,5 +13,6 @@ config_bit:
         - varbase_development
         - varbase_heroslider_media
         - varbase_carousels
+        - varbase_search
       selected:
         - vmi
