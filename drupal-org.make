@@ -340,6 +340,8 @@ projects[bootstrap][version] = 3.5
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
+;; Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable
+projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Legacy Contrib modules.
