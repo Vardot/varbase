@@ -1340,6 +1340,61 @@ JS;
         throw new \Exception("No label with the value of for='" . $value . "' radio button not found.");
     }
   }
+  
+   /**
+   * #varbase: To expand a field group by its id attribute.
+   *
+   * Example 1: I Expand the field "Field Group ID"
+   * @When I Expand the field :arg1
+   * 
+   * @param $text
+   * @throws \InvalidArgumentException
+   */
+  public function iExpandThefield($fieldID) {
+    $js = <<<JS
+    var group = document.getElementById("{$fieldID}");
+    group.setAttribute("open","");
+JS;
+    $this->getSession()->executeScript($js);
+  }
+
+  /**
+   * #varbase: To expand a select list by it's class attribute.
+   * 
+   * @When I Expand the select list :arg1
+   *
+   * @param $text
+   * @throws \InvalidArgumentException
+  */
+  public function iExpandTheSelectList($listClassName) {
+    $js = <<<JS
+    var group = document.getElementsByClassName("{$listClassName}")[0];
+    group.className += "open";
+JS;
+    $this->getSession()->executeScript($js);
+  }
+
+  /**
+   * #varbase: To scroll down in the current status of the page.
+   * 
+   * @When I scrolldown
+   */
+  public function iScrolldown() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(200,350)");
+  }
+
+  /**
+   * #varbase: To check if the Image media browser opened.
+   * 
+   * Example : Then the image media browser should be open
+   *
+   * @Then /^the image media browser should be open$/
+   */
+  public function theImageMediaBrowserIsOpen() {
+    if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.ui-widget-content')) {
+      throw new Exception('The image media browser failed to open.');
+    }
+  }
 
 
   public function cleanUsers() {
@@ -1386,57 +1441,6 @@ JS;
         $ifreamcss = '.' . $ifreamcss;
       }
       $this->_updateIDByCSS($ifreamcss, $fieldid, $prefix);
-    }
-  }
-
-  /**
-   * To expand a field group by adding open attribute.
-   *
-   * Example 1: I Expand the field
-   * @When I Expand the field :arg1
-   * 
-   * @param $text
-   * @throws \InvalidArgumentException
-   */
-  public function iExpandThefield($fieldID) {
-    $js = <<<JS
-    var group = document.getElementById("{$fieldID}");
-    group.setAttribute("open","");
-JS;
-    $this->getSession()->executeScript($js);
-  }
-
-  /**
-   * @When I Expand the select list :arg1
-   *
-   * @param $text
-   * @throws \InvalidArgumentException
-  */
-  public function iExpandTheSelectList($listClassName) {
-    $js = <<<JS
-    var group = document.getElementsByClassName("{$listClassName}")[0];
-    group.className += "open";
-JS;
-    $this->getSession()->executeScript($js);
-  }
-
-  /**
-   * @Then I scrolldown
-   */
-  public function iScrolldown() {
-    $this->getSession()->executeScript("javascript:window.scrollBy(200,350)");
-  }
-
-  /**
-   * To check if the Image media browser opened.
-   * 
-   * Example : Then the image media browser should be open
-   *
-   * @Then /^the image media browser should be open$/
-   */
-  public function theImageMediaBrowserIsOpen() {
-    if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.ui-widget-content')) {
-      throw new Exception('The image media browser failed to open.');
     }
   }
 
