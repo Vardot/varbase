@@ -1277,7 +1277,7 @@ JS;
 
     $target = $this->getSession()->getPage()->find('css', $targetElement);
     if (empty($target)) {
-     throw new Exception('The selected target element [ ' . $targetElement . ' ] is not in the page.');
+      throw new Exception('The selected target element [ ' . $targetElement . ' ] is not in the page.');
     }
 
     $this->getSession()->getDriver()->evaluateScript("jQuery('{$draggedElement}').detach().prependTo('{$targetElement}');");
@@ -1389,4 +1389,63 @@ JS;
     }
   }
 
+  /**
+   * To expand a field group by adding open attribute.
+   *
+   * Example 1: I Expand the field
+   * @When I Expand the field :arg1
+   * 
+   * @param $text
+   * @throws \InvalidArgumentException
+   */
+  public function iExpandThefield($fieldID) {
+    $js = <<<JS
+    var group = document.getElementById("{$fieldID}");
+    group.setAttribute("open","");
+JS;
+    $this->getSession()->executeScript($js);
+  }
+
+  /**
+   * @When I Expand the select list :arg1
+   *
+   * @param $text
+   * @throws \InvalidArgumentException
+  */
+  public function iExpandTheSelectList($listClassName) {
+    $js = <<<JS
+    var group = document.getElementsByClassName("{$listClassName}")[0];
+    group.className += "open";
+JS;
+    $this->getSession()->executeScript($js);
+  }
+
+  /**
+   * @Then I scrolldown
+   */
+  public function iScrolldown() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(200,350)");
+  }
+
+  /**
+   * To check if the Image media browser opened.
+   * 
+   * Example : Then the image media browser should be open
+   *
+   * @Then /^the image media browser should be open$/
+   */
+  public function theImageMediaBrowserIsOpen() {
+    if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.ui-widget-content')) {
+      throw new Exception('The image media browser failed to open.');
+    }
+  }
+
+  /**
+   * Maximize the window before scenario.
+   *
+   * @BeforeScenario @javascript
+   */
+  public function maximizeWindow() {
+    $this->getSession()->getDriver()->maximizeWindow();
+  }
 }
