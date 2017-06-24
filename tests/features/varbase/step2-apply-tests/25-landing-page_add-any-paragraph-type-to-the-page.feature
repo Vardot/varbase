@@ -31,7 +31,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     When I Expand the select list "dropbutton-multiple"
+      And I Expand the select list "dropbutton-multiple"
       And I wait
      Then I should see "Add Image"
      When I press "Add Image"
