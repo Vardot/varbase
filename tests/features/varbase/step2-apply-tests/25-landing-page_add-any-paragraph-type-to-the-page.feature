@@ -17,8 +17,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I select "2 Seconds" from "Slide Interval"
      When I Expand the select list "dropbutton-multiple"
       And I wait
-     Then I should see "Add Image"
-     When I press "Add Image"
+      And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
       And I press the "Select an image" button
