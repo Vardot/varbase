@@ -33,8 +33,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I Expand the select list "dropbutton-multiple"
       And I wait
-     Then I should see "Add Image"
-     When I press "Add Image"
+      And I press "Add Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
