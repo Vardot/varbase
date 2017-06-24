@@ -72,10 +72,11 @@ before_install:
   - firefox --version
   
   # Run selenium standalone server.
-  - if [ ! -f $HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar ]; then
-    wget -O $HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+  - $SELENIUM = "$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
+  - if [ ! -f $SELENIUM ]; then
+    wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
     fi
-  - java -jar $HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
+  - java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
   
   - composer global require phing/phing
