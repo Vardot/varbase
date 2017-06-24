@@ -75,8 +75,7 @@ So that it will show up under that rich text field without having to upload the 
       And I wait for AJAX to finish
       And I switch to main frame
       And I wait for AJAX to finish
-     Then I should see "Embed media"
-      And I should see "Embed Flag Earth"
+     Then I should see "Embed Flag Earth"
      When I fill in "Embed Flag Earth custom Caption text" for "Caption"
       And I fill in "Embed Flag Earth custom Alt text" for "Alternative text"
       And I fill in "Embed Flag Earth custom title" for "Title"
