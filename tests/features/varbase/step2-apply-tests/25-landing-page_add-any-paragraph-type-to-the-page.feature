@@ -107,21 +107,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I scrolldown
      Then I should see "Block"
      When I select "Site branding" from "Block"
-      And I wait for AJAX to finish
-      And I scrolldown
-      And I Expand the field "styling-settings"
-      And I scrolldown
-     Then I should see "Background Image"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I double click on the image with the "Embed Flag Earth all earth in space" title text
-      And I switch to main frame
       And I wait
       And I press "Save"
       And I wait
