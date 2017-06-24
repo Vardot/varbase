@@ -16,7 +16,8 @@ php:
 env:
   - VERSION=8.x-4.x
   
-sudo: false
+sudo: enabled
+dist: trusty
 
 addons:  
   firefox: 46.0.1
