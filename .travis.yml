@@ -73,7 +73,7 @@ before_install:
   
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
-  - if [[ ! -f $SELENIUM ]]; then
+  - if [ ! -f $SELENIUM ]; then
     wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
     fi
   - java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
