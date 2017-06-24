@@ -96,14 +96,22 @@ So that the "Landing page" will show up having paragrpahs of different types
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/landing_page"
+      And I wait
       And I fill in "Test Landing page Drupal Block" for "Title"
       And I fill in "Test Landing page description Drupal Block" for "Page description"
       And I press the "Add" button
-     Then I press "Drupal Block"
+      And I wait for AJAX to finish
+     Then I should see "Add paragraph"
+     When I press "Drupal Block"
       And I wait for AJAX to finish
       And I scrolldown
+     Then I should see "Block"
      When I select "Site branding" from "Block"
+      And I wait for AJAX to finish
+      And I scrolldown
       And I Expand the field "styling-settings"
+      And I scrolldown
+     Then I should see "Background Image"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
