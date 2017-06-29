@@ -174,7 +174,7 @@ projects[mailsystem][type] = module
 projects[mailsystem][version] = 4.1
 
 projects[smtp][type] = module
-projects[smtp][version] = 1.0-beta2
+projects[smtp][version] = 1.0-beta3
 
 projects[maxlength][type] = module
 projects[maxlength][version] = 1.0-beta1
