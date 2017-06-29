@@ -251,7 +251,7 @@
     "drupal/honeypot": "1.26",
     "drupal/captcha": "1.0-beta1",
     "drupal/recaptcha": "2.2",
-    "drupal/search_api": "1.1",
+    "drupal/search_api": "1.2",
     "drupal/mailsystem": "4.1",
     "drupal/smtp": "1.0-beta2",
     "drupal/maxlength": "1.0-beta1",
