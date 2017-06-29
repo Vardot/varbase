@@ -20,8 +20,8 @@ dependencies:
   - user
   - varbase_bootstrap_paragraphs
   - varbase_core
-  - varbase_webform
   - varbase_seo
+  - varbase_webform
   - viewsreference
   - yoast_seo
 package: Varbase
