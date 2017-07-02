@@ -20,11 +20,6 @@ assignments:
         date_format: date_format
         field_storage_config: field_storage_config
         entity_form_mode: entity_form_mode
-        image_style: image_style
-        menu: menu
-        responsive_image_style: responsive_image_style
-        user_role: user_role
-        entity_view_mode: entity_view_mode
     enabled: true
     weight: -12
   dependency:
@@ -52,7 +47,7 @@ assignments:
     enabled: true
     weight: -13
   namespace:
-    enabled: true
+    enabled: false
     weight: -17
   optional:
     types:
@@ -121,7 +116,7 @@ assignments:
         taxonomy_vocabulary: taxonomy_vocabulary
         editor: editor
         filter_format: filter_format
-    enabled: true
+    enabled: false
     weight: -11
   alter:
     enabled: true
