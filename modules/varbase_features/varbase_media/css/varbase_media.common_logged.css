@@ -132,9 +132,11 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
   float: right;
   text-align: center;
 }
+.entity-embed-dialog-step--embed > .form-item-entity .field--type-image img {
+  width: 200px;
+}
 [dir="rtl"] .entity-embed-dialog-step--embed > .form-item-entity {
   float: left;
-  text-align: center;
 }
 /** Style the dropzone upload in entity browsers  **/
 .entity-browser-form div#ief-dropzone-upload > div {

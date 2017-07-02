@@ -66,3 +66,7 @@ body .form-wrapper .counter {
 .adminimal .ui-dialog.ui-widget.ui-widget-content .media-image-edit-form .form-actions {
   display: none;
 }
+
+.paragraph--view-mode--preview .field--name-bp-image-field img {
+  width: 100%;
+}
