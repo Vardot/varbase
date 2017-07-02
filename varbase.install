@@ -401,3 +401,14 @@ function varbase_update_8032() {
     $config->setData($data)->save(TRUE);
   }
 }
+
+/**
+ * Enabled "Create new revision" for Basic block.
+ */
+function varbase_update_8033() {
+  $profile_path = drupal_get_path('profile', 'varbase') . '/config/install/';
+  $config_path = $profile_path . 'block_content.type.basic.yml';
+  $data = (array) Yaml::parse($config_path);
+  $config = \Drupal::configFactory()->getEditable('block_content.type.basic');
+  $config->setData($data)->save(TRUE);
+}
