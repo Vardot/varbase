@@ -269,6 +269,9 @@ projects[security_review][download][branch] = 8.x-1.x
 projects[honeypot][type] = module
 projects[honeypot][version] = 1.26
 
+projects[shield][type] = module
+projects[shield][version] = 1.1
+
 projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta1
 
