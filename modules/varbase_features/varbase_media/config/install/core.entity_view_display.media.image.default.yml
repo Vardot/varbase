@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_image
-    - image.style.field_preview
     - media_entity.bundle.image
+    - responsive_image.styles.default
   module:
-    - image
+    - responsive_image
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -16,21 +16,14 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: field_preview
-      image_link: content
+      responsive_image_style: default
+      image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
-  name:
-    label: hidden
-    type: string
-    weight: 1
-    settings:
-      link_to_entity: true
-    third_party_settings: {  }
+    type: responsive_image
     region: content
 hidden:
   created: true
   langcode: true
+  name: true
   thumbnail: true
   uid: true
