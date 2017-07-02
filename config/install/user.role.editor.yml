@@ -10,6 +10,7 @@ permissions:
   - 'access media overview'
   - 'update media'
   - 'view media'
+  - 'view own unpublished content'
   - 'create page content'
   - 'delete own page content'
   - 'edit own page content'

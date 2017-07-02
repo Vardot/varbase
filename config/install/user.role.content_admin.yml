@@ -67,5 +67,6 @@ permissions:
   - 'view all revisions'
   - 'view landing_page revisions'
   - 'view media'
+  - 'view own unpublished content'
   - 'view page revisions'
   - 'view the administration theme'
