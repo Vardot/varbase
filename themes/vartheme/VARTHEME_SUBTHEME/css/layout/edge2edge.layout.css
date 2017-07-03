@@ -13,4 +13,7 @@
 .bg-edge2edge:after {
   clear: both;
 }
+body {
+	overflow-x: hidden;
+}
 /*# sourceMappingURL=edge2edge.layout.css.map */
