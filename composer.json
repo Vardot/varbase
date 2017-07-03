@@ -272,7 +272,7 @@
     "drupal/entity_browser_enhanced": "1.0-beta5",
     "drupal/vmi": "1.0-beta1",
     "drupal/varbase_bootstrap_paragraphs": "4.x-dev",
-    "drupal/varbase_editor": "4.13",
+    "drupal/varbase_editor": "4.14",
     "drupal/varbase_heroslider_media": "4.0-beta5",
     "drupal/varbase_carousels": "4.0-beta2"
   }
