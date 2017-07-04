@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.small
+label: 'Small (1/4 of width)'
+targetEntityType: media
+cache: true

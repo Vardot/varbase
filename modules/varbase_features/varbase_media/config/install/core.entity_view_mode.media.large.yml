@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.large
+label: 'Large (Full width)'
+targetEntityType: media
+cache: true
