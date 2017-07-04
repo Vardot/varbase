@@ -163,31 +163,36 @@ a.entity-browser-handle.entity-browser-iframe {
 a.entity-browser-handle.entity-browser-iframe:hover {
   text-decoration: none;
 }
-[dir="rtl"] .field--type-image.field--widget-image-image > div > div > .image-widget > .image-preview {
+[dir="rtl"] .image-widget > .image-preview {
   float: left;
 }
-.field--type-image.field--widget-image-image > div > div > .image-widget > .image-preview {
+.image-widget > .image-preview {
   float: right;
 }
-.field--type-image.field--widget-image-image > div > div > .image-widget > .image-widget-data {
+.image-widget > .image-widget-data {
   float: none;
 }
-.field--type-image.field--widget-image-image > div > div > .image-widget > .image-widget-data > .file-size {
+.image-widget > .image-widget-data > .file-size {
   display: none;
 }
-.field--type-image.field--widget-image-image > div > div > .image-widget > .image-widget-data > .file {
+.image-widget > .image-widget-data > .file {
   display: none;
   float: right;
 }
-[dir="rtl"] .field--type-image.field--widget-image-image > div > div > .image-widget > .image-widget-data > .button {
+[dir="rtl"] .image-widget > .image-widget-data > .button {
   float: left;
   margin-left: 4%;
 }
-.field--type-image.field--widget-image-image > div > div > .image-widget > .image-widget-data > .button {
+.image-widget > .image-widget-data > .button {
   float: right;
   margin-right: 4%;
 }
-.field--type-image.field--widget-image-image > div > div > .image-widget:after {
+.image-widget:after {
   display: none;
 }
-/*# sourceMappingURL=varbase_media.common_logged.css.map */
+.field--type-image > div > div > div > div > label {
+  display: none;
+}
+.field--type-image > div > div > label {
+  display: none;
+}
