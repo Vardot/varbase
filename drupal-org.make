@@ -130,7 +130,7 @@ projects[imagemagick][type] = module
 projects[imagemagick][version] = 1.0-alpha6
 
 projects[imageapi_optimize][type] = module
-projects[imageapi_optimize][version] = 2.0-alpha2
+projects[imageapi_optimize][version] = 2.0-alpha3
 
 projects[ultimate_cron][type] = module
 projects[ultimate_cron][version] = 2.0-alpha1

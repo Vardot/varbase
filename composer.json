@@ -211,7 +211,7 @@
     "drupal/ace_editor": "1.x-dev#55dc97d7fcc1aba55a16176f94d72a8ba7002c72",
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
     "drupal/imagemagick": "1.0-alpha6",
-    "drupal/imageapi_optimize": "2.0-alpha2",
+    "drupal/imageapi_optimize": "2.0-alpha3",
     "drupal/ultimate_cron": "2.0-alpha1",
     "drupal/persistent_login": "1.0-alpha3",
     "drupal/userprotect": "1.0",
