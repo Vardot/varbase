@@ -99,6 +99,20 @@
   {% endblock %}
 {% endif %}
 
+{# Header print #}
+<div class="visible-print-block header-print page-header">
+  <div class="{{ container }}">
+    <div class="row">
+      <div class="col-sm-12">
+        {# Logo print #}
+        {% if logo_print %}
+          <img class="logo pull-left visible-print-inline-block" src="{{ logo_print }}" />
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">

@@ -16,3 +16,10 @@ function vartheme_theme_suggestions_page_alter(array &$suggestions, array $varia
     $suggestions[] = 'page__' . $content_type;
   }
 }
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function vartheme_preprocess_page(&$variables) {
+  $variables['logo_print'] = drupal_get_path('theme','vartheme') . '/logo-print.png';
+}
