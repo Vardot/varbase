@@ -228,7 +228,7 @@
     "drupal/coffee": "1.0-beta2",
     "drupal/responsive_preview": "1.0-alpha6",
     "drupal/webform": "5.0-beta15",
-    "drupal/content_lock": "1.0-alpha1",
+    "drupal/content_lock": "1.0-alpha2",
     "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
     "drupal/rabbit_hole": "1.0-beta3",
     "drupal/fast_404": "1.0-alpha2",

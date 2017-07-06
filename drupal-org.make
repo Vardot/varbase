@@ -157,7 +157,7 @@ projects[webform][type] = module
 projects[webform][version] = 5.0-beta15
 
 projects[content_lock][type] = module
-projects[content_lock][version] = 1.0-alpha1
+projects[content_lock][version] = 1.0-alpha2
 
 projects[node_edit_protection][type] = module
 projects[node_edit_protection][download][url] = https://git.drupal.org/project/node_edit_protection.git
