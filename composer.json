@@ -156,6 +156,8 @@
         "https://www.drupal.org/files/issues/2877613-2_0.patch"
       },
       "drupal/paragraphs": {
+        "Issue #2461695: [META] Support translatable paragraph entity reference revision field":
+        "https://www.drupal.org/files/issues/meta_support-2461695-206.patch",
         "Issue #2828110 by chr.fritsch, pixelmord: Sorting of paragraphs 03 - create a NEW paragraph in place between existing ones":
         "https://www.drupal.org/files/issues/sorting_of_paragraphs-2828110-6.patch"
       },
