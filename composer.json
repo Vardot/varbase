@@ -157,7 +157,7 @@
       },
       "drupal/paragraphs": {
         "Issue #2236905: Nicer UI / Icons for Paragraph type + Add another Paragraph":
-        "https://www.drupal.org/files/issues/2236905-48.patch"
+        "https://www.drupal.org/files/issues/2236905-49.patch"
       },
       "drupal/adminimal_theme": {
         "Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable":

@@ -203,7 +203,7 @@ projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.
 projects[paragraphs][download][revision] = c14d496c312373fde8029a1ad72c3d4cc2363ae6
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2236905: Nicer UI / Icons for Paragraph type + Add another Paragraph
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2236905-48.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2236905-49.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2
