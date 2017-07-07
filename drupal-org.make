@@ -198,9 +198,6 @@ projects[better_exposed_filters][version] = 3.0-alpha2
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.0
 
-projects[paragraphs][type] = module
-projects[paragraphs][version] = 1.1
-
 projects[paragraphs[type] = module
 projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
 projects[paragraphs][download][revision] = c14d496c312373fde8029a1ad72c3d4cc2363ae6
