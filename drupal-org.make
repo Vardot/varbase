@@ -201,8 +201,10 @@ projects[link_attributes][version] = 1.0
 projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.1
 
-projects[paragraphs][type] = module
-projects[paragraphs][version] = 1.1
+projects[paragraphs[type] = module
+projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
+projects[paragraphs][download][revision] = c14d496c312373fde8029a1ad72c3d4cc2363ae6
+projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
 ;; Issue #2828110 by chr.fritsch, pixelmord: Sorting of paragraphs 03 - create a NEW paragraph "in place" between existing ones
