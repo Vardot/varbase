@@ -1,5 +1,7 @@
 ## 8.4.05
+
 ### Highlighted important changes since the last release:
+
 * Issue #2886156: Updated [Varbase Landing] feature to use [Paragraphs]
                   instead of [Panelizer].
 * Issue #2883671: [Vartheme] Refactoring CSS/LESS structure in the Vartheme and
@@ -12,6 +14,7 @@
 * Issue #2891629: Updated [Varbase profile] features bundle default config.
 
 ### Added since the last release:
+
 * Issue #2892170: Added logo-print to be used when printing only in varbase theme
 * Issue #2891677: Added permission for editor (View own unpublished content)
 * Issue #2886100: Added patch for label (Title) not set for Views block
@@ -35,21 +38,24 @@
 * Issue #2888454: Buttered up the Behat VarbaseContext
 
 ### Updates since the last release:
+
 * Issue #2884546: Updated [Drupal core] from 8.3.2 to 8.3.3
 * Issue #2888285: Updated [Drupal core] from 8.3.3 to 8.3.4
 * Issue #2892545: Updated [Drupal core] from 8.3.4 to 8.3.5
 * Issue #2885563: Updated [Varbase Editor] feature module from 8.4.12 to 8.4.13
-** Issue #2885559: Updated [Anchor Link] module from 8.1.4 to 8.1.5
+* Issue #2885559: Updated [Anchor Link] module from 8.1.4 to 8.1.5
 * Issue #2891929: Updated [Varbase Editor] feature module from 8.4.13 to 8.4.14
-** Issue #2891913: Have Center for other HTML elements in Rich text editor.
+* Issue #2891913: Have Center for other HTML elements in Rich text editor.
 * Issue #2893255: Updated [Varbase Editor] feature module from 8.4.14 to 8.4.15
-** Issue #2892788: Removed editor configuration from filter configuration basic_html / plain_text
+* Issue #2892788: Removed editor configuration from filter configuration
+                  basic_html / plain_text
 * Issue #2887346: Updated [View modes inventory] module
                   from 8.1.0-alpha2 to 8.1.0-beta1
-** Issue #2887297: Fixed Wrong naming of CONTENT_TYPE at config_templates for Vertical media teaser - large
+* Issue #2887297: Fixed Wrong naming of CONTENT_TYPE at config_templates for
+                  Vertical media teaser - large
 * Issue #2893251: Updated [View modes inventory] module
                   from 8.1.0-beta1 to 8.1.0-beta2
-** Issue #2893238: Fixed anchor all linking on view modes.
+* Issue #2893238: Fixed anchor all linking on view modes.
 * Issue #2893298: Updated [Varbase Bootstrap Paragraphs]
                   from 8.x-4.x-dev to 8.4.0-alpha1
 * Issue #2892564: Updated [Content locking (anti-concurrent editing)] module
@@ -68,6 +74,7 @@
 * Issue #2887276: Updated [Honeypot] module from 8.1.25 to 8.1.26
 
 ### Fixes since the last release:
+
 * Issue #2884315: Fixed [Varbase Media] issue with Image Caption doesn't
                   fit the image.
 * Issue #2887494: Fixed [Varbase Admin] issue for the checkboxes and radio buttons
