@@ -200,10 +200,10 @@ projects[link_attributes][version] = 1.0
 
 projects[paragraphs[type] = module
 projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
-projects[paragraphs][download][revision] = c48d291f9a09d94c131c0c4caa18c3f37f64daf2
+projects[paragraphs][download][revision] = a1d6710872f141d294b3d4e4e6ec806303f90330
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-184.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2
