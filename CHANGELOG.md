@@ -31,6 +31,7 @@
 * Issue #2888454: Added the [ Feature: Landing Pages - Landing page add paragraph
                   types] for Automated Functional Testing.
 * Issue #2891675: Enabled (Create new revision) for Basic block.
+* Issue #2893352: Enabled [entity reference revisions] module on update.
 * Issue #2891909: Changed form of edit entity image on field to look like same
                   as form for embed in WYSIWYG
 * Issue #2884401: Optimization for the post Drupal Scaffold, and Sub 
