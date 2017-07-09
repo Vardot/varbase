@@ -1384,6 +1384,15 @@ JS;
   }
 
   /**
+   * #varbase: To scroll up in the current status of the page.
+   * 
+   * @When I scrollup
+   */
+  public function iScrollup() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,-350)");
+  }
+
+  /**
    * #varbase: To check if the Image media browser opened.
    * 
    * Example : Then the image media browser should be open
