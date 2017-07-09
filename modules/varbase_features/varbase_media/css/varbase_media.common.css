@@ -1,10 +1,3 @@
-/**
- * Varbase media common library style.
- */
-/**
- * Alignment classes for embedded entities.
- */
-/* Image align center style */
 .embedded-entity.align-center img {
   display: block;
   margin-left: auto;
@@ -75,7 +68,6 @@ img.align-center {
 img.align-right {
   margin: 0 0 8px 8px;
 }
-/* Image caption Right and Left style (Fit Image) */
 figure.align-right,
 figure.align-left {
   display: table;

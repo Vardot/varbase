@@ -99,6 +99,7 @@ class AssemblerForm extends FormBase {
    * Get selected extra varbase's components.
    *
    * @return array
+   *   Selected extra compoment from the configbit yml file.
    */
   protected function getSelectedExtraComponents($configbit_root) {
     // Selected Extra Varbase components.
@@ -109,6 +110,9 @@ class AssemblerForm extends FormBase {
 
   /**
    * {@inheritdoc}
+   *
+   * @return array
+   *   Extra compoments modules.
    */
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
     $form['#title'] = $this->t('Extra components');

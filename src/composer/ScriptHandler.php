@@ -3,6 +3,7 @@
 namespace Varbase\composer;
 
 use Symfony\Component\Filesystem\Filesystem;
+use Composer\EventDispatcher\Event;
 
 /**
  * Varbase Composer Script Handler.
@@ -12,9 +13,11 @@ class ScriptHandler {
   /**
    * Get the Drupal root directory.
    *
-   * @param string or int or object... $project_root
+   * @param string $project_root
+   *    Project root.
    *
-   * @return type
+   * @return string
+   *    Drupal root path.
    */
   protected static function getDrupalRoot($project_root) {
     return $project_root . '/docroot';
@@ -26,7 +29,7 @@ class ScriptHandler {
    * @param \Composer\EventDispatcher\Event $event
    *   The script event.
    */
-  public static function postDrupalScaffoldProcedure(\Composer\EventDispatcher\Event $event) {
+  public static function postDrupalScaffoldProcedure(Event $event) {
 
     $fs = new Filesystem();
     $drupal_root = static::getDrupalRoot(getcwd());
@@ -53,13 +56,14 @@ class ScriptHandler {
     }
 
     if ($fs->exists($drupal_root . '/profiles/varbase/src/assets/development.services.yml')) {
-      // Alter development.services.yml to have Varbase's Local development services.
+      // Alter development.services.yml to have Varbase's Local development
+      // services.
       copy(getcwd() . '/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
-    
+
     // Copy ACE librarary into /modules/contrib/ace_editor/libraries.
     if ($fs->exists($drupal_root . '/libraries/ace/src-min-noconflict/ace.js')) {
-      mkdir($drupal_root . '/modules/contrib/ace_editor/libraries', 0777, true);
+      mkdir($drupal_root . '/modules/contrib/ace_editor/libraries', 0777, TRUE);
       rename($drupal_root . '/libraries/ace', $drupal_root . '/modules/contrib/ace_editor/libraries/ace');
     }
 
@@ -84,7 +88,7 @@ class ScriptHandler {
    * @param \Composer\EventDispatcher\Event $event
    *   The script event.
    */
-  public static function postDrupalScaffoldSubProfileProcedure(\Composer\EventDispatcher\Event $event) {
+  public static function postDrupalScaffoldSubProfileProcedure(Event $event) {
 
     $fs = new Filesystem();
     $root = static::getDrupalRoot(getcwd());
@@ -97,10 +101,8 @@ class ScriptHandler {
       // Parse the varbase.info.yml file.
       $varbase_info = Yaml::parse(file_get_contents($varbase_info_file_with_root_path));
 
-      /**
-       *  Remove the distribution item for the parent varbase profile, as we will
-       *  use this sub proifle as the distribution cover on the install step.
-       */
+      // Remove the distribution item for the parent varbase profile, as we will
+      // use this sub proifle as the distribution cover on the install step.
       if (isset($varbase_info['distribution'])) {
         unset($varbase_info['distribution']);
       }

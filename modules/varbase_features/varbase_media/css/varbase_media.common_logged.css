@@ -1,7 +1,3 @@
-/**
- * Varbase media common logged in users style.
- */
-/* Style the entity select and editor image dialog for images. */
 .entity-select-dialog #entity-embed-dialog-form .form-type-radio {
   display: block;
 }
@@ -40,7 +36,6 @@
 .editor-image-dialog #editor-image-dialog-form .form-item-attributes-data-entity-embed-display .input-group-addon {
   display: none;
 }
-/* Style the CKEditor widget for images. */
 .cke_widget_wrapper .align-left {
   margin: 0 8px 8px 0;
 }
@@ -56,7 +51,6 @@
 .cke_widget_wrapper .align-center figcaption {
   text-align: center;
 }
-/** Field type entity reference **/
 body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list .item-container {
   position: relative;
 }
@@ -127,7 +121,6 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
   right: auto;
   left: 0;
 }
-/* Embed_media_form image Preview style */
 .entity-embed-dialog-step--embed > .form-item-entity {
   float: right;
   text-align: center;
@@ -138,7 +131,6 @@ body .form-wrapper.field--widget-entity-browser-entity-reference .entities-list 
 [dir="rtl"] .entity-embed-dialog-step--embed > .form-item-entity {
   float: left;
 }
-/** Style the dropzone upload in entity browsers  **/
 .entity-browser-form div#ief-dropzone-upload > div {
   border: 2px dashed rgba(107, 107, 107, 0.65);
   border-radius: 20px;
@@ -163,7 +155,6 @@ a.entity-browser-handle.entity-browser-iframe {
 a.entity-browser-handle.entity-browser-iframe:hover {
   text-decoration: none;
 }
-/* Edit image field form style. */
 [dir="rtl"] form.media-image-edit-form > .field--type-image.field--widget-image-image > div > div > .image-widget > .image-preview {
   float: left;
 }
