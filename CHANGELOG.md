@@ -2,11 +2,17 @@
 
 ### Highlighted important changes since the last release:
 
-* Issue #2886156: Updated [Varbase Landing] feature to use [Paragraphs]
-                  instead of [Panelizer].
-* Issue #2883671: [Vartheme] Refactoring CSS/LESS structure in the Vartheme and
-                  VARTHEME_SUBTHEME themes to use SMACSS, and having each part
-                  as libraries.
+* Issue #2886156: Updated [Varbase Landing] feature to use [Paragraphs] instead
+                  of [Panelizer].
+* Issue #2888454: Added the [ Feature: Landing Pages - Landing page add
+                  paragraph types] for Automated Functional Testing.
+* Issue #2893298: Updated [Varbase Bootstrap Paragraphs] module
+                  from 8.x-4.x-dev to 8.4.0-alpha1
+* Issue #2883671: [Vartheme] Refactoring CSS/LESS structure in the Vartheme
+                  and VARTHEME_SUBTHEME themes to use SMACSS, and having
+                  each part as libraries.
+* Issue #2892027: Fixed View mode in Embed media form, as it is not working
+                  in WYSIWYG.
 * Issue #2891609: [Varbase Media] Added default image style, and changed the
                   config for default view mode for image media bundle.
 * Issue #2886156: Have [Varbase Webform] Enabled for [Varbase Landing] feature
@@ -15,27 +21,27 @@
 
 ### Added since the last release:
 
-* Issue #2892170: Added logo-print to be used when printing only in varbase theme
+* Issue #2892170: Added logo-print to be used when printing only in varbase
+                  theme
 * Issue #2891677: Added permission for editor (View own unpublished content)
 * Issue #2886100: Added patch for label (Title) not set for Views block
-                 (exposed filters in Block).
+                  (exposed filters in Block).
 * Issue #2891595: Added [Shield] module but not enabled.
 * Issue #2887298: Added new [Varbase Search] component, to use search_api
                   module in search feature, and have it in the Extra Components
                   installation step.
 * Issue #2892894: Added the Patch for Support translatable paragraph entity
                   reference revision field.
-* Issue #2891609: Added default image style, and changed the
-                  config for default view mode for image media bundle.
+* Issue #2891609: Added default image style, and changed the config for default
+                  view mode for image media bundle.
 * Issue #2888006: Added [Color field] module, but not enabled.
-* Issue #2888454: Added the [ Feature: Landing Pages - Landing page add paragraph
-                  types] for Automated Functional Testing.
 * Issue #2891675: Enabled (Create new revision) for Basic block.
 * Issue #2893352: Enabled [entity reference revisions] module on update.
+* Issue #2893357: Enabled [views reference] module on update.
 * Issue #2891909: Changed form of edit entity image on field to look like same
                   as form for embed in WYSIWYG
-* Issue #2884401: Optimization for the post Drupal Scaffold, and Sub 
-                  Profile Procedure.
+* Issue #2884401: Optimization for the post Drupal Scaffold, and Sub Profile
+                  Procedure.
 * Issue #2888454: Buttered up the Behat VarbaseContext
 
 ### Updates since the last release:
@@ -48,17 +54,13 @@
 * Issue #2891929: Updated [Varbase Editor] feature module from 8.4.13 to 8.4.14
 * Issue #2891913: Have Center for other HTML elements in Rich text editor.
 * Issue #2893255: Updated [Varbase Editor] feature module from 8.4.14 to 8.4.15
-* Issue #2892788: Removed editor configuration from filter configuration
-                  basic_html / plain_text
 * Issue #2887346: Updated [View modes inventory] module
                   from 8.1.0-alpha2 to 8.1.0-beta1
 * Issue #2887297: Fixed Wrong naming of CONTENT_TYPE at config_templates for
-                  Vertical media teaser - large
+                  Vertical media teaser - large.
 * Issue #2893251: Updated [View modes inventory] module
                   from 8.1.0-beta1 to 8.1.0-beta2
 * Issue #2893238: Fixed anchor all linking on view modes.
-* Issue #2893298: Updated [Varbase Bootstrap Paragraphs]
-                  from 8.x-4.x-dev to 8.4.0-alpha1
 * Issue #2892564: Updated [Content locking (anti-concurrent editing)] module
                   from 8.1.0-alpha1 to 8.1.0-alpha2
 * Issue #2882955: Updated [webform] module from 8.5.0-beta11 to 8.5.0-beta12
@@ -69,34 +71,33 @@
                   from 8.1.0-alpha5 to 8.1.0-alpha6
 * Issue #2890642: Updated [Search API] module from 8.1.1 to 8.1.2
 * Issue #2890643: Updated [SMTP Authentication Support] module
-                  (Security update ) from 8.1.0-beta2 to 8.1.0-beta3
+                 (Security update ) from 8.1.0-beta2 to 8.1.0-beta3
 * Issue #2892262: Updated [Image Optimize (or ImageAPI Optimize)] module
                   from 8.2.0-alpha2 to 8.2.0-alpha3
 * Issue #2887276: Updated [Honeypot] module from 8.1.25 to 8.1.26
 
 ### Fixes since the last release:
-
 * Issue #2884315: Fixed [Varbase Media] issue with Image Caption doesn't
                   fit the image.
-* Issue #2887494: Fixed [Varbase Admin] issue for the checkboxes and radio buttons
-                  validation from Adminimal admin theme.
-* Issue #2883671: Fixed [Vartheme] to set the proper directory for the Bootstrap
-                  Glyphicon font.
+* Issue #2887494: Fixed [Varbase Admin] issue for the checkboxes and radio
+                  buttons validation from Adminimal admin theme.
+* Issue #2883671: Fixed [Vartheme] to set the proper directory for the
+                  Bootstrap Glyphicon font.
 * Issue #2890704: Fixed [Varbase Landing] paragraph names to
-                  (Component and Components)
-* Issue #2884325: Fixed Wrong HTML "all languages" in
-                  details field group from Classy theme
-* Issue #2891609: Fixed the automated functional test after default view mode
-                  for image media bundle.
+                 (Component and Components)
+* Issue #2884325: Fixed Wrong HTML "all languages" in details field group
+                  from Classy theme
+* Issue #2891609: Fixed the automated functional test after default view
+                  mode for image media bundle.
 * Issue #2891905: Fixed an issue of background edge to edge (bg-edge2edge)
                   with scrolling
 * Issue #2888454: Fixed travis-ci speed of processing the functional
                   automated tests.
-* Issue #2892027: Fixed View mode in Embed media form, as it is not working
-                  in WYSIWYG.
+* Issue #2892788: Removed editor configuration from filter configuration
+                  basic_html / plain_text
 * Issue #2885447: Reverted back to 4.6.2 version of [anchor, link, fakeobjects]
-                  CKEditor pligins, to fix the issue of plugin versions breaks
-                  edit functionality.
+                  CKEditor pligins, to fix the issue of plugin versions
+                  breaks edit functionality.
 * Issue #2886156: Removed the preview for paragraphs in the [Varbase Landing].
 * Issue #2893241: Varbase 8.4.05: Updated [CHANGELOG.md, UPDATE.md] files and
                   filtered the code for Drupal 8 Coding Standard.
