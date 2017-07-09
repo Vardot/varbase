@@ -62,8 +62,8 @@ content:
     settings:
       title: Component
       title_plural: Components
-      edit_mode: preview
-      add_mode: modal
+      edit_mode: closed
+      add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
