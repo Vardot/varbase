@@ -394,7 +394,7 @@ projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 4.0-beta2
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 4.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
