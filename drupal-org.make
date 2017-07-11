@@ -181,8 +181,10 @@ projects[maxlength][version] = 1.0-beta1
 
 projects[menu_position][type] = module
 projects[menu_position][download][url] = https://git.drupal.org/project/menu_position.git
-projects[menu_position][download][revision] = a337956f24053d337c399ad86c1f78d4d4235702
+projects[menu_position][download][revision] = 1e3a6778acc74a35174d297052ec44995d5e5137
 projects[menu_position][download][branch] = 8.x-1.x
+;; Issue #2883131 by akalata, sassafrass, Znak: Fatal error: Call to undefined method when creating a rule
+projects[menu_position][patch][] = https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch
 
 projects[mail_edit][type] = module
 projects[mail_edit][download][url] = https://git.drupal.org/project/mail_edit.git

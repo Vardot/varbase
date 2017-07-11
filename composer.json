@@ -162,6 +162,10 @@
       "drupal/adminimal_theme": {
         "Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable":
         "https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch"
+      },
+      "drupal/menu_position": {
+        "Issue #2883131 by akalata, sassafrass, Znak: Fatal error: Call to undefined method when creating a rule":
+        "https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch"
       }
     }
   },
@@ -256,7 +260,7 @@
     "drupal/mailsystem": "4.1",
     "drupal/smtp": "1.0-beta3",
     "drupal/maxlength": "1.0-beta1",
-    "drupal/menu_position": "1.x-dev#a337956f24053d337c399ad86c1f78d4d4235702",
+    "drupal/menu_position": "1.x-dev#1e3a6778acc74a35174d297052ec44995d5e5137",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/taxonomy_access_fix": "2.1",
     "drupal/better_exposed_filters": "3.0-alpha2",
