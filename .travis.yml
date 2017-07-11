@@ -96,6 +96,7 @@ before_script:
   - drush -y en varbase_heroslider_media -vvv
   - drush -y en varbase_carousels -vvv
   - drush -y en varbase_search -vvv
+  - drush -y en vbp_text_and_image -vvv
 
 script:
   - cd ./profiles/varbase
