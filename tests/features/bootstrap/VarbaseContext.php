@@ -484,8 +484,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
 
     $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].execCommand( '$selectorCommand' );");
-  }
 
+  }
 
   /**
   * #varbase : To append text at the end of a rich text editor field  WYSIWYG with content
@@ -1361,14 +1361,14 @@ JS;
   /**
    * #varbase: To expand a select list by it's class attribute.
    * 
-   * @When I Expand the select list :arg1
+   * @When I Expand the :nth select list :arg1
    *
    * @param $text
    * @throws \InvalidArgumentException
   */
-  public function iExpandTheSelectList($listClassName) {
+  public function iExpandTheSelectList($index, $listClassName) {
     $js = <<<JS
-    var group = document.getElementsByClassName("{$listClassName}")[0];
+    var group = document.getElementsByClassName("{$listClassName}")[{$index}];
     group.className += "open";
 JS;
     $this->getSession()->executeScript($js);
@@ -1461,4 +1461,19 @@ JS;
   public function maximizeWindow() {
     $this->getSession()->getDriver()->maximizeWindow();
   }
+
+  /**
+   * Find the :nth element having the first attribute 
+   * and check if it's have the second one.
+   *
+   * @Then I should see the :nth :arg1 with :arg2 class
+   */
+  public function iShouldSeeTheHaveAttribute($index, $wrapper, $position) {
+    $items = $this->getSession()->getPage()->findAll('css', '.' . $wrapper);
+    $item = $items[$index]->find('css', '.' . $wrapper . '.' . $position);
+    if (!$item) {
+      throw new Exception("The image position is wrong");
+    }
+  }
+
 }

@@ -10,14 +10,14 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Carousel" for "Title"
       And I fill in "Test Landing page description Carousel" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Carousel"
       And I wait for AJAX to finish
       And I scrolldown
       And I select "2 Seconds" from "Slide Interval"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -32,7 +32,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -60,7 +60,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Accordion" for "Title"
       And I fill in "Test Landing page description Accordion" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I press "Add Accordion"
       And I wait for AJAX to finish
@@ -79,7 +79,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I switch to main frame
       And I fill in "Accordion Section Title test" for "Accordion Section Title"
-     When I Expand the select list "dropbutton-multiple"
+     When I Expand the "0" select list "dropbutton-multiple"
       And I press "Add Simple"
       And I wait
      Then I should see "Accordion Section Body"
@@ -97,7 +97,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Drupal Block" for "Title"
       And I fill in "Test Landing page description Drupal Block" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press the "Add Drupal Block" button
@@ -117,7 +117,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Columns (Equal)" for "Title"
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Columns (Equal)"
@@ -136,7 +136,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
 
       And I switch to main frame
-     When I Expand the select list "dropbutton-multiple"
+     When I Expand the "0" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -152,7 +152,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
 
-     When I Expand the select list "dropbutton-multiple"
+     When I Expand the "0" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -178,7 +178,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Columns (Two Uneven)"
@@ -197,7 +197,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait 
 
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -212,7 +212,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -238,7 +238,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Columns (Three Uneven)"
@@ -257,7 +257,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait 
 
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -273,7 +273,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait
 
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -289,7 +289,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
 
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I press "Add Simple"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Simple text test - column Three"
@@ -304,7 +304,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Image" for "Title"
       And I fill in "Test Landing page description Image" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Image"
@@ -332,7 +332,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Modal" for "Title"
       And I fill in "Test Landing page description Modal" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Modal"
@@ -340,7 +340,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Components"
      When I fill in "Modal button" for "Modal Button Text"
       And I fill in "Modal title" for "Modal Title"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I press "Add Simple"
       And I wait
      Then I should see "Modal Body"
@@ -359,7 +359,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Simple" for "Title"
       And I fill in "Test Landing page description Simple" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Simple"
@@ -392,7 +392,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Tabs" for "Title"
       And I fill in "Test Landing page description Tabs" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Tabs"
@@ -412,7 +412,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I should see "Components"
       And I fill in "Tab 1" for "Tab Name"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I press "Add Simple"
       And I wait 
      Then I should see "Tab Body"
@@ -430,7 +430,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page WebForm" for "Title"
       And I fill in "Test Landing page description WebForm" for "Page description"
-      And I Expand the select list "dropbutton-multiple"
+      And I Expand the "0" select list "dropbutton-multiple"
       And I wait
       And I scrolldown
       And I press "Add Webform"
