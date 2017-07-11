@@ -128,7 +128,7 @@ body {
             padding: 0.5em;
             margin: 0;
             background: #000;
-            opacity: 0.8;
+            opacity: 1;
             font-size: 9px;
             color: #fff;
             word-break: break-all;
@@ -136,6 +136,12 @@ body {
         }
         
         .item-container {
+          text-align: center;
+          vertical-align: middle;
+          width: 150px;
+          height: 150px;
+          background: #000;
+          
           &:hover {
             .field--name-name {
               display: block;
@@ -170,15 +176,8 @@ body {
             background-size: 100%;
             left: 0;
             right: auto;
-          }
-          
-          input[id*="-remove-button"] {
-            background-image: url("../images/pencil-square-o.svg");
-            background-repeat: no-repeat;
-            background-position: left top;
-            background-size: 100%;
-            left: 0;
-            right: auto;
+            -webkit-filter: invert(100%) !important;
+            filter: invert(100%) !important;
           }
           
           input[id*="-remove-button"] {
@@ -188,6 +187,18 @@ body {
             background-size: 100%;
             right: 0;
             left: auto;
+            -webkit-filter: invert(75%) !important;
+            filter: invert(75%) !important;
+          }
+          
+          img.image-style-field-preview {
+            overflow: auto;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
           }
         }
       }

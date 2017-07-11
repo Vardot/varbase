@@ -78,3 +78,15 @@ function varbase_media_update_8005() {
     $embed_button_config->set('label', 'Media Library')->save();
   }
 }
+
+/**
+ * Issue #2893965: [Varbase Media] Media (image) widget field preview.
+ *                 Updated field preview image meida view mode.
+ */
+function varbase_media_update_8006() {
+  $field_preview_view_mode_config = \Drupal::service('config.factory')->getEditable('core.entity_view_display.media.image.field_preview');
+  $field_preview_view_mode_config_file = \Drupal::root() . '/' . drupal_get_path('module', 'varbase_media') . '/config/install/core.entity_view_display.media.image.field_preview.yml';
+  $field_preview_view_mode_config_content = file_get_contents($field_preview_view_mode_config_file);
+  $field_preview_view_mode_config_content_data = (array) Yaml::parse($field_preview_view_mode_config_content);
+  $field_preview_view_mode_config->setData($field_preview_view_mode_config_content_data)->save();
+}
