@@ -1404,6 +1404,22 @@ JS;
       throw new Exception('The image media browser failed to open.');
     }
   }
+  
+  /**
+   * #varbase: To find an element with a selected index having the
+   *           first attribute, and check if it's have the second one.
+   * 
+   * Example #1: Then I should see the "1" "wrapper" with "align2right" class
+   *
+   * @Then I should see the :nth :arg1 with :arg2 class
+   */
+  public function iShouldSeeTheElementWithTheIndexHavingTheAttribute($index, $wrapper, $position) {
+    $items = $this->getSession()->getPage()->findAll('css', '.' . $wrapper);
+    $item = $items[$index]->find('css', '.' . $wrapper . '.' . $position);
+    if (!$item) {
+      throw new Exception("The image position is wrong");
+    }
+  }
 
 
   public function cleanUsers() {
@@ -1460,20 +1476,6 @@ JS;
    */
   public function maximizeWindow() {
     $this->getSession()->getDriver()->maximizeWindow();
-  }
-
-  /**
-   * Find the :nth element having the first attribute 
-   * and check if it's have the second one.
-   *
-   * @Then I should see the :nth :arg1 with :arg2 class
-   */
-  public function iShouldSeeTheHaveAttribute($index, $wrapper, $position) {
-    $items = $this->getSession()->getPage()->findAll('css', '.' . $wrapper);
-    $item = $items[$index]->find('css', '.' . $wrapper . '.' . $position);
-    if (!$item) {
-      throw new Exception("The image position is wrong");
-    }
   }
 
 }
