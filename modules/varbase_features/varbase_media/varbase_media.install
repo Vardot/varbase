@@ -84,7 +84,7 @@ function varbase_media_update_8005() {
  *                 Updated field preview image meida view mode.
  */
 function varbase_media_update_8006() {
-  $image_style_field_preview_config = \Drupal::service('config.factory')->getEditable('image.style.field_preview.yml');
+  $image_style_field_preview_config = \Drupal::service('config.factory')->getEditable('image.style.field_preview');
   $image_style_field_preview_config_file = \Drupal::root() . '/' . drupal_get_path('module', 'varbase_media') . '/config/install/image.style.field_preview.yml';
   $image_style_field_preview_config_content = file_get_contents($image_style_field_preview_config_file);
   $image_style_field_preview_config_content_data = (array) Yaml::parse($image_style_field_preview_config_content);
