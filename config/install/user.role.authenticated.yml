@@ -16,3 +16,4 @@ permissions:
   - userprotect.mail.edit
   - userprotect.pass.edit
   - userprotect.account.edit
+  - 'bypass honeypot protection'
