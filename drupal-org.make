@@ -268,7 +268,7 @@ projects[security_review][download][revision] = 35ebae445bb260e961e47c4c58efe7c5
 projects[security_review][download][branch] = 8.x-1.x
 
 projects[honeypot][type] = module
-projects[honeypot][version] = 1.26
+projects[honeypot][version] = 1.27
 
 projects[shield][type] = module
 projects[shield][version] = 1.1
