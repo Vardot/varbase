@@ -193,6 +193,15 @@
     "branch-alias": {
       "dev-8.x-4.x": "8.4.x-dev"
     },
+   "drupal-libraries": {
+      "library-directory": "docroot/libraries",
+      "libraries": [
+          {"name": "dropzone","package": "vardot/dropzone"},
+          {"name": "blazy", "package": "vardot/blazy"},
+          {"name": "slick", "package": "vardot/slick"},
+          {"name": "ace", "package": "vardot/ace-builds"}
+      ]
+    },
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
