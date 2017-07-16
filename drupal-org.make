@@ -119,7 +119,7 @@ projects[ace_editor][download][url] = https://git.drupal.org/project/ace_editor.
 projects[ace_editor][download][revision] = 7136cf96509e82a00b56a2908108aaee37a6cb98
 projects[ace_editor][download][branch] = 8.x-1.x
 ;; Issue #2886356 by Niklan, joey91133: Library must be moved from module folder
-projects[menu_position][patch][] = https://www.drupal.org/files/issues/library_must_be_moved_from_module_folder_with_composer.patch
+projects[ace_editor][patch][] = https://www.drupal.org/files/issues/library_must_be_moved_from_module_folder_with_composer.patch
 
 projects[entityqueue][type] = module
 projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue.git
