@@ -216,7 +216,7 @@ projects[entity_reference_revisions][type] = module
 projects[entity_reference_revisions][version] = 1.3
 
 projects[viewsreference][type] = module
-projects[viewsreference][version] = 1.0-beta1
+projects[viewsreference][version] = 1.0-beta2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
