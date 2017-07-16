@@ -61,10 +61,10 @@ class ScriptHandler {
       copy(getcwd() . '/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
 
-    // Copy ACE librarary into /modules/contrib/ace_editor/libraries.
-    if ($fs->exists($drupal_root . '/libraries/ace/src-min-noconflict/ace.js')) {
-      mkdir($drupal_root . '/modules/contrib/ace_editor/libraries', 0777, TRUE);
-      rename($drupal_root . '/libraries/ace', $drupal_root . '/modules/contrib/ace_editor/libraries/ace');
+    // Copy ACE librarary into /profiles/varbase/modules/contrib/ace_editor/libraries.
+    if ($fs->exists($drupal_root . '/profiles/varbase/libraries/ace/src-min-noconflict/ace.js')) {
+      mkdir($drupal_root . '/profiles/varbase/modules/contrib/ace_editor/libraries', 0777, TRUE);
+      rename($drupal_root . '/profiles/varbase/libraries/ace', $drupal_root . '/profiles/varbase/modules/contrib/ace_editor/libraries/ace');
     }
 
   }

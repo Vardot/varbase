@@ -1,183 +1,38 @@
 {
   "name": "vardot/varbase",
-  "description": "Drupal Bundled with Necessities | by Vardot",
+  "description": "Varbase: The Ultimate Drupal 8 Bootstrap Distribution | by Vardot",
   "type": "drupal-profile",
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "require-dev": {
-    "drush/drush": "^8.0.0",
-    "drupal/drupal-extension": "^3.2",
-    "drupal-composer/drupal-scaffold": "^2.0.0",
-    "jakoch/phantomjs-installer": "1.9.8",
-    "behat/behat": "^3.0",
-    "drupal/coder": "8.*",
-    "phing/phing": "^2.14",
-    "behat/mink": "~1.7",
-    "behat/mink-goutte-driver": "~1.2",
-    "behat/mink-zombie-driver": "@stable",
-    "behat/mink-selenium2-driver":  "~1.3",
-    "mikey179/vfsStream": "~1.2",
-    "phpunit/phpunit": "~4.8",
-    "guzzlehttp/guzzle": "6.2.*@stable",
-    "symfony/css-selector": "~2.8",
-    "squizlabs/php_codesniffer": "2.*",
-    "behatch/contexts": "*",
-    "emuse/behat-html-formatter": "@stable"
-  },
-  "config": {
-      "bin-dir": "bin/",
-      "secure-http": false
-  },
-  "autoload": {
-    "classmap": [
-      "src/composer/ScriptHandler.php"
-    ]
+  "authors": [
+    {
+      "name": "Mohammed J. Razem",
+      "homepage": "https://github.com/moerazem",
+      "role": "Maintainer"
+    },
+    {
+      "name": "Rajab Natshah",
+      "homepage": "https://github.com/Natshah",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "http://drupal.org/project/issues/varbase",
+    "source": "http://cgit.drupalcode.org/varbase"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "kenwheeler/slick",
-        "version": "1.6.0",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/kenwheeler/slick",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "dinbror/blazy",
-        "version": "1.8.2",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/dinbror/blazy",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "ajaxorg/ace-builds",
-        "version": "1.2.6",
-        "type": "library",
-        "source": {
-          "url": "https://github.com/ajaxorg/ace-builds",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
     }
   ],
-  "scripts": {
-      "post-install-cmd": [
-          "@composer drupal-scaffold",
-          "./bin/phing push"
-      ],
-      "post-update-cmd": [
-          "./bin/phing push"
-      ],
-      "post-drupal-scaffold-cmd": [
-        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
-      ],
-      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-  },
-  "extra": {
-    "installer-paths": {
-      "docroot/core": ["drupal/core"],
-      "docroot/profiles/{$name}": ["type:drupal-profile"],
-      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/{$name}": ["type:drupal-library"]
-    },
-    "branch-alias": {
-      "dev-8.x-4.x": "8.4.x-dev"
-    },
-    "drupal-libraries": {
-      "library-directory": "docroot/libraries",
-      "libraries": [
-        {
-          "name": "dropzone",
-          "package": "enyo/dropzone"
-        },
-        {
-          "name": "blazy",
-          "package": "dinbror/blazy"
-        },
-        {
-          "name": "slick",
-          "package": "kenwheeler/slick"
-        },
-        {
-          "name": "ace",
-          "package": "ajaxorg/ace-builds"
-        }
-      ]
-    },
-    "patches": {
-      "drupal/core": {
-        "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/1356276-303.patch",
-        "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
-        "https://www.drupal.org/files/issues/2720101-30.patch"
-      },
-      "drupal/coffee": {
-        "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
-        "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
-        "Issue #2872093 by mostafadev: Coffee css fixes in RTL":
-        "https://www.drupal.org/files/issues/2872093-10.patch"
-      },
-      "drupal/entity_browser": {
-        "Issue #2820132 by matthieuscarset, RajabNatshah, marcoscano: getDisplay() on null Entity Browser reference.":
-        "https://www.drupal.org/files/issues/entity_browser-8.x-1.0-2820132-17.patch"
-      },
-      "drupal/entityqueue": {
-        "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
-        "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
-      },
-      "drupal/l10n_client": {
-        "Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0":
-        "https://www.drupal.org/files/issues/2867460-2.patch",
-        "Issue #2872668 by GaëlG, Nitebreed: User error: 0 is an invalid render array key":
-        "https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch"
-      },
-      "drupal/yoast_seo": {
-        "Issue #2877613 by RajabNatshah: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
-        "https://www.drupal.org/files/issues/2877613-2_0.patch"
-      },
-      "drupal/paragraphs": {
-        "Issue #2461695: Support translatable paragraph entity reference revision field":
-        "https://www.drupal.org/files/issues/meta_support-2461695-206.patch"
-      },
-      "drupal/adminimal_theme": {
-        "Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable":
-        "https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch"
-      },
-      "drupal/menu_position": {
-        "Issue #2883131 by akalata, sassafrass, Znak: Fatal error: Call to undefined method when creating a rule":
-        "https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch"
-      }
-    }
-  },
   "require": {
-    "cweagans/composer-patches": "^1.5.0",
+    "php": ">=5.6",
     "composer/installers": "^1.2.0",
+    "cweagans/composer-patches": "^1.6.0",
+    "drupal-composer/drupal-scaffold": "^2.2.0",
     "drupal/drupal-library-installer-plugin": "~0.3",
-    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
-    "enyo/dropzone": "4.3.0",
-    "dinbror/blazy": "1.8.2",
-    "kenwheeler/slick": "1.6.0",
-    "ajaxorg/ace-builds": "1.2.6",
     "drupal/core": "8.3.5",
     "drupal/config_update": "1.3",
     "drupal/ctools": "3.0",
@@ -278,6 +133,130 @@
     "drupal/varbase_bootstrap_paragraphs": "4.0-alpha1",
     "drupal/varbase_editor": "4.15",
     "drupal/varbase_heroslider_media": "4.0-beta5",
-    "drupal/varbase_carousels": "4.0-beta2"
+    "drupal/varbase_carousels": "4.0-beta2",
+    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
+    "enyo/dropzone": "4.3.0",
+    "vardot/blazy": "1.8.2.1",
+    "vardot/slick": "1.6.0.1",
+    "vardot/ace-builds": "1.2.6.1"
+  },
+  "require-dev": {
+    "drush/drush": "^8.0.0",
+    "drupal/drupal-extension": "^3.2",
+    "drupal-composer/drupal-scaffold": "^2.0.0",
+    "jakoch/phantomjs-installer": "1.9.8",
+    "behat/behat": "^3.0",
+    "drupal/coder": "8.*",
+    "phing/phing": "^2.14",
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "behat/mink-zombie-driver": "@stable",
+    "behat/mink-selenium2-driver":  "~1.3",
+    "mikey179/vfsStream": "~1.2",
+    "phpunit/phpunit": "~4.8",
+    "guzzlehttp/guzzle": "6.2.*@stable",
+    "symfony/css-selector": "~2.8",
+    "squizlabs/php_codesniffer": "2.*",
+    "behatch/contexts": "*",
+    "emuse/behat-html-formatter": "@stable"
+  },
+  "config": {
+      "bin-dir": "bin/",
+      "secure-http": false
+  },
+  "autoload": {
+    "classmap": [
+      "src/composer/ScriptHandler.php"
+    ]
+  },
+  "scripts": {
+      "post-install-cmd": [
+          "@composer drupal-scaffold",
+          "./bin/phing push"
+      ],
+      "post-update-cmd": [
+          "./bin/phing push"
+      ],
+      "post-drupal-scaffold-cmd": [
+        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
+      ],
+      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+  },
+  "extra": {
+    "installer-paths": {
+      "docroot/core": ["drupal/core"],
+      "docroot/profiles/{$name}": ["type:drupal-profile"],
+      "docroot/profiles/varbase/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/profiles/varbase/themes/contrib/{$name}": ["type:drupal-theme"],
+      "docroot/profiles/varbase/libraries/{$name}": ["type:drupal-library"]
+    },
+    "branch-alias": {
+      "dev-8.x-4.x": "8.4.x-dev"
+    },
+    "drupal-libraries": {
+      "library-directory": "docroot/profiles/varbase/libraries",
+      "libraries": [
+        {
+          "name": "dropzone",
+          "package": "enyo/dropzone"
+        },
+        {
+          "name": "blazy",
+          "package": "vardot/blazy"
+        },
+        {
+          "name": "slick",
+          "package": "vardot/slick"
+        },
+        {
+          "name": "ace",
+          "package": "vardot/ace-builds"
+        }
+      ]
+    },
+    "patches": {
+      "drupal/core": {
+        "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
+        "https://www.drupal.org/files/issues/1356276-303.patch",
+        "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
+        "https://www.drupal.org/files/issues/2720101-30.patch"
+      },
+      "drupal/coffee": {
+        "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
+        "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
+        "Issue #2872093 by mostafadev: Coffee css fixes in RTL":
+        "https://www.drupal.org/files/issues/2872093-10.patch"
+      },
+      "drupal/entity_browser": {
+        "Issue #2820132 by matthieuscarset, RajabNatshah, marcoscano: getDisplay() on null Entity Browser reference.":
+        "https://www.drupal.org/files/issues/entity_browser-8.x-1.0-2820132-17.patch"
+      },
+      "drupal/entityqueue": {
+        "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
+        "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
+      },
+      "drupal/l10n_client": {
+        "Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0":
+        "https://www.drupal.org/files/issues/2867460-2.patch",
+        "Issue #2872668 by GaëlG, Nitebreed: User error: 0 is an invalid render array key":
+        "https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch"
+      },
+      "drupal/yoast_seo": {
+        "Issue #2877613 by RajabNatshah: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
+        "https://www.drupal.org/files/issues/2877613-2_0.patch"
+      },
+      "drupal/paragraphs": {
+        "Issue #2461695: Support translatable paragraph entity reference revision field":
+        "https://www.drupal.org/files/issues/meta_support-2461695-206.patch"
+      },
+      "drupal/adminimal_theme": {
+        "Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable":
+        "https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch"
+      },
+      "drupal/menu_position": {
+        "Issue #2883131 by akalata, sassafrass, Znak: Fatal error: Call to undefined method when creating a rule":
+        "https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch"
+      }
+    }
   }
 }
