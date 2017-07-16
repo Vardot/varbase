@@ -186,15 +186,15 @@
     "installer-paths": {
       "docroot/core": ["drupal/core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
-      "docroot/profiles/varbase/modules/contrib/{$name}": ["type:drupal-module"],
-      "docroot/profiles/varbase/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/profiles/varbase/libraries/{$name}": ["type:drupal-library"]
+      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "docroot/libraries/{$name}": ["type:drupal-library"]
     },
     "branch-alias": {
       "dev-8.x-4.x": "8.4.x-dev"
     },
     "drupal-libraries": {
-      "library-directory": "docroot/profiles/varbase/libraries",
+      "library-directory": "docroot/libraries",
       "libraries": [
         {
           "name": "dropzone",
