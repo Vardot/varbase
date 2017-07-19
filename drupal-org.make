@@ -158,6 +158,9 @@ projects[responsive_preview][version] = 1.0-alpha6
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 1.0-beta1
 
+projects[revision_log_default][type] = module
+projects[revision_log_default][version] = 1.0
+
 projects[webform][type] = module
 projects[webform][version] = 5.0-beta15
 

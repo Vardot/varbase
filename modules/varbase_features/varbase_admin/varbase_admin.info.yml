@@ -10,6 +10,7 @@ dependencies:
   - menu_admin_per_menu
   - node
   - responsive_preview
+  - revision_log_default
   - roleassign
   - taxonomy_access_fix
   - user
