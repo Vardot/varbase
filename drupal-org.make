@@ -155,6 +155,9 @@ projects[adminimal_admin_toolbar][version] = 1.4
 projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha6
 
+projects[views_bulk_edit][type] = module
+projects[views_bulk_edit][version] = 1.0-beta1
+
 projects[webform][type] = module
 projects[webform][version] = 5.0-beta15
 

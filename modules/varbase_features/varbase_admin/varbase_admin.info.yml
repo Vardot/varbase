@@ -15,6 +15,7 @@ dependencies:
   - user
   - userprotect
   - views
+  - views_bulk_edit
 package: Varbase
 version: 8.x-4.x-dev
 core: 8.x
