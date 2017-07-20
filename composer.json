@@ -167,24 +167,26 @@
     ]
   },
   "scripts": {
-      "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-      "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-      "post-install-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
-      "post-update-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
-      "post-package-install": ["Varbase\\composer\\ScriptHandler::postInstallProcedure"],
-      "post-package-update": ["Varbase\\composer\\ScriptHandler::postUpdateProcedure"],
-      "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
-      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-      "create-new-vartheme": "scripts/create-new-vartheme.sh",
-      "varbase-check-tests": "scripts/varbase-check-tests.sh",
-      "varbase-init-tests": "scripts/varbase-init-tests.sh",
-      "varbase-apply-tests": "scripts/varbase-apply-tests.sh",
-      "varbase-cleanup-tests": "scripts/varbase-cleanup-tests.sh",
-      "varbase-full-tests": "scripts/varbase-full-tests.sh",
-      "varbase-full-local-tests": "scripts/varbase-full-tests.sh",
-      "varbase-full-development-tests": "scripts/varbase-full-development-tests.sh",
-      "varbase-full-staging-tests": "scripts/varbase-full-staging-tests.sh",
-      "varbase-full-production-tests": "scripts/varbase-full-production-tests.sh"
+    "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
+    "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
+    "post-install-cmd": [
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    ],
+    "post-update-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
+    "post-package-install": ["Varbase\\composer\\ScriptHandler::postInstallProcedure"],
+    "post-package-update": ["Varbase\\composer\\ScriptHandler::postUpdateProcedure"],
+    "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
+    "create-new-vartheme": "scripts/create-new-vartheme.sh",
+    "varbase-check-tests": "scripts/check-tests.sh",
+    "varbase-init-tests": "scripts/init-tests.sh",
+    "varbase-apply-tests": "scripts/apply-tests.sh",
+    "varbase-cleanup-tests": "scripts/cleanup-tests.sh",
+    "varbase-full-tests": "scripts/full-tests.sh",
+    "varbase-full-local-tests": "scripts/full-tests.sh",
+    "varbase-full-development-tests": "scripts/full-development-tests.sh",
+    "varbase-full-staging-tests": "scripts/full-staging-tests.sh",
+    "varbase-full-production-tests": "scripts/full-production-tests.sh"
   },
   "extra": {
     "branch-alias": {
