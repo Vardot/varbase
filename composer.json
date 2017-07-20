@@ -158,24 +158,21 @@
     "emuse/behat-html-formatter": "@stable"
   },
   "config": {
-      "bin-dir": "bin/",
-      "secure-http": false
+    "bin-dir": "bin/",
+    "secure-http": false
   },
   "autoload": {
-    "classmap": [
-      "src/composer/ScriptHandler.php"
-    ]
+    "psr-4": {
+      "Varbase\\composer\\": "src/composer"
+    }
   },
   "scripts": {
-    "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-    "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-    "post-install-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    "pre-install-cmd": [
+      "Varbase\\composer\\ScriptHandler::checkComposerVersion",
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles"
     ],
-    "post-update-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
-    "post-package-install": ["Varbase\\composer\\ScriptHandler::postInstallProcedure"],
-    "post-package-update": ["Varbase\\composer\\ScriptHandler::postUpdateProcedure"],
+    "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
+    "post-install-cmd": ["DrupalComposer\\DrupalScaffold\\Plugin::scaffold"],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
     "create-new-vartheme": "scripts/create-new-vartheme.sh",
     "varbase-check-tests": "scripts/check-tests.sh",
