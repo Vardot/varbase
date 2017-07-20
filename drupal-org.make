@@ -21,7 +21,7 @@ projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta2
 
 projects[panels][type] = module
-projects[panels][version] = 4.1
+projects[panels][version] = 4.2
 
 projects[panelizer][type] = module
 projects[panelizer][version] = 4.0
