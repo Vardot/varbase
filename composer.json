@@ -167,12 +167,11 @@
     }
   },
   "scripts": {
-    "pre-install-cmd": [
-      "Varbase\\composer\\ScriptHandler::checkComposerVersion",
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles"
-    ],
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
     "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-    "post-install-cmd": ["DrupalComposer\\DrupalScaffold\\Plugin::scaffold"],
+    "post-install-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
+    "post-update-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
     "create-new-vartheme": "scripts/create-new-vartheme.sh",
     "varbase-check-tests": "scripts/check-tests.sh",
