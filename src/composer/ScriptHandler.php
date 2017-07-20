@@ -2,6 +2,7 @@
 
 namespace Varbase\composer;
 
+use Composer\Semver\Comparator;
 use Symfony\Component\Filesystem\Filesystem;
 use Composer\EventDispatcher\Event;
 
@@ -22,10 +23,10 @@ class ScriptHandler {
   protected static function getDrupalRoot($project_root) {
     return $project_root . '/docroot';
   }
-  
+
   /**
    * Create required files.
-   * 
+   *
    * @param Event $event
    */
   public static function createRequiredFiles(Event $event) {
@@ -64,7 +65,7 @@ class ScriptHandler {
       $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
     }
   }
-  
+
     /**
    * Checks if the installed version of Composer is compatible.
    *
