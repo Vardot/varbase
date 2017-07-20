@@ -170,7 +170,7 @@
       "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
       "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
       "post-install-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
-      "post-update-cmd": ["Varbase\\composer\\ScriptHandlerr::createRequiredFiles"],
+      "post-update-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
       "post-package-install": ["Varbase\\composer\\ScriptHandler::postInstallProcedure"],
       "post-package-update": ["Varbase\\composer\\ScriptHandler::postUpdateProcedure"],
       "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
