@@ -7,13 +7,8 @@
   "prefer-stable": true,
   "authors": [
     {
-      "name": "Mohammed J. Razem",
-      "homepage": "https://github.com/moerazem",
-      "role": "Maintainer"
-    },
-    {
-      "name": "Rajab Natshah",
-      "homepage": "https://github.com/Natshah",
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
       "role": "Maintainer"
     }
   ],
@@ -172,30 +167,38 @@
     ]
   },
   "scripts": {
-      "post-install-cmd": [
-          "@composer drupal-scaffold",
-          "./bin/phing push"
-      ],
-      "post-update-cmd": [
-          "./bin/phing push"
-      ],
-      "post-drupal-scaffold-cmd": [
-        "Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"
-      ],
-      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+      "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
+      "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
+      "pre-update-cmd": ["Varbase\\composer\\ScriptHandler:checkComposerVersion"],
+      "post-install-cmd": ["Varbase\\composer\\ScriptHandler::createRequiredFiles"],
+      "post-update-cmd": ["Varbase\\composer\\ScriptHandlerr::createRequiredFiles"],
+      "post-package-install": ["Varbase\\composer\\ScriptHandler::postInstallProcedure"],
+      "post-package-update": ["Varbase\\composer\\ScriptHandler::postUpdateProcedure"],
+      "create-new-vartheme": "scripts/create-new-vartheme.sh",
+      "varbase-check-tests": "scripts/varbase-check-tests.sh",
+      "varbase-init-tests": "scripts/varbase-init-tests.sh",
+      "varbase-apply-tests": "scripts/varbase-apply-tests.sh",
+      "varbase-cleanup-tests": "scripts/varbase-cleanup-tests.sh",
+      "varbase-full-tests": "scripts/varbase-full-tests.sh",
+      "varbase-full-local-tests": "scripts/varbase-full-tests.sh",
+      "varbase-full-development-tests": "scripts/varbase-full-development-tests.sh",
+      "varbase-full-staging-tests": "scripts/varbase-full-staging-tests.sh",
+      "varbase-full-production-tests": "scripts/varbase-full-production-tests.sh"
   },
   "extra": {
+    "branch-alias": {
+      "dev-8.x-4.x": "8.4.x-dev"
+    },
     "installer-paths": {
       "docroot/core": ["drupal/core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/{$name}": ["type:drupal-library"]
+      "docroot/libraries/{$name}": ["type:drupal-library"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
     },
-    "branch-alias": {
-      "dev-8.x-4.x": "8.4.x-dev"
-    },
-   "drupal-libraries": {
+    "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
           {"name": "dropzone","package": "vardot/dropzone"},
@@ -204,6 +207,7 @@
           {"name": "ace", "package": "vardot/ace-builds"}
       ]
     },
+    "enable-patching": true,
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
