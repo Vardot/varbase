@@ -404,6 +404,7 @@ projects[varbase_carousels][version] = 4.0-beta2
 
 projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][download][url] = https://git.drupal.org/project/varbase_bootstrap_paragraphs.git
+projects[varbase_bootstrap_paragraphs][download][revision] = acd6df8043ffa883aed7913427a98f6845eb23ce
 projects[varbase_bootstrap_paragraphs][download][branch] = 8.x-4.x
 
 ;;;;;;;;;;;;;;;;;;;;;
