@@ -50,7 +50,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I switch to main frame
       And I wait
      Then I Expand the field "styling-settings"
-      And I select "Curious Blue" from "Background Color"
+      And I select "Blue" from "Background Color"
       And I click "Content settings"
       And I select "Right" from "Image position"
       And I press "Save"
