@@ -10,13 +10,17 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Carousel" for "Title"
       And I fill in "Test Landing page description Carousel" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Carousel"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I select "2 Seconds" from "Slide Interval"
       And I Expand the "1" select list "dropbutton-multiple"
       And I wait
@@ -35,8 +39,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait
       And I Expand the "1" select list "dropbutton-multiple"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
@@ -63,12 +68,15 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Accordion" for "Title"
       And I fill in "Test Landing page description Accordion" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
       And I wait
       And I press "Accordion"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
      Then I should see "styling settings"
      When I Expand the field "styling-settings"
       And I press the "Select an image" button
@@ -101,13 +109,17 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Drupal Block" for "Title"
       And I fill in "Test Landing page description Drupal Block" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Drupal Block"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
      Then I should see "Block"
      When I select "Site branding" from "Block"
       And I wait
@@ -122,13 +134,17 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Columns (Equal)" for "Title"
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Columns (Equal)"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I Expand the field "styling-settings"
       And I wait for AJAX to finish
       And I press the "Select an image" button
@@ -162,6 +178,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -185,12 +202,15 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Columns (Two Uneven)"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I Expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -245,13 +265,17 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Columns (Three Uneven)"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I Expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -285,6 +309,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -312,10 +337,13 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Image" for "Title"
       And I fill in "Test Landing page description Image" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
@@ -341,10 +369,13 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Modal" for "Title"
       And I fill in "Test Landing page description Modal" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Modal"
       And I wait for AJAX to finish
      Then I should see "Components"
@@ -371,15 +402,19 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Simple" for "Page description"
       And I scrolldown
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Simple"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I should see "Components"
       And I fill in the rich text editor field "Text" with "Simple text test"
       And I Expand the field "styling-settings"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -403,13 +438,17 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Tabs" for "Title"
       And I fill in "Test Landing page description Tabs" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Tabs"
       And I wait for AJAX to finish
-      And I scrolldown      
+      And I scrolldown
+      And I wait for AJAX to finish    
       And I Expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -441,13 +480,17 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page WebForm" for "Title"
       And I fill in "Test Landing page description WebForm" for "Page description"
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Add Component"
-      And I wait
+      And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
       And I press "Webform"
       And I wait for AJAX to finish
       And I scrolldown
+      And I wait for AJAX to finish
      Then I should see "Components"
       And I select "Contact" from "Webform"
       And I wait
