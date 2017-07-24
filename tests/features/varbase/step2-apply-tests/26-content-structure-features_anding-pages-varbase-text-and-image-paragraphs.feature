@@ -13,10 +13,10 @@ So that the "Landing page" will have text and images in right and left view.
       And I fill in "Test landing page body description." for "Page description"
   
   # Add Simple text centered
-      And I Expand the "0" select list "dropbutton-multiple"
+      And I press "Add Component"
       And I wait
       And I scrolldown
-      And I press "Add Simple"
+      And I press "Simple"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere."
      When I select all text in "Text" field
@@ -29,9 +29,9 @@ So that the "Landing page" will have text and images in right and left view.
      When I click "Edit"
       And I wait
       And I scrolldown
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I press the "2" "Add Component" button
       And I wait
-      And I press "Add Text and image"
+      And I press "Text and image"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."
      When I select all text in "Text" field
@@ -49,7 +49,7 @@ So that the "Landing page" will have text and images in right and left view.
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     Then I Expand the field "styling-settings"
+     Then I Expand the field "styling-settings" 
       And I select "Blue" from "Background Color"
       And I click "Content settings"
       And I select "Right" from "Image position"
@@ -60,9 +60,9 @@ So that the "Landing page" will have text and images in right and left view.
      When I click "Edit"
       And I wait
       And I scrolldown
-      And I Expand the "2" select list "dropbutton-multiple"
+      And I press the "3" "Add Component" button
       And I wait
-      And I press "Add Text and image"
+      And I press "Text and image"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Integer pellentesque nisi leo, et bibendum urna egestas in. Vestibulum vestibulum est aliquam, volutpat velit ut, mollis urna. Quisque facilisis a velit a condimentum. Nulla sit amet elementum enim. Aenean nulla ante, fermentum sed facilisis in, porttitor in ex."
      When I select all text in "Text" field
