@@ -149,10 +149,11 @@ $ ../../../bin/behat -di
 ================================================================================
 
  Scenarios are tagged with the Behat tags of:
-   @local = Local
-   @development = Development server.
-   @staging = Staging and testing server.
-   @production = Production live server.
+
+* **@local = Local**
+* **@development = Development server.**
+* **@staging = Staging and testing server.**
+* **@production = Production live server.**
 
    So that we only run bin/behat --tags with the right tag for the environment.
 
@@ -217,7 +218,9 @@ $ ../../../bin/behat -di
 
    $ ../../../bin/behat --config=behat.varbase-install.yml tools/install-varbase/default-installation.feature
 
-# Automated testing
+
+
+# Advanced customized automated testing
 To run the automated testing with behat you will need to change the [ wd_host and base_url ] settings in the
 [ behat.varbase.yml ] file to go with your project configuration and the selenium server.
 
@@ -241,10 +244,10 @@ To run the automated testing with behat you will need to change the [ wd_host an
       
 Testing scenarios are tagged with the Behat tags of:
 
-@local = Local
-@development = Development server.
-@staging = Staging and testing server.
-@production = Production live server.
+* **@local = Local**
+* **@development = Development server.**
+* **@staging = Staging and testing server.**
+* **@production = Production live server.**
 
 So that we only run bin/behat --tags with the right tag for the environment.
 
