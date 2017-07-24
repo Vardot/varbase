@@ -180,16 +180,7 @@
       "./bin/phing push"
     ],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
-    "create-new-vartheme": "scripts/create-new-vartheme.sh",
-    "varbase-check-tests": "scripts/check-tests.sh",
-    "varbase-init-tests": "scripts/init-tests.sh",
-    "varbase-apply-tests": "scripts/apply-tests.sh",
-    "varbase-cleanup-tests": "scripts/cleanup-tests.sh",
-    "varbase-full-tests": "scripts/full-tests.sh",
-    "varbase-full-local-tests": "scripts/full-tests.sh",
-    "varbase-full-development-tests": "scripts/full-development-tests.sh",
-    "varbase-full-staging-tests": "scripts/full-staging-tests.sh",
-    "varbase-full-production-tests": "scripts/full-production-tests.sh"
+    "create-new-vartheme": "scripts/create-new-vartheme.sh"
   },
   "extra": {
     "branch-alias": {
