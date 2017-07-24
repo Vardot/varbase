@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change directory to the drupal docroot.
+cd ../..
+
 # Create new vartheme subtheme.
 
 bootstrap_library_version="3.3.7";
@@ -174,3 +177,21 @@ else
   echo "---------------------------------------------------------------------------";
   exit 1;
 fi
+
+################################################################################
+##
+## Quick tip on how to use this script command file.
+##
+## Create new Vartheme sub theme for a project.
+##
+## composer create-new-vartheme "THEME_NAME" "ltr" "docroot/sites/default/themes/custom"
+##
+## For right to left themes.
+##
+## composer create-new-vartheme "THEME_NAME" "rtl" "docroot/sites/default/themes/custom"
+##
+## or to create a new theme in the docroot/themes/custom
+##
+## composer create-new-vartheme "THEME_NAME" "ltr"
+##
+################################################################################
