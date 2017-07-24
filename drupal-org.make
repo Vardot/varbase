@@ -206,7 +206,7 @@ projects[better_exposed_filters][type] = module
 projects[better_exposed_filters][version] = 3.0-alpha2
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.0
+projects[link_attributes][version] = 1.1
 
 projects[paragraphs[type] = module
 projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git

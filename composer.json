@@ -116,7 +116,7 @@
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/taxonomy_access_fix": "2.1",
     "drupal/better_exposed_filters": "3.0-alpha2",
-    "drupal/link_attributes": "1.0",
+    "drupal/link_attributes": "1.1",
     "drupal/paragraphs": "1.x-dev#925018a66c681ffbc468f46503db608db40bd6eb",
     "drupal/color_field": "2.0-rc2",
     "drupal/entity_reference_revisions": "1.3",
