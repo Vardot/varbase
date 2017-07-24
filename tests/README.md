@@ -1,11 +1,11 @@
-# Varbase Behat #
+# Varbase Automated Functional Testing
 
- Varbase Behat is an automated testing system, with a set of Gherkin Features 
- and custom Varbase Context with Custom step definitions, and assets, which
- help with the automatic testing for varbase websites.
+ A set of Gherkin Features and custom Varbase Context with custom
+ step definitions, and assets, which help with the automatic testing for
+ varbase project websites.
 
 
- This page can help  you to have all steps, which you need to run the
+ This page can help  you to have the list all steps, which you need to run the
  Behat Gherkin Features to test a varbase website in your localhost machine.
 
 To test varbase 8.x-4.x in the right way you will need to build varbase using
