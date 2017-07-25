@@ -1,33 +1,45 @@
-# Varbase: Drupal Bundled with Necessities
+# Varbase: The Ultimate Drupal 8 Bootstrap Distribution
 
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.x)](https://travis-ci.org/Vardot/varbase)
+[![](https://docs.varbase.vardot.com/assets/Large-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
+
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.05)](https://travis-ci.org/Vardot/varbase/builds/251789744) Varbase 8.4.05
 
 The powerful Drupal distribution for faster development, with editor experience
-in mind. Brought to you by Vardot
+in mind. Brought to you by [Vardot](https://www.vardot.com/).
 
 Varbase is an enhanced Drupal distribution with a lot of necessities.
- Necessities are all the modules, features, configurations that we include
- in every project.
+Necessities are all the modules, features, configurations that we include
+in every project.
+
 
 ## It's made with the following benefits in mind:
 
-* Speeds up development
-* Offers standardized configuration and best-practices
-* Comes with a lot of needed functionalities/modules for every-day Drupal site
-* Tested, tested, and tested
-* Varbase for Drupal 8
+* Speeds up development.
+* Offers standardized configuration and best-practices.
+* Comes with a lot of needed functionalities/modules for every-day Drupal site.
+* [Tested, tested, and tested.](https://travis-ci.org/Vardot/varbase/builds)
 
-## Starting a new project? Consider Varbase for Drupal 8.
-
+Starting a new project? Consider Varbase for Drupal 8.
 Installing Varbase 8.x-4.x comes with several extra automated installation
 steps, to take full advantage of Varbase, other than the Drupal 8 installation
 instructions.
 
-## Install with Composer
+# Install with Composer
 
+To install the most recent stable release of Varbase 8.4.x run this command:
 ```
 composer create-project Vardot/varbase-build:^8.4.05 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
-## Building Varbase 8.x-4.x projects with Varbase Build
-https://github.com/Vardot/varbase-build
+To install the dev version of Varbase 8.4.x run this command:
+```
+composer create-project vardot/varbase-project:8.4.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+```
+
+# [Create new Vartheme sub theme for a project](https://github.com/Vardot/varbase/tree/8.x-4.x/scripts/README.md)
+
+# [Automated Functional Testing](https://github.com/Vardot/varbase/blob/8.x-4.x/tests/README.md)
+
+# [Varbase Gherkin features](https://github.com/Vardot/varbase/blob/8.x-4.x/tests/features/varbase/README.md)
+
+# [Varbase 8.4.x Developer Guide](https://docs.varbase.vardot.com)
