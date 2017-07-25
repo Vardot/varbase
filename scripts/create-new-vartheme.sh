@@ -158,103 +158,102 @@ fi
 
 
 # Create the new Vartheme subtheme if we do not have a folder with that name yet.
-if [[ ! -d "$drupal_root/$theme_path/$theme_name" ]]; then
-  # full theme name and patch.
-  full_theme_path="$drupal_root/$theme_path/$theme_name";
+if [[ ! -d "$theme_path/$theme_name" ]]; then
+
   # 1. Copy the VARTHEME_SUBTHEME folder to your custom theme location.
-  cp -r ${drupal_root}/profiles/varbase/themes/vartheme/VARTHEME_SUBTHEME ${full_theme_path};
+  cp -r ${drupal_root}/profiles/varbase/themes/vartheme/VARTHEME_SUBTHEME ${theme_path}/${theme_name};
 
   # 2. Rename VARTHEME_SUBTHEME.starterkit.yml your_subtheme_name.info.yml
-  mv ${full_theme_path}/VARTHEME_SUBTHEME.starterkit.yml ${full_theme_path}/VARTHEME_SUBTHEME.info.yml ;
-  mv ${full_theme_path}/VARTHEME_SUBTHEME.info.yml ${full_theme_path}/${theme_name}.info.yml ;
+  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.starterkit.yml ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.info.yml ;
+  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.info.yml ${theme_path}/${theme_name}/${theme_name}.info.yml ;
 
   # 3. Rename VARTHEME_SUBTHEME.libraries.yml your_subtheme_name.libraries.yml
-  mv ${full_theme_path}/VARTHEME_SUBTHEME.libraries.yml ${full_theme_path}/${theme_name}.libraries.yml ;
+  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.libraries.yml ${theme_path}/${theme_name}/${theme_name}.libraries.yml ;
 
   # 4. Rename VARTHEME_SUBTHEME.theme your_subtheme_name.theme
-  mv ${full_theme_path}/VARTHEME_SUBTHEME.theme ${full_theme_path}/${theme_name}.theme ;
+  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.theme ${theme_path}/${theme_name}/${theme_name}.theme ;
 
   # 5. Rename VARTHEME_SUBTHEME.settings.yml
-  mv ${full_theme_path}/config/install/VARTHEME_SUBTHEME.settings.yml ${full_theme_path}/config/install/${theme_name}.settings.yml ;
+  mv ${theme_path}/${theme_name}/config/install/VARTHEME_SUBTHEME.settings.yml ${theme_path}/${theme_name}/config/install/${theme_name}.settings.yml ;
 
   # 6. Rename VARTHEME_SUBTHEME.schema.yml
-  mv ${full_theme_path}/config/schema/VARTHEME_SUBTHEME.schema.yml ${full_theme_path}/config/schema/${theme_name}.schema.yml ;
+  mv ${theme_path}/${theme_name}/config/schema/VARTHEME_SUBTHEME.schema.yml ${theme_path}/${theme_name}/config/schema/${theme_name}.schema.yml ;
 
   # 7. Rename VARTHEME_SUBTHEME optional blocks.
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_branding.yml ${full_theme_path}/config/optional/block.block.${theme_name}_branding.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_breadcrumbs.yml ${full_theme_path}/config/optional/block.block.${theme_name}_breadcrumbs.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_content.yml ${full_theme_path}/config/optional/block.block.${theme_name}_content.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_footer.yml ${full_theme_path}/config/optional/block.block.${theme_name}_footer.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_help.yml ${full_theme_path}/config/optional/block.block.${theme_name}_help.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_local_actions.yml ${full_theme_path}/config/optional/block.block.${theme_name}_local_actions.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_local_tasks.yml ${full_theme_path}/config/optional/block.block.${theme_name}_local_tasks.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_main_menu.yml ${full_theme_path}/config/optional/block.block.${theme_name}_main_menu.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_messages.yml ${full_theme_path}/config/optional/block.block.${theme_name}_messages.yml
-  mv ${full_theme_path}/config/optional/block.block.VARTHEME_SUBTHEME_page_title.yml ${full_theme_path}/config/optional/block.block.${theme_name}_page_title.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_branding.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_branding.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_breadcrumbs.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_breadcrumbs.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_content.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_content.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_footer.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_footer.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_help.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_help.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_local_actions.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_actions.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_local_tasks.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_tasks.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_main_menu.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_main_menu.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_messages.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_messages.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_page_title.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_page_title.yml
 
   # 8.  Rename VARTHEME_SUBTHEME.base.css files.
-  mv ${full_theme_path}/css/base/VARTHEME_SUBTHEME.base.css ${full_theme_path}/css/base/${theme_name}.base.css
-  mv ${full_theme_path}/css/base/VARTHEME_SUBTHEME.base.css.map ${full_theme_path}/css/base/${theme_name}.base.css.map
+  mv ${theme_path}/${theme_name}/css/base/VARTHEME_SUBTHEME.base.css ${theme_path}/${theme_name}/css/base/${theme_name}.base.css
+  mv ${theme_path}/${theme_name}/css/base/VARTHEME_SUBTHEME.base.css.map ${theme_path}/${theme_name}/css/base/${theme_name}.base.css.map
 
   # 9.  Rename VARTHEME_SUBTHEME-rtl.base.css files.
-  mv ${full_theme_path}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css ${full_theme_path}/css/rtl/base/${theme_name}-rtl.base.css
-  mv ${full_theme_path}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css.map ${full_theme_path}/css/rtl/base/${theme_name}-rtl.base.css.map
+  mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css
+  mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css.map ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css.map
 
   # 10. Rename VARTHEME_SUBTHEME.base.less file.
-  mv ${full_theme_path}/less/base/VARTHEME_SUBTHEME.base.less ${full_theme_path}/less/base/${theme_name}.base.less
+  mv ${theme_path}/${theme_name}/less/base/VARTHEME_SUBTHEME.base.less ${theme_path}/${theme_name}/less/base/${theme_name}.base.less
 
   # 11.  Rename VARTHEME_SUBTHEME-rtl.base.less file.
-  mv ${full_theme_path}/less/rtl/base/VARTHEME_SUBTHEME-rtl.base.less ${full_theme_path}/less/rtl/base/${theme_name}-rtl.base.less
+  mv ${theme_path}/${theme_name}/less/rtl/base/VARTHEME_SUBTHEME-rtl.base.less ${theme_path}/${theme_name}/less/rtl/base/${theme_name}-rtl.base.less
 
   # 12. Replace all VARTHEME_SUBTHEME with the machine name of your theme.
-  grep -rl 'VARTHEME_SUBTHEME' ${full_theme_path} | xargs sed -i "s/VARTHEME_SUBTHEME/${theme_name}/g" ;
+  grep -rl 'VARTHEME_SUBTHEME' ${theme_path}/${theme_name} | xargs sed -i "s/VARTHEME_SUBTHEME/${theme_name}/g" ;
 
   # 13. Replace the name: 'Vartheme Sub-Theme (LESS)' to the name of your theme.
-  grep -rl 'Vartheme Sub-Theme (LESS)' ${full_theme_path} | xargs sed -i "s/Vartheme Sub-Theme (LESS)/${theme_name}/g" ;
+  grep -rl 'Vartheme Sub-Theme (LESS)' ${theme_path}/${theme_name} | xargs sed -i "s/Vartheme Sub-Theme (LESS)/${theme_name}/g" ;
 
 
   # 14. If we want to use the RTL (right to left) bootstrap.
   # 15.1 Delete the template folder bootstrap.
-  rm -rf ${full_theme_path}/bootstrap ;
+  rm -rf ${theme_path}/${theme_name}/bootstrap ;
 
   # 15.2 Download the bootstrap library. change the version as you need.
-  wget -P ${full_theme_path} https://github.com/twbs/bootstrap/archive/v${bootstrap_library_version}.tar.gz -vvv
+  wget -P ${theme_path}/${theme_name} https://github.com/twbs/bootstrap/archive/v${bootstrap_library_version}.tar.gz -vvv
 
   # 15.3 Extract the bootstrap library.
-  mkdir ${full_theme_path}/bootstrap
-  tar -xzvf ${full_theme_path}/v${bootstrap_library_version}.tar.gz --strip-components=1 -C ${full_theme_path}/bootstrap -vvv
+  mkdir ${theme_path}/${theme_name}/bootstrap
+  tar -xzvf ${theme_path}/${theme_name}/v${bootstrap_library_version}.tar.gz --strip-components=1 -C ${theme_path}/${theme_name}/bootstrap -vvv
 
   # 15.4 Delete the archived bootstrap library.
-  rm ${full_theme_path}/v${bootstrap_library_version}.tar.gz
+  rm ${theme_path}/${theme_name}/v${bootstrap_library_version}.tar.gz
 
   # 16. If we want to use the RTL (right to left) bootstrap.
   if [[ $direction == "rtl" || $direction == "RTL" ]]; then
     # 16.1. Delete the template folder bootstrap-rtl.
-    rm -rf ${full_theme_path}/bootstrap-rtl ;
+    rm -rf ${theme_path}/${theme_name}/bootstrap-rtl ;
 
     # 16.2. Download the bootstrap library. change the version as you need.
-    wget -P ${full_theme_path} https://github.com/morteza/bootstrap-rtl/archive/v${bootstrap_rtl_library_version}.tar.gz -vvv
+    wget -P ${theme_path}/${theme_name} https://github.com/morteza/bootstrap-rtl/archive/v${bootstrap_rtl_library_version}.tar.gz -vvv
 
     # 16.3. Extract the bootstrap library.
-    mkdir ${full_theme_path}/bootstrap-rtl
-    tar -xzvf ${full_theme_path}/v${bootstrap_rtl_library_version}.tar.gz --strip-components=1 -C ${full_theme_path}/bootstrap-rtl -vvv
+    mkdir ${theme_path}/${theme_name}/bootstrap-rtl
+    tar -xzvf ${theme_path}/${theme_name}/v${bootstrap_rtl_library_version}.tar.gz --strip-components=1 -C ${theme_path}/${theme_name}/bootstrap-rtl -vvv
 
     # 16.4. Delete the archived bootstrap library.
-    rm ${full_theme_path}/v${bootstrap_rtl_library_version}.tar.gz
+    rm ${theme_path}/${theme_name}/v${bootstrap_rtl_library_version}.tar.gz
   fi
 
   generated_datetime="$(date '+%Y/%m/%d - %H:%M:%S')";
   generated_log=" Generated by -- composer create-new-vartheme ${theme_name} ${direction} ${theme_path} -- on ${generated_datetime}";
-  echo "${generated_log}"  >> ${full_theme_path}/README.md;
+  echo "${generated_log}"  >> ${theme_path}/${theme_name}/README.md;
 
   echo "---------------------------------------------------------------------------";
-  echo "   The new Vartheme subtheme were created at \"${full_theme_path} :)\" ";
+  echo "   The new Vartheme subtheme were created at \"${theme_path}/${theme_name} :)\" ";
   echo "---------------------------------------------------------------------------";
   exit 0;
 
 else
   echo "---------------------------------------------------------------------------";
-  echo "   The folder \"${full_theme_path}\" is already in the site!";
+  echo "   The folder \"${theme_path}/${theme_name}\" is already in the site!";
   echo "---------------------------------------------------------------------------";
   exit 1;
 fi
