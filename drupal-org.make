@@ -150,7 +150,7 @@ projects[admin_toolbar][type] = module
 projects[admin_toolbar][version] = 1.19
 
 projects[adminimal_admin_toolbar][type] = module
-projects[adminimal_admin_toolbar][version] = 1.4
+projects[adminimal_admin_toolbar][version] = 1.5
 
 projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha6
