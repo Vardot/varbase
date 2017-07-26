@@ -43,7 +43,7 @@
     "drupal/advanced_text_formatter": "1.0-beta3",
     "drupal/block_class": "1.0-alpha1",
     "drupal/menu_block": "1.4",
-    "drupal/extlink": "1.0",
+    "drupal/extlink": "1.x-dev#66866ddcea2bb3dcb8e557599bc1454d09ad22a0",
     "drupal/linkit": "4.3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
     "drupal/features": "3.5",

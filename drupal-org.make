@@ -55,7 +55,9 @@ projects[menu_block][type] = module
 projects[menu_block][version] = 1.4
 
 projects[extlink][type] = module
-projects[extlink][version] = 1.0
+projects[extlink][download][url] = https://git.drupal.org/project/extlink.git
+projects[extlink][download][revision] = 66866ddcea2bb3dcb8e557599bc1454d09ad22a0
+projects[extlink][download][branch] = 8.x-1.x
 ;; Issue #2864772 by vivify, Omar Alahmed: Spacing added between anchor text and text following anchor
 projects[extlink][patch][] = https://www.drupal.org/files/issues/extlink-spacing-added-between-anchor-text-2864772-13.patch
 
