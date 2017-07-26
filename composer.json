@@ -252,6 +252,10 @@
       "drupal/ace_editor": {
         "Issue #2886356 by Niklan, joey91133: Library must be moved from module folder":
         "https://www.drupal.org/files/issues/library_must_be_moved_from_module_folder_with_composer.patch"
+      },
+      "drupal/extlink": {
+        "Issue #2864772 by vivify, Omar Alahmed: Spacing added between anchor text and text following anchor":
+        "https://www.drupal.org/files/issues/extlink-spacing-added-between-anchor-text-2864772-13.patch"
       }
     }
   }

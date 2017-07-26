@@ -56,6 +56,8 @@ projects[menu_block][version] = 1.4
 
 projects[extlink][type] = module
 projects[extlink][version] = 1.0
+;; Issue #2864772 by vivify, Omar Alahmed: Spacing added between anchor text and text following anchor
+projects[extlink][patch][] = https://www.drupal.org/files/issues/extlink-spacing-added-between-anchor-text-2864772-13.patch
 
 projects[linkit][type] = module
 projects[linkit][version] = 4.3
