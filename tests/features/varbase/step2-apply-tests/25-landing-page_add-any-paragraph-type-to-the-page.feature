@@ -13,7 +13,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -71,7 +71,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait
       And I press "Accordion"
       And I wait for AJAX to finish
@@ -112,7 +112,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -137,7 +137,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -203,7 +203,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -222,7 +222,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
-      And I wait 
+      And I wait
 
       And I Expand the "1" select list "dropbutton-multiple"
       And I scrollup
@@ -268,7 +268,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -287,7 +287,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
-      And I wait 
+      And I wait
 
       And I Expand the "1" select list "dropbutton-multiple"
       And I scrollup
@@ -340,7 +340,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -372,7 +372,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -401,7 +401,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Simple" for "Title"
       And I fill in "Test Landing page description Simple" for "Page description"
       And I scrolldown
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -412,8 +412,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see "Components"
       And I fill in the rich text editor field "Text" with "Simple text test"
       And I Expand the field "styling-settings"
-      And I wait for AJAX to finish
-      And I scrolldown
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -441,14 +439,14 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
       And I press "Tabs"
       And I wait for AJAX to finish
       And I scrolldown
-      And I wait for AJAX to finish    
+      And I wait for AJAX to finish
       And I Expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -464,7 +462,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Tab 1" for "Tab Name"
       And I Expand the "1" select list "dropbutton-multiple"
       And I press "Add Simple"
-      And I wait 
+      And I wait
      Then I should see "Tab Body"
       And I fill in the rich text editor field "Text" with "Tab 1 - Body test"
      When I press "Save"
@@ -483,7 +481,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Add Component"
+      And I press "Add paragraph"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish

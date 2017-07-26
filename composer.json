@@ -239,7 +239,7 @@
         "Issue #2461695: Support translatable paragraph entity reference revision field":
         "https://www.drupal.org/files/issues/meta_support-2461695-206.patch",
         "Issue #2877927: Show add widget between paragraphs on hover":
-        "https://www.drupal.org/files/issues/show_add_widget-2877927-6.patch"
+        "https://www.drupal.org/files/issues/show_add_widget-2877927-9.patch"
       },
       "drupal/adminimal_theme": {
         "Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable":

@@ -219,7 +219,7 @@ projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
 ;; Issue #2877927: Show add widget between paragraphs on hover
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-6.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-9.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2
