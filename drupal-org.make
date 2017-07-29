@@ -207,7 +207,7 @@ projects[taxonomy_access_fix][type] = module
 projects[taxonomy_access_fix][version] = 2.1
 
 projects[better_exposed_filters][type] = module
-projects[better_exposed_filters][version] = 3.0-alpha2
+projects[better_exposed_filters][version] = 3.0-alpha3
 
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.1
