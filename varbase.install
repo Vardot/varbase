@@ -412,3 +412,23 @@ function varbase_update_8033() {
   $config = \Drupal::configFactory()->getEditable('block_content.type.basic');
   $config->setData($data)->save(TRUE);
 }
+
+/**
+ * Enable Config Ignore module.
+ */
+function varbase_update_8034() {
+  if (!\Drupal::moduleHandler()->moduleExists('config_ignore')) {
+    \Drupal::service('module_installer')->install(['config_ignore'], FALSE);
+  }
+}
+
+/**
+ * Init config settings for which general config to ignore with config ignore.
+ */
+function varbase_update_8035() {
+  $profile_path = drupal_get_path('profile', 'varbase') . '/config/install/';
+  $config_path = $profile_path . 'config_ignore.settings.yml';
+  $data = (array) Yaml::parse($config_path);
+  $config = \Drupal::configFactory()->getEditable('config_ignore.settings');
+  $config->setData($data)->save(TRUE);
+}
