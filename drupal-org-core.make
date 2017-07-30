@@ -10,3 +10,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/1356276-303.patc
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2720101-30.patch
 ;; Issue #2853988: Add option to rewrite robots.txt on staging environments
 projects[drupal][patch][] = https://www.drupal.org/files/issues/drupal_8-allow_stg_robots-2853988-2.patch
+;; Issue #2599228: Programmatically created translatable content type returns SQL error on content creation
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2599228-31.patch

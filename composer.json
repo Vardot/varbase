@@ -209,7 +209,9 @@
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
         "https://www.drupal.org/files/issues/1356276-303.patch",
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
-        "https://www.drupal.org/files/issues/2720101-30.patch"
+        "https://www.drupal.org/files/issues/2720101-30.patch",
+        "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
+        "https://www.drupal.org/files/issues/2599228-31.patch"
       },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
