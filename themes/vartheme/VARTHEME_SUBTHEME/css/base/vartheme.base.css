@@ -597,6 +597,9 @@ dd {
   margin-left: 10px;
   margin-bottom: 20px;
 }
+img {
+  max-width: 100%;
+}
 .ajax-progress-throbber {
   background: transparent;
   min-height: 0;
