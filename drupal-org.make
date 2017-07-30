@@ -19,6 +19,8 @@ projects[token][version] = 1.0
 
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta2
+;; Issue #2624972 by dstorozhuk, kalistos: No configuration possible in UI for 301, 303, etc. HTTP responses
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch
 
 projects[panels][type] = module
 projects[panels][version] = 4.2

@@ -213,6 +213,10 @@
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
         "https://www.drupal.org/files/issues/2599228-31.patch"
       },
+      "drupal/page_manager": {
+        "Issue #2624972 by dstorozhuk, kalistos: No configuration possible in UI for 301, 303, etc. HTTP responses":
+        "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch"
+      },
       "drupal/coffee": {
         "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
