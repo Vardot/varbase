@@ -414,9 +414,18 @@ function varbase_update_8033() {
 }
 
 /**
- * Enable Config Ignore module.
+ * Enable Config Filter module.
  */
 function varbase_update_8034() {
+  if (!\Drupal::moduleHandler()->moduleExists('config_filter')) {
+    \Drupal::service('module_installer')->install(['config_filter'], FALSE);
+  }
+}
+
+/**
+ * Enable Config Ignore module.
+ */
+function varbase_update_8035() {
   if (!\Drupal::moduleHandler()->moduleExists('config_ignore')) {
     \Drupal::service('module_installer')->install(['config_ignore'], FALSE);
   }
@@ -425,7 +434,7 @@ function varbase_update_8034() {
 /**
  * Init config settings for which general config to ignore with config ignore.
  */
-function varbase_update_8035() {
+function varbase_update_8036() {
   $profile_path = drupal_get_path('profile', 'varbase') . '/config/install/';
   $config_path = $profile_path . 'config_ignore.settings.yml';
   $data = (array) Yaml::parse($config_path);

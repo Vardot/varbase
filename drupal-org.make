@@ -11,6 +11,9 @@ defaults[projects][subdir] = "contrib"
 projects[config_update][type] = module
 projects[config_update][version] = 1.3
 
+projects[config_filter][type] = module
+projects[config_filter][version] = 1.0-rc1
+
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.0
 
