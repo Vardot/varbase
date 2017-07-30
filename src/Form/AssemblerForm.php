@@ -89,7 +89,10 @@ class AssemblerForm extends FormBase {
     $combined_extra_components = array_combine($extra_components_to_assemble, $extra_components_to_assemble);
     $extra_components = array_intersect_key($component_discovery->scan('module'), $combined_extra_components);
 
-    foreach ($extra_components as $key => $extra_component) {
+    // Sort extra components by the default configbit dependencies order.
+    $ordered_extra_components = array_merge(array_flip($combined_extra_components), $extra_components);
+
+    foreach ($ordered_extra_components as $key => $extra_component) {
       $extra_component_info = $this->infoParser->parse($extra_component->getPathname());
       yield $key => $extra_component_info;
     }
