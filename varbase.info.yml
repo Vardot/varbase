@@ -48,6 +48,7 @@ dependencies:
   # contrib modules
   - entity
   - config_update
+  - config_ignore
   - ctools
   - ctools_block
   - ctools_views
