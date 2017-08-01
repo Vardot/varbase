@@ -87,4 +87,5 @@ So that the "Landing page" will have text and images in right and left view.
       And I select "Medium" from "Width"
       And I select "Left" from "Image position"
       And I press "Save"
+      And I wait
      Then I should see the "1" "wrapper" with "align2right" class
