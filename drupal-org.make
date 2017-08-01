@@ -403,6 +403,30 @@ projects[entity_browser_enhanced][version] = 1.0-beta5
 projects[vmi][type] = module
 projects[vmi][version] = 1.0-beta2
 
+projects[masonry][type] = module
+projects[masonry][version] = 1.0-rc2
+
+projects[charts][type] = module
+projects[charts][version] = 3.0-alpha5
+
+projects[google_analytics_reports][type] = module
+projects[google_analytics_reports][version] = 3.0-beta1
+
+projects[login_destination][type] = module
+projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
+projects[login_destination][download][revision] = 98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7
+projects[login_destination][download][branch] = 8.x-1.x
+
+projects[total_control][directory_name] = "total_control"
+projects[total_control][download][type] = "get"
+projects[total_control][download][url] = https://github.com/Vardot/total_control/archive/master.zip
+projects[varbase_total_control][destination] = "modules"
+
+projects[varbase_total_control][directory_name] = "varbase_total_control"
+projects[varbase_total_control][download][type] = "get"
+projects[varbase_total_control][download][url] = https://github.com/Vardot/varbase_total_control/archive/master.zip
+projects[varbase_total_control][destination] = "modules"
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
 ;;;;;;;;;;;;;;;;;;;;;

@@ -137,7 +137,13 @@
     "vardot/dropzone": "4.3.0.1",
     "vardot/blazy": "1.8.2.1",
     "vardot/slick": "1.6.0.1",
-    "vardot/ace-builds": "1.2.6.1"
+    "vardot/ace-builds": "1.2.6.1",
+    "drupal/masonry": "1.0-rc2",
+    "drupal/charts": "3.0-alpha5",
+    "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
+    "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
+    "vardot/total_control": "dev-8.x-1.x",
+    "vardot/varbase_total_control": "dev-8.x-4.x"
   },
   "require-dev": {
     "drush/drush": "^8.0.0",
@@ -264,6 +270,12 @@
       "drupal/extlink": {
         "Issue #2864772 by vivify, Omar Alahmed: Spacing added between anchor text and text following anchor":
         "https://www.drupal.org/files/issues/extlink-spacing-added-between-anchor-text-2864772-13.patch"
+      },
+      "drupal/google_analytics_reports": {
+        "Error when saving either google_analytics_reports view":
+        "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
+        "Warning: htmlspecialchars() expects parameter 1 to be string":
+        "https://www.drupal.org/files/issues/Fix_message-2860399-5.patch"
       }
     }
   }
