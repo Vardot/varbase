@@ -419,12 +419,12 @@ projects[login_destination][download][branch] = 8.x-1.x
 
 projects[total_control][directory_name] = "total_control"
 projects[total_control][download][type] = "get"
-projects[total_control][download][url] = https://github.com/Vardot/total_control/archive/master.zip
+projects[total_control][download][url] = https://github.com/Vardot/total_control/archive/8.x-1.x.zip
 projects[varbase_total_control][destination] = "modules"
 
 projects[varbase_total_control][directory_name] = "varbase_total_control"
 projects[varbase_total_control][download][type] = "get"
-projects[varbase_total_control][download][url] = https://github.com/Vardot/varbase_total_control/archive/master.zip
+projects[varbase_total_control][download][url] = https://github.com/Vardot/varbase_total_control/archive/8.x-4.x.zip
 projects[varbase_total_control][destination] = "modules"
 
 ;;;;;;;;;;;;;;;;;;;;;
