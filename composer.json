@@ -131,7 +131,7 @@
     "drupal/vmi": "1.0-beta2",
     "drupal/varbase_bootstrap_paragraphs": "4.x-dev#acd6df8043ffa883aed7913427a98f6845eb23ce",
     "drupal/varbase_editor": "4.15",
-    "drupal/varbase_heroslider_media": "4.0-beta6",
+    "drupal/varbase_heroslider_media": "4.0-beta7",
     "drupal/varbase_carousels": "4.0-beta2",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     "vardot/dropzone": "4.3.0.1",

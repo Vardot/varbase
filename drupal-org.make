@@ -411,7 +411,7 @@ projects[varbase_editor][type] = module
 projects[varbase_editor][version] = 4.15
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.0-beta6
+projects[varbase_heroslider_media][version] = 4.0-beta7
 
 projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 4.0-beta2
