@@ -417,15 +417,12 @@ projects[login_destination][download][url] = https://git.drupal.org/project/logi
 projects[login_destination][download][revision] = 98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7
 projects[login_destination][download][branch] = 8.x-1.x
 
-projects[total_control][directory_name] = "total_control"
-projects[total_control][download][type] = "get"
-projects[total_control][download][url] = https://github.com/Vardot/total_control/archive/8.x-1.x.zip
-projects[varbase_total_control][destination] = "modules"
 
-projects[varbase_total_control][directory_name] = "varbase_total_control"
-projects[varbase_total_control][download][type] = "get"
-projects[varbase_total_control][download][url] = https://github.com/Vardot/varbase_total_control/archive/8.x-4.x.zip
-projects[varbase_total_control][destination] = "modules"
+projects[control][type] = module
+projects[control][version] = 2.0-alpha1
+
+projects[varbase_total_control][type] = module
+projects[varbase_total_control][version] = 1.0-beta2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.

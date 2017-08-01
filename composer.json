@@ -142,8 +142,8 @@
     "drupal/charts": "3.0-alpha5",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
-    "vardot/total_control": "dev-8.x-1.x",
-    "vardot/varbase_total_control": "dev-8.x-4.x"
+    "drupal/total_control": "^2.0@alpha",
+    "drupal/varbase_total_control": "^1.0@beta"
   },
   "require-dev": {
     "drush/drush": "^8.0.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f274193244e0f4b434512959eaa345d9",
+    "content-hash": "a9b715872ec5e57c9b53f1da55ca780e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6663,6 +6663,70 @@
             }
         },
         {
+            "name": "drupal/total_control",
+            "version": "2.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/total_control",
+                "reference": "8.x-2.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/total_control-8.x-2.0-alpha1.zip",
+                "reference": "8.x-2.0-alpha1",
+                "shasum": "ef1901b93c5b89965fd68813eb59518c8902053b"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/ctools": "*",
+                "drupal/page_manager": "*",
+                "drupal/panels": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-alpha1",
+                    "datestamp": "1501588743"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammed J. Razem",
+                    "homepage": "https://github.com/moerazem",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Abdulla Abu-Zakham",
+                    "homepage": "https://github.com/abuzakham",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "jenlampton",
+                    "homepage": "https://www.drupal.org/user/85586"
+                },
+                {
+                    "name": "populist",
+                    "homepage": "https://www.drupal.org/user/58600"
+                },
+                {
+                    "name": "squiggy",
+                    "homepage": "https://www.drupal.org/user/44299"
+                }
+            ],
+            "description": "Total Control Administration Dashboard",
+            "homepage": "https://github.com/Vardot/total_control",
+            "support": {
+                "source": "http://cgit.drupalcode.org/total_control"
+            }
+        },
+        {
             "name": "drupal/ultimate_cron",
             "version": "2.0.0-alpha1",
             "source": {
@@ -7081,6 +7145,58 @@
                 "source": "http://cgit.drupalcode.org/varbase_heroslider_media",
                 "error": "Invalid dependency: \"varbase_media\" is an unknown drupal 8 package name",
                 "issues": "http://drupal.org/project/issues/varbase_heroslider_media"
+            }
+        },
+        {
+            "name": "drupal/varbase_total_control",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/varbase_total_control",
+                "reference": "8.x-1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/varbase_total_control-8.x-1.0-beta3.zip",
+                "reference": null,
+                "shasum": "3936816bcb6399be64a283e3505d5f0ad652b026"
+            },
+            "require": {
+                "drupal/charts": "*",
+                "drupal/core": "~8.0",
+                "drupal/google_analytics_reports": "*",
+                "drupal/total_control": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1501598943"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammed J. Razem",
+                    "homepage": "https://github.com/moerazem",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Abdulla Abu-Zakham",
+                    "homepage": "https://github.com/abuzakham",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Dashboard for Varbase profile",
+            "homepage": "https://github.com/Vardot/varbase_total_control",
+            "support": {
+                "source": "http://cgit.drupalcode.org/varbase_total_control"
             }
         },
         {
@@ -9844,76 +9960,6 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "forked from kenwheeler/slick to be used as drupal-library",
             "time": "2017-07-16T11:15:45+00:00"
-        },
-        {
-            "name": "vardot/total_control",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Vardot/total_control.git",
-                "reference": "4b21fad8c222137e8225d1213cb382b175ead977"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Vardot/total_control/zipball/4b21fad8c222137e8225d1213cb382b175ead977",
-                "reference": "4b21fad8c222137e8225d1213cb382b175ead977",
-                "shasum": ""
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Mohammed J. Razem",
-                    "homepage": "https://github.com/moerazem",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Abdulla Abu-Zakham",
-                    "homepage": "https://github.com/abuzakham",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Total Control Administration Dashboard",
-            "homepage": "https://github.com/Vardot/total_control",
-            "time": "2017-08-01 08:37:55"
-        },
-        {
-            "name": "vardot/varbase_total_control",
-            "version": "dev-8.x-4.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Vardot/varbase_total_control.git",
-                "reference": "9d08db98cd763bd5c9d553d8d53b75b800eafe2f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Vardot/varbase_total_control/zipball/9d08db98cd763bd5c9d553d8d53b75b800eafe2f",
-                "reference": "9d08db98cd763bd5c9d553d8d53b75b800eafe2f",
-                "shasum": ""
-            },
-            "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Mohammed J. Razem",
-                    "homepage": "https://github.com/moerazem",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Abdulla Abu-Zakham",
-                    "homepage": "https://github.com/abuzakham",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Dashboard for Varbase profile",
-            "homepage": "https://github.com/Vardot/varbase_total_control",
-            "time": "2017-08-01 08:38:15"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -13399,6 +13445,76 @@
             "time": "2017-06-20T23:27:56+00:00"
         },
         {
+            "name": "vardot/total_control",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Vardot/total_control.git",
+                "reference": "4b21fad8c222137e8225d1213cb382b175ead977"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Vardot/total_control/zipball/4b21fad8c222137e8225d1213cb382b175ead977",
+                "reference": "4b21fad8c222137e8225d1213cb382b175ead977",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammed J. Razem",
+                    "homepage": "https://github.com/moerazem",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Abdulla Abu-Zakham",
+                    "homepage": "https://github.com/abuzakham",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Total Control Administration Dashboard",
+            "homepage": "https://github.com/Vardot/total_control",
+            "time": "2017-08-01T08:37:55+00:00"
+        },
+        {
+            "name": "vardot/varbase_total_control",
+            "version": "dev-8.x-4.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Vardot/varbase_total_control.git",
+                "reference": "9d08db98cd763bd5c9d553d8d53b75b800eafe2f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Vardot/varbase_total_control/zipball/9d08db98cd763bd5c9d553d8d53b75b800eafe2f",
+                "reference": "9d08db98cd763bd5c9d553d8d53b75b800eafe2f",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammed J. Razem",
+                    "homepage": "https://github.com/moerazem",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Abdulla Abu-Zakham",
+                    "homepage": "https://github.com/abuzakham",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Dashboard for Varbase profile",
+            "homepage": "https://github.com/Vardot/varbase_total_control",
+            "time": "2017-08-01T08:38:15+00:00"
+        },
+        {
             "name": "webmozart/assert",
             "version": "1.2.0",
             "source": {
@@ -13515,8 +13631,8 @@
         "drupal/varbase_bootstrap_paragraphs": 20,
         "drupal/google_analytics_reports": 20,
         "drupal/login_destination": 20,
-        "vardot/total_control": 20,
-        "vardot/varbase_total_control": 20,
+        "drupal/total_control": 15,
+        "drupal/varbase_total_control": 10,
         "behat/mink-zombie-driver": 0,
         "guzzlehttp/guzzle": 0,
         "emuse/behat-html-formatter": 0
