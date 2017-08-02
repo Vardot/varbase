@@ -14,8 +14,7 @@ php:
 env:
   - VERSION=8.x-4.x
   
-sudo: enabled
-dist: trusty
+dist: precise
 
 addons:  
   firefox: 46.0.1
@@ -49,7 +48,7 @@ before_install:
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
-  - echo 'max_execution_time = 600' >> drupal.php.ini;
+  - echo 'max_execution_time = 1200' >> drupal.php.ini;
   - echo 'max_input_time = 180' >> drupal.php.ini;
   - echo 'max_input_vars = 10000' >> drupal.php.ini;
   - echo 'memory_limit = 2048M' >> drupal.php.ini;
