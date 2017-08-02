@@ -245,7 +245,9 @@ projects[charts][type] = module
 projects[charts][version] = 3.0-alpha5
 
 projects[google_analytics_reports][type] = module
-projects[google_analytics_reports][version] = 3.0-beta1
+projects[google_analytics_reports][download][url] = https://git.drupal.org/project/google_analytics_reports.git
+projects[google_analytics_reports][download][revision] = 2b6bb8efbc7f61ce3c1225638075aa6037b8db44
+projects[google_analytics_reports][download][branch] = 8.x-3.x
 
 projects[login_destination][type] = module
 projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git

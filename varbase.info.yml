@@ -105,7 +105,6 @@ dependencies:
   - menu_position
   - better_exposed_filters
   - link_attributes
-  - varbase_total_control
   - login_destination
 
 themes:
