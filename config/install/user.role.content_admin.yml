@@ -47,6 +47,7 @@ permissions:
   - 'edit any page content'
   - 'edit own landing_page content'
   - 'edit own page content'
+  - 'have total control'
   - 'rabbit hole bypass node'
   - 'rabbit hole bypass taxonomy_term'
   - 'revert all revisions'

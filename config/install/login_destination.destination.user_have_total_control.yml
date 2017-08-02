@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+name: user_have_total_control
+label: 'User have total control'
+triggers:
+  login: login
+destination_path: 'internal:/admin/dashboard'
+pages_type: 0
+pages: ''
+roles:
+  editor: editor
+  content_admin: content_admin
+  site_admin: site_admin
+  administrator: administrator
+weight: 0
+enabled: true

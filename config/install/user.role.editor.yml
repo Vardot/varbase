@@ -15,6 +15,7 @@ permissions:
   - 'delete own page content'
   - 'edit own page content'
   - 'administer panelizer node landing_page content'
+  - 'have total control'
   - 'use ipe with page manager'
   - 'access panels in-place editing'
   - 'create url aliases'

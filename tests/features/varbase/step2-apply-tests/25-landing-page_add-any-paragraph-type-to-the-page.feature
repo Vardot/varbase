@@ -13,7 +13,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -71,7 +71,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait
       And I press "Accordion"
       And I wait for AJAX to finish
@@ -112,7 +112,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -137,7 +137,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -203,7 +203,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -268,7 +268,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -340,7 +340,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -372,7 +372,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -401,7 +401,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Simple" for "Title"
       And I fill in "Test Landing page description Simple" for "Page description"
       And I scrolldown
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -439,7 +439,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -481,7 +481,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+ Add Component"
+      And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
