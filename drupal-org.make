@@ -442,7 +442,7 @@ projects[varbase_bootstrap_paragraphs][download][revision] = acd6df8043ffa883aed
 projects[varbase_bootstrap_paragraphs][download][branch] = 8.x-4.x
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta2
+projects[varbase_total_control][version] = 1.0-beta4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
