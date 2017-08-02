@@ -246,10 +246,10 @@ projects[pathauto][type] = module
 projects[pathauto][version] = 1.0
 
 projects[redirect][type] = module
-projects[redirect][version] = 1.0-alpha5
+projects[redirect][version] = 1.0-beta1
 
 projects[metatag][type] = module
-projects[metatag][version] = 1.1
+projects[metatag][version] = 1.2
 
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 2.9
@@ -432,7 +432,7 @@ projects[varbase_editor][type] = module
 projects[varbase_editor][version] = 4.15
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.0-beta6
+projects[varbase_heroslider_media][version] = 4.0-beta7
 
 projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 4.0-beta2
