@@ -14,15 +14,23 @@ class ConfigBit {
    *
    * Load config bit file as an array, with full file name and path.
    *
-   * @param string $full_config_bit_file_name
+   * @param string $config_bit_file_name
    *   Config bit file name in the root configbit folder.
+   *   
+   * @param string $type
+   *   Config bit file source type (profile / module).
+   *
+   * @param string $project
+   *   Config bit file source eg. varbase.
    *
    * @return array|int
    *   array of config bit.
    *   FALSE if we do not have the config_bit in the config bit file.
    */
-  public static function getConfigBit($full_config_bit_file_name) {
+  public static function getConfigBit($config_bit_file_name, $type = 'profile', $project = 'varbase') {
 
+    // Generate full path to config file
+    $full_config_bit_file_name = drupal_get_path($type, $project)  . '/' . $config_bit_file_name;
     if (is_file($full_config_bit_file_name)) {
       // Pars the config bit file and have it as an array if it was not.
       $config_bit_data = (array) Yaml::parse(file_get_contents($full_config_bit_file_name));
@@ -53,8 +61,8 @@ class ConfigBit {
    * @return array
    *   Get List config as an array.
    */
-  public static function getList($config_bit_file_name, $condition_name, $condition_value, $sublist = NULL) {
-    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name);
+  public static function getList($config_bit_file_name, $condition_name, $condition_value, $sublist = NULL, $type = 'profile', $project = 'varbase') {
+    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name, $type, $project);
 
     if (isset($config_bit_data['type'])
         && $config_bit_data['type'] == 'list'

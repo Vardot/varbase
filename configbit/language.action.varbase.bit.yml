@@ -9,18 +9,18 @@ config_bit:
       when:
         enable_multilingual: false
       files:
-        - /profiles/varbase/modules/varbase_features/varbase_page/config/install/language.content_settings.node.page.yml
-        - /profiles/varbase/modules/varbase_features/varbase_landing/config/install/language.content_settings.node.landing_page.yml
-        - /profiles/varbase/modules/varbase_features/varbase_media/config/install/language.content_settings.media.document.yml
-        - /profiles/varbase/modules/varbase_features/varbase_media/config/install/language.content_settings.media.image.yml
-        - /profiles/varbase/modules/varbase_features/varbase_media/config/install/language.content_settings.media.video.yml
+        - modules/varbase_features/varbase_page/config/install/language.content_settings.node.page.yml
+        - modules/varbase_features/varbase_landing/config/install/language.content_settings.node.landing_page.yml
+        - modules/varbase_features/varbase_media/config/install/language.content_settings.media.document.yml
+        - modules/varbase_features/varbase_media/config/install/language.content_settings.media.image.yml
+        - modules/varbase_features/varbase_media/config/install/language.content_settings.media.video.yml
     unarchive_files:
       archive_extensiton: '.archive'
       when:
         enable_multilingual: true
       files:
-        - /profiles/varbase/modules/varbase_features/varbase_page/config/install/language.content_settings.node.page.yml
-        - /profiles/varbase/modules/varbase_features/varbase_landing/config/install/language.content_settings.node.landing_page.yml
-        - /profiles/varbase/modules/varbase_features/varbase_media/config/install/language.content_settings.media.document.yml
-        - /profiles/varbase/modules/varbase_features/varbase_media/config/install/language.content_settings.media.image.yml
-        - /profiles/varbase/modules/varbase_features/varbase_media/config/install/language.content_settings.media.video.yml
+        - modules/varbase_features/varbase_page/config/install/language.content_settings.node.page.yml
+        - modules/varbase_features/varbase_landing/config/install/language.content_settings.node.landing_page.yml
+        - modules/varbase_features/varbase_media/config/install/language.content_settings.media.document.yml
+        - modules/varbase_features/varbase_media/config/install/language.content_settings.media.image.yml
+        - modules/varbase_features/varbase_media/config/install/language.content_settings.media.video.yml

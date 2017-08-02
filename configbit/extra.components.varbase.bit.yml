@@ -4,7 +4,7 @@
 # ==============================================================================
 config_bit:
   type: list
-  for: /profiles/varbase/varbase.info.yml
+  for: varbase.info.yml
   when:
     show_extra_components: true
     list:

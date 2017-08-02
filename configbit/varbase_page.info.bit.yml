@@ -3,7 +3,7 @@
 # ==============================================================================
 config_bit:
   type: action
-  for: /profiles/varbase/modules/varbase_features/varbase_page/varbase_page.info.yml
+  for: modules/varbase_features/varbase_page/varbase_page.info.yml
   action:
     remove:
       when:
