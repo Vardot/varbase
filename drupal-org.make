@@ -238,6 +238,20 @@ projects[entity_reference_revisions][version] = 1.3
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 1.0-rc3
 
+projects[masonry][type] = module
+projects[masonry][version] = 1.0-rc2
+
+projects[charts][type] = module
+projects[charts][version] = 3.0-alpha5
+
+projects[google_analytics_reports][type] = module
+projects[google_analytics_reports][version] = 3.0-beta1
+
+projects[login_destination][type] = module
+projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
+projects[login_destination][download][revision] = 98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7
+projects[login_destination][download][branch] = 8.x-1.x
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
@@ -307,6 +321,7 @@ projects[recaptcha][version] = 2.2
 
 projects[search_api][type] = module
 projects[search_api][version] = 1.3
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase hero slider media
 ;;;;;;;;;;;;;;;;;;;;;
@@ -403,26 +418,8 @@ projects[entity_browser_enhanced][version] = 1.0-beta5
 projects[vmi][type] = module
 projects[vmi][version] = 1.0-beta2
 
-projects[masonry][type] = module
-projects[masonry][version] = 1.0-rc2
-
-projects[charts][type] = module
-projects[charts][version] = 3.0-alpha5
-
-projects[google_analytics_reports][type] = module
-projects[google_analytics_reports][version] = 3.0-beta1
-
-projects[login_destination][type] = module
-projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
-projects[login_destination][download][revision] = 98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7
-projects[login_destination][download][branch] = 8.x-1.x
-
-
-projects[control][type] = module
-projects[control][version] = 2.0-alpha1
-
-projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta2
+projects[total_control][type] = module
+projects[total_control][version] = 2.0-alpha2	
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
@@ -441,6 +438,9 @@ projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][download][url] = https://git.drupal.org/project/varbase_bootstrap_paragraphs.git
 projects[varbase_bootstrap_paragraphs][download][revision] = acd6df8043ffa883aed7913427a98f6845eb23ce
 projects[varbase_bootstrap_paragraphs][download][branch] = 8.x-4.x
+
+projects[varbase_total_control][type] = module
+projects[varbase_total_control][version] = 1.0-beta2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
