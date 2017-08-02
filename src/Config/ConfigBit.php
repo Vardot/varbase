@@ -42,7 +42,7 @@ class ConfigBit {
       }
     }
     else {
-      return FALSE;
+      throw new \Drupal\Core\Asset\Exception('Config bit file does not exist!');
     }
   }
 

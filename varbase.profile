@@ -76,7 +76,7 @@ function varbase_install_tasks(&$install_state) {
  */
 function varbase_assemble_extra_components(array &$install_state) {
   // Configbit root folder for varbase profile.
-  $configbit_root = \Drupal::root() . '/profiles/varbase/configbit';
+  $configbit_root = 'configbit';
 
   // Default Varbase components, which must be installed.
   $default_components = ConfigBit::getList($configbit_root . '/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies', 'profile', 'varbase');
@@ -192,7 +192,7 @@ function varbase_fix_entity_update($entity_update) {
 function varbase_config_bit_for_multilingual($enable_multilingual) {
 
   // Configbit root folder for varbase profile.
-  $configbit_root = \Drupal::root() . '/profiles/varbase/configbit';
+  $configbit_root = 'configbit';
 
   // Change configurations to work with enable_multilingual.
   if ($enable_multilingual) {
