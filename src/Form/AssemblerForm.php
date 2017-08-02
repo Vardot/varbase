@@ -83,7 +83,7 @@ class AssemblerForm extends FormBase {
     $component_discovery = new ExtensionDiscovery($this->root);
 
     // Extra Varbase components, which could be selected to be installed.
-    $extra_components_to_assemble = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies');
+    $extra_components_to_assemble = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
 
     // Combine default Varbase components and selected extra varbase components.
     $combined_extra_components = array_combine($extra_components_to_assemble, $extra_components_to_assemble);
@@ -106,7 +106,7 @@ class AssemblerForm extends FormBase {
    */
   protected function getSelectedExtraComponents($configbit_root) {
     // Selected Extra Varbase components.
-    $selected_extra_components = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'selected');
+    $selected_extra_components = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'selected', 'profile', 'varbase');
 
     return $selected_extra_components;
   }

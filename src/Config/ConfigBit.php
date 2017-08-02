@@ -8,7 +8,7 @@ use Symfony\Component\Yaml\Yaml;
  * Defines config bit to help in managing custom config which used in install.
  */
 class ConfigBit {
-
+  
   /**
    * Get Config Bit file.
    *
@@ -42,7 +42,7 @@ class ConfigBit {
       }
     }
     else {
-      throw new Exception('Config bit file does not exist!');
+      return FALSE;
     }
   }
 
@@ -93,8 +93,8 @@ class ConfigBit {
    * @param string|bool $condition_value
    *   Condition value for the condition name in the config bit file.
    */
-  public static function actionArchiveFiles($config_bit_file_name, $condition_name, $condition_value) {
-    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name);
+  public static function actionArchiveFiles($config_bit_file_name, $condition_name, $condition_value, $type = 'profile', $project = 'varbase') {
+    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name, $type, $project);
 
     if (isset($config_bit_data['type'])
         && $config_bit_data['type'] = 'action'
@@ -125,8 +125,8 @@ class ConfigBit {
    * @param string|bool $condition_value
    *   Condition value for the condition name in the config bit file.
    */
-  public static function actionUnArchiveFiles($config_bit_file_name, $condition_name, $condition_value) {
-    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name);
+  public static function actionUnArchiveFiles($config_bit_file_name, $condition_name, $condition_value, $type = 'profile', $project = 'varbase') {
+    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name, $type, $project);
     if (isset($config_bit_data['type'])
         && $config_bit_data['type'] = 'action'
         && isset($config_bit_data['action'])
@@ -158,8 +158,8 @@ class ConfigBit {
    * @param string $target
    *   Targent item in the parent config file.
    */
-  public static function actionAdd($config_bit_file_name, $condition_name, $condition_value, $target) {
-    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name);
+  public static function actionAdd($config_bit_file_name, $condition_name, $condition_value, $target, $type = 'profile', $project = 'varbase') {
+    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name, $type, $project);
 
     if (isset($config_bit_data['type'])
         && $config_bit_data['type'] == 'action'
@@ -205,8 +205,8 @@ class ConfigBit {
    * @param string $target
    *   Targent item in the parent config file.
    */
-  public static function actionRemove($config_bit_file_name, $condition_name, $condition_value, $target) {
-    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name);
+  public static function actionRemove($config_bit_file_name, $condition_name, $condition_value, $target, $type = 'profile', $project = 'varbase') {
+    $config_bit_data = ConfigBit::getConfigBit($config_bit_file_name, $type, $project);
 
     if (isset($config_bit_data['type'])
         && $config_bit_data['type'] == 'action'
