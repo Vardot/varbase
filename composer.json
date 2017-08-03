@@ -276,6 +276,10 @@
         "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
         "Warning: htmlspecialchars() expects parameter 1 to be string":
         "https://www.drupal.org/files/issues/Fix_message-2860399-5.patch"
+      },
+      "drupal/responsive_preview": {
+        "Issue #2899640: Responsive Preview shows 'Page not found' when multilingual site is enabled with Path-prefix setting":
+        "https://www.drupal.org/files/issues/responsive_preview_with_path_prefix-2899640-2_0.patch"
       }
     }
   }
