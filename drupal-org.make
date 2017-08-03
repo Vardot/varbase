@@ -166,6 +166,8 @@ projects[adminimal_admin_toolbar][version] = 1.5
 
 projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha6
+;; Issue #2899640: Responsive Preview shows "Page not found" when multilingual site is enabled with Path-prefix setting
+projects[responsive_preview][patch][] = https://www.drupal.org/files/issues/responsive_preview_with_path_prefix-2899640-2_0.patch
 
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 1.0-beta1
