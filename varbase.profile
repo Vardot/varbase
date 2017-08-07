@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\Filesystem\Filesystem;
 use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\varbase\Config\ConfigBit;
 use Drupal\varbase\Form\ConfigureMultilingualForm;
@@ -102,7 +103,10 @@ function varbase_assemble_extra_components(array &$install_state) {
   $selected_extra_features = $install_state['varbase']['extra_features_values'];
   foreach ($selected_extra_features as $extra_feature_key => $extra_feature_checked) {
     if ($extra_feature_checked) {
+      // Add the checked exter feature to the batch process to be enabled.
       $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_feature_key];
+      
+      
     }
   }
   
@@ -110,7 +114,10 @@ function varbase_assemble_extra_components(array &$install_state) {
   $selected_demo_content = $install_state['varbase']['demo_content_values'];
   foreach ($selected_demo_content as $demo_content_key => $demo_content_checked) {
     if ($demo_content_checked) {
+      // Add the checked demo content to the batch process to be enabled.
       $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
+      
+      
     }
   }
 
@@ -139,10 +146,27 @@ function varbase_assemble_development_tools(array &$install_state) {
   // Install selected Development tools.
   $selected_development_tools = $install_state['varbase']['development_tools_values'];
   $selected_development_configs = $install_state['varbase']['development_tools_configs'];
+  
+  // Development tools. 
+  $developmentTools = ConfigBit::getList('configbit/development.tools.varbase.bit.yml', 'show_development_tools', TRUE, 'dependencies', 'profile', 'varbase');
+  if (count($developmentTools)) {
+    foreach ($selected_development_tools as $development_tool_key => $development_tool_checked) {
+      if ($development_tool_checked) {
 
-  foreach ($selected_development_tools as $development_tool_key => $development_tool_checked) {
-    if ($development_tool_checked) {
-      $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
+        // Add the checked development tool to the batch process to be enabled.
+        $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
+
+        if (isset($developmentTools[$development_tool_key]['formbit'])){
+          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $developmentTools[$development_tool_key]['formbit'];
+          $formbit_file = new Filesystem();
+          if ($formbit_file->exists($formbit_file_name)) {
+
+            include_once $formbit_file_name;
+            // Submit form bit with editable config values.
+            call_user_func_array($development_tool_key . "_submit_formbit", array($selected_development_configs));
+          }
+        }
+      }
     }
   }
 

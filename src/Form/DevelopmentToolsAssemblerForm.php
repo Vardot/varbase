@@ -123,7 +123,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           '#default_value' => $checkbox_selected,
         ];
         
-        // If cofnig_form is ture for this development tool.
+        // If config_form is ture for this development tool.
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
           $form['development_tools'][$development_tool_key . '_config'] = [

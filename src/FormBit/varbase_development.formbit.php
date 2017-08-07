@@ -2,12 +2,25 @@
 
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Get editable config names.
+ * 
+ * @return array
+ *   Array of config names, and list of values.
+ */
 function varbase_development_get_editable_config_names() {
   return ['system.logging' => ['error_level' => ERROR_REPORTING_HIDE,
     ],
   ];
 }
 
+/**
+ * Build form bit.
+ * 
+ * @param array $formbit
+ * @param FormStateInterface $form_state
+ * @param array $install_state
+ */
 function varbase_development_build_formbit(array &$formbit, FormStateInterface &$form_state, array &$install_state = NULL) {
   $formbit['error_level'] = [
     '#type' => 'radios',
@@ -23,8 +36,15 @@ function varbase_development_build_formbit(array &$formbit, FormStateInterface &
   ];
 }
 
-function varbase_development_submit_formbit(array &$form, FormStateInterface $form_state) {
+/**
+ * Submit form bit with editable config values.
+ * 
+ * To update the editable config in drupal active config.
+ * 
+ * @param array $editable_config_values
+ */
+function varbase_development_submit_formbit(array $editable_config_values) {
   $config = \Drupal::configFactory()->getEditable('system.logging');
-  $config->set('error_level', $form_state->getValue('error_level'));
+  $config->set('error_level', $editable_config_values['system.logging']['error_level']);
   $config->save(TRUE);
 }
