@@ -137,7 +137,7 @@ class ScriptHandler {
     if ($fs->exists($drupal_root . '/profiles/varbase/src/assets/development.services.yml')) {
       // Alter development.services.yml to have Varbase's Local development
       // services.
-      copy(getcwd() . '/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
+      copy(drupal_root . '/profiles/varbase/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
   }
 
