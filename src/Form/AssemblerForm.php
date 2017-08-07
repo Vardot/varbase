@@ -73,43 +73,6 @@ class AssemblerForm extends FormBase {
   public function getFormId() {
     return 'varbase_extra_components';
   }
-
-  /**
-   * Get info for each of Varbase's Extra Components.
-   *
-   * And make sure that we do have the extra component in the files.
-   */
-  protected function getExtraComponentsInfo($configbit_root) {
-    $component_discovery = new ExtensionDiscovery($this->root);
-
-    // Extra Varbase components, which could be selected to be installed.
-    $extra_components_to_assemble = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
-
-    // Combine default Varbase components and selected extra varbase components.
-    $combined_extra_components = array_combine($extra_components_to_assemble, $extra_components_to_assemble);
-    $extra_components = array_intersect_key($component_discovery->scan('module'), $combined_extra_components);
-
-    // Sort extra components by the default configbit dependencies order.
-    $ordered_extra_components = array_merge(array_flip($combined_extra_components), $extra_components);
-
-    foreach ($ordered_extra_components as $key => $extra_component) {
-      $extra_component_info = $this->infoParser->parse($extra_component->getPathname());
-      yield $key => $extra_component_info;
-    }
-  }
-
-  /**
-   * Get selected extra varbase's components.
-   *
-   * @return array
-   *   Selected extra component from the configbit yml file.
-   */
-  protected function getSelectedExtraComponents($configbit_root) {
-    // Selected Extra Varbase components.
-    $selected_extra_components = ConfigBit::getList($configbit_root . '/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'selected', 'profile', 'varbase');
-
-    return $selected_extra_components;
-  }
   
   /**
    * {@inheritdoc}
