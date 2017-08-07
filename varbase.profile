@@ -100,8 +100,16 @@ function varbase_assemble_extra_components(array &$install_state) {
   }
 
   // Install selected extra features.
-  $selected_extra_features = $install_state['varbase']['extra_features_values'];
-  $selected_extra_features_configs = $install_state['varbase']['extra_features_configs'];
+  $selected_extra_features = [];
+  $selected_extra_features_configs = [];
+  
+  if (isset($install_state['varbase']['extra_features_values'])) {
+    $selected_extra_features = $install_state['varbase']['extra_features_values'];
+  }
+
+  if (isset($install_state['varbase']['extra_features_configs'])) {
+    $selected_extra_features_configs = $install_state['varbase']['extra_features_configs'];
+  }
 
   $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
 
@@ -132,8 +140,16 @@ function varbase_assemble_extra_components(array &$install_state) {
   }
 
   // Install selected Demo content.
-  $selected_demo_content = $install_state['varbase']['demo_content_values'];
-  $selected_demo_content_configs = $install_state['varbase']['demo_content_configs'];
+  $selected_demo_content = [];
+  $selected_demo_content_configs = [];
+  
+  if (isset($install_state['varbase']['demo_content_values'])) {
+    $selected_demo_content = $install_state['varbase']['demo_content_values'];
+  }
+
+  if (isset($install_state['varbase']['demo_content_configs'])) {
+    $selected_demo_content_configs = $install_state['varbase']['demo_content_configs'];
+  }
   
   $demoContent = ConfigBit::getList('configbit/demo.content.varbase.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'varbase');
   if (count($demoContent) && count($selected_demo_content)) {
@@ -185,12 +201,20 @@ function varbase_assemble_development_tools(array &$install_state) {
   $batch = [];
 
   // Install selected Development tools.
-  $selected_development_tools = $install_state['varbase']['development_tools_values'];
-  $selected_development_configs = $install_state['varbase']['development_tools_configs'];
-  
+  $selected_development_tools = [];
+  $selected_development_configs = [];
+
+  if (isset($install_state['varbase']['development_tools_values'])) {
+    $selected_development_tools = $install_state['varbase']['development_tools_values'];
+  }
+
+  if (isset($install_state['varbase']['development_tools_configs'])) {
+    $selected_development_configs = $install_state['varbase']['development_tools_configs'];
+  }
+
   // Development tools. 
   $developmentTools = ConfigBit::getList('configbit/development.tools.varbase.bit.yml', 'show_development_tools', TRUE, 'dependencies', 'profile', 'varbase');
-  
+
   // If we do have development tools and we have selected development tools.
   if (count($selected_development_tools) && count($developmentTools)) {
     // Have batch processes for each selected development tool.
