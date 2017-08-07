@@ -135,7 +135,8 @@
     "drupal/entity_browser_enhanced": "1.0-beta5",
     "drupal/vmi": "1.0-beta2",
     "drupal/varbase_bootstrap_paragraphs": "4.x-dev#acd6df8043ffa883aed7913427a98f6845eb23ce",
-    "drupal/varbase_editor": "4.15",
+    "drupal/ckeditor_media_embed": "1.1",
+    "drupal/varbase_editor": "4.x-dev",
     "drupal/varbase_heroslider_media": "4.0-beta8",
     "drupal/varbase_carousels": "4.0-beta2",
     "drupal/varbase_total_control": "1.0-beta4",
@@ -280,6 +281,10 @@
       "drupal/responsive_preview": {
         "Issue #2899640: Responsive Preview shows 'Page not found' when multilingual site is enabled with Path-prefix setting":
         "https://www.drupal.org/files/issues/responsive_preview_with_path_prefix-2899640-2_0.patch"
+      },
+      "drupal/ckeditor_media_embed": {
+        "Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG":
+        "https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch"
       }
     }
   }

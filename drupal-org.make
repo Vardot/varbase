@@ -256,6 +256,11 @@ projects[login_destination][download][url] = https://git.drupal.org/project/logi
 projects[login_destination][download][revision] = 98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7
 projects[login_destination][download][branch] = 8.x-1.x
 
+projects[ckeditor_media_embed][type] = module
+projects[ckeditor_media_embed][version] = 1.1
+;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
+projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
@@ -430,7 +435,7 @@ projects[total_control][version] = 2.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.15
+projects[varbase_editor][version] = 4.x-dev
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 4.0-beta8

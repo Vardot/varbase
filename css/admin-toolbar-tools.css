@@ -8,3 +8,7 @@
 .adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:hover:before {
   background-image: url(../files/images/varbase-x-small-emblem-white.png);
 }
+
+span .cke_button__embed_icon {
+  background-image:url('../images/embed.png') !important;
+}
