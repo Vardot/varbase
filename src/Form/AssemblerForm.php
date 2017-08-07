@@ -2,7 +2,6 @@
 
 namespace Drupal\varbase\Form;
 
-use Drupal\Core\Extension\ExtensionDiscovery;
 use Drupal\Core\Extension\InfoParserInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
