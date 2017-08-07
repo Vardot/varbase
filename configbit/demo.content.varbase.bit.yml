@@ -1,0 +1,18 @@
+# ==============================================================================
+# List of varbase demo components, which they will be listed under the 
+# Extra components installation step, in the Demo content section.
+# ==============================================================================
+config_bit:
+  type: list
+  for: varbase.info.yml
+  when:
+    show_demo: true
+    list:
+      dependencies:
+        varbase_demo:
+          title: 'Varbase Demo'
+          description: 'Varbase default demo content'
+          selected: false
+          config_form: false
+          
+

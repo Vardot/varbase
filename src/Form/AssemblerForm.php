@@ -110,7 +110,7 @@ class AssemblerForm extends FormBase {
 
     return $selected_extra_components;
   }
-
+  
   /**
    * {@inheritdoc}
    *
@@ -122,14 +122,139 @@ class AssemblerForm extends FormBase {
     $form['extra_components_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',
-      '#markup' => $this->t("Select extra components, so that they will be assembled and installed."),
+      '#markup' => $this->t("Select extra features, Demo content, so that they will be assembled and installed."),
       '#suffix' => '</p>',
     ];
-    $form['extra_components'] = [
-      '#type' => 'checkboxes',
-      '#weight' => 0,
-      '#options' => array(),
-    ];
+
+    // Extra Features. 
+    $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
+    if (count($extraFeatures)) {
+      
+      $form['extra_features'] = [
+        '#type' => 'fieldset',
+        '#title' => $this->t('Extra Features'),
+      ];
+      
+      foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
+         
+        $checkbox_title = '';
+        $checkbox_description = '';
+        $checkbox_selected = FALSE;
+        
+        if (isset($extra_feature_info['title'])) {
+          $checkbox_title = $extra_feature_info['title'];
+        }
+        
+        if (isset($extra_feature_info['description'])) {
+          $checkbox_description = $extra_feature_info['description'];
+        }
+        
+        if (isset($extra_feature_info['selected'])) {
+          $checkbox_selected = $extra_feature_info['selected'];
+        }
+        
+        $form['extra_features'][$extra_feature_key] = [
+          '#type' => 'checkbox',
+          '#title' => $checkbox_title,
+          '#description' => $checkbox_description,
+          '#default_value' => $checkbox_selected,
+        ];
+
+        if (isset ($extra_feature_info['config_form']) &&
+                   $extra_feature_info['config_form'] == TRUE) {
+          $form['extra_features'][$extra_feature_key . '_config'] = [
+            '#type' => 'fieldset',
+            '#title' => $checkbox_title,
+            '#states' => [
+              'visible' => [
+                ':input[name="' . $extra_feature_key . '"]' => ['checked' => TRUE],
+              ],
+              'invisible' => [
+                ':input[name="' . $extra_feature_key . '"]' => ['checked' => FALSE],
+              ],
+            ],
+          ];
+          
+          if (isset($extra_feature_info['formbit'])) {
+            $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
+            $formbit_file = new Filesystem();
+            if ($formbit_file->exists($formbit_file_name)) {
+
+              include_once $formbit_file_name;
+              // Add configuration form element in the formbit position.
+              call_user_func_array($extra_feature_key . "_build_formbit", array(&$form['extra_features'][$extra_feature_key . '_config'], &$form_state, &$install_state));
+            }
+          }
+          
+        }
+
+      }
+    }
+    
+    // Demo Content.
+    $demoContent = ConfigBit::getList('configbit/demo.content.varbase.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'varbase');
+    if (count($demoContent) > 0) {
+      $form['demo_content'] = [
+        '#type' => 'fieldset',
+        '#title' => $this->t('Demo Content'),
+      ];
+      
+      foreach ($demoContent as $demo_content_key => $demo_content_info) {
+        
+        $checkbox_title = '';
+        $checkbox_description = '';
+        $checkbox_selected = FALSE;
+        
+        if (isset($demo_content_info['title'])) {
+          $checkbox_title = $demo_content_info['title'];
+        }
+        
+        if (isset($demo_content_info['description'])) {
+          $checkbox_description = $demo_content_info['description'];
+        }
+        
+        if (isset($demo_content_info['selected'])) {
+          $checkbox_selected = $demo_content_info['selected'];
+        }
+        
+        $form['demo_content'][$demo_content_key] = [
+          '#type' => 'checkbox',
+          '#title' => $checkbox_title,
+          '#description' => $checkbox_description,
+          '#default_value' => $checkbox_selected,
+        ];
+        
+        if (isset($demo_content_info['config_form']) &&
+                  $demo_content_info['config_form'] == TRUE) {
+          $form['demo_content'][$demo_content_key . '_config'] = [
+            '#type' => 'fieldset',
+            '#title' => $checkbox_title,
+            '#states' => [
+              'visible' => [
+                ':input[name="' . $demo_content_key . '"]' => ['checked' => TRUE],
+              ],
+              'invisible' => [
+                ':input[name="' . $demo_content_key . '"]' => ['checked' => FALSE],
+              ],
+            ],
+          ];
+          
+          if (isset($demo_content_info['formbit'])) {
+            $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
+            $formbit_file = new Filesystem();
+            if ($formbit_file->exists($formbit_file_name)) {
+
+              include_once $formbit_file_name;
+              // Add configuration form element in the formbit position.
+              call_user_func_array($demo_content_key . "_build_formbit", array(&$form['extra_features'][$demo_content_key . '_config'], &$form_state, &$install_state));
+            }
+          }
+          
+        }
+
+      }
+    }
+    
     $form['actions'] = [
       'continue' => [
         '#type' => 'submit',
@@ -140,16 +265,6 @@ class AssemblerForm extends FormBase {
       '#weight' => 5,
     ];
 
-    // Configbit root folder for varbase profile.
-    $configbit_root = 'configbit';
-
-    foreach ($this->getExtraComponentsInfo($configbit_root) as $key => $info) {
-      $form['extra_components']['#options'][$key] = $info['name'];
-    }
-
-    // Default selected extra components.
-    $form['extra_components']['#default_value'] = $this->getSelectedExtraComponents($configbit_root);
-
     return $form;
   }
 
@@ -157,9 +272,77 @@ class AssemblerForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $extra_components = $form_state->getValue('extra_components');
-    $extra_components = array_filter($extra_components);
-    $GLOBALS['install_state']['varbase']['extra_components'] = $extra_components;
-  }
+    
+ 
+    
+    // Extra Features. 
+    $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
+    if (count($extraFeatures)) {
+      $extra_features_values = [];
+         
+      foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
+        
+        // form state has got value for this extra feature.
+        if ($form_state->hasValue($extra_feature_key)) {
+          $extra_features_values[$extra_feature_key] = $form_state->getValue($extra_feature_key);
+        }
+        
+        if ($extra_feature_info['config_form']) {
+          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
+          $formbit_file = new Filesystem();
+          if ($formbit_file->exists($formbit_file_name)) {
+            
+            include_once $formbit_file_name;
+            $extra_features_editable_configs = call_user_func_array($extra_feature_key . "_get_editable_config_names", array());
+            
+            foreach($extra_features_editable_configs as $extra_features_editable_config_key => $extra_features_editable_config) {
+              if ($form_state->hasValue($extra_features_editable_config_key)) {
+                $extra_features_editable_configs[$extra_features_editable_config_key] = $form_state->getValue($extra_features_editable_config_key);
+              }
+            } 
+            $GLOBALS['install_state']['varbase']['extra_features_configs'] = $extra_features_editable_configs;
+          }
+        }
+      }
+      
+      $GLOBALS['install_state']['varbase']['extra_features_values'] = $extra_features_values;
+    }
 
+
+    // Demo Content. 
+    $demoContent = ConfigBit::getList('configbit/demo.content.varbase.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'varbase');
+    if (count($demoContent)) {
+      $demo_content_values = [];
+          
+      foreach ($demoContent as $demo_content_key => $demo_content_info) {
+        
+        // if form state has got value for this demo content.
+        if ($form_state->hasValue($demo_content_key)) {
+          $demo_content_values[$demo_content_key] = $form_state->getValue($demo_content_key);
+        }
+        
+        if ($demo_content_info['config_form']) {
+          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
+          $formbit_file = new Filesystem();
+          if ($formbit_file->exists($formbit_file_name)) {
+            
+            include_once $formbit_file_name;
+            $demo_content_editable_configs = call_user_func_array($demo_content_key . "_get_editable_config_names", array());
+            
+            foreach($demo_content_editable_configs as $demo_content_editable_config_key => $demo_content_editable_config) {
+              if ($form_state->hasValue($demo_content_editable_config_key)) {
+                $demo_content_editable_configs[$demo_content_editable_config_key] = $form_state->getValue($demo_content_editable_config_key);
+              }
+            } 
+            
+            $GLOBALS['install_state']['varbase']['demo_content_configs'] = $demo_content_editable_configs;
+          }
+        }
+      }
+      
+      $GLOBALS['install_state']['varbase']['demo_content_values'] = $demo_content_values;
+    }
+    
+  }
+  
 }

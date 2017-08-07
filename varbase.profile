@@ -7,9 +7,10 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\language\Entity\ConfigurableLanguage;
-use Drupal\varbase\Form\AssemblerForm;
-use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Config\ConfigBit;
+use Drupal\varbase\Form\ConfigureMultilingualForm;
+use Drupal\varbase\Form\AssemblerForm;
+use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -62,6 +63,17 @@ function varbase_install_tasks(&$install_state) {
       'display' => TRUE,
       'type' => 'batch',
     ),
+    'varbase_development_tools' => array(
+      'display_name' => t('Development tools'),
+      'display' => TRUE,
+      'type' => 'form',
+      'function' => DevelopmentToolsAssemblerForm::class,
+    ),
+    'varbase_assemble_development_tools' => array(
+      'display_name' => t('Assemble development tools'),
+      'display' => TRUE,
+      'type' => 'batch',
+    ),
   );
 }
 
@@ -75,25 +87,63 @@ function varbase_install_tasks(&$install_state) {
  *   The batch job definition.
  */
 function varbase_assemble_extra_components(array &$install_state) {
-  // Configbit root folder for varbase profile.
-  $configbit_root = 'configbit';
 
   // Default Varbase components, which must be installed.
-  $default_components = ConfigBit::getList($configbit_root . '/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies', 'profile', 'varbase');
+  $default_components = ConfigBit::getList('configbit/default.components.varbase.bit.yml', 'install_default_components', TRUE, 'dependencies', 'profile', 'varbase');
 
-  // Selected extra components to be installed.
-  $selected_extra_components = $install_state['varbase']['extra_components'];
-
-  $batch = array();
+  $batch = [];
 
   // Install default components first.
   foreach ($default_components as $default_component) {
     $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $default_component];
   }
+  
+  // Install selected extra features.
+  $selected_extra_features = $install_state['varbase']['extra_features_values'];
+  foreach ($selected_extra_features as $extra_feature_key => $extra_feature_checked) {
+    if ($extra_feature_checked) {
+      $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_feature_key];
+    }
+  }
+  
+  // Install selected Demo content.
+  $selected_demo_content = $install_state['varbase']['demo_content_values'];
+  foreach ($selected_demo_content as $demo_content_key => $demo_content_checked) {
+    if ($demo_content_checked) {
+      $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
+    }
+  }
 
-  // Install selected extra components.
-  foreach ($selected_extra_components as $extra_component) {
-    $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_component];
+  // Hide Wornings and status messages.
+  $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+
+  // Fix entity updates to clear up any mismatched entity.
+  $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+
+  return $batch;
+}
+
+/**
+ * Batch job to assemble Varbase extra components.
+ *
+ * @param array $install_state
+ *   The current install state.
+ *
+ * @return array
+ *   The batch job definition.
+ */
+function varbase_assemble_development_tools(array &$install_state) {
+
+  $batch = [];
+
+  // Install selected Development tools.
+  $selected_development_tools = $install_state['varbase']['development_tools_values'];
+  $selected_development_configs = $install_state['varbase']['development_tools_configs'];
+
+  foreach ($selected_development_tools as $development_tool_key => $development_tool_checked) {
+    if ($development_tool_checked) {
+      $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
+    }
   }
 
   // Hide Wornings and status messages.
@@ -191,29 +241,26 @@ function varbase_fix_entity_update($entity_update) {
  */
 function varbase_config_bit_for_multilingual($enable_multilingual) {
 
-  // Configbit root folder for varbase profile.
-  $configbit_root = 'configbit';
-
   // Change configurations to work with enable_multilingual.
   if ($enable_multilingual) {
 
     // Put back the language config if it was not in before installation.
-    ConfigBit::actionUnArchiveFiles($configbit_root . '/language.action.varbase.bit.yml', 'enable_multilingual', TRUE, 'profile', 'varbase');
+    ConfigBit::actionUnArchiveFiles('configbit/language.action.varbase.bit.yml', 'enable_multilingual', TRUE, 'profile', 'varbase');
 
     // Put back the language config bit.
-    ConfigBit::actionAdd($configbit_root . '/varbase_landing.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionAdd($configbit_root . '/varbase_page.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionAdd($configbit_root . '/varbase_media.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
+    ConfigBit::actionAdd('configbit/varbase_landing.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
+    ConfigBit::actionAdd('configbit/varbase_page.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
+    ConfigBit::actionAdd('configbit/varbase_media.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
   }
   else {
     // Change configurations to work with NO multilingual.
     // Archive the language config out before installation.
-    ConfigBit::actionArchiveFiles($configbit_root . '/language.action.varbase.bit.yml', 'enable_multilingual', FALSE, 'profile', 'varbase');
+    ConfigBit::actionArchiveFiles('configbit/language.action.varbase.bit.yml', 'enable_multilingual', FALSE, 'profile', 'varbase');
 
     // Remove language config bit before installation.
-    ConfigBit::actionRemove($configbit_root . '/varbase_landing.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionRemove($configbit_root . '/varbase_page.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionRemove($configbit_root . '/varbase_media.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
+    ConfigBit::actionRemove('configbit/varbase_landing.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
+    ConfigBit::actionRemove('configbit/varbase_page.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
+    ConfigBit::actionRemove('configbit/varbase_media.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
   }
 
 }

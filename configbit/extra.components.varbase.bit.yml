@@ -9,10 +9,23 @@ config_bit:
     show_extra_components: true
     list:
       dependencies:
-        - vmi
-        - varbase_development
-        - varbase_heroslider_media
-        - varbase_carousels
-        - varbase_search
-      selected:
-        - vmi
+        vmi:
+          title: 'View Modes Inventory'
+          description: 'Provides a set of template content View Modes that are typically used (some of them) in each website.'
+          selected: true
+          config_form: false
+        varbase_heroslider_media:
+          title: 'Media Hero Slider'
+          description: 'Populate the universal implementation of a "Hero Slider" to be used on the homepage in most cases. A rich hero slider that allows you to display video and/or image slides.'
+          selected: false
+          config_form: false
+        varbase_carousels:
+          title: 'Varbase Carousels'
+          description: 'Provides the base implementation for the carousels in your website. Admins will be able to create carousels on the spot and place it anywhere in the site.'
+          selected: false
+          config_form: false
+        varbase_search:
+          title: 'Varbase Search'
+          description: 'Provides search configuration, and offering search capabilities.'
+          selected: false
+          config_form: false

@@ -113,14 +113,14 @@ class ConfigureMultilingualForm extends FormBase {
     $form['enable_multilingual'] = array(
       '#type' => 'checkbox',
       '#title' => $this->t('Enable multiple languages for this site'),
-      '#description' => t('This will enable the necessary modules for a multilingual website. These include: Language, Interface Translation, Content Translation, Configuration Translation, and its recommended configuration.'),
+      '#description' => $this->t('This will enable the necessary modules for a multilingual website. These include: Language, Interface Translation, Content Translation, Configuration Translation, and its recommended configuration.'),
       '#default_value' => FALSE,
     );
 
     $form['multilingual_languages'] = array(
       '#type' => 'select',
       '#title' => $this->t("Please select your site's other language(s)"),
-      '#description' => t('You can skip this and add languages later.'),
+      '#description' => $this->t('You can skip this and add languages later.'),
       '#options' => $select_options,
       '#multiple' => TRUE,
       '#size' => 8,

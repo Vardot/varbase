@@ -1,0 +1,17 @@
+# ==============================================================================
+# List of development tools varbase, which they will be listed in the
+# Development tools form, when we install varbase.
+# ==============================================================================
+config_bit:
+  type: list
+  for: varbase.info.yml
+  when:
+    show_development_tools: true
+    list:
+      dependencies:
+        varbase_development:
+          title: 'Development tools'
+          description: 'Development Environment Modules and Features, make sure to disable this feature in production.'
+          selected: false
+          config_form: true
+          formbit: 'src/FormBit/varbase_development.formbit.php'
