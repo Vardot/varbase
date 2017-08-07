@@ -106,6 +106,7 @@ dependencies:
   - better_exposed_filters
   - link_attributes
   - login_destination
+  - ckeditor_media_embed
 
 themes:
   # Contrib themes.
