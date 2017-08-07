@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
 
 /**
- * Defines form for selecting extra compoennts for the assembler to install.
+ * Defines form for selecting extra components for the assembler to install.
  */
 class AssemblerForm extends FormBase {
 
@@ -102,7 +102,7 @@ class AssemblerForm extends FormBase {
    * Get selected extra varbase's components.
    *
    * @return array
-   *   Selected extra compoment from the configbit yml file.
+   *   Selected extra component from the configbit yml file.
    */
   protected function getSelectedExtraComponents($configbit_root) {
     // Selected Extra Varbase components.
@@ -122,7 +122,7 @@ class AssemblerForm extends FormBase {
     $form['extra_components_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',
-      '#markup' => $this->t("Select extra features, Demo content, so that they will be assembled and installed."),
+      '#markup' => $this->t("Install additional ready-to-use features in your site."),
       '#suffix' => '</p>',
     ];
 
@@ -132,7 +132,7 @@ class AssemblerForm extends FormBase {
       
       $form['extra_features'] = [
         '#type' => 'fieldset',
-        '#title' => $this->t('Extra Features'),
+        '#title' => $this->t('Site features'),
       ];
       
       foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
@@ -196,7 +196,7 @@ class AssemblerForm extends FormBase {
     if (count($demoContent) > 0) {
       $form['demo_content'] = [
         '#type' => 'fieldset',
-        '#title' => $this->t('Demo Content'),
+        '#title' => $this->t('Demo content'),
       ];
       
       foreach ($demoContent as $demo_content_key => $demo_content_info) {
