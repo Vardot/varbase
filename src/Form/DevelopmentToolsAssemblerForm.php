@@ -81,11 +81,11 @@ class DevelopmentToolsAssemblerForm extends FormBase {
    *   Development tools modules.
    */
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
-    $form['#title'] = $this->t('Development Tools');
+    $form['#title'] = $this->t('Development tools');
     $form['development_tools_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',
-      '#markup' => $this->t("Select a development tool, so that it will be assembled and installed."),
+      '#markup' => $this->t("If you're only evaluating Varbase, you don't need to install these tools. These tools are needed if you're a developer and you're installing Varbase to build a new site."),
       '#suffix' => '</p>',
     ];
 
