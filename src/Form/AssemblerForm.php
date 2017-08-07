@@ -273,8 +273,6 @@ class AssemblerForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     
- 
-    
     // Extra Features. 
     $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
     if (count($extraFeatures)) {
