@@ -111,8 +111,10 @@ function varbase_assemble_extra_components(array &$install_state) {
     $selected_extra_features_configs = $install_state['varbase']['extra_features_configs'];
   }
 
+  // Get the list of extra features config bits.
   $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
 
+  // If we do have selected extra features.
   if (count($selected_extra_features) && count($extraFeatures)) {
 
     foreach ($selected_extra_features as $extra_feature_key => $extra_feature_checked) {
@@ -120,16 +122,18 @@ function varbase_assemble_extra_components(array &$install_state) {
         // Add the checked exter feature to the batch process to be enabled.
         $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_feature_key];
 
-        if (isset($extraFeatures[$extra_feature_key]['config_from']) &&
+        if (count($selected_extra_features_configs) &&
+            isset($extraFeatures[$extra_feature_key]['config_from']) &&
             $extraFeatures[$extra_feature_key]['config_from'] == TRUE &&
             isset($extraFeatures[$extra_feature_key]['formbit'])) {
-          
+
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
           $formbit_file = new Filesystem();
+          
           if ($formbit_file->exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
-            
+
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
             $batch['operations'][] = [$extra_feature_key . "_submit_formbit", (array) $selected_extra_features_configs];
@@ -150,7 +154,8 @@ function varbase_assemble_extra_components(array &$install_state) {
   if (isset($install_state['varbase']['demo_content_configs'])) {
     $selected_demo_content_configs = $install_state['varbase']['demo_content_configs'];
   }
-  
+
+  // Get the list of extra features config bits.
   $demoContent = ConfigBit::getList('configbit/demo.content.varbase.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'varbase');
   if (count($demoContent) && count($selected_demo_content)) {
 
@@ -159,7 +164,8 @@ function varbase_assemble_extra_components(array &$install_state) {
         // Add the checked demo content to the batch process to be enabled.
         $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
 
-        if (isset($demoContent[$demo_content_key]['config_from']) &&
+        if (count($selected_demo_content_configs) &&
+            isset($demoContent[$demo_content_key]['config_from']) &&
             $demoContent[$demo_content_key]['config_from'] == TRUE &&
             isset($demoContent[$demo_content_key]['formbit'])) {
 
@@ -224,7 +230,8 @@ function varbase_assemble_development_tools(array &$install_state) {
         // Add the checked development tool to the batch process to be enabled.
         $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
         
-        if (isset($developmentTools[$development_tool_key]['config_from']) &&
+        if (count($selected_development_configs) &&
+            isset($developmentTools[$development_tool_key]['config_from']) &&
             $developmentTools[$development_tool_key]['config_from'] == TRUE &&
             isset($developmentTools[$development_tool_key]['formbit'])) {
           

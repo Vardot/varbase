@@ -9,14 +9,17 @@ use Drupal\Core\Form\FormStateInterface;
  *   Array of config names, and list of values.
  */
 function varbase_development_get_editable_config_names() {
-  return ['system.logging' => ['error_level' => ERROR_REPORTING_HIDE,
+  $editable_cofnigs = ['system.logging' => [
+      'error_level' => ERROR_REPORTING_HIDE,
     ],
   ];
+
+  return $editable_cofnigs;
 }
 
 /**
  * Build form bit.
- * 
+ *
  * @param array $formbit
  * @param FormStateInterface $form_state
  * @param array $install_state
@@ -44,7 +47,7 @@ function varbase_development_build_formbit(array &$formbit, FormStateInterface &
  * @param array $editable_config_values
  */
 function varbase_development_submit_formbit(array $editable_config_values) {
-  $config = \Drupal::configFactory()->getEditable('system.logging');
-  $config->set('error_level', $editable_config_values['system.logging']['error_level']);
-  $config->save(TRUE);
+  $configFactory = \Drupal::configFactory()->getEditable('system.logging');
+  $configFactory->set('error_level', $editable_config_values['system.logging']['error_level']);
+  $configFactory->save(TRUE);
 }

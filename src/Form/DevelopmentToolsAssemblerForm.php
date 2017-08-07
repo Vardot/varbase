@@ -192,11 +192,15 @@ class DevelopmentToolsAssemblerForm extends FormBase {
             include_once $formbit_file_name;
             $development_tools_editable_configs = call_user_func_array($development_tool_key . "_get_editable_config_names", array());
             
-            foreach($development_tools_editable_configs as $development_tools_editable_config_key => $development_tools_editable_config) {
-              if ($form_state->hasValue($development_tools_editable_config_key)) {
-                $development_tools_editable_configs[$development_tools_editable_config_key] = $form_state->getValue($development_tools_editable_config_key);
+            if (count($development_tools_editable_configs)) {
+              foreach($development_tools_editable_configs as $development_tools_editable_config_key => $development_tools_editable_config) {
+                foreach($development_tools_editable_config as $development_tools_config_item_key => $development_tools_config_item_value) {
+                  if ($form_state->hasValue($development_tools_config_item_key)) {
+                    $development_tools_editable_configs[$development_tools_editable_config_key][$development_tools_config_item_key] = $form_state->getValue($development_tools_config_item_key);
+                  }
+                }
               }
-            } 
+            }
             
             $GLOBALS['install_state']['varbase']['development_tools_configs'] = $development_tools_editable_configs;
           }

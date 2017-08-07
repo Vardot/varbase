@@ -6,7 +6,7 @@ config_bit:
   type: list
   for: varbase.info.yml
   when:
-    show_demo: true
+    show_demo: false
     list:
       dependencies:
         varbase_demo:
