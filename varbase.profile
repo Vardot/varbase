@@ -229,10 +229,10 @@ function varbase_assemble_development_tools(array &$install_state) {
 
         // Add the checked development tool to the batch process to be enabled.
         $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
-        
+       
         if (count($selected_development_configs) &&
-            isset($developmentTools[$development_tool_key]['config_from']) &&
-            $developmentTools[$development_tool_key]['config_from'] == TRUE &&
+            isset($developmentTools[$development_tool_key]['config_form']) &&
+            $developmentTools[$development_tool_key]['config_form'] == TRUE &&
             isset($developmentTools[$development_tool_key]['formbit'])) {
           
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $developmentTools[$development_tool_key]['formbit'];
