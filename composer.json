@@ -168,8 +168,7 @@
   },
   "config": {
     "bin-dir": "bin/",
-    "secure-http": false,
-    "preferred-install": "dist"
+    "secure-http": false
   },
   "autoload": {
     "psr-4": {
