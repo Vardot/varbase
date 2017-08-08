@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: editor
 label: Editor
-weight: 2
+weight: -8
 is_admin: null
 permissions:
   - 'access files overview'
