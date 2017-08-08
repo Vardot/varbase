@@ -1,0 +1,16 @@
+# ==============================================================================
+# List of varbase demo components, which they will be listed under the 
+# Extra components installation step, in the Demo content section.
+# ==============================================================================
+config_bit:
+  type: list
+  for: varbase.info.yml
+  when:
+    show_demo: false
+    list:
+      dependencies:
+        varbase_demo:
+          title: "Install Demo Content"
+          description: "If you're evaluating Varbase, installing demo content will help you get an idea of how Varbase works, and what features are included."
+          selected: false
+          config_form: false

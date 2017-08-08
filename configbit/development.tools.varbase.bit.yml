@@ -1,0 +1,17 @@
+# ==============================================================================
+# List of development tools varbase, which they will be listed in the
+# Development tools form, when we install varbase.
+# ==============================================================================
+config_bit:
+  type: list
+  for: varbase.info.yml
+  when:
+    show_development_tools: true
+    list:
+      dependencies:
+        varbase_development:
+          title: "Install Development Tools"
+          description: "Install the development tools if you're a developer and you're going to use Varbase to build a new project. This will install several modules that help you build your site, such as <a href=\"https://www.drupal.org/project/devel\" target=\"_blank\">Devel</a>, <a href=\"https://www.drupal.org/docs/8/core/modules/dblog/overview\" target=\"_blank\">Database Logging</a>, and UI modules such as View UI, Features UI, Libraries UI, and Configuration Update Reports.<br /><em>Make sure to uninstall this feature and its modules when you go in production mode</em>."
+          selected: false
+          config_form: true
+          formbit: "src/FormBit/varbase_development.formbit.php"

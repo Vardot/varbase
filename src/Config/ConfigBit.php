@@ -3,6 +3,7 @@
 namespace Drupal\varbase\config;
 
 use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * Defines config bit to help in managing custom config which used in install.
@@ -16,7 +17,7 @@ class ConfigBit {
    *
    * @param string $config_bit_file_name
    *   Config bit file name in the root configbit folder.
-   *   
+   *
    * @param string $type
    *   Config bit file source type (profile / module).
    *
@@ -42,10 +43,31 @@ class ConfigBit {
       }
     }
     else {
-      throw new \Drupal\Core\Asset\Exception('Config bit file does not exist!');
+      throw new \Exception('Config bit file does not exist!');
     }
   }
-
+  
+  /**
+   * Do we have this cofnigbit file.
+   * 
+   * @param string $config_bit_file_name
+   *   Config bit file name in the root configbit folder.
+   *
+   * @param string $type
+   *   Config bit file source type (profile / module).
+   *
+   * @param string $project
+   *   Config bit file source eg. varbase.
+   * 
+   * @return bool
+   */
+  public static function doWeHaveThisConfigBit($config_bit_file_name, $type = 'profile', $project = 'varbase') {
+    // Generate full path to config file
+    $full_config_bit_file_name = drupal_get_path($type, $project)  . '/' . $config_bit_file_name;
+    $fs = new Filesystem();
+    return $fs->exists($full_config_bit_file_name);
+  }
+  
   /**
    * Get a list of sub list of config.
    *
