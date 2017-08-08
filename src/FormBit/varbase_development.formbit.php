@@ -46,7 +46,7 @@ function varbase_development_build_formbit(array &$formbit, FormStateInterface &
  * 
  * @param array $editable_config_values
  */
-function varbase_development_submit_formbit(array $editable_config_values) {
+function varbase_development_submit_formbit(array $editable_config_values) {              
   $configFactory = \Drupal::configFactory()->getEditable('system.logging');
   $configFactory->set('error_level', $editable_config_values['system.logging']['error_level']);
   $configFactory->save(TRUE);

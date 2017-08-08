@@ -136,7 +136,7 @@ function varbase_assemble_extra_components(array &$install_state) {
 
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = [$extra_feature_key . "_submit_formbit", (array) $selected_extra_features_configs];
+            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$extra_feature_key, $formbit_file_name, $selected_extra_features_configs]];
           }
         }
       }
@@ -175,9 +175,9 @@ function varbase_assemble_extra_components(array &$install_state) {
 
             include_once $formbit_file_name;
 
-            // Added the selected extra feature configs to the batch process
+            // Added the selected demo content configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = [$demo_content_key . "_submit_formbit", (array) $selected_demo_content_configs];
+            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$demo_content_key, $formbit_file_name, $selected_demo_content_configs]];
           }
         }
       }
@@ -239,11 +239,9 @@ function varbase_assemble_development_tools(array &$install_state) {
           $formbit_file = new Filesystem();
           if ($formbit_file->exists($formbit_file_name)) {
 
-            include_once $formbit_file_name;
-            
             // Added the selected development configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = [$development_tool_key . "_submit_formbit", (array) $selected_development_configs];
+            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$development_tool_key, $formbit_file_name, $selected_development_configs]];
           }
         }
       }
@@ -310,6 +308,21 @@ function varbase_configure_multilingual(array &$install_state) {
  */
 function varbase_assemble_extra_component_then_install($extra_component) {
   \Drupal::service('module_installer')->install((array) $extra_component);
+}
+
+/**
+ * Batch function to save editable config values for extra components.
+ *
+ * @param string|array $extra_component_machine_name
+ *   machine name key of the extra component.
+ * @param string|array $formbit_file_name
+ *   FormBit file name.
+ * @param string|array $editable_config_values
+ *   Editable config values.
+ */
+function varbase_save_editable_config_values($extra_component_machine_name, $formbit_file_name, $editable_config_values) {
+  include_once $formbit_file_name;
+  call_user_func_array($extra_component_machine_name . "_submit_formbit", array($editable_config_values));
 }
 
 /**
