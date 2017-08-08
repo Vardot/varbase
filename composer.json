@@ -168,7 +168,8 @@
   },
   "config": {
     "bin-dir": "bin/",
-    "secure-http": false
+    "secure-http": false,
+    "preferred-install": "dist"
   },
   "autoload": {
     "psr-4": {
@@ -181,11 +182,13 @@
     "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
     "post-install-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories",
       "@composer drupal-scaffold",
       "./bin/phing push"
     ],
     "post-update-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories",
       "./bin/phing push"
     ],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],

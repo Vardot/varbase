@@ -101,6 +101,14 @@ class ScriptHandler {
       exit(1);
     }
   }
+  
+  /**
+   * Remove .git folder from modules, themes, profiles of development branches.
+   */
+  public static function removeGitDirectories() {
+    $drupal_root = static::getDrupalRoot(getcwd());
+    exec('find ' . $drupal_root . ' -name \'.git\' | xargs rm -rf');
+  }
 
   /**
    * Post Drupal Scaffold Procedure.
