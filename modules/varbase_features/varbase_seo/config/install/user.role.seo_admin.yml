@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 id: seo_admin
 label: 'SEO Admin'
-weight: 6
+weight: -6
 is_admin: null
 permissions:
   - 'access administration pages'
