@@ -130,8 +130,8 @@ projects[ace_editor][type] = module
 projects[ace_editor][download][url] = https://git.drupal.org/project/ace_editor.git
 projects[ace_editor][download][revision] = 7136cf96509e82a00b56a2908108aaee37a6cb98
 projects[ace_editor][download][branch] = 8.x-1.x
-;; Issue #2886356 by Niklan, joey91133: Library must be moved from module folder
-projects[ace_editor][patch][] = https://www.drupal.org/files/issues/library_must_be_moved_from_module_folder_with_composer.patch
+;; Issue #2886356 by Niklan, RajabNatshah, joey91133: Updated the requirements on installation for [ACE Editor] to make it work if the library was in the installation profile
+projects[ace_editor][patch][] = https://www.drupal.org/files/issues/2886356-13.patch
 
 projects[entityqueue][type] = module
 projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue.git
