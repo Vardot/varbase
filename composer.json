@@ -45,7 +45,7 @@
     "drupal/advanced_text_formatter": "1.0-beta3",
     "drupal/block_class": "1.0-alpha1",
     "drupal/menu_block": "1.4",
-    "drupal/extlink": "1.x-dev#66866ddcea2bb3dcb8e557599bc1454d09ad22a0",
+    "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/linkit": "4.3",
     "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
     "drupal/features": "3.5",
@@ -267,10 +267,6 @@
       "drupal/ace_editor": {
         "Issue #2886356 by Niklan, RajabNatshah, joey91133: Updated the requirements on installation for [ACE Editor] to make it work if the library was in the installation profile":
         "https://www.drupal.org/files/issues/2886356-13.patch"
-      },
-      "drupal/extlink": {
-        "Issue #2864772 by vivify, Omar Alahmed: Spacing added between anchor text and text following anchor":
-        "https://www.drupal.org/files/issues/extlink-spacing-added-between-anchor-text-2864772-13.patch"
       },
       "drupal/google_analytics_reports": {
         "Error when saving either google_analytics_reports view":
