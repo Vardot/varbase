@@ -85,9 +85,9 @@ projects[entity][type] = module
 projects[entity][version] = 1.0-alpha4
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 1.0
-;; Issue #2820132 by matthieuscarset, RajabNatshah, marcoscano: getDisplay() on null Entity Browser reference.
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity_browser-8.x-1.0-2820132-17.patch
+projects[entity_browser][version] = 1.1
+;; Issue #2820132 by matthieuscarset, RajabNatshah, ZeiP, marcoscano: getDisplay() on null Entity Browser reference
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2820132-19.patch
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 1.0-alpha7
