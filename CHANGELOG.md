@@ -10,7 +10,9 @@
 * Issue #2896862: Enhanced the UI/UX preview for paragraphs in the Varbase
                   Landing page with [Add] button and easy reorder and editing
                   of paragraphs.
-* Issue #2900313: Add ability to embed tweets and other rich content in
+* Issue #2893965: Changed [Varbase Media] Media (image) widget field preview,
+                  Fixed the name of the image.style.field_preview config file.
+* Issue #2900313: Added ability to embed tweets and other rich content in
                   WYSIWYG with Varbase Editor [Rich editor] Text format.
 * Issue #2899042: Added the option to Allow distribution to be installed in
                   other than profiles/varbase.
