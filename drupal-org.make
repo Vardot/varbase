@@ -433,7 +433,7 @@ projects[total_control][version] = 2.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.16
+projects[varbase_editor][version] = 4.17
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 4.0-beta10
