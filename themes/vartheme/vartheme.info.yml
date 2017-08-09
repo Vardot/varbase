@@ -21,8 +21,8 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-# Bootstrap styling and scripts libraries.
-  - vartheme/bootstrap-styling
+# Bootstrap styles and scripts libraries.
+  - vartheme/bootstrap-styles
   - vartheme/bootstrap-scripts
   
 # Boostrap component libraries.
@@ -50,7 +50,7 @@ libraries:
   - vartheme/bootstrap-print
   - vartheme/bootstrap-no-spacing
   
-# Vartheme general global styling and scripts libraries.
+# Vartheme general global styles and scripts libraries.
   - vartheme/global-styles
   - vartheme/global-scripts
 

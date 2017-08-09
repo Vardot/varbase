@@ -20,15 +20,15 @@ regions:
   page_bottom: 'Page bottom'
 
 libraries:
-# Bootstrap styling and scripts libraries.
-  - VARTHEME_SUBTHEME/bootstrap-styling
+# Bootstrap styles and scripts libraries.
+  - VARTHEME_SUBTHEME/bootstrap-styles
   - VARTHEME_SUBTHEME/bootstrap-scripts
   
-# VARTHEME_SUBTHEME custom Vartheme styling and scripts libraries.
-  - VARTHEME_SUBTHEME/vartheme-styling
+# VARTHEME_SUBTHEME custom Vartheme styles and scripts libraries.
+  - VARTHEME_SUBTHEME/vartheme-styles
 
-# VARTHEME_SUBTHEME global styling and scripts libraries.
-  - VARTHEME_SUBTHEME/global-styling
+# VARTHEME_SUBTHEME global styles and scripts libraries.
+  - VARTHEME_SUBTHEME/global-styles
   - VARTHEME_SUBTHEME/global-scripts
 
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
@@ -38,17 +38,17 @@ libraries-override:
   bootstrap_library/bootstrap-cdn: false
   bootstrap_library/bootstrap: false
   bootstrap_library/bootstrap-dev: false
-  vartheme/bootstrap-styling: false
+  vartheme/bootstrap-styles: false
   vartheme/bootstrap-scripts: false
   vartheme/global-styles: false
   vartheme/global-scripts: false
   
 # Comment lines to use (RTL) libraries from vartheme.
-  vartheme/bootstrap-styling-rtl: false
-  vartheme/global-styling-rtl: false
-  VARTHEME_SUBTHEME/bootstrap-styling-rtl: false
-  VARTHEME_SUBTHEME/vartheme-styling-rtl: false
-  VARTHEME_SUBTHEME/global-styling-rtl: false
+  vartheme/bootstrap-styles-rtl: false
+  vartheme/global-styles-rtl: false
+  VARTHEME_SUBTHEME/bootstrap-styles-rtl: false
+  VARTHEME_SUBTHEME/vartheme-styles-rtl: false
+  VARTHEME_SUBTHEME/global-styles-rtl: false
 
 # Uncomment lines to replace, exclude css and js files from vartheme.
 # You will need to copy less/css files from Vartheme to use theme for the

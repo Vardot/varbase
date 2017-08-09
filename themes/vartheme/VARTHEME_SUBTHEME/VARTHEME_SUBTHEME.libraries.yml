@@ -1,4 +1,4 @@
-# VARTHEME_SUBTHEME global styling library.
+# VARTHEME_SUBTHEME global styles library.
 global-styles: 
   css:
     base:
@@ -8,8 +8,8 @@ global-styles:
       css/theme/content.theme.css: {}
       css/theme/footer.theme.css: {}
 
-# VARTHEME_SUBTHEME global (RTL) styling library.
-global-styling-rtl:
+# VARTHEME_SUBTHEME global (RTL) styles library.
+global-styles-rtl:
   css:
     base:
       css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css: {}
@@ -23,26 +23,26 @@ global-scripts:
   js:
     js/script.js: {}
     
-# VARTHEME_SUBTHEME Vartheme styling library.
-vartheme-styling:
+# VARTHEME_SUBTHEME Vartheme styles library.
+vartheme-styles:
   css:
     base:
       css/base/vartheme.base.css: {}
 
-# VARTHEME_SUBTHEME Vartheme (RTL) styling library.
-vartheme-styling-rtl:
+# VARTHEME_SUBTHEME Vartheme (RTL) styles library.
+vartheme-styles-rtl:
   css:
     base:
       css/rtl/base/vartheme-rtl.base.css: {}
 
-# VARTHEME_SUBTHEME Bootstrap global styling library.
-bootstrap-styling:
+# VARTHEME_SUBTHEME Bootstrap global styles library.
+bootstrap-styles:
   css:
     base:
       css/base/bootstrap.base.css: {}
 
-# VARTHEME_SUBTHEME Bootstrap global (RTL) styling library.
-bootstrap-styling-rtl:
+# VARTHEME_SUBTHEME Bootstrap global (RTL) styles library.
+bootstrap-styles-rtl:
   css:
     base:
       css/rtl/base/bootstrap-rtl.base.css: {}
@@ -116,13 +116,13 @@ bootstrap-scripts:
 # Bootstrap starterkit components.
 # ------------------------------------------------------------------------------
 
-# Vartheme Bootstrap AJAX (throbber) styling component library.
+# Vartheme Bootstrap AJAX (throbber) styles component library.
 #ajax:
 #  css:
 #    component:
 #      css/component/ajax.component.css: {}
 
-# Vartheme Bootstrap Alert styling component library.
+# Vartheme Bootstrap Alert styles component library.
 #alert:
 #  css:
 #    component:
@@ -158,19 +158,19 @@ bootstrap-scripts:
 #    component:
 #      css/component/icon.component.css: {}
 
-# Vartheme Bootstrap Navbar styling component library.
+# Vartheme Bootstrap Navbar styles component library.
 #navbar:
 #  css:
 #    component:
 #      css/component/navbar.component.css: {}
 
-# Vartheme Bootstrap Node styling component library.
+# Vartheme Bootstrap Node styles component library.
 #node:
 #  css:
 #    component:
 #      css/component/node.component.css: {}
 
-# Vartheme Bootstrap Panel styling component library.
+# Vartheme Bootstrap Panel styles component library.
 #panel:
 #  css:
 #    component:
@@ -194,7 +194,7 @@ bootstrap-scripts:
 #    component:
 #      css/component/tabs.component.css: {}
 
-# Vartheme Bootstrap Toolbar module styling component library.
+# Vartheme Bootstrap Toolbar module styles component library.
 #toolbar:
 #  css:
 #    component:
