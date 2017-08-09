@@ -445,7 +445,7 @@ projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 4.0-alpha2
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta4
+projects[varbase_total_control][version] = 1.0-beta5
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
