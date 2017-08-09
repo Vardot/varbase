@@ -4,41 +4,38 @@
 
 * Issue #2899468: Added [Varbase Total Control] feature module.
 * Issue #2898561: Changed Installation Steps: Extra components, Development
-                  tools, Add Descriptions for modules/features in the
-                 [Extra Component] step, with forms for custom configurations.
-* Issue #2894493: Changed [Varbase Project] Cleanup Composer for easier updates.
+                  tools, Add Descriptions for modules/features in the [Extra
+                  Component] step, with forms for custom configurations
+* Issue #2894493: Changed [Varbase Project] with a cleanup for Composer for
+                  easier updates
 * Issue #2896862: Enhanced the UI/UX preview for paragraphs in the Varbase
                   Landing page with [Add] button and easy reorder and editing
-                  of paragraphs.
+                  of paragraphs
 * Issue #2893965: Changed [Varbase Media] Media (image) widget field preview,
                   Fixed the name of the image.style.field_preview config file.
 * Issue #2900313: Added ability to embed tweets and other rich content in
-                  WYSIWYG with Varbase Editor [Rich editor] Text format.
+                  WYSIWYG with Varbase Editor [Rich editor] Text format
 * Issue #2899042: Added the option to Allow distribution to be installed in
-                  other than profiles/varbase.
+                  other than profiles/varbase
 * Issue #2895646: Added Colours in [Varbase Bootstrap Paragraphs] for the vbp
                   background with Colour set vpb_color
-* Issue #2900235: Added a new user role (SEO Admin) with SEO related
-                  permissions in the [Varbase SEO] feature module
-
 
 ### Added since the last release:
 
-* Issue #2893609: Added required Menu Position patch - Until patch is committed
-                  to next dev release.
+* Issue #2893609: Added required Menu Position patch - Until patch is
+                  committed to next dev release.
 * Issue #2894140: Added the 26 [ Feature: Content Structure Features -
                   Landing Pages - Varbase text and image paragraphs]
                   Automated Functional Test
-* Issue #2894168: Added the permission (Bypass Honeypot protection) to the
-                  Authenticated role.
-* Issue #2895135: Added the patch for [ace editor] to use the ace build library
-                  from libraries.
-* Issue #2895150: Added more image assets for tests.
+* Issue #2894168: Added the permission (Bypass Honeypot protection) to
+                  the Authenticated role
 * Issue #2895135: Added the patch for [ace editor] to use the ace build
-                  library from libraries.
+                  library from libraries
+* Issue #2895150: Added more image assets for tests
+* Issue #2895135: Added the patch for [ace editor] to use the ace build
+                  library from libraries
 * Issue #2895796: Added [Views Bulk Edit] module and enable
 * Issue #2895798: Added [Revision Log Default] module and enable
-* Issue #2895796: Added [Views Bulk Edit] module and enable
 * Issue #2897452: Added a patch for Extlink for the issue of extra space when
                   no icon displayed
 * Issue #2898447: Added the patch for page manager redirect location
@@ -49,98 +46,96 @@
                   settings for which general config to ignore
 * Issue #2898452: Added and Enabled Config Filter module.
 * Issue #2898896: Enabled [Webform Bootstrap] module in [Varbase Webform]
-                  feature module.
+                  feature module
 * Issue #2898898: Added share-image.png in theme for SEO sharing
 * Issue #2900591: Added the patch to update the requirements on installation
                   for [ACE Editor] to make it work if the library was in the
-                  installation profile.
-* Issue #2900591: Reverted the patch to update the requirements on installation
-                  for [ACE Editor] to make it work if the library was
-                  in the install.
+                  installation profile
 * Issue #2900235: Added a new user role (SEO Admin) with SEO related
-                  permissions in the [Varbase SEO] feature module.
+                  permissions in the [Varbase SEO] feature module
 
 ### Updates since the last release:
 
 * Issue #2899415: Updated [Drupal core] from 8.3.5 to 8.3.6
-* Issue #2893579: Removed Default Home page link.
-* Issue #2894493: Updated Varbase Scripts to work with varbase project.
+* Issue #2893579: Removed Default Home page link
+* Issue #2894493: Updated Varbase Scripts to work with varbase project
 * Issue #2893965: Changed [Varbase Media] Media (image) widget field preview,
-                  Fixed the name of the image.style.field_preview config file.
-* Issue #2900851: Updated [varbase heroslider media] feature
-                 module from 8.4.0-beta9 to 8.4.0-beta10
-* Issue #2894168: Changed [Password Policy] To decrease the password policy
-                  complexity.
+                          Fixed the name of the image.style.field_preview
+                          config file.
+* Issue #2900851: Updated [varbase heroslider media] feature module
+                          from 8.4.0-beta9 to 8.4.0-beta10
+* Issue #2894168: Changed [Password Policy] To decrease the password
+                           policy complexity
 * Issue #2894217: Updated [yoast_seo] Real-time SEO module
-                  from 8.1.2 to 8.1.3
-* Issue #2894481: Updated [honeypot] module
-                  from 8.1.26 to 8.1.27
-* Issue #2895146: Updated [Views Reference Field] module
-                  from 8.1.0-beta1 to 8.1.0-beta2
-* Issue #2895793: Updated [Views Reference Field] module
-                  from 8.1.0-beta2 to 8.1.0-rc2
+                          from 8.1.2 to 8.1.3
+* Issue #2894481: Updated [honeypot] module from 8.1.26 to 8.1.27
+* Issue #2895146: Updated [Views Reference Field]
+                          from 8.1.0-beta1 to 8.1.0-beta2
+* Issue #2895793: Updated [Views Reference Field]
+                          from 8.1.0-beta2 to 8.1.0-rc2
 * Issue #2896078: Updated [Search API] module from 8.1.2 to 8.1.3
 * Issue #2896082: Updated [Panels] module from 8.4.1 to 8.4.2
-* Issue #2895646: Updated [Paragraphs]
-                  to 1.x-dev#925018a66c681ffbc468f46503db608db40bd6eb
+* Issue #2895646: Updated [Paragraphs] to
+                          1.x-dev#925018a66c681ffbc468f46503db608db40bd6eb
 * Issue #2896742: Updated [Content locking (anti-concurrent editing)] module
-                  from 8.1.0-alpha2 to 8.1.0-alpha3
+                          from 8.1.0-alpha2 to 8.1.0-alpha3
 * Issue #2896743: Updated [Views Reference Field] from 8.1.0-rc2 to 8.1.0-rc3
 * Issue #2894493: Removed not important custom composer command scripts.
 * Issue #2894493: Changed the notes for Advanced customized automated testing.
-* Issue #2896862: Updated [ Feature: 25-landing page-add Paragraph types 
-                  and Feature: 26-content structure feature - landing page]
+* Issue #2896862: Updated [ Feature: 25-landing page-add Paragraph types and
+                          Feature: 26-content structure feature - landing page]
 * Issue #2894493: Updated the script for Createing new Vartheme sub theme for
-                  a project.
+                          a project.
 * Issue #2896862: Updated [Feature: Landing Pages - Add any paragraph types
-                  to the page.] auto tests.
+                          to the page.] auto tests.
 * Issue #2896995: Updated [Link Attributes widget] module from 8.1.0 to 8.1.1
 * Issue #2897237: Updated [Adminimal Admin Toolbar] module from 8.1.4 to 8.1.5
 * Issue #2894493: Updated Varbase Gherkin features README.md file.
 * Issue #2898309: Updated [DRD Agent] module from 8.3.1 to 8.3.3
 * Issue #2898310: Updated [Better Exposed Filters] module
-                  from 8.3.0-alpha2 to 8.3.0-alpha3
+                          from 8.3.0-alpha2 to 8.3.0-alpha3
 * Issue #2898315: Updated [varbase hero slider media] feature module
-                  from 8.4.0-beta5 to 8.4.0-beta6
+                          from 8.4.0-beta5 to 8.4.0-beta6
 * Issue #2898900: Updated [Redirect] from 8.1.0-alpha5 to 8.1.0-beta1
 * Issue #2898902: Updated [Metatag] module from 8.1.1 to 8.1.2
 * Issue #2898939: Updated [Varbase Heroslider media] module
-                  from 8.4.0-beta6 to 8.4.0-beta7
+                          from 8.4.0-beta6 to 8.4.0-beta7
 * Issue #2899415: Changed .travis.yml file to have dist: precise
 * Issue #2900221: Updated [varbase hero slider media] module
-                  from 8.4.0-beta7 to 8.4.0-beta8
+                          from 8.4.0-beta7 to 8.4.0-beta8
 * Issue #2900561: Updated [webform] module from 8.5.0-beta15 to 8.5.0-beta16
 * Issue #2900605: Removed Extlink extra space patch from make file and composer
 * Issue #2900704: Removed .git folder from modules, themes, profiles
-                  of development branches
+                          of development branches
 * Issue #2900736: Updated [varbase heroslider media] feature module
-                  from 8.4.0-beta8 to 8.4.0-beta9
+                          from 8.4.0-beta8 to 8.4.0-beta9
 * Issue #2900743: Updated [entity browser] module from 8.1.0 to 8.1.1
 * Issue #2900831: Updated [varbase editor] module from 8.4.15 to 8.4.16
 * Issue #2900833: Updated [varbase bootstrap paragraphs] feature module
-                  from 8.4.0-alpha1 8.4.0-alpha2
+                          from 8.4.0-alpha1 8.4.0-alpha2
 
 ### Fixes since the last release:
 
-
 * Issue #2894612: Fixed Form required filed wrong path to load required.svg
-                  image on label.
+                        image on label
 * Issue #2894493: Fixed issues on running custom composer command and scripts.
-* Issue #2897939: Fixed the issue of Default content with translatable content.
-                  type returns SQL error on content creation.
-* Issue #2897185: Fixed the issue of Images are not responsive in WYSIWYG.
+* Issue #2897939: Fixed the issue of Default content with translatable content
+                        type returns SQL error on content creation
+* Issue #2897185: Fixed the issue of Images are not responsive in WYSIWYG
 * Issue #2898444: Fixed the order of extra components by the default order in
-                  the Configbit YAML instead of alphabetical
+                        the Configbit YAML instead of alphabetical
 * Issue #2885192: Fixed Responsive Preview shows 'Page not found' when
-                  multilingual site is enabled with Path-prefix setting.
-* Issue #2886082: Fixed: Image entity browser works perfect but the problem
-                  is you focus on title text field then hitting enter, it
-                  forces the image entity browser to open.
+                        multilingual site is enabled with Path-prefix setting
+* Issue #2900924: Fixed mixed names of libraries styles and styling in Vartheme,
+                        and VARTHEME_SUBTHEME template
+* Issue #2886082: Fixed Image entity browser works perfect but the problem is
+                         you focus on title text field then hitting enter, it
+                         forces the image entity browser to open
 * Issue #2886082: Reverted Fixed: Image entity browser works perfect but the
-                  problem is you focus on title text field then hitting enter,
-                  it forces the image entity browser to open.
-* Issue #2900691: Varbase 8.4.06: Updated [CHANGELOG.md, UPDATE.md] files
-                  and filtered the code for Drupal 8 Coding Standard.
+                         problem is you focus on title text field then hitting
+                         enter, it forces the image entity browser to open
+* Issue #2900691: Varbase 8.4.06: Updated [CHANGELOG.md, UPDATE.md] files and
+                  filtered the code for Drupal 8 Coding Standard.
 
 ## 8.4.05
 
