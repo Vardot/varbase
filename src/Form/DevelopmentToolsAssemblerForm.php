@@ -9,6 +9,7 @@ use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
 use Symfony\Component\Filesystem\Filesystem;
+use Drupal\Component\Utility\Bytes;
 
 /**
  * Defines form for selecting extra compoennts for the assembler to install.
