@@ -8,7 +8,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
-use Symfony\Component\Filesystem;
 
 /**
  * Defines form for selecting extra compoennts for the assembler to install.
@@ -141,7 +140,6 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           
           if (isset($development_tool_info['formbit'])){
             $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $development_tool_info['formbit'];
-            $formbit_file = new Filesystem();
             if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;

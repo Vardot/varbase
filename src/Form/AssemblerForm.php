@@ -248,7 +248,6 @@ class AssemblerForm extends FormBase {
         if (isset($extra_feature_info['config_form']) &&
                   $extra_feature_info['config_form'] == TRUE) {
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
-          $formbit_file = new Filesystem();
           if (file_exists($formbit_file_name)) {
             
             include_once $formbit_file_name;
