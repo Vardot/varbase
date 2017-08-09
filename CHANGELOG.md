@@ -67,6 +67,8 @@
 * Issue #2894493: Updated Varbase Scripts to work with varbase project.
 * Issue #2893965: Changed [Varbase Media] Media (image) widget field preview,
                   Fixed the name of the image.style.field_preview config file.
+* Issue #2900851: Updated [varbase heroslider media] feature
+                 module from 8.4.0-beta9 to 8.4.0-beta10
 * Issue #2894168: Changed [Password Policy] To decrease the password policy
                   complexity.
 * Issue #2894217: Updated [yoast_seo] Real-time SEO module
