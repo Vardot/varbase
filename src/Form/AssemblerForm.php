@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
+use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * Defines form for selecting extra components for the assembler to install.
@@ -208,7 +209,7 @@ class AssemblerForm extends FormBase {
 
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
-              call_user_func_array($demo_content_key . "_build_formbit", array(&$form['extra_features'][$demo_content_key . '_config'], &$form_state, &$install_state));
+              call_user_func_array($demo_content_key . "_build_formbit", array(&$form['demo_content'][$demo_content_key . '_config'], &$form_state, &$install_state));
             }
           }
           
@@ -239,15 +240,16 @@ class AssemblerForm extends FormBase {
     $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
     if (count($extraFeatures)) {
       $extra_features_values = [];
-         
+
       foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
         
-        // form state has got value for this extra feature.
+        // if form state has got value for this extra feature.
         if ($form_state->hasValue($extra_feature_key)) {
           $extra_features_values[$extra_feature_key] = $form_state->getValue($extra_feature_key);
         }
         
-        if ($extra_feature_info['config_form']) {
+        if (isset($extra_feature_info['config_form']) &&
+                  $extra_feature_info['config_form'] == TRUE) {
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
           $formbit_file = new Filesystem();
           if ($formbit_file->exists($formbit_file_name)) {
@@ -255,11 +257,16 @@ class AssemblerForm extends FormBase {
             include_once $formbit_file_name;
             $extra_features_editable_configs = call_user_func_array($extra_feature_key . "_get_editable_config_names", array());
             
-            foreach($extra_features_editable_configs as $extra_features_editable_config_key => $extra_features_editable_config) {
-              if ($form_state->hasValue($extra_features_editable_config_key)) {
-                $extra_features_editable_configs[$extra_features_editable_config_key] = $form_state->getValue($extra_features_editable_config_key);
+            if (count($extra_features_editable_configs)) {
+              foreach($extra_features_editable_configs as $extra_features_editable_config_key => $extra_features_editable_config) {
+                foreach($extra_features_editable_config as $extra_features_config_item_key => $extra_features_config_item_value) {
+                  if ($form_state->hasValue($extra_features_config_item_key)) {
+                    $extra_features_editable_configs[$extra_features_editable_config_key][$extra_features_config_item_key] = $form_state->getValue($extra_features_config_item_key);
+                  }
+                }
               }
-            } 
+            }
+            
             $GLOBALS['install_state']['varbase']['extra_features_configs'] = $extra_features_editable_configs;
           }
         }
@@ -273,7 +280,7 @@ class AssemblerForm extends FormBase {
     $demoContent = ConfigBit::getList('configbit/demo.content.varbase.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'varbase');
     if (count($demoContent)) {
       $demo_content_values = [];
-          
+
       foreach ($demoContent as $demo_content_key => $demo_content_info) {
         
         // if form state has got value for this demo content.
@@ -281,7 +288,8 @@ class AssemblerForm extends FormBase {
           $demo_content_values[$demo_content_key] = $form_state->getValue($demo_content_key);
         }
         
-        if ($demo_content_info['config_form']) {
+        if (isset($demo_content_info['config_form']) &&
+                  $demo_content_info['config_form'] == TRUE) {
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
           $formbit_file = new Filesystem();
           if ($formbit_file->exists($formbit_file_name)) {
@@ -289,11 +297,15 @@ class AssemblerForm extends FormBase {
             include_once $formbit_file_name;
             $demo_content_editable_configs = call_user_func_array($demo_content_key . "_get_editable_config_names", array());
             
-            foreach($demo_content_editable_configs as $demo_content_editable_config_key => $demo_content_editable_config) {
-              if ($form_state->hasValue($demo_content_editable_config_key)) {
-                $demo_content_editable_configs[$demo_content_editable_config_key] = $form_state->getValue($demo_content_editable_config_key);
+            if (count($demo_content_editable_configs)) {
+              foreach($demo_content_editable_configs as $demo_content_editable_config_key => $demo_content_editable_config) {
+                foreach($demo_content_editable_config as $demo_content_config_item_key => $demo_content_config_item_value) {
+                  if ($form_state->hasValue($demo_content_config_item_key)) {
+                    $demo_content_editable_configs[$demo_content_editable_config_key][$demo_content_config_item_key] = $form_state->getValue($demo_content_config_item_key);
+                  }
+                }
               }
-            } 
+            }
             
             $GLOBALS['install_state']['varbase']['demo_content_configs'] = $demo_content_editable_configs;
           }
@@ -302,7 +314,6 @@ class AssemblerForm extends FormBase {
       
       $GLOBALS['install_state']['varbase']['demo_content_values'] = $demo_content_values;
     }
-    
   }
   
 }

@@ -102,7 +102,7 @@ function varbase_assemble_extra_components(array &$install_state) {
   // Install selected extra features.
   $selected_extra_features = [];
   $selected_extra_features_configs = [];
-  
+
   if (isset($install_state['varbase']['extra_features_values'])) {
     $selected_extra_features = $install_state['varbase']['extra_features_values'];
   }
@@ -116,23 +116,25 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   // If we do have selected extra features.
   if (count($selected_extra_features) && count($extraFeatures)) {
-
+    // Have batch processes for each selected extra features.
     foreach ($selected_extra_features as $extra_feature_key => $extra_feature_checked) {
       if ($extra_feature_checked) {
-        // Add the checked exter feature to the batch process to be enabled.
-        $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_feature_key];
 
+        // If the extra feature was a module and not enabled, then enable it.
+        if (!\Drupal::moduleHandler()->moduleExists($extra_feature_key)) {
+          // Add the checked extra feature to the batch process to be enabled.
+          $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_feature_key];
+        }
+       
         if (count($selected_extra_features_configs) &&
-            isset($extraFeatures[$extra_feature_key]['config_from']) &&
-            $extraFeatures[$extra_feature_key]['config_from'] == TRUE &&
+            isset($extraFeatures[$extra_feature_key]['config_form']) &&
+            $extraFeatures[$extra_feature_key]['config_form'] == TRUE &&
             isset($extraFeatures[$extra_feature_key]['formbit'])) {
-
+          
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
           $formbit_file = new Filesystem();
           
           if ($formbit_file->exists($formbit_file_name)) {
-
-            include_once $formbit_file_name;
 
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
@@ -141,12 +143,18 @@ function varbase_assemble_extra_components(array &$install_state) {
         }
       }
     }
+
+    // Hide Wornings and status messages.
+    $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+
+    // Fix entity updates to clear up any mismatched entity.
+    $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
   }
 
   // Install selected Demo content.
   $selected_demo_content = [];
   $selected_demo_content_configs = [];
-  
+
   if (isset($install_state['varbase']['demo_content_values'])) {
     $selected_demo_content = $install_state['varbase']['demo_content_values'];
   }
@@ -155,40 +163,45 @@ function varbase_assemble_extra_components(array &$install_state) {
     $selected_demo_content_configs = $install_state['varbase']['demo_content_configs'];
   }
 
-  // Get the list of extra features config bits.
+  // Get the list of demo content config bits.
   $demoContent = ConfigBit::getList('configbit/demo.content.varbase.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'varbase');
-  if (count($demoContent) && count($selected_demo_content)) {
 
+  // If we do have demo_content and we have selected demo_content.
+  if (count($selected_demo_content) && count($demoContent)) {
+    // Have batch processes for each selected demo content.
     foreach ($selected_demo_content as $demo_content_key => $demo_content_checked) {
       if ($demo_content_checked) {
-        // Add the checked demo content to the batch process to be enabled.
-        $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
+
+        // If the demo content was a module and not enabled, then enable it.
+        if (!\Drupal::moduleHandler()->moduleExists($demo_content_key)) {
+          // Add the checked demo content to the batch process to be enabled.
+          $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
+        }
 
         if (count($selected_demo_content_configs) &&
-            isset($demoContent[$demo_content_key]['config_from']) &&
-            $demoContent[$demo_content_key]['config_from'] == TRUE &&
+            isset($demoContent[$demo_content_key]['config_form']) &&
+            $demoContent[$demo_content_key]['config_form'] == TRUE &&
             isset($demoContent[$demo_content_key]['formbit'])) {
 
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demoContent[$demo_content_key]['formbit'];
           $formbit_file = new Filesystem();
           if ($formbit_file->exists($formbit_file_name)) {
 
-            include_once $formbit_file_name;
-
-            // Added the selected demo content configs to the batch process
+            // Added the selected development configs to the batch process
             // with the same function name in the formbit.
             $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$demo_content_key, $formbit_file_name, $selected_demo_content_configs]];
           }
         }
       }
     }
+
+    // Hide Wornings and status messages.
+    $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+
+    // Fix entity updates to clear up any mismatched entity.
+    $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+
   }
-
-  // Hide Wornings and status messages.
-  $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
-
-  // Fix entity updates to clear up any mismatched entity.
-  $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
 
   return $batch;
 }
@@ -227,14 +240,17 @@ function varbase_assemble_development_tools(array &$install_state) {
     foreach ($selected_development_tools as $development_tool_key => $development_tool_checked) {
       if ($development_tool_checked) {
 
-        // Add the checked development tool to the batch process to be enabled.
-        $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
-       
+        // If the development tool was a module and not enabled, then enable it.
+        if (!\Drupal::moduleHandler()->moduleExists($development_tool_key)) {
+          // Add the checked development tool to the batch process to be enabled.
+          $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
+        }
+
         if (count($selected_development_configs) &&
             isset($developmentTools[$development_tool_key]['config_form']) &&
             $developmentTools[$development_tool_key]['config_form'] == TRUE &&
             isset($developmentTools[$development_tool_key]['formbit'])) {
-          
+
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $developmentTools[$development_tool_key]['formbit'];
           $formbit_file = new Filesystem();
           if ($formbit_file->exists($formbit_file_name)) {
@@ -246,13 +262,13 @@ function varbase_assemble_development_tools(array &$install_state) {
         }
       }
     }
+    
+    // Hide Wornings and status messages.
+    $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+
+    // Fix entity updates to clear up any mismatched entity.
+    $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
   }
-
-  // Hide Wornings and status messages.
-  $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
-
-  // Fix entity updates to clear up any mismatched entity.
-  $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
 
   return $batch;
 }
@@ -307,7 +323,7 @@ function varbase_configure_multilingual(array &$install_state) {
  *   Name of the extra component.
  */
 function varbase_assemble_extra_component_then_install($extra_component) {
-  \Drupal::service('module_installer')->install((array) $extra_component);
+  \Drupal::service('module_installer')->install((array) $extra_component, TRUE);
 }
 
 /**
