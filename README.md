@@ -2,7 +2,7 @@
 
 [![](https://docs.varbase.vardot.com/assets/Large-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.05)](https://travis-ci.org/Vardot/varbase/builds/251789744) Varbase 8.4.05
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.06)](https://travis-ci.org/Vardot/varbase/builds/251789744) Varbase 8.4.05
 
 The powerful Drupal distribution for faster development, with editor experience
 in mind. Brought to you by [Vardot](https://www.vardot.com/).
