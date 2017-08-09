@@ -2,7 +2,7 @@ name: Varbase
 type: profile
 description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
 core: 8.x
-version: 8.x-4.06
+version: 8.x-4.x-dev
 dependencies:
   # core
   - automated_cron
