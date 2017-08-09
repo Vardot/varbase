@@ -155,7 +155,7 @@ https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/create-new-vartheme.sh
    When we run drush "updb" or go to "/update.php"
    Then we should see the steps of updates.
    When we run drush "updb" or go to "/update.php" again
-   Then we will have the site update with the new Varbase 8.4.04 version
+   Then we will have the site update with the new Varbase 8.4.06 version
    When we go to "/admin/config/development/features"
    Then we should see "Changed"
    When we follow with each feature to import new changes.
