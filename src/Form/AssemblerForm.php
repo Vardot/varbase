@@ -8,8 +8,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
-use Symfony\Component\Filesystem\Filesystem;
-use Drupal\Component\Utility\Bytes;
 
 /**
  * Defines form for selecting extra components for the assembler to install.
@@ -141,8 +139,7 @@ class AssemblerForm extends FormBase {
           
           if (isset($extra_feature_info['formbit'])) {
             $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
-            $formbit_file = new Filesystem();
-            if ($formbit_file->exists($formbit_file_name)) {
+            if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
@@ -205,8 +202,7 @@ class AssemblerForm extends FormBase {
           
           if (isset($demo_content_info['formbit'])) {
             $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
-            $formbit_file = new Filesystem();
-            if ($formbit_file->exists($formbit_file_name)) {
+            if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
@@ -253,7 +249,7 @@ class AssemblerForm extends FormBase {
                   $extra_feature_info['config_form'] == TRUE) {
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
           $formbit_file = new Filesystem();
-          if ($formbit_file->exists($formbit_file_name)) {
+          if (file_exists($formbit_file_name)) {
             
             include_once $formbit_file_name;
             $extra_features_editable_configs = call_user_func_array($extra_feature_key . "_get_editable_config_names", array());
@@ -292,8 +288,7 @@ class AssemblerForm extends FormBase {
         if (isset($demo_content_info['config_form']) &&
                   $demo_content_info['config_form'] == TRUE) {
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
-          $formbit_file = new Filesystem();
-          if ($formbit_file->exists($formbit_file_name)) {
+          if (file_exists($formbit_file_name)) {
             
             include_once $formbit_file_name;
             $demo_content_editable_configs = call_user_func_array($demo_content_key . "_get_editable_config_names", array());

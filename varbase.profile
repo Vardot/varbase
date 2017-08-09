@@ -6,9 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Symfony\Component\Filesystem\Filesystem;
 use Drupal\language\Entity\ConfigurableLanguage;
-use Drupal\Component\Utility\Bytes;
 use Drupal\varbase\Config\ConfigBit;
 use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Form\AssemblerForm;
@@ -133,9 +131,8 @@ function varbase_assemble_extra_components(array &$install_state) {
             isset($extraFeatures[$extra_feature_key]['formbit'])) {
           
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
-          $formbit_file = new Filesystem();
           
-          if ($formbit_file->exists($formbit_file_name)) {
+          if (file_exists($formbit_file_name)) {
 
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
@@ -185,8 +182,7 @@ function varbase_assemble_extra_components(array &$install_state) {
             isset($demoContent[$demo_content_key]['formbit'])) {
 
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demoContent[$demo_content_key]['formbit'];
-          $formbit_file = new Filesystem();
-          if ($formbit_file->exists($formbit_file_name)) {
+          if (file_exists($formbit_file_name)) {
 
             // Added the selected development configs to the batch process
             // with the same function name in the formbit.
@@ -253,8 +249,7 @@ function varbase_assemble_development_tools(array &$install_state) {
             isset($developmentTools[$development_tool_key]['formbit'])) {
 
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $developmentTools[$development_tool_key]['formbit'];
-          $formbit_file = new Filesystem();
-          if ($formbit_file->exists($formbit_file_name)) {
+          if (file_exists($formbit_file_name)) {
 
             // Added the selected development configs to the batch process
             // with the same function name in the formbit.

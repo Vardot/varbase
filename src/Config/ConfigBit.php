@@ -3,7 +3,6 @@
 namespace Drupal\varbase\config;
 
 use Symfony\Component\Yaml\Yaml;
-use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * Defines config bit to help in managing custom config which used in install.
@@ -64,8 +63,7 @@ class ConfigBit {
   public static function doWeHaveThisConfigBit($config_bit_file_name, $type = 'profile', $project = 'varbase') {
     // Generate full path to config file
     $full_config_bit_file_name = drupal_get_path($type, $project)  . '/' . $config_bit_file_name;
-    $fs = new Filesystem();
-    return $fs->exists($full_config_bit_file_name);
+    return file_exists($full_config_bit_file_name);
   }
   
   /**

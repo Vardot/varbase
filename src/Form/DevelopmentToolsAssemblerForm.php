@@ -8,8 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
-use Symfony\Component\Filesystem\Filesystem;
-use Drupal\Component\Utility\Bytes;
+use Symfony\Component\Filesystem;
 
 /**
  * Defines form for selecting extra compoennts for the assembler to install.
@@ -143,7 +142,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           if (isset($development_tool_info['formbit'])){
             $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $development_tool_info['formbit'];
             $formbit_file = new Filesystem();
-            if ($formbit_file->exists($formbit_file_name)) {
+            if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
@@ -187,8 +186,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $development_tool_info['formbit'];
-          $formbit_file = new Filesystem();
-          if ($formbit_file->exists($formbit_file_name)) {
+          if (file_exists($formbit_file_name)) {
             
             include_once $formbit_file_name;
             $development_tools_editable_configs = call_user_func_array($development_tool_key . "_get_editable_config_names", array());
