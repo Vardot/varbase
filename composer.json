@@ -267,8 +267,8 @@
         "https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch"
       },
       "drupal/ace_editor": {
-        "Issue #2886356 by Niklan, joey91133: Library must be moved from module folder":
-        "https://www.drupal.org/files/issues/library_must_be_moved_from_module_folder_with_composer.patch"
+        "Issue #2886356: Updated the requirements on installation for [ACE Editor] to make it work if the library was in the installation profile":
+        "https://www.drupal.org/files/issues/ace_editor-integrate_libraries_module-2886356-17.patch"
       },
       "drupal/google_analytics_reports": {
         "Error when saving either google_analytics_reports view":
