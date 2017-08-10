@@ -259,6 +259,9 @@ projects[ckeditor_media_embed][version] = 1.1
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
 
+projects[entityqueue_form_widget][type] = module
+projects[entityqueue_form_widget][version] = 1.0-beta1
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
@@ -433,7 +436,7 @@ projects[total_control][version] = 2.x-dev
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.x-dev
+projects[varbase_editor][version] = 4.17
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 4.x-dev
