@@ -85,3 +85,12 @@ function varbase_admin_update_8009() {
     \Drupal::service('module_installer')->install(['menu_admin_per_menu'], FALSE);
   }
 }
+
+/**
+ * Enable Custom Permissions module.
+ */
+function varbase_admin_update_8010() {
+  if (!\Drupal::moduleHandler()->moduleExists('config_perms')) {
+    \Drupal::service('module_installer')->install(['config_perms'], FALSE);
+  }
+}
