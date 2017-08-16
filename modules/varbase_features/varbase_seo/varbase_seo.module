@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_seo.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_seo_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['field_yoast_seo']['widget']['0']['yoast_seo']['#title'] = 'Real-time SEO analyzer';
+}
