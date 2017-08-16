@@ -10,7 +10,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_BASE_FORM_ID_alter().
  */
-function varbase_seo_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function varbase_seo_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['field_yoast_seo']) &&
       isset($form['field_yoast_seo']['widget']) &&
       isset($form['field_yoast_seo']['widget']['0'] &&
