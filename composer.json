@@ -64,7 +64,7 @@
     "drupal/focal_point": "1.0-beta4",
     "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
     "drupal/ckeditor_bidi": "2.0",
-    "drupal/ace_editor": "1.x-dev#7136cf96509e82a00b56a2908108aaee37a6cb98",
+    "drupal/ace_editor": "1.0",
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
     "drupal/imagemagick": "1.0-alpha6",
     "drupal/imageapi_optimize": "2.0-alpha3",
@@ -266,10 +266,6 @@
       "drupal/menu_position": {
         "Issue #2883131 by akalata, sassafrass, Znak: Fatal error: Call to undefined method when creating a rule":
         "https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch"
-      },
-      "drupal/ace_editor": {
-        "Issue #2886356: Updated the requirements on installation for [ACE Editor] to make it work if the library was in the installation profile":
-        "https://www.drupal.org/files/issues/ace_editor-integrate_libraries_module-2886356-17.patch"
       },
       "drupal/google_analytics_reports": {
         "Error when saving either google_analytics_reports view":
