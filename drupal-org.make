@@ -35,9 +35,7 @@ projects[panelizer][type] = module
 projects[panelizer][version] = 4.0
 
 projects[bootstrap_layouts][type] = module
-projects[bootstrap_layouts][download][url] = https://git.drupal.org/project/bootstrap_layouts.git
-projects[bootstrap_layouts][download][revision] = dfc2f7ab34564b245cc5253c9366283f3fac6a67
-projects[bootstrap_layouts][download][branch] = 8.x-5.x
+projects[bootstrap_layouts][version] = 5.0-alpha1
 
 projects[ds][type] = module
 projects[ds][version] = 3.1
