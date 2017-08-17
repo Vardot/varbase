@@ -12,11 +12,11 @@ So that the "Landing page" will have text and images in right and left view.
       And I fill in "Test landing page title for text and image paragraphs" for "Title"
       And I fill in "Test landing page body description." for "Page description"
 
-  # Add Simple text centered
+  # Add Rich Text centered
       And I press "+   Add Component"
       And I wait
       And I scrolldown
-      And I press "Simple"
+      And I press "Rich Text"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere."
      When I select all text in "Text" field

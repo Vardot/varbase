@@ -92,7 +92,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I fill in "Accordion Section Title test" for "Accordion Section Title"
      When I Expand the "1" select list "dropbutton-multiple"
-      And I press "Add Simple"
+      And I press "Add Rich Text"
       And I wait
      Then I should see "Accordion Section Body"
       And I fill in the rich text editor field "Text" with "Accordion Section Body test"
@@ -323,7 +323,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
 
       And I Expand the "1" select list "dropbutton-multiple"
-      And I press "Add Simple"
+      And I press "Add Rich Text"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Simple text test - column Three"
       And I press "Save"
@@ -382,7 +382,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I fill in "Modal button" for "Modal Button Text"
       And I fill in "Modal title" for "Modal Title"
       And I Expand the "1" select list "dropbutton-multiple"
-      And I press "Add Simple"
+      And I press "Add Rich Text"
       And I wait
      Then I should see "Modal Body"
       And I fill in the rich text editor field "Text" with "Modal Body test"
@@ -394,23 +394,23 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see "Modal Body test"
 
   @javascript @local @development
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Simple"
+  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Rich Text"
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/landing_page"
       And I wait
-      And I fill in "Test Landing page Simple" for "Title"
-      And I fill in "Test Landing page description Simple" for "Page description"
+      And I fill in "Test Landing page Rich Text" for "Title"
+      And I fill in "Test Landing page description Rich Text" for "Page description"
       And I scrolldown
       And I press "+   Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "Simple"
+      And I press "Rich Text"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
       And I should see "Components"
-      And I fill in the rich text editor field "Text" with "Simple text test"
+      And I fill in the rich text editor field "Text" with "Rich Text test"
       And I Expand the field "styling-settings"
       And I wait for AJAX to finish
       And I press the "Select an image" button
@@ -426,8 +426,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I press "Save"
       And I wait
-     Then I should see "Landing page Test Landing page Simple has been created"
-      And I should see "Simple text test"
+     Then I should see "Landing page Test Landing page Rich Text has been created"
+      And I should see "Rich Text test"
 
   @javascript @local @development
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Tabs"
@@ -461,7 +461,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see "Components"
       And I fill in "Tab 1" for "Tab Name"
       And I Expand the "1" select list "dropbutton-multiple"
-      And I press "Add Simple"
+      And I press "Add Rich Text"
       And I wait
      Then I should see "Tab Body"
       And I fill in the rich text editor field "Text" with "Tab 1 - Body test"
