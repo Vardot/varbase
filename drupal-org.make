@@ -227,7 +227,7 @@ projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.
 projects[paragraphs][download][revision] = d15b2e44281e5d85f9dfde164df61ccc8a764e9a
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/paragraphs-8-1-DEV-d15b2e4----2461695-213.patch
 ;; Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-27.patch
 
