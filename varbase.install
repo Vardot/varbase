@@ -441,3 +441,12 @@ function varbase_update_8036() {
   $config = \Drupal::configFactory()->getEditable('config_ignore.settings');
   $config->setData($data)->save(TRUE);
 }
+
+/**
+ * Enable Entityqueue Form Widget module.
+ */
+function varbase_update_8037() {
+  if (!\Drupal::moduleHandler()->moduleExists('entityqueue_form_widget')) {
+    \Drupal::service('module_installer')->install(['entityqueue_form_widget'], FALSE);
+  }
+}

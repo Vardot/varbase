@@ -132,6 +132,9 @@ projects[entityqueue][download][branch] = 8.x-1.x
 ; Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch
 
+projects[entityqueue_form_widget][type] = module
+projects[entityqueue_form_widget][version] = 1.0-beta1
+
 projects[imagemagick][type] = module
 projects[imagemagick][version] = 1.0-alpha6
 

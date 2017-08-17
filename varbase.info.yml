@@ -72,6 +72,7 @@ dependencies:
   - anchor_link
   - views_infinite_scroll
   - entityqueue
+  - entityqueue_form_widget
   - embed
   - entity_browser
   - entity_browser_enhanced
