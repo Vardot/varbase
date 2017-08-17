@@ -66,6 +66,7 @@
     "drupal/ckeditor_bidi": "2.0",
     "drupal/ace_editor": "1.0",
     "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
+    "drupal/entityqueue_form_widget": "1.0-beta1",
     "drupal/imagemagick": "1.0-alpha6",
     "drupal/imageapi_optimize": "2.0-alpha3",
     "drupal/ultimate_cron": "2.0-alpha1",
