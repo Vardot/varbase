@@ -12,7 +12,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I fill in "Test landing page title for text and image paragraphs" for "Title"
       And I fill in "Test landing page body description." for "Page description"
 
-  # Add Rich Text centered
+  # Add Rich text centered
       And I press "+   Add Component"
       And I wait
       And I scrolldown
@@ -50,7 +50,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I switch to main frame
       And I wait
      Then I Expand the field "styling-settings"
-      And I select "Blue" from "Background Color"
+      And I select "Blue" from "Background color"
       And I click "Content settings"
       And I select "Right" from "Image position"
       And I press "Save"
