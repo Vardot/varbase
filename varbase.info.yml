@@ -120,3 +120,6 @@ themes:
 distribution:
   name: Varbase
 features: true
+
+interface translation project: varbase
+interface translation server pattern: profiles/varbase/translations/%language.po
