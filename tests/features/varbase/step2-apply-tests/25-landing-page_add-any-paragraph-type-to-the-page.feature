@@ -21,7 +21,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I select "2 Seconds" from "Slide Interval"
+      And I select "2 Seconds" from "Slide interval"
       And I Expand the "1" select list "dropbutton-multiple"
       And I wait
       And I scrollup
@@ -90,11 +90,11 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I wait
       And I switch to main frame
-      And I fill in "Accordion Section Title test" for "Accordion Section Title"
+      And I fill in "Accordion Section Title test" for "Accordion section title"
      When I Expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
-     Then I should see "Accordion Section Body"
+     Then I should see "Accordion section body"
       And I fill in the rich text editor field "Text" with "Accordion Section Body test"
      When I press "Save"
      Then I should see "Landing page Test Landing page Accordion has been created"
@@ -325,7 +325,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I Expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait for AJAX to finish
-      And I fill in the rich text editor field "Text" with "Simple text test - column Three"
+      And I fill in the rich text editor field "Text" with "Rich text test - column Three"
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Three Uneven) has been created"
@@ -379,12 +379,12 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Modal"
       And I wait for AJAX to finish
      Then I should see "Components"
-     When I fill in "Modal button" for "Modal Button Text"
-      And I fill in "Modal title" for "Modal Title"
+     When I fill in "Modal button" for "Modal button text"
+      And I fill in "Modal title" for "Modal title"
       And I Expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
-     Then I should see "Modal Body"
+     Then I should see "Modal body"
       And I fill in the rich text editor field "Text" with "Modal Body test"
      When I press "Save"
      Then I should see "Landing page Test Landing page Modal has been created"
@@ -459,11 +459,11 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I should see "Components"
-      And I fill in "Tab 1" for "Tab Name"
+      And I fill in "Tab 1" for "Tab name"
       And I Expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
-     Then I should see "Tab Body"
+     Then I should see "Tab body"
       And I fill in the rich text editor field "Text" with "Tab 1 - Body test"
      When I press "Save"
       And I wait
