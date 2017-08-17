@@ -13,7 +13,6 @@ body.install-page {
 }
 .installer-logo {
   width: 222px;
-  height: 50px;
 }
 body.install-page .logo a {
   background-image: url('../images/home_logo.png');
@@ -24,11 +23,11 @@ footer.installer-footer {
   max-width: 770px;
   border-radius: 5px;
   color: white;
-  font-weight: bold;
 }
 footer.installer-footer #credit {
   float: right;
   padding: 20px 0 40px;
+  font-size: 11px;
 }
 
 footer.installer-footer #credit a {
@@ -37,17 +36,26 @@ footer.installer-footer #credit a {
     height: 0;
     overflow: hidden;
     padding: 50px 0 0;
-    width: 180px;
+    width: 125px;
 }
 body.install-page .logo a {
   background-image: url(../images/home_logo.png);
   background-position-x: 0px;
   background-position-y: 0px;
-  background-size: initial;
+  background-size: 100%;
   background-repeat-x: no-repeat;
   background-repeat-y: no-repeat;
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;
   background-color: transparent;
+}
+.install-page .site-version {
+    vertical-align: initial !important;
+    padding-left: 10px;
+}
+@media (min-width: 48em) {
+  .page-title {
+    margin-left: 1.3em !important;
+  }
 }
