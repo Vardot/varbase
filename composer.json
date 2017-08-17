@@ -224,7 +224,9 @@
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
         "https://www.drupal.org/files/issues/2720101-30.patch",
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
-        "https://www.drupal.org/files/issues/2599228-31.patch"
+        "https://www.drupal.org/files/issues/2599228-31.patch",
+        "Issue #2893892 by johannijdam: Warning Warning: Invalid argument supplied for foreach() in Drupal":
+        "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
       "drupal/page_manager": {
         "Issue #2624972 by dstorozhuk, kalistos: No configuration possible in UI for 301, 303, etc. HTTP responses":
