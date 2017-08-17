@@ -235,7 +235,7 @@ projects[entity_reference_revisions][type] = module
 projects[entity_reference_revisions][version] = 1.3
 
 projects[viewsreference][type] = module
-projects[viewsreference][version] = 1.0-rc3
+projects[viewsreference][version] = 1.0
 
 projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
