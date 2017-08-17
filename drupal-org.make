@@ -221,12 +221,12 @@ projects[link_attributes][version] = 1.1
 
 projects[paragraphs[type] = module
 projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
-projects[paragraphs][download][revision] = e907f6d57c44e81d65e8c1e7247dccd0eae92258 
+projects[paragraphs][download][revision] = d15b2e44281e5d85f9dfde164df61ccc8a764e9a
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
 ;; Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-27.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2
@@ -395,7 +395,7 @@ projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminim
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Legacy Contrib modules.
 ;;  - Not used, but kept for projects which still using them
-;;  - As a step to update or migrate and use new selected modules. 
+;;  - As a step to update or migrate and use new selected modules.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[libraries][type] = module
