@@ -12,14 +12,6 @@ body.install-page {
   background-color: initial;
 }
 
-.installer-logo {
-  width: 222px;
-}
-
-body.install-page .logo a {
-  background-image: url('../images/vardot-white-logo.png');
-}
-
 footer.installer-footer {
   margin: 0 auto;
   width: 75%;
@@ -42,13 +34,17 @@ footer.installer-footer #credit a {
   padding: 50px 0 0;
   width: 125px;
 }
+
+.installer-logo {
+  width: 222px;
+}
+
 body.install-page .logo a {
   background-image: url(../images/vardot-white-logo.png);
   background-position-x: 0px;
   background-position-y: 0px;
   background-size: 100%;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
+  background-repeat: no-repeat;
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;
@@ -59,6 +55,8 @@ body.install-page .logo a {
   vertical-align: initial !important;
   padding-left: 10px;
   color: #4192c8;
+  font-weight: bold;
+  font-size: 0.6em;
 }
 
 @media (min-width: 48em) {
