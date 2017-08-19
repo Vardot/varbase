@@ -11,12 +11,15 @@ body.install-page {
   background-clip: initial;
   background-color: initial;
 }
+
 .installer-logo {
   width: 222px;
 }
+
 body.install-page .logo a {
-  background-image: url('../images/home_logo.png');
+  background-image: url('../images/vardot-white-logo.png');
 }
+
 footer.installer-footer {
   margin: 0 auto;
   width: 75%;
@@ -24,6 +27,7 @@ footer.installer-footer {
   border-radius: 5px;
   color: white;
 }
+
 footer.installer-footer #credit {
   float: right;
   padding: 20px 0 40px;
@@ -32,14 +36,14 @@ footer.installer-footer #credit {
 
 footer.installer-footer #credit a {
   clear: right;
-    float: right;
-    height: 0;
-    overflow: hidden;
-    padding: 50px 0 0;
-    width: 125px;
+  float: right;
+  height: 0;
+  overflow: hidden;
+  padding: 50px 0 0;
+  width: 125px;
 }
 body.install-page .logo a {
-  background-image: url(../images/home_logo.png);
+  background-image: url(../images/vardot-white-logo.png);
   background-position-x: 0px;
   background-position-y: 0px;
   background-size: 100%;
@@ -50,12 +54,16 @@ body.install-page .logo a {
   background-clip: initial;
   background-color: transparent;
 }
+
 .install-page .site-version {
-    vertical-align: initial !important;
-    padding-left: 10px;
+  vertical-align: initial !important;
+  padding-left: 10px;
+  color: #4192c8;
 }
+
 @media (min-width: 48em) {
   .page-title {
     margin-left: 1.3em !important;
+    color: #4192c8;
   }
 }
