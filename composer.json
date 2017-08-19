@@ -240,7 +240,9 @@
       },
       "drupal/entity_browser": {
         "Issue #2820132 by matthieuscarset, RajabNatshah, ZeiP, marcoscano: getDisplay() on null Entity Browser reference":
-        "https://www.drupal.org/files/issues/2820132-19.patch"
+        "https://www.drupal.org/files/issues/2820132-19.patch",
+        "Issue #2902831 by pafa7a: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7":
+        "https://www.drupal.org/files/issues/entity_browser_views-2902831-5.patch"
       },
       "drupal/entityqueue": {
         "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
