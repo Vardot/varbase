@@ -22,3 +22,9 @@ regions_hidden:
 libraries:
   - 'vartheme_admin/global-admin-styling'
   - 'vartheme_admin/global-admin-scripts'
+  
+libraries-override:
+  seven/install-page:
+    css:
+      theme:
+        css/theme/install-page.css: css/install-page.css
