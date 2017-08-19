@@ -259,6 +259,8 @@
         "https://www.drupal.org/files/issues/2877613-2_0.patch"
       },
       "drupal/paragraphs": {
+        "Issue #2461695: Support translatable paragraph entity reference revision field":
+        "https://www.drupal.org/files/issues/paragraphs-8-1-DEV-d15b2e4----2461695-213.patch",
         "Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover":
         "https://www.drupal.org/files/issues/show_add_widget-2877927-27.patch"
       },
