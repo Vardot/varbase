@@ -74,7 +74,7 @@ projects[image_resize_filter][download][revision] = c3f4b23b02005859092aaff746b9
 projects[image_resize_filter][download][branch] = 8.x-1.x
 
 projects[views_infinite_scroll][type] = module
-projects[views_infinite_scroll][version] = 1.3
+projects[views_infinite_scroll][version] = 1.5
 
 projects[embed][type] = module
 projects[embed][version] = 1.0
