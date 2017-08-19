@@ -86,6 +86,8 @@ projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.1
 ;; Issue #2820132 by matthieuscarset, RajabNatshah, ZeiP, marcoscano: getDisplay() on null Entity Browser reference
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2820132-19.patch
+;; Issue #2902831 by pafa7a: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity_browser_views-2902831-5.patch
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 1.0-alpha7
@@ -224,12 +226,12 @@ projects[link_attributes][version] = 1.1
 
 projects[paragraphs[type] = module
 projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
-projects[paragraphs][download][revision] = d15b2e44281e5d85f9dfde164df61ccc8a764e9a
+projects[paragraphs][download][revision] = e907f6d57c44e81d65e8c1e7247dccd0eae92258 
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/paragraphs-8-1-DEV-d15b2e4----2461695-213.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
 ;; Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-27.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2
