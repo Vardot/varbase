@@ -24,6 +24,7 @@ display:
     display_title: Master
     position: 0
     display_options:
+      use_ajax: true
       access:
         type: perm
         options:
@@ -487,6 +488,7 @@ display:
     display_title: 'Editor Media Browser'
     position: 4
     display_options:
+      use_ajax: true
       display_extenders: {  }
       display_description: ''
       fields:
@@ -892,6 +894,7 @@ display:
     display_title: 'Image Browser'
     position: 2
     display_options:
+      use_ajax: true
       display_extenders: {  }
       display_description: ''
       fields:
@@ -1310,6 +1313,7 @@ display:
     display_title: 'Images Browser'
     position: 3
     display_options:
+      use_ajax: true
       display_extenders: {  }
       display_description: ''
       fields:
