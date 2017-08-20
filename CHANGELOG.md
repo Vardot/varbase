@@ -6,7 +6,7 @@
                   and enable it.
 * Issue #2902938: Added translations for Varbase.
 * Issue #2902821: Updated UI/UX for [Varbase Bootstrap Paragraphs] on styles,
-                  and Edit preview
+                  and Edit preview, with style of text and image type.
 * Issue #2902971: Added RTL support for [Varbase Total Control Dashboard]
 * Issue #2902798: Updated [Drupal core] from 8.3.6 to 8.3.7
 
@@ -44,6 +44,8 @@
 * Issue #2903358: Removed not used config from [Varbase Editor] for the
                   Full HTML text format (restricted_html) not to have any
                   notification in the syslog
+* Issue #2903437: Fixed the style of action links primary button in
+                  the [Vartheme Admin] theme.
 * Issue #2902802: Varbase 8.4.07: Updated [CHANGELOG.md, UPDATE.md] files
                   and filtered the code for Drupal 8 Coding Standard.
 

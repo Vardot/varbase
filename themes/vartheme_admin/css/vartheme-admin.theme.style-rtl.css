@@ -70,3 +70,7 @@ body .form-wrapper .counter:before {
 #yoast-wrapper {
   direction: ltr;
 }
+
+.adminimal .action-links .button--primary {
+  line-height: 19px;
+}
