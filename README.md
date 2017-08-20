@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.06)](https://travis-ci.org/Vardot/varbase/builds/262871528) Varbase 8.4.06
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.06)](https://travis-ci.org/Vardot/varbase) Varbase 8.4.07
 
 # Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)
 
