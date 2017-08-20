@@ -5,6 +5,9 @@
 * Issue #2902878: Added [Entityqueue Form Widget] module 8.1.0-beta1
                   and enable it.
 * Issue #2902938: Added translations for Varbase.
+* Issue #2902821: Updated UI/UX for [Varbase Bootstrap Paragraphs] on styles,
+                  and Edit preview
+* Issue #2902971: Added RTL support for [Varbase Total Control Dashboard]
 * Issue #2902798: Updated [Drupal core] from 8.3.6 to 8.3.7
 
 ### Added since the last release:
