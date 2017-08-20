@@ -2,33 +2,48 @@
 
 ### Highlighted important changes since the last release:
 * Issue #2902956: Updated Varbase Installer to have a branded install.
-* Issue #2902878: Added [Entityqueue Form Widget] module 8.1.0-beta1 and enable it.
+* Issue #2902878: Added [Entityqueue Form Widget] module 8.1.0-beta1
+                  and enable it.
 * Issue #2902938: Added translations for Varbase.
 * Issue #2902798: Updated [Drupal core] from 8.3.6 to 8.3.7
 
 ### Added since the last release:
-* Issue #2902878: Added [Entityqueue Form Widget] module 8.1.0-beta1 and enable it.
-* Issue #2902082: Added [Custom Permissions] module 8.x-1.0 and the patch to fix a conflict with config_translate.
+* Issue #2902878: Added [Entityqueue Form Widget] module 8.1.0-beta1
+                  and enable it.
+* Issue #2902082: Added [Custom Permissions] module 8.x-1.0 and the patch to
+                  fix a conflict with config_translate.
 * Issue #2902938: Added translations for Varbase.
 
 ### Updates since the last release:
 * Issue #2902365: Updated [devel] module from 8.1.0-rc2 to 8.1.0
-* Issue #2902485: Enhanced the behaviour of [Real Time SEO] module UI in Varbase SEO for LTR and RTL.
+* Issue #2902485: Enhanced the behaviour of [Real Time SEO] module UI in
+                  Varbase SEO for LTR and RTL.
 * Issue #2902506: Updated [Ace Code Editor] module from 8.1.x-dev to 8.1.0
-* Issue #2902550: Updated [bootstrap layouts] module from 8.5.x-dev to 8.5.0-alpha1
+* Issue #2902550: Updated [bootstrap layouts] module
+                  from 8.5.x-dev to 8.5.0-alpha1
 * Issue #2902798: Updated [Drupal core] from 8.3.6 to 8.3.7
 * Issue #2902816: Updated [Views Reference Field] from 8.1.0-rc3 to 8.1.0
 * Issue #2902832: Updated [paragraphs] module to the latest dev version.
-* Issue #2902832: Reverted Updated [paragraphs] module to the latest dev version
-* Issue #2902832: Updated [ Feature: Landing Pages - Add any paragraph types to the page. ] and [ Feature: Content Structure Features - Landing Pages - Varbase text and image paragraphs. ]
-* Issue #2903356: Updated [Ultimate Cron] module from 8.2.0-alpha1 to 8.2.0-alpha2
-* Issue #2903357: Updated [Views Infinite Scroll] module from 8.1.3 to 8.1.5
+* Issue #2902832: Reverted Updated [paragraphs] module to the latest
+                  dev version
+* Issue #2902832: Updated [ Feature: Landing Pages - Add any paragraph types
+                  to the page. ] and [ Feature: Content Structure Features -
+                  Landing Pages - Varbase text and image paragraphs. ]
+* Issue #2903356: Updated [Ultimate Cron] module
+                  from 8.2.0-alpha1 to 8.2.0-alpha2
+* Issue #2903357: Updated [Views Infinite Scroll] module
+                  from 8.1.3 to 8.1.5
 
 ### Fixes since the last release:
 * Issue #2901372: Fixed a Warning on installing Varbase 8.x-406
-* Issue #2902802: Varbase 8.4.07: Updated [CHANGELOG.md, UPDATE.md] files and filtered the code for Drupal 8 Coding Standard.
-* Issue #2903355: Fixed patches for [google_analytics_reports] module on 3.x-dev#2b6bb8e
-* Issue #2903358: Removed not used config from [Varbase Editor] for the Full HTML text format (restricted_html) not to have any notification in the syslog
+* Issue #2903355: Fixed patches for [google_analytics_reports] module
+                  on 3.x-dev#2b6bb8e
+* Issue #2903358: Removed not used config from [Varbase Editor] for the
+                  Full HTML text format (restricted_html) not to have any
+                  notification in the syslog
+* Issue #2902802: Varbase 8.4.07: Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
+
 
 ## 8.4.06
 
