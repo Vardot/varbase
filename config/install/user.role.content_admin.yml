@@ -64,7 +64,6 @@ permissions:
   - 'use text format basic_html'
   - 'use text format basic_html'
   - 'use text format full_html'
-  - 'use text format restricted_html'
   - 'view all revisions'
   - 'view landing_page revisions'
   - 'view media'

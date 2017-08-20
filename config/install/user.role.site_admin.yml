@@ -86,7 +86,6 @@ permissions:
   - 'use text format basic_html'
   - 'use text format code_html'
   - 'use text format full_html'
-  - 'use text format restricted_html'
   - userprotect.protected_site_admin.bypass
   - 'view all revisions'
   - 'view landing_page revisions'

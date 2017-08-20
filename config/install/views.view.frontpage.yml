@@ -319,7 +319,7 @@ display:
           tokenize: true
           content:
             value: '<h1>Welcome to [site:name]</h1>'
-            format: restricted_html
+            format: full_html
           plugin_id: text
       empty:
         area_text_custom:
