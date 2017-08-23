@@ -306,6 +306,8 @@ projects[l10n_client][patch][] = https://www.drupal.org/files/issues/l10n_client
 
 projects[username_enumeration_prevention][type] = module
 projects[username_enumeration_prevention][version] = 1.0-beta1
+;; Issue #2823440: Set $severity to OK at start of hook_requirements()
+projects[username_enumeration_prevention][patch][] = https://www.drupal.org/files/issues/username_enumeration_prevention_requirements_severity-2823440-1.patch
 
 projects[password_policy][type] = module
 projects[password_policy][version] = 3.0-alpha3
