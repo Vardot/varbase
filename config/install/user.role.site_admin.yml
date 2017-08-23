@@ -23,6 +23,7 @@ permissions:
   - 'access site reports'
   - 'access toolbar'
   - 'access user profiles'
+  - 'access varbase settings'
   - 'administer account menu items'
   - 'administer account settings'
   - 'administer admin menu items'
