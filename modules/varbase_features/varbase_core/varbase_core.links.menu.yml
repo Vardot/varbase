@@ -1,0 +1,5 @@
+varbase_core.settings_index:
+  title: 'Varbase settings'
+  description: 'Configuring Varbase settings.'
+  parent: system.admin_config
+  route_name: varbase_core.settings_index

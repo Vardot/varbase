@@ -1,0 +1,4 @@
+varbase_core.settings_index:
+  title: 'Varbase Settings'
+  route_name: varbase_core.settings
+  base_route: varbase_core.settings
