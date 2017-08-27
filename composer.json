@@ -261,6 +261,8 @@
       "drupal/paragraphs": {
         "Issue #2461695: Support translatable paragraph entity reference revision field":
         "https://www.drupal.org/files/issues/meta_support-2461695-206.patch",
+        "Issue #2868155: Add new hooks to allow easier editing of paragraph forms":
+        "https://www.drupal.org/files/issues/2868155-8.patch",
         "Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover":
         "https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch"
       },

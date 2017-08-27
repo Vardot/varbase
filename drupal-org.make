@@ -230,6 +230,8 @@ projects[paragraphs][download][revision] = e907f6d57c44e81d65e8c1e7247dccd0eae92
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
+;; Issue #2868155: Add new hooks to allow easier editing of paragraph forms
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2868155-8.patch
 ;; Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch
 
