@@ -1,12 +1,16 @@
+# Global admin styling.
 global-admin-styling:
   css:
     theme:
       css/vartheme-admin.theme.style.css: {}
-      css/components/paragraphs.component.css: {}
+
+# Global admin right to left styling.
 global-admin-styling-rtl:
   css:
     theme:
       css/vartheme-admin.theme.style-rtl.css: {}
+
+# Global admin scripts.
 global-admin-scripts:
   js:
     js/vartheme-admin.script.js: {}
