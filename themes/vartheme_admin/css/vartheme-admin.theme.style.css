@@ -67,14 +67,3 @@ body .form-wrapper .counter {
   display: none;
 }
 
-.paragraph--view-mode--preview .field--name-bp-image-field img {
-  width: 100%;
-}
-
-.paragraph-type-add-modal .paragraph-type-add-modal-button:hover {
-  color: #000000;
-}
-
-input.paragraph-type-add-modal-button, .widget {
-  padding-left: 10px !important;
-}
