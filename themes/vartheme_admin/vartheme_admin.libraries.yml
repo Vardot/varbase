@@ -6,7 +6,7 @@ global-admin-styling:
 global-admin-styling-rtl:
   css:
     theme:
-      css/vartheme-admin.theme.style-rtl.css: {}      
+      css/vartheme-admin.theme.style-rtl.css: {}
 global-admin-scripts:
   js:
     js/vartheme-admin.script.js: {}
