@@ -269,6 +269,11 @@ projects[ckeditor_media_embed][version] = 1.1
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
 
+projects[paragraphs_previewer][type] = module
+projects[paragraphs_previewer][version] = 1.0
+;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
+projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;

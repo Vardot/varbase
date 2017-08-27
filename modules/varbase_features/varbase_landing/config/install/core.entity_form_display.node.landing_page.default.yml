@@ -12,7 +12,7 @@ dependencies:
     - field_group
     - maxlength
     - metatag
-    - paragraphs
+    - paragraphs_previewer
     - path
     - yoast_seo
 third_party_settings:
@@ -57,7 +57,7 @@ content:
       advanced_text_formatter:
         show_token_tree: 0
   field_lp_paragraphs:
-    type: paragraphs
+    type: entity_reference_paragraphs_previewer
     weight: 26
     settings:
       title: Component

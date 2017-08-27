@@ -78,3 +78,20 @@ body .form-wrapper .counter {
 input.paragraph-type-add-modal-button, .widget {
   padding-left: 10px !important;
 }
+
+.js .paragraphs-collapsed-description {
+  display: none;
+}
+
+.paragraph-type-top {
+  position: relative;
+  top: -25px;
+}
+
+.paragraph-actions {
+  float: right;
+}
+
+.paragraphs-subform .paragraph-type-top {
+  top: 0px;
+}
