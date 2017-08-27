@@ -99,15 +99,6 @@
   {% endblock %}
 {% endif %}
 
-{# hero_slider #}
-{% if page.hero_slider %}
-{% block hero_slider %}
-  <div class="hero_slider">
-    {{ page.hero_slider }}
-  </div>
-{% endblock %}
-{% endif %}
-
 {# Header print #}
 <div class="visible-print-block header-print page-header">
   <div class="{{ container }}">
@@ -121,6 +112,15 @@
     </div>
   </div>
 </div>
+        
+{# hero_slider #}
+{% if page.hero_slider %}
+{% block hero_slider %}
+  <div class="hero_slider">
+    {{ page.hero_slider }}
+  </div>
+{% endblock %}
+{% endif %}
 
 {# Main #}
 {% block main %}
