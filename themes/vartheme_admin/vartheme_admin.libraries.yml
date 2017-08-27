@@ -2,10 +2,11 @@ global-admin-styling:
   css:
     theme:
       css/vartheme-admin.theme.style.css: {}
+      css/components/paragraphs.component.css: {}
 global-admin-styling-rtl:
   css:
     theme:
-      css/vartheme-admin.theme.style-rtl.css: {}
+      css/vartheme-admin.theme.style-rtl.css: {}      
 global-admin-scripts:
   js:
     js/vartheme-admin.script.js: {}
