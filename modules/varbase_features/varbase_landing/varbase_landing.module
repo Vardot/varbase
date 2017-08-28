@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains varbase_media.module.
+ * Contains varbase_landing.module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
