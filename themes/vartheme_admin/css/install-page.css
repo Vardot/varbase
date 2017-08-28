@@ -26,6 +26,13 @@ footer.installer-footer #credit {
   font-size: 11px;
 }
 
+[dir="rtl"] footer.installer-footer #credit {
+  float: left;
+  text-align: left;
+  padding: 20px 0 40px;
+  font-size: 11px;
+}
+
 footer.installer-footer #credit a {
   clear: right;
   float: right;
