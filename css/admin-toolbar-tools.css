@@ -6,9 +6,13 @@
 .adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help.is-active:before,
 .adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-admin-toolbar-tools-help:before,
 .adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:hover:before {
-  background-image: url(../files/images/varbase-x-small-emblem-white.png);
+  background-image: url(../images/varbase-x-small-emblem-white.png);
 }
 
 span .cke_button__embed_icon {
   background-image:url('../images/embed.png') !important;
+}
+
+span .cke_button__media_icon {
+  background-image:url('../modules/varbase_features/varbase_media/images/embed-media.png') !important;
 }

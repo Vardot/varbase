@@ -13,18 +13,7 @@ use Drupal\file\Entity\File;
  * Implements hook_install().
  */
 function varbase_media_install() {
-
-  $embed_icon = \Drupal::moduleHandler()->getModule('varbase_media')->getPath() . '/images/embed.png';
-  $embed_icon_destination = file_unmanaged_copy($embed_icon, 'public://' . \Drupal::service('file_system')->basename($embed_icon));
-
-  if ($embed_icon_destination) {
-    $embed_icon_file = File::create(['uri' => $embed_icon_destination]);
-    $embed_icon_file->save();
-
-    EmbedButton::load('media')
-      ->set('icon_uuid', $embed_icon_file->uuid())
-      ->save();
-  }
+  // Insert your varbase media custom install operation.
 }
 
 /**
