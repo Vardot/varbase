@@ -3,9 +3,38 @@ As a logged in user with a permission to mange Landing pages
 I want to be able to add number of Text and image paragraph compoments
 So that the "Landing page" will have text and images in right and left view.
 
-@javascript @local @development
-  Scenario: Check if a user with a permission to manage "Landing page" content type create a new Landing page that will look like this page https://www.getopensocial.com/features
+@local @development @staging @production
+  Scenario: Upload the "Embed Flag Earth" file.
+    Given I am a logged in user with the "test_super_admin" user
+     When I go to "/admin/content/media"
+      And I wait
+     Then I should see "Add media"
+     When I click "Add media"
+      And I wait
+     Then I should see "Document"
+      And I should see "Image"
+      And I should see "Video"
+     When I go to "/media/add/image"
+      And I wait
+     Then I should see "Allowed types: png gif jpg jpeg."
+     When I attach the file "flag-earth.jpg" to "Image"
+      And I wait
+      And I press the "Save" button
+      And I wait
+      And I fill in "Embed Flag Earth in space" for "field_image[0][alt]"
+      And I fill in "Embed Flag Earth all earth in space" for "field_image[0][title]"
+      And I fill in "Embed Flag Earth" for "Media name"
+      And I press the "Save" button
+      And I wait
+     Then I should see "Embed Flag Earth"
+      And I wait
+     When I go to "/admin/content/media"
+     Then I should see "Add media"
+      And I should see the "Edit" in the "Embed Flag Earth" row
 
+  @javascript @local @development
+  Scenario: Check if a user with a permission to manage "Landing page" content type create a new Landing page that will look like this page https://www.getopensocial.com/features
+  
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
