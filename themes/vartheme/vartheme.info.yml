@@ -53,6 +53,10 @@ libraries:
 # Vartheme general global styles and scripts libraries.
   - vartheme/global-styles
   - vartheme/global-scripts
+  
+# Vartheme Varbase Bootstrap Paragraphs colors theme.
+# Uncomment the following line to replace vbp-colors with this theme colors.
+#  - varbase_bootstrap_theme/vbp-colors: vartheme/vbp-colors
 
 #libraries-override:
 #  bootstrap_library/bootstrap-cdn: false
