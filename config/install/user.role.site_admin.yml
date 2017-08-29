@@ -44,6 +44,7 @@ permissions:
   - 'administer taxonomy'
   - 'administer tools menu items'
   - 'administer users'
+  - 'administer varbase bootstrap paragraphs settings'
   - 'assign roles'
   - 'change layouts in place editing'
   - 'create content translations'
