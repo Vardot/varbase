@@ -51,6 +51,7 @@ dependencies:
 
   # contrib modules
   - entity
+  - entity_clone
   - config_update
   - config_filter
   - config_ignore
@@ -112,7 +113,6 @@ dependencies:
   - link_attributes
   - login_destination
   - ckeditor_media_embed
-  - entity_clone
 
 themes:
   # Contrib themes.
