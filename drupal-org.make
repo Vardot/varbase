@@ -226,7 +226,7 @@ projects[link_attributes][version] = 1.1
 
 projects[paragraphs[type] = module
 projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
-projects[paragraphs][download][revision] = e907f6d57c44e81d65e8c1e7247dccd0eae92258 
+projects[paragraphs][download][revision] = e907f6d57c44e81d65e8c1e7247dccd0eae92258
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
@@ -273,6 +273,19 @@ projects[paragraphs_previewer][type] = module
 projects[paragraphs_previewer][version] = 1.0
 ;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
+
+projects[entity_clone[type] = module
+projects[entity_clone][download][url] = https://git.drupal.org/project/entity_clone.git
+projects[entity_clone][download][revision] = 9265e359bd31bda693dac9ad84ad52fe63531488
+projects[entity_clone][download][branch] = 8.x-1.x
+;; Issue #2770687: Wrong redirection of page for entity clone module
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch
+;; Issue #2800203: Event dispatcher for clone events
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-event_dispatcher-2800203-5.patch
+;; Issue #2706639: Support for cloning nodes that have another entities attached
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch
+;; Issue #2769823: Getting error after clicking on abort clone button
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.

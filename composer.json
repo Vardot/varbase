@@ -137,6 +137,7 @@
     "drupal/total_control": "2.x-dev#d5c4aea34daf4260a4948e1d0c2322ecfd2a973a",
     "drupal/anchor_link": "1.x-dev",
     "drupal/entity_browser_enhanced": "1.x-dev",
+    "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
     "drupal/vmi": "1.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "4.x-dev",
     "drupal/varbase_editor": "4.x-dev",
@@ -300,6 +301,16 @@
       "drupal/paragraphs_previewer": {
         "Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch":
         "https://www.drupal.org/files/issues/2904917-2.patch"
+      },
+      "drupal/entity_clone": {
+        "Issue #2770687: Wrong redirection of page for entity clone module":
+        "https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch",
+        "Issue #2800203: Event dispatcher for clone events":
+        "https://www.drupal.org/files/issues/entity_clone-event_dispatcher-2800203-5.patch",
+        "Issue #2706639: Support for cloning nodes that have another entities attached":
+        "https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch",
+        "Issue #2769823: Getting error after clicking on abort clone button":
+        "https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch"
       }
     }
   }

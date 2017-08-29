@@ -450,3 +450,12 @@ function varbase_update_8037() {
     \Drupal::service('module_installer')->install(['entityqueue_form_widget'], FALSE);
   }
 }
+
+/**
+ * Enable Entity clone module.
+ */
+function varbase_update_8038() {
+  if (!\Drupal::moduleHandler()->moduleExists('entity_clone')) {
+    \Drupal::service('module_installer')->install(['entity_clone'], FALSE);
+  }
+}
