@@ -51,6 +51,7 @@ dependencies:
 
   # contrib modules
   - entity
+  - entity_clone
   - config_update
   - config_filter
   - config_ignore
