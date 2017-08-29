@@ -30,6 +30,10 @@ libraries:
 # VARTHEME_SUBTHEME global styles and scripts libraries.
   - VARTHEME_SUBTHEME/global-styles
   - VARTHEME_SUBTHEME/global-scripts
+  
+# VARTHEME_SUBTHEME Varbase Bootstrap Paragraphs colors theme.
+# Uncomment the following line to load vbp-colors with this theme colors.
+#  - vartheme/vbp-colors
 
 # OPTIONALLY: You can choose to remove Vartheme base theme stylesheets and/or
 # Javascript files.
@@ -49,10 +53,10 @@ libraries-override:
   VARTHEME_SUBTHEME/bootstrap-styles-rtl: false
   VARTHEME_SUBTHEME/vartheme-styles-rtl: false
   VARTHEME_SUBTHEME/global-styles-rtl: false
-  
+
 # VARTHEME_SUBTHEME Varbase Bootstrap Paragraphs colors theme.
-# Uncomment the following line to replace vbp-colors with this theme colors.
-#  - varbase_bootstrap_theme/vbp-colors: VARTHEME_SUBTHEME/vbp-colors
+# Uncomment the following line to override vbp-colors with this theme colors.
+#  varbase_bootstrap_paragraphs/vbp-colors: vartheme/vbp-colors
 
 # Uncomment lines to replace, exclude css and js files from vartheme.
 # You will need to copy less/css files from Vartheme to use theme for the
