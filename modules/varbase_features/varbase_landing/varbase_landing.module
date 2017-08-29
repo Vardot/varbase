@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_landing.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_landing_form_node_landing_page_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add the Varbase Bootstrap Paragraphs default admin styling.
+  $form['#attached']['library'][] = 'varbase_bootstrap_paragraphs/vbp-default-admin';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_landing_form_node_landing_page_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add the Varbase Bootstrap Paragraphs default admin styling.
+  $form['#attached']['library'][] = 'varbase_bootstrap_paragraphs/vbp-default-admin';
+}
