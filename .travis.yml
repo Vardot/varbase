@@ -19,7 +19,6 @@ env:
   - AFATG=03-admin-managment
   - AFATG=04-content-structure
   - AFATG=05-content-management
-  - AFATG=06-rich-text-editor
 
 matrix:
   exclude:
@@ -62,14 +61,6 @@ matrix:
     env: AFATG=05-content-management
   - php: 5.6
     env: AFATG=05-content-management
-
-# Automated Functional Acceptance Tests: 06 rich text editor
-  - php: 7.1
-    env: AFATG=06-rich-text-editor
-  - php: 7.0
-    env: AFATG=06-rich-text-editor
-  - php: 5.6
-    env: AFATG=06-rich-text-editor
 
 dist: precise
 
