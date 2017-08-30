@@ -79,9 +79,6 @@ mysql:
   encoding: utf8
 
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y aria2
-  - aria2c -v
   - phpenv config-rm xdebug.ini
   - phpenv rehash
   - composer self-update
@@ -123,7 +120,6 @@ before_install:
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
   
   - composer global require phing/phing
-  - composer global require jakoch/composer-fastfetch:dev-master
   
 install:
   - phing build -Dversion=$VERSION -Dbranch=$TRAVIS_COMMIT
