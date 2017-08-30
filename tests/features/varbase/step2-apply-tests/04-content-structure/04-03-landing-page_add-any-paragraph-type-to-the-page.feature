@@ -5,7 +5,7 @@ So that the "Landing page" will show up having paragrpahs of different types
 
 @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file.
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "/admin/content/media"
       And I wait
      Then I should see "Add media"
@@ -33,9 +33,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see the "Edit" in the "Embed Flag Earth" row
   #-----------------------------------------------------------------------------
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Carousel"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Carousel" for "Title"
@@ -91,9 +91,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Carousel has been created"
       And I should see image with the "Embed Flag Earth all earth in space" title text
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Accordion"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Accordion" for "Title"
@@ -132,9 +132,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I should see "Accordion Section Body test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Drupal Block" for "Title"
@@ -157,9 +157,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Drupal Block has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Equal)"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Equal)" for "Title"
@@ -224,9 +224,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Two Uneven)"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
@@ -288,9 +288,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Three Uneven)"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
@@ -360,9 +360,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Columns (Three Uneven) has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Image"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Image" for "Title"
@@ -392,9 +392,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Image has been created"
       And I should see image with the "Embed Flag Earth all earth in space" title text
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Modal"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Modal" for "Title"
@@ -423,9 +423,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Modal title"
       And I should see "Modal Body test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Rich Text"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Rich Text" for "Title"
@@ -459,9 +459,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Rich Text has been created"
       And I should see "Rich Text test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Tabs"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Tabs" for "Title"
@@ -501,9 +501,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see "Tab 1"
       And I should see "Tab 1 - Body test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "WebForm"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page WebForm" for "Title"

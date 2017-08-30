@@ -1,4 +1,4 @@
-Feature: user requirements - Have persistent login options and configurations.
+Feature: User Management - Have persistent login options and configurations.
   As a user which can login to the site.
   I want to have the option to have "Remember Me" option on the user login form.
   So I can persistent my login session independent of setting of a long session lifetime.

@@ -1,11 +1,11 @@
-Feature: Module Requirements - Standard Entity Queue Management - Have the option to Reverse order in admin view.
+Feature: Content Management - Standard Entity Queue Management - Have the option to Reverse order in admin view.
 As a logged in user with a permisstioto manage entityqueues 
 I well be able to view the order of entities in entity queues in a reverse order.
 So that they will have a flipped order at the front-end.
 
 @javascript @local @development
 Scenario: Check that Reverse order in admin view is working.
-  Given I am a logged in user with the "webmaster" user
+  Given I am a logged in user with the "test_site_admin" user
    When I go to "/admin/structure/entityqueue"
     And I wait
    Then I should see "Test Queue"

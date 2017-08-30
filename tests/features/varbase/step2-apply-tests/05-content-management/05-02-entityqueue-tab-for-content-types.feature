@@ -1,11 +1,11 @@
-Feature: Module Requirements - Standard Entity Queue Management - Have Entityqueue tab inside the full content page and be able to Add to a queue or Remove from a queue
+Feature: Content Management - Standard Entity Queue Management - Have Entityqueue tab inside the full content page and be able to Add to a queue or Remove from a queue
 As a logged in user with a permission to manage entity queues
 I well be able to see an Entityqueue tab inside the full content page of a selected content
 So that I can Add to queue or Remove from queue for the content.
 
 @javascript @local @development
 Scenario: Check if queuable content have the "Entityqueue" tab at the full content page and can Add to queue or Remove from queue.
-  Given I am a logged in user with the "webmaster" user
+  Given I am a logged in user with the "test_site_admin" user
    When I go to "/node/add/test_content"
     And I wait
    Then I should see "Create Test Content"

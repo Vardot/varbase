@@ -1,6 +1,6 @@
-Feature: Content Structure Features - Basic Pages - Pages with pre-defined layouts
+Feature: Content Structure - Landing Pages
 As a logged in user with a permission to manage Landing pages.
-I want to be able to add a "Landing page" which has got predefined layouts
+I want to be able to add a "Landing page" which has got predefined set of paragrphs
 So that the "Landing page" will show up in the structured menu under its parent page
 
   @javascript @local @development @staging @production

@@ -4,7 +4,7 @@ I want to be able to embed existing files from the library of files in the CKEdi
 So that it will show up under that rich text field without having to upload the image for each content
 
   Background:
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
 
   # Create the Basic page and upload the file to the library before the test case.
   # ----------------------------------------------------------------------------
