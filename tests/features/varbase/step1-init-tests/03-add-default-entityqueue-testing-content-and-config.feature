@@ -2,7 +2,7 @@ Feature: Content Management - Add default [entityqueue] module testing content a
 
 @javascript @init @tools @local @development @staging
 Scenario: Create "Test Content" content type.
-  Given I am a logged in user with the "test_site_admin" user
+  Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/types/add"
     And I wait
    Then I should see "Add content type"
@@ -14,7 +14,7 @@ Scenario: Create "Test Content" content type.
 
 @javascript @init @tools @local @development @staging
 Scenario: Add Entity Queue "Test Queue" and use "Test Content" content type.
-  Given I am a logged in user with the "test_site_admin" user
+  Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/entityqueue"
     And I wait
    Then I should see "Add entity queue"
