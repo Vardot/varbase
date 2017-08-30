@@ -5,7 +5,7 @@ So that they will have a flipped order at the front-end.
 
 @javascript @local @development
 Scenario: Check that Reverse order in admin view is working.
-  Given I am a logged in user with the "test_site_admin" user
+  Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/entityqueue"
     And I wait
    Then I should see "Test Queue"
