@@ -459,3 +459,13 @@ function varbase_update_8038() {
     \Drupal::service('module_installer')->install(['entity_clone'], FALSE);
   }
 }
+
+/**
+ * Enable Paragraphs previewer module.
+ */
+function varbase_update_8039() {
+  if (!\Drupal::moduleHandler()->moduleExists('paragraphs_previewer')) {
+    \Drupal::service('module_installer')->install(['paragraphs_previewer'], FALSE);
+  }
+}
+
