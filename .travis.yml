@@ -123,7 +123,7 @@ before_install:
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
   
   - composer global require phing/phing
-  - composer global require jakoch/composer-fastfetch
+  - composer global require jakoch/composer-fastfetch:dev-master
   
 install:
   - phing build -Dversion=$VERSION -Dbranch=$TRAVIS_COMMIT
