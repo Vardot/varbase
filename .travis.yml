@@ -12,52 +12,51 @@ php:
   - 5.6
   - 7.0
 env:
-  - VERSION=8.x-4.x
-  - AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=01-website-base-requirements
-  - AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=02-user-management
-  - AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=03-admin-managment
-  - AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=04-content-structure
-  - AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=05-content-management
-  - AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=06-rich-text-editor
+  - AFAT_GROUP=01-website-base-requirements
+  - AFAT_GROUP=02-user-management
+  - AFAT_GROUP=03-admin-managment
+  - AFAT_GROUP=04-content-structure
+  - AFAT_GROUP=05-content-management
+  - AFAT_GROUP=06-rich-text-editor
 
 
 matrix:
   exclude:
 # Automated Functional Acceptance Tests: 01 website base requirements
   - php: 5.6
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=01-website-base-requirements
+    env: AFAT_GROUP=01-website-base-requirements
   - php: 7.0
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=01-website-base-requirements
+    env: AFAT_GROUP=01-website-base-requirements
 
 # Automated Functional Acceptance Tests: 02 user management
   - php: 5.6
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=02-user-management
+    env: AFAT_GROUP=02-user-management
   - php: 7.0
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=02-user-management
+    env: AFAT_GROUP=02-user-management
 
 # Automated Functional Acceptance Tests: 03 admin managment
   - php: 5.6
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=03-admin-managment
+    env: AFAT_GROUP=03-admin-managment
   - php: 7.0
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=03-admin-managment
+    env: AFAT_GROUP=03-admin-managment
 
 # Automated Functional Acceptance Tests: 04 content structure
   - php: 5.6
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=04-content-structure
+    env: AFAT_GROUP=04-content-structure
   - php: 7.0
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=04-content-structure
+    env: AFAT_GROUP=04-content-structure
 
 # Automated Functional Acceptance Tests: 05 content-management
   - php: 5.6
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=05-content-management
+    env: AFAT_GROUP=05-content-management
   - php: 7.0
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=05-content-management
+    env: AFAT_GROUP=05-content-management
 
 # Automated Functional Acceptance Tests: 06 rich text editor
   - php: 5.6
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=06-rich-text-editor
+    env: AFAT_GROUP=06-rich-text-editor
   - php: 7.0
-    env: AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP=06-rich-text-editor
+    env: AFAT_GROUP=06-rich-text-editor
 
 dist: precise
 
@@ -145,7 +144,8 @@ before_script:
 script:
   - cd ./profiles/varbase
   - behat --strict tests/features/varbase/step1-init-tests/
-  - behat --strict tests/features/varbase/step2-apply-tests/$AUTOMATED_FUNCTIONAL_ACCEPTANCE_TEST_GROUP
+#         Automated Functional Acceptance Test groups.
+  - behat --strict tests/features/varbase/step2-apply-tests/$AFAT_GROUP
 #  - behat --strict tests/features/varbase/step3-cleanup-tests/  # no need as we build every time.
 
 matrix:
