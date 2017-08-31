@@ -14,6 +14,7 @@
   <property name="docroot" value="docroot" />
   <property name="profile" value="${docroot}/profiles/varbase" />
   <property name="site" value="${docroot}/sites/default" />
+  <property name="display.dimensions" value="1366x768x24" />
   <property name="behat" value="../../../bin/behat" />
   <property name="testing.group" value="${project.basedir}/bin/behat" />
   <property name="version" value="HEAD" />
@@ -62,8 +63,8 @@
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
   </target>
 
-  <!-- Builds Varbase with Composer. -->
-  <target name="build" depends="env">
+  <!-- Build with Composer. -->
+  <target name="build-with-composer" depends="env">
     <if>
       <equals arg1="${version}" arg2="HEAD" />
       <then>
@@ -112,8 +113,8 @@
     </if>
   </target>
 
-  <!-- Installs Varbase and sets it up for development. -->
-  <target name="install" depends="env">
+  <!-- Install with drush site install -->
+  <target name="install-with-drush-site-install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
     <exec command="${drush} site-install varbase --yes --site-name='Test Varbase4c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_development_tools.varbase_development=true" dir="${docroot}" passthru="true" />
     <exec command="${drush} en vbp_text_and_image --yes" dir="${docroot}" />
@@ -139,6 +140,14 @@
     <delete file="libraries" />
   </target>
   
+  <!-- Configure and run the virtual display. -->
+  <target name="configure-and-run-the-virtual-display" depends="env">
+    <exec command="export DISPLAY=:0" />
+    <exec command="sh -e /etc/init.d/xvfb start" />
+    <exec command="Xvfb :0 -ac -screen 0 ${display.dimensions} &" />
+    <exec command="sleep 3" />
+  </target>
+
   <!-- Automated functional acceptance testing for Varbase. -->
   <target name="automated-functional-acceptance-testing" depends="env">
     <exec command="${behat} --strict tests/features/varbase/${testing.group}" dir="${docroot}/profiles/varbase" />
