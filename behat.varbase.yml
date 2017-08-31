@@ -43,6 +43,7 @@ default:
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
         - Drupal\DrupalExtension\Context\BatchContext
+        - Behatch\Context\SystemContext
         - behatch:browser:
             timeout: 1
         - behatch:debug:
@@ -93,7 +94,7 @@ default:
         error_message_selector: '.messages.error'
         success_message_selector: '.messages.status'
         warning_message_selector: '.messages.warning'
-    Sanpi\Behatch\Extension: ~
+    Behatch\Extension: ~
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
       renderer: Twig,Behat2

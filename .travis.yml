@@ -50,7 +50,8 @@ matrix:
     env: AFATG=05-content-management
   - php: 5.6
     env: AFATG=05-content-management
-
+  fast_finish: true
+ 
 dist: precise
 
 addons:  
@@ -76,7 +77,6 @@ before_install:
   - phpenv rehash
   - composer self-update
   - composer --version
-  - composer global require phing/phing
 
   # Composer Configurations.
   - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
@@ -119,5 +119,3 @@ script:
   - behat --strict tests/features/varbase/step1-init-tests/
   - behat --strict tests/features/varbase/step2-apply-tests/$AFATG
 #  - behat --strict tests/features/varbase/step3-cleanup-tests/  # no need as we build every time.
-matrix:
-  fast_finish: true
