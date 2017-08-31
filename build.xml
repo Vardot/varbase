@@ -144,7 +144,7 @@
   <target name="configure-and-run-the-virtual-display" depends="env">
     <exec command="export DISPLAY=:0" />
     <exec command="sh -e /etc/init.d/xvfb start" />
-    <exec command="Xvfb :0 -ac -screen 0 ${display.dimensions} &" />
+    <exec command="Xvfb :0 -ac -screen 0 ${display.dimensions} " />
     <exec command="sleep 3" />
   </target>
 
