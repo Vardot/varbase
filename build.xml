@@ -15,8 +15,6 @@
   <property name="profile" value="${docroot}/profiles/varbase" />
   <property name="site" value="${docroot}/sites/default" />
   <property name="display.dimensions" value="1366x768x24" />
-  <property name="behat" value="../../../bin/behat" />
-  <property name="testing.group" value="" />
   <property name="version" value="HEAD" />
 
   <!-- Finds Composer, NPM, and rsync. -->
@@ -146,11 +144,6 @@
     <exec command="sh -e /etc/init.d/xvfb start" />
     <exec command="Xvfb :0 -ac -screen 0 ${display.dimensions}" />
     <exec command="sleep 3" />
-  </target>
-
-  <!-- Automated functional acceptance testing for Varbase. -->
-  <target name="automated-functional-acceptance-testing" depends="env">
-    <exec command="${behat} --strict tests/features/varbase/${testing.group}" dir="${docroot}/profiles/varbase" />
   </target>
 
   <!-- Builds a Varbase code base from legacy Drush make files. -->
