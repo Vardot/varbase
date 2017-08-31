@@ -20,7 +20,6 @@ env:
   - AFATG=05-content-management
 
 matrix:
-  fast_finish: true
   exclude:
 # Automated Functional Acceptance Testing group: 01 website base requirements
   - php: 7.0
@@ -120,3 +119,5 @@ script:
   - behat --strict tests/features/varbase/step1-init-tests/
   - behat --strict tests/features/varbase/step2-apply-tests/$AFATG
 #  - behat --strict tests/features/varbase/step3-cleanup-tests/  # no need as we build every time.
+matrix:
+  fast_finish: true
