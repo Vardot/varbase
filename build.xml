@@ -9,11 +9,13 @@
   <property name="db.host" value="localhost" />
   <property name="db.user" value="root" />
   <property name="db.password" value="" />
-  <property name="db.database" value="varbase" />
+  <property name="db.database" value="test_varbase4c" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
   <property name="docroot" value="docroot" />
   <property name="profile" value="${docroot}/profiles/varbase" />
   <property name="site" value="${docroot}/sites/default" />
+  <property name="behat" value="../../../bin/behat" />
+  <property name="testing.group" value="${project.basedir}/bin/behat" />
   <property name="version" value="HEAD" />
 
   <!-- Finds Composer, NPM, and rsync. -->
@@ -113,7 +115,8 @@
   <!-- Installs Varbase and sets it up for development. -->
   <target name="install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
-    <exec command="${drush} site-install varbase --yes --site-name=Varbase4 --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_development_tools.varbase_development=true" dir="${docroot}" passthru="true" />
+    <exec command="${drush} site-install varbase --yes --site-name='Test Varbase4c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_development_tools.varbase_development=true" dir="${docroot}" passthru="true" />
+    <exec command="${drush} en vbp_text_and_image --yes" dir="${docroot}" />
     <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${docroot}" />
     <exec command="${drush} config-set system.performance js.preprocess 0 --yes --format=boolean" dir="${docroot}" />
     <exec command="${drush} config-set system.logging error_level all --yes" dir="${docroot}" />
@@ -134,6 +137,11 @@
     <symlink target="${profile}/libraries" link="libraries" />
     <exec command="./package" />
     <delete file="libraries" />
+  </target>
+  
+  <!-- Automated functional acceptance testing for Varbase. -->
+  <target name="automated-functional-acceptance-testing" depends="env">
+    <exec command="${behat} --strict tests/features/varbase/${testing.group}" dir="${docroot}/profiles/varbase" />
   </target>
 
   <!-- Builds a Varbase code base from legacy Drush make files. -->
