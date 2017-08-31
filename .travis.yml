@@ -118,3 +118,6 @@ script:
   - behat --strict tests/features/varbase/step1-init-tests/
   - behat --strict tests/features/varbase/step2-apply-tests/$AFATG
 #  - behat --strict tests/features/varbase/step3-cleanup-tests/  # no need as we build every time.
+
+matrix:
+  fast_finish: true
