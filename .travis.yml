@@ -50,7 +50,6 @@ matrix:
     env: AFATG=05-content-management
   - php: 5.6
     env: AFATG=05-content-management
-  fast_finish: true
  
 dist: precise
 
