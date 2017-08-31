@@ -14,7 +14,6 @@
   <property name="docroot" value="docroot" />
   <property name="profile" value="${docroot}/profiles/varbase" />
   <property name="site" value="${docroot}/sites/default" />
-  <property name="display.dimensions" value="1366x768x24" />
   <property name="version" value="HEAD" />
 
   <!-- Finds Composer, NPM, and rsync. -->
@@ -59,29 +58,6 @@
 
   <target name="pull" depends="env">
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
-  </target>
-
-  <!-- Build with Composer. -->
-  <target name="build-with-composer" depends="env">
-    <if>
-      <equals arg1="${version}" arg2="HEAD" />
-      <then>
-        <exec command="${composer} install" passthru="true" />
-      </then>
-      <else>
-        <if>
-          <not>
-            <isset property="branch" />
-          </not>
-          <then>
-            <exec command="git rev-parse --abbrev-ref HEAD" outputProperty="branch" />
-          </then>
-        </if>
-        <exec command="git checkout ${version}" />
-        <exec command="${composer} install" passthru="true" />
-        <exec command="git checkout ${branch}" />
-      </else>
-    </if>
   </target>
 
   <!-- Prepares the docroot for installation via the UI. -->
@@ -136,14 +112,6 @@
     <symlink target="${profile}/libraries" link="libraries" />
     <exec command="./package" />
     <delete file="libraries" />
-  </target>
-  
-  <!-- Configure and run the virtual display. -->
-  <target name="configure-and-run-the-virtual-display" depends="env">
-    <exec command="export DISPLAY=:0" />
-    <exec command="sh -e /etc/init.d/xvfb start" />
-    <exec command="Xvfb :0 -ac -screen 0 ${display.dimensions}" />
-    <exec command="sleep 3" />
   </target>
 
   <!-- Builds a Varbase code base from legacy Drush make files. -->
