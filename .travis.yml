@@ -111,7 +111,7 @@ before_install:
   - phpenv rehash
    
   # Configure and run the virtual display.
-  - phing configure-and-run-the-virtual-display -Ddisplay.dimensions=1366x768x24
+  - phing configure-and-run-the-virtual-display -Ddisplay.dimensions="1366x768x24"
 
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
