@@ -16,7 +16,7 @@
   <property name="site" value="${docroot}/sites/default" />
   <property name="display.dimensions" value="1366x768x24" />
   <property name="behat" value="../../../bin/behat" />
-  <property name="testing.group" value="${project.basedir}/bin/behat" />
+  <property name="testing.group" value="" />
   <property name="version" value="HEAD" />
 
   <!-- Finds Composer, NPM, and rsync. -->
