@@ -186,13 +186,11 @@
     "post-install-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
       "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-      "@composer drupal-scaffold",
-      "./bin/phing push"
+      "@composer drupal-scaffold"
     ],
     "post-update-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-      "./bin/phing push"
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
     ],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
     "create-new-vartheme": "scripts/create-new-vartheme.sh"
