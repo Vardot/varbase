@@ -52,7 +52,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I scrolldown
       And I wait for AJAX to finish
       And I select "2 Seconds" from "Slide interval"
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I wait
       And I scrollup
       And I press "Add Image"
@@ -67,8 +67,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
+      And I wait for AJAX to finish
       And I wait
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -83,9 +84,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
-      And wait
+      And I wait
       And I switch to main frame
       And I wait for AJAX to finish
+      And I wait
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Carousel has been created"
@@ -108,7 +110,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I scrolldown
       And I wait for AJAX to finish
      Then I should see "styling settings"
-     When I Expand the field "styling-settings"
+     When I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -120,8 +122,10 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I wait
       And I switch to main frame
+      And I wait for AJAX to finish
+      And I wait
       And I fill in "Accordion Section Title test" for "Accordion section title"
-     When I Expand the "1" select list "dropbutton-multiple"
+     When I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Accordion section body"
@@ -175,7 +179,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -186,9 +190,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
-
       And I switch to main frame
-     When I Expand the "1" select list "dropbutton-multiple"
+      And I wait for AJAX to finish
+      And I wait
+      And I expand the "1" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -203,8 +208,8 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-
-     When I Expand the "1" select list "dropbutton-multiple"
+      And I wait
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -220,7 +225,8 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-     When I press "Save"
+      And I wait
+      And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
 
@@ -241,7 +247,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -252,9 +258,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
+      And I wait for AJAX to finish
       And I wait
-
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -268,8 +274,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
+      And I wait for AJAX to finish
       And I wait
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -306,7 +313,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -319,7 +326,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait
 
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -335,7 +342,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait
 
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -352,7 +359,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
   
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Rich text test - column Three"
@@ -411,7 +418,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Modal body"
@@ -441,7 +448,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I should see "Components"
       And I fill in the rich text editor field "Text" with "Rich Text test"
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -477,7 +484,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -490,7 +497,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I should see "Components"
       And I fill in "Tab 1" for "Tab name"
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Tab body"

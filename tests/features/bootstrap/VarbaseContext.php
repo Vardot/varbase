@@ -1344,8 +1344,8 @@ JS;
    /**
    * #varbase: To expand a field group by its id attribute.
    *
-   * Example 1: I Expand the field "Field Group ID"
-   * @When I Expand the field :arg1
+   * Example 1: I expand the field "Field Group ID"
+   * @When I expand the field :arg1
    * 
    * @param $text
    * @throws \InvalidArgumentException
@@ -1361,7 +1361,7 @@ JS;
   /**
    * #varbase: To expand a select list by it's class attribute.
    * 
-   * @When I Expand the :nth select list :arg1
+   * @When I expand the :nth select list :arg1
    *
    * @param $text
    * @throws \InvalidArgumentException

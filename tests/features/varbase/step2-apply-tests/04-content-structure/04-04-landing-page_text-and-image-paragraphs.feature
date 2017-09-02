@@ -78,7 +78,7 @@ So that the "Landing page" will have text and images in right and left view.
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     Then I Expand the field "styling-settings"
+     Then I expand the field "styling-settings"
       And I select "Blue" from "Background color"
       And I click "Content settings"
       And I select "Right" from "Image position"
@@ -109,7 +109,7 @@ So that the "Landing page" will have text and images in right and left view.
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     Then I Expand the field "styling-settings"
+     Then I expand the field "styling-settings"
       And I click "Content settings"
       And I select "Medium" from "Width"
       And I select "Left" from "Image position"

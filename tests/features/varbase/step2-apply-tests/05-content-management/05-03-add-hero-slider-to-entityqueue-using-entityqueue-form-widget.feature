@@ -49,7 +49,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     Then I Expand the field "edit-entityqueue-form-widget"
+     Then I expand the field "edit-entityqueue-form-widget"
       And I check the box "varbase_heroslider_media"
       And I press "Save"
 
@@ -74,7 +74,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait
      When I click "Edit"
       And I wait
-      And I Expand the field "edit-entityqueue-form-widget"
+      And I expand the field "edit-entityqueue-form-widget"
      Then the "varbase_heroslider_media" checkbox should be checked
      When I uncheck the box "varbase_heroslider_media"
       And I press "Save"
