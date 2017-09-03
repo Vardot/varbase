@@ -426,7 +426,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I press "Save"
      Then I should see "Landing page Test Landing page Modal has been created"
      When I press "Modal button"
-      And I wait
+      And I wait for AJAX to finish
      Then I should see "Modal title"
       And I should see "Modal Body test"
 
