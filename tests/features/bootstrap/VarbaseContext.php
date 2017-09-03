@@ -1344,11 +1344,9 @@ JS;
    /**
    * #varbase: To expand a field group by its id attribute.
    *
-   * Example 1: I expand the field "Field Group ID"
-   * @When I expand the field :arg1
+   * Example #1: I expand the field "Field Group ID"
    * 
-   * @param $text
-   * @throws \InvalidArgumentException
+   * @When I expand the field :arg1
    */
   public function iExpandThefield($fieldID) {
     $js = <<<JS
@@ -1360,12 +1358,11 @@ JS;
 
   /**
    * #varbase: To expand a select list by it's class attribute.
+   *
+   * Example #1: I expand the "1" select list "dropbutton-multiple"
    * 
    * @When I expand the :nth select list :arg1
-   *
-   * @param $text
-   * @throws \InvalidArgumentException
-  */
+   */
   public function iExpandTheSelectList($index, $listClassName) {
     $js = <<<JS
     var group = document.getElementsByClassName("{$listClassName}")[{$index}];
@@ -1376,6 +1373,8 @@ JS;
 
   /**
    * #varbase: To scroll down in the current status of the page.
+   *
+   * Example #1: When I scrolldown
    * 
    * @When I scrolldown
    */
@@ -1384,7 +1383,9 @@ JS;
   }
 
   /**
-   * #varbase: To scroll up in the current status of the page.
+   * #varbase: To scroll up in the current status of the page, about 350 up
+   *
+   * Example #1: When I scrollup
    * 
    * @When I scrollup
    */
