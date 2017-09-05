@@ -10,5 +10,6 @@ So that they must be (Editor, Site Admin, Content Admin, Super Admin)
       And I wait
      Then I should see "Editor"
       And I should see "Content Admin"
+      And I should see "SEO Admin"
       And I should see "Site Admin"
       And I should see "Super Admin"
