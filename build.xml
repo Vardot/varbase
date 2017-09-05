@@ -9,7 +9,7 @@
   <property name="db.host" value="localhost" />
   <property name="db.user" value="root" />
   <property name="db.password" value="" />
-  <property name="db.database" value="varbase" />
+  <property name="db.database" value="test_varbase4c" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
   <property name="docroot" value="docroot" />
   <property name="profile" value="${docroot}/profiles/varbase" />
@@ -60,29 +60,6 @@
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
   </target>
 
-  <!-- Builds Varbase with Composer. -->
-  <target name="build" depends="env">
-    <if>
-      <equals arg1="${version}" arg2="HEAD" />
-      <then>
-        <exec command="${composer} install" passthru="true" />
-      </then>
-      <else>
-        <if>
-          <not>
-            <isset property="branch" />
-          </not>
-          <then>
-            <exec command="git rev-parse --abbrev-ref HEAD" outputProperty="branch" />
-          </then>
-        </if>
-        <exec command="git checkout ${version}" />
-        <exec command="${composer} install" passthru="true" />
-        <exec command="git checkout ${branch}" />
-      </else>
-    </if>
-  </target>
-
   <!-- Prepares the docroot for installation via the UI. -->
   <target name="preinstall" depends="uninstall">
     <if>
@@ -110,10 +87,11 @@
     </if>
   </target>
 
-  <!-- Installs Varbase and sets it up for development. -->
-  <target name="install" depends="env">
+  <!-- Install with drush site install -->
+  <target name="install-with-drush-site-install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
-    <exec command="${drush} site-install varbase --yes --site-name=Varbase4 --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true -vvv" dir="${docroot}" passthru="true" />
+    <exec command="${drush} site-install varbase --yes --site-name='Test Varbase4c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_development_tools.varbase_development=true" dir="${docroot}" passthru="true" />
+    <exec command="${drush} en vbp_text_and_image --yes" dir="${docroot}" />
     <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${docroot}" />
     <exec command="${drush} config-set system.performance js.preprocess 0 --yes --format=boolean" dir="${docroot}" />
     <exec command="${drush} config-set system.logging error_level all --yes" dir="${docroot}" />

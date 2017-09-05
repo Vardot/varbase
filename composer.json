@@ -167,7 +167,7 @@
     "guzzlehttp/guzzle": "6.2.*@stable",
     "symfony/css-selector": "~2.8",
     "squizlabs/php_codesniffer": "2.*",
-    "behatch/contexts": "*",
+    "behatch/contexts": "2.7.1",
     "emuse/behat-html-formatter": "@stable"
   },
   "config": {

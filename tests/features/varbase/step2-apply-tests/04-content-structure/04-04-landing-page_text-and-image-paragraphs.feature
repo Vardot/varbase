@@ -1,4 +1,4 @@
-Feature: Content Structure Features - Landing Pages - Varbase text and image paragraphs.
+Feature: Content Structure - Landing Pages - Varbase text and image paragraphs.
 As a logged in user with a permission to mange Landing pages
 I want to be able to add number of Text and image paragraph compoments
 So that the "Landing page" will have text and images in right and left view.
@@ -32,7 +32,7 @@ So that the "Landing page" will have text and images in right and left view.
      Then I should see "Add media"
       And I should see the "Edit" in the "Embed Flag Earth" row
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type create a new Landing page that will look like this page https://www.getopensocial.com/features
   
     Given I am a logged in user with the "test_site_admin" user
@@ -78,7 +78,7 @@ So that the "Landing page" will have text and images in right and left view.
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     Then I Expand the field "styling-settings"
+     Then I expand the field "styling-settings"
       And I select "Blue" from "Background color"
       And I click "Content settings"
       And I select "Right" from "Image position"
@@ -109,7 +109,7 @@ So that the "Landing page" will have text and images in right and left view.
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     Then I Expand the field "styling-settings"
+     Then I expand the field "styling-settings"
       And I click "Content settings"
       And I select "Medium" from "Width"
       And I select "Left" from "Image position"

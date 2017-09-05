@@ -5,7 +5,7 @@ So that the "Landing page" will show up having paragrpahs of different types
 
 @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file.
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "/admin/content/media"
       And I wait
      Then I should see "Add media"
@@ -33,9 +33,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see the "Edit" in the "Embed Flag Earth" row
   #-----------------------------------------------------------------------------
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Carousel"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Carousel" for "Title"
@@ -52,7 +52,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I scrolldown
       And I wait for AJAX to finish
       And I select "2 Seconds" from "Slide interval"
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I wait
       And I scrollup
       And I press "Add Image"
@@ -67,8 +67,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
+      And I wait for AJAX to finish
       And I wait
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -83,17 +84,18 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
-      And wait
+      And I wait
       And I switch to main frame
       And I wait for AJAX to finish
+      And I wait
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Carousel has been created"
       And I should see image with the "Embed Flag Earth all earth in space" title text
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Accordion"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Accordion" for "Title"
@@ -108,7 +110,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I scrolldown
       And I wait for AJAX to finish
      Then I should see "styling settings"
-     When I Expand the field "styling-settings"
+     When I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -120,8 +122,10 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I wait
       And I switch to main frame
+      And I wait for AJAX to finish
+      And I wait
       And I fill in "Accordion Section Title test" for "Accordion section title"
-     When I Expand the "1" select list "dropbutton-multiple"
+     When I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Accordion section body"
@@ -132,9 +136,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I should see "Accordion Section Body test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Drupal Block" for "Title"
@@ -157,9 +161,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Drupal Block has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Equal)"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Equal)" for "Title"
@@ -175,7 +179,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -186,9 +190,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
-
       And I switch to main frame
-     When I Expand the "1" select list "dropbutton-multiple"
+      And I wait for AJAX to finish
+      And I wait
+      And I expand the "1" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -203,8 +208,8 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-
-     When I Expand the "1" select list "dropbutton-multiple"
+      And I wait
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -220,13 +225,14 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-     When I press "Save"
+      And I wait
+      And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Two Uneven)"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
@@ -241,7 +247,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -252,9 +258,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
+      And I wait for AJAX to finish
       And I wait
-
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -268,8 +274,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
+      And I wait for AJAX to finish
       And I wait
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -288,9 +295,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Three Uneven)"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
@@ -306,7 +313,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -319,7 +326,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait
 
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I scrollup
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -335,7 +342,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait
 
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I scrolldown
@@ -352,7 +359,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
   
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Rich text test - column Three"
@@ -360,9 +367,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Columns (Three Uneven) has been created"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Image"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Image" for "Title"
@@ -392,9 +399,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Image has been created"
       And I should see image with the "Embed Flag Earth all earth in space" title text
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Modal"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Modal" for "Title"
@@ -411,7 +418,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Modal body"
@@ -419,13 +426,13 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I press "Save"
      Then I should see "Landing page Test Landing page Modal has been created"
      When I press "Modal button"
-      And I wait
+      And I wait for AJAX to finish
      Then I should see "Modal title"
       And I should see "Modal Body test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Rich Text"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Rich Text" for "Title"
@@ -441,7 +448,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I should see "Components"
       And I fill in the rich text editor field "Text" with "Rich Text test"
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -459,9 +466,9 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Rich Text has been created"
       And I should see "Rich Text test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Tabs"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Tabs" for "Title"
@@ -477,7 +484,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I Expand the field "styling-settings"
+      And I expand the field "styling-settings"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -490,7 +497,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I should see "Components"
       And I fill in "Tab 1" for "Tab name"
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Tab body"
@@ -501,9 +508,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see "Tab 1"
       And I should see "Tab 1 - Body test"
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "WebForm"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page WebForm" for "Title"

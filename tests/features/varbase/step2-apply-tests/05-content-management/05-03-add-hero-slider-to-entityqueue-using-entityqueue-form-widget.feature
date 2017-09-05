@@ -1,8 +1,8 @@
-Feature: Entityqueue form widget
+Feature: Content Management - Add hero slider to entityqueue using entityqueue form widget.
 As a logged in user with a permission to mange entityqueues
 I want to be able to add and remove entities to any allowed entityqueue.
 
-@local @development @staging @production
+  @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "/admin/content/media"
@@ -31,7 +31,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
      Then I should see "Add media"
       And I should see the "Edit" in the "Embed Flag Earth" row
 
-  @javascript @local @development
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Entity queues" can add a "heroslider" to "heroslider entityqueu"
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
@@ -49,19 +49,19 @@ I want to be able to add and remove entities to any allowed entityqueue.
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-     Then I Expand the field "edit-entityqueue-form-widget"
+     Then I expand the field "edit-entityqueue-form-widget"
       And I check the box "varbase_heroslider_media"
       And I press "Save"
 
-  @javascript @local @development
-  Scenario: Check if the "Hero slider" added to the "varbase_heroslider_media" entityqueue
+  @javascript @local @development @staging @production
+  Scenario: Check if the "Hero slider" added to the "varbase_heroslider_media" entityqueue.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
      Then I should see "Test hero slider" value in the "edit-items-0-target-id" input element
 
-  @javascript @local @development
-  Scenario: Remove "Hero slider" from the "varbase_heroslider_media" entityqueue
+  @javascript @local @development @staging @production
+  Scenario: Remove a "Hero slider" from the "varbase_heroslider_media" entityqueue
     Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/content"
       And I wait
@@ -74,7 +74,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait
      When I click "Edit"
       And I wait
-      And I Expand the field "edit-entityqueue-form-widget"
+      And I expand the field "edit-entityqueue-form-widget"
      Then the "varbase_heroslider_media" checkbox should be checked
      When I uncheck the box "varbase_heroslider_media"
       And I press "Save"

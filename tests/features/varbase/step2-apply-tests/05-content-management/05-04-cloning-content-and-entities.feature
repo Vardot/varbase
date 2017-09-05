@@ -1,4 +1,4 @@
-Feature: Entity clone module - test cloning an entity
+Feature: Content Management - Cloning content and entities.
 As a logged in user with a permission to mange entities
 I want to be able to clone an entity.
 
@@ -21,7 +21,7 @@ I want to be able to clone an entity.
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I Expand the "1" select list "dropbutton-multiple"
+      And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Modal body"
