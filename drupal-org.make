@@ -25,7 +25,7 @@ projects[token][version] = 1.0
 
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta2
-;; Issue #2624972 by dstorozhuk, kalistos: No configuration possible in UI for 301, 303, etc. HTTP responses
+;; Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch
 
 projects[panels][type] = module
@@ -97,9 +97,9 @@ projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clo
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.1
-;; Issue #2820132 by matthieuscarset, RajabNatshah, ZeiP, marcoscano: getDisplay() on null Entity Browser reference
+;; Issue #2820132: getDisplay() on null Entity Browser reference
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2820132-19.patch
-;; Issue #2902831 by pafa7a: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7
+;; Issue #2902831: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity_browser_views-2902831-5.patch
 
 projects[dropzonejs][type] = module
@@ -144,7 +144,7 @@ projects[entityqueue][type] = module
 projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue.git
 projects[entityqueue][download][revision] = e17c172fe1bfdab2194b06b848cad92bc6824e49
 projects[entityqueue][download][branch] = 8.x-1.x
-; Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages
+; Issue #2145441: Option to create Entityqueue tab on Entity pages
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch
 
 projects[entityqueue_form_widget][type] = module
@@ -167,7 +167,7 @@ projects[userprotect][version] = 1.0
 
 projects[config_perms][type] = module
 projects[config_perms][version] = 1.0
-;; Issue #2877329 by josebc: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist
+;; Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist
 projects[config_perms][patch][] = https://www.drupal.org/files/issues/config_perms-added_missing_edit_route-2877329-11.patch
 
 projects[roleassign][type] = module
@@ -220,7 +220,7 @@ projects[menu_position][type] = module
 projects[menu_position][download][url] = https://git.drupal.org/project/menu_position.git
 projects[menu_position][download][revision] = 1e3a6778acc74a35174d297052ec44995d5e5137
 projects[menu_position][download][branch] = 8.x-1.x
-;; Issue #2883131 by akalata, sassafrass, Znak: Fatal error: Call to undefined method when creating a rule
+;; Issue #2883131: Fatal error: Call to undefined method when creating a rule
 projects[menu_position][patch][] = https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch
 
 projects[mail_edit][type] = module
@@ -245,7 +245,7 @@ projects[paragraphs][download][branch] = 8.x-1.x
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
 ;; Issue #2868155: Add new hooks to allow easier editing of paragraph forms
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2868155-8.patch
-;; Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover
+;; Issue #2877927: Show add widget between paragraphs on hover
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch
 
 projects[color_field][type] = module
@@ -267,9 +267,9 @@ projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][download][url] = https://git.drupal.org/project/google_analytics_reports.git
 projects[google_analytics_reports][download][revision] = 2b6bb8efbc7f61ce3c1225638075aa6037b8db44
 projects[google_analytics_reports][download][branch] = 8.x-3.x
-;; Issue #2850463 by sylus, casey: Error when saving either google_analytics_reports view
+;; Issue #2850463: Error when saving either google_analytics_reports view
 projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch
-;; Issue #2860399 by iMiksu, abu-zakham: Warning: htmlspecialchars() expects parameter 1 to be string
+;; Issue #2860399: Warning: htmlspecialchars() expects parameter 1 to be string
 projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/Fix_message-2860399-5.patch
 
 projects[login_destination][type] = module
@@ -315,9 +315,9 @@ projects[l10n_client][type] = module
 projects[l10n_client][download][url] = https://git.drupal.org/project/l10n_client.git
 projects[l10n_client][download][revision] = 9bf8d597732870bdca301512c71b6e5d74d48db2
 projects[l10n_client][download][branch] = 8.x-1.x
-;; Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0
+;; Issue #2867460: Incompatible with this version of Drupal core 8.3.0
 projects[l10n_client][patch][] = https://www.drupal.org/files/issues/2867460-2.patch
-;; Issue #2872668 by GaëlG, Nitebreed: User error: 0 is an invalid render array key":
+;; Issue #2872668: User error: 0 is an invalid render array key":
 projects[l10n_client][patch][] = https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -388,9 +388,9 @@ projects[features][version] = 3.5
 
 projects[coffee][type] = module
 projects[coffee][version] = 1.0-beta2
-;; Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8
+;; Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8
 projects[coffee][patch][] = https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch
-;; Issue #2872093 by mostafadev: Coffee css fixes in RTL
+;; Issue #2872093: Coffee css fixes in RTL
 projects[coffee][patch][] = https://www.drupal.org/files/issues/2872093-10.patch
 
 projects[diff][type] = module
@@ -420,7 +420,7 @@ projects[bootstrap][version] = 3.5
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
-;; Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable
+;; Issue #2696393: Checkboxes with .error class are not usable
 projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch
 
 ;;;;;;;;;;;;;;;;;;;;;

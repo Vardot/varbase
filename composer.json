@@ -222,42 +222,42 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/1356276-303.patch",
+        "https://www.drupal.org/files/issues/1356276-360.patch",
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
         "https://www.drupal.org/files/issues/2720101-30.patch",
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
         "https://www.drupal.org/files/issues/2599228-31.patch",
-        "Issue #2893892 by johannijdam: Warning Warning: Invalid argument supplied for foreach() in Drupal":
+        "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
         "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
       "drupal/page_manager": {
-        "Issue #2624972 by dstorozhuk, kalistos: No configuration possible in UI for 301, 303, etc. HTTP responses":
+        "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":
         "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch"
       },
       "drupal/coffee": {
-        "Issue #2815381 by mqanneh, ahmadhalah, michaelmol: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
+        "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
-        "Issue #2872093 by mostafadev: Coffee css fixes in RTL":
+        "Issue #2872093: Coffee css fixes in RTL":
         "https://www.drupal.org/files/issues/2872093-10.patch"
       },
       "drupal/entity_browser": {
-        "Issue #2820132 by matthieuscarset, RajabNatshah, ZeiP, marcoscano: getDisplay() on null Entity Browser reference":
+        "Issue #2820132: Fixed getDisplay() on null Entity Browser reference":
         "https://www.drupal.org/files/issues/2820132-19.patch",
-        "Issue #2902831 by pafa7a: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7":
+        "Issue #2902831: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7":
         "https://www.drupal.org/files/issues/entity_browser_views-2902831-5.patch"
       },
       "drupal/entityqueue": {
-        "Issue #2145441 by josebc, Xenza: Option to create Entityqueue tab on Entity pages.":
+        "Issue #2145441: Option to create Entityqueue tab on Entity pages.":
         "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
       },
       "drupal/l10n_client": {
-        "Issue #2867460 by RajabNatshah: Incompatible with this version of Drupal core 8.3.0":
+        "Issue #2867460: Incompatible with this version of Drupal core 8.3.0":
         "https://www.drupal.org/files/issues/2867460-2.patch",
-        "Issue #2872668 by GaëlG, Nitebreed: User error: 0 is an invalid render array key":
+        "Issue #2872668: User error: 0 is an invalid render array key":
         "https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch"
       },
       "drupal/yoast_seo": {
-        "Issue #2877613 by RajabNatshah: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
+        "Issue #2877613: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
         "https://www.drupal.org/files/issues/2877613-2_0.patch"
       },
       "drupal/paragraphs": {
@@ -265,21 +265,21 @@
         "https://www.drupal.org/files/issues/meta_support-2461695-206.patch",
         "Issue #2868155: Add new hooks to allow easier editing of paragraph forms":
         "https://www.drupal.org/files/issues/2868155-8.patch",
-        "Issue #2877927 by yasmeensalah, samuel.seide: Show add widget between paragraphs on hover":
+        "Issue #2877927: Show add widget between paragraphs on hover":
         "https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch"
       },
       "drupal/adminimal_theme": {
-        "Issue #2696393 by kasperg, ahmadhalah: Checkboxes with .error class are not usable":
+        "Issue #2696393: Checkboxes with .error class are not usable":
         "https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch"
       },
       "drupal/menu_position": {
-        "Issue #2883131 by akalata, sassafrass, Znak: Fatal error: Call to undefined method when creating a rule":
+        "Issue #2883131: Call to undefined method when creating a rule":
         "https://www.drupal.org/files/issues/2883131-19-menu_position_save_new_rules_and_config.patch"
       },
       "drupal/google_analytics_reports": {
-        "Issue #2850463 by sylus, casey: Error when saving either google_analytics_reports view":
+        "Issue #2850463: Error when saving either google_analytics_reports view":
         "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
-        "Issue #2860399 by iMiksu, abu-zakham: Warning: htmlspecialchars() expects parameter 1 to be string":
+        "Issue #2860399: Warning: htmlspecialchars() expects parameter 1 to be string":
         "https://www.drupal.org/files/issues/Fix_message-2860399-5.patch"
       },
       "drupal/responsive_preview": {
@@ -291,7 +291,7 @@
         "https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch"
       },
       "drupal/config_perms": {
-        "Issue #2877329 by josebc: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist":
+        "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist":
         "https://www.drupal.org/files/issues/config_perms-added_missing_edit_route-2877329-11.patch"
       },
       "drupal/username_enumeration_prevention": {
