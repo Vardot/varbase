@@ -14,7 +14,7 @@ php:
 env:
   - AFATG=01-website-base-requirements
   - AFATG=02-user-management
-  - AFATG=03-admin-managment
+  - AFATG=03-admin-management
   - AFATG=04-content-structure
   - AFATG=05-content-management
 
@@ -28,9 +28,9 @@ matrix:
   - php: 7.0
     env: AFATG=02-user-management
 
-# Automated Functional Acceptance Testing group: 03 admin managment
+# Automated Functional Acceptance Testing group: 03 admin management
   - php: 7.0
-    env: AFATG=03-admin-managment 
+    env: AFATG=03-admin-management 
 
 # Automated Functional Acceptance Testing group: 04 content structure
   - php: 7.0
