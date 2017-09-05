@@ -78,7 +78,7 @@ $ ../../../bin/behat tests/features/varbase
 ```
 4. Run the behat command at PROJECT_DIR_NAME/docroot/profiles/varbase/testes
 
-$ ../../../bin/behat features/varbase/step2-apply-tests/01-website-base-requirements_user-registration_only-admins-login_v4-0.feature
+$ ../../../bin/behat tests/features/varbase/step2-apply-tests/01-website-base-requirements/01-01-user-registration_only-admins-login.feature
 
 ================================================================================
 

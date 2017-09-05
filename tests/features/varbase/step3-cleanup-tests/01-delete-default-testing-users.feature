@@ -53,7 +53,7 @@ Feature: Delete default testing users.
       And I wait for the batch job to finish
      Then I should see "test_editor has been deleted."
 
-  @javascript @cleanup @tools @local @development @staging @production
+  @javascript @cleanup @tools @local @development @staging
   Scenario: Delete the test_content_admin user.
      When I go to "/admin/people"
       And I fill in "test_content_admin" for "Name or email contains"
@@ -74,7 +74,29 @@ Feature: Delete default testing users.
       And I wait for the batch job to finish
      Then I should see "test_content_admin has been deleted."
 
-  @javascript @cleanup @tools @local @development @staging @production
+  @javascript @cleanup @tools @local @development @staging
+  Scenario: Delete the test_seo_admin user.
+     When I go to "/admin/people"
+      And I wait
+      And I fill in "test_seo_admin" for "Name or email contains"
+      And I press "Filter"
+      And I wait
+     Then I should see "test_seo_admin"
+     When I click "test_seo_admin"
+      And I wait
+     Then I should see "test_seo_admin"
+     When I click "Edit"
+      And I wait
+     Then I should see "test_seo_admin"
+     When I press "Cancel account"
+      And I wait
+     Then I should see "Are you sure you want to cancel the account test_seo_admin?"
+     When I select the radio button "Delete the account and its content."
+      And I press "Cancel account"
+      And I wait for the batch job to finish
+     Then I should see "test_seo_admin has been deleted."
+
+  @javascript @cleanup @tools @local @development @staging
   Scenario: Delete the test_site_admin user.
      When I go to "/admin/people"
       And I wait
@@ -96,7 +118,7 @@ Feature: Delete default testing users.
       And I wait for the batch job to finish
      Then I should see "test_site_admin has been deleted."
 
-  @javascript @cleanup @tools @local @development @staging @production
+  @javascript @cleanup @tools @local @development @staging
   Scenario: Delete the test_super_admin user.
      When I go to "/admin/people"
       And I wait
