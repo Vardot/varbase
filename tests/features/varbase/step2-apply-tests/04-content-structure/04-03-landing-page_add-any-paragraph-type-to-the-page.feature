@@ -129,12 +129,12 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Add Rich Text"
       And I wait
      Then I should see "Accordion section body"
-      And I fill in the rich text editor field "Text" with "Accordion Section Body test"
-     When I press "Save"
+     When I fill in the rich text editor field "Text" with "Accordion Section Body test"
+      And I press "Save"
      Then I should see "Landing page Test Landing page Accordion has been created"
-      And I click "Accordion Section Title test"
+     When I click "Accordion Section Title test"
       And I wait
-      And I should see "Accordion Section Body test"
+     Then I should see "Accordion Section Body test"
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
@@ -163,7 +163,7 @@ So that the "Landing page" will show up having paragrpahs of different types
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Equal)"
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Equal)" for "Title"
@@ -232,7 +232,7 @@ So that the "Landing page" will show up having paragrpahs of different types
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Two Uneven)"
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
@@ -297,7 +297,7 @@ So that the "Landing page" will show up having paragrpahs of different types
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Three Uneven)"
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
@@ -358,7 +358,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-  
+
       And I expand the "1" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait for AJAX to finish
