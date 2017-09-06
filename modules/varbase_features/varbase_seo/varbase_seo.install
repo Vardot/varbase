@@ -5,6 +5,8 @@
  * Install, update and uninstall functions for the Varbase SEO module.
  */
 
+use Symfony\Component\Yaml\Yaml;
+
 /**
  * Enable Metatag: Facebook module.
  */
