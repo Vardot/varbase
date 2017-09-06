@@ -53,7 +53,7 @@ function varbase_landing_update_8005() {
 /**
  * Enable Paragraphs previewer module.
  */
-function varbase_update_8006() {
+function varbase_landing_update_8006() {
   if (!\Drupal::moduleHandler()->moduleExists('paragraphs_previewer')) {
     \Drupal::service('module_installer')->install(['paragraphs_previewer'], FALSE);
   }
