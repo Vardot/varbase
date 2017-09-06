@@ -195,7 +195,7 @@ projects[webform][version] = 5.0-beta16
 
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha4
-;; Issue #2907026: Fixed Warning: When we do not have content types yet in the system - Then we get  Invalid argument supplied for foreach() in content_lock_views_data()
+;; Issue #2907026: Fixed Warning: When we do not have content types yet in the system.
 projects[content_lock][patch][] = https://www.drupal.org/files/issues/2907026-7_0.patch
 
 projects[node_edit_protection][type] = module

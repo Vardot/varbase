@@ -313,7 +313,7 @@
         "https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch"
       },
       "drupal/content_lock": {
-        "Issue #2907026: Fixed Warning: When we do not have content types yet in the system - Then we get  Invalid argument supplied for foreach() in content_lock_views_data()":
+        "Issue #2907026: Fixed Warning: When we do not have content types yet in the system.":
         "https://www.drupal.org/files/issues/2907026-7_0.patch"
       }
     }
