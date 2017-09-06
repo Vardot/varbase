@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node
+label: Content
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:summary]'
+  abstract: '[node:summary]'
+  google_plus_image: '[node:field_image:entity:field_image:1200x630:url]'
+  og_description: '[node:summary]'
+  og_type: article
+  og_image: '[node:field_image:entity:field_image:1200x630:url]'
+  og_image_url: '[node:field_image:entity:field_image:1200x630:url]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: '[node:field_image:entity:field_image:280x150:url]'
+  twitter_cards_type: summary_large_image
