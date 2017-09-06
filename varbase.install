@@ -459,3 +459,12 @@ function varbase_update_8038() {
     \Drupal::service('module_installer')->install(['entity_clone'], FALSE);
   }
 }
+
+/**
+ * Enable Autocomplete Deluxe module.
+ */
+function varbase_update_8039() {
+  if (!\Drupal::moduleHandler()->moduleExists('autocomplete_deluxe')) {
+    \Drupal::service('module_installer')->install(['autocomplete_deluxe'], FALSE);
+  }
+}

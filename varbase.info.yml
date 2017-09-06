@@ -110,6 +110,7 @@ dependencies:
   - maxlength
   - menu_position
   - better_exposed_filters
+  - autocomplete_deluxe
   - link_attributes
   - login_destination
   - ckeditor_media_embed
