@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_admin.module.
+ */
+
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Implements hook_entity_bundle_create().
+ */
+function varbase_admin_entity_bundle_create($entity_type_id, $bundle) {
+
+  if ($entity_type_id == 'node') {
+    $config = \Drupal::service('config.factory')->getEditable('content_lock.settings');
+    if ($config->get('types')['node']) {
+      $new_content = array($bundle => $bundle);
+      $data = array_merge($config->get('types')['node'], $new_content);
+      $yaml = Yaml::parse(file_get_contents(\Drupal::root() . '/' . drupal_get_path('profile', 'varbase') . '/config/install/content_lock.settings.yml'));
+      $yaml['types']['node'] = $data;
+
+      $new_yaml = Yaml::dump($yaml);
+      file_put_contents(\Drupal::root() . '/' . drupal_get_path('profile', 'varbase') . '/config/install/content_lock.settings.yml', $new_yaml);
+
+      $config_file = \Drupal::root() . '/' . drupal_get_path('profile', 'varbase') . '/config/install/content_lock.settings.yml';
+      $data = (array) Yaml::parse($config_file);
+      $config->setData($data)->save(TRUE);
+    }
+    else {
+      $yaml = Yaml::parse(file_get_contents(\Drupal::root() . '/' . drupal_get_path('profile', 'varbase') . '/config/install/content_lock.settings.yml'));
+      $yaml['types']['node'] = array($bundle => $bundle);
+
+      $new_yaml = Yaml::dump($yaml);
+      file_put_contents(\Drupal::root() . '/' . drupal_get_path('profile', 'varbase') . '/config/install/content_lock.settings.yml', $new_yaml);
+
+      $config_file = \Drupal::root() . '/' . drupal_get_path('profile', 'varbase') . '/config/install/content_lock.settings.yml';
+      $data = (array) Yaml::parse($config_file);
+      $config->setData($data)->save(TRUE);
+    }
+  }
+}
