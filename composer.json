@@ -121,6 +121,7 @@
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/taxonomy_access_fix": "2.1",
     "drupal/better_exposed_filters": "3.0-alpha3",
+    "drupal/autocomplete_deluxe": "1.0-beta1",
     "drupal/link_attributes": "1.1",
     "drupal/paragraphs": "1.x-dev#e907f6d57c44e81d65e8c1e7247dccd0eae92258",
     "drupal/paragraphs_previewer": "1.0",
