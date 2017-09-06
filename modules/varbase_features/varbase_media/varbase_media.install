@@ -79,3 +79,14 @@ function varbase_media_update_8006() {
   $image_style_field_preview_config_content_data = (array) Yaml::parse($image_style_field_preview_config_content);
   $image_style_field_preview_config->setData($image_style_field_preview_config_content_data)->save();
 }
+
+/**
+ * Issue #2905259: Added ALT and TITLE columns for images.
+ *                 In Media content page admin/content/media.
+ */
+function varbase_media_update_8007() {
+  $config = \Drupal::configFactory()->getEditable('views.view.media');
+  $config_file = \Drupal::root() . '/' . drupal_get_path('module', 'varbase_media') . '/config/install/views.view.media.yml';
+  $data = (array) Yaml::parse($config_file);
+  $config->setData($data)->save(TRUE);
+}
