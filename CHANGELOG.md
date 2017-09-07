@@ -1,3 +1,67 @@
+## 8.4.08
+
+### Highlighted important changes since the last release:
+* Issue #2904173: Changed [Background Color] in the Styling Settings to use a
+                  set of Color set to choose with [Color boxes] with a general
+                  color settings.
+* Issue #2907081: Added [Autocomplete Deluxe] module 8.1.0-beta1
+* Issue #2905276: Added [Entity Clone] module and its patches.
+* Issue #2904086: Added a general [Varbase Settings] admin page with permission:
+                  access varbase settings to the [site admin] user role.
+* Issue #2907360: Added [schema metatag] module 1.0-rc4
+
+### Added since the last release:
+* Issue #2905057: Added the [Administer Varbase Bootstrap Paragraphs settings]
+                  permission to the [site admin] user role. and Moved
+                  the default.
+* Issue #2905057: Added the vbp-colors library in Vartheme and
+                  VARTHEME_SUBTHEME, have libraries in Vartheme and
+                  VARTHEME_SUBTHEME to override vbp-colors with the current
+                  active default theme colors.
+* Issue #2905259: Added ALT and TITLE columns for images in Media content
+                  page admin/content/media.
+* Issue #2905084: Added branding support for sub profile installer.
+* Issue #2904049: Added the 2823440-1.patch for the [Username Enumeration
+                  Prevention] module.
+* Issue #2904086: Added a general [Varbase Settings] admin page with
+                  permission: access varbase settings to the
+                 [site admin] user role.
+* Issue #2904948: Added the 2868155-8.patch for [Paragraphs] module to Add new
+                  hooks to allow easier editing of paragraph forms.
+* Issue #2904981: Added [Paragraphs previewer] module and Fixed paragraphs
+                  edit mode.
+* Issue #2906983: Added the 2907026-7_0.patch for [content lock] 8.1.0-alpha4
+                  Fixed Warning: When we do not have content types yet in
+                  the system.
+* Issue #2907360: Added [schema metatag] module 1.0-rc4
+
+### Changed since the last release:
+* Issue #2904173: Changed [Background Color] in the Styling Settings to use
+                  a set of Color set to choose with [Color boxes] with a
+                  general color settings.
+* Issue #2905032: Bettered up assets for for admin toolbar, Varbase Media,
+                  Varbase Editor.
+* Issue #2905595: Optimization round for the automated functional
+                  acceptance testing.
+* Issue #2907351: Changed [Varbase SEO] with an optimization round to have
+                  better init Metatag configs.
+* Issue #2904616: Enhanced the width of Paragraph types to respect container
+                  based on the Bootstrap way.
+
+### Updates since the last release:
+* Issue #2906754: Updated the patch on [Drupal core] to Allow profiles to
+                  provide a base_parent profile and load them in the correct
+                  order to 1356276-360.patch
+* Issue #2903554: Updated [Config Filter] module from 8.1.0-rc1 to 8.1.0
+* Issue #2906983: Updated [content lock] module
+                  from 8.1.0-alpha3 to 8.1.0-alpha4
+
+### Fixes since the last release:
+* Issue #2904323: Fixed Vartheme and Vartheme Subtheme print logo
+                  404 (Not Found).
+* Issue #2905262: Fixed installer style on RTL.
+
+
 ## 8.4.07
 
 ### Highlighted important changes since the last release:
