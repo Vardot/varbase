@@ -24,11 +24,10 @@ global-scripts:
     js/script.js: {}
     
 # VARTHEME_SUBTHEME Varbase Bootstrap Paragraphs colors theme.
-# Uncommit the following to load your colors file.
-#vbp-colors:
-#  css:
-#    theme:
-#      css/theme/vbp-colors.theme.css: {}
+vbp-colors:
+  css:
+    theme:
+      css/theme/vbp-colors.theme.css: {}
     
 # VARTHEME_SUBTHEME Vartheme styles library.
 vartheme-styles:
