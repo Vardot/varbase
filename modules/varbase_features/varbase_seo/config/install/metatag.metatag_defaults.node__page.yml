@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Basic page'
+tags:
+  title: '[node:title] | [site:name]'
+  schema_article_author: 'a:7:{s:5:"@type";s:6:"Person";s:3:"@id";s:0:"";s:4:"name";s:26:"[node:author:display-name]";s:3:"url";s:17:"[node:author:url]";s:6:"sameAs";s:0:"";s:4:"logo";a:0:{}s:5:"pivot";s:0:"";}'
+  schema_article_publisher: 'a:7:{s:5:"@type";s:12:"Organization";s:3:"@id";s:0:"";s:4:"name";s:11:"[site:name]";s:3:"url";s:10:"[site:url]";s:6:"sameAs";s:0:"";s:4:"logo";a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:39:"[site:url][current-theme:path]/logo.png";}s:5:"pivot";s:0:"";}'
+  schema_article_date_published: '[node:created:html_datetime]'
+  schema_article_date_modified: '[node:changed:html_datetime]'
+  schema_article_description: '[node:summary]'
+  schema_article_type: Article
+  schema_article_headline: '[node:title]'

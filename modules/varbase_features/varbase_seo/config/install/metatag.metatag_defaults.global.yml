@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies: {  }
+id: global
+label: Global
+tags:
+  generator: 'Varbase 8 (https://www.vardot.com)'
+  shortlink: '[current-page:url:unaliased]'
+  title: '[current-page:title] | [site:name]'
+  rights: '©[current-date:html_year] [site:name]. All rights reserved.'
+  canonical_url: '[current-page:url:absolute]'
+  referrer: origin
+  google_plus_image: '[site:url][default-active-theme:path]/share-logo.png'
+  apple_mobile_web_app_capable: 'yes'
+  mobileoptimized: width
+  handheldfriendly: 'true'
+  og_site_name: '[site:name]'
+  og_url: '[current-page:url:absolute]'
+  og_type: website
+  og_image: '[site:url][default-active-theme:path]/share-logo.png'
+  og_title: '[current-page:title] | [site:name]'
+  og_image_url: '[site:url][default-active-theme:path]/share-logo.png'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_image: '[site:url][default-active-theme:path]/share-logo.png'
+  twitter_cards_title: '[current-page:title] | [site:name]'
+  twitter_cards_type: summary
+  schema_web_site_publisher: 'a:7:{s:5:"@type";s:12:"Organization";s:3:"@id";s:0:"";s:4:"name";s:6:"Vardot";s:3:"url";s:14:"www.vardot.com";s:6:"sameAs";s:0:"";s:4:"logo";a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:39:"[site:url][current-theme:path]/logo.png";}s:5:"pivot";s:0:"";}'
+  schema_web_site_url: '[site:url]'
+  schema_web_site_type: WebSite
+  schema_web_site_name: '[site:name]'

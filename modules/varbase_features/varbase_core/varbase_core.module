@@ -1,0 +1,2 @@
+<?php
+module_load_include('inc', 'varbase_core', 'varbase_core.tokens');
