@@ -305,6 +305,9 @@ projects[redirect][version] = 1.0-beta1
 projects[metatag][type] = module
 projects[metatag][version] = 1.2
 
+projects[schema_metatag][type] = module
+projects[schema_metatag][version] = 1.0-rc4
+
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 2.9
 
