@@ -1,4 +1,4 @@
-Feature: Admin Managment - Standard Back-End Navigation - Navigate through the Drupal admin with the keyboard for faster access
+Feature: Admin management - Standard Back-End Navigation - Navigate through the Drupal admin with the keyboard for faster access
 As a site admin
 I want to be able to navigate through the Drupal admin with the keyboard
 So that I will have a faster access to administration pages in the site.

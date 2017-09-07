@@ -2,6 +2,6 @@ varbase_core.settings_index:
   path: '/admin/config/varbase'
   defaults:
     _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
-    _title: 'Varbase Settings'
+    _title: 'Varbase settings'
   requirements:
     _permission: 'access varbase settings'
