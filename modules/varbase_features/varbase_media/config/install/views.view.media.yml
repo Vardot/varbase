@@ -255,7 +255,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Media content'
+          label: 'Meta content'
           exclude: false
           alter:
             alter_text: true
