@@ -6,14 +6,14 @@ use Drupal\Core\Render\BubbleableMetadata;
  * Implements hook_token_info().
  */
 function varbase_core_token_info() {
-  // Current theme token.
-  $info['types']['current-theme'] = array(
-    'name' => t('Current theme'),
-    'description' => t('Tokens related to the current theme.'),
+  // Default theme token.
+  $info['types']['default-active-theme'] = array(
+    'name' => t('Default theme'),
+    'description' => t('Tokens related to the Default theme.'),
   );
-  $info['tokens']['current-theme']['path'] = array(
+  $info['tokens']['default-active-theme']['path'] = array(
     'name' => t('Path'),
-    'description' => t('The path of the current theme.'),
+    'description' => t('The path of the Default theme.'),
   );
 
   return $info;
@@ -34,7 +34,7 @@ function varbase_core_tokens($type, $tokens, array $data, array $options, Bubble
     $langcode = $language_manager->getCurrentLanguage()->getId();
   }
 
-  if ($type == 'current-theme') {
+  if ($type == 'default-active-theme') {
     foreach ($tokens as $name => $original) {
       switch ($name) {
         case 'path':

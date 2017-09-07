@@ -105,23 +105,3 @@ function varbase_seo_update_8011() {
     \Drupal::service('module_installer')->install(['redirect_404'], FALSE);
   }
 }
-
-/**
- * Optimization round to have better init Metatag configs.
- */
-function varbase_seo_update_8012() {
-  $profile_path = drupal_get_path('module', 'varbase_seo') . '/config/install/';
-  $configs['metatag.metatag_defaults.403'] = $profile_path . 'metatag.metatag_defaults.403.yml';
-  $configs['metatag.metatag_defaults.404'] = $profile_path . 'metatag.metatag_defaults.404.yml';
-  $configs['metatag.metatag_defaults.front'] = $profile_path . 'metatag.metatag_defaults.front.yml';
-  $configs['metatag.metatag_defaults.global'] = $profile_path . 'metatag.metatag_defaults.global.yml';
-  $configs['metatag.metatag_defaults.node'] = $profile_path . 'metatag.metatag_defaults.node.yml';
-  $configs['metatag.metatag_defaults.taxonomy_term'] = $profile_path . 'metatag.metatag_defaults.taxonomy_term.yml';
-  $configs['metatag.metatag_defaults.user'] = $profile_path . 'metatag.metatag_defaults.user.yml';
-
-  foreach ($configs as $name => $config_path) {
-    $data = (array) Yaml::parse($config_path);
-    $config = \Drupal::configFactory()->getEditable($name);
-    $config->setData($data)->save(TRUE);
-  }
-}
