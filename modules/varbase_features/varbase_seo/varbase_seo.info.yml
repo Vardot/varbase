@@ -12,6 +12,11 @@ dependencies:
   - metatag_open_graph
   - metatag_twitter_cards
   - metatag_verification
+  - schema_metatag
+  - schema_web_site
+  - schema_web_page
+  - schema_article
+  - schema_item_list
   - node
   - pathauto
   - rdf

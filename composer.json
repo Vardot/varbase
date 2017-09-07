@@ -80,6 +80,7 @@
     "drupal/pathauto": "1.0",
     "drupal/redirect": "1.0-beta1",
     "drupal/metatag": "1.2",
+    "drupal/schema_metatag": "1.0-rc4",
     "drupal/simple_sitemap": "2.9",
     "drupal/google_analytics": "2.1",
     "drupal/yoast_seo": "1.3",
