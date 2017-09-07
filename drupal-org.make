@@ -365,7 +365,7 @@ projects[recaptcha][version] = 2.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.3
+projects[search_api][version] = 1.4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase hero slider media
