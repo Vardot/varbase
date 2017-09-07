@@ -468,3 +468,15 @@ function varbase_update_8039() {
     \Drupal::service('module_installer')->install(['autocomplete_deluxe'], FALSE);
   }
 }
+
+/**
+ * Add Color Configs to the Available CSS styles (classes) for Varbase Bootstrap
+ * Paragraphs.
+ */
+function varbase_update_8040() {
+  $profile_path = drupal_get_path('profile', 'varbase') . '/config/install/';
+  $config_path = $profile_path . 'varbase_bootstrap_paragraphs.settings.yml';
+  $data = (array) Yaml::parse($config_path);
+  $config = \Drupal::configFactory()->getEditable('varbase_bootstrap_paragraphs.settings');
+  $config->setData($data)->save(TRUE);
+}
