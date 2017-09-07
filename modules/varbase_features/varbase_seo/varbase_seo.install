@@ -105,3 +105,48 @@ function varbase_seo_update_8011() {
     \Drupal::service('module_installer')->install(['redirect_404'], FALSE);
   }
 }
+
+/**
+ * Enable Schema Metatag module.
+ */
+function varbase_seo_update_8012() {
+  if (!\Drupal::moduleHandler()->moduleExists('schema_metatag')) {
+    \Drupal::service('module_installer')->install(['schema_metatag'], FALSE);
+  }
+}
+
+/**
+ * Enable Schema Web Site module.
+ */
+function varbase_seo_update_8013() {
+  if (!\Drupal::moduleHandler()->moduleExists('schema_web_site')) {
+    \Drupal::service('module_installer')->install(['schema_web_site'], FALSE);
+  }
+}
+
+/**
+ * Enable Schema Web Page module.
+ */
+function varbase_seo_update_8014() {
+  if (!\Drupal::moduleHandler()->moduleExists('schema_web_page')) {
+    \Drupal::service('module_installer')->install(['schema_web_page'], FALSE);
+  }
+}
+
+/**
+ * Enable Schema Article module.
+ */
+function varbase_seo_update_8015() {
+  if (!\Drupal::moduleHandler()->moduleExists('schema_article')) {
+    \Drupal::service('module_installer')->install(['schema_article'], FALSE);
+  }
+}
+
+/**
+ * Enable Schema Item List module.
+ */
+function varbase_seo_update_8016() {
+  if (!\Drupal::moduleHandler()->moduleExists('schema_item_list')) {
+    \Drupal::service('module_installer')->install(['schema_item_list'], FALSE);
+  }
+}
