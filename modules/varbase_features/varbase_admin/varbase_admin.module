@@ -14,6 +14,8 @@ function varbase_admin_entity_bundle_create($entity_type_id, $bundle) {
 
   if ($entity_type_id == 'node') {
     $config = \Drupal::service('config.factory')->getEditable('content_lock.settings');
+
+    // Check if there is a locked content types in the active config.
     if ($config->get('types')['node']) {
       $new_content = array($bundle => $bundle);
       $data = array_merge($config->get('types')['node'], $new_content);
