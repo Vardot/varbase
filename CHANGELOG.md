@@ -47,6 +47,8 @@
                   better init Metatag configs.
 * Issue #2904616: Enhanced the width of Paragraph types to respect container
                   based on the Bootstrap way.
+* Issue #2907298: Varbase 8.4.08: Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
 
 ### Updates since the last release:
 * Issue #2906754: Updated the patch on [Drupal core] to Allow profiles to
@@ -55,6 +57,7 @@
 * Issue #2903554: Updated [Config Filter] module from 8.1.0-rc1 to 8.1.0
 * Issue #2906983: Updated [content lock] module
                   from 8.1.0-alpha3 to 8.1.0-alpha4
+* Issue #2907387: Update [Search API] module from 8.1.3 to 8.1.4
 
 ### Fixes since the last release:
 * Issue #2904323: Fixed Vartheme and Vartheme Subtheme print logo

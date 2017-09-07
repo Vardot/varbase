@@ -2,7 +2,7 @@ name: 'Varbase Search'
 description: 'Provides search configuration, and offering search capabilities.'
 type: module
 core: 8.x
-version: 8.x-4.07
+version: 8.x-4.08
 package: Varbase
 dependencies:
   - better_exposed_filters
