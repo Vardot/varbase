@@ -470,8 +470,7 @@ function varbase_update_8039() {
 }
 
 /**
- * Add Color Configs to the Available CSS styles (classes) for Varbase Bootstrap
- * Paragraphs.
+ * Add Color Configs to the Available styles for Varbase Bootstrap Paragraphs.
  */
 function varbase_update_8040() {
   $profile_path = drupal_get_path('profile', 'varbase') . '/config/install/';

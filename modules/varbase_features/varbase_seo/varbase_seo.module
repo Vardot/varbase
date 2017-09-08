@@ -14,7 +14,7 @@ function varbase_seo_form_node_form_alter(&$form, FormStateInterface $form_state
   if (isset($form['field_yoast_seo']) &&
       isset($form['field_yoast_seo']['widget']) &&
       isset($form['field_yoast_seo']['widget']['0']) &&
-      isset($form['field_yoast_seo']['widget']['0']['yoast_seo'])){
+      isset($form['field_yoast_seo']['widget']['0']['yoast_seo'])) {
     $form['field_yoast_seo']['widget']['0']['yoast_seo']['#title'] = t('Real-time SEO analyzer');
   }
 }

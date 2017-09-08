@@ -15,7 +15,7 @@ function varbase_security_update_8001() {
 }
 
 /**
- * Enable	Password Character Length Policy module.
+ * Enable Password Character Length Policy module.
  */
 function varbase_security_update_8002() {
   if (!\Drupal::moduleHandler()->moduleExists('password_policy_length')) {

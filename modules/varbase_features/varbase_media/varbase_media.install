@@ -6,15 +6,6 @@
  */
 
 use Symfony\Component\Yaml\Yaml;
-use Drupal\embed\Entity\EmbedButton;
-use Drupal\file\Entity\File;
-
-/**
- * Implements hook_install().
- */
-function varbase_media_install() {
-  // Insert your varbase media custom install operation.
-}
 
 /**
  * Enable blazy module.
@@ -70,7 +61,8 @@ function varbase_media_update_8005() {
 
 /**
  * Issue #2893965: [Varbase Media] Media (image) widget field preview.
- *                 Updated field preview image meida view mode.
+ *
+ * Updated field preview image meida view mode.
  */
 function varbase_media_update_8006() {
   $image_style_field_preview_config = \Drupal::service('config.factory')->getEditable('image.style.field_preview');
@@ -82,7 +74,8 @@ function varbase_media_update_8006() {
 
 /**
  * Issue #2905259: Added ALT and TITLE columns for images.
- *                 In Media content page admin/content/media.
+ *
+ * In Media content page admin/content/media.
  */
 function varbase_media_update_8007() {
   $config = \Drupal::configFactory()->getEditable('views.view.media');

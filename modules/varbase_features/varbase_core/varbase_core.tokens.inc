@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * @file
+ * Contains varbase_core.tokens.inc.
+ */
+
+ /**
+  * To have all varbase core general and global tokens.
+  */
+
 use Drupal\Core\Render\BubbleableMetadata;
 
 /**

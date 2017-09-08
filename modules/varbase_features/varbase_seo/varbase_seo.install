@@ -5,8 +5,6 @@
  * Install, update and uninstall functions for the Varbase SEO module.
  */
 
-use Symfony\Component\Yaml\Yaml;
-
 /**
  * Enable Metatag: Facebook module.
  */
@@ -15,7 +13,7 @@ function varbase_seo_update_8001() {
     \Drupal::service('module_installer')->install(['metatag_facebook'], FALSE);
   }
 }
-    
+
 /**
  * Enable Metatag: Google Plus module.
  */
@@ -24,7 +22,7 @@ function varbase_seo_update_8002() {
     \Drupal::service('module_installer')->install(['metatag_google_plus'], FALSE);
   }
 }
-    
+
 /**
  * Enable Metatag: hreflang module.
  */
@@ -33,7 +31,7 @@ function varbase_seo_update_8003() {
     \Drupal::service('module_installer')->install(['metatag_hreflang'], FALSE);
   }
 }
-    
+
 /**
  * Enable Metatag: Mobile & UI Adjustments module.
  */
@@ -42,7 +40,7 @@ function varbase_seo_update_8004() {
     \Drupal::service('module_installer')->install(['metatag_mobile'], FALSE);
   }
 }
-    
+
 /**
  * Enable Metatag: Open Graph module.
  */
@@ -51,7 +49,7 @@ function varbase_seo_update_8005() {
     \Drupal::service('module_installer')->install(['metatag_open_graph'], FALSE);
   }
 }
-    
+
 /**
  * Enable Metatag: Twitter Cards module.
  */
@@ -60,7 +58,7 @@ function varbase_seo_update_8006() {
     \Drupal::service('module_installer')->install(['metatag_twitter_cards'], FALSE);
   }
 }
-    
+
 /**
  * Enable Metatag: Verification module.
  */
@@ -69,7 +67,7 @@ function varbase_seo_update_8007() {
     \Drupal::service('module_installer')->install(['metatag_verification'], FALSE);
   }
 }
-    
+
 /**
  * Enable Real-time SEO for Drupal module.
  */
@@ -78,7 +76,7 @@ function varbase_seo_update_8008() {
     \Drupal::service('module_installer')->install(['yoast_seo'], FALSE);
   }
 }
-    
+
 /**
  * Enable Simple XML Sitemap module.
  */
@@ -87,7 +85,7 @@ function varbase_seo_update_8009() {
     \Drupal::service('module_installer')->install(['simple_sitemap'], FALSE);
   }
 }
-    
+
 /**
  * Enable Google Analytics module.
  */
@@ -96,7 +94,7 @@ function varbase_seo_update_8010() {
     \Drupal::service('module_installer')->install(['google_analytics'], FALSE);
   }
 }
-    
+
 /**
  * Enable Redirect 404 module.
  */

@@ -1,2 +1,9 @@
 <?php
+
+/**
+ * @file
+ * Contains varbase_core.module.
+ */
+
+// To have all varbase core general and global tokens.
 module_load_include('inc', 'varbase_core', 'varbase_core.tokens');

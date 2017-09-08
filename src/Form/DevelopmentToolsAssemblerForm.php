@@ -88,32 +88,32 @@ class DevelopmentToolsAssemblerForm extends FormBase {
       '#suffix' => '</p>',
     ];
 
-    // Development tools. 
+    // Development tools.
     $developmentTools = ConfigBit::getList('configbit/development.tools.varbase.bit.yml', 'show_development_tools', TRUE, 'dependencies', 'profile', 'varbase');
     if (count($developmentTools)) {
-      
+
       $form['development_tools'] = [
         '#type' => 'fieldset',
       ];
-      
+
       foreach ($developmentTools as $development_tool_key => $development_tool_info) {
-        
+
         $checkbox_title = '';
         $checkbox_description = '';
         $checkbox_selected = FALSE;
-        
+
         if (isset($development_tool_info['title'])) {
           $checkbox_title = $development_tool_info['title'];
         }
-        
+
         if (isset($development_tool_info['description'])) {
           $checkbox_description = $development_tool_info['description'];
         }
-        
+
         if (isset($development_tool_info['selected'])) {
           $checkbox_selected = $development_tool_info['selected'];
         }
-        
+
         // Have a checkbox to enable this development tool.
         $form['development_tools'][$development_tool_key] = [
           '#type' => 'checkbox',
@@ -121,7 +121,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           '#description' => $checkbox_description,
           '#default_value' => $checkbox_selected,
         ];
-        
+
         // If config_form is ture for this development tool.
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
@@ -137,20 +137,25 @@ class DevelopmentToolsAssemblerForm extends FormBase {
               ],
             ],
           ];
-          
-          if (isset($development_tool_info['formbit'])){
+
+          if (isset($development_tool_info['formbit'])) {
             $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $development_tool_info['formbit'];
             if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
-              call_user_func_array($development_tool_key . "_build_formbit", array(&$form['development_tools'][$development_tool_key . '_config'], &$form_state, &$install_state));
+              call_user_func_array($development_tool_key . "_build_formbit",
+                array(&$form['development_tools'][$development_tool_key . '_config'],
+                  &$form_state,
+                  &$install_state,
+                )
+              );
             }
           }
         }
       }
     }
-    
+
     $form['actions'] = [
       'continue' => [
         '#type' => 'submit',
@@ -168,42 +173,42 @@ class DevelopmentToolsAssemblerForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    
+
     // Development Tools.
     $developmentTools = ConfigBit::getList('configbit/development.tools.varbase.bit.yml', 'show_development_tools', TRUE, 'dependencies', 'profile', 'varbase');
     if (count($developmentTools)) {
       $development_tools_values = [];
 
       foreach ($developmentTools as $development_tool_key => $development_tool_info) {
-        
-        // if form state has got value for this development tool.
+
+        // If form state has got value for this development tool.
         if ($form_state->hasValue($development_tool_key)) {
           $development_tools_values[$development_tool_key] = $form_state->getValue($development_tool_key);
         }
-        
+
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $development_tool_info['formbit'];
           if (file_exists($formbit_file_name)) {
-            
+
             include_once $formbit_file_name;
             $development_tools_editable_configs = call_user_func_array($development_tool_key . "_get_editable_config_names", array());
-            
+
             if (count($development_tools_editable_configs)) {
-              foreach($development_tools_editable_configs as $development_tools_editable_config_key => $development_tools_editable_config) {
-                foreach($development_tools_editable_config as $development_tools_config_item_key => $development_tools_config_item_value) {
+              foreach ($development_tools_editable_configs as $development_tools_editable_config_key => $development_tools_editable_config) {
+                foreach ($development_tools_editable_config as $development_tools_config_item_key => $development_tools_config_item_value) {
                   if ($form_state->hasValue($development_tools_config_item_key)) {
                     $development_tools_editable_configs[$development_tools_editable_config_key][$development_tools_config_item_key] = $form_state->getValue($development_tools_config_item_key);
                   }
                 }
               }
             }
-            
+
             $GLOBALS['install_state']['varbase']['development_tools_configs'] = $development_tools_editable_configs;
           }
         }
       }
-      
+
       $GLOBALS['install_state']['varbase']['development_tools_values'] = $development_tools_values;
     }
   }

@@ -124,19 +124,25 @@ function varbase_assemble_extra_components(array &$install_state) {
           // Add the checked extra feature to the batch process to be enabled.
           $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_feature_key];
         }
-       
+
         if (count($selected_extra_features_configs) &&
             isset($extraFeatures[$extra_feature_key]['config_form']) &&
             $extraFeatures[$extra_feature_key]['config_form'] == TRUE &&
             isset($extraFeatures[$extra_feature_key]['formbit'])) {
-          
+
           $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
-          
+
           if (file_exists($formbit_file_name)) {
 
             // Added the selected extra feature configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$extra_feature_key, $formbit_file_name, $selected_extra_features_configs]];
+            $batch['operations'][] = ['varbase_save_editable_config_values',
+              (array) [
+                $extra_feature_key,
+                $formbit_file_name,
+                $selected_extra_features_configs,
+              ],
+            ];
           }
         }
       }
@@ -186,7 +192,13 @@ function varbase_assemble_extra_components(array &$install_state) {
 
             // Added the selected development configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$demo_content_key, $formbit_file_name, $selected_demo_content_configs]];
+            $batch['operations'][] = ['varbase_save_editable_config_values',
+              (array) [
+                $demo_content_key,
+                $formbit_file_name,
+                $selected_demo_content_configs,
+              ],
+            ];
           }
         }
       }
@@ -228,7 +240,7 @@ function varbase_assemble_development_tools(array &$install_state) {
     $selected_development_configs = $install_state['varbase']['development_tools_configs'];
   }
 
-  // Development tools. 
+  // Development tools.
   $developmentTools = ConfigBit::getList('configbit/development.tools.varbase.bit.yml', 'show_development_tools', TRUE, 'dependencies', 'profile', 'varbase');
 
   // If we do have development tools and we have selected development tools.
@@ -239,7 +251,7 @@ function varbase_assemble_development_tools(array &$install_state) {
 
         // If the development tool was a module and not enabled, then enable it.
         if (!\Drupal::moduleHandler()->moduleExists($development_tool_key)) {
-          // Add the checked development tool to the batch process to be enabled.
+          // Add checked development tool to the batch process to be enabled.
           $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
         }
 
@@ -253,12 +265,18 @@ function varbase_assemble_development_tools(array &$install_state) {
 
             // Added the selected development configs to the batch process
             // with the same function name in the formbit.
-            $batch['operations'][] = ['varbase_save_editable_config_values', (array) [$development_tool_key, $formbit_file_name, $selected_development_configs]];
+            $batch['operations'][] = ['varbase_save_editable_config_values',
+              (array) [
+                $development_tool_key,
+                $formbit_file_name,
+                $selected_development_configs,
+              ],
+            ];
           }
         }
       }
     }
-    
+
     // Hide Wornings and status messages.
     $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
 
@@ -326,7 +344,7 @@ function varbase_assemble_extra_component_then_install($extra_component) {
  * Batch function to save editable config values for extra components.
  *
  * @param string|array $extra_component_machine_name
- *   machine name key of the extra component.
+ *   Machine name key of the extra component.
  * @param string|array $formbit_file_name
  *   FormBit file name.
  * @param string|array $editable_config_values

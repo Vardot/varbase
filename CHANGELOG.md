@@ -58,6 +58,10 @@
 * Issue #2906983: Updated [content lock] module
                   from 8.1.0-alpha3 to 8.1.0-alpha4
 * Issue #2907387: Update [Search API] module from 8.1.3 to 8.1.4
+* Issue #2907437: Updated [Varbase Bootstrap Paragraphs] feature module
+                  from 8.4.0-alpha4  8.4.0-alpha5 to have the update process
+                  for the type color widget in the form view mode for
+                  paragraph types.
 
 ### Fixes since the last release:
 * Issue #2904323: Fixed Vartheme and Vartheme Subtheme print logo
