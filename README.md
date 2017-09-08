@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.08)](https://travis-ci.org/Vardot/varbase) Varbase 8.4.08
-
-# Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.08)](https://travis-ci.org/Vardot/varbase/builds/273184767) Varbase 8.4.08
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
+
+## Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)
 
 The powerful Drupal distribution for faster development, with editor experience
 in mind. Brought to you by [Vardot](https://www.vardot.com/).

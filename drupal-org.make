@@ -455,37 +455,35 @@ projects[xmlsitemap][version] = 1.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[anchor_link][type] = module
-projects[anchor_link][version] = 1.5
+projects[anchor_link][version] = 1.x-dev
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.0-beta5
+projects[entity_browser_enhanced][version] = 1.x-dev
 
 projects[vmi][type] = module
-projects[vmi][version] = 1.0-beta2
+projects[vmi][version] = 1.x-dev
 
 projects[total_control][type] = module
-projects[total_control][download][url] = https://git.drupal.org/project/total_control.git
-projects[total_control][download][revision] = d5c4aea34daf4260a4948e1d0c2322ecfd2a973a
-projects[total_control][download][branch] = 8.x-2.x
+projects[total_control][version] = 2.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.18
+projects[varbase_editor][version] = 4.x-dev
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.0-beta11
+projects[varbase_heroslider_media][version] = 4.x-dev
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 4.0-beta3
+projects[varbase_carousels][version] = 4.x-dev
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.0-alpha5
+projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta8
+projects[varbase_total_control][version] = 1.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
