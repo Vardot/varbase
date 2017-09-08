@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.07)](https://travis-ci.org/Vardot/varbase/builds/266571233) Varbase 8.4.07
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.08)](https://travis-ci.org/Vardot/varbase) Varbase 8.4.08
 
 # Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)
 
@@ -28,7 +28,7 @@ instructions.
 
 To install the most recent stable release of Varbase 8.4.x run this command:
 ```
-composer create-project Vardot/varbase-project:^8.4.07 PROJECT_DIR_NAME --no-interaction
+composer create-project Vardot/varbase-project:^8.4.08 PROJECT_DIR_NAME --no-interaction
 ```
 
 To install the dev version of Varbase 8.4.x run this command:
