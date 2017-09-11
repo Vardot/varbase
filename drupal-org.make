@@ -191,7 +191,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-beta16
+projects[webform][version] = 5.0-beta17
 
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha4
