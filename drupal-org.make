@@ -184,6 +184,11 @@ projects[tour_ui][download][url] = https://git.drupal.org/project/tour_ui.git
 projects[tour_ui][download][revision] = 5cf793c071aeddea0ecd20d80b541606bfe2aff1
 projects[tour_ui][download][branch] = 8.x-1.x
 
+projects[tour_builder][type] = module
+projects[tour_builder][download][url] = https://git.drupal.org/project/tour_builder.git
+projects[tour_builder][download][revision] = d70e898949b7ec4095efb391a0dbec56d0117558
+projects[tour_builder][download][branch] = 8.x-1.x
+
 projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha6
 ;; Issue #2899640: Responsive Preview shows "Page not found" when multilingual site is enabled with Path-prefix setting
