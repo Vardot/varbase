@@ -22,6 +22,7 @@ permissions:
   - 'access site in maintenance mode'
   - 'access site reports'
   - 'access toolbar'
+  - 'access tour'
   - 'access user profiles'
   - 'access varbase settings'
   - 'administer account menu items'

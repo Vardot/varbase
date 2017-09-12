@@ -8,12 +8,13 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
+  - 'access sitemap'
+  - 'access tour'
+  - 'access user profiles'
+  - 'bypass honeypot protection'
   - 'search content'
   - 'use text format basic_html'
-  - 'access sitemap'
-  - 'access user profiles'
-  - 'view media'
+  - userprotect.account.edit
   - userprotect.mail.edit
   - userprotect.pass.edit
-  - userprotect.account.edit
-  - 'bypass honeypot protection'
+  - 'view media'

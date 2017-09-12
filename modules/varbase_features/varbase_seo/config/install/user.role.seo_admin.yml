@@ -11,6 +11,7 @@ permissions:
   - 'access contextual links'
   - 'access in-place editing'
   - 'access toolbar'
+  - 'access tour'
   - 'administer google analytics'
   - 'administer meta tags'
   - 'administer redirect settings'
@@ -32,4 +33,3 @@ permissions:
   - 'edit own varbase_heroslider_media content'
   - 'use yoast seo'
   - 'view the administration theme'
-

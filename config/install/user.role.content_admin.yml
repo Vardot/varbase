@@ -19,6 +19,7 @@ permissions:
   - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access toolbar'
+  - 'access tour'
   - 'access user profiles'
   - 'administer footer menu items'
   - 'administer main menu items'

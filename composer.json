@@ -77,6 +77,7 @@
     "drupal/roleassign": "1.0-alpha2",
     "drupal/admin_toolbar": "1.19",
     "drupal/adminimal_admin_toolbar": "1.5",
+    "drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
     "drupal/pathauto": "1.0",
     "drupal/redirect": "1.0-beta1",
     "drupal/metatag": "1.2",
