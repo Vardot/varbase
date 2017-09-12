@@ -10,6 +10,7 @@ regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
   header: 'Top Bar'
+  hero_slider: 'Media Hero Slider'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
