@@ -203,7 +203,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I press "Add Rich Text"
       And I wait for AJAX to finish
-      And I fill in the rich text editor field "Text" with "Rich text test - column Three"
+      And I fill in the rich text editor field "Text" with "Rich text test - column two"
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"

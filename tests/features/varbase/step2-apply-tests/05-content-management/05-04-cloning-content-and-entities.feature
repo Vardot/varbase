@@ -4,7 +4,7 @@ I want to be able to clone an entity.
 
 @javascript @local @development
   Scenario: Check if a user with a permission can clone a "landing page"
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Clone landing page" for "Title"
@@ -37,7 +37,7 @@ I want to be able to clone an entity.
 
   @javascript @local @development
   Scenario: Check if a user with a permission deleted a cloned entity the original will not affected
-    Given I am a logged in user with the "test_super_admin" user
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "admin/content"
       And I wait
      Then I should see "Content"
