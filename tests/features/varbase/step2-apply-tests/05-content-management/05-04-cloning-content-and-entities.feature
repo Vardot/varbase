@@ -29,7 +29,7 @@ I want to be able to clone an entity.
      When I press "Save"
      Then I should see "Modal button"
      When I click "Clone"
-      And I wait 
+      And I wait
       And I press "Clone"
       And I wait
      Then I should see "Test Clone landing page - Cloned" value in the "edit-title-0-value" input element
@@ -37,7 +37,7 @@ I want to be able to clone an entity.
 
   @javascript @local @development
   Scenario: Check if a user with a permission deleted a cloned entity the original will not affected
-    Given I am a logged in user with the "test_site_admin" user
+    Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/content"
       And I wait
      Then I should see "Content"
