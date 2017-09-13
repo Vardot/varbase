@@ -11,3 +11,4 @@ access_check: false
 normalize_aliases: true
 content_location_header: false
 term_path_handler: true
+route_normalizer_enabled: true
