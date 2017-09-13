@@ -2,7 +2,7 @@ Feature: Content Management - Add default [entityqueue] module testing content a
 
 @javascript @init @tools @local @development @staging
 Scenario: Create "Test Content" content type.
-  Given I am a logged in user with the "webmaster" user
+  Given I am a logged in user with the "test_super_admin" user
    When I go to "/admin/structure/types/add"
     And I wait
    Then I should see "Add content type"
@@ -14,7 +14,7 @@ Scenario: Create "Test Content" content type.
 
 @javascript @init @tools @local @development @staging
 Scenario: Add Entity Queue "Test Queue" and use "Test Content" content type.
-  Given I am a logged in user with the "webmaster" user
+  Given I am a logged in user with the "test_super_admin" user
    When I go to "/admin/structure/entityqueue"
     And I wait
    Then I should see "Add entity queue"
@@ -30,7 +30,7 @@ Scenario: Add Entity Queue "Test Queue" and use "Test Content" content type.
 
 @javascript @init @tools @local @development @staging
 Scenario: Add Test content N1, N2, N3, N4 type of test content.
-  Given I am a logged in user with the "webmaster" user
+  Given I am a logged in user with the "test_super_admin" user
    When I go to "/node/add/test_content"
     And I wait
    Then I should see "Create Test Content"
@@ -39,7 +39,7 @@ Scenario: Add Test content N1, N2, N3, N4 type of test content.
     And I press "Save"
     And I wait
    Then I should see "Test Content Test content N1 has been created."
-   
+
    When I go to "/node/add/test_content"
     And I wait
    Then I should see "Create Test Content"
@@ -60,7 +60,7 @@ Scenario: Add Test content N1, N2, N3, N4 type of test content.
 
 @javascript @init @tools @local @development @staging
 Scenario: Add Test content N1, N2, N3, N4 nodes to the "Test Queue" entityqueue.
-  Given I am a logged in user with the "webmaster" user
+  Given I am a logged in user with the "test_super_admin" user
    When I go to "/admin/structure/entityqueue"
     And I wait
    Then I should see "Test Queue"

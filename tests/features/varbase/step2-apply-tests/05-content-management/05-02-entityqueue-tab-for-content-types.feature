@@ -5,7 +5,7 @@ So that I can Add to queue or Remove from queue for the content.
 
 @javascript @local @development
 Scenario: Check if queuable content have the "Entityqueue" tab at the full content page and can Add to queue or Remove from queue.
-  Given I am a logged in user with the "webmaster" user
+  Given I am a logged in user with the "test_super_admin" user
    When I go to "/node/add/test_content"
     And I wait
    Then I should see "Create Test Content"
