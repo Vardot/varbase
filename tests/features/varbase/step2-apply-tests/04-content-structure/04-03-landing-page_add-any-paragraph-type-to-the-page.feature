@@ -167,12 +167,6 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-      And I expand the "1" select list "dropbutton-multiple"
-      And I wait for AJAx to finish
-      And I press "Add Rich Text"
-      And I wait for AJAX to finish
-      And I should see "Components"
-      And I fill in the rich text editor field "Text" with "Rich Text test"
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
@@ -201,9 +195,6 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-      And I press "Add Rich Text"
-      And I wait for AJAX to finish
-      And I fill in the rich text editor field "Text" with "Rich text test - column two"
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"
@@ -246,11 +237,6 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait for AJAX to finish
-      And I expand the "1" select list "dropbutton-multiple"
-      And I wait for AJAx to finish
-      And I press "Add Rich Text"
-      And I wait for AJAX to finish
-      And I fill in the rich text editor field "Text" with "Rich text test - column Two"
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Three Uneven) has been created"
