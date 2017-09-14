@@ -14,15 +14,15 @@ tips:
     id: welcome-to-varbase-01
     plugin: text
     label: 'Welcome to Varbase'
-    weight: -100
+    weight: 2
     attributes: null
     body: "<h1>Congratulations!</h1>\r\n<h3>With Varbase you can build amazing websites that can grow to join the top 100 websites on the internet!</h3>\r\n<p>That's true! It's built on Drupal 8, the world's #1 open source CMS software for small businesses, global enterprises, and everything in between.</p>\r\n<p>&nbsp;</p>\r\n<p>This quick tour will take you on the general features to get you acquainted. Click \"Next\" to proceed.</p>"
-    location: top
+    location: left
   tour-switch:
     id: tour-switch
     plugin: text
     label: 'Tour Switch'
-    weight: -100
+    weight: 1
     attributes:
       data-class: tour-toolbar-tab
     body: 'Remember! You can always switch on or off the tour from this button.'

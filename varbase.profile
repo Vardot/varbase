@@ -438,10 +438,10 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
 function varbase_after_install_finished(array &$install_state) {
   install_finished($install_state);
   $output = [];
-  
+
   // After install direction.
   $after_install_direction = $base_url;
-  
+
   if (isset($install_state['varbase']['varbase_tour'])
     && $install_state['varbase']['varbase_tour'] == TRUE) {
     $after_install_direction = $base_url . '/?tour';
@@ -478,7 +478,7 @@ function varbase_after_install_finished(array &$install_state) {
     ],
   ];
   $output['#attached']['html_head'][] = [$meta_redirect, 'meta_redirect'];
-  
+
   return $output;
 }
 

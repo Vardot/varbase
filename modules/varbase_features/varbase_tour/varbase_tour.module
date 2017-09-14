@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_tour.module.
+ */
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function varbase_tour_page_attachments(array &$page) {
+  // Attached the varbase tour styling library.
+  $page['#attached']['library'][] = 'varbase_tour/tour-styling';
+  $page['#attached']['library'][] = 'varbase_tour/tour-default-theme';
+}
