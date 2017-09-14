@@ -12,5 +12,5 @@ config_bit:
         varbase_tour:
           title: "Varbase Tour"
           description: "Provide Tours for varbase."
-          selected: true
+          selected: false
           config_form: false
