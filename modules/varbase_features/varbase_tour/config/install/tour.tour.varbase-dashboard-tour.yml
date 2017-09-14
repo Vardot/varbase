@@ -16,7 +16,7 @@ tips:
     id: welcome-to-your-dashboard
     plugin: text
     label: 'Welcome to Your Dashboard'
-    weight: -100
+    weight: 1
     attributes: null
     body: "<p>As an editor or a site manager, this dashboard includes quick access links and summarized information for you.</p>\r\n<p>Press \"Next\" to get a quick overview of its elements.</p>"
     location: top
@@ -24,7 +24,7 @@ tips:
     id: your-account
     plugin: text
     label: 'Your Account'
-    weight: -100
+    weight: 2
     attributes:
       data-class: 'block-varbase-dashboard-user .button-action'
     body: 'You can always edit your account by going clicking this button.'
@@ -33,7 +33,7 @@ tips:
     id: create-content
     plugin: text
     label: 'Create Content'
-    weight: -100
+    weight: 3
     attributes:
       data-class: block-varbase-create-content
     body: "<p>This block will list the most important content for you or your editors to create.</p>\r\n<p>You can edit what content types to appear here by going to the <b>Dashboard Panel edit page</b>. <em>If you don't have permission to do so, contact your site administrator.</em></p>"
@@ -42,7 +42,7 @@ tips:
     id: google-analytics
     plugin: text
     label: 'Google Analytics'
-    weight: -100
+    weight: 4
     attributes:
       data-class: 'block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__content'
     body: '<p>Connect your Google Analytics account to your site to start seeing stats directly in your dashboard.<p>'
@@ -51,7 +51,7 @@ tips:
     id: your-content-statistics
     plugin: text
     label: 'Your Content Statistics'
-    weight: -100
+    weight: 5
     attributes:
       data-class: 'block-varbase-content-overview  a[href="/admin/content?type=page"]'
     body: 'Finally, once you start adding content to your site, your content''s statistics will appear here.'
