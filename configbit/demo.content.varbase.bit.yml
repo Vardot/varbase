@@ -6,11 +6,11 @@ config_bit:
   type: list
   for: varbase.info.yml
   when:
-    show_demo: false
+    show_demo: true
     list:
       dependencies:
-        varbase_demo:
-          title: "Install Demo Content"
-          description: "If you're evaluating Varbase, installing demo content will help you get an idea of how Varbase works, and what features are included."
-          selected: false
+        varbase_tour:
+          title: "Varbase Tour"
+          description: "Provide Tours for varbase."
+          selected: true
           config_form: false

@@ -182,6 +182,11 @@ function varbase_assemble_extra_components(array &$install_state) {
           $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
         }
 
+        // If Varbase Tour were selected then send an install status flag.
+        if ($demo_content_key == 'varbase_tour') {
+          $GLOBALS['homepage_with_varbase_tour'] = TRUE;
+        }
+
         if (count($selected_demo_content_configs) &&
             isset($demoContent[$demo_content_key]['config_form']) &&
             $demoContent[$demo_content_key]['config_form'] == TRUE &&
