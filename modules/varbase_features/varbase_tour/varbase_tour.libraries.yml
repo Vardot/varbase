@@ -1,0 +1,14 @@
+back-end:
+  version: VERSION
+  css:
+    theme:
+      css/theme/varbase_tour.back-end.css: { every_page: 1 }
+  dependencies:
+    - system/base
+front-end:
+  version: VERSION
+  css:
+    theme:
+      css/theme/varbase_tour.front-end.css: { every_page: 1 }
+  dependencies:
+    - system/base

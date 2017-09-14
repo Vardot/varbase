@@ -78,6 +78,13 @@ function varbase_install_tasks(&$install_state) {
 }
 
 /**
+ * Implements hook_install_tasks_alter().
+ */
+function varbase_install_tasks_alter(array &$tasks, array $install_state) {
+  $tasks['install_finished']['function'] = 'varbase_after_install_finished';
+}
+
+/**
  * Batch job to assemble Varbase extra components.
  *
  * @param array $install_state
@@ -184,7 +191,7 @@ function varbase_assemble_extra_components(array &$install_state) {
 
         // If Varbase Tour were selected then send an install status flag.
         if ($demo_content_key == 'varbase_tour') {
-          $GLOBALS['homepage_with_varbase_tour'] = TRUE;
+          $install_state['varbase']['varbase_tour'] = TRUE;
         }
 
         if (count($selected_demo_content_configs) &&
@@ -415,6 +422,64 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
     ConfigBit::actionRemove('configbit/varbase_media.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
   }
 
+}
+
+/**
+ * Varbase after install finished.
+ *
+ * Lanuch auto Varbase Tour auto launch after install.
+ *
+ * @param array $install_state
+ *   The current install state.
+ *
+ * @return array
+ *   A renderable array with a redirect header.
+ */
+function varbase_after_install_finished(array &$install_state) {
+  install_finished($install_state);
+  $output = [];
+  
+  // After install direction.
+  $after_install_direction = $base_url;
+  
+  if (isset($install_state['varbase']['varbase_tour'])
+    && $install_state['varbase']['varbase_tour'] == TRUE) {
+    $after_install_direction = $base_url . '/?tour';
+  }
+
+  // Clear all messages.
+  drupal_get_messages();
+
+  $success_message = t('Congratulations, you installed @drupal!', [
+    '@drupal' => drupal_install_profile_distribution_name(),
+  ]);
+  drupal_set_message($success_message);
+
+  global $base_url;
+  $output = [
+    '#title' => t('Varbase'),
+    'info' => [
+      '#markup' => t('Congratulations, you installed Varbase! If you are not redirected in 5 seconds, <a href="@url">click here</a> to proceed to your site.', [
+        '@url' => $after_install_direction,
+      ]),
+    ],
+    '#attached' => [
+      'http_header' => [
+        ['Cache-Control', 'no-cache'],
+      ],
+    ],
+  ];
+
+  $meta_redirect = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'http-equiv' => 'refresh',
+      'content' => '0;url=' . $base_url . '/?tour',
+    ],
+  ];
+  $output['#attached']['html_head'][] = [$meta_redirect, 'meta_redirect'];
+  
+  return $output;
 }
 
 /**
