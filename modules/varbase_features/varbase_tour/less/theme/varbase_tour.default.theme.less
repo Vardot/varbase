@@ -9,7 +9,13 @@
       left: 25% !important;
       top: 19% !important;
     }
-  } 
+  }
+  
+  &.tip-tour-switch {
+    top: 35px !important;
+    right: 35px !important;
+    left: auto !important;
+  }
   
   .button {
     box-sizing: border-box;
@@ -91,4 +97,26 @@
     border-color: #144b78;
     box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.2);
   }
+}
+
+[dir="rtl"] body .joyride-tip-guide {
+  &.tip-tour-switch {
+    top: 35px !important;
+    left: 135px !important;
+    right: auto !important;
+  }
+
+  .joyride-nub {
+    &.right {
+      left: -28px;
+      right: auto;
+    }
+    
+    &.left {
+      left: auto;
+      right: -28px;
+    }
+  }
+
+
 }

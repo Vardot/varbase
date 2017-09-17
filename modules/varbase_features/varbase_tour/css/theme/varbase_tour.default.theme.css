@@ -6,6 +6,11 @@
   left: 25% !important;
   top: 19% !important;
 }
+.joyride-tip-guide.tip-tour-switch {
+  top: 35px !important;
+  right: 35px !important;
+  left: auto !important;
+}
 .joyride-tip-guide .button {
   box-sizing: border-box;
   display: inline-block;
@@ -89,5 +94,18 @@
   background-image: linear-gradient(to bottom, #08639b, #0071b8);
   border-color: #144b78;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+[dir="rtl"] body .joyride-tip-guide.tip-tour-switch {
+  top: 35px !important;
+  left: 135px !important;
+  right: auto !important;
+}
+[dir="rtl"] body .joyride-tip-guide .joyride-nub.right {
+  left: -28px;
+  right: auto;
+}
+[dir="rtl"] body .joyride-tip-guide .joyride-nub.left {
+  left: auto;
+  right: -28px;
 }
 /*# sourceMappingURL=varbase_tour.default.theme.css.map */
