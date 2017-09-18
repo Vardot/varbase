@@ -42,7 +42,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I fill in "Test landing page body description." for "Page description"
 
   # Add Rich text centered
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait
       And I scrolldown
       And I press "Rich Text"
@@ -58,7 +58,7 @@ So that the "Landing page" will have text and images in right and left view.
      When I click "Edit"
       And I wait
       And I scrolldown
-      And I press the "2" "+   Add Component" button
+      And I press "Add Component"
       And I wait
       And I press "Text and image"
       And I wait for AJAX to finish
@@ -88,7 +88,7 @@ So that the "Landing page" will have text and images in right and left view.
      When I click "Edit"
       And I wait
       And I scrolldown
-      And I press the "3" "+   Add Component" button
+      And I press "Add Component"
       And I wait
       And I press "Text and image"
       And I wait for AJAX to finish
