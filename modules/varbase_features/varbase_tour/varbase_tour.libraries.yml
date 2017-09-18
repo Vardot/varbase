@@ -2,18 +2,26 @@ tour-styling:
   version: VERSION
   css:
     theme:
-      css/component/tour.component.css: { every_page: 1 }
+      css/component/tour.component.css: { }
 tour-admin-theme:
   version: VERSION
   css:
     theme:
-      css/theme/varbase_tour.admin.theme.css: { every_page: 1 }
+      css/theme/varbase_tour.admin.theme.css: { }
   dependencies:
     - system/base
 tour-default-theme:
   version: VERSION
   css:
     theme:
-      css/theme/varbase_tour.default.theme.css: { every_page: 1 }
+      css/theme/varbase_tour.default.theme.css: { }
   dependencies:
     - system/base
+tour-welcome-modal:
+  version: VERSION
+  css:
+    theme:
+      css/component/bootstrap-dialog.component.css: { }
+  js:
+    js/bootstrap-dialog.js: { }
+    js/varbase_tour.scripts.js: { } 

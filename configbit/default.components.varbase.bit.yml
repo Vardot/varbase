@@ -19,5 +19,6 @@ config_bit:
         - varbase_webform
         - varbase_page
         - varbase_landing
+        - varbase_tour
         # Enable listed modules in order at this installation step. 
         - libraries

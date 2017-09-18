@@ -189,11 +189,6 @@ function varbase_assemble_extra_components(array &$install_state) {
           $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
         }
 
-        // If Varbase Tour were selected then send an install status flag.
-        if ($demo_content_key == 'varbase_tour') {
-          $install_state['varbase']['varbase_tour'] = TRUE;
-        }
-
         if (count($selected_demo_content_configs) &&
             isset($demoContent[$demo_content_key]['config_form']) &&
             $demoContent[$demo_content_key]['config_form'] == TRUE &&
@@ -440,12 +435,7 @@ function varbase_after_install_finished(array &$install_state) {
   $output = [];
 
   // After install direction.
-  $after_install_direction = $base_url;
-
-  if (isset($install_state['varbase']['varbase_tour'])
-    && $install_state['varbase']['varbase_tour'] == TRUE) {
-    $after_install_direction = $base_url . '/?tour';
-  }
+  $after_install_direction = $base_url . '/?welcome';
 
   // Clear all messages.
   drupal_get_messages();
@@ -474,7 +464,7 @@ function varbase_after_install_finished(array &$install_state) {
     '#tag' => 'meta',
     '#attributes' => [
       'http-equiv' => 'refresh',
-      'content' => '0;url=' . $base_url . '/?tour',
+      'content' => '0;url=' . $base_url . '/?welcome',
     ],
   ];
   $output['#attached']['html_head'][] = [$meta_redirect, 'meta_redirect'];

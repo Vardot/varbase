@@ -10,7 +10,44 @@
  * Implements hook_page_attachments().
  */
 function varbase_tour_page_attachments(array &$page) {
-  // Attached the varbase tour styling library.
-  $page['#attached']['library'][] = 'varbase_tour/tour-styling';
-  $page['#attached']['library'][] = 'varbase_tour/tour-default-theme';
+  // When the current user is not an anonymous user.
+  if (!\Drupal::currentUser()->isAnonymous()) {
+    // Then attach the varbase tour styling library.
+    $page['#attached']['library'][] = 'varbase_tour/tour-styling';
+    // And attach the varbase tour default theme library.
+    $page['#attached']['library'][] = 'varbase_tour/tour-default-theme';
+
+    // When the url is one of the admin routes.
+    if (\Drupal::service('router.admin_context')->isAdminRoute()) {
+      // Then attach the varbase tour admin theme library.
+      $page['#attached']['library'][] = 'varbase_tour/tour-admin-theme';
+    }
+
+    // When the current page is the front page.
+    if (\Drupal::service('path.matcher')->isFrontPage()) {
+      $query_welcome = \Drupal::request()->query->get('welcome');
+      if (isset($query_welcome)) {
+        $varbase_tour_config = \Drupal::service('config.factory')->getEditable('varbase_tour.settings');
+
+        // When we do have "/?tour=1&welcome=done" at the front page. 
+        if ($query_welcome == 'done') {
+          // Then update the "welcome status" checkbox config to unchecked. 
+          $varbase_tour_config = \Drupal::service('config.factory')->getEditable('varbase_tour.settings');
+          $varbase_tour_config->set('welcome_status', 0);
+          $varbase_tour_config->save();
+        }
+        else {
+          // When we do have "/?welcome" at the front page.
+          // And the "welcome status" checkbox config is checked.
+          $welcome_status = $varbase_tour_config->get('welcome_status');
+
+          if (isset($welcome_status) && $welcome_status == 1) {
+            // Then attache the varbase tour module scripting library.
+            $page['#attached']['library'][] = 'varbase_tour/tour-welcome-modal';
+          }
+        }
+      }
+    }
+  }
+
 }

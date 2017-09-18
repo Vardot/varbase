@@ -18,3 +18,4 @@ bower_components/
 /themes/vartheme/VARTHEME_SUBTHEME/css/mixins.css
 /themes/vartheme/VARTHEME_SUBTHEME/css/mixins.css.map
 /themes/vartheme/VARTHEME_SUBTHEME/js/script.min.js
+/modules/varbase_features/varbase_tour/js/varbase_tour.scripts.min.js
