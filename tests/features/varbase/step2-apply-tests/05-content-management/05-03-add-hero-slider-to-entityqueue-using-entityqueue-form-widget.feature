@@ -45,6 +45,8 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I fill in "Embed Flag Earth" for "Search"
       And I press the "Search" button
       And I wait for AJAX to finish
+      And I wait for AJAX to finish
+      And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
