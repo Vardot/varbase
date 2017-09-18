@@ -65,6 +65,6 @@ I want to be able to clone an entity.
       And I wait
      Then I should see "Modal button"
      When I press "Modal button"
-      And I wait
+      And I wait for AJAX to finish
      Then I should see "Modal title"
       And I should see "Modal Body test"
