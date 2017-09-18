@@ -12,7 +12,7 @@ I want to be able to clone an entity.
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I scrolldown
       And I wait for AJAX to finish
@@ -21,7 +21,7 @@ I want to be able to clone an entity.
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Modal body"
