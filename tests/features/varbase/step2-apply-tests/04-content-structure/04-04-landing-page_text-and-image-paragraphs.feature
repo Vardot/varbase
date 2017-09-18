@@ -42,7 +42,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I fill in "Test landing page body description." for "Page description"
 
   # Add Rich text centered
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait
       And I scrolldown
       And I press "Rich Text"
