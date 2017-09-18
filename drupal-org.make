@@ -201,7 +201,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-beta17
+projects[webform][version] = 5.0-beta18
 
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha4
@@ -254,14 +254,14 @@ projects[link_attributes][version] = 1.1
 
 projects[paragraphs[type] = module
 projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
-projects[paragraphs][download][revision] = e907f6d57c44e81d65e8c1e7247dccd0eae92258
+projects[paragraphs][download][revision] = abd9a871f6390a7e6b24985635ecc90db5179e15
 projects[paragraphs][download][branch] = 8.x-1.x
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-206.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-222.patch
 ;; Issue #2868155: Add new hooks to allow easier editing of paragraph forms
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2868155-8.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2868155-16.patch
 ;; Issue #2877927: Show add widget between paragraphs on hover
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2877927_29.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2

@@ -91,7 +91,7 @@
     "drupal/responsive_preview": "1.0-alpha6",
     "drupal/views_bulk_edit": "1.0-beta1",
     "drupal/revision_log_default": "1.0",
-    "drupal/webform": "5.0-beta17",
+    "drupal/webform": "5.0-beta18",
     "drupal/content_lock": "1.0-alpha4",
     "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
     "drupal/rabbit_hole": "1.0-beta3",
@@ -126,7 +126,7 @@
     "drupal/better_exposed_filters": "3.0-alpha3",
     "drupal/autocomplete_deluxe": "1.0-beta1",
     "drupal/link_attributes": "1.1",
-    "drupal/paragraphs": "1.x-dev#e907f6d57c44e81d65e8c1e7247dccd0eae92258",
+    "drupal/paragraphs": "1.x-dev#abd9a871f6390a7e6b24985635ecc90db5179e15",
     "drupal/paragraphs_previewer": "1.0",
     "drupal/color_field": "2.0-rc2",
     "drupal/entity_reference_revisions": "1.3",
@@ -266,11 +266,11 @@
       },
       "drupal/paragraphs": {
         "Issue #2461695: Support translatable paragraph entity reference revision field":
-        "https://www.drupal.org/files/issues/meta_support-2461695-206.patch",
+        "https://www.drupal.org/files/issues/meta_support-2461695-222.patch",
         "Issue #2868155: Add new hooks to allow easier editing of paragraph forms":
-        "https://www.drupal.org/files/issues/2868155-8.patch",
+        "https://www.drupal.org/files/issues/2868155-16.patch",
         "Issue #2877927: Show add widget between paragraphs on hover":
-        "https://www.drupal.org/files/issues/show_add_widget-2877927-25.patch"
+        "https://www.drupal.org/files/issues/2877927_29.patch"
       },
       "drupal/adminimal_theme": {
         "Issue #2696393: Checkboxes with .error class are not usable":
