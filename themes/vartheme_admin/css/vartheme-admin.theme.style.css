@@ -66,12 +66,3 @@ body .form-wrapper .counter {
 .adminimal .ui-dialog.ui-widget.ui-widget-content .media-image-edit-form .form-actions {
   display: none;
 }
-
-/* View Modes Inventory - */
-#ds_layout_wrapper .ds-layout-preview-image img {
-  width: 365px;
-}
-
-#ds_layout_wrapper .ds-layout-preview-image {
-  width: 350px;
-}
