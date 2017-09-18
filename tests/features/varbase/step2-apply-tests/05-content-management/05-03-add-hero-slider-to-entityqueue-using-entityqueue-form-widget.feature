@@ -44,7 +44,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I switch to iframe "entity_browser_iframe_heroslider_media_browser"
       And I fill in "Embed Flag Earth" for "Search"
       And I press the "Search" button
-      And I wait for 10 seconds
+      And I wait for 5 seconds
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
