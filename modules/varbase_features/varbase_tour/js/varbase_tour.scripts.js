@@ -16,18 +16,18 @@
 "<p>This quick tour will take you on the general features to get you acquainted. Click \"Next\" to proceed.</p>");
 
       BootstrapDialog.show({
-          type: BootstrapDialog.TYPE_INFO,
-          size: BootstrapDialog.SIZE_WIDE,
-          title: false,
-          message: varbase_tour_welcome_message,
-          buttons: [{
-                      label: 'Next',
-                      title: 'Next',
-                      action: function(dialog) {
-                        window.location = '?tour=1&welcome=done';
-                        dialog.setClosable(false);
-                      }
-                   }]
+        type: BootstrapDialog.TYPE_INFO,
+        size: BootstrapDialog.SIZE_WIDE,
+        title: false,
+        message: varbase_tour_welcome_message,
+        buttons: [{
+                    label: 'Next',
+                    title: 'Next',
+                    action: function(dialog) {
+                      window.location = '?tour=1&welcome=done';
+                      dialog.setClosable(false);
+                    }
+                 }]
       });
     }
   };
