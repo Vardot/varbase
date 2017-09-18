@@ -41,12 +41,12 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Carousel" for "Title"
       And I fill in "Test Landing page description Carousel" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Carousel"
       And I wait for AJAX to finish
       And I select "2 Seconds" from "Slide interval"
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I wait
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -62,7 +62,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
       And I wait
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I wait for AJAX to finish
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -92,7 +92,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Accordion" for "Title"
       And I fill in "Test Landing page description Accordion" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait
       And I press "Accordion"
       And I wait for AJAX to finish
@@ -112,7 +112,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I wait
       And I fill in "Accordion Section Title test" for "Accordion section title"
-     When I expand the "1" select list "dropbutton-multiple"
+     When I expand the "0" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Accordion section body"
@@ -131,7 +131,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Drupal Block" for "Title"
       And I fill in "Test Landing page description Drupal Block" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Drupal Block"
       And I wait for AJAX to finish
@@ -150,7 +150,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Columns (Equal)" for "Title"
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Columns (Equal)"
       And I wait for AJAX to finish
@@ -179,7 +179,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Columns (Two Uneven)"
       And I wait for AJAX to finish
@@ -207,7 +207,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Columns (Three Uneven)"
       And I wait for AJAX to finish
@@ -223,7 +223,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
@@ -249,7 +249,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Image" for "Title"
       And I fill in "Test Landing page description Image" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Image"
       And I wait for AJAX to finish
@@ -277,14 +277,14 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Modal" for "Title"
       And I fill in "Test Landing page description Modal" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Modal"
       And I wait for AJAX to finish
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Modal body"
@@ -303,7 +303,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
       And I fill in "Test Landing page Rich Text" for "Title"
       And I fill in "Test Landing page description Rich Text" for "Page description"
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Rich Text"
       And I wait for AJAX to finish
@@ -335,7 +335,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Tabs" for "Title"
       And I fill in "Test Landing page description Tabs" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Tabs"
       And I wait for AJAX to finish
@@ -352,7 +352,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I should see "Components"
       And I fill in "Tab 1" for "Tab name"
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Tab body"
@@ -371,7 +371,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page WebForm" for "Title"
       And I fill in "Test Landing page description WebForm" for "Page description"
       And I wait for AJAX to finish
-      And I press "+   Add Component"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Webform"
       And I wait for AJAX to finish
