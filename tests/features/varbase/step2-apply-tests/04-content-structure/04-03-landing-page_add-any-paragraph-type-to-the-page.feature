@@ -46,7 +46,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Carousel"
       And I wait for AJAX to finish
       And I select "2 Seconds" from "Slide interval"
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I wait
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -62,7 +62,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
       And I wait
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I wait for AJAX to finish
       And I press "Add Image"
       And I wait for AJAX to finish
@@ -112,7 +112,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I wait
       And I fill in "Accordion Section Title test" for "Accordion section title"
-     When I expand the "1" select list "dropbutton-multiple"
+     When I expand the "0" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Accordion section body"
@@ -223,7 +223,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I press "Add Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
@@ -284,7 +284,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Modal body"
@@ -352,7 +352,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I should see "Components"
       And I fill in "Tab 1" for "Tab name"
-      And I expand the "1" select list "dropbutton-multiple"
+      And I expand the "0" select list "dropbutton-multiple"
       And I press "Add Rich Text"
       And I wait
      Then I should see "Tab body"
