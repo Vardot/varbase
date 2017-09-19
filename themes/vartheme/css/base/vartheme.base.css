@@ -612,4 +612,8 @@ img {
 .maintenance-page #page {
   text-align: center;
 }
+.adminimal-admin-toolbar .ui-dialog {
+  z-index: 100000;
+}
 /*# sourceMappingURL=vartheme.base.css.map */
+

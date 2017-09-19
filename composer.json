@@ -126,7 +126,7 @@
     "drupal/better_exposed_filters": "3.0-alpha3",
     "drupal/autocomplete_deluxe": "1.0-beta1",
     "drupal/link_attributes": "1.1",
-    "drupal/paragraphs": "1.x-dev#abd9a871f6390a7e6b24985635ecc90db5179e15",
+    "drupal/paragraphs": "1.2",
     "drupal/paragraphs_previewer": "1.0",
     "drupal/color_field": "2.0-rc2",
     "drupal/entity_reference_revisions": "1.3",
