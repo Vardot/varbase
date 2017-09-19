@@ -3,34 +3,34 @@ As a logged in user with a permission to mange Landing pages
 I want to be able to add any paragraph type to the page
 So that the "Landing page" will show up having paragrpahs of different types
 
-@local @development @staging @production
-  Scenario: Upload the "Embed Flag Earth" file.
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "/admin/content/media"
-      And I wait
-     Then I should see "Add media"
-     When I click "Add media"
-      And I wait
-     Then I should see "Document"
-      And I should see "Image"
-      And I should see "Video"
-     When I go to "/media/add/image"
-      And I wait
-     Then I should see "Allowed types: png gif jpg jpeg."
-     When I attach the file "flag-earth.jpg" to "Image"
-      And I wait
-      And I press the "Save" button
-      And I wait
-      And I fill in "Embed Flag Earth in space" for "field_image[0][alt]"
-      And I fill in "Embed Flag Earth all earth in space" for "field_image[0][title]"
-      And I fill in "Embed Flag Earth" for "Media name"
-      And I press the "Save" button
-      And I wait
-     Then I should see "Embed Flag Earth"
-      And I wait
-     When I go to "/admin/content/media"
-     Then I should see "Add media"
-      And I should see the "Edit" in the "Embed Flag Earth" row
+# @local @development @staging @production
+#   Scenario: Upload the "Embed Flag Earth" file.
+#     Given I am a logged in user with the "test_site_admin" user
+#      When I go to "/admin/content/media"
+#       And I wait
+#      Then I should see "Add media"
+#      When I click "Add media"
+#       And I wait
+#      Then I should see "Document"
+#       And I should see "Image"
+#       And I should see "Video"
+#      When I go to "/media/add/image"
+#       And I wait
+#      Then I should see "Allowed types: png gif jpg jpeg."
+#      When I attach the file "flag-earth.jpg" to "Image"
+#       And I wait
+#       And I press the "Save" button
+#       And I wait
+#       And I fill in "Embed Flag Earth in space" for "field_image[0][alt]"
+#       And I fill in "Embed Flag Earth all earth in space" for "field_image[0][title]"
+#       And I fill in "Embed Flag Earth" for "Media name"
+#       And I press the "Save" button
+#       And I wait
+#      Then I should see "Embed Flag Earth"
+#       And I wait
+#      When I go to "/admin/content/media"
+#      Then I should see "Add media"
+#       And I should see the "Edit" in the "Embed Flag Earth" row
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
@@ -46,9 +46,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Carousel"
       And I wait for AJAX to finish
       And I select "2 Seconds" from "Slide interval"
-      And I expand the "0" select list "dropbutton-multiple"
+      And I press "Add Component"
       And I wait
-      And I press "Add Image"
+      And I press "Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -62,9 +62,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
       And I wait
-      And I expand the "0" select list "dropbutton-multiple"
+      And I press "Add Component"
       And I wait for AJAX to finish
-      And I press "Add Image"
+      And I press "Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -112,8 +112,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I wait
       And I fill in "Accordion Section Title test" for "Accordion section title"
-     When I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Rich Text"
+     When I press "Add Component"
+      And I press "Rich Text"
       And I wait
      Then I should see "Accordion section body"
      When I fill in the rich text editor field "Text" with "Accordion Section Body test"
@@ -223,8 +223,8 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I switch to main frame
       And I wait
-      And I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Image"
+      And I press "Add Component"
+      And I press "Image"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -284,8 +284,8 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Rich Text"
+      And I press "Add Component"
+      And I press "Rich Text"
       And I wait
      Then I should see "Modal body"
       And I fill in the rich text editor field "Text" with "Modal Body test"
@@ -352,8 +352,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I should see "Components"
       And I fill in "Tab 1" for "Tab name"
-      And I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Rich Text"
+      And I press "Add Component"
+      And I press "Rich Text"
       And I wait
      Then I should see "Tab body"
       And I fill in the rich text editor field "Text" with "Tab 1 - Body test"
