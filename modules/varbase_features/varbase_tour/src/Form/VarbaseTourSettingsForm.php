@@ -34,7 +34,7 @@ class VarbaseTourSettingsForm extends ConfigFormBase {
       '#type' => 'checkbox',
       '#default_value' => $config->get('welcome_status'),
       '#title' => t('Varbase welcome message status'),
-      '#description' => t('Check this checkbox if you want to show the varbase welcome message at the front page when the user got to "<front>?welcome" page, by visiting "<front>?tour=1&welcome=0" this check box will unchecked.'),
+      '#description' => t('<p>Check this checkbox if you want to show the varbase welcome message at the front page when the user have "<front>?welcome" in the address.</p><p>By visiting "<front>/?tour=1&welcome=done" this check box will be unchecked.</p>'),
     ];
 
     return parent::buildForm($form, $form_state);
