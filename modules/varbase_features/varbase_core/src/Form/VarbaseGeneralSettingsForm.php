@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\varbase_tour\Form;
+namespace Drupal\varbase_core\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -8,33 +8,35 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Provides form for managing module settings.
  */
-class VarbaseTourSettingsForm extends ConfigFormBase {
+class VarbaseGeneralSettingsForm extends ConfigFormBase {
 
   /**
    * Get the from ID.
    */
   public function getFormId() {
-    return 'varbase_tour_settings';
+    return 'varbase_core_general_settings';
   }
 
   /**
    * Get the editable config names.
    */
   protected function getEditableConfigNames() {
-    return ['varbase_tour.settings'];
+    return ['varbase_core.general_settings'];
   }
 
   /**
    * Build the form.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    global $base_url;
+    $front_page_with_welcome = $base_url . '/?welcome';
 
-    $config = $this->config('varbase_tour.settings');
+    $config = $this->config('varbase_core.general_settings');
     $form['settings']['welcome_status'] = [
       '#type' => 'checkbox',
       '#default_value' => $config->get('welcome_status'),
-      '#title' => t('Varbase welcome message status'),
-      '#description' => t('<p>Check this checkbox if you want to show the varbase welcome message at the front page when the user have "<front>?welcome" in the address.</p><p>By visiting "<front>/?tour=1&welcome=done" this check box will be unchecked.</p>'),
+      '#title' => t('Allow site to show welcome message'),
+      '#description' => t('This option will allow to display Varbase\'s welcome message on the homepage by adding ?welcome to the URL. This option is automatically disabled after closing the welcome message. Check this then navigate to <a href="@front_page_with_welcome">@front_page_with_welcome</a> to see the welcome message again.', ['@front_page_with_welcome' => $front_page_with_welcome]),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -45,7 +47,7 @@ class VarbaseTourSettingsForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
-    $config = $this->config('varbase_tour.settings');
+    $config = $this->config('varbase_core.general_settings');
     $config->set('welcome_status', $form_state->getValue('welcome_status'));
     $config->save();
 

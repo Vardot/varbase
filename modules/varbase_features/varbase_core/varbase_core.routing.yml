@@ -5,3 +5,10 @@ varbase_core.settings_index:
     _title: 'Varbase settings'
   requirements:
     _permission: 'access varbase settings'
+varbase_core.general_settings:
+  path: '/admin/config/varbase/settings'
+  defaults:
+    _form: '\Drupal\varbase_core\Form\VarbaseGeneralSettingsForm'
+    _title: 'Varbase general settings'
+  requirements:
+    _permission: 'access varbase settings'

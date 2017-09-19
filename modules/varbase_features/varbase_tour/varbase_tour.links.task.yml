@@ -1,5 +1,0 @@
-varbase_tour.settings:
-  title: 'Varbase Tour settings'
-  route_name: varbase_core.settings_index
-  base_route: varbase_tour.settings
-  wight: -100

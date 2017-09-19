@@ -3,3 +3,9 @@ varbase_core.settings_index:
   description: 'Configuring Varbase settings.'
   parent: system.admin_config
   route_name: varbase_core.settings_index
+varbase_core.general_settings:
+  title: 'Varbase general settings'
+  description: 'Configuring Varbase general settings.'
+  parent: varbase_core.settings_index
+  route_name: varbase_core.general_settings
+  weight: -1000

@@ -1,7 +1,0 @@
-varbase_tour.settings:
-  path: '/admin/config/varbase/varbase-tour'
-  defaults:
-    _form: '\Drupal\varbase_tour\Form\VarbaseTourSettingsForm'
-    _title: 'Varbase Tour settings'
-  requirements:
-    _permission: 'administer varbase tour settings'

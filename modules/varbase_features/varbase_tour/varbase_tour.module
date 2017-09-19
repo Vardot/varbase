@@ -5,48 +5,83 @@
  * Contains varbase_tour.module.
  */
 
-
 /**
  * Implements hook_page_attachments().
  */
 function varbase_tour_page_attachments(array &$page) {
   // Given that the current user is a logged in user.
-  if (!\Drupal::currentUser()->isAnonymous()) {
+  if (\Drupal::currentUser()->isAuthenticated()) {
     // Then attach the varbase tour styling library.
-    $page['#attached']['library'][] = 'varbase_tour/tour-styling';
+    $page['#attached']['library'][] = 'varbase_tour/styling';
     // And attach the varbase tour default theme library.
-    $page['#attached']['library'][] = 'varbase_tour/tour-default-theme';
+    $page['#attached']['library'][] = 'varbase_tour/default-theme';
 
     // When the url is one of the admin routes.
     if (\Drupal::service('router.admin_context')->isAdminRoute()) {
       // Then attach the varbase tour admin theme library.
-      $page['#attached']['library'][] = 'varbase_tour/tour-admin-theme';
+      $page['#attached']['library'][] = 'varbase_tour/admin-theme';
     }
 
     // When the current page is the front page.
     if (\Drupal::service('path.matcher')->isFrontPage()) {
       $query_welcome = \Drupal::request()->query->get('welcome');
       if (isset($query_welcome)) {
-        $varbase_tour_config = \Drupal::service('config.factory')->getEditable('varbase_tour.settings');
-
+        $varbase_tour_config = \Drupal::service('config.factory')->getEditable('varbase_core.general_settings');
+        $welcome_status = $varbase_tour_config->get('welcome_status');
+         
         // When we do have "/?tour=1&welcome=done" is in the URL address for the front page. 
-        if ($query_welcome == 'done') {
+        if ($query_welcome == 'done'
+            && isset($welcome_status)
+            && $welcome_status == 1) {
           // Then update the "welcome status" checkbox config to unchecked. 
           $varbase_tour_config->set('welcome_status', 0);
           $varbase_tour_config->save();
         }
-        else {
-          // When we do have "/?welcome" is in the URL address for the front page.
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_tour_theme($existing, $type, $theme, $path) {
+
+  $varbase_tour_config = \Drupal::service('config.factory')->getEditable('varbase_core.general_settings');
+  return [
+    'welcome_modal' => [],
+  ];
+}
+
+/**
+ * Implements hook_page_top().
+ */
+function varbase_tour_page_top(array &$page_top) {
+  
+ // Given that the current user is a logged in user.
+  if (\Drupal::currentUser()->isAuthenticated()) {
+    // And the current page is the front page.
+    if (\Drupal::service('path.matcher')->isFrontPage()) {
+      $query_welcome = \Drupal::request()->query->get('welcome');
+      if (isset($query_welcome)) {
+        $varbase_tour_config = \Drupal::service('config.factory')->getEditable('varbase_core.general_settings'); 
+        // When we do have "/?welcome" is in the URL address for the front page.
+        if ($query_welcome != 'done') {
           // And the "welcome status" checkbox config is checked.
           $welcome_status = $varbase_tour_config->get('welcome_status');
-
           if (isset($welcome_status) && $welcome_status == 1) {
-            // Then attache the varbase tour welcome message modal scripting library.
-            $page['#attached']['library'][] = 'varbase_tour/tour-welcome-modal';
+            $page_top['welcome_modal'] = [
+              '#type' => 'container',
+              '#theme' => 'welcome_modal',
+              '#access' => \Drupal::currentUser()->isAuthenticated(),
+              '#cache' => [
+                'keys' => ['varbase_core'],
+                'contexts' => ['user.permissions'],
+              ],
+            ];
           }
         }
       }
     }
   }
-
 }
