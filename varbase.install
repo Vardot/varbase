@@ -491,3 +491,12 @@ function varbase_update_8040() {
   $config = \Drupal::configFactory()->getEditable('varbase_bootstrap_paragraphs.settings');
   $config->setData($data)->save(TRUE);
 }
+
+/**
+ * Enable Varbase Tour module.
+ */
+function varbase_update_8041() {
+  if (!\Drupal::moduleHandler()->moduleExists('autocomplete_deluxe')) {
+    \Drupal::service('module_installer')->install(['autocomplete_deluxe'], FALSE);
+  }
+}

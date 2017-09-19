@@ -431,25 +431,21 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
  *   A renderable array with a redirect header.
  */
 function varbase_after_install_finished(array &$install_state) {
-  install_finished($install_state);
-  $output = [];
-
+  global $base_url;
+  
   // After install direction.
   $after_install_direction = $base_url . '/?welcome';
+  
+  install_finished($install_state);
+  $output = [];
 
   // Clear all messages.
   drupal_get_messages();
 
-  $success_message = t('Congratulations, you installed @drupal!', [
-    '@drupal' => drupal_install_profile_distribution_name(),
-  ]);
-  drupal_set_message($success_message);
-
-  global $base_url;
   $output = [
     '#title' => t('Varbase'),
     'info' => [
-      '#markup' => t('Congratulations, you installed Varbase! If you are not redirected in 5 seconds, <a href="@url">click here</a> to proceed to your site.', [
+      '#markup' => t('<p>Congratulations, you have installed Varbase!</p><p>If you are not redirected to the front page in 5 seconds, Please <a href="@url">click here</a> to proceed to your insalled site.</p>', [
         '@url' => $after_install_direction,
       ]),
     ],
@@ -464,7 +460,7 @@ function varbase_after_install_finished(array &$install_state) {
     '#tag' => 'meta',
     '#attributes' => [
       'http-equiv' => 'refresh',
-      'content' => '0;url=' . $base_url . '/?welcome',
+      'content' => '0;url=' . $after_install_direction,
     ],
   ];
   $output['#attached']['html_head'][] = [$meta_redirect, 'meta_redirect'];
