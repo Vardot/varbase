@@ -496,7 +496,7 @@ function varbase_update_8040() {
  * Enable Varbase Tour module.
  */
 function varbase_update_8041() {
-  if (!\Drupal::moduleHandler()->moduleExists('autocomplete_deluxe')) {
-    \Drupal::service('module_installer')->install(['autocomplete_deluxe'], FALSE);
+  if (!\Drupal::moduleHandler()->moduleExists('varbase_tour')) {
+    \Drupal::service('module_installer')->install(['varbase_tour'], FALSE);
   }
 }
