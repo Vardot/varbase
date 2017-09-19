@@ -46,8 +46,6 @@ function varbase_tour_page_attachments(array &$page) {
  * Implements hook_theme().
  */
 function varbase_tour_theme($existing, $type, $theme, $path) {
-
-  $varbase_tour_config = \Drupal::service('config.factory')->getEditable('varbase_core.general_settings');
   return [
     'welcome_modal' => [],
   ];
