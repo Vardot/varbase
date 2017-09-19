@@ -22,6 +22,7 @@ I want to be able to clone an entity.
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
       And I press "Add Component"
+      And I wait for AJAX to finish  
       And I press "Rich Text"
       And I wait
      Then I should see "Modal body"
