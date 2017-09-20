@@ -147,7 +147,7 @@ projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta1
 
 projects[imagemagick][type] = module
-projects[imagemagick][version] = 1.0-alpha6
+projects[imagemagick][version] = 2.1
 
 projects[imageapi_optimize][type] = module
 projects[imageapi_optimize][version] = 2.0-alpha3
