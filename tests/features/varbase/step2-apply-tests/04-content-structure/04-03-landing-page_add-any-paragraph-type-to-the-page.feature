@@ -46,9 +46,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Carousel"
       And I wait for AJAX to finish
       And I select "2 Seconds" from "Slide interval"
-      And I expand the "0" select list "dropbutton-multiple"
-      And I wait
-      And I press "Add Image"
+      And I press "Add Component"
+      And I wait for AJAX to finish
+      And I press "field_lp_paragraphs_0_subform_bp_slide_content_bp_image_add_more"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -62,9 +62,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I wait for AJAX to finish
       And I wait
-      And I expand the "0" select list "dropbutton-multiple"
+      And I press "Add Component"
       And I wait for AJAX to finish
-      And I press "Add Image"
+      And I press "field_lp_paragraphs_0_subform_bp_slide_content_bp_image_add_more"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -112,8 +112,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I wait
       And I fill in "Accordion Section Title test" for "Accordion section title"
-     When I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Rich Text"
+     When I press "Add Component"
+      And I press "field_lp_paragraphs_0_subform_bp_accordion_section_0_subform_bp_accordion_section_body_bp_simple_add_more"
       And I wait
      Then I should see "Accordion section body"
      When I fill in the rich text editor field "Text" with "Accordion Section Body test"
@@ -205,26 +205,14 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I go to "node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
-      And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
+      And I fill in "Test Landing page description Columns (Three Uneven)" for "Page description"
       And I wait for AJAX to finish
       And I press "Add Component"
       And I wait for AJAX to finish
       And I press "Columns (Three Uneven)"
       And I wait for AJAX to finish
-      And I expand the field "styling-settings"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I double click on the image with the "Embed Flag Earth all earth in space" title text
-      And I switch to main frame
-      And I wait
-      And I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Image"
+      And I press "Add Component"
+      And I press "field_lp_paragraphs_0_subform_bp_column_content_3_bp_image_add_more"
       And I wait for AJAX to finish
       And I press the "Select an image" button
       And I wait for AJAX to finish
@@ -284,8 +272,8 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
-      And I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Rich Text"
+      And I press "Add Component"
+      And I press "field_lp_paragraphs_0_subform_bp_modal_body_bp_simple_add_more"
       And I wait
      Then I should see "Modal body"
       And I fill in the rich text editor field "Text" with "Modal Body test"
@@ -352,8 +340,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I switch to main frame
       And I should see "Components"
       And I fill in "Tab 1" for "Tab name"
-      And I expand the "0" select list "dropbutton-multiple"
-      And I press "Add Rich Text"
+      And I press "Add Component"
+      And I press "field_lp_paragraphs_0_subform_bp_tab_section_0_subform_bp_tab_section_body_bp_simple_add_more"
       And I wait
      Then I should see "Tab body"
       And I fill in the rich text editor field "Text" with "Tab 1 - Body test"
