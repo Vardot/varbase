@@ -9,6 +9,9 @@ config_bit:
     install_default_components: true
     list:
       dependencies:
+        # Enable listed modules in order at this installation step. 
+        - libraries
+        # Enable listed Varbase modules in order at this installation step. 
         - varbase_core
         - varbase_admin
         - varbase_total_control
@@ -20,5 +23,4 @@ config_bit:
         - varbase_page
         - varbase_landing
         - varbase_tour
-        # Enable listed modules in order at this installation step. 
-        - libraries
+        - varbase_default_content

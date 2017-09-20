@@ -199,6 +199,9 @@ projects[revision_log_default][version] = 1.0
 projects[webform][type] = module
 projects[webform][version] = 5.0-beta18
 
+projects[default_content][type] = module
+projects[default_content][version] = 1.0-alpha6
+
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha4
 ;; Issue #2907026: Fixed Warning: When we do not have content types yet in the system.

@@ -8,9 +8,33 @@
 
 // Insert your VARTHEME_SUBTHEME footer custom LESS styling.
 
-.footer {
-  margin-top: 45px;
-  padding-top: 35px;
-  padding-bottom: 36px;
-  border-top: 1px solid @legend-border-color;
+.footer-wrapper {
+  background-color: @footer-wrapper-bg;
+
+  .footer {
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 45px;
+
+    #block-copyright {
+      float: left;
+      padding: 17px 0 17px 0;
+      font-size: 12px;
+
+      > div {
+        padding: 14px 0 10px 0;
+        }
+      }
+
+    ul.nav {
+      float: right;
+      padding: 17px 0 17px 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+      }
+    }
+  }
 }
