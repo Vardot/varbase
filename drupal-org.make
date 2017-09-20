@@ -9,7 +9,7 @@ defaults[projects][subdir] = "contrib"
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[config_update][type] = module
-projects[config_update][version] = 1.3
+projects[config_update][version] = 1.4
 
 projects[config_filter][type] = module
 projects[config_filter][version] = 1.0
@@ -80,7 +80,7 @@ projects[embed][type] = module
 projects[embed][version] = 1.0
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-alpha4
+projects[entity][version] = 1.0-beta1
 
 projects[entity_clone[type] = module
 projects[entity_clone][download][url] = https://git.drupal.org/project/entity_clone.git
@@ -96,11 +96,7 @@ projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clo
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 1.1
-;; Issue #2820132: getDisplay() on null Entity Browser reference
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2820132-19.patch
-;; Issue #2902831: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity_browser_views-2902831-5.patch
+projects[entity_browser][version] = 1.3
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 1.0-alpha7
@@ -253,9 +249,7 @@ projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.1
 
 projects[paragraphs[type] = module
-projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
-projects[paragraphs][download][revision] = abd9a871f6390a7e6b24985635ecc90db5179e15
-projects[paragraphs][download][branch] = 8.x-1.x
+projects[paragraphs][version] = 1.2
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-222.patch
 ;; Issue #2868155: Add new hooks to allow easier editing of paragraph forms
@@ -276,7 +270,7 @@ projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
 
 projects[charts][type] = module
-projects[charts][version] = 3.0-alpha5
+projects[charts][version] = 3.0-alpha6
 
 projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][download][url] = https://git.drupal.org/project/google_analytics_reports.git
