@@ -253,9 +253,7 @@ projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.1
 
 projects[paragraphs[type] = module
-projects[paragraphs][download][url] = https://git.drupal.org/project/paragraphs.git
-projects[paragraphs][download][revision] = abd9a871f6390a7e6b24985635ecc90db5179e15
-projects[paragraphs][download][branch] = 8.x-1.x
+projects[paragraphs][version] = 1.2
 ;; Issue #2461695: Support translatable paragraph entity reference revision field
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-222.patch
 ;; Issue #2868155: Add new hooks to allow easier editing of paragraph forms
