@@ -612,28 +612,4 @@ img {
 .maintenance-page #page {
   text-align: center;
 }
-.footer-wrapper {
-  background-color: #f2f2f2;
-}
-.footer-wrapper .footer {
-  border: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.footer-wrapper .footer #block-copyright {
-  float: left;
-  padding: 17px 0 17px 0;
-  font-size: 12px;
-}
-.footer-wrapper .footer #block-copyright > div {
-  padding: 14px 0 10px 0;
-}
-.footer-wrapper .footer ul.nav {
-  float: right;
-  padding: 17px 0 17px 0;
-}
-.footer-wrapper .footer ul.nav li {
-  display: inline-block;
-  list-style: none;
-}
 /*# sourceMappingURL=vartheme.base.css.map */
