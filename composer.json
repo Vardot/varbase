@@ -51,7 +51,7 @@
     "drupal/features": "3.5",
     "drupal/views_infinite_scroll": "1.5",
     "drupal/embed": "1.0",
-    "drupal/entity": "1.0-alpha4",
+    "drupal/entity": "1.0-beta1",
     "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
     "drupal/entity_browser": "1.1",
     "drupal/dropzonejs": "1.0-alpha7",
