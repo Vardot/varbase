@@ -1,0 +1,104 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b858d97d-eaa5-4cfe-af6f-b92c21bbca95"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 1
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Copyright",
+            "lang": "en"
+        }
+    ],
+    "revision_log": [
+        {
+            "value": "Created new Basic block"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1505910672
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1505910672
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3b28e05b-32ba-45b4-9058-bd07fbeb9a0d"
+                    }
+                ]
+            }
+        ]
+    },
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        null
+    ],
+    "body": [
+        {
+            "value": "Powered by <a href=\"https:\/\/www.vardot.com\/?utm_source=varbase&utm_campaign=varbase%20default%20links\">Vardot<\/a>. Enjoy the free software, or <a href=\"https:\/\/www.vardot.com\/form\/get-support-varbase?utm_source=varbase&utm_campaign=varbase%20default%20links\">get a quote<\/a> for enterprise support and fully functional websites.",
+            "format": "code_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

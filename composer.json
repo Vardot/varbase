@@ -148,6 +148,7 @@
     "drupal/varbase_heroslider_media": "4.x-dev",
     "drupal/varbase_carousels": "4.x-dev",
     "drupal/varbase_total_control": "1.x-dev",
+    "drupal/default_content": "1.0-alpha6",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     "vardot/dropzone": "4.3.0.1",
     "vardot/blazy": "1.8.2.1",

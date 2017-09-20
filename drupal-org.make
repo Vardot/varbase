@@ -489,6 +489,9 @@ projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
 projects[varbase_total_control][type] = module
 projects[varbase_total_control][version] = 1.x-dev
 
+projects[default_content][type] = module
+projects[default_content][version] = 1.0-alpha6
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
 ;;;;;;;;;;;;;;;;;;;;;

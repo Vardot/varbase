@@ -1,0 +1,8 @@
+name: 'Varbase default content'
+type: module
+hidden: TRUE
+description: 'Varbase default content'
+package: Web services
+core: 8.x
+dependencies:
+  - default_content
