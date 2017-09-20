@@ -96,11 +96,7 @@ projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clo
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 1.1
-;; Issue #2820132: getDisplay() on null Entity Browser reference
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2820132-19.patch
-;; Issue #2902831: Entity browser views that do have use_ajax explicitly enabled are broken with 8.3.7
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity_browser_views-2902831-5.patch
+projects[entity_browser][version] = 1.3
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 1.0-alpha7
