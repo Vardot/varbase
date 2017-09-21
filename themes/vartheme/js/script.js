@@ -9,6 +9,9 @@
   Drupal.behaviors.vartheme = {
     attach: function (context) {
       // Vartheme JavaScript behaviors goes here.
+      
+      // Move panels ipe tray padding buttom by it's outer height.
+      $('#panels-ipe-tray').parent('body').css('padding-bottom', $('#panels-ipe-tray').outerHeight());
     }
   };
 
