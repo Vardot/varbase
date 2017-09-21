@@ -1,19 +1,14 @@
-styling:
-  version: VERSION
-  css:
-    theme:
-      css/component/tour.component.css: { }
 admin-theme:
   version: VERSION
   css:
     theme:
-      css/theme/tour.admin.theme.css: { }
+      css/theme/tour.admin.theme.css: { media: screen }
   dependencies:
     - system/base
 default-theme:
   version: VERSION
   css:
     theme:
-      css/theme/tour.default.theme.css: { }
+      css/theme/tour.default.theme.css: { media: screen }
   dependencies:
     - system/base

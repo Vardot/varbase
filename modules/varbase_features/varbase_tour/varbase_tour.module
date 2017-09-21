@@ -11,15 +11,14 @@
 function varbase_tour_page_attachments(array &$page) {
   // Given that the current user is a logged in user.
   if (\Drupal::currentUser()->isAuthenticated()) {
-    // Then attach the varbase tour styling library.
-    $page['#attached']['library'][] = 'varbase_tour/styling';
-    // And attach the varbase tour default theme library.
-    $page['#attached']['library'][] = 'varbase_tour/default-theme';
 
-    // When the url is one of the admin routes.
-    if (\Drupal::service('router.admin_context')->isAdminRoute()) {
-      // Then attach the varbase tour admin theme library.
-      $page['#attached']['library'][] = 'varbase_tour/admin-theme';
+    // When the url is NOT an admin route or in the admin theme.
+    if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+      // Then attach the seven tour styling library.
+      // And attach the varbase tour default theme library.
+      $page['#attached']['library'][] = 'seven/tour-styling';
+//      $page['#attached']['library'][] = 'varbase_tour/admin-theme'; 
+      $page['#attached']['library'][] = 'varbase_tour/default-theme'; 
     }
 
     // When the current page is the front page.

@@ -1,15 +1,14 @@
 .joyride-tip-guide {
   z-index: 10000;
 }
-.joyride-tip-guide.tip-module-varbase-tour.tip-welcome-to-varbase-01 {
-  width: 50%  !important;
-  left: 25% !important;
-  top: 19% !important;
-}
 .joyride-tip-guide.tip-tour-switch {
   top: 35px !important;
   right: 35px !important;
   left: auto !important;
+}
+.joyride-tip-guide.tip-tour-switch .joyride-nub {
+  left: auto;
+  right: 28px;
 }
 .joyride-tip-guide .button {
   box-sizing: border-box;
@@ -95,17 +94,19 @@
   border-color: #144b78;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
+.joyride-tip-guide h2,
+.joyride-tip-guide .heading-b {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 1.385em;
+}
 [dir="rtl"] body .joyride-tip-guide.tip-tour-switch {
   top: 35px !important;
   left: 135px !important;
   right: auto !important;
 }
-[dir="rtl"] body .joyride-tip-guide .joyride-nub.right {
-  left: -28px;
+[dir="rtl"] body .joyride-tip-guide .joyride-nub {
+  left: 28px;
   right: auto;
-}
-[dir="rtl"] body .joyride-tip-guide .joyride-nub.left {
-  left: auto;
-  right: -28px;
 }
 /*# sourceMappingURL=tour.default.theme.css.map */
