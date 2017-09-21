@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - varbase_tour
+id: welcome-to-varbase
+label: 'Welcome to Varbase'
+module: varbase_tour
+routes:
+  -
+    route_name: page_manager.page_view_homepage_homepage-panels_variant-0
+tips:
+  tour-switch:
+    id: tour-switch
+    plugin: text
+    label: 'Tour Switch'
+    weight: 1
+    attributes:
+      data-id: toolbar-tab-tour
+      data-class: tour-toolbar-tab
+    body: 'Remember! You can always switch on or off the tour from this button.'
+    location: bottom

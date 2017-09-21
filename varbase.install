@@ -84,6 +84,18 @@ function varbase_install() {
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::entityDefinitionUpdateManager()->applyUpdates();
 
+  // If Varbase Tour were enabled then redirect to the homepage with activ tour.
+  if (isset($GLOBALS['homepage_with_varbase_tour'])
+    && $GLOBALS['homepage_with_varbase_tour'] == TRUE) {
+    $homepage_with_tour = "/?tour";
+    $response = new Symfony\Component\HttpFoundation\RedirectResponse($homepage_with_tour);
+    $response->send();
+    exit;
+    
+    include_once __DIR__ . '/../../core/includes/install.core.inc';
+    include_once __DIR__ . '/../../core/includes/install.inc';
+    install_goto('?tour');
+  }
 }
 
 /**
@@ -478,4 +490,13 @@ function varbase_update_8040() {
   $data = (array) Yaml::parse($config_path);
   $config = \Drupal::configFactory()->getEditable('varbase_bootstrap_paragraphs.settings');
   $config->setData($data)->save(TRUE);
+}
+
+/**
+ * Enable Varbase Tour module.
+ */
+function varbase_update_8041() {
+  if (!\Drupal::moduleHandler()->moduleExists('varbase_tour')) {
+    \Drupal::service('module_installer')->install(['varbase_tour'], FALSE);
+  }
 }

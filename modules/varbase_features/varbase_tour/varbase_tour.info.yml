@@ -1,0 +1,9 @@
+name: 'Varbase Tour'
+description: 'Provide Tours for varbase.'
+type: module
+dependencies:
+  - tour
+package: Varbase
+version: 8.x-4.x-dev
+core: 8.x
+project: varbase
