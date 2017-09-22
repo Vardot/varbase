@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - varbase_heroslider_media
+id: media-hero-slider-creation
+label: 'Media Hero Slider Creation'
+module: varbase_heroslider_media
+routes:
+  -
+    route_name: node.add
+    route_params:
+      node_type: varbase_heroslider_media
+tips:
+  creating-a-hero-slide:
+    id: creating-a-hero-slide
+    plugin: text
+    label: 'Creating a Hero Slide'
+    weight: 1
+    attributes: null
+    body: "This tour will take you through the main features of the hero slide creation.\r\n\r\nLets start!"
+    location: top
+  slide-content:
+    id: slide-content
+    plugin: text
+    label: 'Slide Content'
+    weight: 2
+    attributes:
+      data-class: field--name-field-brief
+    body: 'Add the content of the slide in the Slide title and Slide text.'
+    location: bottom
+  add-the-slide-to-the-queue:
+    id: add-the-slide-to-the-queue
+    plugin: text
+    label: 'Add The Slide to The Queue'
+    weight: 3
+    attributes:
+      data-id: edit-entityqueue-form-widget
+    body: 'Then add the slide the "Media Hero Slider" queue to push it to the queue directly.'
+    location: left
+  preview-and-save:
+    id: preview-and-save
+    plugin: text
+    label: 'Preview and Save'
+    weight: 4
+    attributes:
+      data-id: edit-preview
+    body: 'Preview your slide, then publish and save.'
+    location: top
