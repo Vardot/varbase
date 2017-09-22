@@ -1,0 +1,9 @@
+fields_extra: false
+fields_extra_list: {  }
+field_permissions: false
+hidden_region: false
+override_node_revision: false
+override_node_revision_view_mode: full
+region_to_block: false
+region_blocks: {  }
+switch_field: false

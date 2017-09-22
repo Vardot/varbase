@@ -1,0 +1,8 @@
+disabled: false
+field_template: true
+ft-default: default
+ft-show-colon: false
+classes:
+  region: {  }
+  field: {  }
+use_field_names: true
