@@ -3,25 +3,27 @@ status: true
 dependencies:
   config:
     - page_manager.page.homepage
-    - views.view.frontpage
+  content:
+    - 'block_content:basic:b137b5b9-7a08-4f18-9ce9-66a6a3a06954'
   module:
+    - block_content
     - panels
-    - views
 id: homepage-panels_variant-0
 label: Homepage
 variant: panels_variant
 variant_settings:
   blocks:
-    1d476cf7-e736-4eb9-9a6b-ec0b08885e84:
-      id: 'views_block:frontpage-frontpage_block'
-      label: ''
-      provider: views
+    2276ba9c-6346-467b-88df-e41ddd9358f8:
+      id: 'block_content:b137b5b9-7a08-4f18-9ce9-66a6a3a06954'
+      label: 'Welcome to Varbase'
+      provider: block_content
       label_display: visible
-      views_label: ''
-      items_per_page: none
+      status: true
+      info: ''
+      view_mode: full
       context_mapping: {  }
       region: main
-      uuid: 1d476cf7-e736-4eb9-9a6b-ec0b08885e84
+      uuid: 2276ba9c-6346-467b-88df-e41ddd9358f8
       weight: 1
   id: panels_variant
   uuid: d61dddde-a5ea-42e0-841f-f5468212c9c8

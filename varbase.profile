@@ -432,10 +432,15 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
  */
 function varbase_after_install_finished(array &$install_state) {
   global $base_url;
-  
+
+  // Disable Varbase Default Content feature mdoule.
+  if (\Drupal::moduleHandler()->moduleExists('varbase_default_content')) {
+    \Drupal::service('module_installer')->uninstall(['varbase_default_content'], FALSE);
+  }
+
   // After install direction.
   $after_install_direction = $base_url . '/?welcome';
-  
+
   install_finished($install_state);
   $output = [];
 
