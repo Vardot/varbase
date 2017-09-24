@@ -218,6 +218,16 @@ function varbase_assemble_extra_components(array &$install_state) {
     $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
 
   }
+  
+  
+  // Uninstall list of not needed modules after the config had been loaded.
+  // To be loaded from a ConfigBit yml file.
+  $uninstall_components = ['varbase_default_content'];
+  if (count($uninstall_components) > 0) {
+    foreach ($uninstall_components as $uninstall_component)
+    $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
+  }
+  
 
   return $batch;
 }
@@ -420,6 +430,18 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
 }
 
 /**
+ * Batch function to Uninstall list of not needed modules after the config had been loaded.
+ *
+ * @param string|array $uninstall_component
+ *   Name of the extra component.
+ */
+function varbase_uninstall_component($uninstall_component) {
+  if (\Drupal::moduleHandler()->moduleExists($uninstall_component)) {
+    \Drupal::service('module_installer')->uninstall((array) $uninstall_component, FALSE);
+  }
+}
+
+/**
  * Varbase after install finished.
  *
  * Lanuch auto Varbase Tour auto launch after install.
@@ -432,11 +454,6 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
  */
 function varbase_after_install_finished(array &$install_state) {
   global $base_url;
-
-  // Disable Varbase Default Content feature mdoule.
-  if (\Drupal::moduleHandler()->moduleExists('varbase_default_content')) {
-    \Drupal::service('module_installer')->uninstall(['varbase_default_content'], FALSE);
-  }
 
   // After install direction.
   $after_install_direction = $base_url . '/?welcome';
