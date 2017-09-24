@@ -140,7 +140,7 @@
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
     "drupal/ckeditor_media_embed": "1.1",
-    "drupal/total_control": "2.0-alpha2",
+    "drupal/total_control": "2.x-dev#d5c4aea34daf4260a4948e1d0c2322ecfd2a973a",
     "drupal/anchor_link": "1.5",
     "drupal/entity_browser_enhanced": "1.0-beta5",
     "drupal/vmi": "1.0-beta3",
