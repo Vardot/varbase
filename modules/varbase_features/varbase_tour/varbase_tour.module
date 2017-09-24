@@ -46,7 +46,11 @@ function varbase_tour_page_attachments(array &$page) {
  */
 function varbase_tour_theme($existing, $type, $theme, $path) {
   return [
-    'welcome_modal' => [],
+    'welcome_modal' => [
+      'variables' => [
+        'items' => [],
+      ],
+    ],
   ];
 }
 
