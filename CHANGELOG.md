@@ -1,3 +1,56 @@
+## 8.4.09
+
+### Highlighted important changes since the last release:
+* Issue #2909434: Changed [VMI Back-End layout illustration images] with
+                  white backgrounds View Modes Inventory
+* Issue #2908182: Added [Varbase Tour] module with list of tours for Varbase,
+                 and a Welcome to Varbase Modal Message after install.
+* Issue #2910254: Added [Varbase Default Content] feature module.
+
+### Added since the last release:
+* Issue #2908182: Added [Varbase Tour] module with list of tours for Varbase,
+                  and a Welcome to Varbase Modal Message after install.
+* Issue #2910254: Added [Varbase Default Content] feature module.
+* Issue #2910254: Added [Default content] module.
+* Issue #2908188: Added [Tour UI] module 8.1.0-dev 5cf793c and Added
+                  (access tour) permission for all authenticated users.
+* Issue #2908203: Added [Tour Builder] module 1.x-dev d70e898 and only enable
+                  with Varbase Development.
+* Issue #2910881: Added a tour tips for Media Hero Slider Creation.
+
+### Changed since the last release:
+* Issue #2909434: Changed [VMI Back-End layout illustration images] with
+                  white backgrounds.
+* Issue #2908433: Changed permissions for [Editor, content admin, and site
+                  admin] user roles to manage paragraphs, paragraphs previewer,
+                  entity cloning, and entity browser pages.
+* Issue #2908309: Changed [Varbase SEO] Enforce clean and canonical URLs.
+* Issue #2908433: Changed permissions for [Editor, content admin, and site
+                  admin] user roles to manage paragraphs, paragraphs previewer,
+                  entity cloning, and entity browser pages.
+* Issue #2910839: Enabled Display Suite field templates by default, to be able
+                  to Customize the labels and the HTML output of your fields
+* Issue #2911206: Changed [Varbase Hero Slider Media] structure to the better
+                  way
+
+### Updates since the last release:
+* Issue #2909913: Updated [paragraphs] module from 8.1.x-dev to 8.1.2 and
+                  related automated tests.
+* Issue #2910216: Updated [Entity API] module from 8.1.0-alpha4 to 8.1.0-beta1
+* Issue #2909412: Updated [Webform] module from 8.5.0-beta17 to 8.5.0-beta18
+* Issue #2910223: Updated [Entity Browser] from 8.1.1 to 8.1.3
+* Issue #2910231: Updated [ImageMagick] module from 8.1.0-alpha6 to 8.2.1
+* Issue #2910212: Updated [Configuration Update Manager] module
+                  from 8.1.3 to 8.1.4
+* Issue #2910208: Updated [Charts] module from 8.3.0-alpha5 to 8.3.0-alpha6
+* Issue #2908230: Updated [Admin Toolbar] module from 8.1.19 to 8.1.20
+
+### Fixes since the last release:
+* Issue #2908183: Fixed missing Media Hero Slider region in VARTHEME_SUBTHEME
+* Issue #2908355: Fixed messing toolbar component css styling file.
+
+
+
 ## 8.4.08
 
 ### Highlighted important changes since the last release:
