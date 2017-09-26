@@ -316,10 +316,10 @@ projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.0-rc4
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 2.9
+projects[simple_sitemap][version] = 2.10
 
 projects[google_analytics][type] = module
-projects[google_analytics][version] = 2.1
+projects[google_analytics][version] = 2.2
 
 projects[yoast_seo][type] = module
 projects[yoast_seo][version] = 1.3
@@ -431,7 +431,7 @@ projects[devel][version] = 1.0
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.5
+projects[bootstrap][version] = 3.6
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
