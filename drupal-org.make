@@ -138,7 +138,7 @@ projects[ace_editor][version] = 1.0
 
 projects[entityqueue][type] = module
 projects[entityqueue][download][url] = https://git.drupal.org/project/entityqueue.git
-projects[entityqueue][download][revision] = e17c172fe1bfdab2194b06b848cad92bc6824e49
+projects[entityqueue][download][revision] = 7b262d5434b4530cd4ada5c348dae180de7c52d9
 projects[entityqueue][download][branch] = 8.x-1.x
 ; Issue #2145441: Option to create Entityqueue tab on Entity pages
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch
