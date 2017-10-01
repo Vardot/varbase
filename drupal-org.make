@@ -213,7 +213,7 @@ projects[node_edit_protection][download][revision] = 902339c08222f838030c07aaea2
 projects[node_edit_protection][download][branch] = 8.x-1.x
 
 projects[rabbit_hole][type] = module
-projects[rabbit_hole][version] = 1.0-beta3
+projects[rabbit_hole][version] = 1.0-beta4
 
 projects[fast_404][type] = module
 projects[fast_404][version] = 1.0-alpha2
