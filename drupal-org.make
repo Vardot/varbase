@@ -345,7 +345,7 @@ projects[username_enumeration_prevention][version] = 1.0-beta1
 projects[username_enumeration_prevention][patch][] = https://www.drupal.org/files/issues/username_enumeration_prevention_requirements_severity-2823440-1.patch
 
 projects[password_policy][type] = module
-projects[password_policy][version] = 3.0-alpha3
+projects[password_policy][version] = 3.0-alpha4
 
 projects[seckit][type] = module
 projects[seckit][version] = 1.0-alpha2

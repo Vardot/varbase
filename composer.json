@@ -110,7 +110,7 @@
     "drupal/slick_views": "1.0-rc2",
     "drupal/slick_media": "1.0",
     "drupal/username_enumeration_prevention": "1.0-beta1",
-    "drupal/password_policy": "3.0-alpha3",
+    "drupal/password_policy": "3.0-alpha4",
     "drupal/seckit": "1.0-alpha2",
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/honeypot": "1.27",
