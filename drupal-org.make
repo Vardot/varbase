@@ -197,7 +197,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-beta18
+projects[webform][version] = 5.0-beta19
 
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha6
@@ -213,7 +213,7 @@ projects[node_edit_protection][download][revision] = 902339c08222f838030c07aaea2
 projects[node_edit_protection][download][branch] = 8.x-1.x
 
 projects[rabbit_hole][type] = module
-projects[rabbit_hole][version] = 1.0-beta3
+projects[rabbit_hole][version] = 1.0-beta4
 
 projects[fast_404][type] = module
 projects[fast_404][version] = 1.0-alpha2
@@ -310,7 +310,7 @@ projects[redirect][type] = module
 projects[redirect][version] = 1.0-beta1
 
 projects[metatag][type] = module
-projects[metatag][version] = 1.2
+projects[metatag][version] = 1.3
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.0-rc4
@@ -345,7 +345,7 @@ projects[username_enumeration_prevention][version] = 1.0-beta1
 projects[username_enumeration_prevention][patch][] = https://www.drupal.org/files/issues/username_enumeration_prevention_requirements_severity-2823440-1.patch
 
 projects[password_policy][type] = module
-projects[password_policy][version] = 3.0-alpha3
+projects[password_policy][version] = 3.0-alpha4
 
 projects[seckit][type] = module
 projects[seckit][version] = 1.0-alpha2
