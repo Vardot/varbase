@@ -148,7 +148,7 @@
     "drupal/varbase_editor": "4.18",
     "drupal/varbase_heroslider_media": "4.0-beta12",
     "drupal/varbase_carousels": "4.0-beta3",
-    "drupal/varbase_total_control": "1.0-beta8",
+    "drupal/varbase_total_control": "1.0-beta9",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     "vardot/dropzone": "4.3.0.1",
     "vardot/blazy": "1.8.2.1",
