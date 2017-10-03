@@ -142,7 +142,7 @@ projects[entityqueue][version] = 1.0-alpha7
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch
 
 projects[entityqueue_form_widget][type] = module
-projects[entityqueue_form_widget][version] = 1.0-beta1
+projects[entityqueue_form_widget][version] = 1.0-beta2
 
 projects[imagemagick][type] = module
 projects[imagemagick][version] = 2.1
@@ -416,7 +416,7 @@ projects[menu_admin_per_menu][type] = module
 projects[menu_admin_per_menu][version] = 1.0-rc1
 
 projects[drd_agent][type] = module
-projects[drd_agent][version] = 3.3
+projects[drd_agent][version] = 3.4
 
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
@@ -490,7 +490,7 @@ projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 4.0-beta1
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta8
+projects[varbase_total_control][version] = 1.0-beta9
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
