@@ -416,7 +416,7 @@ projects[menu_admin_per_menu][type] = module
 projects[menu_admin_per_menu][version] = 1.0-rc1
 
 projects[drd_agent][type] = module
-projects[drd_agent][version] = 3.3
+projects[drd_agent][version] = 3.4
 
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
