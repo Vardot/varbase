@@ -469,9 +469,7 @@ projects[vmi][type] = module
 projects[vmi][version] = 1.0-beta3
 
 projects[total_control][type] = module
-projects[total_control][download][url] = https://git.drupal.org/project/total_control.git
-projects[total_control][download][revision] = d5c4aea34daf4260a4948e1d0c2322ecfd2a973a
-projects[total_control][download][branch] = 8.x-2.x
+projects[total_control][version] = 2.0-alpha3
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
