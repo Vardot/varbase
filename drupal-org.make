@@ -139,7 +139,7 @@ projects[ace_editor][version] = 1.0
 projects[entityqueue][type] = module
 projects[entityqueue][version] = 1.0-alpha7
 ; Issue #2145441: Option to create Entityqueue tab on Entity pages
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2145441-32.patch
 
 projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta2
