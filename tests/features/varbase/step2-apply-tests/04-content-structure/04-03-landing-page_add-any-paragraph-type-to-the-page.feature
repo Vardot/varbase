@@ -97,7 +97,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Carousel has been created"
-      And I should see image with the "Mars panorama image" title text
+      And I should see image with the "Embed Flag Earth all earth in space" title text
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Accordion"
