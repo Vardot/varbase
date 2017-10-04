@@ -71,10 +71,11 @@ So that it will show up under that rich text field without having to upload the 
       And I press the "Search" button
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I double click on the image with the "Embed Flag Earth all earth in space" title text
-      And I wait for AJAX to finish
+     When I click on the image with the "Embed Flag Earth all earth in space" title text
+      And I press the "Select media" button
+      And I wait
       And I switch to main frame
-      And I wait for AJAX to finish
+      And I wait
       And I fill in "Embed Flag Earth custom Caption text" for "Caption"
       And I fill in "Embed Flag Earth custom Alt text" for "Alternative text"
       And I fill in "Embed Flag Earth custom title" for "Title"
