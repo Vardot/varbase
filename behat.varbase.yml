@@ -52,8 +52,6 @@ default:
         - behatch:json:
             evaluationMode: javascript
         - behatch:rest
-        - behatch:system:
-            root: "../../"
         - behatch:table
         - behatch:xml
       paths:

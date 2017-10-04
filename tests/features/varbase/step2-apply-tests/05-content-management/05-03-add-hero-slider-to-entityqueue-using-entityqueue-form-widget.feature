@@ -3,7 +3,7 @@ As a logged in user with a permission to mange entityqueues
 I want to be able to add and remove entities to any allowed entityqueue.
 
  @local @development @staging @production
-  Scenario: Upload the "Embed Flag Earth" file and Upload the "Mars panorama image" file.
+  Scenario: Upload the "Flag Earth" file and Upload the "Mars panorama image" file.
      Given I am a logged in user with the "test_site_admin" user
       When I go to "/admin/content/media"
        And I wait
@@ -18,12 +18,12 @@ I want to be able to add and remove entities to any allowed entityqueue.
        And I wait
        And I press the "Save" button
        And I wait
-       And I fill in "Embed Flag Earth in space" for "field_image[0][alt]"
-       And I fill in "Embed Flag Earth all earth in space" for "field_image[0][title]"
-       And I fill in "Embed Flag Earth" for "Media name"
+       And I fill in "Flag Earth in space" for "field_image[0][alt]"
+       And I fill in "Flag Earth all earth in space" for "field_image[0][title]"
+       And I fill in "Flag Earth" for "Media name"
        And I press the "Save" button
        And I wait
-      Then I should see "Embed Flag Earth"
+      Then I should see "Flag Earth"
   #-----------------------------------------------------------------------------
   #  Upload the "Mars panorama image" file.
       When I go to "/admin/content/media"
@@ -48,42 +48,48 @@ I want to be able to add and remove entities to any allowed entityqueue.
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Entity queues" can add a "heroslider" to "heroslider entityqueu"
+  Scenario: Check if a user with a permission to manage "Entity queues" can add a "Test hero slider number 1" to the heroslider entity queue
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
-      And I wait
-      And I fill in "Test hero slider #1" for "Slide title"
+      And I wait max of 2s for the page to be ready and loaded
+     Then I should see "Create Hero slider"
+     When I fill in "Test hero slider #1" for "Slide title"
       And I fill in "Test hero slider slide text #1" for "Slide text"
-     Then I press "Select Media"
+      And I press "Select Media"
       And I wait for AJAX to finish
-     When the image media browser should be open
+      And the image media browser should be open
       And I switch to iframe "entity_browser_iframe_heroslider_media_browser"
-      And I fill in "Embed Flag Earth" for "Search"
+      And I fill in "Flag Earth" for "Search"
       And I press the "Search" button
       And wait max of 5s
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
+     Then I should see image with the "Flag Earth all earth in space" title text
+     When I click on the image with the "Flag Earth all earth in space" title text
       And I wait
       And I press "Select media"
       And I wait
       And I switch to main frame
       And I wait
       And I expand the field "edit-entityqueue-form-widget"
+      And I wait
      Then I should see "Choose from the available entityqueues below to push this content to."
-     When I check the box "varbase_heroslider_media"
+     When I check "varbase_heroslider_media"
       And I press "Save"
+      And I wait
      Then I should see "Test hero slider #1"
 
-#   Test hero slider #2
+  @javascript @local @development @staging @production
+  Scenario: Check if a user with a permission to manage "Entity queues" can add a "Test hero slider number 2" to the heroslider entity queue
+    Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
-      And I wait
-      And I fill in "Test hero slider #2" for "Slide title"
+      And I wait max of 2s for the page to be ready and loaded
+     Then I should see "Create Hero slider"
+     When I fill in "Test hero slider #2" for "Slide title"
       And I fill in "Test hero slider slide text #2" for "Slide text"
-     Then I press "Select Media"
+      And I press "Select Media"
       And I wait for AJAX to finish
-     When the image media browser should be open
+      And the image media browser should be open
       And I switch to iframe "entity_browser_iframe_heroslider_media_browser"
-      And I fill in "Embed Flag Earth" for "Search"
+      And I fill in "Mars panorama" for "Search"
       And I press the "Search" button
       And wait max of 5s
      Then I should see image with the "Mars panorama image" title text
@@ -93,9 +99,11 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I switch to main frame
       And I wait
       And I expand the field "edit-entityqueue-form-widget"
+      And I wait
      Then I should see "Choose from the available entityqueues below to push this content to."
-     When I check the box "varbase_heroslider_media"
+     When I check "varbase_heroslider_media"
       And I press "Save"
+      And I wait
      Then I should see "Test hero slider #2"
 
   @javascript @local @development @staging @production
