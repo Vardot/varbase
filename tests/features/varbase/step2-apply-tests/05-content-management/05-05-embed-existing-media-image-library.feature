@@ -41,10 +41,6 @@ So that it will show up under that rich text field without having to upload the 
        And I press the "Save" button
        And I wait
       Then I should see "Embed Flag Earth"
-       And I wait
-      When I go to "/admin/content/media"
-      Then I should see "Add media"
-       And I should see the "Edit" in the "Embed Flag Earth" row
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
@@ -72,14 +68,15 @@ So that it will show up under that rich text field without having to upload the 
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select media" button
+      And I wait
+      And I press "Select media"
       And I wait
       And I switch to main frame
       And I wait
       And I fill in "Embed Flag Earth custom Caption text" for "Caption"
       And I fill in "Embed Flag Earth custom Alt text" for "Alternative text"
       And I fill in "Embed Flag Earth custom title" for "Title"
-     When I click "Embed" in the "button" element with the "class" attribute set to "button button--primary js-form-submit form-submit ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+     When I click "Embed" in the "button" element with the "class" attribute set to "js-form-submit form-submit"
       And I wait for AJAX to finish
      When I press "Save"
       And I wait
