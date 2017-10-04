@@ -142,7 +142,7 @@ projects[entityqueue][version] = 1.0-alpha7
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2145441-32.patch
 
 projects[entityqueue_form_widget][type] = module
-projects[entityqueue_form_widget][version] = 1.0-beta2
+projects[entityqueue_form_widget][version] = 1.0-beta3
 
 projects[imagemagick][type] = module
 projects[imagemagick][version] = 2.1
