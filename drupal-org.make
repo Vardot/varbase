@@ -155,6 +155,8 @@ projects[ultimate_cron][version] = 2.0-alpha2
 
 projects[persistent_login][type] = module
 projects[persistent_login][version] = 1.0-alpha3
+;; Issue #2899530: Hide user^s local task
+projects[persistent_login][patch][] = https://www.drupal.org/files/issues/persistent_login-user_task_permission-2899530-6.patch
 
 projects[userprotect][type] = module
 projects[userprotect][version] = 1.0
