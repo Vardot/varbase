@@ -186,9 +186,7 @@ projects[tour_builder][download][revision] = d70e898949b7ec4095efb391a0dbec56d01
 projects[tour_builder][download][branch] = 8.x-1.x
 
 projects[responsive_preview][type] = module
-projects[responsive_preview][version] = 1.0-alpha6
-;; Issue #2899640: Responsive Preview shows "Page not found" when multilingual site is enabled with Path-prefix setting
-projects[responsive_preview][patch][] = https://www.drupal.org/files/issues/responsive_preview_with_path_prefix-2899640-2_0.patch
+projects[responsive_preview][version] = 1.0-alpha7
 
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 1.0-beta1
