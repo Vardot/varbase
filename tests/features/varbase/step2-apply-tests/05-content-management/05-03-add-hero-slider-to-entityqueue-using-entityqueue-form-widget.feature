@@ -72,13 +72,13 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I expand the field "edit-entityqueue-form-widget"
       And I wait
      Then I should see "Choose from the available entityqueues below to push this content to."
-     When I check "varbase_heroslider_media"
+     When I check the box "varbase_heroslider_media"
       And I press "Save"
       And I wait
      Then I should see "Test hero slider #1"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Entity queues" can add a "Test hero slider number 2" to the heroslider entity queue
+  Scenario: Add a "Test hero slider number 2" to the heroslider entity queue.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
@@ -101,7 +101,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I expand the field "edit-entityqueue-form-widget"
       And I wait
      Then I should see "Choose from the available entityqueues below to push this content to."
-     When I check "varbase_heroslider_media"
+     When I check the box "varbase_heroslider_media"
       And I press "Save"
       And I wait
      Then I should see "Test hero slider #2"
