@@ -57,8 +57,8 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I fill in "Test hero slider slide text #1" for "Slide text"
       And I press "Select Media"
       And I wait for AJAX to finish
-      And the image media browser should be open
-      And I switch to iframe "entity_browser_iframe_heroslider_media_browser"
+     Then the image media browser should be open
+     When I switch to iframe "entity_browser_iframe_heroslider_media_browser"
       And I fill in "Flag Earth" for "Search"
       And I press the "Search" button
       And wait max of 5s
@@ -66,11 +66,10 @@ I want to be able to add and remove entities to any allowed entityqueue.
      When I click on the image with the "Flag Earth all earth in space" title text
       And I wait
       And I press "Select media"
-      And I wait
       And I switch to main frame
-      And I wait
+      And wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
-      And I wait
+      And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
       And I press "Save"
@@ -87,19 +86,18 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I fill in "Test hero slider slide text #2" for "Slide text"
       And I press "Select Media"
       And I wait for AJAX to finish
-      And the image media browser should be open
-      And I switch to iframe "entity_browser_iframe_heroslider_media_browser"
+     Then the image media browser should be open
+     When I switch to iframe "entity_browser_iframe_heroslider_media_browser"
       And I fill in "Mars panorama" for "Search"
       And I press the "Search" button
       And wait max of 5s
      Then I should see image with the "Mars panorama image" title text
      When I click on the image with the "Mars panorama image" title text
-      And I press the "Select an image" button
-      And I wait
+      And I press "Select media"
       And I switch to main frame
-      And I wait
+      And wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
-      And I wait
+      And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
       And I press "Save"
