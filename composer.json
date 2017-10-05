@@ -156,7 +156,7 @@
     "vardot/ace": "1.2.8.1"
   },
   "require-dev": {
-    "drush/drush": "8.1.13",
+    "drush/drush": "~9",
     "drupal/coder": "8.2.12",
     "drupal/drupal-extension": "3.3.1",
     "phing/phing": "2.16.0",
