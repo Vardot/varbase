@@ -500,3 +500,16 @@ function varbase_update_8041() {
     \Drupal::service('module_installer')->install(['varbase_tour'], FALSE);
   }
 }
+
+/**
+ * Enable Settings Tray module as outside_in had been renamed settings_tray.
+ */
+function varbase_update_8042() {
+  if (\Drupal::moduleHandler()->moduleExists('outside_in')) {
+    \Drupal::service('module_installer')->uninstall(['outside_in'], FALSE);
+  }
+  
+  if (!\Drupal::moduleHandler()->moduleExists('settings_tray')) {
+    \Drupal::service('module_installer')->install(['settings_tray'], FALSE);
+  }
+}

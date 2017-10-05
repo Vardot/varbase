@@ -46,7 +46,7 @@ dependencies:
   - views
   - user
   - text
-  - outside_in
+  - settings_tray
   - layout_discovery
 
   # contrib modules

@@ -171,16 +171,13 @@
     "use strict";
     Drupal.behaviors.varbaseTourWelcomeModal = {
       attach: function (context) {
+        $('#welcome-modal').modal({
+          backdrop: 'static',
+          keyboard: false
+        });
 
-        $(document).one('ready', function () {
-          $('#welcome-modal').modal({
-            backdrop: 'static',
-            keyboard: false
-          });
-
-          $('#welcome-modal').on('hidden.bs.modal', function (e) {
-            window.location.href= "?tour=1&welcome=done";
-          });
+        $('#welcome-modal').on('hidden.bs.modal', function (e) {
+          window.location.href= "?tour=1&welcome=done";
         });
       }
     };
