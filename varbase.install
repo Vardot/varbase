@@ -159,8 +159,17 @@ function varbase_update_8004() {
  * Enable Settings Tray module.
  */
 function varbase_update_8005() {
-  if (!\Drupal::moduleHandler()->moduleExists('outside_in')) {
-    \Drupal::service('module_installer')->install(['outside_in'], FALSE);
+  // Read the extension configuration.
+  $modules_data = \Drupal::config('core.extension')->get('module');
+  // Unset the outside_in module.
+  if (isset($modules_data['outside_in'])) {
+    unset($modules_data['outside_in']);
+  }
+  // Save the configuration.
+  \Drupal::configFactory()->getEditable('core.extension')->set('module', $modules_data)->save();
+  
+  if (!\Drupal::moduleHandler()->moduleExists('settings_tray')) {
+    \Drupal::service('module_installer')->install(['settings_tray'], FALSE);
   }
 }
 
@@ -505,9 +514,15 @@ function varbase_update_8041() {
  * Enable Settings Tray module as outside_in had been renamed settings_tray.
  */
 function varbase_update_8042() {
-  if (\Drupal::moduleHandler()->moduleExists('outside_in')) {
-    \Drupal::service('module_installer')->uninstall(['outside_in'], FALSE);
+
+  // Read the extension configuration.
+  $modules_data = \Drupal::config('core.extension')->get('module');
+  // Unset the outside_in module.
+  if (isset($modules_data['outside_in'])) {
+    unset($modules_data['outside_in']);
   }
+  // Save the configuration.
+  \Drupal::configFactory()->getEditable('core.extension')->set('module', $modules_data)->save();
   
   if (!\Drupal::moduleHandler()->moduleExists('settings_tray')) {
     \Drupal::service('module_installer')->install(['settings_tray'], FALSE);
