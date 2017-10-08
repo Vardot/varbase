@@ -1,3 +1,61 @@
+## 8.4.10
+
+### Highlighted important changes since the last release:
+* Issue #2911702: Update Varbase to use Drupal 8.4.0 - With media module in
+                  core and related changes.
+
+### Added since the last release:
+* Issue #2914098: Added the patch for [Persistent Login] module to provide
+                  a permission to access (user/{user}/persistent-logins) path.
+
+### Changed since the last release:
+* No changes over Varbase features.
+
+### Updates since the last release:
+* Issue #2911702: Update Varbase to use Drupal 8.4.0 - With media module in
+                  core and related changes.
+* Issue #2911775: Updated [Bootstrap] theme
+                  from 8.3.5 to 8.3.6
+* Issue #2911780: Updated [Google Analytics] module
+                  from 8.2.1 to 8.2.2
+* Issue #2911792: Updated [Simple XML sitemap] module
+                  from 8.2.9 to 8.2.10
+* Issue #2913043: Updated [Password policy] module
+                  from 8.3.0-alpha3 to 8.3.0-alpha4
+* Issue #2913047: Updated [Rabbit Hole] module
+                  from 8.1.0-beta3 to 8.1.0-beta4
+* Issue #2913049: Updated [Webform] module
+                  from 8.5.0-beta18 to 8.5.0-beta19
+* Issue #2913054: Updated [metatag] module
+                  from 8.1.2 to 8.1.3
+* Issue #2913182: Updated [Entityqueue] module
+                  from 8.1.x-dev 7b262d5 to 8.1.0-alpha7
+* Issue #2913447: Updated [Entityqueue Form Widget] module
+                  from 8.1.0-beta1 to 8.1.0-beta2
+* Issue #2913461: Updated [DRD Agent] module
+                  from 8.3.3 to 8.3.4
+* Issue #2913465: Updated [Varbase Total Control Dashboard] module
+                  from 8.1.0-beta8 to 8.1.0-beta9
+* Issue #2913182: Updated [Entityqueue] module patch to 2145441-32.patch
+* Issue #2913526: Updated [Total Control Admin Dashboard] module
+                  from 8.2.x-dev d5c4aea to 8.2.0-alpha3
+* Issue #2913742: Updated [Entityqueue Form Widget] module
+                  from 8.1.0-beta2 to 8.1.0-beta3
+* Issue #2914045: Updated [Menu Admin per Menu] module
+                  from 8.1.0-rc1 to 8.1.0
+* Issue #2914158: Updated [Devel] module
+                  from 8.1.0 to 8.1.2
+* Issue #2914169: Updated [Responsive Theme Preview] module
+                  from 8.1.0-alpha6 to 8.1.0-alpha7
+* Issue #2914712: Updated [Admin Toolbar] module
+                  from 8.1.20 to 8.1.x-dev 5a07bd6
+
+### Fixes since the last release:
+* Issue #2913538: Fixed an empty div that has a border when you upload
+                  images to dropzonejs
+
+
+
 ## 8.4.09
 
 ### Highlighted important changes since the last release:

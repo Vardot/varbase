@@ -20,6 +20,6 @@ dependencies:
   - varbase_seo
   - yoast_seo
 package: Varbase
-version: 8.x-4.x-dev
+version: 8.x-4.10
 core: 8.x
 project: varbase
