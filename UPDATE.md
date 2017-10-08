@@ -10,6 +10,15 @@ developers need to do to update the last release to the new release.
 #  For Example:
 * https://www.drupal.org/project/varbase/releases/8.x-4.0
 * https://www.drupal.org/project/varbase/releases/8.x-4.01
+* https://www.drupal.org/project/varbase/releases/8.x-4.02
+* https://www.drupal.org/project/varbase/releases/8.x-4.03
+* https://www.drupal.org/project/varbase/releases/8.x-4.04
+* https://www.drupal.org/project/varbase/releases/8.x-4.05
+* https://www.drupal.org/project/varbase/releases/8.x-4.06
+* https://www.drupal.org/project/varbase/releases/8.x-4.07
+* https://www.drupal.org/project/varbase/releases/8.x-4.08
+* https://www.drupal.org/project/varbase/releases/8.x-4.09
+* https://www.drupal.org/project/varbase/releases/8.x-4.10
 
 
 # 2 - Backups
@@ -20,7 +29,7 @@ developers need to do to update the last release to the new release.
 # 3 - Get the packaged files for the new version of Varbase 8.4.x
 
 * From Drupal website: https://www.drupal.org/project/varbase
-* Using Varbase-Build: https://packagist.org/packages/vardot/varbase-build
+* Using Varbase-Build: https://packagist.org/packages/vardot/varbase-project
 
 # 4 - From your terminal, change directory to the root directory of your
 #     project to do the update:
