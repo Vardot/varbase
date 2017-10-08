@@ -7,9 +7,12 @@
 ### Added since the last release:
 * Issue #2914098: Added the patch for [Persistent Login] module to provide
                   a permission to access (user/{user}/persistent-logins) path.
+* Issue #2914756: Added the patch for [Default content] module to fix the
+ issue of Invalid translation language error when selected installation language does not match demo content language
 
 ### Changed since the last release:
-* No changes over Varbase features.
+* No changes over Varbase features. This is a refactor which #2911702:
+  Updated [Drupal core] from 8.3.7 to 8.4.0
 
 ### Updates since the last release:
 * Issue #2911702: Update Varbase to use Drupal 8.4.0 - With media module in
@@ -45,10 +48,12 @@
                   from 8.1.0-rc1 to 8.1.0
 * Issue #2914158: Updated [Devel] module
                   from 8.1.0 to 8.1.2
-* Issue #2914169: Updated [Responsive Theme Preview] module
+* Issue #2914169: Updated [Responsive Theme Preview] module 
                   from 8.1.0-alpha6 to 8.1.0-alpha7
 * Issue #2914712: Updated [Admin Toolbar] module
                   from 8.1.20 to 8.1.x-dev 5a07bd6
+* Issue #2914757: Updated [Views Bootstrap] module
+                  from 8.3.x-dev b34caf9 to 8.3.x-dev ec4e787
 
 ### Fixes since the last release:
 * Issue #2913538: Fixed an empty div that has a border when you upload
