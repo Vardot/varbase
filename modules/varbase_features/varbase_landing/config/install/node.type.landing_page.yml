@@ -13,5 +13,5 @@ type: landing_page
 description: 'Use <em>Landing pages</em> to build multi-component pages with custom layouts to display content in a modern way.'
 help: ''
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: false
