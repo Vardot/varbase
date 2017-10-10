@@ -123,7 +123,7 @@ projects[crop][type] = module
 projects[crop][version] = 1.2
 
 projects[focal_point][type] = module
-projects[focal_point][version] = 1.0-beta4
+projects[focal_point][version] = 1.0-beta5
 
 projects[pathologic][type] = module
 projects[pathologic][download][url] = https://git.drupal.org/project/pathologic.git
