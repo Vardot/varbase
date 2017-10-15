@@ -116,7 +116,7 @@
     "drupal/shield": "1.1",
     "drupal/captcha": "1.0-beta1",
     "drupal/recaptcha": "2.2",
-    "drupal/search_api": "1.4",
+    "drupal/search_api": "1.5",
     "drupal/mailsystem": "4.1",
     "drupal/smtp": "1.0-beta3",
     "drupal/maxlength": "1.0-beta1",
