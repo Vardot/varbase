@@ -7,8 +7,8 @@ id: node.page.status
 field_name: status
 entity_type: node
 bundle: page
-label: 'Publishing status'
-description: 'A boolean indicating whether the node is published.'
+label: 'Published?'
+description: 'If checked, this content will be published. Keep unchecked to save it unpublished as draft.'
 required: false
 translatable: false
 default_value:
