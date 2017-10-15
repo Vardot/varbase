@@ -15,7 +15,7 @@ projects[config_filter][type] = module
 projects[config_filter][version] = 1.0
 
 projects[config_ignore][type] = module
-projects[config_ignore][version] = 2.0
+projects[config_ignore][version] = 2.1
 
 projects[ctools][type] = module
 projects[ctools][version] = 3.0
