@@ -14888,8 +14888,6 @@ msgid "The time that the node was created."
 msgstr ""
 msgid "Computed menu link for the node (only available during node saving)."
 msgstr ""
-msgid "A boolean indicating whether the node is published."
-msgstr ""
 msgid "The username of the content author."
 msgstr "اسم المستخدم لمؤلف المحتوى."
 
