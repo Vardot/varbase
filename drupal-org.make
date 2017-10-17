@@ -201,6 +201,9 @@ projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
 projects[webform][version] = 5.0-beta19
+;; Issue #2913525: Type 1 Error when trying to restore a revision of a content page.
+projects[webform][patch][] = https://www.drupal.org/files/issues/type_1_error_when-2913525-7.patch
+
 
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha6
