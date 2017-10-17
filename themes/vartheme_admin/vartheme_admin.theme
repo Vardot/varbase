@@ -12,8 +12,12 @@
  */
 function vartheme_admin_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    $content_type = $node->bundle();
-    $suggestions[] = 'page__' . $content_type;
+    if(is_numeric($node)) {
+      $node = \Drupal\node\Entity\Node::load($node);
+    }
+    if($node instanceof \Drupal\node\NodeInterface) {
+      array_splice($suggestions, 1, 0, 'page__' . $node->bundle());
+    }
   }
 }
 
