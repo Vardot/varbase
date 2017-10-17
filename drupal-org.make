@@ -135,6 +135,8 @@ projects[ckeditor_bidi][version] = 2.0
 
 projects[ace_editor][type] = module
 projects[ace_editor][version] = 1.0
+;; Issue #2916832: Add support for calling libraries from the current active profile
+projects[ace_editor][patch][] = https://www.drupal.org/files/issues/2916832-4.patch
 
 projects[entityqueue][type] = module
 projects[entityqueue][version] = 1.0-alpha7
