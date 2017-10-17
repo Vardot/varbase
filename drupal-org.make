@@ -138,8 +138,10 @@ projects[ace_editor][version] = 1.0
 
 projects[entityqueue][type] = module
 projects[entityqueue][version] = 1.0-alpha7
-; Issue #2145441: Option to create Entityqueue tab on Entity pages
+;; Issue #2145441: Option to create Entityqueue tab on Entity pages
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2145441-32.patch
+;; Issue #2825773: Make Contextual links work for views using Entityqueue
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2825773-23-outside_in_to_settings_tray.patch
 
 projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta3

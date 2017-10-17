@@ -240,7 +240,9 @@
       },
       "drupal/entityqueue": {
         "Issue #2145441: Option to create Entityqueue tab on Entity pages.":
-        "https://www.drupal.org/files/issues/2145441-32.patch"
+        "https://www.drupal.org/files/issues/2145441-32.patch",
+        "Issue #2825773: Make Contextual links work for views using Entityqueue":
+        "https://www.drupal.org/files/issues/2825773-23-outside_in_to_settings_tray.patch"
       },
       "drupal/l10n_client": {
         "Issue #2867460: Incompatible with this version of Drupal core 8.3.0":
