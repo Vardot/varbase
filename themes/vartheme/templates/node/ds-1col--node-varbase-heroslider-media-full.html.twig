@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template for teh full content of media hero slider.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+<div class="varbase-heroslider-media">
+  <{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'bg-edge2edge', 'clearfix') }}>
+
+    {{ title_suffix.contextual_links }}
+
+    {{ ds_content }}
+
+  </{{ ds_content_wrapper }}>
+</div>
