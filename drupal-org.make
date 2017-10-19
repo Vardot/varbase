@@ -144,6 +144,12 @@ projects[entityqueue][version] = 1.0-alpha7
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2145441-32.patch
 ;; Issue #2825773: Make Contextual links work for views using Entityqueue
 projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2825773-23-outside_in_to_settings_tray.patch
+;; Issue #2856833: Only users with 'Administer entityqueue' should be able to create entityqueues
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2856833-7.patch
+;; Issue #2916026: Only users with 'Administer entityqueue' should be able to delete entityqueues
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-to-delete-entityqueues-2916026-3.patch
+;; Issue #2917308: Only users with 'Administer entityqueue' should be able to edit (configure) entityqueues
+projects[entityqueue][patch][] = https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-edit-configure-entityqueues-2917308-2.patch
 
 projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta3
