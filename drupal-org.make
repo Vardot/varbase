@@ -214,7 +214,7 @@ projects[webform][patch][] = https://www.drupal.org/files/issues/type_1_error_wh
 
 
 projects[default_content][type] = module
-projects[default_content][version] = 1.0-alpha6
+projects[default_content][version] = 1.0-alpha7
 ;; Issue #2900089: Invalid translation language error when selected installation language does not match demo content language
 projects[default_content][patch][] = https://www.drupal.org/files/issues/2900089-14.patch
 
