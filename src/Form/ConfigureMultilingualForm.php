@@ -152,12 +152,27 @@ class ConfigureMultilingualForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    // Get the value of enable multilingual checkbox.
     $enable_multilingual = $form_state->getValue('enable_multilingual');
-    $GLOBALS['install_state']['varbase']['enable_multilingual'] = $enable_multilingual;
+    if (isset($enable_multilingual)
+        && $enable_multilingual == TRUE) {
+      $GLOBALS['install_state']['varbase']['enable_multilingual'] = TRUE;
+    }
+    else {
+      $GLOBALS['install_state']['varbase']['enable_multilingual'] = FALSE;
+    }
 
+    // Get list of selected multilingual languages.
     $multilingual_languages = $form_state->getValue('multilingual_languages');
-    $multilingual_languages = array_filter($multilingual_languages);
+    if (isset($multilingual_languages)
+        && count($multilingual_languages) > 0) {
+      $multilingual_languages = array_filter($multilingual_languages);
+    }
+    else {
+      $multilingual_languages = [];
+    }
     $GLOBALS['install_state']['varbase']['multilingual_languages'] = $multilingual_languages;
+
   }
 
 }
