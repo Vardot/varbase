@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: de2e_4_1
+label: 'Display Edge-to-Edge 4:1'
+effects:
+  8b69b2ed-83e1-4240-a797-e4137b0d2c59:
+    uuid: 8b69b2ed-83e1-4240-a797-e4137b0d2c59
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 400
+      crop_type: focal_point
+pipeline: ''
