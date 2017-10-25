@@ -448,6 +448,8 @@ projects[devel][version] = 1.2
 
 projects[bootstrap][type] = theme
 projects[bootstrap][version] = 3.6
+;; Issue #2903656: Updating to Drupal core 8.4.0-beta1 results in not working dropdown menu
+projects[bootstrap][patch][] = https://www.drupal.org/files/issues/updating_to_drupal_core-2903656-3.patch
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3

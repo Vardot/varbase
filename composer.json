@@ -327,6 +327,10 @@
       "drupal/ace_editor": {
         "Issue #2916832: Add support for calling libraries from the current active profile":
         "https://www.drupal.org/files/issues/2916832-4.patch"
+      },
+      "drupal/bootstrap": {
+        "Issue #2903656: Updating to Drupal core 8.4.0-beta1 results in not working dropdown menu":
+        "https://www.drupal.org/files/issues/updating_to_drupal_core-2903656-3.patch"
       }
     }
   }
