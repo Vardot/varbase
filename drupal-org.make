@@ -99,7 +99,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.3
 
 projects[dropzonejs][type] = module
-projects[dropzonejs][version] = 1.0-alpha7
+projects[dropzonejs][version] = 1.0-alpha8
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0-beta2
