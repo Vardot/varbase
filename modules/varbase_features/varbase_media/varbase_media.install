@@ -83,3 +83,32 @@ function varbase_media_update_8007() {
   $data = (array) Yaml::parse($config_file);
   $config->setData($data)->save(TRUE);
 }
+
+/**
+ * Issue #2917363: Added Display Edge-to-Edge 4:1 responsive image style.
+ */
+function varbase_media_update_8008() {
+  $config_path = \Drupal::root() . '/' . drupal_get_path('module', 'varbase_media') . '/config/install/';
+
+  $config_names = [
+    'image.style.de2e_4_1',
+    'image.style.de2e_4_1_md',
+    'image.style.de2e_4_1_sm',
+    'image.style.de2e_4_1_xs',
+    'responsive_image.styles.de2e_4_1',
+    'core.entity_view_mode.media.se2e_4_1',
+    'core.entity_view_display.media.image.se2e_4_1'
+  ];
+
+  foreach ($config_names as $config_name) {
+    $config_file = $config_path . $config_name . '.yml';
+
+    if (file_exists($config_file)) {
+      $config = \Drupal::service('config.factory')->getEditable($config_name);
+      $config_content = file_get_contents($config_file);
+      $config_content_data = (array) Yaml::parse($config_content);
+      $config->setData($config_content_data)->save();
+    }
+  }
+
+}
