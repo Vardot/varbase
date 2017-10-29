@@ -331,6 +331,12 @@
       "drupal/bootstrap": {
         "Issue #2903656: Updating to Drupal core 8.4.0-beta1 results in not working dropdown menu":
         "https://www.drupal.org/files/issues/updating_to_drupal_core-2903656-3.patch"
+      },
+      "drupal/focal_point": {
+        "Issue #2915497: Missing schema for focal_point_scale_and_crop effect":
+        "https://www.drupal.org/files/issues/2915497_3.patch",
+        "Issue #2916562: Broken image preview":
+        "https://www.drupal.org/files/issues/2916562-11.patch"
       }
     }
   }

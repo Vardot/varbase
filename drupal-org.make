@@ -124,6 +124,10 @@ projects[crop][version] = 1.3
 
 projects[focal_point][type] = module
 projects[focal_point][version] = 1.0-beta5
+;; Issue #2915497: Missing schema for focal_point_scale_and_crop effect
+projects[focal_point][patch][] = https://www.drupal.org/files/issues/2915497_3.patch
+;; Issue #2916562: Broken image preview
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/2916562-11.patch
 
 projects[pathologic][type] = module
 projects[pathologic][download][url] = https://git.drupal.org/project/pathologic.git
