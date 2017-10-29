@@ -336,7 +336,7 @@
         "Issue #2915497: Missing schema for focal_point_scale_and_crop effect":
         "https://www.drupal.org/files/issues/2915497_3.patch",
         "Issue #2916562: Broken image preview":
-        "https://www.drupal.org/files/issues/2916562-15.patch"
+        "https://www.drupal.org/files/issues/2916562-16.patch"
       }
     }
   }
