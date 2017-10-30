@@ -12,16 +12,16 @@ dependencies:
   - metatag_open_graph
   - metatag_twitter_cards
   - metatag_verification
-  - schema_metatag
-  - schema_web_site
-  - schema_web_page
-  - schema_article
-  - schema_item_list
   - node
   - pathauto
   - rdf
   - redirect
   - redirect_404
+  - schema_article
+  - schema_item_list
+  - schema_metatag
+  - schema_web_page
+  - schema_web_site
   - simple_sitemap
   - user
   - yoast_seo

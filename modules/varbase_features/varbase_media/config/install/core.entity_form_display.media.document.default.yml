@@ -6,6 +6,7 @@ dependencies:
     - media_entity.bundle.document
   module:
     - file
+    - path
 id: media.document.default
 targetEntityType: media
 bundle: document
@@ -38,6 +39,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 3

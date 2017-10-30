@@ -13,4 +13,5 @@ effects:
     data:
       width: 400
       height: 400
+      crop_type: focal_point
 pipeline: ''

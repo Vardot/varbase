@@ -5,5 +5,4 @@ id: node__landing_page
 label: 'Content: Landing page'
 tags:
   title: '[node:title] | [site:name]'
-  description: '[node:field_description:value]'
-  schema_web_page_type: WebPage
+  description: '[node:summary]'
