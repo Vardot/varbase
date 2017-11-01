@@ -291,8 +291,8 @@
         "https://www.drupal.org/files/issues/config_perms-added_missing_edit_route-2877329-11.patch"
       },
       "drupal/username_enumeration_prevention": {
-        "Issue #2823440: Set $severity to OK at start of hook_requirements()":
-        "https://www.drupal.org/files/issues/username_enumeration_prevention_requirements_severity-2823440-1.patch"
+        "Issue #2871931: hook_requirements error on install phase":
+        "https://www.drupal.org/files/issues/username_enumeration_prevention-check_phase_runtime-2871931-5.patch"
       },
       "drupal/paragraphs_previewer": {
         "Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch":
