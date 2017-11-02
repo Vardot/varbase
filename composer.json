@@ -27,7 +27,7 @@
     "cweagans/composer-patches": "1.6.2",
     "drupal-composer/drupal-scaffold": "2.3.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "drupal/core": "8.4.0",
+    "drupal/core": "8.4.1",
     "drupal/config_update": "1.4",
     "drupal/config_filter": "1.0",
     "drupal/config_ignore": "2.1",

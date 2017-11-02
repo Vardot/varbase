@@ -3,8 +3,8 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.4.0"
-;; Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order 
+projects[drupal][version] = "8.4.1"
+;; Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order
 projects[drupal][patch][] = https://www.drupal.org/files/issues/1356276-360.patch
 ;; Issue #2720101: Label (Title) not set for Views block (exposed filters in Block)
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2720101-30.patch
