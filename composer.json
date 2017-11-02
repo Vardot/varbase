@@ -24,7 +24,7 @@
   ],
   "require": {
     "composer/installers": "1.4.0",
-    "cweagans/composer-patches": "1.6.2",
+    "cweagans/composer-patches": "1.x-dev",
     "drupal-composer/drupal-scaffold": "2.3.0",
     "drupal/drupal-library-installer-plugin": "0.3",
     "drupal/core": "8.4.1",
