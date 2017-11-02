@@ -24,7 +24,7 @@
   ],
   "require": {
     "composer/installers": "1.4.0",
-    "cweagans/composer-patches": "1.x-dev",
+    "cweagans/composer-patches": "1.6.2",
     "drupal-composer/drupal-scaffold": "2.3.0",
     "drupal/drupal-library-installer-plugin": "0.3",
     "drupal/core": "8.4.1",
@@ -220,15 +220,13 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/1356276-360.patch",
+        "https://www.drupal.org/files/issues/1356276-408--8.4.x.patch",
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
         "https://www.drupal.org/files/issues/2720101-30.patch",
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
         "https://www.drupal.org/files/issues/2599228-31.patch",
         "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
-        "https://www.drupal.org/files/issues/patch_empty_fix.patch",
-        "Issue #2573807: Fatal error: Call to a member function getTimestamp()":
-        "https://www.drupal.org/files/issues/2573807-49.patch"
+        "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
       "drupal/page_manager": {
         "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":

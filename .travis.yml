@@ -7,10 +7,10 @@ cache:
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
     - "$HOME/.selenium/cache"
-    
+
 php:
   - 7.0
-  
+
 env:
   - AFATG=01-website-base-requirements
   - AFATG=02-user-management
@@ -30,7 +30,7 @@ matrix:
 
 # Automated Functional Acceptance Testing group: 03 admin management
   - php: 7.0
-    env: AFATG=03-admin-management 
+    env: AFATG=03-admin-management
 
 # Automated Functional Acceptance Testing group: 04 content structure
   - php: 7.0
@@ -39,10 +39,10 @@ matrix:
 # Automated Functional Acceptance Testing group: 05 content-management
   - php: 7.0
     env: AFATG=05-content-management
- 
-dist: precise
 
-addons:  
+dist: trusty
+
+addons:
   firefox: 46.0.1
   apt:
     packages:
@@ -54,7 +54,7 @@ addons:
       - xfonts-75dpi
       - xfonts-scalable
       - xserver-xorg-core
-  
+
 mysql:
   database: test_varbase4c
   username: root
@@ -86,7 +86,7 @@ before_install:
   - echo 'sendmail_path = /bin/true' >> varbase.php.ini;
   - phpenv config-add varbase.php.ini
   - phpenv rehash
-   
+
   # Configure and run the virtual display.
   - export DISPLAY=:0
   - sh -e /etc/init.d/xvfb start
@@ -102,7 +102,7 @@ install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - composer install --no-interaction -vvv
-  
+
   ## Install with drush.
   - cd docroot
   - drush site-install varbase --yes --site-name='Test Varbase4c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase4c" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_development_tools.varbase_development=true
