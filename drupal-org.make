@@ -46,7 +46,9 @@ projects[views_bootstrap][download][revision] = ec4e7872315db6a7287014b029c31679
 projects[views_bootstrap][download][branch] = 8.x-3.x
 
 projects[field_group][type] = module
-projects[field_group][version] = 1.0-rc6
+projects[field_group][download][url] = https://git.drupal.org/project/field_group.git
+projects[field_group][download][revision] = 83c00b5e61056940745e9c37ba4bbac9a1124d75
+projects[field_group][download][branch] = 8.x-3.x
 
 projects[smart_trim][type] = module
 projects[smart_trim][version] = 1.0

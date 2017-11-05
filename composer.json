@@ -39,7 +39,7 @@
     "drupal/bootstrap_layouts": "5.0",
     "drupal/ds": "3.1",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
-    "drupal/field_group": "1.0-rc6",
+    "drupal/field_group": "3.x-dev#83c00b5e61056940745e9c37ba4bbac9a1124d75",
     "drupal/smart_trim": "1.0",
     "drupal/advanced_text_formatter": "1.0-beta3",
     "drupal/block_class": "1.0-alpha1",
