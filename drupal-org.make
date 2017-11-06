@@ -19,6 +19,8 @@ projects[config_ignore][version] = 2.1
 
 projects[ctools][type] = module
 projects[ctools][version] = 3.0
+;; Issue #2820783: Fix Block.php notices and warnings.
+projects[ctools][patch][] = https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch
 
 projects[token][type] = module
 projects[token][version] = 1.0

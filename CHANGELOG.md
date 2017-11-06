@@ -40,6 +40,9 @@
 * Issue [#2920200](https://www.drupal.org/node/2920200):
                   Added the better patch for [username enumeration prevention]
                   module to fix requirements issues.
+* Issue [#2921314](https://www.drupal.org/node/2921314):
+                  Added the patch for [Chaos tool suite (ctools)] module to
+                  fix the issue of Block.php notices and warnings.
 
 ### Changed since the last release:
 * Issue [#2916762](https://www.drupal.org/node/2916762):

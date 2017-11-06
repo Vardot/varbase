@@ -331,6 +331,10 @@
         "https://www.drupal.org/files/issues/2915497_3.patch",
         "Issue #2916562: Broken image preview":
         "https://www.drupal.org/files/issues/2916562-16.patch"
+      },
+      "drupal/ctools": {
+        "Issue #2820783: Fix Block.php notices and warnings.":
+        "https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch"
       }
     }
   }
