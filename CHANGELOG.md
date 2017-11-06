@@ -43,6 +43,10 @@
 * Issue [#2921314](https://www.drupal.org/node/2921314):
                   Added the patch for [Chaos tool suite (ctools)] module to
                   fix the issue of Block.php notices and warnings.
+* Issue [#2921326](https://www.drupal.org/node/2921326):
+                  Added the patch for [Drupal core] to fix the issue of
+                  Preview of content - Notice: Undefined offset: 0 in quick
+                  edit entity is latest revision'
 
 ### Changed since the last release:
 * Issue [#2916762](https://www.drupal.org/node/2916762):

@@ -14,3 +14,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/drupal_8-allow_s
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2599228-31.patch
 ;; Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal
 projects[drupal][patch][] = https://www.drupal.org/files/issues/patch_empty_fix.patch
+;; Issue #2914938: Preview of content - Notice: Undefined offset: 0 in quick edit entity is latest revision
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2914938-14.patch
