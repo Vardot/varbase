@@ -167,19 +167,22 @@
   </div>
 </div>
 <script type="text/javascript">
-  (function ($, _, Drupal, drupalSettings) {
-    "use strict";
-    Drupal.behaviors.varbaseTourWelcomeModal = {
-      attach: function (context) {
-        $('#welcome-modal').modal({
-          backdrop: 'static',
-          keyboard: false
-        });
+  window.onload = function () {
+    (function ($, _, Drupal, drupalSettings) {
+        "use strict";
 
-        $('#welcome-modal').on('hidden.bs.modal', function (e) {
-          window.location.href= "?tour=1&welcome=done";
-        });
-      }
-    };
-  })(window.jQuery, window._, window.Drupal, window.drupalSettings);
+        Drupal.behaviors.varbaseTourWelcomeModal = {
+          attach: function (context) {
+            $('#welcome-modal').modal({
+              backdrop: 'static',
+              keyboard: false
+            });
+
+            $('#welcome-modal').on('hidden.bs.modal', function (e) {
+              window.location.href= "?tour=1&welcome=done";
+            });
+          }
+        };
+    })(window.jQuery, window._, window.Drupal, window.drupalSettings);
+  }
 </script>

@@ -69,6 +69,9 @@
                   Downgraded [Drush] in require-dev in composer.json from
                   ~9 to 8.4.15 only for development and automated functional
                   testing.
+* Issue [#2921383](https://www.drupal.org/node/2921383):
+                  Changed Varbase after install Tour Welcome Modal message
+                  with window onload.
 * Issue [#2921031](https://www.drupal.org/node/2921031):
                   Varbase 8.4.11: Updated [CHANGELOG.md, UPDATE.md] files and
                   filtered the code for Drupal 8 Coding Standard
