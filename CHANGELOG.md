@@ -46,7 +46,11 @@
 * Issue [#2921326](https://www.drupal.org/node/2921326):
                   Added the patch for [Drupal core] to fix the issue of
                   Preview of content - Notice: Undefined offset: 0 in quick
-                  edit entity is latest revision'
+                  edit entity is latest revision
+* Issue [#2921426](https://www.drupal.org/node/2921426):
+                  Added the patch for [Views Reference Field] module to fix
+                  the issue of viewsreference update 8103 in
+                  viewsreference.install
 
 ### Changed since the last release:
 * Issue [#2916762](https://www.drupal.org/node/2916762):
