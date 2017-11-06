@@ -73,7 +73,7 @@ function varbase_media_form_entity_embed_dialog_alter(&$form, FormStateInterface
         // Render the Embed entity.
         $form['entity'] = [
           '#type' => 'item',
-          '#markup' => render(entity_view($entity)),
+          '#markup' => \Drupal::service('renderer')->renderRoot(entity_view($entity, 's3')),
         ];
 
         // Change the "data align" field from rado buttons to Select list.

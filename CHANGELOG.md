@@ -140,6 +140,9 @@
 * Issue [#2919555](https://www.drupal.org/node/2919555):
                   Fixed the issue of tokens for social media image styles in
                   Varbase SEO content meta tags.
+* Issue [#2921357](https://www.drupal.org/node/2921357):
+                  Fixed service renderer with render root for media entity
+                  view with [s3] Size 3 auto.
 
 ## 8.4.10
 
