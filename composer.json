@@ -141,7 +141,7 @@
     "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
     "drupal/ckeditor_media_embed": "1.1",
     "drupal/total_control": "2.0-alpha3",
-    "drupal/anchor_link": "1.5",
+    "drupal/anchor_link": "1.6",
     "drupal/entity_browser_enhanced": "1.0-beta5",
     "drupal/vmi": "1.0-beta3",
     "drupal/varbase_bootstrap_paragraphs": "4.0-beta1",

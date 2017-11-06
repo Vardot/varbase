@@ -483,7 +483,7 @@ projects[xmlsitemap][version] = 1.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[anchor_link][type] = module
-projects[anchor_link][version] = 1.5
+projects[anchor_link][version] = 1.6
 
 projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-beta5
