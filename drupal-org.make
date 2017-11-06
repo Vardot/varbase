@@ -502,7 +502,7 @@ projects[varbase_editor][type] = module
 projects[varbase_editor][version] = 4.18
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.x-dev
+projects[varbase_heroslider_media][version] = 4.0-beta13
 
 projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 4.0-beta3

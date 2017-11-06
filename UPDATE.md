@@ -19,6 +19,7 @@ developers need to do to update the last release to the new release.
 * https://www.drupal.org/project/varbase/releases/8.x-4.08
 * https://www.drupal.org/project/varbase/releases/8.x-4.09
 * https://www.drupal.org/project/varbase/releases/8.x-4.10
+* https://www.drupal.org/project/varbase/releases/8.x-4.11
 
 
 # 2 - Backups
@@ -29,7 +30,7 @@ developers need to do to update the last release to the new release.
 # 3 - Get the packaged files for the new version of Varbase 8.4.x
 
 * From Drupal website: https://www.drupal.org/project/varbase
-* Using Varbase-Build: https://packagist.org/packages/vardot/varbase-project
+* Using varbase-project: https://packagist.org/packages/vardot/varbase-project
 
 # 4 - From your terminal, change directory to the root directory of your
 #     project to do the update:
@@ -89,6 +90,49 @@ while working on the project.
 ---
 
 
+# Updating Varbase 8.4.10 to Varbase 8.4.11
+
+## Updating files with Copy and Paste for Varbase 8.4.10 to Varbase 8.4.11
+```
+  Given that we are at the drupal root folder for varbase
+   When we delete all drupal core folders and files
+    And we copy all new Varbase files drupal root folder for varbase
+    And we make sure that we have all custom module or themes still in the
+        "sites" folder
+    And we make sure that all new used modules and features are present.
+   Then we will be ready to update the active config and database.
+```
+
+## Varbase Procedures to the varbase base code. not in any varbase-project or varbase-project project builders.
+```
+  Given that we are at the root folder for varbase project, not the docroot
+    And we make sure that the current "Varbase-project" composer.json file and
+        files are the latest
+   When we delete the "vendor" folder
+    And we delete the "composer.lock" file
+    And we run the "composer require vardot/varbase:8.4.11" command
+    And wait for composer to finish work
+   Then we should not see any issues in the terminal
+    And we should see "Writing lock file" in the terminal
+    And we should see "Generating autoload files" in the terminal
+   When the composer finishes work with no errors
+   Then we will be ready to update the active config and database.
+```
+
+## Updating the active config and database from Varbase 8.4.10 to Varbase 8.4.11
+```
+  Given that we are in the docroot of the current Varbase project
+    And all files are updated using (copy and past) or (composer require/update
+   When we run drush "updb" or go to "/update.php"
+   Then we should see the steps of updates.
+   When we run drush "updb" or go to "/update.php" again
+   Then we will have the site update with the new Varbase 8.4.11 version
+   When we go to "/admin/config/development/features"
+   Then we should see "Changed"
+   When we follow with each feature to import new changes.
+   Then we will have the Varbase site updated to the latest version.
+```
+
 
 # Updating Varbase 8.4.09 to Varbase 8.4.10
 
@@ -103,8 +147,7 @@ while working on the project.
    Then we will be ready to update the active config and database.
 ```
 
-Varbase Procedures to the varbase base code. not in any varbase-project or
- varbase-project project builders.
+## Varbase Procedures to the varbase base code. not in any varbase-project or varbase-project project builders.
 ```
   Given that we are at the root folder for varbase project, not the docroot
     And we make sure that the current "Varbase-project" composer.json file and
@@ -134,7 +177,6 @@ Varbase Procedures to the varbase base code. not in any varbase-project or
    Then we will have the Varbase site updated to the latest version.
 ```
 
-
 # Updating Varbase 8.4.08 to Varbase 8.4.09
 
 ## Updating files with Copy and Paste for Varbase 8.4.08 to Varbase 8.4.09
@@ -148,8 +190,7 @@ Varbase Procedures to the varbase base code. not in any varbase-project or
    Then we will be ready to update the active config and database.
 ```
 
-Varbase Procedures to the varbase base code. not in any varbase-project or
- varbase-project project builders.
+## Varbase Procedures to the varbase base code. not in any varbase-project or varbase-project project builders.
 ```
   Given that we are at the root folder for varbase project, not the docroot
     And we make sure that the current "Varbase-project" composer.json file and
