@@ -112,3 +112,52 @@ function varbase_media_update_8008() {
   }
 
 }
+
+/**
+ * Added social large, medium, and small image styles.
+ */
+function varbase_media_update_8009() {
+  $config_path = \Drupal::root() . '/' . drupal_get_path('module', 'varbase_media') . '/config/install/';
+
+  $config_names = [
+    'image.style.social_large',
+    'image.style.social_medium',
+    'image.style.social_small'
+  ];
+
+  foreach ($config_names as $config_name) {
+    $config_file = $config_path . $config_name . '.yml';
+
+    if (file_exists($config_file)) {
+      $config = \Drupal::service('config.factory')->getEditable($config_name);
+      $config_content = file_get_contents($config_file);
+      $config_content_data = (array) Yaml::parse($config_content);
+      $config->setData($config_content_data)->save();
+    }
+  }
+
+}
+
+/**
+ * Update entity form display for media image type, to use the latest config
+ * from the focal point module.
+ */
+function varbase_media_update_8010() {
+  $config_path = \Drupal::root() . '/' . drupal_get_path('module', 'varbase_media') . '/config/install/';
+
+  $config_names = [
+    'core.entity_form_display.media.image.default'
+  ];
+
+  foreach ($config_names as $config_name) {
+    $config_file = $config_path . $config_name . '.yml';
+
+    if (file_exists($config_file)) {
+      $config = \Drupal::service('config.factory')->getEditable($config_name);
+      $config_content = file_get_contents($config_file);
+      $config_content_data = (array) Yaml::parse($config_content);
+      $config->setData($config_content_data)->save();
+    }
+  }
+
+}

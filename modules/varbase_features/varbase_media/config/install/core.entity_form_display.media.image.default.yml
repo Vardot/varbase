@@ -6,7 +6,7 @@ dependencies:
     - image.style.field_preview
     - media_entity.bundle.image
   module:
-    - image
+    - focal_point
     - path
 id: media.image.default
 targetEntityType: media
@@ -18,13 +18,16 @@ content:
     settings:
       preview_image_style: field_preview
       progress_indicator: throbber
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
-    type: image_image
+    type: image_focal_point
     region: content
   langcode:
     type: language_select
     weight: 2
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   name:
