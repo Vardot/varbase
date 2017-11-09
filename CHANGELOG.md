@@ -1,12 +1,12 @@
 ## 8.4.12
 
 ### Highlighted important changes since Varbase 8.4.11:
-* Issue [#2922107](https://www.drupal.org/node/2916762):
+* Issue [#2922107](https://www.drupal.org/node/2922107):
                   Updated [Custom Permissions] module from 8.1.0 to 8.1.1,
                   as Custom Permissions module had a - Moderately critical
                   - Access bypass - SA-CONTRIB-2017-083.
                   https://www.drupal.org/sa-contrib-2017-083
-* Issue [#2922107](https://www.drupal.org/node/2916762):
+* Issue [#2922107](https://www.drupal.org/node/2922107):
                   Updated the patch for [Custom Permissions] module on the
                   issue of When [content_translation, config_translate] module
                   are enabled, And enabled [Custom Permissions], Then we will
@@ -14,8 +14,11 @@
                   Varbase websites are safe, as we had this managed long
                   time ago at this issue link:
                   https://www.drupal.org/node/2877329
-* Issue [#2921785](https://www.drupal.org/node/2916762):
+* Issue [#2921785](https://www.drupal.org/node/2921785):
                   Updated [DRD Agent] module from 8.3.4 to 8.3.5
+* Issue [#2922156](https://www.drupal.org/node/2922156):
+                  Varbase 8.4.12: Updated [CHANGELOG.md, UPDATE.md] files and
+                  filtered the code for Drupal 8 Coding Standard.
 
 
 ## 8.4.11
