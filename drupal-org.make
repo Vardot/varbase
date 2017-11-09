@@ -178,7 +178,7 @@ projects[userprotect][type] = module
 projects[userprotect][version] = 1.0
 
 projects[config_perms][type] = module
-projects[config_perms][version] = 1.0
+projects[config_perms][version] = 1.1
 ;; Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist
 projects[config_perms][patch][] = https://www.drupal.org/files/issues/config_perms-added_missing_edit_route-2877329-11.patch
 
