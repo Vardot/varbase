@@ -5,6 +5,6 @@ description: 'Varbase default content'
 dependencies:
   - default_content
 package: Varbase
-version: 8.x-4.12
+version: 8.x-4.x-dev
 core: 8.x
 project: varbase
