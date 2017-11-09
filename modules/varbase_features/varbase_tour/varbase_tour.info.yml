@@ -4,6 +4,6 @@ type: module
 dependencies:
   - tour
 package: Varbase
-version: 8.x-4.x-dev
+version: 8.x-4.12
 core: 8.x
 project: varbase

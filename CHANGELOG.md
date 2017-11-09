@@ -1,6 +1,26 @@
+## 8.4.12
+
+### Highlighted important changes since Varbase 8.4.11:
+* Issue [#2922107](https://www.drupal.org/node/2916762):
+                  Updated [Custom Permissions] module from 8.1.0 to 8.1.1,
+                  as Custom Permissions module had a - Moderately critical
+                  - Access bypass - SA-CONTRIB-2017-083.
+                  https://www.drupal.org/sa-contrib-2017-083
+* Issue [#2922107](https://www.drupal.org/node/2916762):
+                  Updated the patch for [Custom Permissions] module on the
+                  issue of When [content_translation, config_translate] module
+                  are enabled, And enabled [Custom Permissions], Then we will
+                  get Route "custom_perms_select_list_form" does not exist,
+                  Varbase websites are safe, as we had this managed long
+                  time ago at this issue link:
+                  https://www.drupal.org/node/2877329
+* Issue [#2921785](https://www.drupal.org/node/2916762):
+                  Updated [DRD Agent] module from 8.3.4 to 8.3.5
+
+
 ## 8.4.11
 
-### Highlighted important changes since the last release:
+### Highlighted important changes since Varbase 8.4.10:
 * Issue [#2916762](https://www.drupal.org/node/2916762):
                   Changed the Style of the full content page of (hero slider)
                   to look same as the default real style of the hero slide.
@@ -10,7 +30,7 @@
 * Issue [#2915103](https://www.drupal.org/node/2915103):
                   Reordered right-side field sets in node/add/edit pages.
 
-### Added since the last release:
+### Added since Varbase 8.4.10:
 * Issue [#2916699](https://www.drupal.org/node/2916699):
                   Added the patch for [Webform node] module to fix the issue
                   when trying to restore a revision of a content page.
@@ -52,7 +72,7 @@
                   the issue of viewsreference update 8103 in
                   viewsreference.install
 
-### Changed since the last release:
+### Changed since Varbase 8.4.10:
 * Issue [#2916762](https://www.drupal.org/node/2916762):
                   Changed the Style of the full content page of (hero slider)
                   to look same as the default real style of the hero slide.
@@ -80,7 +100,7 @@
                   Varbase 8.4.11: Updated [CHANGELOG.md, UPDATE.md] files and
                   filtered the code for Drupal 8 Coding Standard
 
-### Updates since last release
+### Updates Varbase 8.4.10:
 * Issue [#2921075](https://www.drupal.org/node/2921075):
                   Updated [Drupal Core] from 8.4.1 to 8.4.2
 * Issue [#2920412](https://www.drupal.org/node/2920412):
@@ -130,7 +150,7 @@
                   Updated [Views Bulk Operations (VBO)] module
                   from 8.1.0-alpha2 to 8.1.0-beta2
 
-### Fixes since the last release:
+### Fixes since Varbase 8.4.10:
 * Issue [#2915966](https://www.drupal.org/node/2915966):
                   Fixed Revisions review issue: revert content does not work
                   for Landing page content type.
@@ -153,12 +173,12 @@
 
 ## 8.4.10
 
-### Highlighted important changes since the last release:
+### Highlighted important changes since Varbase 8.4.09:
 * Issue [#2911702](https://www.drupal.org/node/2911702):
                   Update Varbase to use Drupal 8.4.0 - With media module in
                   core and related changes.
 
-### Added since the last release:
+### Added since Varbase 8.4.09:
 * Issue [#2914098](https://www.drupal.org/node/2914098):
                   Added the patch for [Persistent Login] module to provide
                   a permission to access (user/{user}/persistent-logins) path.
@@ -166,11 +186,11 @@
                   Added the patch for [Default content] module to fix the
  issue of Invalid translation language error when selected installation language does not match demo content language
 
-### Changed since the last release:
+### Changed since Varbase 8.4.09:
 * No changes over Varbase features. This is a refactor which #2911702:
   Updated [Drupal core] from 8.3.7 to 8.4.0
 
-### Updates since the last release:
+### Updates since Varbase 8.4.09:
 * Issue [#2911702](https://www.drupal.org/node/2911702):
                   Update Varbase to use Drupal 8.4.0 - With media module in
                   core and related changes.
@@ -231,7 +251,7 @@
                   Updated [Views Bootstrap] module
                   from 8.3.x-dev b34caf9 to 8.3.x-dev ec4e787
 
-### Fixes since the last release:
+### Fixes since Varbase 8.4.09:
 * Issue [#2913538](https://www.drupal.org/node/2913538):
                   Fixed an empty div that has a border when you upload
                   images to dropzonejs
@@ -240,7 +260,7 @@
 
 ## 8.4.09
 
-### Highlighted important changes since the last release:
+### Highlighted important changes since Varbase 8.4.08:
 * Issue [#2909434](https://www.drupal.org/node/2909434):
                   Changed [VMI Back-End layout illustration images] with
                   white backgrounds View Modes Inventory
@@ -250,7 +270,7 @@
 * Issue [#2910254](https://www.drupal.org/node/2910254):
                  Added [Varbase Default Content] feature module.
 
-### Added since the last release:
+### Added since Varbase 8.4.08:
 * Issue [#2908182](https://www.drupal.org/node/2908182):
                   Added [Varbase Tour] module with list of tours for Varbase,
                   and a Welcome to Varbase Modal Message after install.
@@ -267,7 +287,7 @@
 * Issue [#2910881](https://www.drupal.org/node/2910881):
                   Added a tour tips for Media Hero Slider Creation.
 
-### Changed since the last release:
+### Changed since Varbase 8.4.08:
 * Issue [#2909434](https://www.drupal.org/node/2909434):
                   Changed [VMI Back-End layout illustration images] with
                   white backgrounds.
@@ -288,7 +308,7 @@
                   Changed [Varbase Hero Slider Media] structure to the better
                   way
 
-### Updates since the last release:
+### Updates since Varbase 8.4.08:
 * Issue [#2909913](https://www.drupal.org/node/2909913):
                   Updated [paragraphs] module from 8.1.x-dev to 8.1.2 and
                   related automated tests.
@@ -308,7 +328,7 @@
 * Issue [#2908230](https://www.drupal.org/node/2908230):
                   Updated [Admin Toolbar] module from 8.1.19 to 8.1.20
 
-### Fixes since the last release:
+### Fixes since Varbase 8.4.08:
 * Issue [#2908183](https://www.drupal.org/node/2908183):
                   Fixed missing Media Hero Slider region in VARTHEME_SUBTHEME
 * Issue [#2908355](https://www.drupal.org/node/2908355):
@@ -318,7 +338,7 @@
 
 ## 8.4.08
 
-### Highlighted important changes since the last release:
+### Highlighted important changes since Varbase 8.4.07:
 * Issue [#2904173](https://www.drupal.org/node/2904173):
                   Changed [Background Color] in the Styling Settings to use a
                   set of Color set to choose with [Color boxes] with a general
@@ -333,7 +353,7 @@
 * Issue [#2907360](https://www.drupal.org/node/2907360):
                   Added [schema metatag] module 1.0-rc4
 
-### Added since the last release:
+### Added since Varbase 8.4.07:
 * Issue [#2905057](https://www.drupal.org/node/2905057):
                   Added the [Administer Varbase Bootstrap Paragraphs settings]
                   permission to the [site admin] user role. and Moved
@@ -368,7 +388,7 @@
 * Issue [#2907360](https://www.drupal.org/node/2907360):
                   Added [schema metatag] module 1.0-rc4
 
-### Changed since the last release:
+### Changed since Varbase 8.4.07:
 * Issue [#2904173](https://www.drupal.org/node/2904173):
                   Changed [Background Color] in the Styling Settings to use
                   a set of Color set to choose with [Color boxes] with a
@@ -389,7 +409,7 @@
                   Varbase 8.4.08: Updated [CHANGELOG.md, UPDATE.md] files
                   and filtered the code for Drupal 8 Coding Standard.
 
-### Updates since the last release:
+### Updates since Varbase 8.4.07:
 * Issue [#2906754](https://www.drupal.org/node/2906754):
                   Updated the patch on [Drupal core] to Allow profiles to
                   provide a base_parent profile and load them in the correct
@@ -407,7 +427,7 @@
                   for the type color widget in the form view mode for
                   paragraph types.
 
-### Fixes since the last release:
+### Fixes since Varbase 8.4.07:
 * Issue [#2904323](https://www.drupal.org/node/2904323):
                   Fixed Vartheme and Vartheme Subtheme print logo
                   404 (Not Found).
@@ -417,7 +437,7 @@
 
 ## 8.4.07
 
-### Highlighted important changes since the last release:
+### Highlighted important changes since Varbase 8.4.06:
 * Issue [#2902956](https://www.drupal.org/node/2902956):
                   Updated Varbase Installer to 2902878 a branded install.
 * Issue [#2902878](https://www.drupal.org/node/ttttttt):
@@ -433,7 +453,7 @@
 * Issue [#2902798](https://www.drupal.org/node/2902798):
                   Updated [Drupal core] from 8.3.6 to 8.3.7
 
-### Added since the last release:
+### Added since Varbase 8.4.06:
 * Issue [#2902878](https://www.drupal.org/node/2902878):
                   Added [Entityqueue Form Widget] module 8.1.0-beta1
                   and enable it.
@@ -443,7 +463,7 @@
 * Issue [#2902938](https://www.drupal.org/node/2902938):
                   Added translations for Varbase.
 
-### Updates since the last release:
+### Updates since Varbase 8.4.06:
 * Issue [#2902365](https://www.drupal.org/node/2902365):
                   Updated [devel] module from 8.1.0-rc2 to 8.1.0
 * Issue [#2902485](https://www.drupal.org/node/2902485):
@@ -474,7 +494,7 @@
                   Updated [Views Infinite Scroll] module
                   from 8.1.3 to 8.1.5
 
-### Fixes since the last release:
+### Fixes since Varbase 8.4.06:
 * Issue [#2901372](https://www.drupal.org/node/2901372):
                   Fixed a Warning on installing Varbase 8.x-406
 * Issue [#2903355](https://www.drupal.org/node/2903355):
@@ -494,7 +514,7 @@
 
 ## 8.4.06
 
-### Highlighted important changes since the last release:
+### Highlighted important changes since Varbase 8.4.05:
 
 * Issue [#2899468](https://www.drupal.org/node/2899468):
                   Added [Varbase Total Control] feature module.
@@ -522,7 +542,7 @@
                   Added Colours in [Varbase Bootstrap Paragraphs] for the vbp
                   background with Colour set vpb_color
 
-### Added since the last release:
+### Added since Varbase 8.4.05:
 
 * Issue [#2893609](https://www.drupal.org/node/2893609):
                   Added required Menu Position patch - Until patch is
@@ -573,7 +593,7 @@
                   Added a new user role (SEO Admin) with SEO related
                   permissions in the [Varbase SEO] feature module
 
-### Updates since the last release:
+### Updates since Varbase 8.4.05:
 
 * Issue [#2899415](https://www.drupal.org/node/2899415):
                   Updated [Drupal core] from 8.3.5 to 8.3.6
@@ -671,7 +691,7 @@
                   Updated [varbase bootstrap paragraphs] feature module
                           from 8.4.0-alpha1 8.4.0-alpha2
 
-### Fixes since the last release:
+### Fixes since Varbase 8.4.05:
 
 * Issue [#2894612](https://www.drupal.org/node/2894612):
                   Fixed Form required filed wrong path to load required.svg
@@ -706,7 +726,7 @@
 
 ## 8.4.05
 
-### Highlighted important changes since the last release:
+### Highlighted important changes since Varbase 8.4.04:
 
 * Issue [#2886156](https://www.drupal.org/node/2886156):
                   Updated [Varbase Landing] feature to use [Paragraphs] instead
@@ -733,7 +753,7 @@
 * Issue [#2891629](https://www.drupal.org/node/2891629):
                   Updated [Varbase profile] features bundle default config.
 
-### Added since the last release:
+### Added since Varbase 8.4.04:
 
 * Issue [#2892170](https://www.drupal.org/node/2892170):
                   Added logo-print to be used when printing only in varbase
@@ -772,7 +792,7 @@
 * Issue [#2888454](https://www.drupal.org/node/2888454):
                   Buttered up the Behat VarbaseContext
 
-### Updates since the last release:
+### Updates since Varbase 8.4.04:
 
 * Issue [#2884546](https://www.drupal.org/node/2884546):
                   Updated [Drupal core] from 8.3.2 to 8.3.3
@@ -826,7 +846,7 @@
 * Issue [#2887276](https://www.drupal.org/node/2887276):
                   Updated [Honeypot] module from 8.1.25 to 8.1.26
 
-### Fixes since the last release:
+### Fixes since Varbase 8.4.04:
 * Issue [#2884315](https://www.drupal.org/node/2884315):
                   Fixed [Varbase Media] issue with Image Caption doesn't
                   fit the image.
