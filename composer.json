@@ -89,7 +89,7 @@
     "drupal/coffee": "1.0-beta2",
     "drupal/responsive_preview": "1.0-alpha7",
     "drupal/views_bulk_operations": "1.0-beta2",
-    "drupal/views_bulk_edit": "2.0-alpha2",
+    "drupal/views_bulk_edit": "2.0-beta1",
     "drupal/revision_log_default": "1.0",
     "drupal/webform": "5.0-beta23",
     "drupal/default_content": "1.0-alpha7",
