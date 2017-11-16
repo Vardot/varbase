@@ -25,12 +25,13 @@ bundle: landing_page
 label: Components
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       bp_accordion: bp_accordion
       bp_block: bp_block
