@@ -280,6 +280,8 @@ projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2868155-16.patch
 ;; Issue #2877927: Show add widget between paragraphs on hover
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2877927_29.patch
+;; Issue #2909416: Hide duplicate action while translating.
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2909416-2.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2

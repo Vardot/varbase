@@ -266,7 +266,9 @@
         "Issue #2868155: Add new hooks to allow easier editing of paragraph forms":
         "https://www.drupal.org/files/issues/2868155-16.patch",
         "Issue #2877927: Show add widget between paragraphs on hover":
-        "https://www.drupal.org/files/issues/2877927_29.patch"
+        "https://www.drupal.org/files/issues/2877927_29.patch",
+        "Issue #2909416: Hide duplicate action while translating.":
+        "https://www.drupal.org/files/issues/2909416-2.patch"
       },
       "drupal/adminimal_theme": {
         "Issue #2696393: Checkboxes with .error class are not usable":
