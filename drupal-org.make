@@ -280,6 +280,8 @@ projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2868155-16.p
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2877927_29.patch
 ;; Issue #2909416: Hide duplicate action while translating.
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2909416-2.patch
+;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2924774-4.patch
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2

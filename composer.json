@@ -268,7 +268,9 @@
         "Issue #2877927: Show add widget between paragraphs on hover":
         "https://www.drupal.org/files/issues/2877927_29.patch",
         "Issue #2909416: Hide duplicate action while translating.":
-        "https://www.drupal.org/files/issues/2909416-2.patch"
+        "https://www.drupal.org/files/issues/2909416-2.patch",
+        "Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]":
+        "https://www.drupal.org/files/issues/2924774-4.patch"
       },
       "drupal/adminimal_theme": {
         "Issue #2696393: Checkboxes with .error class are not usable":
