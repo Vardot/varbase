@@ -503,19 +503,19 @@ projects[total_control][version] = 2.0-alpha3
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.18
+projects[varbase_editor][version] = 4.x-dev
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.0-beta13
+projects[varbase_heroslider_media][version] = 4.x-dev
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 4.0-beta3
+projects[varbase_carousels][version] = 4.x-dev
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.0-beta1
+projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta9
+projects[varbase_total_control][version] = 1.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
