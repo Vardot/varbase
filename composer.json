@@ -136,7 +136,7 @@
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/xmlsitemap": "1.0-alpha2",
     "drupal/masonry": "1.0-rc2",
-    "drupal/charts": "3.0-alpha6",
+    "drupal/charts": "3.0-alpha7",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
     "drupal/ckeditor_media_embed": "1.1",
