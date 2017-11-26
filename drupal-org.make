@@ -137,7 +137,7 @@ projects[pathologic][download][revision] = e0473546e51cbeaa3acb34e3208a0c503ca85
 projects[pathologic][download][branch] = 8.x-1.x
 
 projects[ckeditor_bidi][type] = module
-projects[ckeditor_bidi][version] = 2.0
+projects[ckeditor_bidi][version] = 2.1
 
 projects[ace_editor][type] = module
 projects[ace_editor][version] = 1.0
