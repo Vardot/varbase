@@ -1471,12 +1471,13 @@ JS;
   }
 
   /**
-   * Maximize the window before scenario.
+   * Maximize the window before step.
    *
    * @BeforeStep
    */
-  public function beforeStep() {
-    $this->getSession()->getDriver()->maximizeWindow();
+  public function beforeStepMaximizeWindow() {
+    $webDriver = $this->getSession()->getDriver()->getWebDriverSession();
+    $webDriver->window($webDriver->window_handle())->maximize();
   }
 
 }
