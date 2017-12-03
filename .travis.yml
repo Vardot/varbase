@@ -43,7 +43,7 @@ matrix:
 dist: trusty
 
 addons:
-  firefox: 46.0.1
+  firefox: latest
   apt:
     packages:
       - xorg
