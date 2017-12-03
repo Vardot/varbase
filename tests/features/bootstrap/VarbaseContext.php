@@ -1473,7 +1473,7 @@ JS;
   /**
    * Maximize the window before step.
    *
-   * @BeforeStep
+   * @BeforeStep @javascript
    */
   public function beforeStepMaximizeWindow() {
     $webDriver = $this->getSession()->getDriver()->getWebDriverSession();
