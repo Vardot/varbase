@@ -1473,7 +1473,7 @@ JS;
   /**
    * Maximize the window before scenario.
    *
-   * @WhenPageOpens
+   * @BeforeScenario @javascript
    */
   public function maximizeWindow() {
     $this->getSession()->getDriver()->manage()->maximizeWindow();
