@@ -111,9 +111,9 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
   }
 
   /**
-   * @BeforeScenario
+   * @BeforeStep @javascript
    */
-  public function registorSelectors(BeforeScenarioScope $scope) {
+  public function registerSelectors() {
 
     $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
 
@@ -123,7 +123,7 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
       $selectorHandler->registerNamedXpath($name, $css->translateToXPath($selector));
     }
 
-    // Registor selector name for all XPath selectors.
+    // Register selector name for all XPath selectors.
     foreach ($this->xpathSelectors as $name => $selector) {
       $selectorHandler->registerNamedXpath($name, $selector);
     }
