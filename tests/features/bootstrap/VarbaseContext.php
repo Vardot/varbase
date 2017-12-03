@@ -1475,8 +1475,8 @@ JS;
    *
    * @BeforeScenario @javascript
    */
-  public function maximizeWindow() {
-    $this->getSession()->getDriver()->maximizeWindow();
-  }
+//  public function maximizeWindow() {
+//    $this->getSession()->getDriver()->maximizeWindow();
+//  }
 
 }
