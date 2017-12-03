@@ -7,7 +7,6 @@ cache:
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
     - "$HOME/.selenium/cache"
-    - "$HOME/.chrome/cache"
 
 php:
   - 7.0
@@ -109,8 +108,6 @@ before_install:
   - java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
 install:
-  - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
-
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - composer install --no-interaction -vvv
