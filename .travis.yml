@@ -76,10 +76,10 @@ before_install:
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
-  - echo 'max_execution_time = 1200' >> varbase.php.ini;
+  - echo 'max_execution_time = 300' >> varbase.php.ini;
   - echo 'max_input_time = 180' >> varbase.php.ini;
   - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 2048M' >> varbase.php.ini;
+  - echo 'memory_limit = 512M' >> varbase.php.ini;
   - echo 'error_reporting = E_ALL' >> varbase.php.ini;
   - echo 'post_max_size = 64M' >> varbase.php.ini;
   - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
@@ -103,19 +103,14 @@ before_install:
   - mv -f chromedriver $HOME/.composer/vendor/bin/
   - rm chromedriver_linux64.zip
 
-  # Update Chrome.
-  - export CHROME_BIN=/usr/bin/google-chrome
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome-stable_current_amd64.deb
-  - rm google-chrome-stable_current_amd64.deb
-  - google-chrome --version
-
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
   - if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
   - java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
 install:
+  - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
+
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - composer install --no-interaction -vvv
