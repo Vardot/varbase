@@ -43,7 +43,7 @@ matrix:
 dist: trusty
 
 addons:
-  firefox: latest
+  chrome: stable
   apt:
     packages:
       - xorg
@@ -92,6 +92,13 @@ before_install:
   - sh -e /etc/init.d/xvfb start
   - Xvfb :0 -ac -screen 0 1366x768x24 &
   - sleep 3
+
+  - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
