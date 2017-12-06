@@ -84,7 +84,7 @@ before_install:
   # Configure and run the virtual display.
   - export DISPLAY=:0
   - sh -e /etc/init.d/xvfb start
-  - Xvfb :0 -ac -screen 0 1366x768x24 &
+  - Xvfb :0 -ac -screen 0 1366x768x24 2>/dev/null &
   - sleep 3
 
   # Download Chrome Driver 2.33
