@@ -87,7 +87,7 @@ before_install:
   - Xvfb :0 -ac -screen 0 1366x768x24 &
   - sleep 3
 
-  # Download Chrome Driver
+  # Download Chrome Driver 2.33
   - wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - chmod +x chromedriver
@@ -95,9 +95,9 @@ before_install:
   - mv -f chromedriver $HOME/.composer/vendor/bin/
   - rm chromedriver_linux64.zip
 
-  # Run selenium standalone server.
-  - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
-  - if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
+  # Run selenium standalone server 3.8.1
+  - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-3.8.1.jar";
+  - if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar; fi
   - java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
 install:
