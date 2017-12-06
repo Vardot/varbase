@@ -53,6 +53,7 @@ addons:
       - xfonts-100dpi
       - xfonts-75dpi
       - xfonts-scalable
+      - xfonts-cyrillic
       - xserver-xorg-core
       - libappindicator1
       - fonts-liberation
