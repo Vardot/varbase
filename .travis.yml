@@ -46,14 +46,8 @@ addons:
   chrome: stable
   apt:
     packages:
-      - xorg
-      - xvfb
-      - dbus-x11
-      - x11-xkb-utils
-      - xfonts-100dpi
-      - xfonts-75dpi
-      - xfonts-scalable
-      - xserver-xorg-core
+      - libappindicator1
+      - fonts-liberation
 
 mysql:
   database: test_varbase4c
