@@ -50,10 +50,24 @@ addons:
       - xvfb
       - dbus-x11
       - x11-xkb-utils
-      - xfonts-100dpi
-      - xfonts-75dpi
-      - xfonts-scalable
       - xfonts-cyrillic
+      - xfonts-nexus
+      - xfonts-terminus
+      - xfonts-terminus-dos
+      - xfonts-terminus-oblique
+      - xfonts-x3270-misc
+      - xfonts-tipa
+      - xfonts-traditional
+      - xfonts-base
+      - xfonts-scalable
+      - xfonts-100dpi
+      - xfonts-100dpi-transcoded
+      - xfonts-75dpi
+      - xfonts-75dpi-transcoded
+      - xfonts-biznet-100dpi
+      - xfonts-biznet-75dpi
+      - xfonts-biznet-base
+      - xfonts-unifont
       - xserver-xorg-core
       - libappindicator1
       - fonts-liberation
