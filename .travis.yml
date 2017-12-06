@@ -9,7 +9,7 @@ cache:
     - "$HOME/.selenium/cache"
 
 php:
-  - 7.0
+  - 7.1.11
 
 env:
   - AFATG=01-website-base-requirements
@@ -21,23 +21,23 @@ env:
 matrix:
   exclude:
 # Automated Functional Acceptance Testing group: 01 website base requirements
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=01-website-base-requirements
 
 # Automated Functional Acceptance Testing group: 02 user management
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=02-user-management
 
 # Automated Functional Acceptance Testing group: 03 admin management
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=03-admin-management
 
 # Automated Functional Acceptance Testing group: 04 content structure
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=04-content-structure
 
 # Automated Functional Acceptance Testing group: 05 content-management
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=05-content-management
 
 dist: trusty
