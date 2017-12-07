@@ -50,7 +50,6 @@ default:
             screenshotDir: "%paths.base%/tests/screenshots/"
         - behatch:context:json:
             evaluationMode: javascript
-        - behatch:context::rest
         - behatch:context:system:
             root: "../../"
         - behatch:context:table
