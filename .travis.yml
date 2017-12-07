@@ -126,7 +126,7 @@ before_install:
 install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
-  - composer install --no-interaction -vvv
+  - composer install --no-interaction
 
   ## Install with drush.
   - cd docroot
