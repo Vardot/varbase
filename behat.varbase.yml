@@ -43,17 +43,6 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
-        - behatch:context::browser:
-            timeout: 4
-        - behatch:context::debug:
-            screenshotDir: "%paths.base%/tests/screenshots/"
-        - behatch:context::json:
-            evaluationMode: javascript
-        - behatch:context::rest
-        - behatch:context::system:
-            root: "../../"
-        - behatch:context::table
-        - behatch:context::xml
       paths:
         features: %paths.base%/tests/features
         bootstrap: %paths.base%/tests/features/bootstrap
@@ -93,7 +82,19 @@ default:
         error_message_selector: '.messages.error'
         success_message_selector: '.messages.status'
         warning_message_selector: '.messages.warning'
-    Behatch\Extension: ~
+    Behatch\Extension:
+      contexts:
+        - behatch:context::browser:
+            timeout: 4
+        - behatch:context::debug:
+            screenshotDir: "%paths.base%/tests/screenshots/"
+        - behatch:context::json:
+            evaluationMode: javascript
+        - behatch:context::rest
+        - behatch:context::system:
+            root: "../../"
+        - behatch:context::table
+        - behatch:context::xml
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
       renderer: Twig,Behat2
