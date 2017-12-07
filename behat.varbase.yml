@@ -44,17 +44,17 @@ default:
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
         - Behat\MinkExtension\Context\MinkContext
-        - behatch:context::browser:
+        - behatch:context:browser:
             timeout: 4
-        - behatch:context::debug:
+        - behatch:context:debug:
             screenshotDir: "%paths.base%/tests/screenshots/"
-        - behatch:context::json:
+        - behatch:context:json:
             evaluationMode: javascript
         - behatch:context::rest
-        - behatch:context::system:
+        - behatch:context:system:
             root: "../../"
-        - behatch:context::table
-        - behatch:context::xml
+        - behatch:context:table
+        - behatch:context:xml
       paths:
         features: %paths.base%/tests/features
         bootstrap: %paths.base%/tests/features/bootstrap
