@@ -43,11 +43,6 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
-        - Drupal\DrupalExtension\Context\BatchContext
-        - behatch:debug:
-            screenshotDir: "%paths.base%/tests/screenshots/"
-        - behatch:system:
-            root: "../../"
       paths:
         features: %paths.base%/tests/features
         bootstrap: %paths.base%/tests/features/bootstrap
@@ -87,7 +82,6 @@ default:
         error_message_selector: '.messages.error'
         success_message_selector: '.messages.status'
         warning_message_selector: '.messages.warning'
-    Behatch\Extension: ~
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
       renderer: Twig,Behat2
