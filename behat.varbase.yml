@@ -43,7 +43,6 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
-        - Behat\MinkExtension\Context\MinkContext
         - behatch:context:browser:
             timeout: 4
         - behatch:context:debug:
