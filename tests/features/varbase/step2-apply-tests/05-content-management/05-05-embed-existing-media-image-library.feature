@@ -75,7 +75,6 @@ So that it will show up under that rich text field without having to upload the 
       And I wait
       And I fill in "Embed Flag Earth custom Caption text" for "Caption"
       And I fill in "Embed Flag Earth custom Alt text" for "Alternative text"
-      And I fill in "Embed Flag Earth custom title" for "Title"
      When I click "Embed" in the "button" element with the "class" attribute set to "js-form-submit form-submit"
       And I wait for AJAX to finish
      When I press "Save"
