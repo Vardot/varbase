@@ -137,9 +137,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Accordion has been created"
-     When I click "Accordion Section Title test"
-      And I wait for 2s
-     Then I should see "Accordion Section Body test"
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
@@ -385,7 +382,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Tabs has been created"
       And I should see "Tab 1"
-      And I should see "Tab 1 - Body test"
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "WebForm"

@@ -100,37 +100,3 @@ So that the "Landing page" will have text and images in right and left view.
       And I press "Save"
       And I wait
      Then I should see the "0" "wrapper" with "align2left" class
-
-  # Add Text and Image -> image to the left
-     When I click "Edit"
-      And I wait
-      And I scrolldown
-      And I press "Add Component"
-      And I wait
-      And I press "Text and image"
-      And I wait for AJAX to finish
-      And I fill in the rich text editor field "Text" with "Integer pellentesque nisi leo, et bibendum urna egestas in. Vestibulum vestibulum est aliquam, volutpat velit ut, mollis urna. Quisque facilisis a velit a condimentum. Nulla sit amet elementum enim. Aenean nulla ante, fermentum sed facilisis in, porttitor in ex."
-      And I select all text in "Text" field
-      And I click on "justifycenter" command button in the rich text editor field "Text"
-      And I wait
-      And I click "Image"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-      And the image media browser should be open
-      And I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Mars panorama" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Mars panorama image" title text
-     When I click on the image with the "Mars panorama image" title text
-      And I press the "Select an image" button
-      And I wait
-      And I switch to main frame
-      And I wait
-      And I expand the field "styling-settings"
-      And I click "Content"
-      And I select "paragraph--width--medium" from "field_lp_paragraphs[1][subform][bp_width]"
-      And I select "left" from "field_lp_paragraphs[1][subform][field_image_position]"
-      And I press "Save"
-      And I wait
-     Then I should see the "1" "wrapper" with "align2right" class
