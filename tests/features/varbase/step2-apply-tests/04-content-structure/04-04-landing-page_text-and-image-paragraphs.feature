@@ -129,7 +129,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I wait
       And I expand the field "styling-settings"
       And I click "Content"
-      And I select "medium" from "field_lp_paragraphs[1][subform][bp_width]"
+      And I select "paragraph--width--medium" from "field_lp_paragraphs[1][subform][bp_width]"
       And I select "left" from "field_lp_paragraphs[1][subform][field_image_position]"
       And I press "Save"
       And I wait
