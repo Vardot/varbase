@@ -628,7 +628,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     /**
     * #varbase: To double click on an image with the provided title.
     *
-    * Example 1: I click on the image with the "Flag Earth image title" title text
+    * Example 1: I double on the image with the "Flag Earth image title" title text
     *
     * @Given /^I double click on the image with the "([^"]*)" title text$/
     */

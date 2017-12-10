@@ -67,9 +67,7 @@ So that it will show up under that rich text field without having to upload the 
       And I press the "Search" button
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I wait
-      And I press "Select media"
+     When I double click on the image with the "Embed Flag Earth all earth in space" title text
       And I wait
       And I switch to main frame
       And I wait
