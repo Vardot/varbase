@@ -135,6 +135,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Accordion section body"
      When I fill in the rich text editor field "Text" with "Accordion Section Body test"
       And I press "Save"
+      And I wait
      Then I should see "Landing page Test Landing page Accordion has been created"
      When I click "Accordion Section Title test"
       And I wait for 2s
