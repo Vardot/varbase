@@ -137,7 +137,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Save"
      Then I should see "Landing page Test Landing page Accordion has been created"
      When I click "Accordion Section Title test"
-      And I wait
+      And I wait for 2s
      Then I should see "Accordion Section Body test"
 
   @javascript @local @development @staging @production
