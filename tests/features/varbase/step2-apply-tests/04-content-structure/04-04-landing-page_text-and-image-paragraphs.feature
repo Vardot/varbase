@@ -68,6 +68,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I click on "justifycenter" command button in the rich text editor field "Text"
       And I wait
       And I press "Save"
+      And I wait
      Then I should see "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere." in the "p" element with the "class" attribute set to "text-align-center"
 
   # Add Text and Image -> image to the right
@@ -101,6 +102,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I click "Content"
       And I select "Right" from "Image position"
       And I press "Save"
+      And I wait
      Then I should see the "0" "wrapper" with "align2left" class
 
   # Add Text and Image -> image to the left

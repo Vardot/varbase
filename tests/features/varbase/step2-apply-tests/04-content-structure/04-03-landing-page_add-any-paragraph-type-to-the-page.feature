@@ -310,7 +310,6 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I press "Modal button"
       And I wait for AJAX to finish
      Then I should see "Modal title"
-      And I should see "Modal Body test"
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Rich Text"
