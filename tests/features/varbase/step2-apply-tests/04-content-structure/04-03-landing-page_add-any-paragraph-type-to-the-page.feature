@@ -113,6 +113,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see "styling settings"
      When I expand the field "styling-settings"
+      And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -171,6 +173,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I expand the field "styling-settings"
       And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -201,6 +204,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Columns (Two Uneven)"
       And I wait for AJAX to finish
       And I expand the field "styling-settings"
+      And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -322,6 +327,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I fill in the rich text editor field "Text" with "Rich Text test"
       And I expand the field "styling-settings"
       And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -353,6 +359,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Tabs"
       And I wait for AJAX to finish
       And I expand the field "styling-settings"
+      And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open

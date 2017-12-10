@@ -97,7 +97,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I switch to main frame
       And I wait
       And I expand the field "styling-settings"
-      And I click "Content settings"
+      And I click "Content"
       And I select "Right" from "Image position"
       And I press "Save"
      Then I should see the "0" "wrapper" with "align2left" class
@@ -129,7 +129,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I switch to main frame
       And I wait
       And I expand the field "styling-settings"
-      And I click "Content settings"
+      And I click "Content"
       And I select "Medium" from "Width"
       And I select "Left" from "Image position"
       And I press "Save"
