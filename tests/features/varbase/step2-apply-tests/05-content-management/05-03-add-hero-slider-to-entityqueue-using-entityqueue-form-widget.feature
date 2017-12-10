@@ -70,7 +70,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait for AJAX to finish
       And I switch to main frame
       And I wait for AJAX to finish
-      And wait max of 5s
+      And wait max of 60s
       And I press "Save"
       And I wait
      Then I should see "Test hero slider #1"
@@ -98,7 +98,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait for AJAX to finish
       And I switch to main frame
       And I wait for AJAX to finish
-      And wait max of 5s
+      And wait max of 60s
       And I press "Save"
       And I wait
      Then I should see "Test hero slider #2"
