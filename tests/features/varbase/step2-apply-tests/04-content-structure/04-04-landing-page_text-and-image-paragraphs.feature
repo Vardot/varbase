@@ -129,8 +129,8 @@ So that the "Landing page" will have text and images in right and left view.
       And I wait
       And I expand the field "styling-settings"
       And I click "Content"
-      And I select "Medium" from "Width"
-      And I select "Left" from "Image position"
+      And I select "medium" from "field_lp_paragraphs[1][subform][bp_width]"
+      And I select "left" from "field_lp_paragraphs[1][subform][field_image_position]"
       And I press "Save"
       And I wait
      Then I should see the "1" "wrapper" with "align2right" class
