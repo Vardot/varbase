@@ -9,7 +9,7 @@ defaults[projects][subdir] = "contrib"
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[config_update][type] = module
-projects[config_update][version] = 1.4
+projects[config_update][version] = 1.5
 
 projects[config_filter][type] = module
 projects[config_filter][version] = 1.1

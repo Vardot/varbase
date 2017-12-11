@@ -28,7 +28,7 @@
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
     "drupal/core": "8.4.2",
-    "drupal/config_update": "1.4",
+    "drupal/config_update": "1.5",
     "drupal/config_filter": "1.1",
     "drupal/config_ignore": "2.1",
     "drupal/ctools": "3.0",
