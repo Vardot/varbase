@@ -64,10 +64,13 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And wait max of 5s
      Then I should see image with the "Flag Earth all earth in space" title text
      When I click on the image with the "Flag Earth all earth in space" title text
+      And I wait for AJAX to finish
       And wait max of 5s
       And I press "Select media"
+      And I wait for AJAX to finish
       And wait max of 5s
       And I switch to main frame
+      And I wait for AJAX to finish
       And wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
@@ -94,10 +97,13 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And wait max of 5s
      Then I should see image with the "Mars panorama image" title text
      When I click on the image with the "Mars panorama image" title text
+      And I wait for AJAX to finish
       And wait max of 5s
       And I press "Select media"
+      And I wait for AJAX to finish
       And wait max of 5s
       And I switch to main frame
+      And I wait for AJAX to finish
       And wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
