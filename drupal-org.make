@@ -305,7 +305,7 @@ projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issue
 
 projects[login_destination][type] = module
 projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
-projects[login_destination][download][revision] = 98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7
+projects[login_destination][download][revision] = 944d78fbf01853244d8e01f63b41dc37d5f99e50
 projects[login_destination][download][branch] = 8.x-1.x
 
 projects[ckeditor_media_embed][type] = module
