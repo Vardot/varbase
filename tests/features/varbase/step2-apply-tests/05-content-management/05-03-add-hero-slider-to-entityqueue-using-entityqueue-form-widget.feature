@@ -50,8 +50,8 @@ I want to be able to add and remove entities to any allowed entityqueue.
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Entity queues" can add a "Test hero slider number 1" to the heroslider entity queue
     Given I am a logged in user with the "test_super_admin" user
-     When I go to "node/add/varbase_heroslider_media"
-      And I wait
+     When I go to "/node/add/varbase_heroslider_media"
+      And I wait max of 5s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #1" for "Slide title"
       And I fill in "Test hero slider slide text #1" for "Slide text"
@@ -83,8 +83,8 @@ I want to be able to add and remove entities to any allowed entityqueue.
   @javascript @local @development @staging @production
   Scenario: Add a "Test hero slider number 2" to the heroslider entity queue.
     Given I am a logged in user with the "test_super_admin" user
-     When I go to "node/add/varbase_heroslider_media"
-      And I wait
+     When I go to "/node/add/varbase_heroslider_media"
+      And I wait max of 5s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #2" for "Slide title"
       And I fill in "Test hero slider slide text #2" for "Slide text"
