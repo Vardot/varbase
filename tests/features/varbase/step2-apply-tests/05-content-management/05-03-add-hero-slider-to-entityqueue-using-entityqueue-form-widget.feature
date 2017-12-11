@@ -72,8 +72,6 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait for AJAX to finish
       And wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
-      And I wait for AJAX to finish
-      And wait max of 5s
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
       And I press "Save"
@@ -105,8 +103,6 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait for AJAX to finish
       And wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
-      And I wait for AJAX to finish
-      And wait max of 5s
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
       And I press "Save"
