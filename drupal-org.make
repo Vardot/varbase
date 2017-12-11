@@ -184,9 +184,7 @@ projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][download][url] = https://git.drupal.org/project/admin_toolbar.git
-projects[admin_toolbar][download][revision] = 5a07bd6290449ebb9aa16e47614b7f51a921223b
-projects[admin_toolbar][download][branch] = 8.x-1.x
+projects[admin_toolbar][version] = 1.21
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.5
