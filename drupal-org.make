@@ -133,7 +133,7 @@ projects[focal_point][patch][] = https://www.drupal.org/files/issues/2916562-16.
 
 projects[pathologic][type] = module
 projects[pathologic][download][url] = https://git.drupal.org/project/pathologic.git
-projects[pathologic][download][revision] = e0473546e51cbeaa3acb34e3208a0c503ca85613
+projects[pathologic][download][revision] = 4f9f3fdcf1e0b224c4d8650e383a769f40abf9bf
 projects[pathologic][download][branch] = 8.x-1.x
 
 projects[ckeditor_bidi][type] = module
