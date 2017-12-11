@@ -91,11 +91,11 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait for AJAX to finish
      Then the image media browser should be open
      When I switch to iframe "entity_browser_iframe_heroslider_media_browser"
-      And I fill in "Mars panorama" for "Search"
+      And I fill in "Flag Earth" for "Search"
       And I press the "Search" button
       And wait max of 5s
-     Then I should see image with the "Mars panorama image" title text
-     When I double click on the image with the "Mars panorama image" title text
+     Then I should see image with the "Flag Earth all earth in space" title text
+     When I double click on the image with the "Flag Earth all earth in space" title text
       And I wait for AJAX to finish
       And wait max of 5s
       And I wait for AJAX to finish
