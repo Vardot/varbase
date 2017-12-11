@@ -43,18 +43,16 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
-        - Drupal\DrupalExtension\Context\BatchContext
-        - behatch:browser:
-            timeout: 1
-        - behatch:debug:
+        - behatch:context:browser:
+            timeout: 4
+        - behatch:context:debug:
             screenshotDir: "%paths.base%/tests/screenshots/"
-        - behatch:json:
+        - behatch:context:json:
             evaluationMode: javascript
-        - behatch:rest
-        - behatch:system:
+        - behatch:context:system:
             root: "../../"
-        - behatch:table
-        - behatch:xml
+        - behatch:context:table
+        - behatch:context:xml
       paths:
         features: %paths.base%/tests/features
         bootstrap: %paths.base%/tests/features/bootstrap
@@ -70,13 +68,13 @@ default:
       selenium2:
         wd_host: 127.0.0.1:4445/wd/hub
         capabilities:
-          browser: 'firefox'
-          # browser: 'chrome'
+          # browser: 'firefox'
+          browser: 'chrome'
           # browser: 'phantomjs'
           nativeEvents: true
       base_url: 'http://127.0.0.1:8080'
-      browser_name: 'firefox'
-      # browser_name: 'chrome'
+      # browser_name: 'firefox'
+      browser_name: 'chrome'
       # browser_name: 'phantomjs'
       javascript_session: selenium2
     Drupal\DrupalExtension:

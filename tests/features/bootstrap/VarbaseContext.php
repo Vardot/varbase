@@ -628,7 +628,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     /**
     * #varbase: To double click on an image with the provided title.
     *
-    * Example 1: I click on the image with the "Flag Earth image title" title text
+    * Example 1: I double on the image with the "Flag Earth image title" title text
     *
     * @Given /^I double click on the image with the "([^"]*)" title text$/
     */
@@ -652,36 +652,36 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @Given /^I click on the image with the "([^"]*)" title text$/
    */
   public function iClickOnTheImageWithTheTitleText($titleText) {
-    // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+     // Find an image with the title.
+     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
 
-    if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
-    }
+     if (empty($element)) {
+       throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
+     }
 
     // Click on the image.
     $element->click();
   }
 
 
-    /**
-    * #varbase: To double click on an image with the provided  alt Text.
-    *
-    * Example 1: I click on the image with the "Flag Earth image title" alt text
-    *
-    * @Given /^I double click on the image with the "([^"]*)" alt text$/
-    */
-   public function iDoubleClickOnTheImageWithTheAltText($altText) {
-     // Find an image with the title.
-     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
+  /**
+   * #varbase: To double click on an image with the provided  alt Text.
+   *
+   * Example 1: I double click on the image with the "Flag Earth image title" alt text
+   *
+   * @Given /^I double click on the image with the "([^"]*)" alt text$/
+   */
+  public function iDoubleClickOnTheImageWithTheAltText($altText) {
+    // Find an image with the title.
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
 
-     if (empty($element)) {
-       throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
-     }
+    if (empty($element)) {
+      throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
+    }
 
-     // Double click on the image.
-     $element->doubleClick();
-   }
+    // Double click on the image.
+    $element->doubleClick();
+  }
 
    /**
    * #varbase: To click on an image with the provided alt.
@@ -1321,10 +1321,10 @@ JS;
   }
 
    /**
-   * #varbase: To click on the lable with the for attribute value linked to
+   * #varbase: To click on the label with the for attribute value linked to
    *           to the an ID of a radio button with a value to select the radio option
    *           we need to use this when we do have a list of radio buttons
-   *           but we do have the label with extra html tags like images or the
+   *           but we do have the label with extra HTML tags like images or the
    *           actual radio button is hidden.
    *
    * Example 1: I click on the radio label for "right_sidebar_layout" value
@@ -1471,13 +1471,12 @@ JS;
   }
 
   /**
-   * Maximize the window before step.
+   * Maximize the window before scenario.
    *
    * @BeforeStep @javascript
    */
   public function beforeStepMaximizeWindow() {
-    $webDriver = $this->getSession()->getDriver()->getWebDriverSession();
-    $webDriver->window($webDriver->window_handle())->maximize();
+    $this->getSession()->getDriver()->maximizeWindow();
   }
 
 }

@@ -10,7 +10,8 @@ So that I can see path I followed to locate the current page usually near the to
       And I wait
       And I fill in "Test Basic page root title" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page root body"
-      And I click "Menu settings"
+      And I expand the field "edit-menu"
+      And I wait
       And I check the box "Provide a menu link"
       And I select "<Main navigation>" from "Parent item"
       And I press the "Save" button
@@ -25,7 +26,8 @@ So that I can see path I followed to locate the current page usually near the to
       And I wait
       And I fill in "Test Basic page sub 1 title" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page sub 1 body"
-      And I click "Menu settings"
+      And I expand the field "edit-menu"
+      And I wait
       And I check the box "Provide a menu link"
       And I select "Test Basic page root title" from "Parent item"
       And I press the "Save" button
@@ -41,7 +43,8 @@ So that I can see path I followed to locate the current page usually near the to
       And I wait
       And I fill in "Test Basic page sub 2 title" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page sub 2 body"
-      And I click "Menu settings"
+      And I expand the field "edit-menu"
+      And I wait
       And I check the box "Provide a menu link"
       And I select "Test Basic page sub 1 title" from "Parent item"
       And I press the "Save" button

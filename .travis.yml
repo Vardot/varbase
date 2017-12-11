@@ -9,7 +9,7 @@ cache:
     - "$HOME/.selenium/cache"
 
 php:
-  - 7.0
+  - 7.1.11
 
 env:
   - AFATG=01-website-base-requirements
@@ -21,39 +21,56 @@ env:
 matrix:
   exclude:
 # Automated Functional Acceptance Testing group: 01 website base requirements
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=01-website-base-requirements
 
 # Automated Functional Acceptance Testing group: 02 user management
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=02-user-management
 
 # Automated Functional Acceptance Testing group: 03 admin management
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=03-admin-management
 
 # Automated Functional Acceptance Testing group: 04 content structure
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=04-content-structure
 
 # Automated Functional Acceptance Testing group: 05 content-management
-  - php: 7.0
+  - php: 7.1.11
     env: AFATG=05-content-management
 
 dist: trusty
 
 addons:
-  firefox: 46.0.1
+  chrome: stable
   apt:
     packages:
       - xorg
       - xvfb
       - dbus-x11
       - x11-xkb-utils
-      - xfonts-100dpi
-      - xfonts-75dpi
+      - xfonts-cyrillic
+      - xfonts-nexus
+      - xfonts-terminus
+      - xfonts-terminus-dos
+      - xfonts-terminus-oblique
+      - xfonts-x3270-misc
+      - xfonts-tipa
+      - xfonts-traditional
+      - xfonts-base
       - xfonts-scalable
+      - xfonts-100dpi
+      - xfonts-100dpi-transcoded
+      - xfonts-75dpi
+      - xfonts-75dpi-transcoded
+      - xfonts-biznet-100dpi
+      - xfonts-biznet-75dpi
+      - xfonts-biznet-base
+      - xfonts-unifont
       - xserver-xorg-core
+      - libappindicator1
+      - fonts-liberation
 
 mysql:
   database: test_varbase4c
@@ -78,7 +95,7 @@ before_install:
   - echo 'max_execution_time = 1200' >> varbase.php.ini;
   - echo 'max_input_time = 180' >> varbase.php.ini;
   - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 2048M' >> varbase.php.ini;
+  - echo 'memory_limit = 1042M' >> varbase.php.ini;
   - echo 'error_reporting = E_ALL' >> varbase.php.ini;
   - echo 'post_max_size = 64M' >> varbase.php.ini;
   - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
@@ -90,8 +107,16 @@ before_install:
   # Configure and run the virtual display.
   - export DISPLAY=:0
   - sh -e /etc/init.d/xvfb start
-  - Xvfb :0 -ac -screen 0 1366x768x24 &
+  - Xvfb :0 -ac -screen 0 1366x768x24 &>/dev/null &
   - sleep 3
+
+  # Download Chrome Driver.
+  - wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - chmod +x chromedriver
+  - mkdir -p $HOME/.composer/vendor/bin
+  - mv -f chromedriver $HOME/.composer/vendor/bin/
+  - rm chromedriver_linux64.zip
 
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
@@ -101,7 +126,7 @@ before_install:
 install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
-  - composer install --no-interaction -vvv
+  - composer install --no-interaction
 
   ## Install with drush.
   - cd docroot
@@ -112,6 +137,7 @@ install:
   - drush config-set system.logging error_level all --yes
 before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
+  - jdk_switcher use oraclejdk8
   - sleep 5
 script:
   - cd ./profiles/varbase

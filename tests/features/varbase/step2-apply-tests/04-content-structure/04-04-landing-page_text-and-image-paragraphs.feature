@@ -68,6 +68,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I click on "justifycenter" command button in the rich text editor field "Text"
       And I wait
       And I press "Save"
+      And I wait
      Then I should see "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere." in the "p" element with the "class" attribute set to "text-align-center"
 
   # Add Text and Image -> image to the right
@@ -96,42 +97,6 @@ So that the "Landing page" will have text and images in right and left view.
       And I wait
       And I switch to main frame
       And I wait
-      And I expand the field "styling-settings"
-      And I click "Content settings"
-      And I select "Right" from "Image position"
       And I press "Save"
+      And I wait
      Then I should see the "0" "wrapper" with "align2left" class
-
-  # Add Text and Image -> image to the left
-     When I click "Edit"
-      And I wait
-      And I scrolldown
-      And I press "Add Component"
-      And I wait
-      And I press "Text and image"
-      And I wait for AJAX to finish
-      And I fill in the rich text editor field "Text" with "Integer pellentesque nisi leo, et bibendum urna egestas in. Vestibulum vestibulum est aliquam, volutpat velit ut, mollis urna. Quisque facilisis a velit a condimentum. Nulla sit amet elementum enim. Aenean nulla ante, fermentum sed facilisis in, porttitor in ex."
-      And I select all text in "Text" field
-      And I click on "justifycenter" command button in the rich text editor field "Text"
-      And I wait
-      And I click "Image"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-      And the image media browser should be open
-      And I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Mars panorama" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Mars panorama image" title text
-     When I click on the image with the "Mars panorama image" title text
-      And I press the "Select an image" button
-      And I wait
-      And I switch to main frame
-      And I wait
-      And I expand the field "styling-settings"
-      And I click "Content settings"
-      And I select "Medium" from "Width"
-      And I select "Left" from "Image position"
-      And I press "Save"
-      And I wait
-     Then I should see the "1" "wrapper" with "align2right" class

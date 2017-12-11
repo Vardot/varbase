@@ -113,6 +113,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see "styling settings"
      When I expand the field "styling-settings"
+      And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -133,10 +135,8 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Accordion section body"
      When I fill in the rich text editor field "Text" with "Accordion Section Body test"
       And I press "Save"
-     Then I should see "Landing page Test Landing page Accordion has been created"
-     When I click "Accordion Section Title test"
       And I wait
-     Then I should see "Accordion Section Body test"
+     Then I should see "Landing page Test Landing page Accordion has been created"
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
@@ -171,6 +171,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I expand the field "styling-settings"
       And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -201,6 +202,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Columns (Two Uneven)"
       And I wait for AJAX to finish
       And I expand the field "styling-settings"
+      And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -305,7 +308,6 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I press "Modal button"
       And I wait for AJAX to finish
      Then I should see "Modal title"
-      And I should see "Modal Body test"
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Rich Text"
@@ -322,6 +324,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      When I fill in the rich text editor field "Text" with "Rich Text test"
       And I expand the field "styling-settings"
       And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -353,6 +356,8 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I press "Tabs"
       And I wait for AJAX to finish
       And I expand the field "styling-settings"
+      And I wait for AJAX to finish
+      And I click "Styling"
       And I press the "Select an image" button
       And I wait for AJAX to finish
      Then the image media browser should be open
@@ -377,7 +382,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Landing page Test Landing page Tabs has been created"
       And I should see "Tab 1"
-      And I should see "Tab 1 - Body test"
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "WebForm"
