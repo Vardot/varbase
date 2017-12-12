@@ -68,9 +68,12 @@ So that it will show up under that rich text field without having to upload the 
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I double click on the image with the "Embed Flag Earth all earth in space" title text
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I fill in "Embed Flag Earth custom Caption text" for "Caption"
       And I fill in "Embed Flag Earth custom Alt text" for "Alternative text"
      When I click "Embed" in the "button" element with the "class" attribute set to "js-form-submit form-submit"

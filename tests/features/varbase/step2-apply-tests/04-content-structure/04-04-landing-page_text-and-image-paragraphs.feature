@@ -73,9 +73,12 @@ So that the "Landing page" will have text and images in right and left view.
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see the "0" "wrapper" with "align2left" class

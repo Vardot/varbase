@@ -53,9 +53,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Add Component"
       And I wait for AJAX to finish
       And I press "field_lp_paragraphs_0_subform_bp_slide_content_bp_image_add_more"
@@ -70,9 +73,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Carousel has been created"
@@ -104,9 +110,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I fill in "Accordion Section Title test" for "Accordion section title"
      When I press "Add Component"
       And I press "field_lp_paragraphs_0_subform_bp_accordion_section_0_subform_bp_accordion_section_body_bp_simple_add_more"
@@ -161,9 +170,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
@@ -193,9 +205,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"
@@ -225,9 +240,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Three Uneven) has been created"
@@ -254,9 +272,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Image has been created"
@@ -314,9 +335,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Rich Text has been created"
@@ -347,9 +371,12 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see image with the "Embed Flag Earth all earth in space" title text
      When I click on the image with the "Embed Flag Earth all earth in space" title text
       And I press the "Select an image" button
-      And I wait
+      And wait max of 5s
+      And I wait for AJAX to finish
+      And wait max of 5s
       And I switch to main frame
-      And I wait
+      And I wait for AJAX to finish
+      And wait max of 5s
      Then I should see "Components"
      When I fill in "Tab 1" for "Tab name"
       And I press "Add Component"
