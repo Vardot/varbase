@@ -3,7 +3,7 @@ As a logged in user with a permission to mange entityqueues
 I want to be able to add and remove entities to any allowed entityqueue.
 
 @local @development @staging @production
-  Scenario: Upload the "Flag Earth" file and Upload the "Mars panorama image" file.
+  Scenario: Upload the "Flag Earth" file.
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/admin/content/media"
       And I wait
@@ -24,27 +24,6 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I press the "Save" button
       And I wait
      Then I should see "Flag Earth"
-  #-----------------------------------------------------------------------------
-  #  Upload the "Mars panorama image" file.
-     When I go to "/admin/content/media"
-      And I wait
-     Then I should see "Add media"
-     When I click "Add media"
-      And I wait
-     Then I should see "Image"
-     When I go to "/media/add/image"
-      And I wait
-     Then I should see "Allowed types: png gif jpg jpeg."
-     When I attach the file "mars-panorama-image-6000x1000.jpg" to "Image"
-      And I wait
-      And I press the "Save" button
-      And I wait
-      And I fill in "Mars panorama" for "field_image[0][alt]"
-      And I fill in "Mars panorama image" for "field_image[0][title]"
-      And I fill in "Mars panorama" for "Media name"
-      And I press the "Save" button
-      And I wait
-     Then I should see "Mars panorama"
   #-----------------------------------------------------------------------------
   
   @javascript @local @development @staging @production
