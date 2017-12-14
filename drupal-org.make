@@ -84,10 +84,18 @@ projects[embed][version] = 1.0
 projects[entity][type] = module
 projects[entity][version] = 1.0-beta1
 
-projects[entity_clone][type] = module
-projects[entity_clone][version] = 1.0-alpha2
+projects[entity_clone[type] = module
+projects[entity_clone][download][url] = https://git.drupal.org/project/entity_clone.git
+projects[entity_clone][download][revision] = 9265e359bd31bda693dac9ad84ad52fe63531488
+projects[entity_clone][download][branch] = 8.x-1.x
+;; Issue #2770687: Wrong redirection of page for entity clone module
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch
+;; Issue #2800203: Event dispatcher for clone events
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-event_dispatcher-2800203-5.patch
 ;; Issue #2706639: Support for cloning nodes that have another entities attached
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch
+;; Issue #2769823: Getting error after clicking on abort clone button
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.4
