@@ -88,8 +88,6 @@ projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-alpha2
 ;; Issue #2706639: Support for cloning nodes that have another entities attached
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch
-;; Issue #2743379: Check permission before showing Clone operation
-projects[entity_clone][patch][] = https://www.drupal.org/files/issues/check-permission-2743379-1.patch
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.4

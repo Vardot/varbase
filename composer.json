@@ -301,9 +301,7 @@
       },
       "drupal/entity_clone": {
         "Issue #2706639: Support for cloning nodes that have another entities attached":
-        "https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch",
-        "Issue #2743379: Check permission before showing Clone operation":
-        "https://www.drupal.org/files/issues/check-permission-2743379-1.patch"
+        "https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch"
       },
       "drupal/default_content": {
         "Issue #2900089: Invalid translation language error when selected installation language does not match demo content language":
