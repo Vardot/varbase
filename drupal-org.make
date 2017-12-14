@@ -86,12 +86,8 @@ projects[entity][version] = 1.0-beta1
 
 projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-alpha2
-;; Issue #2770687: Wrong redirection of page for entity clone module
-projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch
 ;; Issue #2706639: Support for cloning nodes that have another entities attached
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch
-;; Issue #2769823: Getting error after clicking on abort clone button
-projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 ;; Issue #2743379: Check permission before showing Clone operation
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/check-permission-2743379-1.patch
 
