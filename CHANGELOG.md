@@ -1,3 +1,121 @@
+## 8.4.13
+
+### Highlighted important changes since Varbase 8.4.12:
+* Issue [#2928269](https://www.drupal.org/node/2928269):
+                   Changed the UI/UX for [Styling Settings] of paragraphs at
+                   the back-end form display.
+* Issue [#2925242](https://www.drupal.org/node/2925242):
+                   Added Paragraphs classes, and [Remove Container] option 
+                   to [Styling settings] in all paragraph types.
+* Issue [#2924949](https://www.drupal.org/node/2924949):
+                   Added Webform as an option for all paragraphs with the
+                   type of container.
+* Issue [#2928711](https://www.drupal.org/node/2928711):
+                   Added [Column Wrapper] paragraph type to be able to have
+                   components in rows under nested columns.
+* Issue [#2928092](https://www.drupal.org/node/2928092):
+                   Changed Browser in [behat.varbase.yml, and .travis.yml] to
+                   work with selenium on [Travis-ci].
+* Issue [#2929996](https://www.drupal.org/node/2929996):
+                   Updated [Drupal Core] from 8.4.2 to 8.4.3
+
+### Added since Varbase 8.4.12:
+* Issue [#2924021](https://www.drupal.org/node/2924021):
+                   Added the 2909416-2.patch for [Paragraphs] module to hide
+                   duplicate action while translating.
+* Issue [#2925242](https://www.drupal.org/node/2925242):
+                   Added Paragraphs classes, and [Remove Container] option to
+                   [Styling settings] in all paragraph types.
+* Issue [#2924949](https://www.drupal.org/node/2924949):
+                   Added Webform as an option for all paragraphs with the
+                   type of container.
+* Issue [#2928711](https://www.drupal.org/node/2928711):
+                   Added [Column Wrapper] paragraph type to be able to
+                   have components in rows under nested columns.
+
+### Changed since Varbase 8.4.12:
+* Issue [#2924014](https://www.drupal.org/node/2924014):
+                   Changed [Varbase Landing] page to have paragraphs with
+                   ready translatable multilingual components.
+* Issue [#2924014](https://www.drupal.org/node/2924014):
+                   Changed [Varbase Landing] page to have paragraphs with
+                   ready translatable multilingual components: Added the patch for [paragraphs] module to let Editors add/delete/clone paragraphs When [Editing a translation] for already translated node which uses paragraphs field.
+* Issue [#2928092](https://www.drupal.org/node/2928092):
+                   Changed Browser in [behat.varbase.yml, and .travis.yml]
+                   to work with selenium on [Travis-ci].
+* Issue [#2928269](https://www.drupal.org/node/2928269):
+                   Changed the UI/UX for [Styling Settings] of paragraphs
+                   at the back-end form display.
+* Issue [#2930044](https://www.drupal.org/node/2930044):
+                   Varbase 8.4.13: Updated [CHANGELOG.md, UPDATE.md] files
+                   and filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Varbase 8.4.12
+* Issue [#2929996](https://www.drupal.org/node/2929996):
+                   Updated [Drupal Core] from 8.4.2 to 8.4.3
+* Issue [#2925191](https://www.drupal.org/node/2925191):
+                   Updated [Varbase Bootstrap Paragraphs] module
+                   from 8.4.0-beta1 to 8.4.0-beta3 with number
+                   of optimizations for features.
+* Issue [#2922824](https://www.drupal.org/node/2922824):
+                   Updated [Views Bulk Edit] from 8.2.0-alpha2 to 8.2.0-beta1
+* Issue [#2923275](https://www.drupal.org/node/2923275):
+                   Updated [DRD Agent] module from 8.3.5 to 8.3.6
+* Issue [#2923715](https://www.drupal.org/node/2923715):
+                   Updated [Media entity] module from 8.1.6 to 8.1.7
+* Issue [#2924166](https://www.drupal.org/node/2924166):
+                   Updated [Field group] module
+                   from 3.x-dev 83c00b5 to 8.3.0-beta1
+* Issue [#2924708](https://www.drupal.org/node/2924708):
+                   Updated [Webform] module from 8.5.0-beta23 to 8.5.0-beta24
+* Issue [#2924714](https://www.drupal.org/node/2924714):
+                   Updated [Views Reference Field] module
+                   from 8.2.0-alpha2 to 8.2.0-alpha3
+* Issue [#2925191](https://www.drupal.org/node/2925191):
+                   Updated [Varbase Bootstrap Paragraphs] module:
+                   use DEV for Varbase public contrib features.
+* Issue [#2926333](https://www.drupal.org/node/2926333):
+                   Updated [CKEditor BiDi Buttons] Module from 8.2.0 to 8.2.1
+* Issue [#2926336](https://www.drupal.org/node/2926336):
+                   Updated [Charts] module from 8.3.0-alpha6 to 8.3.0-alpha7
+* Issue [#2926338](https://www.drupal.org/node/2926338):
+                   Updated [Views Bulk Operations (VBO)] module
+                   from 8.1.0-beta2 to 8.1.0-beta4
+* Issue [#2929956](https://www.drupal.org/node/2929956):
+                   Updated [config filter] module from 8.1.0 to 8.1.1
+* Issue [#2929954](https://www.drupal.org/node/2929954):
+                   Updated [Configuration Update Manager] module
+                   from 8.1.4 to 8.1.5
+* Issue [#2929959](https://www.drupal.org/node/2929959):
+                   Updated [Entity Browser] module from 8.1.3 to 8.1.4
+* Issue [#2929960](https://www.drupal.org/node/2929960):
+                   Updated [Views Bulk Operations (VBO)] module
+                   from 8.1.0-beta4 to 8.x-1.0-rc1
+* Issue [#2929961](https://www.drupal.org/node/2929961):
+                   Updated [Webform] module from 8.5.0-beta24 to 8.5.0-beta25
+* Issue [#2929967](https://www.drupal.org/node/2929967):
+                   Updated [Bootstrap] theme from 8.3.6 to 8.3.7
+* Issue [#2929959](https://www.drupal.org/node/2929959):
+                   Updated [Entity Browser] module from 8.1.3 to 8.1.4
+* Issue [#2930019](https://www.drupal.org/node/2930019):
+                   Updated [Admin Toolbar] module
+                   from 8.1.x-dev 5a07bd6 to 8.1.21
+* Issue [#2930029](https://www.drupal.org/node/2930029):
+                   Updated [pathologic] module from
+                   8.1.x-dev-e047354 to 8.1.x-dev-4f9f3fd
+* Issue [#2930034](https://www.drupal.org/node/2930034):
+                   Updated [Menu position] module
+                   from 8.1.x-dev-1e3a677 to 8.1.x-dev-d134276b
+* Issue [#2930040](https://www.drupal.org/node/2930040):
+                   Updated [Login Destination] module
+                   from 8.1.x-dev-98892eb to 8.1.x-dev-944d78f
+
+### Fixes since Varbase 8.4.12:
+* Issue [#2919712](https://www.drupal.org/node/2919712):
+                   Fixed Nested paragraph class overrides
+                   Bootstrap grid columns.
+
+
 ## 8.4.12
 
 ### Highlighted important changes since Varbase 8.4.11:
