@@ -46,6 +46,29 @@ addons:
   chrome: stable
   apt:
     packages:
+      - xorg
+      - xvfb
+      - dbus-x11
+      - x11-xkb-utils
+      - xfonts-cyrillic
+      - xfonts-nexus
+      - xfonts-terminus
+      - xfonts-terminus-dos
+      - xfonts-terminus-oblique
+      - xfonts-x3270-misc
+      - xfonts-tipa
+      - xfonts-traditional
+      - xfonts-base
+      - xfonts-scalable
+      - xfonts-100dpi
+      - xfonts-100dpi-transcoded
+      - xfonts-75dpi
+      - xfonts-75dpi-transcoded
+      - xfonts-biznet-100dpi
+      - xfonts-biznet-75dpi
+      - xfonts-biznet-base
+      - xfonts-unifont
+      - xserver-xorg-core
       - libappindicator1
       - fonts-liberation
 
@@ -84,7 +107,7 @@ before_install:
   # Configure and run the virtual display.
   - export DISPLAY=:0
   - sh -e /etc/init.d/xvfb start
-  - sh -e /etc/init.d/xvfb :0 -ac -screen 0 1366x768x24 &>/dev/null &
+  - Xvfb :0 -ac -screen 0 1366x768x24 &>/dev/null &
   - sleep 3
 
   # Download Chrome Driver.

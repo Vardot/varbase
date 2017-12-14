@@ -109,9 +109,6 @@
 * Issue [#2930040](https://www.drupal.org/node/2930040):
                    Updated [Login Destination] module
                    from 8.1.x-dev-98892eb to 8.1.x-dev-944d78f
-* Issue [#2930741](https://www.drupal.org/node/2930741):
-                   Updated [Entity Clone] module
-                   from 8.1.x-dev-9265e35 to 8.1.0-alpha2
 
 ### Fixes since Varbase 8.4.12:
 * Issue [#2919712](https://www.drupal.org/node/2919712):
