@@ -28,105 +28,6 @@ So that the "Landing page" will show up having paragrpahs of different types
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Carousel"
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
-      And I wait
-      And I fill in "Test Landing page Carousel" for "Title"
-      And I fill in "Test Landing page description Carousel" for "Page description"
-      And I press "Add Component"
-      And I wait for AJAX to finish
-      And I press "Carousel"
-      And I wait for AJAX to finish
-      And I select "2 Seconds" from "Slide interval"
-      And I press "Add Component"
-      And I wait for AJAX to finish
-      And I press "field_lp_paragraphs_0_subform_bp_slide_content_bp_image_add_more"
-      And I wait for AJAX to finish
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I press "Add Component"
-      And I wait for AJAX to finish
-      And I press "field_lp_paragraphs_0_subform_bp_slide_content_bp_image_add_more"
-      And I wait for AJAX to finish
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I press "Save"
-      And I wait
-     Then I should see "Landing page Test Landing page Carousel has been created"
-      And I should see image with the "Embed Flag Earth all earth in space" title text
-
-  @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Accordion"
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
-      And I wait
-      And I fill in "Test Landing page Accordion" for "Title"
-      And I fill in "Test Landing page description Accordion" for "Page description"
-      And I wait for AJAX to finish
-      And I press "Add Component"
-      And I wait
-      And I press "Accordion"
-      And I wait for AJAX to finish
-     Then I should see "styling settings"
-     When I expand the field "styling-settings"
-      And I wait for AJAX to finish
-      And I click "Styling"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I fill in "Accordion Section Title test" for "Accordion section title"
-     When I press "Add Component"
-      And I press "field_lp_paragraphs_0_subform_bp_accordion_section_0_subform_bp_accordion_section_body_bp_simple_add_more"
-      And I wait
-     Then I should see "Accordion section body"
-     When I fill in the rich text editor field "Text" with "Accordion Section Body test"
-      And I press "Save"
-      And I wait
-     Then I should see "Landing page Test Landing page Accordion has been created"
-
-  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
@@ -157,25 +58,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I press "Columns (Equal)"
       And I wait for AJAX to finish
-      And I expand the field "styling-settings"
-      And I wait for AJAX to finish
-      And I click "Styling"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
@@ -192,96 +74,9 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I press "Columns (Two Uneven)"
       And I wait for AJAX to finish
-      And I expand the field "styling-settings"
-      And I wait for AJAX to finish
-      And I click "Styling"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"
-
-  @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Three Uneven)"
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
-      And I wait
-      And I fill in "Test Landing page Columns (Three Uneven)" for "Title"
-      And I fill in "Test Landing page description Columns (Three Uneven)" for "Page description"
-      And I wait for AJAX to finish
-      And I press "Add Component"
-      And I wait for AJAX to finish
-      And I press "Columns (Three Uneven)"
-      And I wait for AJAX to finish
-      And I press "Add Component"
-      And I press "field_lp_paragraphs_0_subform_bp_column_content_3_bp_image_add_more"
-      And I wait for AJAX to finish
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I press "Save"
-      And I wait
-     Then I should see "Landing page Test Landing page Columns (Three Uneven) has been created"
-
-  @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Image"
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
-      And I wait
-      And I fill in "Test Landing page Image" for "Title"
-      And I fill in "Test Landing page description Image" for "Page description"
-      And I wait for AJAX to finish
-      And I press "Add Component"
-      And I wait for AJAX to finish
-      And I press "Image"
-      And I wait for AJAX to finish
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I press "Save"
-      And I wait
-     Then I should see "Landing page Test Landing page Image has been created"
-      And I should see image with the "Embed Flag Earth all earth in space" title text
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Modal"
@@ -322,25 +117,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see "Components"
      When I fill in the rich text editor field "Text" with "Rich Text test"
-      And I expand the field "styling-settings"
-      And I wait for AJAX to finish
-      And I click "Styling"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see "Landing page Test Landing page Rich Text has been created"
@@ -358,25 +134,6 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
       And I press "Tabs"
       And I wait for AJAX to finish
-      And I expand the field "styling-settings"
-      And I wait for AJAX to finish
-      And I click "Styling"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-     Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
      Then I should see "Components"
      When I fill in "Tab 1" for "Tab name"
       And I press "Add Component"

@@ -62,23 +62,6 @@ So that the "Landing page" will have text and images in right and left view.
       And I select all text in "Text" field
       And I click on "justifycenter" command button in the rich text editor field "Text"
       And I wait
-      And I click "Image"
-      And I press the "Select an image" button
-      And I wait for AJAX to finish
-      And the image media browser should be open
-      And I switch to iframe "entity_browser_iframe_image_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
-      And I press the "Search" button
-      And I wait for AJAX to finish
-     Then I should see image with the "Embed Flag Earth all earth in space" title text
-     When I click on the image with the "Embed Flag Earth all earth in space" title text
-      And I press the "Select an image" button
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
-      And I switch to main frame
-      And I wait for AJAX to finish
-      And wait max of 5s
       And I press "Save"
       And I wait
      Then I should see the "0" "wrapper" with "align2left" class
