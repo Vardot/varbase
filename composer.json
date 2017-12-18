@@ -334,6 +334,10 @@
       "drupal/ctools": {
         "Issue #2820783: Fix Block.php notices and warnings.":
         "https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch"
+      },
+      "drupal/login_destination": {
+        "Issue #2931356: Fixes Route Error.":
+        "https://www.drupal.org/files/issues/2931356-5.patch"
       }
     }
   }
