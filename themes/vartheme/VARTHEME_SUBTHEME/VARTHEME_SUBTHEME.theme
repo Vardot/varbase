@@ -25,5 +25,5 @@ function VARTHEME_SUBTHEME_theme_suggestions_page_alter(array &$suggestions, arr
  * Implements hook_preprocess_page().
  */
 function VARTHEME_SUBTHEME_preprocess_page(&$variables) {
-  $variables['logo_print'] = drupal_get_path('theme','VARTHEME_SUBTHEME') . '/logo-print.png';
+  $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'VARTHEME_SUBTHEME') . '/logo-print.png';
 }
