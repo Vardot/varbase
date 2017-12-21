@@ -328,7 +328,7 @@ projects[pathauto][type] = module
 projects[pathauto][version] = 1.0
 
 projects[redirect][type] = module
-projects[redirect][version] = 1.0-beta1
+projects[redirect][version] = 1.0
 
 projects[metatag][type] = module
 projects[metatag][version] = 1.3
