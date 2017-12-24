@@ -3,6 +3,7 @@ Feature: Delete default testing users.
 # test_authenticated: { email: 'authenticated.test@vardot.com', password: 'dD.123123ddd' }
 # test_editor: { email: 'editor.test@vardot.com', password: 'dD.123123ddd' }
 # test_content_admin: { email: 'content.admin.test@vardot.com', password: 'dD.123123ddd' }
+# test_seo_admin: { email: 'seo.admin.test@vardot.com', password: 'dD.123123ddd' }
 # test_site_admin: { email: 'site.admin.test@vardot.com', password: 'dD.123123ddd' }
 # test_super_admin: { email: 'super.admin.test@vardot.com', password: 'dD.123123ddd' }
 
