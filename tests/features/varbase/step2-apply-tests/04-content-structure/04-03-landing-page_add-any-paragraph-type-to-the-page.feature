@@ -28,6 +28,16 @@ So that the "Landing page" will show up having paragrpahs of different types
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
+  Scenario: Check Varbase Bootstrap Paragraphs settings, and colours.
+    Given I am a logged in user with the "webmaster" user
+     When I go to "/admin/config/varbase/varbase-bootstrap-paragraphs"
+      And I wait
+     Then I should see "Varbase Bootstrap Paragraphs settings"
+      And I should see "Available CSS styles (classes) for Varbase Bootstrap Paragraphs"
+      And I press "Save configuration"
+     Then I should see "The configuration options have been saved."
+
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
