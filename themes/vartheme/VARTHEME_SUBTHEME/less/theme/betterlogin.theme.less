@@ -1,0 +1,40 @@
+// VARTHEME-SUBTHEME Better login styling.
+// -----------------------------------------------------------------------------
+@import "../../bootstrap/less/variables.less";  // Bootstrap variables.
+@import "../../bootstrap/less/mixins.less";     // Bootstrap mixins.
+@import "../variables.less";                    // VARTHEME-SUBTHEME variables.
+@import "../mixins.less";                       // VARTHEME-SUBTHEME mixins.
+// -----------------------------------------------------------------------------
+
+#auth-box {
+  padding: @navbar-height 0 0;
+
+  h1#the-logo {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 25px;
+  }
+
+  h2.title {
+    margin: 0;
+    padding: 0 0 15px;
+    font-size: 2em;
+  }
+
+  #middle-part {
+    border-radius: 3px;
+    background: @body-bg;
+    padding: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 3px 1px @popover-fallback-border-color;
+  }
+
+  .back-link {
+    padding: 15px 0 0;
+  }
+
+  #bottom-part {
+    font-size: 13px;
+    padding: 15px 0 0;
+  }
+}

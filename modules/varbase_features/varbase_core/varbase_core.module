@@ -32,3 +32,11 @@ function varbase_core_form_node_form_alter(&$form, $form_state) {
     $form['ds_switch_view_mode']['#weight'] = 101;
   }
 }
+
+/**
+ * Implements hook_template_preprocess_default_variables_alter().
+ */
+function varbase_core_template_preprocess_default_variables_alter(&$variables) {
+  $user_settings_config = \Drupal::config('user.settings');
+  $variables['user_settings_register_admin_only'] = $user_settings_config->get('register') == 'admin_only' ? 1 : 0;
+}

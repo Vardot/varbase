@@ -1,0 +1,27 @@
+#auth-box {
+  padding: 50px 0 0;
+}
+#auth-box h1#the-logo {
+  text-align: center;
+  margin: 0;
+  padding: 0 0 25px;
+}
+#auth-box h2.title {
+  margin: 0;
+  padding: 0 0 15px;
+  font-size: 2em;
+}
+#auth-box #middle-part {
+  border-radius: 3px;
+  background: #fff;
+  padding: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 3px 1px #ccc;
+}
+#auth-box .back-link {
+  padding: 15px 0 0;
+}
+#auth-box #bottom-part {
+  font-size: 13px;
+  padding: 15px 0 0;
+}
