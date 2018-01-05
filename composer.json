@@ -222,7 +222,7 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/1356276-408--8.4.3.patch",
+        "https://www.drupal.org/files/issues/1356276-408--8.4.4.patch",
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
         "https://www.drupal.org/files/issues/2720101-43.patch",
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
