@@ -305,10 +305,8 @@ projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issue
 
 projects[login_destination][type] = module
 projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
-projects[login_destination][download][revision] = 944d78fbf01853244d8e01f63b41dc37d5f99e50
+projects[login_destination][download][revision] = 54be8b89fdc073ca40af6b9b2eeb050e0aeb7908
 projects[login_destination][download][branch] = 8.x-1.x
-;; Issue #2931356: Fixes Route Error.
-projects[login_destination][patch][] = https://www.drupal.org/files/issues/2931356-5.patch
 
 projects[ckeditor_media_embed][type] = module
 projects[ckeditor_media_embed][version] = 1.1

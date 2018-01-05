@@ -139,7 +139,7 @@
     "drupal/masonry": "1.0-rc2",
     "drupal/charts": "3.0-alpha7",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
-    "drupal/login_destination": "1.x-dev#944d78fbf01853244d8e01f63b41dc37d5f99e50",
+    "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/ckeditor_media_embed": "1.1",
     "drupal/total_control": "2.0-alpha3",
     "drupal/anchor_link": "1.6",
@@ -335,10 +335,6 @@
       "drupal/ctools": {
         "Issue #2820783: Fix Block.php notices and warnings.":
         "https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch"
-      },
-      "drupal/login_destination": {
-        "Issue #2931356: Fixes Route Error.":
-        "https://www.drupal.org/files/issues/2931356-5.patch"
       }
     }
   }
