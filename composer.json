@@ -27,7 +27,7 @@
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "drupal/core": "8.4.3",
+    "drupal/core": "8.4.4",
     "drupal/config_update": "1.5",
     "drupal/config_filter": "1.1",
     "drupal/config_ignore": "2.1",
@@ -228,9 +228,7 @@
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
         "https://www.drupal.org/files/issues/2599228-31.patch",
         "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
-        "https://www.drupal.org/files/issues/patch_empty_fix.patch",
-        "Issue #2914938: Preview of content - Notice: Undefined offset: 0 in quick edit entity is latest revision":
-        "https://www.drupal.org/files/issues/2914938-48.patch"
+        "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
       "drupal/page_manager": {
         "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":
