@@ -264,7 +264,7 @@ projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta1
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.1
+projects[link_attributes][version] = 1.2
 
 projects[paragraphs[type] = module
 projects[paragraphs][version] = 1.2
