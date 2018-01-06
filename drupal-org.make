@@ -283,7 +283,7 @@ projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2
 
 projects[entity_reference_revisions][type] = module
-projects[entity_reference_revisions][version] = 1.3
+projects[entity_reference_revisions][version] = 1.4
 
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 2.0-alpha3
