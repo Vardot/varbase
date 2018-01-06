@@ -184,7 +184,7 @@ projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.21
+projects[admin_toolbar][version] = 1.22
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.5
@@ -264,7 +264,7 @@ projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta1
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.1
+projects[link_attributes][version] = 1.2
 
 projects[paragraphs[type] = module
 projects[paragraphs][version] = 1.2
@@ -283,7 +283,7 @@ projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc2
 
 projects[entity_reference_revisions][type] = module
-projects[entity_reference_revisions][version] = 1.3
+projects[entity_reference_revisions][version] = 1.4
 
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 2.0-alpha3
@@ -305,10 +305,8 @@ projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issue
 
 projects[login_destination][type] = module
 projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
-projects[login_destination][download][revision] = 944d78fbf01853244d8e01f63b41dc37d5f99e50
+projects[login_destination][download][revision] = 54be8b89fdc073ca40af6b9b2eeb050e0aeb7908
 projects[login_destination][download][branch] = 8.x-1.x
-;; Issue #2931356: Fixes Route Error.
-projects[login_destination][patch][] = https://www.drupal.org/files/issues/2931356-5.patch
 
 projects[betterlogin][type] = module
 projects[betterlogin][download][url] = https://git.drupal.org/project/betterlogin.git
