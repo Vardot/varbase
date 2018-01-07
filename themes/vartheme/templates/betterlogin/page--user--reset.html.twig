@@ -1,4 +1,6 @@
-<div class="container">
+{# Main #}
+{% block main %}
+<div role="main" class="main-container container">
   <div class="row">
     <div id="auth-box" class="login col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4">
       <div id="top-part">
@@ -10,27 +12,8 @@
       </div>
       <div id="middle-part">
         <h2 class="title">{{ title }}</h2>
-        {# Highlighted #}
-        {% if page.highlighted %}
-          {% block highlighted %}
-            <div class="highlighted">{{ page.highlighted }}</div>
-          {% endblock %}
-        {% endif %}
-        
-        {{ messages }}
-
-        {# Help #}
-        {% if page.help %}
-          {% block help %}
-            {{ page.help }}
-          {% endblock %}
-        {% endif %}
-
-        {# Content #}
-        {% block content %}
-          <a id="main-content"></a>
-          {{ page.content }}
-        {% endblock %}
+        {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions', 'vartheme_page_title') }}
+        {{ page.content }}
       </div>
       <div id="bottom-part">
       {% if not logged_in %}
@@ -50,3 +33,4 @@
     </div>
   </div>
 </div>
+{% endblock main %}
