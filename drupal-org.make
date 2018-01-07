@@ -302,6 +302,8 @@ projects[google_analytics_reports][download][branch] = 8.x-3.x
 projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch
 ;; Issue #2860399: Warning: htmlspecialchars() expects parameter 1 to be string
 projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/Fix_message-2860399-5.patch
+;; Issue #2932010: Fixed an issue to Not to check Updates or import Fields while the Drupal site MAINTENANCE_MODE is in Install or Update.
+projects[google_analytics_reports][patch][] = https://www.drupal.org/files/issues/2932010-4.patch
 
 projects[login_destination][type] = module
 projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
