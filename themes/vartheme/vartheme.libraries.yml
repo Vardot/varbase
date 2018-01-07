@@ -1,5 +1,5 @@
 # Vartheme global styles library.
-global-styles: 
+global-styles:
   css:
     base:
       css/base/vartheme.base.css: {}
@@ -22,12 +22,18 @@ global-styles-rtl:
 global-scripts:
   js:
     js/script.js: {}
-    
+
 # Vartheme Varbase Bootstrap Paragraphs colors theme.
 vbp-colors:
   css:
     theme:
       css/theme/vbp-colors.theme.css: {}
+
+# Vartheme better login theme.
+betterlogin:
+  css:
+    theme:
+      css/theme/betterlogin.theme.css: {}
 
 # Bootstrap global styles library.
 bootstrap-styles:
@@ -39,7 +45,7 @@ bootstrap-styles-rtl:
   css:
     base:
       css/rtl/base/bootstrap-rtl.base.css: {}
-      
+
 # Bootstrap global scripts library.
 bootstrap-scripts:
   js:

@@ -310,6 +310,11 @@ projects[login_destination][download][url] = https://git.drupal.org/project/logi
 projects[login_destination][download][revision] = 54be8b89fdc073ca40af6b9b2eeb050e0aeb7908
 projects[login_destination][download][branch] = 8.x-1.x
 
+projects[betterlogin][type] = module
+projects[betterlogin][download][url] = https://git.drupal.org/project/betterlogin.git
+projects[betterlogin][download][revision] = f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd
+projects[betterlogin][download][branch] = 8.x-1.x
+
 projects[ckeditor_media_embed][type] = module
 projects[ckeditor_media_embed][version] = 1.1
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG

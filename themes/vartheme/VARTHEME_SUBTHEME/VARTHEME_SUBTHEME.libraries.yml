@@ -28,7 +28,13 @@ vbp-colors:
   css:
     theme:
       css/theme/vbp-colors.theme.css: {}
-    
+
+# VARTHEME_SUBTHEME better login theme.
+#betterlogin:
+#  css:
+#    theme:
+#      css/theme/betterlogin.theme.css: {}
+
 # VARTHEME_SUBTHEME Vartheme styles library.
 vartheme-styles:
   css:

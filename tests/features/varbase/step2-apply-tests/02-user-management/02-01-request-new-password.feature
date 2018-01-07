@@ -10,7 +10,7 @@ So that I can reset my password for the account
   Scenario: Check that an anonymous user can reset his/her password.
      When I go to "/user/login"
       And I wait
-     Then I should see "Reset your password"
+     Then I should see "Forgot your password?"
 
   @local @development @staging @production
   Scenario: Verify that the system cannot send an email to non-existing users/emails.
