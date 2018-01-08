@@ -142,7 +142,7 @@
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
     "drupal/ckeditor_media_embed": "1.1",
-    "drupal/total_control": "2.0-alpha3",
+    "drupal/total_control": "2.0-alpha4",
     "drupal/anchor_link": "1.6",
     "drupal/entity_browser_enhanced": "1.0-beta6",
     "drupal/vmi": "1.0-beta3",

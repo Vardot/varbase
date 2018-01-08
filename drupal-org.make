@@ -502,7 +502,7 @@ projects[vmi][type] = module
 projects[vmi][version] = 1.0-beta3
 
 projects[total_control][type] = module
-projects[total_control][version] = 2.0-alpha3
+projects[total_control][version] = 2.0-alpha4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
