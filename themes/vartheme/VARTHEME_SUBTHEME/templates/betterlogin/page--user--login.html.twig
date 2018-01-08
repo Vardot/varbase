@@ -11,20 +11,14 @@
         </h1>
       </div>
       <div id="middle-part">
-        {% if logged_in %}
-          {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions') }}
-        {% else %}
-          <h2 class="title">{{ title }}</h2>
-          {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions', 'vartheme_page_title') }}
-        {% endif %}
+        <h2 class="title">{{ title }}</h2>
+        {{ page.header|without('VARTHEME_SUBTHEME_local_tasks', 'VARTHEME_SUBTHEME_breadcrumbs', 'VARTHEME_SUBTHEME_local_actions', 'VARTHEME_SUBTHEME_page_title') }}
         {{ page.content }}
       </div>
       <div id="bottom-part">
-      {% if not logged_in %}
-        <div class="login-link">
-          <a href="{{ path('user.login') }}"><span class="icon glyphicon glyphicon-log-in" aria-hidden="true"></span> {{ 'Login'|t }}</a>
+        <div class="password-link">
+          <a href="{{ path('user.pass') }}"><span class="icon glyphicon glyphicon-log-in" aria-hidden="true"></span> {{ 'Forgot your password?'|t }}</a>
         </div>
-      {% endif %}
       {% if not logged_in and not user_settings_register_admin_only %}
         <div class="register-link">
           <a href="{{ path('user.register') }}"><span class="icon glyphicon glyphicon-user" aria-hidden="true"></span> {{ 'Register a new account'|t }}</a>

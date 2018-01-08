@@ -11,8 +11,12 @@
         </h1>
       </div>
       <div id="middle-part">
-        <h2 class="title">{{ title }}</h2>
-        {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions', 'vartheme_page_title') }}
+        {% if logged_in %}
+          {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions') }}
+        {% else %}
+          <h2 class="title">{{ title }}</h2>
+          {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions', 'vartheme_page_title') }}
+        {% endif %}
         {{ page.content }}
       </div>
       <div id="bottom-part">
