@@ -542,12 +542,3 @@ function varbase_update_8042() {
     \Drupal::service('module_installer')->install(['settings_tray'], FALSE);
   }
 }
-
-/**
- * Enable Better Login module.
- */
-function varbase_update_8043() {
-  if (!\Drupal::moduleHandler()->moduleExists('betterlogin')) {
-    \Drupal::service('module_installer')->install(['betterlogin'], FALSE);
-  }
-}
