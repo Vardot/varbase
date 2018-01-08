@@ -160,7 +160,7 @@
   "require-dev": {
     "drush/drush": "8.1.15",
     "drupal/coder": "8.2.12",
-    "drupal/drupal-extension": "3.3.1",
+    "drupal/drupal-extension": "3.4.0",
     "phing/phing": "2.16.0",
     "behat/behat": "3.4.3",
     "behat/mink": "1.7.1",
