@@ -503,6 +503,8 @@ projects[vmi][version] = 1.0-beta3
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4
+;; Issue #2935351: Fixed the issue when Enabled with multilingual of Translatable Markup for Invalid Argument Exception: $string (Array) must be a string.
+projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib features.
