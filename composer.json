@@ -70,7 +70,7 @@
     "drupal/imagemagick": "2.2",
     "drupal/imageapi_optimize": "2.0-alpha3",
     "drupal/ultimate_cron": "2.0-alpha2",
-    "drupal/persistent_login": "1.0-alpha3",
+    "drupal/persistent_login": "1.0-alpha4",
     "drupal/userprotect": "1.0",
     "drupal/config_perms": "1.1",
     "drupal/roleassign": "1.0-alpha2",
