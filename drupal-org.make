@@ -286,7 +286,7 @@ projects[entity_reference_revisions][type] = module
 projects[entity_reference_revisions][version] = 1.4
 
 projects[viewsreference][type] = module
-projects[viewsreference][version] = 2.0-alpha3
+projects[viewsreference][version] = 2.0-alpha4
 
 projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2

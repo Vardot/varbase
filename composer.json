@@ -132,7 +132,7 @@
     "drupal/paragraphs_previewer": "1.0",
     "drupal/color_field": "2.0-rc2",
     "drupal/entity_reference_revisions": "1.4",
-    "drupal/viewsreference": "2.0-alpha3",
+    "drupal/viewsreference": "2.0-alpha4",
     "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/xmlsitemap": "1.0-alpha2",
