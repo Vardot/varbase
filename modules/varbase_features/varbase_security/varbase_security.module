@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_security.module.
+ */
+ use Drupal\password_policy\Entity\PasswordPolicy;
+ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\user\Entity\User;
+ use Drupal\Component\Utility\Crypt;
+ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for user_form().
+ */
+function varbase_security_form_user_form_alter(&$form, &$form_state) {
+  if (\Drupal::moduleHandler()->moduleExists('password_policy')) {
+    if (isset($form['account']['password_policy_status'])) {
+      unset($form['account']['password_policy_status']);
+    }
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function varbase_security_element_info_alter(array &$types) {
+  if (\Drupal::moduleHandler()->moduleExists('password_policy')) {
+    if (isset($types['password_confirm'])) {
+      if (isset($types['password_confirm']['#process'][1])
+         && $types['password_confirm']['#process'][1] == 'password_policy_check_constraints_password_confirm_process') {
+        unset($types['password_confirm']['#process'][1]);
+      }
+    }
+  }
+}
