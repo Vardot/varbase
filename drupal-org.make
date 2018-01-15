@@ -373,9 +373,6 @@ projects[username_enumeration_prevention][patch][] = https://www.drupal.org/file
 projects[password_policy][type] = module
 projects[password_policy][version] = 3.0-alpha4
 
-projects[prlp][type] = module
-projects[prlp][version] = 1.3
-
 projects[seckit][type] = module
 projects[seckit][version] = 1.0-alpha2
 

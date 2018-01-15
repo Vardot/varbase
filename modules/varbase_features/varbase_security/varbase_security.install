@@ -85,12 +85,3 @@ function varbase_security_update_8009() {
     \Drupal::service('module_installer')->install(['username_enumeration_prevention'], FALSE);
   }
 }
-
-/**
- * Enable Password Reset Landing Page (PRLP) module.
- */
-function varbase_security_update_8010() {
-  if (!\Drupal::moduleHandler()->moduleExists('prlp')) {
-    \Drupal::service('module_installer')->install(['prlp'], FALSE);
-  }
-}

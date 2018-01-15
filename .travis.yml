@@ -1,3 +1,6 @@
+sudo: required
+dist: trusty
+group: deprecated-2017Q4
 language: php
 cache:
   bundler: true
@@ -40,37 +43,11 @@ matrix:
   - php: 7.1.11
     env: AFATG=05-content-management
 
-dist: trusty
-
 addons:
-  chrome: stable
   apt:
     packages:
-      - xorg
-      - xvfb
-      - dbus-x11
-      - x11-xkb-utils
-      - xfonts-cyrillic
-      - xfonts-nexus
-      - xfonts-terminus
-      - xfonts-terminus-dos
-      - xfonts-terminus-oblique
-      - xfonts-x3270-misc
-      - xfonts-tipa
-      - xfonts-traditional
-      - xfonts-base
-      - xfonts-scalable
-      - xfonts-100dpi
-      - xfonts-100dpi-transcoded
-      - xfonts-75dpi
-      - xfonts-75dpi-transcoded
-      - xfonts-biznet-100dpi
-      - xfonts-biznet-75dpi
-      - xfonts-biznet-base
-      - xfonts-unifont
-      - xserver-xorg-core
-      - libappindicator1
-      - fonts-liberation
+    - libappindicator1
+    - fonts-liberation
 
 mysql:
   database: test_varbase4c
@@ -95,7 +72,7 @@ before_install:
   - echo 'max_execution_time = 1200' >> varbase.php.ini;
   - echo 'max_input_time = 180' >> varbase.php.ini;
   - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 1042M' >> varbase.php.ini;
+  - echo 'memory_limit = 2000M' >> varbase.php.ini;
   - echo 'error_reporting = E_ALL' >> varbase.php.ini;
   - echo 'post_max_size = 64M' >> varbase.php.ini;
   - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
@@ -111,12 +88,20 @@ before_install:
   - sleep 3
 
   # Download Chrome Driver.
-  - wget http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip
+  - LATEST_CHROMEDRIVER=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+  - wget http://chromedriver.storage.googleapis.com/$LATEST_CHROMEDRIVER/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - chmod +x chromedriver
   - mkdir -p $HOME/.composer/vendor/bin
   - mv -f chromedriver $HOME/.composer/vendor/bin/
   - rm chromedriver_linux64.zip
+
+  # Update Chrome.
+  - export CHROME_BIN=/usr/bin/google-chrome
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i google-chrome-stable_current_amd64.deb
+  - rm google-chrome-stable_current_amd64.deb
+  - google-chrome --version
 
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
