@@ -8,20 +8,11 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
-* https://www.drupal.org/project/varbase/releases/8.x-4.0
-* https://www.drupal.org/project/varbase/releases/8.x-4.01
-* https://www.drupal.org/project/varbase/releases/8.x-4.02
-* https://www.drupal.org/project/varbase/releases/8.x-4.03
-* https://www.drupal.org/project/varbase/releases/8.x-4.04
-* https://www.drupal.org/project/varbase/releases/8.x-4.05
-* https://www.drupal.org/project/varbase/releases/8.x-4.06
-* https://www.drupal.org/project/varbase/releases/8.x-4.07
-* https://www.drupal.org/project/varbase/releases/8.x-4.08
-* https://www.drupal.org/project/varbase/releases/8.x-4.09
 * https://www.drupal.org/project/varbase/releases/8.x-4.10
 * https://www.drupal.org/project/varbase/releases/8.x-4.11
 * https://www.drupal.org/project/varbase/releases/8.x-4.12
 * https://www.drupal.org/project/varbase/releases/8.x-4.13
+* https://www.drupal.org/project/varbase/releases/8.x-4.14
 
 
 # 2 - Backups
@@ -91,6 +82,51 @@ while working on the project.
 * Done :\)
 
 ---
+
+# Updating Varbase 8.4.13 to Varbase 8.4.14
+  If you already did the update of Varbase from 8.4.13 to 8.4.14, this
+  updating to 8.4.14 will be a quick and easy one.
+
+## Updating files with Copy and Paste for Varbase 8.4.13 to Varbase 8.4.14
+```
+  Given that we are at the drupal root folder for varbase
+   When we delete all drupal core folders and files
+    And we copy all new Varbase files drupal root folder for varbase
+    And we make sure that we have all custom module or themes still in the
+        "sites" folder
+    And we make sure that all new used modules and features are present.
+   Then we will be ready to update the active config and database.
+```
+
+## Varbase Procedures to the varbase base code. not in any varbase-project project builders.
+```
+  Given that we are at the root folder for varbase project, not the docroot
+    And we make sure that the current "Varbase-project" composer.json file and
+        files are the latest
+   When we delete the "vendor" folder
+    And we delete the "composer.lock" file
+    And we run the "composer require vardot/varbase:8.4.14" command
+    And wait for composer to finish work
+   Then we should not see any issues in the terminal
+    And we should see "Writing lock file" in the terminal
+    And we should see "Generating autoload files" in the terminal
+   When the composer finishes work with no errors
+   Then we will be ready to update the active config and database.
+```
+
+## Updating the active config and database from Varbase 8.4.13 to Varbase 8.4.14
+```
+  Given that we are in the docroot of the current Varbase project
+    And all files are updated using (copy and past) or (composer require/update
+   When we run drush "updb" or go to "/update.php"
+   Then we should see the steps of updates.
+   When we run drush "updb" or go to "/update.php" again
+   Then we will have the site update with the new Varbase 8.4.14 version
+   When we go to "/admin/config/development/features"
+   Then we should see "Changed"
+   When we follow with each feature to import new changes.
+   Then we will have the Varbase site updated to the latest version.
+```
 
 
 # Updating Varbase 8.4.12 to Varbase 8.4.13

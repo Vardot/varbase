@@ -1,3 +1,108 @@
+## 8.4.14
+
+### Highlighted important changes since Varbase 8.4.13:
+* Issue [#2924033](https://www.drupal.org/node/2924033):
+                  Changed [Varbase security] feature with
+                  new password policy behaviour.
+* Issue [#2933028](https://www.drupal.org/node/2933028):
+                  Added [Better Login] module 1.x-dev and style for vartheme
+                  and VARTHEM_SUBTHEME
+* Issue [#2926736](https://www.drupal.org/node/2926736):
+                  Changed location of config settings file for
+                  [Varbase bootstrap paragraphs] from the [install] to the
+                  [optional] directory.
+* Issue [#2934539](https://www.drupal.org/node/2934539):
+                  Updated [Drupal Core] from 8.4.3 to 8.4.4
+
+### Added since Varbase 8.4.13:
+* Issue [#2933028](https://www.drupal.org/node/2933028):
+                  Added [Better Login] module 1.x-dev and style for
+                  vartheme and VARTHEM_SUBTHEME
+* Issue [#2932881](https://www.drupal.org/node/2932881):
+                  Added the [ Feature: Pre-check important administrator
+                  and development pages. ] automated functional test to
+                  make sure that all admin and development tools are working.
+* Issue [#2934937](https://www.drupal.org/node/2934937):
+                  Added the 2931562-11.patch for [Search API] module to Fixed
+                  the Notice: Undefined index: total When we enable the module
+                  in the installation step.
+* Issue [#2934940](https://www.drupal.org/node/2934940):
+                  Added the 2932010-4.patch for [Google Analytics Report]
+                  module to Fixed an issue to Not to check Updates or import
+                  Fields while the Drupal site MAINTENANCE_MODE is in
+                  Install or Update.
+
+### Changed since Varbase 8.4.13:
+* Issue [#2924033](https://www.drupal.org/node/2924033):
+                  Changed [Varbase security] feature with new password
+                  policy behaviour.
+* Issue [#2924033](https://www.drupal.org/node/2924033):
+                  Updated the Automated functional testing to work with the
+                  new password policy behaviour.
+* Issue [#2926736](https://www.drupal.org/node/2926736):
+                  Changed location of config settings file for
+                  [Varbase bootstrap paragraphs] from the [install]
+                  to the [optional] directory.
+* Issue [#2934967](https://www.drupal.org/node/2934967):
+                  Varbase 8.4.14: Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Varbase 8.4.13
+* Issue [#2934539](https://www.drupal.org/node/2934539):
+                  Updated [Drupal Core] from 8.4.3 to 8.4.4
+* Issue [#2932843](https://www.drupal.org/node/2932843):
+                  Updated [Varbase Bootstrap Paragraphs] module
+                  from 8.4.0-beta3 to 8.4.0-rc1
+* Issue [#2931409](https://www.drupal.org/node/2931409):
+                  Updated [Views Bulk Operations (VBO)] module
+                  from 8.1.0-rc1 to 8.1.0
+* Issue [#2932343](https://www.drupal.org/node/2932343):
+                  Updated [Redirect] module from 8.1.0-beta1 to 8.1.0             
+* Issue [#2932346](https://www.drupal.org/node/2932346):
+                  Updated [Token] module from 8.1.0 to 8.1.1
+* Issue [#2932845](https://www.drupal.org/node/2932845):
+                  Updated [Metatag] module from 8.1.3 to 8.1.4
+* Issue [#2932848](https://www.drupal.org/node/2932848):
+                  Updated [Views Bulk Edit] module
+                  from 8.2.0-beta1 to 8.2.0-beta2
+* Issue [#2932855](https://www.drupal.org/node/2932855):
+                  Updated [Search API] module from 8.1.5 to 8.1.6
+* Issue [#2932986](https://www.drupal.org/node/2932986):
+                  Updated [Webform] module from 8.5.0-beta25 to 8.5.0-rc1
+* Issue [#2934529](https://www.drupal.org/node/2934529):
+                  Updated [Admin Toolbar] module from 8.1.21 to 8.1.22
+* Issue [#2934531](https://www.drupal.org/node/2934531):
+                  Updated [Link Attributes widget] module from 8.1.1 to 8.1.2
+* Issue [#2934280](https://www.drupal.org/node/2934280):
+                  Updated [Login Destination] module
+                  from 8.1.x-dev-944d78f to 8.1.x-dev-54be8b8
+* Issue [#2934861](https://www.drupal.org/node/2934861):
+                  Updated [Entity Reference Revisions] module
+                  from 8.1.3 to 8.1.4
+* Issue [#2935158](https://www.drupal.org/node/2935158):
+                  Updated [Total Control Admin Dashboard] module
+                  from 8.2.0-alpha3 to 8.2.0-alpha4
+* Issue [#2935185](https://www.drupal.org/node/2935185):
+                  Updated [drupal/drupal-extension] required composer 
+                  development and testing tool from 3.3.1 to 3.4.0
+* Issue [#2935191](https://www.drupal.org/node/2935191):
+                  Updated [behatch/contexts] required composer development
+                  and testing tool from 3.0.0 to 3.0.1
+* Issue [#2936540](https://www.drupal.org/node/2936540):
+                  Updated [Views Reference Field] module
+                  from 8.2.0-alpha3 to 8.2.0-alpha4
+* Issue [#2936541](https://www.drupal.org/node/2936541):
+                  Updated [Persistent Login] module
+                  from 8.1.0-alpha3 to 8.1.0-alpha4
+
+### Fixes since Varbase 8.4.13:
+* Issue [#2931502](https://www.drupal.org/node/2931502):
+                  Fixed the issue of [Login Destination] Route Error with get
+                  route needed the link to be Routed.
+* Issue [#2931683](https://www.drupal.org/node/2931683):
+                  Fixed the print logo for VARTHEM_SUBTHEME which had a wrong
+                  URL, as it was fixed in vartheme.
+
 ## 8.4.13
 
 ### Highlighted important changes since Varbase 8.4.12:
@@ -39,7 +144,10 @@
                    ready translatable multilingual components.
 * Issue [#2924014](https://www.drupal.org/node/2924014):
                    Changed [Varbase Landing] page to have paragraphs with
-                   ready translatable multilingual components: Added the patch for [paragraphs] module to let Editors add/delete/clone paragraphs When [Editing a translation] for already translated node which uses paragraphs field.
+                   ready translatable multilingual components: Added the patch
+                   for [paragraphs] module to let Editors add/delete/clone
+                   paragraphs When [Editing a translation] for already
+                   translated node which uses paragraphs field.
 * Issue [#2928092](https://www.drupal.org/node/2928092):
                    Changed Browser in [behat.varbase.yml, and .travis.yml]
                    to work with selenium on [Travis-ci].
@@ -305,7 +413,8 @@
                   a permission to access (user/{user}/persistent-logins) path.
 * Issue [#2914756](https://www.drupal.org/node/2914756):
                   Added the patch for [Default content] module to fix the
- issue of Invalid translation language error when selected installation language does not match demo content language
+                  issue of Invalid translation language error when selected
+                  installation language does not match demo content language
 
 ### Changed since Varbase 8.4.09:
 * No changes over Varbase features. This is a refactor which #2911702:
@@ -1199,7 +1308,8 @@
 * Issue [#2882145](https://www.drupal.org/node/2882145):
                   Updated [anchor link] module from 8.1.3 to 8.1.4
 * Issue [#2882144](https://www.drupal.org/node/2882144):
-                  Updated [Varbase editor] feature module from 8.x-4.10 to 8.4.11
+                  Updated [Varbase editor] feature module
+                  from 8.x-4.10 to 8.4.11
 * Issue [#2882198](https://www.drupal.org/node/2882198):
                   Updated [CHANGELOG.md, UPDATE.md] files and filtered the code
                   for Drupal 8 Coding Standard.
@@ -1365,7 +1475,8 @@
 * Issue [#2868067](https://www.drupal.org/node/2868067):
                   Updated [Page Manager] from 1.x-dev to 4.x-dev
 * Issue [#2867287](https://www.drupal.org/node/2867287):
-                  Updated [Drupal core] from 8.3.0-rc2 to 8.3.0 : Fix for the Issue of not having plugin.manager.core.layout on update with
+                  Updated [Drupal core] from 8.3.0-rc2 to 8.3.0 : Fix for the
+                  Issue of not having plugin.manager.core.layout on update with
                   [bootstrap_layouts] module 8.x-5.x-dev .
 * Issue [#2867009](https://www.drupal.org/node/2867009):
                   Updated [panels] module back from 8.4.0-alpha1 to 8.x-4.x-dev
@@ -2316,20 +2427,25 @@ composer create-project Vardot/varbase-build:8.4.0-beta16 PROJECT_DIR_NAME
 
 ## 8.4.0-alpha4
 * Removed [article] content type and all its configs.
-* Added the starting points for the [Vartheme] the Base theme for Vardot standard websites. Based on Bootstrap 3 and less css.
+* Added the starting points for the [Vartheme] the Base theme for Vardot
+  standard websites. Based on Bootstrap 3 and less css.
 * Removed config for [Comment] and [Contact] core modules.
-* Added to be enabled the [page_manager_ui], [features_ui], [ctools_views], [update] modules
-* Added the patch for [2672110 - EntityFieldDeriver naive about field info, throws PHP warnings] when we install
+* Added to be enabled the [page_manager_ui], [features_ui], [ctools_views]
+  , [update] modules
+* Added the patch for [2672110 - EntityFieldDeriver naive about field info,
+  throws PHP warnings] when we install
 
 ## 8.4.0-alpha3
 * Issue [#2755859](https://www.drupal.org/node/2755859):
-                  Remove Flixslider and flixslider views and have the list of dependencies enabled modules
+                  Remove Flixslider and flixslider views and have the list of
+                  dependencies enabled modules
 * Issue [#2755867](https://www.drupal.org/node/2755867):
                   Added patches for number of modules
 * Issue [#2755867](https://www.drupal.org/node/2755867):
                   Removed errored patches.
 * Issue [#2755875](https://www.drupal.org/node/2755875):
-                  Added the [layout_plugin] and [bootstrap_layouts] modules and enabled them
+                  Added the [layout_plugin] and [bootstrap_layouts] modules
+                  and enabled them.
 
 ## 8.4.0-alpha2
 * Issue [#2752685](https://www.drupal.org/node/2752685):
