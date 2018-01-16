@@ -345,8 +345,8 @@
         "https://www.drupal.org/files/issues/2935351-2.patch"
       },
       "drupal/pathologic": {
-        "Issue #2927759: Update hooks for D7 present in D8 version of module.":
-        "https://www.drupal.org/files/issues/remove-d7-update-functions-2927759-4.patch"
+        "Issue #2927759: Remove the Update hooks for D7 present in D8 version of module.":
+        "https://www.drupal.org/files/issues/2927759-8.patch"
       }
     }
   }
