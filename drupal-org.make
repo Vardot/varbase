@@ -135,6 +135,8 @@ projects[pathologic][type] = module
 projects[pathologic][download][url] = https://git.drupal.org/project/pathologic.git
 projects[pathologic][download][revision] = 4f9f3fdcf1e0b224c4d8650e383a769f40abf9bf
 projects[pathologic][download][branch] = 8.x-1.x
+;; Issue #2927759: Remove the Update hooks for D7 present in D8 version of module.
+projects[pathologic][patch][] = https://www.drupal.org/files/issues/remove-d7-update-functions-2927759-4.patch
 
 projects[ckeditor_bidi][type] = module
 projects[ckeditor_bidi][version] = 2.1
