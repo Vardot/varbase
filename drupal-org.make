@@ -461,7 +461,7 @@ projects[devel][version] = 1.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.7
+projects[bootstrap][version] = 3.8
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
