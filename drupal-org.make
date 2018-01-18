@@ -122,7 +122,7 @@ projects[video_embed_field][type] = module
 projects[video_embed_field][version] = 1.5
 
 projects[crop][type] = module
-projects[crop][version] = 1.3
+projects[crop][version] = 1.4
 
 projects[focal_point][type] = module
 projects[focal_point][version] = 1.0-beta5
