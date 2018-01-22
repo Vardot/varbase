@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.varbase_blog.field_yoast_seo
     - node.type.varbase_blog
   module:
+    - autocomplete_deluxe
     - entity_browser
     - field_group
     - metatag
@@ -110,11 +111,19 @@ content:
   field_tags:
     weight: 27
     settings:
+      limit: '10'
+      min_length: '0'
+      delimiter: ''
+      not_found_message_allow: '1'
+      not_found_message: 'The term ''@term'' will be added'
+      new_terms: '1'
       match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      target_type: taxonomy_term
       size: 60
-      placeholder: ''
+      selection_handler: default
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: autocomplete_deluxe
     region: content
   field_yoast_seo:
     weight: 2

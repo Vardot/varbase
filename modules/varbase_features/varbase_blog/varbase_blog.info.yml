@@ -3,6 +3,7 @@ description: 'Provides Blog content type and related configuration. Use <em>Blog
 type: module
 core: 8.x
 dependencies:
+  - autocomplete_deluxe
   - block
   - block_class
   - ctools
