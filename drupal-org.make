@@ -51,7 +51,7 @@ projects[field_group][type] = module
 projects[field_group][version] = 3.0-beta1
 
 projects[smart_trim][type] = module
-projects[smart_trim][version] = 1.0
+projects[smart_trim][version] = 1.1
 
 projects[advanced_text_formatter][type] = module
 projects[advanced_text_formatter][version] = 1.0-beta3

@@ -40,7 +40,7 @@
     "drupal/ds": "3.1",
     "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
     "drupal/field_group": "3.0-beta1",
-    "drupal/smart_trim": "1.0",
+    "drupal/smart_trim": "1.1",
     "drupal/advanced_text_formatter": "1.0-beta3",
     "drupal/block_class": "1.0-alpha1",
     "drupal/menu_block": "1.4",
