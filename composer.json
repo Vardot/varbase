@@ -60,7 +60,7 @@
     "drupal/media_entity_document": "1.1",
     "drupal/media_entity_image": "1.2",
     "drupal/video_embed_field": "1.5",
-    "drupal/crop": "1.4",
+    "drupal/crop": "1.5",
     "drupal/focal_point": "1.0-beta5",
     "drupal/pathologic": "1.x-dev#4f9f3fdcf1e0b224c4d8650e383a769f40abf9bf",
     "drupal/ckeditor_bidi": "2.1",
