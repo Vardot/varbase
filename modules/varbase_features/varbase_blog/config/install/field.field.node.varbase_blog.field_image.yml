@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media_entity.bundle.image
+    - node.type.varbase_blog
+id: node.varbase_blog.field_image
+field_name: field_image
+entity_type: node
+bundle: varbase_blog
+label: 'Main image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,86 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.varbase_blog.body
+    - field.field.node.varbase_blog.field_categories
+    - field.field.node.varbase_blog.field_image
+    - field.field.node.varbase_blog.field_meta_tags
+    - field.field.node.varbase_blog.field_tags
+    - field.field.node.varbase_blog.field_yoast_seo
+    - node.type.varbase_blog
+  module:
+    - ds
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+        - user
+        - node_post_date
+        - node_links
+    fields:
+      user:
+        plugin_id: user
+        weight: 2
+        label: hidden
+        formatter: default
+      node_links:
+        plugin_id: node_links
+        weight: 7
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_long
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.varbase_blog.default
+targetEntityType: node
+bundle: varbase_blog
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: ds_content
+hidden:
+  body: true
+  field_categories: true
+  field_meta_tags: true
+  field_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_blog.module.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function varbase_blog_page_attachments(array &$page) {
+  // Attach the styling library.
+  $page['#attached']['library'][] = 'varbase_blog/blog_theme';
+}

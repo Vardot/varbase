@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Categories'
+vid: categories
+description: ''
+hierarchy: 0
+weight: 0
