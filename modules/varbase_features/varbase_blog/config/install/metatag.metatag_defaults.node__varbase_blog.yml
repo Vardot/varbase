@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__varbase_blog
+label: 'Content: Blog'
+tags:
+  description: '[node:summary]'
+  title: '[node:title] | [site:name]'

@@ -29,3 +29,8 @@ config_bit:
           description: "A suite of site search engine tools to help you build better search performance, customization, and search experience. Built using <a href=\"https://www.drupal.org/project/search_api\" target=\"_blank\">Search API</a>."
           selected: false
           config_form: false
+        varbase_blog:
+          title: "Varbase Blog"
+          description: "Provides the necessary tools to build blogs in your website."
+          selected: false
+          config_form: false

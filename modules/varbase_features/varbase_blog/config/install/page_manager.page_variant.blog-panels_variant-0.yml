@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.blog
+    - system.menu.blog-menu
+    - views.view.blog_entry
+  module:
+    - menu_block
+    - panels
+    - views
+id: blog-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    873b549c-160c-402a-9c0c-2ad55bc2fcad:
+      id: 'views_block:blog_entry-blog_listing'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: left
+      weight: 0
+      uuid: 873b549c-160c-402a-9c0c-2ad55bc2fcad
+      context_mapping: {  }
+    20d97dad-31df-4687-9f6e-10fa8886135b:
+      id: 'views_block:blog_entry-most_popular'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: -1
+      uuid: 20d97dad-31df-4687-9f6e-10fa8886135b
+      context_mapping: {  }
+    b7044fa9-b541-46fa-be4f-b973e32afcb8:
+      id: 'views_block:blog_entry-most_recent_blog'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: right
+      weight: 0
+      uuid: b7044fa9-b541-46fa-be4f-b973e32afcb8
+      context_mapping: {  }
+    5c3a518c-3c89-4349-8527-d6b8efcd38e8:
+      id: 'menu_block:blog-menu'
+      label: 'Blog menu'
+      provider: menu_block
+      label_display: '0'
+      level: 1
+      depth: 0
+      expand: 0
+      parent: 'blog-menu:'
+      suggestion: blog_menu
+      region: top
+      weight: 0
+      uuid: 5c3a518c-3c89-4349-8527-d6b8efcd38e8
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 7c767761-a0e2-4046-9613-578466538075
+  label: null
+  weight: 0
+  layout: bs_2col_stacked
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      top:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+          col-md-9: col-md-9
+        add_region_classes: 1
+        attributes: ''
+      left:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+          col-md-9: col-md-9
+        add_region_classes: 1
+        attributes: ''
+      right:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+          col-md-3: col-md-3
+        add_region_classes: 1
+        attributes: ''
+      bottom:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: blog-panels_variant-0
+  builder: standard
+page: blog
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

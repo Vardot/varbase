@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: blog-menu
+label: 'Blog menu'
+description: ''
+locked: false

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.varbase_blog
+  module:
+    - metatag
+id: node.varbase_blog.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: varbase_blog
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:1:{s:25:"schema_web_site_publisher";s:257:"a:7:{s:5:"@type";s:12:"Organization";s:3:"@id";s:0:"";s:4:"name";s:11:"[site:name]";s:3:"url";s:10:"[site:url]";s:6:"sameAs";s:0:"";s:4:"logo";a:2:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:39:"[site:url][current-theme:path]/logo.png";}s:5:"pivot";s:0:"";}";}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

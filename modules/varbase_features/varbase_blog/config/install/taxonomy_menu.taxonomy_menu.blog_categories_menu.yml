@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.blog-menu
+    - taxonomy.vocabulary.categories
+id: blog_categories_menu
+label: 'Blog categories Menu'
+vocabulary: categories
+menu: blog-menu
+expanded: false
+depth: 0
+menu_parent: 'admin:node.add.varbase_blog'

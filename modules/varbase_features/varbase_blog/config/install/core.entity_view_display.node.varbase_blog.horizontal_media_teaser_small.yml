@@ -1,0 +1,83 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.horizontal_media_teaser_small
+    - field.field.node.varbase_blog.body
+    - field.field.node.varbase_blog.field_categories
+    - field.field.node.varbase_blog.field_image
+    - field.field.node.varbase_blog.field_meta_tags
+    - field.field.node.varbase_blog.field_tags
+    - field.field.node.varbase_blog.field_yoast_seo
+    - node.type.varbase_blog
+  module:
+    - ds
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: horizontal_media_teaser_small
+      library: vmi/horizontal_media_teaser_small
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: article
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_image
+      right:
+        - node_title
+        - node_post_date
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 2
+        label: hidden
+        formatter: ds_post_date_short
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.varbase_blog.horizontal_media_teaser_small
+targetEntityType: node
+bundle: varbase_blog
+mode: horizontal_media_teaser_small
+content:
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: s3_standard
+      link: false
+    third_party_settings: {  }
+    region: left
+hidden:
+  body: true
+  field_categories: true
+  field_meta_tags: true
+  field_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true

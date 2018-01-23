@@ -1,0 +1,134 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.varbase_blog.body
+    - field.field.node.varbase_blog.field_categories
+    - field.field.node.varbase_blog.field_image
+    - field.field.node.varbase_blog.field_meta_tags
+    - field.field.node.varbase_blog.field_tags
+    - field.field.node.varbase_blog.field_yoast_seo
+    - node.type.varbase_blog
+  module:
+    - ds
+    - field_group
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_author_information
+        - node_author
+        - field_image
+        - links
+        - node_post_date
+        - body
+        - field_tags
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 2
+        label: hidden
+        formatter: ds_post_date_medium
+      node_author:
+        plugin_id: node_author
+        weight: 0
+        label: hidden
+        formatter: author
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  field_group:
+    group_author_information:
+      children:
+        - node_author
+        - node_post_date
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Author information'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: author-info
+      label: 'Author information'
+      region: hidden
+id: node.varbase_blog.full
+targetEntityType: node
+bundle: varbase_blog
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  field_tags:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
+    type: entity_reference_label
+    region: ds_content
+  links:
+    weight: 2
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_categories: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
