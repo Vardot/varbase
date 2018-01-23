@@ -124,6 +124,7 @@
     "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/taxonomy_access_fix": "2.1",
+    "drupal/taxonomy_menu": "3.3",
     "drupal/better_exposed_filters": "3.0-alpha3",
     "drupal/autocomplete_deluxe": "1.0-beta1",
     "drupal/link_attributes": "1.2",
