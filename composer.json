@@ -202,139 +202,153 @@
     "branch-alias": {
       "dev-8.x-4.x": "8.4.x-dev"
     },
-    "autoload": {
-        "psr-4": {
-            "Varbase\\composer\\": "src/composer"
-        }
+    "installer-paths": {
+      "docroot/core": ["drupal/core"],
+      "docroot/profiles/{$name}": ["type:drupal-profile"],
+      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "docroot/libraries/{$name}": ["type:drupal-library"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
     },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-        "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-        "post-install-cmd": [
-            "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-            "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-            "@composer drupal-scaffold",
-            "./bin/phing push"
-        ],
-        "post-update-cmd": [
-            "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-            "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-            "./bin/phing push"
-        ],
-        "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
-        "create-new-vartheme": "scripts/create-new-vartheme.sh"
+    "drupal-libraries": {
+      "library-directory": "docroot/libraries",
+      "libraries": [
+          {"name": "dropzone","package": "vardot/dropzone"},
+          {"name": "blazy", "package": "vardot/blazy"},
+          {"name": "slick", "package": "vardot/slick"},
+          {"name": "ace", "package": "vardot/ace"}
+      ]
     },
-    "extra": {
-        "branch-alias": {
-            "dev-8.x-4.x": "8.4.x-dev"
-        },
-        "installer-paths": {
-            "docroot/core": ["drupal/core"],
-            "docroot/profiles/{$name}": ["type:drupal-profile"],
-            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "docroot/libraries/{$name}": ["type:drupal-library"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
-        },
-        "drupal-libraries": {
-            "library-directory": "docroot/libraries",
-            "libraries": [
-                { "name": "dropzone", "package": "vardot/dropzone" },
-                { "name": "blazy", "package": "vardot/blazy" },
-                { "name": "slick", "package": "vardot/slick" },
-                { "name": "ace", "package": "vardot/ace" }
-            ]
-        },
-        "enable-patching": true,
-        "patches": {
-            "drupal/core": {
-                "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order": "https://www.drupal.org/files/issues/1356276-408--8.4.4.patch",
-                "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)": "https://www.drupal.org/files/issues/2720101-43.patch",
-                "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation": "https://www.drupal.org/files/issues/2599228-31.patch",
-                "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal": "https://www.drupal.org/files/issues/patch_empty_fix.patch"
-            },
-            "drupal/page_manager": {
-                "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses": "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch"
-            },
-            "drupal/coffee": {
-                "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8": "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
-                "Issue #2872093: Coffee css fixes in RTL": "https://www.drupal.org/files/issues/2872093-10.patch"
-            },
-            "drupal/entityqueue": {
-                "Issue #2145441: Option to create Entityqueue tab on Entity pages.": "https://www.drupal.org/files/issues/2145441-32.patch",
-                "Issue #2825773: Make Contextual links work for views using Entityqueue": "https://www.drupal.org/files/issues/2825773-23-outside_in_to_settings_tray.patch",
-                "Issue #2916026: Only users with [Administer entityqueue] should be able to delete entityqueues": "https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-to-delete-entityqueues-2916026-3.patch",
-                "Issue #2917308: Only users with [Administer entityqueue] should be able to edit (configure) entityqueues": "https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-edit-configure-entityqueues-2917308-2.patch"
-            },
-            "drupal/l10n_client": {
-                "Issue #2867460: Incompatible with this version of Drupal core 8.3.0": "https://www.drupal.org/files/issues/2867460-2.patch",
-                "Issue #2872668: User error: 0 is an invalid render array key": "https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch"
-            },
-            "drupal/yoast_seo": {
-                "Issue #2877613: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.": "https://www.drupal.org/files/issues/2877613-2_0.patch"
-            },
-            "drupal/paragraphs": {
-                "Issue #2461695: Support translatable paragraph entity reference revision field": "https://www.drupal.org/files/issues/meta_support-2461695-222.patch",
-                "Issue #2868155: Add new hooks to allow easier editing of paragraph forms": "https://www.drupal.org/files/issues/2868155-16.patch",
-                "Issue #2877927: Show add widget between paragraphs on hover": "https://www.drupal.org/files/issues/2877927_29.patch",
-                "Issue #2909416: Hide duplicate action while translating.": "https://www.drupal.org/files/issues/2909416-2.patch",
-                "Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]": "https://www.drupal.org/files/issues/2924774-4.patch"
-            },
-            "drupal/adminimal_theme": {
-                "Issue #2696393: Checkboxes with .error class are not usable": "https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch"
-            },
-            "drupal/google_analytics_reports": {
-                "Issue #2850463: Error when saving either google_analytics_reports view": "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
-                "Issue #2860399: Warning: htmlspecialchars() expects parameter 1 to be string": "https://www.drupal.org/files/issues/Fix_message-2860399-5.patch",
-                "Issue #2932010: Fixed an issue to Not to check Updates or import Fields while the Drupal site MAINTENANCE_MODE is in Install or Update.": "https://www.drupal.org/files/issues/2932010-4.patch"
-            },
-            "drupal/ckeditor_media_embed": {
-                "Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG": "https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch"
-            },
-            "drupal/config_perms": {
-                "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist": "https://www.drupal.org/files/issues/2877329-16.patch"
-            },
-            "drupal/username_enumeration_prevention": {
-                "Issue #2871931: hook_requirements error on install phase": "https://www.drupal.org/files/issues/username_enumeration_prevention-check_phase_runtime-2871931-5.patch"
-            },
-            "drupal/paragraphs_previewer": {
-                "Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch": "https://www.drupal.org/files/issues/2904917-2.patch"
-            },
-            "drupal/entity_clone": {
-                "Issue #2770687: Wrong redirection of page for entity clone module": "https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch",
-                "Issue #2800203: Event dispatcher for clone events": "https://www.drupal.org/files/issues/entity_clone-event_dispatcher-2800203-5.patch",
-                "Issue #2706639: Support for cloning nodes that have another entities attached": "https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch",
-                "Issue #2769823: Getting error after clicking on abort clone button": "https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch"
-            },
-            "drupal/default_content": {
-                "Issue #2900089: Invalid translation language error when selected installation language does not match demo content language": "https://www.drupal.org/files/issues/2900089-14.patch"
-            },
-            "drupal/content_lock": {
-                "Issue #2907026: Fixed Warning: When we do not have content types yet in the system.": "https://www.drupal.org/files/issues/2907026-7_0.patch"
-            },
-            "drupal/persistent_login": {
-                "Issue #2899530: Hide user^s local task": "https://www.drupal.org/files/issues/persistent_login-user_task_permission-2899530-6.patch"
-            },
-            "drupal/ace_editor": {
-                "Issue #2916832: Add support for calling libraries from the current active profile": "https://www.drupal.org/files/issues/2916832-4.patch"
-            },
-            "drupal/focal_point": {
-                "Issue #2915497: Missing schema for focal_point_scale_and_crop effect": "https://www.drupal.org/files/issues/2915497_3.patch",
-                "Issue #2916562: Broken image preview": "https://www.drupal.org/files/issues/2916562-16.patch"
-            },
-            "drupal/ctools": {
-                "Issue #2820783: Fix Block.php notices and warnings.": "https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch"
-            },
-            "drupal/search_api": {
-                "Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.": "https://www.drupal.org/files/issues/2931562-11--undefined_total_in_task_manager_batch_finish.patch"
-            },
-            "drupal/total_control": {
-                "Issue #2935351: Fixed the issue when Enabled with multilingual of Translatable Markup for Invalid Argument Exception: $string (Array) must be a string.": "https://www.drupal.org/files/issues/2935351-2.patch"
-            },
-            "drupal/pathologic": {
-                "Issue #2927759: Remove the Update hooks for D7 present in D8 version of module.": "https://www.drupal.org/files/issues/2927759-8.patch"
-            }
-        }
+    "enable-patching": true,
+    "patches": {
+      "drupal/core": {
+        "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
+        "https://www.drupal.org/files/issues/1356276-408--8.4.4.patch",
+        "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
+        "https://www.drupal.org/files/issues/2720101-43.patch",
+        "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
+        "https://www.drupal.org/files/issues/2599228-31.patch",
+        "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
+        "https://www.drupal.org/files/issues/patch_empty_fix.patch"
+      },
+      "drupal/page_manager": {
+        "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":
+        "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch"
+      },
+      "drupal/coffee": {
+        "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
+        "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
+        "Issue #2872093: Coffee css fixes in RTL":
+        "https://www.drupal.org/files/issues/2872093-10.patch"
+      },
+      "drupal/entityqueue": {
+        "Issue #2145441: Option to create Entityqueue tab on Entity pages.":
+        "https://www.drupal.org/files/issues/2145441-32.patch",
+        "Issue #2825773: Make Contextual links work for views using Entityqueue":
+        "https://www.drupal.org/files/issues/2825773-23-outside_in_to_settings_tray.patch",
+        "Issue #2916026: Only users with [Administer entityqueue] should be able to delete entityqueues":
+        "https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-to-delete-entityqueues-2916026-3.patch",
+        "Issue #2917308: Only users with [Administer entityqueue] should be able to edit (configure) entityqueues":
+        "https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-edit-configure-entityqueues-2917308-2.patch"
+      },
+      "drupal/l10n_client": {
+        "Issue #2867460: Incompatible with this version of Drupal core 8.3.0":
+        "https://www.drupal.org/files/issues/2867460-2.patch",
+        "Issue #2872668: User error: 0 is an invalid render array key":
+        "https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch"
+      },
+      "drupal/yoast_seo": {
+        "Issue #2877613: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
+        "https://www.drupal.org/files/issues/2877613-2_0.patch"
+      },
+      "drupal/paragraphs": {
+        "Issue #2461695: Support translatable paragraph entity reference revision field":
+        "https://www.drupal.org/files/issues/meta_support-2461695-222.patch",
+        "Issue #2868155: Add new hooks to allow easier editing of paragraph forms":
+        "https://www.drupal.org/files/issues/2868155-16.patch",
+        "Issue #2877927: Show add widget between paragraphs on hover":
+        "https://www.drupal.org/files/issues/2877927_29.patch",
+        "Issue #2909416: Hide duplicate action while translating.":
+        "https://www.drupal.org/files/issues/2909416-2.patch",
+        "Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]":
+        "https://www.drupal.org/files/issues/2924774-4.patch"
+      },
+      "drupal/adminimal_theme": {
+        "Issue #2696393: Checkboxes with .error class are not usable":
+        "https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch"
+      },
+      "drupal/google_analytics_reports": {
+        "Issue #2850463: Error when saving either google_analytics_reports view":
+        "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
+        "Issue #2860399: Warning: htmlspecialchars() expects parameter 1 to be string":
+        "https://www.drupal.org/files/issues/Fix_message-2860399-5.patch",
+        "Issue #2932010: Fixed an issue to Not to check Updates or import Fields while the Drupal site MAINTENANCE_MODE is in Install or Update.":
+        "https://www.drupal.org/files/issues/2932010-4.patch"
+      },
+      "drupal/ckeditor_media_embed": {
+        "Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG":
+        "https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch"
+      },
+      "drupal/config_perms": {
+        "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist":
+        "https://www.drupal.org/files/issues/2877329-16.patch"
+      },
+      "drupal/username_enumeration_prevention": {
+        "Issue #2871931: hook_requirements error on install phase":
+        "https://www.drupal.org/files/issues/username_enumeration_prevention-check_phase_runtime-2871931-5.patch"
+      },
+      "drupal/paragraphs_previewer": {
+        "Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch":
+        "https://www.drupal.org/files/issues/2904917-2.patch"
+      },
+      "drupal/entity_clone": {
+        "Issue #2770687: Wrong redirection of page for entity clone module":
+        "https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch",
+        "Issue #2800203: Event dispatcher for clone events":
+        "https://www.drupal.org/files/issues/entity_clone-event_dispatcher-2800203-5.patch",
+        "Issue #2706639: Support for cloning nodes that have another entities attached":
+        "https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch",
+        "Issue #2769823: Getting error after clicking on abort clone button":
+        "https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch"
+      },
+      "drupal/default_content": {
+        "Issue #2900089: Invalid translation language error when selected installation language does not match demo content language":
+        "https://www.drupal.org/files/issues/2900089-14.patch"
+      },
+      "drupal/content_lock": {
+        "Issue #2907026: Fixed Warning: When we do not have content types yet in the system.":
+        "https://www.drupal.org/files/issues/2907026-7_0.patch"
+      },
+      "drupal/persistent_login": {
+        "Issue #2899530: Hide user^s local task":
+        "https://www.drupal.org/files/issues/persistent_login-user_task_permission-2899530-6.patch"
+      },
+      "drupal/ace_editor": {
+        "Issue #2916832: Add support for calling libraries from the current active profile":
+        "https://www.drupal.org/files/issues/2916832-4.patch"
+      },
+      "drupal/focal_point": {
+        "Issue #2915497: Missing schema for focal_point_scale_and_crop effect":
+        "https://www.drupal.org/files/issues/2915497_3.patch",
+        "Issue #2916562: Broken image preview":
+        "https://www.drupal.org/files/issues/2916562-16.patch"
+      },
+      "drupal/ctools": {
+        "Issue #2820783: Fix Block.php notices and warnings.":
+        "https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch"
+      },
+      "drupal/search_api": {
+        "Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.":
+        "https://www.drupal.org/files/issues/2931562-11--undefined_total_in_task_manager_batch_finish.patch"
+      },
+      "drupal/total_control": {
+        "Issue #2935351: Fixed the issue when Enabled with multilingual of Translatable Markup for Invalid Argument Exception: $string (Array) must be a string.":
+        "https://www.drupal.org/files/issues/2935351-2.patch"
+      },
+      "drupal/pathologic": {
+        "Issue #2927759: Remove the Update hooks for D7 present in D8 version of module.":
+        "https://www.drupal.org/files/issues/2927759-8.patch"
+      }
     }
+  }
 }
