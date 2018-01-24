@@ -28,7 +28,7 @@ function varbase_auth_get_editable_config_names() {
  *
  * @param array $formbit
  *   FormBit for the form.
- * @param FormStateInterface $form_state
+ * @param Drupal\Core\Form\FormStateInterface $form_state
  *   Form status.
  * @param array $install_state
  *   Install state.
@@ -67,15 +67,13 @@ function varbase_auth_submit_formbit(array $editable_config_values) {
  * Custom function to get checked values.
  *
  * From the Config and enable the modules.
- *
  */
 function _varbase_auth_enable_modules() {
   $configFactory = \Drupal::configFactory()->getEditable('simple.settings');
   $modules = $configFactory->get('social_auth_type');
-   if (\Drupal::moduleHandler()->moduleExists('varbase_auth') && $modules != NULL) {
+  if (\Drupal::moduleHandler()->moduleExists('varbase_auth') && $modules != NULL) {
     foreach ($modules as $key => $module) {
       if (is_string($module)) {
-        // array_push($modules, $module);
         \Drupal::service('module_installer')->install([$module]);
       }
     }
