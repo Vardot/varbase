@@ -124,7 +124,7 @@
     "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/taxonomy_access_fix": "2.1",
-    "drupal/taxonomy_menu": "3.3",
+    "drupal/taxonomy_menu": "3.x-dev#1103ad0855de4d242364a5b7e74a5c5fc1ce9e02",
     "drupal/better_exposed_filters": "3.0-alpha3",
     "drupal/autocomplete_deluxe": "1.0-beta1",
     "drupal/link_attributes": "1.2",
@@ -348,6 +348,10 @@
       "drupal/pathologic": {
         "Issue #2927759: Remove the Update hooks for D7 present in D8 version of module.":
         "https://www.drupal.org/files/issues/2927759-8.patch"
+      },
+      "drupal/taxonomy_menu": {
+        "Issue #2939143: Fixed Undefined method TaxonomyMenu::generateTaxonomyLinks()":
+        "https://www.drupal.org/files/issues/2939143-2.patch"  
       }
     }
   }

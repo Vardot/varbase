@@ -260,7 +260,11 @@ projects[taxonomy_access_fix][type] = module
 projects[taxonomy_access_fix][version] = 2.1
 
 projects[taxonomy_menu][type] = module
-projects[taxonomy_menu][version] = 3.3
+projects[taxonomy_menu][download][url] = https://git.drupal.org/project/taxonomy_menu.git
+projects[taxonomy_menu][download][revision] = 1103ad0855de4d242364a5b7e74a5c5fc1ce9e02
+projects[taxonomy_menu][download][branch] = 8.x-3.x
+;; Issue #2939143: Fixed Undefined method TaxonomyMenu::generateTaxonomyLinks()
+projects[taxonomy_menu][patch][] = https://www.drupal.org/files/issues/2939143-2.patch
 
 projects[better_exposed_filters][type] = module
 projects[better_exposed_filters][version] = 3.0-alpha3

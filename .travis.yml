@@ -12,7 +12,7 @@ cache:
     - "$HOME/.selenium/cache"
 
 php:
-  - 7.1.11
+  - 7.1.13
 
 env:
   - AFATG=01-website-base-requirements
@@ -24,23 +24,23 @@ env:
 matrix:
   exclude:
 # Automated Functional Acceptance Testing group: 01 website base requirements
-  - php: 7.1.11
+  - php: 7.1.13
     env: AFATG=01-website-base-requirements
 
 # Automated Functional Acceptance Testing group: 02 user management
-  - php: 7.1.11
+  - php: 7.1.13
     env: AFATG=02-user-management
 
 # Automated Functional Acceptance Testing group: 03 admin management
-  - php: 7.1.11
+  - php: 7.1.13
     env: AFATG=03-admin-management
 
 # Automated Functional Acceptance Testing group: 04 content structure
-  - php: 7.1.11
+  - php: 7.1.13
     env: AFATG=04-content-structure
 
 # Automated Functional Acceptance Testing group: 05 content-management
-  - php: 7.1.11
+  - php: 7.1.13
     env: AFATG=05-content-management
 
 addons:
@@ -82,9 +82,9 @@ before_install:
   - phpenv rehash
 
   # Configure and run the virtual display.
-  - export DISPLAY=:0
+  - export DISPLAY=:99
   - sh -e /etc/init.d/xvfb start
-  - Xvfb :0 -ac -screen 0 1366x768x24 &>/dev/null &
+  - Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
   - sleep 3
 
   # Download Chrome Driver.
@@ -115,7 +115,7 @@ install:
 
   ## Install with drush.
   - cd docroot
-  - drush site-install varbase --yes --site-name='Test Varbase4c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase4c" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_development_tools.varbase_development=true
+  - drush site-install varbase --yes --site-name='Test Varbase4c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase4c" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_development_tools.varbase_development=true
   - drush pm-enable vbp_text_and_image --yes
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes
@@ -123,7 +123,6 @@ install:
   - drush cr
 before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
-  - jdk_switcher use oraclejdk8
   - sleep 5
 script:
   - cd ./profiles/varbase
