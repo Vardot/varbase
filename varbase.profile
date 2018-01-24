@@ -64,11 +64,6 @@ function varbase_install_tasks(&$install_state) {
       'display' => TRUE,
       'type' => 'batch',
     ),
-    'varbase_additional_modules' => array(
-      'display_name' => t('Install additional modules'),
-      'display' => FALSE,
-      'type' => 'batch',
-    ),
     'varbase_development_tools' => array(
       'display_name' => t('Development tools'),
       'display' => TRUE,
@@ -308,30 +303,6 @@ function varbase_assemble_development_tools(array &$install_state) {
   }
 
   return $batch;
-}
-
-/**
- * Batch job to assemble Varbase additional modules.
- *
- * @param array $install_state
- *   The current install state.
- *
- * @return array
- *   The batch job definition.
- */
-function varbase_additional_modules(array &$install_state) {
-    
-  if (\Drupal::moduleHandler()->moduleExists('varbase_auth')) {
-    $configFactory = \Drupal::configFactory()->getEditable('simple.settings');
-    $auths = $configFactory->get('social_auth_type');
-    $modules = array ();
-    foreach ($auths as $key => $module) {
-      if (is_string($module)) {
-        array_push($modules, $module);
-      }
-    }
-    \Drupal::service('module_installer')->install($modules);
-  }
 }
 
 /**

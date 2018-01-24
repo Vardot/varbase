@@ -59,4 +59,25 @@ function varbase_auth_submit_formbit(array $editable_config_values) {
   $configFactory = \Drupal::configFactory()->getEditable('simple.settings');
   $configFactory->set('social_auth_type', $editable_config_values['simple.settings']['social_auth_type']);
   $configFactory->save(TRUE);
+
+  _varbase_auth_enable_modules();
+}
+
+/**
+ * Custom function to get checked values.
+ *
+ * From the Config and enable the modules.
+ *
+ */
+function _varbase_auth_enable_modules() {
+  $configFactory = \Drupal::configFactory()->getEditable('simple.settings');
+  $modules = $configFactory->get('social_auth_type');
+   if (\Drupal::moduleHandler()->moduleExists('varbase_auth') && $modules != NULL) {
+    foreach ($modules as $key => $module) {
+      if (is_string($module)) {
+        // array_push($modules, $module);
+        \Drupal::service('module_installer')->install([$module]);
+      }
+    }
+  }
 }
