@@ -1,0 +1,7 @@
+name: Varbase Auth
+type: module
+description: Provides Social Auth
+core: 8.x
+package: Varbase
+dependencies:
+  - social_auth
