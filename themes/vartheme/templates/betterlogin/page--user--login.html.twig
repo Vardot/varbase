@@ -21,7 +21,7 @@
         {% endif %}
       </div>
       <div id="middle-part">
-        <h2 class="title">{{ title }}</h2>
+        {# <h2 class="title">{{ title }}</h2> #}
         {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions', 'vartheme_page_title') }}
         {{ page.content }}
       </div>

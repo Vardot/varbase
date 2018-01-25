@@ -324,6 +324,24 @@ projects[betterlogin][download][url] = https://git.drupal.org/project/betterlogi
 projects[betterlogin][download][revision] = f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd
 projects[betterlogin][download][branch] = 8.x-1.x
 
+projects[social_api][type] = module
+projects[social_api][version] = 2.0-beta3
+
+projects[social_auth][type] = module
+projects[social_auth][version] = 2.0-beta3
+
+projects[social_auth_google][type] = module
+projects[social_auth_google][version] = 2.0-beta2
+
+projects[social_auth_facebook][type] = module
+projects[social_auth_facebook][version] = 2.0-beta2
+
+projects[social_auth_twitter][type] = module
+projects[social_auth_twitter][version] = 2.0-alpha1
+
+projects[social_auth_linkedin][type] = module
+projects[social_auth_linkedin][version] = 2.0-alpha2
+
 projects[ckeditor_media_embed][type] = module
 projects[ckeditor_media_embed][version] = 1.1
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
