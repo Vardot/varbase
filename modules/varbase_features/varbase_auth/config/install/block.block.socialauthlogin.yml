@@ -16,9 +16,9 @@ provider: null
 plugin: social_auth_login
 settings:
   id: social_auth_login
-  label: 'Social Auth Login'
+  label: 'Login with'
   provider: social_auth
-  label_display: '0'
+  label_display: visible
 visibility:
   request_path:
     id: request_path
