@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_auth.module.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function varbase_auth_page_attachments(array &$page) {
+  // Attach the styling library.
+  $page['#attached']['library'][] = 'varbase_auth/auth_theme';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_auth_form_user_login_form_alter(&$form, $form_state, $form_id) {
+  $moduleHandler = \Drupal::service('module_handler');
+  $social_modules = ['social_auth_google', 'social_auth_facebook', 'social_auth_twitter', 'social_auth_linkedin'];
+  $social_flag = FALSE;
+  foreach ($social_modules as $module) {
+    if ($moduleHandler->moduleExists($module)) {
+      $social_flag = TRUE;
+      break;
+    }
+  }
+
+  if ($moduleHandler->moduleExists('varbase_auth') && $social_flag) {
+    $block = Block::load('socialauthlogin');
+    $block->set('status', 1);
+    $block->save();
+
+    $form['#prefix'] = '<h2 class="block-title"> <span> OR </span></h2>';
+  }
+  else {
+    $block = Block::load('socialauthlogin');
+    $block->set('status', 0);
+    $block->save();
+
+    $form['#prefix'] = '<h2 class="block-title"><span> Login </span></h2>';
+  }
+}

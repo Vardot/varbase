@@ -27,15 +27,3 @@ function vartheme_theme_suggestions_page_alter(array &$suggestions, array $varia
 function vartheme_preprocess_page(&$variables) {
   $variables['logo_print'] = \Drupal::request()->getBaseUrl() . '/' . drupal_get_path('theme', 'vartheme') . '/logo-print.png';
 }
-
-function vartheme_form_alter(&$form, $form_state, $form_id) {
-  if($form_id == 'user_login_form'){
-    $moduleHandler = \Drupal::service('module_handler');
-    if ($moduleHandler->moduleExists('varbase_auth')) {
-      $form['#prefix'] = '<h2 class="block-title"> <span> OR </span></h2>';
-    }
-    else {
-      $form['#prefix'] = '<h2 class="block-title">Login</h2>';
-    }
-  }
-}

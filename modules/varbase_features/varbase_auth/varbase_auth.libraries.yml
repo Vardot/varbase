@@ -1,0 +1,4 @@
+auth_theme:
+  css:
+    theme:
+      css/theme/varbase_auth.theme.css: {}
