@@ -1,44 +1,44 @@
 #!//bin/bash
 ################################################################################
-## Create new vartheme subtheme.
+## Create new vartheme Material subtheme.
 ################################################################################
 ##
 ## Quick tip on how to use this script command file.
 ##
-## Create new Vartheme sub theme for a project.
+## Create new Vartheme Material sub theme for a project.
 ## By Composer:
 ## -----------------------------------------------------------------------------
 ## cd PROJECT_DIR_NAME/docroot/profiles/varbase
-## composer create-new-vartheme "THEME_NAME" "ltr" "sites/default/themes/custom"
+## composer create-new-vartheme_material "THEME_NAME" "ltr" "sites/default/themes/custom"
 ## -----------------------------------------------------------------------------
 ## By Bash:
 ## -----------------------------------------------------------------------------
 ## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
-## bash ./create-new-vartheme.sh "THEME_NAME" "ltr" "sites/default/themes/custom"
+## bash ./create-new-vartheme_material.sh "THEME_NAME" "ltr" "sites/default/themes/custom"
 ##------------------------------------------------------------------------------
 ##
 ## For right to left themes.
 ## By Composer:
 ## -----------------------------------------------------------------------------
 ## cd PROJECT_DIR_NAME/docroot/profiles/varbase
-## composer create-new-vartheme "THEME_NAME" "rtl" "sites/default/themes/custom"
+## composer create-new-vartheme_material "THEME_NAME" "rtl" "sites/default/themes/custom"
 ## -----------------------------------------------------------------------------
 ## By Bash:
 ## -----------------------------------------------------------------------------
 ## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
-## bash ./create-new-vartheme.sh "THEME_NAME" "rtl" "sites/default/themes/custom"
+## bash ./create-new-vartheme_material.sh "THEME_NAME" "rtl" "sites/default/themes/custom"
 ## -----------------------------------------------------------------------------
 ##
 ## To create a new theme in the themes/custom
 ## By Composer:
 ## -----------------------------------------------------------------------------
 ## cd PROJECT_DIR_NAME/docroot/profiles/varbase
-## composer create-new-vartheme "THEME_NAME" "ltr"
+## composer create-new-vartheme_material "THEME_NAME" "ltr"
 ## -----------------------------------------------------------------------------
 ## By Bash:
 ## -----------------------------------------------------------------------------
 ## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
-## bash ./create-new-vartheme.sh "THEME_NAME" "ltr"
+## bash ./create-new-vartheme_material.sh "THEME_NAME" "ltr"
 ## -----------------------------------------------------------------------------
 ##
 ################################################################################
@@ -157,60 +157,60 @@ else
 fi
 
 
-# Create the new Vartheme subtheme if we do not have a folder with that name yet.
+# Create the new Vartheme material subtheme if we do not have a folder with that name yet.
 if [[ ! -d "$theme_path/$theme_name" ]]; then
 
-  # 1. Copy the VARTHEME_SUBTHEME folder to your custom theme location.
-  cp -r ${drupal_root}/profiles/varbase/themes/vartheme/VARTHEME_SUBTHEME ${theme_path}/${theme_name};
+  # 1. Copy the VARTHEME_MATERIAL_SUBTHEME folder to your custom theme location.
+  cp -r ${drupal_root}/themes/contrib/vartheme_material/VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name};
 
-  # 2. Rename VARTHEME_SUBTHEME.starterkit.yml your_subtheme_name.info.yml
-  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.starterkit.yml ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.info.yml ;
-  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.info.yml ${theme_path}/${theme_name}/${theme_name}.info.yml ;
+  # 2. Rename VARTHEME_MATERIAL_SUBTHEME.starterkit.yml your_subtheme_name.info.yml
+  mv ${theme_path}/${theme_name}/VARTHEME_MATERIAL_SUBTHEME.starterkit.yml ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.info.yml ;
+  mv ${theme_path}/${theme_name}/VARTHEME_MATERIAL_SUBTHEME.info.yml ${theme_path}/${theme_name}/${theme_name}.info.yml ;
 
-  # 3. Rename VARTHEME_SUBTHEME.libraries.yml your_subtheme_name.libraries.yml
-  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.libraries.yml ${theme_path}/${theme_name}/${theme_name}.libraries.yml ;
+  # 3. Rename VARTHEME_MATERIAL_SUBTHEME.libraries.yml your_subtheme_name.libraries.yml
+  mv ${theme_path}/${theme_name}/VARTHEME_MATERIAL_SUBTHEME.libraries.yml ${theme_path}/${theme_name}/${theme_name}.libraries.yml ;
 
-  # 4. Rename VARTHEME_SUBTHEME.theme your_subtheme_name.theme
-  mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.theme ${theme_path}/${theme_name}/${theme_name}.theme ;
+  # 4. Rename VARTHEME_MATERIAL_SUBTHEME.theme your_subtheme_name.theme
+  mv ${theme_path}/${theme_name}/VARTHEME_MATERIAL_SUBTHEME.theme ${theme_path}/${theme_name}/${theme_name}.theme ;
 
-  # 5. Rename VARTHEME_SUBTHEME.settings.yml
-  mv ${theme_path}/${theme_name}/config/install/VARTHEME_SUBTHEME.settings.yml ${theme_path}/${theme_name}/config/install/${theme_name}.settings.yml ;
+  # 5. Rename VARTHEME_MATERIAL_SUBTHEME.settings.yml
+  mv ${theme_path}/${theme_name}/config/install/VARTHEME_MATERIAL_SUBTHEME.settings.yml ${theme_path}/${theme_name}/config/install/${theme_name}.settings.yml ;
 
-  # 6. Rename VARTHEME_SUBTHEME.schema.yml
-  mv ${theme_path}/${theme_name}/config/schema/VARTHEME_SUBTHEME.schema.yml ${theme_path}/${theme_name}/config/schema/${theme_name}.schema.yml ;
+  # 6. Rename VARTHEME_MATERIAL_SUBTHEME.schema.yml
+  mv ${theme_path}/${theme_name}/config/schema/VARTHEME_MATERIAL_SUBTHEME.schema.yml ${theme_path}/${theme_name}/config/schema/${theme_name}.schema.yml ;
 
-  # 7. Rename VARTHEME_SUBTHEME optional blocks.
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_branding.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_branding.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_breadcrumbs.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_breadcrumbs.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_content.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_content.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_copyright.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_copyright.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_footer.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_footer.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_help.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_help.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_local_actions.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_actions.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_local_tasks.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_tasks.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_main_menu.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_main_menu.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_messages.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_messages.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_page_title.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_page_title.yml
+  # 7. Rename VARTHEME_MATERIAL_SUBTHEME optional blocks.
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_branding.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_branding.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_breadcrumbs.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_breadcrumbs.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_content.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_content.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_copyright.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_copyright.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_footer.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_footer.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_help.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_help.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_local_actions.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_actions.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_local_tasks.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_tasks.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_main_menu.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_main_menu.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_messages.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_messages.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_page_title.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_page_title.yml
 
-  # 8.  Rename VARTHEME_SUBTHEME.base.css files.
+  # 8.  Rename VARTHEME_MATERIAL_SUBTHEME.base.css files.
   mv ${theme_path}/${theme_name}/css/base/VARTHEME_SUBTHEME.base.css ${theme_path}/${theme_name}/css/base/${theme_name}.base.css
   mv ${theme_path}/${theme_name}/css/base/VARTHEME_SUBTHEME.base.css.map ${theme_path}/${theme_name}/css/base/${theme_name}.base.css.map
 
-  # 9.  Rename VARTHEME_SUBTHEME-rtl.base.css files.
+  # 9.  Rename VARTHEME_MATERIAL_SUBTHEME-rtl.base.css files.
   mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css
   mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css.map ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css.map
 
-  # 10. Rename VARTHEME_SUBTHEME.base.less file.
+  # 10. Rename VARTHEME_MATERIAL_SUBTHEME.base.less file.
   mv ${theme_path}/${theme_name}/less/base/VARTHEME_SUBTHEME.base.less ${theme_path}/${theme_name}/less/base/${theme_name}.base.less
 
-  # 11.  Rename VARTHEME_SUBTHEME-rtl.base.less file.
+  # 11.  Rename VARTHEME_MATERIAL_SUBTHEME-rtl.base.less file.
   mv ${theme_path}/${theme_name}/less/rtl/base/VARTHEME_SUBTHEME-rtl.base.less ${theme_path}/${theme_name}/less/rtl/base/${theme_name}-rtl.base.less
 
-  # 12. Replace all VARTHEME_SUBTHEME with the machine name of your theme.
-  grep -rl 'VARTHEME_SUBTHEME' ${theme_path}/${theme_name} | xargs sed -i "s/VARTHEME_SUBTHEME/${theme_name}/g" ;
+  # 12. Replace all VARTHEME_MATERIAL_SUBTHEME with the machine name of your theme.
+  grep -rl 'VARTHEME_MATERIAL_SUBTHEME' ${theme_path}/${theme_name} | xargs sed -i "s/VARTHEME_MATERIAL_SUBTHEME/${theme_name}/g" ;
 
-  # 13. Replace the name: 'Vartheme Sub-Theme (LESS)' to the name of your theme.
-  grep -rl 'Vartheme Sub-Theme (LESS)' ${theme_path}/${theme_name} | xargs sed -i "s/Vartheme Sub-Theme (LESS)/${theme_name}/g" ;
+  # 13. Replace the name: 'Vartheme Material Sub-Theme (LESS)' to the name of your theme.
+  grep -rl 'Vartheme Material Sub-Theme (LESS)' ${theme_path}/${theme_name} | xargs sed -i "s/Vartheme Material Sub-Theme (LESS)/${theme_name}/g" ;
 
 
   # 14. If we want to use the RTL (right to left) bootstrap.
@@ -244,11 +244,11 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   fi
 
   generated_datetime="$(date '+%Y/%m/%d - %H:%M:%S')";
-  generated_log=" Generated by -- composer create-new-vartheme ${theme_name} ${direction} ${theme_path} -- on ${generated_datetime}";
+  generated_log=" Generated by -- composer create-new-vartheme_material ${theme_name} ${direction} ${theme_path} -- on ${generated_datetime}";
   echo "${generated_log}"  >> ${theme_path}/${theme_name}/README.md;
 
   echo "---------------------------------------------------------------------------";
-  echo "   The new Vartheme subtheme were created at \"${theme_path}/${theme_name} :)\" ";
+  echo "   The new Vartheme Material subtheme were created at \"${theme_path}/${theme_name} :)\" ";
   echo "---------------------------------------------------------------------------";
   exit 0;
 

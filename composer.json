@@ -197,7 +197,8 @@
       "./bin/phing push"
     ],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
-    "create-new-vartheme": "scripts/create-new-vartheme.sh"
+    "create-new-vartheme": "scripts/create-new-vartheme.sh",
+    "create-new-vartheme_material": "scripts/create-new-vartheme_material.sh"
   },
   "extra": {
     "branch-alias": {
