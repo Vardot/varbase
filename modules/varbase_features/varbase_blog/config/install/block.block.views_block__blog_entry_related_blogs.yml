@@ -12,19 +12,20 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: views_block__blog_entry_most_popular_material
+id: views_block__blog_entry_related_blogs
 theme: vartheme_material
-region: sidebar_second
-weight: -7
+region: content
+weight: 0
 provider: null
-plugin: 'views_block:blog_entry-most_popular'
+plugin: 'views_block:blog_entry-related_blogs'
 settings:
-  id: 'views_block:blog_entry-most_popular'
+  id: 'views_block:blog_entry-related_blogs'
   label: ''
   provider: views
   label_display: visible
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

@@ -12,7 +12,7 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: views_block__blog_entry_most_recent_blog_material
+id: views_block__blog_entry_most_recent_blog
 theme: vartheme_material
 region: sidebar_second
 weight: -6
