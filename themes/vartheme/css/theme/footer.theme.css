@@ -7,12 +7,12 @@
   padding-bottom: 0;
   margin-top: 45px;
 }
-.footer-wrapper .footer #block-copyright {
+.footer-wrapper .footer section[id$="-copyright"] {
   float: left;
   padding: 17px 0 17px 0;
   font-size: 12px;
 }
-.footer-wrapper .footer #block-copyright > div {
+.footer-wrapper .footer section[id$="-copyright"] > div {
   padding: 14px 0 10px 0;
 }
 .footer-wrapper .footer ul.nav {
