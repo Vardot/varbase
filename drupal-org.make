@@ -482,9 +482,7 @@ projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminim
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[libraries][type] = module
-projects[libraries][download][url] = https://git.drupal.org/project/libraries.git
-projects[libraries][download][revision] = 061ead081c92a6209b09eaf23b4e3103f360946e
-projects[libraries][download][branch] = 8.x-3.x
+projects[libraries][version] = 3.0-alpha1
 
 ;; Layout plugin is in Drupal 8.3.x core under the name of [Layout Discovery]
 projects[layout_plugin][type] = module
