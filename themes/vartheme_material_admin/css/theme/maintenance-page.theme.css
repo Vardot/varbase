@@ -1,0 +1,276 @@
+/**
+ * @file
+ * Maintenance theming.
+ */
+/* line 6, ../../scss/theme/maintenance-page.theme.scss */
+.maintenance-page {
+  background-color: #e0e0d8;
+  background-image: -webkit-radial-gradient(#e5e6e6, #f2f2f3);
+  background-image: radial-gradient(#e5e6e6, #f2f2f3);
+  background-repeat: repeat;
+  background-position: left top, 50% 50%;
+  /* LTR */
+  min-height: 100%;
+}
+
+/* line 14, ../../scss/theme/maintenance-page.theme.scss */
+[dir="rtl"] .maintenance-page {
+  background-position: right top, 50% 50%;
+}
+
+/* line 18, ../../scss/theme/maintenance-page.theme.scss */
+.page-title {
+  font-size: 2em;
+  line-height: 1.2em;
+  color: #0074bd;
+  word-wrap: break-word;
+}
+
+/**
+ * Task list & step indicator
+ */
+@media all and (max-width: 48em) {
+  /* 768px */
+  /* line 29, ../../scss/theme/maintenance-page.theme.scss */
+  header[role="banner"] {
+    position: relative;
+  }
+
+  /* line 32, ../../scss/theme/maintenance-page.theme.scss */
+  .step-indicator {
+    display: block;
+    font-size: 1.385em;
+    position: absolute;
+    top: 0.2em;
+    right: 0.5em;
+    /* LTR */
+  }
+
+  /* line 39, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] .step-indicator {
+    left: 0.5em;
+    right: auto;
+  }
+
+  /* line 43, ../../scss/theme/maintenance-page.theme.scss */
+  .task-list {
+    display: none;
+  }
+}
+@media all and (min-width: 48em) {
+  /* 768px */
+  /* line 49, ../../scss/theme/maintenance-page.theme.scss */
+  .step-indicator {
+    display: none;
+  }
+
+  /* line 52, ../../scss/theme/maintenance-page.theme.scss */
+  .task-list {
+    margin-left: 0;
+    /* LTR */
+    list-style-type: none;
+    padding-left: 0;
+    /* LTR */
+    padding-bottom: 1em;
+  }
+
+  /* line 58, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] .task-list {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  /* line 62, ../../scss/theme/maintenance-page.theme.scss */
+  .task-list li {
+    padding: 0.5em 1em 0.5em 3.85em;
+    /* LTR */
+    color: #1a1a1a;
+  }
+
+  /* line 66, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] .task-list li {
+    padding: 0.5em 3.85em 0.5em 1em;
+  }
+
+  /* line 69, ../../scss/theme/maintenance-page.theme.scss */
+  .task-list .is-active {
+    background: #ebeae4;
+    position: relative;
+    font-weight: normal;
+  }
+
+  /* line 74, ../../scss/theme/maintenance-page.theme.scss */
+  .task-list .is-active:after {
+    left: 100%;
+    /* LTR */
+    border: solid transparent;
+    border-color: rgba(235, 234, 228, 0);
+    border-left-color: #ebeae4;
+    /* LTR */
+    border-width: 1.35em;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    margin-top: -1.32em;
+  }
+
+  /* line 88, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] .task-list .is-active:after {
+    left: auto;
+    right: 100%;
+    border-left-color: transparent;
+    border-right-color: #ebeae4;
+  }
+
+  /* line 94, ../../scss/theme/maintenance-page.theme.scss */
+  .task-list .done {
+    color: #adadad;
+  }
+}
+/**
+ * Layout
+ */
+/* line 102, ../../scss/theme/maintenance-page.theme.scss */
+.layout-container {
+  background: #fff;
+  width: auto;
+  margin-left: 1.25em;
+  margin-right: 1.25em;
+}
+
+/* line 108, ../../scss/theme/maintenance-page.theme.scss */
+.layout-container:after {
+  /* no reason for a clearfix in the markup */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media all and (max-width: 48em) {
+  /* 768px */
+  /* line 114, ../../scss/theme/maintenance-page.theme.scss */
+  .layout-container {
+    margin: 1.25em;
+    padding: 10px 20px;
+  }
+
+  /* line 118, ../../scss/theme/maintenance-page.theme.scss */
+  .page-title {
+    margin-right: 2em;
+    /* LTR */
+    margin-bottom: 0.725em;
+  }
+
+  /* line 122, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] .page-title {
+    margin-right: 0;
+    margin-left: 2em;
+  }
+}
+@media all and (min-width: 48em) {
+  /* 768px */
+  /* line 129, ../../scss/theme/maintenance-page.theme.scss */
+  html {
+    display: table;
+  }
+
+  /* line 132, ../../scss/theme/maintenance-page.theme.scss */
+  .install-page,
+  .maintenance-page {
+    display: table-cell;
+    padding: 1em 0;
+    vertical-align: middle;
+  }
+
+  /* line 138, ../../scss/theme/maintenance-page.theme.scss */
+  html,
+  .install-page,
+  .maintenance-page {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* line 145, ../../scss/theme/maintenance-page.theme.scss */
+  .layout-container {
+    margin: 0 auto;
+    width: 75%;
+    max-width: 770px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px 0 40px 0;
+  }
+
+  /* Positioning sidebar & content */
+  /* line 155, ../../scss/theme/maintenance-page.theme.scss */
+  main {
+    box-sizing: border-box;
+    clear: none;
+    float: left;
+    /* LTR */
+    padding-left: 3.85em;
+    padding-right: 3.85em;
+    width: 65%;
+  }
+
+  /* line 163, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] main {
+    float: right;
+  }
+
+  /* line 166, ../../scss/theme/maintenance-page.theme.scss */
+  ul {
+    padding: 15px;
+    margin: 0.25em 0;
+  }
+
+  /* line 170, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] ul {
+    margin-right: 0;
+    /* Overrides default [dir="rtl"] ul margin */
+  }
+
+  /* line 173, ../../scss/theme/maintenance-page.theme.scss */
+  .layout-sidebar-first {
+    float: left;
+    /* LTR */
+    width: 35%;
+  }
+
+  /* line 177, ../../scss/theme/maintenance-page.theme.scss */
+  [dir="rtl"] .layout-sidebar-first {
+    float: right;
+  }
+
+  /* Margins for sitename */
+  /* line 182, ../../scss/theme/maintenance-page.theme.scss */
+  .page-title {
+    margin: 0.75em 1.9em;
+  }
+}
+/**
+ * Status report customization for install and update page.
+ */
+/* line 190, ../../scss/theme/maintenance-page.theme.scss */
+.system-status-report__status-title {
+  float: none;
+  width: 100%;
+}
+
+/* line 194, ../../scss/theme/maintenance-page.theme.scss */
+.system-status-report__entry__value {
+  float: none;
+  width: 100%;
+  padding-left: 3em;
+  /* LTR */
+  padding-top: 0;
+}
+
+/* line 200, ../../scss/theme/maintenance-page.theme.scss */
+[dir="rtl"] .system-status-report__entry__value {
+  padding-left: 1em;
+  padding-right: 3em;
+}

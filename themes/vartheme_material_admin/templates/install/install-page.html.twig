@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme implementation to display a Drupal installation page.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_install_page()
+ */
+#}
+<div class="layout-container">
+
+  <header role="banner">
+    {% if site_name %}
+      <h1 class="page-title">
+        {% if profile_logo %}
+          <img src="{{ profile_logo }}" class="installer-logo">
+        {% else %}
+          <img src="../{{ active_theme_path() }}/images/varbase-medium-logo.png" class="installer-logo">
+        {% endif %}
+
+        {% if site_version %}
+          <span class="site-version">{{ site_version }}</span>
+        {% endif %}
+      </h1>
+    {% endif %}
+  </header>
+
+  {% if page.sidebar_first %}
+    <aside class="layout-sidebar-first" role="complementary">
+      {{ page.sidebar_first }}
+    </aside>{# /.layout-sidebar-first #}
+  {% endif %}
+
+  <main role="main">
+    {% if title %}
+      <h2>{{ title }}</h2>
+    {% endif %}
+    {{ page.highlighted }}
+    {{ page.content }}
+  </main>
+
+  {% if page.sidebar_second %}
+    <aside class="layout-sidebar-second" role="complementary">
+      {{ page.sidebar_second }}
+    </aside>{# /.layout-sidebar-second #}
+  {% endif %}
+
+</div>{# /.layout-container #}
+
+<footer class="installer-footer clearfix">
+      <div id="credit" class="clearfix">
+        <div class="message">Proudly built by</div>
+        <div class="logo">
+          <a href="http://www.vardot.com" target="_blank">Vardot Company</a>
+        </div>
+      </div>
+</footer>

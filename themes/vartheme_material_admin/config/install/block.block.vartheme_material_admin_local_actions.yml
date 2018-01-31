@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vartheme_material_admin
+id: vartheme_material_admin_local_actions
+theme: vartheme_material_admin
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions (Material Admin)'
+  provider: core
+  label_display: '0'
+visibility: {  }

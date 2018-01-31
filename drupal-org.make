@@ -334,6 +334,16 @@ projects[paragraphs_previewer][version] = 1.0
 ;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
 
+projects[material_admin_support][type] = module
+projects[material_admin_support][download][url] = https://git.drupal.org/project/material_admin_support.git
+projects[material_admin_support][download][revision] = 96ce192c31643faf69d77aca3c68578f778be3bc
+projects[material_admin_support][download][branch] = 8.x-1.x
+
+projects[type_style][type] = module
+projects[type_style][download][url] = https://git.drupal.org/project/type_style.git
+projects[type_style][download][revision] = 486a8ec7c1c7dcd93790ee281c78cfa3dba90d78
+projects[type_style][download][branch] = 8.x-1.x
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
@@ -474,6 +484,9 @@ projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
 ;; Issue #2696393: Checkboxes with .error class are not usable
 projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch
+
+projects[material_admin][type] = theme
+projects[material_admin][version] = 1.0-alpha4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Legacy Contrib modules.

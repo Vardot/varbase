@@ -1,0 +1,137 @@
+/**
+ * @file
+ * Installation styling.
+ *
+ * Unfortunately we have to make our styling quite strong, to override the
+ * .maintenance-page styling.
+ */
+.install-page {
+  background-color: #1275b2;
+  background-image:
+    url(../../images/noise-low.png),
+    -webkit-radial-gradient(hsl(203, 80%, 45%), hsl(203, 80%, 32%));
+  background-image:
+    url(../../images/noise-low.png),
+    radial-gradient(hsl(203, 80%, 45%), hsl(203, 80%, 32%));
+  background-repeat: repeat;
+  background-position: left top, 50% 50%; /* LTR */
+  min-height: 100%;
+}
+[dir="rtl"] .install-page {
+  background-position: right top, 50% 50%;
+}
+
+/**
+ * Password widget
+ */
+.install-page .password-parent,
+.install-page .confirm-parent {
+  width: auto;
+}
+.install-page .form-item .password-suggestions {
+  float: none;
+  width: auto;
+}
+.install-page table td {
+  word-break: break-all;
+}
+
+.install-page .site-version {
+  vertical-align: super;
+  font-size: 0.5em;
+  color: #595959;
+}
+
+@media all and (max-width: 1010px) and (min-width: 48em) {
+  .install-page .password-strength,
+  .install-page .confirm-parent {
+    width: 100%;
+  }
+  .install-configure-form .form-type-password {
+    width: 100%;
+  }
+  .password-confirm,
+  .password-field {
+    float: none;
+  }
+  .password-confirm-match {
+    float: none;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+body.install-page {
+  background-image: url('../../images/varbase-bg.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: fixed;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+
+footer.installer-footer {
+  margin: 0 auto;
+  width: 75%;
+  max-width: 770px;
+  border-radius: 5px;
+  color: white;
+}
+
+footer.installer-footer #credit {
+  float: right;
+  padding: 20px 0 40px;
+  font-size: 11px;
+}
+
+[dir="rtl"] footer.installer-footer #credit {
+  float: left;
+  text-align: left;
+  padding: 20px 0 40px;
+  font-size: 11px;
+}
+
+footer.installer-footer #credit a {
+  clear: right;
+  float: right;
+  height: 0;
+  overflow: hidden;
+  padding: 50px 0 0;
+  width: 125px;
+}
+
+.installer-logo {
+  width: 222px;
+}
+
+body.install-page .logo a {
+  background-image: url(../../images/vardot-white-logo.png);
+  background-position-x: 0px;
+  background-position-y: 0px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: transparent;
+}
+
+.install-page .site-version {
+  vertical-align: initial !important;
+  padding-left: 10px;
+  color: #4192c8;
+  font-weight: bold;
+  font-size: 0.6em;
+}
+
+@media (min-width: 48em) {
+  .page-title {
+    margin-left: 1.3em !important;
+    color: #4192c8;
+  }
+}
