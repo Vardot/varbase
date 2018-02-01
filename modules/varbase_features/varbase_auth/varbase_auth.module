@@ -8,14 +8,6 @@
 use Drupal\block\Entity\Block;
 
 /**
- * Implements hook_page_attachments().
- */
-function varbase_auth_page_attachments(array &$page) {
-  // Attach the styling library.
-  $page['#attached']['library'][] = 'varbase_auth/auth_theme';
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
  */
 function varbase_auth_form_user_login_form_alter(&$form, $form_state, $form_id) {
