@@ -18,10 +18,10 @@ settings:
   id: social_auth_login
   label: 'Login with'
   provider: social_auth
-  label_display: visible
+  label_display: '0'
 visibility:
   request_path:
     id: request_path
-    pages: /user/login
+    pages: "/user/login\r\n/user/register"
     negate: false
     context_mapping: {  }
