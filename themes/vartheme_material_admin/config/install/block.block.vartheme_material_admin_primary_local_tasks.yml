@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vartheme_material_admin
+id: vartheme_material_admin_primary_local_tasks
+theme: vartheme_material_admin
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs (Material Admin)'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

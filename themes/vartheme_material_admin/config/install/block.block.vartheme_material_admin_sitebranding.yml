@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - vartheme_material_admin
+id: vartheme_material_admin_sitebranding
+theme: vartheme_material_admin
+region: header
+weight: -10
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding (Material Admin)'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/login\r\n/user/password\r\n/user/register"
+    negate: false
+    context_mapping: {  }

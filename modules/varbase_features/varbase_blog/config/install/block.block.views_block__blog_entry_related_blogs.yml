@@ -8,12 +8,12 @@ dependencies:
     - ctools
     - views
   theme:
-    - vartheme
+    - vartheme_material
 third_party_settings:
   block_class:
     classes: ''
 id: views_block__blog_entry_related_blogs
-theme: vartheme
+theme: vartheme_material
 region: content
 weight: 0
 provider: null

@@ -183,6 +183,7 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_branding.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_branding.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_breadcrumbs.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_breadcrumbs.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_content.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_content.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_copyright.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_copyright.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_footer.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_footer.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_help.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_help.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_local_actions.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_actions.yml

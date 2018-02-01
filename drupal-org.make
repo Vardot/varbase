@@ -260,7 +260,11 @@ projects[taxonomy_access_fix][type] = module
 projects[taxonomy_access_fix][version] = 2.1
 
 projects[taxonomy_menu][type] = module
-projects[taxonomy_menu][version] = 3.3
+projects[taxonomy_menu][download][url] = https://git.drupal.org/project/taxonomy_menu.git
+projects[taxonomy_menu][download][revision] = 1103ad0855de4d242364a5b7e74a5c5fc1ce9e02
+projects[taxonomy_menu][download][branch] = 8.x-3.x
+;; Issue #2939143: Fixed Undefined method TaxonomyMenu::generateTaxonomyLinks()
+projects[taxonomy_menu][patch][] = https://www.drupal.org/files/issues/2939143-2.patch
 
 projects[better_exposed_filters][type] = module
 projects[better_exposed_filters][version] = 3.0-alpha3
@@ -347,6 +351,16 @@ projects[paragraphs_previewer][type] = module
 projects[paragraphs_previewer][version] = 1.0
 ;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
+
+projects[material_admin_support][type] = module
+projects[material_admin_support][download][url] = https://git.drupal.org/project/material_admin_support.git
+projects[material_admin_support][download][revision] = 96ce192c31643faf69d77aca3c68578f778be3bc
+projects[material_admin_support][download][branch] = 8.x-1.x
+
+projects[type_style][type] = module
+projects[type_style][download][url] = https://git.drupal.org/project/type_style.git
+projects[type_style][download][revision] = 486a8ec7c1c7dcd93790ee281c78cfa3dba90d78
+projects[type_style][download][branch] = 8.x-1.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
@@ -489,6 +503,9 @@ projects[adminimal_theme][version] = 1.3
 ;; Issue #2696393: Checkboxes with .error class are not usable
 projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch
 
+projects[material_admin][type] = theme
+projects[material_admin][version] = 1.0-alpha4
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Legacy Contrib modules.
 ;;  - Not used, but kept for projects which still using them
@@ -496,9 +513,7 @@ projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminim
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[libraries][type] = module
-projects[libraries][download][url] = https://git.drupal.org/project/libraries.git
-projects[libraries][download][revision] = 061ead081c92a6209b09eaf23b4e3103f360946e
-projects[libraries][download][branch] = 8.x-3.x
+projects[libraries][version] = 3.0-alpha1
 
 ;; Layout plugin is in Drupal 8.3.x core under the name of [Layout Discovery]
 projects[layout_plugin][type] = module
@@ -513,13 +528,13 @@ projects[xmlsitemap][version] = 1.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[anchor_link][type] = module
-projects[anchor_link][version] = 1.6
+projects[anchor_link][version] = 1.x-dev
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.0-beta6
+projects[entity_browser_enhanced][version] = 1.x-dev
 
 projects[vmi][type] = module
-projects[vmi][version] = 1.0-beta3
+projects[vmi][version] = 1.x-dev
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4
@@ -531,19 +546,26 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.18
+projects[varbase_editor][version] = 4.x-dev
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.0-beta13
+projects[varbase_heroslider_media][version] = 4.x-dev
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 4.0-beta3
+projects[varbase_carousels][version] = 4.x-dev
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.0-rc1
+projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta9
+projects[varbase_total_control][version] = 1.x-dev
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Varbase public contrib themes.
+;;;;;;;;;;;;;;;;;;;;;
+
+projects[vartheme_material][type] = module
+projects[vartheme_material][version] = 4.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

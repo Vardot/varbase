@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - vartheme_material_admin
+id: vartheme_material_admin_help
+theme: vartheme_material_admin
+region: highlighted
+weight: 10
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

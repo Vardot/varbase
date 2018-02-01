@@ -1,0 +1,34 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/base/vartheme_material_admin.base.css: {}
+    theme:
+      css/theme/vartheme_material_admin.theme.css: {}
+  js:
+    js/vartheme_material_admin.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings
+
+maintenance-page:
+  version: VERSION
+  js:
+    js/mobile.install.js: {}
+  css:
+    theme:
+      css/theme/maintenance-page.theme.css: {}
+  dependencies:
+    - system/maintenance
+    
+install-page:
+  version: VERSION
+  js:
+    js/mobile.install.js: {}
+  css:
+    theme:
+      css/theme/install-page.theme.css: {}
+  dependencies:
+    - system/maintenance
