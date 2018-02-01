@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_auth.module.
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_auth_preprocess(&$variables) {
+  $moduleHandler = \Drupal::service('module_handler');
+  $modules_list = \Drupal::service('module_handler')->getModuleList();
+
+  $social_flag = TRUE;
+
+  // Check if at least one social auth module is enabled.
+  foreach ($modules_list as $module => $value) {
+    if (substr_count($module, 'social_auth_') != 0) {
+      $social_flag = TRUE;
+      break;
+    }
+  }
+
+  if ($moduleHandler->moduleExists('varbase_auth') && $social_flag) {
+    $block = Block::load('socialauthlogin');
+    $block->set('status', 1);
+    $block->save();
+
+    // Add variables to template.
+    _varbase_auth_add_template_variable($variables, [
+      'modules_enabled' => [
+        'type' => 'bool',
+        'value' => 1,
+      ],
+    ]);
+  }
+  else {
+    $block = Block::load('socialauthlogin');
+    $block->set('status', 0);
+    $block->save();
+
+    // Add variables to template.
+    _varbase_auth_add_template_variable($variables, [
+      'modules_enabled' => [
+        'type' => 'bool',
+        'value' => 0 ,
+      ],
+    ]);
+  }
+}
+
+/**
+ * Populates TWIG variables with VARBASE_AUTH related data.
+ *
+ * E.g.: $variables['VARBASE_AUTH']['test'] becomes
+ * {{ VARBASE_AUTH.test }} in the templates.
+ *
+ * @param array &$variables
+ *   The core $variables passed by reference.
+ * @param array $data
+ *   New data in array format, which will be passed to the template.
+ *
+ * @return bool|array
+ *   The new data.
+ *
+ * @internal
+ */
+function _varbase_auth_add_template_variable(array &$variables, array $data = NULL) {
+  static $key = 'VARBASE_AUTH';
+
+  if (!isset($variables[$key])) {
+    $variables[$key] = $data;
+  }
+  else {
+    $variables[$key][] = $data;
+  }
+  return $data;
+}

@@ -21,9 +21,16 @@
         {% endif %}
       </div>
       <div id="middle-part">
-        <h2 class="title">{{ title }}</h2>
         {{ page.header|without('vartheme_local_tasks', 'vartheme_breadcrumbs', 'vartheme_local_actions', 'vartheme_page_title') }}
-        {{ page.content }}
+        {% if (VARBASE_AUTH.modules_enabled.value) and (page.content.socialauthlogin) %}
+          <h2 class="block-title"><span> {{ "Sign up with"|t }} </span></h2>
+          {{ page.content.socialauthlogin }}
+          <h2 class="block-title"><span> {{ "or"|t }} </span></h2>
+          {{ page.content|without('socialauthlogin') }}
+        {% else %}
+          <h2 class="block-title"><span> {{ title }} </span></h2>
+          {{ page.content }}
+        {% endif %}
       </div>
       <div id="bottom-part">
       {% if not logged_in %}

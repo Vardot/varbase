@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the varbase_auth module.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions related to the installation of varbase_auth.
+ */
+function varbase_auth_install() {
+  // Install some additional modules.
+  _varbase_auth_module_installer();
+}
+
+/**
+ * Install some additional modules.
+ */
+function _varbase_auth_module_installer() {
+  $configFactory = \Drupal::configFactory()->getEditable('simple.settings');
+  $auths = $configFactory->get('social_auth_type');
+  $modules = [];
+  foreach ($auths as $key => $module) {
+    if (is_string($module)) {
+      array_push($modules, $module);
+    }
+  }
+  \Drupal::service('module_installer')->install($modules);
+}

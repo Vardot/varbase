@@ -1,0 +1,10 @@
+name: 'Varbase Social Single Sign-On'
+type: module
+description: 'Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google+'
+core: 8.x
+package: Varbase
+dependencies:
+  - block
+  - block_class
+  - social_auth
+  - system
