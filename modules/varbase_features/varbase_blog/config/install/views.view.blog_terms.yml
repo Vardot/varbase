@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.categories
+    - taxonomy.vocabulary.blog_categories
     - taxonomy.vocabulary.tags
   module:
     - node
@@ -256,7 +256,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            categories: categories
+            blog_categories: blog_categories
           group: 1
           exposed: false
           expose:

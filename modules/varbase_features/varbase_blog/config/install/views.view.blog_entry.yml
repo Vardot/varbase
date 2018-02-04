@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.text_teaser_small
     - core.entity_view_mode.node.vertical_media_teaser_medium
     - node.type.varbase_blog
+    - taxonomy.vocabulary.blog_categories
     - taxonomy.vocabulary.categories
     - taxonomy.vocabulary.tags
   module:
@@ -931,7 +932,7 @@ display:
             node: true
             limit: true
             vids:
-              categories: categories
+              blog_categories: blog_categories
             anyall: +
             term_page: '0'
           default_argument_skip_url: false

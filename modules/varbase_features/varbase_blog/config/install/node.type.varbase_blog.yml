@@ -7,7 +7,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Blog
+name: 'Blog post'
 type: varbase_blog
 description: 'Use <em>Blog</em> to publish blog post by different authors in the Blog section of the site.'
 help: ''

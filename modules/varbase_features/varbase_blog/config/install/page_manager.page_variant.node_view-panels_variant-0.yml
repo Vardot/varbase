@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+    - views.view.blog_entry
+  module:
+    - ctools
+    - panels
+    - views
+id: node_view-panels_variant-0
+label: 'Blog post'
+variant: panels_variant
+variant_settings:
+  blocks:
+    c105e14e-08ed-4fa4-a772-e4804f037d89:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: full
+      region: main
+      weight: 0
+      uuid: c105e14e-08ed-4fa4-a772-e4804f037d89
+      context_mapping:
+        entity: node
+    39ef7088-0505-45f5-8e35-35e69b275fb1:
+      id: 'views_block:blog_entry-related_blogs'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: main
+      weight: 0
+      uuid: 39ef7088-0505-45f5-8e35-35e69b275fb1
+      context_mapping: {  }
+  id: panels_variant
+  uuid: c6b40163-8926-46e8-88dc-e19df2a93db2
+  label: null
+  weight: 0
+  layout: bs_1col
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: '[node:title]'
+  storage_type: page_manager
+  storage_id: node_view-panels_variant-0
+  builder: ipe
+page: node_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      varbase_blog: varbase_blog
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

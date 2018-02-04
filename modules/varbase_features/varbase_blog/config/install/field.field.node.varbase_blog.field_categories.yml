@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_categories
     - node.type.varbase_blog
-    - taxonomy.vocabulary.categories
+    - taxonomy.vocabulary.blog_categories
 id: node.varbase_blog.field_categories
 field_name: field_categories
 entity_type: node
@@ -19,10 +19,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      categories: categories
+      blog_categories: blog_categories
     sort:
       field: name
       direction: asc
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: blog_categories
 field_type: entity_reference
