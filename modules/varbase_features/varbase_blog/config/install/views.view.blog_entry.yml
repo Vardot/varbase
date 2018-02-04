@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.node.vertical_media_teaser_medium
     - node.type.varbase_blog
     - taxonomy.vocabulary.blog_categories
-    - taxonomy.vocabulary.categories
     - taxonomy.vocabulary.tags
   module:
     - ds
