@@ -1,4 +1,2 @@
 bundle: varbase
-excluded:
-  - taxonomy.vocabulary.categories
 required: true

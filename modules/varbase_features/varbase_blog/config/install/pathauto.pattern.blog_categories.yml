@@ -9,14 +9,14 @@ label: 'Blog categories'
 type: 'canonical_entities:taxonomy_term'
 pattern: 'blog/categories/[term:name]'
 selection_criteria:
-  ef5cf146-5a71-4f4e-96b7-9506ed0f0524:
+  a352f2a3-fc08-4a3e-b764-1a8b8f5c05b7:
     id: 'entity_bundle:taxonomy_term'
     bundles:
-      categories: categories
+      blog_categories: blog_categories
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: ef5cf146-5a71-4f4e-96b7-9506ed0f0524
+    uuid: a352f2a3-fc08-4a3e-b764-1a8b8f5c05b7
 selection_logic: and
 weight: -5
 relationships: {  }

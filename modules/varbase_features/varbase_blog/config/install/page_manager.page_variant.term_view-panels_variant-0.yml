@@ -56,7 +56,7 @@ selection_criteria:
   -
     id: 'entity_bundle:taxonomy_term'
     bundles:
-      categories: categories
+      blog_categories: blog_categories
       tags: tags
     negate: false
     context_mapping:

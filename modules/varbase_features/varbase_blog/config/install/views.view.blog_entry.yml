@@ -1021,6 +1021,7 @@ display:
         options:
           items_per_page: 3
           offset: 0
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
