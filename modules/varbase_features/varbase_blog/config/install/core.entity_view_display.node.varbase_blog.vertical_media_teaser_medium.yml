@@ -122,14 +122,14 @@ content:
     type: smart_trim
     weight: 10
     settings:
-      trim_length: '30'
+      trim_length: 30
       trim_type: words
       trim_suffix: ' ...'
-      more_link: '0'
+      more_link: false
       more_text: More
       summary_handler: ignore
       trim_options:
-        text: text
+        text: true
       more_class: more-link
     third_party_settings:
       ds:

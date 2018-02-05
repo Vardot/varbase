@@ -5,7 +5,7 @@ dependencies:
     - views.view.blog_entry
   module:
     - block_class
-    - ctools
+    - system
     - views
   theme:
     - vartheme_material
@@ -25,11 +25,10 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      varbase_blog: varbase_blog
+  request_path:
+    id: request_path
+    pages: "/blog\r\n/blog/*"
     negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
+    context_mapping: {  }

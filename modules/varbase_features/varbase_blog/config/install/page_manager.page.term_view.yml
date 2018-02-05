@@ -1,13 +1,23 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - ctools
 id: term_view
 label: 'Term View'
 description: ''
 use_admin_theme: false
 path: '/taxonomy/term/{taxonomy_term}'
 access_logic: and
-access_conditions: {  }
+access_conditions:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      blog_categories: blog_categories
+      tags: tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
 parameters:
   taxonomy_term:
     machine_name: taxonomy_term

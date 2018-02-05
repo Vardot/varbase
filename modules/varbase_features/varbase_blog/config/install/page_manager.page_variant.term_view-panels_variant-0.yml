@@ -6,6 +6,7 @@ dependencies:
     - system.menu.blog-menu
     - views.view.blog_entry
   module:
+    - ctools
     - menu_block
     - panels
     - views
@@ -21,31 +22,9 @@ variant_settings:
       label_display: '0'
       views_label: ''
       items_per_page: none
-      region: left
+      region: main
       weight: 0
       uuid: 27499fc7-af2a-4e39-8532-3ab9df76e2c8
-      context_mapping: {  }
-    7c8cc70f-f819-44ed-bbb8-666cb2cf2dca:
-      id: 'views_block:blog_entry-most_popular'
-      label: ''
-      provider: views
-      label_display: visible
-      views_label: ''
-      items_per_page: none
-      region: right
-      weight: -1
-      uuid: 7c8cc70f-f819-44ed-bbb8-666cb2cf2dca
-      context_mapping: {  }
-    628b1275-8998-4a3f-9c9a-c4ad0dcb8ade:
-      id: 'views_block:blog_entry-most_recent_blog'
-      label: ''
-      provider: views
-      label_display: visible
-      views_label: ''
-      items_per_page: none
-      region: right
-      weight: 0
-      uuid: 628b1275-8998-4a3f-9c9a-c4ad0dcb8ade
       context_mapping: {  }
     30550b6f-3c0a-442f-a4f2-328386a287a7:
       id: 'menu_block:blog-menu'
@@ -57,7 +36,7 @@ variant_settings:
       expand: 0
       parent: 'blog-menu:'
       suggestion: blog_menu
-      region: top
+      region: main
       weight: 0
       uuid: 30550b6f-3c0a-442f-a4f2-328386a287a7
       context_mapping: {  }
@@ -65,48 +44,22 @@ variant_settings:
   uuid: 1b7acb0d-3c4d-4314-82f5-931eed2b0ecc
   label: null
   weight: 0
-  layout: bs_2col_stacked
-  layout_settings:
-    layout:
-      wrapper: div
-      classes:
-        row: row
-      add_layout_class: 1
-      attributes: ''
-    regions:
-      top:
-        wrapper: div
-        classes:
-          col-sm-12: col-sm-12
-          col-md-9: col-md-9
-        add_region_classes: 1
-        attributes: ''
-      left:
-        wrapper: div
-        classes:
-          col-sm-12: col-sm-12
-          col-md-9: col-md-9
-        add_region_classes: 1
-        attributes: ''
-      right:
-        wrapper: div
-        classes:
-          col-sm-12: col-sm-12
-          col-md-3: col-md-3
-        add_region_classes: 1
-        attributes: ''
-      bottom:
-        wrapper: div
-        classes:
-          col-sm-12: col-sm-12
-        add_region_classes: 1
-        attributes: ''
+  layout: bs_1col
+  layout_settings: {  }
   page_title: '[term:name]'
   storage_type: page_manager
   storage_id: term_view-panels_variant-0
   builder: standard
 page: term_view
 weight: 0
-selection_criteria: {  }
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      blog_categories: blog_categories
+      tags: tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
 selection_logic: and
 static_context: {  }

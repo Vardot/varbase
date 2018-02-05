@@ -1,5 +1,5 @@
-name: Blog
-description: 'Provides Blog content type and related configuration. Use <em>Blog</em> to publish blog post by different authors in the Blog section of the site.'
+name: 'Varbase blog'
+description: 'Provides Blog post content type and related configuration. Use <em>Blog</em> to publish blog post by different authors in the Blog section of the site.'
 type: module
 core: 8.x
 dependencies:
@@ -33,4 +33,5 @@ dependencies:
   - views
   - views_bootstrap
   - yoast_seo
+version: 8.x-4.x-dev
 package: Varbase
