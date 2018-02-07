@@ -30,7 +30,7 @@ projects[page_manager][version] = 4.0-beta2
 ;; Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch
 ;; Issue #2665328: Variants take entity label not the variant title
-projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-64.patch
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch
 
 projects[panels][type] = module
 projects[panels][version] = 4.2

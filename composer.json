@@ -248,7 +248,7 @@
         "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":
         "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch",
         "Issue #2665328: Variants take entity label not the variant title":
-        "https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-64.patch"
+        "https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch"
       },
       "drupal/coffee": {
         "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
