@@ -67,7 +67,7 @@
     "drupal/ace_editor": "1.0",
     "drupal/entityqueue": "1.0-alpha7",
     "drupal/entityqueue_form_widget": "1.0-beta3",
-    "drupal/imagemagick": "2.2",
+    "drupal/imagemagick": "2.3",
     "drupal/imageapi_optimize": "2.0-alpha3",
     "drupal/ultimate_cron": "2.0-alpha2",
     "drupal/persistent_login": "1.0-alpha4",
