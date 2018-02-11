@@ -224,7 +224,7 @@ projects[default_content][version] = 1.0-alpha7
 projects[default_content][patch][] = https://www.drupal.org/files/issues/2900089-14.patch
 
 projects[content_lock][type] = module
-projects[content_lock][version] = 1.0-alpha6
+projects[content_lock][version] = 1.0-alpha7
 
 projects[node_edit_protection][type] = module
 projects[node_edit_protection][download][url] = https://git.drupal.org/project/node_edit_protection.git
