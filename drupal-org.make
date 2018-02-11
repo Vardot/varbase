@@ -257,7 +257,7 @@ projects[mail_edit][download][revision] = bcd0041830d8581b36e6211f0c8eabd8caf965
 projects[mail_edit][download][branch] = 8.x-1.x
 
 projects[taxonomy_access_fix][type] = module
-projects[taxonomy_access_fix][version] = 2.1
+projects[taxonomy_access_fix][version] = 2.3
 
 projects[taxonomy_menu][type] = module
 projects[taxonomy_menu][download][url] = https://git.drupal.org/project/taxonomy_menu.git
