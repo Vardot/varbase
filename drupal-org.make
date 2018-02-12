@@ -207,7 +207,7 @@ projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha7
 
 projects[views_bulk_operations][type] = module
-projects[views_bulk_operations][version] = 1.0
+projects[views_bulk_operations][version] = 2.0
 
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 2.0-beta4
