@@ -827,3 +827,20 @@ img {
     text-align: center;
   }
 }
+
+// Hide for anonymous users.
+.hidden-anonymous {
+  display: none !important;
+}
+
+// Show only for admin users.
+body.user-logged-in {
+
+  .visible-admin {
+    display: inline-block !important;
+  }
+
+  .btn.visible-admin {
+    display: inline-block !important;
+  }
+}
