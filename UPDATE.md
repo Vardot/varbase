@@ -13,6 +13,7 @@ developers need to do to update the last release to the new release.
 * https://www.drupal.org/project/varbase/releases/8.x-4.12
 * https://www.drupal.org/project/varbase/releases/8.x-4.13
 * https://www.drupal.org/project/varbase/releases/8.x-4.14
+* https://www.drupal.org/project/varbase/releases/8.x-4.15
 
 
 # 2 - Backups
@@ -80,6 +81,18 @@ while working on the project.
 # 9 - Regression test the full site.
 
 * Done :\)
+
+---
+
+
+# Updating Varbase 8.4.14 to Varbase 8.4.15
+# Same as updating Varbase 8.4.14 to Varbase 8.4.15
+
+This release fixes security vulnerabilities in Drupal core.
+
+Drupal core - Critical - Multiple Vulnerabilities - SA-CORE-2018-001
+No other changes are included, only the SPDX license identifier from GPL-2.0+ to GPL-2.0-or-later.
+
 
 ---
 
