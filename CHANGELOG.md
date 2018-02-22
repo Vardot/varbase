@@ -1,3 +1,21 @@
+## 8.4.15
+
+### Highlighted important changes since Varbase 8.4.14:
+This release fixes security vulnerabilities in Drupal core
+
+[Drupal core - Critical - Multiple Vulnerabilities - SA-CORE-2018-001](https://www.drupal.org/SA-CORE-2018-001)
+No other changes are included, only the SPDX license identifier from GPL-2.0+ to GPL-2.0-or-later.
+
+
+* Issue [#2946845](https://www.drupal.org/node/2946845):
+                  Updated [Drupal Core] from 8.4.4 to 8.4.5
+* Issue [#2937949](https://www.drupal.org/node/2937949):
+                  Changed composer SPDX license identifier
+                  from GPL-2.0+ to GPL-2.0-or-later
+* Issue [#2946846](https://www.drupal.org/node/2946846):
+                   Varbase 8.4.15: Updated [CHANGELOG.md, UPDATE.md] files
+                   and filtered the code for Drupal 8 Coding Standard.
+
 ## 8.4.14
 
 ### Highlighted important changes since Varbase 8.4.13:
