@@ -340,7 +340,7 @@ projects[social_auth_twitter][type] = module
 projects[social_auth_twitter][version] = 2.0-alpha1
 
 projects[social_auth_linkedin][type] = module
-projects[social_auth_linkedin][version] = 2.0-alpha2
+projects[social_auth_linkedin][version] = 2.0-beta1
 
 projects[ckeditor_media_embed][type] = module
 projects[ckeditor_media_embed][version] = 1.1
