@@ -331,7 +331,7 @@ projects[social_auth][type] = module
 projects[social_auth][version] = 2.0-beta4
 
 projects[social_auth_google][type] = module
-projects[social_auth_google][version] = 2.0-beta2
+projects[social_auth_google][version] = 2.0-beta3
 
 projects[social_auth_facebook][type] = module
 projects[social_auth_facebook][version] = 2.0-beta3
