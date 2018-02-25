@@ -422,7 +422,7 @@ projects[honeypot][type] = module
 projects[honeypot][version] = 1.27
 
 projects[shield][type] = module
-projects[shield][version] = 1.1
+projects[shield][version] = 1.2
 
 projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta1
