@@ -325,7 +325,7 @@ projects[betterlogin][download][revision] = f7cf1c5c9ec5e80c6ac0ef04ed605e254952
 projects[betterlogin][download][branch] = 8.x-1.x
 
 projects[social_api][type] = module
-projects[social_api][version] = 2.0-beta3
+projects[social_api][version] = 2.0-beta4
 
 projects[social_auth][type] = module
 projects[social_auth][version] = 2.0-beta3
