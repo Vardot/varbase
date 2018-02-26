@@ -118,7 +118,7 @@
     "drupal/shield": "1.2",
     "drupal/captcha": "1.0-beta1",
     "drupal/recaptcha": "2.2",
-    "drupal/search_api": "1.6",
+    "drupal/search_api": "1.7",
     "drupal/mailsystem": "4.1",
     "drupal/smtp": "1.0-beta3",
     "drupal/maxlength": "1.0-beta1",
@@ -351,7 +351,7 @@
       },
       "drupal/search_api": {
         "Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.":
-        "https://www.drupal.org/files/issues/2931562-11--undefined_total_in_task_manager_batch_finish.patch"
+        "https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch"
       },
       "drupal/total_control": {
         "Issue #2935351: Fixed the issue when Enabled with multilingual of Translatable Markup for Invalid Argument Exception: $string (Array) must be a string.":
