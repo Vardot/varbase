@@ -122,7 +122,7 @@ themes:
   - bootstrap
 
   # Custom themes.
-  - vartheme_material
+  - vartheme
   - vartheme_admin
 distribution:
   name: Varbase
