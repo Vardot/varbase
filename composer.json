@@ -153,7 +153,7 @@
     "drupal/ckeditor_media_embed": "1.1",
     "drupal/total_control": "2.0-alpha4",
     "drupal/anchor_link": "1.x-dev",
-    "drupal/entity_browser_enhanced": "1.x-dev",
+    "drupal/entity_browser_enhanced": "1.0-rc1",
     "drupal/vmi": "1.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "4.x-dev",
     "drupal/varbase_editor": "4.x-dev",

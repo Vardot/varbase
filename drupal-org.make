@@ -529,7 +529,7 @@ projects[anchor_link][type] = module
 projects[anchor_link][version] = 1.x-dev
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.x-dev
+projects[entity_browser_enhanced][version] = 1.0-rc1
 
 projects[vmi][type] = module
 projects[vmi][version] = 1.x-dev
