@@ -362,6 +362,10 @@
       "drupal/taxonomy_menu": {
         "Issue #2939143: Fixed Undefined method TaxonomyMenu::generateTaxonomyLinks()":
         "https://www.drupal.org/files/issues/2939143-2.patch"  
+      },
+      "drupal/slick": {
+        "Issue #2948735: Adding the alt attribute to the slick thumbnails":
+        "https://www.drupal.org/files/issues/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-2.patch"
       }
     }
   }

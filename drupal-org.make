@@ -446,6 +446,8 @@ projects[blazy][version] = 1.0-rc2
 
 projects[slick][type] = module
 projects[slick][version] = 1.0
+;; Issue #2948735: Adding the alt attribute to the slick thumbnails
+projects[slick][patch][] = https://www.drupal.org/files/issues/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-2.patch
 
 projects[slick_views][type] = module
 projects[slick_views][version] = 1.0-rc2
