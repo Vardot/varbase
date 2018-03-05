@@ -155,7 +155,7 @@
     "drupal/anchor_link": "1.x-dev",
     "drupal/entity_browser_enhanced": "1.0-rc1",
     "drupal/vmi": "1.0-rc1",
-    "drupal/varbase_bootstrap_paragraphs": "4.x-dev",
+    "drupal/varbase_bootstrap_paragraphs": "4.0-rc2",
     "drupal/varbase_editor": "4.19",
     "drupal/varbase_heroslider_media": "4.0-rc1",
     "drupal/varbase_carousels": "4.0-rc1",

@@ -555,7 +555,7 @@ projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 4.0-rc1
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 4.0-rc2
 
 projects[varbase_total_control][type] = module
 projects[varbase_total_control][version] = 1.0-beta10
