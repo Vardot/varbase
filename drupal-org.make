@@ -546,7 +546,7 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.x-dev
+projects[varbase_editor][version] = 4.19
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 4.x-dev
