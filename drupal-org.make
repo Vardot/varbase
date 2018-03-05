@@ -564,7 +564,7 @@ projects[varbase_auth][type] = module
 projects[varbase_auth][version] = 4.x-dev
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 4.x-dev
+projects[varbase_blog][version] = 4.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib themes.

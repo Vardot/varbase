@@ -161,7 +161,7 @@
     "drupal/varbase_carousels": "4.0-rc1",
     "drupal/varbase_total_control": "1.0-beta10",
     "drupal/varbase_auth" : "4.x-dev",
-    "drupal/varbase_blog" : "4.x-dev",
+    "drupal/varbase_blog" : "4.0-alpha1",
     "drupal/vartheme": "4.16",
     "drupal/vartheme_material": "4.0-alpha1",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
