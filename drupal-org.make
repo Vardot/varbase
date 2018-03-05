@@ -462,7 +462,7 @@ projects[slick_media][version] = 1.0
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[features][type] = module
-projects[features][version] = 3.5
+projects[features][version] = 3.7
 
 projects[coffee][type] = module
 projects[coffee][version] = 1.0-beta2
