@@ -561,7 +561,7 @@ projects[varbase_total_control][type] = module
 projects[varbase_total_control][version] = 1.0-beta10
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 4.x-dev
+projects[varbase_auth][version] = 4.0-alpha1
 
 projects[varbase_blog][type] = module
 projects[varbase_blog][version] = 4.0-alpha1
