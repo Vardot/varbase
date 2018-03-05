@@ -558,7 +558,7 @@ projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.x-dev
+projects[varbase_total_control][version] = 1.0-beta10
 
 projects[varbase_auth][type] = module
 projects[varbase_auth][version] = 4.x-dev
