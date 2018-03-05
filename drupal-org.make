@@ -365,7 +365,7 @@ projects[type_style][download][branch] = 8.x-1.x
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[pathauto][type] = module
-projects[pathauto][version] = 1.0
+projects[pathauto][version] = 1.1
 
 projects[redirect][type] = module
 projects[redirect][version] = 1.0
