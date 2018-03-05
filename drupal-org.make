@@ -127,9 +127,7 @@ projects[crop][type] = module
 projects[crop][version] = 1.5
 
 projects[focal_point][type] = module
-projects[focal_point][version] = 1.0-beta5
-;; Issue #2915497: Missing schema for focal_point_scale_and_crop effect
-projects[focal_point][patch][] = https://www.drupal.org/files/issues/2915497_3.patch
+projects[focal_point][version] = 1.0-beta6
 ;; Issue #2916562: Broken image preview
 projects[focal_point][patch][] = https://www.drupal.org/files/issues/2916562-16.patch
 

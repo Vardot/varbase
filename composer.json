@@ -61,7 +61,7 @@
     "drupal/media_entity_image": "1.2",
     "drupal/video_embed_field": "1.5",
     "drupal/crop": "1.5",
-    "drupal/focal_point": "1.0-beta5",
+    "drupal/focal_point": "1.0-beta6",
     "drupal/pathologic": "1.x-dev#4f9f3fdcf1e0b224c4d8650e383a769f40abf9bf",
     "drupal/ckeditor_bidi": "2.1",
     "drupal/ace_editor": "1.0",
@@ -340,8 +340,6 @@
         "https://www.drupal.org/files/issues/2916832-4.patch"
       },
       "drupal/focal_point": {
-        "Issue #2915497: Missing schema for focal_point_scale_and_crop effect":
-        "https://www.drupal.org/files/issues/2915497_3.patch",
         "Issue #2916562: Broken image preview":
         "https://www.drupal.org/files/issues/2916562-16.patch"
       },
