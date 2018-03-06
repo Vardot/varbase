@@ -214,7 +214,8 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-rc3
+projects[webform][download][url] = https://git.drupal.org/project/webform.git
+projects[webform][download][revision] = 385cb39037cc966b286fbe42e591a4119d482c85
 ;; Issue #2944792: Remove Contribute dependency.
 projects[webform][patch][] = https://www.drupal.org/files/issues/webform-2944792-remove-contribute-dependency-28.patch
 
