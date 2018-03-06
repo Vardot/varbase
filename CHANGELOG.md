@@ -1,3 +1,217 @@
+## 8.4.16
+
+### Highlighted important changes since Varbase 8.4.15:
+* Issue [#2938940](https://www.drupal.org/node/2938940):
+                  Added [Varbase Blog] feature module.
+* Issue [#2941397](https://www.drupal.org/node/2941397):
+                  Added [Varbase Auth] feature module for Varbase Social
+                  Single Sign-On authentication with a number of default
+                  supported social networks.
+* Issue [#2947751](https://www.drupal.org/node/2947751):
+                  [View Modes Inventory] Changed All images in Vertical
+                  and Horizontal media teasers to be linked to content.
+* Issue [#2946014](https://www.drupal.org/node/2946014):
+                  Removed [Vartheme] from Varbase core code, and have it as
+                  stand-alone theme, but still have it as the default them.
+* Issue [#2939408](https://www.drupal.org/node/2939408):
+                  Added [Varbase Theme - Material Design] (Experimental) theme
+                  as the vartheme material theme.
+* Issue [#2940952](https://www.drupal.org/node/2940952):
+                  Added [Vartheme Material Admin] Varbase (Experimental)
+                  admin theme, with [Material Admin] theme as an option
+                  for admin theme.
+* Issue [#2947698](https://www.drupal.org/node/2947698):
+                  Added [Card] Vartheme bootstrap card, as a custom component
+                  library to help style [VMI] vertical media teasers, and
+                  text teasers.
+* Issue [#2948308](https://www.drupal.org/node/2948308):
+                  Changed [Vartheme] theme to extend the new
+                  bootstrap/framework library from [Bootstrap] 8.3.10 change
+                  of records. This release works well with the
+                  Bootstrap 8.3.10 >= versions.
+
+### Added since Varbase 8.4.15:
+* Issue [#2938940](https://www.drupal.org/node/2938940):
+                  Added [Varbase Blog] feature module.
+* Issue [#2941397](https://www.drupal.org/node/2941397):
+                  Added [Varbase Auth] feature module for Varbase Social Single
+                  Sign-On authentication with a number of default supported
+                  social networks.
+* Issue [#2939408](https://www.drupal.org/node/2939408):
+                  Added [Varbase Theme - Material Design] theme the
+                  vartheme material theme.
+* Issue [#2940952](https://www.drupal.org/node/2940952):
+                  Added [Vartheme Material Admin] Varbase (Experimental)
+                  admin theme, with [Material Admin] theme as an
+                  option for admin theme.
+* Issue [#2938938](https://www.drupal.org/node/2938938):
+                  Added [Taxonomy menu] module 8.3.3
+* Issue [#2943308](https://www.drupal.org/node/2943308):
+                  Added the 2665328-66.patch for [Page Manager] module to fix
+                  contexts on getting title.
+* Issue [#2944721](https://www.drupal.org/node/2944721):
+                  Added hidden-anonymous and visible-admin LESS/CSS classes
+                  as they have been moved to Vartheme base for features to use.
+* Issue [#2945609](https://www.drupal.org/node/2945609):
+                  Added [Field Categories, and Field Tags] storage fields
+                  to Varbase core config.
+* Issue [#2947698](https://www.drupal.org/node/2947698):
+                  Added [Card] Vartheme bootstrap card, as a custom component
+                  library to help style [VMI] vertical media teasers, and text teasers.
+* Issue [#2947696](https://www.drupal.org/node/2947696):
+                  Added [Justify content to center] CSS/LESS Class to
+                  vartheme.base . so that it could be used to justify
+                  navigation to center.
+* Issue [#2947699](https://www.drupal.org/node/2947699):
+                  Added [vb-tags] vartheme bootstrap tags, as a custom
+                  component library to help style the field_tags in varbase.
+* Issue [#2947701](https://www.drupal.org/node/2947701):
+                  Added [equal-height] vartheme LESS/CSS class in
+                  [vartheme/equal-height] as a custom component library
+                  to help equal heights of columns in bootstrap rows.
+* Issue [#2950120](https://www.drupal.org/node/2950120):
+                  Added the 2948735-2.patch for [Slick Carousel] module which
+                  add the alt attribute to the slick thumbnails
+* Issue [#2950304](https://www.drupal.org/node/2950304):
+                  Added [contribute] module 1.0-beta7
+
+### Changed since Varbase 8.4.15:
+* Issue [#2947751](https://www.drupal.org/node/2947751):
+                  [VMI] Changed All images in Vertical and Horizontal
+                  media teasers to be linked to content.
+* Issue [#2946014](https://www.drupal.org/node/2946014):
+                  Removed [Vartheme] from Varbase core code, and have
+                  it as stand-alone theme.
+* Issue [#2948308](https://www.drupal.org/node/2948308):
+                  Changed [Vartheme] theme to extend the new
+                  bootstrap/framework library from [Bootstrap] 8.3.10 change
+                  of records. This release works well with the
+                  Bootstrap 8.3.10 >= versions.
+* Issue [#2937949](https://www.drupal.org/node/2937949):
+                  Changed composer SPDX license identifier
+                  from GPL-2.0+ to GPL-2.0-or-later
+* Issue [#2943941](https://www.drupal.org/node/2943941):
+                  Changed [Taxonomy view term] in varbase install
+                  config to allow custom taxonomy view terms to have
+                  a custom look, then can be placed in custom panel pages.
+* Issue [#2944386](https://www.drupal.org/node/2944386):
+                  Changed share-logo.png to share-image.png in meta tags.
+* Issue [#2949970](https://www.drupal.org/node/2949970):
+                  Varbase 8.4.16: Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Varbase 8.4.15
+* Issue [#2950048](https://www.drupal.org/node/2950048):
+                  Updated [Entity Browser Enhance(d|r)] module
+                  from 8.1.0-beta6 to 8.1.0-rc1
+* Issue [#2950134](https://www.drupal.org/node/2950134):
+                  Updated [View Modes Inventory] module
+                  from 8.1.0-beta3 to 8.1.0-rc1
+* Issue [#2950141](https://www.drupal.org/node/2950141):
+                  Updated [Varbase Editor] module from 8.4.18 to 8.4.19
+* Issue [#2950152](https://www.drupal.org/node/2950152):
+                  Updated [Varbase hero slider media] module
+                  from 8.4.0-beta13 to 8.4.0-rc1
+* Issue [#2950157](https://www.drupal.org/node/2950157):
+                  Updated [Varbase Carousels] module
+                  from 8.4.0-beta3 to 8.4.0-rc1
+* Issue [#2950181](https://www.drupal.org/node/2950181):
+                  Updated [Varbase Total Control Dashboard] module
+                  from 8.1.0-beta9 to 8.1.0-beta10
+* Issue [#2950193](https://www.drupal.org/node/2950193):
+                  Updated [Varbase Bootstrap Paragraphs] module
+                  from 8.4.0-rc1 to 8.4.0-rc2
+* Issue [#2946845](https://www.drupal.org/node/2946845):
+                  Updated [Drupal Core] from 8.4.4 to 8.4.5 
+                  - as in Varbase 8.4.15
+* Issue [#2937705](https://www.drupal.org/node/2937705):
+                  Updated [Bootstrap] theme from 8.3.7 to 8.3.8
+* Issue [#2938483](https://www.drupal.org/node/2938483):
+                  Updated [Bootstrap] theme from 8.3.8 to 8.3.9
+* Issue [#2948303](https://www.drupal.org/node/2948303):
+                  Updated [Bootstrap] theme from 8.3.9 to 8.3.10
+* Issue [#2938475](https://www.drupal.org/node/2938475):
+                  Updated [Bootstrap Layouts] module from 8.5.0 to 8.5.1
+* Issue [#2937714](https://www.drupal.org/node/2937714):
+                  Updated [Crop API] module from 8.1.3 to 8.1.4
+* Issue [#2938490](https://www.drupal.org/node/2938490):
+                  Updated [Crop API] module from 8.1.4 to 8.1.5
+* Issue [#2938498](https://www.drupal.org/node/2938498):
+                  Updated [Smart Trim] module from 8.1.0 to 8.1.1
+* Issue [#2940619](https://www.drupal.org/node/2940619):
+                  Updated [Libraries API] module
+                  from 8.3.x-dev 061ead0 to 8.3.0-alpha1
+* Issue [#2942536](https://www.drupal.org/node/2942536):
+                  Updated [Content locking (anti-concurrent editing)] module 
+                  from 8.1.0-alpha4 to 8.1.0-alpha6
+* Issue [#2943871](https://www.drupal.org/node/2943871):
+                  Updated [Content locking (anti-concurrent editing)] module
+                  from 8.1.0-alpha6 to 8.1.0-alpha7
+* Issue [#2942539](https://www.drupal.org/node/2942539):
+                  Updated [Schema.org Metatag] module from 8.1.0-rc4 to 8.1.0
+* Issue [#2942610](https://www.drupal.org/node/2942610):
+                  Updated [Views Bulk Edit] module from
+                  8.2.0-beta2 to 8.2.0-beta3
+* Issue [#2942613](https://www.drupal.org/node/2942613):
+                  Updated [Webform] module from 8.5.0-rc1 to 8.5.0-rc2
+* Issue [#2942803](https://www.drupal.org/node/2942803):
+                  Updated [Webform] module from 8.5.0-rc2 to 8.5.0-rc3
+* Issue [#2942805](https://www.drupal.org/node/2942805):
+                  Updated [Views Bulk Edit] module
+                  from 8.2.0-beta3 to 8.2.0-beta4
+* Issue [#2942811](https://www.drupal.org/node/2942811):
+                  Updated [Admin Toolbar] module from 8.1.22 to 8.1.23
+* Issue [#2943874](https://www.drupal.org/node/2943874):
+                  Updated [ImageMagick] module from 8.2.2 to 8.2.3
+* Issue [#2943880](https://www.drupal.org/node/2943880):
+                  Updated [Material Admin] theme
+                  from 8.1.0-alpha4 to 8.1.0-alpha5
+* Issue [#2943922](https://www.drupal.org/node/2943922):
+                  Updated [Taxonomy access fix] module from 8.2.1 to 8.2.3
+* Issue [#2944052](https://www.drupal.org/node/2943922):
+                  Updated [Taxonomy access fix] module from 8.2.3 to 8.2.4
+* Issue [#2944657](https://www.drupal.org/node/2944657):
+                  Updated [Taxonomy access fix] module from 8.2.4 to 8.2.5
+* Issue [#2943931](https://www.drupal.org/node/2943931):
+                  Updated [Paragraphs Previewer] module from 8.1.0 to 8.1.2
+* Issue [#2943936](https://www.drupal.org/node/2943936):
+                  Updated [Ultimate Cron] module
+                  from 8.2.0-alpha2 to 8.2.0-alpha3
+* Issue [#2944055](https://www.drupal.org/node/2944055):
+                  Updated [Views Bulk Operations (VBO)] module
+                  from 8.1.0 to 8.2.0
+* Issue [#2947683](https://www.drupal.org/node/2947683):
+                  Updated [shield] module from 8.1.1 to 8.1.2
+* Issue [#2947687](https://www.drupal.org/node/2947687):
+                  Updated [Social API] module from 8.2.0-beta3 to 8.2.0-beta4
+* Issue [#2947688](https://www.drupal.org/node/2947688):
+                  Updated [Social Auth] module from 8.2.0-beta3 to 8.2.0-beta4
+* Issue [#2947689](https://www.drupal.org/node/2947689):
+                  Updated [Social Auth Facebook] module
+                  from 8.2.0-beta2 to 8.2.0-beta3
+* Issue [#2947690](https://www.drupal.org/node/2947690):
+                  Updated [Social Auth Google] module
+                  from 8.2.0-beta2 to 8.2.0-beta3
+* Issue [#2947694](https://www.drupal.org/node/2947694):
+                  Updated [Social Auth LinkedIn] module
+                  from 8.2.0-alpha2 to 8.2.0-beta1
+* Issue [#2947878](https://www.drupal.org/node/2947878):
+                  Updated [Search API] module from 8.1.6 to 8.1.7
+* Issue [#2949958](https://www.drupal.org/node/2949958
+                  Updated [Focal Point] module from 8.1.0-beta5 to 8.1.0-beta6
+* Issue [#2949960](https://www.drupal.org/node/2949960):
+                  Updated [Pathauto] module from 8.1.0 to 8.1.1
+* Issue [#2949975](https://www.drupal.org/node/2949975):
+                  Updated [Features] module from 8.3.5 to 8.3.7
+
+### Fixes since Varbase 8.4.15:
+* Issue [#2927765](https://www.drupal.org/node/2927765):
+                  Fixed the issue with Ægir Hostmaster (Aegir):
+                  Unable to update Varbase in Aegir based systems because
+                  of wrong update files in pathologic module.
+
+
+
 ## 8.4.15
 
 ### Highlighted important changes since Varbase 8.4.14:

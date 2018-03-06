@@ -14,6 +14,7 @@ developers need to do to update the last release to the new release.
 * https://www.drupal.org/project/varbase/releases/8.x-4.13
 * https://www.drupal.org/project/varbase/releases/8.x-4.14
 * https://www.drupal.org/project/varbase/releases/8.x-4.15
+* https://www.drupal.org/project/varbase/releases/8.x-4.16
 
 
 # 2 - Backups
@@ -82,7 +83,58 @@ while working on the project.
 
 * Done :\)
 
----
+
+
+--------------------------------------------------------------------------------
+
+
+# Updating Varbase 8.4.15 to Varbase 8.4.6
+  If you already did the update of Varbase from 8.4.15 to 8.4.164, this
+  updating to 8.4.16 will be a quick and easy one.
+
+## Updating files with Copy and Paste for Varbase 8.4.15 to Varbase 8.4.16
+```
+  Given that we are at the drupal root folder for varbase
+   When we delete all drupal core folders and files
+    And we copy all new Varbase files drupal root folder for varbase
+    And we make sure that we have all custom module or themes still in the
+        "sites" folder
+    And we make sure that all new used modules and features are present.
+   Then we will be ready to update the active config and database.
+```
+
+## Varbase Procedures to the varbase base code. not in any varbase-project project builders.
+```
+  Given that we are at the root folder for varbase project, not the docroot
+    And we make sure that the current "Varbase-project" composer.json file and
+        files are the latest
+   When we delete the "vendor" folder
+    And we delete the "composer.lock" file
+    And we run the "composer require vardot/varbase:8.4.16" command
+    And wait for composer to finish work
+   Then we should not see any issues in the terminal
+    And we should see "Writing lock file" in the terminal
+    And we should see "Generating autoload files" in the terminal
+   When the composer finishes work with no errors
+   Then we will be ready to update the active config and database.
+```
+
+## Updating the active config and database from Varbase 8.4.15 to Varbase 8.4.16
+```
+  Given that we are in the docroot of the current Varbase project
+    And all files are updated using (copy and past) or (composer require/update
+   When we run drush "updb" or go to "/update.php"
+   Then we should see the steps of updates.
+   When we run drush "updb" or go to "/update.php" again
+   Then we will have the site update with the new Varbase 8.4.16 version
+   When we go to "/admin/config/development/features"
+   Then we should see "Changed"
+   When we follow with each feature to import new changes.
+   Then we will have the Varbase site updated to the latest version.
+```
+
+
+--------------------------------------------------------------------------------
 
 
 # Updating Varbase 8.4.14 to Varbase 8.4.15
@@ -94,7 +146,8 @@ Drupal core - Critical - Multiple Vulnerabilities - SA-CORE-2018-001
 No other changes are included, only the SPDX license identifier from GPL-2.0+ to GPL-2.0-or-later.
 
 
----
+--------------------------------------------------------------------------------
+
 
 # Updating Varbase 8.4.13 to Varbase 8.4.14
   If you already did the update of Varbase from 8.4.13 to 8.4.14, this
@@ -140,6 +193,9 @@ No other changes are included, only the SPDX license identifier from GPL-2.0+ to
    When we follow with each feature to import new changes.
    Then we will have the Varbase site updated to the latest version.
 ```
+
+
+--------------------------------------------------------------------------------
 
 
 # Updating Varbase 8.4.12 to Varbase 8.4.13
@@ -188,6 +244,9 @@ No other changes are included, only the SPDX license identifier from GPL-2.0+ to
 ```
 
 
+--------------------------------------------------------------------------------
+
+
 # Updating Varbase 8.4.11 to Varbase 8.4.12
   If you already did the update of Varbase from 8.4.10 to 8.4.11, this
   updating to 8.4.12 will be a quick and easy one.
@@ -234,6 +293,9 @@ No other changes are included, only the SPDX license identifier from GPL-2.0+ to
 ```
 
 
+--------------------------------------------------------------------------------
+
+
 # Updating Varbase 8.4.10 to Varbase 8.4.11
 
 ## Updating files with Copy and Paste for Varbase 8.4.10 to Varbase 8.4.11
@@ -276,6 +338,9 @@ No other changes are included, only the SPDX license identifier from GPL-2.0+ to
    When we follow with each feature to import new changes.
    Then we will have the Varbase site updated to the latest version.
 ```
+
+
+--------------------------------------------------------------------------------
 
 
 # Updating Varbase 8.4.09 to Varbase 8.4.10
@@ -321,6 +386,10 @@ No other changes are included, only the SPDX license identifier from GPL-2.0+ to
    Then we will have the Varbase site updated to the latest version.
 ```
 
+
+--------------------------------------------------------------------------------
+
+
 # Updating Varbase 8.4.08 to Varbase 8.4.09
 
 ## Updating files with Copy and Paste for Varbase 8.4.08 to Varbase 8.4.09
@@ -365,8 +434,7 @@ No other changes are included, only the SPDX license identifier from GPL-2.0+ to
 ```
 
 
-
-
+--------------------------------------------------------------------------------
 
 
 # Updating Varbase 8.4.07 to Varbase 8.4.08
@@ -413,6 +481,8 @@ Varbase Procedures to the varbase base code. not in any varbase-project or
    Then we will have the Varbase site updated to the latest version.
 ```
 
+
+--------------------------------------------------------------------------------
 
 
 # Updating Varbase 8.4.06 to Varbase 8.4.07
@@ -496,6 +566,9 @@ https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/create-new-vartheme.sh
 ```
 
 
+--------------------------------------------------------------------------------
+
+
 # Updating Varbase 8.4.05 to Varbase 8.4.06
 
 ## Updating files with Copy and Paste for Varbase 8.4.05 to Varbase 8.4.06
@@ -577,6 +650,9 @@ https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/create-new-vartheme.sh
 ```
 
 
+--------------------------------------------------------------------------------
+
+
 # Updating Varbase 8.4.04 to Varbase 8.4.05
 
 If you are updating from Varbase 8.4.01 or earlier, please follow the steps
@@ -622,6 +698,9 @@ to updated to Varbase 8.4.02 first. in the UPDATE.md file.
    When we follow with each feature to import new changes.
    Then we will have the Varbase site updated to the latest version.
 ```
+
+
+--------------------------------------------------------------------------------
 
 
 # Varbase 8.4.03 to Varbase 8.4.04
@@ -671,7 +750,8 @@ to updated to Varbase 8.4.02 first. in the UPDATE.md file.
 ```
 
 
----
+--------------------------------------------------------------------------------
+
 
 # Varbase 8.4.02 to Varbase 8.4.03
 
@@ -720,7 +800,8 @@ to updated to Varbase 8.4.02 first. in the UPDATE.md file.
 ```
 
 
----
+--------------------------------------------------------------------------------
+
 
 # Varbase 8.4.01 to Varbase 8.4.02
 
