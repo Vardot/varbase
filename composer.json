@@ -366,6 +366,10 @@
       "drupal/slick": {
         "Issue #2948735: Adding the alt attribute to the slick thumbnails":
         "https://www.drupal.org/files/issues/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-2.patch"
+      },
+      "drupal/webform": {
+        "Issue #2944792: Remove Contribute dependency.":
+        "https://www.drupal.org/files/issues/webform-2944792-remove-contribute-dependency-28.patch"
       }
     }
   }
