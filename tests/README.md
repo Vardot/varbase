@@ -14,7 +14,7 @@ the composer.
 ## Create a Varbase project with [Composer](https://getcomposer.org/download/):
 
 ```
-composer create-project vardot/varbase-project:8.4.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/varbase:8.4.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 --------------------------------------------------------------------------------
@@ -76,7 +76,7 @@ terminal then you could run the following command:
 ```
 $ ../../../bin/behat tests/features/varbase
 ```
-4. Run the behat command at PROJECT_DIR_NAME/docroot/profiles/varbase/testes
+4. Run the behat command at PROJECT_DIR_NAME/docroot/profiles/varbase/tests
 
 $ ../../../bin/behat tests/features/varbase/step2-apply-tests/01-website-base-requirements/01-01-user-registration_only-admins-login.feature
 
@@ -119,8 +119,8 @@ So that I will need a site admin or super admin to add me to the website
 --------------------------------------------------------------------------------
 5. Run this command with the .feature file to run the Gherkin Script in it to the installed site.
 
-$ ../../../bin/behat features/varbase/your-gherkin-feature.feature
-$ ../../../bin/behat features/project-name/your-gherkin-feature.feature
+$ ../../../bin/behat tests/features/varbase/your-gherkin-feature.feature
+$ ../../../bin/behat tests/features/project-name/your-gherkin-feature.feature
 
 --------------------------------------------------------------------------------
 8. Run this command to print all available step definitions
@@ -160,19 +160,19 @@ $ ../../../bin/behat -di
    Example:
 ================================================================================
 ```
-    $ ../../../bin/behat --tags '@development' features/varbase/
+    $ ../../../bin/behat --tags '@development' tests/features/varbase/
 ```
     Which it will run Scenarios which has got the @development tag.
 
 ================================================================================
 ```
-    $ ../../../bin/behat --tags '@staging' features/varbase/
+    $ ../../../bin/behat --tags '@staging' ftests/eatures/varbase/
 
     Which it will run Scenarios which has got the @staging tag.
 ```
 ================================================================================
 
-    $ ../../../bin/behat --tags '@production' features/varbase/
+    $ ../../../bin/behat --tags '@production' tests/features/varbase/
 
     Which it will run Scenarios which has got the @production tag.
 
@@ -200,7 +200,7 @@ $ ../../../bin/behat -di
     # You can run the following command:
     # --------------------------------------------------------------------------
 ```
-    $ ../../../bin/behat features/varbase/ --format pretty --out std  --format html  --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
+    $ ../../../bin/behat tests/features/varbase/ --format pretty --out std  --format html  --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
 ```
     After that you can see the report in the PROJECT_DIR_NAME/docroot/profiles/varbase/tests/reports folder.
 
@@ -208,9 +208,9 @@ $ ../../../bin/behat -di
     initialization and cleaning up after the test.
 
 ```
-    $ ../../../bin/behat features/varbase/step1-init-tests
-    $ ../../../bin/behat features/varbase/step2-apply-tests
-    $ ../../../bin/behat features/varbase/step3-cleanup-tests
+    $ ../../../bin/behat tests/features/varbase/step1-init-tests
+    $ ../../../bin/behat tests/features/varbase/step2-apply-tests
+    $ ../../../bin/behat tests/features/varbase/step3-cleanup-tests
 ```
 
 8. If you want to test the installation process, you will need to use the

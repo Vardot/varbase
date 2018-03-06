@@ -5,44 +5,57 @@
 Default settings could be changed in scripts.settings.yml
 
 
-## Create new Vartheme sub theme for a project.
-By Composer:
-```
-cd PROJECT_DIR_NAME/docroot/profiles/varbase
-composer create-new-vartheme "THEME_NAME" "ltr" "sites/default/themes/custom"
-```
-
-By Bash:
-```
-cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
-bash ./create-new-vartheme.sh "THEME_NAME" "ltr" "sites/default/themes/custom"
-```
---------------------------------------------------------------------------------
-
-## For right to left themes.
-By Composer:
-```
-cd PROJECT_DIR_NAME/docroot/profiles/varbase
-composer create-new-vartheme "THEME_NAME" "rtl" "sites/default/themes/custom"
-```
-
-By Bash:
-```
-cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
-bash ./create-new-vartheme.sh "THEME_NAME" "rtl" "sites/default/themes/custom"
-```
---------------------------------------------------------------------------------
-
-## To create a new theme in the themes/custom
-By Composer:
-```
-cd PROJECT_DIR_NAME/docroot/profiles/varbase
-composer create-new-vartheme "THEME_NAME" "ltr"
-```
+# Create new Vartheme sub theme for a project.
 
 By Bash:
 ```
 cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
 bash ./create-new-vartheme.sh "THEME_NAME" "ltr"
+```
+--------------------------------------------------------------------------------
+
+## For right to left themes.
+
+By Bash:
+```
+cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+bash ./create-new-vartheme.sh "THEME_NAME" "rtl"
+```
+--------------------------------------------------------------------------------
+
+## To create a new theme in the PROJECT_DIR_NAME/docroot/themes/custom
+
+By Bash:
+```
+cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+bash ./create-new-vartheme.sh "THEME_NAME"
+```
+--------------------------------------------------------------------------------
+
+
+# Create new Vartheme Material sub theme for a project.
+
+By Bash:
+```
+cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+bash ./create-new-vartheme_material.sh "THEME_NAME" "ltr"
+```
+--------------------------------------------------------------------------------
+
+## For right to left themes.
+
+By Bash:
+```
+cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+bash ./create-new-vartheme_material.sh "THEME_NAME" "rtl"
+```
+--------------------------------------------------------------------------------
+
+## To create a new theme in the PROJECT_DIR_NAME/docroot/themes/custom
+
+By Bash:
+```
+cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+bash ./create-new-vartheme_material.sh "THEME_NAME"
 ```
 --------------------------------------------------------------------------------

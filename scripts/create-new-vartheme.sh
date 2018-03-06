@@ -6,39 +6,24 @@
 ## Quick tip on how to use this script command file.
 ##
 ## Create new Vartheme sub theme for a project.
-## By Composer:
-## -----------------------------------------------------------------------------
-## cd PROJECT_DIR_NAME/docroot/profiles/varbase
-## composer create-new-vartheme "THEME_NAME" "ltr" "sites/default/themes/custom"
-## -----------------------------------------------------------------------------
-## By Bash:
-## -----------------------------------------------------------------------------
-## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
-## bash ./create-new-vartheme.sh "THEME_NAME" "ltr" "sites/default/themes/custom"
-##------------------------------------------------------------------------------
-##
-## For right to left themes.
-## By Composer:
-## -----------------------------------------------------------------------------
-## cd PROJECT_DIR_NAME/docroot/profiles/varbase
-## composer create-new-vartheme "THEME_NAME" "rtl" "sites/default/themes/custom"
-## -----------------------------------------------------------------------------
-## By Bash:
-## -----------------------------------------------------------------------------
-## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
-## bash ./create-new-vartheme.sh "THEME_NAME" "rtl" "sites/default/themes/custom"
-## -----------------------------------------------------------------------------
-##
-## To create a new theme in the themes/custom
-## By Composer:
-## -----------------------------------------------------------------------------
-## cd PROJECT_DIR_NAME/docroot/profiles/varbase
-## composer create-new-vartheme "THEME_NAME" "ltr"
-## -----------------------------------------------------------------------------
 ## By Bash:
 ## -----------------------------------------------------------------------------
 ## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
 ## bash ./create-new-vartheme.sh "THEME_NAME" "ltr"
+##------------------------------------------------------------------------------
+##
+## For right to left themes.
+## By Bash:
+## -----------------------------------------------------------------------------
+## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+## bash ./create-new-vartheme.sh "THEME_NAME" "rtl"
+## -----------------------------------------------------------------------------
+##
+## To create a new theme in the PROJECT_DIR_NAME/docroot/themes/custom
+## By Bash:
+## -----------------------------------------------------------------------------
+## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+## bash ./create-new-vartheme.sh "THEME_NAME"
 ## -----------------------------------------------------------------------------
 ##
 ################################################################################
@@ -131,37 +116,15 @@ fi
 
 # Default themes creation path.
 theme_path=$drupal_root/$default_themes_creation_path;
-
-# Grape the theme path argument. only if we have arg #3.
-if [ ! -z "$3" ]; then
-  arg3=$3;
-  if [[ $arg3 =~ ^[A-Za-z][A-Za-z0-9_-/]*$ ]]; then
-    if [[ "${arg3: -1}" == "/" ]]; then
-      arg3="${arg3::-1}";
-    fi
-
-    if [[ ! -d "$arg3" ]]; then
-      theme_path=$arg3;
-      mkdir -p $theme_path;
-    fi
-  else
-    echo "---------------------------------------------------------------------------";
-    echo "   Theme path must be in the right format!                                 ";
-    echo "---------------------------------------------------------------------------";
-    exit 1;
-  fi
-else
-  if [[ ! -d "$theme_path" ]]; then
-    mkdir -p $theme_path;
-  fi
-fi
+mkdir -p ${theme_path};
+cp ${current_path}/README.md ${theme_path}/README.md
 
 
 # Create the new Vartheme subtheme if we do not have a folder with that name yet.
 if [[ ! -d "$theme_path/$theme_name" ]]; then
 
   # 1. Copy the VARTHEME_SUBTHEME folder to your custom theme location.
-  cp -r ${drupal_root}/profiles/varbase/themes/vartheme/VARTHEME_SUBTHEME ${theme_path}/${theme_name};
+  cp -r ${drupal_root}/themes/contrib/vartheme/VARTHEME_SUBTHEME ${theme_path}/${theme_name};
 
   # 2. Rename VARTHEME_SUBTHEME.starterkit.yml your_subtheme_name.info.yml
   mv ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.starterkit.yml ${theme_path}/${theme_name}/VARTHEME_SUBTHEME.info.yml ;
@@ -191,14 +154,14 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_main_menu.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_main_menu.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_messages.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_messages.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_page_title.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_page_title.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_socialauthlogin.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_socialauthlogin.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_SUBTHEME_views_block__varbase_heroslider_media_varbase_heroslider_media.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_views_block__varbase_heroslider_media_varbase_heroslider_media.yml 
 
   # 8.  Rename VARTHEME_SUBTHEME.base.css files.
   mv ${theme_path}/${theme_name}/css/base/VARTHEME_SUBTHEME.base.css ${theme_path}/${theme_name}/css/base/${theme_name}.base.css
-  mv ${theme_path}/${theme_name}/css/base/VARTHEME_SUBTHEME.base.css.map ${theme_path}/${theme_name}/css/base/${theme_name}.base.css.map
 
   # 9.  Rename VARTHEME_SUBTHEME-rtl.base.css files.
   mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css
-  mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css.map ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css.map
 
   # 10. Rename VARTHEME_SUBTHEME.base.less file.
   mv ${theme_path}/${theme_name}/less/base/VARTHEME_SUBTHEME.base.less ${theme_path}/${theme_name}/less/base/${theme_name}.base.less
