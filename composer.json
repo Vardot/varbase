@@ -91,7 +91,8 @@
     "drupal/views_bulk_operations": "2.0",
     "drupal/views_bulk_edit": "2.0-beta4",
     "drupal/revision_log_default": "1.0",
-    "drupal/webform": "5.x-dev#385cb39037cc966b286fbe42e591a4119d482c85",
+    "drupal/webform": "5.0-rc3",
+    "drupal/contribute": "1.0-beta7",
     "drupal/default_content": "1.0-alpha7",
     "drupal/content_lock": "1.0-alpha7",
     "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
@@ -367,10 +368,6 @@
       "drupal/slick": {
         "Issue #2948735: Adding the alt attribute to the slick thumbnails":
         "https://www.drupal.org/files/issues/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-2.patch"
-      },
-      "drupal/webform": {
-        "Issue #2944792: Remove Contribute dependency.":
-        "https://www.drupal.org/files/issues/webform-2944792-remove-contribute-dependency-28.patch"
       }
     }
   }
