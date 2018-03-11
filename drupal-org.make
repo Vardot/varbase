@@ -507,7 +507,7 @@ projects[adminimal_theme][version] = 1.3
 projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch
 
 projects[material_admin][type] = theme
-projects[material_admin][version] = 1.0-alpha5
+projects[material_admin][version] = 1.0-alpha6
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Legacy Contrib modules.
