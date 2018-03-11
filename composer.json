@@ -94,7 +94,7 @@
     "drupal/webform": "5.0-rc3",
     "drupal/contribute": "1.0-beta7",
     "drupal/default_content": "1.0-alpha7",
-    "drupal/content_lock": "1.0-alpha7",
+    "drupal/content_lock": "1.0-alpha8",
     "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
     "drupal/rabbit_hole": "1.0-beta4",
     "drupal/fast_404": "1.0-alpha2",
