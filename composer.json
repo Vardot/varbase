@@ -27,7 +27,7 @@
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "drupal/core": "8.4.5",
+    "drupal/core": "8.5.0",
     "drupal/config_update": "1.5",
     "drupal/config_filter": "1.1",
     "drupal/config_ignore": "2.1",
@@ -153,18 +153,18 @@
     "drupal/social_auth_linkedin": "2.0-beta1",
     "drupal/ckeditor_media_embed": "1.1",
     "drupal/total_control": "2.0-alpha4",
-    "drupal/anchor_link": "1.x-dev",
-    "drupal/entity_browser_enhanced": "1.x-dev",
-    "drupal/vmi": "1.x-dev",
-    "drupal/varbase_bootstrap_paragraphs": "4.x-dev",
-    "drupal/varbase_editor": "4.x-dev",
-    "drupal/varbase_heroslider_media": "4.x-dev",
-    "drupal/varbase_carousels": "4.x-dev",
-    "drupal/varbase_total_control": "1.x-dev",
-    "drupal/varbase_auth" : "4.x-dev",
-    "drupal/varbase_blog" : "4.x-dev",
-    "drupal/vartheme": "4.x-dev",
-    "drupal/vartheme_material": "4.x-dev",
+    "drupal/anchor_link": "1.6",
+    "drupal/entity_browser_enhanced": "1.0-rc1",
+    "drupal/vmi": "1.0-rc1",
+    "drupal/varbase_bootstrap_paragraphs": "4.0-rc2",
+    "drupal/varbase_editor": "4.19",
+    "drupal/varbase_heroslider_media": "4.0-rc1",
+    "drupal/varbase_carousels": "4.0-rc1",
+    "drupal/varbase_total_control": "1.0-beta10",
+    "drupal/varbase_auth" : "4.0-alpha1",
+    "drupal/varbase_blog" : "4.0-alpha1",
+    "drupal/vartheme": "4.16",
+    "drupal/vartheme_material": "4.0-alpha1",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     "vardot/dropzone": "4.3.0.1",
     "vardot/blazy": "1.8.2.1",
@@ -239,11 +239,11 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/1356276-408--8.4.4.patch",
+        "https://www.drupal.org/files/issues/drupal-n1356276-417-d8.5.%2A.patch",
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
         "https://www.drupal.org/files/issues/2720101-43.patch",
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
-        "https://www.drupal.org/files/issues/2599228-31.patch",
+        "https://www.drupal.org/files/issues/2599228-31-tests-only.patch",
         "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
         "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
@@ -251,7 +251,9 @@
         "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":
         "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch",
         "Issue #2665328: Variants take entity label not the variant title":
-        "https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch"
+        "https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch",
+        "Issue #2918564: Update 'page_manager.variant_route_filter' service according to core changes":
+        "https://www.drupal.org/files/issues/2918564-22.patch"
       },
       "drupal/coffee": {
         "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
@@ -368,6 +370,10 @@
       "drupal/slick": {
         "Issue #2948735: Adding the alt attribute to the slick thumbnails":
         "https://www.drupal.org/files/issues/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-2.patch"
+      },
+      "drupal/login_destination": {
+        "Issue #2947616: Fixed SetOptions on null causing error.":
+        "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
       }
     }
   }

@@ -31,6 +31,8 @@ projects[page_manager][version] = 4.0-beta2
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch
 ;; Issue #2665328: Variants take entity label not the variant title
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch
+;; Issue #2918564: Update 'page_manager.variant_route_filter' service according to core changes
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/2918564-22.patch
 
 projects[panels][type] = module
 projects[panels][version] = 4.2
@@ -302,7 +304,7 @@ projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
 
 projects[charts][type] = module
-projects[charts][version] = 3.0-alpha8
+projects[charts][version] = 3.0-alpha7
 
 projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][download][url] = https://git.drupal.org/project/google_analytics_reports.git
@@ -319,6 +321,8 @@ projects[login_destination][type] = module
 projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
 projects[login_destination][download][revision] = 54be8b89fdc073ca40af6b9b2eeb050e0aeb7908
 projects[login_destination][download][branch] = 8.x-1.x
+;; Issue #2947616: Fixed SetOptions on null causing error.
+projects[login_destination][patch][] = https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch
 
 projects[betterlogin][type] = module
 projects[betterlogin][download][url] = https://git.drupal.org/project/betterlogin.git
@@ -531,13 +535,13 @@ projects[xmlsitemap][version] = 1.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[anchor_link][type] = module
-projects[anchor_link][version] = 1.x-dev
+projects[anchor_link][version] = 1.6
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.x-dev
+projects[entity_browser_enhanced][version] = 1.0-rc1
 
 projects[vmi][type] = module
-projects[vmi][version] = 1.x-dev
+projects[vmi][version] = 1.0-rc1
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4
@@ -549,35 +553,35 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.x-dev
+projects[varbase_editor][version] = 4.19
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.x-dev
+projects[varbase_heroslider_media][version] = 4.0-rc1
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 4.x-dev
+projects[varbase_carousels][version] = 4.0-rc1
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 4.0-rc2
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.x-dev
+projects[varbase_total_control][version] = 1.0-beta10
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 4.x-dev
+projects[varbase_auth][version] = 4.0-alpha1
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 4.x-dev
+projects[varbase_blog][version] = 4.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = module
-projects[vartheme][version] = 4.x-dev
+projects[vartheme][version] = 4.16
 
 projects[vartheme_material][type] = module
-projects[vartheme_material][version] = 4.x-dev
+projects[vartheme_material][version] = 4.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
