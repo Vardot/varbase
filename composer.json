@@ -163,7 +163,7 @@
     "drupal/varbase_auth" : "4.0-alpha1",
     "drupal/varbase_blog" : "4.0-alpha1",
     "drupal/vartheme": "4.17",
-    "drupal/vartheme_material": "4.0-alpha1",
+    "drupal/vartheme_material": "4.0-alpha2",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     "vardot/dropzone": "4.3.0.1",
     "vardot/blazy": "1.8.2.1",
