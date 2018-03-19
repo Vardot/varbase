@@ -142,7 +142,7 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   # 6. Rename VARTHEME_MATERIAL_SUBTHEME.schema.yml
   mv ${theme_path}/${theme_name}/config/schema/VARTHEME_MATERIAL_SUBTHEME.schema.yml ${theme_path}/${theme_name}/config/schema/${theme_name}.schema.yml ;
 
-  # 7. Rename VARTHEME_MATERIAL_SUBTHEME optional blocks.
+  # 7.1 Rename VARTHEME_MATERIAL_SUBTHEME optional blocks.
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_branding.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_branding.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_breadcrumbs.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_breadcrumbs.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_content.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_content.yml
@@ -157,17 +157,29 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_socialauthlogin.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_socialauthlogin.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_views_block__varbase_heroslider_media_varbase_heroslider_media.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_views_block__varbase_heroslider_media_varbase_heroslider_media.yml 
 
+  # 7.2 Rename the extentions of TWIG template files.
+  # html.html.twig is very important and needed file for RTL websites.
+  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/system/html.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/system/html.html.twig
+
+  # Custom Better Login templates for edit, login, rest password, and register template files. 
+  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--edit.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--edit.html.twig
+  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--login.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--login.html.twig
+  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--password.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--password.html.twig
+  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--register.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--register.html.twig
+  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--reset.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--reset.html.twig
+
+
   # 8.  Rename VARTHEME_MATERIAL_SUBTHEME.base.css files.
   mv ${theme_path}/${theme_name}/css/base/VARTHEME_MATERIAL_SUBTHEME.base.css ${theme_path}/${theme_name}/css/base/${theme_name}.base.css
 
   # 9.  Rename VARTHEME_MATERIAL_SUBTHEME-rtl.base.css files.
-  mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_SUBTHEME-rtl.base.css ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css
+  mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_MATERIAL_SUBTHEME-rtl.base.css ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css
 
   # 10. Rename VARTHEME_MATERIAL_SUBTHEME.base.less file.
   mv ${theme_path}/${theme_name}/less/base/VARTHEME_MATERIAL_SUBTHEME.base.less ${theme_path}/${theme_name}/less/base/${theme_name}.base.less
 
   # 11.  Rename VARTHEME_MATERIAL_SUBTHEME-rtl.base.less file.
-  mv ${theme_path}/${theme_name}/less/rtl/base/VARTHEME_SUBTHEME-rtl.base.less ${theme_path}/${theme_name}/less/rtl/base/${theme_name}-rtl.base.less
+  mv ${theme_path}/${theme_name}/less/rtl/base/VARTHEME_MATERIAL_SUBTHEME-rtl.base.less ${theme_path}/${theme_name}/less/rtl/base/${theme_name}-rtl.base.less
 
   # 12. Replace all VARTHEME_MATERIAL_SUBTHEME with the machine name of your theme.
   grep -rl 'VARTHEME_MATERIAL_SUBTHEME' ${theme_path}/${theme_name} | xargs sed -i "s/VARTHEME_MATERIAL_SUBTHEME/${theme_name}/g" ;
