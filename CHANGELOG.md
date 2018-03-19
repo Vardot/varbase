@@ -4,10 +4,10 @@
 * Issue [#2950672](https://www.drupal.org/node/2950672):
                   Updated [Drupal core] from 8.4.5 to 8.5.0
 
-Only updated [Drupal core] from 8.4.5 to 8.5.0
-Keeping the use of media_entity module Varbase 8.x-4.x 
-Planned to have Varbase 8.x-5.x which planned to use the media module
- in Drupal 8.5.x core.
+Only updated [*Drupal core*] from 8.4.5 to 8.5.0
+Keeping the use of *media_entity* module in *Varbase 8.x-4.x* 
+Planned to have *Varbase 8.x-5.x* branch to use the *media* module
+ in *Drupal 8.5.x* core.
 
 ### Added since Varbase 8.4.16:
 * Issue [#2953394](https://www.drupal.org/node/2953394):
@@ -31,6 +31,9 @@ Planned to have Varbase 8.x-5.x which planned to use the media module
                   [VARTHEME_MATERIAL_SUBTHEM] so we do not end up loading
                   theme with [Vartheme Material] after the new update of
                   TWIG engine in Drupal 8.5.0
+* Issue [#2953417](https://www.drupal.org/node/2953417):
+                  Varbase 8.4.17: Updated [CHANGELOG.md, UPDATE.md] files and
+                  filtered the code for Drupal 8 Coding Standard.
 
 ### Updates since Varbase 8.4.16
 * Issue [#2950672](https://www.drupal.org/node/2950672):
