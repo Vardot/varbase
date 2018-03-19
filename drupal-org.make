@@ -575,7 +575,7 @@ projects[varbase_blog][version] = 4.0-alpha1
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = module
-projects[vartheme][version] = 4.16
+projects[vartheme][version] = 4.17
 
 projects[vartheme_material][type] = module
 projects[vartheme_material][version] = 4.0-alpha1
