@@ -117,7 +117,7 @@
     "drupal/honeypot": "1.27",
     "drupal/shield": "1.2",
     "drupal/captcha": "1.0-beta1",
-    "drupal/recaptcha": "2.2",
+    "drupal/recaptcha": "2.3",
     "drupal/search_api": "1.7",
     "drupal/mailsystem": "4.1",
     "drupal/smtp": "1.0-beta3",

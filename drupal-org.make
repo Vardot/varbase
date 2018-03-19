@@ -430,7 +430,7 @@ projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta1
 
 projects[recaptcha][type] = module
-projects[recaptcha][version] = 2.2
+projects[recaptcha][version] = 2.3
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase Search
