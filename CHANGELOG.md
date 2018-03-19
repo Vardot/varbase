@@ -1,3 +1,85 @@
+## 8.4.17
+
+### Highlighted important changes since Varbase 8.4.16:
+* Issue [#2950672](https://www.drupal.org/node/2950672):
+                  Updated [Drupal core] from 8.4.5 to 8.5.0
+
+Only updated [Drupal core] from 8.4.5 to 8.5.0
+Keeping the use of media_entity module Varbase 8.x-4.x 
+Planned to have Varbase 8.x-5.x which planned to use the media module
+ in Drupal 8.5.x core.
+
+### Added since Varbase 8.4.16:
+* Issue [#2953394](https://www.drupal.org/node/2953394):
+                  Added custom [media html twig] template file with
+                  no contextual links to [Vartheme Admin]
+                  and [Vartheme Material Admin] administration themes.
+* Issue [#2953398](https://www.drupal.org/node/2953398):
+                  Added custom [media html twig] template file with
+                  no contextual links to [Vartheme] front-end theme.
+* Issue [#2953411](https://www.drupal.org/node/2953411):
+                  Added custom [media html twig] template file with
+                  no contextual links to [Vartheme Material] front-end theme.
+
+### Changed since Varbase 8.4.16:
+* Issue [#2954204](https://www.drupal.org/node/2954204):
+                  Changed twig template files extension in [VARTHEME_SUBTHEM]
+                  so we do not end up loading theme with [Vartheme] after
+                  the new update of TWIG engine in Drupal 8.5.0
+* Issue [#2954210](https://www.drupal.org/node/2954210):
+                  Changed twig template files extension in
+                  [VARTHEME_MATERIAL_SUBTHEM] so we do not end up loading
+                  theme with [Vartheme Material] after the new update of
+                  TWIG engine in Drupal 8.5.0
+
+### Updates since Varbase 8.4.16
+* Issue [#2950672](https://www.drupal.org/node/2950672):
+                  Updated [Drupal core] from 8.4.5 to 8.5.0
+* Issue [#2953276](https://www.drupal.org/node/2953276):
+                  Updated [Bootstrap] theme from 8.3.10 to 8.3.11
+* Issue [#2954241](https://www.drupal.org/node/2954241):
+                  Updated [Vartheme] theme from 8.4.16 to 8.4.17
+* Issue [#2954243](https://www.drupal.org/node/2954243):
+                  Updated [Vartheme Material] theme
+                  from 8.4.0-alpha1 to 8.4.0-alpha2
+* Issue [#2951948](https://www.drupal.org/node/2951948):
+                  Updated [Views Bulk Operations (VBO)] module
+                  from 8.2.0 to 8.2.1
+* Issue [#2951949](https://www.drupal.org/node/2951949):
+                  Updated [Material Admin] theme
+                  from 8.1.0-alpha5 to 8.1.0-alpha6
+* Issue [#2951950](https://www.drupal.org/node/2951950):
+                  Updated [Content locking (anti-concurrent editing)] module
+                  from 8.1.0-alpha7 to 8.1.0-alpha8
+* Issue [#2951953](https://www.drupal.org/node/2951953):
+                  Updated [Charts] module from 8.3.0-alpha7 to 8.3.0-alpha8
+* Issue [#2953232](https://www.drupal.org/node/2953232):
+                  Updated [Entity API] module from 8.1.0-beta1 to 8.1.0-beta3
+* Issue [#2953236](https://www.drupal.org/node/2953236):
+                  Updated [Redirect] module from 8.1.0 to 8.1.1
+* Issue [#2953240](https://www.drupal.org/node/2953240):
+                  Updated [Schema.org Metatag] module from 8.1.0 to 8.1.1
+* Issue [#2953248](https://www.drupal.org/node/2953248):
+                  Updated [Views Bulk Edit] module
+                  from 8.2.0-beta4 to 8.2.0-rc1
+* Issue [#2953254](https://www.drupal.org/node/2953254):
+                  Updated [Webform] module from 8.5.0-rc3 to 8.5.0-rc5
+                  - And removed [contribute] module
+* Issue [#2954170](https://www.drupal.org/node/2954170):
+                  Updated [Webform] module from 8.5.0-rc5 to 8.5.0-rc6
+* Issue [#2954167](https://www.drupal.org/node/2954167):
+                  Updated [reCAPTCHA] module from 8.2.2 to 8.2.3
+
+### Fixes since Varbase 8.4.16:
+* Issue [#2953415](https://www.drupal.org/node/2953415):
+                  Fixed wrong RTL file name for VARTHEME_MATERIAL_SUBTHEME
+                  in the [Vartheme Material] theme.
+* Issue [#2900926](https://www.drupal.org/node/2900926):
+                  Fixed issues on the Vartheme sub theme generator scripts
+                  for a project using command line works for RTL option but
+                  does not for LTR.
+
+
 ## 8.4.16
 
 ### Highlighted important changes since Varbase 8.4.15:
@@ -197,7 +279,7 @@
                   from 8.2.0-alpha2 to 8.2.0-beta1
 * Issue [#2947878](https://www.drupal.org/node/2947878):
                   Updated [Search API] module from 8.1.6 to 8.1.7
-* Issue [#2949958](https://www.drupal.org/node/2949958
+* Issue [#2949958](https://www.drupal.org/node/2949958):
                   Updated [Focal Point] module from 8.1.0-beta5 to 8.1.0-beta6
 * Issue [#2949960](https://www.drupal.org/node/2949960):
                   Updated [Pathauto] module from 8.1.0 to 8.1.1
