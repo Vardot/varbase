@@ -40,6 +40,12 @@ Planned to have *Varbase 8.x-5.x* branch to use the *media* module
                   Updated [Drupal core] from 8.4.5 to 8.5.0
 * Issue [#2954474](https://www.drupal.org/node/2954474):
                   Updated [composer/installers] from 1.4.0 to 1.5.0
+                  in require and development tools in require-dev
+*                  Updated [drush/drush] from 8.1.15 to 8.1.16
+*                  Updated [drupal/drupal-extension] from 3.4.0 to 3.4.1
+*                  Updated [phing/phing from] 2.16.0 to 2.16.1
+*                  Updated [behat/mink-extension] from 2.3.0 to 2.3.1
+*                  Updated [behatch/contexts] from 3.0.1 to 3.1.0
 * Issue [#2953276](https://www.drupal.org/node/2953276):
                   Updated [Bootstrap] theme from 8.3.10 to 8.3.11
 * Issue [#2954241](https://www.drupal.org/node/2954241):
