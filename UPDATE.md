@@ -24,7 +24,7 @@ developers need to do to update the last release to the new release.
 * Backup your project files.
 * Test a restore for your backups, to make sure that your backups works.
 
-# 3 - Get the packaged files for the new version of Varbase 8.4.x
+# 3 - Get the packaged files for the new version of Varbase 8.5.x
 
 * From Drupal website: https://www.drupal.org/project/varbase
 * Using varbase-project: https://packagist.org/packages/vardot/varbase-project
@@ -558,12 +558,12 @@ Project template for Varbase distribution. as we had switch to create Varbase
  projects with the following clean composer command and files:
 
 https://github.com/Vardot/varbase-project
-https://github.com/Vardot/varbase-project/blob/8.4.x/composer.json
+https://github.com/Vardot/varbase-project/blob/8.5.x/composer.json
 
 Every Varbase script or command will be in vardot/varbase, bin/behat, marge-scripts.
 
 ```
-composer create-project vardot/varbase-project:8.4.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/varbase-project:8.5.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 ### Moved all scripts:
@@ -572,22 +572,22 @@ Varbase Procedures to the varbase base code. not in any varbase-build or
  varbase-project project builders.
 
 ### Following the drupal/drupal composer.json
-https://github.com/drupal/drupal/blob/8.4.x/composer.json
+https://github.com/drupal/drupal/blob/8.5.x/composer.json
 
 Which will call and merge drupal/core composer.json
-https://github.com/drupal/core/blob/8.4.x/composer.json
+https://github.com/drupal/core/blob/8.5.x/composer.json
 This is the composer file for standard, and minimum drupal profiles.
 
 ### Varbase Project
 https://github.com/Vardot/varbase-project
 
 ### Varbase core
-https://github.com/Vardot/varbase/blob/8.x-4.x/README.md
+https://github.com/Vardot/varbase/blob/8.x-5.x/README.md
 
 ### Create new Vartheme sub theme for a project
-https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/README.md
-https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/scripts.settings.yml
-https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/create-new-vartheme.sh
+https://github.com/Vardot/varbase/blob/8.x-5.x/scripts/README.md
+https://github.com/Vardot/varbase/blob/8.x-5.x/scripts/scripts.settings.yml
+https://github.com/Vardot/varbase/blob/8.x-5.x/scripts/create-new-vartheme.sh
 
 
 ```
@@ -642,12 +642,12 @@ Project template for Varbase distribution. as we had switch to create Varbase
  projects with the following clean composer command and files:
 
 https://github.com/Vardot/varbase-project
-https://github.com/Vardot/varbase-project/blob/8.4.x/composer.json
+https://github.com/Vardot/varbase-project/blob/8.5.x/composer.json
 
 Every Varbase script or command will be in vardot/varbase, bin/behat, marge-scripts.
 
 ```
-composer create-project vardot/varbase-project:8.4.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/varbase-project:8.5.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 ### Moved all scripts:
@@ -656,22 +656,22 @@ Varbase Procedures to the varbase base code. not in any varbase-build or
  varbase-project project builders.
 
 ### Following the drupal/drupal composer.json
-https://github.com/drupal/drupal/blob/8.4.x/composer.json
+https://github.com/drupal/drupal/blob/8.5.x/composer.json
 
 Which will call and merge drupal/core composer.json
-https://github.com/drupal/core/blob/8.4.x/composer.json
+https://github.com/drupal/core/blob/8.5.x/composer.json
 This is the composer file for standard, and minimum drupal profiles.
 
 ### Varbase Project
 https://github.com/Vardot/varbase-project
 
 ### Varbase core
-https://github.com/Vardot/varbase/blob/8.x-4.x/README.md
+https://github.com/Vardot/varbase/blob/8.x-5.x/README.md
 
 ### Create new Vartheme sub theme for a project
-https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/README.md
-https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/scripts.settings.yml
-https://github.com/Vardot/varbase/blob/8.x-4.x/scripts/create-new-vartheme.sh
+https://github.com/Vardot/varbase/blob/8.x-5.x/scripts/README.md
+https://github.com/Vardot/varbase/blob/8.x-5.x/scripts/scripts.settings.yml
+https://github.com/Vardot/varbase/blob/8.x-5.x/scripts/create-new-vartheme.sh
 
 
 ```
