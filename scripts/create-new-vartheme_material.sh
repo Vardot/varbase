@@ -155,18 +155,19 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_messages.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_messages.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_page_title.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_page_title.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_socialauthlogin.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_socialauthlogin.yml
-  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_views_block__varbase_heroslider_media_varbase_heroslider_media.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_views_block__varbase_heroslider_media_varbase_heroslider_media.yml 
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_MATERIAL_SUBTHEME_views_block__varbase_heroslider_media_varbase_heroslider_media.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_views_block__varbase_heroslider_media_varbase_heroslider_media.yml
 
   # 7.2 Rename the extentions of TWIG template files.
   # html.html.twig is very important and needed file for RTL websites.
-  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/system/html.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/system/html.html.twig
+  mv ${theme_path}/${theme_name}/templates/system/html.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/system/html.html.twig
 
-  # Custom Better Login templates for edit, login, rest password, and register template files. 
-  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--edit.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--edit.html.twig
-  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--login.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--login.html.twig
-  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--password.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--password.html.twig
-  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--register.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--register.html.twig
-  mv ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--reset.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/VARTHEME_MATERIAL_SUBTHEME/templates/betterlogin/page--user--reset.html.twig
+  # Custom Better Login templates for edit, login, rest password, and register template files.
+  mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--edit.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--edit.html.twig
+  mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--login.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--login.html.twig
+  mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--password.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--password.html.twig
+  mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--register.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--register.html.twig
+  mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--reset.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--reset.html.twig
+  mv ${theme_path}/${theme_name}/templates/betterlogin/block--social-auth.html.twig-VARTHEME_MATERIAL_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/block--social-auth.html.twig
 
 
   # 8.  Rename VARTHEME_MATERIAL_SUBTHEME.base.css files.
