@@ -373,6 +373,10 @@
       "drupal/login_destination": {
         "Issue #2947616: Fixed SetOptions on null causing error.":
         "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
+      },
+      "drupal/masquerade": {
+        "Issue #2951196: Fix Permission Denied when trying to masquerade when baseUrl is not /":
+        "https://www.drupal.org/files/issues/2018-03-09/masquerade-no-baseUrl-2951196-3.patch"
       }
     }
   }

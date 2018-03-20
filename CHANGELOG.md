@@ -81,6 +81,9 @@ Planned to have *Varbase 8.x-5.x* branch to use the *media* module
                   Fixed issues on the Vartheme sub theme generator scripts
                   for a project using command line works for RTL option but
                   does not for LTR.
+* Issue [#2954467](https://www.drupal.org/node/2954467):
+                  Fixed issues with the [masquerade] Permission Denied when
+                  trying to masquerade when baseUrl is not /.
 
 
 ## 8.4.16
