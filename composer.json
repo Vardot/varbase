@@ -81,7 +81,7 @@
     "drupal/pathauto": "1.1",
     "drupal/redirect": "1.1",
     "drupal/metatag": "1.4",
-    "drupal/schema_metatag": "1.1",
+    "drupal/schema_metatag": "1.2",
     "drupal/simple_sitemap": "2.11",
     "drupal/google_analytics": "2.2",
     "drupal/yoast_seo": "1.3",
