@@ -98,7 +98,7 @@
     "drupal/rabbit_hole": "1.0-beta4",
     "drupal/fast_404": "1.0-alpha2",
     "drupal/diff": "1.0-rc1",
-    "drupal/masquerade": "2.0-beta1",
+    "drupal/masquerade": "2.0-beta2",
     "drupal/menu_admin_per_menu": "1.0",
     "drupal/drd_agent": "3.6",
     "drupal/libraries_ui": "1.0",
@@ -373,10 +373,6 @@
       "drupal/login_destination": {
         "Issue #2947616: Fixed SetOptions on null causing error.":
         "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
-      },
-      "drupal/masquerade": {
-        "Issue #2951196: Fix Permission Denied when trying to masquerade when baseUrl is not /":
-        "https://www.drupal.org/files/issues/2018-03-09/masquerade-no-baseUrl-2951196-3.patch"
       }
     }
   }
