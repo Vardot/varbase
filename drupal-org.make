@@ -550,35 +550,35 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.19
+projects[varbase_editor][version] = 5.x-dev
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.0-rc1
+projects[varbase_heroslider_media][version] = 5.x-dev
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 4.0-rc1
+projects[varbase_carousels][version] = 5.x-dev
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.0-rc2
+projects[varbase_bootstrap_paragraphs][version] = 5.x-dev
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.0-beta10
+projects[varbase_total_control][version] = 5.x-dev
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 4.0-alpha1
+projects[varbase_auth][version] = 5.x-dev
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 4.0-alpha1
+projects[varbase_blog][version] = 5.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = module
-projects[vartheme][version] = 4.17
+projects[vartheme][version] = 5.x-dev
 
 projects[vartheme_material][type] = module
-projects[vartheme_material][version] = 4.0-alpha2
+projects[vartheme_material][version] = 5.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
