@@ -15,3 +15,8 @@ config_bit:
           selected: false
           config_form: true
           formbit: "src/FormBit/varbase_development.formbit.php"
+        varbase_styleguide:
+          title: "Varbase Style guide"
+          description: "Install Varbase custom styling guide if you want to have a full look for Varbase components, Bootstrap elements, and view mode style for content types. This will install several modules that help you on themeing and styling your site, such as <a href=\"https://www.drupal.org/project/styleguide\" target=\"_blank\">Style Guide</a>."
+          selected: false
+          config_form: false

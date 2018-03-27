@@ -349,6 +349,9 @@ projects[ckeditor_media_embed][version] = 1.1
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
 
+projects[styleguide][type] = module
+projects[styleguide][version] = 1.0-alpha3
+
 projects[paragraphs_previewer][type] = module
 projects[paragraphs_previewer][version] = 1.2
 ;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
@@ -528,7 +531,7 @@ projects[xmlsitemap][type] = module
 projects[xmlsitemap][version] = 1.0-alpha2
 
 ;;;;;;;;;;;;;;;;;;;;;
-;; Varbase public contrib modules.
+;; General Public contributed modules.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[anchor_link][type] = module
@@ -546,20 +549,35 @@ projects[total_control][version] = 2.0-alpha4
 projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2.patch
 
 ;;;;;;;;;;;;;;;;;;;;;
-;; Varbase public contrib features.
+;; Varbase public contributed modules.
 ;;;;;;;;;;;;;;;;;;;;;
+
+projects[varbase_core][type] = module
+projects[varbase_core][version] = 5.x-dev
+
+projects[varbase_media][type] = module
+projects[varbase_media][version] = 5.x-dev
+
+projects[varbase_bootstrap_paragraphs][type] = module
+projects[varbase_bootstrap_paragraphs][version] = 5.x-dev
 
 projects[varbase_editor][type] = module
 projects[varbase_editor][version] = 5.x-dev
+
+projects[varbase_landing][type] = module
+projects[varbase_landing][version] = 5.x-dev
+
+projects[varbase_search][type] = module
+projects[varbase_search][version] = 5.x-dev
+
+projects[varbase_seo][type] = module
+projects[varbase_seo][version] = 5.x-dev
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 5.x-dev
 
 projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 5.x-dev
-
-projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 5.x-dev
 
 projects[varbase_total_control][type] = module
 projects[varbase_total_control][version] = 5.x-dev
@@ -570,8 +588,11 @@ projects[varbase_auth][version] = 5.x-dev
 projects[varbase_blog][type] = module
 projects[varbase_blog][version] = 5.x-dev
 
+projects[varbase_styleguide][type] = module
+projects[varbase_styleguide][version] = 5.x-dev
+
 ;;;;;;;;;;;;;;;;;;;;;
-;; Varbase public contrib themes.
+;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = module
@@ -579,6 +600,12 @@ projects[vartheme][version] = 5.x-dev
 
 projects[vartheme_material][type] = module
 projects[vartheme_material][version] = 5.x-dev
+
+projects[vartheme_admin][type] = module
+projects[vartheme_admin][version] = 5.x-dev
+
+projects[vartheme_material_admin][type] = module
+projects[vartheme_material_admin][version] = 5.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

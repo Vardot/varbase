@@ -407,27 +407,7 @@ function varbase_fix_entity_update($entity_update) {
 function varbase_config_bit_for_multilingual($enable_multilingual) {
 
   // Change configurations to work with enable_multilingual.
-  if ($enable_multilingual) {
-
-    // Put back the language config if it was not in before installation.
-    ConfigBit::actionUnArchiveFiles('configbit/language.action.varbase.bit.yml', 'enable_multilingual', TRUE, 'profile', 'varbase');
-
-    // Put back the language config bit.
-    ConfigBit::actionAdd('configbit/varbase_landing.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionAdd('configbit/varbase_page.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionAdd('configbit/varbase_media.info.bit.yml', 'enable_multilingual', TRUE, 'dependencies', 'profile', 'varbase');
-  }
-  else {
-    // Change configurations to work with NO multilingual.
-    // Archive the language config out before installation.
-    ConfigBit::actionArchiveFiles('configbit/language.action.varbase.bit.yml', 'enable_multilingual', FALSE, 'profile', 'varbase');
-
-    // Remove language config bit before installation.
-    ConfigBit::actionRemove('configbit/varbase_landing.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionRemove('configbit/varbase_page.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
-    ConfigBit::actionRemove('configbit/varbase_media.info.bit.yml', 'enable_multilingual', FALSE, 'dependencies', 'profile', 'varbase');
-  }
-
+  // Each module will manage its multilingual config.
 }
 
 /**
