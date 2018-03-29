@@ -8,14 +8,10 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
-* https://www.drupal.org/project/varbase/releases/8.x-4.10
-* https://www.drupal.org/project/varbase/releases/8.x-4.11
-* https://www.drupal.org/project/varbase/releases/8.x-4.12
-* https://www.drupal.org/project/varbase/releases/8.x-4.13
-* https://www.drupal.org/project/varbase/releases/8.x-4.14
 * https://www.drupal.org/project/varbase/releases/8.x-4.15
 * https://www.drupal.org/project/varbase/releases/8.x-4.16
 * https://www.drupal.org/project/varbase/releases/8.x-4.17
+* https://www.drupal.org/project/varbase/releases/8.x-4.18
 
 
 # 2 - Backups
@@ -88,12 +84,26 @@ while working on the project.
 
 --------------------------------------------------------------------------------
 
+
+# Updating Varbase 8.4.17 to Varbase 8.4.18
+## Same as updating Varbase 8.4.16 to Varbase 8.4.17
+
+This release fixes security vulnerabilities in Drupal core.
+
+Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002
+https://www.drupal.org/sa-core-2018-002
+
+--------------------------------------------------------------------------------
+
+
 # Updating Varbase 8.4.16 to Varbase 8.4.17
   If you already did the update of Varbase from 8.4.16 to 8.4.17, this
   updating to 8.4.16 will be a quick and easy one.
 
 Before any update, please disable the [contribute] module, which the dependency 
-had been removed in [Webform 8.5.0-rc5] module. [Remove Contribute dependency and move Contribute message into Webform module.](https://www.drupal.org/node/2951706)
+had been removed in [Webform 8.5.0-rc5] module.
+ [Remove Contribute dependency](https://www.drupal.org/node/2951706)
+ and move Contribute message into Webform module.
 
 
 ## Updating files with Copy and Paste for Varbase 8.4.16 to Varbase 8.4.17

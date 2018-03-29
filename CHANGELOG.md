@@ -1,3 +1,31 @@
+## 8.4.18
+
+### Highlighted important changes since Varbase 8.4.17:
+* Issue [#2956819](https://www.drupal.org/node/ttttt):
+                  Updated [Drupal core] from 8.5.0 to 8.5.1
+
+Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002
+https://www.drupal.org/sa-core-2018-002
+
+### Added since Varbase 8.4.17:
+* No added features.
+
+### Changed since Varbase 8.4.17:
+* No changes.
+
+### Updates since Varbase 8.4.17
+* Issue [#2956819](https://www.drupal.org/node/ttttt):
+                  Updated [Drupal core] from 8.5.0 to 8.5.1
+* Issue [#2955838](https://www.drupal.org/node/ttttt):
+                  Updated [Webform] module from 8.5.0-rc6 to 8.5.0-rc7
+* Issue [#2955845](https://www.drupal.org/node/ttttt):
+                  Updated [Masquerade] module from 8.2.0-beta1 to 8.2.0-beta2
+* Issue [#2955852](https://www.drupal.org/node/ttttt):
+                  Updated [Schema.org Metatag] module from 8.1.1 to 8.1.2
+
+### Fixes since Varbase 8.4.17:
+* No Fixes.
+
 ## 8.4.17
 
 ### Highlighted important changes since Varbase 8.4.16:
