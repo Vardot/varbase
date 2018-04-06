@@ -595,16 +595,16 @@ projects[varbase_styleguide][version] = 5.x-dev
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[vartheme][type] = module
+projects[vartheme][type] = theme
 projects[vartheme][version] = 5.x-dev
 
-projects[vartheme_material][type] = module
+projects[vartheme_material][type] = theme
 projects[vartheme_material][version] = 5.x-dev
 
-projects[vartheme_admin][type] = module
+projects[vartheme_admin][type] = theme
 projects[vartheme_admin][version] = 5.x-dev
 
-projects[vartheme_material_admin][type] = module
+projects[vartheme_material_admin][type] = theme
 projects[vartheme_material_admin][version] = 5.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
