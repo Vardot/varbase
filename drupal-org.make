@@ -574,10 +574,10 @@ projects[varbase_blog][version] = 4.0-alpha1
 ;; Varbase public contrib themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
-projects[vartheme][type] = module
+projects[vartheme][type] = theme
 projects[vartheme][version] = 4.17
 
-projects[vartheme_material][type] = module
+projects[vartheme_material][type] = theme
 projects[vartheme_material][version] = 4.0-alpha2
 
 ;;;;;;;;;;;;;;;;;;;;;
