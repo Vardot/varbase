@@ -52,6 +52,7 @@ assignments:
   optional:
     types:
       config:
+        block: block
         language_content_settings: language_content_settings
         configurable_language: configurable_language
     enabled: true
@@ -121,8 +122,8 @@ assignments:
   alter:
     enabled: true
     weight: 0
-    core: 1
-    uuid: 1
-    user_permissions: 0
+    core: true
+    uuid: true
+    user_permissions: false
 profile_name: varbase
 is_profile: false

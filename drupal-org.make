@@ -102,10 +102,10 @@ projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clo
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 1.4
+projects[entity_browser][version] = 2.0-alpha2
 
 projects[dropzonejs][type] = module
-projects[dropzonejs][version] = 1.0-alpha8
+projects[dropzonejs][version] = 2.0-alpha3
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0-beta2
@@ -113,17 +113,8 @@ projects[entity_embed][version] = 1.0-beta2
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-beta1
 
-projects[media_entity][type] = module
-projects[media_entity][version] = 1.7
-
-projects[media_entity_document][type] = module
-projects[media_entity_document][version] = 1.1
-
-projects[media_entity_image][type] = module
-projects[media_entity_image][version] = 1.2
-
 projects[video_embed_field][type] = module
-projects[video_embed_field][version] = 1.5
+projects[video_embed_field][version] = 2.0-alpha2
 
 projects[crop][type] = module
 projects[crop][version] = 1.5

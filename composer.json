@@ -52,14 +52,11 @@
     "drupal/embed": "1.0",
     "drupal/entity": "1.0-beta3",
     "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
-    "drupal/entity_browser": "1.4",
-    "drupal/dropzonejs": "1.0-alpha8",
+    "drupal/entity_browser": "2.0-alpha2",
+    "drupal/dropzonejs": "2.0-alpha3",
     "drupal/entity_embed": "1.0-beta2",
     "drupal/inline_entity_form": "1.0-beta1",
-    "drupal/media_entity": "1.7",
-    "drupal/media_entity_document": "1.1",
-    "drupal/media_entity_image": "1.2",
-    "drupal/video_embed_field": "1.5",
+    "drupal/video_embed_field": "2.0-alpha2",
     "drupal/crop": "1.5",
     "drupal/focal_point": "1.0-beta6",
     "drupal/pathologic": "1.x-dev#4f9f3fdcf1e0b224c4d8650e383a769f40abf9bf",
@@ -378,6 +375,10 @@
       "drupal/login_destination": {
         "Issue #2947616: Fixed SetOptions on null causing error.":
         "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
+      },
+      "drupal/rabbit_hole": {
+        "Issue #2918563: rh_media submodule compatible with core media?":
+        "https://www.drupal.org/files/issues/rh_media-upgrade-drupal8.4.2-2918563-6.patch"
       }
     }
   }

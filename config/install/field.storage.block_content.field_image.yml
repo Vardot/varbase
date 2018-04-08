@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - block_content
-    - media_entity
+    - media
 id: block_content.field_image
 field_name: field_image
 entity_type: block_content
