@@ -19,8 +19,8 @@ So that the "Landing page" will have text and images in right and left view.
        And I wait
        And I press the "Save" button
        And I wait
-       And I fill in "Embed Flag Earth in space" for "field_image[0][alt]"
-       And I fill in "Embed Flag Earth all earth in space" for "field_image[0][title]"
+       And I fill in "Embed Flag Earth in space" for "field_media_image[0][alt]"
+       And I fill in "Embed Flag Earth all earth in space" for "field_media_image[0][title]"
        And I fill in "Embed Flag Earth" for "Media name"
        And I press the "Save" button
        And I wait

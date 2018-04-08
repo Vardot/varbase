@@ -22,8 +22,8 @@ So that I will be able to manage files, see where they have been used in content
        And I wait
        And I press the "Save" button
        And I wait
-       And I fill in "Flag Earth in space" for "field_image[0][alt]"
-       And I fill in "Flag Earth all earth in space" for "field_image[0][title]"
+       And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
+       And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
        And I fill in "Flag Earth" for "Media name"
        And I press the "Save" button
        And I wait
