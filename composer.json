@@ -379,6 +379,10 @@
       "drupal/rabbit_hole": {
         "Issue #2918563: rh_media submodule compatible with core media?":
         "https://www.drupal.org/files/issues/rh_media-upgrade-drupal8.4.2-2918563-6.patch"
+      },
+      "drupal/video_embed_field": {
+        "Issue #2922476: Fix test dependencies for media in core.":
+        "https://www.drupal.org/files/issues/2922476-3-change_test_dependencies.patch"
       }
     }
   }
