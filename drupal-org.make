@@ -455,7 +455,7 @@ projects[slick_views][version] = 1.0-rc2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[slick_media][type] = module
-projects[slick_media][version] = 1.0
+projects[slick_media][version] = 2.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
