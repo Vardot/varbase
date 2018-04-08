@@ -573,7 +573,7 @@ projects[varbase_blog][version] = 4.0-alpha1
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 4.17
+projects[vartheme][version] = 4.18
 
 projects[vartheme_material][type] = theme
 projects[vartheme_material][version] = 4.0-alpha2
