@@ -37,7 +37,7 @@ So that it will show up under that rich text field without having to upload the 
        And I wait
        And I fill in "Embed Flag Earth in space" for "field_media_image[0][alt]"
        And I fill in "Embed Flag Earth all earth in space" for "field_media_image[0][title]"
-       And I fill in "Embed Flag Earth" for "Media name"
+       And I fill in "Embed Flag Earth" for "name[0][value]"
        And I press the "Save" button
        And I wait
       Then I should see "Embed Flag Earth"

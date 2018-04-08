@@ -24,7 +24,7 @@ So that I will be able to manage files, see where they have been used in content
        And I wait
        And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
        And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
-       And I fill in "Flag Earth" for "Media name"
+       And I fill in "Flag Earth" for "name[0][value]"
        And I press the "Save" button
        And I wait
       Then I should see "Flag Earth"
@@ -38,7 +38,7 @@ So that I will be able to manage files, see where they have been used in content
      When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"
-     When I fill in "Flag Earth" for "Media name"
+     When I fill in "Flag Earth" for "name[0][value]"
       And I press the "Apply" button
       And I wait
      Then I should see "Flag Earth"
@@ -48,7 +48,7 @@ So that I will be able to manage files, see where they have been used in content
      When I click "Edit"
       And I wait
      Then I should see "Edit Image Flag Earth"
-     When I fill in "Flag Earth after edit" for "Media name"
+     When I fill in "Flag Earth after edit" for "name[0][value]"
       And I press the "Save" button
       And I wait
      Then I should see "Image Flag Earth after edit has been updated."
@@ -58,7 +58,7 @@ So that I will be able to manage files, see where they have been used in content
      When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"
-     When I fill in "Flag Earth after edit" for "Media name"
+     When I fill in "Flag Earth after edit" for "name[0][value]"
       And I press the "Apply" button
       And I wait
       And I wait

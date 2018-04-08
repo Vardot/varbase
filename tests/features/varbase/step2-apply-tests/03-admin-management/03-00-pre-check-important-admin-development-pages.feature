@@ -21,7 +21,7 @@ So that I can use them after the install or update.
       And I should see "Display Suite"
       And I should see "Display modes"
       And I should see "Entityqueues"
-      And I should see "Media bundles"
+      And I should see "Media types"
       And I should see "Menu position rules"
       And I should see "Menus"
       And I should see "Pages"
