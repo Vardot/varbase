@@ -1,5 +1,0 @@
-bundle: varbase
-excluded:
-  - metatag.metatag_defaults.403
-  - metatag.metatag_defaults.404
-required: true

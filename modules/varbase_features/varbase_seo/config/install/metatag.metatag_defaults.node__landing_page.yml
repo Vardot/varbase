@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: node__landing_page
-label: 'Content: Landing page'
-tags:
-  title: '[node:title] | [site:name]'
-  description: '[node:summary]'
