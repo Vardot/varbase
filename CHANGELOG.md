@@ -1,7 +1,60 @@
+## 8.4.19
+
+### Highlighted important changes since Varbase 8.4.18:
+
+* Issue [#2960080](https://www.drupal.org/node/2960080):
+                  Departed modules and themes from Varbase 8.x-4.x Profile
+                  as stand-alone projects.
+* Issue [#2956143](https://www.drupal.org/node/2956143):
+                  Added [Varbase style guide] module.
+
+### Added since Varbase 8.4.18:
+* Issue [#2956143](https://www.drupal.org/node/2956143):
+                  Added [Varbase style guide] module.
+
+### Changed since Varbase 8.4.18:
+* Issue [#2960080](https://www.drupal.org/node/2960080):
+                  Departed modules and themes from Varbase 8.x-4.x Profile
+                  as stand-alone projects
+* Issue [#2960152](https://www.drupal.org/node/2960152):
+                  Varbase 8.4.19: Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Varbase 8.4.18
+* Issue [#2959450](https://www.drupal.org/node/2959450):
+                  Updated [Vartheme] theme from 8.4.17 to 8.4.18
+* Issue [#2960120](https://www.drupal.org/node/2960120):
+                  Updated [Varbase media hero slider] module
+                  from 8.4.0-rc1 to 8.4.0-rc2
+* Issue [#2957552](https://www.drupal.org/node/2957552):
+                  Updated [Metatag] module from 8.1.4 to 8.1.5
+* Issue [#2958109](https://www.drupal.org/node/2958109):
+                  Updated [Taxonomy access fix] module from 8.2.5 to 8.2.6
+* Issue [#2958123](https://www.drupal.org/node/2958123):
+                  Updated [Views Bulk Operations (VBO)] module
+                  from 8.2.1 to 8.2.2
+* Issue [#2960128](https://www.drupal.org/node/2960128):
+                  Updated [Views Bulk Edit] module from 8.2.0-rc2 to 8.2.0
+* Issue [#2958151](https://www.drupal.org/node/2958151):
+                  Updated [Webform] module from 8.5.0-rc7 to 8.5.0-rc10
+* Issue [#2959435](https://www.drupal.org/node/2959435):
+                  Updated [Real-time SEO for Drupal] module
+                  from 8.1.3 to 8.2.0-alpha2
+* Issue [#2959454](https://www.drupal.org/node/2959454):
+                  Updated [Config Filter] module from 8.1.1 to 8.1.2
+* Issue [#2960124](https://www.drupal.org/node/2960124):
+                  Updated [Simple XML sitemap] module from 8.2.11 to 8.2.12
+
+### Fixes since Varbase 8.4.18:
+* Issue [#2959302](https://www.drupal.org/node/2959302) by travisc:
+                  Fixed status of location of varbase base theme and modules
+                  which related to drupal-org.make project type.
+
+
 ## 8.4.18
 
 ### Highlighted important changes since Varbase 8.4.17:
-* Issue [#2956819](https://www.drupal.org/node/ttttt):
+* Issue [#2956819](https://www.drupal.org/node/2956819):
                   Updated [Drupal core] from 8.5.0 to 8.5.1
 
 Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-002
@@ -14,13 +67,13 @@ https://www.drupal.org/sa-core-2018-002
 * No changes.
 
 ### Updates since Varbase 8.4.17
-* Issue [#2956819](https://www.drupal.org/node/ttttt):
+* Issue [#2956819](https://www.drupal.org/node/2956819):
                   Updated [Drupal core] from 8.5.0 to 8.5.1
-* Issue [#2955838](https://www.drupal.org/node/ttttt):
+* Issue [#2955838](https://www.drupal.org/node/2955838):
                   Updated [Webform] module from 8.5.0-rc6 to 8.5.0-rc7
-* Issue [#2955845](https://www.drupal.org/node/ttttt):
+* Issue [#2955845](https://www.drupal.org/node/2955845):
                   Updated [Masquerade] module from 8.2.0-beta1 to 8.2.0-beta2
-* Issue [#2955852](https://www.drupal.org/node/ttttt):
+* Issue [#2955852](https://www.drupal.org/node/2955852):
                   Updated [Schema.org Metatag] module from 8.1.1 to 8.1.2
 
 ### Fixes since Varbase 8.4.17:
