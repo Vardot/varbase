@@ -364,6 +364,9 @@ projects[type_style][download][url] = https://git.drupal.org/project/type_style.
 projects[type_style][download][revision] = 486a8ec7c1c7dcd93790ee281c78cfa3dba90d78
 projects[type_style][download][branch] = 8.x-1.x
 
+projects[styleguide][type] = module
+projects[styleguide][version] = 1.0-alpha3
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib modules for Varbase SEO.
 ;;;;;;;;;;;;;;;;;;;;;
