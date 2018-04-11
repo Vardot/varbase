@@ -569,7 +569,7 @@ projects[varbase_seo][type] = module
 projects[varbase_seo][version] = 4.x-dev
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.x-dev
+projects[varbase_heroslider_media][version] = 4.0-rc2
 
 projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 4.x-dev
