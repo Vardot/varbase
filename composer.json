@@ -33,7 +33,7 @@
     "drupal/config_ignore": "2.1",
     "drupal/ctools": "3.0",
     "drupal/token": "1.1",
-    "drupal/page_manager": "4.0-beta2",
+    "drupal/page_manager": "4.0-beta3",
     "drupal/panels": "4.2",
     "drupal/panelizer": "4.0",
     "drupal/bootstrap_layouts": "5.1",
@@ -256,12 +256,8 @@
         "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
       "drupal/page_manager": {
-        "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":
-        "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch",
         "Issue #2665328: Variants take entity label not the variant title":
-        "https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch",
-        "Issue #2918564: Update 'page_manager.variant_route_filter' service according to core changes":
-        "https://www.drupal.org/files/issues/2918564-22.patch"
+        "https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch"
       },
       "drupal/coffee": {
         "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
