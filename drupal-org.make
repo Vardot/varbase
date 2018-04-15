@@ -371,7 +371,7 @@ projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.2
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 2.11
+projects[simple_sitemap][version] = 2.12
 
 projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.2
