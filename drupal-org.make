@@ -31,7 +31,7 @@ projects[page_manager][version] = 4.0-beta3
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch
 
 projects[panels][type] = module
-projects[panels][version] = 4.2
+projects[panels][version] = 4.3
 
 projects[panelizer][type] = module
 projects[panelizer][version] = 4.1
