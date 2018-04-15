@@ -370,7 +370,7 @@
       },
       "drupal/slick": {
         "Issue #2948735: Adding the alt attribute to the slick thumbnails":
-        "https://www.drupal.org/files/issues/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-2.patch"
+        "https://www.drupal.org/files/issues/2018-04-02/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-3_0.patch"
       },
       "drupal/login_destination": {
         "Issue #2947616: Fixed SetOptions on null causing error.":
