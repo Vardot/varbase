@@ -26,13 +26,9 @@ projects[token][type] = module
 projects[token][version] = 1.1
 
 projects[page_manager][type] = module
-projects[page_manager][version] = 4.0-beta2
-;; Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses
-projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch
+projects[page_manager][version] = 4.0-beta3
 ;; Issue #2665328: Variants take entity label not the variant title
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch
-;; Issue #2918564: Update 'page_manager.variant_route_filter' service according to core changes
-projects[page_manager][patch][] = https://www.drupal.org/files/issues/2918564-22.patch
 
 projects[panels][type] = module
 projects[panels][version] = 4.2
