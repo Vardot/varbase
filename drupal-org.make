@@ -34,7 +34,7 @@ projects[panels][type] = module
 projects[panels][version] = 4.3
 
 projects[panelizer][type] = module
-projects[panelizer][version] = 4.0
+projects[panelizer][version] = 4.1
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
