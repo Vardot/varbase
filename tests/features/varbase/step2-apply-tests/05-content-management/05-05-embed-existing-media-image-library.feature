@@ -63,7 +63,7 @@ So that it will show up under that rich text field without having to upload the 
       And I wait for AJAX to finish
      Then the editor media browser should be open
      When I switch to iframe "entity_browser_iframe_editor_media_browser"
-      And I fill in "Embed Flag Earth" for "Search keywords"
+      And I fill in "Embed Flag Earth" for "edit-name"
       And I press the "Search" button
       And I wait for AJAX to finish
      Then I should see image with the "Embed Flag Earth all earth in space" title text

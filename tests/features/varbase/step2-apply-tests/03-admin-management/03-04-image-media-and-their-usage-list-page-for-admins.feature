@@ -38,7 +38,7 @@ So that I will be able to manage files, see where they have been used in content
      When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"
-     When I fill in "Flag Earth" for "name[0][value]"
+     When I fill in "Flag Earth" for "edit-name"
       And I press the "Apply" button
       And I wait
      Then I should see "Flag Earth"
@@ -58,7 +58,7 @@ So that I will be able to manage files, see where they have been used in content
      When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"
-     When I fill in "Flag Earth after edit" for "name[0][value]"
+     When I fill in "Flag Earth after edit" for "edit-name"
       And I press the "Apply" button
       And I wait
       And I wait
