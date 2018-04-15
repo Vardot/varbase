@@ -69,7 +69,7 @@
     "drupal/ultimate_cron": "2.0-alpha3",
     "drupal/persistent_login": "1.0-alpha4",
     "drupal/userprotect": "1.0",
-    "drupal/config_perms": "1.1",
+    "drupal/config_perms": "2.0-beta1",
     "drupal/roleassign": "1.0-alpha2",
     "drupal/admin_toolbar": "1.23",
     "drupal/adminimal_admin_toolbar": "1.5",
@@ -305,10 +305,6 @@
       "drupal/ckeditor_media_embed": {
         "Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG":
         "https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch"
-      },
-      "drupal/config_perms": {
-        "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist":
-        "https://www.drupal.org/files/issues/2877329-16.patch"
       },
       "drupal/username_enumeration_prevention": {
         "Issue #2871931: hook_requirements error on install phase":
