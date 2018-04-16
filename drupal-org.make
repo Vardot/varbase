@@ -110,7 +110,7 @@ projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-beta1
 
 projects[video_embed_field][type] = module
-projects[video_embed_field][version] = 2.0-alpha2
+projects[video_embed_field][version] = 2.0
 ;; Issue #2922476: Fix test dependencies for media in core.
 projects[video_embed_field][patch][] = https://www.drupal.org/files/issues/2922476-3-change_test_dependencies.patch
 
