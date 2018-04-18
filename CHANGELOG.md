@@ -1,3 +1,50 @@
+## 8.4.20
+
+### Highlighted important changes since Varbase 8.4.19:
+* Issue [#2962237](https://www.drupal.org/node/2962237):
+                  Updated [Drupal core] from 8.5.1 to 8.5.2
+
+Drupal core - Moderately critical - Cross Site Scripting - SA-CORE-2018-003
+https://www.drupal.org/sa-core-2018-003
+
+### Added since Varbase 8.4.19:
+* No added features.
+
+
+### Changed since Varbase 8.4.19:
+* Issue [#2960308](https://www.drupal.org/node/2960308):
+                  Switched 2948735-2.patch to 2948735-3_0.patch for [Slick Carousel] module.
+* Issue [#2962240](https://www.drupal.org/node/2962240):
+                  Varbase 8.4.20: Updated [CHANGELOG.md, UPDATE.md] files
+                  and filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Varbase 8.4.19
+* Issue [#2962237](https://www.drupal.org/node/2962237):
+                  Updated [Drupal core] from 8.5.1 to 8.5.2
+* Issue [#2962231](https://www.drupal.org/node/2962231):
+                  Updated [View Modes Inventory - Bootstrap Ready] module
+                  from 8.1.0-rc1 to 8.1.0
+* Issue [#2961128](https://www.drupal.org/node/2961128):
+                  Updated [Page Manager] module from 8.4.0-beta2 to 8.4.0-beta3
+* Issue [#2961139](https://www.drupal.org/node/2961139):
+                  Updated [Panels] module from 8.4.2 to 8.4.3
+* Issue [#2961131](https://www.drupal.org/node/2961131):
+                  Updated [Panelizer] module from 8.4.0 to 8.4.1
+* Issue [#2961096](https://www.drupal.org/node/2961096):
+                  Updated [Charts] module from 8.3.0-alpha8 to 8.3.0-alpha9
+* Issue [#2961632](https://www.drupal.org/node/2961632):
+                  Updated [Search API] module from 8.1.7 to 8.1.8
+* Issue [#2962234](https://www.drupal.org/node/2962234):
+                  Updated [Views Bulk Edit] module from 8.2.0 to 8.2.1
+* Issue [#2962236](https://www.drupal.org/node/2962236):
+                  Updated [CKEditor Media Embed Plugin] module
+                  from 8.1.1 to 8.1.2
+
+### Fixes since Varbase 8.4.19:
+* No Fixes.
+
+
+
 ## 8.4.19
 
 ### Highlighted important changes since Varbase 8.4.18:
