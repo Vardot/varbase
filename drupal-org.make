@@ -330,7 +330,7 @@ projects[social_auth_linkedin][type] = module
 projects[social_auth_linkedin][version] = 2.0-beta1
 
 projects[ckeditor_media_embed][type] = module
-projects[ckeditor_media_embed][version] = 1.1
+projects[ckeditor_media_embed][version] = 1.2
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
 
