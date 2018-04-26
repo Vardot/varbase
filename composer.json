@@ -100,7 +100,7 @@
     "drupal/diff": "1.0-rc1",
     "drupal/masquerade": "2.0-beta2",
     "drupal/menu_admin_per_menu": "1.0",
-    "drupal/drd_agent": "3.6",
+    "drupal/drd_agent": "3.7",
     "drupal/libraries_ui": "1.0",
     "drupal/devel": "1.2",
     "drupal/bootstrap": "3.11",
