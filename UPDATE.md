@@ -8,12 +8,12 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
-* https://www.drupal.org/project/varbase/releases/8.x-4.15
-* https://www.drupal.org/project/varbase/releases/8.x-4.16
-* https://www.drupal.org/project/varbase/releases/8.x-4.17
-* https://www.drupal.org/project/varbase/releases/8.x-4.18
-* https://www.drupal.org/project/varbase/releases/8.x-4.19
+* https://www.drupal.org/project/varbase/releases/8.x-4.21
 * https://www.drupal.org/project/varbase/releases/8.x-4.20
+* https://www.drupal.org/project/varbase/releases/8.x-4.19
+* https://www.drupal.org/project/varbase/releases/8.x-4.18
+* https://www.drupal.org/project/varbase/releases/8.x-4.17
+* https://www.drupal.org/project/varbase/releases/8.x-4.16
 
 # 2 - Backups
 
@@ -82,6 +82,18 @@ while working on the project.
 * Done :\)
 
 
+--------------------------------------------------------------------------------
+
+
+# Updating Varbase 8.4.20 to Varbase 8.4.21
+## Same as updating Varbase 8.4.18 to 8.4.19 and then updating
+ Varbase 8.4.19 to 8.4.20
+
+This release fixes security vulnerabilities in Drupal core.
+
+Drupal core - Highly critical - Remote Code Execution - SA-CORE-2018-004
+
+https://www.drupal.org/sa-core-2018-004
 
 
 --------------------------------------------------------------------------------

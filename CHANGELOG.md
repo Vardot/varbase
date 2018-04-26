@@ -1,3 +1,38 @@
+## 8.4.21
+
+### Highlighted important changes since Varbase 8.4.20:
+* Issue [#2966083](https://www.drupal.org/node/2966083):
+                  Updated [Drupal core] from 8.5.2 to 8.5.3
+                  It’s a follow up to the Highly Critical RCE vulnerability
+                  Drupal core - Highly critical - Remote Code Execution -
+                  SA-CORE-2018-004
+
+https://www.drupal.org/sa-core-2018-004
+
+### Added since Varbase 8.4.20:
+* No added features.
+
+### Changed since Varbase 8.4.20:
+Issue [#2966078](https://www.drupal.org/node/2966078):
+                Varbase 8.4.21: Updated [CHANGELOG.md, UPDATE.md] files and
+                filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Varbase 8.4.20:
+* Issue [#2966083](https://www.drupal.org/node/2966083):
+                  Updated [Drupal core] from 8.5.2 to 8.5.3
+* Issue [#2963027](https://www.drupal.org/node/2963027):
+                  Updated [Webform] module from 8.5.0-rc10 to 8.5.0-rc12
+* Issue [#2965913](https://www.drupal.org/node/2965913):
+                  Updated [Pathauto] module from 8.1.1 to 8.1.2
+* Issue [#2966092](https://www.drupal.org/node/2966092):
+                  Updated [CKEditor Media Embed Plugin] module
+                  from 8.1.2 to 8.1.3
+* Issue [#2966279](https://www.drupal.org/node/2966279):
+                  Updated [DRD Agent] module from 8.3.6 to 8.3.7
+
+### Fixes since Varbase 8.4.20:
+* No Fixes.
+
 ## 8.4.20
 
 ### Highlighted important changes since Varbase 8.4.19:
