@@ -75,7 +75,7 @@
     "drupal/adminimal_admin_toolbar": "1.5",
     "drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
     "drupal/tour_builder": "1.x-dev#d70e898949b7ec4095efb391a0dbec56d0117558",
-    "drupal/pathauto": "1.1",
+    "drupal/pathauto": "1.2",
     "drupal/redirect": "1.1",
     "drupal/metatag": "1.5",
     "drupal/schema_metatag": "1.2",
