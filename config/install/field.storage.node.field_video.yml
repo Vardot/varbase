@@ -2,18 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - media
     - node
-id: node.field_description
-field_name: field_description
+id: node.field_video
+field_name: field_video
 entity_type: node
-label: 'Description'
-required: false
-default_value: {  }
-default_value_callback: ''
-settings: {  }
-type: string_long
+type: entity_reference
 settings:
-  case_sensitive: false
+  target_type: media
 module: core
 locked: false
 cardinality: 1
