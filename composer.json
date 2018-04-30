@@ -123,7 +123,7 @@
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
     "drupal/taxonomy_access_fix": "2.6",
     "drupal/taxonomy_menu": "3.x-dev#1103ad0855de4d242364a5b7e74a5c5fc1ce9e02",
-    "drupal/better_exposed_filters": "3.0-alpha3",
+    "drupal/better_exposed_filters": "3.0-alpha4",
     "drupal/autocomplete_deluxe": "1.0-beta1",
     "drupal/link_attributes": "1.2",
     "drupal/paragraphs": "1.2",
