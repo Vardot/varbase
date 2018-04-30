@@ -88,7 +88,7 @@
     "drupal/l10n_client": "1.x-dev#9bf8d597732870bdca301512c71b6e5d74d48db2",
     "drupal/coffee": "1.0-beta2",
     "drupal/responsive_preview": "1.0-alpha7",
-    "drupal/views_bulk_operations": "2.2",
+    "drupal/views_bulk_operations": "2.3",
     "drupal/views_bulk_edit": "2.1",
     "drupal/revision_log_default": "1.0",
     "drupal/webform": "5.0-rc12",
