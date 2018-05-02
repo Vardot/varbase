@@ -62,7 +62,7 @@
     "drupal/video_embed_field": "1.5",
     "drupal/crop": "1.5",
     "drupal/focal_point": "1.0-beta6",
-    "drupal/pathologic": "1.x-dev#4f9f3fdcf1e0b224c4d8650e383a769f40abf9bf",
+    "drupal/pathologic": "1.0-alpha1",
     "drupal/ckeditor_bidi": "2.1",
     "drupal/ace_editor": "1.0",
     "drupal/entityqueue": "1.0-alpha7",
@@ -358,10 +358,6 @@
       "drupal/total_control": {
         "Issue #2935351: Fixed the issue when Enabled with multilingual of Translatable Markup for Invalid Argument Exception: $string (Array) must be a string.":
         "https://www.drupal.org/files/issues/2935351-2.patch"
-      },
-      "drupal/pathologic": {
-        "Issue #2927759: Remove the Update hooks for D7 present in D8 version of module.":
-        "https://www.drupal.org/files/issues/2927759-8.patch"
       },
       "drupal/taxonomy_menu": {
         "Issue #2939143: Fixed Undefined method TaxonomyMenu::generateTaxonomyLinks()":
