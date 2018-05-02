@@ -364,6 +364,10 @@
         "Issue #2948735: Adding the alt attribute to the slick thumbnails":
         "https://www.drupal.org/files/issues/2018-04-02/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-3_0.patch"
       },
+      "drupal/blazy": {
+        "Issue #2881849: Integrate with core Media 8.4":
+        "https://www.drupal.org/files/issues/2881849-8.patch"
+      },
       "drupal/login_destination": {
         "Issue #2947616: Fixed SetOptions on null causing error.":
         "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"

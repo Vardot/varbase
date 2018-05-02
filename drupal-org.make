@@ -433,6 +433,8 @@ projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--
 
 projects[blazy][type] = module
 projects[blazy][version] = 1.0-rc2
+;; Issue #2881849: Integrate with core Media 8.4
+projects[blazy][patch][] = https://www.drupal.org/files/issues/2881849-8.patch
 
 projects[slick][type] = module
 projects[slick][version] = 1.0
