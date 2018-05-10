@@ -14,3 +14,7 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/drupal_8-allow_s
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2599228-31-tests-only.patch
 ;; Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal
 projects[drupal][patch][] = https://www.drupal.org/files/issues/patch_empty_fix.patch
+;; Issue #2877383: Add action support to Media module.
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2877383-56.patch
+;; Issue #2670730: Provide a delete action for each content entity type.
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2670730-81-89-8.5.0-rc1.patch

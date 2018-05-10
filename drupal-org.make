@@ -99,18 +99,33 @@ projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clo
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.0-alpha2
+;; Issue #2865928: The View widget should filter based on field settings.
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch
+;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2877751-27-8.x-2.x.patch
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 2.0-alpha3
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0-beta2
+;; Issue #2832504 - Send the CKEditor instance ID to the embed.preview route.
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2832504-2.patch
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-beta1
 
 projects[video_embed_field][type] = module
 projects[video_embed_field][version] = 2.0
+
+projects[media_entity_instagram][type] = module
+projects[media_entity_instagram][version] = 2.0-alpha1
+
+projects[media_entity_twitter][type] = module
+projects[media_entity_twitter][version] = 2.0-alpha2
+
+projects[media_entity_googledocs][type] = module
+projects[media_entity_googledocs][version] = 4.0
 
 projects[crop][type] = module
 projects[crop][version] = 2.0-rc1
