@@ -4,6 +4,7 @@ namespace Varbase\composer;
 
 use Composer\Semver\Comparator;
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Finder\Finder;
 use Composer\EventDispatcher\Event;
 
 /**
@@ -109,7 +110,13 @@ class ScriptHandler {
    */
   public static function removeGitDirectories() {
     $drupal_root = static::getDrupalRoot(getcwd());
-    exec("find " . $drupal_root . " -name '.git' | xargs rm -rf");
+    $gitDirs = new Finder();
+    $gitDirs->directories()->ignoreVCS(false)->ignoreDotFiles(false)->in($drupal_root)->name('.git');
+
+    if ($gitDirs->count()) {
+      $fs = new Filesystem();
+      $fs->remove($gitDirs);
+    }
   }
 
   /**
