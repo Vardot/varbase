@@ -366,7 +366,7 @@
       },
       "drupal/taxonomy_menu": {
         "Issue #2939143: Fixed Undefined method TaxonomyMenu::generateTaxonomyLinks()":
-        "https://www.drupal.org/files/issues/2939143-2.patch"  
+        "https://www.drupal.org/files/issues/2939143-2.patch"
       },
       "drupal/slick": {
         "Issue #2948735: Adding the alt attribute to the slick thumbnails":
@@ -393,6 +393,10 @@
         "https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch",
         "Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.":
         "https://www.drupal.org/files/issues/2877751-27-8.x-2.x.patch"
+      },
+      "drupal/ds": {
+        "Issue #2779243: Method declaration incompatibility":
+        "https://www.drupal.org/files/issues/ds-method-declaration-incompatible-2779243-17.patch"
       }
     }
   }

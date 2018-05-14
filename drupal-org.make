@@ -41,6 +41,8 @@ projects[bootstrap_layouts][version] = 5.1
 
 projects[ds][type] = module
 projects[ds][version] = 3.1
+;; Issue #2779243: Method declaration incompatibility.
+projects[ds][patch][] = https://www.drupal.org/files/issues/ds-method-declaration-incompatible-2779243-17.patch
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][download][url] = https://git.drupal.org/project/views_bootstrap.git
