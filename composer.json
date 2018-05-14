@@ -361,7 +361,7 @@
       },
       "drupal/taxonomy_menu": {
         "Issue #2939143: Fixed Undefined method TaxonomyMenu::generateTaxonomyLinks()":
-        "https://www.drupal.org/files/issues/2939143-2.patch"  
+        "https://www.drupal.org/files/issues/2939143-2.patch"
       },
       "drupal/slick": {
         "Issue #2948735: Adding the alt attribute to the slick thumbnails":
@@ -370,6 +370,10 @@
       "drupal/login_destination": {
         "Issue #2947616: Fixed SetOptions on null causing error.":
         "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
+      },
+      "drupal/ds": {
+        "Issue #2779243: Method declaration incompatibility.":
+        "https://www.drupal.org/files/issues/ds-method-declaration-incompatible-2779243-17.patch"
       }
     }
   }
