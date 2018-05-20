@@ -283,7 +283,7 @@ projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2909416-2.pa
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2924774-4.patch
 
 projects[color_field][type] = module
-projects[color_field][version] = 2.0-rc2
+projects[color_field][version] = 2.0-rc3
 
 projects[entity_reference_revisions][type] = module
 projects[entity_reference_revisions][version] = 1.4
