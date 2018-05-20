@@ -98,6 +98,7 @@
     "drupal/revision_log_default": "1.0",
     "drupal/webform": "5.0-rc12",
     "drupal/default_content": "1.0-alpha7",
+    "drupal/better_normalizers": "1.0-beta3",
     "drupal/content_lock": "1.0-alpha8",
     "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
     "drupal/rabbit_hole": "1.0-beta4",
@@ -350,7 +351,9 @@
       },
       "drupal/default_content": {
         "Issue #2900089: Invalid translation language error when selected installation language does not match demo content language":
-        "https://www.drupal.org/files/issues/2900089-14.patch"
+        "https://www.drupal.org/files/issues/2900089-14.patch",
+        "Issue #2886350: Allow export of all site content.":
+        "https://www.drupal.org/files/issues/default_content-export_all_content-2886350-2-D8.patch"
       },
       "drupal/persistent_login": {
         "Issue #2899530: Hide user^s local task":

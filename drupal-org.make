@@ -220,6 +220,11 @@ projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha7
 ;; Issue #2900089: Invalid translation language error when selected installation language does not match demo content language
 projects[default_content][patch][] = https://www.drupal.org/files/issues/2900089-14.patch
+;; Issue #2886350: Allow export of all site content.
+projects[default_content][patch][] = https://www.drupal.org/files/issues/default_content-export_all_content-2886350-2-D8.patch
+
+projects[better_normalizers][type] = module
+projects[better_normalizers][version] = 1.0-beta3
 
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha8
