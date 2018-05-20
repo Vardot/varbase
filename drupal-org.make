@@ -295,6 +295,9 @@ projects[entity_reference_revisions][version] = 1.4
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 2.0-alpha4
 
+projects[libraries][type] = module
+projects[libraries][version] = 3.0-alpha1
+
 projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
 
@@ -365,10 +368,6 @@ projects[type_style][download][url] = https://git.drupal.org/project/type_style.
 projects[type_style][download][revision] = 486a8ec7c1c7dcd93790ee281c78cfa3dba90d78
 projects[type_style][download][branch] = 8.x-1.x
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Contrib modules for Varbase SEO.
-;;;;;;;;;;;;;;;;;;;;;
-
 projects[pathauto][type] = module
 projects[pathauto][version] = 1.2
 
@@ -399,10 +398,6 @@ projects[l10n_client][patch][] = https://www.drupal.org/files/issues/2867460-2.p
 ;; Issue #2872668: User error: 0 is an invalid render array key":
 projects[l10n_client][patch][] = https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Contrib modules for Varbase security.
-;;;;;;;;;;;;;;;;;;;;;
-
 projects[username_enumeration_prevention][type] = module
 projects[username_enumeration_prevention][version] = 1.0-beta1
 ;; Issue #2871931: hook_requirements error on install phase
@@ -431,18 +426,10 @@ projects[captcha][version] = 1.0-beta1
 projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.3
 
-;;;;;;;;;;;;;;;;;;;;;
-;; Contrib modules for Varbase Search
-;;;;;;;;;;;;;;;;;;;;;
-
 projects[search_api][type] = module
 projects[search_api][version] = 1.8
 ;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
 projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch
-
-;;;;;;;;;;;;;;;;;;;;;
-;; Contrib modules for Varbase hero slider media
-;;;;;;;;;;;;;;;;;;;;;
 
 projects[blazy][type] = module
 projects[blazy][version] = 1.0-rc2
@@ -456,10 +443,6 @@ projects[slick][patch][] = https://www.drupal.org/files/issues/2018-04-02/adding
 
 projects[slick_views][type] = module
 projects[slick_views][version] = 1.0-rc2
-
-;;;;;;;;;;;;;;;;;;;;;
-;; Contrib modules for varbase carousels.
-;;;;;;;;;;;;;;;;;;;;;
 
 projects[slick_media][type] = module
 projects[slick_media][version] = 2.0-alpha1
@@ -510,23 +493,6 @@ projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminim
 
 projects[material_admin][type] = theme
 projects[material_admin][version] = 1.0-alpha6
-
-;;;;;;;;;;;;;;;;;;;;;
-;; Legacy Contrib modules.
-;;  - Not used, but kept for projects which still using them
-;;  - As a step to update or migrate and use new selected modules.
-;;;;;;;;;;;;;;;;;;;;;
-
-projects[libraries][type] = module
-projects[libraries][version] = 3.0-alpha1
-
-;; Layout plugin is in Drupal 8.3.x core under the name of [Layout Discovery]
-projects[layout_plugin][type] = module
-projects[layout_plugin][version] = 1.0-alpha23
-
-;; Switched to use [simple sitemap] as the default for sitemap.
-projects[xmlsitemap][type] = module
-projects[xmlsitemap][version] = 1.0-alpha2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; General Public contributed modules.
