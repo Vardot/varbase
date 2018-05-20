@@ -16,12 +16,16 @@
     "issues": "http://drupal.org/project/issues/varbase",
     "source": "http://cgit.drupalcode.org/varbase"
   },
-  "repositories": [
-    {
+  "repositories": {
+    "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+      },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     }
-  ],
+  },
   "require": {
     "composer/installers": "1.5.0",
     "oomphinc/composer-installers-extender": "1.1.2",
@@ -177,10 +181,10 @@
     "vardot/varbase_vmi_demo": "dev-8.x-5.x",
     "vardot/varbase_story_demo": "dev-8.x-5.x",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
-    "vardot/dropzone": "4.3.0.1",
-    "vardot/blazy": "1.8.2.1",
-    "vardot/slick": "1.6.0.1",
-    "vardot/ace": "1.2.8.1"
+    "npm-asset/dropzone": "4.3.0",
+    "npm-asset/blazy": "1.8.2",
+    "npm-asset/slick-carousel": "1.8.1",
+    "npm-asset/ace-builds": "1.3.3"
   },
   "require-dev": {
     "drush/drush": "8.1.16",
@@ -228,21 +232,31 @@
     "branch-alias": {
       "dev-8.x-5.x": "8.5.x-dev"
     },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
     "installer-paths": {
       "docroot/core": ["drupal/core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/{$name}": ["type:drupal-library"],
+      "docroot/libraries/slick": ["npm-asset/slick-carousel"],
+      "docroot/libraries/ace": ["npm-asset/ace-builds"],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
-          {"name": "dropzone","package": "vardot/dropzone"},
-          {"name": "blazy", "package": "vardot/blazy"},
-          {"name": "slick", "package": "vardot/slick"},
-          {"name": "ace", "package": "vardot/ace"}
+          {"name": "dropzone","package": "npm-asset/dropzone"},
+          {"name": "blazy", "package": "npm-asset/blazy"},
+          {"name": "slick", "package": "npm-asset/slick-carousel"},
+          {"name": "ace", "package": "npm-asset/ace-builds"}
       ]
     },
     "enable-patching": true,
