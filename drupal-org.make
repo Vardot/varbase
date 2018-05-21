@@ -233,6 +233,8 @@ projects[node_edit_protection][type] = module
 projects[node_edit_protection][download][url] = https://git.drupal.org/project/node_edit_protection.git
 projects[node_edit_protection][download][revision] = 902339c08222f838030c07aaea23bdc51ababebd
 projects[node_edit_protection][download][branch] = 8.x-1.x
+;; #2941962: Fixed Warning: array_search() expects parameter 2 to be array.
+projects[node_edit_protection][patch][] = https://www.drupal.org/files/issues/2018-05-16/warning-array-search-2941962-4.patch
 
 projects[rabbit_hole][type] = module
 projects[rabbit_hole][version] = 1.0-beta4
