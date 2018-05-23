@@ -115,7 +115,7 @@ projects[entity_embed][version] = 1.0-beta2
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2832504-2.patch
 
 projects[inline_entity_form][type] = module
-projects[inline_entity_form][version] = 1.0-beta1
+projects[inline_entity_form][version] = 1.0-rc1
 
 projects[video_embed_field][type] = module
 projects[video_embed_field][version] = 2.0
