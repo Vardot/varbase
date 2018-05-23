@@ -189,7 +189,7 @@ projects[admin_toolbar][type] = module
 projects[admin_toolbar][version] = 1.23
 
 projects[adminimal_admin_toolbar][type] = module
-projects[adminimal_admin_toolbar][version] = 1.6
+projects[adminimal_admin_toolbar][version] = 1.7
 
 projects[tour_ui][type] = module
 projects[tour_ui][download][url] = https://git.drupal.org/project/tour_ui.git
