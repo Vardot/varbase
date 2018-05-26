@@ -141,7 +141,7 @@
     "drupal/layout_plugin": "1.0-alpha23",
     "drupal/xmlsitemap": "1.0-alpha2",
     "drupal/masonry": "1.0-rc2",
-    "drupal/charts": "3.0-alpha9",
+    "drupal/charts": "3.0-alpha10",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908",
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd",
