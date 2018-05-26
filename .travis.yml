@@ -11,10 +11,6 @@ cache:
     - "$HOME/.npm"
     - "$HOME/.selenium/cache"
     
-addons:
-  apt:
-    update: true
-
 php:
   - 7.1.17
 
@@ -49,6 +45,7 @@ matrix:
 
 addons:
   apt:
+    update: true
     packages:
     - libappindicator1
     - fonts-liberation
