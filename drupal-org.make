@@ -385,7 +385,7 @@ projects[metatag][type] = module
 projects[metatag][version] = 1.5
 
 projects[schema_metatag][type] = module
-projects[schema_metatag][version] = 1.2
+projects[schema_metatag][version] = 1.3
 
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 2.12
