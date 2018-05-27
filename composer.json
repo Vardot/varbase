@@ -140,7 +140,7 @@
     "drupal/material_admin_support": "1.x-dev#96ce192c31643faf69d77aca3c68578f778be3bc",
     "drupal/type_style": "1.x-dev#486a8ec7c1c7dcd93790ee281c78cfa3dba90d78",
     "drupal/color_field": "2.0-rc3",
-    "drupal/entity_reference_revisions": "1.4",
+    "drupal/entity_reference_revisions": "1.5",
     "drupal/viewsreference": "2.0-alpha4",
     "drupal/libraries": "3.0-alpha1",
     "drupal/masonry": "1.0-rc2",
