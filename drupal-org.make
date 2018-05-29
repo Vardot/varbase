@@ -27,8 +27,6 @@ projects[token][version] = 1.3
 
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta3
-;; Issue #2665328: Variants take entity label not the variant title
-projects[page_manager][patch][] = https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch
 
 projects[panels][type] = module
 projects[panels][version] = 4.3

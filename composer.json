@@ -255,10 +255,6 @@
         "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
         "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
-      "drupal/page_manager": {
-        "Issue #2665328: Variants take entity label not the variant title":
-        "https://www.drupal.org/files/issues/page_manager-fix_contexts_on_get_title-2665328-66.patch"
-      },
       "drupal/coffee": {
         "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
         "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
