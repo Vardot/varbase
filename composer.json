@@ -74,7 +74,7 @@
     "drupal/entityqueue_form_widget": "1.0-beta3",
     "drupal/imagemagick": "2.3",
     "drupal/imageapi_optimize": "2.0-alpha3",
-    "drupal/ultimate_cron": "2.0-alpha3",
+    "drupal/ultimate_cron": "2.0-alpha4",
     "drupal/persistent_login": "1.0",
     "drupal/userprotect": "1.0",
     "drupal/config_perms": "2.0-beta1",
