@@ -74,7 +74,7 @@
     "drupal/userprotect": "1.0",
     "drupal/config_perms": "1.1",
     "drupal/roleassign": "1.0-alpha2",
-    "drupal/admin_toolbar": "1.23",
+    "drupal/admin_toolbar": "1.24",
     "drupal/adminimal_admin_toolbar": "1.7",
     "drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
     "drupal/tour_builder": "1.x-dev#d70e898949b7ec4095efb391a0dbec56d0117558",
