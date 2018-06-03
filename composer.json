@@ -126,7 +126,7 @@
     "drupal/recaptcha": "2.3",
     "drupal/search_api": "1.8",
     "drupal/mailsystem": "4.1",
-    "drupal/smtp": "1.0-beta3",
+    "drupal/smtp": "1.0-beta4",
     "drupal/maxlength": "1.0-beta2",
     "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
