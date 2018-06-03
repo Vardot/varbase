@@ -247,7 +247,7 @@ projects[smtp][type] = module
 projects[smtp][version] = 1.0-beta3
 
 projects[maxlength][type] = module
-projects[maxlength][version] = 1.0-beta1
+projects[maxlength][version] = 1.0-beta2
 
 projects[menu_position][type] = module
 projects[menu_position][download][url] = https://git.drupal.org/project/menu_position.git
