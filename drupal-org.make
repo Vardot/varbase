@@ -282,6 +282,11 @@ projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/29
 projects[paragraphs_features][type] = module
 projects[paragraphs_features][version] = 1.0
 
+projects[paragraphs_asymmetric_translation_widgets][type] = module
+projects[paragraphs_asymmetric_translation_widgets][download][url] = https://git.drupal.org/project/paragraphs_asymmetric_translation_widgets.git
+projects[paragraphs_asymmetric_translation_widgets][download][revision] = e676e682fd30c123fff1e863716b6792516bb11a
+projects[paragraphs_asymmetric_translation_widgets][download][branch] = 8.x-1.x
+
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc3
 
