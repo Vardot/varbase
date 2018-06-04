@@ -282,6 +282,14 @@ projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2909416-2.pa
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2924774-4.patch
 
+projects[paragraphs_previewer][type] = module
+projects[paragraphs_previewer][version] = 1.2
+;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
+projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
+
+projects[paragraphs_features][type] = module
+projects[paragraphs_features][version] = 1.0
+
 projects[color_field][type] = module
 projects[color_field][version] = 2.0-rc3
 
@@ -342,11 +350,6 @@ projects[ckeditor_media_embed][type] = module
 projects[ckeditor_media_embed][version] = 1.3
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
-
-projects[paragraphs_previewer][type] = module
-projects[paragraphs_previewer][version] = 1.2
-;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
-projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
 
 projects[material_admin_support][type] = module
 projects[material_admin_support][download][url] = https://git.drupal.org/project/material_admin_support.git
