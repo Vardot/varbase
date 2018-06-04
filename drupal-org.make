@@ -279,17 +279,9 @@ projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.3
 
 projects[paragraphs[type] = module
-projects[paragraphs][version] = 1.2
-;; Issue #2461695: Support translatable paragraph entity reference revision field
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/meta_support-2461695-222.patch
-;; Issue #2868155: Add new hooks to allow easier editing of paragraph forms
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2868155-16.patch
-;; Issue #2877927: Show add widget between paragraphs on hover
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2877927_29.patch
-;; Issue #2909416: Hide duplicate action while translating.
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2909416-2.patch
+projects[paragraphs][version] = 1.3
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2924774-4.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2924774-29.patch
 
 projects[paragraphs_previewer][type] = module
 projects[paragraphs_previewer][version] = 1.2
