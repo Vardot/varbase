@@ -272,7 +272,7 @@ projects[link_attributes][version] = 1.3
 projects[paragraphs[type] = module
 projects[paragraphs][version] = 1.3
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2924774-29.patch
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
 
 projects[paragraphs_previewer][type] = module
 projects[paragraphs_previewer][version] = 1.2
