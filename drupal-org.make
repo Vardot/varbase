@@ -98,7 +98,7 @@ projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clo
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 1.4
+projects[entity_browser][version] = 1.5
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 1.0-alpha8
