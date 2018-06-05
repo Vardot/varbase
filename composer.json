@@ -57,7 +57,7 @@
     "drupal/embed": "1.0",
     "drupal/entity": "1.0-beta3",
     "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
-    "drupal/entity_browser": "2.0-alpha2",
+    "drupal/entity_browser": "2.0-alpha3",
     "drupal/dropzonejs": "2.0-alpha3",
     "drupal/entity_embed": "1.0-beta2",
     "drupal/inline_entity_form": "1.0-rc1",
