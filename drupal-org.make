@@ -589,7 +589,7 @@ libraries[blazy][download][url] = "https://github.com/dinbror/blazy/archive/1.8.
 libraries[blazy][destination] = "libraries"
 
 libraries[slick][download][type] = get
-libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.8.1.tar.gz"
+libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/v1.8.1.tar.gz"
 libraries[slick][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
