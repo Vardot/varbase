@@ -32,7 +32,7 @@
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "drupal/core": "8.5.3",
+    "drupal/core": "8.5.4",
     "drupal/config_update": "1.5",
     "drupal/config_filter": "1.2",
     "drupal/config_ignore": "2.1",
@@ -265,7 +265,7 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/drupal-n1356276-417-d8.5.%2A.patch",
+        "https://www.drupal.org/files/issues/1356278-408--8.5.x-real.patch",
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
         "https://www.drupal.org/files/issues/2720101-43.patch",
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
