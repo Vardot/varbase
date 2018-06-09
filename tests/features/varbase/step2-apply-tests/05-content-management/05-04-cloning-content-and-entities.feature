@@ -36,11 +36,10 @@ I want to be able to clone an entity.
      Then I should see "Modal button"
      When I click "Clone"
       And I wait
-     Then I should see "Do you want clone the Content entity named Test Clone landing page?"
+     Then I should see "Clone Content"
      When I press "edit-clone"
       And I wait
-     Then I should see "Test Clone landing page - Cloned" value in the "edit-title-0-value" input element
-      And I press "Save"
+     Then I should see "Test Clone landing page - Cloned"
 
   @javascript @local @development
   Scenario: Check if a user with a permission deleted a cloned entity the original will not affected
@@ -70,7 +69,4 @@ I want to be able to clone an entity.
      Then I should see "Test Clone landing page"
      When I click "Test Clone landing page"
       And I wait
-     Then I should see "Modal button"
-     When I press "Modal button"
-      And I wait for AJAX to finish
-     Then I should see "Modal title"
+     Then I should see "Test Clone landing page"

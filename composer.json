@@ -358,6 +358,10 @@
       "drupal/node_edit_protection": {
         "Issue #2941962: Fixed Warning: array_search() expects parameter 2 to be array.":
         "https://www.drupal.org/files/issues/2018-05-16/warning-array-search-2941962-4.patch"
+      },
+      "drupal/rabbit_hole": {
+        "Issue #2961738: Ensure getOperation method exists on form":
+        "https://www.drupal.org/files/issues/2018-05-10/rabbit_hole-instance_of_check-2961738-5.patch"
       }
     }
   }
