@@ -82,7 +82,7 @@ projects[embed][type] = module
 projects[embed][version] = 1.0
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-beta3
+projects[entity][version] = 1.0-beta4
 
 projects[entity_clone[type] = module
 projects[entity_clone][download][url] = https://git.drupal.org/project/entity_clone.git
