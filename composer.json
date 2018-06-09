@@ -374,8 +374,8 @@
         "https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch"
       },
       "drupal/rabbit_hole": {
-        "Issue #2918563: rh_media submodule compatible with core media?":
-        "https://www.drupal.org/files/issues/rh_media-upgrade-drupal8.4.2-2918563-6.patch"
+        "Issue #2961738: Ensure getOperation method exists on form":
+        "https://www.drupal.org/files/issues/2018-05-10/rabbit_hole-instance_of_check-2961738-5.patch"
       },
       "drupal/entity_embed": {
         "Issue #2832504: Send the CKEditor instance ID to the embed.preview route.":

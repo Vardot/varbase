@@ -228,6 +228,8 @@ projects[node_edit_protection][patch][] = https://www.drupal.org/files/issues/20
 
 projects[rabbit_hole][type] = module
 projects[rabbit_hole][version] = 1.0-beta4
+;; Issue #2961738: Ensure getOperation method exists on form":
+projects[rabbit_hole][patch][] = https://www.drupal.org/files/issues/2018-05-10/rabbit_hole-instance_of_check-2961738-5.patch
 
 projects[fast_404][type] = module
 projects[fast_404][version] = 1.0-alpha3

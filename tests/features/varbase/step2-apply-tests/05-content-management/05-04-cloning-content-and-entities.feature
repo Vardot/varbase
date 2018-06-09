@@ -23,8 +23,11 @@ I want to be able to clone an entity.
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
       And I fill in "Modal title" for "Modal title"
+      And I wait for AJAX to finish
+      And I wait
       And I press "Add Component"
       And I wait for AJAX to finish
+      And I wait
       And I press "field_lp_paragraphs_0_subform_bp_modal_body_bp_simple_add_more"
       And I wait
      Then I should see "Modal body"
@@ -36,8 +39,7 @@ I want to be able to clone an entity.
      Then I should see "Clone Content"
      When I press "edit-clone"
       And I wait
-     Then I should see "Test Clone landing page - Cloned" value in the "edit-title-0-value" input element
-      And I press "Save"
+     Then I should see "Test Clone landing page - Cloned"
 
   @javascript @local @development
   Scenario: Check if a user with a permission deleted a cloned entity the original will not affected
@@ -67,7 +69,4 @@ I want to be able to clone an entity.
      Then I should see "Test Clone landing page"
      When I click "Test Clone landing page"
       And I wait
-     Then I should see "Modal button"
-     When I press "Modal button"
-      And I wait for AJAX to finish
-     Then I should see "Modal title"
+     Then I should see "Test Clone landing page"
