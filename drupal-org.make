@@ -88,10 +88,6 @@ projects[entity_clone[type] = module
 projects[entity_clone][download][url] = https://git.drupal.org/project/entity_clone.git
 projects[entity_clone][download][revision] = 6d0ce053605e9aaf8412927a9b0ea8da7a9a06e5
 projects[entity_clone][download][branch] = 8.x-1.x
-;; Issue #2770687: Wrong redirection of page for entity clone module
-projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch
-;; Issue #2769823: Getting error after clicking on abort clone button
-projects[entity_clone][patch][] = https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.0-alpha3

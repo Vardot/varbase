@@ -327,12 +327,6 @@
         "Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch":
         "https://www.drupal.org/files/issues/2904917-2.patch"
       },
-      "drupal/entity_clone": {
-        "Issue #2770687: Wrong redirection of page for entity clone module":
-        "https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch",
-        "Issue #2769823: Getting error after clicking on abort clone button":
-        "https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch"
-      },
       "drupal/default_content": {
         "Issue #2900089: Invalid translation language error when selected installation language does not match demo content language":
         "https://www.drupal.org/files/issues/2900089-14.patch",
