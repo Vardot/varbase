@@ -221,7 +221,7 @@ projects[rabbit_hole][type] = module
 projects[rabbit_hole][version] = 1.0-beta4
 
 projects[fast_404][type] = module
-projects[fast_404][version] = 1.0-alpha2
+projects[fast_404][version] = 1.0-alpha3
 
 projects[mailsystem][type] = module
 projects[mailsystem][version] = 4.1
