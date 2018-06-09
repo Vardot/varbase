@@ -34,7 +34,7 @@ I want to be able to clone an entity.
      When I click "Clone"
       And I wait
      Then I should see "Do you want clone the Content entity named Test Clone landing page?"
-      And I press "edit-clone"
+     When I press "edit-clone"
       And I wait
      Then I should see "Test Clone landing page - Cloned" value in the "edit-title-0-value" input element
       And I press "Save"
