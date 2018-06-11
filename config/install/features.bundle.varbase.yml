@@ -52,7 +52,6 @@ assignments:
   optional:
     types:
       config:
-        block: block
         language_content_settings: language_content_settings
         configurable_language: configurable_language
     enabled: true
