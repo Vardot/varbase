@@ -15,6 +15,24 @@
               Added storage [Field Video] and [Field Media] to [Varbase Core] 
               to let developers create fields for video media types of (local),
               (embed) and use the [Video Browser] from [Varbase Media].
+* Issue [#2978726](http://drupal.org/node/2978726):
+              [Varbase Blog] Changed [Main Image] field to [Main Media] to use
+              [Field Media] from [Varbase Core] for images and video posts,
+              and use the [Media Browser] from [Varbase Media] as the default
+              Media browser for the [Blog Post] content type.
+* Issue [#2978723](http://drupal.org/node/2978723):
+              [Varbase Media] Added [Media Browser] as a general image and
+              video browsers for the [Field media] in Varbase core.
+* Issue [#2978725](http://drupal.org/node/2978725):
+              [Varbase Media Hero Slider] Switched to use [Media Browser]
+              from [Varbase Media] as the default Media browser for hero slider
+              content type. and removed not needed views and the custom hero
+              slider media browser.
+* Issue [#2979168](http://drupal.org/node/2979168):
+              Optimized configs of responsive images for media [Size 8] and
+              [Edge to Edge] on (auto, standard, traditional, and square),
+              and Have no revision information or revision log message for
+              media types, and added Varbase Auto Fill Media data Behaviors.
 
  ### Added since Varbase 8.4.x:
 * Issue [#2974100](http://drupal.org/node/2974100):
@@ -34,7 +52,7 @@
               create fields for video media types of (local), (embed) and use
               the [Video Browser] from [Varbase Media]
 * Issue [#2977178](http://drupal.org/node/2977178):
-              Added [Paragraphs Features] module 8.1.1
+              Added [Paragraphs Features] module 8.1.2
 * Issue [#2977218](http://drupal.org/node/2977218):
               Added [Paragraphs asymmetric translation widgets] module
               1.x-dev e676e68
