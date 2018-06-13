@@ -10,7 +10,7 @@
               switched all used libraries to use asset packaging.
 * Issue [#2956295](http://drupal.org/node/2956295):
               Departed modules and themes from Varbase 8.x-5.x Profile as
-              stand-alone projects
+              stand-alone projects.
 * Issue [#2967640](http://drupal.org/node/2967640):
               Added storage [Field Video] and [Field Media] to [Varbase Core] 
               to let developers create fields for video media types of (local),
@@ -39,18 +39,18 @@
               Added the asset composer repository [asset-packagist.org], and 
               switched all used libraries to use asset packaging.
 * Issue [#2961471](http://drupal.org/node/2961471):
-              Added Video (embed) and Video (local) media video types
+              Added Video (embed) and Video (local) media video types.
 * Issue [#2967640](http://drupal.org/node/2967640):
               Added storage [Field Video] to [Varbase Core] to let developers
               create fields for video media types of (local), (embed) and use 
-              the [Video Browser] from [Varbase Media]
+              the [Video Browser] from [Varbase Media].
 * Issue [#2978527](http://drupal.org/node/2978527):
               Added support for initial [VMI] config values for [Field Video]
-              and [Field Media]
+              and [Field Media].
 * Issue [#2967640](http://drupal.org/node/2967640):
               Added storage [Field Video] to [Varbase Core] to let developers
               create fields for video media types of (local), (embed) and use
-              the [Video Browser] from [Varbase Media]
+              the [Video Browser] from [Varbase Media].
 * Issue [#2977178](http://drupal.org/node/2977178):
               Added [Paragraphs Features] module 8.1.2
 * Issue [#2977218](http://drupal.org/node/2977218):
@@ -69,13 +69,13 @@
  ### Changed since Varbase 8.4.x:
 * Issue [#2956295](http://drupal.org/node/2956295):
               Departed modules and themes from Varbase 8.x-5.x Profile as
-              stand-alone projects
+              stand-alone projects.
 * Issue [#2954551](http://drupal.org/node/2954551):
               Started a new branch for version: 8.x-5.x-dev and extra
               branch-alias with dev-8.x-5.x to 8.5.x-dev
 * Issue [#2959483](http://drupal.org/node/2959483):
               Changed [Varbase Profile] modules and config to work with
-              [Media] Drupal core module
+              [Media] Drupal core module.
 * Issue [#2978780](http://drupal.org/node/2978780):
               Changed [Varbase] bundle config not to have blocks in the
               optional config folder, as they will be in the config/install
@@ -86,7 +86,7 @@
               order in listing and readability.
 * Issue [#2974085](http://drupal.org/node/2974085):
               Removed Legacy Contrib modules, which they are not used any more,
-              but kept for projects which still using them
+              but kept for projects which still using them.
 * Issue [#2971906](http://drupal.org/node/2971906):
               [Varbase Editor] Removed [Drupal Image] and [Video embed]
               CKEditor command buttons from Rich editor and Simple editor.
@@ -123,6 +123,9 @@
  ### Updates since Varbase 8.4.x:
 * Issue [#2977949](http://drupal.org/node/2977949):
               Updated [Drupal core] from 8.5.3 to 8.5.4
+* Issue [#2979339]](http://drupal.org/node/2979339):
+              Updated [Entity Browser Enhance(d|r)] module
+              from 8.1.0-rc1 to 8.1.0-rc2
 * Issue [#2977538](http://drupal.org/node/2977538):
               Updated [Entity Browser] module from 8.2.0-alpha2 to 8.2.0-alpha3
 * Issue [#2977148](http://drupal.org/node/2977148):
@@ -196,7 +199,7 @@
               Drupal\page_manager\PageVariantInterface or be null, string given.
 * Issue [#2974402](http://drupal.org/node/2974402):
               Fixed Warning for [Node Edit Protection] module: array_search()
-              expects parameter 2 to be array
+              expects parameter 2 to be array.
 * Issue [#2973026 by dame](http://drupal.org/node/2973026):
               Replace exec in remove Git Repositories with Symfony Finder & 
               File System to work with Windows and Linux
