@@ -91,7 +91,7 @@
     "drupal/views_bulk_operations": "2.3",
     "drupal/views_bulk_edit": "2.1",
     "drupal/revision_log_default": "1.0",
-    "drupal/webform": "5.0-rc14",
+    "drupal/webform": "5.0-rc15",
     "drupal/default_content": "1.0-alpha7",
     "drupal/content_lock": "1.0-alpha8",
     "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
