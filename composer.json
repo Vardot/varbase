@@ -157,7 +157,7 @@
     "drupal/total_control": "2.0-alpha4",
     "drupal/anchor_link": "1.6",
     "drupal/entity_browser_enhanced": "1.0-rc3",
-    "drupal/vmi": "1.0",
+    "drupal/vmi": "1.1",
     "drupal/varbase_core": "4.x-dev",
     "drupal/varbase_media": "4.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "4.x-dev",

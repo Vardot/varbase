@@ -527,7 +527,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-rc3
 
 projects[vmi][type] = module
-projects[vmi][version] = 1.0
+projects[vmi][version] = 1.1
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4
