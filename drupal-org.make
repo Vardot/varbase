@@ -519,7 +519,7 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 5.0-alpha2
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 5.x-dev
+projects[varbase_media][version] = 5.0-alpha2
 
 projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 5.0-alpha1

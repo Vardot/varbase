@@ -163,7 +163,7 @@
     "drupal/entity_browser_enhanced": "1.0-rc3",
     "drupal/vmi": "2.0-alpha1",
     "drupal/varbase_core": "5.0-alpha2",
-    "drupal/varbase_media": "5.x-dev",
+    "drupal/varbase_media": "5.0-alpha2",
     "drupal/varbase_bootstrap_paragraphs": "5.0-alpha1",
     "drupal/varbase_editor": "5.0-alpha1",
     "drupal/varbase_landing": "5.0-alpha1",
