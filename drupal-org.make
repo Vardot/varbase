@@ -467,7 +467,7 @@ projects[coffee][patch][] = https://www.drupal.org/files/issues/coffee-coffee_br
 projects[coffee][patch][] = https://www.drupal.org/files/issues/2872093-10.patch
 
 projects[diff][type] = module
-projects[diff][version] = 1.0-rc1
+projects[diff][version] = 1.0-rc2
 
 projects[masquerade][type] = module
 projects[masquerade][version] = 2.0-beta2
