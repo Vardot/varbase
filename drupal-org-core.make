@@ -18,3 +18,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/patch_empty_fix.
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2877383-56.patch
 ;; Issue #2670730: Provide a delete action for each content entity type.
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2670730-81-89-8.5.0-rc1.patch
+;; Issue #2855521: Fix Drupalimage calling drupallink functions without checking if the plugin is loaded.
+projects[drupal][patch][] = https://www.drupal.org/files/issues/edit_drupalimage-2855521-15.patch

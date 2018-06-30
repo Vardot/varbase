@@ -275,7 +275,9 @@
         "Issue #2877383: Add action support to Media module.":
         "https://www.drupal.org/files/issues/2877383-56.patch",
         "Issue #2670730: Provide a delete action for each content entity type.":
-        "https://www.drupal.org/files/issues/2670730-81-89-8.5.0-rc1.patch"
+        "https://www.drupal.org/files/issues/2670730-81-89-8.5.0-rc1.patch",
+        "Issue #2855521: Fix Drupalimage calling drupallink functions without checking if the plugin is loaded":
+        "https://www.drupal.org/files/issues/edit_drupalimage-2855521-15.patch"
       },
       "drupal/coffee": {
         "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
