@@ -381,7 +381,9 @@
       },
       "drupal/entity_embed": {
         "Issue #2832504: Send the CKEditor instance ID to the embed.preview route.":
-        "https://www.drupal.org/files/issues/2832504-2.patch"
+        "https://www.drupal.org/files/issues/2832504-2.patch",
+        "Issue #2511404: Image entities/fields embedded using Entity Embed cannot be linked in CKEditor":
+        "https://www.drupal.org/files/issues/2018-04-23/25114040-47.patch"
       },
       "drupal/entity_browser": {
         "Issue #2865928: The View widget should filter based on field settings.":

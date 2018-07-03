@@ -103,6 +103,8 @@ projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0-beta2
 ;; Issue #2832504 - Send the CKEditor instance ID to the embed.preview route.
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2832504-2.patch
+;; Issue #2511404: Image entities/fields embedded using Entity Embed cannot be linked in CKEditor.
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2018-04-23/25114040-47.patch
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-rc1
