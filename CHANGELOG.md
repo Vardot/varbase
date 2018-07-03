@@ -1,6 +1,96 @@
+# 8.5.0-alpha2
+
+### Highlighted important changes since Varbase 8.5.0-alpha1:
+* Issue [#2983378](http://drupal.org/node/2983378):
+              Added [data entity embed display settings] TO LINK entity image
+              with target link when we use.
+* Issue [#2983236](http://drupal.org/node/2983236):
+              Reverted [Real-time SEO] module back to old JS version (1.x)
+              instead of version (2.x).
+
+### Highlighted important changes since Varbase 8.4.x:
+* Issue [#2959483](http://drupal.org/node/2959483):
+               Changed [Varbase Profile] modules and config to work with
+               [Media] Drupal core module.
+* Issue [#2974100](http://drupal.org/node/2974100):
+              Added the asset composer repository [asset-packagist.org],
+              and switched all used libraries to use asset packaging.
+* Issue [#2956295](http://drupal.org/node/2956295):
+              Departed modules and themes from Varbase 8.x-5.x Profile as
+              stand-alone projects.
+* Issue [#2967640](http://drupal.org/node/2967640):
+              Added storage [Field Video] and [Field Media] to [Varbase Core]
+              to let developers create fields for video media types of (local),
+              (embed) and use the [Video Browser] from [Varbase Media].
+* Issue [#2978726](http://drupal.org/node/2978726):
+              [Varbase Blog] Changed [Main Image] field to [Main Media] to use
+              [Field Media] from [Varbase Core] for images and video posts,
+              and use the [Media Browser] from [Varbase Media] as the default
+              Media browser for the [Blog Post] content type.
+* Issue [#2978723](http://drupal.org/node/2978723):
+              [Varbase Media] Added [Media Browser] as a general image and
+              video browsers for the [Field media] in Varbase core.
+* Issue [#2978725](http://drupal.org/node/2978725):
+              [Varbase Media Hero Slider] Switched to use [Media Browser] from
+              [Varbase Media] as the default Media browser for hero slider
+              content type. and removed not needed views and the custom hero
+              slider media browser.
+* Issue [#2979168](http://drupal.org/node/2979168):
+              Optimized configs of responsive images for media [Size 8] and
+              [Edge to Edge] on (auto, standard, traditional, and square),
+              and Have no revision information or revision log message for
+              media types, and added Varbase Auto Fill Media data Behaviors.
+
+### Added since Varbase 8.5.0-alpha1:
+* Issue [#2983378](http://drupal.org/node/2983378):
+              Added [data entity embed display settings] TO LINK entity image
+              with target link when we use.
+* Issue [#2983384](http://drupal.org/node/2983384):
+              Added the 25114040-47.patch for the [Entity Embed] module to
+              let editors be able to Embed Image media and link them to a
+              target URL in the CKEditor.
+
+### Changed since Varbase 8.5.0-alpha1:
+* Issue [#2983362](http://drupal.org/node/2983362):
+              Changed [Rich editor] text format to allow for Align images
+              Uses a data-align attribute on <img> tags to align images.
+* Issue [#2983236](http://drupal.org/node/2983236):
+              Reverted [Real-time SEO] module back to old JS version (1.x)
+              instead of version (2.x)
+* Issue [#2983221](http://drupal.org/node/2983221):
+              Varbase 8.5.0-alpha2: Updated [CHANGELOG.md, UPDATE.md] files
+              and filtered the code for Drupal 8 Coding Standard.
+
+### Updates since Varbase 8.5.0-alpha1:
+* Issue [#2981388](http://drupal.org/node/2981388):
+              Updated [Paragraphs asymmetric translation widgets]
+              from 8.1.x-dev e676e68 to 8.1.0-alpha2
+* Issue [#2983282](http://drupal.org/node/2983282):
+              Updated [Views Bulk Operations (VBO)] module
+              from 8.2.3 to 8.2.4
+* Issue [#2982792](http://drupal.org/node/2982792):
+              Updated [Webform] module from 8.5.0-rc15 to 8.5.0-rc16
+* Issue [#2982784](http://drupal.org/node/2982784):
+              Updated [Diff] module from 8.1.0-rc1 to 8.1.0-rc2
+
+### Fixes since Varbase 8.5.0-alpha1:
+* Issue [#2981604](http://drupal.org/node/2981604):
+              Fixed [Background Image] to use field media image in the
+              media type [Image] under the [Styling settings] part for
+              all Varbase Bootstrap paragraphs types.
+* Issue [#2980408](http://drupal.org/node/2980408):
+              Fixed [Media entity] issue when we update media image, it still
+              retrieves the old image instead of the updated one.
+* Issue [#2983387](http://drupal.org/node/2983387):
+              Fixed form view for the [Landing page] content type to use the
+              description field as a feed for Real-time SEO.
+* Issue [#2982794](http://drupal.org/node/2982794):
+              Fixed [Drupal core] image calling Drupal link functions without
+              checking if the plugin is loaded
+
 # 8.5.0-alpha1
 
- ### Highlighted important changes since Varbase 8.4.x:
+### Highlighted important changes since Varbase 8.4.x:
 
 * Issue [#2959483](http://drupal.org/node/2959483): 
               Changed [Varbase Profile] modules and config to work with [Media]
@@ -34,7 +124,7 @@
               and Have no revision information or revision log message for
               media types, and added Varbase Auto Fill Media data Behaviors.
 
- ### Added since Varbase 8.4.x:
+### Added since Varbase 8.4.x:
 * Issue [#2974100](http://drupal.org/node/2974100):
               Added the asset composer repository [asset-packagist.org], and 
               switched all used libraries to use asset packaging.
@@ -66,7 +156,7 @@
               [Varbase Bootstrap Paragraphs] Added allow_reference_changes:
               true in a new paragraphs.settings.yml general config.
 
- ### Changed since Varbase 8.4.x:
+### Changed since Varbase 8.4.x:
 * Issue [#2956295](http://drupal.org/node/2956295):
               Departed modules and themes from Varbase 8.x-5.x Profile as
               stand-alone projects.
@@ -120,7 +210,7 @@
               and Have no revision information or revision log message for
               media types, and added Varbase Auto Fill Media data Behaviors.
 
- ### Updates since Varbase 8.4.x:
+### Updates since Varbase 8.4.x:
 * Issue [#2977949](http://drupal.org/node/2977949):
               Updated [Drupal core] from 8.5.3 to 8.5.4
 * Issue [#2979339]](http://drupal.org/node/2979339):
@@ -186,7 +276,7 @@
 * Issue [#2978515](http://drupal.org/node/2978515):
               Updated [Fast 404] module from 8.1.0-alpha2 to 8.1.0-alpha3
 
- ### Fixes since Varbase 8.4.x:
+### Fixes since Varbase 8.4.x:
 * Issue [#2978845](http://drupal.org/node/2978845):
               Fixed the location of [Varbase Video Player icon] to work
               with all video media sizes and any entity referenced fields.
