@@ -3,10 +3,13 @@
 ### Highlighted important changes since Varbase 8.5.0-alpha1:
 * Issue [#2983378](http://drupal.org/node/2983378):
               Added [data entity embed display settings] TO LINK entity image
-              with target link when we use.
+              with a target link when we embed the image in the CKEditor.
 * Issue [#2983236](http://drupal.org/node/2983236):
               Reverted [Real-time SEO] module back to old JS version (1.x)
               instead of version (2.x).
+* Issue [#2980408](http://drupal.org/node/2980408):
+              Fixed [Media entity] issue when we update media image, it still
+              retrieves the old image instead of the updated one.
 
 ### Highlighted important changes since Varbase 8.4.x:
 * Issue [#2959483](http://drupal.org/node/2959483):
