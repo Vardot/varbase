@@ -8,6 +8,7 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
+* https://www.drupal.org/project/varbase/releases/8.x-4.22
 * https://www.drupal.org/project/varbase/releases/8.x-4.21
 * https://www.drupal.org/project/varbase/releases/8.x-4.20
 * https://www.drupal.org/project/varbase/releases/8.x-4.19
@@ -80,6 +81,59 @@ while working on the project.
 # 9 - Regression test the full site.
 
 * Done :\)
+
+
+--------------------------------------------------------------------------------
+
+
+# Updating Varbase 8.4.21 to Varbase 8.4.22
+  If you already did the update of Varbase from 8.4.20 to 8.4.21, this
+  updating to 8.4.22 will be a quick and easy one.
+
+## Updating files with Copy and Paste for Varbase 8.4.21 to Varbase 8.4.22
+```
+  Given that we are at the drupal root folder for varbase
+   When we delete all drupal core folders and files
+    And we copy all new Varbase files drupal root folder for varbase
+    And we make sure that we have all custom module or themes still in the
+        "sites" folder
+    And we make sure that all new used modules and features are present.
+   Then we will be ready to update the active config and database.
+```
+
+## Varbase Procedures to the varbase base code. not in any varbase-project project builders.
+```
+  Given that we are at the root folder for varbase project, not the docroot
+    And we make sure that the current "Varbase-project" composer.json file and
+        files are the latest
+   When we delete the "vendor" folder
+    And we delete the "composer.lock" file
+    And we change "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
+             with "drupal/entity_clone": "1.x-dev#6d0ce053605e9aaf8412927a9b0ea8da7a9a06e5",
+    And we remove "drupal/pathologic": "1.x-dev#4f9f3fdcf1e0b224c4d8650e383a769f40abf9bf",
+    And we run the "composer require vardot/varbase:8.4.22" command
+    And wait for composer to finish work
+   Then we should not see any issues in the terminal
+    And we should see "Writing lock file" in the terminal
+    And we should see "Generating autoload files" in the terminal
+   When the composer finishes work with no errors
+   Then we will be ready to update the active config and database.
+```
+
+## Updating the active config and database from Varbase 8.4.21 to Varbase 8.4.22
+```
+  Given that we are in the docroot of the current Varbase project
+    And all files are updated using (copy and past) or (composer require/update
+   When we run drush "updb" or go to "/update.php"
+   Then we should see the steps of updates.
+   When we run drush "updb" or go to "/update.php" again
+   Then we will have the site update with the new Varbase 8.4.22 version
+   When we go to "/admin/config/development/features"
+   Then we should see "Changed"
+   When we follow with each feature to import new changes.
+   Then we will have the Varbase site updated to the latest version.
+```
+
 
 
 --------------------------------------------------------------------------------

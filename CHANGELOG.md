@@ -1,3 +1,156 @@
+## 8.4.22
+
+### Highlighted important changes since Varbase 8.4.21:
+* Issue [#2979378](https://www.drupal.org/node/2979378):
+                  Updated [View Modes Inventory - Bootstrap Ready] module
+                  from 8.1.0 to 8.1.1
+* Issue [#2977148](https://www.drupal.org/node/2977148):
+                  Updated [Paragraphs] module from 8.1.2 to 8.1.3
+* Issue [#2977536](https://www.drupal.org/node/2977536):
+                  Updated [Entity browser] module from 8.1.4 to 8.1.5
+* Issue [#2980408](https://www.drupal.org/node/2980408):
+                  Fixed [Media entity] issue when we update media image, 
+                  it still retrieves the old image instead of the updated one.
+
+### Added since Varbase 8.4.21:
+* Issue [#2977178](https://www.drupal.org/node/2977178):
+                  Added [Paragraphs Features] module 8.1.2
+* Issue [#2977218](https://www.drupal.org/node/2977218):
+                  Added [Paragraphs asymmetric translation widgets] module
+                  1.x-dev e676e68
+
+### Changed since Varbase 8.4.21:
+* Issue [#2984371](https://www.drupal.org/node/2984371):
+                  Enable [Paragraphs Features, and Paragraphs Asymmetric
+                  Translation Widgets] modules on Varbase updates and update
+                  the new default form display for the landing page
+                  content type.
+* Issue [#2977148](https://www.drupal.org/node/2977148):
+                  Changed the Automated Functional Acceptance Testing after
+                  the update for [Paragraphs] module from 8.1.2 to 8.1.3
+
+### Updates since Varbase 8.4.21:
+* Issue [#2979378](https://www.drupal.org/node/2979378):
+                  Updated [View Modes Inventory - Bootstrap Ready] module
+                  from 8.1.0 to 8.1.1
+* Issue [#2977148](https://www.drupal.org/node/2977148):
+                  Updated [Paragraphs] module from 8.1.2 to 8.1.3
+* Issue [#2981388](https://www.drupal.org/node/2977148):
+                  Updated [Paragraphs asymmetric translation widgets]
+                  from 8.1.x-dev e676e68 to 8.1.0-alpha2
+* Issue [#2977536](https://www.drupal.org/node/2977536):
+                  Updated [Entity browser] module from 8.1.4 to 8.1.5
+* Issue [#2967910](https://www.drupal.org/node/2967910):
+                  Updated [Persistent Login] module from 8.1.0-alpha4 to 8.1.0
+* Issue [#2968001](https://www.drupal.org/node/2968001):
+                  Updated [Better Exposed Filters] module
+                  from 8.3.0-alpha3 to 8.3.0-alpha4
+* Issue [#2968105](https://www.drupal.org/node/2968105):
+                  Updated [Views Bulk Operations (VBO)] module
+                  from 8.2.2 to 8.2.3
+* Issue [#2983282](https://www.drupal.org/node/2983282):
+                  Updated [Views Bulk Operations (VBO)] module
+                  from 8.2.3 to 8.2.4
+* Issue [#2968779](https://www.drupal.org/node/2968779):
+                  Updated [Menu block] module from 8.1.4 to 8.1.5
+* Issue [#2968789](https://www.drupal.org/node/2968789):
+                  Updated [Media entity image] module from 8.1.2 to 8.1.3
+* Issue [#2968825](https://www.drupal.org/node/2968825):
+                  Updated [Pathologic] module
+                  from 8.1.x-dev 4f9f3fd to 8.1.0-alpha1
+* Issue [#2971268](https://www.drupal.org/node/2971268):
+                  Updated [Redirect] module from 8.1.1 to 8.1.2
+* Issue [#2974078](https://www.drupal.org/node/2974078):
+                  Updated [Adminimal Admin Toolbar] module from 8.1.5 to 8.1.6
+* Issue [#2974080](https://www.drupal.org/node/2974080):
+                  Updated [Link Attributes widget] module from 8.1.2 to 8.1.3
+* Issue [#2974082](https://www.drupal.org/node/2974082):
+                  Updated [Color Field] module from 8.2.0-rc2 to 8.2.0-rc3
+* Issue [#2974078](https://www.drupal.org/node/2974078):
+                  Updated [Adminimal Admin Toolbar] module from 8.1.5 to 8.1.7
+* Issue [#2974694](https://www.drupal.org/node/2974694):
+                  Updated [Inline Entity Form] module
+                  from 8.1.0-beta1 to 8.1.0-rc1
+* Issue [#2975544](https://www.drupal.org/node/2975544):
+                  Updated [Charts] module from 8.3.0-alpha9 to 8.3.0-alpha10
+* Issue [#2975562](https://www.drupal.org/node/2975562):
+                  Updated [Entity Reference Revisions] module
+                  from 8.1.4 to 8.1.5
+* Reverted Issue [#2975544](https://www.drupal.org/node/2975544):
+                  Updated [Charts] module from 8.3.0-alpha9 to 8.3.0-alpha10
+                  - As we do have many issues with many custom repositories.
+* Issue [#2975576](https://www.drupal.org/node/2975576):
+                  Updated [token] module from 8.1.1 to 8.1.3
+* Issue [#2975570](https://www.drupal.org/node/2975570):
+                  Updated [Social Auth Twitter] module
+                  from 8.2.0-alpha1 to 8.2.0-alpha2
+* Issue [#2975569](https://www.drupal.org/node/2975569):
+                  Updated [Schema.org Metatag] module from 8.1.2 to 8.1.3
+* Issue [#2977071](https://www.drupal.org/node/2977071):
+                  Updated [Ultimate Cron] module
+                  from 8.2.0-alpha3 to 8.2.0-alpha4
+* Issue [#2977070](https://www.drupal.org/node/2977070):
+                  Updated [SMTP Authentication Support] module
+                  from 8.1.0-beta3 to 8.1.0-beta4
+* Issue [#2977068](https://www.drupal.org/node/2977068):
+                  Updated [Maxlength] module from 8.1.0-beta1 to 8.1.0-beta2
+* Issue [#2977067](https://www.drupal.org/node/2977067):
+                  Updated [Admin Toolbar] module from 8.1.23 to 8.1.24
+* Issue [#2977559](https://www.drupal.org/node/2977559):
+                  Updated [Webform] module from 8.5.0-rc12 to 8.5.0-rc13
+* Issue [#2977546](https://www.drupal.org/node/2977546):
+                  Updated [Real-time SEO for Drupal] module
+                  from 8.2.0-alpha2 to 8.2.0-alpha3
+* Issue [#2983236](https://www.drupal.org/node/2983236):
+                  Reverted [Real-time SEO] module back to
+                  old JS version (1.x) instead of version (2.x)
+* Issue [#2978512](https://www.drupal.org/node/2978512):
+                  Updated [Entity Clone] module
+                  from 8.1.x-dev 9265e35 to 8.1.x-dev 6d0ce05
+* Issue [#2978505](https://www.drupal.org/node/2978505):
+                  Updated [Entity API] module from 8.1.0-beta3 to 8.1.0-beta4
+* Issue [#2977949](https://www.drupal.org/node/2977949):
+                  Updated [Drupal core] from 8.5.3 to 8.5.4
+* Issue [#2984355](https://www.drupal.org/node/2984355):
+                  Updated [Drupal core] from 8.5.4 to 8.5.5
+* Issue [#2979339](https://www.drupal.org/node/2979339):
+                  Updated [Entity Browser Enhance(d|r)] module
+                  from 8.1.0-rc1 to 8.1.0-rc2
+* Issue [#2977559](https://www.drupal.org/node/2977559):
+                  Updated [Webform] module from 8.5.0-rc12 to 8.5.0-rc15
+* Issue [#2982784](https://www.drupal.org/node/2982784):
+                  Updated [Diff] module from 8.1.0-rc1 to 8.1.0-rc2
+* Issue [#2982792](https://www.drupal.org/node/2982792):
+                  Updated [Webform] module from 8.5.0-rc15 to 8.5.0-rc16
+
+### Fixes since Varbase 8.4.21:
+* Issue [#2980408](https://www.drupal.org/node/2980408):
+                  Fixed [Media entity] issue when we update media image,
+                  it still retrieves the old image instead of the updated one.
+* Issue [#2971923](https://www.drupal.org/node/2971923):
+                  Fixed issue with the CKEditor command button [Media library]
+                  icon Editor Entity Browser.
+* Issue [#2972620](https://www.drupal.org/node/2972620):
+                  Fixed issue with PHP 7.2, 5.6 versions.
+* Issue [#2973026](https://www.drupal.org/node/2973026)
+                  by dame: Replace exec in remove Git Repositories with
+                  Symfony Finder & File System to work with Windows and Linux.
+* Issue [#2974402](https://www.drupal.org/node/2974402):
+                  Fixed Warning for [Node Edit Protection] module:
+                  array_search() expects parameter 2 to be array.
+* Issue [#2976012](https://www.drupal.org/node/2976012):
+                  Fixed issue with Argument 1 passed to
+                  PageManagerHelper::getVariantTitle() must implement
+                  interface Drupal\page_manager\PageVariantInterface or
+                  be null, string given.
+* Issue [#2978551](https://www.drupal.org/node/2978551):
+                  Fixed issue for the [rabbit hole] with [entity clone] modules
+                  to ensure getOperation method exists on form.
+* Issue [#2982794](https://www.drupal.org/node/2982794):
+                  Fixed [Drupal core] image calling drupal link functions
+                  without checking if the plugin is loaded.
+
+
 ## 8.4.21
 
 ### Highlighted important changes since Varbase 8.4.20:
@@ -1967,7 +2120,7 @@ No other changes are included, only the SPDX license identifier from GPL-2.0+ to
                   Updated [Page Manager] from 1.x-dev to 4.x-dev
 * Issue [#2867287](https://www.drupal.org/node/2867287):
                   Updated [Drupal core] from 8.3.0-rc2 to 8.3.0 : Fix for the
-                  Issue of not having plugin.manager.core.layout on update with
+              * Issue of not having plugin.manager.core.layout on update with
                   [bootstrap_layouts] module 8.x-5.x-dev .
 * Issue [#2867009](https://www.drupal.org/node/2867009):
                   Updated [panels] module back from 8.4.0-alpha1 to 8.x-4.x-dev
