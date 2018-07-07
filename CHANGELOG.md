@@ -1,3 +1,9 @@
+# 8.5.0-alpha3
+
+### Highlighted important changes since Varbase 8.5.0-alpha2:
+
+Issue #2984355: Updated [Drupal core] from 8.5.4 to 8.5.5
+
 # 8.5.0-alpha2
 
 ### Highlighted important changes since Varbase 8.5.0-alpha1:
