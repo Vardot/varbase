@@ -32,7 +32,7 @@
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "drupal/core": "8.5.4",
+    "drupal/core": "8.5.5",
     "drupal/config_update": "1.5",
     "drupal/config_filter": "1.2",
     "drupal/config_ignore": "2.1",
