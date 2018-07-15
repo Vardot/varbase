@@ -375,7 +375,7 @@ projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 2.12
 
 projects[google_analytics][type] = module
-projects[google_analytics][version] = 2.2
+projects[google_analytics][version] = 2.3
 
 projects[yoast_seo][type] = module
 projects[yoast_seo][version] = 1.3
