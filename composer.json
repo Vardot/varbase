@@ -47,7 +47,7 @@
     "drupal/field_group": "3.0-beta1",
     "drupal/smart_trim": "1.1",
     "drupal/advanced_text_formatter": "1.0-beta3",
-    "drupal/block_class": "1.0-alpha1",
+    "drupal/block_class": "1.0",
     "drupal/menu_block": "1.5",
     "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
     "drupal/linkit": "4.3",

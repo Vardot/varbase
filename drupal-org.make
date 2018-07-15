@@ -57,7 +57,7 @@ projects[advanced_text_formatter][type] = module
 projects[advanced_text_formatter][version] = 1.0-beta3
 
 projects[block_class][type] = module
-projects[block_class][version] = 1.0-alpha1
+projects[block_class][version] = 1.0
 
 projects[menu_block][type] = module
 projects[menu_block][version] = 1.5
