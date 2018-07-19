@@ -398,6 +398,10 @@
       "drupal/node_edit_protection": {
         "Issue #2941962: Fixed Warning: array_search() expects parameter 2 to be array.":
         "https://www.drupal.org/files/issues/2018-05-16/warning-array-search-2941962-4.patch"
+      },
+      "drupal/entity_clone": {
+        "Issue #2743379: Clone operation shows regardless of permission":
+        "https://www.drupal.org/files/issues/2018-07-05/2743379-entity-clone-operation-access-12.patch"
       }
     }
   }
