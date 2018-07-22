@@ -428,7 +428,7 @@ projects[recaptcha][version] = 2.3
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.8
+projects[search_api][version] = 1.9
 ;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
 projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch
 
