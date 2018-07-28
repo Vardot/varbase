@@ -43,8 +43,6 @@ permissions:
   - 'administer meta tags'
   - 'administer pages'
   - 'administer pane access'
-  - 'administer panelizer node landing_page content'
-  - 'administer panelizer node landing_page layout'
   - 'administer shortcuts'
   - 'administer taxonomy'
   - 'administer tools menu items'

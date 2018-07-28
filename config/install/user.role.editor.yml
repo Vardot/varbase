@@ -23,7 +23,6 @@ permissions:
   - 'access toolbar'
   - 'access tour'
   - 'access user profiles'
-  - 'administer panelizer node landing_page content'
   - 'create landing_page content'
   - 'create media'
   - 'create page content'

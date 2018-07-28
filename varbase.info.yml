@@ -62,7 +62,7 @@ dependencies:
   - page_manager
   - page_manager_ui
   - panels
-  - panelizer
+  - panels_ipe
   - bootstrap_layouts
   - ds
   - ds_extras

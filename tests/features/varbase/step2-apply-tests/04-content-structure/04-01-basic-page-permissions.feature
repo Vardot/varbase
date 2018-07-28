@@ -86,9 +86,3 @@ So that the "Basic page" will show up in the structured menu under its parent pa
       And I wait
      Then I should see "Edit Basic page Test Basic page"
 
-  @javascript @local @development @staging @production
-  Scenario: Check that we did not Allow content of "Basic page" type to have its display controlled by Panelizer.
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/structure/types/manage/page/display"
-      And I wait
-     Then the "Panelize this view mode" checkbox should not be checked
