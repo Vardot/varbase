@@ -20,3 +20,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2877383-56.patch
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2670730-81-89-8.5.0-rc1.patch
 ;; Issue #2855521: Fix Drupalimage calling drupallink functions without checking if the plugin is loaded.
 projects[drupal][patch][] = https://www.drupal.org/files/issues/edit_drupalimage-2855521-15.patch
+;; Issue #2936358: Layout Builder should be opt-in per display (entity type/bundle/view mode)
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-07-28/2936358-opt_in-2936358-64-do-not-test.patch
