@@ -6,7 +6,7 @@ distribution:
   name: Varbase
   install:
     theme: vartheme_admin
-version: 8.x-5.0-alpha4
+version: 8.x-5.x-dev
 dependencies:
   # core
   - automated_cron
