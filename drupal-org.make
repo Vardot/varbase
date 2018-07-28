@@ -38,6 +38,8 @@ projects[ds][type] = module
 projects[ds][version] = 3.1
 ;; Issue #2779243: Method declaration incompatibility.
 projects[ds][patch][] = https://www.drupal.org/files/issues/ds-method-declaration-incompatible-2779243-17.patch
+;; Issue #2920868: Fixed fatal errors when we have missing layouts, on an update.
+projects[ds][patch][] = https://www.drupal.org/files/issues/error-when-layout-is-removed-2920868-4.patch
 ;; Issue #2966959: Fix a DS issue on a Value Conflict with Layout Builder.
 projects[ds][patch][] = https://www.drupal.org/files/issues/2018-04-27/2966959-ds-namespace_form_for_layout_builder-4.patch
 
