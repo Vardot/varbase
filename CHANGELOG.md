@@ -1,3 +1,171 @@
+# 8.5.0-alpha4
+
+### Highlighted important changes since Varbase 8.5.0-alpha3:
+* Issue [#2986808](http://drupal.org/node/2986808):
+                  Removed [panelizer] module with all used configs.
+* Issue [#2988835](http://drupal.org/node/2988835):
+                  Added the 2936358-64 patch for Drupal core 8.5.x to have
+                  [Layout Builder] with opt-in per display
+                  (entity type/bundle/view mode)
+* Issue [#2987364](http://drupal.org/node/2987364):
+                  Changed [Varbase Bootstrap Paragraphs] colors to use
+                  background-color
+* Issue [#2987365](http://drupal.org/node/2987365):
+                  Changed [Vartheme][vbp-colors] paragraphs colors to use
+                  background-color
+* Issue [#2987366](http://drupal.org/node/2987366):
+                  Changed [Vartheme Material][vbp-colors] paragraphs colors to
+                  use background-color
+
+### Highlighted important changes since Varbase 8.5.0-alpha2:
+* Issue [#2984355](http://drupal.org/node/2984355):
+                  Updated [Drupal core] from 8.5.4 to 8.5.5
+
+### Highlighted important changes since Varbase 8.5.0-alpha1:
+* Issue [#2983378](http://drupal.org/node/2983378):
+                  Added [data entity embed display settings] TO LINK entity
+                  image with a target link when we embed the image in
+                  the CKEditor.
+* Issue [#2983236](http://drupal.org/node/2983236):
+                  Reverted [Real-time SEO] module back to old JS version
+                  (1.x) instead of version (2.x)
+* Issue [#2980408](http://drupal.org/node/2980408):
+                  Fixed [Media entity] issue when we update media image,
+                  it still retrieves the old image instead of the updated one
+
+### Highlighted important changes since Varbase 8.4.x:
+* Issue [#2959483](http://drupal.org/node/2959483):
+                  Changed [Varbase Profile] modules and config to work with
+                  [Media] Drupal core module.
+* Issue [#2974100](http://drupal.org/node/2974100):
+                  Added the asset composer repository [asset-packagist.org],
+                  and switched all used libraries to use asset packaging.
+* Issue [#2956295](http://drupal.org/node/2956295):
+                  Departed modules and themes from Varbase 8.x-5.x Profile
+                  as stand-alone projects.
+* Issue [#2967640](http://drupal.org/node/2967640):
+                  Added storage [Field Video] and [Field Media] to
+                  [Varbase Core] to let developers create fields for video
+                  media types of (local), (embed) and use the [Video Browser]
+                  from [Varbase Media].
+* Issue [#2978726](http://drupal.org/node/2978726):
+                  [Varbase Blog] Changed [Main Image] field to [Main Media]
+                  to use [Field Media] from [Varbase Core] for images and
+                  video posts, and use the [Media Browser] from [Varbase Media]
+                  as the default Media browser for the [Blog Post] content type.
+* Issue [#2978723](http://drupal.org/node/2978723):
+                  [Varbase Media] Added [Media Browser] as a general image and
+                  video browsers for the [Field media] in Varbase core.
+* Issue [#2978725](http://drupal.org/node/2978725):
+                  [Varbase Media Hero Slider] Switched to use [Media Browser]
+                  from [Varbase Media] as the default Media browser for hero
+                  slider content type. and removed not needed views and the
+                  custom hero slider media browser.
+* Issue [#2979168](http://drupal.org/node/2979168):
+                  Optimized configs of responsive images for media [Size 8]
+                  and [Edge to Edge] on (auto, standard, traditional,
+                  and square), and Have no revision information or revision
+                  log message for media types, and added Varbase Auto Fill
+                  Media data Behaviours.
+
+### Added since Varbase 8.5.0-alpha3:
+* Issue [#2988835](http://drupal.org/node/2988835):
+                  Added the 2936358-64 patch for Drupal core 8.5.x to have
+                  [Layout Builder] with opt-in per display
+                  (entity type/bundle/view mode)
+
+### Changed since Varbase 8.5.0-alpha3:
+* Issue [#2987364](http://drupal.org/node/2987364):
+                  Changed [Varbase Bootstrap Paragraphs] colors to use
+                  background-color
+* Issue [#2987365](http://drupal.org/node/2987365):
+                  Changed [Vartheme][vbp-colors] paragraphs colors to use
+                  background-color
+* Issue [#2987366](http://drupal.org/node/2987366):
+                  Changed [Vartheme Material][vbp-colors] paragraphs colors
+                  to use background-color
+* Issue [#2986800](http://drupal.org/node/2986800)
+                  by Ahmad Abbad: Remove content_translation module from
+                  dependencies.
+* Issue [#2988764](http://drupal.org/node/2988764):
+                  Removed configs from [Varbase Media Hero Slider] module,
+                  which were related to the [panelizer] module as we
+                  removed panelizer from [Varbase] profile.
+* Issue [#2988761](http://drupal.org/node/2988761):
+                  Removed configs from [Varbase Core] module, which were
+                  related to the [panelizer] module as we removed panelizer
+                  from [Varbase] profile.
+* Issue [#2986884](http://drupal.org/node/2986884):
+                  Removed configs from [Varbase blog] which were related to
+                  the [panelizer] module as we removed panelizer from
+                  [Varbase] profile.
+* Issue [#2988774](http://drupal.org/node/2988774):
+                  Changed the composer.json for [Varbase core] module.
+* Issue [#2988776](http://drupal.org/node/2988776):
+                  Changed the composer.json for [Varbase Media] module.
+* Issue [#2988780](http://drupal.org/node/2988780):
+                  Changed the composer.json for [Varbase Bootstrap
+                  Paragraphs] module.
+* Issue [#2988782](http://drupal.org/node/2988782):
+                  Changed the composer.json for [Varbase Editor] module.
+* Issue [#2988784](http://drupal.org/node/2988784):
+                  Changed the composer.json for [Varbase Landing] module
+* Issue [#2988786](http://drupal.org/node/2988786):
+                  Changed the composer.json for [Varbase Search] module.
+* Issue [#2988788](http://drupal.org/node/2988788):
+                  Changed the composer.json for [Varbase SEO] module.
+* Issue [#2988793](http://drupal.org/node/2988793):
+                  Changed the composer.json for [Varbase Carousels] module.
+* Issue [#2988798](http://drupal.org/node/2988798):
+                  Changed the composer.json for [Varbase Total Control
+                  Dashboard] module.
+* Issue [#2988801](http://drupal.org/node/2988801):
+                  Changed the composer.json for [Varbase Social Single
+                  Sign-On] module
+* Issue [#2988803](http://drupal.org/node/2988803):
+                  Changed the composer.json for [Varbase Blog (Corporate
+                  Blog)] module.
+* Issue [#2988809](http://drupal.org/node/2988809):
+                  Changed the composer.json for [Varbase Styleguide] module.
+* Issue [#2988812](http://drupal.org/node/2988812):
+                  Changed the composer.json for [Vartheme] theme.
+* Issue [#2988816](http://drupal.org/node/2988816):
+                  Changed the composer.json for [Vartheme Material Design]
+                  theme.
+* Issue [#2988820](http://drupal.org/node/2988820):
+                  Changed the composer.json for [Vartheme Admin] theme.
+* Issue [#2988823](http://drupal.org/node/2988823):
+                  Changed the composer.json for [Vartheme Material Admin] theme.
+
+### Updates since Varbase 8.5.0-alpha3:
+* Issue [#2985872](http://drupal.org/node/2985872):
+                  Updated [Block Class] module from 8.1.0-alpha1 to 8.1.0
+* Issue [#2985874](http://drupal.org/node/2985874):
+                  Updated [Google Analytics] module from 8.2.2 to 8.2.3
+* Issue [#2987343](http://drupal.org/node/2987343):
+                  Updated [Bootstrap] theme from 8.3.11 to 8.3.12
+* Issue [#2987344](http://drupal.org/node/2987344):
+                  Updated [Search API] module from 8.1.8 to 8.1.9
+* Issue [#2988769](http://drupal.org/node/2988769):
+                  Updated [Views Bulk Edit] module from 8.2.1 to 8.2.2
+
+### Fixes since Varbase 8.5.0-alpha3:
+* Issue [#2988830](http://drupal.org/node/2988830):
+                  Fixed a [Display Suite] fatal errors when we have missing
+                  layouts, on an update.
+* Issue [#2986565](http://drupal.org/node/2986565)
+                  by mahmoud-zayed: Fixed issue with [Entity clone] which
+                 Apply Clone operation shows regardless of permission patch.
+* Issue [#2986811](http://drupal.org/node/2986811)
+                  by abu-zakham: Fixed [Ds] issue on a value Conflict with
+                  [Layout Builder] in Drupal core.
+* Issue [#2985870](http://drupal.org/node/2985870)
+                  by john.money: Fixed Missing requirement for
+                  better_exposed_filters
+* Issue [#2985869](http://drupal.org/node/2985869)
+                  by john.money: Fixed Missing requirement for
+                  video_embed_wysiwyg
+
 # 8.5.0-alpha3
 
 ### Highlighted important changes since Varbase 8.5.0-alpha2:
