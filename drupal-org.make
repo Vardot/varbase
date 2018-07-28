@@ -196,7 +196,7 @@ projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][version] = 2.4
 
 projects[views_bulk_edit][type] = module
-projects[views_bulk_edit][version] = 2.1
+projects[views_bulk_edit][version] = 2.2
 
 projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
