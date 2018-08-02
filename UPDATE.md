@@ -9,12 +9,10 @@ developers need to do to update the last release to the new release.
 
 #  For Example:
 * https://www.drupal.org/project/varbase/releases/8.x-4.22
+* https://www.drupal.org/project/varbase/releases/8.x-4.22
 * https://www.drupal.org/project/varbase/releases/8.x-4.21
 * https://www.drupal.org/project/varbase/releases/8.x-4.20
 * https://www.drupal.org/project/varbase/releases/8.x-4.19
-* https://www.drupal.org/project/varbase/releases/8.x-4.18
-* https://www.drupal.org/project/varbase/releases/8.x-4.17
-* https://www.drupal.org/project/varbase/releases/8.x-4.16
 
 # 2 - Backups
 
@@ -84,7 +82,12 @@ while working on the project.
 
 
 --------------------------------------------------------------------------------
+# Updating Varbase 8.4.21 to Varbase 8.4.22
+  This is only a security vulnerability onDrupal Core - 3rd-party libraries
+   -SA-CORE-2018-005
 
+  If you already did the update of Varbase from 8.4.21 to 8.4.22, Please 
+  follow the same steps on updating Varbase 8.4.21 to Varbase 8.4.22
 
 # Updating Varbase 8.4.21 to Varbase 8.4.22
   If you already did the update of Varbase from 8.4.20 to 8.4.21, this

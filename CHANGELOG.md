@@ -1,3 +1,32 @@
+## 8.4.23
+
+### Highlighted important changes since Varbase 8.4.22:
+* Issue [#2990103](https://www.drupal.org/node/2990103):
+                 Updated [Drupal core] module from 8.5.5 to 8.5.6
+* Drupal Core - 3rd-party libraries -SA-CORE-2018-005
+* https://www.drupal.org/SA-CORE-2018-005
+* CVE-2018-14773: Remove support for legacy and risky HTTP headers
+* https://symfony.com/blog/cve-2018-14773-remove-support-for-legacy-and-ri...
+* Zend Security Advisory: ZF2018-01 ZF2018-01: URL Rewrite vulnerability
+* https://framework.zend.com/security/advisory/ZF2018-01
+
+### Updates since Varbase 8.4.22:
+* Issue [#2987343](https://www.drupal.org/node/2987343):
+                  Updated [Bootstrap] theme from 8.3.11 to 8.3.12
+* Issue [#2987344](https://www.drupal.org/node/2987344):
+                  Updated [Search API] module from 8.1.8 to 8.1.9
+* Issue [#2985872](https://www.drupal.org/node/2985872):
+                  Updated [Block Class] module from 8.1.0-alpha1 to 8.1.0
+* Issue [#2985874](https://www.drupal.org/node/2985874):
+                  Updated [Google Analytics] module from 8.2.2 o 8.2.3
+* Issue [#2988769](https://www.drupal.org/node/2988769):
+                  Updated [Views Bulk Edit] module from 8.2.1 to 8.2.2
+
+### Fixes since Varbase 8.4.22:
+* Issue [#2986565](https://www.drupal.org/node/2986565) by mahmoud-zayed:
+                  Fixed issue with [Entity clone] which Apply Clone operation
+                  shows regardless of permission patch.
+
 ## 8.4.22
 
 ### Highlighted important changes since Varbase 8.4.21:
