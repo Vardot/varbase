@@ -1,3 +1,15 @@
+# 8.5.0-alpha5
+
+### Highlighted important changes since Varbase 8.5.0-alpha4:
+* Issue [#2990103](http://drupal.org/node/2990103):
+                  Updated [Drupal core] module from 8.5.5 to 8.5.6
+* Drupal Core - 3rd-party libraries -SA-CORE-2018-005
+* https://www.drupal.org/SA-CORE-2018-005
+* CVE-2018-14773: Remove support for legacy and risky HTTP headers
+* https://symfony.com/blog/cve-2018-14773-remove-support-for-legacy-and-ri...
+* Zend Security Advisory: ZF2018-01 ZF2018-01: URL Rewrite vulnerability
+* https://framework.zend.com/security/advisory/ZF2018-01
+
 # 8.5.0-alpha4
 
 ### Highlighted important changes since Varbase 8.5.0-alpha3:
