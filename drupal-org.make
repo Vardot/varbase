@@ -449,7 +449,7 @@ projects[slick_views][type] = module
 projects[slick_views][version] = 1.0-rc2
 
 projects[slick_media][type] = module
-projects[slick_media][version] = 2.0-alpha1
+projects[slick_media][version] = 2.0-alpha2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
