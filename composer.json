@@ -363,7 +363,7 @@
       },
       "drupal/entity_clone": {
         "Issue #2743379: Clone operation shows regardless of permission":
-        "https://www.drupal.org/files/issues/2018-07-05/2743379-entity-clone-operation-access-12.patch"
+        "https://www.drupal.org/files/issues/check-permission-2743379-1.patch"
       }
     }
   }

@@ -89,7 +89,7 @@ projects[entity_clone][download][url] = https://git.drupal.org/project/entity_cl
 projects[entity_clone][download][revision] = 6d0ce053605e9aaf8412927a9b0ea8da7a9a06e5
 projects[entity_clone][download][branch] = 8.x-1.x
 ;; Issue #2743379: Clone operation shows regardless of permission.
-projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2018-07-05/2743379-entity-clone-operation-access-12.patch
+projects[entity_clone][patch][] = https://www.drupal.org/files/issues/check-permission-2743379-1.patch
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.5
