@@ -230,7 +230,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-8.x-5.x": "8.5.x-dev"
+      "dev-8.x-6.x": "8.6.x-dev"
     },
     "installer-types": [
       "bower-asset",

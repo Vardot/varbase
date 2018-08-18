@@ -7,13 +7,6 @@ For each stable release we will have some notes, and extra steps,
 developers need to do to update the last release to the new release.
 
 
-#  For Example:
-* https://www.drupal.org/project/varbase/releases/8.x-5.0-alpha5
-* https://www.drupal.org/project/varbase/releases/8.x-5.0-alpha4
-* https://www.drupal.org/project/varbase/releases/8.x-5.0-alpha3
-* https://www.drupal.org/project/varbase/releases/8.x-5.0-alpha2
-* https://www.drupal.org/project/varbase/releases/8.x-5.0-alpha1
-
 
 # 2 - Backups
 
@@ -85,5 +78,5 @@ while working on the project.
 
 --------------------------------------------------------------------------------
 
-# No upgrade path to update Varbase 8.x-4.x to 8.x-5.x yet
+# No upgrade path to update Varbase 8.x-4.x to 8.x-6.x yet
 You will need to manage a migration, or a hard update process.
