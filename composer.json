@@ -32,7 +32,7 @@
     "cweagans/composer-patches": "1.6.4",
     "drupal-composer/drupal-scaffold": "2.4.0",
     "drupal/drupal-library-installer-plugin": "0.3",
-    "drupal/core": "8.5.6",
+    "drupal/core": "8.6.0-rc1",
     "drupal/config_update": "1.5",
     "drupal/config_filter": "1.2",
     "drupal/config_ignore": "2.1",
@@ -161,23 +161,23 @@
     "drupal/anchor_link": "1.6",
     "drupal/entity_browser_enhanced": "1.0-rc3",
     "drupal/vmi": "2.0-alpha1",
-    "drupal/varbase_core": "5.x-dev",
-    "drupal/varbase_media": "5.x-dev",
-    "drupal/varbase_bootstrap_paragraphs": "5.x-dev",
-    "drupal/varbase_editor": "5.x-dev",
-    "drupal/varbase_landing": "5.x-dev",
-    "drupal/varbase_search": "5.x-dev",
-    "drupal/varbase_seo": "5.x-dev",
-    "drupal/varbase_heroslider_media": "5.x-dev",
-    "drupal/varbase_carousels": "5.x-dev",
-    "drupal/varbase_total_control": "5.x-dev",
-    "drupal/varbase_auth" : "5.x-dev",
-    "drupal/varbase_blog" : "5.x-dev",
-    "drupal/varbase_styleguide": "5.x-dev",
-    "drupal/vartheme": "5.x-dev",
-    "drupal/vartheme_material": "5.x-dev",
-    "drupal/vartheme_admin": "5.x-dev",
-    "drupal/vartheme_material_admin": "5.x-dev",
+    "drupal/varbase_core": "6.x-dev",
+    "drupal/varbase_media": "6.x-dev",
+    "drupal/varbase_bootstrap_paragraphs": "6.x-dev",
+    "drupal/varbase_editor": "6.x-dev",
+    "drupal/varbase_landing": "6.x-dev",
+    "drupal/varbase_search": "6.x-dev",
+    "drupal/varbase_seo": "6.x-dev",
+    "drupal/varbase_heroslider_media": "6.x-dev",
+    "drupal/varbase_carousels": "6.x-dev",
+    "drupal/varbase_total_control": "6.x-dev",
+    "drupal/varbase_auth" : "6.x-dev",
+    "drupal/varbase_blog" : "6.x-dev",
+    "drupal/varbase_styleguide": "6.x-dev",
+    "drupal/vartheme": "6.x-dev",
+    "drupal/vartheme_material": "6.x-dev",
+    "drupal/vartheme_admin": "6.x-dev",
+    "drupal/vartheme_material_admin": "6.x-dev",
     "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
     "npm-asset/dropzone": "4.3.0",
     "npm-asset/blazy": "1.8.2",
@@ -197,8 +197,8 @@
     "behat/mink-selenium2-driver": "1.3.1",
     "behatch/contexts": "3.1.0",
     "emuse/behat-html-formatter": "0.1.0",
-    "vardot/varbase_vmi_demo": "dev-8.x-5.x",
-    "vardot/varbase_story_demo": "dev-8.x-5.x"
+    "vardot/varbase_vmi_demo": "dev-8.x-6.x",
+    "vardot/varbase_story_demo": "dev-8.x-6.x"
   },
   "config": {
     "bin-dir": "bin/",
@@ -264,21 +264,13 @@
     "patches": {
       "drupal/core": {
         "Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order":
-        "https://www.drupal.org/files/issues/1356278-408--8.5.x-real.patch",
+        "https://www.drupal.org/files/issues/2018-07-12/1356276-473.patch",
         "Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)":
-        "https://www.drupal.org/files/issues/2720101-43.patch",
+        "https://www.drupal.org/files/issues/2720101-53.patch",
         "Issue #2599228: Programmatically created translatable content type returns SQL error on content creation":
-        "https://www.drupal.org/files/issues/2599228-31-tests-only.patch",
+        "https://www.drupal.org/files/issues/2018-08-08/2599228-58.patch",
         "Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal":
-        "https://www.drupal.org/files/issues/patch_empty_fix.patch",
-        "Issue #2877383: Add action support to Media module.":
-        "https://www.drupal.org/files/issues/2877383-56.patch",
-        "Issue #2670730: Provide a delete action for each content entity type.":
-        "https://www.drupal.org/files/issues/2670730-81-89-8.5.0-rc1.patch",
-        "Issue #2855521: Fix Drupalimage calling drupallink functions without checking if the plugin is loaded":
-        "https://www.drupal.org/files/issues/edit_drupalimage-2855521-15.patch",
-        "Issue #2936358: Layout Builder should be opt-in per display (entity type/bundle/view mode)":
-        "https://www.drupal.org/files/issues/2018-07-28/2936358-opt_in-2936358-64-do-not-test.patch"
+        "https://www.drupal.org/files/issues/patch_empty_fix.patch"
       },
       "drupal/coffee": {
         "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
