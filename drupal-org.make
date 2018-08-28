@@ -34,6 +34,9 @@ projects[panels][version] = 4.3
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
+projects[layout_builder_restrictions][type] = module
+projects[layout_builder_restrictions][version] = 1.0
+
 projects[ds][type] = module
 projects[ds][version] = 3.1
 ;; Issue #2779243: Method declaration incompatibility.
