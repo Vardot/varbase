@@ -362,16 +362,6 @@ projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/em
 projects[styleguide][type] = module
 projects[styleguide][version] = 1.0-alpha3
 
-projects[material_admin_support][type] = module
-projects[material_admin_support][download][url] = https://git.drupal.org/project/material_admin_support.git
-projects[material_admin_support][download][revision] = 96ce192c31643faf69d77aca3c68578f778be3bc
-projects[material_admin_support][download][branch] = 8.x-1.x
-
-projects[type_style][type] = module
-projects[type_style][download][url] = https://git.drupal.org/project/type_style.git
-projects[type_style][download][revision] = 486a8ec7c1c7dcd93790ee281c78cfa3dba90d78
-projects[type_style][download][branch] = 8.x-1.x
-
 projects[pathauto][type] = module
 projects[pathauto][version] = 1.2
 
@@ -493,9 +483,6 @@ projects[adminimal_theme][version] = 1.3
 ;; Issue #2696393: Checkboxes with .error class are not usable
 projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch
 
-projects[material_admin][type] = theme
-projects[material_admin][version] = 1.0-alpha6
-
 ;;;;;;;;;;;;;;;;;;;;;
 ;; General Public contributed modules.
 ;;;;;;;;;;;;;;;;;;;;;
@@ -564,14 +551,8 @@ projects[varbase_styleguide][version] = 5.x-dev
 projects[vartheme][type] = theme
 projects[vartheme][version] = 5.x-dev
 
-projects[vartheme_material][type] = theme
-projects[vartheme_material][version] = 5.x-dev
-
 projects[vartheme_admin][type] = theme
 projects[vartheme_admin][version] = 5.x-dev
-
-projects[vartheme_material_admin][type] = theme
-projects[vartheme_material_admin][version] = 5.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
