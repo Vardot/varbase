@@ -358,7 +358,7 @@ projects[redirect][type] = module
 projects[redirect][version] = 1.2
 
 projects[metatag][type] = module
-projects[metatag][version] = 1.6
+projects[metatag][version] = 1.7
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.3
