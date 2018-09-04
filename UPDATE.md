@@ -136,7 +136,7 @@ while working on the project.
 
 
 --------------------------------------------------------------------------------
-# Updating Varbase 8.4.21 to Varbase 8.4.22
+# Updating Varbase 8.4.22 to Varbase 8.4.23
   This is only a security vulnerability onDrupal Core - 3rd-party libraries
    -SA-CORE-2018-005
 
