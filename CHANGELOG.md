@@ -1,3 +1,47 @@
+## 8.4.24
+
+### Highlighted important changes since Varbase 8.4.23:
+* Issue [#2995514](https://www.drupal.org/node/2995514):
+                 Switched from restricted composer require to open, only for
+                 not patched modules And add the composer.lock in the
+                 varbase-project template.
+
+### Added since Varbase 8.4.23:
+* No added features, As all new features will be in Varbase 8.5.x and 8.6.x
+
+### Changed since Varbase 8.4.23:
+* Issue [#2995514](https://www.drupal.org/node/2995514):
+                 Switched from restricted composer require to open, only for
+                 not patched modules And add the composer.lock in the
+                 varbase-project template.
+* Issue [#2995476](https://www.drupal.org/node/2995476):
+                 Removed [Vartheme Material Design] themes and related modules
+
+### Updates since Varbase 8.4.23:
+* Issue [#2992070](https://www.drupal.org/node/2992070):
+                 Updated [Adminimal Admin Toolbar] module from 8.1.7 to 8.1.8
+* Issue [#2992073](https://www.drupal.org/node/2992073):
+                 Updated [Honeypot] module from 8.1.27 to 8.1.28
+* Issue [#2992083](https://www.drupal.org/node/2992083):
+                 Updated [Username Enumeration Prevention] module
+                 from 8.1.0-beta1 to 8.1.0-beta2
+* Issue [#2993030](https://www.drupal.org/node/2993030):
+                 Updated [Security Kit] module from 8.1.0-alpha2 to 8.1.0
+* Issue [#2993034](https://www.drupal.org/node/2993034):
+                 Updated [Webform] module from 8.5.0-rc16 to 8.5.0-rc18
+* Issue [#2995114](https://www.drupal.org/node/2995114):
+                 Updated [Image Optimize (or ImageAPI Optimize)] module
+                 from 8.2.0-alpha3 to 8.2.0-alpha4
+* Issue [#2995117](https://www.drupal.org/node/2995117):
+                 Updated [Metatag] module from 8.1.5 to ^8.1.7 and change
+                 to open requirement and the Drupal.org make builder.
+
+### Fixes since Varbase 8.4.23:
+* Issue [#2990965](https://www.drupal.org/node/2990965):
+                 Fixed issue of unable to edit menu items, which related 
+                 to entity clone patch.
+
+
 ## 8.4.23
 
 ### Highlighted important changes since Varbase 8.4.22:
