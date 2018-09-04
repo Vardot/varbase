@@ -102,6 +102,11 @@ while working on the project.
   Given that we are at the root folder for varbase project, not the docroot
     And we make sure that the current "Varbase-project" composer.json file and
         files are the latest
+    And remove:
+```
+    "drupal/material_admin_support": "1.x-dev#96ce192c31643faf69d77aca3c68578f778be3bc",
+    "drupal/type_style": "1.x-dev#486a8ec7c1c7dcd93790ee281c78cfa3dba90d78",
+```
    When we delete the "vendor" folder
     And we delete the "composer.lock" file
     And we run the "composer require vardot/varbase:8.4.24" command
