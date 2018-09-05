@@ -65,7 +65,7 @@
     "drupal/pathologic": "^1.0-alpha1",
     "drupal/ckeditor_bidi": "2.1",
     "drupal/ace_editor": "1.0",
-    "drupal/entityqueue": "1.0-alpha8",
+    "drupal/entityqueue": "^1.0-alpha8",
     "drupal/entityqueue_form_widget": "^1.0-beta3",
     "drupal/imagemagick": "^2.3",
     "drupal/imageapi_optimize": "^2.0-alpha4",
