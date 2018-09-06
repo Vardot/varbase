@@ -104,7 +104,7 @@ projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-rc1
 
 projects[media_entity][type] = module
-projects[media_entity][version] = 1.7
+projects[media_entity][version] = 1.8
 
 projects[media_entity_document][type] = module
 projects[media_entity_document][version] = 1.1
