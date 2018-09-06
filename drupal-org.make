@@ -276,7 +276,7 @@ projects[paragraphs_asymmetric_translation_widgets][download][revision] = e676e6
 projects[paragraphs_asymmetric_translation_widgets][download][branch] = 8.x-1.x
 
 projects[color_field][type] = module
-projects[color_field][version] = 2.0-rc3
+projects[color_field][version] = 2.0
 
 projects[entity_reference_revisions][type] = module
 projects[entity_reference_revisions][version] = 1.5
