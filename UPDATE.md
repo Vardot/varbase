@@ -8,6 +8,7 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
+* https://www.drupal.org/project/varbase/releases/8.x-4.25
 * https://www.drupal.org/project/varbase/releases/8.x-4.24
 * https://www.drupal.org/project/varbase/releases/8.x-4.23
 * https://www.drupal.org/project/varbase/releases/8.x-4.22
@@ -80,6 +81,12 @@ while working on the project.
 
 * Done :\)
 
+--------------------------------------------------------------------------------
+
+# Updating Varbase 8.4.24 to Varbase 8.4.25
+## Same as updating Varbase 8.4.23 to 8.4.24 
+
+--------------------------------------------------------------------------------
 
 # Updating Varbase 8.4.23 to Varbase 8.4.24
   If you already did the update of Varbase from 8.4.23 to 8.4.24, this
@@ -142,6 +149,8 @@ while working on the project.
 
   If you already did the update of Varbase from 8.4.21 to 8.4.22, Please 
   follow the same steps on updating Varbase 8.4.21 to Varbase 8.4.22
+
+--------------------------------------------------------------------------------
 
 # Updating Varbase 8.4.21 to Varbase 8.4.22
   If you already did the update of Varbase from 8.4.20 to 8.4.21, this

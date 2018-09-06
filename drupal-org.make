@@ -518,53 +518,53 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 4.x-dev
+projects[varbase_core][version] = 4.0
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 4.x-dev
+projects[varbase_media][version] = 4.0
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 4.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 4.0
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 4.x-dev
+projects[varbase_editor][version] = 4.19
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 4.x-dev
+projects[varbase_landing][version] = 4.0
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 4.x-dev
+projects[varbase_search][version] = 4.0
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 4.x-dev
+projects[varbase_seo][version] = 4.0
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 4.x-dev
+projects[varbase_heroslider_media][version] = 4.0
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 4.x-dev
+projects[varbase_carousels][version] = 4.0
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 1.x-dev
+projects[varbase_total_control][version] = 1.2
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 4.x-dev
+projects[varbase_auth][version] = 4.0
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 4.x-dev
+projects[varbase_blog][version] = 4.0
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 5.x-dev
+projects[varbase_styleguide][version] = 5.0-beta4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contrib themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 4.x-dev
+projects[vartheme][version] = 4.20
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 4.x-dev
+projects[vartheme_admin][version] = 4.0
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

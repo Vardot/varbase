@@ -1,3 +1,20 @@
+## 8.4.25
+
+### Highlighted important changes since Varbase 8.4.24:
+
+* Issue #2997690: Update [Drupal core] from 8.5.6 to 8.5.7
+* Issue #2997438: Update [Entityqueue] module from 8.1.0-alpha7 to ^8.1.0-alpha8
+
+### Added since Varbase 8.4.24:
+* No added features, As all new features will be in Varbase 8.5.x and 8.6.x
+
+### Updates since Varbase 8.4.24:
+* Issue #2997690: Update [Drupal core] from 8.5.6 to 8.5.7
+* Issue #2997438: Update [Entityqueue] module from 8.1.0-alpha7 to ^8.1.0-alpha8
+* Issue #2997741: Updated [Media entity] module from ^8.1.7 to ^8.1.8
+* Issue #2997745: Update [Honeypot] module from ^8.1.28 to ^8.1.29
+* Issue #2997750: Updated [Color Field] module from ^8.2.0-rc3 to ^8.2.0
+
 ## 8.4.24
 
 ### Highlighted important changes since Varbase 8.4.23:
