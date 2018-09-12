@@ -96,7 +96,7 @@ projects[entity_clone][download][branch] = 8.x-1.x
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2018-08-26/2743379-18.patch
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 2.0-alpha3
+projects[entity_browser][version] = 2.0
 ;; Issue #2865928: The View widget should filter based on field settings.
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch
 ;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
