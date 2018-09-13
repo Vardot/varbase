@@ -129,7 +129,13 @@
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
     "drupal-libraries": {
-      "library-directory": "docroot/libraries"
+      "library-directory": "docroot/libraries",
+      "libraries": [
+          {"name": "dropzone","package": "npm-asset/dropzone"},
+          {"name": "blazy", "package": "npm-asset/blazy"},
+          {"name": "slick", "package": "npm-asset/slick-carousel"},
+          {"name": "ace", "package": "npm-asset/ace-builds"}
+      ]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true
