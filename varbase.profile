@@ -459,7 +459,7 @@ function varbase_after_install_finished(array &$install_state) {
   $output = [
     '#title' => t('Varbase'),
     'info' => [
-      '#markup' => t('<p>Congratulations, you have installed Varbase!</p><p>If you are not redirected to the front page in 5 seconds, Please <a href="@url">click here</a> to proceed to your insalled site.</p>', [
+      '#markup' => t('<p>Congratulations, you have installed Varbase!</p><p>If you are not redirected to the front page in 5 seconds, Please <a href="@url">click here</a> to proceed to your installed site.</p>', [
         '@url' => $after_install_direction,
       ]),
     ],
