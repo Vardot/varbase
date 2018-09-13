@@ -501,7 +501,7 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 5.0
+projects[varbase_core][version] = 5.1
 
 projects[varbase_media][type] = module
 projects[varbase_media][version] = 5.0

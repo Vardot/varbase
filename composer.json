@@ -32,7 +32,7 @@
     "cweagans/composer-patches": "^1.6.4",
     "drupal-composer/drupal-scaffold": "^2.4.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "drupal/varbase_core": "^5.0",
+    "drupal/varbase_core": "^5.1",
     "drupal/varbase_media": "^5.0",
     "drupal/varbase_bootstrap_paragraphs": "^5.0",
     "drupal/varbase_editor": "^5.0",
@@ -117,12 +117,19 @@
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "docroot/libraries/slick": ["npm-asset/slick-carousel"],
+      "docroot/libraries/ace": ["npm-asset/ace-builds"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
         "type:npm-asset"
       ],
+      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
+      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "drupal-libraries": {
+      "library-directory": "docroot/libraries"
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true

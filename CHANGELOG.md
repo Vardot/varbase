@@ -367,6 +367,12 @@
 * Issue [#2956966](http://drupal.org/node/2956966)
                  by Muath Khraisat, Ahmad Abbad: Fix PHP 5.6: Error:
                  syntax error, unexpected
+* Issue [#2999427](http://drupal.org/node/2999427)
+                 by JayBeeDutch, Mohammed J. Razem: Fix typo in the text
+                 between the installation and the redirection
+* Issue [#2999447](http://drupal.org/node/2999447): Fix issue of composer
+                 installer-paths which locate modules as submodules, not in
+                 the root/docroot/module/contrib default location.
 
 # 8.5.0-alpha5
 
