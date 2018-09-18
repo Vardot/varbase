@@ -78,5 +78,5 @@ while working on the project.
 
 --------------------------------------------------------------------------------
 
-# No upgrade path to update Varbase 8.x-4.x to 8.x-6.x yet
+# No upgrade path to update Varbase 8.x-5.x to 8.x-6.x yet
 You will need to manage a migration, or a hard update process.

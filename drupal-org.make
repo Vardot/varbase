@@ -23,7 +23,7 @@ projects[ctools][version] = 3.0
 projects[ctools][patch][] = https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch
 
 projects[token][type] = module
-projects[token][version] = 1.3
+projects[token][version] = 1.4
 
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta3
@@ -35,7 +35,7 @@ projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
 projects[layout_builder_restrictions][type] = module
-projects[layout_builder_restrictions][version] = 1.0
+projects[layout_builder_restrictions][version] = 1.1
 
 projects[ds][type] = module
 projects[ds][version] = 3.1
@@ -96,7 +96,7 @@ projects[entity_clone][download][branch] = 8.x-1.x
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2018-08-26/2743379-18.patch
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 2.0-alpha3
+projects[entity_browser][version] = 2.0
 ;; Issue #2865928: The View widget should filter based on field settings.
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch
 ;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
@@ -147,15 +147,7 @@ projects[ace_editor][version] = 1.0
 projects[ace_editor][patch][] = https://www.drupal.org/files/issues/2916832-4.patch
 
 projects[entityqueue][type] = module
-projects[entityqueue][version] = 1.0-alpha7
-;; Issue #2145441: Option to create Entityqueue tab on Entity pages
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2145441-32.patch
-;; Issue #2825773: Make Contextual links work for views using Entityqueue
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/2825773-23-outside_in_to_settings_tray.patch
-;; Issue #2916026: Only users with [Administer entityqueue] should be able to delete entityqueues
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-to-delete-entityqueues-2916026-3.patch
-;; Issue #2917308: Only users with [Administer entityqueue] should be able to edit (configure) entityqueues
-projects[entityqueue][patch][] = https://www.drupal.org/files/issues/only-users-with-administer-entityqueue-should-be-able-edit-configure-entityqueues-2917308-2.patch
+projects[entityqueue][version] = 1.0-alpha8
 
 projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta3
@@ -212,7 +204,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-rc18
+projects[webform][version] = 5.0-rc21
 
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha7
@@ -291,7 +283,7 @@ projects[paragraphs_previewer][version] = 1.2
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
 
 projects[paragraphs_features][type] = module
-projects[paragraphs_features][version] = 1.2
+projects[paragraphs_features][version] = 1.4
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
 projects[paragraphs_asymmetric_translation_widgets][download][url] = https://git.drupal.org/project/paragraphs_asymmetric_translation_widgets.git
@@ -299,7 +291,7 @@ projects[paragraphs_asymmetric_translation_widgets][download][revision] = e676e6
 projects[paragraphs_asymmetric_translation_widgets][download][branch] = 8.x-1.x
 
 projects[color_field][type] = module
-projects[color_field][version] = 2.0-rc3
+projects[color_field][version] = 2.0
 
 projects[entity_reference_revisions][type] = module
 projects[entity_reference_revisions][version] = 1.5
@@ -366,7 +358,7 @@ projects[styleguide][type] = module
 projects[styleguide][version] = 1.0-alpha3
 
 projects[pathauto][type] = module
-projects[pathauto][version] = 1.2
+projects[pathauto][version] = 1.3
 
 projects[redirect][type] = module
 projects[redirect][version] = 1.2
@@ -410,7 +402,7 @@ projects[security_review][download][revision] = 35ebae445bb260e961e47c4c58efe7c5
 projects[security_review][download][branch] = 8.x-1.x
 
 projects[honeypot][type] = module
-projects[honeypot][version] = 1.28
+projects[honeypot][version] = 1.29
 
 projects[shield][type] = module
 projects[shield][version] = 1.2
@@ -447,7 +439,7 @@ projects[slick_media][version] = 2.0-alpha2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[features][type] = module
-projects[features][version] = 3.7
+projects[features][version] = 3.8
 
 projects[coffee][type] = module
 projects[coffee][version] = 1.0-beta2
@@ -479,7 +471,7 @@ projects[devel][version] = 1.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.12
+projects[bootstrap][version] = 3.13
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
@@ -497,7 +489,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-rc3
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.0-alpha1
+projects[vmi][version] = 2.0
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4

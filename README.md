@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-6.x)](https://travis-ci.org/Vardot/varbase/builds/411160134) Varbase 8.6.x-dev
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-6.x)](https://travis-ci.org/Vardot/varbase) Varbase 8.6.x
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -20,7 +20,7 @@ in every project.
 * [Tested, tested, and tested.](https://travis-ci.org/Vardot/varbase/builds)
 
 Starting a new project? Consider Varbase for Drupal 8.
-Installing Varbase 8.x-5.x comes with several extra automated installation
+Installing Varbase 8.x-6.x comes with several extra automated installation
 steps, to take full advantage of Varbase, other than the Drupal 8 installation
 instructions.
 
