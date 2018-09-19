@@ -47,9 +47,7 @@ projects[ds][patch][] = https://www.drupal.org/files/issues/error-when-layout-is
 projects[ds][patch][] = https://www.drupal.org/files/issues/2018-04-27/2966959-ds-namespace_form_for_layout_builder-4.patch
 
 projects[views_bootstrap][type] = module
-projects[views_bootstrap][download][url] = https://git.drupal.org/project/views_bootstrap.git
-projects[views_bootstrap][download][revision] = ec4e7872315db6a7287014b029c3167962647588
-projects[views_bootstrap][download][branch] = 8.x-3.x
+projects[views_bootstrap][version] = 3.1
 
 projects[field_group][type] = module
 projects[field_group][version] = 3.0-beta1
