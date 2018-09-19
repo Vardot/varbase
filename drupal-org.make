@@ -117,7 +117,7 @@ projects[video_embed_field][type] = module
 projects[video_embed_field][version] = 2.0
 
 projects[media_entity_instagram][type] = module
-projects[media_entity_instagram][version] = 2.0-alpha1
+projects[media_entity_instagram][version] = 2.0-alpha2
 
 projects[media_entity_twitter][type] = module
 projects[media_entity_twitter][version] = 2.0-alpha2
