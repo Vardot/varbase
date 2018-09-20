@@ -107,3 +107,14 @@ function varbase_install() {
     install_goto('?tour');
   }
 }
+
+/**
+ * Enable [BigPipe] Drupal core module by default.
+ */
+function varbase_update_8501() {
+  // Apply for Varbase 8.5.0 to 8.5.1
+
+  if (\Drupal::moduleHandler()->moduleExists('big_pipe')) {
+    \Drupal::service('module_installer')->uninstall(['big_pipe'], FALSE);
+  }
+}
