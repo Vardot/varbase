@@ -1,3 +1,42 @@
+# 8.5.1
+
+### Highlighted important changes since Varbase 8.5.0:
+* Issue [#3000876](http://drupal.org/node/3000876):
+                 Update [Drupal core] from 8.5.7 to 8.6.1
+* Issue [#3001196](http://drupal.org/node/3001196):
+                 Enable [BigPipe] Drupal core module by default
+
+### Added since Varbase 8.5.0:
+* No new features
+
+### Change since Varbase 8.5.0:
+Issue [#3001196](http://drupal.org/node/3001196):
+                 Enable [BigPipe] Drupal core module by default
+
+### Updates since Varbase 8.5.0:
+* Issue [#3000876](http://drupal.org/node/3000876):
+                 Update [Drupal core] from 8.5.7 to 8.6.1
+* Issue [#3000907](http://drupal.org/node/3000907):
+                 Update [Views Bootstrap] from 3.x-dev ec4e787 to ^3.1
+* Issue [#3000924](http://drupal.org/node/3000924):
+                 Update [Search API] module from 8.1.9 to 8.1.10
+* Issue [#3000934](http://drupal.org/node/3000934):
+                 Update [Layout Builder Restrictions] module 8.1.1 to 8.1.2
+* Issue [#3000945](http://drupal.org/node/3000945):
+                 Update [Media entity Instagram] module
+                 from 8.2.0-alpha1 to 8.2.0-alpha2
+* Issue [#3000975](http://drupal.org/node/3000975):
+                 Update [Link Attributes widget] module from 8.1.3 to 8.1.5
+* Issue [#2999288](http://drupal.org/node/2999288):
+                 Update [Bootstrap] theme from ^8.3.12 to ^8.3.13
+
+### Fixes since Varbase 8.5.0:
+* Issue [#3000014](http://drupal.org/node/3000014)
+                  by [mhawwari](https://www.drupal.org/u/mhawwari):
+                  Fix Better Login Input Label Alignment
+
+--------------------------------------------------------------------------------
+
 # 8.5.0
 
 ### Highlighted important changes since Varbase 8.4.x:

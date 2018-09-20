@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-5.0)](https://travis-ci.org/Vardot/varbase/builds/428311121) Varbase 8.5.0
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-5.1)](https://travis-ci.org/Vardot/varbase/builds/428311121) Varbase 8.5.1
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -28,7 +28,7 @@ instructions.
 
 To install the most recent stable release of Varbase 8.5.x run this command:
 ```
-composer create-project Vardot/varbase-project:^8.5.0 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/varbase-project:^8.5.1 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Varbase 8.5.x run this command:
