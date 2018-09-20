@@ -19,6 +19,7 @@ dependencies:
   - contextual
   - datetime
   - dynamic_page_cache
+  - big_pipe
   - editor
   - filter
   - entity_reference
