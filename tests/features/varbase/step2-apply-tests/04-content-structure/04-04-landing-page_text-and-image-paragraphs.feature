@@ -6,7 +6,7 @@ So that the "Landing page" will have text and images in right and left view.
  @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file.
      Given I am a logged in user with the "test_site_admin" user
-      When I go to "/admin/content/media"
+      When I go to "admin/content/media-table"
        And I wait
       Then I should see "Add media"
       When I click "Add media"

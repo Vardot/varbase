@@ -20,7 +20,7 @@ So that it will show up under that rich text field without having to upload the 
 
    @local @development @staging @production
    Scenario: Upload the "Embed Flag Earth" file.
-      When I go to "/admin/content/media"
+      When I go to "admin/content/media-table"
        And I wait
       Then I should see "Add media"
       When I click "Add media"

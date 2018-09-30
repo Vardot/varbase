@@ -113,9 +113,6 @@ projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2018-04-23
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-rc1
 
-projects[video_embed_field][type] = module
-projects[video_embed_field][version] = 2.0
-
 projects[media_entity_instagram][type] = module
 projects[media_entity_instagram][version] = 2.0-alpha2
 
