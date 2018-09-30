@@ -87,8 +87,6 @@ dependencies:
   - dropzonejs_eb_widget:dropzonejs_eb_widget
   - entity_embed:entity_embed
   - inline_entity_form:inline_entity_form
-  - video_embed_media:video_embed_media
-  - video_embed_wysiwyg:video_embed_wysiwyg
   - crop:crop
   - focal_point:focal_point
   - pathologic:pathologic
