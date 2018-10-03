@@ -5,9 +5,9 @@ core = 8.x
 projects[drupal][type] = "core"
 projects[drupal][version] = "8.6.1"
 ;; Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-09-14/1356276-486.patch
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-02/1356276-501.patch
 ;; Issue #2855026: Installation profiles do not support project:module format for dependencies
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-09-10/drupal-support_project_module_format_dependencies-2855026-49.patch
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-02/2855026-55.patch
 ;; Issue #2720101: Label (Title) not set for Views block (exposed filters in Block)
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2720101-53.patch
 ;; Issue #2853988: Add option to rewrite robots.txt on staging environments
