@@ -4,8 +4,16 @@ core = 8.x
 ; Drupal Core
 projects[drupal][type] = "core"
 projects[drupal][version] = "8.6.2"
-;; Issue #1356276: Allow profiles to provide a base_parent profile and load them in the correct order
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-12/1356276-531.patch
+;; Issue #2869592: Disabled update module shouldn't produce a status report warning
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch
+;; Issue #2885441: EntityReferenceAutocompleteWidget should define its size setting as an integer
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2885441-2.patch
+;; Issue #2815221: Add quickedit to the latest-revision route
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-17/2815221-reroll-8.6.1.patch
+;; Issue #1356276: Allow profiles to define a base/parent profile and load them in the correct order
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-05/1356276-515.patch
+;; Issue #2914389: Allow profiles to exclude dependencies of their parent
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch
 ;; Issue #2855026: Installation profiles do not support project:module format for dependencies
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-02/2855026-55.patch
 ;; Issue #2720101: Label (Title) not set for Views block (exposed filters in Block)
