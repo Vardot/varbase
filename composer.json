@@ -138,7 +138,7 @@
     "drupal/viewsreference": "^2.0-alpha4",
     "drupal/libraries": "^3.0-alpha1",
     "drupal/layout_plugin": "^1.0-alpha23",
-    "drupal/xmlsitemap": "^1.0-alpha2",
+    "drupal/xmlsitemap": "^1.0-alpha3",
     "drupal/masonry": "^1.0-rc2",
     "drupal/charts": "3.0-alpha9",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",

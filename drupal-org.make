@@ -493,7 +493,7 @@ projects[layout_plugin][version] = 1.0-alpha23
 
 ;; Switched to use [simple sitemap] as the default for sitemap.
 projects[xmlsitemap][type] = module
-projects[xmlsitemap][version] = 1.0-alpha2
+projects[xmlsitemap][version] = 1.0-alpha3
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; General public contributed modules.
