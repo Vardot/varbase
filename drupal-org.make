@@ -23,7 +23,7 @@ projects[ctools][version] = 3.0
 projects[ctools][patch][] = https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch
 
 projects[token][type] = module
-projects[token][version] = 1.3
+projects[token][version] = 1.5
 
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta3
