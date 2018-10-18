@@ -92,7 +92,7 @@ projects[entity_clone][download][branch] = 8.x-1.x
 projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2018-08-26/2743379-18.patch
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 1.5
+projects[entity_browser][version] = 1.6
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 1.0-alpha8
