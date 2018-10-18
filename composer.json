@@ -50,7 +50,7 @@
     "drupal/features": "^3.7",
     "drupal/views_infinite_scroll": "^1.5",
     "drupal/embed": "^1.0",
-    "drupal/entity": "^1.0-rc1",
+    "drupal/entity": "1.0-beta4",
     "drupal/entity_clone": "1.x-dev#6d0ce053605e9aaf8412927a9b0ea8da7a9a06e5",
     "drupal/entity_browser": "^1.5",
     "drupal/dropzonejs": "^1.0-alpha8",
