@@ -268,7 +268,7 @@ projects[paragraphs_previewer][version] = 1.2
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
 
 projects[paragraphs_features][type] = module
-projects[paragraphs_features][version] = 1.2
+projects[paragraphs_features][version] = 1.4
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
 projects[paragraphs_asymmetric_translation_widgets][download][url] = https://git.drupal.org/project/paragraphs_asymmetric_translation_widgets.git
