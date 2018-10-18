@@ -111,7 +111,7 @@
     "drupal/slick_media": "^1.0",
     "drupal/username_enumeration_prevention": "^1.0-beta2",
     "drupal/password_policy": "^3.0-alpha4",
-    "drupal/seckit": "^1.0",
+    "drupal/seckit": "^1.1",
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/honeypot": "^1.29",
     "drupal/shield": "^1.2",
