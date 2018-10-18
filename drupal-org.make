@@ -392,7 +392,7 @@ projects[password_policy][type] = module
 projects[password_policy][version] = 3.0-alpha4
 
 projects[seckit][type] = module
-projects[seckit][version] = 1.0
+projects[seckit][version] = 1.1
 
 projects[security_review][type] = module
 projects[security_review][download][url] = https://git.drupal.org/project/security_review.git
