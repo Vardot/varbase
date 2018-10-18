@@ -12,7 +12,7 @@ projects[config_update][type] = module
 projects[config_update][version] = 1.5
 
 projects[config_filter][type] = module
-projects[config_filter][version] = 1.2
+projects[config_filter][version] = 1.3
 
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.1
