@@ -1,3 +1,65 @@
+## 8.4.26
+
+### Highlighted important changes since Varbase 8.4.25:
+
+* Issue [#3007519](https://www.drupal.org/node/3007519):
+ Update [Drupal core] from 8.5.7 to 8.5.8 
+
+It’s a follow up to the Drupal Core - Multiple Vulnerabilities - 
+ [SA-CORE-2018-006](https://www.drupal.org/sa-core-2018-006)
+
+### Added since Varbase 8.4.25:
+* No added features.
+
+### Changed since Varbase 8.4.25:
+* No Changes over features.
+
+### Updates since Varbase 8.4.25:
+* Issue [#3007519](https://www.drupal.org/node/3007519):
+                  Updated [Drupal core] from 8.5.7 to 8.5.8
+* Issue [#3007525](https://www.drupal.org/node/3007525):
+                  Updated [Blazy] module from ^8.1.0-rc2 to ^8.1.0-rc3
+* Issue [#3007528](https://www.drupal.org/node/3007528):
+                  Updated [Bootstrap] theme from ^8.3.12 to ^8.3.13
+* Issue [#3007529](https://www.drupal.org/node/3007529):
+                  Updated [Config Filter] module from ^8.1.2 to ^8.1.3
+* Issue [#3007543](https://www.drupal.org/node/3007543):
+                  Updated [Entity Browser] module from ^8.1.5 to ^8.1.6
+* Issue [#3007550](https://www.drupal.org/node/3007550):
+                  Updated [Entity Reference Revisions] module
+                  from ^8.1.5 to ^8.1.6
+* Issue [#3007553](https://www.drupal.org/node/3007553):
+                  Updated [Features] module from ^8.3.7 to ^8.3.8
+* Issue [#3007556](https://www.drupal.org/node/3007556):
+                  Updated [Link Attributes widget] module from ^8.1.3 to ^8.1.5
+* Issue [#3007560](https://www.drupal.org/node/3007560):
+                  Updated [Paragraphs Features] module from ^8.1.2 to ^8.1.4
+* Issue [#3007561](https://www.drupal.org/node/3007561):
+                  Updated [pathauto] from ^8.1.2 to ^8.1.3
+* Issue [#3007567](https://www.drupal.org/node/3007567):
+                  Updated [Persistent Login] module from ^8.1.0 to ^8.1.1
+* Issue [#3007577](https://www.drupal.org/node/3007577):
+                  Updated [Redirect] module from ^8.1.2 to ^8.1.3
+* Issue [#3007580](https://www.drupal.org/node/3007580):
+                  Updated [Search API] module from 8.1.9 to 8.1.10
+* Issue [#3007583](https://www.drupal.org/node/3007583):
+                  Updated [Security Kit] module from ^8.1.0 to ^8.1.1
+* Issue [#3007585](https://www.drupal.org/node/3007585):
+                  Updated [Token] module from ^8.1.3 to ^8.1.5
+* Issue [#3007586](https://www.drupal.org/node/3007586):
+                  Updated [Webform] module from ^8.5.0-rc18 to ^8.5.0-rc22
+* Issue [#3007588](https://www.drupal.org/node/3007588):
+                  Updated [XML sitemap] module
+                  from ^8.1.0-alpha2 to ^8.1.0-alpha3
+
+### Fixes since Varbase 8.4.25:
+* Issue [#2999427](https://www.drupal.org/node/2999427)
+ by [JayBeeDutch](https://www.drupal.org/u/jaybeedutch)
+, [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem): Fixed typo
+ in the text between the installation and the redirection.
+
+--------------------------------------------------------------------------------
+
 ## 8.4.25
 
 ### Highlighted important changes since Varbase 8.4.24:

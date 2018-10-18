@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.25)](https://travis-ci.org/Vardot/varbase/builds/425220206) Varbase 8.4.25
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-4.26)](https://travis-ci.org/Vardot/varbase/builds/443079174) Varbase 8.4.26
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -28,17 +28,12 @@ instructions.
 
 To install the most recent stable release of Varbase 8.4.x run this command:
 ```
-composer create-project Vardot/varbase-project:^8.4.25 PROJECT_DIR_NAME --no-interaction
+composer create-project Vardot/varbase-project:^8.4.26 PROJECT_DIR_NAME --no-interaction
 ```
 
 To install the dev version of Varbase 8.4.x run this command:
 ```
 composer create-project vardot/varbase-project:8.4.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
-```
-
-To install the dev version of Varbase 8.5.x run this command:
-```
-composer create-project vardot/varbase-project:8.5.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 ## [Create a new Vartheme sub theme for a project](https://github.com/Vardot/varbase/tree/8.x-4.x/scripts/README.md)
