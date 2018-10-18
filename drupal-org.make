@@ -417,7 +417,7 @@ projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[blazy][type] = module
-projects[blazy][version] = 1.0-rc2
+projects[blazy][version] = 1.0-rc3
 
 projects[slick][type] = module
 projects[slick][version] = 1.0
