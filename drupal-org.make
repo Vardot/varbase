@@ -344,7 +344,7 @@ projects[styleguide][version] = 1.0-alpha3
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[pathauto][type] = module
-projects[pathauto][version] = 1.2
+projects[pathauto][version] = 1.3
 
 projects[redirect][type] = module
 projects[redirect][version] = 1.2
