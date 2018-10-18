@@ -134,7 +134,7 @@
     "drupal/paragraphs_asymmetric_translation_widgets": "^1.0-alpha2",
     "drupal/styleguide": "^1.0-alpha3",
     "drupal/color_field": "^2.0",
-    "drupal/entity_reference_revisions": "^1.5",
+    "drupal/entity_reference_revisions": "^1.6",
     "drupal/viewsreference": "^2.0-alpha4",
     "drupal/libraries": "^3.0-alpha1",
     "drupal/layout_plugin": "^1.0-alpha23",
