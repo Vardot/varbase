@@ -1,3 +1,111 @@
+# 8.5.2
+
+### Highlighted important changes since Varbase 8.5.1:
+
+* Issue [#3007650](http://drupal.org/node/3007650):
+                 Updated [Drupal core] from 8.6.1 to 8.6.2
+
+Follow up to the Drupal Core - Multiple Vulnerabilities - 
+[SA-CORE-2018-006](https://www.drupal.org/sa-core-2018-006)
+
+* Issue [#3004239](http://drupal.org/node/3004239):
+                 Changed the logic of which default image field name for media
+                 entity should be used for the Social share image styles and
+                 tokens
+
+### Added since Varbase 8.5.1:
+* No added new features.
+
+### Change since Varbase 8.5.1:
+* Issue [#3003267](http://drupal.org/node/3003267):
+                 Changed [Varbase] profile info.yml to project:module syntax
+                 standard not to have a broken installation of sub profiles
+* Issue [#2995713](http://drupal.org/node/2995713):
+                 Changed [Varbase Core] module info.yml to project:module syntax
+                 standard not to have a broken installation of sub profiles
+* Issue [#2997571](http://drupal.org/node/2997571):
+                 Changed [Varbase Media] module info.yml to project:module
+                 syntax standard not to have a broken installation of sub
+                 profiles
+* Issue [#3004239](http://drupal.org/node/3004239):
+                 Changed the logic of which default image field name for
+                 media entity should be used for the Social share image
+                 styles and tokens
+* Issue [#3000855](http://drupal.org/node/3000855):
+                 Changed [Varbase Bootstrap Paragraphs] module info.yml to
+                 project:module syntax standard not to have a broken
+                 installation of sub profiles
+* Issue [#3000227](http://drupal.org/node/3000227):
+                 Changed [Varbase Editor] module info.yml to project:module
+                 syntax standard not to have a broken installation of
+                 sub profiles
+* Issue [#3003239](http://drupal.org/node/3003239):
+                 Changed [Varbase Landing] module info.yml to project:module
+                 syntax standard not to have a broken installation of
+                 sub profiles
+* Issue [#3003101](http://drupal.org/node/3003101):
+                 Changed [Varbase Search] module info.yml to project:module
+                 syntax standard not to have a broken installation of
+                 sub profiles.
+* Issue [#2997569](http://drupal.org/node/2997569):
+                 Changed [Varbase SEO] module info.yml to project:module syntax
+                 standard not to have a broken installation of sub profiles
+* Issue [#3003237](http://drupal.org/node/3003237):
+                 Changed [Varbase Media Hero Slider] module info.yml to
+                 project:module syntax standard not to have a broken
+                 installation of sub profiles.
+* Issue [#3003226](http://drupal.org/node/3003226):
+                 Changed [Varbase Carousels] module info.yml to project:module
+                 syntax standard not to have a broken installation of
+                 sub profiles.
+* Issue [#3000467](http://drupal.org/node/3000467):
+                 Changed [Varbase Total Control Dashboard] module info.yml
+                 to project:module syntax standard not to have a broken
+                 installation of sub profiles.
+* Issue [#3003223](http://drupal.org/node/3003223):
+                 Changed [Varbase Social Single Sign-On] module info.yml to
+                 project:module syntax standard not to have a broken
+                 installation of sub-profile.
+* Issue [#3003225](http://drupal.org/node/3003225):
+                 Changed [Varbase Blog (Corporate Blog)] module info.yml to
+                 project:module syntax standard not to have a broken
+                 installation of sub profiles.
+* Issue [#2995712](http://drupal.org/node/2995712):
+                 Capitalized the name of the [Varbase Styleguide] module and
+                 dependency namespacing in .info.yml file.
+
+### Updates since Varbase 8.5.1:
+* Issue [#3007650](http://drupal.org/node/3007650):
+                 Updated [Drupal core] from 8.6.1 to 8.6.2
+* Issue [#3007525](http://drupal.org/node/3007525):
+                 Updated [Blazy] module from 8.1.0-rc2 to ^8.1.0-rc3
+* Issue [#3007529](http://drupal.org/node/3007529):
+                 Updated [Config Filter] module from ^8.1.2 to ^8.1.3
+* Issue [#3007537](http://drupal.org/node/3007537):
+                 Updated [Entity API] module from 8.1.0-beta4 to 8.1.0-rc1
+* Issue [#3007550](http://drupal.org/node/3007550):
+                 Updated [Entity Reference Revisions] module from ^8.1.5 to ^8.1.6
+* Issue [#3007567](http://drupal.org/node/3007567):
+                 Updated [Persistent Login] module from 8.1.0 to 8.1.1
+* Issue [#3007577](http://drupal.org/node/3007577):
+                 Updated [Redirect] module from ^8.1.2 to ^8.1.3
+* Issue [#3007583](http://drupal.org/node/3007583):
+                 Updated [Security Kit] module from ^8.1.0 to ^8.1.1
+* Issue [#3007585](http://drupal.org/node/3007585):
+                 Updated [Token] module from ^8.1.3 to ^8.1.5
+* Issue [#3007586](http://drupal.org/node/3007586):
+                 Updated [Webform] module from ^8.5.0-rc21 to ^8.5.0-rc22
+
+### Fixes since Varbase 8.5.1:
+* Issue [#3004098](http://drupal.org/node/3004098):
+                 Fixed [Vartheme admin] theme style to work with Seven theme
+                 from Drupal 8.6.x core
+* Issue [#3001899](http://drupal.org/node/3001899)
+                 by [midobel](https://www.drupal.org/u/midobel):
+                 Fixed typo in the welcome page
+
+--------------------------------------------------------------------------------
+
 # 8.5.1
 
 ### Highlighted important changes since Varbase 8.5.0:
