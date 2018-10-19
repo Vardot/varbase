@@ -8,6 +8,7 @@ developers need to do to update the last release to the new release.
 
 
 #  For Example:
+* https://www.drupal.org/project/varbase/releases/8.x-5.2
 * https://www.drupal.org/project/varbase/releases/8.x-5.1
 * https://www.drupal.org/project/varbase/releases/8.x-5.0
 
@@ -188,3 +189,4 @@ If you already did the update of Varbase from 8.5.0 to 8.5.1, this updating
 
 # No upgrade path to update Varbase 8.x-4.x to 8.x-5.x yet
 You will need to manage a migration, or a hard update process.
+https://www.drupal.org/project/varbase/issues/3000529
