@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-5.2)](https://travis-ci.org/Vardot/varbase/builds/431104304) Varbase 8.5.2
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-5.2)](https://travis-ci.org/Vardot/varbase/builds/443844400) Varbase 8.5.2
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
