@@ -14,8 +14,6 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-17/28152
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-05/1356276-515.patch
 ;; Issue #2914389: Allow profiles to exclude dependencies of their parent
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch
-;; Issue #2855026: Installation profiles do not support project:module format for dependencies
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-02/2855026-55.patch
 ;; Issue #2720101: Label (Title) not set for Views block (exposed filters in Block)
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2720101-53.patch
 ;; Issue #2853988: Add option to rewrite robots.txt on staging environments
