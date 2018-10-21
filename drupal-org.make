@@ -289,7 +289,7 @@ projects[color_field][type] = module
 projects[color_field][version] = 2.0
 
 projects[entity_reference_revisions][type] = module
-projects[entity_reference_revisions][version] = 1.5
+projects[entity_reference_revisions][version] = 1.6
 
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 2.0-alpha4
