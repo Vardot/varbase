@@ -414,9 +414,7 @@ projects[search_api][version] = 1.10
 projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch
 
 projects[blazy][type] = module
-projects[blazy][version] = 1.0-rc2
-;; Issue #2881849: Integrate with core Media 8.4
-projects[blazy][patch][] = https://www.drupal.org/files/issues/2881849-8.patch
+projects[blazy][version] = 1.0-rc3
 
 projects[slick][type] = module
 projects[slick][version] = 1.0
