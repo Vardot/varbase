@@ -521,7 +521,7 @@ projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 6.0
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.0
+projects[varbase_total_control][version] = 6.1
 
 projects[varbase_auth][type] = module
 projects[varbase_auth][version] = 6.0
