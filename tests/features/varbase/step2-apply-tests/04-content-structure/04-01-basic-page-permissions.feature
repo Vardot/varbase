@@ -11,7 +11,7 @@ So that the "Basic page" will show up in the structured menu under its parent pa
     Given I am a logged in user with the "test_authenticated" user
      When I go to "/node/add"
       And I wait
-     Then I should not see "Basic page"
+     Then I should see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Check if [Editor] can add content of "Basic page" type.
@@ -81,8 +81,13 @@ So that the "Basic page" will show up in the structured menu under its parent pa
      Then I should see "Test Basic page"
      When I click "Test Basic page"
       And I wait
-     Then I should see "Test Basic page body"
-     When I click "Edit"
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test Basic page" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test Basic page"
+     When I click "Edit" in the "Test Basic page" row
       And I wait
      Then I should see "Edit Basic page Test Basic page"
-

@@ -7,5 +7,5 @@ Feature: Delete Arabic language from the system.
       And I wait
      Then I should see "Are you sure you want to delete the language Arabic?"
      When I press "Delete"
-      And I wait
+      And I wait 2m
      Then I should see "The Arabic (ar) language has been removed."

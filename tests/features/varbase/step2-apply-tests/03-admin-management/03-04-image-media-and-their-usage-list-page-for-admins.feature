@@ -25,6 +25,7 @@ So that I will be able to manage files, see where they have been used in content
        And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
        And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
        And I fill in "Flag Earth" for "name[0][value]"
+       And I check the box "Save to Library"
        And I press the "Save" button
        And I wait
       Then I should see "Flag Earth"
@@ -42,13 +43,11 @@ So that I will be able to manage files, see where they have been used in content
       And I press the "Apply" button
       And I wait
      Then I should see "Flag Earth"
-     When I click "Flag Earth"
-      And I wait
-     Then I should see "Flag Earth"
-     When I click "Edit"
+     When I click "Edit" in the "Flag Earth" row
       And I wait
      Then I should see "Edit Image Flag Earth"
      When I fill in "Flag Earth after edit" for "name[0][value]"
+      And I check the box "Save to Library"
       And I press the "Save" button
       And I wait
      Then I should see "Image Flag Earth after edit has been updated."
@@ -61,13 +60,11 @@ So that I will be able to manage files, see where they have been used in content
      When I fill in "Flag Earth after edit" for "edit-name"
       And I press the "Apply" button
       And I wait
-      And I wait
-      And I wait for AJAX to finish
      Then I should see "Flag Earth after edit"
-     When I click "Flag Earth after edit"
+     When I click "Edit" in the "Flag Earth after edit" row
       And I wait
      Then I should see "Flag Earth after edit"
-     When I click "Delete"
+     When I click "edit-delete"
       And I wait
      Then I should see "This action cannot be undone."
      When I press the "Delete" button

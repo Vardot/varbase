@@ -21,18 +21,19 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
       And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
       And I fill in "Flag Earth" for "name[0][value]"
+      And I check the box "Save to Library"
       And I press the "Save" button
       And I wait
      Then I should see "Flag Earth"
   #-----------------------------------------------------------------------------
-  
+
   @javascript @local @development @staging @production
-  Scenario: Check that we can open the hero slider media browser. 
+  Scenario: Check that we can open the hero slider media browser.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
      Then I should see "Create Hero slider"
-     When I press "Select Media"
+     When I press "Select media"
       And I wait for AJAX to finish
      Then the image media browser should be open
 
@@ -44,10 +45,10 @@ I want to be able to add and remove entities to any allowed entityqueue.
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #1" for "Slide title"
       And I fill in "Test hero slider slide text #1" for "Slide text"
-      And I press "Select Media"
+      And I press "Select media"
       And I wait for AJAX to finish
      Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_heroslider_media_browser"
+     When I switch to iframe "entity_browser_iframe_media_browser"
       And I fill in "Flag Earth" for "edit-name"
       And I press the "Search" button
       And wait max of 5s
@@ -67,7 +68,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I press "Save"
       And I wait
      Then I should see "Test hero slider #1"
-  
+
   @javascript @local @development @staging @production
   Scenario: Add a "Test hero slider number 2" to the heroslider entity queue.
     Given I am a logged in user with the "test_super_admin" user
@@ -76,10 +77,10 @@ I want to be able to add and remove entities to any allowed entityqueue.
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #2" for "Slide title"
       And I fill in "Test hero slider slide text #2" for "Slide text"
-      And I press "Select Media"
+      And I press "Select media"
       And I wait for AJAX to finish
      Then the image media browser should be open
-     When I switch to iframe "entity_browser_iframe_heroslider_media_browser"
+     When I switch to iframe "entity_browser_iframe_media_browser"
       And I fill in "Flag Earth" for "edit-name"
       And I press the "Search" button
       And wait max of 5s
@@ -99,7 +100,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I press "Save"
       And I wait
      Then I should see "Test hero slider #2"
-  
+
   @javascript @local @development @staging @production
   Scenario: Check if the "Hero slider" added to the "varbase_heroslider_media" entityqueue.
     Given I am a logged in user with the "test_super_admin" user
@@ -107,7 +108,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I wait
      Then I should see "Test hero slider #1" value in the "edit-items-0-target-id" input element
       And I should see "Test hero slider #2" value in the "edit-items-1-target-id" input element
-  
+
   @javascript @local @development @staging @production
   Scenario: Remove a "Hero slider" from the "varbase_heroslider_media" entityqueue
     Given I am a logged in user with the "test_super_admin" user
@@ -118,9 +119,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I press the "Filter" button
       And I wait
      Then I should see "Test hero slider #1"
-     When I click "Test hero slider #1"
-      And I wait
-     When I click "Edit"
+     When I click "Edit" in the "Test hero slider #1" row
       And I wait
       And I expand the field "edit-entityqueue-form-widget"
      Then the "varbase_heroslider_media" checkbox should be checked

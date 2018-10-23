@@ -38,6 +38,7 @@ So that it will show up under that rich text field without having to upload the 
        And I fill in "Embed Flag Earth in space" for "field_media_image[0][alt]"
        And I fill in "Embed Flag Earth all earth in space" for "field_media_image[0][title]"
        And I fill in "Embed Flag Earth" for "name[0][value]"
+       And I check the box "Save to Library"
        And I press the "Save" button
        And I wait
       Then I should see "Embed Flag Earth"
@@ -52,10 +53,7 @@ So that it will show up under that rich text field without having to upload the 
       And I press the "Filter" button
       And I wait
      Then I should see "Test Basic page to embed existing files"
-     When I click "Test Basic page to embed existing files"
-      And I wait
-     Then I should see "Test Basic page body to embed existing files"
-     When I click "Edit"
+     When I click "Edit" in the "Test Basic page to embed existing files" row
       And I wait
      Then I should see "Edit Basic page Test Basic page to embed existing files"
      When I move focus to "Body" rich text editor field
@@ -79,5 +77,15 @@ So that it will show up under that rich text field without having to upload the 
      When I click "Embed" in the "button" element with the "class" attribute set to "js-form-submit form-submit"
       And I wait for AJAX to finish
      When I press "Save"
+      And I wait
+     Then I should see "Basic page Test Basic page to embed existing files has been updated."
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test Basic page to embed existing files" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test Basic page to embed existing files"
+     When I click "Test Basic page to embed existing files"
       And I wait
      Then I should see image with the "Embed Flag Earth all earth in space" title text

@@ -18,18 +18,14 @@ Feature: Delete default testing users.
       And I press "Filter"
       And I wait
      Then I should see "test_authenticated"
-     When I click "test_authenticated"
-      And I wait
-     Then I should see "test_authenticated"
-     When I click "Edit"
-      And I wait
+     When I click "Edit" in the "test_authenticated" row
      Then I should see "test_authenticated"
      When I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_authenticated?"
      When I select the radio button "Delete the account and its content."
       And I press "Cancel account"
-      And I wait for the batch job to finish
+      And I wait for 10s
      Then I should see "test_authenticated has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
@@ -40,10 +36,7 @@ Feature: Delete default testing users.
       And I press "Filter"
       And I wait
      Then I should see "test_editor"
-     When I click "test_editor"
-      And I wait
-     Then I should see "test_editor"
-     When I click "Edit"
+     When I click "Edit" in the "test_editor" row
       And I wait
      Then I should see "test_editor"
      When I press "Cancel account"
@@ -51,7 +44,7 @@ Feature: Delete default testing users.
      Then I should see "Are you sure you want to cancel the account test_editor?"
      When I select the radio button "Delete the account and its content."
       And I press "Cancel account"
-      And I wait for the batch job to finish
+      And I wait for 10s
      Then I should see "test_editor has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
@@ -61,10 +54,7 @@ Feature: Delete default testing users.
       And I press "Filter"
       And I wait
      Then I should see "test_content_admin"
-     When I click "test_content_admin"
-      And I wait
-     Then I should see "test_content_admin"
-     When I click "Edit"
+     When I click "Edit" in the "test_content_admin" row
       And I wait
      Then I should see "test_content_admin"
      When I press "Cancel account"
@@ -72,7 +62,7 @@ Feature: Delete default testing users.
      Then I should see "Are you sure you want to cancel the account test_content_admin?"
      When I select the radio button "Delete the account and its content."
       And I press "Cancel account"
-      And I wait for the batch job to finish
+      And I wait for 10s
      Then I should see "test_content_admin has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
@@ -83,10 +73,7 @@ Feature: Delete default testing users.
       And I press "Filter"
       And I wait
      Then I should see "test_seo_admin"
-     When I click "test_seo_admin"
-      And I wait
-     Then I should see "test_seo_admin"
-     When I click "Edit"
+     When I click "Edit" in the "test_seo_admin" row
       And I wait
      Then I should see "test_seo_admin"
      When I press "Cancel account"
@@ -94,7 +81,7 @@ Feature: Delete default testing users.
      Then I should see "Are you sure you want to cancel the account test_seo_admin?"
      When I select the radio button "Delete the account and its content."
       And I press "Cancel account"
-      And I wait for the batch job to finish
+      And I wait for 10s
      Then I should see "test_seo_admin has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
@@ -105,10 +92,7 @@ Feature: Delete default testing users.
       And I press "Filter"
       And I wait
      Then I should see "test_site_admin"
-     When I click "test_site_admin"
-      And I wait
-     Then I should see "test_site_admin"
-     When I click "Edit"
+     When I click "Edit" in the "test_site_admin" row
       And I wait
      Then I should see "test_site_admin"
      When I press "Cancel account"
@@ -116,7 +100,7 @@ Feature: Delete default testing users.
      Then I should see "Are you sure you want to cancel the account test_site_admin?"
      When I select the radio button "Delete the account and its content."
       And I press "Cancel account"
-      And I wait for the batch job to finish
+      And I wait for 10s
      Then I should see "test_site_admin has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
@@ -127,10 +111,7 @@ Feature: Delete default testing users.
       And I press "Filter"
       And I wait
      Then I should see "test_super_admin"
-     When I click "test_super_admin"
-      And I wait
-     Then I should see "test_super_admin"
-     When I click "Edit"
+     When I click "Edit" in the "test_super_admin" row
       And I wait
      Then I should see "test_super_admin"
      When I press "Cancel account"
@@ -138,5 +119,5 @@ Feature: Delete default testing users.
      Then I should see "Are you sure you want to cancel the account test_super_admin?"
      When I select the radio button "Delete the account and its content."
       And I press "Cancel account"
-      And I wait for the batch job to finish
+      And I wait for 10s
      Then I should see "test_super_admin has been deleted."
