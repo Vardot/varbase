@@ -259,7 +259,7 @@ projects[taxonomy_menu][download][branch] = 8.x-3.x
 projects[taxonomy_menu][patch][] = https://www.drupal.org/files/issues/2939143-2.patch
 
 projects[better_exposed_filters][type] = module
-projects[better_exposed_filters][version] = 3.0-alpha4
+projects[better_exposed_filters][version] = 3.0-alpha5
 
 projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta1
