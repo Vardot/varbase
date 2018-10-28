@@ -301,7 +301,7 @@ projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
 
 projects[charts][type] = module
-projects[charts][version] = 3.0-alpha9
+projects[charts][version] = 3.0-beta2
 
 projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][download][url] = https://git.drupal.org/project/google_analytics_reports.git
