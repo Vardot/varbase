@@ -371,7 +371,7 @@ projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.3
 
 projects[yoast_seo][type] = module
-projects[yoast_seo][version] = 1.3
+projects[yoast_seo][version] = 1.4
 
 projects[l10n_client][type] = module
 projects[l10n_client][download][url] = https://git.drupal.org/project/l10n_client.git
