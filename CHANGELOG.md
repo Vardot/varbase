@@ -1,3 +1,60 @@
+# 8.5.3
+
+### Highlighted important changes since Varbase 8.5.2:
+* Issue [#3009782](http://drupal.org/node/3009782):
+                  Update [Paragraphs] module from 8.1.3 to 8.1.5
+
+Paragraphs - Moderately critical - Access Bypass - 
+[SA-CONTRIB‌-2018-073](https://www.drupal.org/sa-contrib-2018-073)
+* Issue [#3008794](http://drupal.org/node/3008794):
+                  Changed the patch for [Drupal 8.6.x core] to Allow profiles 
+                  to define a base/parent profile and load them in the correct
+                  order.
+
+### Added since Varbase 8.5.2:
+* Issue [#3009957](http://drupal.org/node/3009957):
+                  Have a default [Simple sitemap] settings with
+                  [Skip non-existent translations] checked by default
+
+### Changed since Varbase 8.5.2:
+* Issue [#3008794](http://drupal.org/node/3008794): Changed the patch for
+                  [Drupal 8.6.x core] to Allow profiles to define a base/parent
+                  profile and load them in the correct order.
+
+### Updates since Varbase 8.5.2:
+* Issue [#3009782](http://drupal.org/node/3009782):
+                  Update [Paragraphs] module from 8.1.3 to 8.1.5
+* Issue [#3009790](http://drupal.org/node/3009790):
+                  Updated [Better Exposed Filters] module
+                  from ^8.3.0-alpha4 to ^8.3.0-alpha5
+* Issue [#3009803](http://drupal.org/node/3009803):
+                  Updated [Webform] module from ^8.5.0-rc22 to ^8.5.0-rc24
+* Issue [#3010216](http://drupal.org/node/3010216):
+                  Update [Real-time SEO for Drupal] module from ^1.3 to ^1.4
+* Issue [#3009794](http://drupal.org/node/3009794):
+                  Update [Charts] module from ^8.3.0-alpha9 to ^8.3.0-beta2
+
+### Fixes since Varbase 8.5.2:
+* Issue [#3008732](http://drupal.org/node/3008732):
+                  Fixed an issue with the Drupal.org packaged zip file when we
+                  get Varbase by [Drush dl varbase-8][zip] required
+                  Modules not found.
+* Issue [#3009983](http://drupal.org/node/3009983):
+                  Fixed homepage, user/login, user/register, and
+                  user/password having no H1.
+* Issue [#3010008](http://drupal.org/node/3010008):
+                  Fixed [Varbase default content] homepage with H1 tag for
+                  website name.
+* Issue [#3010485](http://drupal.org/node/3010485)
+                  by sally_nader: Made blocks titles translatable for
+                  [Varbase Total Control Dashboard] module.
+* Issue [#3010828](http://drupal.org/node/3010828)
+                  by sally_nader: Removed translation function from blocks
+                  views templates for [Varbase Total Control Dashboard] module.
+
+
+--------------------------------------------------------------------------------
+
 # 8.5.2
 
 ### Highlighted important changes since Varbase 8.5.1:
