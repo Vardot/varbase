@@ -2,7 +2,7 @@
 
 ### Highlighted important changes since Varbase 8.5.2:
 * Issue [#3009782](http://drupal.org/node/3009782):
-                  Update [Paragraphs] module from 8.1.3 to 8.1.5
+                  Updated [Paragraphs] module from 8.1.3 to 8.1.5
 
 Paragraphs - Moderately critical - Access Bypass - 
 [SA-CONTRIB‌-2018-073](https://www.drupal.org/sa-contrib-2018-073)
@@ -13,7 +13,7 @@ Paragraphs - Moderately critical - Access Bypass -
 
 ### Added since Varbase 8.5.2:
 * Issue [#3009957](http://drupal.org/node/3009957):
-                  Have a default [Simple sitemap] settings with
+                  Added a default [Simple sitemap] settings with
                   [Skip non-existent translations] checked by default
 
 ### Changed since Varbase 8.5.2:
@@ -23,16 +23,16 @@ Paragraphs - Moderately critical - Access Bypass -
 
 ### Updates since Varbase 8.5.2:
 * Issue [#3009782](http://drupal.org/node/3009782):
-                  Update [Paragraphs] module from 8.1.3 to 8.1.5
+                  Updated [Paragraphs] module from 8.1.3 to 8.1.5
 * Issue [#3009790](http://drupal.org/node/3009790):
                   Updated [Better Exposed Filters] module
                   from ^8.3.0-alpha4 to ^8.3.0-alpha5
 * Issue [#3009803](http://drupal.org/node/3009803):
                   Updated [Webform] module from ^8.5.0-rc22 to ^8.5.0-rc24
 * Issue [#3010216](http://drupal.org/node/3010216):
-                  Update [Real-time SEO for Drupal] module from ^1.3 to ^1.4
+                  Updated [Real-time SEO for Drupal] module from ^1.3 to ^1.4
 * Issue [#3009794](http://drupal.org/node/3009794):
-                  Update [Charts] module from ^8.3.0-alpha9 to ^8.3.0-beta2
+                  Updated [Charts] module from ^8.3.0-alpha9 to ^8.3.0-beta2
 
 ### Fixes since Varbase 8.5.2:
 * Issue [#3008732](http://drupal.org/node/3008732):
