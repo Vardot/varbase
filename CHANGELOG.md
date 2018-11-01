@@ -7,7 +7,7 @@
 [SA-CONTRIB‌-2018-073](https://www.drupal.org/sa-contrib-2018-073)
 
 ### Added since Varbase 8.4.26:
-* No add new features ( all new features will be in Varbase 8.6.x )
+* No new features ( all new features will be in Varbase 8.6.x )
 
 ### Changed since Varbase 8.4.26:
 * No Changes over features.
