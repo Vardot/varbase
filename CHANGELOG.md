@@ -1,4 +1,41 @@
-## 8.4.26
+# 8.4.27
+
+### Highlighted important changes since Varbase 8.4.26:
+* Issue [#3009781](https://www.drupal.org/node/3009781):
+                  Updated [Paragraphs] module from 8.1.3 to 8.1.5
+  Paragraphs - Moderately critical - Access Bypass - 
+[SA-CONTRIB‌-2018-073](https://www.drupal.org/sa-contrib-2018-073)
+
+### Added since Varbase 8.4.26:
+* No add new features ( all new features will be in Varbase 8.6.x )
+
+### Changed since Varbase 8.4.26:
+* No Changes over features.
+
+### Updates since Varbase 8.4.26:
+* Issue [#3009781](https://www.drupal.org/node/3009781):
+                  Updated [Paragraphs] module from 8.1.3 to 8.1.5
+* Issue [#3009789](https://www.drupal.org/node/3009789):
+                  Updated [Better Exposed Filters] module
+                  from ^8.3.0-alpha4 to ^8.3.0-alpha5
+* Issue [#3009795](https://www.drupal.org/node/3009795):
+                  Updated [Charts] module from 8.3.0-alpha9 to ^8.3.0-beta2
+* Issue [#3009804](https://www.drupal.org/node/3009804):
+                  Updated [Webform] module from ^8.5.0-rc22 to ^8.5.0-rc24
+* Issue [#3010223](https://www.drupal.org/node/3010223):
+                  Updated [Real-time SEO for Drupal] module from ^1.3 to ^1.4
+
+### Fixes since Varbase 8.4.26:
+* Issue [#3010485](https://www.drupal.org/node/3010485)
+                  by [sally_nader](https://www.drupal.org/u/sally_nader):
+                  Made blocks titles translatable for [Varbase Total Control
+                  Dashboard] module
+
+
+--------------------------------------------------------------------------------
+
+
+# 8.4.26
 
 ### Highlighted important changes since Varbase 8.4.25:
 
