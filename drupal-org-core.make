@@ -12,8 +12,6 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2885441-2.patch
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-17/2815221-reroll-8.6.1.patch
 ;; Issue #1356276: Allow profiles to define a base/parent profile and load them in the correct order
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.2.patch
-;; Issue #2914389: Allow profiles to exclude dependencies of their parent
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch
 ;; Issue #2720101: Label (Title) not set for Views block (exposed filters in Block)
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2720101-53.patch
 ;; Issue #2853988: Add option to rewrite robots.txt on staging environments
