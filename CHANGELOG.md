@@ -1,7 +1,8 @@
 # 8.6.1
 
 ### Highlighted important changes since Varbase 8.6.0:
-Issue [#3009782: Updated [Paragraphs] module from 8.1.3 to 8.1.5
+Issue [#3009782](https://www.drupal.org/node/3009782):
+                 Updated [Paragraphs] module from 8.1.3 to 8.1.5
 
 Paragraphs - Moderately critical - Access Bypass - 
 [SA-CONTRIB-2018-073](https://www.drupal.org/sa-contrib-2018-073)
