@@ -1,3 +1,66 @@
+# 8.6.1
+
+### Highlighted important changes since Varbase 8.6.0:
+Issue [#3009782: Updated [Paragraphs] module from 8.1.3 to 8.1.5
+
+Paragraphs - Moderately critical - Access Bypass - 
+[SA-CONTRIB-2018-073](https://www.drupal.org/sa-contrib-2018-073)
+
+* Issue [#3008794](https://www.drupal.org/node/3008794):
+                  Changed the patch for [Drupal 8.6.x core] to Allow profiles
+                  to define a base/parent profile and load them in the
+                  correct order.
+* Issue [#3009841](https://www.drupal.org/node/3009841):
+                  Added exposed date filters to [Content, People] views in
+                  [Varbase Admin] module, so that admins will be able list
+                  content or users with the selected date range.
+
+### Added since Varbase 8.6.0:
+* Issue [#3009841](https://www.drupal.org/node/3009841):
+                  Added exposed date filters to [Content, People] views in
+                  [Varbase Admin] module, so that admins will be able list
+                  content or users with the selected date range.
+* Issue [#3010819](https://www.drupal.org/node/3010819):
+                  Styled a width for [Created content from, and to] date
+                  filters and [Registered user from, and to] date filters.
+* Issue [#3009957](https://www.drupal.org/node/3009957):
+                  Added a default [Simple sitemap] settings with
+                  [Skip non-existent translations] checked by default.
+
+### Change since Varbase 8.6.0:
+* Issue [#3008794](https://www.drupal.org/node/3008794):
+                  Changed the patch for [Drupal 8.6.x core] to Allow profiles
+                  to define a base/parent profile and load them in the correct
+                  order.
+
+### Updates since Varbase 8.6.0:
+* Issue [#3009782](https://www.drupal.org/node/3009782):
+                  Updated [Paragraphs] module from 8.1.3 to 8.1.5
+* Issue [#3009790](https://www.drupal.org/node/3009790):
+                  Updated [Better Exposed Filters] module
+                  from ^8.3.0-alpha4 to ^8.3.0-alpha5
+* Issue [#3010216](https://www.drupal.org/node/3010216):
+                  Updated [Real-time SEO for Drupal] module
+                  from ^1.3 to ^1.4
+* Issue [#3009794](https://www.drupal.org/node/3009794):
+                  Updated [Charts] module from ^8.3.0-alpha9 to ^8.3.0-beta2
+
+### Fixes since Varbase 8.6.0:
+* Issue [#3010008](https://www.drupal.org/node/3010008):
+                  Fixed [Varbase default content] homepage with H1 tag for
+                  the website name.
+* Issue [#3009983](https://www.drupal.org/node/3009983):
+                  Fixed homepage, user/login, user/register, and
+                  user/password having no H1
+* Issue [#3010485](https://www.drupal.org/node/3010485)
+                  by sally_nader: Made blocks titles translatable
+* Issue [#3010828](https://www.drupal.org/node/3010828)
+                  by sally_nader: Removed translation function from
+                  blocks views templates
+
+
+--------------------------------------------------------------------------------
+
 # 8.6.0
 
 ### Highlighted important changes since Varbase 8.5.x:

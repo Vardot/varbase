@@ -6,6 +6,8 @@ General instructions on how to update Varbase
 For each stable release we will have some notes, and extra steps,
 developers need to do to update the last release to the new release.
 
+#  For Example:
+* https://www.drupal.org/project/varbase/releases/8.x-6.1
 * https://www.drupal.org/project/varbase/releases/8.x-6.0
 
 
@@ -74,6 +76,59 @@ while working on the project.
 # 9 - Regression test the full site.
 
 * Done :\)
+
+
+
+--------------------------------------------------------------------------------
+
+
+# Updating Varbase 8.6.0 to Varbase 8.6.1
+
+
+## Updating files with *Copy and Paste* for Varbase 8.6.0 to Varbase 8.6.1
+```
+  Given that we are at the drupal root folder for varbase
+   When we delete all drupal core folders and files
+    And we copy all new Varbase files drupal root folder for varbase
+    And we make sure that we have all custom module or themes still in the
+        "sites" folder
+    And we make sure that all new used modules and features are present.
+   Then we will be ready to update the active config and database.
+```
+
+## Varbase Procedures to update the varbase base code. not in any varbase-project project builders.
+```
+  Given that we are at the root folder for varbase project, not the docroot
+    And we make sure that the current "Varbase-project" composer.json file and
+        files are the latest
+   When we delete the "composer.lock" file
+    And we delete the "vendor" folder
+    And we delete the "docroot/modules/contrib" folder
+    And we delete the "docroot/themes/contrib" folder
+    And we delete the "docroot/profiles/varbase" folder
+    And we delete the "docroot/libraries" folder
+    And we run the "composer require vardot/varbase:8.6.1" command
+    And wait for composer to finish work
+   Then we should not see any issues in the terminal
+    And we should see "Writing lock file" in the terminal
+    And we should see "Generating autoload files" in the terminal
+   When the composer finishes work without errors
+   Then we will be ready to update the active config and database.
+```
+
+## Updating the active config and database from Varbase 8.6.0 to Varbase 8.6.1
+```
+  Given that we are in the docroot of the current Varbase project
+    And all files are updated using (copy and past) or (composer require/update
+   When we run drush "updb" or go to "/update.php"
+   Then we should see the steps of updates.
+   When we run drush "updb" or go to "/update.php" again
+   Then we will have the site update with the new Varbase 8.6.1 version
+   When we go to "/admin/config/development/features"
+   Then we should see "Changed"
+   When we follow with each feature to import new changes.
+   Then we will have the Varbase site updated to the latest version.
+```
 
 
 
