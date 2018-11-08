@@ -41,7 +41,7 @@
     "drupal/varbase_seo": "^5.2",
     "drupal/varbase_heroslider_media": "^5.1",
     "drupal/varbase_carousels": "^5.1",
-    "drupal/varbase_total_control": "^5.2",
+    "drupal/varbase_total_control": "^5.3",
     "drupal/varbase_auth" : "^5.1",
     "drupal/varbase_blog" : "^5.1",
     "drupal/varbase_styleguide": "^5.1",
