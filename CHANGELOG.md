@@ -1,7 +1,30 @@
+# 8.6.2
+
+### Highlighted important changes since Varbase 8.6.1:
+* Issue [#3012231](https://www.drupal.org/node/3012231):
+                  Updated [Drupal core] from 8.6.2 to 8.6.3
+
+### Added since Varbase 8.6.1:
+* No new features in this version, as it's only an update for Drupal core.
+
+### Changed since Varbase 8.6.1:
+* No changes in this version, as it's only an update for Drupal core.
+
+### Updates since Varbase 8.6.1:
+* Issue [#3012231](https://www.drupal.org/node/3012231):
+                  Updated [Drupal core] from 8.6.2 to 8.6.3
+* Issue [#3012288](https://www.drupal.org/node/3012288):
+                  Updated [Webform] module from ^8.5.0-rc24 to ^8.5.0-rc26
+
+### Fixes since Varbase 8.x-6.1:
+* No fixes in this version, as it's only an update for Drupal core.
+
+--------------------------------------------------------------------------------
+
 # 8.6.1
 
 ### Highlighted important changes since Varbase 8.6.0:
-Issue [#3009782](https://www.drupal.org/node/3009782):
+* Issue [#3009782](https://www.drupal.org/node/3009782):
                  Updated [Paragraphs] module from 8.1.3 to 8.1.5
 
 Paragraphs - Moderately critical - Access Bypass - 
