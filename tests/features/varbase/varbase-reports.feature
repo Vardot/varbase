@@ -1,6 +1,6 @@
 Feature: Varbase reports
 
-  @ORPHAN
+  @VARBASE-956 @OPEN
   Scenario: Access content report
     Given I am a logged in user with the "webmaster" user
     When I go to "/admin/status/reports/varbase"
