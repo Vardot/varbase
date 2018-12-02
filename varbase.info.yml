@@ -7,123 +7,17 @@ distribution:
   install:
     theme: vartheme_admin
 version: 8.x-6.x-dev
-dependencies:
-  # core
-  - automated_cron
-  - block
-  - block_content
-  - breakpoint
-  - ckeditor
-  - color
-  - config
-  - contextual
-  - datetime
-  - dynamic_page_cache
-  - big_pipe
-  - editor
-  - filter
-  - entity_reference
-  - field
-  - field_ui
-  - file
-  - help
-  - history
-  - image
-  - media
-  - menu_link_content
-  - menu_ui
-  - node
-  - options
-  - page_cache
-  - path
-  - quickedit
-  - responsive_image
-  - shortcut
-  - syslog
-  - taxonomy
-  - telephone
-  - toolbar
-  - tour
-  - update
-  - views
+install:
+  - system
+  - action
   - user
-  - text
-  - settings_tray
-  - layout_discovery
-
-  # contrib modules
-  - entity
-  - entity_clone
-  - config_update
-  - config_filter
-  - config_ignore
-  - ctools
-  - ctools_block
-  - ctools_views
-  - token
-  - page_manager
-  - page_manager_ui
-  - panels
-  - panels_ipe
-  - bootstrap_layouts
-  - ds
-  - ds_extras
-  - views_bootstrap
-  - field_group
-  - smart_trim
-  - advanced_text_formatter
-  - block_class
-  - menu_block
-  - features
-  - linkit
-  - anchor_link
-  - views_infinite_scroll
-  - entityqueue
-  - entityqueue_form_widget
-  - embed
-  - entity_browser
-  - entity_browser_enhanced
-  - dropzonejs
-  - dropzonejs_eb_widget
-  - entity_embed
-  - inline_entity_form
-  - crop
-  - focal_point
-  - pathologic
-  - persistent_login
-  - captcha
-  - recaptcha
-  - ultimate_cron
-  - content_lock
-  - content_lock_timeout
-  - node_edit_protection
-  - rabbit_hole
-  - rh_node
-  - rh_taxonomy
-  - fast404
-  - imageapi_optimize
-  - mailsystem
-  - smtp
-  - maxlength
-  - menu_position
-  - better_exposed_filters
-  - autocomplete_deluxe
-  - link_attributes
-  - login_destination
-  - betterlogin
-  - ckeditor_media_embed
-
+  - node
+  - block
 themes:
-  # Contrib themes.
   - adminimal_theme
   - bootstrap
-
-  # Custom themes.
   - vartheme
   - vartheme_admin
-distribution:
-  name: Varbase
-features: true
 
 interface translation project: varbase
 interface translation server pattern: profiles/varbase/translations/%language.po

@@ -27,10 +27,10 @@
     }
   },
   "require": {
-    "composer/installers": "^1.5.0",
-    "oomphinc/composer-installers-extender": "^1.1.2",
-    "cweagans/composer-patches": "^1.6.4",
-    "drupal-composer/drupal-scaffold": "^2.4.0",
+    "composer/installers": "~1",
+    "oomphinc/composer-installers-extender": "~1",
+    "cweagans/composer-patches": "~1",
+    "drupal-composer/drupal-scaffold": "~2",
     "drupal/drupal-library-installer-plugin": "^0.3",
     "drupal/varbase_core": "6.x-dev",
     "drupal/varbase_media": "6.x-dev",
@@ -63,17 +63,17 @@
     "drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd"
   },
   "require-dev": {
-    "drush/drush": "^8.1.16",
-    "drupal/coder": "^8.2.12",
-    "drupal/drupal-extension": "^3.4.1",
-    "phing/phing": "^2.16.1",
-    "behat/behat": "^3.4.3",
-    "behat/mink": "^1.7.1",
-    "behat/mink-extension": "^2.3.1",
-    "behat/mink-goutte-driver": "^1.2.1",
-    "behat/mink-zombie-driver": "^1.4.0",
-    "behat/mink-selenium2-driver": "^1.3.1",
-    "behatch/contexts": "^3.1.0",
+    "drush/drush": "~9",
+    "drupal/coder": "~8",
+    "drupal/drupal-extension": "~3",
+    "phing/phing": "~2",
+    "behat/behat": "~3",
+    "behat/mink": "~1",
+    "behat/mink-extension": "~2.",
+    "behat/mink-goutte-driver": "~1",
+    "behat/mink-zombie-driver": "~1",
+    "behat/mink-selenium2-driver": "~1",
+    "behatch/contexts": "~3",
     "emuse/behat-html-formatter": "^0.1.0"
   },
   "config": {
@@ -115,7 +115,7 @@
       "npm-asset"
     ],
     "installer-paths": {
-      "docroot/core": ["drupal/core"],
+      "docroot/core": ["type:drupal-core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
       "docroot/modules/contrib/{$name}": ["type:drupal-module"],
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],

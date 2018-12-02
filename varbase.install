@@ -6,9 +6,13 @@
  */
 
 use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config;
+use Drupal\Core\Config\InstallStorage;
+use Drupal\Core\Config\StorageInterface;
+use Drupal\Core\Config\ExtensionInstallStorage;
+use Drupal\Core\Config\FileStorage;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
-use Drupal\shortcut\Entity\Shortcut;
 
 /**
  * Implements hook_install().
@@ -18,82 +22,20 @@ use Drupal\shortcut\Entity\Shortcut;
  * @see system_install()
  */
 function varbase_install() {
+
+  // Install optional configs.
+  $config_installer = \Drupal::service('config.installer');
+  $optional_install_path = drupal_get_path('profile', 'varbase') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
+  if (is_dir($optional_install_path)) {
+    // Install any optional config the profile provides.
+    $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
+    $config_installer->installOptionalConfig($storage, '');
+  }
+  // ---------------------------------------------------------------------------
+
   // Set front page to "node".
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
 
-  // Assign user 1 the "administrator" role.
-  $user = User::load(1);
-  $user->roles[] = 'administrator';
-  $user->save();
-
-  // Restrict user registration to admin role creation.
-  \Drupal::configFactory()->getEditable('user.settings')->set('register', USER_REGISTER_ADMINISTRATORS_ONLY)->save(TRUE);
-
-  // Allow authenticated users to use shortcuts.
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access shortcuts']);
-
-  // Populate the default shortcut set.
-  $shortcut = Shortcut::create(array(
-    'shortcut_set' => 'default',
-    'title' => t('Add content'),
-    'weight' => 0,
-    'link' => array('uri' => 'internal:/node/add'),
-  ));
-  $shortcut->save();
-
-  $shortcut = Shortcut::create(array(
-    'shortcut_set' => 'default',
-    'title' => t('All content'),
-    'weight' => 1,
-    'link' => array('uri' => 'internal:/admin/content'),
-  ));
-  $shortcut->save();
-
-  $shortcut = Shortcut::create(array(
-    'shortcut_set' => 'default',
-    'title' => t('All media'),
-    'weight' => 2,
-    'link' => array('uri' => 'internal:/admin/content/media'),
-  ));
-  $shortcut->save();
-
-  $shortcut = Shortcut::create(array(
-    'shortcut_set' => 'default',
-    'title' => t('Taxonomy'),
-    'weight' => 3,
-    'link' => array('uri' => 'internal:/admin/structure/taxonomy'),
-  ));
-  $shortcut->save();
-
-  $shortcut = Shortcut::create(array(
-    'shortcut_set' => 'default',
-    'title' => t('Permissions'),
-    'weight' => 4,
-    'link' => array('uri' => 'internal:/admin/people/permissions'),
-  ));
-  $shortcut->save();
-
-  // Allow all users to use search.
-  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, array('search content'));
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, array('search content'));
-
-  // Enable the admin theme.
-  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
-
-  // Entity updates to clear up any mismatched entity and/or field definitions
-  // And Fix changes were detected in the entity type and field definitions.
-  \Drupal::entityDefinitionUpdateManager()->applyUpdates();
-  
-  // Activate Varbase Bootstrap Paragraphs Settings in the active config.
-  if (\Drupal::moduleHandler()->moduleExists('varbase_bootstrap_paragraphs')) {
-    $profile_path = drupal_get_path('profile', 'varbase') . '/config/optional/';
-    $config_path = $profile_path . 'varbase_bootstrap_paragraphs.settings.yml';
-    $config_content = file_get_contents($config_path);
-    $config_data = (array) Yaml::parse($config_content);
-    $config_factory = \Drupal::configFactory()->getEditable('varbase_bootstrap_paragraphs.settings');
-    $config_factory->setData($config_data)->save(TRUE);
-  }
-  
   // If Varbase Tour were enabled then redirect to the homepage with activ tour.
   if (isset($GLOBALS['homepage_with_varbase_tour'])
     && $GLOBALS['homepage_with_varbase_tour'] == TRUE) {
