@@ -165,6 +165,7 @@ class ConfigureMultilingualForm extends FormBase {
     // Get list of selected multilingual languages.
     $multilingual_languages = $form_state->getValue('multilingual_languages');
     if (isset($multilingual_languages)
+        && is_array($multilingual_languages)
         && count($multilingual_languages) > 0) {
       $multilingual_languages = array_filter($multilingual_languages);
     }

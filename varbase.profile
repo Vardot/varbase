@@ -326,8 +326,11 @@ function varbase_configure_multilingual(array &$install_state) {
 
     // Add all selected languages and then translatvarbase_hide_messagesion
     // will fetched for theme.
-    foreach ($install_state['varbase']['multilingual_languages'] as $language_code) {
-      $batch['operations'][] = ['varbase_configure_language_and_fetch_traslation', (array) $language_code];
+    if (isset($install_state['varbase']['multilingual_languages'])
+        && is_array($install_state['varbase']['multilingual_languages'])) {
+      foreach ($install_state['varbase']['multilingual_languages'] as $language_code) {
+        $batch['operations'][] = ['varbase_configure_language_and_fetch_traslation', (array) $language_code];
+      }
     }
 
     // Hide Wornings and status messages.
