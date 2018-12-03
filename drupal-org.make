@@ -12,7 +12,7 @@ projects[config_update][type] = module
 projects[config_update][version] = 1.5
 
 projects[config_filter][type] = module
-projects[config_filter][version] = 1.3
+projects[config_filter][version] = 1.4
 
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.1
@@ -41,11 +41,13 @@ projects[ds][type] = module
 projects[ds][version] = 3.1
 ;; Issue #2779243: Method declaration incompatibility.
 projects[ds][patch][] = https://www.drupal.org/files/issues/ds-method-declaration-incompatible-2779243-17.patch
+;; Issue #2920868: Fixed fatal errors when we have missing layouts, on an update.
+projects[ds][patch][] = https://www.drupal.org/files/issues/error-when-layout-is-removed-2920868-4.patch
+;; Issue #2966959: Fix a DS issue on a Value Conflict with Layout Builder.
+projects[ds][patch][] = https://www.drupal.org/files/issues/2018-04-27/2966959-ds-namespace_form_for_layout_builder-4.patch
 
 projects[views_bootstrap][type] = module
-projects[views_bootstrap][download][url] = https://git.drupal.org/project/views_bootstrap.git
-projects[views_bootstrap][download][revision] = ec4e7872315db6a7287014b029c3167962647588
-projects[views_bootstrap][download][branch] = 8.x-3.x
+projects[views_bootstrap][version] = 3.1
 
 projects[field_group][type] = module
 projects[field_group][version] = 3.0-beta1
@@ -99,6 +101,10 @@ projects[dropzonejs][version] = 1.0-alpha8
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0-beta2
+;; Issue #2832504 - Send the CKEditor instance ID to the embed.preview route.
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2832504-2.patch
+;; Issue #2511404: Image entities/fields embedded using Entity Embed cannot be linked in CKEditor.
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2018-04-23/25114040-47.patch
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-rc1
@@ -158,23 +164,19 @@ projects[userprotect][type] = module
 projects[userprotect][version] = 1.0
 
 projects[config_perms][type] = module
-projects[config_perms][version] = 1.1
-;; Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist
-projects[config_perms][patch][] = https://www.drupal.org/files/issues/2877329-16.patch
+projects[config_perms][version] = 2.0-beta1
 
 projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.24
+projects[admin_toolbar][version] = 1.25
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.8
 
 projects[tour_ui][type] = module
-projects[tour_ui][download][url] = https://git.drupal.org/project/tour_ui.git
-projects[tour_ui][download][revision] = 5cf793c071aeddea0ecd20d80b541606bfe2aff1
-projects[tour_ui][download][branch] = 8.x-1.x
+projects[tour_ui][version] = 1.0-beta2
 
 projects[tour_builder][type] = module
 projects[tour_builder][download][url] = https://git.drupal.org/project/tour_builder.git
@@ -194,12 +196,14 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-rc24
+projects[webform][version] = 5.0-rc27
 
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha7
 ;; Issue #2900089: Invalid translation language error when selected installation language does not match demo content language
 projects[default_content][patch][] = https://www.drupal.org/files/issues/2900089-14.patch
+;; Issue #2886350: Allow export of all site content.
+projects[default_content][patch][] = https://www.drupal.org/files/issues/default_content-export_all_content-2886350-2-D8.patch
 
 projects[content_lock][type] = module
 projects[content_lock][version] = 1.0-alpha8
@@ -257,7 +261,7 @@ projects[autocomplete_deluxe][version] = 1.0-beta1
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.5
 
-projects[paragraphs[type] = module
+projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.5
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
@@ -271,9 +275,7 @@ projects[paragraphs_features][type] = module
 projects[paragraphs_features][version] = 1.4
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
-projects[paragraphs_asymmetric_translation_widgets][download][url] = https://git.drupal.org/project/paragraphs_asymmetric_translation_widgets.git
-projects[paragraphs_asymmetric_translation_widgets][download][revision] = e676e682fd30c123fff1e863716b6792516bb11a
-projects[paragraphs_asymmetric_translation_widgets][download][branch] = 8.x-1.x
+projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-alpha3
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0
@@ -309,9 +311,7 @@ projects[login_destination][download][branch] = 8.x-1.x
 projects[login_destination][patch][] = https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch
 
 projects[betterlogin][type] = module
-projects[betterlogin][download][url] = https://git.drupal.org/project/betterlogin.git
-projects[betterlogin][download][revision] = f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd
-projects[betterlogin][download][branch] = 8.x-1.x
+projects[betterlogin][version] = 1.2
 
 projects[social_api][type] = module
 projects[social_api][version] = 2.0-beta4
@@ -408,7 +408,7 @@ projects[recaptcha][version] = 2.3
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.10
+projects[search_api][version] = 1.11
 ;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
 projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch
 
@@ -471,7 +471,7 @@ projects[devel][version] = 1.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.13
+projects[bootstrap][version] = 3.15
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
@@ -579,10 +579,10 @@ libraries[blazy][download][url] = "https://github.com/dinbror/blazy/archive/1.8.
 libraries[blazy][destination] = "libraries"
 
 libraries[slick][download][type] = get
-libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/1.6.0.tar.gz"
+libraries[slick][download][url] = "https://github.com/kenwheeler/slick/archive/v1.8.1.tar.gz"
 libraries[slick][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
-libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.2.6.tar.gz"
+libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.3.3.tar.gz"
 libraries[ace][destination] = "libraries"
