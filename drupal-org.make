@@ -65,9 +65,7 @@ projects[menu_block][type] = module
 projects[menu_block][version] = 1.5
 
 projects[extlink][type] = module
-projects[extlink][download][url] = https://git.drupal.org/project/extlink.git
-projects[extlink][download][revision] = 8a773a6c5519ccb167e18cc39d68551b30b0e4b3
-projects[extlink][download][branch] = 8.x-1.x
+projects[extlink][version] = 1.1
 
 projects[linkit][type] = module
 projects[linkit][version] = 4.3
