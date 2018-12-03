@@ -87,6 +87,19 @@ while working on the project.
   If you already did the update of Varbase from 8.4.26 to 8.4.27, this
   updating to 8.4.28 will be a quick and easy one.
 
+## Updating files with Copy and Paste for Varbase 8.4.27 to Varbase 8.4.28
+```
+  Given that we are at the drupal root folder for varbase
+   When we delete all drupal core folders and files
+    And we copy all new Varbase files drupal root folder for varbase
+    And we make sure that we have all custom module or themes still in the
+        "sites" folder
+    And we make sure that all new used modules and features are present.
+    And clear Drupal cash by "drush cr" in the docroot
+   Then we will be ready to update the active config and database.
+```
+
+## Varbase Procedures to the varbase base code. not in any varbase-project project builders.
 Remove the following from your composer.json file
 ```
 "drupal/views_bootstrap": "3.x-dev#ec4e7872315db6a7287014b029c3167962647588",
@@ -101,19 +114,25 @@ Remove the following from your composer.json file
 "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
 ```
 
-
-## Updating files with Copy and Paste for Varbase 8.4.27 to Varbase 8.4.28
+And change the following:
 ```
-  Given that we are at the drupal root folder for varbase
-   When we delete all drupal core folders and files
-    And we copy all new Varbase files drupal root folder for varbase
-    And we make sure that we have all custom module or themes still in the
-        "sites" folder
-    And we make sure that all new used modules and features are present.
-   Then we will be ready to update the active config and database.
+    "composer/installers": "^1.5.0",
+    "cweagans/composer-patches": "^1.6.4",
+    "drupal-composer/drupal-scaffold": "^2.4.0",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "webflo/drupal-finder": "^1.1.0",
+    "webmozart/path-util": "^2.3.0",
+```
+with
+```
+    "composer/installers": "~1",
+    "cweagans/composer-patches": "~1",
+    "drupal-composer/drupal-scaffold": "~2",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "webflo/drupal-finder": "~1",
+    "webmozart/path-util": "~2",
 ```
 
-## Varbase Procedures to the varbase base code. not in any varbase-project project builders.
 ```
   Given that we are at the root folder for varbase project, not the docroot
     And we make sure that the current "Varbase-project" composer.json file and
@@ -126,6 +145,7 @@ Remove the following from your composer.json file
     And we should see "Writing lock file" in the terminal
     And we should see "Generating autoload files" in the terminal
    When the composer finishes work with no errors
+    And clear Drupal cash by "drush cr" in the docroot
    Then we will be ready to update the active config and database.
 ```
 
@@ -136,7 +156,7 @@ Remove the following from your composer.json file
    When we run drush "updb" or go to "/update.php"
    Then we should see the steps of updates.
    When we run drush "updb" or go to "/update.php" again
-   Then we will have the site update with the new Varbase 8.4.27 version
+   Then we will have the site update with the new Varbase 8.4.28 version
    When we go to "/admin/config/development/features"
    Then we should see "Changed"
    When we follow with each feature to import new changes.
