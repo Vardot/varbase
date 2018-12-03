@@ -1,3 +1,60 @@
+# 8.4.28
+
+### Highlighted important changes since Varbase 8.4.27:
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [Varbase 8.4.x profile] to use Drupal ~8.6 with
+ [tilde Version Range](https://getcomposer.org/doc/articles/versions.md) (~)
+                  for a step preparation for the upgrade to Varbase 8.6.x
+
+### Added since Varbase 8.4.27:
+* No new features ( all new features will be in Varbase 8.6.x )
+
+### Changed since Varbase 8.4.27:
+* Issue [#3017512](https://www.drupal.org/node/3017512):
+                  Changed [Varbase Bootstrap Paragraphs] composer.json to have
+                  tilde Version Range (~)
+* Issue [#3017553](https://www.drupal.org/node/3017553):
+                  Changed [Varbase Media] composer.json to have
+                  tilde Version Range (~)
+* Issue [#3017509](https://www.drupal.org/node/3017509):
+                  Changed [Varbase Media Hero Slider] composer.json to have
+                  tilde Version Range (~)
+* Issue [#3017507](https://www.drupal.org/node/3017507):
+                  Changed [Varbase Carousels] composer.json to have
+                  tilde Version Range (~)
+* Issue [#3017502](https://www.drupal.org/node/3017502):
+                  Changed [Varbase Blog (Corporate Blog)] composer.json to have
+                  tilde Version Range (~)
+* Issue [#3017498](https://www.drupal.org/node/3017498):
+                  Changed [Varbase Styleguide] composer.json to have
+                  tilde Version Range (~)
+
+### Updates since Varbase 8.4.27:
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [Varbase 8.4.x profile] to use Drupal ~8.6 with
+                  tilde Version Range (~) for a step preparation for the
+                  upgrade to Varbase 8.6.x
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [Custom Permissions] module from ~1 to ~2
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [Tour UI] module from 1.x-dev 5cf793c to ~1
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [Paragraphs asymmetric translation widgets] module
+                  from 1.x-dev e676e68 to ~1
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [Better Login] module from 1.x-dev to ~1
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [Bootstrap] theme from 3.13 to 3.15 with ~3
+* Issue [#3017645](https://www.drupal.org/node/3017645):
+                  Updated [External Links] module from 1.x-dev 8a773a6 to ~1
+
+### Fixes since Varbase 8.4.27:
+* No fixes, only the change of
+  [tilde Version Range](https://getcomposer.org/doc/articles/versions.md) (~)
+                  which could help in fixing many issues we could face.
+
+--------------------------------------------------------------------------------
+
 # 8.4.27
 
 ### Highlighted important changes since Varbase 8.4.26:
