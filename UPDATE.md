@@ -95,7 +95,7 @@ while working on the project.
     And we make sure that we have all custom module or themes still in the
         "sites" folder
     And we make sure that all new used modules and features are present.
-    And clear Drupal cash by "drush cr" in the docroot
+    And clear Drupal cache by "drush cr" in the docroot
    Then we will be ready to update the active config and database.
 ```
 
@@ -145,7 +145,7 @@ with
     And we should see "Writing lock file" in the terminal
     And we should see "Generating autoload files" in the terminal
    When the composer finishes work with no errors
-    And clear Drupal cash by "drush cr" in the docroot
+    And clear Drupal cache by "drush cr" in the docroot
    Then we will be ready to update the active config and database.
 ```
 
