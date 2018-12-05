@@ -101,7 +101,38 @@ If you already did the update of Varbase from 8.5.3 to 8.5.4, this updating
    Then we will be ready to update the active config and database.
 ```
 
-## Varbase Procedures to update the varbase base code. not in any varbase-project project builders.
+## Varbase Procedures to update the varbase base code. not in any varbase-project project template.
+
+Remove:
+```
+"drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
+```
+```
+"drupal/betterlogin": "1.x-dev#f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd"
+```
+
+Replace:
+```
+    "composer/installers": "^1.5.0",
+    "oomphinc/composer-installers-extender": "^1.1.2",
+    "cweagans/composer-patches": "^1.6.4",
+    "drupal-composer/drupal-scaffold": "^2.4.0",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "webflo/drupal-finder": "^1.1.0",
+    "webmozart/path-util": "^2.3.0",
+```
+With:
+```
+    "composer/installers": "~1",
+    "oomphinc/composer-installers-extender": "~1",
+    "cweagans/composer-patches": "~1",
+    "drupal-composer/drupal-scaffold": "~2",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "webflo/drupal-finder": "~1",
+    "webmozart/path-util": "~2",
+```
+
+
 ```
   Given that we are at the root folder for varbase project, not the docroot
     And we make sure that the current "Varbase-project" composer.json file and
