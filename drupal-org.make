@@ -496,7 +496,7 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 5.7
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 5.7
+projects[varbase_media][version] = 5.8
 
 projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 5.3

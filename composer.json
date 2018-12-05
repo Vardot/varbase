@@ -61,7 +61,7 @@
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908"
   },
   "require-dev": {
-    "drush/drush": "~9",
+    "drush/drush": "~8",
     "drupal/coder": "~8",
     "drupal/drupal-extension": "~3",
     "phing/phing": "~2",
