@@ -1,3 +1,95 @@
+# 8.5.5
+### Highlighted important changes since Varbase 8.5.4:
+* Issue [#3017999](http://drupal.org/node/3017999):
+                  Changed [Varbase 8.5.x profile] to use Drupal ~8.6 with tilde
+                  Version Range (~) for a step preparation for the
+                  upgrade to Varbase 8.6.x
+
+### Added since Varbase 8.5.4:
+* No new features, all new features will come in Varbase 8.6.x
+
+### Changed since Varbase 8.5.4:
+* Issue [#3017999](http://drupal.org/node/3017999):
+                  Changed [Varbase 8.5.x profile] to use Drupal ~8.6 with tilde
+                  Version Range (~) for a step preparation for the upgrade
+                  to Varbase 8.6.x
+* Issue [#3017554](http://drupal.org/node/3017554):
+                  Changed [Varbase Core] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017553](http://drupal.org/node/3017553):
+                  Changed [Varbase Media] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017512](http://drupal.org/node/3017512):
+                  Changed [Varbase Bootstrap Paragraphs] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017550](http://drupal.org/node/3017550):
+                  Changed [Varbase Editor] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017517](http://drupal.org/node/3017517):
+                  Changed [Varbase Landing] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017506](http://drupal.org/node/3017506):
+                  Changed [Varbase Search] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017546](http://drupal.org/node/3017546):
+                  Changed [Varbase SEO] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017509](http://drupal.org/node/3017509):
+                  Changed [Varbase Media Hero Slider] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017507](http://drupal.org/node/3017507):
+                  Changed [Varbase Carousels] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017515](http://drupal.org/node/3017515):
+                  Changed [Varbase Total Control Dashboard] Components
+                  dependencies on install: enable or dependencies: enable of
+                  modules in the .info.yml and composer.json to have tilde
+                  Version Range (~)
+* Issue [#3017499](http://drupal.org/node/3017499):
+                  Changed [Varbase Social Single Sign-On] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017502](http://drupal.org/node/3017502):
+                  Changed [Varbase Blog (Corporate Blog)] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3017498](http://drupal.org/node/3017498):
+                  Changed [Varbase Styleguide] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3018004](http://drupal.org/node/3018004):
+                  Changed [Vartheme] composer.json to
+                  have tilde Version Range (~)
+* Issue [#3018134](http://drupal.org/node/3018134):
+                  Changed [Vartheme Admin] composer.json to
+                  have tilde Version Range (~)
+
+### Updates since Varbase 8.5.4:
+* Issue [3018140](http://drupal.org/node/3018140):
+                  Varbase 8.5.5: Update [CHANGELOG.md, UPDATE.md] files and
+                  filter the code for Drupal 8 Coding Standard.
+
+Also updates for drush make files for drupal.org builder to match
+                  requirement of ~ in the composer:
+* Updated [Drupal core] from 8.6.3 to 8.6.4 with ~8.6
+* Updated [Bootstrap] module from 3.13 to 3.15 with a ~3
+* Updated [Config Filter] module from 1.3 to 1.4 with a ~1
+* Updated [Admin Toolbar] module from 1.24 to 1.25 with a ~1
+* Updated [Tour UI] module from 1.x-dev 5cf793c to 1.0-beta2 with a ~1
+* Updated [Webform] module from 5.0-rc26 to 5.0-rc27 with a ~5
+* Updated [Better Login] module from 1.x-dev f7cf1c5 to 1.2 with a ~1
+* Updated [Search API] module from 1.10 to 1.11 with a ~1
+
+### Fixes since Varbase 8.5.4:
+* Issue [#3015363](http://drupal.org/node/3015363):
+                  Fixed issue with module load include by switching to using
+                  load Include not to have any Call to undefined function
+                  module_load_include()
+* Issue [#3016407](http://drupal.org/node/3016407)
+                  by ahmadhalah: Fixed an issue of YouTube does not play
+                  directly after clicking on the thumbnail with a cover image.
+* Issue [#3012888](http://drupal.org/node/3012888)
+                  by mhawwari: Fixed Syntax Error In Card Component
+
+--------------------------------------------------------------------------------
+
 # 8.5.4
 
 ### Highlighted important changes since Varbase 8.5.3:

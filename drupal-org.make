@@ -12,7 +12,7 @@ projects[config_update][type] = module
 projects[config_update][version] = 1.5
 
 projects[config_filter][type] = module
-projects[config_filter][version] = 1.3
+projects[config_filter][version] = 1.4
 
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.1
@@ -174,15 +174,13 @@ projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.24
+projects[admin_toolbar][version] = 1.25
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.8
 
 projects[tour_ui][type] = module
-projects[tour_ui][download][url] = https://git.drupal.org/project/tour_ui.git
-projects[tour_ui][download][revision] = 5cf793c071aeddea0ecd20d80b541606bfe2aff1
-projects[tour_ui][download][branch] = 8.x-1.x
+projects[tour_ui][version] = 1.0-beta2
 
 projects[tour_builder][type] = module
 projects[tour_builder][download][url] = https://git.drupal.org/project/tour_builder.git
@@ -202,7 +200,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-rc26
+projects[webform][version] = 5.0-rc27
 
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha7
@@ -325,9 +323,7 @@ projects[login_destination][download][branch] = 8.x-1.x
 projects[login_destination][patch][] = https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch
 
 projects[betterlogin][type] = module
-projects[betterlogin][download][url] = https://git.drupal.org/project/betterlogin.git
-projects[betterlogin][download][revision] = f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd
-projects[betterlogin][download][branch] = 8.x-1.x
+projects[betterlogin][version] = 1.2
 
 projects[social_api][type] = module
 projects[social_api][version] = 2.0-beta4
@@ -412,7 +408,7 @@ projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.3
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.10
+projects[search_api][version] = 1.11
 ;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
 projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch
 
@@ -467,7 +463,7 @@ projects[devel][version] = 1.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.13
+projects[bootstrap][version] = 3.15
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
@@ -485,7 +481,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-rc3
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.0
+projects[vmi][version] = 2.1
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4
@@ -497,53 +493,53 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 5.x-dev
+projects[varbase_core][version] = 5.7
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 5.x-dev
+projects[varbase_media][version] = 5.6
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 5.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 5.3
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 5.x-dev
+projects[varbase_editor][version] = 5.2
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 5.x-dev
+projects[varbase_landing][version] = 5.2
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 5.x-dev
+projects[varbase_search][version] = 5.3
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 5.x-dev
+projects[varbase_seo][version] = 5.3
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 5.x-dev
+projects[varbase_heroslider_media][version] = 5.2
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 5.x-dev
+projects[varbase_carousels][version] = 5.2
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 5.x-dev
+projects[varbase_total_control][version] = 5.4
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 5.x-dev
+projects[varbase_auth][version] = 5.2
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 5.x-dev
+projects[varbase_blog][version] = 5.2
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 5.x-dev
+projects[varbase_styleguide][version] = 5.2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 5.x-dev
+projects[vartheme][version] = 5.3
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 5.x-dev
+projects[vartheme_admin][version] = 5.2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
