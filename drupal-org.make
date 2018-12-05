@@ -268,7 +268,7 @@ projects[autocomplete_deluxe][version] = 1.0-beta1
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.5
 
-projects[paragraphs[type] = module
+projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.5
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
