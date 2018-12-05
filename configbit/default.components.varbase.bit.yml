@@ -13,14 +13,14 @@ config_bit:
         - libraries
         # Enable listed Varbase modules in order at this installation step. 
         - varbase_core
+        - varbase_media
+        - varbase_editor
         - varbase_admin
-        - varbase_total_control
         - varbase_security
         - varbase_seo
-        - varbase_editor
-        - varbase_media
         - varbase_webform
         - varbase_page
         - varbase_landing
-        - varbase_tour
+        - varbase_total_control
         - varbase_default_content
+        - varbase_tour
