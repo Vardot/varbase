@@ -1,10 +1,8 @@
-sudo: required
 dist: trusty
-group: deprecated-2017Q4
+
 language: php
 cache:
   bundler: true
-  apt: true
   directories:
     - "$HOME/.composer/cache"
     - "$HOME/.drush/cache"
@@ -42,13 +40,6 @@ matrix:
 # Automated Functional Acceptance Testing group: 05 content-management
   - php: 7.2
     env: AFATG=05-content-management
-
-addons:
-  apt:
-    update: true
-    packages:
-    - libappindicator1
-    - fonts-liberation
 
 mysql:
   database: test_varbase4c
