@@ -13,6 +13,7 @@ install:
   - user
   - node
   - block
+  - help
 themes:
   - adminimal_theme
   - bootstrap
