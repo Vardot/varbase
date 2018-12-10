@@ -6,13 +6,7 @@ So that the "Landing page" will show up having paragrpahs of different types
  @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file.
      Given I am a logged in user with the "test_site_admin" user
-      When I go to "admin/content/media-table"
-       And I wait
-      Then I should see "Add media"
-      When I click "Add media"
-       And I wait
-      Then I should see "Image"
-      When I go to "/media/add/image"
+      When I go to "media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
       When I attach the file "flag-earth.jpg" to "Image"

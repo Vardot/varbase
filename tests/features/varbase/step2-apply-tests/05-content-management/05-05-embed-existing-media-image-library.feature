@@ -20,14 +20,6 @@ So that it will show up under that rich text field without having to upload the 
 
    @local @development @staging @production
    Scenario: Upload the "Embed Flag Earth" file.
-      When I go to "admin/content/media-table"
-       And I wait
-      Then I should see "Add media"
-      When I click "Add media"
-       And I wait
-      Then I should see "Document"
-       And I should see "Image"
-       And I should see "Video"
       When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."

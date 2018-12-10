@@ -64,4 +64,17 @@ So that I can use them after the install or update.
       And I should see "Bootstrap"
       And I should see "Vartheme Admin"
 
-
+   @javascript @check @local @development @staging @production
+   Scenario: Check active type of media types.
+      When I go to "media/add"
+       And I wait
+      Then I should see "Add media"
+      When I click "Add media"
+       And I wait
+      Then I should see "File"
+       And I should see "Image"
+       And I should see "Audio"
+       And I should see "Video"
+       And I should see "Remote video"
+       And I should see "Instagram"
+       And I should see "Tweet"

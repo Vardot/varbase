@@ -1,6 +1,6 @@
-Feature: Content Management - Standard Entity Queue Management - Have Entityqueue tab inside the full content page and be able to Add to a queue or Remove from a queue
+Feature: Content Management - Standard Entity Queue Management - Have Entity queue tab inside the full content page and be able to Add to a queue or Remove from a queue
 As a logged in user with a permission to manage entity queues
-I well be able to see an Entityqueue tab inside the full content page of a selected content
+I well be able to see an Entity queue tab inside the full content page of a selected content
 So that I can Add to queue or Remove from queue for the content.
 
 @javascript @local @development
