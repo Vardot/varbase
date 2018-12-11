@@ -38,9 +38,7 @@ projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
 projects[ds][type] = module
-projects[ds][version] = 3.1
-;; Issue #2779243: Method declaration incompatibility.
-projects[ds][patch][] = https://www.drupal.org/files/issues/ds-method-declaration-incompatible-2779243-17.patch
+projects[ds][version] = 3.2
 ;; Issue #2920868: Fixed fatal errors when we have missing layouts, on an update.
 projects[ds][patch][] = https://www.drupal.org/files/issues/error-when-layout-is-removed-2920868-4.patch
 ;; Issue #2966959: Fix a DS issue on a Value Conflict with Layout Builder.
