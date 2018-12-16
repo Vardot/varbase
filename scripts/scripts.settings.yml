@@ -1,5 +1,5 @@
 bootstrap:
-  library_version: "3.3.7"
+  library_version: "3.4.0"
   rtl_library_version: "3.4.0"
 default_themes_creation_path: "themes/custom"
 default_theme_name: "mytheme"
