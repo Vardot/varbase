@@ -55,7 +55,6 @@
     "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
     "drupal/menu_position": "1.x-dev#d134276b4bbd08b3c9678943d0225fbef7dd05b5",
     "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
-    "drupal/taxonomy_menu": "3.x-dev#1103ad0855de4d242364a5b7e74a5c5fc1ce9e02",
     "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
     "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908"
   },
