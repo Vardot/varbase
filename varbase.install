@@ -30,19 +30,24 @@ function varbase_install() {
     $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
     $config_installer->installOptionalConfig($storage, '');
     // Have the .settings.yml configs into the active config.
-    $settings_config_files = file_scan_directory($optional_install_path, '/^.*\\.(settings.yml)$/i');
-    $settings_config_filenames = array();
-    foreach ($settings_config_files as $settings_config_file) {
-      $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
-      $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
-      $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
-      $config_factory->setData($settings_config_file_data)->save(TRUE);
+    $settings_config_files = file_scan_directory($optional_install_path, '/^.*\\(settings.yml)$/i');
+    if (isset($settings_config_files) && is_array($settings_config_files)) {
+      foreach ($settings_config_files as $settings_config_file) {
+        $settings_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $settings_config_file->uri);
+        $settings_config_file_data = (array) Yaml::parse($settings_config_file_content);
+        $config_factory = \Drupal::configFactory()->getEditable($settings_config_file->name);
+        $config_factory->setData($settings_config_file_data)->save(TRUE);
+      }
     }
   }
   // ---------------------------------------------------------------------------
 
   // Set front page to "node".
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
+
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::entityDefinitionUpdateManager()->applyUpdates();
 
   // If Varbase Tour were enabled then redirect to the homepage with activ tour.
   if (isset($GLOBALS['homepage_with_varbase_tour'])

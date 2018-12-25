@@ -9,10 +9,10 @@ defaults[projects][subdir] = "contrib"
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[config_update][type] = module
-projects[config_update][version] = 1.5
+projects[config_update][version] = 1.6
 
 projects[config_filter][type] = module
-projects[config_filter][version] = 1.3
+projects[config_filter][version] = 1.4
 
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.1
@@ -38,9 +38,7 @@ projects[layout_builder_restrictions][type] = module
 projects[layout_builder_restrictions][version] = 1.2
 
 projects[ds][type] = module
-projects[ds][version] = 3.1
-;; Issue #2779243: Method declaration incompatibility.
-projects[ds][patch][] = https://www.drupal.org/files/issues/ds-method-declaration-incompatible-2779243-17.patch
+projects[ds][version] = 3.2
 ;; Issue #2920868: Fixed fatal errors when we have missing layouts, on an update.
 projects[ds][patch][] = https://www.drupal.org/files/issues/error-when-layout-is-removed-2920868-4.patch
 ;; Issue #2966959: Fix a DS issue on a Value Conflict with Layout Builder.
@@ -137,7 +135,7 @@ projects[ckeditor_bidi][type] = module
 projects[ckeditor_bidi][version] = 2.1
 
 projects[ace_editor][type] = module
-projects[ace_editor][version] = 1.0
+projects[ace_editor][version] = 1.1
 ;; Issue #2916832: Add support for calling libraries from the current active profile
 projects[ace_editor][patch][] = https://www.drupal.org/files/issues/2916832-4.patch
 
@@ -171,7 +169,7 @@ projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.24
+projects[admin_toolbar][version] = 1.25
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.8
@@ -199,7 +197,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0-rc26
+projects[webform][version] = 5.0
 
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha7
@@ -369,7 +367,7 @@ projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.3
 
 projects[yoast_seo][type] = module
-projects[yoast_seo][version] = 1.4
+projects[yoast_seo][version] = 1.5
 
 projects[l10n_client][type] = module
 projects[l10n_client][download][url] = https://git.drupal.org/project/l10n_client.git
@@ -407,23 +405,21 @@ projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.3
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.10
+projects[search_api][version] = 1.11
 ;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
 projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch
 
 projects[blazy][type] = module
-projects[blazy][version] = 1.0-rc3
+projects[blazy][version] = 1.0-rc4
 
 projects[slick][type] = module
-projects[slick][version] = 1.0
-;; Issue #2948735: Adding the alt attribute to the slick thumbnails
-projects[slick][patch][] = https://www.drupal.org/files/issues/2018-04-02/adding-the-alt-attribute-to-the-slick-thumbnails-2948735-3_0.patch
+projects[slick][version] = 1.1
 
 projects[slick_views][type] = module
 projects[slick_views][version] = 1.0-rc2
 
 projects[slick_media][type] = module
-projects[slick_media][version] = 2.0-alpha2
+projects[slick_media][version] = 2.0-alpha3
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
@@ -462,7 +458,7 @@ projects[devel][version] = 1.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.13
+projects[bootstrap][version] = 3.16
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.3
@@ -480,7 +476,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-rc3
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.0
+projects[vmi][version] = 2.1
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4
