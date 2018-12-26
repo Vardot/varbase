@@ -1,3 +1,178 @@
+# 8.6.3
+
+### Highlighted important changes since Varbase 8.6.2:
+
+Now you can install most Varbase components with any Drupal 8 site. Even if
+ installed with the Minimal or Standard profile.
+
+However, using them with Varbase distro and Vartheme theme gives you way much
+ more cool stuff!
+
+For an example of how to require them in Drupal 8 site you can have a look at
+
+ [Varbase Media](https://www.drupal.org/project/varbase_media/issues/3017553)
+
+ [Varbase Editor](https://www.drupal.org/project/varbase_editor/issues/3017550)
+
+* Issue [#3017555](https://www.drupal.org/node/3017555):
+                  Changed [Varbase 8.6.x] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3020808](https://www.drupal.org/node/3020808):
+                  Updated scripts settings for [Create new vartheme subtheme]
+                  generator command to use Bootstrap library 3.4.0
+* [varbase-project] template: Added Varbase Updater for Managing Varbase updates
+                  [#43](https://github.com/Vardot/varbase-project/issues/43)
+* [varbase-project] template: Added composer-patches to repositories type vcs
+                  for vardot/composer-patches repository
+                  [#44](https://github.com/Vardot/varbase-project/issues/44)
+                  As it will fix issues of deleting some modules which they do
+                  have patches over them. it will work on composer require,
+                  composer update as we have fixed issues with
+                  [cweagans/composer-patches](https://github.com/cweagans/composer-patches/pull/243)
+                  and more. but they still not merged yet, we went on the way
+                  of managing our own
+                  [vardot/composer-patches](https://github.com/Vardot/composer-patches/commits/master)
+                  To follow with the latest work on this subject you could
+                  have a look at our Varbase Project template file:
+                  https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json
+
+### Added since Varbase 8.6.2:
+* Issue [#3021486](https://www.drupal.org/node/3021486):
+                  Added [webform analysis and Webform Views Integration]
+                  to [Varbase core] and enable in [Varbase Webform] with
+                  install: not dependency:
+* Issue [#3019580](https://www.drupal.org/node/3019580):
+                  Added an on install permission for [Varbase Search] to grant
+                  anonymous and authenticated users a permission to
+                  [search content] and removed that from Varbase on install.
+* [varbase-project] template: Added patch Level for drupal/core project
+                  with -p2 level using composer-patches 1.6.5
+                  [#42](https://github.com/Vardot/varbase-project/issues/42)
+* [varbase-project] template: Added Varbase Updater for Managing Varbase updates
+                  [#43](https://github.com/Vardot/varbase-project/issues/43)
+* [varbase-project] template: Added composer-patches to repositories type vcs
+                  for vardot/composer-patches repository
+                  [#44](https://github.com/Vardot/varbase-project/issues/44)
+
+### Changed since Varbase 8.6.2:
+* Issue [#3017555](https://www.drupal.org/node/3017555):
+                  Changed [Varbase 8.6.x] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017554](https://www.drupal.org/node/3017554):
+                  Changed [Varbase Core] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017553](https://www.drupal.org/node/3017553):
+                  Changed [Varbase Media] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017550](https://www.drupal.org/node/3017550):
+                  Changed [Varbase Editor] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017502](https://www.drupal.org/node/3017502):
+                  Changed [Varbase Blog (Corporate Blog)] composer.json to have
+                  tilde Version Range (~)
+* Issue [#3017512](https://www.drupal.org/node/3017512):
+                  Changed [Varbase Bootstrap Paragraphs] Components
+                  dependencies on install: enable or dependencies: enable of
+                  modules in the .info.yml and composer.json to have tilde
+                  Version Range (~)
+* Issue [#3017517](https://www.drupal.org/node/3017517):
+                  Changed [Varbase Landing] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017509](https://www.drupal.org/node/3017509):
+                  Changed [Varbase Media Hero Slider] Components dependencies
+                  on install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017507](https://www.drupal.org/node/3017507):
+                  Changed [Varbase Carousels] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017499](https://www.drupal.org/node/3017499):
+                  Changed [Varbase Social Single Sign-On] Components
+                  dependencies on install: enable or dependencies: enable
+                  of modules in the .info.yml and composer.json to
+                  have tilde Version Range (~)
+                  and added support for stark, bartik, bootstrap, with Vartheme
+* Issue [#3017506](https://www.drupal.org/node/3017506):
+                  Changed [Varbase Search] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017546](https://www.drupal.org/node/3017506):
+                  Changed [Varbase SEO] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017498](https://www.drupal.org/node/3017498):
+                  Changed [Varbase Styleguide] Components dependencies on
+                  install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+* Issue [#3017515](https://www.drupal.org/node/3017515):
+                  Changed [Varbase Total Control Dashboard] Components
+                  dependencies on install: enable or dependencies: enable of
+                  modules in the .info.yml and composer.json to have tilde
+                  Version Range (~)
+* Issue [#3018004](https://www.drupal.org/node/3018004):
+                  Changed [Vartheme] composer.json to have tilde Version
+                  Range (~)
+* Issue [#3018134](https://www.drupal.org/node/3018134):
+                  Changed [Vartheme Admin] composer.json to have tilde Version
+                  Range (~)
+* Issue [#3017494](https://www.drupal.org/node/3017494):
+                  Changed [Varbase FAQs] Components dependencies
+                  on install: enable or dependencies: enable of modules in the
+                  .info.yml and composer.json to have tilde Version Range (~)
+
+### Updates since Varbase 8.6.2:
+* Issue [#3020808](https://www.drupal.org/node/3020808):
+                  Updated scripts settings for [Create new vartheme subtheme]
+                  generator command to use Bootstrap library 3.4.0
+* Issue [#3018483](https://www.drupal.org/node/3018483):
+                  Varbase 8.6.3: Updated [CHANGELOG.md, UPDATE.md,
+                  drupal-org.make] files and filtered the code for
+                  Drupal 8 Coding Standard:
+* Updated [Bootstrap] theme from 8.3.13 to 8.3.16
+* Updated [View Modes Inventory - Bootstrap Ready] module from 8.2.0 to 8.2.1
+* Updated [Configuration Update Manager] module from 8.1.5 to 8.1.6
+* Updated [Config Filter] module from 8.1.3 to 8.1.4
+* Updated [Display Suite] module from 8.3.1 to 8.3.2
+* Updated [Ace Code Editor] module from 8.1.0 to 8.1.1
+* Updated [Admin Toolbar] module from 8.1.24 to 8.1.25
+* Updated [Webform] module from 8.5.0-rc26 to 8.5.0
+* Updated [Real-time SEO for Drupal] module from 8.1.4 to 8.1.5
+* Updated [Search API] module from 8.1.10 to 8.1.11
+* Updated [Blazy] module from 8.1.0-rc3 to 8.1.0-rc4
+* Updated [Slick Carousel] module from 8.1.0 to 8.1.1
+* Updated [Slick Media] module from 8.2.0-alpha2 to 8.2.0-alpha3
+* Issue [#3019722](https://www.drupal.org/node/3019722):
+                  Updated [Display Suite] module from 3.1 to ~3
+* Issue [#3022251](https://www.drupal.org/node/3022251):
+                  Updated [Taxonomy Menu] module from 3.x-dev 1103ad0 3.4
+                  with a patch
+* Issue [#3019721](https://www.drupal.org/node/3019721):
+                  Updated [Slick Carousel] module from 1.0 to ~1.0
+
+### Fixes since Varbase 8.x-6.2:
+* Issue [#3019686](https://www.drupal.org/node/3019686):
+                  Fixed issue of media image default view mode of linking the
+                  default image to the file image.
+* Issue [#3017493](https://www.drupal.org/node/3017493)
+                  by [Muath Khraisat](https://www.drupal.org/u/muath-khraisat)
+                 : Fixed the appearing of the image in the
+                  entity browser widget.
+* Issue [#3019107](https://www.drupal.org/node/3019107)
+                  by [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+                 : [IE] fixed the height space under the
+                  card image appeared on IE.
+* Issue [#3012888](https://www.drupal.org/node/3012888)
+                  by [mhawwari](https://www.drupal.org/u/malhawwari)
+                 : Fixed Syntax Error In Card Component.
+
+--------------------------------------------------------------------------------
+
 # 8.6.2
 
 ### Highlighted important changes since Varbase 8.6.1:
