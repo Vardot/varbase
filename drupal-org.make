@@ -365,12 +365,10 @@ projects[yoast_seo][version] = 1.5
 
 projects[l10n_client][type] = module
 projects[l10n_client][download][url] = https://git.drupal.org/project/l10n_client.git
-projects[l10n_client][download][revision] = 9bf8d597732870bdca301512c71b6e5d74d48db2
+projects[l10n_client][download][revision] = 3c4412686592462226f805d36c28d39c9d0e88af
 projects[l10n_client][download][branch] = 8.x-1.x
 ;; Issue #2867460: Incompatible with this version of Drupal core 8.3.0
 projects[l10n_client][patch][] = https://www.drupal.org/files/issues/2867460-2.patch
-;; Issue #2872668: User error: 0 is an invalid render array key":
-projects[l10n_client][patch][] = https://www.drupal.org/files/issues/l10n_client-hook_toolbar-fix-2872668-3.patch
 
 projects[username_enumeration_prevention][type] = module
 projects[username_enumeration_prevention][version] = 1.0-beta2
