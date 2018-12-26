@@ -20,7 +20,8 @@ For an example of how to require them in Drupal 8 site you can have a look at
                   .info.yml and composer.json to have tilde Version Range (~)
 * Issue [#3020808](https://www.drupal.org/node/3020808):
                   Updated scripts settings for [Create new vartheme subtheme]
-                  generator command to use Bootstrap library 3.4.0
+                  generator command to use
+[Bootstrap library 3.4.0](https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0/)
 * [varbase-project] template: Added Varbase Updater for Managing Varbase updates
                   [#43](https://github.com/Vardot/varbase-project/issues/43)
 * [varbase-project] template: Added composer-patches to repositories type vcs
@@ -132,24 +133,28 @@ https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json
 ### Updates since Varbase 8.6.2:
 * Issue [#3020808](https://www.drupal.org/node/3020808):
                   Updated scripts settings for [Create new vartheme subtheme]
-                  generator command to use Bootstrap library 3.4.0
+                  generator command to use
+[Bootstrap library 3.4.0](https://blog.getbootstrap.com/2018/12/13/bootstrap-3-4-0/)
 * Issue [#3018483](https://www.drupal.org/node/3018483):
                   Varbase 8.6.3: Updated [CHANGELOG.md, UPDATE.md,
                   drupal-org.make] files and filtered the code for
                   Drupal 8 Coding Standard:
-* Updated [Bootstrap] theme from 8.3.13 to 8.3.16
-* Updated [View Modes Inventory - Bootstrap Ready] module from 8.2.0 to 8.2.1
-* Updated [Configuration Update Manager] module from 8.1.5 to 8.1.6
-* Updated [Config Filter] module from 8.1.3 to 8.1.4
-* Updated [Display Suite] module from 8.3.1 to 8.3.2
-* Updated [Ace Code Editor] module from 8.1.0 to 8.1.1
-* Updated [Admin Toolbar] module from 8.1.24 to 8.1.25
-* Updated [Webform] module from 8.5.0-rc26 to 8.5.0
-* Updated [Real-time SEO for Drupal] module from 8.1.4 to 8.1.5
-* Updated [Search API] module from 8.1.10 to 8.1.11
-* Updated [Blazy] module from 8.1.0-rc3 to 8.1.0-rc4
-* Updated [Slick Carousel] module from 8.1.0 to 8.1.1
-* Updated [Slick Media] module from 8.2.0-alpha2 to 8.2.0-alpha3
+```
+    Updated [Bootstrap] theme from 8.3.13 to 8.3.16
+    Updated [View Modes Inventory - Bootstrap Ready] module from 8.2.0 to 8.2.1
+    Updated [Configuration Update Manager] module from 8.1.5 to 8.1.6
+    Updated [Config Filter] module from 8.1.3 to 8.1.4
+    Updated [Display Suite] module from 8.3.1 to 8.3.2
+    Updated [Ace Code Editor] module from 8.1.0 to 8.1.1
+    Updated [Admin Toolbar] module from 8.1.24 to 8.1.25
+    Updated [Webform] module from 8.5.0-rc26 to 8.5.0
+    Updated [Real-time SEO for Drupal] module from 8.1.4 to 8.1.5
+    Updated [Search API] module from 8.1.10 to 8.1.11
+    Updated [Blazy] module from 8.1.0-rc3 to 8.1.0-rc4
+    Updated [Slick Carousel] module from 8.1.0 to 8.1.1
+    Updated [Slick Media] module from 8.2.0-alpha2 to 8.2.0-alpha3
+```
+
 * Issue [#3019722](https://www.drupal.org/node/3019722):
                   Updated [Display Suite] module from 3.1 to ~3
 * Issue [#3022251](https://www.drupal.org/node/3022251):
@@ -173,6 +178,9 @@ https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json
 * Issue [#3012888](https://www.drupal.org/node/3012888)
                   by [mhawwari](https://www.drupal.org/u/malhawwari)
                  : Fixed Syntax Error In Card Component.
+* Issue [#3022562](https://www.drupal.org/node/3022562):
+                  Fixed Broken/missing handler on bulk action field
+                  in Media Library view.
 
 --------------------------------------------------------------------------------
 
