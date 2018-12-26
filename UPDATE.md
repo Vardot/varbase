@@ -61,11 +61,24 @@ while working on the project.
 
 ```
  Given that you are logged in with the "webmaster" user
-   And the "Features" module is enabled
-   And the "Features UI" module is enabled
-  When you go to "admin/config/development/features"
-  Then you should not see any changed features in the Varbase core bundle.
-  When you click on all "Changed"
+   And the "Configuration Update Reports" module is enabled
+  When you go to "/admin/config/development/configuration/report"
+   And from "Single module" you could select any Varbase component
+    /admin/config/development/configuration/report/module/varbase_core
+    /admin/config/development/configuration/report/module/varbase_admin
+    /admin/config/development/configuration/report/module/varbase_media
+    /admin/config/development/configuration/report/module/varbase_development
+    /admin/config/development/configuration/report/module/varbase_editor
+    /admin/config/development/configuration/report/module/varbase_page
+    /admin/config/development/configuration/report/module/varbase_bootstrap_paragraphs
+    /admin/config/development/configuration/report/module/varbase_landing
+    /admin/config/development/configuration/report/module/varbase_blog
+    /admin/config/development/configuration/report/module/varbase_seo
+    /admin/config/development/configuration/report/module/varbase_security
+    /admin/config/development/configuration/report/module/varbase_search
+    /admin/config/development/configuration/report/module/varbase_auth
+    /admin/config/development/configuration/report/module/varbase_total_control
+    /admin/config/development/configuration/report/module/varbase_webform
   Then you will be able to see all changes
    And you will be able to import new changes if you need them
 ```
@@ -125,9 +138,25 @@ while working on the project.
    Then we should see the steps of updates.
    When we run drush "updb" or go to "/update.php" again
    Then we will have the site update with the new Varbase 8.6.3 version
-   When we go to "/admin/config/development/features"
-
-   Then we will have the Varbase site updated to the latest version.
+   When you go to "/admin/config/development/configuration/report"
+   And from "Single module" you could select any Varbase component
+     /admin/config/development/configuration/report/module/varbase_core
+     /admin/config/development/configuration/report/module/varbase_admin
+     /admin/config/development/configuration/report/module/varbase_media
+     /admin/config/development/configuration/report/module/varbase_development
+     /admin/config/development/configuration/report/module/varbase_editor
+     /admin/config/development/configuration/report/module/varbase_page
+     /admin/config/development/configuration/report/module/varbase_bootstrap_paragraphs
+     /admin/config/development/configuration/report/module/varbase_landing
+     /admin/config/development/configuration/report/module/varbase_blog
+     /admin/config/development/configuration/report/module/varbase_seo
+     /admin/config/development/configuration/report/module/varbase_security
+     /admin/config/development/configuration/report/module/varbase_search
+     /admin/config/development/configuration/report/module/varbase_auth
+     /admin/config/development/configuration/report/module/varbase_total_control
+     /admin/config/development/configuration/report/module/varbase_webform
+   Then you will be able to see all changes
+   So that you could select which change you would you like to update.
 ```
 
 --------------------------------------------------------------------------------
