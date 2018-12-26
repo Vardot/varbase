@@ -193,6 +193,12 @@ projects[revision_log_default][version] = 1.0
 projects[webform][type] = module
 projects[webform][version] = 5.0
 
+projects[webform_analysis][type] = module
+projects[webform_analysis][version] = 1.0-beta7
+
+projects[webform_views][type] = module
+projects[webform_views][version] = 5.0-alpha6
+
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha7
 ;; Issue #2900089: Invalid translation language error when selected installation language does not match demo content language
