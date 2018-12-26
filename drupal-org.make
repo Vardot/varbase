@@ -63,9 +63,7 @@ projects[menu_block][type] = module
 projects[menu_block][version] = 1.5
 
 projects[extlink][type] = module
-projects[extlink][download][url] = https://git.drupal.org/project/extlink.git
-projects[extlink][download][revision] = 8a773a6c5519ccb167e18cc39d68551b30b0e4b3
-projects[extlink][download][branch] = 8.x-1.x
+projects[extlink][version] = 1.1
 
 projects[linkit][type] = module
 projects[linkit][version] = 4.3
@@ -175,9 +173,7 @@ projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.8
 
 projects[tour_ui][type] = module
-projects[tour_ui][download][url] = https://git.drupal.org/project/tour_ui.git
-projects[tour_ui][download][revision] = 5cf793c071aeddea0ecd20d80b541606bfe2aff1
-projects[tour_ui][download][branch] = 8.x-1.x
+projects[tour_ui][version] = 1.0-beta2 
 
 projects[tour_builder][type] = module
 projects[tour_builder][download][url] = https://git.drupal.org/project/tour_builder.git
@@ -318,9 +314,7 @@ projects[login_destination][download][branch] = 8.x-1.x
 projects[login_destination][patch][] = https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch
 
 projects[betterlogin][type] = module
-projects[betterlogin][download][url] = https://git.drupal.org/project/betterlogin.git
-projects[betterlogin][download][revision] = f7cf1c5c9ec5e80c6ac0ef04ed605e25495232cd
-projects[betterlogin][download][branch] = 8.x-1.x
+projects[betterlogin][version] = 1.2
 
 projects[social_api][type] = module
 projects[social_api][version] = 2.0-beta4
@@ -491,7 +485,7 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 6.3
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.1
+projects[varbase_media][version] = 6.2
 
 projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 6.2

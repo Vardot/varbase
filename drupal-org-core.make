@@ -3,7 +3,7 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.6.3"
+projects[drupal][version] = "8.6.4"
 ;; Issue #2869592: Disabled update module shouldn't produce a status report warning
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch
 ;; Issue #2885441: EntityReferenceAutocompleteWidget should define its size setting as an integer
@@ -14,7 +14,7 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-09-24/28152
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-23/1356276-549-8.6.x.patch
 ;; Issue #2914389: Allow profiles to exclude dependencies of their parent
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-11-07/2914389-11-do-not-test.patch
-;; Issue #2720101: Label (Title) not set for Views block (exposed filters in Block)
+;; Issue #2720101 Label (Title) not set for Views block (exposed filters in Block)
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2720101-53.patch
 ;; Issue #2853988: Add option to rewrite robots.txt on staging environments
 projects[drupal][patch][] = https://www.drupal.org/files/issues/drupal_8-allow_stg_robots-2853988-2.patch

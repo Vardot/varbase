@@ -26,16 +26,19 @@ For an example of how to require them in Drupal 8 site you can have a look at
 * [varbase-project] template: Added composer-patches to repositories type vcs
                   for vardot/composer-patches repository
                   [#44](https://github.com/Vardot/varbase-project/issues/44)
-                  As it will fix issues of deleting some modules which they do
-                  have patches over them. it will work on composer require,
-                  composer update as we have fixed issues with
-                  [cweagans/composer-patches](https://github.com/cweagans/composer-patches/pull/243)
-                  and more. but they still not merged yet, we went on the way
-                  of managing our own
-                  [vardot/composer-patches](https://github.com/Vardot/composer-patches/commits/master)
-                  To follow with the latest work on this subject you could
-                  have a look at our Varbase Project template file:
-                  https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json
+
+**NOTICE:** We're now using composer patches from Vardot repository to suggest
+several fixes and better handling of patches in your Drupal project.
+You'll notice that we have included (https://github.com/vardot/composer-patches)
+in the this composer.json repositories. This will replace the original
+library (cweagans/composer-patches) with our own from (vardot/composer-patches).
+See https://github.com/cweagans/composer-patches/pull/243 and more details
+on our changes on the composer-patches package. Once our changes get merged,
+we will revert to using (cweagans/composer-patches) without this override.
+
+To follow with the latest work on this subject you could
+have a look at our Varbase Project template file:
+https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json
 
 ### Added since Varbase 8.6.2:
 * Issue [#3021486](https://www.drupal.org/node/3021486):
