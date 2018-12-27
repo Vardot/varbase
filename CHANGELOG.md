@@ -181,6 +181,9 @@ https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json
 * Issue [#3022562](https://www.drupal.org/node/3022562):
                   Fixed Broken/missing handler on bulk action field
                   in Media Library view.
+* Issue [#3022669](https://www.drupal.org/node/3022669):
+                  Fixed Issue with [Localization client] of User error:
+                  0 is an invalid render array key.
 
 --------------------------------------------------------------------------------
 
