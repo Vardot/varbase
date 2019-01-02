@@ -51,10 +51,12 @@ I want to be able to clone an entity.
       And I press the "Filter" button
       And I wait
      Then I should see "Test Clone landing page - Cloned"
-      And I check the box "edit-views-bulk-operations-bulk-form-0"
-      And I select "Delete content" from "With selection"
-      And I press "Apply to selected items"
-      And I press "Delete"
+     When I click "Test Clone landing page - Cloned"
+      And I wait
+     Then I should see "Test Clone landing page - Cloned"
+     When I click "Delete"
+     Then I should see "This action cannot be undone."
+     When I press "Delete"
       And I wait
      Then I go to "admin/content"
       And I wait
