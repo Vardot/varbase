@@ -51,7 +51,7 @@ I want to be able to clone an entity.
       And I press the "Filter" button
       And I wait
      Then I should see "Test Clone landing page - Cloned"
-      And I check the box "edit-node-bulk-form-0"
+      And I check the box "edit-views-bulk-operations-bulk-form-0"
       And I select "Delete content" from "With selection"
       And I press "Apply to selected items"
       And I press "Delete"
