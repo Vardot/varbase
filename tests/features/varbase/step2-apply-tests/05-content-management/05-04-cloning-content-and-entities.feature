@@ -53,7 +53,7 @@ I want to be able to clone an entity.
      Then I should see "Test Clone landing page - Cloned"
       And I check the box "edit-views-bulk-operations-bulk-form-0"
       And I select "Delete selected entities" from "Action"
-      And I press "Action"
+      And I press "Apply to selected items"
       And I wait
      Then I should see "Are you sure you wish to perform"
      When I press "Execute action"
