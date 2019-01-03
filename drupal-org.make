@@ -237,9 +237,7 @@ projects[maxlength][type] = module
 projects[maxlength][version] = 1.0-beta2
 
 projects[menu_position][type] = module
-projects[menu_position][download][url] = https://git.drupal.org/project/menu_position.git
-projects[menu_position][download][revision] = d134276b4bbd08b3c9678943d0225fbef7dd05b5
-projects[menu_position][download][branch] = 8.x-1.x
+projects[menu_position][version] = 1.0-alpha1
 
 projects[mail_edit][type] = module
 projects[mail_edit][download][url] = https://git.drupal.org/project/mail_edit.git
