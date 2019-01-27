@@ -35,7 +35,7 @@ projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
 projects[layout_builder_restrictions][type] = module
-projects[layout_builder_restrictions][version] = 1.2
+projects[layout_builder_restrictions][version] = 1.3
 
 projects[ds][type] = module
 projects[ds][version] = 3.2
@@ -166,7 +166,7 @@ projects[admin_toolbar][type] = module
 projects[admin_toolbar][version] = 1.25
 
 projects[adminimal_admin_toolbar][type] = module
-projects[adminimal_admin_toolbar][version] = 1.8
+projects[adminimal_admin_toolbar][version] = 1.9
 
 projects[tour_ui][type] = module
 projects[tour_ui][version] = 1.0-beta2 
@@ -189,7 +189,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.0
+projects[webform][version] = 5.1
 
 projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
@@ -223,7 +223,7 @@ projects[rabbit_hole][version] = 1.0-beta4
 projects[rabbit_hole][patch][] = https://www.drupal.org/files/issues/2018-05-10/rabbit_hole-instance_of_check-2961738-5.patch
 
 projects[fast_404][type] = module
-projects[fast_404][version] = 1.0-alpha3
+projects[fast_404][version] = 1.0-alpha4
 
 projects[mailsystem][type] = module
 projects[mailsystem][version] = 4.1
@@ -410,7 +410,7 @@ projects[slick][type] = module
 projects[slick][version] = 1.1
 
 projects[slick_views][type] = module
-projects[slick_views][version] = 1.0-rc2
+projects[slick_views][version] = 1.0
 
 projects[slick_media][type] = module
 projects[slick_media][version] = 2.0-alpha3
@@ -452,12 +452,10 @@ projects[devel][version] = 1.2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.16
+projects[bootstrap][version] = 3.17
 
 projects[adminimal_theme][type] = theme
-projects[adminimal_theme][version] = 1.3
-;; Issue #2696393: Checkboxes with .error class are not usable
-projects[adminimal_theme][patch][] = https://www.drupal.org/files/issues/adminimal-checkboxes_with_error-2696393-3.patch
+projects[adminimal_theme][version] = 1.4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; General Public contributed modules.
@@ -482,53 +480,53 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 6.x-dev
+projects[varbase_core][version] = 6.5
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 6.4
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 6.3
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] = 6.2
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 6.1
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.1
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.3
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 6.3
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 6.1
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.3
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.2
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 6.1
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.3
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

@@ -1,3 +1,94 @@
+# 8.6.4
+
+### Highlighted important changes since Varbase 8.6.3:
+* Issue [#3024940](https://www.drupal.org/node/3024940):
+                   Changed [Varbase Media Hero Slider] to have a fixed Image
+                   max and min Height
+* Issue [#3026247](https://www.drupal.org/node/3026247):
+                   Added [vartheme/spacing] bootstrap spacing library to
+                   support a back-ported spacing style borrowed from Bootstrap 4
+* Issue [#3023119](https://www.drupal.org/node/3023119):
+                   Added VBO to admin/content and admin/people and changed
+                   the batch size to 50
+* Issue [#3023181](https://www.drupal.org/node/3023181):
+                   Added VBO to admin/media with [Created from, and Created to]
+                   date filters to media table
+* Issue [#3025036](https://www.drupal.org/node/3025036):
+                   Added target bundle [text and image] to landing page
+                   components * (landing page paragraphs field) without
+                   changing old configurations
+
+### Added since Varbase 8.6.3:
+* Issue [#3026046](https://www.drupal.org/node/3026046):
+                   Added styling template for [Varbase Media Hero Slider] to
+                   VARTHEME_SUBTHEM to let themers change Custom Varbase Hero
+                   slider media variables
+* Issue [#3026247](https://www.drupal.org/node/3026247):
+                   Added [vartheme/spacing] bootstrap spacing library to
+                   support a back-ported spacing style borrowed from Bootstrap 4
+* Issue [#3025783](https://www.drupal.org/node/3025783):
+                   Added a default RTL Font [Droid Arabic Kufi ] to Vartheme
+                   and VARTHEME_SUBTHEME
+* Issue [#3023119](https://www.drupal.org/node/3023119):
+                   Added VBO to admin/content and admin/people and changed
+                   the batch size to 50
+* Issue [#3023181](https://www.drupal.org/node/3023181):
+                   Added VBO to admin/media with [Created from, and Created to]
+                   date filters to media table
+* Issue [#3023087](https://www.drupal.org/node/3023087):
+                   Added a default override for Views Infinite Scroll button
+                   style to use Bootstrap btn
+* Issue [#3023116](https://www.drupal.org/node/3023116):
+                   Added Drupal Console ~1.0 to require-dev
+* Issue [#3025036](https://www.drupal.org/node/3025036):
+                   Added target bundle [text and image] to landing page
+                   components * (landing page paragraphs field) without changing old configurations
+
+### Changed since Varbase 8.6.3:
+* Issue [#3024940](https://www.drupal.org/node/3024940):
+                   Changed [Varbase Media Hero Slider] to have a fixed Image
+                   max and min Height
+* Issue [#3027158](https://www.drupal.org/node/3027158):
+                   Changed [Views Bootstrap] module from 3.1 to ~3.0
+
+### Updates since Varbase 8.6.3:
+* Issue [#3027176](https://www.drupal.org/node/3027176):
+                   Updated [Adminimal] theme from 1.3 to ~1.0 (1.4) at the time
+* Issue [#3023061](https://www.drupal.org/node/3023061):
+                   Updated [Simple XML Sitemap] module from ^2.12 to ~3.0
+* Issue [#3024236](https://www.drupal.org/node/3024236):
+                   Updated [Entity Clone] module from 1.x-dev 6d0ce05 to ~1.0
+* Issue [#3023647](https://www.drupal.org/node/3023647):
+                   Updated [Menu position] module
+                   from 1.x-dev d134276 to 8.1.0-alpha1 (~1.0)
+* Issue [#3028740](https://www.drupal.org/node/3028740):
+                   Updated [Vimeo api player.js] external remote player library
+                   from version: 2.6.1 to open card for latest library version
+
+### Fixes since Varbase 8.x-6.3:
+* Issue [#3025606](https://www.drupal.org/node/3025606)
+  by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem):
+                   Fixed description caret staying on its
+                   own line when description has HTML
+* Issue [#3023173](https://www.drupal.org/node/3023173):
+                   Fixed [VBO) Fatal error with a patch when we execute simple
+                   actions on [Adminimal] theme
+* Issue [#3026336](https://www.drupal.org/node/3026336):
+                   Fixed issue for [page manager] module with 2665328 87.patch
+                   as variants take entity label not the variant title
+* Issue [#3020311](https://www.drupal.org/node/3020311)
+                   by [a.qala](https://www.drupal.org/u/aqala):
+                   Fixed accordion issue with 2921228-3.patch for
+                   [Field Group] module with accordion field groups (both on
+                   form and view modes)
+* Issue [#3028164](https://www.drupal.org/node/3028164):
+                   Fixed a bug of not loading general metatag defaults configs
+                   in active config on installation
+* Issue [#3028739](https://www.drupal.org/node/3028739):
+                   Fixed issue with single slide height on full content and
+                   single slick slide and the center of video players
+
+
 # 8.6.3
 
 ### Highlighted important changes since Varbase 8.6.2:
