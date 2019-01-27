@@ -49,6 +49,8 @@ projects[views_bootstrap][version] = 3.1
 
 projects[field_group][type] = module
 projects[field_group][version] = 3.0-beta1
+;; Issue #2921228: Accordion does not work
+projects[field_group][patch][] = https://www.drupal.org/files/issues/field_group_accordion-2921228-3.patch
 
 projects[smart_trim][type] = module
 projects[smart_trim][version] = 1.1
@@ -523,7 +525,7 @@ projects[varbase_styleguide][version] = 6.1
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.3
+projects[vartheme][version] = 6.4
 
 projects[vartheme_admin][type] = theme
 projects[vartheme_admin][version] = 6.4
