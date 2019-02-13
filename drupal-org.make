@@ -240,9 +240,7 @@ projects[menu_position][type] = module
 projects[menu_position][version] = 1.0-alpha1
 
 projects[mail_edit][type] = module
-projects[mail_edit][download][url] = https://git.drupal.org/project/mail_edit.git
-projects[mail_edit][download][revision] = bcd0041830d8581b36e6211f0c8eabd8caf9652b
-projects[mail_edit][download][branch] = 8.x-1.x
+projects[mail_edit][version] = 1.x-dev
 
 projects[taxonomy_access_fix][type] = module
 projects[taxonomy_access_fix][version] = 2.6
