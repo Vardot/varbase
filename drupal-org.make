@@ -171,12 +171,10 @@ projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.9
 
 projects[tour_ui][type] = module
-projects[tour_ui][version] = 1.0-beta2 
+projects[tour_ui][version] = 1.0-beta2
 
 projects[tour_builder][type] = module
-projects[tour_builder][download][url] = https://git.drupal.org/project/tour_builder.git
-projects[tour_builder][download][revision] = d70e898949b7ec4095efb391a0dbec56d0117558
-projects[tour_builder][download][branch] = 8.x-1.x
+projects[tour_builder][version] = 1.0-alpha1
 
 projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha7
