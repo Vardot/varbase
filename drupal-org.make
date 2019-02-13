@@ -366,7 +366,7 @@ projects[yoast_seo][type] = module
 projects[yoast_seo][version] = 1.5
 
 projects[l10n_client][type] = module
-projects[l10n_client][version] = 6.x-dev
+projects[l10n_client][version] = 1.x-dev
 
 projects[username_enumeration_prevention][type] = module
 projects[username_enumeration_prevention][version] = 1.0-beta2
@@ -378,9 +378,7 @@ projects[seckit][type] = module
 projects[seckit][version] = 1.1
 
 projects[security_review][type] = module
-projects[security_review][download][url] = https://git.drupal.org/project/security_review.git
-projects[security_review][download][revision] = 35ebae445bb260e961e47c4c58efe7c50c228999
-projects[security_review][download][branch] = 8.x-1.x
+projects[security_review][version] = 1.x-dev
 
 projects[honeypot][type] = module
 projects[honeypot][version] = 1.29
