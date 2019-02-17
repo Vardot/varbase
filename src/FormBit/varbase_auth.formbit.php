@@ -39,7 +39,7 @@ function varbase_auth_build_formbit(array &$formbit, FormStateInterface &$form_s
     '#title' => t('Social authentications to enable'),
     '#default_value' => ['social_auth_google'],
     '#options' => [
-      'social_auth_google' => t('Google +'),
+      'social_auth_google' => t('Google'),
       'social_auth_facebook' => t('Facebook'),
       'social_auth_linkedin' => t('Linkedin'),
       'social_auth_twitter' => t('Twitter'),
