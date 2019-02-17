@@ -36,7 +36,7 @@ config_bit:
           config_form: false
         varbase_auth:
           title: "Varbase Social Single Sign-On"
-          description: "Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google+. Built using <a href=\"https://www.drupal.org/project/social_api\" target=\"_blank\">Social API</a>."
+          description: "Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google. Built using <a href=\"https://www.drupal.org/project/social_api\" target=\"_blank\">Social API</a>."
           selected: false
           config_form: true
           formbit: "src/FormBit/varbase_auth.formbit.php"
