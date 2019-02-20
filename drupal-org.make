@@ -85,9 +85,7 @@ projects[entity][type] = module
 projects[entity][version] = 1.0-rc1
 
 projects[entity_clone][type] = module
-projects[entity_clone][version] = 1.0-beta1
-;; Issue #2743379: Clone operation shows regardless of permission.
-projects[entity_clone][patch][] = https://www.drupal.org/files/issues/2018-08-26/2743379-18.patch
+projects[entity_clone][version] = 1.0-beta2
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.0
