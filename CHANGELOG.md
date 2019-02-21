@@ -1,3 +1,76 @@
+# 8.6.5
+
+### Highlighted important changes since Varbase 8.6.4:
+* Cleaned up number of modules with hash commits so that
+ [vardot/varbase-project](https://github.com/Vardot/varbase-project)
+ template and the
+ [composer.json](https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json)
+ looks clean.
+* Issue [#3033630](https://www.drupal.org/node/3033630):
+                  Renamed Google+ to Google in installer.
+* Issue [#3034471](https://www.drupal.org/node/3034471):
+                 Updated [Google Analytics Reports] module
+                 from 3.x-dev 2b6bb8e to (~3.0) as 8.x-3.0-beta2 went out.
+* Issue [#3034567](https://www.drupal.org/node/3034567):
+                 Changed [Social Auth Google] Google+ logo to Google accounts
+                 as Google shutdown Google+
+* Issue [#3032661](https://www.drupal.org/node/3032661):
+                 Changed [Varbase Internationalization] not to use the
+                 [Localization client] module by disabling it for old sites
+                 and not to install it in new Varbase installations.
+* Issue [#3033768](https://www.drupal.org/node/3033768):
+                 Fixed W3C standards for element div not allowed as child
+                 of element h2.
+
+### Added since Varbase 8.6.4:
+* Issue [#3034567](https://www.drupal.org/node/3034567):
+                 Added the 3034353-2.patch for [Social Auth Google] to change
+                 the Google+ logo to Google accounts as Google shutdown Google+
+
+### Changed since Varbase 8.6.4:
+* Issue [#3033630](https://www.drupal.org/node/3033630)
+                 by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem):
+                 Renamed Google+ to Google in installer.
+* Issue [#3032661](https://www.drupal.org/node/3032661):
+                 Changed [Varbase Internationalization] not to use the
+                 [Localization client] module by disabling it for old sites
+                 and not to install it in new Varbase installations.
+* Issue [#3032678](https://www.drupal.org/node/3032678):
+                 Changed [Varbase Security] not to install the [Security Review]
+                 module in new Varbase installations and require a * wild
+                 card version.
+* Issue [#3032690](https://www.drupal.org/node/3032690):
+                 Changed [Varbase Admin] require [Mail Editor] module with a
+                 * wild card version.
+* Issue [#3034396](https://www.drupal.org/node/3034396):
+                 Removed all patches for [Entity Clone] as they
+                 all are already applied in 8.x-1.0-beta2.
+
+### Updates since Varbase 8.6.4:
+* Issue [#3034471](https://www.drupal.org/node/3034471):
+                 Updated [Google Analytics Reports] module from
+                 3.x-dev 2b6bb8e to (~3.0) as 8.x-3.0-beta2 went out.
+* Issue [#3034513](https://www.drupal.org/node/3034513):
+                 Updated [Paragraphs] module from 8.1.5 to 8.1.6
+* Issue [#3034502](https://www.drupal.org/node/3034502):
+                 Updated [Paragraphs Previewer] module from 8.1.2 to 8.1.4
+* Issue [#3032699](https://www.drupal.org/node/3032699):
+                 Updated [Tour Builder] module
+                 from 1.x-dev d70e898 to (~1.0) as 8.x-1.0-alpha1 went out
+* Issue [#3032929](https://www.drupal.org/node/3032929):
+                 Updated [Node Edit Protection] module
+                 from 1.x-dev 902339c to (~1.0) as 8.x-1.0-alpha1 went out.
+
+### Fixes since Varbase 8.x-6.4:
+* Issue [#3033768](https://www.drupal.org/node/3033768)
+                 by [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi):
+                 Fixed W3C standards for element div not allowed as child of element h2.
+* Issue [#3033845](https://www.drupal.org/node/3033845)
+                 by [m.alhawwari](https://www.drupal.org/u/malhawwari):
+                 Fixed overflow of table input field on smaller screens.
+
+--------------------------------------------------------------------------------
+
 # 8.6.4
 
 ### Highlighted important changes since Varbase 8.6.3:
@@ -88,6 +161,7 @@
                    Fixed issue with single slide height on full content and
                    single slick slide and the center of video players
 
+--------------------------------------------------------------------------------
 
 # 8.6.3
 

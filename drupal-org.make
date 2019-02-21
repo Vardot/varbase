@@ -308,6 +308,8 @@ projects[social_auth][version] = 2.0-beta4
 
 projects[social_auth_google][type] = module
 projects[social_auth_google][version] = 2.0-beta3
+;; Issue #3034353: Change the Google+ logo to Google accounts as Google shutdown Google+
+projects[social_auth_google][patch][] = https://www.drupal.org/files/issues/2019-02-20/3034353-2.patch
 
 projects[social_auth_facebook][type] = module
 projects[social_auth_facebook][version] = 2.0-beta3
@@ -456,53 +458,53 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 6.x-dev
+projects[varbase_core][version] = 6.7
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 6.4
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 6.4
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] = 6.2
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 6.1
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.1
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.3
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 6.3
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 6.1
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.4
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.3
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 6.1
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.4
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.5
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
