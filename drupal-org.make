@@ -35,7 +35,7 @@ projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
 projects[layout_builder_restrictions][type] = module
-projects[layout_builder_restrictions][version] = 1.3
+projects[layout_builder_restrictions][version] = 1.4
 
 projects[ds][type] = module
 projects[ds][version] = 3.2
@@ -140,7 +140,7 @@ projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta3
 
 projects[imagemagick][type] = module
-projects[imagemagick][version] = 2.3
+projects[imagemagick][version] = 2.4
 
 projects[imageapi_optimize][type] = module
 projects[imageapi_optimize][version] = 2.0-alpha4
@@ -243,7 +243,7 @@ projects[taxonomy_menu][version] = 3.4
 projects[taxonomy_menu][patch][] = https://www.drupal.org/files/issues/2018-12-23/2939143-10.patch
 
 projects[better_exposed_filters][type] = module
-projects[better_exposed_filters][version] = 3.0-alpha5
+projects[better_exposed_filters][version] = 3.0-alpha6
 
 projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta1
@@ -252,14 +252,14 @@ projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.5
 
 projects[paragraphs[type] = module
-projects[paragraphs][version] = 1.5
+projects[paragraphs][version] = 1.6
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
 
 projects[paragraphs_previewer][type] = module
-projects[paragraphs_previewer][version] = 1.2
+projects[paragraphs_previewer][version] = 1.4
 ;; Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch
-projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2904917-2.patch
+projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2019-02-20/2904917-8.patch
 
 projects[paragraphs_features][type] = module
 projects[paragraphs_features][version] = 1.4
@@ -301,24 +301,24 @@ projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.2
 
 projects[social_api][type] = module
-projects[social_api][version] = 2.0-beta4
+projects[social_api][version] = 2.0-beta5
 
 projects[social_auth][type] = module
-projects[social_auth][version] = 2.0-beta4
+projects[social_auth][version] = 2.0-beta5
 
 projects[social_auth_google][type] = module
-projects[social_auth_google][version] = 2.0-beta3
+projects[social_auth_google][version] = 2.0-beta4
 ;; Issue #3034353: Change the Google+ logo to Google accounts as Google shutdown Google+
 projects[social_auth_google][patch][] = https://www.drupal.org/files/issues/2019-02-20/3034353-2.patch
 
 projects[social_auth_facebook][type] = module
-projects[social_auth_facebook][version] = 2.0-beta3
+projects[social_auth_facebook][version] = 2.0-beta4
 
 projects[social_auth_twitter][type] = module
 projects[social_auth_twitter][version] = 2.0-alpha2
 
 projects[social_auth_linkedin][type] = module
-projects[social_auth_linkedin][version] = 2.0-beta1
+projects[social_auth_linkedin][version] = 2.0-beta2
 
 projects[ckeditor_media_embed][type] = module
 projects[ckeditor_media_embed][version] = 1.3
@@ -335,7 +335,7 @@ projects[redirect][type] = module
 projects[redirect][version] = 1.3
 
 projects[metatag][type] = module
-projects[metatag][version] = 1.7
+projects[metatag][version] = 1.8
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.3
@@ -344,7 +344,7 @@ projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 2.12
 
 projects[google_analytics][type] = module
-projects[google_analytics][version] = 2.3
+projects[google_analytics][version] = 2.4 
 
 projects[yoast_seo][type] = module
 projects[yoast_seo][version] = 1.5
@@ -374,7 +374,7 @@ projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta1
 
 projects[recaptcha][type] = module
-projects[recaptcha][version] = 2.3
+projects[recaptcha][version] = 2.4
 
 projects[search_api][type] = module
 projects[search_api][version] = 1.11

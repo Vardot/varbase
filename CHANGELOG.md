@@ -47,6 +47,8 @@
                  all are already applied in 8.x-1.0-beta2.
 
 ### Updates since Varbase 8.6.4:
+* Issue [#3034582](https://www.drupal.org/node/3034582):
+                 Update [Drupal core] from 8.6.7 to 8.6.10
 * Issue [#3034471](https://www.drupal.org/node/3034471):
                  Updated [Google Analytics Reports] module from
                  3.x-dev 2b6bb8e to (~3.0) as 8.x-3.0-beta2 went out.
