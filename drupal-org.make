@@ -163,7 +163,7 @@ projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.25
+projects[admin_toolbar][version] = 1.26
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.9
@@ -315,7 +315,7 @@ projects[social_auth_facebook][type] = module
 projects[social_auth_facebook][version] = 2.0-beta4
 
 projects[social_auth_twitter][type] = module
-projects[social_auth_twitter][version] = 2.0-alpha2
+projects[social_auth_twitter][version] = 2.0-alpha3
 
 projects[social_auth_linkedin][type] = module
 projects[social_auth_linkedin][version] = 2.0-beta2
