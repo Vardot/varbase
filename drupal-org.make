@@ -157,7 +157,7 @@ projects[userprotect][type] = module
 projects[userprotect][version] = 1.0
 
 projects[config_perms][type] = module
-projects[config_perms][version] = 2.0-beta1
+projects[config_perms][version] = 2.0-beta2
 
 projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
