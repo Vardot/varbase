@@ -71,9 +71,7 @@ projects[linkit][type] = module
 projects[linkit][version] = 4.3
 
 projects[image_resize_filter][type] = module
-projects[image_resize_filter][download][url] = https://git.drupal.org/project/image_resize_filter.git
-projects[image_resize_filter][download][revision] = c3f4b23b02005859092aaff746b9f21b794adc58
-projects[image_resize_filter][download][branch] = 8.x-1.x
+projects[image_resize_filter][version] = 1.0-beta1
 
 projects[views_infinite_scroll][type] = module
 projects[views_infinite_scroll][version] = 1.5
