@@ -289,11 +289,7 @@ projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][version] = 3.0-beta2
 
 projects[login_destination][type] = module
-projects[login_destination][download][url] = https://git.drupal.org/project/login_destination.git
-projects[login_destination][download][revision] = 54be8b89fdc073ca40af6b9b2eeb050e0aeb7908
-projects[login_destination][download][branch] = 8.x-1.x
-;; Issue #2947616: Fixed SetOptions on null causing error.
-projects[login_destination][patch][] = https://www.drupal.org/files/issues/2018-03-09/toolbar_alter_error-2947616-11.patch
+projects[login_destination][version] = 1.0-alpha1
 
 projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.2

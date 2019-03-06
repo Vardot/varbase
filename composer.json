@@ -46,8 +46,7 @@
     "drupal/varbase_blog" : "6.x-dev",
     "drupal/varbase_styleguide": "6.x-dev",
     "drupal/vartheme": "6.x-dev",
-    "drupal/vartheme_admin": "6.x-dev",
-    "drupal/login_destination": "1.x-dev#54be8b89fdc073ca40af6b9b2eeb050e0aeb7908"
+    "drupal/vartheme_admin": "6.x-dev"
   },
   "require-dev": {
     "drupal/console": "~1.0",
