@@ -30,7 +30,7 @@ After we make sure that we do have all the tools we could change directory
  in the terminal to:
 
 ```
-$cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+$ cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
 $ bash ./create-new-vartheme-bs4.sh "THEME_NAME"
 ```
 
