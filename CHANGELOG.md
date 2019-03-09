@@ -1,7 +1,7 @@
 # 8.6.6
 
 ### Highlighted important changes since Varbase 8.6.5:
-Issue [#3038760](https://www.drupal.org/node/3038760):
+* Issue [#3038760](https://www.drupal.org/node/3038760):
                  Added [Vartheme (Bootstrap 4 - SASS)] theme (~6.0)
 * Cleaned up all hash commits so that
  [vardot/varbase-project](https://github.com/Vardot/varbase-project)
@@ -48,6 +48,9 @@ Issue [#3038760](https://www.drupal.org/node/3038760):
                  8.x-1.0-beta3 went out
 
 ### Updates since Varbase 8.6.5:
+* Issue [#3035483](https://www.drupal.org/node/3035483):
+                 Update [Custom Permissions] module
+                 from 2.0-beta1 (~2.0) to 2.0-beta2 (~2.0)
 * Issue [#3037138](https://www.drupal.org/node/3037138):
                  Updated [Display suite] module from 8.3.2 to 8.3.3
 * Issue [#3033885](https://www.drupal.org/node/3033885):
@@ -65,6 +68,8 @@ Issue [#3038760](https://www.drupal.org/node/3038760):
 * Issue [#3033885](https://www.drupal.org/node/3033885):
                  Fixed issues after ctools 3.2 with 3033057-13.patch
                  and 3031778-37.patch
+
+--------------------------------------------------------------------------------
 
 # 8.6.5
 

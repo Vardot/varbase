@@ -225,7 +225,7 @@ projects[smtp][type] = module
 projects[smtp][version] = 1.0-beta4
 
 projects[maxlength][type] = module
-projects[maxlength][version] = 1.1
+projects[maxlength][version] = 1.0-beta2
 
 projects[menu_position][type] = module
 projects[menu_position][version] = 1.0-alpha1
