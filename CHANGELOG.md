@@ -1,3 +1,71 @@
+# 8.6.6
+
+### Highlighted important changes since Varbase 8.6.5:
+Issue [#3038760](https://www.drupal.org/node/3038760):
+                 Added [Vartheme (Bootstrap 4 - SASS)] theme (~6.0)
+* Cleaned up all hash commits so that
+ [vardot/varbase-project](https://github.com/Vardot/varbase-project)
+ template and the
+ [composer.json](https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json)
+ looks clean.
+
+### Added since Varbase 8.6.5:
+* Issue [#3038760](https://www.drupal.org/node/3038760):
+                 Added [Vartheme (Bootstrap 4 - SASS)] theme (~6.0)
+* Issue [#3038760](https://www.drupal.org/node/3038760):
+                 Added the create-new-vartheme-bs4.sh bash file to generate
+                 Vartheme BS4 sub theme ( Bootstrap 4 ) SASS and updated the
+                 [README.md](https://github.com/Vardot/varbase/blob/8.x-6.x/scripts/README.md)
+                 for scripts
+* Issue [#3035272](https://www.drupal.org/node/3035272):
+                 Added 3023452-5.patch for [Drupal core] to fix the issue of
+                 Views placeholder texts are not translatable
+
+### Changed since Varbase 8.6.5:
+* Cleaned up all hash commits so that
+ [vardot/varbase](https://github.com/Vardot/varbase)  
+ [composer.json](https://github.com/Vardot/varbase/blob/8.6.x/composer.json) and 
+ [vardot/varbase-project](https://github.com/Vardot/varbase-project)
+ template and the
+ [composer.json](https://github.com/Vardot/varbase-project/blob/8.6.x/composer.json)
+ looks clean.
+* Issue [#3036491](https://www.drupal.org/node/3036491):
+                 Changed [Welcome to Varbase] block in [Varbase default content]
+                 module to support Bootstrap 4 grid system
+* Issue [#3037138](https://www.drupal.org/node/3037138):
+                 Changed the patch to Fix fatal errors when we have missing
+                 layouts, on an update after the update [Display suite]
+                 module from 8.3.2 to 8.3.3
+* Issue [#3034793](https://www.drupal.org/node/3034793):
+                 Removed a patch for [Views Bulk Operations (VBO)] as it was
+                 applied in 8.25 and the serializable issues were fixed in
+                 Drupal core 8.6.x
+* Issue [#3035245](https://www.drupal.org/node/3035245):
+                 Removed a patch for [Rabbit Hole] as it was applied in
+                 1.0-beta5 as we us (~1.0)
+* Issue [#3037117](https://www.drupal.org/node/3037117):
+                 Removed all patches for [Entity Clone] module after
+                 8.x-1.0-beta3 went out
+
+### Updates since Varbase 8.6.5:
+* Issue [#3037138](https://www.drupal.org/node/3037138):
+                 Updated [Display suite] module from 8.3.2 to 8.3.3
+* Issue [#3033885](https://www.drupal.org/node/3033885):
+                 Updated [Chaos Tool Suite (ctools)] module from 8.3.0 to 8.3.2
+* Issue [#3038019](https://www.drupal.org/node/3038019):
+                 Updated [Login Destination] module
+                 from 8.1.x-dev 54be8b to 8.1.0-alpha1 with (~1.0)
+* Issue [#3037311](https://www.drupal.org/node/3037311):
+                 Updated [Image Resize Filter] module and update
+                 [Varbase Editor] to configure [Rich editor, Simple editor]
+                 to use for local and remote images and not to use
+                 for [HTML coder]
+
+### Fixes since Varbase 8.x-6.5:
+* Issue [#3033885](https://www.drupal.org/node/3033885):
+                 Fixed issues after ctools 3.2 with 3033057-13.patch
+                 and 3031778-37.patch
+
 # 8.6.5
 
 ### Highlighted important changes since Varbase 8.6.4:

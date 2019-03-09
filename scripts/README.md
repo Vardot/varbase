@@ -72,9 +72,6 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
 bash ./create-new-vartheme.sh "THEME_NAME" "ltr"
 ```
---------------------------------------------------------------------------------
-
-## For right to left themes.
 
 ### For right to left (RTL) sub-theme
 ```

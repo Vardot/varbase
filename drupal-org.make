@@ -18,18 +18,23 @@ projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.1
 
 projects[ctools][type] = module
-projects[ctools][version] = 3.0
+projects[ctools][version] = 3.2
 ;; Issue #2820783: Fix Block.php notices and warnings.
-projects[ctools][patch][] = https://www.drupal.org/files/issues/fixblockpager-2820783-27.patch
+projects[ctools][patch][] = https://www.drupal.org/files/issues/2019-02-18/ctools-Block.php_notices_and_warnings-2820783-51-D8.patch
 
 projects[token][type] = module
 projects[token][version] = 1.5
 
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta3
+;; Issue #2665328: Variants take entity label not the variant title
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/2018-12-12/2665328-variants-take-entity-label-87.patch
+;; Issue #3033057: Page Manager currently not working with CTools 3.1
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/2019-02-23/3033057-13.patch
 
 projects[panels][type] = module
-projects[panels][version] = 4.3
+;; Issue #3031778: Change panels store
+projects[panels][patch][] = https://www.drupal.org/files/issues/2019-02-21/panels_tempstore-updated-3031778-37.patch
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
@@ -38,11 +43,9 @@ projects[layout_builder_restrictions][type] = module
 projects[layout_builder_restrictions][version] = 1.4
 
 projects[ds][type] = module
-projects[ds][version] = 3.2
-;; Issue #2920868: Fixed fatal errors when we have missing layouts, on an update.
-projects[ds][patch][] = https://www.drupal.org/files/issues/error-when-layout-is-removed-2920868-4.patch
-;; Issue #2966959: Fix a DS issue on a Value Conflict with Layout Builder.
-projects[ds][patch][] = https://www.drupal.org/files/issues/2018-04-27/2966959-ds-namespace_form_for_layout_builder-4.patch
+projects[ds][version] = 3.3
+;; Issue #2920868: Fix fatal errors when we have missing layouts, on an update.
+projects[ds][patch][] = https://www.drupal.org/files/issues/2019-03-03/2920868-12.patch
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][version] = 3.1
@@ -83,7 +86,7 @@ projects[entity][type] = module
 projects[entity][version] = 1.0-rc1
 
 projects[entity_clone][type] = module
-projects[entity_clone][version] = 1.0-beta2
+projects[entity_clone][version] = 1.0-beta3
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.0
@@ -176,7 +179,7 @@ projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-alpha7
 
 projects[views_bulk_operations][type] = module
-projects[views_bulk_operations][version] = 2.4
+projects[views_bulk_operations][version] = 2.5
 
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 2.2
@@ -210,9 +213,7 @@ projects[node_edit_protection][type] = module
 projects[node_edit_protection][version] = 1.0-alpha1
 
 projects[rabbit_hole][type] = module
-projects[rabbit_hole][version] = 1.0-beta4
-;; Issue #2961738: Ensure getOperation method exists on form":
-projects[rabbit_hole][patch][] = https://www.drupal.org/files/issues/2018-05-10/rabbit_hole-instance_of_check-2961738-5.patch
+projects[rabbit_hole][version] = 1.0-beta5
 
 projects[fast_404][type] = module
 projects[fast_404][version] = 1.0-alpha4
@@ -224,7 +225,7 @@ projects[smtp][type] = module
 projects[smtp][version] = 1.0-beta4
 
 projects[maxlength][type] = module
-projects[maxlength][version] = 1.0-beta2
+projects[maxlength][version] = 1.1
 
 projects[menu_position][type] = module
 projects[menu_position][version] = 1.0-alpha1
@@ -263,9 +264,7 @@ projects[paragraphs_features][type] = module
 projects[paragraphs_features][version] = 1.4
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
-projects[paragraphs_asymmetric_translation_widgets][download][url] = https://git.drupal.org/project/paragraphs_asymmetric_translation_widgets.git
-projects[paragraphs_asymmetric_translation_widgets][download][revision] = e676e682fd30c123fff1e863716b6792516bb11a
-projects[paragraphs_asymmetric_translation_widgets][download][branch] = 8.x-1.x
+projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta1
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0
@@ -335,7 +334,7 @@ projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.3
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 2.12
+projects[simple_sitemap][version] = 3.1
 
 projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.4 
@@ -417,7 +416,7 @@ projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
 
 projects[devel][type] = module
-projects[devel][version] = 1.2
+projects[devel][version] = 1.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
@@ -452,56 +451,56 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 6.x-dev
+projects[varbase_core][version] = 6.9
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 6.4
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 6.4
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] = 6.3
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 6.1
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.1
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.3
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 6.3
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 6.1
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.4
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.3
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 6.1
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.4
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.0-beta2
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.5
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
@@ -521,5 +520,5 @@ libraries[slick][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
-libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.3.3.tar.gz"
+libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.4.3.tar.gz"
 libraries[ace][destination] = "libraries"
