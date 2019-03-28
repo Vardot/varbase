@@ -221,6 +221,9 @@ projects[fast_404][version] = 1.0-alpha4
 projects[mailsystem][type] = module
 projects[mailsystem][version] = 4.1
 
+projects[swiftmailer][type] = module
+projects[swiftmailer][version] = 1.0-beta2
+
 projects[smtp][type] = module
 projects[smtp][version] = 1.0-beta4
 
@@ -386,12 +389,6 @@ projects[slick_views][version] = 1.0
 projects[slick_media][type] = module
 projects[slick_media][version] = 2.0-alpha3
 
-projects[update_helper][type] = module
-projects[update_helper][version] = 1.0
-
-projects[checklistapi][type] = module
-projects[checklistapi][version] = 1.10
-
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
@@ -424,12 +421,21 @@ projects[libraries_ui][version] = 1.0
 projects[devel][type] = module
 projects[devel][version] = 1.x-dev
 
+projects[update_helper][type] = module
+projects[update_helper][version] = 1.0
+
+projects[checklistapi][type] = module
+projects[checklistapi][version] = 1.10
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
 projects[bootstrap][version] = 3.17
+
+projects[bootstrap_barrio][type] = theme
+projects[bootstrap_barrio][version] = 4.22
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.4
@@ -494,6 +500,9 @@ projects[varbase_blog][version] = 6.x-dev
 
 projects[varbase_styleguide][type] = module
 projects[varbase_styleguide][version] = 6.x-dev
+
+projects[varbase_email][type] = module
+projects[varbase_email][version] = 6.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.

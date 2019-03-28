@@ -16,6 +16,7 @@ config_bit:
         - varbase_media
         - varbase_editor
         - varbase_admin
+        - varbase_email
         - varbase_security
         - varbase_seo
         - varbase_webform
