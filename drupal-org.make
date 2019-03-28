@@ -386,6 +386,12 @@ projects[slick_views][version] = 1.0
 projects[slick_media][type] = module
 projects[slick_media][version] = 2.0-alpha3
 
+projects[update_helper][type] = module
+projects[update_helper][version] = 1.0
+
+projects[checklistapi][type] = module
+projects[checklistapi][version] = 1.10
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
