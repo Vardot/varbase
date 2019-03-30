@@ -50,9 +50,6 @@
     "drupal/vartheme_bs4": "6.x-dev",
     "drupal/vartheme_admin": "6.x-dev"
   },
-  "replace": {
-    "ajaxorg/ace-builds": "*"
-  },
   "require-dev": {
     "drupal/console": "~1.0",
     "drush/drush": "~9.0",
