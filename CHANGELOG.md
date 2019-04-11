@@ -39,13 +39,17 @@ Test Varbase Blog and VMI Images and Videos with Blazy
 * Issue [#3047326](https://www.drupal.org/node/3047326):
                   Added support for link_attributes in menus in Vartheme BS4
 * Issue [#3024168](https://www.drupal.org/node/3024168)
-                  by waleedq, Mohammed J. Razem: Added the
-                  [Varbase Update Helper] module and
+                  by
+                  [waleedq](https://www.drupal.org/u/waleedq)
+                  , [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+                  : Added the [Varbase Update Helper] module and
                   [update helper, checklist api] modules in the
                   [Varbase core] module.
 * Issue [#3042113](https://www.drupal.org/node/3042113)
-                  by waleedq, Mohammed J. Razem: Initialize the first structure
-                  for the [Varbase Email] module
+                  by
+                  [waleedq](https://www.drupal.org/u/waleedq)
+                  , [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+                  : Initialize the first structure for the [Varbase Email] module
 * Issue [#3044588](https://www.drupal.org/node/3044588):
                   Added a replace for ajaxorg/ace-builds * library in the
                   composer as we are using npm-asset/ace-builds ~1.0
@@ -68,8 +72,10 @@ Test Varbase Blog and VMI Images and Videos with Blazy
                   and [.visible-logged-in, .visible-admin] to Show only
                   for admin users
 * Issue [#3029389](https://www.drupal.org/node/3029389)
-                  by Mithun S: Changed [Vartheme] to use short array as
-                  per the coding standards
+                  by
+                  [Mithun S](https://www.drupal.org/u/mithun-s)
+                  : Changed [Vartheme] to use short array as per the
+                  coding standards
 
 ### Updates since Varbase 8.6.6:
 * Issue [#3044552](https://www.drupal.org/node/3044552):
@@ -91,13 +97,17 @@ Test Varbase Blog and VMI Images and Videos with Blazy
 
 ### Fixes since Varbase 8.x-6.6:
 * Issue [#3046417](https://www.drupal.org/node/3046417)
-                  by Firass Ziedan: Fixed Vartheme BS4 fatal error when using
+                  by
+                  [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                  : Fixed Vartheme BS4 fatal error when using
                   paragraph two column uneven
 * Issue [#3047330](https://www.drupal.org/node/3047330):
                   Fixed typo from .sass to .scss in comments and tips for which
                   variable files to work on.
 * Issue [#3035473](https://www.drupal.org/node/3035473)
-                  by stefan.korn: Fixed less file syntax for [Media Hero Slider]
+                  by
+                  [stefan.korn](https://www.drupal.org/u/stefankorn)
+                  : Fixed less file syntax for [Media Hero Slider]
 
 
 # 8.6.6
