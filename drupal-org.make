@@ -33,14 +33,13 @@ projects[page_manager][patch][] = https://www.drupal.org/files/issues/2018-12-12
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/2019-02-23/3033057-13.patch
 
 projects[panels][type] = module
-;; Issue #3031778: Change panels store
-projects[panels][patch][] = https://www.drupal.org/files/issues/2019-02-21/panels_tempstore-updated-3031778-37.patch
+projects[panels][version] = 4.4
 
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
 projects[layout_builder_restrictions][type] = module
-projects[layout_builder_restrictions][version] = 1.4
+projects[layout_builder_restrictions][version] = 1.5
 
 projects[ds][type] = module
 projects[ds][version] = 3.3
@@ -83,13 +82,13 @@ projects[embed][type] = module
 projects[embed][version] = 1.0
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-rc1
+projects[entity][version] = 1.0-rc2
 
 projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-beta3
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 2.0
+projects[entity_browser][version] = 2.1
 ;; Issue #2865928: The View widget should filter based on field settings.
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch
 ;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
@@ -112,7 +111,7 @@ projects[media_entity_instagram][type] = module
 projects[media_entity_instagram][version] = 2.0-alpha2
 
 projects[media_entity_twitter][type] = module
-projects[media_entity_twitter][version] = 2.0-alpha2
+projects[media_entity_twitter][version] = 2.0-alpha3
 
 projects[media_entity_googledocs][type] = module
 projects[media_entity_googledocs][version] = 4.0
@@ -121,9 +120,9 @@ projects[crop][type] = module
 projects[crop][version] = 2.0-rc1
 
 projects[focal_point][type] = module
-projects[focal_point][version] = 1.0-beta6
+projects[focal_point][version] = 1.0
 ;; Issue #2916562: Broken image preview
-projects[focal_point][patch][] = https://www.drupal.org/files/issues/2916562-16.patch
+projects[focal_point][patch][] = https://www.drupal.org/files/issues/2019-03-30/2916562-39.patch
 
 projects[pathologic][type] = module
 projects[pathologic][version] = 1.0-alpha1
@@ -135,7 +134,7 @@ projects[ace_editor][type] = module
 projects[ace_editor][version] = 1.1
 
 projects[entityqueue][type] = module
-projects[entityqueue][version] = 1.0-alpha8
+projects[entityqueue][version] = 1.0-beta1
 
 projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta3
@@ -188,7 +187,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.1
+projects[webform][version] = 5.2
 
 projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
@@ -251,10 +250,10 @@ projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta1
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.5
+projects[link_attributes][version] = 1.6
 
 projects[paragraphs[type] = module
-projects[paragraphs][version] = 1.6
+projects[paragraphs][version] = 1.8
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
 
@@ -285,13 +284,13 @@ projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
 
 projects[charts][type] = module
-projects[charts][version] = 3.0-beta2
+projects[charts][version] = 3.0-beta3
 
 projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][version] = 3.0-beta2
 
 projects[login_destination][type] = module
-projects[login_destination][version] = 1.0-alpha1
+projects[login_destination][version] = 1.0-alpha2
 
 projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.2
@@ -300,7 +299,7 @@ projects[social_api][type] = module
 projects[social_api][version] = 2.0-beta5
 
 projects[social_auth][type] = module
-projects[social_auth][version] = 2.0-beta5
+projects[social_auth][version] = 2.0-beta6
 
 projects[social_auth_google][type] = module
 projects[social_auth_google][version] = 2.0-beta4
@@ -325,7 +324,7 @@ projects[styleguide][type] = module
 projects[styleguide][version] = 1.0-alpha3
 
 projects[pathauto][type] = module
-projects[pathauto][version] = 1.3
+projects[pathauto][version] = 1.4
 
 projects[redirect][type] = module
 projects[redirect][version] = 1.3
@@ -373,9 +372,7 @@ projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.4
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.11
-;; Issue #2931562: Fixed the Notice: Undefined index: total When we enable the module in the installation step.
-projects[search_api][patch][] = https://www.drupal.org/files/issues/2931562-13--undefined_total_in_task_manager_batch_finish.patch
+projects[search_api][version] = 1.12
 
 projects[blazy][type] = module
 projects[blazy][version] = 1.0-rc4
@@ -413,7 +410,7 @@ projects[menu_admin_per_menu][type] = module
 projects[menu_admin_per_menu][version] = 1.0
 
 projects[drd_agent][type] = module
-projects[drd_agent][version] = 3.7
+projects[drd_agent][version] = 3.8
 
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
@@ -448,7 +445,7 @@ projects[anchor_link][type] = module
 projects[anchor_link][version] = 1.6
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.0-rc3
+projects[entity_browser_enhanced][version] = 1.0-rc4
 
 projects[vmi][type] = module
 projects[vmi][version] = 2.1
@@ -466,56 +463,56 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 6.x-dev
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 6.5
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 6.5
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] =6.3
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 6.1
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.2
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.3
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 6.4
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 6.2
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.4
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.3
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 6.1
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.1
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.5
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.0-beta5
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.5
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

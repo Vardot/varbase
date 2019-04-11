@@ -1,3 +1,105 @@
+# 8.6.7
+
+### Highlighted important changes since Varbase 8.6.6:
+* Issue [#3046616](https://www.drupal.org/node/3046616):
+                  Switched of using [Responsive image styles] only to use
+                  [Blazy loading with responsive image styles] for most media
+                  view mode sizes of ( Image, Video, Remote Video) media types
+Test Varbase Blog and VMI Images and Videos with Blazy
+* Issue [#3043881](https://www.drupal.org/node/3043881):
+                  Added [Varbase Update Helper] to the List of default varbase
+                  components, which they will be installed when we
+                  install varbase
+* Issue [#3043869](https://www.drupal.org/node/3043869):
+                  Added [Varbase Email] module to the List of default varbase
+                  components, which it will be installed when we
+                  install varbase.
+* Issue [#3047359](https://www.drupal.org/node/3047359):
+                  Removed enabling the [smtp] module as we have switched to
+                  use swiftmailer ~1.0 and Varbase emailing configs switched
+                  to [Varbase Email] module.
+
+### Added since Varbase 8.6.6:
+* Issue [#3044573](https://www.drupal.org/node/3044573):
+                  Added a post Message play to oEmbed iframe for Remote
+                  Youtube and Vimeo embedded videos
+* Issue [#3047120](https://www.drupal.org/node/3047120):
+                  Added spaceless twig filter for titles of Varbase Bootstrap
+                  Paragraphs templates.
+* Issue [#3040222](https://www.drupal.org/node/3040222):
+                  Added a default style for the [Maintenance page] in
+                  Vartheme BS4 and VARTHEME_BS4_SUBTHEME
+* Issue [#3043841](https://www.drupal.org/node/3043841):
+                  Added theme-settings.php and [Email Logo] settings to
+                  [Vartheme Bootstrap 4 settings] to be used with
+                  [Varbase Email] module
+* Issue [#3043826](https://www.drupal.org/node/3043826):
+                  Added [Email Logo] settings to [Vartheme settings] to be
+                  used with [Varbase Email] module
+* Issue [#3047326](https://www.drupal.org/node/3047326):
+                  Added support for link_attributes in menus in Vartheme BS4
+* Issue [#3024168](https://www.drupal.org/node/3024168)
+                  by waleedq, Mohammed J. Razem: Added the
+                  [Varbase Update Helper] module and
+                  [update helper, checklist api] modules in the
+                  [Varbase core] module.
+* Issue [#3042113](https://www.drupal.org/node/3042113)
+                  by waleedq, Mohammed J. Razem: Initialize the first structure
+                  for the [Varbase Email] module
+* Issue [#3044588](https://www.drupal.org/node/3044588):
+                  Added a replace for ajaxorg/ace-builds * library in the
+                  composer as we are using npm-asset/ace-builds ~1.0
+
+### Changed since Varbase 8.6.6:
+* Issue [#3046906](https://www.drupal.org/node/3046906):
+                  Changed default entity view display for Images in the
+                  Carousels slick settings for the new
+                  Slick ~2.0 and Blazy ~2.0
+* Issue [#3047144](https://www.drupal.org/node/3047144):
+                  Changed all [Glyphicon] icons to [Font Awesome] icons
+                  in [Vartheme BS4] and clean up of old bootstrap icons
+* Issue [#3041041](https://www.drupal.org/node/3041041):
+                  Removed .justify-content-center from [Vartheme BS4] as
+                  Justify content centre is in the Bootstrap base library
+                  only keep the RTL one
+* Issue [#3043888](https://www.drupal.org/node/3043888):
+                  Have a better CSS utility classes for [Vartheme BS4]
+                  on the [.hidden-anonymous] to Hide for anonymous users
+                  and [.visible-logged-in, .visible-admin] to Show only
+                  for admin users
+* Issue [#3029389](https://www.drupal.org/node/3029389)
+                  by Mithun S: Changed [Vartheme] to use short array as
+                  per the coding standards
+
+### Updates since Varbase 8.6.6:
+* Issue [#3044552](https://www.drupal.org/node/3044552):
+                  Updated [Entity Browser] module from 8.2.0 to 8.2.1
+* Issue [#3044558](https://www.drupal.org/node/3044558):
+                  Updated [Focal Point] module from 8.1.0-beta6 to stable 8.1.0
+* Issue [#3046874](https://www.drupal.org/node/3046874):
+                  Updated [Blazy] module from (~1.0) to (~2.0)
+* Issue [#3046885](https://www.drupal.org/node/3046885):
+                  Updated [Slick Carousel] module from (~1.0) to (~2.0)
+* Issue [#3046886](https://www.drupal.org/node/3046886):
+                  Updated [Slick Views] module from (~1.0) to (~2.0)
+* Issue [#3044086](https://www.drupal.org/node/3044086):
+                  Updated [Paragraphs] module from 8.1.6 to 8.1.8
+* Issue [#3044122](https://www.drupal.org/node/3044122):
+                  Updated [Search API] module from 8.1.11 to 8.1.12 (~1.0)
+* Issue [#3044561](https://www.drupal.org/node/3044561):
+                  Updated [Panels] module from 8.4.3 to 8.4.4 (~4.0)
+
+### Fixes since Varbase 8.x-6.6:
+* Issue [#3046417](https://www.drupal.org/node/3046417)
+                  by Firass Ziedan: Fixed Vartheme BS4 fatal error when using
+                  paragraph two column uneven
+* Issue [#3047330](https://www.drupal.org/node/3047330):
+                  Fixed typo from .sass to .scss in comments and tips for which
+                  variable files to work on.
+* Issue [#3035473](https://www.drupal.org/node/3035473)
+                  by stefan.korn: Fixed less file syntax for [Media Hero Slider]
+
+
 # 8.6.6
 
 ### Highlighted important changes since Varbase 8.6.5:
