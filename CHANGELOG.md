@@ -76,6 +76,10 @@ Test Varbase Blog and VMI Images and Videos with Blazy
                   [Mithun S](https://www.drupal.org/u/mithun-s)
                   : Changed [Vartheme] to use short array as per the
                   coding standards
+* Issue [#3040036](https://www.drupal.org/node/3029389):
+                   Changed a patch for [Drupal core 8.6.11] from
+                   2815221-109.patch to 2815221-116.patch which
+                   add quickedit to the latest-revision route
 
 ### Updates since Varbase 8.6.6:
 * Issue [#3044552](https://www.drupal.org/node/3044552):
@@ -108,6 +112,24 @@ Test Varbase Blog and VMI Images and Videos with Blazy
                   by
                   [stefan.korn](https://www.drupal.org/u/stefankorn)
                   : Fixed less file syntax for [Media Hero Slider]
+* Issue [#3039104](https://www.drupal.org/node/3039104):
+                  Fixed VARTHEME_BS4_SUBTHEME .info file on the issue of
+                  calling vbp-colors, and betterlogin, as it is a recursive
+                  library override, will bring PHP Fatal error: Allowed memory
+                  size on symfony yaml Parser on line 169
+* Issue [#3039160](https://www.drupal.org/node/3039160):
+                  Fixed logo-print.png path for Vartheme BS4 and
+                  VARTHEME_BS4_SUBTHEME a legacy issue from old vartheme
+* Issue [#3039173](https://www.drupal.org/node/3039173):
+                  Fixed old script token of VARTHEME_SUBTHEME to
+                  VARTHEME_BS4_SUBTHEME in the sub theme
+* Issue [#3039435](https://www.drupal.org/node/3039435):
+                  Fixed betterlogin twig-VARTHEME_BS4_SUBTHEME and
+                  system call of VARTHEME_BS4_SUBTHEME blocks and
+                  libraries vartheme_bs4/global-styles
+* Issue [#3039513](https://www.drupal.org/node/3039513):
+                  Fixed bootstrap variables not been overridden in
+                  Vartheme BS4 and VARTHEME_BS4_SUBTHEME
 
 
 # 8.6.6
