@@ -100,8 +100,8 @@ I want to be able to add and remove entities to any allowed entityqueue.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
-     Then I should see "Test hero slider #1" value in the "edit-items-0-target-id" input element
-      And I should see "Test hero slider #2" value in the "edit-items-1-target-id" input element
+     Then I should see "Test hero slider #1" in the "#edit-items-0-target-id" element
+      And I should see "Test hero slider #2" in the "#edit-items-1-target-id" element
 
   @javascript @local @development @staging @production
   Scenario: Remove a "Hero slider" from the "varbase_heroslider_media" entityqueue

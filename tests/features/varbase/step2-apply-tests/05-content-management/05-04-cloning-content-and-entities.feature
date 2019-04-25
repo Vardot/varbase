@@ -57,7 +57,7 @@ I want to be able to clone an entity.
       And I wait
      Then I should see "Are you sure you wish to perform"
      When I press "Execute action"
-      And I wait
+      And I wait for 5s
      Then I should see "Action processing results: Delete entities (1)."
      When I go to "admin/content"
       And I wait

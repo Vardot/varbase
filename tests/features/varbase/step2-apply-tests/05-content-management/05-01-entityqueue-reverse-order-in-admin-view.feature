@@ -12,9 +12,9 @@ Scenario: Check that Reverse order in admin view is working.
    When I click "Edit items" in the "Test Queue" row
     And I wait
    Then I should see "Edit subqueue Test Queue"
-    And I should see "Test content N1" value in the "edit-items-0-target-id" input element
-    And I should see "Test content N2" value in the "edit-items-1-target-id" input element
-    And I should see "Test content N3" value in the "edit-items-2-target-id" input element
+    And I should see "Test content N1" in the "#edit-items-0-target-id" element
+    And I should see "Test content N2" in the "#edit-items-1-target-id" element
+    And I should see "Test content N3" in the "#edit-items-2-target-id" element
 
    When I go to "/admin/structure/entityqueue/test_queue#edit-queue-settings"
     And I wait
@@ -33,6 +33,6 @@ Scenario: Check that Reverse order in admin view is working.
    When I click "Edit items" in the "Test Queue" row
     And I wait
    Then I should see "Edit subqueue Test Queue"
-    And I should see "Test content N3" value in the "edit-items-0-target-id" input element
-    And I should see "Test content N2" value in the "edit-items-1-target-id" input element
-    And I should see "Test content N1" value in the "edit-items-2-target-id" input element
+    And I should see "Test content N3" in the "#edit-items-0-target-id" element
+    And I should see "Test content N2" in the "#edit-items-1-target-id" element
+    And I should see "Test content N1" in the "#edit-items-2-target-id" element
