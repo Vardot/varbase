@@ -95,7 +95,7 @@ projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity-b
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2877751-27-8.x-2.x.patch
 
 projects[dropzonejs][type] = module
-projects[dropzonejs][version] = 2.0-alpha3
+projects[dropzonejs][version] = 2.0-alpha4
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0-beta2
@@ -134,7 +134,7 @@ projects[ace_editor][type] = module
 projects[ace_editor][version] = 1.1
 
 projects[entityqueue][type] = module
-projects[entityqueue][version] = 1.0-beta1
+projects[entityqueue][version] = 1.0-beta2
 
 projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0-beta3
@@ -448,7 +448,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-rc4
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.1
+projects[vmi][version] = 2.2
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-alpha4
@@ -463,56 +463,56 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 6.x-dev
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 6.8
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 6.6
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] = 6.3
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 6.2
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.2
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.3
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 6.5
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 6.2
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.4
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.3
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 6.2
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.1
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.0-beta6
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.6
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
@@ -532,5 +532,5 @@ libraries[slick][destination] = "libraries"
 
 libraries[ace][directory_name] = "ace"
 libraries[ace][download][type] = "get"
-libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.4.3.tar.gz"
+libraries[ace][download][url] = "http://github.com/ajaxorg/ace-builds/archive/v1.4.4.tar.gz"
 libraries[ace][destination] = "libraries"
