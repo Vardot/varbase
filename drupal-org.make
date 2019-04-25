@@ -460,7 +460,7 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 6.x-dev
+projects[varbase_core][version] = 6.12
 
 projects[varbase_media][type] = module
 projects[varbase_media][version] = 6.8

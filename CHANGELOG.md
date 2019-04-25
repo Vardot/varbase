@@ -58,6 +58,16 @@
                   removed then costumed
 
 ### Updates since Varbase 8.x-6.7:
+* Issue [#3050503](https://www.drupal.org/node/3050503):
+                  Varbase 8.6.8: Update [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filter the code for Drupal 8
+                   Coding Standard
+* Updated [Drupal core] from 8.6.14 to 8.6.15 (Drush make) in composer
+   it's (~8.6.0)
+* Updated [Entityqueue] from 1.0-beta1 to 1.0-beta2  (Drush make) in composer
+   it's (~1.0)
+* Updated [dropzonejs] from 2.0-alpha3 to 2.0-alpha4  (Drush make) in composer
+   it's (~2.0)
 
 ### Fixes since Varbase 8.x-6.7:
 * Issue [#3048899](https://www.drupal.org/node/3048899):
