@@ -64,7 +64,7 @@ before_install:
   - echo 'max_execution_time = 1200' >> varbase.php.ini;
   - echo 'max_input_time = 180' >> varbase.php.ini;
   - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 2000M' >> varbase.php.ini;
+  - echo 'memory_limit = 3000M' >> varbase.php.ini;
   - echo 'error_reporting = E_ALL' >> varbase.php.ini;
   - echo 'post_max_size = 64M' >> varbase.php.ini;
   - echo 'upload_max_filesize = 32M' >> varbase.php.ini;

@@ -10,9 +10,6 @@
                   structure and implement theme suggestions and JS behaviors
                   for each video provider to support autoplay for various video
                   providers (YouTube, Vimeo, and Local video)
-* Issue [#3049751](https://www.drupal.org/node/3049751):
-                  Styled the one slide view and Full content hero slider page
-                  to look like a preview for the slide
 * Issue [#3050202](https://www.drupal.org/node/3050202):
                   Implemented theme suggestions and JS behaviours in
                   Varbase Media Header for each video provider to support
@@ -41,6 +38,9 @@
                   [Hero slider] content type
 
 ### Changed since Varbase 8.6.7:
+* Issue [#3049751](https://www.drupal.org/node/3049751):
+                  Styled the one slide view and Full content hero slider page
+                  to look like a preview for the slide
 * Issue [#3049744](https://www.drupal.org/node/3049744):
                   Have the title element go to the end of the line, with the
                   Length Indicator and the title should have the same exact
