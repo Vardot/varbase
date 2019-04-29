@@ -16,8 +16,8 @@ install:
   - help
 themes:
   - adminimal_theme
-  - bootstrap
-  - vartheme
+  - bootstrap_barrio
+  - vartheme_bs4
   - vartheme_admin
 
 interface translation project: varbase
