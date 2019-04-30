@@ -120,35 +120,41 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
 
 
   # 7 Rename TWIG template files.
-  # html.html.twig is very important and needed file for RTL websites.
   mv ${theme_path}/${theme_name}/templates/system/html.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/system/html.html.twig
   mv ${theme_path}/${theme_name}/templates/system/page.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/system/page.html.twig
   mv ${theme_path}/${theme_name}/templates/system/maintenance-page.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/system/maintenance-page.html.twig
-
-
-  # Custom Better Login templates for edit, login, rest password, and register template files.
   mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--edit.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--edit.html.twig
   mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--login.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--login.html.twig
   mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--password.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--password.html.twig
   mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--register.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--register.html.twig
   mv ${theme_path}/${theme_name}/templates/betterlogin/page--user--reset.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/page--user--reset.html.twig
   mv ${theme_path}/${theme_name}/templates/betterlogin/block--social-auth.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/betterlogin/block--social-auth.html.twig
-
-
   mv ${theme_path}/${theme_name}/templates/entity-embed/entity-embed-container.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/entity-embed/entity-embed-container.html.twig
-
   mv ${theme_path}/${theme_name}/templates/media/media.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/media/media.html.twig
   mv ${theme_path}/${theme_name}/templates/media/media--image.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/media/media--image.html.twig
   mv ${theme_path}/${theme_name}/templates/media/media-oembed-iframe.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/media/media-oembed-iframe.html.twig
-
   mv ${theme_path}/${theme_name}/templates/video-embed-field/video-embed-iframe.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/video-embed-field/video-embed-iframe.html.twig
 
+  # 8 Rename config files.
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_branding.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_branding.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_breadcrumbs.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_breadcrumbs.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_content.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_content.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_copyright.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_copyright.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_footer.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_footer.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_help.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_help.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_local_actions.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_actions.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_local_tasks.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_local_tasks.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_main_menu.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_main_menu.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_messages.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_messages.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_page_title.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_page_title.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_socialauthlogin.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_socialauthlogin.yml
+  mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_views_block__varbase_heroslider_media_varbase_heroslider_media.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_views_block__varbase_heroslider_media_varbase_heroslider_media.yml
 
-  # 8. Replace all VARTHEME_BS4_SUBTHEME with the machine name of your theme.
+  # 9. Replace all VARTHEME_BS4_SUBTHEME with the machine name of your theme.
   grep -rl 'VARTHEME_BS4_SUBTHEME' ${theme_path}/${theme_name} | xargs sed -i "s/VARTHEME_BS4_SUBTHEME/${theme_name}/g" ;
 
 
-  # 9. Install needed libraries
+  # 10. Install needed libraries
   cd ${theme_path}/${theme_name};
   npm install;
 
