@@ -12,6 +12,7 @@ use Drupal\varbase\Config\ConfigBit;
 use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
+use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -397,7 +398,7 @@ function varbase_configure_language_and_fetch_traslation($language_code) {
  */
 function varbase_fix_entity_update($entity_update) {
   if ($entity_update) {
-    \Drupal::entityDefinitionUpdateManager()->applyUpdates();
+    VarbaseEntityDefinitionUpdateManager::applyUpdates();
   }
 }
 

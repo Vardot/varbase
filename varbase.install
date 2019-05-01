@@ -12,6 +12,7 @@ use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Config\FileStorage;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
+use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
 
 /**
  * Implements hook_install().
@@ -47,7 +48,7 @@ function varbase_install() {
 
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
-  \Drupal::entityDefinitionUpdateManager()->applyUpdates();
+  VarbaseEntityDefinitionUpdateManager::applyUpdates();
 
   // If Varbase Tour were enabled then redirect to the homepage with activ tour.
   if (isset($GLOBALS['homepage_with_varbase_tour'])
