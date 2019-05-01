@@ -48,7 +48,9 @@ function varbase_install() {
 
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
-  VarbaseEntityDefinitionUpdateManager::applyUpdates();
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->applyUpdates();
 
   // If Varbase Tour were enabled then redirect to the homepage with activ tour.
   if (isset($GLOBALS['homepage_with_varbase_tour'])
@@ -57,7 +59,7 @@ function varbase_install() {
     $response = new Symfony\Component\HttpFoundation\RedirectResponse($homepage_with_tour);
     $response->send();
     exit;
-    
+
     include_once __DIR__ . '/../../core/includes/install.core.inc';
     include_once __DIR__ . '/../../core/includes/install.inc';
     install_goto('?tour');

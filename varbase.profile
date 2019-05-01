@@ -220,8 +220,8 @@ function varbase_assemble_extra_components(array &$install_state) {
     $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
 
   }
-  
-  
+
+
   // Uninstall list of not needed modules after the config had been loaded.
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
@@ -229,7 +229,7 @@ function varbase_assemble_extra_components(array &$install_state) {
     foreach ($uninstall_components as $uninstall_component)
     $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
   }
-  
+
 
   return $batch;
 }
@@ -398,7 +398,9 @@ function varbase_configure_language_and_fetch_traslation($language_code) {
  */
 function varbase_fix_entity_update($entity_update) {
   if ($entity_update) {
-    VarbaseEntityDefinitionUpdateManager::applyUpdates();
+    \Drupal::classResolver()
+      ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+      ->applyUpdates();
   }
 }
 
@@ -438,7 +440,7 @@ function varbase_uninstall_component($uninstall_component) {
  *   A renderable array with a redirect header.
  */
 function varbase_after_install_finished(array &$install_state) {
-  
+
   // Activate Varbase Bootstrap Paragraphs Settings in the active config.
   if (\Drupal::moduleHandler()->moduleExists('varbase_bootstrap_paragraphs')) {
     $profile_path = drupal_get_path('profile', 'varbase') . '/config/optional/';
@@ -448,7 +450,7 @@ function varbase_after_install_finished(array &$install_state) {
     $config_factory = \Drupal::configFactory()->getEditable('varbase_bootstrap_paragraphs.settings');
     $config_factory->setData($config_data)->save(TRUE);
   }
-  
+
   global $base_url;
 
   // After install direction.

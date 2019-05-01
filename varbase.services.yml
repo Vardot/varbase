@@ -7,3 +7,6 @@ services:
     class: '\Drupal\varbase\Config\ConfigBit'
     arguments:
       - '@element_info'
+  varbase.definition_update_manager:
+    class: '\Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager'
+    arguments: ['@class_resolver', '@entity.definition_update_manager']
