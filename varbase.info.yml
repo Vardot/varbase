@@ -2,6 +2,7 @@ name: Varbase
 type: profile
 description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
 core: 8.x
+project: varbase
 distribution:
   name: Varbase
   install:
