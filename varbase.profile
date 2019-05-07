@@ -441,6 +441,12 @@ function varbase_uninstall_component($uninstall_component) {
  */
 function varbase_after_install_finished(array &$install_state) {
 
+  // Mark all updates by the update helper checklist as successful on install.
+  if (\Drupal::moduleHandler()->moduleExists('update_helper_checklist')) {
+    $checkList = \Drupal::service('update_helper_checklist.update_checklist');
+    $checkList->markAllUpdates();
+  }
+
   // Activate Varbase Bootstrap Paragraphs Settings in the active config.
   if (\Drupal::moduleHandler()->moduleExists('varbase_bootstrap_paragraphs')) {
     $profile_path = drupal_get_path('profile', 'varbase') . '/config/optional/';
