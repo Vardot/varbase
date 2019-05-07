@@ -98,7 +98,7 @@ projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 2.0-alpha4
 
 projects[entity_embed][type] = module
-projects[entity_embed][version] = 1.0-beta2
+projects[entity_embed][version] = 1.0-beta3
 ;; Issue #2832504 - Send the CKEditor instance ID to the embed.preview route.
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2832504-2.patch
 ;; Issue #2511404: Image entities/fields embedded using Entity Embed cannot be linked in CKEditor.
@@ -196,7 +196,7 @@ projects[webform_views][type] = module
 projects[webform_views][version] = 5.0-alpha6
 
 projects[default_content][type] = module
-projects[default_content][version] = 1.0-alpha7
+projects[default_content][version] = 1.0-alpha8
 ;; Issue #2900089: Invalid translation language error when selected installation language does not match demo content language
 projects[default_content][patch][] = https://www.drupal.org/files/issues/2900089-14.patch
 ;; Issue #2886350: Allow export of all site content.
@@ -212,7 +212,7 @@ projects[node_edit_protection][type] = module
 projects[node_edit_protection][version] = 1.0-alpha1
 
 projects[rabbit_hole][type] = module
-projects[rabbit_hole][version] = 1.0-beta5
+projects[rabbit_hole][version] = 1.0-beta6
 
 projects[fast_404][type] = module
 projects[fast_404][version] = 1.0-alpha4
@@ -225,6 +225,11 @@ projects[swiftmailer][version] = 1.0-beta2
 
 projects[smtp][type] = module
 projects[smtp][version] = 1.0-beta4
+
+projects[length_indicator][type] = module
+projects[length_indicator][version] = 1.0-rc3
+;; Issue #3048286: Add cursor position direction support for RTL)
+projects[length_indicator][patch][] = https://www.drupal.org/files/issues/2019-04-15/3048286-3.patch
 
 projects[maxlength][type] = module
 projects[maxlength][version] = 1.0-beta2
@@ -352,6 +357,8 @@ projects[username_enumeration_prevention][version] = 1.0-beta2
 
 projects[password_policy][type] = module
 projects[password_policy][version] = 3.0-alpha4
+;; Issue #3032549: Fix Password policy module issue with saving constraint
+projects[password_policy][patch][] = https://www.drupal.org/files/issues/2019-04-28/3032549-18.patch
 
 projects[seckit][type] = module
 projects[seckit][version] = 1.1
@@ -463,56 +470,56 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 6.x-dev
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 6.10
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 6.6
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] = 6.3
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 6.2
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.2
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.3
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 6.7
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 6.2
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.4
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.3
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 6.2
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.1
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.0-rc1
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.6
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
