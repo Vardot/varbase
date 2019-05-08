@@ -382,7 +382,7 @@ projects[search_api][type] = module
 projects[search_api][version] = 1.13
 
 projects[blazy][type] = module
-projects[blazy][version] = 1.0-rc4
+projects[blazy][version] = 2.0-rc3
 
 projects[slick][type] = module
 projects[slick][version] = 1.1
@@ -423,7 +423,6 @@ projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
 
 projects[devel][type] = module
-projects[devel][version] = 1.x-dev
 
 projects[update_helper][type] = module
 projects[update_helper][version] = 1.0
