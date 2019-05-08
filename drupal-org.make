@@ -379,7 +379,7 @@ projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.4
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.12
+projects[search_api][version] = 1.13
 
 projects[blazy][type] = module
 projects[blazy][version] = 1.0-rc4
