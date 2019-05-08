@@ -193,7 +193,7 @@ projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
 
 projects[webform_views][type] = module
-projects[webform_views][version] = 5.0-alpha6
+projects[webform_views][version] = 5.0-alpha7
 
 projects[default_content][type] = module
 projects[default_content][version] = 1.0-alpha8
@@ -470,7 +470,7 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 6.x-dev
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.10
+projects[varbase_media][version] = 6.11
 
 projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 6.6

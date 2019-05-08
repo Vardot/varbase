@@ -91,6 +91,9 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
                   [m.alhawwari](https://www.drupal.org/u/malhawwari)
                   : Fixed to return header media from default when no
                   translation is available
+* Issue [#3053163](https://www.drupal.org/node/3053163):
+                  Fixed Media grid view style after the update to
+                  Drupal 8.7.0 stable
 
 --------------------------------------------------------------------------------
 
