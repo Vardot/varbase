@@ -426,6 +426,8 @@ projects[devel][type] = module
 
 projects[update_helper][type] = module
 projects[update_helper][version] = 1.0
+;; Issue #3024165: [PATCH] Enhancements, Better messages for the unable to apply updates, drush command and removed the Mark all updates as successful on install
+projects[update_helper][patch][] = https://www.drupal.org/files/issues/2019-05-08/3024165-25.patch
 
 projects[checklistapi][type] = module
 projects[checklistapi][version] = 1.10
