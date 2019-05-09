@@ -1,6 +1,6 @@
-# 8.6.9
+# 8.6.10
 
-### Highlighted important changes since Varbase 8.6.8:
+### Highlighted important changes since Varbase 8.6.9:
 * Issue [#3052218](https://www.drupal.org/node/3052218):
                   Updated [Drupal core] from ~8.6.0 to ~8.7.0
 * Issue [#3051422](https://www.drupal.org/node/3051422):
@@ -22,7 +22,7 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
 * Switched BS3 MD min ( >=992px) to BS4 LG min ( >=992px)
 * Switched BS3 LG min ( >=1200px) to BS4 XL min ( >=1200px)
 
-### Added since Varbase 8.6.8:
+### Added since Varbase 8.6.9:
 * Issue [#3051878](https://www.drupal.org/node/3051878):
                   Added project: varbase to varbase.info.yml
 * Issue [#3051417](https://www.drupal.org/node/3051417):
@@ -46,7 +46,7 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
                   [devkinetic](https://www.drupal.org/u/devkinetic)
                   : Added private flag to package.json for Vartheme BS4
 
-### Changed since Varbase 8.6.8:
+### Changed since Varbase 8.6.9:
 * Issue [#3051884](https://www.drupal.org/node/3051884):
                   Switched to use [Varbase Entity Definition Update Manager]
                   and remove deprecated
@@ -70,7 +70,7 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
                   : Removed the language code from base_url in
                   [Varbase Media Hero Slider] oembed base_path
 
-### Updates since Varbase 8.6.8:
+### Updates since Varbase 8.6.9:
 * Issue [#3052578](https://www.drupal.org/node/3052578):
                   Updated [Default Content] module
                   from 8.1.0-alpha7 to 8.1.0-alpha8
@@ -80,7 +80,7 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
                   Updated JavaScript/CSS libraries for Popper and Bootstrap
                   Barrio theme for new toast and alert library
 
-### Fixes since Varbase 8.x-6.8:
+### Fixes since Varbase 8.x-6.9:
 * Issue [#3052032](https://www.drupal.org/node/3052032)
                   by
                   [devkinetic](https://www.drupal.org/u/devkinetic)
@@ -94,6 +94,20 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
 * Issue [#3053163](https://www.drupal.org/node/3053163):
                   Fixed Media grid view style after the update to
                   Drupal 8.7.0 stable
+
+--------------------------------------------------------------------------------
+
+# 8.6.9
+
+### Highlighted important changes since Varbase 8.6.8:
+* Issue [#3053839](https://www.drupal.org/node/3053839):
+                  Update [Drupal core] from 8.6.15 to 8.6.16
+* Drupal core - Moderately critical - Third-party libraries -
+  [SA-CORE-2019-007](https://www.drupal.org/SA-CORE-2019-007)
+* Issue [#3053828](https://www.drupal.org/node/3053828):
+                  Changed drupal/core ~8.6 to ~8.6.0 to let composer
+                  update to 8.6.16 and more 8.6.x versions and
+                  not to update to 8.7.x
 
 --------------------------------------------------------------------------------
 
