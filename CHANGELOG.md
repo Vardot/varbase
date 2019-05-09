@@ -1,3 +1,17 @@
+# 8.6.9
+
+### Highlighted important changes since Varbase 8.6.8:
+* Issue [#3053839](https://www.drupal.org/node/3053839):
+                  Update [Drupal core] from 8.6.15 to 8.6.16
+* Drupal core - Moderately critical - Third-party libraries -
+  [SA-CORE-2019-007](https://www.drupal.org/SA-CORE-2019-007)
+* Issue [#3053828](https://www.drupal.org/node/3053828):
+                  Changed drupal/core ~8.6 to ~8.6.0 to let composer
+                  update to 8.6.16 and more 8.6.x versions and
+                  not to update to 8.7.x
+
+--------------------------------------------------------------------------------
+
 # 8.6.8
 
 ### Highlighted important changes since Varbase 8.6.7:
