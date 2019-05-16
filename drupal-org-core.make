@@ -18,3 +18,7 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-07-09/29143
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-06/2599228-74.patch
 ;; Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-12-10/core--getDerivatives-Invalid-argument-foreach--2893892-11-d8.patch
+;; Issue #3052492: Fixed Failed while updating from 8.6.x to 8.7.x as ViewsEntitySchemaSubscriber should not make an entity update fail if a view cannot be resaved
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-05-06/3052492-13.patch
+;; Issue #3052140: Cannot convert custom entity types from non-revisionable to revisionable with pre-8.7.x compatible methods
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-05-04/3052140-13.patch
