@@ -71,9 +71,9 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
     $element = $this->getSession()->getPage();
     $this->getSession()->visit($this->locatePath('/user'));
-    $element->fillField('Username', $username);
-    $element->fillField('Password', $password);
-    $submit = $element->findButton('Log in');
+    $element->fillField('edit-name', $username);
+    $element->fillField('edit-pass', $password);
+    $submit = $element->findButton('op');
     $submit->click();
   }
 
@@ -93,9 +93,9 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     // Login with the
     $element = $this->getSession()->getPage();
     $this->getSession()->visit($this->locatePath('/user'));
-    $element->fillField('Username', $username);
-    $element->fillField('Password', $password);
-    $submit = $element->findButton('Log in');
+    $element->fillField('edit-name', $username);
+    $element->fillField('edit-pass', $password);
+    $submit = $element->findButton('op');
     $submit->click();
   }
 
