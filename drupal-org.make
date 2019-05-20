@@ -517,7 +517,7 @@ projects[vartheme][type] = theme
 projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.0-rc1
+projects[vartheme_bs4][version] = 6.0-rc2
 
 projects[vartheme_admin][type] = theme
 projects[vartheme_admin][version] = 6.6

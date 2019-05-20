@@ -69,6 +69,21 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
                   [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
                   : Removed the language code from base_url in
                   [Varbase Media Hero Slider] oembed base_path
+* Issue [#3053436](https://www.drupal.org/node/3053436)
+                  by
+                  [waleedq](https://www.drupal.org/u/waleedq)
+                  : Applied an update onsave for the [Update Helper] module, and
+                  disable applied updates and updated the patch
+                  to 3024165-31.patch
+* Issue [#3055619](https://www.drupal.org/node/3055619)
+                  by
+                  [metalbote](https://www.drupal.org/u/metalbote)
+                  : Changed Varbase Behat Context to use form element ids
+                 instead of labels, so that tests run on non-english installs
+* Issue [#3055719](https://www.drupal.org/node/3055719)
+                  by
+                  [YousefAnbar](https://www.drupal.org/u/yousefanbar)
+                  : Removed .equal-height-xs from bootstrap 4 as it is not needed
 
 ### Updates since Varbase 8.6.9:
 * Issue [#3052578](https://www.drupal.org/node/3052578):
@@ -94,6 +109,10 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
 * Issue [#3053163](https://www.drupal.org/node/3053163):
                   Fixed Media grid view style after the update to
                   Drupal 8.7.0 stable
+* Issue [#3055737](https://www.drupal.org/node/3055737)
+                  by
+                  [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+                  : Fixed card deck and space under card image on IE
 
 --------------------------------------------------------------------------------
 
