@@ -58,7 +58,7 @@ projects[smart_trim][type] = module
 projects[smart_trim][version] = 1.1
 
 projects[advanced_text_formatter][type] = module
-projects[advanced_text_formatter][version] = 1.0-beta3
+projects[advanced_text_formatter][version] = 1.0
 
 projects[block_class][type] = module
 projects[block_class][version] = 1.0
@@ -99,7 +99,7 @@ projects[dropzonejs][version] = 2.0-alpha4
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0-beta3
-;; Issue #2832504 - Send the CKEditor instance ID to the embed.preview route.
+;; Issue #2832504: Send the CKEditor instance ID to the embed.preview route.
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2832504-2.patch
 ;; Issue #2511404: Image entities/fields embedded using Entity Embed cannot be linked in CKEditor.
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2018-04-23/25114040-47.patch
@@ -181,7 +181,7 @@ projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][version] = 2.5
 
 projects[views_bulk_edit][type] = module
-projects[views_bulk_edit][version] = 2.2
+projects[views_bulk_edit][version] = 2.3
 
 projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
@@ -228,7 +228,7 @@ projects[smtp][version] = 1.0-beta4
 
 projects[length_indicator][type] = module
 projects[length_indicator][version] = 1.0-rc3
-;; Issue #3048286: Add cursor position direction support for RTL)
+;; Issue #3048286: Add cursor position direction support for RTL
 projects[length_indicator][patch][] = https://www.drupal.org/files/issues/2019-04-15/3048286-3.patch
 
 projects[maxlength][type] = module
@@ -318,7 +318,7 @@ projects[social_auth_twitter][type] = module
 projects[social_auth_twitter][version] = 2.0-alpha3
 
 projects[social_auth_linkedin][type] = module
-projects[social_auth_linkedin][version] = 2.0-beta2
+projects[social_auth_linkedin][version] = 2.0-beta3
 
 projects[ckeditor_media_embed][type] = module
 projects[ckeditor_media_embed][version] = 1.3
@@ -437,7 +437,7 @@ projects[checklistapi][version] = 1.10
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.17
+projects[bootstrap][version] = 3.19
 
 projects[bootstrap_barrio][type] = theme
 projects[bootstrap_barrio][version] = 4.22
