@@ -385,13 +385,13 @@ projects[blazy][type] = module
 projects[blazy][version] = 2.0-rc3
 
 projects[slick][type] = module
-projects[slick][version] = 1.1
+projects[slick][version] = 2.0-rc3
 
 projects[slick_views][type] = module
-projects[slick_views][version] = 1.0
+projects[slick_views][version] = 2.0
 
 projects[slick_media][type] = module
-projects[slick_media][version] = 2.0-alpha3
+projects[slick_media][version] = 2.0-alpha3 
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
