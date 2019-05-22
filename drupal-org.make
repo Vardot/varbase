@@ -468,19 +468,19 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 6.x-dev
+projects[varbase_core][version] = 7.x-dev
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 7.x-dev
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] = 7.x-dev
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 7.x-dev
 
 projects[varbase_search][type] = module
 projects[varbase_search][version] = 6.x-dev
@@ -489,10 +489,10 @@ projects[varbase_seo][type] = module
 projects[varbase_seo][version] = 6.x-dev
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 7.x-dev
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 7.x-dev
 
 projects[varbase_total_control][type] = module
 projects[varbase_total_control][version] = 6.x-dev
@@ -501,7 +501,7 @@ projects[varbase_auth][type] = module
 projects[varbase_auth][version] = 6.x-dev
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 7.x-dev
 
 projects[varbase_styleguide][type] = module
 projects[varbase_styleguide][version] = 6.x-dev

@@ -32,18 +32,18 @@
     "cweagans/composer-patches": "~1.0",
     "drupal-composer/drupal-scaffold": "~2.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
-    "drupal/varbase_core": "6.x-dev",
-    "drupal/varbase_media": "6.x-dev",
-    "drupal/varbase_bootstrap_paragraphs": "6.x-dev",
-    "drupal/varbase_editor": "6.x-dev",
-    "drupal/varbase_landing": "6.x-dev",
+    "drupal/varbase_core": "7.x-dev",
+    "drupal/varbase_media": "7.x-dev",
+    "drupal/varbase_bootstrap_paragraphs": "7.x-dev",
+    "drupal/varbase_editor": "7.x-dev",
+    "drupal/varbase_landing": "7.x-dev",
     "drupal/varbase_search": "6.x-dev",
     "drupal/varbase_seo": "6.x-dev",
-    "drupal/varbase_heroslider_media": "6.x-dev",
-    "drupal/varbase_carousels": "6.x-dev",
+    "drupal/varbase_heroslider_media": "7.x-dev",
+    "drupal/varbase_carousels": "7.x-dev",
     "drupal/varbase_total_control": "6.x-dev",
     "drupal/varbase_auth": "6.x-dev",
-    "drupal/varbase_blog": "6.x-dev",
+    "drupal/varbase_blog": "7.x-dev",
     "drupal/varbase_styleguide": "6.x-dev",
     "drupal/varbase_email": "6.x-dev",
     "drupal/vartheme": "6.x-dev",
@@ -97,7 +97,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-8.x-6.x": "8.6.x-dev"
+      "dev-8.x-7.x": "8.7.x-dev"
     },
     "installer-types": [
       "bower-asset",
