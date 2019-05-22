@@ -468,7 +468,7 @@ projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 6.x-dev
+projects[varbase_core][version] = 6.16
 
 projects[varbase_media][type] = module
 projects[varbase_media][version] = 6.11
@@ -498,7 +498,7 @@ projects[varbase_total_control][type] = module
 projects[varbase_total_control][version] = 6.4
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.3
+projects[varbase_auth][version] = 6.4
 
 projects[varbase_blog][type] = module
 projects[varbase_blog][version] = 6.2
