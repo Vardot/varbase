@@ -42,7 +42,7 @@ matrix:
     env: AFATG=05-content-management
 
 mysql:
-  database: test_varbase6c
+  database: test_varbase807xxc
   username: root
   encoding: utf8
 
@@ -107,7 +107,7 @@ install:
 
   ## Install with drush.
   - cd docroot
-  - drush site-install varbase --yes --site-name='Test Varbase6c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase6c" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true varbase_development_tools.varbase_development=true
+  - drush site-install varbase --yes --site-name='Test Varbase807xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase807xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true varbase_development_tools.varbase_development=true
   - drush pm-enable varbase_styleguide --yes
   - drush pm-enable vbp_text_and_image --yes
   - drush pm-enable varbase_media_instagram --yes

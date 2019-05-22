@@ -9,7 +9,7 @@
   <property name="db.host" value="localhost" />
   <property name="db.user" value="root" />
   <property name="db.password" value="" />
-  <property name="db.database" value="test_varbase6c" />
+  <property name="db.database" value="test_varbase807xxc" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
   <property name="docroot" value="docroot" />
   <property name="profile" value="${docroot}/profiles/varbase" />
@@ -90,7 +90,7 @@
   <!-- Install with drush site install -->
   <target name="install-with-drush-site-install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
-    <exec command="${drush} site-install varbase --yes --site-name='Test Varbase6c' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true varbase_development_tools.varbase_development=true" dir="${docroot}" passthru="true" />
+    <exec command="${drush} site-install varbase --yes --site-name='Test Varbase807xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url=${db.url} varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true varbase_development_tools.varbase_development=true" dir="${docroot}" passthru="true" />
     <exec command="${drush} en varbase_styleguide --yes" dir="${docroot}" />
     <exec command="${drush} en vbp_text_and_image --yes" dir="${docroot}" />
     <exec command="${drush} en varbase_media_instagram --yes" dir="${docroot}" />
