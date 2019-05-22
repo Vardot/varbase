@@ -113,6 +113,9 @@ Varbase Media Mapping Bootstrap 3 into Bootstrap 4:
                   by
                   [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
                   : Fixed card deck and space under card image on IE
+* Issue [#3056083](https://www.drupal.org/node/3056083):
+                  Fixed regression of responsive image styles when updating
+                  to Bootstrap 4 breakpoints
 
 --------------------------------------------------------------------------------
 

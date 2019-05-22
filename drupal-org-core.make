@@ -14,8 +14,6 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-03-05/28152
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-12/1356276-531.patch
 ;; Issue #2914389: Allow profiles to exclude dependencies of their parent
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch
-;; Issue #2853988: Add option to rewrite robots.txt on staging environments
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-10-06/2599228-74.patch
 ;; Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-12-10/core--getDerivatives-Invalid-argument-foreach--2893892-11-d8.patch
 ;; Issue #3052492: Fixed Failed while updating from 8.6.x to 8.7.x as ViewsEntitySchemaSubscriber should not make an entity update fail if a view cannot be resaved
