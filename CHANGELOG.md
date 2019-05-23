@@ -1,3 +1,20 @@
+# 8.6.11
+
+### Highlighted important changes since Varbase 8.6.10:
+
+* Issue [#3056587](https://www.drupal.org/node/3056587):
+                  Updated [Drupal core] from 8.7.1 to 8.7.2 ( ~8.7.0 )
+                  and removed all patches for 8.7.1
+* Issue [#3056598](https://www.drupal.org/node/3056598):
+                 Varbase 8.6.11: Updated [CHANGELOG.md, README.md,
+                 drupal-org.make] files and filter the code for
+                 Drupal 8 Coding Standard
+* Updated [Admin Toolbar] module from 8.1.26 to 8.1.27
+* Updated [Adminimal - Responsive Administration Theme] theme
+          from 8.1.4 to 8.1.5
+
+--------------------------------------------------------------------------------
+
 # 8.6.10
 
 ### Highlighted important changes since Varbase 8.6.9:
