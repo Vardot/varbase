@@ -40,3 +40,8 @@ config_bit:
           selected: false
           config_form: true
           formbit: "src/FormBit/varbase_auth.formbit.php"
+        varbase_api:
+          title: "Varbase API"
+          description: "A JSON:API implementation with authentication and authorization that allows for easy ingestion of content by other applications."
+          selected: false
+          config_form: false

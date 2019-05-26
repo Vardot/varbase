@@ -33,6 +33,7 @@
     "drupal-composer/drupal-scaffold": "~2.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
     "drupal/varbase_core": "7.x-dev",
+    "drupal/varbase_api": "7.x-dev",
     "drupal/varbase_media": "7.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "7.x-dev",
     "drupal/varbase_editor": "7.x-dev",
