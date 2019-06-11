@@ -25,7 +25,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
      When I go to "/admin/config/services/jsonapi/extras"
       And I wait
      Then I should see "JSON:API Extras"
-      And I should see "api" value in the "path_prefix" input element
+      And I should see "api" value in the "edit-path-prefix" input element
 
   @check @local @development @staging @production
   Scenario: Check JSON:API Resource overrides.
@@ -40,7 +40,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And I wait
      Then I should see "Varbase API settings"
       And the "entity_json" checkbox is checked
-      And the "bundle_docs" is checked
+      And the "bundle_docs" checkbox is checked
      When I go to "/admin/config/system/varbase/api/keys"
       And I wait
      Then I should see "Path to the directory in which to store the generated keys."
