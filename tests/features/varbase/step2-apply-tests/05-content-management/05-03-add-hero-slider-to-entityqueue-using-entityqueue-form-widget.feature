@@ -15,7 +15,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
       And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
       And I fill in "Flag Earth" for "name[0][value]"
-      And I check the box "Save to Library"
+      And I check the box "Show in media library"
       And I press the "Save" button
       And I wait
      Then I should see "Flag Earth"

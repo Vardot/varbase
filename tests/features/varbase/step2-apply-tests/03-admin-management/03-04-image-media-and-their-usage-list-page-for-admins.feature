@@ -25,7 +25,7 @@ So that I will be able to manage files, see where they have been used in content
        And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
        And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
        And I fill in "Flag Earth" for "name[0][value]"
-       And I check the box "Save to Library"
+       And I check the box "Show in media library"
        And I press the "Save" button
        And I wait
       Then I should see "Flag Earth"
@@ -47,7 +47,7 @@ So that I will be able to manage files, see where they have been used in content
       And I wait
      Then I should see "Edit Image Flag Earth"
      When I fill in "Flag Earth after edit" for "name[0][value]"
-      And I check the box "Save to Library"
+      And I check the box "Show in media library"
       And I press the "Save" button
       And I wait
      Then I should see "Image Flag Earth after edit has been updated."
