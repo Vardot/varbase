@@ -14,7 +14,11 @@ install:
   - user
   - node
   - block
+  - datetime
   - help
+  - image
+  - views
+  - file
 themes:
   - adminimal_theme
   - bootstrap_barrio

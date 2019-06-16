@@ -12,6 +12,32 @@ So that I can use them after the install or update.
       And I wait
      Then I should see "Content"
 
+   @check @local @development @staging @production
+   Scenario: Check Files admin page.
+      When I go to "/admin/content/files"
+       And I wait
+      Then I should see "Files"
+
+   @check @local @development @staging @production
+   Scenario: Check Media Grid admin page.
+      When I go to "/admin/content/media"
+       And I wait
+      Then I should see "Media"
+
+   @check @local @development @staging @production
+   Scenario: Check Media Table admin page.
+      When I go to "/admin/content/media-table"
+       And I wait
+      Then I should see "Media"
+       And I should see "Thumbnail"
+       And I should see "Cover Image"
+       And I should see "Media name"
+       And I should see "Type"
+       And I should see "Author"
+       And I should see "Status"
+       And I should see "Updated"
+       And I should see "Operations"
+
   @check @local @development @staging @production
   Scenario: Check the structure page.
      When I go to "/admin/structure"
