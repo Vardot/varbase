@@ -134,7 +134,7 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
     And I wait
    Then I should see "Masquerade as test_authenticated"
 
-  # Check if a site admin user can NOT masquerade as an Editor user.
+  # Check if a site admin user can masquerade as an Editor user.
    When I go to "/admin/people"
     And I wait
     And I fill in "test_editor" for "Name or email contains"
@@ -143,9 +143,9 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
    Then I should see "test_editor"
    When I click "test_editor"
     And I wait
-   Then I should not see "Masquerade as test_editor"
+   Then I should see "Masquerade as test_editor"
 
-  # Check if a site admin user can NOT masquerade as a content admin user.
+  # Check if a site admin user can masquerade as a content admin user.
    When I go to "/admin/people"
     And I wait
     And I fill in "test_content_admin" for "Name or email contains"
@@ -154,7 +154,7 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
    Then I should see "test_content_admin"
    When I click "test_content_admin"
     And I wait
-   Then I should not see "Masquerade as test_content_admin"
+   Then I should see "Masquerade as test_content_admin"
 
 @javascript @check @local @development @staging @production
 Scenario: Check if a content admin user can NOT masquerade as the super user (UID 1) "webmaster".
