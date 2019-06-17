@@ -123,7 +123,7 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
     And I wait
    Then I should not see "Masquerade as webmaster"
 
-  # Check if a site admin user can NOT masquerade as an authenticated user.
+  # Check if a site admin user can masquerade as an authenticated user.
    When I go to "/admin/people"
     And I wait
     And I fill in "test_authenticated" for "Name or email contains"
@@ -132,7 +132,7 @@ Scenario: Check if a site admin user can NOT masquerade as any user.
    Then I should see "test_authenticated"
    When I click "test_authenticated"
     And I wait
-   Then I should not see "Masquerade as test_authenticated"
+   Then I should see "Masquerade as test_authenticated"
 
   # Check if a site admin user can NOT masquerade as an Editor user.
    When I go to "/admin/people"
