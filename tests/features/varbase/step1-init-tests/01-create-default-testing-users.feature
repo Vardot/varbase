@@ -22,7 +22,7 @@ Feature: Create default testing users.
      Then I should see "Created a new user account"
 
   @javascript @init @tools @local @development @staging
-  Scenario: Set a passeord for the test_authenticated user.
+  Scenario: Set a password for the test_authenticated user.
      When I go to "/admin/people"
       And I wait
       And I fill in "test_authenticated" for "Name or email contains"
@@ -50,7 +50,7 @@ Feature: Create default testing users.
      Then I should see "Created a new user account"
 
    @javascript @init @tools @local @development @staging
-   Scenario: Set a passeord for the test_editor user.
+   Scenario: Set a password for the test_editor user.
       When I go to "/admin/people"
        And I wait
        And I fill in "test_editor" for "Name or email contains"
@@ -78,7 +78,7 @@ Feature: Create default testing users.
      Then I should see "Created a new user account"
 
  @javascript @init @tools @local @development @staging
- Scenario: Set a passeord for the test_content_admin user.
+ Scenario: Set a password for the test_content_admin user.
     When I go to "/admin/people"
      And I wait
      And I fill in "test_content_admin" for "Name or email contains"
@@ -105,7 +105,7 @@ Feature: Create default testing users.
      Then I should see "Created a new user account"
 
  @javascript @init @tools @local @development @staging
- Scenario: Set a passeord for the test_seo_admin user.
+ Scenario: Set a password for the test_seo_admin user.
     When I go to "/admin/people"
      And I wait
      And I fill in "test_seo_admin" for "Name or email contains"
@@ -133,7 +133,7 @@ Feature: Create default testing users.
      Then I should see "Created a new user account"
 
  @javascript @init @tools @local @development @staging
- Scenario: Set a passeord for the test_site_admin user.
+ Scenario: Set a password for the test_site_admin user.
     When I go to "/admin/people"
      And I wait
      And I fill in "test_site_admin" for "Name or email contains"
@@ -161,7 +161,7 @@ Feature: Create default testing users.
      Then I should see "Created a new user account"
 
  @javascript @init @tools @local @development @staging
- Scenario: Set a passeord for the test_super_admin user.
+ Scenario: Set a password for the test_super_admin user.
     When I go to "/admin/people"
      And I wait
      And I fill in "test_super_admin" for "Name or email contains"

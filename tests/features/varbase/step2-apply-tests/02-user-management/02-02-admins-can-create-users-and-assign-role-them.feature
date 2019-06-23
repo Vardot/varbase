@@ -14,14 +14,32 @@ So that they will be able to use the site.
       And I should see "Username"
       And I should see "Email address"
 
-  @javascript @local @development @staging @production
+  @javascript @init @tools @local @development @staging
   Scenario: Check if admins can create a new user account as an (authenticated user).
-    Given I go to "/admin/people/create"
+     When I go to "/admin/people/create"
+      And I wait
+     Then I should see "Add user"
      When I fill in "tester@vardot.com" for "Email address"
       And I fill in "Tester" for "Username"
-      And I fill in "dD.123123ddd" for "Password"
-      And I fill in "dD.123123ddd" for "Confirm password"
       And I press "Create new account"
+      And I wait
+     Then I should see "Created a new user account"
+
+  @javascript @init @tools @local @development @staging
+  Scenario: Set a password for the Tester user.
+     When I go to "/admin/people"
+      And I wait
+      And I fill in "test_authenticated" for "Name or email contains"
+      And I press "Filter"
+      And I wait
+     Then I should see "test_authenticated"
+     When I click "Edit" in the "test_authenticated" row
+     Then I should see "test_authenticated"
+     When I fill in "dD.123123ddd" for "Password"
+      And I fill in "dD.123123ddd" for "Confirm password"
+      And I press "Save"
+      And I wait
+     Then I should see "The changes have been saved."
 
   @javascript @cleanup @local @development @staging @production
   Scenario: Delete the Tester user.
