@@ -132,7 +132,8 @@
         {"name": "c3","package": "bower-asset/c3"},
         {"name": "d3", "package": "bower-asset/d3"},
         {"name": "masonry", "package": "npm-asset/masonry-layout"},
-        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"}
+        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
       ]
     },
     "enable-patching": true,
