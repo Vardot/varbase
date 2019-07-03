@@ -21,7 +21,7 @@ Feature: Create default testing users.
       And I fill in "dD.123123ddd" for "Confirm password"
       And I press "Create new account"
       And I wait
-     Then I should see "Created a new user account"
+     Then I should not see "The name test_authenticated is already taken."
 
   @init @tools @local @development @staging
   Scenario: Create the test_editor user.
@@ -35,7 +35,7 @@ Feature: Create default testing users.
       And I check the box "Editor"
       And I press "Create new account"
       And I wait
-     Then I should see "Created a new user account"
+     Then I should not see "The name test_editor is already taken."
 
   @init @tools @local @development @staging
   Scenario: Create the test_content_admin user.
@@ -49,7 +49,7 @@ Feature: Create default testing users.
       And I check the box "Content Admin"
       And I press "Create new account"
       And I wait
-     Then I should see "Created a new user account"
+     Then I should not see "The name test_content_admin is already taken."
 
   @init @tools @local @development @staging
   Scenario: Create the test_seo_admin user.
@@ -63,7 +63,7 @@ Feature: Create default testing users.
       And I check the box "SEO Admin"
       And I press "Create new account"
       And I wait
-     Then I should see "Created a new user account"
+     Then I should not see "The name test_seo_admin is already taken."
 
   @init @tools @local @development @staging
   Scenario: Create the test_site_admin user.
@@ -77,7 +77,7 @@ Feature: Create default testing users.
       And I check the box "Site Admin"
       And I press "Create new account"
       And I wait
-     Then I should see "Created a new user account"
+     Then I should not see "The name test_site_admin is already taken."
 
   @init @tools @local @development @staging
   Scenario: Create the test_super_admin user.
@@ -91,20 +91,4 @@ Feature: Create default testing users.
       And I check the box "Super Admin"
       And I press "Create new account"
       And I wait
-     Then I should see "Created a new user account"
-
- @javascript @init @tools @local @development @staging
- Scenario: Set a password for the test_super_admin user.
-    When I go to "/admin/people"
-     And I wait
-     And I fill in "test_super_admin" for "Name or email contains"
-     And I press "Filter"
-     And I wait
-    Then I should see "test_super_admin"
-    When I click "Edit" in the "test_super_admin" row
-    Then I should see "test_super_admin"
-    When I fill in "dD.123123ddd" for "Password"
-     And I fill in "dD.123123ddd" for "Confirm password"
-     And I press "Save"
-     And I wait
-    Then I should see "The changes have been saved."
+     Then I should not see "The name test_super_admin is already taken."
