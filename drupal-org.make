@@ -406,6 +406,12 @@ projects[openapi][version] = 1.0-beta4
 ;; Issue #2982692: Fix issue of NOT respecting disabled JSON:API resources by JSON:API Extras
 projects[openapi][patch][] = https://www.drupal.org/files/issues/2019-06-24/2982692-11.patch
 
+projects[schemata][type] = module
+projects[schemata][version] = 1.0-beta1
+
+projects[openapi_ui][type] = module
+projects[openapi_ui][version] = 1.0-rc2
+
 projects[openapi_ui_redoc][type] = module
 projects[openapi_ui_redoc][version] = 1.0-rc2
 
