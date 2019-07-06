@@ -1,3 +1,99 @@
+# 8.6.12
+
+### Highlighted important changes since Varbase 8.6.11:
+* Issue [#3062092](https://www.drupal.org/node/3062092):
+                  Have [Varbase Update Helper] module as a dependency with
+                  [Varbase Core] module
+* Issue [#3057151](https://www.drupal.org/node/3057151):
+                  Enabled [Redirect domain] module in the [Varbase seo] module
+* Issue [#3062258](https://www.drupal.org/node/3062258):
+                  Changed Varbase Dashboard to work with C3 Charts and
+                  without warning
+
+### Added since Varbase 8.6.11:
+* Issue [#3060713](https://www.drupal.org/node/3060713):
+                  Added [Textmatch] CKEditor plugin which is required by
+                  the [CKEditor Media Embed] module and updated other needed
+                  libraries to work with CKEditor 4.11
+* Issue [#3063924](https://www.drupal.org/node/3063924):
+                  Added the Masonry, Images Loaded asset libraries
+
+### Changed since Varbase 8.6.11:
+* Issue [#3063917](https://www.drupal.org/node/3063917):
+                  Removed all patches for the [Total Control] module and keep
+                  using the ( ~2.0 ) in the composer
+* Issue [#3062094](https://www.drupal.org/node/3062094):
+                  Removed the [Search] menu link and box from the toolbar
+                  as we use Coffee
+* Issue [#3062233](https://www.drupal.org/node/3062233):
+                  Optimized permissions for the SEO Admin user role
+* Issue [#3057182](https://www.drupal.org/node/3057182):
+                  Optimization round No.1 for the Varbase API 8.x-6.x branch
+                  and the structure with Drupal standards
+
+### Updates since Varbase 8.6.11:
+* Issue [#3060637](https://www.drupal.org/node/3060637):
+                  Updated [Password Policy] from 8.3.0-alpha4
+                  to 8.3.0-alpha5 (~3.0 )
+* Issue [#3057149](https://www.drupal.org/node/3057149):
+                  Updated [Field Group] module from 8.3.0-beta1 to 8.3.0-rc1
+* Issue [#3060682](https://www.drupal.org/node/3060682):
+                  Updated [Page Manager] module from 8.4.0-beta3 to 8.4.0-beta4
+* Issue [#3065929](https://www.drupal.org/node/3065929):
+                  Updated [Entity Browser] module from 8.2.1 to 8.2.2
+                  and the patch to 2877751-40.patch to inform users how many
+                  items they can add to a field that uses an entity browser
+* Issue [#3065798](https://www.drupal.org/node/3065798):
+                  Updated [OpenAPI] from 8.1.0-beta3 to 8.1.0-beta4
+* Issue [#3060661](https://www.drupal.org/node/3060661):
+                  Updated [Entity Embed] module from 8.1.0-beta3
+                  to 8.1.0-rc1 ( ~1.0 )
+* Issue [#3063632](https://www.drupal.org/node/3063632):
+                  Updated [OpenAPI] from 8.1.0-beta2 to 8.1.0-beta3
+
+### Fixes since Varbase 8.x-6.11:
+* Issue [#3066186](https://www.drupal.org/node/3066186):
+                  Fixed Drupal coding standard and practice for [Varbase Core] module
+* Issue [#3061128](https://www.drupal.org/node/3061128)
+                  by
+                  Firass Ziedan
+                  : Fix the issue of oembed link does not pass the URL parameter to the provider
+* Issue [#3048170](https://www.drupal.org/node/3048170)
+                  by
+                  stefan.korn
+                 : Fixed issue of drush varbase-up not working with Drush 9.x
+* Issue [#3058511](https://www.drupal.org/node/3058511)
+                  by
+                  jedgar1mx
+                 : Fixed Uncaught TypeError: Cannot read property
+                  'querySelectorAll' of null
+* Issue [#3059083](https://www.drupal.org/node/3059083)
+                  by
+                  Omar Alahmed
+                 : Fixed fatal error when trying to translate a node with
+                  accordion paragraph type
+* Issue [#3059043](https://www.drupal.org/node/3059043):
+                  Fixed paragraphs module to have it work with field group version 3
+* Issue [#3065344](https://www.drupal.org/node/3065344)
+                  by
+                  m.alhawwari
+                 : Fixed issue of swagger-ui package should be moved
+                  from vendor to libraries
+* Issue [#3056662](https://www.drupal.org/node/3056662)
+                  by
+                  YousefAnbar
+                 : Fixed RTL style for the better login page
+* Issue [#3063703](https://www.drupal.org/node/3063703):
+                  Fixed issue of NOT respecting disabled JSON:API resources
+                  by JSON:API Extras
+* Issue [#3063701](https://www.drupal.org/node/3063701):
+                  Fixed issue of route openapi.docs does not exist.
+                  as it was changed to openapi.documentation in OpenAPI module
+* Issue [#3061159](https://www.drupal.org/node/3061159):
+                  Fixed Varbase API .info.yml for dev tracking
+
+--------------------------------------------------------------------------------
+
 # 8.6.11
 
 ### Highlighted important changes since Varbase 8.6.10:

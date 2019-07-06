@@ -26,11 +26,9 @@ projects[token][type] = module
 projects[token][version] = 1.5
 
 projects[page_manager][type] = module
-projects[page_manager][version] = 4.0-beta3
+projects[page_manager][version] = 4.0-beta4
 ;; Issue #2665328: Variants take entity label not the variant title
 projects[page_manager][patch][] = https://www.drupal.org/files/issues/2018-12-12/2665328-variants-take-entity-label-87.patch
-;; Issue #3033057: Page Manager currently not working with CTools 3.1
-projects[page_manager][patch][] = https://www.drupal.org/files/issues/2019-02-23/3033057-13.patch
 
 projects[panels][type] = module
 projects[panels][version] = 4.4
@@ -50,9 +48,7 @@ projects[views_bootstrap][type] = module
 projects[views_bootstrap][version] = 3.1
 
 projects[field_group][type] = module
-projects[field_group][version] = 3.0-beta1
-;; Issue #2921228: Accordion does not work
-projects[field_group][patch][] = https://www.drupal.org/files/issues/field_group_accordion-2921228-3.patch
+projects[field_group][version] = 3.0-rc1
 
 projects[smart_trim][type] = module
 projects[smart_trim][version] = 1.1
@@ -82,27 +78,21 @@ projects[embed][type] = module
 projects[embed][version] = 1.0
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-rc2
+projects[entity][version] = 1.0-rc3
 
 projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-beta3
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.1
-;; Issue #2865928: The View widget should filter based on field settings.
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch
 ;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2877751-27-8.x-2.x.patch
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2019-07-04/2877751-40.patch
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 2.0-alpha4
 
 projects[entity_embed][type] = module
-projects[entity_embed][version] = 1.0-beta3
-;; Issue #2832504: Send the CKEditor instance ID to the embed.preview route.
-projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2832504-2.patch
-;; Issue #2511404: Image entities/fields embedded using Entity Embed cannot be linked in CKEditor.
-projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2018-04-23/25114040-47.patch
+projects[entity_embed][version] = 1.0
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-rc1
@@ -134,13 +124,13 @@ projects[ace_editor][type] = module
 projects[ace_editor][version] = 1.1
 
 projects[entityqueue][type] = module
-projects[entityqueue][version] = 1.0-beta2
+projects[entityqueue][version] = 1.0-beta5
 
 projects[entityqueue_form_widget][type] = module
-projects[entityqueue_form_widget][version] = 1.0-beta3
+projects[entityqueue_form_widget][version] = 1.0-rc1
 
 projects[imagemagick][type] = module
-projects[imagemagick][version] = 2.4
+projects[imagemagick][version] = 2.5
 
 projects[imageapi_optimize][type] = module
 projects[imageapi_optimize][version] = 2.0-alpha4
@@ -255,9 +245,9 @@ projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta1
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.6
+projects[link_attributes][version] = 1.8
 
-projects[paragraphs[type] = module
+projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.8
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
@@ -271,7 +261,7 @@ projects[paragraphs_features][type] = module
 projects[paragraphs_features][version] = 1.4
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
-projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta1
+projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta2
 
 projects[color_field][type] = module
 projects[color_field][version] = 2.0
@@ -292,7 +282,7 @@ projects[charts][type] = module
 projects[charts][version] = 3.0-beta3
 
 projects[google_analytics_reports][type] = module
-projects[google_analytics_reports][version] = 3.0-beta2
+projects[google_analytics_reports][version] = 3.0-beta3
 
 projects[login_destination][type] = module
 projects[login_destination][version] = 1.0-alpha2
@@ -321,7 +311,7 @@ projects[social_auth_linkedin][type] = module
 projects[social_auth_linkedin][version] = 2.0-beta3
 
 projects[ckeditor_media_embed][type] = module
-projects[ckeditor_media_embed][version] = 1.3
+projects[ckeditor_media_embed][version] = 1.6
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
 
@@ -332,7 +322,7 @@ projects[pathauto][type] = module
 projects[pathauto][version] = 1.4
 
 projects[redirect][type] = module
-projects[redirect][version] = 1.3
+projects[redirect][version] = 1.4
 
 projects[metatag][type] = module
 projects[metatag][version] = 1.8
@@ -341,7 +331,7 @@ projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.3
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 3.1
+projects[simple_sitemap][version] = 3.2
 
 projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.4 
@@ -356,12 +346,10 @@ projects[username_enumeration_prevention][type] = module
 projects[username_enumeration_prevention][version] = 1.0-beta2
 
 projects[password_policy][type] = module
-projects[password_policy][version] = 3.0-alpha4
-;; Issue #3032549: Fix Password policy module issue with saving constraint
-projects[password_policy][patch][] = https://www.drupal.org/files/issues/2019-04-28/3032549-18.patch
+projects[password_policy][version] = 3.0-alpha5
 
 projects[seckit][type] = module
-projects[seckit][version] = 1.1
+projects[seckit][version] = 1.2
 
 projects[security_review][type] = module
 projects[security_review][version] = 1.x-dev
@@ -437,7 +425,7 @@ projects[checklistapi][version] = 1.10
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.19
+projects[bootstrap][version] = 3.20
 
 projects[bootstrap_barrio][type] = theme
 projects[bootstrap_barrio][version] = 4.22
@@ -459,68 +447,66 @@ projects[vmi][type] = module
 projects[vmi][version] = 2.2
 
 projects[total_control][type] = module
-projects[total_control][version] = 2.0-alpha4
-;; Issue #2935351: Fixed the issue when Enabled with multilingual of Translatable Markup for Invalid Argument Exception: $string (Array) must be a string.
-projects[total_control][patch][] = https://www.drupal.org/files/issues/2935351-2.patch
+projects[total_control][version] = 2.0-beta2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed modules.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 6.x-dev
+projects[varbase_core][version] = 6.18
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 6.x-dev
+projects[varbase_media][version] = 6.13
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 6.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 6.7
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 6.x-dev
+projects[varbase_editor][version] = 3.3
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 6.x-dev
+projects[varbase_landing][version] = 6.2
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.2
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.4
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 6.x-dev
+projects[varbase_heroslider_media][version] = 6.7
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 6.x-dev
+projects[varbase_carousels][version] = 6.2
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.5
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.4
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 6.x-dev
+projects[varbase_blog][version] = 6.2
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.2
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.0-alpha1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.0-rc3
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.6
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
