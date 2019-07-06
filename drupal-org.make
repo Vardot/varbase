@@ -72,7 +72,7 @@ projects[image_resize_filter][type] = module
 projects[image_resize_filter][version] = 1.0-beta1
 
 projects[views_infinite_scroll][type] = module
-projects[views_infinite_scroll][version] = 1.5
+projects[views_infinite_scroll][version] = 1.6
 
 projects[embed][type] = module
 projects[embed][version] = 1.0
@@ -84,7 +84,7 @@ projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-beta3
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 2.1
+projects[entity_browser][version] = 2.2
 ;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
 projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2019-07-04/2877751-40.patch
 
