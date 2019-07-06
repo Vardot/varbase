@@ -463,7 +463,7 @@ projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 6.7
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 3.3
+projects[varbase_editor][version] = 6.3
 
 projects[varbase_landing][type] = module
 projects[varbase_landing][version] = 6.2
