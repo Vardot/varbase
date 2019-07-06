@@ -40,9 +40,9 @@ class AssemblerForm extends FormBase {
    *
    * @param string $root
    *   The Drupal application root.
-   * @param InfoParserInterface $info_parser
+   * @param \Drupal\Core\Extension\InfoParserInterface $info_parser
    *   The info parser service.
-   * @param TranslationInterface $translator
+   * @param \Drupal\Core\StringTranslation\TranslationInterface $translator
    *   The string translation service.
    * @param \Drupal\varbase\Form\FormHelper $form_helper
    *   The form helper.
@@ -144,10 +144,10 @@ class AssemblerForm extends FormBase {
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
               call_user_func_array($extra_feature_key . "_build_formbit",
-                array(&$form['extra_features'][$extra_feature_key . '_config'],
+                [&$form['extra_features'][$extra_feature_key . '_config'],
                   &$form_state,
                   &$install_state,
-                )
+                ]
               );
             }
           }
@@ -212,10 +212,10 @@ class AssemblerForm extends FormBase {
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
               call_user_func_array($demo_content_key . "_build_formbit",
-                array(&$form['demo_content'][$demo_content_key . '_config'],
+                [&$form['demo_content'][$demo_content_key . '_config'],
                   &$form_state,
                   &$install_state,
-                )
+                ]
               );
             }
           }
@@ -261,7 +261,7 @@ class AssemblerForm extends FormBase {
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
-            $extra_features_editable_configs = call_user_func_array($extra_feature_key . "_get_editable_config_names", array());
+            $extra_features_editable_configs = call_user_func_array($extra_feature_key . "_get_editable_config_names", []);
 
             if (count($extra_features_editable_configs)) {
               foreach ($extra_features_editable_configs as $extra_features_editable_config_key => $extra_features_editable_config) {
@@ -299,7 +299,7 @@ class AssemblerForm extends FormBase {
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
-            $demo_content_editable_configs = call_user_func_array($demo_content_key . "_get_editable_config_names", array());
+            $demo_content_editable_configs = call_user_func_array($demo_content_key . "_get_editable_config_names", []);
 
             if (count($demo_content_editable_configs)) {
               foreach ($demo_content_editable_configs as $demo_content_editable_config_key => $demo_content_editable_config) {

@@ -31,7 +31,7 @@ function varbase_form_install_configure_form_alter(&$form, FormStateInterface $f
   $form['admin_account']['account']['name']['#default_value'] = 'webmaster';
   $form['admin_account']['account']['name']['#attributes']['disabled'] = TRUE;
   $form['admin_account']['account']['mail']['#default_value'] = 'webmaster@vardot.com';
-  $form['admin_account']['account']['mail']['#description'] = t('In most case, and for <a target="_blank" href="@link">Vardot</a> specific use, we recommend this to always be <em>webmaster@vardot.com</em>.', array('@link' => 'http://vardot.com'));
+  $form['admin_account']['account']['mail']['#description'] = t('In most case, and for <a target="_blank" href="@link">Vardot</a> specific use, we recommend this to always be <em>webmaster@vardot.com</em>.', ['@link' => 'http://vardot.com']);
 }
 
 /**
@@ -42,41 +42,41 @@ function varbase_install_tasks(&$install_state) {
   // Multilingual configuration task.
   $needs_configure_multilingual = (isset($install_state['varbase']['enable_multilingual']) && $install_state['varbase']['enable_multilingual'] == TRUE);
 
-  return array(
-    'varbase_multilingual_configuration_form' => array(
+  return [
+    'varbase_multilingual_configuration_form' => [
       'display_name' => t('Multilingual configuration'),
       'display' => TRUE,
       'type' => 'form',
       'function' => ConfigureMultilingualForm::class,
-    ),
-    'varbase_configure_multilingual' => array(
+    ],
+    'varbase_configure_multilingual' => [
       'display_name' => t('Configure multilingual'),
       'display' => $needs_configure_multilingual,
       'type' => 'batch',
-    ),
-    'varbase_extra_components' => array(
+    ],
+    'varbase_extra_components' => [
       'display_name' => t('Extra components'),
       'display' => TRUE,
       'type' => 'form',
       'function' => AssemblerForm::class,
-    ),
-    'varbase_assemble_extra_components' => array(
+    ],
+    'varbase_assemble_extra_components' => [
       'display_name' => t('Assemble extra components'),
       'display' => TRUE,
       'type' => 'batch',
-    ),
-    'varbase_development_tools' => array(
+    ],
+    'varbase_development_tools' => [
       'display_name' => t('Development tools'),
       'display' => TRUE,
       'type' => 'form',
       'function' => DevelopmentToolsAssemblerForm::class,
-    ),
-    'varbase_assemble_development_tools' => array(
+    ],
+    'varbase_assemble_development_tools' => [
       'display_name' => t('Assemble development tools'),
       'display' => TRUE,
       'type' => 'batch',
-    ),
-  );
+    ],
+  ];
 }
 
 /**
@@ -221,15 +221,14 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   }
 
-
   // Uninstall list of not needed modules after the config had been loaded.
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
   if (count($uninstall_components) > 0) {
-    foreach ($uninstall_components as $uninstall_component)
-    $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
+    foreach ($uninstall_components as $uninstall_component) {
+      $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
+    }
   }
-
 
   return $batch;
 }
@@ -316,7 +315,7 @@ function varbase_assemble_development_tools(array &$install_state) {
  *   The batch job definition.
  */
 function varbase_configure_multilingual(array &$install_state) {
-  $batch = array();
+  $batch = [];
 
   // If the multiligual config checkbox were checked.
   if (isset($install_state['varbase']['enable_multilingual'])
@@ -374,7 +373,7 @@ function varbase_assemble_extra_component_then_install($extra_component) {
  */
 function varbase_save_editable_config_values($extra_component_machine_name, $formbit_file_name, $editable_config_values) {
   include_once $formbit_file_name;
-  call_user_func_array($extra_component_machine_name . "_submit_formbit", array($editable_config_values));
+  call_user_func_array($extra_component_machine_name . "_submit_formbit", [$editable_config_values]);
 }
 
 /**
@@ -417,7 +416,9 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
 }
 
 /**
- * Batch function to Uninstall list of not needed modules after the config had been loaded.
+ * Batch function to Uninstall list of not needed modules.
+ *
+ * After the config had been loaded.
  *
  * @param string|array $uninstall_component
  *   Name of the extra component.

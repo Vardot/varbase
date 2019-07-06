@@ -64,7 +64,7 @@ function varbase_auth_submit_formbit(array $editable_config_values) {
   $auth_modules = $configFactory->get('social_auth_type');
 
   if (isset($auth_modules) && is_array($auth_modules) && count($auth_modules) > 0) {
-    
+
     $modules_to_install = [];
     foreach ($auth_modules as $auth_module_index => $auth_module) {
       if (is_string($auth_module)) {

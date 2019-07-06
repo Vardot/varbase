@@ -28,7 +28,7 @@ function varbase_development_get_editable_config_names() {
  *
  * @param array $formbit
  *   FormBit for the form.
- * @param FormStateInterface $form_state
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
  *   Form status.
  * @param array $install_state
  *   Install state.

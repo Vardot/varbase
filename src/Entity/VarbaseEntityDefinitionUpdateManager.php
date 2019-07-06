@@ -14,7 +14,8 @@ use Drupal\Core\Field\FieldStorageDefinitionListenerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Varbase Entity Definition Update Manager
+ * Varbase Entity Definition Update Manager.
+ *
  * Customized class from the Devel Entity Updates module
  * Development version of the entity definition update manager.
  */
@@ -184,7 +185,7 @@ final class VarbaseEntityDefinitionUpdateManager implements ContainerInjectionIn
    *   The operation to perform, possible values are:
    *   - EntityDefinitionUpdateManagerInterface::DEFINITION_CREATED
    *   - EntityDefinitionUpdateManagerInterface::DEFINITION_UPDATED
-   *   - EntityDefinitionUpdateManagerInterface::DEFINITION_DELETED
+   *   - EntityDefinitionUpdateManagerInterface::DEFINITION_DELETED.
    * @param \Drupal\Core\Field\FieldStorageDefinitionInterface|null $storage_definition
    *   (optional) The new field storage definition. Defaults to none.
    * @param \Drupal\Core\Field\FieldStorageDefinitionInterface|null $original_storage_definition

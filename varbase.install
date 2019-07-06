@@ -5,13 +5,11 @@
  * Install, update and uninstall functions for the Varbase installation profile.
  */
 
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Yaml\Yaml;
-use Drupal\Core\Config;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Config\FileStorage;
-use Drupal\user\Entity\User;
-use Drupal\user\RoleInterface;
 use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
 
 /**
@@ -42,7 +40,6 @@ function varbase_install() {
     }
   }
   // ---------------------------------------------------------------------------
-
   // Set front page to "node".
   \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
 
@@ -56,7 +53,7 @@ function varbase_install() {
   if (isset($GLOBALS['homepage_with_varbase_tour'])
     && $GLOBALS['homepage_with_varbase_tour'] == TRUE) {
     $homepage_with_tour = "/?tour";
-    $response = new Symfony\Component\HttpFoundation\RedirectResponse($homepage_with_tour);
+    $response = new RedirectResponse($homepage_with_tour);
     $response->send();
     exit;
 

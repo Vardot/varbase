@@ -40,9 +40,9 @@ class ConfigureMultilingualForm extends FormBase {
    *
    * @param string $root
    *   The Drupal application root.
-   * @param InfoParserInterface $info_parser
+   * @param \Drupal\Core\Extension\InfoParserInterface $info_parser
    *   The info parser service.
-   * @param TranslationInterface $translator
+   * @param \Drupal\Core\StringTranslation\TranslationInterface $translator
    *   The string translation service.
    * @param \Drupal\varbase\Form\FormHelper $form_helper
    *   The form helper.
@@ -79,8 +79,8 @@ class ConfigureMultilingualForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
 
     $standard_languages = LanguageManager::getStandardLanguageList();
-    $select_options = array();
-    $browser_options = array();
+    $select_options = [];
+    $browser_options = [];
 
     foreach ($standard_languages as $langcode => $language_names) {
       $select_options[$langcode] = $language_names[0];
@@ -103,37 +103,37 @@ class ConfigureMultilingualForm extends FormBase {
     }
 
     $form['#title'] = $this->t('Multilingual configuration');
-    $form['multilingual_configuration_introduction'] = array(
+    $form['multilingual_configuration_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',
       '#markup' => '<b>' . $default_language_name . '</b> ' . $this->t("is the default language."),
       '#suffix' => '</p>',
-    );
+    ];
 
-    $form['enable_multilingual'] = array(
+    $form['enable_multilingual'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable multiple languages for this site'),
       '#description' => $this->t('This will enable the necessary modules for a multilingual website. These include: Language, Interface Translation, Content Translation, Configuration Translation, and its recommended configuration.'),
       '#default_value' => FALSE,
-    );
+    ];
 
-    $form['multilingual_languages'] = array(
+    $form['multilingual_languages'] = [
       '#type' => 'select',
       '#title' => $this->t("Please select your site's other language(s)"),
       '#description' => $this->t('You can skip this and add languages later.'),
       '#options' => $select_options,
       '#multiple' => TRUE,
       '#size' => 8,
-      '#attributes' => array('style' => 'width:100%;'),
-      '#states' => array(
-        'visible' => array(
-          ':input[name="enable_multilingual"]' => array('checked' => TRUE),
-        ),
-        'invisible' => array(
-          ':input[name="enable_multilingual"]' => array('checked' => FALSE),
-        ),
-      ),
-    );
+      '#attributes' => ['style' => 'width:100%;'],
+      '#states' => [
+        'visible' => [
+          ':input[name="enable_multilingual"]' => ['checked' => TRUE],
+        ],
+        'invisible' => [
+          ':input[name="enable_multilingual"]' => ['checked' => FALSE],
+        ],
+      ],
+    ];
 
     $form['actions'] = [
       'continue' => [

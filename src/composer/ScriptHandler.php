@@ -15,10 +15,10 @@ class ScriptHandler {
    * Get the Drupal root directory.
    *
    * @param string $project_root
-   *    Project root.
+   *   Project root.
    *
    * @return string
-   *    Drupal root path.
+   *   Drupal root path.
    */
   protected static function getDrupalRoot($project_root) {
     return $project_root . '/docroot';
@@ -27,7 +27,7 @@ class ScriptHandler {
   /**
    * Create required files.
    *
-   * @param Event $event
+   * @param \Composer\EventDispatcher\Event $event
    *   Event of creeate required files.
    */
   public static function createRequiredFiles(Event $event) {
@@ -112,7 +112,8 @@ class ScriptHandler {
 
     if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
       self::removeWindowsGitDirectories($drupal_root);
-    } else {
+    }
+    else {
       exec("find " . $drupal_root . " -name '.git' | xargs rm -rf");
     }
   }
@@ -157,25 +158,28 @@ class ScriptHandler {
   }
 
   /**
-   * Find and return the path to .git repository in root folder
+   * Find and return the path to .git repository in root folder.
+   *
    * @param string $root
    */
   private static function removeWindowsGitDirectories($root) {
     foreach (scandir($root) as $dirOrFile) {
-      if ('.' === $dirOrFile || '..' === $dirOrFile ) {
+      if ('.' === $dirOrFile || '..' === $dirOrFile) {
         continue;
       }
 
-      if ('.git' === $dirOrFile){
-        self::rmdirWindows($root.'/.git');
-      } elseif(!is_file($root.'/'.$dirOrFile)) {
-        self::removeWindowsGitDirectories($root.'/'.$dirOrFile);
+      if ('.git' === $dirOrFile) {
+        self::rmdirWindows($root . '/.git');
+      }
+      elseif (!is_file($root . '/' . $dirOrFile)) {
+        self::removeWindowsGitDirectories($root . '/' . $dirOrFile);
       }
     }
   }
 
   /**
-   * Remove a directory on Windows
+   * Remove a directory on Windows.
+   *
    * @param string $dirname
    */
   private static function rmdirWindows($dirname) {
@@ -185,7 +189,7 @@ class ScriptHandler {
     }
 
     $dir = dir($dirname);
-    while (false !== $entry = $dir->read()) {
+    while (FALSE !== $entry = $dir->read()) {
       if ($entry === '.' || $entry === '..') {
         continue;
       }
@@ -195,4 +199,5 @@ class ScriptHandler {
     $dir->close();
     rmdir($dirname);
   }
+
 }

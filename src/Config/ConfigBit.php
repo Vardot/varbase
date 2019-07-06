@@ -96,7 +96,7 @@ class ConfigBit {
       }
     }
     else {
-      return array();
+      return [];
     }
   }
 

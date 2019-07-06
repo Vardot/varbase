@@ -40,9 +40,9 @@ class DevelopmentToolsAssemblerForm extends FormBase {
    *
    * @param string $root
    *   The Drupal application root.
-   * @param InfoParserInterface $info_parser
+   * @param \Drupal\Core\Extension\InfoParserInterface $info_parser
    *   The info parser service.
-   * @param TranslationInterface $translator
+   * @param \Drupal\Core\StringTranslation\TranslationInterface $translator
    *   The string translation service.
    * @param \Drupal\varbase\Form\FormHelper $form_helper
    *   The form helper.
@@ -145,10 +145,10 @@ class DevelopmentToolsAssemblerForm extends FormBase {
               include_once $formbit_file_name;
               // Add configuration form element in the formbit position.
               call_user_func_array($development_tool_key . "_build_formbit",
-                array(&$form['development_tools'][$development_tool_key . '_config'],
+                [&$form['development_tools'][$development_tool_key . '_config'],
                   &$form_state,
                   &$install_state,
-                )
+                ]
               );
             }
           }
@@ -192,7 +192,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
-            $development_tools_editable_configs = call_user_func_array($development_tool_key . "_get_editable_config_names", array());
+            $development_tools_editable_configs = call_user_func_array($development_tool_key . "_get_editable_config_names", []);
 
             if (count($development_tools_editable_configs)) {
               foreach ($development_tools_editable_configs as $development_tools_editable_config_key => $development_tools_editable_config) {
