@@ -86,7 +86,7 @@ projects[entity_clone][version] = 1.0-beta3
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.2
 ;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2877751-27-8.x-2.x.patch
+projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2019-07-04/2877751-40.patch
 
 projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 2.0-alpha4
@@ -108,8 +108,8 @@ projects[crop][version] = 2.0-rc1
 
 projects[focal_point][type] = module
 projects[focal_point][version] = 1.0
-;; Issue #2916562: Broken image preview
-projects[focal_point][patch][] = https://www.drupal.org/files/issues/2019-03-30/2916562-39.patch
+;; Issue #3001262: Integrate focal point with media_library, which is now in core
+projects[focal_point][patch][] = https://www.drupal.org/files/issues/2019-05-02/focal_point-integrate_with_media_library-3001262-4-b.patch
 
 projects[pathologic][type] = module
 projects[pathologic][version] = 1.0-alpha1
@@ -142,6 +142,21 @@ projects[persistent_login][patch][] = https://www.drupal.org/files/issues/persis
 
 projects[userprotect][type] = module
 projects[userprotect][version] = 1.0
+
+projects[events_log_track][type] = module
+projects[events_log_track][version] = 1.1
+;; Issue #2934036: Events Log Track breaks Entity Browser
+projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2018-04-19/2934036-check_empty_submit-5.patch
+;; Issue #2930817: Entities with title longer than 50 characters
+projects[events_log_track][patch][] =https://www.drupal.org/files/issues/increase-character-length-2930817-2.patch
+;; Issue #2974170: Event logs for change in workflows
+projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2018-06-26/events_log_track-add-workflows-2974170-7.patch
+;; Issue #2959769: Add handlers for file and media entities
+projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2018-06-26/events-log-track_add-file-media-2959769-9.patch
+;; Issue #3027463: Skip password logging during failed authentication attempt
+projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2019-01-22/event-log-track-auth-3027463-2.patch
+;; Issue #3060838: Fix fatal error when we request password with non-existing users/emails  on the Events Log Track User Authentication
+projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2019-06-11/3060838-4.patch
 
 projects[config_perms][type] = module
 projects[config_perms][version] = 2.0-beta2
@@ -244,10 +259,12 @@ projects[autocomplete_deluxe][version] = 1.0-beta1
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.8
 
-projects[paragraphs[type] = module
+projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.8
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
+;; Issue #2907094: Make paragraphs module working with field_group version 3.x with support for the field_layout module
+projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2907094_7_field_group_support.patch
 
 projects[paragraphs_previewer][type] = module
 projects[paragraphs_previewer][version] = 1.4
@@ -376,7 +393,33 @@ projects[slick_views][type] = module
 projects[slick_views][version] = 2.0
 
 projects[slick_media][type] = module
-projects[slick_media][version] = 2.0-alpha3 
+projects[slick_media][version] = 2.0-alpha3
+
+projects[consumers][type] = module
+projects[consumers][version] = 1.9
+
+projects[openapi][type] = module
+projects[openapi][version] = 1.0-rc3
+;; Issue #2982692: Fix issue of NOT respecting disabled JSON:API resources by JSON:API Extras
+projects[openapi][patch][] = https://www.drupal.org/files/issues/2019-06-24/2982692-11.patch
+
+projects[openapi_ui_redoc][type] = module
+projects[openapi_ui_redoc][version] = 1.0-rc2
+
+projects[openapi_ui_swagger][type] = module
+projects[openapi_ui_swagger][version] = 1.0-rc3
+
+projects[simple_oauth][type] = module
+projects[simple_oauth][version] = 3.16
+
+projects[schema_metatag][type] = module
+projects[schema_metatag][version] = 1.3
+
+projects[restui][type] = module
+projects[restui][version] = 1.17
+
+projects[jsonapi_extras][type] = module
+projects[jsonapi_extras][version] = 3.8
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
