@@ -399,7 +399,7 @@ projects[consumers][type] = module
 projects[consumers][version] = 1.9
 
 projects[openapi][type] = module
-projects[openapi][version] = 1.0-rc3
+projects[openapi][version] = 1.0-beta4
 ;; Issue #2982692: Fix issue of NOT respecting disabled JSON:API resources by JSON:API Extras
 projects[openapi][patch][] = https://www.drupal.org/files/issues/2019-06-24/2982692-11.patch
 
