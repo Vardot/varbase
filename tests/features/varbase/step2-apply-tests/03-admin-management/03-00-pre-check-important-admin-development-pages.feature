@@ -1,4 +1,4 @@
-Feature: Pre-check important administrator and development pages.
+Feature: Pre-check important administrator and development pages
 As a site admin user
 I want to be able to make sure that all admin and development tools are working
 So that I can use them after the install or update.
@@ -7,25 +7,25 @@ So that I can use them after the install or update.
     Given I am a logged in user with the "webmaster" user
 
   @check @local @development @staging @production
-  Scenario: Check the content page.
+  Scenario: Check the content page
      When I go to "/admin/content"
       And I wait
      Then I should see "Content"
 
    @check @local @development @staging @production
-   Scenario: Check Files admin page.
+   Scenario: Check Files admin page
       When I go to "/admin/content/files"
        And I wait
       Then I should see "Files"
 
    @check @local @development @staging @production
-   Scenario: Check Media Grid admin page.
+   Scenario: Check Media Grid admin page
       When I go to "/admin/content/media"
        And I wait
       Then I should see "Media"
 
    @check @local @development @staging @production
-   Scenario: Check Media Table admin page.
+   Scenario: Check Media Table admin page
       When I go to "/admin/content/media-table"
        And I wait
       Then I should see "Media"
@@ -39,7 +39,7 @@ So that I can use them after the install or update.
        And I should see "Operations"
 
   @check @local @development @staging @production
-  Scenario: Check the structure page.
+  Scenario: Check the structure page
      When I go to "/admin/structure"
       And I wait
      Then I should see "Block layout"
@@ -57,7 +57,7 @@ So that I can use them after the install or update.
       And I should see "Webforms"
 
   @check @local @development @staging @production
-  Scenario: Check the structure page.
+  Scenario: Check the structure page
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
@@ -73,7 +73,7 @@ So that I can use them after the install or update.
       And I should see "Total Control dashboard"
 
   @check @local @development @staging @production
-  Scenario: Check the views page.
+  Scenario: Check the views page
      When I go to "/admin/structure/views"
       And I wait
      Then I should see "Views"
@@ -81,7 +81,7 @@ So that I can use them after the install or update.
       And I should see "Media Hero Slider"
 
   @check @local @development @staging @production
-  Scenario: Check the Appearance page.
+  Scenario: Check the Appearance page
      When I go to "/admin/appearance"
       And I wait
      Then I should see "Appearance"
@@ -93,7 +93,7 @@ So that I can use them after the install or update.
       And I should see "Vartheme Admin"
 
    @check @local @development @staging @production
-   Scenario: Check active type of media types.
+   Scenario: Check active type of media types
       When I go to "/media/add"
        And I wait
       Then I should see "File"
@@ -105,7 +105,7 @@ So that I can use them after the install or update.
        And I should see "Tweet"
 
    @check @local @development @staging @production
-   Scenario: Check Varbase update instructions page.
+   Scenario: Check Varbase update instructions page
       When I go to "/admin/config/development/update-helper"
        And I wait
       Then I should see "Varbase update instructions"

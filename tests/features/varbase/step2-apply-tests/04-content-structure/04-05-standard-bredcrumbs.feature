@@ -4,7 +4,7 @@ I want to be able to see the back path
 So that I can see path I followed to locate the current page usually near the top of the page
 
   @javascript @local @development @staging @production
-  Scenario: Add the Test Basic page root page to the main menu.
+  Scenario: Add the Test Basic page root page to the main menu
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/node/add/page"
       And I wait
@@ -20,7 +20,7 @@ So that I can see path I followed to locate the current page usually near the to
       And I should see "Test Basic page root body"
 
   @javascript @local @development @staging @production
-  Scenario: Add the Test Basic page sub 1, then check the breadcrumb.
+  Scenario: Add the Test Basic page sub 1, then check the breadcrumb
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/node/add/page"
       And I wait

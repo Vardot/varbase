@@ -1,7 +1,7 @@
-Feature: Delete Arabic language from the system.
+Feature: Delete Arabic language from the system
 
   @javascript @cleanup @arabic @local
-  Scenario: Delete Arabic language from the system.
+  Scenario: Delete Arabic language from the system
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/regional/language/delete/ar"
       And I wait

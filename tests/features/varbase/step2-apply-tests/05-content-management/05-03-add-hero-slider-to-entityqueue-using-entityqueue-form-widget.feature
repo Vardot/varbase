@@ -1,9 +1,9 @@
-Feature: Content Management - Add hero slider to entityqueue using entityqueue form widget.
-As a logged in user with a permission to mange entityqueues
-I want to be able to add and remove entities to any allowed entityqueue.
+Feature: Content Management - Add hero slider to entity queue using entity queue form widget
+As a logged in user with a permission to mange entity queues
+I want to be able to add and remove entities to any allowed entity queue.
 
 @local @development @staging @production
-  Scenario: Upload the "Flag Earth" file.
+  Scenario: Upload the Flag Earth file
     Given I am a logged in user with the "test_site_admin" user
      When I go to "media/add/image"
       And I wait
@@ -22,7 +22,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Check that we can open the hero slider media browser.
+  Scenario: Check that we can open the hero slider media browser
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
@@ -32,7 +32,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
      Then the image media browser should be open
 
   @javascript @local @development @staging @production
-  Scenario: Add a "Test hero slider number 1" to the heroslider entity queue.
+  Scenario: Add a Test hero slider number 1 to the heroslider entity queue.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
@@ -64,7 +64,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
      Then I should see "Test hero slider #1"
 
   @javascript @local @development @staging @production
-  Scenario: Add a "Test hero slider number 2" to the heroslider entity queue.
+  Scenario: Add a Test hero slider number 2 to the heroslider entity queue
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
@@ -96,7 +96,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
      Then I should see "Test hero slider #2"
 
   @javascript @local @development @staging @production
-  Scenario: Check if the "Hero slider" added to the "varbase_heroslider_media" entityqueue.
+  Scenario: Check if the Hero slider added to the varbase hero slider media entity queue
     Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
@@ -104,7 +104,7 @@ I want to be able to add and remove entities to any allowed entityqueue.
       And I should see "Test hero slider #2" in the "#edit-items-1-target-id" element
 
   @javascript @local @development @staging @production
-  Scenario: Remove a "Hero slider" from the "varbase_heroslider_media" entityqueue
+  Scenario: Remove a Hero slider from the varbase hero slider media entity queue
     Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/content"
       And I wait

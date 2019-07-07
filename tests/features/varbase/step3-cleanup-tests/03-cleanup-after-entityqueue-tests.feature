@@ -1,7 +1,7 @@
-Feature: Cleanup after [entityqueue] module tests.
+Feature: Cleanup after [entityqueue] module tests
 
 @javascript @cleanup @local @development
-Scenario: Delete Entity Queue "Test Queue".
+Scenario: Delete Entity Queue Test Queue
   Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/entityqueue/test_queue/delete"
     And I wait
@@ -12,7 +12,7 @@ Scenario: Delete Entity Queue "Test Queue".
 
 
 @javascript @cleanup @local @development
-Scenario: Delete "Test Content" content type item
+Scenario: Delete Test Content content type item
   Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/types/manage/test_content/delete"
     And I wait

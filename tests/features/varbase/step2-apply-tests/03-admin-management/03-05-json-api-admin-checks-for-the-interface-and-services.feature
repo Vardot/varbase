@@ -1,4 +1,4 @@
-Feature: Check JSON:API admin interface and services and Varbase API settings.
+Feature: Check JSON:API admin interface and services and Varbase API settings
 As a site admin user
 I want to be able to check the JSON:API available interface options
 So that I can use them to enable or disable API service for Varbase APIs.
@@ -21,7 +21,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And I should see "Allowed operations"
 
   @check @local @development @staging @production
-  Scenario: Check JSON:API Extras configurations.
+  Scenario: Check JSON:API Extras configurations
      When I go to "/admin/config/services/jsonapi/extras"
       And I wait
      Then I should see "JSON:API Extras"
@@ -35,7 +35,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And I should see "The following table shows the list of JSON:API resource types available."
 
   @javascript @check @local @development @staging @production
-  Scenario: Check Varbase API settings and Generate keys.
+  Scenario: Check Varbase API settings and Generate keys
      When I go to "/admin/config/system/varbase/api"
       And I wait
      Then I should see "Varbase API settings"

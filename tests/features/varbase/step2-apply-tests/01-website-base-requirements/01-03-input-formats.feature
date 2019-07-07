@@ -4,7 +4,7 @@ I want to be able to switch between input formats
 So that can use different type of rich text editors.
 
   @javascript @local @development @staging @production
-  Scenario: Check if Site Admin user can change the text format for the body of Basic page.
+  Scenario: Check if Site Admin user can change the text format for the body of Basic page
     Given I am a logged in user with the "test_site_admin"
      When I go to "/node/add/page"
       And I wait
@@ -26,7 +26,7 @@ So that can use different type of rich text editors.
       And I should not see the "#cke_edit-body-0-value" element in the "field body"
 
   @javascript @local @development @staging @production
-  Scenario: Check if Super Admin user can change the text format for the body of Basic page.
+  Scenario: Check if Super Admin user can change the text format for the body of Basic page
     Given I am a logged in user with the "test_super_admin"
      When I go to "/node/add/page"
       And I wait

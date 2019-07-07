@@ -1,4 +1,4 @@
-Feature: Create default testing users.
+Feature: Create default testing users
 
 # test_authenticated: { email: 'authenticated.test@vardot.com', password: 'dD.123123ddd' }
 # test_editor: { email: 'editor.test@vardot.com', password: 'dD.123123ddd' }
@@ -11,7 +11,7 @@ Feature: Create default testing users.
     Given I am a logged in user with the "webmaster" user
 
   @init @tools @local @development @staging
-  Scenario: Create the test_authenticated user.
+  Scenario: Create the test_authenticated user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
@@ -24,7 +24,7 @@ Feature: Create default testing users.
      Then I should not see "The name test_authenticated is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_editor user.
+  Scenario: Create the test_editor user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
@@ -38,7 +38,7 @@ Feature: Create default testing users.
      Then I should not see "The name test_editor is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_content_admin user.
+  Scenario: Create the test_content_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
@@ -52,7 +52,7 @@ Feature: Create default testing users.
      Then I should not see "The name test_content_admin is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_seo_admin user.
+  Scenario: Create the test_seo_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
@@ -66,7 +66,7 @@ Feature: Create default testing users.
      Then I should not see "The name test_seo_admin is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_site_admin user.
+  Scenario: Create the test_site_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"
@@ -80,7 +80,7 @@ Feature: Create default testing users.
      Then I should not see "The name test_site_admin is already taken."
 
   @init @tools @local @development @staging
-  Scenario: Create the test_super_admin user.
+  Scenario: Create the test_super_admin user
      When I go to "/admin/people/create"
       And I wait
      Then I should see "Add user"

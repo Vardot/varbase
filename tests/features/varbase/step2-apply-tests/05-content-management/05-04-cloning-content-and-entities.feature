@@ -1,9 +1,9 @@
-Feature: Content Management - Cloning content and entities.
+Feature: Content Management - Cloning content and entities
 As a logged in user with a permission to mange entities
 I want to be able to clone an entity.
 
 @javascript @local @development
-  Scenario: Check if a user with a permission can clone a "landing page"
+  Scenario: Check if a user with a permission can clone a landing page
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait

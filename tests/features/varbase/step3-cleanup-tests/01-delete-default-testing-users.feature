@@ -1,4 +1,4 @@
-Feature: Delete default testing users.
+Feature: Delete default testing users
 
 # test_authenticated: { email: 'authenticated.test@vardot.com', password: 'dD.123123ddd' }
 # test_editor: { email: 'editor.test@vardot.com', password: 'dD.123123ddd' }
@@ -11,7 +11,7 @@ Feature: Delete default testing users.
     Given I am a logged in user with the "webmaster" user
 
   @javascript @cleanup @tools @local @development @staging
-  Scenario: Delete the test_authenticated user.
+  Scenario: Delete the test_authenticated user
      When I go to "/admin/people"
       And I wait
       And I fill in "test_authenticated" for "Name or email contains"
@@ -29,7 +29,7 @@ Feature: Delete default testing users.
      Then I should see "test_authenticated has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
-  Scenario: Delete the test_editor user.
+  Scenario: Delete the test_editor user
      When I go to "/admin/people"
       And I wait
       And I fill in "test_editor" for "Name or email contains"
@@ -48,7 +48,7 @@ Feature: Delete default testing users.
      Then I should see "test_editor has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
-  Scenario: Delete the test_content_admin user.
+  Scenario: Delete the test_content_admin user
      When I go to "/admin/people"
       And I fill in "test_content_admin" for "Name or email contains"
       And I press "Filter"
@@ -66,7 +66,7 @@ Feature: Delete default testing users.
      Then I should see "test_content_admin has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
-  Scenario: Delete the test_seo_admin user.
+  Scenario: Delete the test_seo_admin user
      When I go to "/admin/people"
       And I wait
       And I fill in "test_seo_admin" for "Name or email contains"
@@ -85,7 +85,7 @@ Feature: Delete default testing users.
      Then I should see "test_seo_admin has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
-  Scenario: Delete the test_site_admin user.
+  Scenario: Delete the test_site_admin user
      When I go to "/admin/people"
       And I wait
       And I fill in "test_site_admin" for "Name or email contains"
@@ -104,7 +104,7 @@ Feature: Delete default testing users.
      Then I should see "test_site_admin has been deleted."
 
   @javascript @cleanup @tools @local @development @staging
-  Scenario: Delete the test_super_admin user.
+  Scenario: Delete the test_super_admin user
      When I go to "/admin/people"
       And I wait
       And I fill in "test_super_admin" for "Name or email contains"

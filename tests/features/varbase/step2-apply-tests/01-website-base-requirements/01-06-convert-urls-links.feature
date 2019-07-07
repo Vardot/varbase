@@ -4,7 +4,7 @@ I want to add raw URLs and links in the rich text editor
 So that they will be converted to links and visitors can click on them.
 
   @javascript @local @development @staging @production
-  Scenario: Check if inserted raw URL will convert into a link using the "Rich editor" text format when we save a new Basic page.
+  Scenario: Check if inserted raw URL will convert into a link using the "Rich editor" text format when we save a new Basic page
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/node/add/page"
       And I wait

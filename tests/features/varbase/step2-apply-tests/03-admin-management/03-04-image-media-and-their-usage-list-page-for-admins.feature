@@ -7,14 +7,14 @@ So that I will be able to manage files, see where they have been used in content
     Given I am a logged in user with the "test_site_admin" user
 
   @javascript @local @development @staging @production
-  Scenario: Check if content admins can access the content files page.
+  Scenario: Check if content admins can access the content files page
      When I go to "admin/content/media-table"
       And I wait
      Then I should see "Add media"
       And I should not see "Access denied"
 
   @local @development @staging @production
-  Scenario: Check if we do have a file named "Flag Earth" , if not then upload the file dependently.
+  Scenario: Check if we do have a file named Flag Earth, if not then upload the file dependently
       When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
@@ -35,7 +35,7 @@ So that I will be able to manage files, see where they have been used in content
        And I should see the "Edit" in the "Flag Earth" row
 
   @javascript @local @development @staging @production
-  Scenario: Check if content admins can edit files.
+  Scenario: Check if content admins can edit files
      When I go to "admin/content/media-table"
       And I wait
      Then I should see "Add media"
@@ -53,7 +53,7 @@ So that I will be able to manage files, see where they have been used in content
      Then I should see "Image Flag Earth after edit has been updated."
 
   @javascript @local @development @staging @production
-  Scenario: Check if content admins can delete files.
+  Scenario: Check if content admins can delete files
      When I go to "admin/content/media-table"
       And I wait
      Then I should see "Add media"

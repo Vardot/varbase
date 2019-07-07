@@ -1,10 +1,10 @@
-Feature: Landing Pages - Add any paragraph types to the page.
+Feature: Landing Pages - Add any paragraph types to the page
 As a logged in user with a permission to mange Landing pages
 I want to be able to add any paragraph type to the page
 So that the "Landing page" will show up having paragrpahs of different types
 
  @local @development @staging @production
-  Scenario: Upload the "Embed Flag Earth" file.
+  Scenario: Upload the "Embed Flag Earth" file
      Given I am a logged in user with the "test_site_admin" user
       When I go to "media/add/image"
        And I wait
@@ -23,7 +23,7 @@ So that the "Landing page" will show up having paragrpahs of different types
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Check Varbase Bootstrap Paragraphs settings, and colours.
+  Scenario: Check Varbase Bootstrap Paragraphs settings
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/varbase/varbase-bootstrap-paragraphs"
       And I wait
@@ -33,7 +33,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "The configuration options have been saved."
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Drupal Block"
+  Scenario: Check if a user with a permission to manage Landing page content type can add paragraphs of type Drupal Block
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
@@ -54,7 +54,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Drupal Block has been created"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Equal)"
+  Scenario: Check if a user with a permission to manage Landing page content type can add paragraphs of type Columns Equal
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
@@ -72,7 +72,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Columns (Two Uneven)"
+  Scenario: Check if a user with a permission to manage Landing page content type can add paragraphs of type Columns Two Uneven
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
@@ -90,7 +90,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Modal"
+  Scenario: Check if a user with a permission to manage Landing page content type can add paragraphs of type Modal
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
@@ -119,7 +119,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Modal title"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Rich Text"
+  Scenario: Check if a user with a permission to manage Landing page content type can add paragraphs of type Rich Text
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
@@ -140,7 +140,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see "Rich Text test"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "Tabs"
+  Scenario: Check if a user with a permission to manage Landing page content type can add paragraphs of type Tabs
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
@@ -167,7 +167,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I should see "Tab 1"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage "Landing page" content type can add paragraphs of type "WebForm"
+  Scenario: Check if a user with a permission to manage Landing page content type can add paragraphs of type WebForm
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
