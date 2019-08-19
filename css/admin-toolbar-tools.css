@@ -12,7 +12,3 @@
 span .cke_button__embed_icon {
   background-image: url('../images/embed.png') !important;
 }
-
-span .cke_button__media_icon {
-  background-image: url('../images/embed-media.png') !important;
-}
