@@ -1,3 +1,84 @@
+# 8.6.13
+
+### Highlighted important changes since Varbase 8.6.12:
+* Issue [#3073370](https://www.drupal.org/node/3073370):
+                  Updated [Drupal core] from 8.7.4 to 8.7.6 ( ~8.7.0 )
+                  by removing already applied or committed patches
+                  in drupal/core
+* Issue [#3075805](https://www.drupal.org/node/3075805):
+                  Updated [Metatag] module from 8.1.8 to 8.1.9
+* Issue [#3075851](https://www.drupal.org/node/3075851):
+                  Updated [Paragraphs] module from 8.1.8 to 8.1.9
+
+### Added since Varbase 8.6.12:
+* Issue [#3075633](https://www.drupal.org/node/3075633):
+                  Added SASS/SCSS compile options for output Style as expanded,
+                  indent Type as space, and indent Width of 2 spaces
+
+### Changed since Varbase 8.6.12:
+* Issue [#3075795](https://www.drupal.org/node/3075795):
+                  Changed configure widgets for Entity Browser Enhanced
+                  behaviors using the new schema format
+* Issue [#2998934](https://www.drupal.org/node/2998934)
+                  by
+                  [Pasqualle]()
+                 , [RajabNatshah]()
+                 , [Mohammed J. Razem]()
+                 : Splitted up config with schema refactor to have Enhancer
+                  for each given entity browser widget separately per
+                  entity browser
+* Issue [#3074888](https://www.drupal.org/node/3074888):
+                  Switched CSS management from LESS to SCSS with gulp and
+                  make use of the (RFS) Responsive Font Size SCSS library
+
+### Updates since Varbase 8.6.12:
+* Issue [#3075800](https://www.drupal.org/node/3075800):
+                  Update drupal-org.make files and filter the code
+                  for Drupal 8 Coding Standard
+* Updated [Entity Browser Enhance(d|r)] from 8.1.0-rc4 to 8.1.0-rc5
+* Updated [Entityqueue Form Widget] from 8.1.0-rc1 to 8.1.0
+* Updated [Link Attributes widget] from 8.1.8 to 8.1.9
+* Updated [Paragraphs] from 8.1.8 to 8.1.9
+* Updated [Paragraphs Features] from 8.1.4 to 8.1.6
+* Updated [Responsive Theme Preview] from 8.1.0-alpha7 to 8.1.0-beta1
+* Updated [Schema.org Metatag] from 8.1.3 to 8.1.4
+* Updated [Search API] from 8.1.13 to 8.1.14
+* Updated [Simple XML sitemap] from 8.3.2 to 8.3.3
+* Updated [Social API] from 8.2.0-beta5 to 8.2.0-rc1
+* Updated [Social Auth] from 8.2.0-beta6 to 8.2.0-rc1
+* Updated [View Modes Inventory - Bootstrap Ready] from 8.2.2 to 8.2.3
+* Updated [Webform] from 8.5.2 to 8.5.4
+
+### Fixes since Varbase 8.x-6.12:
+* Issue [#3070215](https://www.drupal.org/node/3070215)
+                  by
+                  [mrP]()
+                 , [RajabNatshah]()
+                 : Fixed [regression] Embed an Image media type with
+                  a link MISSING
+* Issue [#3066869](https://www.drupal.org/node/3066869)
+                  by
+                  [marioangulo]()
+                 , [RajabNatshah]()
+                 : Fixed a not appearing Varbase dashboard sessions
+                  and pageviews chart
+* Issue [#3075313](https://www.drupal.org/node/3075313):
+                  Fixed [Text Teaser(s)] third party settings for core entity
+                  view display of CONTENT_TYPE_NAME
+* Issue [#3067836](https://www.drupal.org/node/3067836):
+                  Fixed [Varbase Email] uses of deprecated Drupal core APIs
+                  and standard Drupal Practice
+* Issue [#3075638](https://www.drupal.org/node/3075638):
+                  Fixed [Vartheme BS4] Drupal coding standard and
+                  Drupal Practice
+* Issue [#3067853](https://www.drupal.org/node/3067853)
+                  by
+                  [Mohammed J. Razem]()
+                 : Fixed issue in a custom token used in two places in
+                  the metatag config
+
+--------------------------------------------------------------------------------
+
 # 8.6.12
 
 ### Highlighted important changes since Varbase 8.6.11:
