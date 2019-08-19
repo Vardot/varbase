@@ -21,15 +21,16 @@
                   behaviors using the new schema format
 * Issue [#2998934](https://www.drupal.org/node/2998934)
                   by
-                  [Pasqualle]()
-                 , [RajabNatshah]()
-                 , [Mohammed J. Razem]()
+                  [Pasqualle](https://www.drupal.org/u/pasqualle)
+                 , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 , [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
                  : Splitted up config with schema refactor to have Enhancer
                   for each given entity browser widget separately per
                   entity browser
 * Issue [#3074888](https://www.drupal.org/node/3074888):
-                  Switched CSS management from LESS to SCSS with gulp and
-                  make use of the (RFS) Responsive Font Size SCSS library
+                  Switched CSS management in the [VMI] module from LESS to
+                  SCSS with gulp and make use of the (RFS)
+                  Responsive Font Size SCSS library
 
 ### Updates since Varbase 8.6.12:
 * Issue [#3075800](https://www.drupal.org/node/3075800):
@@ -52,14 +53,14 @@
 ### Fixes since Varbase 8.x-6.12:
 * Issue [#3070215](https://www.drupal.org/node/3070215)
                   by
-                  [mrP]()
-                 , [RajabNatshah]()
+                  [mrP](https://www.drupal.org/u/mrp)
+                 , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                  : Fixed [regression] Embed an Image media type with
                   a link MISSING
 * Issue [#3066869](https://www.drupal.org/node/3066869)
                   by
-                  [marioangulo]()
-                 , [RajabNatshah]()
+                  [marioangulo](https://www.drupal.org/u/marioangulo)
+                 , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                  : Fixed a not appearing Varbase dashboard sessions
                   and pageviews chart
 * Issue [#3075313](https://www.drupal.org/node/3075313):
@@ -73,7 +74,7 @@
                   Drupal Practice
 * Issue [#3067853](https://www.drupal.org/node/3067853)
                   by
-                  [Mohammed J. Razem]()
+                  [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
                  : Fixed issue in a custom token used in two places in
                   the metatag config
 
