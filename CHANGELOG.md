@@ -104,8 +104,8 @@
                 : Fixed [Varbase Media Hero Slider]
                  uses of deprecated Drupal core APIs and standard Drupal Practice
 * Issue [#3067832](https://www.drupal.org/node/3067832)
-                 by joy29](https://www.drupal.org/u/joy29)
-                , RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 by [joy29](https://www.drupal.org/u/joy29)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 : Fixed [Varbase Editor] uses of
                  deprecated Drupal core APIs and standard Drupal Practice
 * Issue [#3068329](https://www.drupal.org/node/3068329)
