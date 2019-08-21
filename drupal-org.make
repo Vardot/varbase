@@ -93,6 +93,10 @@ projects[dropzonejs][version] = 2.0-alpha4
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0
+;; Issue #3070343: Allow to add a Drupal core link with Link Widget for Image entities using Entity Embed Dialog in CKEditor
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-07-25/3070343-8.patch
+;; Issue #2679875: Inline Entity Form integration
+projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-08-18/2679875-10.patch
 
 projects[inline_entity_form][type] = module
 projects[inline_entity_form][version] = 1.0-rc1
@@ -124,7 +128,7 @@ projects[entityqueue][type] = module
 projects[entityqueue][version] = 1.0-beta5
 
 projects[entityqueue_form_widget][type] = module
-projects[entityqueue_form_widget][version] = 1.0-rc1
+projects[entityqueue_form_widget][version] = 1.0
 
 projects[imagemagick][type] = module
 projects[imagemagick][version] = 2.5
@@ -177,7 +181,7 @@ projects[tour_builder][type] = module
 projects[tour_builder][version] = 1.0-alpha1
 
 projects[responsive_preview][type] = module
-projects[responsive_preview][version] = 1.0-alpha7
+projects[responsive_preview][version] = 1.0-beta1
 
 projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][version] = 2.5
@@ -189,7 +193,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.2
+projects[webform][version] = 5.4
 
 projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
@@ -257,14 +261,12 @@ projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta1
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.8
+projects[link_attributes][version] = 1.9
 
 projects[paragraphs][type] = module
-projects[paragraphs][version] = 1.8
+projects[paragraphs][version] = 1.9
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
-;; Issue #2907094: Make paragraphs module working with field_group version 3.x with support for the field_layout module
-projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2907094_7_field_group_support.patch
 
 projects[paragraphs_previewer][type] = module
 projects[paragraphs_previewer][version] = 1.4
@@ -272,7 +274,7 @@ projects[paragraphs_previewer][version] = 1.4
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2019-02-20/2904917-8.patch
 
 projects[paragraphs_features][type] = module
-projects[paragraphs_features][version] = 1.4
+projects[paragraphs_features][version] = 1.6
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
 projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta2
@@ -308,10 +310,10 @@ projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.2
 
 projects[social_api][type] = module
-projects[social_api][version] = 2.0-beta5
+projects[social_api][version] = 2.0-rc1
 
 projects[social_auth][type] = module
-projects[social_auth][version] = 2.0-beta6
+projects[social_auth][version] = 2.0-rc1
 
 projects[social_auth_google][type] = module
 projects[social_auth_google][version] = 2.0-beta4
@@ -345,10 +347,10 @@ projects[metatag][type] = module
 projects[metatag][version] = 1.9
 
 projects[schema_metatag][type] = module
-projects[schema_metatag][version] = 1.3
+projects[schema_metatag][version] = 1.4
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 3.2
+projects[simple_sitemap][version] = 3.3
 
 projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.4 
@@ -384,7 +386,7 @@ projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.4
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.13
+projects[search_api][version] = 1.14
 
 projects[blazy][type] = module
 projects[blazy][version] = 2.0-rc3
@@ -403,8 +405,6 @@ projects[consumers][version] = 1.9
 
 projects[openapi][type] = module
 projects[openapi][version] = 1.0-beta4
-;; Issue #2982692: Fix issue of NOT respecting disabled JSON:API resources by JSON:API Extras
-projects[openapi][patch][] = https://www.drupal.org/files/issues/2019-06-24/2982692-11.patch
 
 projects[schemata][type] = module
 projects[schemata][version] = 1.0-beta1
@@ -428,7 +428,7 @@ projects[restui][type] = module
 projects[restui][version] = 1.17
 
 projects[jsonapi_extras][type] = module
-projects[jsonapi_extras][version] = 3.8
+projects[jsonapi_extras][version] = 3.10
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
@@ -490,10 +490,10 @@ projects[anchor_link][type] = module
 projects[anchor_link][version] = 1.6
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.0-rc4
+projects[entity_browser_enhanced][version] = 1.0-rc5
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.2
+projects[vmi][version] = 2.3
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-beta2
@@ -503,62 +503,62 @@ projects[total_control][version] = 2.0-beta2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 7.x-dev
+projects[varbase_core][version] = 7.2
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.4
 
 projects[varbase_media][type] = module
 projects[varbase_media][version] = 7.x-dev
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.1
 
 projects[varbase_editor][type] = module
 projects[varbase_editor][version] = 7.x-dev
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.0
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.1
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.1
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 7.x-dev
+projects[varbase_blog][version] = 7.1
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.3
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.5
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.7
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.6
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.2
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.0
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.0-rc4
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.6
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
