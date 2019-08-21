@@ -59,7 +59,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
 
      When I go to "/admin/config/services/openapi/redoc/jsonapi"
       And I wait
-     Then I should see "This is a JSON API compliant implemenation"
+     Then I should see "This is a JSON API compliant implementation"
 
      When I go to "/admin/config/services/openapi/swagger/jsonapi"
       And I wait
