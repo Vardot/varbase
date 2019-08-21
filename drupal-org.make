@@ -404,7 +404,7 @@ projects[consumers][type] = module
 projects[consumers][version] = 1.9
 
 projects[openapi][type] = module
-projects[openapi][version] = 1.0-beta4
+projects[openapi][version] = 1.0-beta6
 
 projects[schemata][type] = module
 projects[schemata][version] = 1.0-beta1
@@ -422,7 +422,7 @@ projects[simple_oauth][type] = module
 projects[simple_oauth][version] = 3.16
 
 projects[schema_metatag][type] = module
-projects[schema_metatag][version] = 1.3
+projects[schema_metatag][version] = 1.4
 
 projects[restui][type] = module
 projects[restui][version] = 1.17
