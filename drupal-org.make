@@ -131,7 +131,7 @@ projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0
 
 projects[imagemagick][type] = module
-projects[imagemagick][version] = 2.5
+projects[imagemagick][version] = 2.6
 
 projects[imageapi_optimize][type] = module
 projects[imageapi_optimize][version] = 2.0-alpha4
@@ -298,7 +298,7 @@ projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
 
 projects[charts][type] = module
-projects[charts][version] = 3.0-beta3
+projects[charts][version] = 3.0
 
 projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][version] = 3.0-beta3
@@ -509,13 +509,13 @@ projects[varbase_api][type] = module
 projects[varbase_api][version] = 7.4
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.x-dev
+projects[varbase_media][version] = 7.4
 
 projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 7.1
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.1
 
 projects[varbase_landing][type] = module
 projects[varbase_landing][version] = 7.0
@@ -536,7 +536,7 @@ projects[varbase_seo][type] = module
 projects[varbase_seo][version] = 6.5
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.7
+projects[varbase_total_control][version] = 6.8
 
 projects[varbase_auth][type] = module
 projects[varbase_auth][version] = 6.5

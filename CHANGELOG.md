@@ -52,6 +52,11 @@
                  responsive devices] automated functional testing to
                  follow with new updated list of devices in the
                  Responsive Theme Preview module
+* Issue [#3077303](https://www.drupal.org/node/3077303):
+                 Switched all CKEditor Embed Media (Image, Video, Remote Video)
+                 view modes from Blazy to Responsive image styles
+                 [ Default, Original, Large (Full width),
+                 Medium (1/2 of width), Small (1/4 of width) ]
 
 ### Updates since Varbase 8.x-7.0:
 * Issue [#3075851](https://www.drupal.org/node/3075851):
