@@ -83,6 +83,8 @@
 * - Updated [Social Auth] module from 8.2.0-beta6 to 8.2.0-rc1
 * - Updated [View Modes Inventory - Bootstrap Ready] module from 8.2.2 to 8.2.3
 * - Updated [Webform] module from 8.5.2 to 8.5.4
+* - Updated [Charts] module from 8.3.0-beta3 to 8.3.0
+* - Updated [Image Magick] module from 8.2.5 to 8.2.6
 
 ### Fixes since Varbase 8.x-7.0:
 * Issue [#3067853](https://www.drupal.org/node/3067853)
