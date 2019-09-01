@@ -1,5 +1,5 @@
+#!/bin/usr/env bash
 
-#!//bin/bash
 ################################################################################
 ## Create new Vartheme BS4 Sub-Theme.
 ################################################################################
@@ -109,17 +109,17 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   # 6. Rename VARTHEME_BS4_SUBTHEME.schema.yml
   mv ${theme_path}/${theme_name}/config/schema/VARTHEME_BS4_SUBTHEME.schema.yml ${theme_path}/${theme_name}/config/schema/${theme_name}.schema.yml ;
 
-  # 6. Rename VARTHEME_BS4_SUBTHEME.base.scss and VARTHEME_BS4_SUBTHEME.base.css
+  # 7. Rename VARTHEME_BS4_SUBTHEME.base.scss and VARTHEME_BS4_SUBTHEME.base.css
   mv ${theme_path}/${theme_name}/scss/base/VARTHEME_BS4_SUBTHEME.base.scss ${theme_path}/${theme_name}/scss/base/${theme_name}.base.scss ;
   mv ${theme_path}/${theme_name}/css/base/VARTHEME_BS4_SUBTHEME.base.css ${theme_path}/${theme_name}/css/base/${theme_name}.base.css ;
 
-  # 6. Rename VARTHEME_BS4_SUBTHEME.base.scss and VARTHEME_BS4_SUBTHEME.base.css
-  mv ${theme_path}/${theme_name}/scss/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.scss ${theme_path}/${theme_name}/scss/rtl/base/${theme_name}.base.scss ;
-  mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.css ${theme_path}/${theme_name}/css/rtl/base/${theme_name}.base.css ;
+  # 8. Rename VARTHEME_BS4_SUBTHEME-rtl.base.scss and VARTHEME_BS4_SUBTHEME-rtl.base.css
+  mv ${theme_path}/${theme_name}/scss/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.scss ${theme_path}/${theme_name}/scss/rtl/base/${theme_name}-rtl.base.scss ;
+  mv ${theme_path}/${theme_name}/css/rtl/base/VARTHEME_BS4_SUBTHEME-rtl.base.css ${theme_path}/${theme_name}/css/rtl/base/${theme_name}-rtl.base.css ;
 
 
 
-  # 7 Rename TWIG template files.
+  # 9 Rename TWIG template files.
   mv ${theme_path}/${theme_name}/templates/system/html.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/system/html.html.twig
   mv ${theme_path}/${theme_name}/templates/system/page.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/system/page.html.twig
   mv ${theme_path}/${theme_name}/templates/system/maintenance-page.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/system/maintenance-page.html.twig
@@ -135,7 +135,7 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   mv ${theme_path}/${theme_name}/templates/media/media-oembed-iframe.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/media/media-oembed-iframe.html.twig
   mv ${theme_path}/${theme_name}/templates/video-embed-field/video-embed-iframe.html.twig-VARTHEME_BS4_SUBTHEME ${theme_path}/${theme_name}/templates/video-embed-field/video-embed-iframe.html.twig
 
-  # 8 Rename config files.
+  # 10 Rename config files.
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_branding.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_branding.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_breadcrumbs.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_breadcrumbs.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_content.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_content.yml
@@ -150,11 +150,11 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_socialauthlogin.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_socialauthlogin.yml
   mv ${theme_path}/${theme_name}/config/optional/block.block.VARTHEME_BS4_SUBTHEME_views_block__varbase_heroslider_media_varbase_heroslider_media.yml ${theme_path}/${theme_name}/config/optional/block.block.${theme_name}_views_block__varbase_heroslider_media_varbase_heroslider_media.yml
 
-  # 9. Replace all VARTHEME_BS4_SUBTHEME with the machine name of your theme.
+  # 11. Replace all VARTHEME_BS4_SUBTHEME with the machine name of your theme.
   grep -rl 'VARTHEME_BS4_SUBTHEME' ${theme_path}/${theme_name} | xargs sed -i "s/VARTHEME_BS4_SUBTHEME/${theme_name}/g" ;
 
 
-  # 10. Install needed libraries
+  # 12. Install needed libraries
   cd ${theme_path}/${theme_name};
   npm install;
 
