@@ -3,11 +3,9 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.7.6"
+projects[drupal][version] = "8.7.8"
 ;; Issue #2869592: Disabled update module shouldn't produce a status report warning
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch
-;; Issue #2885441: EntityReferenceAutocompleteWidget should define its size setting as an integer
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2885441-2.patch
 ;; Issue #2815221: Add quickedit to the latest-revision route
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-03-05/2815221-116.patch
 ;; Issue #1356276: Allow profiles to define a base/parent profile and load them in the correct order
