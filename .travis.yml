@@ -79,16 +79,17 @@ before_install:
   - Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
   - sleep 3
 
-  # Download Chrome Driver.
-  - LATEST_CHROMEDRIVER=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-  - wget http://chromedriver.storage.googleapis.com/$LATEST_CHROMEDRIVER/chromedriver_linux64.zip
+  # Download Latest Chrome Driver.
+  -  CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+  -  echo $CHROME_DRIVER_VERSION;
+  -  wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - chmod +x chromedriver
   - mkdir -p $HOME/.composer/vendor/bin
   - mv -f chromedriver $HOME/.composer/vendor/bin/
   - rm chromedriver_linux64.zip
 
-  # Update Chrome.
+  # Update to latest Chrome browser.
   - export CHROME_BIN=/usr/bin/google-chrome
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   - sudo apt-get clean
@@ -99,8 +100,8 @@ before_install:
   - google-chrome --version
 
   # Run selenium standalone server.
-  - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-3.141.59.jar";
-  - if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar; fi
+  - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
+  - if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
   - java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
   - echo "[  OK  ] Starting Selenium on the 4445 port ..."
 install:
