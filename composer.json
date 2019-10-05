@@ -64,7 +64,7 @@
     "behat/mink-zombie-driver": "~1.0",
     "behat/mink-selenium2-driver": "~1.0",
     "behatch/contexts": "~3.0",
-    "emuse/behat-html-formatter": "^0.1.0"
+    "emuse/behat-html-formatter": "^0.2.0"
   },
   "config": {
     "bin-dir": "bin/",

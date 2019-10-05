@@ -1,9 +1,21 @@
 {
+  "name": "varbase",
+  "private": true,
+  "version": "8.7.0",
+  "description": "Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)",
+  "keywords": [
+    "Drupal",
+    "Varbase",
+    "Drupal profile",
+    "Bootstrap"
+  ],
+  "author": "Vardot",
+  "license": "GPL-2.0",
   "scripts": {
     "install-libraries": "npm install && bower install"
   },
   "dependencies": {
-    "bower": "1.7.x"
+    "bower": ">=1.8.8"
   },
   "license": "GPL-2.0",
   "repository": {

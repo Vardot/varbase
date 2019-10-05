@@ -1505,7 +1505,7 @@ JS;
    *
    * @BeforeScenario @javascript
    */
-  public function beforeStepMaximizeWindow() {
+  public function beforeScenarioMaximizeWindow() {
     $this->getSession()->getDriver()->maximizeWindow();
   }
 
