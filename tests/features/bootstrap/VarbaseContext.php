@@ -1407,6 +1407,25 @@ JS;
   }
   
   /**
+   * #varbase: To check if the media browser with the selected iframe id 
+   *           is open.
+   * 
+   * Example : Then the "entity_browser_iframe_media_browser" media browser should be open
+   *
+   * @Then /^the "([^"]*)" media browser should be open$/
+   */
+  public function theMediaBrowserIsOpen($entity_browser_iframe_id) {
+    if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.ui-widget-content')) {
+      throw new Exception('The media browser failed to open.');
+    }
+
+    $radioButton = $this->getSession()->getPage()->find('css', "#$entity_browser_iframe_id");
+    if (!$radioButton) {
+        throw new \Exception("$labelText is not found.");
+    }
+  }
+  
+  /**
    * #varbase: To find an element with a selected index having the
    *           first attribute, and check if it's have the second one.
    * 
@@ -1420,6 +1439,17 @@ JS;
     if (!$item) {
       throw new Exception("The image position is wrong");
     }
+  }
+  
+  /**
+   * #varbase: Resize the current window browser to a selected width and height.
+   * 
+   * Example #1: And I resize the current window to width="1280" and height="600" 
+   * 
+   * @Given /^I resize the current window to width="([^"]*)" and height="([^"]*)"$/
+   */
+  public function resizeTheCurrentWindowToWidthAndHeight($width, $height) {
+    $this->getSession()->resizeWindow((int)$width, (int)$height, 'current');
   }
 
 
@@ -1473,7 +1503,7 @@ JS;
   /**
    * Maximize the window before scenario.
    *
-   * @BeforeStep @javascript
+   * @BeforeStep
    */
   public function beforeStepMaximizeWindow() {
     $this->getSession()->getDriver()->maximizeWindow();

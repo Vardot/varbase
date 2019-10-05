@@ -29,7 +29,7 @@ I want to be able to add and remove entities to any allowed entity queue.
      Then I should see "Create Hero slider"
      When I press "Select media"
       And I wait for AJAX to finish
-     Then the image media browser should be open
+     Then the "entity_browser_iframe_media_browser" media browser should be open
 
   @javascript @local @development @staging @production
   Scenario: Add a Test hero slider number 1 to the heroslider entity queue.
@@ -41,8 +41,9 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I fill in "Test hero slider slide text #1" for "Slide text"
       And I press "Select media"
       And I wait for AJAX to finish
-     Then the image media browser should be open
+     Then the "entity_browser_iframe_media_browser" media browser should be open
      When I switch to iframe "entity_browser_iframe_media_browser"
+      And I wait max of 5s 
       And I fill in "Flag Earth" for "edit-name"
       And I press the "Search" button
       And wait max of 5s
@@ -73,8 +74,9 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I fill in "Test hero slider slide text #2" for "Slide text"
       And I press "Select media"
       And I wait for AJAX to finish
-     Then the image media browser should be open
+     Then the "entity_browser_iframe_media_browser" media browser should be open
      When I switch to iframe "entity_browser_iframe_media_browser"
+      And I wait max of 5s
       And I fill in "Flag Earth" for "edit-name"
       And I press the "Search" button
       And wait max of 5s
