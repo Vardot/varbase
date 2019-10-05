@@ -1414,14 +1414,14 @@ JS;
    *
    * @Then /^the "([^"]*)" media browser should be open$/
    */
-  public function theMediaBrowserIsOpen($entity_browser_iframe_id) {
+  public function theMediaBrowserIsOpen($entityBrowserIframeId) {
     if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.ui-widget-content')) {
       throw new Exception('The media browser failed to open.');
     }
 
-    $radioButton = $this->getSession()->getPage()->find('css', "#$entity_browser_iframe_id");
-    if (!$radioButton) {
-        throw new \Exception("$labelText is not found.");
+    $entityBrowserIframe = $this->getSession()->getPage()->find('css', "#$entityBrowserIframeId");
+    if (!$entityBrowserIframeId) {
+        throw new \Exception("$entityBrowserIframeId is not found.");
     }
   }
   
