@@ -41,9 +41,10 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I fill in "Test hero slider slide text #1" for "Slide text"
       And I press "Select media"
       And I wait for AJAX to finish
+      And I wait 5s
      Then the "entity_browser_iframe_media_browser" media browser should be open
      When I switch to iframe "entity_browser_iframe_media_browser"
-      And wait 5s
+      And I wait 5s
      Then I should see "Media name"
      When I fill in "Flag Earth" for "Media name"
       And I press the "Search" button
@@ -73,9 +74,10 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I fill in "Test hero slider slide text #2" for "Slide text"
       And I press "Select media"
       And I wait for AJAX to finish
+      And I wait 5s
      Then the "entity_browser_iframe_media_browser" media browser should be open
      When I switch to iframe "entity_browser_iframe_media_browser"
-      And wait 5s
+      And I wait 5s
      Then I should see "Media name"
      When I fill in "Flag Earth" for "Media name"
       And I press the "Search" button
