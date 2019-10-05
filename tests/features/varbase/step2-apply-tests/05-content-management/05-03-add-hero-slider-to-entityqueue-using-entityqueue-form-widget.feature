@@ -43,14 +43,13 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then the "entity_browser_iframe_media_browser" media browser should be open
      When I switch to iframe "entity_browser_iframe_media_browser"
-      And I wait 3s
-      And I fill in "Flag Earth" for "name"
+      And wait max of 5s
+     Then I should see "Media name"
+     When I fill in "Flag Earth" for "Media name"
       And I press the "Search" button
       And wait max of 5s
      Then I should see image with the "Flag Earth all earth in space" title text
      When I double click on the image with the "Flag Earth all earth in space" title text
-      And I wait for AJAX to finish
-      And wait max of 5s
       And I wait for AJAX to finish
       And wait max of 5s
       And I switch to main frame
@@ -76,16 +75,14 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then the "entity_browser_iframe_media_browser" media browser should be open
      When I switch to iframe "entity_browser_iframe_media_browser"
-      And I wait 3s
-      And I fill in "Flag Earth" for "name"
+      And wait max of 5s
+     Then I should see "Media name"
+     When I fill in "Flag Earth" for "Media name"
       And I press the "Search" button
       And wait max of 5s
      Then I should see image with the "Flag Earth all earth in space" title text
      When I double click on the image with the "Flag Earth all earth in space" title text
       And I wait for AJAX to finish
-      And wait max of 5s
-      And I wait for AJAX to finish
-      And wait max of 5s
       And I switch to main frame
       And I wait for AJAX to finish
       And wait max of 5s
