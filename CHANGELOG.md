@@ -86,6 +86,7 @@ breakpoints
 * - Updated [Slick Carousel] module from 8.2.0-rc3 to 8.2.0-rc4
 * - Updated [SMTP Authentication Support] module from 8.1.0-beta4 to 8.1.0-beta5
 * - Updated [Views Bulk Edit] module from 8.2.3 to 8.2.4
+* - Updated [Simple OAuth] from 8.3.16 to 8.4.2
 * Issue [#3085506](https://www.drupal.org/node/3085506):
                  Updated [ChromeDriver, standalone selenium server] for
                  the travis-ci Automated Functional Acceptance Testing and

@@ -418,7 +418,7 @@ projects[openapi_ui_swagger][type] = module
 projects[openapi_ui_swagger][version] = 1.0-rc3
 
 projects[simple_oauth][type] = module
-projects[simple_oauth][version] = 3.16
+projects[simple_oauth][version] = 4.2
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.4
