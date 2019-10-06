@@ -47,6 +47,8 @@ projects[ds][version] = 3.4
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][version] = 4.1
+;; Issue #3049311: Grids should not be split into multiple rows
+projects[views_bootstrap][patch][] = https://www.drupal.org/files/issues/2019-05-31/views-bootstrap-dont-split-grid-rows-3049311-9.patch
 
 projects[field_group][type] = module
 projects[field_group][version] = 3.0-rc1
