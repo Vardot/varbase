@@ -505,7 +505,7 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 7.x-dev
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.5
+projects[varbase_api][version] = 7.6
 
 projects[varbase_media][type] = module
 projects[varbase_media][version] = 7.5
@@ -514,7 +514,7 @@ projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 7.4
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.1
+projects[varbase_editor][version] = 7.2
 
 projects[varbase_landing][type] = module
 projects[varbase_landing][version] = 7.0
