@@ -25,6 +25,9 @@ projects[ctools][patch][] = https://www.drupal.org/files/issues/2019-02-18/ctool
 projects[token][type] = module
 projects[token][version] = 1.5
 
+projects[token_filter][type] = module
+projects[token_filter][version] = 1.1
+
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta4
 ;; Issue #2665328: Variants take entity label not the variant title
@@ -40,9 +43,7 @@ projects[layout_builder_restrictions][type] = module
 projects[layout_builder_restrictions][version] = 1.5
 
 projects[ds][type] = module
-projects[ds][version] = 3.3
-;; Issue #2920868: Fix fatal errors when we have missing layouts, on an update.
-projects[ds][patch][] = https://www.drupal.org/files/issues/2019-03-03/2920868-12.patch
+projects[ds][version] = 3.4
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][version] = 4.1
@@ -99,21 +100,19 @@ projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-07-25
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-08-18/2679875-10.patch
 
 projects[inline_entity_form][type] = module
-projects[inline_entity_form][version] = 1.0-rc1
+projects[inline_entity_form][version] = 1.0-rc2
 
 projects[media_entity_instagram][type] = module
-projects[media_entity_instagram][version] = 2.0-alpha2
+projects[media_entity_instagram][version] = 2.0
 
 projects[media_entity_twitter][type] = module
-projects[media_entity_twitter][version] = 2.0-alpha3
+projects[media_entity_twitter][version] = 2.1
 
 projects[crop][type] = module
 projects[crop][version] = 2.0-rc1
 
 projects[focal_point][type] = module
-projects[focal_point][version] = 1.0
-;; Issue #3001262: Integrate focal point with media_library, which is now in core
-projects[focal_point][patch][] = https://www.drupal.org/files/issues/2019-05-02/focal_point-integrate_with_media_library-3001262-4-b.patch
+projects[focal_point][version] = 1.2
 
 projects[pathologic][type] = module
 projects[pathologic][version] = 1.0-alpha1
@@ -187,7 +186,7 @@ projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][version] = 2.5
 
 projects[views_bulk_edit][type] = module
-projects[views_bulk_edit][version] = 2.3
+projects[views_bulk_edit][version] = 2.4
 
 projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
@@ -230,7 +229,7 @@ projects[swiftmailer][type] = module
 projects[swiftmailer][version] = 1.0-beta2
 
 projects[smtp][type] = module
-projects[smtp][version] = 1.0-beta4
+projects[smtp][version] = 1.0-beta5
 
 projects[length_indicator][type] = module
 projects[length_indicator][version] = 1.0-rc3
@@ -286,7 +285,7 @@ projects[color_field][type] = module
 projects[color_field][version] = 2.0
 
 projects[entity_reference_revisions][type] = module
-projects[entity_reference_revisions][version] = 1.6
+projects[entity_reference_revisions][version] = 1.7
 
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 2.0-alpha4
@@ -330,7 +329,7 @@ projects[social_auth_linkedin][type] = module
 projects[social_auth_linkedin][version] = 2.0-beta3
 
 projects[ckeditor_media_embed][type] = module
-projects[ckeditor_media_embed][version] = 1.6
+projects[ckeditor_media_embed][version] = 1.7
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
 
@@ -344,7 +343,7 @@ projects[redirect][type] = module
 projects[redirect][version] = 1.4
 
 projects[metatag][type] = module
-projects[metatag][version] = 1.9
+projects[metatag][version] = 1.10
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.4
@@ -380,7 +379,7 @@ projects[shield][type] = module
 projects[shield][version] = 1.2
 
 projects[captcha][type] = module
-projects[captcha][version] = 1.0-beta1
+projects[captcha][version] = 1.0-beta2
 
 projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.4
@@ -389,10 +388,10 @@ projects[search_api][type] = module
 projects[search_api][version] = 1.14
 
 projects[blazy][type] = module
-projects[blazy][version] = 2.0-rc3
+projects[blazy][version] = 2.0-rc5
 
 projects[slick][type] = module
-projects[slick][version] = 2.0-rc3
+projects[slick][version] = 2.0-rc4
 
 projects[slick_views][type] = module
 projects[slick_views][version] = 2.0
@@ -428,7 +427,7 @@ projects[restui][type] = module
 projects[restui][version] = 1.17
 
 projects[jsonapi_extras][type] = module
-projects[jsonapi_extras][version] = 3.10
+projects[jsonapi_extras][version] = 3.12
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
@@ -454,7 +453,7 @@ projects[menu_admin_per_menu][type] = module
 projects[menu_admin_per_menu][version] = 1.0
 
 projects[drd_agent][type] = module
-projects[drd_agent][version] = 3.8
+projects[drd_agent][version] = 3.9
 
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
@@ -506,59 +505,59 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 7.x-dev
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.5
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.x-dev
+projects[varbase_media][version] = 7.5
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.4
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.1
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.0
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.3
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.1
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 7.x-dev
+projects[varbase_blog][version] = 7.1
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.3
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.5
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.9
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.5
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.3
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.0
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.0
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.7
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

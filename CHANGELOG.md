@@ -1,3 +1,152 @@
+# 8.7.2
+
+### Highlighted important changes since Varbase 8.x-7.1:
+
+* Issue [#3085390](https://www.drupal.org/node/3085390):
+                 Updated [Drupal core] from 8.7.7 to 8.7.8 (~8.7.0 )
+                 and remove applied patches
+
+## Switched CSS management for all Varbase Components from LESS to SCSS with
+Gulp as the task manager and made use of the (RFS) Responsive Font Size SCSS
+library as we had shifted our responsive media breakpoints to the Bootstrap 4
+breakpoints
+
+## So its the same number for the breakpoint but under the new name for the breakpoint.
+
+* Issue [#3077909](https://www.drupal.org/node/3077909):
+                 Switched CSS management for [Varbase Media Hero Slider]
+                 from LESS to SCSS with Gulp as the task manager and make use
+                 of the (RFS) Responsive Font Size SCSS library
+* Issue [#3080019](https://www.drupal.org/node/3080019):
+                 Switched CSS management for [Varbase Bootstrap Paragraphs]
+                 from LESS to SCSS with Gulp as the task manager and make use
+                 of the (RFS) Responsive Font Size SCSS library, which comes
+                 with Bootstrap 4
+
+### Added since Varbase 8.x-7.1:
+* Issue [#3085537](https://www.drupal.org/node/3085537):
+                 Added [Token Filter] module 8.1.1 ( ~1.0 )
+* Issue [#3085555](https://www.drupal.org/node/3085555):
+                 Had the [Replaces global and entity tokens with their values]
+                 filter only for HTML Editor (code filter) text format
+* Issue [#3085199](https://www.drupal.org/node/3085199):
+                 Added support for [drupal off canvas editor] and the
+                 [layout builder] settings try to [Vartheme BS4] theme with
+                 vbp_color and vbp_colors mixins
+* Issue [#3085292](https://www.drupal.org/node/3085292):
+                 Added support for [drupal off canvas editor] and the
+                 [layout builder] settings try to [Varbase Bootstrap Paragraphs]
+                 module with vbp_color and vbp_colors mixins
+* Issue [#3085141](https://www.drupal.org/node/3085141)
+                 by [Muath Khraisat](https://www.drupal.org/u/muath-khraisat)
+                : Added the 3059241-4.patch for [Views Bootstrap] module to fix
+                 missing col-lg and col-xl in bootstrap grid format settings
+
+### Changed since Varbase 8.x-7.1:
+* Issue [#3076272](https://www.drupal.org/node/3076272)
+                 by [metalbote](https://www.drupal.org/u/metalbote)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                : Switched CSS management for [Vartheme Admin]
+                 from LESS to SCSS with Gulp as the task manager
+* Issue [#3080023](https://www.drupal.org/node/3080023):
+                 Switched CSS management for [Varbase Total Control Dashboard]
+                 from LESS to SCSS with Gulp as the task manager and make use
+                 of the (RFS) Responsive Font Size SCSS library
+* Issue [#3077911](https://www.drupal.org/node/3077911):
+                 Switched CSS management for [Varbase Media Header]
+                 from LESS to SCSS with Gulp as the task manager and make use
+                 of the (RFS) Responsive Font Size SCSS library
+* Issue [#3080020](https://www.drupal.org/node/3080020):
+                 Switched CSS management for [Varbase FAQs]
+                 from LESS to SCSS with Gulp as the task manager and make use
+                 of the (RFS) Responsive Font Size SCSS library
+* Issue [#3080022](https://www.drupal.org/node/3080022):
+                 Switched CSS management for [Varbase Styleguide] from LESS to SCSS with Gulp as the task manager and make use of the (RFS) Responsive Font Size SCSS library
+* Issue [#3085333](https://www.drupal.org/node/3085333)
+                 by [philltran](https://www.drupal.org/u/philltran)
+                : Removed [Drupal core] patch for issue 2885441 from
+                 drupal-org-core.make
+
+### Updates since Varbase 8.x-7.1:
+* Issue [#3085104](https://www.drupal.org/node/3085104):
+                  Varbase 8.7.2: Updated [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filter the code for
+                  Drupal 8 Coding Standard
+* - Updated [Blazy] module from 8.2.0-rc3 to 8.2.0-rc5
+* - Updated [CAPTCHA] module from 8.1.0-beta1 to 8.1.0-beta2
+* - Updated [CKEditor Media Embed Plugin] module from 8.1.6 to 8.1.7
+* - Updated [DRD Agent] module from 8.3.8 to 8.3.9
+* - Updated [Entity Reference Revisions] module from 8.1.6 to 8.1.7
+* - Updated [Focal Point] module from 8.1.0 to 8.1.2
+* - Updated [Inline Entity Form] module from 8.1.0-rc1 to 8.1.0-rc2
+* - Updated [JSON:API Extras] module from 8.3.10 to 8.3.12
+* - Updated [Media entity Instagram] module from 8.2.0-alpha2 to 8.2.0
+* - Updated [Media entity Twitter] module from 8.2.0-alpha3 to 8.2.1
+* - Updated [Metatag] module from 8.1.9 to 8.1.10
+* - Updated [Slick Carousel] module from 8.2.0-rc3 to 8.2.0-rc4
+* - Updated [SMTP Authentication Support] module from 8.1.0-beta4 to 8.1.0-beta5
+* - Updated [Views Bulk Edit] module from 8.2.3 to 8.2.4
+* Issue [#3085506](https://www.drupal.org/node/3085506):
+                 Updated [ChromeDriver, standalone selenium server] for
+                 the travis-ci Automated Functional Acceptance Testing and
+                 updated emuse/behat-html-formatter to ^0.2.0
+* Issue [#3078550](https://www.drupal.org/node/3078550):
+                 Updated [Display Suite] module from 8.3.3 to 8.3.4 ( ~3.0 )
+                 and removed committed patches
+* Issue [#3080789](https://www.drupal.org/node/3080789):
+                 Updated [Focal Point] module from 1.0 to 1.1 ( ~1.0 )
+                 and removed committed patches
+* Issue [#3079468](https://www.drupal.org/node/3079468)
+                 by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+                 , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 : Updated [Simple OAuth]
+                 from ~3.0 to ~4.0
+
+### Fixes since Varbase 8.x-7.1:
+* Issue [#3082815](https://www.drupal.org/node/3082815)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed the slider in [RTL] display half of the vimeo and
+                 youtube video in [Varbase Media Hero Slider].
+* Issue [#3080137](https://www.drupal.org/node/3080137)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Fixed hook preprocess name for [Varbase Media Header]
+                 from [Varbase Media Hero Slider] module
+* Issue [#3084824](https://www.drupal.org/node/3084824)
+                 by [abedajam](https://www.drupal.org/u/abedajam)
+                : Fixed missing character in paragraphs previewer
+                 hook_field_widget_WIDGET_TYPE_form_alter in [Varbase Bootstrap
+                 Paragraphs] modules
+* Issue [#3081350](https://www.drupal.org/node/3081350)
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+                : Fixed [Varbase Theme (Bootstrap 4 - SASS)]
+                 theme sub-theme bash script generator on MAC OS X
+* Issue [#3081351](https://www.drupal.org/node/3081351)
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+                : Fixed [Vartheme BS3] theme sub-theme bash script generator
+                 on MAC OS X
+* Issue [#3081361](https://www.drupal.org/node/3081361)
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+                : Fixed [Vartheme BS4] theme sub-theme bash script generator
+                 on MAC OS X
+* Issue [#3078546](https://www.drupal.org/node/3078546)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed Vartheme BS4 RTL generation script for a new
+                 sub-theme not create {theme}-rtl base file
+* Issue [#3078545](https://www.drupal.org/node/3078545)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed RTL generation in create-new-vartheme-bs4 script not 
+                create {theme}-rtl base file
+* Issue [#3071221](https://www.drupal.org/node/3071221)
+                 by [marioangulo](https://www.drupal.org/u/marioangulo)
+                : Fixed Top Pages Panel Urls in [Varbase Total Control
+                 Dashboard] module
+* Issue [#3085671](https://www.drupal.org/node/3085671):
+                 Fixed the update process to uninstall the Simple Oauth Extras
+                 module as it was merged into Simple Oauth to make it work
+                 without conditions
+
+--------------------------------------------------------------------------------
+
 # 8.7.1
 
 ### Highlighted important changes since Varbase 8.x-7.0:
