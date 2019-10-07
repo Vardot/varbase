@@ -351,7 +351,7 @@ projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.4
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 3.3
+projects[simple_sitemap][version] = 3.4
 
 projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.4 
@@ -528,7 +528,7 @@ projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 7.1
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 7.1
+projects[varbase_blog][version] = 7.2
 
 projects[varbase_search][type] = module
 projects[varbase_search][version] = 6.3
@@ -556,7 +556,7 @@ projects[vartheme][type] = theme
 projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.0
+projects[vartheme_bs4][version] = 6.1
 
 projects[vartheme_admin][type] = theme
 projects[vartheme_admin][version] = 6.7

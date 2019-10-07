@@ -39,10 +39,18 @@ breakpoints
                  module with vbp_color and vbp_colors mixins
 * Issue [#3085141](https://www.drupal.org/node/3085141)
                  by [Muath Khraisat](https://www.drupal.org/u/muath-khraisat)
-                : Added the 3059241-4.patch for [Views Bootstrap] module to fix
-                 missing col-lg and col-xl in bootstrap grid format settings
+                : Added the 3049311-9.patch for [Views Bootstrap] module to fix
+                missing col-lg and col-xl in bootstrap grid format settings
+                and grids should not be split into multiple rows
 
 ### Changed since Varbase 8.x-7.1:
+* Issue [#3086223](https://www.drupal.org/node/3086223):
+                 Changed [Varbase Blog] views for blog listing to work with
+                 the better logic for Bootstrap 4
+* Issue [#3086262](https://www.drupal.org/node/3086262):
+                 Changed [Vartheme BS4] theme hook to work with
+                 [Views Bootstrap] ~4.0 grid new better logic and template
+                 for Bootstrap 
 * Issue [#3076272](https://www.drupal.org/node/3076272)
                  by [metalbote](https://www.drupal.org/u/metalbote)
                 , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
