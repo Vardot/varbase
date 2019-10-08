@@ -39,9 +39,13 @@ breakpoints
                  module with vbp_color and vbp_colors mixins
 * Issue [#3085141](https://www.drupal.org/node/3085141)
                  by [Muath Khraisat](https://www.drupal.org/u/muath-khraisat)
-                : Added the 3049311-9.patch for [Views Bootstrap] module to fix
-                missing col-lg and col-xl in bootstrap grid format settings
-                and grids should not be split into multiple rows
+                 : Added the 3049311-9.patch for [Views Bootstrap] module to fix
+                 missing col-lg and col-xl in bootstrap grid format settings
+                 and grids should not be split into multiple rows
+* Issue [#3077926](https://www.drupal.org/node/3077926):
+                 Added an optional config update to [Varbase Update Helper]
+                 for the new Gallery media type, changes in the entity browsers,
+                 Displays and form Displays
 
 ### Changed since Varbase 8.x-7.1:
 * Issue [#3086223](https://www.drupal.org/node/3086223):
@@ -81,7 +85,7 @@ breakpoints
                   drupal-org.make] files and filter the code for
                   Drupal 8 Coding Standard
 * - Updated [Blazy] module from 8.2.0-rc3 to 8.2.0-rc5
-* - Updated [CAPTCHA] module from 8.1.0-beta1 to 8.1.0-beta2
+* - Updated [CAPTCHA] module from 8.1.0-beta1 to 1.0-beta3
 * - Updated [CKEditor Media Embed Plugin] module from 8.1.6 to 8.1.7
 * - Updated [DRD Agent] module from 8.3.8 to 8.3.9
 * - Updated [Entity Reference Revisions] module from 8.1.6 to 8.1.7
@@ -95,6 +99,7 @@ breakpoints
 * - Updated [SMTP Authentication Support] module from 8.1.0-beta4 to 8.1.0-beta5
 * - Updated [Views Bulk Edit] module from 8.2.3 to 8.2.4
 * - Updated [Simple OAuth] from 8.3.16 to 8.4.2
+* - Updated [Simple XML sitemap from 8.3.3 to 8.3.4
 * Issue [#3085506](https://www.drupal.org/node/3085506):
                  Updated [ChromeDriver, standalone selenium server] for
                  the travis-ci Automated Functional Acceptance Testing and

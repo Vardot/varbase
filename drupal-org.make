@@ -381,7 +381,7 @@ projects[shield][type] = module
 projects[shield][version] = 1.2
 
 projects[captcha][type] = module
-projects[captcha][version] = 1.0-beta2
+projects[captcha][version] = 1.0-beta3
 
 projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.4
