@@ -158,6 +158,10 @@ breakpoints
                  Fixed the update process to uninstall the Simple Oauth Extras
                  module as it was merged into Simple Oauth to make it work
                  without conditions
+* Issue [#3086751](https://www.drupal.org/node/3086751)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                 : Fixed paragraphs styling regression issue by removing
+                 make-row() mixin call from scss base file
 
 --------------------------------------------------------------------------------
 
