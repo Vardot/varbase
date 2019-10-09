@@ -239,7 +239,7 @@ projects[length_indicator][version] = 1.0-rc3
 projects[length_indicator][patch][] = https://www.drupal.org/files/issues/2019-04-15/3048286-3.patch
 
 projects[maxlength][type] = module
-projects[maxlength][version] = 1.0-beta2
+projects[maxlength][version] = 1.0-beta4
 
 projects[menu_position][type] = module
 projects[menu_position][version] = 1.0-alpha1

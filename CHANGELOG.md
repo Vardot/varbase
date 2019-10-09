@@ -11,7 +11,8 @@ Gulp as the task manager and made use of the (RFS) Responsive Font Size SCSS
 library as we had shifted our responsive media breakpoints to the Bootstrap 4
 breakpoints
 
-## So its the same number for the breakpoint but under the new name for the breakpoint.
+## So it's the same number for the breakpoint but under the new name for the
+breakpoint.
 
 * Issue [#3077909](https://www.drupal.org/node/3077909):
                  Switched CSS management for [Varbase Media Hero Slider]
@@ -100,6 +101,7 @@ breakpoints
 * - Updated [Views Bulk Edit] module from 8.2.3 to 8.2.4
 * - Updated [Simple OAuth] from 8.3.16 to 8.4.2
 * - Updated [Simple XML sitemap from 8.3.3 to 8.3.4
+* - Updated [Maxlength] from 8.1.0-beta2 to 8.1.0-beta4
 * Issue [#3085506](https://www.drupal.org/node/3085506):
                  Updated [ChromeDriver, standalone selenium server] for
                  the travis-ci Automated Functional Acceptance Testing and
