@@ -1,7 +1,7 @@
 {
   "name": "varbase",
   "private": true,
-  "version": "8.7.0",
+  "version": "8.8.0",
   "description": "Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)",
   "keywords": [
     "Drupal",

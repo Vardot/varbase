@@ -504,7 +504,7 @@ projects[total_control][version] = 2.0-beta2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 7.x-dev
+projects[varbase_core][version] = 8.x-dev
 
 projects[varbase_api][type] = module
 projects[varbase_api][version] = 7.x-dev
