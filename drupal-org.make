@@ -528,7 +528,7 @@ projects[varbase_carousels][type] = module
 projects[varbase_carousels][version] = 7.x-dev
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 7.x-dev
+projects[varbase_blog][version] = 8.x-dev
 
 projects[varbase_search][type] = module
 projects[varbase_search][version] = 6.x-dev
