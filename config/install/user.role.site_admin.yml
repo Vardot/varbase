@@ -60,6 +60,7 @@ permissions:
   - 'administer pane access'
   - 'administer redirect settings'
   - 'administer redirects'
+  - 'administer scripts'
   - 'administer shortcuts'
   - 'administer taxonomy'
   - 'administer tools menu items'
