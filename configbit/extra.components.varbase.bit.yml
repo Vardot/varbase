@@ -45,3 +45,13 @@ config_bit:
           description: "A JSON:API implementation with authentication and authorization that allows for easy ingestion of content by other applications."
           selected: false
           config_form: false
+        google_analytics:
+          title: "Google Analytics"
+          description: "Adds the <a href=\"https://www.drupal.org/project/google_analytics\" target=\"_blank\">Google Analytics</a> web statistics tracking system to your website."
+          selected: false
+          config_form: false
+        google_tag:
+          title: "Google Tag Manager"
+          description: "Adds an integration with the <a href=\"https://www.drupal.org/project/google_tag\" target=\"_blank\">Google Tag Manager</a> (GTM) application."
+          selected: false
+          config_form: false
