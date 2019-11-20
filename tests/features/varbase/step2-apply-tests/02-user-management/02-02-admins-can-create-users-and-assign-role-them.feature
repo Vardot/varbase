@@ -1,22 +1,31 @@
 Feature: User Management - Standard User Management - Admins can create users and assign a role to them
 As a site admin user
-I want to be able create new user accounts and assign roles to them
+I want to be able to create new user accounts and assign roles to them
 So that they will be able to use the site.
 
   Background:
     Given I am a logged in user with the "webmaster" user
 
   @javascript @local @development @staging @production
-  Scenario: Check if admins can see the "Add user" button under People administration page
-    Given I go to "/admin/people"
-     When I click "Add user"
-      And I should see "People"
+  Scenario: Check if admins can see all parts and filters in the People administration page
+     When I go to "/admin/people"
+      And I wait
+     Then I should see "People"
+      And I should see "Add user"
+      And I should see "Name or email contains"
+      And I should see "Status"
+      And I should see "Role"
+      And I should see "Registered date (from)"
+      And I should see "Registered date (to)"
       And I should see "Username"
-      And I should see "Email address"
+      And I should see "Member for"
+      And I should see "Last access"
+      And I should see "Operations"
 
   @javascript @local @development @staging @production
   Scenario: Check if admins can create a new user account as an authenticated user
-    Given I go to "/admin/people/create"
+     When I go to "/admin/people/create"
+      And I wait
      When I fill in "tester@vardot.com" for "Email address"
       And I fill in "Tester" for "Username"
       And I fill in "dD.123123ddd" for "Password"
