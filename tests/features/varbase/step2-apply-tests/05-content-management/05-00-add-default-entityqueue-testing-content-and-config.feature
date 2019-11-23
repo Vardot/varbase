@@ -23,7 +23,10 @@ Scenario: Add Entity Queue Test Queue and use Test Content type
    Then I should see "Add Entity Queue"
    When I fill in "Test Queue" for "Name"
     And I fill in "test_queue" for "Machine-readable name"
-    And I check the box "Test Content"
+    And I click "Entity settings"
+    And I wait
+   Then I should see "Content type"
+   When I check the box "Test Content"
     And I press "Save"
     And I wait
    Then I should see "The entity queue Test Queue has been added."
