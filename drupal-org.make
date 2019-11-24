@@ -12,7 +12,7 @@ projects[config_update][type] = module
 projects[config_update][version] = 1.6
 
 projects[config_filter][type] = module
-projects[config_filter][version] = 1.4
+projects[config_filter][version] = 1.5
 
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.1
@@ -51,7 +51,7 @@ projects[views_bootstrap][version] = 4.1
 projects[views_bootstrap][patch][] = https://www.drupal.org/files/issues/2019-05-31/views-bootstrap-dont-split-grid-rows-3049311-9.patch
 
 projects[field_group][type] = module
-projects[field_group][version] = 3.0-rc1
+projects[field_group][version] = 3.0-rc2
 
 projects[smart_trim][type] = module
 projects[smart_trim][version] = 1.1
@@ -173,7 +173,7 @@ projects[admin_toolbar][type] = module
 projects[admin_toolbar][version] = 1.27
 
 projects[adminimal_admin_toolbar][type] = module
-projects[adminimal_admin_toolbar][version] = 1.9
+projects[adminimal_admin_toolbar][version] = 1.10
 
 projects[tour_ui][type] = module
 projects[tour_ui][version] = 1.0-beta2
@@ -194,7 +194,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.4
+projects[webform][version] = 5.5
 
 projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
@@ -225,18 +225,16 @@ projects[fast_404][type] = module
 projects[fast_404][version] = 1.0-alpha4
 
 projects[mailsystem][type] = module
-projects[mailsystem][version] = 4.1
+projects[mailsystem][version] = 4.2
 
 projects[swiftmailer][type] = module
 projects[swiftmailer][version] = 1.0-beta2
 
 projects[smtp][type] = module
-projects[smtp][version] = 1.0-beta5
+projects[smtp][version] = 1.0-beta6
 
 projects[length_indicator][type] = module
-projects[length_indicator][version] = 1.0-rc3
-;; Issue #3048286: Add cursor position direction support for RTL
-projects[length_indicator][patch][] = https://www.drupal.org/files/issues/2019-04-15/3048286-3.patch
+projects[length_indicator][version] = 1.0
 
 projects[maxlength][type] = module
 projects[maxlength][version] = 1.0-beta4
@@ -259,13 +257,13 @@ projects[better_exposed_filters][type] = module
 projects[better_exposed_filters][version] = 3.0-alpha6
 
 projects[autocomplete_deluxe][type] = module
-projects[autocomplete_deluxe][version] = 1.0-beta1
+projects[autocomplete_deluxe][version] = 1.0-beta2
 
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.9
 
 projects[paragraphs][type] = module
-projects[paragraphs][version] = 1.9
+projects[paragraphs][version] = 1.10
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
 
@@ -299,7 +297,7 @@ projects[masonry][type] = module
 projects[masonry][version] = 1.0-rc2
 
 projects[charts][type] = module
-projects[charts][version] = 3.0
+projects[charts][version] = 3.1
 
 projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][version] = 3.0-beta3
@@ -339,7 +337,7 @@ projects[styleguide][type] = module
 projects[styleguide][version] = 1.0-alpha3
 
 projects[pathauto][type] = module
-projects[pathauto][version] = 1.4
+projects[pathauto][version] = 1.5
 
 projects[redirect][type] = module
 projects[redirect][version] = 1.4
@@ -352,6 +350,12 @@ projects[schema_metatag][version] = 1.4
 
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 3.4
+
+projects[google_tag][type] = module
+projects[google_tag][version] = 1.2
+
+projects[script_manager][type] = module
+projects[script_manager][version] = 1.1
 
 projects[google_analytics][type] = module
 projects[google_analytics][version] = 2.4 
@@ -380,14 +384,17 @@ projects[honeypot][version] = 1.29
 projects[shield][type] = module
 projects[shield][version] = 1.2
 
+projects[flood_unblock][type] = module
+projects[flood_unblock][version] = 1.5
+
 projects[captcha][type] = module
-projects[captcha][version] = 1.0-beta3
+projects[captcha][version] = 1.0-beta4
 
 projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.4
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.14
+projects[search_api][version] = 1.15
 
 projects[blazy][type] = module
 projects[blazy][version] = 2.0-rc5
@@ -402,7 +409,7 @@ projects[slick_media][type] = module
 projects[slick_media][version] = 2.0-alpha3
 
 projects[consumers][type] = module
-projects[consumers][version] = 1.9
+projects[consumers][version] = 1.10
 
 projects[openapi][type] = module
 projects[openapi][version] = 1.0-beta6
@@ -420,7 +427,7 @@ projects[openapi_ui_swagger][type] = module
 projects[openapi_ui_swagger][version] = 1.0-rc3
 
 projects[simple_oauth][type] = module
-projects[simple_oauth][version] = 4.2
+projects[simple_oauth][version] = 4.3
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.4
@@ -475,7 +482,7 @@ projects[checklistapi][version] = 1.10
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.20
+projects[bootstrap][version] = 3.21
 
 projects[bootstrap_barrio][type] = theme
 projects[bootstrap_barrio][version] = 4.22
@@ -494,7 +501,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0-rc5
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.3
+projects[vmi][version] = 2.4
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0-beta2
@@ -504,62 +511,62 @@ projects[total_control][version] = 2.0-beta2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 7.x-dev
+projects[varbase_core][version] = 7.6
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.7
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.x-dev
+projects[varbase_media][version] = 7.5
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.8
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.2
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.1
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.4
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.1
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 7.x-dev
+projects[varbase_blog][version] = 7.2
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.4
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.6
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.9
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.6
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.3
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.7
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.7
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

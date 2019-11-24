@@ -1,3 +1,175 @@
+# 8.7.3
+
+### Highlighted important changes since Varbase 8.x-7.2:
+* Issue [#3085114](https://www.drupal.org/node/3085114):
+                 Added [Google Tag Manager] module to Varbase SEO component
+* Issue [#3094353](https://www.drupal.org/node/3094353):
+                 Added [Script Manager] module to [Varbase SEO] - not optional
+                 but can be uninstalled
+* Issue [#3094918](https://www.drupal.org/node/3094918):
+                 Added option (on install) to Enable [Google Tag Manager]
+                 and [Google Analytics] modules
+
+### Added since Varbase 8.x-7.2:
+* Issue [#3095334](https://www.drupal.org/node/3095334):
+                 Added [Flood Unblock] module 8.1.5 ( ~1.0 )
+* Issue [#3094401](https://www.drupal.org/node/3094401)
+                 by
+                 [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+                : Added an optional update entry from Update Helper to enable
+                 the script manager modul
+* Issue [#3094382](https://www.drupal.org/node/3094382):
+                 Added administer scripts permission to [Site Admin,
+                 Super Admin] user roles. so that they could access the
+                 Script Manager configuration options
+* Issue [#3091267](https://www.drupal.org/node/3091267)
+                 by
+                 [qusai taha](https://www.drupal.org/u/qusai-taha)
+                : Added li tags for menu item(ul) in menu--acount.html.twig
+* Issue [#3090679](https://www.drupal.org/node/3090679)
+                 by
+                 [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Added the patch to fix ajax issue in bootstrap_barrio
+                 base theme
+* Issue [#3096425](https://www.drupal.org/node/3096425)
+                 by
+                 [mahseri](https://www.drupal.org/u/mahseri)
+                : Added config template for search result [Search result
+                 highlighting input] view mode
+* Issue [#3093426](https://www.drupal.org/node/3093426)
+                 by
+                 [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+                : Added configuration link for the [Varbase Bootstrap
+                 Paragraphs settings] page
+* Issue [#3093428](https://www.drupal.org/node/3093428):
+                 Added the 3089444-21.patch for the [JSON:API Extras] module
+                 to fix Compatibility with Drupal 8.8.x and Drupal 8.7.x
+
+### Changed since Varbase 8.x-7.2:
+* Issue [#3089579](https://www.drupal.org/node/3089579)
+                 by
+                 [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+                : Changed view reference paragraph title in [Vartheme BS4]
+                 to add h2
+* Issue [#3093000](https://www.drupal.org/node/3093000)
+                 by
+                 [YousefAnbar](https://www.drupal.org/u/yousefanbar)
+                : Changed horizontal media teaser templates in [VarthemeBS4]
+                 to have full support for bootstrap 4 and remove legacy
+                 from bootstrap 3
+* Issue [#3095189](https://www.drupal.org/node/3095189):
+                 Removed all paragraphs templates from [Vartheme BS4] as they
+                 are synced with templates from Varbase Bootstrap
+                 Paragraphs 8.x-7.8
+* Issue [#3094081](https://www.drupal.org/node/3094081)
+                 by
+                 [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                , [sreher](https://www.drupal.org/u/sreher)
+                : Changed README file with better info which are related
+                 to Varbase Auth
+* Issue [#3094921](https://www.drupal.org/node/3094921):
+                 Moved [Google Analytics config settings] from optional
+                 to managed config. so that when Google Analytics module
+                 enabled the custom GA settings will be loaded to the
+                 active config
+* Issue [#3090903](https://www.drupal.org/node/3090903)
+                 by
+                 [YousefAnbar](https://www.drupal.org/u/yousefanbar)
+                 : Changed Varbase Bootstrap Paragraphs description for the 
+                 settings on how to customize the styles to fit the project
+                 brand with custom theme
+* Issue [#3092737](https://www.drupal.org/node/3092737)
+                 by
+                 [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+                : Changed the order for rendering the
+                 X button icon and the modal's field title
+* Issue [#3095593](https://www.drupal.org/node/3095593):
+                 Changed Feature: User Management - Standard User Management
+                 - Admins can create users and assign a role to them -
+                 to work with Drupal 8.7.10 and Drupal 8.8.x and Fix Entity
+                 settings in the Scenario: Add Entity Queue Test Queue and
+                 use Test Content type
+* Issue [#3093009](https://www.drupal.org/node/3093009)
+                 by
+                 [YousefAnbar](https://www.drupal.org/u/yousefanbar)
+                : Replaced View Modes Inventory [VMI] bootstrap 3 grid
+                 classes with bootstrap 4
+
+### Updates since Varbase 8.x-7.2:
+* Issue [#3093435](https://www.drupal.org/node/3093435):
+                 Updated [Paragraphs] module from 8.1.9 to 8.1.10
+* Issue [#3093429](https://www.drupal.org/node/3093429):
+                 Updated [Admin Toolbar] module from ( ~1.0 ) to ( ~2.0 )
+* Issue [#3095120](https://www.drupal.org/node/3095120):
+                 Updated [Length Indicator] module from 1.0-rc3 to ( ~1.0 )
+* Issue [#3095305](https://www.drupal.org/node/3095305):
+                 Varbase 8.7.3: Updated [CHANGELOG.md, README.md,
+                 drupal-org.make] files and filter the code for
+                 Drupal 8 Coding Standard
+* - Updated [View Modes Inventory - Bootstrap Ready] module from 8.2.3 to 8.2.4
+* - Updated [Adminimal Admin Toolbar] module from 8.1.9 to 8.1.10
+* - Updated [Autocomplete Deluxe] module from 8.1.0-beta1 to 8.1.0-beta2
+* - Updated [CAPTCHA] module from 8.1.0-beta3 to 8.1.0-beta4
+* - Updated [Charts] module from 8.3.0 to 8.3.1
+* - Updated [Config Filter] module from 8.1.4 to 8.1.5
+* - Updated [Consumers] module from 8.1.9 to 8.1.10
+* - Updated [Field Group] module from 8.3.0-rc1 to 8.3.0-rc2
+* - Updated [Length Indicator] module from 8.1.0-rc3 to 8.1.0
+* - Updated [Mail System] module from 8.4.1 to 8.4.2
+* - Updated [Paragraphs] module from 8.1.9 to 8.1.10
+* - Updated [Pathauto] module from 8.1.4 to 8.1.5
+* - Updated [Search API] module from 8.1.14 to 8.1.15
+* - Updated [Simple OAuth] module from 8.4.2 to 8.4.3
+* - Updated [SMTP Authentication Support] module from 8.1.0-beta5 to 8.1.0-beta6
+* - Updated [Webform] module from 8.5.4 to 8.5.5
+* - Updated [Bootstrap] theme from 8.3.20 to 8.3.21
+* Issue [#3093410](https://www.drupal.org/node/3093410):
+                 Updated the default travis-ci PHP testing version from
+                 PHP7.2 to PHP7.3 for Automated Functional Acceptance
+                 Testing groups
+
+### Fixes since Varbase 8.x-7.2:
+* Issue [#3089664](https://www.drupal.org/node/3089664)
+                 by
+                 [YousefAnbar](https://www.drupal.org/u/yousefanbar)
+                 : Fixed redundant order-1 when aligning
+                 the image to the right
+* Issue [#3090355](https://www.drupal.org/node/3090355)
+                 by
+                 [YousefAnbar](https://www.drupal.org/u/yousefanbar)
+                 : Fixed paragraph title location for text and image paragraph
+                 to be above the row
+* Issue [#3090100](https://www.drupal.org/node/3090100)
+                 by 
+                 [qusai taha](https://www.drupal.org/u/qusai-taha)
+                 : Fixed static active class on (li) html tag and move to
+                 anchor tag
+* Issue [#3087746](https://www.drupal.org/node/3087746)
+                 by 
+                 [mhawwari](https://www.drupal.org/u/mhawwari)
+                 : Fixed [Varbase Email] validation for loaded logo file from
+                 email upload before creating its url
+* Issue [#3089800](https://www.drupal.org/node/3089800)
+                 by 
+                 [qusai taha](https://www.drupal.org/u/qusai-taha)
+                 : Fixed coma (,) after h3 in SCSS
+* Issue [#3090319](https://www.drupal.org/node/3090319)
+                 by 
+                 [qusai taha](https://www.drupal.org/u/qusai-taha)
+                 , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 : Fixed font size value in breadcrumb.component.scss
+* Issue [#3095029](https://www.drupal.org/node/3095029)
+                 by 
+                 [Abdelrahman_Amer](https://www.drupal.org/u/abdelrahman_amer)
+                 : Fixed fetal error after translation accordion paragraph
+* Issue [#3095111](https://www.drupal.org/node/3095111)
+                 by 
+                 [arawashdeh](https://www.drupal.org/u/arawashdeh)
+                 : Fixed the ampersand character "&" in the paragraph title
+                 not to appear as encoded "&amp; "
+
+--------------------------------------------------------------------------------
+
 # 8.7.2
 
 ### Highlighted important changes since Varbase 8.x-7.1:

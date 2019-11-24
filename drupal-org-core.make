@@ -3,7 +3,7 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.7.8"
+projects[drupal][version] = "8.7.10"
 ;; Issue #2869592: Disabled update module shouldn't produce a status report warning
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch
 ;; Issue #2815221: Add quickedit to the latest-revision route
@@ -18,3 +18,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-12-10/core-
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-03-31/3044656-2.patch
 ;; Issue #2646744: Drupal Core Url does not accept root-relative (file) URLs, making it impossible to let LinkGenerator create root-relative file URL links
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-12-15/2646744-34.patch
+;; Issue #2820347: Fix Exposed filter reset redirects user to 404 page on AJAX view when placed as a block
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-07-22/2820347-129.patch
