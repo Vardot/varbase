@@ -26,7 +26,7 @@ So that I can use them after the install or update.
 
    @check @local @development @staging @production
    Scenario: Check Media Table admin page
-      When I go to "/admin/content/media-table"
+      When I go to "/admin/content/media"
        And I wait
       Then I should see "Media"
        And I should see "Thumbnail"
