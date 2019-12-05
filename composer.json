@@ -38,6 +38,7 @@
     "drupal/varbase_bootstrap_paragraphs": "7.x-dev",
     "drupal/varbase_editor": "7.x-dev",
     "drupal/varbase_landing": "7.x-dev",
+    "drupal/varbase_layout_builder": "7.x-dev",
     "drupal/varbase_heroslider_media": "7.x-dev",
     "drupal/varbase_carousels": "7.x-dev",
     "drupal/varbase_blog": "8.x-dev",
