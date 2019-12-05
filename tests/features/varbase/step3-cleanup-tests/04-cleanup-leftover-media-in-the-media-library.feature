@@ -3,7 +3,7 @@ Feature: Cleanup leftover media from the Media Library
 @javascript @cleanup @local @development
 Scenario: Delete leftover media from the Media Library
   Given I am a logged in user with the "webmaster" user
-   When I go to "/admin/content/media"
+   When I go to "/admin/content/media-grid"
     And I wait
    Then I should see "Media"
    When I check the box "edit-select-all"
