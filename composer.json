@@ -30,7 +30,7 @@
     "composer/installers": "~1.0",
     "oomphinc/composer-installers-extender": "~1.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal-composer/drupal-scaffold": "~2.0",
+    "drupal/core-composer-scaffold": "^8.8.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
     "drupal/varbase_core": "8.x-dev",
     "drupal/varbase_api": "7.x-dev",
@@ -98,6 +98,11 @@
     "create-new-vartheme": "scripts/create-new-vartheme.sh"
   },
   "extra": {
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "docroot/"
+      }
+    },
     "branch-alias": {
       "dev-8.x-8.x": "8.8.x-dev"
     },
