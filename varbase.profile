@@ -458,6 +458,26 @@ function varbase_after_install_finished(array &$install_state) {
     $config_factory->setData($config_data)->save(TRUE);
   }
 
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->applyUpdates();
+
+  // Full flash and clear cash and rebuilding newly created routes.
+  // After install of extra modules by install: in the .info.yml files.
+  // In Varbase profile and all Varbase components.
+  // ---------------------------------------------------------------------------
+  // * Necessary inlitilization for the entire system.
+  // * Account for changed config by the end install.
+  // * Flush all persistent caches.
+  // * Flush asset file caches.
+  // * Wipe the Twig PHP Storage cache.
+  // * Rebuild module and theme data.
+  // * Clear all plugin caches.
+  // * Rebuild the menu router based on all rebuilt data.
+  drupal_flush_all_caches();
+
   global $base_url;
 
   // After install direction.
