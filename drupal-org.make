@@ -170,7 +170,7 @@ projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.27
+projects[admin_toolbar][version] = 2.0
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.10
@@ -254,7 +254,7 @@ projects[taxonomy_menu][version] = 3.4
 projects[taxonomy_menu][patch][] = https://www.drupal.org/files/issues/2018-12-23/2939143-10.patch
 
 projects[better_exposed_filters][type] = module
-projects[better_exposed_filters][version] = 3.0-alpha6
+projects[better_exposed_filters][version] = 4.0-alpha1
 
 projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta2
