@@ -1,3 +1,104 @@
+# 8.7.4
+
+### Highlighted important changes since Varbase 8.x-7.3:
+* Issue [#3095125](https://www.drupal.org/node/3095125):
+                 Added blurred image effect to [Varbase Media] to be loaded
+                 for all Blazy enabled images
+
+### Added since Varbase 8.x-7.3:
+* Issue [#3101923](https://www.drupal.org/node/3101923):
+                 Added an optional config update to [Varbase Update Helper]
+                 for the Add blurred image effect to be loaded for all Blazy
+                 enabled images
+* Issue [#3096425](https://www.drupal.org/node/3096425)
+                 by
+                 [mahseri](https://www.drupal.org/u/mahseri)
+                : Added config template for search result [Search result
+                 highlighting input] view mode
+
+### Changed since Varbase 8.x-7.3:
+* Issue [#3101614](https://www.drupal.org/node/3101614):
+                 Changed [Varbase Media] oembed iframe CSS placeholder token
+                 to use Drupal core committed style template
+* Issue [#3101611](https://www.drupal.org/node/3101611):
+                 Changed [Varbase Media Header] media oembed iframe CSS
+                 placeholder token to use Drupal core committed style template
+* Issue [#3101609](https://www.drupal.org/node/3101609):
+                 Changed [Varbase Media Hero Slider] media oembed iframe CSS
+                 placeholder token to use Drupal core committed style template
+* Issue [#3101603](https://www.drupal.org/node/3101603):
+                 Changed [Vartheme BS4] media oembed iframe CSS
+                 placeholder token to use Drupal core committed style template
+* Issue [#3101283](https://www.drupal.org/node/3101283):
+                 Removed the 3089444-21.patch for [JSON:API Extras] module
+                 as it was committed in 8.x-3.13
+* Issue [#3098737](https://www.drupal.org/node/3098737):
+                 Issue #3098737: Removed the 3096956-17 patch for
+                 [Views Reference Field] as it was committed and
+                 8.x-2.0-alpha6 was released
+
+### Updates since Varbase 8.x-7.3:
+* Issue [#3097281](https://www.drupal.org/node/3097281)
+                 by
+                 [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                , [AEinstein](https://www.drupal.org/u/aeinstein)
+                : Update [Bootstrap 4] library from 4.3.1 to 4.4.0
+* Issue [#3101872](https://www.drupal.org/node/3101872):
+                 Updated [Bootstrap 4] library from 4.4.0 to 4.4.1
+* Issue [#3101570](https://www.drupal.org/node/3101570):
+                 Updated [Update helper] module from 8.1.0 to 8.1.1 and
+                 update the [PATCH] Enhancements
+* Issue [#3101347](https://www.drupal.org/node/3101347):
+                 Updated [Better Exposed Filters] module from ~3.0 to ~4.0
+* Issue [#3101268](https://www.drupal.org/node/3101268):
+                 Updated [Google Analytics] module from ~2.0 to ~3.0
+* Issue [#3101510](https://www.drupal.org/node/3101510):
+                 Varbase 8.7.4: Update [CHANGELOG.md, README.md,
+                 drupal-org.make] files and filter the code for Drupal 8
+                 Coding Standard
+* - Updated [Smart Trim] module from 8.1.1 to 8.1.2
+* - Updated [Taxonomy access fix] module from 8.2.6 to 8.2.7
+* - Updated [Better Login] module from 8.1.2 to 8.1.3
+* - Updated [Better Normalizers] module from 8.1.0-beta3 to 8.1.0-beta4
+* - Updated [Block Class] module from 8.1.0 to 8.1.1
+* - Updated [Config Ignore] module from 8.2.1 to 8.2.2
+* - Updated [Display Suite] module from 8.3.4 to 8.3.5
+* - Updated [DRD Agent] module from 8.3.9 to 8.3.10
+* - Updated [Embed] module from 8.1.0 to 8.1.3
+* - Updated [GoogleTagManager] module from 8.1.2 to 8.1.3
+* - Updated [Honeypot] module from 8.1.29 to 8.1.30
+* - Updated [Image Resize Filter] module from 8.1.0-beta1 to 8.1.0
+* - Updated [JSON:API Extras] module from 8.3.12 to 8.3.13
+* - Updated [Paragraphs Features] module from 8.1.6 to 8.1.7
+* - Updated [Pathauto] module from 8.1.5 to 8.1.6
+* - Updated [Redirect] module from 8.1.4 to 8.1.5
+* - Updated [Simple XML sitemap] module from 8.3.4 to 8.3.5
+* - Updated [Update helper] module from 8.1.0 to 8.1.1
+* - Updated [Username Enumeration Prevention] module from 8.1.0-beta2 to 8.1.0
+* - Updated [Views Reference Field] module from 8.2.0-alpha4 to 8.2.0-alpha6
+* - Updated [Webform] module from 8.5.5 to 8.5.6
+
+### Fixes since Varbase 8.x-7.3:
+* Issue [#3096606](https://www.drupal.org/node/3096606):
+                 Fixed drag and drop of blocks incompatible issue for
+                 [Bootstrap Layouts] with [Layout Builder]
+* Issue [#3096607](https://www.drupal.org/node/3096607):
+                 Fixed unsupported operand types for [Bootstrap Layouts]
+                 in set configuration
+* Issue [#3099787](https://www.drupal.org/node/3099787)
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
+                 : Fixed generate image Uri for blurry from the
+                 fallback image style when responsive image style is used
+* Issue [#3098750](https://www.drupal.org/node/3098750):
+                 Fixed the Automated Functional Acceptance
+                 Testing group: 03 admin management for [Media Library]
+                 and the [Media Grid and Media Table] admin pages
+* Issue [#3098789](https://www.drupal.org/node/3098789):
+                 Fixed [Media Library] and the [Media Grid and Media Table]
+                 admin pages to work with Drupal ^8.8.x and ^8.7.x
+
+--------------------------------------------------------------------------------
+
 # 8.7.3
 
 ### Highlighted important changes since Varbase 8.x-7.2:
