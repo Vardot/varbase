@@ -49,6 +49,20 @@ function varbase_install() {
     ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
+  // Full flash and clear cash and rebuilding newly created routes.
+  // After install of extra modules by install: in the .info.yml files.
+  // In Varbase profile and all Varbase components.
+  // ---------------------------------------------------------------------------
+  // * Necessary inlitilization for the entire system.
+  // * Account for changed config by the end install.
+  // * Flush all persistent caches.
+  // * Flush asset file caches.
+  // * Wipe the Twig PHP Storage cache.
+  // * Rebuild module and theme data.
+  // * Clear all plugin caches.
+  // * Rebuild the menu router based on all rebuilt data.
+  drupal_flush_all_caches();
+
   // If Varbase Tour were enabled then redirect to the homepage with activ tour.
   if (isset($GLOBALS['homepage_with_varbase_tour'])
     && $GLOBALS['homepage_with_varbase_tour'] == TRUE) {
