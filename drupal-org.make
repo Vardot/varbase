@@ -547,7 +547,7 @@ projects[varbase_total_control][type] = module
 projects[varbase_total_control][version] = 6.9
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.0
+projects[varbase_auth][version] = 6.6
 
 projects[varbase_styleguide][type] = module
 projects[varbase_styleguide][version] = 6.3

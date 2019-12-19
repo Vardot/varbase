@@ -42,7 +42,7 @@
                  by
                  [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 , [AEinstein](https://www.drupal.org/u/aeinstein)
-                : Update [Bootstrap 4] library from 4.3.1 to 4.4.0
+                : Updated [Bootstrap 4] library from 4.3.1 to 4.4.0
 * Issue [#3101872](https://www.drupal.org/node/3101872):
                  Updated [Bootstrap 4] library from 4.4.0 to 4.4.1
 * Issue [#3101570](https://www.drupal.org/node/3101570):
@@ -56,6 +56,7 @@
                  Varbase 8.7.4: Update [CHANGELOG.md, README.md,
                  drupal-org.make] files and filter the code for Drupal 8
                  Coding Standard
+* - Updated [Drupal] core from 8.7.10 to 8.7.11
 * - Updated [Smart Trim] module from 8.1.1 to 8.1.2
 * - Updated [Taxonomy access fix] module from 8.2.6 to 8.2.7
 * - Updated [Better Login] module from 8.1.2 to 8.1.3
