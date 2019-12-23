@@ -39,6 +39,9 @@ projects[panels][version] = 4.4
 projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
+projects[layout_builder_modal][type] = module
+projects[layout_builder_modal][version] = 1.0-alpha2
+
 projects[layout_builder_restrictions][type] = module
 projects[layout_builder_restrictions][version] = 1.5
 
