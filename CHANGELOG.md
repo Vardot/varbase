@@ -19,6 +19,10 @@
 ### Added since Varbase 8.x-7.4:
 * Issue [#3099007](https://www.drupal.org/node/3099007):
                   Added [Varbase Layout Builder] component module
+* Issue [#3102723](https://www.drupal.org/node/3102723):
+                  Added the 3101791-8.patch for [Layout Builder Modal] module
+                  to fix an integration issue with [Layout Builder UX]
+                  to configure shortcut link to open with modal
 
 ### Changed since Varbase 8.x-7.4:
 * Issue [#3093424](https://www.drupal.org/node/3093424):
@@ -28,7 +32,7 @@
                   - Admins can create users and assign a role to them - to work
                   with Drupal 8.7.10 and Drupal 8.8.x
 * Issue [#3102415](https://www.drupal.org/node/3102415)
-                  by jedgar1mx
+                  by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
                  : Removed the 3034353-2.patch for [Social Auth Google] as it
                   was committed in 8.x-2.0 stable
 
