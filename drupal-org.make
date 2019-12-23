@@ -42,6 +42,24 @@ projects[bootstrap_layouts][version] = 5.1
 projects[layout_builder_restrictions][type] = module
 projects[layout_builder_restrictions][version] = 1.5
 
+projects[layout_library][type] = module
+projects[layout_library][version] = 1.0-beta1
+
+projects[layout_builder_block_sanitizer][type] = module
+projects[layout_builder_block_sanitizer][version] = 1.0-alpha2
+
+projects[media_library_theme_reset][type] = module
+projects[media_library_theme_reset][version] = 1.0-beta1
+
+projects[layout_builder_at][type] = module
+projects[layout_builder_at][version] = 2.10 
+
+projects[media_library_form_element][type] = module
+projects[media_library_form_element][version] = 1.0-alpha4 
+
+projects[lb_ux][type] = module
+projects[lb_ux][version] = 1.0-beta1
+
 projects[ds][type] = module
 projects[ds][version] = 3.5
 
@@ -352,7 +370,10 @@ projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 3.5
 
 projects[google_analytics][type] = module
-projects[google_analytics][version] = 2.4 
+projects[google_analytics][version] = 2.4
+
+projects[google_tag][type] = module
+projects[google_tag][version] = 1.3
 
 projects[yoast_seo][type] = module
 projects[yoast_seo][version] = 1.5
@@ -453,7 +474,7 @@ projects[menu_admin_per_menu][type] = module
 projects[menu_admin_per_menu][version] = 1.0
 
 projects[drd_agent][type] = module
-projects[drd_agent][version] = 3.10
+projects[drd_agent][version] = 3.11
 
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
@@ -468,6 +489,9 @@ projects[update_helper][patch][] = https://www.drupal.org/files/issues/2019-12-1
 
 projects[checklistapi][type] = module
 projects[checklistapi][version] = 1.10
+
+projects[script_manager][type] = module
+projects[script_manager][version] = 1.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
@@ -521,7 +545,7 @@ projects[varbase_landing][type] = module
 projects[varbase_landing][version] = 7.1
 
 projects[varbase_layout_builder][type] = module
-projects[varbase_layout_builder][version] = 1.0-alpha1
+projects[varbase_layout_builder][version] = 1.0-alpha2
 
 projects[varbase_heroslider_media][type] = module
 projects[varbase_heroslider_media][version] = 7.5
