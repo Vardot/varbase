@@ -1,3 +1,68 @@
+# 8.8.0
+
+### Highlighted important changes since Varbase 8.x-7.4:
+* Updated [Drupal] core from ~8.7.0 to ~8.8.0
+* Issue [#3093406](https://www.drupal.org/node/3093406):
+                  Started an 8.x-8.x new branch for [Varbase] version:
+                  8.x-8.x-dev and extra branch-alias with
+                  dev-8.x-8.x to 8.8.x-dev
+* Issue [#3100016](https://www.drupal.org/node/3100016):
+                  Switched from drupal/core ~8.8.0 to drupal/core-recommended
+                  ~8.8.0 in Varbase Core 8.8.0
+* Issue [#3099991](https://www.drupal.org/node/3099991):
+                  Switched from drupal-composer/drupal-scaffold ~2.0
+                  to drupal/core-composer-scaffold ^8.8.0
+* Issue [#3082049](https://www.drupal.org/node/3082049):
+                  Initialized [Varbase Layout Builder] with a starter set
+                  of layouts and styling options for sections
+
+### Added since Varbase 8.x-7.4:
+* Issue [#3099007](https://www.drupal.org/node/3099007):
+                  Added [Varbase Layout Builder] component module
+
+### Changed since Varbase 8.x-7.4:
+* Issue [#3093424](https://www.drupal.org/node/3093424):
+                  Started an 8.x-8.x branch for [Varbase Blog] module
+* Issue [#3095593](https://www.drupal.org/node/3095593):
+                  Changed Feature: User Management - Standard User Management
+                  - Admins can create users and assign a role to them - to work
+                  with Drupal 8.7.10 and Drupal 8.8.x
+* Issue [#3102415](https://www.drupal.org/node/3102415)
+                  by jedgar1mx
+                 : Removed the 3034353-2.patch for [Social Auth Google] as it
+                  was committed in 8.x-2.0 stable
+
+### Updates since Varbase 8.x-7.4:
+* Issue [#3101257](https://www.drupal.org/node/3101257):
+                  Updated [Config Filter] from ~1.0 to ~2.0
+* Issue [#3101261](https://www.drupal.org/node/3101261):
+                  Updated [Content locking (anti-concurrent editing)]
+                  module from ~1.0 to ~2.0
+* Issue [#3095576](https://www.drupal.org/node/3095576):
+                  Varbase 8.8.0: Update [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filter the code for Drupal
+                  8 Coding Standard
+* - Updated [Drupal] core from 8.7.11 ( ~8.7.0 ) to 8.8.1 ( ~8.8.0 )
+* - Updated [Metatag] module from 8.1.10 to 8.1.11
+* - Updated [Paragraphs] module from 8.1.9 to 8.1.10
+* - Updated [Social API] module from 8.2.0-rc1 to 8.2.0-rc2
+* - Updated [Social Auth] module from 8.2.0-rc1 to 8.2.0-rc2
+* - Updated [Social Auth Google] module from 8.2.0-beta4 to 8.2.0
+
+### Fixes since Varbase 8.x-7.4:
+* Issue [#3098789](https://www.drupal.org/node/3098789):
+                  Fixed [Media Library] and the [Media Grid and
+                  Media Table] admin pages
+* Issue [#3098750](https://www.drupal.org/node/3098750):
+                  Fixed the Automated Functional Acceptance Testing group:
+                  03 admin management for [Media Library] and the
+                  [Media Grid and Media Table] admin pages
+* Issue [#3101234](https://www.drupal.org/node/3101234):
+                  Fixed Drupal core multilingual site's layout edit
+                  context issue
+
+--------------------------------------------------------------------------------
+
 # 8.7.2
 
 ### Highlighted important changes since Varbase 8.x-7.1:

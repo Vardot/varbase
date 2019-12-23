@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-8.x-dev)](https://travis-ci.org/Vardot/varbase/builds/595754536) Varbase 8.8.x
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=8.x-8.0)](https://travis-ci.org/Vardot/varbase/builds/627194163) Varbase 8.8.0
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -23,6 +23,14 @@ Starting a new project? Consider Varbase for Drupal 8.
 Installing Varbase 8.x-7.x comes with several extra automated installation
 steps, to take full advantage of Varbase, other than the Drupal 8 installation
 instructions.
+
+
+# Install with Composer
+
+To install the most recent stable release of Varbase 8.8.x run this command:
+```
+composer create-project vardot/varbase-project:^8.8.0 PROJECT_DIR_NAME --no-dev --no-interaction
+```
 
 To install the dev version of Varbase 8.8.x run this command:
 ```
