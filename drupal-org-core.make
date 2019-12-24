@@ -22,5 +22,3 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-12-15/26467
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-19/3101231-19.patch
 ;; Issue #2996114: Fix Argument 2 passed to Drupal jsonapi Routing closure must be an instance of ResourceType, NULL given
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-03/2996114-99.patch
-;; Issue #3086307: Fix install performance by 20% on rebuilding the router after installation
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-03/3086307-24.patch

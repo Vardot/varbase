@@ -23,8 +23,16 @@
                   Added the 3101791-8.patch for [Layout Builder Modal] module
                   to fix an integration issue with [Layout Builder UX]
                   to configure shortcut link to open with modal
+* Issue [#3102559](https://www.drupal.org/node/3102559):
+                 Added the 3102555-3.patch for [Better Login] module to fix
+                 the remove all blocks in content region
+* Issue [#3102065](https://www.drupal.org/node/3102065):
+                 Added a necessary initialization for the entire system to
+                 account for changed config by the end of the installation 
 
 ### Changed since Varbase 8.x-7.4:
+* Issue [#3093405](https://www.drupal.org/node/3093405):
+                  Started an 8.x-8.x branch for [Varbase Core] module
 * Issue [#3093424](https://www.drupal.org/node/3093424):
                   Started an 8.x-8.x branch for [Varbase Blog] module
 * Issue [#3095593](https://www.drupal.org/node/3095593):
@@ -35,13 +43,22 @@
                   by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
                  : Removed the 3034353-2.patch for [Social Auth Google] as it
                   was committed in 8.x-2.0 stable
+* Issue [#3098737](https://www.drupal.org/node/3098737):
+                   Remove the 3096956-17 patch for [Views Reference Field] as
+                   it was committed and 8.x-2.0-alpha6 was released
 
 ### Updates since Varbase 8.x-7.4:
+* Updated [Drupal] core from 8.7.11 ( ~8.7.0 ) to 8.8.1 ( ~8.8.0 )
+* Issue [#3101570](https://www.drupal.org/node/3101257):
+                  Update [Update helper] module from 8.1.0 to 8.1.1 and update
+                  the [PATCH] Enhancements
 * Issue [#3101257](https://www.drupal.org/node/3101257):
                   Updated [Config Filter] from ~1.0 to ~2.0
 * Issue [#3101261](https://www.drupal.org/node/3101261):
                   Updated [Content locking (anti-concurrent editing)]
                   module from ~1.0 to ~2.0
+* Issue [#3102032](https://www.drupal.org/node/3102032):
+                  Updated [Devel] module from * ( ~2.0 ) to  ~3.0
 * Issue [#3095576](https://www.drupal.org/node/3095576):
                   Varbase 8.8.0: Update [CHANGELOG.md, README.md,
                   drupal-org.make] files and filter the code for Drupal
@@ -65,6 +82,15 @@
 * Issue [#3101234](https://www.drupal.org/node/3101234):
                   Fixed Drupal core multilingual site's layout edit
                   context issue
+* Issue [#3101310](https://www.drupal.org/node/3101310):
+                  Fixed argument 2 passed to Drupal jsonapi Routing closure
+                  must be an instance of ResourceType, NULL given
+* Issue [#3096606](https://www.drupal.org/node/3096606):
+                  Fixed drag and drop of blocks incompatible issue for
+                  [Bootstrap Layouts] with [Layout Builder]
+* Issue [#3096607](https://www.drupal.org/node/3096607):
+                  Fixed unsupported operand types for [Bootstrap Layouts]
+                  in set configuration
 
 --------------------------------------------------------------------------------
 
