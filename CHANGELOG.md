@@ -71,6 +71,7 @@
 * - Updated [Social Auth] module from 8.2.0-rc1 to 8.2.0-rc2
 * - Updated [Social Auth Google] module from 8.2.0-beta4 to 8.2.0
 * - Updated [Blazy] module from 8.2.0-rc5 to 8.2.0-rc6
+* - Updated [Social Auth Facebook] module from 8.2.0-beta4 to 8.2.0
 
 ### Fixes since Varbase 8.x-7.4:
 * Issue [#3098789](https://www.drupal.org/node/3098789):
@@ -92,6 +93,10 @@
 * Issue [#3096607](https://www.drupal.org/node/3096607):
                   Fixed unsupported operand types for [Bootstrap Layouts]
                   in set configuration
+* Issue [#3103229](https://www.drupal.org/node/3103229):
+                  Fixed [Embed buttons] icons for the CKEditor after the
+                  change of Embed API as they had dropped icon_uuid and
+                  change of config schema
 
 --------------------------------------------------------------------------------
 

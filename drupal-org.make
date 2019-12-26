@@ -341,7 +341,7 @@ projects[social_auth_google][type] = module
 projects[social_auth_google][version] = 2.0
 
 projects[social_auth_facebook][type] = module
-projects[social_auth_facebook][version] = 2.0-beta4
+projects[social_auth_facebook][version] = 2.0
 
 projects[social_auth_twitter][type] = module
 projects[social_auth_twitter][version] = 2.0-alpha3
@@ -536,7 +536,7 @@ projects[varbase_api][type] = module
 projects[varbase_api][version] = 7.8
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.8
+projects[varbase_media][version] = 7.9
 
 projects[varbase_bootstrap_paragraphs][type] = module
 projects[varbase_bootstrap_paragraphs][version] = 7.8
