@@ -412,7 +412,7 @@ projects[search_api][type] = module
 projects[search_api][version] = 1.15
 
 projects[blazy][type] = module
-projects[blazy][version] = 2.0-rc5
+projects[blazy][version] = 2.0-rc6
 
 projects[slick][type] = module
 projects[slick][version] = 2.0-rc4

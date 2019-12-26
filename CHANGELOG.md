@@ -64,12 +64,13 @@
                   drupal-org.make] files and filter the code for Drupal
                   8 Coding Standard
 * - Updated [Drupal] core from 8.7.11 ( ~8.7.0 ) to 8.8.1 ( ~8.8.0 )
-* - Updated [DRD Agent] module from 8.1.10 to 8.1.11
+* - Updated [DRD Agent] module from 8.1.10 to 8.1.12
 * - Updated [Metatag] module from 8.1.10 to 8.1.11
 * - Updated [Paragraphs] module from 8.1.9 to 8.1.10
 * - Updated [Social API] module from 8.2.0-rc1 to 8.2.0-rc2
 * - Updated [Social Auth] module from 8.2.0-rc1 to 8.2.0-rc2
 * - Updated [Social Auth Google] module from 8.2.0-beta4 to 8.2.0
+* - Updated [Blazy] module from 8.2.0-rc5 to 8.2.0-rc6
 
 ### Fixes since Varbase 8.x-7.4:
 * Issue [#3098789](https://www.drupal.org/node/3098789):
