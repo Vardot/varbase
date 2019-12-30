@@ -7,7 +7,7 @@ distribution:
   name: Varbase
   install:
     theme: vartheme_admin
-version: 8.x-8.x-dev
+version: 8.x-8.1
 install:
   - system
   - action

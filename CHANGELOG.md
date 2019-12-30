@@ -1,3 +1,64 @@
+# 8.8.1
+
+### Highlighted important changes since Varbase 8.x-8.0:
+* Issue [#3103717](https://www.drupal.org/node/3103717):
+                  Fixed replace drupal-composer/drupal-scaffold with
+                  drupal/core-composer-scaffold and remove post install cmd scripts
+* [Vardot/varbase-project](https://github.com/Vardot/varbase-project)
+                  template : Fixed replace
+                  drupal-composer/drupal-scaffold with
+                  drupal/core-composer-scaffold
+                  [#70](https://github.com/Vardot/varbase-project/issues/70)
+* [Vardot/varbase-updater](https://github.com/Vardot/varbase-updater)
+                  : Changed the update config rules for 8.7.* to 8.8.1 and
+                  from 8.8.* to 8.8.* latest
+                  [#24](https://github.com/Vardot/varbase-updater/issues/24)
+
+### Added since Varbase 8.x-8.0:
+* No new features. Have a look at Varbase 8.x-8.0
+
+### Changed since Varbase 8.x-8.0:
+* No changes. Have a look at Varbase 8.x-8.0
+
+### Updates since Varbase 8.x-8.0:
+* Issue [#3103730](https://www.drupal.org/node/3103730):
+                  Varbase 8.8.1: Update [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filter the code for
+                  Drupal 8 Coding Standard
+* - Updated [Token] module from 8.1.5 to 8.1.6
+* - Updated [Varbase Layout Builder] module from 8.1.0-alpha2 to 8.1.0-alpha3
+* - Updated [Varbase Media] module from 8.7.9 to 8.7.10
+* - Updated [Varbase Media Hero Slider] module from 8.7.5 to 8.7.6
+* - Updated [Varbase Media Header] module from 8.7.3 to 8.7.4
+
+### Fixes since Varbase 8.x-8.0:
+* Issue [#3102935](https://www.drupal.org/node/3102935)
+                by [mhawwari](https://www.drupal.org/u/mhawwari)
+                : Fixed console error. Vimeo player fires twice for [Varbase
+                Media Hero Slider]
+* Issue [#3103554](https://www.drupal.org/node/3103554)
+                by [Abdelrahman_Amer](https://www.drupal.org/u/abdelrahman_amer)
+                : Fixed notice for [Varbase Media] oembed iframe on an
+                Undefined index: render element in
+                drupal_find_theme_templates()
+* Issue [#3103566](https://www.drupal.org/node/3103566)
+                by [Abdelrahman_Amer](https://www.drupal.org/u/abdelrahman_amer)
+                : Fixed notice for [Varbase Media Hero Slider] oembed iframe
+                on an Undefined index: render element in
+                drupal_find_theme_templates()
+* Issue [#3103565](https://www.drupal.org/node/3103565)
+                by [Abdelrahman_Amer](https://www.drupal.org/u/abdelrahman_amer)
+                : Fixed notice for [Varbase Media Header] oembed iframe on
+                an Undefined index: render element in
+                drupal_find_theme_templates()
+* Issue [#3103564](https://www.drupal.org/node/3103564)
+                by [Abdelrahman_Amer](https://www.drupal.org/u/abdelrahman_amer)
+                : Fixed notice for [Varbase Layout Builder] oembed iframe on
+                an Undefined index: render element in
+                drupal_find_theme_templates()
+
+--------------------------------------------------------------------------------
+
 # 8.8.0
 
 ### Highlighted important changes since Varbase 8.x-7.4:

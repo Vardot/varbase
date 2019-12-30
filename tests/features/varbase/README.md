@@ -1,6 +1,6 @@
 # Varbase Gherkin features
 
-A list of features, and scenarios to have a full test over Varbase 8.x-7.x
+A list of features, and scenarios to have a full test over Varbase 8.x-8.x
 
 If you want to run all Gherkin Features over a new Varbase site.
 You will need to create the list of Testing users, Arabic

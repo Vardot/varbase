@@ -20,7 +20,7 @@ in every project.
 * [Tested, tested, and tested.](https://travis-ci.org/Vardot/varbase/builds)
 
 Starting a new project? Consider Varbase for Drupal 8.
-Installing Varbase 8.x-7.x comes with several extra automated installation
+Installing Varbase 8.x-8.x comes with several extra automated installation
 steps, to take full advantage of Varbase, other than the Drupal 8 installation
 instructions.
 
@@ -29,7 +29,7 @@ instructions.
 
 To install the most recent stable release of Varbase 8.8.x run this command:
 ```
-composer create-project vardot/varbase-project:^8.8.0 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project vardot/varbase-project:^8.8.1 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Varbase 8.8.x run this command:
