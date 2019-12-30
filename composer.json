@@ -30,7 +30,6 @@
     "composer/installers": "~1.0",
     "oomphinc/composer-installers-extender": "~1.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^8.8.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
     "drupal/varbase_core": "~8.0",
     "drupal/varbase_api": "~7.0",
@@ -53,6 +52,7 @@
     "drupal/vartheme_admin": "~6.0"
   },
   "require-dev": {
+    "drupal/core-composer-scaffold": "^8.8.0",
     "drupal/console": "~1.0",
     "drush/drush": "~9.0",
     "drupal/coder": "~8.0",
