@@ -32,6 +32,12 @@
 * - Updated [Varbase Media Header] module from 8.7.3 to 8.7.4
 
 ### Fixes since Varbase 8.x-8.0:
+* Issue [#3103229](https://www.drupal.org/node/3103229)
+                by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                , [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+                : Fixed [Embed buttons] icons for the CKEditor after the change
+                of Embed API as they had dropped icon_uuid and change of config
+                schema in case for optional updates or buttons were deleted
 * Issue [#3102935](https://www.drupal.org/node/3102935)
                 by [mhawwari](https://www.drupal.org/u/mhawwari)
                 : Fixed console error. Vimeo player fires twice for [Varbase
