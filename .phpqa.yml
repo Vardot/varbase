@@ -1,0 +1,66 @@
+# ==============================================================================
+# Default common config for Phpqa.
+#
+# For more options see:
+#   https://github.com/EdgedesignCZ/phpqa/blob/master/.phpqa.yml
+# ==============================================================================
+
+phpqa:
+  analyzedDirs: ./
+  buildDir: ./tests/code-quality
+  ignoredDirs: ".gitlab-ci,.git,.idea,bin,docroot,node_modules,private,.tests/assets,vendor,web"
+  ignoredFiles: ""
+  report: true
+  # verbose: true
+  # execution: no-parallel
+  tools:
+    - phpmetrics
+    - phploc
+    - phpcs
+    - phpmd
+    - pdepend
+    - phpcpd
+    - phpstan
+    - security-checker
+  extensions:
+    - php
+    - inc
+    - module
+    - install
+    - test
+    - profile
+    - theme
+    - info
+    - txt
+    - md
+
+phpcs:
+  standard: Drupal
+  ignoreWarnings: true
+  # https://github.com/squizlabs/PHP_CodeSniffer/wiki/Reporting
+  reports:
+    cli:
+      - full
+    file:
+      checkstyle: checkstyle.xml
+
+pdepend:
+# coverageReport: build/coverage-clover.xml
+
+phpmd:
+  standard: ./.phpmd.xml
+
+phpstan:
+  level: 3
+  # https://github.com/phpstan/phpstan#configuration
+  standard: phpstan.neon
+
+phpcpd:
+  minLines: 5
+  minTokens: 70
+
+phpmetrics:
+  config: null
+  git: false
+
+

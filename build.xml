@@ -4,6 +4,7 @@
   <property name="drush" value="${project.basedir}/bin/drush" />
   <property name="composer" value="/usr/local/bin/composer" />
   <property name="npm" value="/usr/local/bin/npm" />
+  <property name="phpqa" value="${project.basedir}/bin/phpqa"/>
   <property name="rsync" value="/usr/bin/rsync" />
   <property name="db.type" value="mysql" />
   <property name="db.host" value="localhost" />
@@ -32,6 +33,7 @@
 
     <echo message="Found Drush: ${drush}" />
     <echo message="Found Composer: ${composer}" />
+    <echo message="Found phpqa: ${phpqa}" />
     <echo message="Found NPM: ${npm}" />
     <echo message="Found rsync: ${rsync}" />
   </target>
@@ -58,6 +60,14 @@
 
   <target name="pull" depends="env">
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
+  </target>
+
+  <!-- Prepares the behat tests environment. -->
+  <target name="code-quality-check" depends="env">
+    <exec executable="${phpqa}" passthru="true">
+      <arg value="--analyzedDirs=./"/>
+      <arg value="--buildDir=./tests/code-quality"/>
+    </exec>
   </target>
 
   <!-- Prepares the docroot for installation via the UI. -->
