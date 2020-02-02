@@ -5,6 +5,7 @@ namespace Varbase\composer;
 use Composer\Semver\Comparator;
 use Symfony\Component\Filesystem\Filesystem;
 use Composer\EventDispatcher\Event;
+use DrupalFinder\DrupalFinder;
 
 /**
  * Varbase Composer Script Handler.
@@ -21,7 +22,16 @@ class ScriptHandler {
    *   Drupal root path.
    */
   protected static function getDrupalRoot($project_root) {
-    return $project_root . '/docroot';
+    $fs = new Filesystem();
+    $drupalFinder = new DrupalFinder();
+    $drupalFinder->locateRoot(getcwd());
+    $drupalRoot = $drupalFinder->getDrupalRoot();
+    if (!$fs->exists($drupalRoot . '/core')) {
+      return $project_root . '/docroot';
+    }
+    else {
+      return $drupalRoot;
+    }
   }
 
   /**
@@ -53,20 +63,23 @@ class ScriptHandler {
     if (!$fs->exists($drupal_root . '/sites/default/settings.php') and $fs->exists($drupal_root . '/sites/default/default.settings.php')) {
       $fs->copy($drupal_root . '/sites/default/default.settings.php', $drupal_root . '/sites/default/settings.php');
       $fs->chmod($drupal_root . '/sites/default/settings.php', 0666);
-      $event->getIO()->write("Create a sites/default/settings.php file with chmod 0666");
+      $event->getIO()
+        ->write("Create a sites/default/settings.php file with chmod 0666");
     }
     // Prepare the services file for installation.
     if (!$fs->exists($drupal_root . '/sites/default/services.yml') and $fs->exists($drupal_root . '/sites/default/default.services.yml')) {
       $fs->copy($drupal_root . '/sites/default/default.services.yml', $drupal_root . '/sites/default/services.yml');
       $fs->chmod($drupal_root . '/sites/default/services.yml', 0666);
-      $event->getIO()->write("Create a sites/default/services.yml file with chmod 0666");
+      $event->getIO()
+        ->write("Create a sites/default/services.yml file with chmod 0666");
     }
     // Create the files directory with chmod 0777.
     if (!$fs->exists($drupal_root . '/sites/default/files')) {
       $oldmask = umask(0);
       $fs->mkdir($drupal_root . '/sites/default/files', 0777);
       umask($oldmask);
-      $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
+      $event->getIO()
+        ->write("Create a sites/default/files directory with chmod 0777");
     }
   }
 
