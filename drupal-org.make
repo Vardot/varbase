@@ -17,6 +17,9 @@ projects[config_filter][version] = 2.0-rc1
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.2
 
+projects[config_inspector][type] = module
+projects[config_inspector][version] = 1.0
+
 projects[ctools][type] = module
 projects[ctools][version] = 3.2
 ;; Issue #2820783: Fix Block.php notices and warnings.
@@ -85,6 +88,15 @@ projects[block_class][version] = 1.1
 
 projects[menu_block][type] = module
 projects[menu_block][version] = 1.5
+
+projects[block_form_alter][type] = module
+projects[block_form_alter][version] = 1.1
+
+projects[entity_block][type] = module
+projects[entity_block][version] = 1.0-beta2
+
+projects[block_content_permissions][type] = module
+projects[block_content_permissions][version] = 1.8
 
 projects[extlink][type] = module
 projects[extlink][version] = 1.1
@@ -496,6 +508,9 @@ projects[checklistapi][version] = 1.10
 projects[script_manager][type] = module
 projects[script_manager][version] = 1.1
 
+projects[allowed_formats][type] = module
+projects[allowed_formats][version] = 1.2
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Contrib themes
 ;;;;;;;;;;;;;;;;;;;;;
@@ -530,65 +545,65 @@ projects[total_control][version] = 2.0-beta2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 8.x-dev
+projects[varbase_core][version] = 8.3
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.8
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.x-dev
+projects[varbase_media][version] = 7.12
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.8
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.5
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.1
 
 projects[varbase_layout_builder][type] = module
-projects[varbase_layout_builder][version] = 1.x-dev
+projects[varbase_layout_builder][version] = 1.0-alpha6
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.6
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.1
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 8.x-dev
+projects[varbase_blog][version] = 8.0
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.4
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.9
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.9
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.7
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.3
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.7
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.7
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

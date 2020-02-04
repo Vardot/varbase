@@ -1,3 +1,127 @@
+# 8.8.2
+
+### Highlighted important changes since Varbase 8.x-8.1:
+* Issue [#3104773](https://www.drupal.org/node/3104773):
+                 Added [Varbase Layout Builder settings] for options source
+                 config to feed [Background color] styling option
+* Issue [#3107973](https://www.drupal.org/node/3107973):
+                 Added support for [Varbase Layout Builder] colors theme
+                 vlb-colors library in Vartheme BS4 and VARTHEME_BS4_SUBTHEME
+                 with gulp-csscomb
+* Issue [#3106854](https://www.drupal.org/node/3106854):
+                 Added a redirect to the layout editing page after creating a
+                 new entity with a View mode Layout Builder enabled on the
+                 default or full content display mode
+* Issue [#3105983](https://www.drupal.org/node/3105983):
+                 Added [Media and Gallery Block types] to be used with the
+                 [Varbase Landing Page (Layout Builder)] content type
+
+### Added since Varbase 8.x-8.1:
+* Issue [#3090764](https://www.drupal.org/node/3090764)
+                 by Odai Atieh
+                : Added [object-fit-polyfill] library in [Varbase Core] to
+                 support IE 9+, iOS 7-, and Android 4.4  (Image, Video,
+                 YouTube, Vimeo) Object-fit
+* Issue [#3105908](https://www.drupal.org/node/3105908):
+                 Added [Text formats Block types] to be used with the
+                 [Varbase Landing Page (Layout Builder)] content type
+* Issue [#3107731](https://www.drupal.org/node/3107731):
+                 Added [Block Form Alter] module ( ~1.0 )
+* Issue [#3104761](https://www.drupal.org/node/3104761):
+                 Added and enable [Entity Blocks] module ( ~1.0 ) and
+                 configured restriction for Varbase Landing Page
+                 (Layout Builder) content type
+* Issue [#3105920](https://www.drupal.org/node/3105920):
+                 Added [Block Content Permissions] module ( ~1.0 )
+* Issue [#3105911](https://www.drupal.org/node/3105911):
+                 Added [Allowed Formats] module ( ~1.0 )
+* Issue [#3106590](https://www.drupal.org/node/3106590):
+                 Added [Configuration inspector] module to [Varbase Development]
+                 for development usage only
+* Issue [#3104059](https://www.drupal.org/node/3104059)
+                 by Mohammad Fayoumi
+                : Added alternative text to the logo print image in
+                 [Varbase Theme (Bootstrap 4 - SASS)]
+* Issue [#3079231](https://www.drupal.org/node/3079231)
+                 by metalbote
+                : Added code quality tests and analysis
+
+### Changed since Varbase 8.x-8.1:
+* Issue [#3106793](https://www.drupal.org/node/3106793)
+                 by Mohammed J. Razem
+                : Provided a new token for the site origin URL (protocol
+                 and domain name) without language prefix
+* Issue [#3082722](https://www.drupal.org/node/3082722)
+                 by firassziedan
+                , RajabNatshah
+                , Mohammed J. Razem
+                : Changed default metatag configs to use Origin URL
+                 [site:origin-url] token for the site (protocol and
+                 domain name) without language prefix
+* Issue [#3106862](https://www.drupal.org/node/3106862)
+                 by Mohammed J. Razem
+                : Changed the redirect_404 view to show full pager and sort by
+                 last accessed
+* Issue [#3109736](https://www.drupal.org/node/3109736):
+                 Changed alternatives gulp-csscombx with gulp-csscomb
+* Issue [#3074961](https://www.drupal.org/node/3074961)
+                 by metalbote
+                : Change web-root logic as drupalRoot should not be
+                 hardcoded in src/Scripthandler
+
+### Updates since Varbase 8.x-8.1:
+* Issue [#3108245](https://www.drupal.org/node/3108245):
+                 Updated [Views Bootstrap] module from 8.4.1 to 8.4.2 ( ~4.0 )
+                 and removed committed patches
+* Issue [#3106252](https://www.drupal.org/node/3106252):
+                 Updated [Entity Browser] module from 8.2.2 to 8.2.3 ( ~2.0 )
+                 and remove committed patches
+* Issue [#3104881](https://www.drupal.org/node/3104881):
+                 Updated [Better Login] module from 8.1.3 to 8.1.4 ( ~1.0 )
+                 and removed committed patches
+* Issue [#3106477](https://www.drupal.org/node/3106477):
+                 Updated [Layout Builder Modal] from 8.1.0-alpha2 to 8.1.0
+                 ( ~1.0 ) and removed committed patches
+* Issue [#3108121](https://www.drupal.org/node/3108121):
+                 Updated [Popper.js] library to v2.0.0 stable
+* Issue [#3110640](https://www.drupal.org/node/3110640):
+                 Varbase 8.8.2: Updated [CHANGELOG.md, README.md,
+                 drupal-org.make] files and filtered the code for Drupal
+                 8 Coding Standard
+
+### Fixes since Varbase 8.x-8.1:
+* Issue [#3109040](https://www.drupal.org/node/3109040):
+                 Fixed background media supports in [Varbase Layout Builder]
+                 for IE 9+, iOS 7-, and Android 4.4 (Image, Video,
+                 YouTube, Vimeo) Object-fit
+* Issue [#3106640](https://www.drupal.org/node/3106640)
+                 by mhawwari
+                : Fixed deprecated override file for [Varbase Media Hero Slider]
+                 theming in Vartheme BS4 Sub-themes
+* Issue [#3106321](https://www.drupal.org/node/3106321):
+                 Fixed regression for overridden media types with other
+                 Varbase components like Varbase Blog and Varbase Media Header
+* Issue [#3104904](https://www.drupal.org/node/3104904)
+                 by josebc
+                : Fixed upgrading [Config Filter] to 2.x breaks old
+                 [config splits] configs
+* Issue [#3103868](https://www.drupal.org/node/3103868)
+                 by RajabNatshah
+                , Joachim Namyslo
+                : Fixed update-varbase.sh should invoke composer update
+                 whenever possible
+* Issue [#3109848](https://www.drupal.org/node/3109848):
+                 Fixed Cache Tags on node revision preview timestamp
+                 for a node content page
+* Issue [#3106537](https://www.drupal.org/node/3106537):
+                 Fixed Warning: for misnamed Plugin Alternate Hand held
+                 in [metatag] module
+* Issue [#3110723](https://www.drupal.org/node/3110723):
+                 Fixed notice error messages from [External Links]
+                 module for not having a default config values
+
+--------------------------------------------------------------------------------
+
 # 8.8.1
 
 ### Highlighted important changes since Varbase 8.x-8.0:
