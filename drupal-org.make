@@ -177,7 +177,7 @@ projects[persistent_login][version] = 1.1
 projects[persistent_login][patch][] = https://www.drupal.org/files/issues/persistent_login-user_task_permission-2899530-6.patch
 
 projects[userprotect][type] = module
-projects[userprotect][version] = 1.0
+projects[userprotect][version] = 1.1
 
 projects[events_log_track][type] = module
 projects[events_log_track][version] = 1.1

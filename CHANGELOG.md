@@ -151,6 +151,9 @@
 * Issue [#3110723](https://www.drupal.org/node/3110723):
                  Fixed notice error messages from [External Links]
                  module for not having a default config values
+* Issue [#3111112](https://www.drupal.org/node/3111112)
+                  by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+                  : Fixed Autocomplete Deluxe issue of no auto suggestion
 
 --------------------------------------------------------------------------------
 
