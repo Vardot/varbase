@@ -18,7 +18,7 @@
 
 ### Added since Varbase 8.x-8.1:
 * Issue [#3090764](https://www.drupal.org/node/3090764)
-                 by Odai Atieh
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
                 : Added [object-fit-polyfill] library in [Varbase Core] to
                  support IE 9+, iOS 7-, and Android 4.4  (Image, Video,
                  YouTube, Vimeo) Object-fit
@@ -39,37 +39,39 @@
                  Added [Configuration inspector] module to [Varbase Development]
                  for development usage only
 * Issue [#3104059](https://www.drupal.org/node/3104059)
-                 by Mohammad Fayoumi
+                by [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
                 : Added alternative text to the logo print image in
                  [Varbase Theme (Bootstrap 4 - SASS)]
 * Issue [#3079231](https://www.drupal.org/node/3079231)
-                 by metalbote
+                 by [metalbote](https://www.drupal.org/u/metalbote)
                 : Added code quality tests and analysis
 
 ### Changed since Varbase 8.x-8.1:
 * Issue [#3106793](https://www.drupal.org/node/3106793)
-                 by Mohammed J. Razem
+               by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
                 : Provided a new token for the site origin URL (protocol
                  and domain name) without language prefix
 * Issue [#3082722](https://www.drupal.org/node/3082722)
-                 by firassziedan
-                , RajabNatshah
-                , Mohammed J. Razem
+                 by [firassziedan](https://www.drupal.org/u/firass-ziedan)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                , [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
                 : Changed default metatag configs to use Origin URL
                  [site:origin-url] token for the site (protocol and
                  domain name) without language prefix
 * Issue [#3106862](https://www.drupal.org/node/3106862)
-                 by Mohammed J. Razem
+                 by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
                 : Changed the redirect_404 view to show full pager and sort by
                  last accessed
 * Issue [#3109736](https://www.drupal.org/node/3109736):
                  Changed alternatives gulp-csscombx with gulp-csscomb
 * Issue [#3074961](https://www.drupal.org/node/3074961)
-                 by metalbote
-                : Change web-root logic as drupalRoot should not be
-                 hardcoded in src/Scripthandler
+                 by [metalbote](https://www.drupal.org/u/metalbote)
+                : Changed web-root logic as drupal-root should not be
+                 hard-coded in Script handler
 
 ### Updates since Varbase 8.x-8.1:
+* Issue [#3111086](https://www.drupal.org/node/3111086):
+                 Updated [Update helper] module from 8.1.1 to 8.1.2
 * Issue [#3108245](https://www.drupal.org/node/3108245):
                  Updated [Views Bootstrap] module from 8.4.1 to 8.4.2 ( ~4.0 )
                  and removed committed patches
@@ -88,6 +90,36 @@
                  Varbase 8.8.2: Updated [CHANGELOG.md, README.md,
                  drupal-org.make] files and filtered the code for Drupal
                  8 Coding Standard
+* - Updated [Better Login] module from 8.1.3 to 8.1.4
+* - Updated [Color Field] module from 8.2.0 to 8.2.2
+* - Updated [Crop API] module from 8.2.0-rc1 to 8.2.0
+* - Updated [Diff] module from 8.1.0-rc2 to 8.1.0
+* - Updated [DRD Agent] module from 8.3.12 to 8.3.13
+* - Updated [dropzonejs] module from 8.2.0-alpha4 to 8.2.0
+* - Updated [Entity Browser] module from 8.2.2 to 8.2.4
+* - Updated [External Links] module from 8.1.1 to 8.1.2
+* - Updated [Field Group] module from 8.3.0-rc2 to 8.3.0
+* - Updated [Layout Builder Modal] module from 8.1.0-alpha2 to 8.1.0
+* - Updated [Length Indicator] module from 8.1.0 to 8.1.1
+* - Updated [Link Attributes widget] module from 8.1.9 to 8.1.10
+* - Updated [Masquerade] module from 8.2.0-beta2 to 8.2.0-beta3
+* - Updated [Maxlength] module from 8.1.0-beta4 to 8.1.0-beta5
+* - Updated [Media entity Twitter] module from 8.2.1 to 8.2.3
+* - Updated [Media Library Form API Element] module from 8.1.0-alpha4 to 8.1.0-alpha7
+* - Updated [Menu position] module from 8.1.0-alpha1 to 8.1.0-alpha2
+* - Updated [reCAPTCHA] module from 8.2.4 to 8.2.5
+* - Updated [Slick Carousel] module from 8.2.0-rc4 to 8.2.0
+* - Updated [Slick Views] module from 8.2.0 to 8.2.1
+* - Updated [Update helper] module from 8.1.1 to 8.1.2
+* - Updated [User protect] module from 8.1.0 to 8.1.1
+* - Updated [Views Bootstrap] module from 8.4.1 to 8.4.2
+* - Updated [Webform] module from 8.5.6 to 8.5.8
+* - Updated [Varbase Core] module from 8.8.0 to 8.8.4
+* - Updated [Varbase Editor] module from 8.7.4 to 8.7.5
+* - Updated [Varbase Layout Builder] module from 8.1.0-alpha3 to 8.1.0-alpha6
+* - Updated [Varbase Media] module from 8.7.11 to 8.7.12
+* - Updated [Varbase SEO] module from 8.6.7 to 8.6.9
+* - Updated [Varbase Theme (Bootstrap 4 - SASS)] theme from 8.6.5 to 8.6.7
 
 ### Fixes since Varbase 8.x-8.1:
 * Issue [#3109040](https://www.drupal.org/node/3109040):
@@ -95,19 +127,19 @@
                  for IE 9+, iOS 7-, and Android 4.4 (Image, Video,
                  YouTube, Vimeo) Object-fit
 * Issue [#3106640](https://www.drupal.org/node/3106640)
-                 by mhawwari
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
                 : Fixed deprecated override file for [Varbase Media Hero Slider]
                  theming in Vartheme BS4 Sub-themes
 * Issue [#3106321](https://www.drupal.org/node/3106321):
                  Fixed regression for overridden media types with other
                  Varbase components like Varbase Blog and Varbase Media Header
 * Issue [#3104904](https://www.drupal.org/node/3104904)
-                 by josebc
+                 by [josebc](https://www.drupal.org/u/josebc)
                 : Fixed upgrading [Config Filter] to 2.x breaks old
                  [config splits] configs
 * Issue [#3103868](https://www.drupal.org/node/3103868)
-                 by RajabNatshah
-                , Joachim Namyslo
+                 by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                , [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
                 : Fixed update-varbase.sh should invoke composer update
                  whenever possible
 * Issue [#3109848](https://www.drupal.org/node/3109848):

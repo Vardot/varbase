@@ -43,7 +43,7 @@ projects[bootstrap_layouts][type] = module
 projects[bootstrap_layouts][version] = 5.1
 
 projects[layout_builder_modal][type] = module
-projects[layout_builder_modal][version] = 1.0-alpha2
+projects[layout_builder_modal][version] = 1.0
 
 projects[layout_builder_restrictions][type] = module
 projects[layout_builder_restrictions][version] = 1.5
@@ -61,7 +61,7 @@ projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.10 
 
 projects[media_library_form_element][type] = module
-projects[media_library_form_element][version] = 1.0-alpha4 
+projects[media_library_form_element][version] = 1.0-alpha7 
 
 projects[lb_ux][type] = module
 projects[lb_ux][version] = 1.0-beta1
@@ -70,12 +70,10 @@ projects[ds][type] = module
 projects[ds][version] = 3.5
 
 projects[views_bootstrap][type] = module
-projects[views_bootstrap][version] = 4.1
-;; Issue #3049311: Grids should not be split into multiple rows
-projects[views_bootstrap][patch][] = https://www.drupal.org/files/issues/2019-05-31/views-bootstrap-dont-split-grid-rows-3049311-9.patch
+projects[views_bootstrap][version] = 4.2
 
 projects[field_group][type] = module
-projects[field_group][version] = 3.0-rc2
+projects[field_group][version] = 3.0
 
 projects[smart_trim][type] = module
 projects[smart_trim][version] = 1.2
@@ -99,7 +97,9 @@ projects[block_content_permissions][type] = module
 projects[block_content_permissions][version] = 1.8
 
 projects[extlink][type] = module
-projects[extlink][version] = 1.1
+projects[extlink][version] = 1.2
+;; Issue #3110139: Fix Notice: Undefined index: extlink_target_no_override in extlink_page_attachments()
+projects[extlink][patch][] = https://www.drupal.org/files/issues/2020-01-30/3110139-3.patch
 
 projects[linkit][type] = module
 projects[linkit][version] = 4.3
@@ -120,12 +120,10 @@ projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-beta3
 
 projects[entity_browser][type] = module
-projects[entity_browser][version] = 2.2
-;; Issue #2877751: Inform users how many items they can add to a field that uses an entity browser.
-projects[entity_browser][patch][] = https://www.drupal.org/files/issues/2019-07-04/2877751-40.patch
+projects[entity_browser][version] = 2.4
 
 projects[dropzonejs][type] = module
-projects[dropzonejs][version] = 2.0-alpha4
+projects[dropzonejs][version] = 2.0
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.0
@@ -141,10 +139,10 @@ projects[media_entity_instagram][type] = module
 projects[media_entity_instagram][version] = 2.0
 
 projects[media_entity_twitter][type] = module
-projects[media_entity_twitter][version] = 2.1
+projects[media_entity_twitter][version] = 2.3
 
 projects[crop][type] = module
-projects[crop][version] = 2.0-rc1
+projects[crop][version] = 2.0
 
 projects[focal_point][type] = module
 projects[focal_point][version] = 1.2
@@ -227,7 +225,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.6
+projects[webform][version] = 5.8
 
 projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
@@ -267,13 +265,13 @@ projects[smtp][type] = module
 projects[smtp][version] = 1.0-beta6
 
 projects[length_indicator][type] = module
-projects[length_indicator][version] = 1.0
+projects[length_indicator][version] = 1.1
 
 projects[maxlength][type] = module
-projects[maxlength][version] = 1.0-beta4
+projects[maxlength][version] = 1.0-beta5
 
 projects[menu_position][type] = module
-projects[menu_position][version] = 1.0-alpha1
+projects[menu_position][version] = 1.0-alpha2
 
 projects[mail_edit][type] = module
 projects[mail_edit][version] = 1.x-dev
@@ -293,7 +291,7 @@ projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta2
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.9
+projects[link_attributes][version] = 1.10
 
 projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.10
@@ -315,7 +313,7 @@ projects[paragraphs_edit][type] = module
 projects[paragraphs_edit][version] = 2.0-alpha6
 
 projects[color_field][type] = module
-projects[color_field][version] = 2.0
+projects[color_field][version] = 2.2
 
 projects[entity_reference_revisions][type] = module
 projects[entity_reference_revisions][version] = 1.7
@@ -339,9 +337,7 @@ projects[login_destination][type] = module
 projects[login_destination][version] = 1.0-alpha2
 
 projects[betterlogin][type] = module
-projects[betterlogin][version] = 1.3
-;; Issue #3102555: Fix remove all blocks in the content region. Resulted in losing default integration with other modules
-projects[betterlogin][patch][] = https://www.drupal.org/files/issues/2019-12-21/3102555-3.patch
+projects[betterlogin][version] = 1.4
 
 projects[social_api][type] = module
 projects[social_api][version] = 2.0-rc2
@@ -418,7 +414,7 @@ projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta4
 
 projects[recaptcha][type] = module
-projects[recaptcha][version] = 2.4
+projects[recaptcha][version] = 2.5
 
 projects[search_api][type] = module
 projects[search_api][version] = 1.15
@@ -427,7 +423,7 @@ projects[blazy][type] = module
 projects[blazy][version] = 2.0-rc6
 
 projects[slick][type] = module
-projects[slick][version] = 2.0-rc4
+projects[slick][version] = 2.1
 
 projects[slick_views][type] = module
 projects[slick_views][version] = 2.0
@@ -480,16 +476,16 @@ projects[coffee][patch][] = https://www.drupal.org/files/issues/coffee-coffee_br
 projects[coffee][patch][] = https://www.drupal.org/files/issues/2872093-10.patch
 
 projects[diff][type] = module
-projects[diff][version] = 1.0-rc2
+projects[diff][version] = 1.0
 
 projects[masquerade][type] = module
-projects[masquerade][version] = 2.0-beta2
+projects[masquerade][version] = 2.0-beta3
 
 projects[menu_admin_per_menu][type] = module
 projects[menu_admin_per_menu][version] = 1.0
 
 projects[drd_agent][type] = module
-projects[drd_agent][version] = 3.12
+projects[drd_agent][version] = 3.13
 
 projects[libraries_ui][type] = module
 projects[libraries_ui][version] = 1.0
@@ -498,7 +494,7 @@ projects[devel][type] = module
 projects[devel][version] = 3.0-beta1
 
 projects[update_helper][type] = module
-projects[update_helper][version] = 1.1
+projects[update_helper][version] = 1.2
 ;; Issue #3024165: [PATCH] Enhancements, Better messages for the unable to apply updates, drush command and removed the Mark all updates as successful on install
 projects[update_helper][patch][] = https://www.drupal.org/files/issues/2019-12-17/3024165-33.patch
 
@@ -545,7 +541,7 @@ projects[total_control][version] = 2.0-beta2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 8.3
+projects[varbase_core][version] = 8.4
 
 projects[varbase_api][type] = module
 projects[varbase_api][version] = 7.8
