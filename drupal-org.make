@@ -64,7 +64,7 @@ projects[media_library_form_element][type] = module
 projects[media_library_form_element][version] = 1.0-alpha7 
 
 projects[lb_ux][type] = module
-projects[lb_ux][version] = 1.0-beta1
+projects[lb_ux][version] = 1.0-beta2
 
 projects[ds][type] = module
 projects[ds][version] = 3.5
@@ -163,7 +163,7 @@ projects[entityqueue_form_widget][type] = module
 projects[entityqueue_form_widget][version] = 1.0
 
 projects[imagemagick][type] = module
-projects[imagemagick][version] = 2.6
+projects[imagemagick][version] = 3.0
 
 projects[imageapi_optimize][type] = module
 projects[imageapi_optimize][version] = 2.0-alpha4
@@ -201,7 +201,7 @@ projects[roleassign][type] = module
 projects[roleassign][version] = 1.0-alpha2
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.27
+projects[admin_toolbar][version] = 2.0
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.10
@@ -216,7 +216,7 @@ projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-beta1
 
 projects[views_bulk_operations][type] = module
-projects[views_bulk_operations][version] = 2.5
+projects[views_bulk_operations][version] = 3.4
 
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 2.4
@@ -244,7 +244,7 @@ projects[better_normalizers][type] = module
 projects[better_normalizers][version] = 1.0-beta4
 
 projects[content_lock][type] = module
-projects[content_lock][version] = 1.0-alpha8
+projects[content_lock][version] = 2.0
 
 projects[node_edit_protection][type] = module
 projects[node_edit_protection][version] = 1.0-alpha1
@@ -285,10 +285,12 @@ projects[taxonomy_menu][version] = 3.4
 projects[taxonomy_menu][patch][] = https://www.drupal.org/files/issues/2018-12-23/2939143-10.patch
 
 projects[better_exposed_filters][type] = module
-projects[better_exposed_filters][version] = 3.0-alpha6
+projects[better_exposed_filters][version] = 4.0-alpha1
 
 projects[autocomplete_deluxe][type] = module
 projects[autocomplete_deluxe][version] = 1.0-beta2
+;; Issue #3096033: Autocomplete stopped working in localhost environment
+projects[autocomplete_deluxe][patch][] = https://www.drupal.org/files/issues/2019-12-17/fix_acdx_path-3096033-4.patch
 
 projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.10
@@ -381,7 +383,7 @@ projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 3.5
 
 projects[google_analytics][type] = module
-projects[google_analytics][version] = 2.4
+projects[google_analytics][version] = 3.0
 
 projects[google_tag][type] = module
 projects[google_tag][version] = 1.3
@@ -541,65 +543,65 @@ projects[total_control][version] = 2.0-beta2
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 8.x-dev
+projects[varbase_core][version] = 8.4
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.8
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.x-dev
+projects[varbase_media][version] = 7.13
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.8
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.5
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.1
 
 projects[varbase_layout_builder][type] = module
-projects[varbase_layout_builder][version] = 1.x-dev
+projects[varbase_layout_builder][version] = 1.0-alpha6
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.6
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.1
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 8.x-dev
+projects[varbase_blog][version] = 8.0
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.4
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.9
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.9
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.7
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.3
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.1
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.6
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.7
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.7
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries

@@ -1,3 +1,41 @@
+# 8.8.3
+
+### Highlighted important changes since Varbase 8.x-8.2:
+* Updated [Views Bulk Operations (VBO)] module to 8.3.4 in the drupal-org.make
+file to clear the security flag for Drupal.org packaging 
+* Views Bulk Operations (VBO) - Moderately critical - Access bypass -
+ [SA-CONTRIB-2020-003](https://www.drupal.org/sa-contrib-2020-003)
+--
+* Composer users, a basic composer update will update the module.
+
+### Added since Varbase 8.x-8.2:
+* N/A
+
+### Changed since Varbase 8.x-8.2:
+* N/A
+
+### Updates since Varbase 8.x-8.2:
+* Issue [#3111633](https://www.drupal.org/node/3111633):
+                  Updated [ImageMagick] module from 8.2.6 to 8.3.0
+* Issue [#3111636](https://www.drupal.org/node/3111636):
+                  Varbase 8.8.3: Updated [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filter the code for Drupal 8
+                  Coding Standard
+* - Updated [Layout Builder UX] module from 8.1.0-beta1 to 8.1.0-beta2
+* - Updated [ImageMagick] module from 8.2.6 to 8.3.0
+* - Updated [Admin Toolbar] module from 8.1.27 to 8.2.0
+* - Updated [Views Bulk Operations (VBO)] module from 8.2.5 to 8.3.4
+* - Updated [Content locking (anti-concurrent editing)] module
+            from 8.1.0-alpha8 to 8.2.0
+* - Updated [Better Exposed Filters] module from 8.3.0-alpha6 to 8.4.0-alpha1
+* - Updated [Google Analytics] module from 8.2.4 to 8.3.0
+* - Updated [Varbase Media] module from 8.7.12 to 8.7.13
+
+### Fixes since Varbase 8.x-8.2:
+* N/A
+
+--------------------------------------------------------------------------------
+
 # 8.8.2
 
 ### Highlighted important changes since Varbase 8.x-8.1:
