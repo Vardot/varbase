@@ -32,7 +32,9 @@ file to clear the security flag for Drupal.org packaging
 * - Updated [Varbase Media] module from 8.7.12 to 8.7.13
 
 ### Fixes since Varbase 8.x-8.2:
-* N/A
+* Issue [#3112241](https://www.drupal.org/node/3112241)
+                  by [mhawwari](https://www.drupal.org/u/mhawwari)
+                  : Fixed oEmbed issue of not recognizing Vimeo arguments
 
 --------------------------------------------------------------------------------
 
