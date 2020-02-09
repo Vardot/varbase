@@ -23,7 +23,7 @@ projects[ctools][version] = 3.2
 projects[ctools][patch][] = https://www.drupal.org/files/issues/2019-02-18/ctools-Block.php_notices_and_warnings-2820783-51-D8.patch
 
 projects[token][type] = module
-projects[token][version] = 1.5
+projects[token][version] = 1.6
 
 projects[token_filter][type] = module
 projects[token_filter][version] = 1.1
@@ -107,7 +107,7 @@ projects[media_entity_twitter][type] = module
 projects[media_entity_twitter][version] = 2.3
 
 projects[crop][type] = module
-projects[crop][version] = 2.0-rc1
+projects[crop][version] = 2.0
 
 projects[focal_point][type] = module
 projects[focal_point][version] = 1.2
@@ -311,7 +311,7 @@ projects[social_auth][type] = module
 projects[social_auth][version] = 2.0-rc2
 
 projects[social_auth_google][type] = module
-projects[social_auth_google][version] = 2.0-beta4
+projects[social_auth_google][version] = 2.0
 
 projects[social_auth_facebook][type] = module
 projects[social_auth_facebook][version] = 2.0
