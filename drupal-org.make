@@ -560,7 +560,7 @@ projects[vartheme_bs4][type] = theme
 projects[vartheme_bs4][version] = 6.7
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.8
+projects[vartheme_admin][version] = 6.7
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
