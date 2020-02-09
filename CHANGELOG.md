@@ -1,3 +1,159 @@
+# 8.7.5
+
+### Highlighted important changes since Varbase 8.x-7.4:
+
+* Updated [Views Bulk Operations (VBO)] module to 8.3.4 in the drupal-org.make
+file to clear the security flag for Drupal.org packaging.
+* Views Bulk Operations (VBO) - Moderately critical - Access bypass - 
+[SA-CONTRIB-2020-003](https://www.drupal.org/sa-contrib-2020-003)
+* Composer users, a basic composer update will update the module.
+
+### Added since Varbase 8.x-7.4:
+* Issue [#3104059](https://www.drupal.org/node/3104059)
+                  by [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+                 : Added alternative text to the logo print image in
+                  [Varbase Theme (Bootstrap 4 - SASS)]
+* Issue [#3107973](https://www.drupal.org/node/3107973):
+                  Added support for [Varbase Layout Builder] colors theme
+                  vlb-colors library in Vartheme BS4 and VARTHEME_BS4_SUBTHEME
+                  with gulp-csscomb
+
+### Changed since Varbase 8.x-7.4:
+* Issue [#3106793]()
+                  by Mohammed J. Razem: Provided a new token for the site
+                  origin URL (protocol and domain name) without language prefix
+
+
+We could use the token as
+```
+[site:origin-url]/[default-active-theme:path]/share-image.png
+[site:origin-url]/[default-active-theme:path]/logo.png
+```
+Origin URL [site:origin-url] The Origin URL (scheme and HTTP host) of the site.
+                  No language prefix.
+* Issue [#3082722](https://www.drupal.org/node/3082722)
+                  by [firassziedan](https://www.drupal.org/u/firass-ziedan)
+                 , [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+                 : Changed default metatag configs to use Origin URL
+                  [site:origin-url] token for the site (protocol and
+                  domain name) without language prefix
+* Issue [#3106862](https://www.drupal.org/node/3106862)
+                  by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+                 : Changed the redirect_404 view to show full pager and
+                  sort by last accessed
+* Issue [#3102415](https://www.drupal.org/node/3102415)
+                  by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+                 : Removed the 3034353-2.patch for [Social Auth Google]
+                  as it was committed in 8.x-2.0 stable
+* Issue [#3101603](https://www.drupal.org/node/3101603):
+                  Changed [Vartheme BS4] media oembed iframe CSS placeholder
+                  token to use Drupal core committed style template
+
+### Updates since Varbase 8.x-7.4:
+* Issue [#3101872](https://www.drupal.org/node/3101872):
+                  Updated [Bootstrap 4] library from 4.4.0 to 4.4.1
+* Issue [#3111633](https://www.drupal.org/node/3111633):
+                  Updated [ImageMagick] module from 8.2.6 to 8.3.0
+* Issue [#3108121](https://www.drupal.org/node/3108121):
+                  Updated [Popper.js] library to v2.0.0 stable
+* Issue [#3108245](https://www.drupal.org/node/3108245):
+                  Updated [Views Bootstrap] module from 8.4.1 to 8.4.2 ( ~4.0 )
+                  and removed committed patches
+* Issue [#3104881](https://www.drupal.org/node/3104881):
+                  Updated [Better Login] module from 8.1.3 to 8.1.4 ( ~1.0 )
+                  and removed committed patches
+* Issue [#3106252](https://www.drupal.org/node/3106252):
+                  Updated [Entity Browser] module from 8.2.2 to 8.2.3 ( ~2.0 )
+                  and removed committed patches
+* Issue [#3112260](https://www.drupal.org/node/3112260):
+                  Varbase 8.7.5: Updated [CHANGELOG.md, README.md,
+                  drupal-org.make] files and filtered the code for Drupal
+                  8 Coding Standard
+* - Updated [Better Login] module from 8.1.3 to 8.1.4
+* - Updated [Blazy] module from 8.2.0-rc5 to 8.2.0-rc6
+* - Updated [Color Field] module from 8.2.0 to 8.2.2
+* - Updated [Crop API] module from 8.2.0-rc1 to 8.2.0
+* - Updated [Diff] module from 8.1.0-rc2 to 8.1.0
+* - Updated [DRD Agent] module from 8.3.10 to 8.3.13
+* - Updated [dropzonejs] module from 8.2.0-alpha4 to 8.2.0
+* - Updated [Entity Browser] module from 8.2.2 to 8.2.4
+* - Updated [External Links] module from 8.1.1 to 8.1.2
+* - Updated [Field Group] module from 8.3.0-rc2 to 8.3.0
+* - Updated [Length Indicator] module from 8.1.0 to 8.1.1
+* - Updated [Link Attributes widget] module from 8.1.9 to 8.1.10
+* - Updated [Masquerade] module from 8.2.0-beta2 to 8.2.0-beta3
+* - Updated [Maxlength] module from 8.1.0-beta4 to 8.1.0-beta5
+* - Updated [Media entity Twitter] module from 8.2.1 to 8.2.3
+* - Updated [Menu position] module from 8.1.0-alpha1 to 8.1.0-alpha2
+* - Updated [Metatag] module from 8.1.10 to 8.1.11
+* - Updated [reCAPTCHA] module from 8.2.4 to 8.2.5
+* - Updated [Slick Carousel] module from 8.2.0-rc4 to 8.2.0
+* - Updated [Slick Views] module from 8.2.0 to 8.2.1
+* - Updated [Social API] module from 8.2.0-rc1 to 8.2.0-rc2
+* - Updated [Social Auth] module from 8.2.0-rc1 to 8.2.0-rc2
+* - Updated [Social Auth Facebook] module from 8.2.0-beta4 to 8.2.0
+* - Updated [Social Auth Google] module from 8.2.0-beta4 to 8.2.0
+* - Updated [Token] module from 8.1.5 to 8.1.6
+* - Updated [Update helper] module from 8.1.1 to 8.1.2
+* - Updated [User protect] module from 8.1.0 to 8.1.1
+* - Updated [Views Bootstrap] module from 8.4.1 to 8.4.2
+* - Updated [Webform] module from 8.5.6 to 8.5.8
+* - Updated [Varbase core] module from 8.7.7 to 8.7.11
+* - Updated [Varbase Editor] module from 8.7.4 to 8.7.5
+* - Updated [Varbase Media] module from 8.7.8 to 8.7.14
+* - Updated [Varbase Media Hero Slider] module from 8.7.5 to 8.7.6
+* - Updated [Varbase SEO] module from 8.6.7 to 8.6.9
+* - Updated [Varbase Social Single Sign-On] module from 8.6.6 to 8.6.7
+* - Updated [Varbase Theme (Bootstrap 4 - SASS)] theme from 8.6.5 to 8.6.7
+
+### Fixes since Varbase 8.x-7.4:
+* Issue [#3104904](https://www.drupal.org/node/3104904)
+                  by [josebc](https://www.drupal.org/u/josebc)
+                 : Fixed upgrading [Config Filter] to 2.x breaks old
+                  [config splits] configs
+* Issue [#3110723](https://www.drupal.org/node/3104904):
+                  Fixed notice error messages from [External Links] module
+                  for not having a default config values
+* Issue [#3103229](https://www.drupal.org/node/3103229):
+                  Fixed [Embed buttons] icons for the CKEditor after the
+                  change of Embed API as they had dropped icon_uuid and
+                  change of config schema
+* Issue [#3103554](https://www.drupal.org/node/3103554)
+                  by [Abdelrahman_Amer](https://www.drupal.org/u/abdelrahman_amer)
+                 : Fixed notice for [Varbase Media] oembed iframe on an
+                  Undefined index: render element in
+                  drupal_find_theme_templates()
+* Issue [#3103229](https://www.drupal.org/node/3103229)
+                  by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 , [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+                 : Fixed [Embed buttons] icons for the CKEditor after the
+                  change of Embed API as they had dropped icon_uuid
+                  and change of config schema in case for optional
+                  updates or buttons were deleted
+* Issue [#3112241](https://www.drupal.org/node/3112241)
+                  by [mhawwari](https://www.drupal.org/u/mhawwari)
+                 : Fixed oEmbed issue of not recognizing Vimeo arguments
+* Issue [#3102935](https://www.drupal.org/node/3102935)
+                  by [mhawwari](https://www.drupal.org/u/mhawwari)
+                 : Fixed console error. Vimeo player fires twice
+* Issue [#3103566](https://www.drupal.org/node/3103566)
+                  by [Abdelrahman_Amer](https://www.drupal.org/u/abdelrahman_amer)
+                 : Fixed notice for [Varbase Media Hero Slider] oembed
+                  iframe on an Undefined index: render element in
+                  drupal_find_theme_templates()
+* Issue [#3106537](https://www.drupal.org/node/3106537)
+                  by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 , [rjzaar](https://www.drupal.org/u/rjzaar)
+                 : Fixed Warning: for misnamed Plugin AlternateHandheld
+                  in [metatag] module
+* Issue [#3106640](https://www.drupal.org/node/3106640)
+                  by [mhawwari](https://www.drupal.org/u/mhawwari)
+                  , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 : Fixed deprecated override file for
+                  [Varbase Media Hero Slider] theming in Vartheme
+                  BS4 Sub-themes
+--------------------------------------------------------------------------------
+
 # 8.7.4
 
 ### Highlighted important changes since Varbase 8.x-7.3:
