@@ -1500,13 +1500,4 @@ JS;
     }
   }
 
-  /**
-   * Maximize the window before scenario.
-   *
-   * @BeforeScenario @javascript
-   */
-  public function beforeScenarioMaximizeWindow() {
-    $this->getSession()->getDriver()->maximizeWindow();
-  }
-
 }
