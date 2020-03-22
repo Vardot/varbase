@@ -54,7 +54,6 @@ default:
     Behat\MinkExtension:
       files_path: "%paths.base%/tests/assets/"
       goutte: ~
-      zombie: ~
       selenium2:
         wd_host: 127.0.0.1:4445/wd/hub
         capabilities:
