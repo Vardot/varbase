@@ -138,7 +138,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When /^(?:|I )wait (?:|for )(?P<seconds>\d+) second(?:|s)$/
    * @When /^(?:|I )wait (?:|for )(?P<seconds>\d+)s$/
    */
-  public function iWaitForSeconds($seconds) {
+  public function iWaitForSeconds($seconds = 1) {
     $this->getSession()->wait($seconds * 1000);
   }
 
@@ -156,7 +156,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When /^(?:|I )wait (?:|for )(?P<minutes>\d+) minute(?:|s)$/
    * @When /^(?:|I )wait (?:|for )(?P<minutes>\d+)m$/
    */
-  public function iWaitForMinutes($minutes) {
+  public function iWaitForMinutes($minutes = 1) {
     $this->getSession()->wait($minutes * 60 * 1000);
   }
 
