@@ -6,7 +6,7 @@ So that only users with permission to assign roles may select which roles are av
   @javascript @check @local @development @staging @production
   Scenario: Check the Role Assign configuration
     Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/config/people/roleassign"
+     When I go to "/admin/people/roleassign"
       And I wait
      Then I should see "Role assign"
       And the "Editor" checkbox should be checked
