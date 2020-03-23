@@ -1500,4 +1500,19 @@ JS;
     }
   }
 
+  /**
+  * @When /^(?:|I )switch to iframe "([^"]*)"$/
+  */
+  public function iSwitchToIframe($iFrameLocator) {
+    $this->getSession()->getDriver()->switchToIFrame($iFrameLocator);
+  }
+
+  /**
+  * @When /^(?:|I )switch to main frame$/
+  * @When /^(?:|I )switch to parent$/
+  */
+  public function iSwitchToParent() {
+    $this->getSession()->getDriver()->switchToIFrame(null);
+  }
+
 }
