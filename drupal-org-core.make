@@ -14,6 +14,8 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-11-05/13562
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch
 ;; Issue #2893892: Fixed Warning Invalid argument supplied for foreach() in Drupal
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2018-12-10/core--getDerivatives-Invalid-argument-foreach--2893892-11-d8.patch
+;; Issue #3118087: Fix notice for any extension has a missing or invalid version, Update manager throws errors and is confused about site update status
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-03-17/3118087-67.8_8_x.patch
 ;; Issue #3044656: Add a helper method to strip subdirectories from URL paths
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-03-31/3044656-2.patch
 ;; Issue #3101231: Fix multilingual site's layout edit context issue with TypeError: Argument 1 passed to UrlHelper::buildQuery() must be of the type array, null given
@@ -22,3 +24,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-19/31012
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-03/2996114-99.patch
 ;; Issue #3045171: Form blocks rendered inside layout builder break save
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-02-04/layout-builder-save-issue-3045171-140.patch
+;; Issue #2985882: Fix Error: Call to a member function getLabel() after enabling layout_builder
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch
