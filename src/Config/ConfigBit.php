@@ -126,7 +126,7 @@ class ConfigBit {
         $config_file = drupal_get_path($type, $project) . '/' . $language_config_file;
         if (file_exists($config_file)) {
           $config_file_backup = $config_file . $config_bit_data['action']['archive_files']['archive_extensiton'];
-          file_unmanaged_move($config_file, $config_file_backup);
+          \Drupal::service('file_system')->move($config_file, $config_file_backup);
         }
       }
     }
@@ -157,7 +157,7 @@ class ConfigBit {
         $config_file = drupal_get_path($type, $project) . '/' . $language_config_file;
         $config_file_backup = $config_file . $config_bit_data['action']['unarchive_files']['archive_extensiton'];
         if (!file_exists($config_file) && file_exists($config_file_backup)) {
-          file_unmanaged_move($config_file_backup, $config_file);
+          \Drupal::service('file_system')->move($config_file_backup, $config_file);
         }
       }
     }
