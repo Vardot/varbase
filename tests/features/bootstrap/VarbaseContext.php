@@ -1,7 +1,5 @@
 <?php
 
-namespace Drupal\DrupalExtension\Context;
-
 use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
