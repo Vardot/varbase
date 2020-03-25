@@ -68,14 +68,14 @@ final class VarbaseEntityDefinitionUpdateManager implements ContainerInjectionIn
    *
    * @param \Drupal\Core\Entity\EntityDefinitionUpdateManagerInterface $entity_definition_update_manager
    *   The entity definition update manager.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager service.
    * @param \Drupal\Core\Entity\EntityLastInstalledSchemaRepositoryInterface $entity_last_installed_schema_repository
    *   The last installed schema repository service.
-   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
-   *   The entity field manager service.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager service.
    * @param \Drupal\Core\Entity\EntityTypeListenerInterface $entity_type_listener
    *   The entity type listener interface.
+   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
+   *   The entity field manager service.
    * @param \Drupal\Core\Field\FieldStorageDefinitionListenerInterface $field_storage_definition_listener
    *   The field storage definition listener service.
    */
@@ -99,7 +99,7 @@ final class VarbaseEntityDefinitionUpdateManager implements ContainerInjectionIn
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    /** @noinspection PhpParamsInspection */
+    // @noinspection PhpParamsInspection.
     return new static(
       $container->get('entity.definition_update_manager'),
       $container->get('entity.last_installed_schema.repository'),

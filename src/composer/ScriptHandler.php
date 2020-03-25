@@ -174,6 +174,7 @@ class ScriptHandler {
    * Find and return the path to .git repository in root folder.
    *
    * @param string $root
+   *   The Drupal root directory.
    */
   private static function removeWindowsGitDirectories($root) {
     foreach (scandir($root) as $dirOrFile) {
@@ -194,6 +195,7 @@ class ScriptHandler {
    * Remove a directory on Windows.
    *
    * @param string $dirname
+   *   The directory name.
    */
   private static function rmdirWindows($dirname) {
     if (is_file($dirname)) {

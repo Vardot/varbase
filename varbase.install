@@ -70,9 +70,5 @@ function varbase_install() {
     $response = new RedirectResponse($homepage_with_tour);
     $response->send();
     exit;
-
-    include_once __DIR__ . '/../../core/includes/install.core.inc';
-    include_once __DIR__ . '/../../core/includes/install.inc';
-    install_goto('?tour');
   }
 }

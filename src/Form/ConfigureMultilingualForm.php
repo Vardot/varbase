@@ -8,11 +8,16 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Language\LanguageManager;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
  * Defines form for selecting Varbase's Multiligual configuration options form.
  */
-class ConfigureMultilingualForm extends FormBase {
+class ConfigureMultilingualForm extends FormBase implements ContainerInjectionInterface {
+
+  use StringTranslationTrait;
 
   /**
    * The Drupal application root.
@@ -36,6 +41,13 @@ class ConfigureMultilingualForm extends FormBase {
   protected $formHelper;
 
   /**
+   * The config factory service.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $configFactory;
+
+  /**
    * Configure Multilingual Form constructor.
    *
    * @param string $root
@@ -46,12 +58,15 @@ class ConfigureMultilingualForm extends FormBase {
    *   The string translation service.
    * @param \Drupal\varbase\Form\FormHelper $form_helper
    *   The form helper.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   The config factory service.
    */
-  public function __construct($root, InfoParserInterface $info_parser, TranslationInterface $translator, FormHelper $form_helper) {
+  public function __construct($root, InfoParserInterface $info_parser, TranslationInterface $translator, FormHelper $form_helper, ConfigFactoryInterface $config_factory) {
     $this->root = $root;
     $this->infoParser = $info_parser;
     $this->stringTranslation = $translator;
     $this->formHelper = $form_helper;
+    $this->configFactory = $config_factory;
   }
 
   /**
@@ -59,10 +74,11 @@ class ConfigureMultilingualForm extends FormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-    $container->get('app.root'),
-    $container->get('info_parser'),
-    $container->get('string_translation'),
-    $container->get('varbase.form_helper')
+      $container->get('app.root'),
+      $container->get('info_parser'),
+      $container->get('string_translation'),
+      $container->get('varbase.form_helper'),
+      $container->get('config.factory')
     );
   }
 
@@ -88,7 +104,7 @@ class ConfigureMultilingualForm extends FormBase {
     }
 
     asort($select_options);
-    $default_langcode = \Drupal::configFactory()->getEditable('system.site')->get('default_langcode');
+    $default_langcode = $this->configFactory->getEditable('system.site')->get('default_langcode');
 
     // Save the default language name.
     $default_language_name = $select_options[$default_langcode];
