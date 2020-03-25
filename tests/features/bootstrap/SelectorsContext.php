@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\varbase\tests\features\bootstrap;
+namespace Drupal\DrupalExtension\Context;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
