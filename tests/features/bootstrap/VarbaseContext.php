@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\varbase\tests\features\bootstrap\VarbaseContext;
+namespace Drupal\varbase\tests\features\bootstrap;
 
 use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
