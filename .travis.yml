@@ -107,6 +107,7 @@ before_install:
 install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
+  - rm $HOME/.composer/auth.json
   - composer install --no-interaction
 
   ## Install with drush.
