@@ -49,6 +49,7 @@ mysql:
 before_install:
   - phpenv config-rm xdebug.ini
   - phpenv rehash
+  - if [[ ! -f $HOME/.composer/auth.json ]]; then rm $HOME/.composer/auth.json fi
   - composer self-update
   - composer --version
 
@@ -107,7 +108,6 @@ before_install:
 install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
-  - rm $HOME/.composer/auth.json
   - composer install --no-interaction
 
   ## Install with drush.
