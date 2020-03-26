@@ -49,7 +49,8 @@ mysql:
 before_install:
   - phpenv config-rm xdebug.ini
   - phpenv rehash
-  - if [[ ! -f $HOME/.composer/auth.json ]]; then rm $HOME/.composer/auth.json fi
+  - COMPOSER_AUTH_PATH="$HOME/.composer/auth.json"
+  - if [[ -f COMPOSER_AUTH_PATH ]]; then rm $HOME/.composer/auth.json fi
   - composer self-update
   - composer --version
 
