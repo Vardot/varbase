@@ -202,7 +202,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @Given /^(?:|I )wait max of (?P<time>\d+)s(?:| for the page to be ready and loaded)$/
    * @Given /^(?:|I )wait(?:| for the page)$/
    *
-   * @throws BehaviorException
+   * @throws Exception
    *   If timeout is reached.
    */
   public function iWaitMaxOfSecondsForThePageToBeReadyAndLoaded($time = 10000) {
@@ -231,7 +231,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->wait($time, $condition);
     // Check if we reached the timeout unless the condition is false to explicitly wait the specified time.
     if ($condition !== FALSE && microtime(TRUE) > $end) {
-      throw new BehaviorException(sprintf('Timeout of %d reached when checking on %s', $time, $condition));
+      throw new Exception(sprintf('Timeout of %d reached when checking on %s', $time, $condition));
     }
   }
 
@@ -1581,62 +1581,6 @@ JS;
   private function getAttributeByOtherAttributeValue($attributeName, $otherAttributeName, $otherAttributeValue, $htmlTagName = "*") {
     $element = $this->getSession()->getPage()->find('xpath', "//{$htmlTagName}[contains(@{$otherAttributeName}, '{$otherAttributeValue}')]");
     return $element->getAttribute($attributeName);
-  }
-
-  /**
-   * Accept Alerts Before going to the next step.
-   *
-   * @BeforeStep @AcceptAlertsBeforStep
-   */
-  public function beforeStepAcceptAlert(BeforeStepScope $scope) {
-    try {
-      $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
-    }
-    catch (Exception $e) {
-      // no-op, alert might not be present.
-    }
-  }
-
-  /**
-   * Accept Alerts After going to the next step.
-   *
-   * @AftereStep @AcceptAlertsAfterStep
-   */
-  public function afterStepAcceptAlert(AfterStepScope $scope) {
-    try {
-      $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
-    }
-    catch (Exception $e) {
-      // no-op, alert might not be present.
-    }
-  }
-
-  /**
-   * Accept Alerts Before going to the next step.
-   *
-   * @BeforeStep @AcceptAlertsBeforStep
-   */
-  public function beforeStepDismissAlert(BeforeStepScope $scope) {
-    try {
-      $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
-    }
-    catch (Exception $e) {
-      // no-op, alert might not be present.
-    }
-  }
-
-  /**
-   * Accept Alerts After going to the next step.
-   *
-   * @AftereStep @DismissAlertsAfterStep
-   */
-  public function afterStepDismissAlert(AfterStepScope $scope) {
-    try {
-      $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
-    }
-    catch (Exception $e) {
-      // no-op, alert might not be present.
-    }
   }
 
 }
