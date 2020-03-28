@@ -36,8 +36,7 @@ So that the "Landing page" will have text and images in right and left view.
       And I wait
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait
-      And I scrolldown
+      And I wait for 1 seconds
       And I press "Rich Text"
       And I wait for AJAX to finish
       And I fill in the rich text editor field "Text" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere."
