@@ -10,7 +10,7 @@ I want to be able to clone an entity.
       And I fill in "Test Clone landing page" for "Title"
       And I fill in "Test landing page description text" for "Page description"
       And I wait for AJAX to finish
-      And I wait 1 secound
+      And I wait for 2 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
       And I wait for 2 seconds

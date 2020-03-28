@@ -40,10 +40,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Drupal Block" for "Title"
       And I fill in "Test Landing page description Drupal Block" for "Page description"
       And I wait for AJAX to finish
-      And I wait
+      And I wait for 3 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 1 seconds
+      And I wait for 3 seconds
       And I press "Drupal Block"
       And I wait for AJAX to finish
      Then I should see "Block"
@@ -61,10 +61,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Columns (Equal)" for "Title"
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
       And I wait for AJAX to finish
-      And I wait
+      And I wait for 3 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 1 seconds
+      And I wait for 3 seconds
       And I press "Columns (Equal)"
       And I wait for AJAX to finish
       And I press "Save"
@@ -79,10 +79,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I wait for AJAX to finish
-      And I wait
+      And I wait for 3 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 1 seconds
+      And I wait for 3 seconds
       And I press "Columns (Two Uneven)"
       And I wait for AJAX to finish
       And I press "Save"
@@ -97,10 +97,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Modal" for "Title"
       And I fill in "Test Landing page description Modal" for "Page description"
       And I wait for AJAX to finish
-      And I wait
+      And I wait for 3 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 1 seconds
+      And I wait for 3 seconds
       And I press "Modal"
       And I wait for AJAX to finish
      Then I should see "Components"
@@ -126,10 +126,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Rich Text" for "Title"
       And I fill in "Test Landing page description Rich Text" for "Page description"
       And I wait for AJAX to finish
-      And I wait
+      And I wait for 3 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 1 seconds
+      And I wait for 3 seconds
       And I press "Rich Text"
       And I wait for AJAX to finish
      Then I should see "Components"
@@ -147,10 +147,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page Tabs" for "Title"
       And I fill in "Test Landing page description Tabs" for "Page description"
       And I wait for AJAX to finish
-      And I wait
+      And I wait for 3 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 1 seconds
+      And I wait for 3 seconds
       And I press "Tabs"
       And I wait for AJAX to finish
      Then I should see "Components"
@@ -174,10 +174,10 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page WebForm" for "Title"
       And I fill in "Test Landing page description WebForm" for "Page description"
       And I wait for AJAX to finish
-      And I wait
+      And I wait for 3 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 1 seconds
+      And I wait for 3 seconds
       And I press "Webform"
       And I wait for AJAX to finish
      Then I should see "Components"
