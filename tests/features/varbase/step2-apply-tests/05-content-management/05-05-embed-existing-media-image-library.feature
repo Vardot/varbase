@@ -51,6 +51,7 @@ So that it will show up under that rich text field without having to upload the 
      When I move focus to "Body" rich text editor field
       And I click the editor media browser command button
       And I wait for AJAX to finish
+      And I wait for 5 seconds
      Then the editor media browser should be open
      When I switch to iframe "entity_browser_iframe_editor_media_browser"
       And I fill in "Embed Flag Earth" for "edit-name"

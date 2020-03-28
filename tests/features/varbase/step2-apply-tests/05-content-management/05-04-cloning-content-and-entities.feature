@@ -10,10 +10,10 @@ I want to be able to clone an entity.
       And I fill in "Test Clone landing page" for "Title"
       And I fill in "Test landing page description text" for "Page description"
       And I wait for AJAX to finish
-      And I wait for 2 seconds
+      And I wait for 5 seconds
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 2 seconds
+      And I wait for 5 seconds
       And I press "Modal"
       And I wait for AJAX to finish
      Then I should see "Components"
