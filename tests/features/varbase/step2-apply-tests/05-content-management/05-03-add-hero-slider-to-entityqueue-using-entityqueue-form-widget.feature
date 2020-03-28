@@ -22,20 +22,10 @@ I want to be able to add and remove entities to any allowed entity queue.
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Check that we can open the hero slider media browser
-    Given I am a logged in user with the "test_super_admin" user
-     When I go to "node/add/varbase_heroslider_media"
-      And I wait max of 2s for the page to be ready and loaded
-     Then I should see "Create Hero slider"
-     When I press "Select media"
-      And I wait for AJAX to finish
-     Then the "entity_browser_iframe_media_browser" media browser should be open
-
-  @javascript @local @development @staging @production
   Scenario: Add a Test hero slider number 1 to the heroslider entity queue.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
-      And I wait max of 2s for the page to be ready and loaded
+      And I wait max of 5s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #1" for "Slide title"
       And I fill in "Test hero slider slide text #1" for "Slide text"
