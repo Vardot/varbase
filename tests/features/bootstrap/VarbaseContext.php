@@ -282,7 +282,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase.
    *
    * Example 1: When I press the "Apply" button under the editor media browser
-   * Example 2: When I press the "Submit" button under the editor media browser.
+   * Example 2:  And I press the "Submit" button under the editor media browser.
    *
    * @When /^I press (?:|the )"([^"]*)" button under the editor media browser$/
    */
@@ -925,7 +925,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
       if (preg_match($regex, $actual)) {
         $found = TRUE;
-        break;
+          break;
       }
     }
     if (!$found) {
@@ -969,7 +969,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       if (preg_match($regex, $actual)) {
         $found = TRUE;
         $element->click();
-        break;
+          break;
       }
     }
     if (!$found) {
@@ -1491,7 +1491,7 @@ JS;
    */
   public function theMediaBrowserIsOpen($entityBrowserIframeId) {
     if (!$this->getSession()->getPage()->find('css', '.ui-dialog.ui-widget-content')) {
-      throw new Exception('The media browser failed to open.');
+      throw new \Exception('The media browser failed to open.');
     }
 
     if (!$this->getSession()->getPage()->find('css', "#$entityBrowserIframeId")) {
@@ -1583,4 +1583,17 @@ JS;
     return $element->getAttribute($attributeName);
   }
 
+  /**
+   * Select a paragraph component.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: When I select the "Drupal block" paragraph component
+   * Example 2:  And I select the "Modal" paragraph component
+   *
+   * @When /^I select (?:|the )"([^"]*)" paragraph component$/
+   */
+  public function iSelectTheParagraphComponent($value) {
+    $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "'. $value . '")]')->click();
+  }
 }

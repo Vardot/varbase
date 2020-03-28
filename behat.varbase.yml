@@ -61,6 +61,28 @@ default:
           browser: 'chrome'
           # browser: 'phantomjs'
           nativeEvents: true
+          marionette: true
+          browserName: chrome
+          version: "*"
+          extra_capabilities:
+            chromeOptions:
+              w3c: false
+          chrome:
+            switches:
+#              - "--headless"
+              - "--disable-web-security"
+              - "--DNS-prefetch-disable"
+              - "--whitelisted-ips"
+              - "--start-maximized"
+              - "--disable-translate"
+              - "--ignore-certificate-errors"
+              - "--test-type"
+              - "--disable-dev-shm-usage"
+              - "--disable-extensions"
+              - "incognito"
+              - "enable-precise-memory-info"
+              - "js-flags=--expose-gc"
+              - "no-sandbox"
       base_url: 'http://127.0.0.1:8080'
       # browser_name: 'firefox'
       browser_name: 'chrome'

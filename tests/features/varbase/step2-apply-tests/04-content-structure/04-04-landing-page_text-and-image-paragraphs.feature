@@ -33,48 +33,50 @@ So that the "Landing page" will have text and images in right and left view.
 
   # Add Rich text centered
       And I wait for AJAX to finish
-      And I wait for 5 seconds
+      And I wait for 1 second
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 5 seconds
-      And I press "Rich Text"
+      And I wait for 1 second
+      And I select the "bp_simple" paragraph component
       And I wait for AJAX to finish
-      And I fill in the rich text editor field "Text" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere."
+      And I fill in the rich text editor field "Text" with "Lorem ipsum dolor sit amet1, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere."
       And I select all text in "Text" field
       And I click on "justifycenter" command button in the rich text editor field "Text"
       And I wait
-      And I press "Save"
-      And I wait
-     Then I should see "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere." in the "p" element with the "class" attribute set to "text-align-center"
+     Then I should see "Rich Text"
 
   # Add Text and Image -> image to the right
-     #
-     # When I go to "admin/content"
-     #  And I wait
-     # Then I should see "Content"
-     # When I fill in "Test landing page title for text and image paragraphs" for "Title"
-     #  And I press the "Filter" button
-     #  And I wait
-     # Then I should see "Test landing page title for text and image paragraphs"
-     # When I click "Edit" in the "Test landing page title for text and image paragraphs" row
-     #  And I wait
-     # Then I should see "Test landing page title for text and image paragraphs"
-     #  And I wait
-     #  And I scrolldown
-     #  And I wait for AJAX to finish
-     #  And I wait
-     #  And I press "+ Add"
-     #  And I wait for AJAX to finish
-     #  And I wait
-     #  And I press "Text and image"
-     #  And I wait for AJAX to finish
-     #  And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."
-     #  And I select all text in "Text" field
-     #  And I click on "justifycenter" command button in the rich text editor field "Text"
-     #  And I wait
-     #  And I click "Image"
-     #  And I wait for AJAX to finish
-     # Then I should see "Select Image(s)"
-     #  And I press "Save"
-     #  And I wait
-     # Then I should see the "0" "wrapper" with "align2left" class
+
+      When I press "+ Add"
+       And I wait for AJAX to finish
+       And I wait for 1 second
+       And I select the "text_and_image" paragraph component
+       And I wait for AJAX to finish
+       And I wait 5s
+      Then I should see "Text and image"
+      When I press "field_lp_paragraphs_1_subform_field_image_entity_browser_entity_browser"
+       And I wait for AJAX to finish
+       And I wait 5s
+      Then the "entity_browser_iframe_image_browser" media browser should be open
+      When I switch to iframe "entity_browser_iframe_image_browser"
+       And I wait 5s
+      Then I should see "Media name"
+      When I fill in "Flag Earth" for "Media name"
+       And I press the "Search" button
+       And wait max of 5s
+      Then I should see image with the "Flag Earth all earth in space" title text
+      When I double click on the image with the "Flag Earth all earth in space" title text
+       And I wait for AJAX to finish
+       And wait max of 5s
+       And I switch to parent
+       And I wait for AJAX to finish
+       And wait max of 5s
+      When I click "Text"
+       And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."
+       And I select all text in "Text" field
+       And I click on "justifycenter" command button in the rich text editor field "Text"
+       And I wait
+       And I press "Save"
+       And I wait
+      Then I should see "In eros ipsum, mattis vitae vulputate eu, blandit"
+       And I should see image with the "Flag Earth all earth in space" title text 

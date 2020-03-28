@@ -10,11 +10,10 @@ I want to be able to clone an entity.
       And I fill in "Test Clone landing page" for "Title"
       And I fill in "Test landing page description text" for "Page description"
       And I wait for AJAX to finish
-      And I wait for 5 seconds
+      And I wait for 1 second
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I wait for 5 seconds
-      And I press "Modal"
+      And I select the "bp_modal" paragraph component
       And I wait for AJAX to finish
      Then I should see "Components"
      When I fill in "Modal button" for "Modal button text"
@@ -24,7 +23,7 @@ I want to be able to clone an entity.
       And I press "Add Component"
       And I wait for AJAX to finish
       And I wait
-      And I press "field_lp_paragraphs_0_subform_bp_modal_body_bp_simple_add_more"
+      And I select the "bp_simple" paragraph component
       And I wait
      Then I should see "Modal body"
       And I fill in the rich text editor field "Text" with "Modal Body test"
