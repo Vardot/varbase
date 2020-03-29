@@ -314,6 +314,9 @@ projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta2
 projects[paragraphs_edit][type] = module
 projects[paragraphs_edit][version] = 2.0-alpha6
 
+projects[entity_usage][type] = module
+projects[entity_usage][version] = 2.0-beta3
+
 projects[color_field][type] = module
 projects[color_field][version] = 2.2
 
