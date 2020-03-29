@@ -116,6 +116,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Landing page Test Landing page Modal has been created"
      When I press "Modal button"
       And I wait for AJAX to finish
+      And I wait 2 seconds
      Then I should see "Modal title"
 
   @javascript @local @development @staging @production

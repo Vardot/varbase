@@ -48,7 +48,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       }
     }
     else {
-      throw new Exception('behat.yml config files should include "varbase_users" property.');
+      throw new \Exception('behat.yml config files should include "varbase_users" property.');
     }
   }
 
@@ -76,7 +76,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $password = $this->users[$username];
     }
     catch (Exception $e) {
-      throw new Exception("Password not found for '$username'.");
+      throw new \Exception("Password not found for '$username'.");
     }
     if ($this->loggedIn()) {
       $this->logout();
@@ -231,7 +231,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->wait($time, $condition);
     // Check if we reached the timeout unless the condition is false to explicitly wait the specified time.
     if ($condition !== FALSE && microtime(TRUE) > $end) {
-      throw new Exception(sprintf('Timeout of %d reached when checking on %s', $time, $condition));
+      throw new \Exception(sprintf('Timeout of %d reached when checking on %s', $time, $condition));
     }
   }
 
@@ -255,7 +255,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $editorMediaBrowserButton = $this->getSession()->getPage()->find('css', '.cke_button.cke_button__media');
 
     if (empty($editorMediaBrowserButton)) {
-      throw new Exception('The editor media browser button dose not exist.');
+      throw new \Exception('The editor media browser button dose not exist.');
     }
 
     $editorMediaBrowserButton->click();
@@ -272,7 +272,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     if (!$this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper')
       || !$this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper .media-browser-panes')) {
-      throw new Exception('The editor media browser failed to open.');
+      throw new \Exception('The editor media browser failed to open.');
     }
   }
 
@@ -322,7 +322,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'button') and text() = '{$text}']");
 
     if (empty($element)) {
-      throw new Exception('The editor media browser dose not have [ ' . $text . ' ] button.');
+      throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] button.');
     }
 
     $element->click();
@@ -349,7 +349,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'ui-tabs-anchor') and text() = '{$text}']");
 
     if (empty($element)) {
-      throw new Exception('The editor media browser dose not have [ ' . $text . ' ] tab.');
+      throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] tab.');
     }
 
     $element->click();
@@ -375,7 +375,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//div[contains(@class, 'media-item') and contains(@title, '{$text}')]");
 
     if (empty($element)) {
-      throw new Exception('The editor media browser dose not have [ ' . $text . ' ] file.');
+      throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] file.');
     }
 
     $element->click();
@@ -427,7 +427,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $regex = '/' . preg_quote($text, '/') . '/ui';
 
     if (!preg_match($regex, $actual)) {
-      throw new Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
+      throw new \Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
     }
 
     // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
@@ -451,7 +451,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
 
     if (empty($element)) {
-      throw new Exception('The editor media browser dose not have an image with the [ ' . $titleText . ' ] title text.');
+      throw new \Exception('The editor media browser dose not have an image with the [ ' . $titleText . ' ] title text.');
     }
 
     // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
@@ -477,7 +477,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $regex = '/' . preg_quote($text, '/') . '/ui';
 
     if (preg_match($regex, $actual)) {
-      throw new Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
+      throw new \Exception(sprintf('The text "%s" was not found anywhere in the text of the current page.', $text));
     }
 
     // Switch back too the page from the "entity_browser_iframe_editor_media_browser" iframe.
@@ -513,7 +513,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
 
     if (empty($fieldId)) {
-      throw new Exception('Could not find an id for the rich text editor field : ' . $locator);
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
     $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\");");
@@ -535,7 +535,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $fieldId = $el->getAttribute('id');
 
     if (empty($fieldId)) {
-      throw new Exception('Could not find an id for the rich text editor field : ' . $locator);
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
     $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].execCommand( '$selectorCommand' );");
@@ -567,7 +567,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
 
     if (empty($fieldId)) {
-      throw new Exception('Could not find an id for the rich text editor field : ' . $locator);
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
     $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(CKEDITOR.instances[\"$fieldId\"].getData()+\"$value\");");
@@ -597,7 +597,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
 
     if (empty($fieldId)) {
-      throw new Exception('Could not find an id for the rich text editor field : ' . $locator);
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
     $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\"+CKEDITOR.instances[\"$fieldId\"].getData());");
@@ -618,7 +618,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $fieldid = $el->getAttribute('id');
 
     if (empty($fieldid)) {
-      throw new Exception('Could not find an id for the rich text editor field : ' . $selectedField);
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
 
     $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].focus();");
@@ -639,7 +639,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $fieldid = $el->getAttribute('id');
 
     if (empty($fieldid)) {
-      throw new Exception('Could not find an id for the rich text editor field : ' . $selectedField);
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
 
     $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].execCommand('selectAll', false, null);");
@@ -668,7 +668,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
+      throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
     }
   }
 
@@ -686,7 +686,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] Alt Text.');
+      throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] Alt Text.');
     }
   }
 
@@ -704,7 +704,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
+      throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
     }
 
     // Double click on the image.
@@ -725,7 +725,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
+      throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
     }
 
     // Click on the image.
@@ -746,7 +746,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
+      throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
     }
 
     // Double click on the image.
@@ -767,7 +767,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$altText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] title text.');
+      throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] title text.');
     }
 
     // Click on the image.
@@ -789,7 +789,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $fieldId = $el->getAttribute('id');
 
     if (empty($fieldId)) {
-      throw new Exception('Could not find an id for the rich text editor field : ' . $locator);
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
     $this->getSession()->executeScript("return CKEDITOR.instances[\"$fieldId\"].getData();");
@@ -802,7 +802,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->findAll('xpath', "//img[contains(@title, '{$titleText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text under [ ' . $locator . ' ].');
+      throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text under [ ' . $locator . ' ].');
     }
 
     // Switch back too the page from the iframe.
@@ -827,7 +827,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
 
     if (empty($element)) {
-      throw new Exception('The page dose not have an image with the [ ' . $altText . ' ] Alt Text under [ ' . $filedName . ' ].');
+      throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] Alt Text under [ ' . $filedName . ' ].');
     }
 
     // Switch back too the page from the iframe.
@@ -856,7 +856,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $elem->mouseOver();
     }
     else {
-      throw new Exception("No element matching \"$selector\" is found.");
+      throw new \Exception("No element matching \"$selector\" is found.");
     }
   }
 
@@ -876,7 +876,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $elem->doubleClick();
     }
     else {
-      throw new Exception("No element matching \"$selector\" is found.");
+      throw new \Exception("No element matching \"$selector\" is found.");
     }
   }
 
@@ -896,7 +896,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $elem->rightClick();
     }
     else {
-      throw new Exception("No element matching \"$selector\" is found.");
+      throw new \Exception("No element matching \"$selector\" is found.");
     }
   }
 
@@ -1041,12 +1041,12 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $elementPanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
     if (empty($elementPanelRegion)) {
-      throw new Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
+      throw new \Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
     }
 
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]//*[text()='{$text}']");
     if (empty($element)) {
-      throw new Exception('The panle region "' . $panleRegion . '" dose not have "' . $text . '" in it.');
+      throw new \Exception('The panle region "' . $panleRegion . '" dose not have "' . $text . '" in it.');
     }
   }
 
@@ -1073,12 +1073,12 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $elementPanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
     if (empty($elementPanelRegion)) {
-      throw new Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
+      throw new \Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
     }
 
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]//*[text()='{$text}']");
     if (!empty($element)) {
-      throw new Exception('The panle region "' . $panleRegion . '" dose have "' . $text . '" in it.');
+      throw new \Exception('The panle region "' . $panleRegion . '" dose have "' . $text . '" in it.');
     }
   }
 
@@ -1105,12 +1105,12 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $elementpanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
     if (empty($elementpanelRegion)) {
-      throw new Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
+      throw new \Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
     }
 
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]//*[text()='{$text}']");
     if (empty($element)) {
-      throw new Exception('The panle region "' . $panleRegion . '" dose not have "' . $text . '".');
+      throw new \Exception('The panle region "' . $panleRegion . '" dose not have "' . $text . '".');
     }
 
     $element->click();
@@ -1324,12 +1324,12 @@ JS;
 
     $dragged = $this->getSession()->getPage()->find('css', $draggedElement);
     if (empty($dragged)) {
-      throw new Exception('The selected dragged element [ ' . $draggedElement . ' ] is not in the page.');
+      throw new \Exception('The selected dragged element [ ' . $draggedElement . ' ] is not in the page.');
     }
 
     $target = $this->getSession()->getPage()->find('css', $targetElement);
     if (empty($target)) {
-      throw new Exception('The selected target element [ ' . $targetElement . ' ] is not in the page.');
+      throw new \Exception('The selected target element [ ' . $targetElement . ' ] is not in the page.');
     }
 
     $this->getSession()->getDriver()->evaluateScript("jQuery('{$draggedElement}').detach().prependTo('{$targetElement}');");
@@ -1475,7 +1475,7 @@ JS;
    */
   public function theImageMediaBrowserIsOpen() {
     if (!$this->getSession()->getPage()->find('css', '.ui-dialog.ui-widget-content')) {
-      throw new Exception('The image media browser failed to open.');
+      throw new \Exception('The image media browser failed to open.');
     }
   }
 
@@ -1514,7 +1514,7 @@ JS;
     $items = $this->getSession()->getPage()->findAll('css', '.' . $wrapper);
     $item = $items[$index]->find('css', '.' . $wrapper . '.' . $position);
     if (!$item) {
-      throw new Exception("The image position is wrong");
+      throw new \Exception("The image position is wrong");
     }
   }
 

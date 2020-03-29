@@ -34,7 +34,7 @@ So that the "Landing page" will have text and images in right and left view.
   # Add Rich text centered
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_simple" paragraph component
@@ -47,7 +47,7 @@ So that the "Landing page" will have text and images in right and left view.
 
   # Add Text and Image -> image to the right
 
-      When I press "+ Add"
+      When I press "Add Component"
        And I wait for AJAX to finish
        And I wait for 1 second
        And I select the "text_and_image" paragraph component

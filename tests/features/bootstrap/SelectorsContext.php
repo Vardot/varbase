@@ -86,14 +86,14 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
 
             }
             else {
-              throw new Exception('The file "' . $this->filesPath . $selectorFile . '" is empty or does not exist under SelectorsContext');
+              throw new \Exception('The file "' . $this->filesPath . $selectorFile . '" is empty or does not exist under SelectorsContext');
             }
           }
         }
 
       }
       else {
-        throw new Exception('behat.yml should include "selectors" with css, xpath, files_path, and files parametars. under SelectorsContext');
+        throw new \Exception('behat.yml should include "selectors" with css, xpath, files_path, and files parametars. under SelectorsContext');
       }
     }
   }
@@ -157,7 +157,7 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
     else {
-      throw new Exception('The selector name and the CSS selector must not be empty.');
+      throw new \Exception('The selector name and the CSS selector must not be empty.');
     }
   }
 
@@ -195,7 +195,7 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
     else {
-      throw new Exception('The selector name and the XPath selector must not be empty.');
+      throw new \Exception('The selector name and the XPath selector must not be empty.');
     }
   }
 
@@ -249,11 +249,11 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
 
       }
       else {
-        throw new Exception('The file "' . $this->filesPath . $fileName . '" is empty or does not exist under SelectorsContext');
+        throw new \Exception('The file "' . $this->filesPath . $fileName . '" is empty or does not exist under SelectorsContext');
       }
     }
     else {
-      throw new Exception('No file name or the file_path parameter is not right in the behat.yml file');
+      throw new \Exception('No file name or the file_path parameter is not right in the behat.yml file');
     }
   }
 
@@ -348,7 +348,7 @@ class SelectorsContext extends RawDrupalContext implements SnippetAcceptingConte
     // Have the $selectionStart.
     $selectionStart = strpos($fieldValue, $selectedText);
     if (empty($selectionStart)) {
-      throw new Exception(sprintf('We do not have "%s" in the "%s" field.', $selectedText, $selectedField));
+      throw new \Exception(sprintf('We do not have "%s" in the "%s" field.', $selectedText, $selectedField));
     }
 
     // Have the selectionEnd.
