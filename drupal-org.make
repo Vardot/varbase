@@ -222,7 +222,7 @@ projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 2.4
 
 projects[revision_log_default][type] = module
-projects[revision_log_default][version] = 1.0
+projects[revision_log_default][version] = 1.1
 
 projects[webform][type] = module
 projects[webform][version] = 5.9
@@ -296,7 +296,7 @@ projects[link_attributes][type] = module
 projects[link_attributes][version] = 1.10
 
 projects[paragraphs][type] = module
-projects[paragraphs][version] = 1.10
+projects[paragraphs][version] = 1.11
 ;; Issue #2924774: Let Editors add/delete/clone paragraphs When [Editing a translation]
 projects[paragraphs][patch][] = https://www.drupal.org/files/issues/2018-06-03/2924774-29.patch
 
@@ -422,7 +422,7 @@ projects[search_api][type] = module
 projects[search_api][version] = 1.15
 
 projects[blazy][type] = module
-projects[blazy][version] = 2.0-rc6
+projects[blazy][version] = 2.0
 
 projects[slick][type] = module
 projects[slick][version] = 2.1

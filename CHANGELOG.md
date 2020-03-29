@@ -124,7 +124,7 @@
                  Drupal 9 Readiness for [Varbase FAQs] with Drupal coding
                  standard and practice
 * Issue [#3102163](https://www.drupal.org/node/3102163)
-                 by YousefAnbar
+                by [YousefAnbar](https://www.drupal.org/u/yousefanbar)
                 : Changed FAQ Cache tags based on node_list tag
 * Issue [#3113179](https://www.drupal.org/node/3113179):
                  Drupal 9 Readiness for [Varbase Layout Builder] with Drupal
