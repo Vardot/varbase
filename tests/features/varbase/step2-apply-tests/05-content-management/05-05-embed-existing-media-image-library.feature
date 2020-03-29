@@ -47,10 +47,13 @@ So that it will show up under that rich text field without having to upload the 
      Then I should see "Test Basic page to embed existing files"
      When I click "Edit" in the "Test Basic page to embed existing files" row
       And I wait
+      And I wait for 5 seconds
      Then I should see "Edit Basic page Test Basic page to embed existing files"
      When I move focus to "Body" rich text editor field
       And I click the editor media browser command button
+      And I wait
       And I wait for AJAX to finish
+      And I wait
       And I wait for 5 seconds
      Then the editor media browser should be open
      When I switch to iframe "entity_browser_iframe_editor_media_browser"

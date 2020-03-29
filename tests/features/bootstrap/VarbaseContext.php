@@ -269,8 +269,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @Then /^the editor media browser should be open$/
    */
   public function theEitorMediaBrowserIsOpen() {
-
-    if (!$this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper')
+    if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper')
       || !$this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper .media-browser-panes')) {
       throw new \Exception('The editor media browser failed to open.');
     }
