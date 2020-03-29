@@ -49,13 +49,13 @@ projects[layout_builder_restrictions][type] = module
 projects[layout_builder_restrictions][version] = 1.5
 
 projects[layout_library][type] = module
-projects[layout_library][version] = 1.0-beta1
+projects[layout_library][version] = 1.0-beta2
 
 projects[layout_builder_block_sanitizer][type] = module
 projects[layout_builder_block_sanitizer][version] = 1.0-alpha2
 
 projects[media_library_theme_reset][type] = module
-projects[media_library_theme_reset][version] = 1.0-beta1
+projects[media_library_theme_reset][version] = 1.0-beta2
 
 projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.10 
@@ -108,13 +108,13 @@ projects[image_resize_filter][type] = module
 projects[image_resize_filter][version] = 1.0
 
 projects[views_infinite_scroll][type] = module
-projects[views_infinite_scroll][version] = 1.6
+projects[views_infinite_scroll][version] = 1.7
 
 projects[embed][type] = module
 projects[embed][version] = 1.3
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-rc3
+projects[entity][version] = 1.0
 
 projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-beta3
@@ -126,14 +126,14 @@ projects[dropzonejs][type] = module
 projects[dropzonejs][version] = 2.0
 
 projects[entity_embed][type] = module
-projects[entity_embed][version] = 1.0
+projects[entity_embed][version] = 1.1
 ;; Issue #3070343: Allow to add a Drupal core link with Link Widget for Image entities using Entity Embed Dialog in CKEditor
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-07-25/3070343-8.patch
 ;; Issue #2679875: Inline Entity Form integration
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-08-18/2679875-10.patch
 
 projects[inline_entity_form][type] = module
-projects[inline_entity_form][version] = 1.0-rc2
+projects[inline_entity_form][version] = 1.0-rc3
 
 projects[media_entity_instagram][type] = module
 projects[media_entity_instagram][version] = 2.0
@@ -142,10 +142,10 @@ projects[media_entity_twitter][type] = module
 projects[media_entity_twitter][version] = 2.3
 
 projects[crop][type] = module
-projects[crop][version] = 2.0
+projects[crop][version] = 2.1
 
 projects[focal_point][type] = module
-projects[focal_point][version] = 1.2
+projects[focal_point][version] = 1.3
 
 projects[pathologic][type] = module
 projects[pathologic][version] = 1.0-alpha1
@@ -160,13 +160,13 @@ projects[entityqueue][type] = module
 projects[entityqueue][version] = 1.0-beta5
 
 projects[entityqueue_form_widget][type] = module
-projects[entityqueue_form_widget][version] = 1.0
+projects[entityqueue_form_widget][version] = 1.1
 
 projects[imagemagick][type] = module
-projects[imagemagick][version] = 3.0
+projects[imagemagick][version] = 3.1
 
 projects[imageapi_optimize][type] = module
-projects[imageapi_optimize][version] = 2.0-alpha4
+projects[imageapi_optimize][version] = 2.0-beta1
 
 projects[ultimate_cron][type] = module
 projects[ultimate_cron][version] = 2.0-alpha4
@@ -198,10 +198,10 @@ projects[config_perms][type] = module
 projects[config_perms][version] = 2.0-beta2
 
 projects[roleassign][type] = module
-projects[roleassign][version] = 1.0-alpha2
+projects[roleassign][version] = 1.0-beta1
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 2.0
+projects[admin_toolbar][version] = 2.2
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.10
@@ -216,7 +216,7 @@ projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0-beta1
 
 projects[views_bulk_operations][type] = module
-projects[views_bulk_operations][version] = 3.4
+projects[views_bulk_operations][version] = 3.6
 
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 2.4
@@ -225,7 +225,7 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.0
 
 projects[webform][type] = module
-projects[webform][version] = 5.8
+projects[webform][version] = 5.9
 
 projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
@@ -253,7 +253,7 @@ projects[rabbit_hole][type] = module
 projects[rabbit_hole][version] = 1.0-beta6
 
 projects[fast_404][type] = module
-projects[fast_404][version] = 1.0-alpha4
+projects[fast_404][version] = 1.0-alpha5
 
 projects[mailsystem][type] = module
 projects[mailsystem][version] = 4.2
@@ -262,7 +262,7 @@ projects[swiftmailer][type] = module
 projects[swiftmailer][version] = 1.0-beta2
 
 projects[smtp][type] = module
-projects[smtp][version] = 1.0-beta6
+projects[smtp][version] = 1.0-beta7
 
 projects[length_indicator][type] = module
 projects[length_indicator][version] = 1.1
@@ -306,7 +306,7 @@ projects[paragraphs_previewer][version] = 1.4
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2019-02-20/2904917-8.patch
 
 projects[paragraphs_features][type] = module
-projects[paragraphs_features][version] = 1.7
+projects[paragraphs_features][version] = 1.8
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
 projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta2
@@ -318,7 +318,7 @@ projects[color_field][type] = module
 projects[color_field][version] = 2.2
 
 projects[entity_reference_revisions][type] = module
-projects[entity_reference_revisions][version] = 1.7
+projects[entity_reference_revisions][version] = 1.8
 
 projects[viewsreference][type] = module
 projects[viewsreference][version] = 2.0-alpha6
@@ -336,7 +336,7 @@ projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][version] = 3.0-beta3
 
 projects[login_destination][type] = module
-projects[login_destination][version] = 1.0-alpha2
+projects[login_destination][version] = 1.0-beta1
 
 projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.4
@@ -413,7 +413,7 @@ projects[shield][type] = module
 projects[shield][version] = 1.2
 
 projects[captcha][type] = module
-projects[captcha][version] = 1.0-beta4
+projects[captcha][version] = 1.0
 
 projects[recaptcha][type] = module
 projects[recaptcha][version] = 2.5
@@ -425,10 +425,10 @@ projects[blazy][type] = module
 projects[blazy][version] = 2.0-rc6
 
 projects[slick][type] = module
-projects[slick][version] = 2.0
+projects[slick][version] = 2.1
 
 projects[slick_views][type] = module
-projects[slick_views][version] = 2.1
+projects[slick_views][version] = 2.2
 
 projects[slick_media][type] = module
 projects[slick_media][version] = 2.0-alpha3
@@ -452,7 +452,7 @@ projects[openapi_ui_swagger][type] = module
 projects[openapi_ui_swagger][version] = 1.0-rc3
 
 projects[simple_oauth][type] = module
-projects[simple_oauth][version] = 4.3
+projects[simple_oauth][version] = 4.4
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 1.4
@@ -461,7 +461,7 @@ projects[restui][type] = module
 projects[restui][version] = 1.17
 
 projects[jsonapi_extras][type] = module
-projects[jsonapi_extras][version] = 3.13
+projects[jsonapi_extras][version] = 3.14
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
@@ -496,9 +496,9 @@ projects[devel][type] = module
 projects[devel][version] = 3.0-beta1
 
 projects[update_helper][type] = module
-projects[update_helper][version] = 1.2
+projects[update_helper][version] = 1.3
 ;; Issue #3024165: [PATCH] Enhancements, Better messages for the unable to apply updates, drush command and removed the Mark all updates as successful on install
-projects[update_helper][patch][] = https://www.drupal.org/files/issues/2019-12-17/3024165-33.patch
+projects[update_helper][patch][] = https://www.drupal.org/files/issues/2020-03-08/3024165-35.patch
 
 projects[checklistapi][type] = module
 projects[checklistapi][version] = 1.10
@@ -517,7 +517,7 @@ projects[bootstrap][type] = theme
 projects[bootstrap][version] = 3.21
 
 projects[bootstrap_barrio][type] = theme
-projects[bootstrap_barrio][version] = 4.22
+projects[bootstrap_barrio][version] = 4.23
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.5
@@ -527,81 +527,81 @@ projects[adminimal_theme][version] = 1.5
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[anchor_link][type] = module
-projects[anchor_link][version] = 1.6
+projects[anchor_link][version] = 1.7
 
 projects[entity_browser_enhanced][type] = module
-projects[entity_browser_enhanced][version] = 1.0-rc5
+projects[entity_browser_enhanced][version] = 1.0
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.4
+projects[vmi][version] = 2.5
 
 projects[total_control][type] = module
-projects[total_control][version] = 2.0-beta2
+projects[total_control][version] = 2.0
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed modules.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 8.x-dev
+projects[varbase_core][version] = 8.7
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.9
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.x-dev
+projects[varbase_media][version] = 7.19
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.9
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.7
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.2
 
 projects[varbase_layout_builder][type] = module
-projects[varbase_layout_builder][version] = 1.x-dev
+projects[varbase_layout_builder][version] = 1.0-alpha9
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.8
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.2
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 8.x-dev
+projects[varbase_blog][version] = 8.1
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.5
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.10
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.10
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.8
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.4
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.2
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.7
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.9
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.9
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
