@@ -1,12 +1,442 @@
-.toolbar-icon-admin-toolbar-tools-help:before,
-.toolbar-icon-admin-toolbar-tools-help:active:before,
-.toolbar-icon-admin-toolbar-tools-help.active:before,
-.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:before,
-.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:active:before,
-.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help.is-active:before,
-.adminimal-admin-toolbar .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-admin-toolbar-tools-help:before,
-.adminimal-admin-toolbar .toolbar-icon-admin-toolbar-tools-help:hover:before {
-  background-image: url(../images/varbase-x-small-emblem-white.png);
+.toolbar-horizontal .toolbar-tray .menu-item + .menu-item,
+.toolbar .toolbar-tray-horizontal .menu-item:last-child {
+  border-left: none;
+  border-right: none;
+}
+
+.toolbar-horizontal .toolbar-tray {
+  border-bottom-color: #000;
+  box-shadow: none;
+}
+
+
+#toolbar-administration.toolbar a {
+  transition: all, 0.2s;
+}
+
+#toolbar-administration.toolbar .toolbar-bar {
+  box-shadow: none;
+  background-color: #2d2d2d;
+}
+
+#toolbar-administration.toolbar .toolbar-menu {
+  background: #333;
+}
+
+#toolbar-administration .toolbar-tray .toolbar-menu a,
+#toolbar-administration .toolbar-tray .toolbar-menu span {
+  background: transparent;
+  color: #ccc;
+}
+
+#toolbar-item-administration-search-tray label {
+  background: transparent;
+  color: #ccc !important;
+}
+
+#toolbar-administration .toolbar-tray .toolbar-menu li {
+  background: #333;
+}
+
+#toolbar-administration .toolbar-tray ul li.menu-item {
+  border: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-horizontal ul ul li.menu-item:first-child {
+  border: none;
+}
+
+#toolbar-administration .toolbar-oriented .user-toolbar-tab {
+  float: right;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-vertical {
+  border: none;
+  box-shadow: none;
+}
+
+#toolbar-administration .toolbar-tray a,
+#toolbar-administration .toolbar-tray span {
+  background: #2d2d2d;
+  color: #bbb;
+}
+
+#toolbar-administration .toolbar-tray span {
+  display: block;
+  padding: 1em 1.3333em;
+}
+
+#toolbar-administration .toolbar-tray-horizontal a:hover,
+#toolbar-administration .toolbar-tray-horizontal a:active,
+#toolbar-administration .toolbar-tray-horizontal a:focus {
+  background: #0084d7;
+  color: #fff;
+  text-decoration: none;
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover > a,
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover > .toolbar-box > a {
+  background: #0084d7;
+  color: #fff !important;
+}
+
+.adminimal .toolbar .toolbar-bar .toolbar-tab:not(.workspaces-toolbar-tab) > .toolbar-item {
+  color: #bebebe;
+  font-weight: 600;
+}
+
+.adminimal .toolbar .toolbar-bar .toolbar-tab:not(.workspaces-toolbar-tab) > .toolbar-item:hover {
+  background-image: none;
+  background-color: #2d2d2d;
+  color: #fff;
+  text-decoration: none;
+}
+
+#toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item.is-active,
+#toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item:focus {
+  background-image: none;
+  background-color: rgba(255, 255, 255, .03);
+  text-decoration: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item + .menu-item,
+[dir="rtl"] #toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item + .menu-item,
+#toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item:last-child {
+  border-left: none; /* LTR */
+  border-right: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
+#toolbar-administration.toolbar .toolbar-tray a.is-active {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-vertical .menu-item + .menu-item {
+  border: 0 none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray {
+  background-color: #333;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-horizontal {
+  border-bottom: 1px solid #333;
+  box-shadow: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-vertical {
+  box-shadow: -2px 2px 12px rgba(0,0,0,0.85);
+}
+
+#toolbar-administration.toolbar .toolbar-toggle-orientation {
+  background-color: #333;
+}
+
+#toolbar-administration.toolbar .toolbar-icon.toolbar-handle:focus {
+  background-color: transparent;
+}
+
+#toolbar-administration.toolbar .toolbar-icon.toolbar-handle:before {
+  background-image: url(../images/acacac/chevron-outline-disc-down.svg);
+  transition: .25s;
+}
+
+#toolbar-administration.toolbar .toolbar-icon.toolbar-handle.open:before {
+  background-image: url(../images/ffcfcf/chevron-outline-disc-close.svg) !important;
+  transform: rotate(180deg);
+}
+
+#toolbar-administration.toolbar .toolbar-menu .toolbar-menu .toolbar-icon.toolbar-handle:before {
+  background-image: url(../images/acacac/chevron-outline-disc-down.svg);
+  background-size: 100%;
+}
+
+#toolbar-administration.toolbar .toolbar-icon.toolbar-handle:hover:before,
+#toolbar-administration.toolbar .toolbar-menu .toolbar-menu .toolbar-icon.toolbar-handle:hover:before,
+#toolbar-administration.toolbar .toolbar-menu .toolbar-box:hover .toolbar-icon.toolbar-handle:before {
+  background-image: url(../images/ffffff/chevron-outline-disc-down.svg);
+}
+
+#toolbar-administration.toolbar .toolbar-menu .toolbar-menu .toolbar-icon.toolbar-handle.open:before,
+#toolbar-administration.toolbar .toolbar-menu .toolbar-box:hover .toolbar-icon.toolbar-handle.open:before {
+  background-image: url(../images/ffffff/chevron-outline-disc-close.svg);
+  background-size: 100%;
+}
+
+toolbar-administration .level-1 .toolbar-handle.open,
+#toolbar-administration .toolbar-tray-vertical .level-2 {
+  background: #3b3b3b !important;
+}
+
+toolbar-administration .level-2 .toolbar-handle.open,
+#toolbar-administration .toolbar-tray-vertical .level-3 {
+  background: #434343 !important;
+}
+
+toolbar-administration .level-3 .toolbar-handle.open,
+#toolbar-administration .toolbar-tray-vertical .level-4 {
+  background: #4c4c4c !important;
+}
+
+toolbar-administration .level-4 .toolbar-handle.open,
+#toolbar-administration .toolbar-tray-vertical .level-5 {
+  background: #545454 !important;
+}
+
+/* For WCAG, we are lightening the text on this tier. */
+#toolbar-administration.toolbar .level-3 a,
+#toolbar-administration.toolbar .level-4 a {
+  color: #d5d5d5 !important;
+}
+
+#toolbar-administration .toolbar-handle.open {
+  border-top-left-radius: 10px;
+}
+
+.toolbar .toolbar-tray-vertical .level-3 ul {
+  margin-left: 0 !important;
+}
+
+#toolbar-administration .toolbar-tray-vertical .level-3 a {
+  padding-left: 2.75em !important;
+}
+
+#toolbar-administration .toolbar-tray-horizontal a:focus,
+#toolbar-administration .toolbar-box a:focus {
+  background: #333;
+  text-decoration: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu a {
+  color: #bbb;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu a:hover,
+#toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu a:focus {
+  color: #fff;
+  background: #0084d7;
+  text-decoration: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu ul ul {
+  border: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-horizontal .toolbar-toggle-orientation {
+  border: none;
+}
+
+#toolbar-administration.toolbar .menu-item:hover {
+  background-color: #333;
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item a:focus {
+  background: #4c4c4c;
+}
+
+#toolbar-administration.toolbar .menu-item--expanded {
+  background-color: #333;
+}
+#toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,
+[dir="rtl"] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded {
+  background-image: none;
+  position: relative;
+}
+
+#toolbar-administration .toolbar-tray-horizontal .toolbar-menu ul .toolbar-icon {
+  padding: 1em 12px;
+}
+
+.toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus {
+    background-image: none !important;
+}
+
+#toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {
+  margin: -39px 0 0 200px;
+}
+[dir="rtl"] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {
+  margin: -39px 200px 0 0;
+}
+
+#toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:after {
+  color: #8eacc0;
+  content: url(../images/0084d7/chevron-right.svg);
+  font-size: 16px;
+  pointer-events: none;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-8px);
+  transition: all .2s;
+}
+
+[dir="rtl"] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:after {
+  right: auto;
+  left: 5px;
+  top: 30%;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover:after {
+  content: url(../images/ffffff/chevron-right.svg);
+  transform: translate(6px, -8px);
+}
+
+[dir="rtl"] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover:after {
+  transform-origin: 40% top;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#toolbar-administration.toolbar .toolbar-menu .toolbar-menu a {
+  color: #bbb;
+}
+
+#toolbar-administration.toolbar .toolbar-menu .toolbar-menu a:hover {
+  color: #fff;
+}
+
+#toolbar-administration .toolbar-tray-horizontal ul li.menu-item {
+  border-top: none transparent;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item:last-child {
+  border-left: none;
+  border-right: none;
+}
+
+#toolbar-administration.toolbar .toolbar-tray-horizontal ul  ul li.menu-item:first-child {
+  border-top: 1px solid #0084d7;
+}
+
+/* Removes border top on next consecutive lists after first */
+#toolbar-administration .toolbar-tray-horizontal ul ul li li.menu-item:first-child {
+  border-top: none !important;
+}
+
+/* Main menu icons. */
+#toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
+  background-image: url('../images/varbase-x-small-emblem-white.png');
+  margin: 0;
+  padding: 0;
+}
+
+#toolbar-administration .toolbar-tray-vertical .toolbar-icon-admin-toolbar-tools-help:before {
+  margin-left: 0;
+}
+
+#toolbar-administration .toolbar-icon-system-admin-content:before {
+  background-image: url(../images/acacac/file.svg);
+}
+
+#toolbar-administration .toolbar-icon-system-admin-structure:before {
+  background-image: url(../images/acacac/orgchart.svg);
+}
+
+#toolbar-administration .toolbar-icon-system-themes-page:before {
+  background-image: url(../images/acacac/paintbrush.svg);
+}
+
+#toolbar-administration .toolbar-icon-entity-user-collection:before {
+  background-image: url(../images/acacac/people.svg);
+}
+
+#toolbar-administration .toolbar-icon-system-modules-list:before {
+  background-image: url(../images/acacac/puzzlepiece.svg);
+}
+
+#toolbar-administration .toolbar-icon-system-admin-config:before {
+  background-image: url(../images/acacac/wrench.svg);
+}
+
+#toolbar-administration .toolbar-icon-system-admin-reports:before {
+  background-image: url(../images/acacac/barchart.svg);
+}
+
+#toolbar-administration .toolbar-icon-help-main:before {
+  background-image: url(../images/acacac/questionmark-disc.svg);
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-admin-toolbar-tools-help:before,
+#toolbar-administration .toolbar-icon-admin-toolbar-tools-help:hover:before,
+#toolbar-administration .toolbar-icon-admin-toolbar-tools-help:active:before,
+#toolbar-administration .toolbar-icon-admin-toolbar-tools-help.is-active:before {
+  background-image: url('../images/varbase-x-small-emblem-white.png');
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-content:before,
+#toolbar-administration .toolbar-icon-system-admin-content:hover:before,
+#toolbar-administration .toolbar-icon-system-admin-content:active:before,
+#toolbar-administration .toolbar-icon-system-admin-content.is-active:before {
+  background-image: url(../images/ffffff/file.svg);
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-structure:before,
+#toolbar-administration .toolbar-icon-system-admin-structure:hover:before,
+#toolbar-administration .toolbar-icon-system-admin-structure:active:before,
+#toolbar-administration .toolbar-icon-system-admin-structure.is-active:before {
+  background-image: url(../images/ffffff/orgchart.svg);
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-themes-page:before,
+#toolbar-administration .toolbar-icon-system-themes-page:hover:before,
+#toolbar-administration .toolbar-icon-system-themes-page:active:before,
+#toolbar-administration .toolbar-icon-system-themes-page.is-active:before {
+  background-image: url(../images/ffffff/paintbrush.svg);
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-entity-user-collection:before,
+#toolbar-administration .toolbar-icon-entity-user-collection:hover:before,
+#toolbar-administration .toolbar-icon-entity-user-collection:active:before,
+#toolbar-administration .toolbar-icon-entity-user-collection.is-active:before {
+  background-image: url(../images/ffffff/people.svg);
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-modules-list:before,
+#toolbar-administration .toolbar-icon-system-modules-list:hover:before,
+#toolbar-administration .toolbar-icon-system-modules-list:active:before,
+#toolbar-administration .toolbar-icon-system-modules-list.is-active:before {
+  background-image: url(../images/ffffff/puzzlepiece.svg);
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-config:before,
+#toolbar-administration .toolbar-icon-system-admin-config:hover:before,
+#toolbar-administration .toolbar-icon-system-admin-config:active:before,
+#toolbar-administration .toolbar-icon-system-admin-config.is-active:before {
+  background-image: url(../images/ffffff/wrench.svg);
+}
+
+#toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-reports:before,
+#toolbar-administration .toolbar-icon-system-admin-reports:hover:before,
+#toolbar-administration .toolbar-icon-system-admin-reports:active:before,
+#toolbar-administration .toolbar-icon-system-admin-reports.is-active:before {
+  background-image: url(../images/ffffff/barchart.svg);
+}
+
+#toolbar-administration .menu-item--expanded:hover .toolbar-icon-help-main:before,
+#toolbar-administration .toolbar-icon-help-main:hover:before,
+#toolbar-administration .toolbar-icon-help-main:active:before,
+#toolbar-administration .toolbar-icon-help-main.is-active:before {
+  background-image: url(../images/ffffff/questionmark-disc.svg);
+}
+
+#toolbar-administration .toolbar-tray-vertical .toolbar-icon-admin-toolbar-tools-help {
+  text-indent: 0;
+  transition: none;
 }
 
 span .cke_button__embed_icon {
