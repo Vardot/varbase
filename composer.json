@@ -51,7 +51,7 @@
     "drupal/varbase_email": "6.x-dev",
     "drupal/vartheme": "6.x-dev",
     "drupal/vartheme_bs4": "6.x-dev",
-    "drupal/vartheme_admin": "7.x-dev"
+    "drupal/vartheme_admin": "8.7.x-dev"
   },
   "require-dev": {
     "drupal/core-dev": "^8.8.0",
