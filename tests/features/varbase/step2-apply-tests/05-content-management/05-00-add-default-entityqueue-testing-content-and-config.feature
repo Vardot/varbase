@@ -21,7 +21,7 @@ Scenario: Add Entity Queue Test Queue and use Test Content type
    Then I should see "Add entity queue"
    When I click "Add entity queue"
     And I wait
-   Then I should see "Add Entity Queue"
+   Then I should see "Configure entity queue"
    When I fill in "Test Queue" for "Name"
     And I wait for AJAX to finish
     And I wait for 1 second
