@@ -21,10 +21,9 @@ install:
   - views
   - file
 themes:
-  - claro
-  - gin
   - bootstrap_barrio
   - vartheme_bs4
+  - claro
   - vartheme_admin
 
 interface translation project: varbase

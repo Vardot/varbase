@@ -87,7 +87,7 @@ So that I can use them after the install or update.
      Then I should see "Appearance"
       And I should see "Vartheme"
       And I should see "Vartheme (Bootstrap 4 - SASS)"
-      And I should see "Adminimal"
+      And I should see "Claro"
       And I should see "Bootstrap"
       And I should see "Bootstrap Barrio"
       And I should see "Vartheme Admin"
