@@ -21,7 +21,8 @@ install:
   - views
   - file
 themes:
-  - adminimal_theme
+  - claro
+  - gin
   - bootstrap_barrio
   - vartheme_bs4
   - vartheme_admin

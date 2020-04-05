@@ -604,7 +604,7 @@ projects[vartheme_bs4][type] = theme
 projects[vartheme_bs4][version] = 6.x-dev
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 7.x-dev
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
