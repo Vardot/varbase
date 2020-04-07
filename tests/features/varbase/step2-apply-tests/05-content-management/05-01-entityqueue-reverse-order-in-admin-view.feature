@@ -19,9 +19,7 @@ Scenario: Check that Reverse order in admin view is working
    When I go to "/admin/structure/entityqueue/test_queue#edit-queue-settings"
     And I wait
    Then I should see "Configure Test Queue"
-   When I press "Queue settings"
-    And I wait
-   Then I should see "Restrict this queue to a minimum of"
+    And I should see "Restrict this queue to a minimum of"
     And I should see "Reverse"
    When I check the box "Reverse"
     And I press "Save"
