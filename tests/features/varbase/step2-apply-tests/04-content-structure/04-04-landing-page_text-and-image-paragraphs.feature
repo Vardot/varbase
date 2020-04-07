@@ -9,7 +9,7 @@ So that the "Landing page" will have text and images in right and left view.
       When I go to "media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
-      When I attach the file "flag-earth.jpg" to "Image"
+      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
        And I wait
        And I press the "Save" button
        And I wait

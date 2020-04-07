@@ -18,7 +18,6 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I click "Layout"
       And I wait
      Then I should see "Edit layout for Full Width - No Background Color - Text only"
-#   Add Section 1 as one column
      When I click "Add section"
       And I wait for AJAX to finish
      Then I should see "Choose a layout for this section"

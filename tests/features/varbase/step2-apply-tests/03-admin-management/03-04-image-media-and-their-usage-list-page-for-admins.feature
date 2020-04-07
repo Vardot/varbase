@@ -18,7 +18,7 @@ So that I will be able to manage files, see where they have been used in content
       When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
-      When I attach the file "flag-earth.jpg" to "Image"
+      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
        And I wait
        And I press the "Save" button
        And I wait
@@ -40,7 +40,7 @@ So that I will be able to manage files, see where they have been used in content
       And I wait
      Then I should see "Add media"
      When I fill in "Flag Earth" for "edit-name"
-      And I press the "Apply" button
+      And I press the "Filter" button
       And I wait
      Then I should see "Flag Earth"
      When I click "Edit" in the "Flag Earth" row

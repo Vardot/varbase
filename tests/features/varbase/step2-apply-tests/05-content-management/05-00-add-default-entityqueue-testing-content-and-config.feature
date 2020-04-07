@@ -8,7 +8,7 @@ Scenario: Create Test Content type
    Then I should see "Add content type"
    When I fill in "Test Content" for "Name"
     And I wait for AJAX to finish
-    And I wait for 1 second
+    And I wait for 2 seconds
     And I press "Save and manage fields"
     And I wait
    Then I should see "The content type Test Content has been added."
@@ -24,8 +24,8 @@ Scenario: Add Entity Queue Test Queue and use Test Content type
    Then I should see "Configure entity queue"
    When I fill in "Test Queue" for "Name"
     And I wait for AJAX to finish
-    And I wait for 1 second
-    And I click "Entity settings"
+    And I wait for 2 seconds
+    And I press "Entity settings"
     And I wait
    Then I should see "Content type"
    When I check the box "Test Content"

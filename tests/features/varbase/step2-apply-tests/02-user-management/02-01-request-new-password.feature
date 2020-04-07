@@ -22,7 +22,7 @@ So that I can reset my password for the account
       And I wait
      Then I should see "There was a problem with your form submission. Please wait 6 seconds and try again."
      When I fill in "not.existing.email@vardot.com" for "Username or email address"
-      And I wait 7s
+      And I wait 8 seconds
       And I press the "Submit" button
       And I wait
-     Then I should see "Further instructions have been sent to your e-mail address."
+     Then I should see "Login with"

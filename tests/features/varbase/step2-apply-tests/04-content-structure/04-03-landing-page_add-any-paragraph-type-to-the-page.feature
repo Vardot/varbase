@@ -9,7 +9,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       When I go to "media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
-      When I attach the file "flag-earth.jpg" to "Image"
+      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
        And I wait
        And I press the "Save" button
        And I wait
@@ -41,7 +41,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Drupal Block" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_block" paragraph component
@@ -62,7 +62,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_columns" paragraph component
@@ -80,7 +80,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_columns_two_uneven" paragraph component
@@ -98,7 +98,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Modal" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_modal" paragraph component
@@ -128,7 +128,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Rich Text" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_simple" paragraph component
@@ -149,7 +149,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description Tabs" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_tabs" paragraph component
@@ -176,7 +176,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I fill in "Test Landing page description WebForm" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_webform" paragraph component
