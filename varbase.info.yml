@@ -7,7 +7,7 @@ project: varbase
 distribution:
   name: Varbase
   install:
-    theme: vartheme_admin
+    theme: vartheme_claro
 version: 8.x-8.x-dev
 install:
   - system
@@ -24,7 +24,7 @@ themes:
   - bootstrap_barrio
   - vartheme_bs4
   - claro
-  - vartheme_admin
+  - vartheme_claro
 
 interface translation project: varbase
 interface translation server pattern: profiles/varbase/translations/%language.po
