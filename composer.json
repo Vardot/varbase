@@ -33,6 +33,7 @@
     "drupal/core-composer-scaffold": "^8.8.0",
     "drupal/drupal-library-installer-plugin": "^0.3",
     "webflo/drupal-finder": "~1.0",
+    "drupal/core": "^8.8.0 || ~9.0.0",
     "drupal/varbase_core": "8.x-dev",
     "drupal/varbase_api": "7.x-dev",
     "drupal/varbase_media": "7.x-dev",
