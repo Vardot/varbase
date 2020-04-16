@@ -65,7 +65,8 @@
     "npm-asset/dropzone": "~4.0",
     "npm-asset/blazy": "~1.0",
     "npm-asset/slick-carousel": "~1.0",
-    "npm-asset/ace-builds": "~1.0"
+    "npm-asset/ace-builds": "~1.0",
+    "swagger-api/swagger-ui": "~3.0"
   },
   "require-dev": {
     "drupal/core-dev": "^8.8.0",
@@ -137,13 +138,14 @@
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
+        {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
+        {"name": "chartjs", "package": "bower-asset/chartjs"},
+        {"name": "c3","package": "bower-asset/c3"},
+        {"name": "d3", "package": "bower-asset/d3"},
         {"name": "dropzone","package": "npm-asset/dropzone"},
         {"name": "blazy", "package": "npm-asset/blazy"},
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
-        {"name": "chartjs", "package": "bower-asset/chartjs"},
-        {"name": "c3","package": "bower-asset/c3"},
-        {"name": "d3", "package": "bower-asset/d3"},
         {"name": "masonry", "package": "npm-asset/masonry-layout"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
