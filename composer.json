@@ -2,6 +2,8 @@
   "name": "vardot/varbase",
   "description": "Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready) | by Vardot",
   "type": "drupal-profile",
+  "homepage": "https://www.drupal.org/project/varbase",
+  "notification-url": "https://packages.drupal.org/8/downloads",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -53,7 +55,17 @@
     "drupal/vartheme": "6.x-dev",
     "drupal/vartheme_bs4": "6.x-dev",
     "drupal/vartheme_admin": "6.x-dev",
-    "drupal/vartheme_claro": "8.1.x-dev"
+    "drupal/vartheme_claro": "8.1.x-dev",
+    "bower-asset/objectfitpolyfill": "~2.0",
+    "bower-asset/chartjs": "2.7.*",
+    "bower-asset/c3": "0.4.*",
+    "bower-asset/d3": "3.5.*",
+    "npm-asset/masonry-layout": "~4.0",
+    "npm-asset/imagesloaded": "~4.0",
+    "npm-asset/dropzone": "~4.0",
+    "npm-asset/blazy": "~1.0",
+    "npm-asset/slick-carousel": "~1.0",
+    "npm-asset/ace-builds": "~1.0"
   },
   "require-dev": {
     "drupal/core-dev": "^8.8.0",
