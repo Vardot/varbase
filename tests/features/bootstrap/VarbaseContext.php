@@ -72,21 +72,28 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iAmloggedInUserWithTheUser($username) {
 
-    try {
-      $password = $this->users[$username];
+    if (isset($this->users[$username])) {
+      try {
+        $password = $this->users[$username];
+      }
+      catch (Exception $e) {
+        throw new \Exception("Password not found for '$username'.");
+      }
+
+      if ($this->loggedIn()) {
+        $this->logout();
+      }
+
+      $element = $this->getSession()->getPage();
+      $this->getSession()->visit($this->locatePath('/user'));
+      $element->fillField('edit-name', $username);
+      $element->fillField('edit-pass', $password);
+      $submit = $element->findButton('op');
+      $submit->click();
     }
-    catch (Exception $e) {
-      throw new \Exception("Password not found for '$username'.");
+    else {
+      throw new \Exception("The '$username' user name is wrong or it was not listed in the list of default testing users.");
     }
-    if ($this->loggedIn()) {
-      $this->logout();
-    }
-    $element = $this->getSession()->getPage();
-    $this->getSession()->visit($this->locatePath('/user'));
-    $element->fillField('edit-name', $username);
-    $element->fillField('edit-pass', $password);
-    $submit = $element->findButton('op');
-    $submit->click();
   }
 
   /**
