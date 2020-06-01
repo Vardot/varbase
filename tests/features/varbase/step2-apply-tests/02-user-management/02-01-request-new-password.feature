@@ -17,12 +17,11 @@ So that I can reset my password for the account
      When I go to "/user/password"
       And I wait
      Then I should see "Username or email address"
-     When I fill in "not.existing.email@vardot.com" for "Username or email address"
-      And I press the "Submit" button
+     When I fill in "not.existing.email@vardot.com" for "Username"
+      And I press the "edit-submit" button
       And I wait
-     Then I should see "There was a problem with your form submission. Please wait 6 seconds and try again."
-     When I fill in "not.existing.email@vardot.com" for "Username or email address"
+      And I fill in "not.existing.email@vardot.com" for "Username"
       And I wait 8 seconds
-      And I press the "Submit" button
+      And I press the "edit-submit" button
       And I wait
      Then I should see "Login with"
