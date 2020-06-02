@@ -159,6 +159,9 @@
 ### Updates since Varbase 8.x-8.4:
 * Issue [#3144981](https://www.drupal.org/node/3144981):
                  Updated [Page Manager] module from 8.4.0-beta5 to 8.4.0-beta6
+                 so that we are able to create a layout builder variant
+                 and updated the patch for variants to take entity label
+                 not the title
 * Issue [#3128965](https://www.drupal.org/node/3128965):
                  Updated [Security Review] module from 8.1.x-dev to
                  8.1.0-alpha1 ( ~1.0 )

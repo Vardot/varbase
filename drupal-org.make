@@ -32,7 +32,7 @@ projects[token_filter][version] = 1.2
 projects[page_manager][type] = module
 projects[page_manager][version] = 4.0-beta6
 ;; Issue #2665328: Variants take entity label not the variant title
-projects[page_manager][patch][] = https://www.drupal.org/files/issues/2020-04-01/%202665328-variants-take-entity-label-95.patch
+projects[page_manager][patch][] = https://www.drupal.org/files/issues/2020-06-03/2665328-102.patch
 
 projects[panels][type] = module
 projects[panels][version] = 4.4
@@ -255,7 +255,7 @@ projects[mailsystem][type] = module
 projects[mailsystem][version] = 4.3
 
 projects[swiftmailer][type] = module
-projects[swiftmailer][version] = 1.0-beta2
+projects[swiftmailer][version] = 2.0-alpha2
 
 projects[smtp][type] = module
 projects[smtp][version] = 1.0-rc2
@@ -408,7 +408,7 @@ projects[security_review][type] = module
 projects[security_review][version] = 1.x-dev
 
 projects[honeypot][type] = module
-projects[honeypot][version] = 1.30
+projects[honeypot][version] = 2.0.0
 
 projects[shield][type] = module
 projects[shield][version] = 1.4
@@ -540,7 +540,7 @@ projects[total_control][version] = 2.0
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 8.14
+projects[varbase_core][version] = 8.15
 
 projects[varbase_api][type] = module
 projects[varbase_api][version] = 7.10
