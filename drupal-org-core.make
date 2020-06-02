@@ -3,7 +3,7 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.8.4"
+projects[drupal][version] = "8.8.6"
 ;; Issue #2869592: Disabled update module shouldn't produce a status report warning
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch
 ;; Issue #2815221: Add quickedit to the latest-revision route
@@ -20,7 +20,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-03-31/30446
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-19/3101231-19.patch
 ;; Issue #2996114: Fix Argument 2 passed to Drupal jsonapi Routing closure must be an instance of ResourceType, NULL given
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-03/2996114-99.patch
-;; Issue #3045171: Form blocks rendered inside layout builder break save
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-02-04/layout-builder-save-issue-3045171-140.patch
 ;; Issue #2985882: Fix Error: Call to a member function getLabel() after enabling layout_builder
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch
