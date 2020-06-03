@@ -408,7 +408,6 @@ projects[security_review][type] = module
 projects[security_review][version] = 1.x-dev
 
 projects[honeypot][type] = module
-projects[honeypot][version] = 2.0
 
 projects[shield][type] = module
 projects[shield][version] = 1.4
@@ -601,7 +600,6 @@ projects[vartheme_admin][type] = theme
 projects[vartheme_admin][version] = 6.10
 
 projects[vartheme_claro][type] = theme
-projects[vartheme_claro][version] = 1.0-beta4
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Libraries
