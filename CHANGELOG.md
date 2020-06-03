@@ -155,6 +155,8 @@
                  as it was committed
 * Issue [#3144392](https://www.drupal.org/node/3144392):
                  Changed new Barrio [Use Bootstrap icons] config to not to use
+* Issue [#3145037](https://www.drupal.org/node/3145037):
+                 Changed Vartheme Claro from 8.1.x to 2.x branch
 
 ### Updates since Varbase 8.x-8.4:
 * Issue [#3144981](https://www.drupal.org/node/3144981):
