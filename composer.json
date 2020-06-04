@@ -54,7 +54,6 @@
     "drupal/varbase_email": "6.x-dev",
     "drupal/vartheme": "6.x-dev",
     "drupal/vartheme_bs4": "6.x-dev",
-    "drupal/vartheme_admin": "6.x-dev",
     "drupal/vartheme_claro": "2.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "2.7.*",
