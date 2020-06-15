@@ -1,4 +1,4 @@
-Feature: Check JSON:API admin interface and services and Varbase API settings
+Feature: Check JSON API admin interface and services and Varbase API settings
 As a site admin user
 I want to be able to check the JSON:API available interface options
 So that I can use them to enable or disable API service for Varbase APIs.
@@ -51,7 +51,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And I wait
      Then I should see "OpenAPI Resources"
       And I should see "Rest"
-      And I should see "JsonApi"
+      And I should see "JSON:API"
 
      When I go to "/admin/config/services/openapi/redoc/rest"
       And I wait
