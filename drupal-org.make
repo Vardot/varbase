@@ -460,6 +460,27 @@ projects[restui][version] = 1.18
 projects[jsonapi_extras][type] = module
 projects[jsonapi_extras][version] = 3.14
 
+projects[moderation_sidebar][type] = module
+projects[moderation_sidebar][version] = 1.4
+
+projects[content_planner][type] = module
+projects[content_planner][version] = 1.0-beta11
+;; Issue #3129606 Access bypass in Kanban
+projects[content_planner][patch][] = https://www.drupal.org/files/issues/2020-06-07/access_fix_bypass_in_Kanban-3129606-4.patch
+;; Issue #3010615 Kanban Published to Draft workflow Issue
+projects[content_planner][patch][] = https://www.drupal.org/files/issues/2020-05-06/kanban-published-to-draft-workflow-issue-3010615-16.patch
+;; Issue #3091413 Extend Kanban Filter Form by Content Type filter
+projects[content_planner][patch][] = https://www.drupal.org/files/issues/2020-05-06/add_content_type_filter-3091413-3.patch
+
+projects[scheduler][type] = module
+projects[scheduler][version] = 1.3
+
+projects[content_moderation_notifications][type] = module
+projects[content_moderation_notifications][version] = 3.2
+
+projects[scheduler_content_moderation_integration][type] = module
+projects[scheduler_content_moderation_integration][version] = 1.3
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
 ;;;;;;;;;;;;;;;;;;;;;
@@ -582,6 +603,8 @@ projects[varbase_styleguide][version] = 6.x-dev
 
 projects[varbase_email][type] = module
 projects[varbase_email][version] = 6.x-dev
+
+projects[varbase_workflow][type] = module
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Varbase public contributed themes.
