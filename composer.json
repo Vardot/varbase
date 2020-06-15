@@ -52,7 +52,7 @@
     "drupal/varbase_total_control": "6.x-dev",
     "drupal/varbase_styleguide": "6.x-dev",
     "drupal/varbase_email": "6.x-dev",
-    "drupal/varbase_workflow": "2.x-dev",
+    "drupal/varbase_workflow": "2.0.x-dev",
     "drupal/vartheme": "6.x-dev",
     "drupal/vartheme_bs4": "6.x-dev",
     "drupal/vartheme_admin": "6.x-dev",
