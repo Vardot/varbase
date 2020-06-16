@@ -66,6 +66,9 @@ default:
           version: "*"
           extra_capabilities:
             chromeOptions:
+              args:
+                - "--disable-gpu"
+                - "--window-size=1920,1080"
               w3c: false
           chrome:
             switches:
@@ -81,6 +84,8 @@ default:
               - "--disable-extensions"
               - "incognito"
               - "enable-precise-memory-info"
+              - "ignore-certificate-errors"
+              - "disable-infobars"
               - "js-flags=--expose-gc"
               - "no-sandbox"
       base_url: 'http://127.0.0.1:8080'
