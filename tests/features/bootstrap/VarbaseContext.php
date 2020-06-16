@@ -1602,4 +1602,60 @@ JS;
   public function iSelectTheParagraphComponent($value) {
     $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "'. $value . '")]')->click();
   }
+
+  /**
+   * Accept Alerts Before going to the next step.
+   *
+   * @BeforeStep @AcceptAlertsBeforStep
+   */
+  public function beforeStepAcceptAlert(BeforeStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
+  }
+
+  /**
+   * Accept Alerts After going to the next step.
+   *
+   * @AftereStep @AcceptAlertsAfterStep
+   */
+  public function afterStepAcceptAlert(AfterStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
+  }
+
+  /**
+   * Dismiss Alerts Before going to the next step.
+   *
+   * @BeforeStep @AcceptAlertsBeforStep
+   */
+  public function beforeStepDismissAlert(BeforeStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
+  }
+
+  /**
+   * Dissmiss Alerts After going to the next step.
+   *
+   * @AftereStep @DismissAlertsAfterStep
+   */
+  public function afterStepDismissAlert(AfterStepScope $scope) {
+    try {
+      $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
+    }
+    catch (Exception $e) {
+      // no-op, alert might not be present.
+    }
+  }
 }
