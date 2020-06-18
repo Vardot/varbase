@@ -12,6 +12,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
      When I select "full_html" from "Text format"
       And I fill in "Linking to internal content #1 title" for "Title"
       And I fill in the rich text editor field "Body" with "Linking to internal content #1 body"
+			And I select "published" from "edit-moderation-state-0-state"
       And I press "Save"
       And I wait
       And I should see "Linking to internal content #1 body"
