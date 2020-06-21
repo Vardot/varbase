@@ -76,7 +76,8 @@ So that the "Landing page" will have text and images in right and left view.
        And I select all text in "Text" field
        And I click on "justifycenter" command button in the rich text editor field "Text"
        And I wait
-       And I press "Save"
+			 And I select "published" from "edit-moderation-state-0-state"
+       And I press the "Save" button
        And I wait
       Then I should see "In eros ipsum, mattis vitae vulputate eu, blandit"
        And I should see image with the "Flag Earth all earth in space" title text 

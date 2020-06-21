@@ -50,7 +50,8 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
-      And I press "Save"
+			And I select "published" from "edit-moderation-state-0-state"
+      And I press the "Save" button
       And I wait
      Then I should see "Test hero slider #1"
 
@@ -82,7 +83,8 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
-      And I press "Save"
+			And I select "published" from "edit-moderation-state-0-state"
+      And I press the "Save" button
       And I wait
      Then I should see "Test hero slider #2"
 
@@ -109,7 +111,8 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I expand the field "edit-entityqueue-form-widget"
      Then the "varbase_heroslider_media" checkbox should be checked
      When I uncheck the box "varbase_heroslider_media"
-      And I press "Save"
+			And I select "published" from "edit-moderation-state-0-state"
+      And I press the "Save" button
       And I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
      Then I should not see "Test hero slider #1"

@@ -65,7 +65,8 @@ So that the "Basic page" will show up in the structured menu under its parent pa
       And I wait
       And I fill in "Test Basic page" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page body"
-      And I press "Save"
+			And I select "published" from "edit-moderation-state-0-state"
+      And I press the "Save" button
       And I wait
      Then I should see "Basic page Test Basic page has been created."
 
