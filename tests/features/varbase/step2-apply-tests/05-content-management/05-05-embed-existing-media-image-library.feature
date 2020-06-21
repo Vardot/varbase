@@ -14,6 +14,7 @@ So that it will show up under that rich text field without having to upload the 
        And I wait
        And I fill in "Test Basic page to embed existing files" for "Title"
        And I fill in the rich text editor field "Body" with "Test Basic page body to embed existing files"
+       And I select "published" from "edit-moderation-state-0-state"
        And I press the "Save" button
        And I wait
       Then I should see "Basic page Test Basic page to embed existing files has been created."
@@ -72,7 +73,8 @@ So that it will show up under that rich text field without having to upload the 
       And I fill in "Embed Flag Earth custom Alt text" for "Alternate text"
      When I click "Embed" in the "button" element with the "class" attribute set to "js-form-submit form-submit"
       And I wait for AJAX to finish
-     When I press "Save"
+			And I select "published" from "edit-moderation-state-0-state"
+      And I press the "Save" button
       And I wait
      Then I should see "Basic page Test Basic page to embed existing files has been updated."
      When I go to "admin/content"

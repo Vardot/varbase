@@ -41,7 +41,8 @@ Scenario: Add Test content N1, N2, N3 type of test content
    Then I should see "Create Test Content"
    When I fill in "Test content N1" for "Title"
     And I fill in the rich text editor field "Body" with "Test content N1 Body"
-    And I press "Save"
+		And I select "published" from "edit-moderation-state-0-state"
+    And I press the "Save" button
     And I wait
    Then I should see "Test Content Test content N1 has been created."
 
@@ -50,7 +51,8 @@ Scenario: Add Test content N1, N2, N3 type of test content
    Then I should see "Create Test Content"
    When I fill in "Test content N2" for "Title"
     And I fill in the rich text editor field "Body" with "Test content N2 Body"
-    And I press "Save"
+		And I select "published" from "edit-moderation-state-0-state"
+    And I press the "Save" button
     And I wait
    Then I should see "Test Content Test content N2 has been created."
 
@@ -59,7 +61,8 @@ Scenario: Add Test content N1, N2, N3 type of test content
    Then I should see "Create Test Content"
    When I fill in "Test content N3" for "Title"
     And I fill in the rich text editor field "Body" with "Test content N3 Body"
-    And I press "Save"
+    And I select "published" from "edit-moderation-state-0-state"
+    And I press the "Save" button
     And I wait
    Then I should see "Test Content Test content N3 has been created."
 

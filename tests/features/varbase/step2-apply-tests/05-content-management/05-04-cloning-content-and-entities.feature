@@ -26,8 +26,9 @@ I want to be able to clone an entity.
       And I select the "bp_simple" paragraph component
       And I wait
      Then I should see "Modal body"
-      And I fill in the rich text editor field "Text" with "Modal Body test"
-     When I press "Save"
+     When I fill in the rich text editor field "Text" with "Modal Body test"
+			And I select "published" from "edit-moderation-state-0-state"
+      And I press the "Save" button
      Then I should see "Modal button"
      When I click "Clone"
       And I wait
