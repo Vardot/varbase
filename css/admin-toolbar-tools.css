@@ -250,7 +250,7 @@ toolbar-administration .level-4 .toolbar-handle.open,
 }
 
 .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus {
-    background-image: none !important;
+  background-image: none !important;
 }
 
 #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded .menu-item:hover ul {

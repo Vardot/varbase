@@ -86,7 +86,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
       $element = $this->getSession()->getPage();
       $this->getSession()->visit($this->locatePath('/user'));
-			sleep(2);
+      sleep(2);
       $element->fillField('edit-name', $username);
       $element->fillField('edit-pass', $password);
       $submit = $element->findButton('op');
@@ -115,7 +115,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     // Login with the.
     $element = $this->getSession()->getPage();
     $this->getSession()->visit($this->locatePath('/user'));
-		sleep(2);
+    sleep(2);
     $element->fillField('edit-name', $username);
     $element->fillField('edit-pass', $password);
     $submit = $element->findButton('op');
@@ -211,7 +211,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @Given /^(?:|I )wait max of (?P<time>\d+)s(?:| for the page to be ready and loaded)$/
    * @Given /^(?:|I )wait(?:| for the page)$/
    *
-   * @throws Exception
+   * @throws \WebDriver\Exception
    *   If timeout is reached.
    */
   public function iWaitMaxOfSecondsForThePageToBeReadyAndLoaded($time = 10000) {
@@ -933,7 +933,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
       if (preg_match($regex, $actual)) {
         $found = TRUE;
-          break;
+        break;
       }
     }
     if (!$found) {
@@ -977,7 +977,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       if (preg_match($regex, $actual)) {
         $found = TRUE;
         $element->click();
-          break;
+        break;
       }
     }
     if (!$found) {
@@ -1602,7 +1602,7 @@ JS;
    * @When /^I select (?:|the )"([^"]*)" paragraph component$/
    */
   public function iSelectTheParagraphComponent($value) {
-    $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "'. $value . '")]')->click();
+    $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "' . $value . '")]')->click();
   }
 
   /**
@@ -1660,4 +1660,5 @@ JS;
       // no-op, alert might not be present.
     }
   }
+
 }
