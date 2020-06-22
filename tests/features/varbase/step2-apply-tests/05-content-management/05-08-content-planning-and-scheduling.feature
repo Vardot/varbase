@@ -1,7 +1,7 @@
-Feature: Content Managment - Content Planning and scheduling
+Feature: Content Management - Content Planning and scheduling
 As a content admin
-I want to be able to add plan content publushing for internal content
-So that they will be schedualed to publish or publish on the planed time.
+I want to be able to add plan content publishing for internal content
+So that they will be scheduled to publish or publish on the planed time.
 
   @javascript @local @development @staging @production
   Scenario: Check Content planner dashboard page

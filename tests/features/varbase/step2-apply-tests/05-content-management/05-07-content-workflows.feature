@@ -1,4 +1,4 @@
-Feature: Content Managment - Content moderation workflows. Simple workflow, and Editorial workflow
+Feature: Content Management - Content moderation workflows. Simple workflow, and Editorial workflow
 As a content admin
 I want to be able to manage the workflow of content in simple and editorial workflows
 So that will have an easy publishing workflow with revisions.
@@ -16,6 +16,7 @@ So that will have an easy publishing workflow with revisions.
       And I should see "Publish"
       And I should see "Archive / Unpublish"
       And I should see "Restore from archive"
+      And I should see "Landing page (Layout Builder)"
       And I should see "Landing page"
       And I should see "Basic page"
       And I should see "Blog post"

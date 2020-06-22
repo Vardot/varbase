@@ -560,3 +560,35 @@ function varbase_toolbar_alter(&$items) {
     $items['admin_toolbar_tools']['#attached']['library'][] = 'varbase/toolbar.icon';
   }
 }
+
+/**
+ * Implements hook_modules_installed().
+ */
+function varbase_modules_installed($modules) {
+
+  // Enable Simple Workflow for all content types in Varbase components.
+  if (\Drupal::moduleHandler()->moduleExists('varbase_workflow')) {
+    // When the "Varbase Landing page (Layout Builder)" module is enabled.
+    // And the "Landing page (Layout Builder)" has been created.
+    // Enable the Simple workflow for the content type.
+    if (in_array('vlplb', $modules)) {
+      $config_factory = \Drupal::service('config.factory');
+      $workflow_type_settings = $config_factory->getEditable('workflows.workflow.varbase_simple_workflow')->get('type_settings');
+
+      if (isset($workflow_type_settings['entity_types'])) {
+        if (isset($workflow_type_settings['entity_types']['node'])) {
+          if (!in_array($node_type, $workflow_type_settings['entity_types']['node'])) {
+            $workflow_type_settings['entity_types']['node'][] = 'landing_page_lb';
+          }
+        }
+        else {
+          $workflow_type_settings['entity_types']['node'] = [];
+          $workflow_type_settings['entity_types']['node'][] = 'landing_page_lb';
+        }
+
+        $config_factory->getEditable('workflows.workflow.varbase_simple_workflow')->set('type_settings', $workflow_type_settings)->save(TRUE);
+      }
+    }
+  }
+
+}
