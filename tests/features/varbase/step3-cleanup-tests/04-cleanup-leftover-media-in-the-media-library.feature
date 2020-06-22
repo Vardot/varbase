@@ -7,7 +7,7 @@ Scenario: Delete leftover media from the Media Library
     And I wait
    Then I should see "Media"
    When I check the box "edit-select-all"
-    And I select "views_bulk_operations_delete_entity" from "edit-action"
+    And I select "Delete selected entities" from "action"
     And I press "Apply to selected items"
     And I wait
    Then I should see "Are you sure you wish to perform"
