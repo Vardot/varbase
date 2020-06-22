@@ -35,6 +35,8 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I press the "o" key in the "Link" field
       And I press the "enter" key in the "Link" field
       And I wait for AJAX to finish
+      And I wait 2s
+      And I wait for AJAX to finish
      Then I should see "Linking to internal content #1 title"
      When I click "Linking to internal content #1 title" in the "ul" element with the "class" attribute set to "ui-autocomplete"
      Then I should not see "Linking to internal content #1 title"

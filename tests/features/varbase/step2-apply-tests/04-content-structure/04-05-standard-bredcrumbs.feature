@@ -17,7 +17,7 @@ So that I can see path I followed to locate the current page usually near the to
 			And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
-     Then I should see "Basic page Test Basic page root title has been created."
+     Then I should see "Test Basic page root title"
       And I should see "Test Basic page root body"
 
   @javascript @local @development @staging @production
