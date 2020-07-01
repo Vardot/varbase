@@ -458,30 +458,6 @@ function varbase_after_install_finished(array &$install_state) {
     $config_factory->setData($config_data)->save(TRUE);
   }
 
-  // Enable Simple Workflow for all content types on new Varbase Installations.
-  if (\Drupal::moduleHandler()->moduleExists('varbase_workflow')) {
-    $node_types = \Drupal::entityTypeManager()->getStorage('node_type')->loadMultiple();
-    foreach ($node_types as $node_type) {
-
-      $config_factory = \Drupal::service('config.factory');
-      $workflow_type_settings = $config_factory->getEditable('workflows.workflow.varbase_simple_workflow')->get('type_settings');
-
-      if (isset($workflow_type_settings['entity_types'])) {
-        if (isset($workflow_type_settings['entity_types']['node'])) {
-          if (!in_array($node_type, $workflow_type_settings['entity_types']['node'])) {
-            $workflow_type_settings['entity_types']['node'][] = $node_type->id();
-          }
-        }
-        else {
-          $workflow_type_settings['entity_types']['node'] = [];
-          $workflow_type_settings['entity_types']['node'][] = $node_type->id();
-        }
-
-        $config_factory->getEditable('workflows.workflow.varbase_simple_workflow')->set('type_settings', $workflow_type_settings)->save(TRUE);
-      }
-    }
-  }
-
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()
@@ -559,36 +535,4 @@ function varbase_toolbar_alter(&$items) {
     && !empty($items['admin_toolbar_tools'])) {
     $items['admin_toolbar_tools']['#attached']['library'][] = 'varbase/toolbar.icon';
   }
-}
-
-/**
- * Implements hook_modules_installed().
- */
-function varbase_modules_installed($modules) {
-
-  // Enable Simple Workflow for all content types in Varbase components.
-  if (\Drupal::moduleHandler()->moduleExists('varbase_workflow')) {
-    // When the "Varbase Landing page (Layout Builder)" module is enabled.
-    // And the "Landing page (Layout Builder)" has been created.
-    // Enable the Simple workflow for the content type.
-    if (in_array('vlplb', $modules)) {
-      $config_factory = \Drupal::service('config.factory');
-      $workflow_type_settings = $config_factory->getEditable('workflows.workflow.varbase_simple_workflow')->get('type_settings');
-
-      if (isset($workflow_type_settings['entity_types'])) {
-        if (isset($workflow_type_settings['entity_types']['node'])) {
-          if (!in_array($node_type, $workflow_type_settings['entity_types']['node'])) {
-            $workflow_type_settings['entity_types']['node'][] = 'landing_page_lb';
-          }
-        }
-        else {
-          $workflow_type_settings['entity_types']['node'] = [];
-          $workflow_type_settings['entity_types']['node'][] = 'landing_page_lb';
-        }
-
-        $config_factory->getEditable('workflows.workflow.varbase_simple_workflow')->set('type_settings', $workflow_type_settings)->save(TRUE);
-      }
-    }
-  }
-
 }

@@ -11,7 +11,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      Then I should see "Create Landing page (Layout Builder)"
      When I fill in "Full Width - No Background Color - Text only" for "Title"
       And I fill in "Test Landing page (Layout Builder) description" for "Page description"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Landing page (Layout Builder) Full Width - No Background Color - Text only has been created"
