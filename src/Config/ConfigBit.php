@@ -14,6 +14,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Component\Utility\DiffArray;
+use Drupal\Core\TypedData\Plugin\DataType\ItemList;
 
 /**
  * Class ConfigBit.
@@ -94,7 +95,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       'node.type' => [
         'config_name_match' => "/^node.type.*$/",
         'token' => 'CONTENT_TYPE',
-        'token_variant' => 'bundle',
+        'token_variant' => 'type',
         'config_template_file' => 'node.type.CONTENT_TYPE.bit.yml',
         'targetEntityType' => 'node',
       ],
@@ -253,6 +254,9 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
               $target_config_expected_to_have = TRUE;
             }
           }
+          else {
+            $target_config_expected_to_have = TRUE;
+          }
 
           $target_config_expected_not_to_have = TRUE;
           if (isset($config_action['target_config_expected_not_to_have'])) {
@@ -261,13 +265,25 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
             // have] that are not present in [target config data] .
             $expected_not_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_not_to_have'], $target_config_data);
             if (!empty($expected_not_to_have_diff) && count($expected_not_to_have_diff) == 0) {
-              $target_config_expected_to_have = FALSE;
+              $target_config_expected_not_to_have = FALSE;
             }
           }
 
           if ($target_config_expected_to_have && $target_config_expected_not_to_have) {
             $final_config_data = NestedArray::mergeDeep($target_config_data, $config_action['target_config_value']);
-            $saved_config->set($config_action['target_config_path'], $final_config_data)->save(TRUE);
+            $saved_config->set($config_action['target_config_path'], $final_config_data);
+
+            if (isset($config_action['target_config_remove'])
+              && isset($config_action['path'])
+              && isset($config_action['remove_index'])) {
+              $target_config_remove_data = $saved_config->get($config_action['target_config_remove']['path']);
+              if (isset($target_config_remove_data[$config_action['remove_index']])) {
+                unset($target_config_remove_data[$config_action['remove_index']]);
+              }
+              $saved_config->set($config_action['target_config_remove']['path'], $target_config_remove_data);
+            }
+
+            $saved_config->save(TRUE);
           }
         }
       }
