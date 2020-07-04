@@ -17,10 +17,11 @@ actions:
           - core.entity_form_display.node.CONTENT_TYPE.default
       target_config_name: core.entity_form_display.node.CONTENT_TYPE.default
       target_config_path: content
-      target_config_expected_to_have:
+      target_config_expected_not_to_have:
         title:
           third_party_settings:
-            length_indicator: {  }
+            length_indicator:
+              indicator: true
       target_config_value:
         title:
           third_party_settings:
@@ -30,29 +31,3 @@ actions:
                 optimin: 15
                 optimax: 50
                 tolerance: 10
-# -----------------------------------------------------------------------------.
-# Add the Meta tag field for new content type.
-# -----------------------------------------------------------------------------.
-  - add:
-      dependencies:
-        module:
-          - metatag
-        config:
-          - node.type.CONTENT_TYPE
-          - core.entity_form_display.node.CONTENT_TYPE.default
-      target_config_name: core.entity_form_display.node.CONTENT_TYPE.default
-      target_config_path: content
-      target_config_expected_to_have:
-        field_meta_tags: {  }
-      target_config_value:
-        field_meta_tags:
-          type: metatag_firehose
-          weight: 15
-          region: content
-          settings:
-            sidebar: true
-          third_party_settings: {  }
-      target_config_remove:
-        path: hidden
-        remove_index:
-          field_meta_tags

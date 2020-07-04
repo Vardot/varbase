@@ -1,7 +1,7 @@
 type: action
 status: true
 targetEntityType: node
-token_variant: bundle
+token_variant: type
 event: config.save
 event_config: node.type.CONTENT_TYPE
 actions:
@@ -17,8 +17,6 @@ actions:
           - workflows.workflow.varbase_simple_workflow
       target_config_name: workflows.workflow.varbase_simple_workflow
       target_config_path: entity_types
-      target_config_expected_to_have:
-        node: {  }
       target_config_expected_not_to_have:
         node:
           - CONTENT_TYPE
@@ -38,41 +36,10 @@ actions:
           - metatag.settings
       target_config_name: metatag.settings
       target_config_path: entity_type_groups
-      target_config_expected_to_have:
-        node: { }
       target_config_expected_not_to_have:
         node:
-          CONTENT_TYPE: { }
+          CONTENT_TYPE
       target_config_value:
         node:
           CONTENT_TYPE:
             basic: basic
-  - import:
-      dependencies:
-        module:
-          - metatag
-        config:
-          - field.storage.node.field_meta_tags
-          - node.type.CONTENT_TYPE
-      target_config_name: field.field.node.CONTENT_TYPE.field_meta_tags
-      target_config_value:
-        langcode: en
-        status: true
-        dependencies:
-          config:
-            - field.storage.node.field_meta_tags
-            - node.type.CONTENT_TYPE
-          module:
-            - metatag
-        id: node.CONTENT_TYPE.field_meta_tags
-        field_name: field_meta_tags
-        entity_type: node
-        bundle: CONTENT_TYPE
-        label: 'Meta tags'
-        description: ''
-        required: false
-        translatable: true
-        default_value: {  }
-        default_value_callback: ''
-        settings: {  }
-        field_type: metatag
