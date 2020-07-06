@@ -17,11 +17,10 @@ actions:
           - core.entity_form_display.node.CONTENT_TYPE.default
       target_config_name: core.entity_form_display.node.CONTENT_TYPE.default
       target_config_path: content
-      target_config_expected_not_to_have:
+      target_config_expected_to_have:
         title:
           third_party_settings:
-            length_indicator:
-              indicator: true
+            length_indicator: {  }
       target_config_value:
         title:
           third_party_settings:
