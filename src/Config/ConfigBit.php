@@ -3,6 +3,7 @@
 namespace Drupal\varbase\Config;
 
 use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Config\Config;
 use Drupal\Core\Config\ConfigCrudEvent;
 use Drupal\Core\Config\ConfigEvents;
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -14,7 +15,6 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Component\Utility\DiffArray;
-use Drupal\Core\TypedData\Plugin\DataType\ItemList;
 
 /**
  * Class ConfigBit.
@@ -198,24 +198,51 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       // Parse the yml file content to an array of data.
       $config_template_file_data = (array) Yaml::parse($config_template_file_contents);
 
-      if (isset($config_template_file_data['actions'])
-        && is_array($config_template_file_data['actions'])) {
+      if (isset($config_template_file_data['config_bits'])
+        && is_array($config_template_file_data['config_bits'])) {
 
-        $config_actions = $config_template_file_data['actions'];
+        foreach ($config_template_file_data['config_bits'] as $target_config_bit_name => $target_config_bit_actions) {
 
-        foreach ($config_actions as $config_action) {
+          // Get the config bit factory for the current config bit changes.
+          $target_config_bit_factory = $this->configFactory->getEditable($target_config_bit_name);
+          $save_actions = 0;
 
-          // Add config action.
-          if (isset($config_action['add'])) {
-            if ($this->validateDependencies($config_action['add'])) {
-              $this->applyConfigActionAdd($config_action['add'], $event);
+          if (isset($target_config_bit_actions)
+            && is_array($target_config_bit_actions)
+            && count($target_config_bit_actions) > 0) {
+
+            foreach ($target_config_bit_actions as $config_action) {
+
+              // Add config action.
+              if (isset($config_action['add'])
+                && $this->validateDependencies($config_action['add'])
+                && $this->applyConfigActionAdd($config_action['add'], $target_config_bit_name, $target_config_bit_factory)) {
+
+                $save_actions++;
+              }
+
+              // Remove config action.
+              if (isset($config_action['remove'])
+                && $this->validateDependencies($config_action['remove'])
+                && $this->applyConfigActionRemove($config_action['remove'], $target_config_bit_name, $target_config_bit_factory)) {
+
+                $save_actions++;
+              }
+
+              // Import new config if config does not exists.
+              if (isset($config_action['import'])
+                && $this->validateDependencies($config_action['import'])
+                && $this->applyConfigActionImport($config_action['import'], $target_config_bit_name, $target_config_bit_factory)) {
+
+                $save_actions++;
+              }
+
             }
-          }
 
-          // Import new config if config does not exists.
-          if (isset($config_action['import'])) {
-            if ($this->validateDependencies($config_action['import'])) {
-              $this->applyConfigActionImport($config_action['import'], $event);
+            if ($save_actions > 0) {
+              // Save target config after finishing all config action changes.
+              $target_config_bit_factory->save(TRUE);
+
             }
           }
 
@@ -229,65 +256,66 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *
    * @param array $config_action
    *   The config action.
-   * @param \Drupal\Core\Config\ConfigCrudEvent $event
-   *   The event.
+   * @param string $target_config_bit_name
+   *   The target config bit name.
+   * @param \Drupal\Core\Config\Config $target_config_bit_factory
+   *   The target config object.
+   *
+   * @return bool
+   *   The status of the action.
    */
-  protected function applyConfigActionAdd(array $config_action, ConfigCrudEvent $event) {
-    $saved_config = $event->getConfig();
+  protected function applyConfigActionAdd(array $config_action, string $target_config_bit_name, Config &$target_config_bit_factory) {
 
-    if (isset($config_action['target_config_name'])
-      && is_string($config_action['target_config_name'])
-      && !empty($config_action['target_config_name'])) {
+    if (isset($config_action['target_config_path'])
+      && isset($config_action['target_config_value'])) {
 
-      if (isset($config_action['target_config_path'])) {
-        $target_config_data = $saved_config->get($config_action['target_config_path']);
+      $target_config_data = $target_config_bit_factory->get($config_action['target_config_path']);
 
-        if (isset($target_config_data) && isset($config_action['target_config_value'])) {
+      if (isset($target_config_data)
+        && $this->expectedTargetConfig($config_action, $target_config_data)) {
 
-          $target_config_expected_to_have = FALSE;
-          if (isset($config_action['target_config_expected_to_have'])) {
-            // Computes the difference of arrays with additional index check.
-            // containing all the values from [target config expected to have]
-            // that are not present in [target config data].
-            $expected_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_to_have'], $target_config_data);
-            if (!empty($expected_to_have_diff) && count($expected_to_have_diff) > 0) {
-              $target_config_expected_to_have = TRUE;
-            }
-          }
-          else {
-            $target_config_expected_to_have = TRUE;
-          }
+        $final_config_data = NestedArray::mergeDeep($target_config_data, $config_action['target_config_value']);
+        $target_config_bit_factory->set($config_action['target_config_path'], $final_config_data);
+        return TRUE;
+      }
+    }
 
-          $target_config_expected_not_to_have = TRUE;
-          if (isset($config_action['target_config_expected_not_to_have'])) {
-            // Computes the difference of arrays with additional index check.
-            // containing all the values from [target config expected NOT to
-            // have] that are not present in [target config data] .
-            $expected_not_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_not_to_have'], $target_config_data);
-            if (!empty($expected_not_to_have_diff) && count($expected_not_to_have_diff) == 0) {
-              $target_config_expected_not_to_have = FALSE;
-            }
-          }
+    return FALSE;
+  }
 
-          if ($target_config_expected_to_have && $target_config_expected_not_to_have) {
-            $final_config_data = NestedArray::mergeDeep($target_config_data, $config_action['target_config_value']);
-            $saved_config->set($config_action['target_config_path'], $final_config_data);
+  /**
+   * Apply Config Action Remove.
+   *
+   * @param array $config_action
+   *   The config action.
+   * @param string $target_config_bit_name
+   *   The target config bit name.
+   * @param \Drupal\Core\Config\Config $target_config_bit_factory
+   *   The target config object.
+   *
+   * @return bool
+   *   The status of the action.
+   */
+  protected function applyConfigActionRemove(array $config_action, string $target_config_bit_name, Config &$target_config_bit_factory) {
 
-            if (isset($config_action['target_config_remove'])
-              && isset($config_action['path'])
-              && isset($config_action['remove_index'])) {
-              $target_config_remove_data = $saved_config->get($config_action['target_config_remove']['path']);
-              if (isset($target_config_remove_data[$config_action['remove_index']])) {
-                unset($target_config_remove_data[$config_action['remove_index']]);
-              }
-              $saved_config->set($config_action['target_config_remove']['path'], $target_config_remove_data);
-            }
+    if (isset($config_action['target_config_path'])
+      && is_string($config_action['target_config_path'])
+      && isset($config_action['target_config_remove_index'])) {
 
-            $saved_config->save(TRUE);
-          }
+      $target_config_data = $target_config_bit_factory->get($config_action['target_config_path']);
+
+      if (isset($target_config_data)
+        && $this->expectedTargetConfig($config_action, $target_config_data)) {
+
+        if (isset($target_config_data[$config_action['target_config_remove_index']])) {
+          unset($target_config_data[$config_action['target_config_remove_index']]);
+          $target_config_bit_factory->set($config_action['target_config_path'], $target_config_data);
+          return TRUE;
         }
       }
     }
+
+    return FALSE;
   }
 
   /**
@@ -295,21 +323,22 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *
    * @param array $config_action
    *   The config action.
-   * @param \Drupal\Core\Config\ConfigCrudEvent $event
-   *   The event.
+   * @param string $target_config_bit_name
+   *   The target config bit name.
+   * @param \Drupal\Core\Config\Config $target_config_bit_factory
+   *   The target config object.
+   *
+   * @return bool
+   *   The status of the action.
    */
-  protected function applyConfigActionImport(array $config_action, ConfigCrudEvent $event) {
-    if (isset($config_action['target_config_name'])
-      && is_string($config_action['target_config_name'])
-      && !empty($config_action['target_config_name'])) {
-
-      if (!$this->configExists($config_action['target_config_name'])) {
-        if (isset($config_action['target_config_value'])) {
-          $imported_config = $this->configFactory->getEditable($config_action['target_config_name']);
-          $imported_config->setData($config_action['target_config_value'])->save(TRUE);
-        }
-      }
+  protected function applyConfigActionImport(array $config_action, string $target_config_bit_name, Config &$target_config_bit_factory) {
+    if (!$this->configExists($target_config_bit_name)
+      && isset($config_action['target_config_value'])) {
+      $target_config_bit_factory->setData($config_action['target_config_value']);
+      return TRUE;
     }
+
+    return FALSE;
   }
 
   /**
@@ -379,6 +408,111 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
     }
 
     return FALSE;
+  }
+
+  /**
+   * Check expected target config.
+   *
+   * @param array $config_action
+   *   The config action.
+   * @param array $target_config_data
+   *   The target config data.
+   */
+  protected function expectedTargetConfig(array $config_action, array $target_config_data) {
+    return ($this->targetConfigExpectedToHave($config_action, $target_config_data)
+      && $this->targetConfigExpectedNotToHave($config_action, $target_config_data)
+      && $this->targetConfigExpectedToHaveIndex($config_action, $target_config_data)
+      && $this->targetConfigExpectedNotToHaveIndex($config_action, $target_config_data));
+  }
+
+  /**
+   * Check target config expected to have.
+   *
+   * @param array $config_action
+   *   The config action.
+   * @param array $target_config_data
+   *   The target config data.
+   */
+  protected function targetConfigExpectedToHave(array $config_action, array $target_config_data) {
+    if (isset($config_action['target_config_expected_to_have'])) {
+      // Computes the difference of arrays with additional index check.
+      // containing all the values from [target config expected to have]
+      // that are not present in [target config data].
+      $expected_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_to_have'], $target_config_data);
+
+      if (!empty($expected_to_have_diff) && count($expected_to_have_diff) > 0) {
+        return TRUE;
+      }
+    }
+    else {
+      return TRUE;
+    }
+
+    return FALSE;
+  }
+
+  /**
+   * Check target config expected not to have.
+   *
+   * @param array $config_action
+   *   The config action.
+   * @param array $target_config_data
+   *   The target config data.
+   */
+  protected function targetConfigExpectedNotToHave(array $config_action, array $target_config_data) {
+    if (isset($config_action['target_config_expected_not_to_have'])) {
+      // Computes the difference of arrays with additional index check.
+      // containing all the values from [target config expected NOT to
+      // have] that are not present in [target config data] .
+      $expected_not_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_not_to_have'], $target_config_data);
+      if (!empty($expected_not_to_have_diff) && count($expected_not_to_have_diff) == 0) {
+        return FALSE;
+      }
+    }
+
+    return TRUE;
+  }
+
+  /**
+   * Check target config expected to have index.
+   *
+   * @param array $config_action
+   *   The config action.
+   * @param array $target_config_data
+   *   The target config data.
+   */
+  protected function targetConfigExpectedToHaveIndex(array $config_action, array $target_config_data) {
+    if (isset($config_action['target_config_expected_to_have_index'])) {
+      if (isset($target_config_data[$config_action['target_config_expected_to_have_index']])) {
+        return TRUE;
+      }
+      else {
+        return FALSE;
+      }
+    }
+
+    return TRUE;
+  }
+
+  /**
+   * Check target config expected not to have index.
+   *
+   * @param array $config_action
+   *   The config action.
+   * @param array $target_config_data
+   *   The target config data.
+   */
+  protected function targetConfigExpectedNotToHaveIndex(array $config_action, array $target_config_data) {
+    if (isset($config_action['target_config_expected_not_to_have_index'])) {
+      if (!isset($target_config_data[$config_action['target_config_expected_not_to_have_index']])) {
+        return TRUE;
+      }
+      else {
+        return FALSE;
+      }
+    }
+
+    return TRUE;
   }
 
   /**

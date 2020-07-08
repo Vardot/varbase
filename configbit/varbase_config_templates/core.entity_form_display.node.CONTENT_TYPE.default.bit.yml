@@ -4,29 +4,66 @@ targetEntityType: node
 token_variant: bundle
 event: config.save
 event_config: core.entity_form_display.node.CONTENT_TYPE.default
-actions:
-# -----------------------------------------------------------------------------.
-# Add Length indicator to the title field for new content type.
-# -----------------------------------------------------------------------------.
-  - add:
-      dependencies:
-        module:
-          - length_indicator
-        config:
-          - node.type.CONTENT_TYPE
-          - core.entity_form_display.node.CONTENT_TYPE.default
-      target_config_name: core.entity_form_display.node.CONTENT_TYPE.default
-      target_config_path: content
-      target_config_expected_to_have:
-        title:
-          third_party_settings:
-            length_indicator: {  }
-      target_config_value:
-        title:
-          third_party_settings:
-            length_indicator:
-              indicator: true
-              indicator_opt:
-                optimin: 15
-                optimax: 50
-                tolerance: 10
+config_bits:
+  core.entity_form_display.node.CONTENT_TYPE.default:
+    # -----------------------------------------------------------------------------.
+    # Add Length indicator to the title field for new content type.
+    # -----------------------------------------------------------------------------.
+    - add:
+        dependencies:
+          module:
+            - length_indicator
+          config:
+            - node.type.CONTENT_TYPE
+            - core.entity_form_display.node.CONTENT_TYPE.default
+        target_config_path: content
+        target_config_expected_to_have:
+          title:
+            third_party_settings:
+              length_indicator: {  }
+        target_config_value:
+          title:
+            third_party_settings:
+              length_indicator:
+                indicator: true
+                indicator_opt:
+                  optimin: 15
+                  optimax: 50
+                  tolerance: 10
+    # -----------------------------------------------------------------------------.
+    # Hide [Promoted to front page] and [Sticky at top of lists] at form display.
+    # -----------------------------------------------------------------------------.
+    - add:
+        dependencies:
+          config:
+            - node.type.CONTENT_TYPE
+            - core.entity_form_display.node.CONTENT_TYPE.default
+        target_config_path: hidden
+        target_config_expected_not_to_have_index: promote
+        target_config_value:
+          promote: true
+    - add:
+        dependencies:
+          config:
+            - node.type.CONTENT_TYPE
+            - core.entity_form_display.node.CONTENT_TYPE.default
+        target_config_path: hidden
+        target_config_expected_not_to_have_index: sticky
+        target_config_value:
+          sticky: true
+    - remove:
+        dependencies:
+          config:
+            - node.type.CONTENT_TYPE
+            - core.entity_form_display.node.CONTENT_TYPE.default
+        target_config_path: content
+        target_config_expected_to_have_index: promote
+        target_config_remove_index: promote
+    - remove:
+        dependencies:
+          config:
+            - node.type.CONTENT_TYPE
+            - core.entity_form_display.node.CONTENT_TYPE.default
+        target_config_path: content
+        target_config_expected_to_have_index: sticky
+        target_config_remove_index: sticky
