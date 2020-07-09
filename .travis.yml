@@ -125,6 +125,10 @@ install:
   - drush pm-enable social_auth_linkedin --yes
   - drush pm-enable varbase_layout_builder --yes
   - drush pm-enable vlplb --yes
+  - drush pm-enable varbase_rich_text_block --yes
+  - drush pm-enable varbase_html_code_block --yes
+  - drush pm-enable varbase_media_block --yes
+  - drush pm-enable varbase_gallery_block --yes
   - drush pm-enable varbase_content_planner --yes
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes

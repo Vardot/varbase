@@ -15,6 +15,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Component\Utility\DiffArray;
+use Drupal\Core\Plugin\CachedDiscoveryClearerInterface;
 
 /**
  * Class ConfigBit.
@@ -54,6 +55,13 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
   protected $database;
 
   /**
+   * A plugin cache clear instance.
+   *
+   * @var \Drupal\Core\Plugin\CachedDiscoveryClearerInterface
+   */
+  protected $pluginCacheClearer;
+
+  /**
    * ConfigBit construct.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
@@ -64,12 +72,21 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *   The module handler service.
    * @param \Drupal\Core\Database\Connection $database
    *   The database connection to be used.
+   * @param \Drupal\Core\Plugin\CachedDiscoveryClearerInterface $plugin_cache_clearer
+   *   A plugin cache clear instance.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, ConfigManagerInterface $config_manager, ModuleHandlerInterface $module_handler, Connection $database) {
+  public function __construct(
+    ConfigFactoryInterface $config_factory,
+    ConfigManagerInterface $config_manager,
+    ModuleHandlerInterface $module_handler,
+    Connection $database,
+    CachedDiscoveryClearerInterface $plugin_cache_clearer
+  ) {
     $this->configFactory = $config_factory;
     $this->configManager = $config_manager;
     $this->moduleHandler = $module_handler;
     $this->database = $database;
+    $this->pluginCacheClearer = $plugin_cache_clearer;
   }
 
   /**
@@ -80,7 +97,8 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
     $container->get('config.factory'),
     $container->get('config.manager'),
     $container->get('module_handler'),
-    $container->get('database')
+    $container->get('database'),
+    $container->get('plugin.cache_clearer')
     );
   }
 
@@ -90,7 +108,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
   protected static function supportedConfigTypes() {
     return [
       // ----------------------------------------------------------------------.
-      // When content type config saved.
+      // When content type config had been saved.
       // ----------------------------------------------------------------------.
       'node.type' => [
         'config_name_match' => "/^node.type.*$/",
@@ -98,9 +116,10 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         'token_variant' => 'type',
         'config_template_file' => 'node.type.CONTENT_TYPE.bit.yml',
         'targetEntityType' => 'node',
+        'plugin.cache_clearer' => TRUE,
       ],
       // ----------------------------------------------------------------------.
-      // When a form display for a content type config saved.
+      // When a form display for a content type config had been saved.
       // ----------------------------------------------------------------------.
       'core.entity_form_display.node.CONTENT_TYPE.default' => [
         'config_name_match' => "/^core.entity_form_display.node.*.default$/",
@@ -109,9 +128,10 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         'config_template_file' => 'core.entity_form_display.node.CONTENT_TYPE.default.bit.yml',
         'targetEntityType' => 'node',
         'mode' => 'default',
+        'plugin.cache_clearer' => TRUE,
       ],
       // ----------------------------------------------------------------------.
-      // When an entityqueue config saved.
+      // When an entityqueue config had been saved.
       // ----------------------------------------------------------------------.
       'entityqueue.entity_queue.ENTITYQUEUE_NAME' => [
         'config_name_match' => "/^entityqueue.entity_queue.*$/",
@@ -121,7 +141,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         'targetEntityType' => 'entity_subqueue',
       ],
       // ----------------------------------------------------------------------.
-      // When a form display for an entityqueue config saved.
+      // When a form display for an entityqueue config had been saved.
       // ----------------------------------------------------------------------.
       'core.entity_form_display.entityqueue.entity_queue.ENTITYQUEUE_NAME.default' => [
         'config_name_match' => "/^core.entity_form_display.entityqueue.entity_queue.*.default$/",
@@ -143,6 +163,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
   public static function getSubscribedEvents() {
     return [
       ConfigEvents::SAVE => ['configSave', 0],
+      ConfigEvents::IMPORT => ['configSave', 0],
     ];
   }
 
@@ -243,6 +264,12 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
               // Save target config after finishing all config action changes.
               $target_config_bit_factory->save(TRUE);
 
+              // Flushes plugins caches on requisted.
+              if (isset($supportedConfigType['plugin.cache_clearer'])
+                && $supportedConfigType['plugin.cache_clearer'] == TRUE) {
+
+                $this->pluginCacheClearer->clearCachedDefinitions();
+              }
             }
           }
 
