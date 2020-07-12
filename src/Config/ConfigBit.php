@@ -16,7 +16,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Component\Utility\DiffArray;
 use Drupal\Core\Plugin\CachedDiscoveryClearerInterface;
-use Drupal\Core\Config\ConfigImporterEvent;
 
 /**
  * Class ConfigBit.
@@ -162,30 +161,8 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *   The event names to listen for, and the methods that should be executed.
    */
   public static function getSubscribedEvents() {
-    return [
-      ConfigEvents::SAVE => ['configSave', 0],
-      ConfigEvents::IMPORT => ['configImport', 0],
-    ];
-  }
-
-  /**
-   * React to a config object being imported.
-   *
-   * @param \Drupal\Core\Config\ConfigImporterEvent $event
-   *   The Config importer event.
-   */
-  public function configImport(ConfigImporterEvent $event) {
-    $imported_config = $event->getConfig();
-    $imported_config_name = $imported_config->getName();
-
-    $supportedConfigTypes = $this->supportedConfigTypes();
-
-    // Process config bits for each supported config type.
-    foreach ($supportedConfigTypes as $supportedConfigType) {
-      if (preg_match($supportedConfigType['config_name_match'], $imported_config_name)) {
-        $this->processConfigBits($supportedConfigType, $imported_config);
-      }
-    }
+    $events[ConfigEvents::SAVE][] = ['onConfigSave', 128];
+    return $events;
   }
 
   /**
@@ -194,7 +171,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    * @param \Drupal\Core\Config\ConfigCrudEvent $event
    *   The Config crud event.
    */
-  public function configSave(ConfigCrudEvent $event) {
+  public function onConfigSave(ConfigCrudEvent $event) {
     $saved_config = $event->getConfig();
     $saved_config_name = $saved_config->getName();
 
