@@ -457,6 +457,8 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *   The target config data.
    */
   protected function targetConfigExpectedToHave(array $config_action, array $target_config_data) {
+    $target_config_expected_to_have = FALSE;
+
     if (isset($config_action['target_config_expected_to_have'])) {
       // Computes the difference of arrays with additional index check.
       // containing all the values from [target config expected to have]
@@ -464,14 +466,28 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       $expected_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_to_have'], $target_config_data);
 
       if (!empty($expected_to_have_diff) && count($expected_to_have_diff) > 0) {
-        return TRUE;
+        $target_config_expected_to_have = TRUE;
+      }
+
+      // Wild card exption to have in all listed configs.
+      if(isset($config_action['expected_config_wild_card'])) {
+        $wild_card_configs = $this->configFactory->listAll($config_action['expected_config_wild_card']);
+        foreach ($wild_card_configs as $wild_card_name) {
+          $wild_card_factory = $this->configFactory->getEditable($wild_card_name);
+          $wild_card_data = $wild_card_factory->get($config_action['target_config_path']);
+          $wild_card_expected_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_not_to_have'], $wild_card_data);
+          if (!empty($wild_card_expected_to_have_diff) && count($wild_card_expected_to_have_diff) == 0) {
+            $target_config_expected_to_have = FALSE;
+            break;
+          }
+        }
       }
     }
     else {
-      return TRUE;
+      $target_config_expected_to_have = TRUE;
     }
 
-    return FALSE;
+    return $target_config_expected_to_have;
   }
 
   /**
@@ -483,17 +499,34 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *   The target config data.
    */
   protected function targetConfigExpectedNotToHave(array $config_action, array $target_config_data) {
+    $target_config_expected_not_to_have = TRUE;
+
     if (isset($config_action['target_config_expected_not_to_have'])) {
       // Computes the difference of arrays with additional index check.
       // containing all the values from [target config expected NOT to
       // have] that are not present in [target config data] .
       $expected_not_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_not_to_have'], $target_config_data);
       if (!empty($expected_not_to_have_diff) && count($expected_not_to_have_diff) == 0) {
-        return FALSE;
+        $target_config_expected_not_to_have = FALSE;
       }
+
+      // Wild card exption not to have in all listed configs.
+      if(isset($config_action['expected_config_wild_card'])) {
+        $wild_card_configs = $this->configFactory->listAll($config_action['expected_config_wild_card']);
+        foreach ($wild_card_configs as $wild_card_name) {
+          $wild_card_factory = $this->configFactory->getEditable($wild_card_name);
+          $wild_card_data = $wild_card_factory->get($config_action['target_config_path']);
+          $wild_card_expected_not_to_have_diff = DiffArray::diffAssocRecursive($config_action['target_config_expected_not_to_have'], $wild_card_data);
+          if (!empty($wild_card_expected_not_to_have_diff) && count($wild_card_expected_not_to_have_diff) > 0) {
+            $target_config_expected_not_to_have = FALSE;
+            break;
+          }
+        }
+      }
+
     }
 
-    return TRUE;
+    return $target_config_expected_not_to_have;
   }
 
   /**
