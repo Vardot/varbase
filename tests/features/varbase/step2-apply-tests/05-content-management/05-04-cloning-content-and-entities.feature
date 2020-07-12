@@ -24,6 +24,7 @@ I want to be able to clone an entity.
       And I wait for AJAX to finish
       And I wait
       And I select the "bp_simple" paragraph component
+      And I wait for AJAX to finish
       And I wait
      Then I should see "Modal body"
      When I fill in the rich text editor field "Text" with "Modal Body test"
