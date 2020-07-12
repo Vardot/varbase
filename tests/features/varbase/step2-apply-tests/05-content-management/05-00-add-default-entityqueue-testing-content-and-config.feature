@@ -77,19 +77,28 @@ Scenario: Add Test content N1, N2, N3 nodes to the Test Queue entityqueue
    When I click "Edit items" in the "Test Queue" row
     And I wait
    Then I should see "Edit subqueue Test Queue"
-   When I fill in "Test content N1" for "items[add_more][new_item][target_id]"
+	 When I press "Add existing item"
+    And I wait for AJAX to finish
+	 Then I should see "Item"
+   When I fill in "Test content N1" for "items[form][0][entity_id]"
     And I press "Add item"
     And I wait for AJAX to finish
    Then I should see "Test content N1"
 
   # Add "Test content N2" to the location #2 in the "Test Queue"
-   When I fill in "Test content N2" for "items[add_more][new_item][target_id]"
+   When I press "Add existing item"
+	  And I wait for AJAX to finish
+	 Then I should see "Item"
+   When I fill in "Test content N2" for "items[form][1][entity_id]"
     And I press "Add item"
     And I wait for AJAX to finish
    Then I should see "Test content N1"
 
   # Add "Test content N3" to the location #3 in the "Test Queue"
-   When I fill in "Test content N3" for "items[add_more][new_item][target_id]"
+   When I press "Add existing item"
+	  And I wait for AJAX to finish
+	 Then I should see "Item"
+   When I fill in "Test content N3" for "items[form][2][entity_id]"
     And I press "Add item"
     And I wait for AJAX to finish
    Then I should see "Test content N1"
