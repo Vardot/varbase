@@ -16,6 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Component\Utility\DiffArray;
 use Drupal\Core\Plugin\CachedDiscoveryClearerInterface;
+use Drupal\Core\Config\ConfigImporterEvent;
 
 /**
  * Class ConfigBit.
@@ -163,15 +164,35 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
   public static function getSubscribedEvents() {
     return [
       ConfigEvents::SAVE => ['configSave', 0],
-      ConfigEvents::IMPORT => ['configSave', 0],
+      ConfigEvents::IMPORT => ['configImport', 0],
     ];
+  }
+
+  /**
+   * React to a config object being imported.
+   *
+   * @param \Drupal\Core\Config\ConfigImporterEvent $event
+   *   The Config importer event.
+   */
+  public function configImport(ConfigImporterEvent $event) {
+    $imported_config = $event->getConfig();
+    $imported_config_name = $imported_config->getName();
+
+    $supportedConfigTypes = $this->supportedConfigTypes();
+
+    // Process config bits for each supported config type.
+    foreach ($supportedConfigTypes as $supportedConfigType) {
+      if (preg_match($supportedConfigType['config_name_match'], $imported_config_name)) {
+        $this->processConfigBits($supportedConfigType, $imported_config);
+      }
+    }
   }
 
   /**
    * React to a config object being saved.
    *
    * @param \Drupal\Core\Config\ConfigCrudEvent $event
-   *   Config crud event.
+   *   The Config crud event.
    */
   public function configSave(ConfigCrudEvent $event) {
     $saved_config = $event->getConfig();
@@ -182,7 +203,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
     // Process config bits for each supported config type.
     foreach ($supportedConfigTypes as $supportedConfigType) {
       if (preg_match($supportedConfigType['config_name_match'], $saved_config_name)) {
-        $this->processConfigBits($supportedConfigType, $event);
+        $this->processConfigBits($supportedConfigType, $saved_config);
       }
     }
   }
@@ -192,12 +213,10 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *
    * @param array $supportedConfigType
    *   The supported config type.
-   * @param \Drupal\Core\Config\ConfigCrudEvent $event
-   *   The Config crud event.
+   * @param \Drupal\Core\Config\Config $saved_config
+   *   The saved config.
    */
-  protected function processConfigBits(array $supportedConfigType, ConfigCrudEvent $event) {
-    // Get saved config.
-    $saved_config = $event->getConfig();
+  protected function processConfigBits(array $supportedConfigType, Config $saved_config) {
 
     // Get saved cofnig name.
     $saved_config_name = $saved_config->getName();
