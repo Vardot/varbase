@@ -163,8 +163,8 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    */
   public static function getSubscribedEvents() {
     return [
-      ConfigEvents::SAVE => ['configSave', 0],
-      ConfigEvents::IMPORT => ['configImport', 0],
+      ConfigEvents::SAVE => ['onConfigSave', 0],
+      ConfigEvents::IMPORT => ['onConfigImport', 0],
     ];
   }
 
@@ -174,7 +174,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    * @param \Drupal\Core\Config\ConfigImporterEvent $event
    *   The Config importer event.
    */
-  public function configImport(ConfigImporterEvent $event) {
+  public function onConfigImport(ConfigImporterEvent $event) {
     $imported_config = $event->getConfig();
     $imported_config_name = $imported_config->getName();
 
