@@ -16,6 +16,7 @@ So that will have an easy publishing workflow with revisions.
       And I should see "Publish"
       And I should see "Archive / Unpublish"
       And I should see "Restore from archive"
+      And I should see "Landing page (Layout Builder)"
       And I should see "Landing page"
       And I should see "Basic page"
       And I should see "Blog post"

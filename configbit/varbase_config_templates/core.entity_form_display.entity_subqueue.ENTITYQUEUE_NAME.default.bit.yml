@@ -1,0 +1,7 @@
+type: action
+status: true
+targetEntityType: entity_subqueue
+token_variant: id
+event: config.save
+event_config: core.entity_form_display.entity_subqueue.ENTITYQUEUE_NAME.default
+config_bits: {  }

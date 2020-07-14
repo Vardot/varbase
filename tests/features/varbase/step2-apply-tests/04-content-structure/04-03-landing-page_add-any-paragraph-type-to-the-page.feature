@@ -49,7 +49,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Block"
      When I select "Site branding" from "Block"
       And I wait
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Landing page Test Landing page Drupal Block has been created"
@@ -68,7 +68,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for 1 second
       And I select the "bp_columns" paragraph component
       And I wait for AJAX to finish
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Landing page Test Landing page Columns (Equal) has been created"
@@ -87,7 +87,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for 1 second
       And I select the "bp_columns_two_uneven" paragraph component
       And I wait for AJAX to finish
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Landing page Test Landing page Columns (Two Uneven) has been created"
@@ -115,7 +115,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Modal body"
      When I fill in the rich text editor field "Text" with "Modal Body test"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
      Then I should see "Landing page Test Landing page Modal has been created"
      When I press "Modal button"
@@ -139,7 +139,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait for AJAX to finish
      Then I should see "Components"
      When I fill in the rich text editor field "Text" with "Rich Text test"
-  		And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Landing page Test Landing page Rich Text has been created"
@@ -167,7 +167,7 @@ So that the "Landing page" will show up having paragrpahs of different types
       And I wait
      Then I should see "Tab body"
       And I fill in the rich text editor field "Text" with "Tab 1 - Body test"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Landing page Test Landing page Tabs has been created"
@@ -190,7 +190,7 @@ So that the "Landing page" will show up having paragrpahs of different types
      Then I should see "Components"
      When I select "Contact" from "Webform"
       And I wait
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Landing page Test Landing page WebForm has been created"

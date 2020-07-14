@@ -50,7 +50,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Test hero slider #1"
@@ -83,7 +83,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider_media"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Test hero slider #2"
@@ -93,8 +93,8 @@ I want to be able to add and remove entities to any allowed entity queue.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
-     Then I should see "Test hero slider #1" in the "#edit-items-0-target-id" element
-      And I should see "Test hero slider #2" in the "#edit-items-1-target-id" element
+     Then I should see "Test hero slider #1"
+      And I should see "Test hero slider #2"
 
   @javascript @local @development @staging @production
   Scenario: Remove a Hero slider from the varbase hero slider media entity queue
@@ -111,7 +111,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I expand the field "edit-entityqueue-form-widget"
      Then the "varbase_heroslider_media" checkbox should be checked
      When I uncheck the box "varbase_heroslider_media"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait

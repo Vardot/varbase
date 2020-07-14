@@ -1,0 +1,69 @@
+type: action
+status: true
+targetEntityType: entity_subqueue
+token_variant: id
+event: config.save
+event_config: entityqueue.entity_queue.ENTITYQUEUE_NAME
+config_bits:
+  core.entity_form_display.entity_subqueue.ENTITYQUEUE_NAME.default:
+    # -----------------------------------------------------------------------------.
+    # Import default entityqueue form display for new Entity Queues.
+    # -----------------------------------------------------------------------------.
+    - import:
+        dependencies:
+          module:
+            - entityqueue
+            - inline_entity_form
+            - entity_browser_entity_form
+          config:
+            - entityqueue.entity_queue.ENTITYQUEUE_NAME
+        target_config_value:
+          langcode: en
+          status: true
+          dependencies:
+            config:
+              - entityqueue.entity_queue.ENTITYQUEUE_NAME
+            module:
+              - entity_browser_entity_form
+              - inline_entity_form
+          id: entity_subqueue.ENTITYQUEUE_NAME.default
+          targetEntityType: entity_subqueue
+          bundle: ENTITYQUEUE_NAME
+          mode: default
+          content:
+            items:
+              type: inline_entity_form_complex
+              weight: 5
+              settings:
+                form_mode: default
+                revision: true
+                override_labels: true
+                label_singular: item
+                label_plural: items
+                allow_existing: true
+                match_operator: CONTAINS
+                collapsible: false
+                collapsed: false
+                allow_new: false
+                allow_edit: false
+                allow_duplicate: false
+              region: content
+              third_party_settings:
+                entity_browser_entity_form:
+                  entity_browser_id: _none
+            langcode:
+              type: language_select
+              weight: 2
+              region: content
+              settings:
+                include_locked: true
+              third_party_settings: {  }
+            title:
+              type: string_textfield
+              weight: -10
+              region: content
+              settings:
+                size: 60
+                placeholder: ''
+              third_party_settings: {  }
+          hidden: {  }

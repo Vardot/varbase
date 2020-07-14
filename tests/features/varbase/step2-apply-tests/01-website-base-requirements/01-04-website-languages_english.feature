@@ -13,7 +13,7 @@ So that can be sure that the website is using the English language as one of the
      When I select "English" from "Language"
       And I fill in "Test English Basic page title by content admin" for "Title"
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Test English Basic page title by content admin"
@@ -27,7 +27,7 @@ So that can be sure that the website is using the English language as one of the
      Then I should see "Language"
      When I select "English" from "Language"
       And I fill in "Test English Landing page title by content admin" for "Title"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Test English Landing page title by content admin"
@@ -42,7 +42,7 @@ So that can be sure that the website is using the English language as one of the
      When I select "English" from "Language"
       And I fill in "Test English Basic page title by site admin" for "Title"
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Test English Basic page title by site admin"
@@ -56,7 +56,7 @@ So that can be sure that the website is using the English language as one of the
      Then I should see "Language"
      When I select "English" from "Language"
       And I fill in "Test English Landing page title by site admin" for "Title"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Test English Landing page title by site admin"

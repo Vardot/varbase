@@ -73,7 +73,7 @@ So that it will show up under that rich text field without having to upload the 
       And I fill in "Embed Flag Earth custom Alt text" for "Alternate text"
      When I click "Embed" in the "button" element with the "class" attribute set to "js-form-submit form-submit"
       And I wait for AJAX to finish
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Basic page Test Basic page to embed existing files has been updated."

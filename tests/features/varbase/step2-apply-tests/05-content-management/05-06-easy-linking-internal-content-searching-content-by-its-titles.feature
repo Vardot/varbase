@@ -12,7 +12,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
      When I select "full_html" from "Text format"
       And I fill in "Linking to internal content #1 title" for "Title"
       And I fill in the rich text editor field "Body" with "Linking to internal content #1 body"
-			And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
       And I should see "Linking to internal content #1 body"
@@ -39,4 +39,11 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I wait for AJAX to finish
      Then I should see "Linking to internal content #1 title"
      When I click "Linking to internal content #1 title" in the "ul" element with the "class" attribute set to "ui-autocomplete"
+      And I wait for AJAX to finish
      Then I should not see "Linking to internal content #1 title"
+     When I click "Save" in the "button" element with the "class" attribute set to "button js-form-submit form-submit ui-button ui-corner-all ui-widget"
+      And I wait
+      And I select "published" from "edit-moderation-state-0-state"
+      And I press the "Save" button
+      And I wait
+      And I should see "Linking to internal content #2 body"

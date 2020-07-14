@@ -1,0 +1,49 @@
+type: action
+status: true
+targetEntityType: node
+token_variant: type
+event: config.save
+event_config: node.type.CONTENT_TYPE
+config_bits:
+  workflows.workflow.varbase_simple_workflow:
+    # -----------------------------------------------------------------------------.
+    # Add the node type to the Varbase Simple workflow.
+    # -----------------------------------------------------------------------------.
+    - add:
+        dependencies:
+          module:
+            - varbase_workflow
+          config:
+            - node.type.CONTENT_TYPE
+            - workflows.workflow.varbase_simple_workflow
+        target_config_path: type_settings
+        expected_config_wild_card: 'workflows.workflow.'
+        target_config_expected_not_to_have:
+          entity_types:
+            node:
+              - CONTENT_TYPE
+        target_config_value:
+          entity_types:
+            node:
+              - CONTENT_TYPE
+  metatag.settings:
+    # -----------------------------------------------------------------------------.
+    # Add default metatags config template when content types been created with
+    # only Basic tags metatags.
+    # -----------------------------------------------------------------------------.
+    - add:
+        dependencies:
+          module:
+            - metatag
+          config:
+            - node.type.CONTENT_TYPE
+            - metatag.settings
+        target_config_path: entity_type_groups
+        target_config_expected_not_to_have:
+          node:
+            CONTENT_TYPE:
+              basic: basic
+        target_config_value:
+          node:
+            CONTENT_TYPE:
+              basic: basic
