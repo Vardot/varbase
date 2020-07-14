@@ -34,6 +34,11 @@ config_bit:
           description: "Provides the necessary tools to build blogs in your website."
           selected: false
           config_form: false
+        varbase_landing:
+          title: "Varbase Landing Page (Paragraphs)"
+          description: "Provides the basis for Landing Pages using <a href=\"https://www.drupal.org/project/paragraphs\" target=\"_blank\">Paragraphs</a> module, which is built to include appealing stacked components.<br /><em>Note that Varbase now is already shipped with a Landing Page content type via Layout Builder. You should enable this component (Varbase Landing Page - Paragraphs) only if you want Landing Pages with Paragraphs instead of Layout Builder.</em>"
+          selected: false
+          config_form: false
         varbase_auth:
           title: "Varbase Social Single Sign-On"
           description: "Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google. Built using <a href=\"https://www.drupal.org/project/social_api\" target=\"_blank\">Social API</a>."

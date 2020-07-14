@@ -123,8 +123,7 @@ install:
   - drush pm-enable social_auth_facebook --yes
   - drush pm-enable social_auth_twitter --yes
   - drush pm-enable social_auth_linkedin --yes
-  - drush pm-enable varbase_layout_builder --yes
-  - drush pm-enable vlplb --yes
+  - drush pm-enable varbase_landing --yes
   - drush pm-enable varbase_rich_text_block --yes
   - drush pm-enable varbase_html_code_block --yes
   - drush pm-enable varbase_media_block --yes
