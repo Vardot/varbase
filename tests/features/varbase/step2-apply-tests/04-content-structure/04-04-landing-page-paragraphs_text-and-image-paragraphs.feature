@@ -1,7 +1,7 @@
-Feature: Content Structure - Landing Pages - Varbase text and image paragraphs
-As a logged in user with a permission to mange Landing pages
+Feature: Content Structure - Landing page (Paragraphs) - Varbase text and image paragraphs
+As a logged in user with a permission to mange Landing page (Paragraphs)
 I want to be able to add number of Text and image paragraph compoments
-So that the "Landing page" will have text and images in right and left view.
+So that the "Landing page (Paragraphs)" will have text and images in right and left view.
 
  @local @development @staging @production
   Scenario: Upload the Embed Flag Earth file
@@ -23,7 +23,7 @@ So that the "Landing page" will have text and images in right and left view.
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage Landing page content type create a new Landing page
+  Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type create a new Landing page
 
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
