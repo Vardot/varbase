@@ -113,7 +113,7 @@ install:
 
   ## Install with drush.
   - cd docroot
-  - drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true
+  - drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
   - drush pm-enable varbase_development --yes
   - drush pm-enable varbase_styleguide --yes
   - drush pm-enable varbase_media_instagram --yes
@@ -123,11 +123,6 @@ install:
   - drush pm-enable social_auth_facebook --yes
   - drush pm-enable social_auth_twitter --yes
   - drush pm-enable social_auth_linkedin --yes
-  - drush pm-enable varbase_landing --yes
-  - drush pm-enable varbase_rich_text_block --yes
-  - drush pm-enable varbase_html_code_block --yes
-  - drush pm-enable varbase_media_block --yes
-  - drush pm-enable varbase_gallery_block --yes
   - drush pm-enable varbase_content_planner --yes
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes
