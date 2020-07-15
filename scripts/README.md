@@ -49,7 +49,7 @@ We can use
 ```
 $ cd PROJECT_DIR_NAME/docroot/themes/contrib/vartheme_bs4
 yarn theme:create-sub-theme "THEME_NAME"
-``
+```
 
 * Activate your new sub theme by going to Appearance in our Varbase site.
 * Search for THEME_NAME of the generated new sub theme and click on Install
