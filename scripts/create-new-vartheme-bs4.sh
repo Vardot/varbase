@@ -155,7 +155,7 @@ if [[ ! -d "$theme_path/$theme_name" ]]; then
 
   # 12. Install needed libraries
   cd ${theme_path}/${theme_name};
-  npm install yarn global ;
+  npm install -g yarn ;
   yarn install ;
 
   generated_datetime="$(date '+%Y/%m/%d - %H:%M:%S')";
