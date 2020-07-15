@@ -169,6 +169,7 @@ permissions:
   - 'delete own varbase_heroslider_media content'
   - 'delete own video media'
   - 'delete terms in categories'
+  - delete_homepage_node
   - 'dropzone upload files'
   - 'ds switch view mode'
   - 'edit any audio media'
