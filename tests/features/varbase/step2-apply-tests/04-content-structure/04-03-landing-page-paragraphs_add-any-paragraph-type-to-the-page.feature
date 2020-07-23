@@ -113,6 +113,8 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
       And I wait for AJAX to finish
       And I select the "bp_simple" paragraph component
       And I wait
+      And I wait for AJAX to finish
+      And I wait for 1 second
      Then I should see "Modal body"
      When I fill in the rich text editor field "Text" with "Modal Body test"
       And I select "published" from "edit-moderation-state-0-state"

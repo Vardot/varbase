@@ -952,6 +952,49 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Check if we do not have the text in the selected element.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: Then I should not see "your text" in the "ol" element with the "class" attribute set to "breadcrumb"
+   * Example #2:  And I should not see "your text" in the "div" element with the "id" attribute set to "right-panel"
+   *
+   * @Then /^I should not see "(?P<text>[^"]*)" in the "(?P<htmlTagName>[^"]*)" element with the "(?P<attribute>[^"]*)" attribute set to "(?P<value>[^"]*)"$/
+   */
+  public function iShouldNotSeeTextInTheHtmlTagElement($text, $htmlTagName, $attribute, $value) {
+
+    $elements = $this->getSession()->getPage()->findAll('css', $htmlTagName);
+    if (empty($elements)) {
+      throw new \Exception(sprintf('The element "%s" was not found in the page', $htmlTagName));
+    }
+
+    $found = FALSE;
+    foreach ($elements as $element) {
+      $actual = $element->getText();
+      $actual = preg_replace('/\s+/u', ' ', $actual);
+      $regex = '/' . preg_quote($text, '/') . '/ui';
+
+      if (preg_match($regex, $actual)) {
+        $found = TRUE;
+        break;
+      }
+    }
+    if ($found) {
+      throw new \Exception(sprintf('"%s" was found in the "%s" element', $text, $htmlTagName));
+    }
+
+    if (empty($attribute)) {
+      $attr = $element->getAttribute($attribute);
+      if (empty($attr)) {
+        throw new \Exception(sprintf('The "%s" attribute is present on the element "%s"', $attribute, $htmlTagName));
+      }
+      if (strpos($attr, "$value") === FALSE) {
+        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      }
+    }
+  }
+
+  /**
    * Click on the text in the selected element.
    *
    * Varbase Context #varbase.
