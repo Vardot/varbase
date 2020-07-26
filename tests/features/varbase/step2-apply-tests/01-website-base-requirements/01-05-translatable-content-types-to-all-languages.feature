@@ -33,7 +33,7 @@ So that I will be able to create a content then I will have the option to transl
       And I should see "Not translated" in the "Arabic" row
      When I click "Add" in the "Arabic" row
       And I wait
-     Then I should see "translation of Test English Basic page"
+     Then I should see "Test English Basic page"
      When I fill in "تجربة صفحة بسيطة عربية العنوان" for "edit-title-0-value"
       And I fill in the rich text editor field "edit-body-0-value" with "تجربة صفحة بسيطة عربية المحتوى"
       And I press the "edit-submit" button
