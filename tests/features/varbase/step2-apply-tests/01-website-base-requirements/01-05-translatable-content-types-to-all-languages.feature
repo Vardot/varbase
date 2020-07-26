@@ -32,9 +32,7 @@ So that I will be able to create a content then I will have the option to transl
      Then I should see "Translations of Test English Basic page"
       And I should see "Not translated" in the "Arabic" row
      When I click "Add" in the "Arabic" row
-      And I wait
-      And I wait for AJAX to finish
-      And I wait for 2 seconds
+      And I wait max of "5" seconds for the page to be ready and loaded
      Then I should see "Create Arabic translation of Test English Basic page"
      When I fill in "تجربة صفحة بسيطة عربية العنوان" for "Title"
       And I fill in the rich text editor field "Body" with "تجربة صفحة بسيطة عربية المحتوى"
