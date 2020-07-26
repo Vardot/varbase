@@ -224,6 +224,15 @@ function varbase_assemble_extra_components(array &$install_state) {
   // Uninstall list of not needed modules after the config had been loaded.
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
+  if (\Drupal::moduleHandler()->moduleExists('varbase_heroslider_media')) {
+    \Drupal::service('module_installer')->install(['enabled_varbase_heroslider_media_content'], FALSE);
+    $uninstall_components[] = 'enabled_varbase_heroslider_media_content';
+  }
+  else {
+    \Drupal::service('module_installer')->install(['disabled_varbase_heroslider_media_content'], FALSE);
+    $uninstall_components[] = 'disabled_varbase_heroslider_media_content';
+  }
+
   if (count($uninstall_components) > 0) {
     foreach ($uninstall_components as $uninstall_component) {
       $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
