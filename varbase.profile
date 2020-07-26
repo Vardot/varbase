@@ -224,12 +224,13 @@ function varbase_assemble_extra_components(array &$install_state) {
   // Uninstall list of not needed modules after the config had been loaded.
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
+
   if (\Drupal::moduleHandler()->moduleExists('varbase_heroslider_media')) {
-    \Drupal::service('module_installer')->install(['enabled_varbase_heroslider_media_content'], FALSE);
+    $batch['operations'][] = ['varbase_install_component', (array) 'enabled_varbase_heroslider_media_content'];
     $uninstall_components[] = 'enabled_varbase_heroslider_media_content';
   }
   else {
-    \Drupal::service('module_installer')->install(['disabled_varbase_heroslider_media_content'], FALSE);
+    $batch['operations'][] = ['varbase_install_component', (array) 'disabled_varbase_heroslider_media_content'];
     $uninstall_components[] = 'disabled_varbase_heroslider_media_content';
   }
 
@@ -422,6 +423,19 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
 
   // Change configurations to work with enable_multilingual.
   // Each module will manage its multilingual config.
+}
+
+/**
+ * Batch function to Install needed modules.
+ *
+ *
+ * @param string|array $install_component
+ *   Name of the extra component.
+ */
+function varbase_install_component($install_component) {
+  if (!\Drupal::moduleHandler()->moduleExists($install_component)) {
+    \Drupal::service('module_installer')->install([$install_component], FALSE);
+  }
 }
 
 /**
