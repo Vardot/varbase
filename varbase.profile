@@ -225,7 +225,8 @@ function varbase_assemble_extra_components(array &$install_state) {
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
 
-  if (\Drupal::moduleHandler()->moduleExists('varbase_heroslider_media')) {
+  if (isset($selected_extra_features['varbase_heroslider_media'])
+    && $selected_extra_features['varbase_heroslider_media'] == TRUE) {
     $batch['operations'][] = ['varbase_install_component', (array) 'enabled_varbase_heroslider_media_content'];
     $uninstall_components[] = 'enabled_varbase_heroslider_media_content';
   }
