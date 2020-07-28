@@ -13,6 +13,7 @@ use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
 use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+use Drupal\node\Entity\Node;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -235,6 +236,10 @@ function varbase_assemble_extra_components(array &$install_state) {
     $uninstall_components[] = 'disabled_varbase_heroslider_media_content';
   }
 
+  // Reset timestamp for nodes.
+  $node_ids = [1];
+  $batch['operations'][] = ['varbase_reset_timestamp_for_nodes', (array) $node_ids];
+
   if (count($uninstall_components) > 0) {
     foreach ($uninstall_components as $uninstall_component) {
       $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
@@ -450,6 +455,20 @@ function varbase_install_component($install_component) {
 function varbase_uninstall_component($uninstall_component) {
   if (\Drupal::moduleHandler()->moduleExists($uninstall_component)) {
     \Drupal::service('module_installer')->uninstall((array) $uninstall_component, FALSE);
+  }
+}
+
+/**
+ * Batch to reset timestamp for selected nodes.
+ *
+ * @param int|array $nid
+ *   The Node ID.
+ */
+function varbase_reset_timestamp_for_nodes($nid) {
+  $node = Node::load($nid);
+  if (isset($node)) {
+    $node->created = \Drupal::time()->getCurrentTime();
+    $node->save();
   }
 }
 
