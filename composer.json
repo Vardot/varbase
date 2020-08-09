@@ -56,11 +56,12 @@
     "drupal/vartheme": "6.x-dev",
     "drupal/vartheme_bs4": "6.x-dev",
     "drupal/vartheme_admin": "6.x-dev",
-    "drupal/vartheme_claro": "2.x-dev",
+    "drupal/vartheme_claro": "2.1.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "2.7.*",
     "bower-asset/c3": "0.4.*",
     "bower-asset/d3": "3.5.*",
+    "bower-asset/jqueryui-touch-punch": "0.2.*",
     "npm-asset/masonry-layout": "~4.0",
     "npm-asset/imagesloaded": "~4.0",
     "npm-asset/dropzone": "~4.0",
@@ -126,6 +127,7 @@
       "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
+      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
       "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
@@ -147,6 +149,7 @@
         {"name": "blazy", "package": "npm-asset/blazy"},
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
+        {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "masonry", "package": "npm-asset/masonry-layout"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
@@ -155,7 +158,7 @@
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
-       "drupal/core": "-p2"
+      "drupal/core": "-p2"
     }
   }
 }
