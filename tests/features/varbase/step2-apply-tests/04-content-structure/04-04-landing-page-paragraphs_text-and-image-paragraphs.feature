@@ -54,23 +54,20 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
        And I wait for AJAX to finish
        And I wait 5s
       Then I should see "Text and image"
-      When I press "field_lp_paragraphs_1_subform_field_image_entity_browser_entity_browser"
+       And I should see "No media items are selected."
+      When I press "field_image-media-library-open-button-field_lp_paragraphs-0-subform"
        And I wait for AJAX to finish
-       And I wait 5s
-      Then the "entity_browser_iframe_image_browser" media browser should be open
-      When I switch to iframe "entity_browser_iframe_image_browser"
-       And I wait 5s
-      Then I should see "Media name"
-      When I fill in "Flag Earth" for "Media name"
-       And I press the "Search" button
-       And wait max of 5s
+       And I should see "Name"
+      When I fill in "Flag Earth" for "Name"
+       And I press the "Apply filters" button
+       And I wait for AJAX to finish
       Then I should see image with the "Flag Earth all earth in space" title text
-      When I double click on the image with the "Flag Earth all earth in space" title text
+      When I check the box "media_library_select_form[0]"
        And I wait for AJAX to finish
-       And wait max of 5s
-       And I switch to parent
+       And I press "dialog-submit"
        And I wait for AJAX to finish
-       And wait max of 5s
+       And I scrollup
+      Then I should see "The maximum number of media items have been selected."
       When I click "Text"
        And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."
        And I select all text in "Text" field
@@ -80,4 +77,4 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
        And I press the "Save" button
        And I wait
       Then I should see "In eros ipsum, mattis vitae vulputate eu, blandit"
-       And I should see image with the "Flag Earth all earth in space" title text 
+       And I should see image with the "Flag Earth all earth in space" title text
