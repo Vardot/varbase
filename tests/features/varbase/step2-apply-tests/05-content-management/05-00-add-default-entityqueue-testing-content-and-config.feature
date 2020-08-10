@@ -24,8 +24,8 @@ Scenario: Add Entity Queue Test Queue and use Test Content type
    Then I should see "Configure entity queue"
    When I fill in "Test Queue" for "Name"
     And I wait for AJAX to finish
-    And I wait for 2 seconds
-    And I press "Entity settings"
+	 Then I should see "Entity settings"
+   When I click "Entity settings"
     And I wait
    Then I should see "Content type"
    When I check the box "Test Content"

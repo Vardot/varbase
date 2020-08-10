@@ -32,6 +32,20 @@ I want to be able to clone an entity.
       And I press the "Save" button
       And I wait
      Then I should see "Modal button"
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test Clone landing page" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test Clone landing page"
+     When I fill in "Test Clone landing page" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test Clone landing page"
+     When I click "Edit" in the "Test Clone landing page" row
+      And I wait
+     Then I should see "Clone"
      When I click "Clone"
       And I wait
      Then I should see "Clone Content"
