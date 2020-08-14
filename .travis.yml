@@ -1,6 +1,16 @@
-dist: trusty
-  
+dist: xenial
 language: php
+php:
+  - 7.3
+services:
+  - mysql
+  - xvfb
+addons:
+  chrome: stable
+mysql:
+  database: test_varbase808xxc
+  username: root
+  encoding: utf8
 cache:
   bundler: true
   directories:
@@ -8,18 +18,14 @@ cache:
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
     - "$HOME/.selenium/cache"
-
-php:
-  - 7.3
-
 env:
   - AFATG=01-website-base-requirements
   - AFATG=02-user-management
   - AFATG=03-admin-management
   - AFATG=04-content-structure
   - AFATG=05-content-management
-
 matrix:
+  fast_finish: true
   exclude:
 # Automated Functional Acceptance Testing group: 01 website base requirements
   - php: 7.3
@@ -40,12 +46,6 @@ matrix:
 # Automated Functional Acceptance Testing group: 05 content-management
   - php: 7.3
     env: AFATG=05-content-management
-
-mysql:
-  database: test_varbase808xxc
-  username: root
-  encoding: utf8
-
 before_install:
   - phpenv config-rm xdebug.ini
   - phpenv rehash
@@ -58,28 +58,17 @@ before_install:
   - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
   - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
 
-  # MySQL Configurations.
-  - mysql -e 'SET GLOBAL wait_timeout = 5400;'
-  - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
-
   # PHP Configurations.
-  - echo 'max_execution_time = 1200' >> varbase.php.ini;
-  - echo 'max_input_time = 180' >> varbase.php.ini;
-  - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 3000M' >> varbase.php.ini;
-  - echo 'error_reporting = E_ALL' >> varbase.php.ini;
-  - echo 'post_max_size = 64M' >> varbase.php.ini;
-  - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
-  - echo 'max_file_uploads = 40' >> varbase.php.ini;
-  - echo 'sendmail_path = /bin/true' >> varbase.php.ini;
-  - phpenv config-add varbase.php.ini
+  - echo 'max_execution_time = 1200' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'max_input_time = 180' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'max_input_vars = 10000' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'memory_limit = 3000M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'error_reporting = E_ALL' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'post_max_size = 64M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'upload_max_filesize = 32M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'max_file_uploads = 40' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
   - phpenv rehash
-
-  # Configure and run the virtual display.
-  - export DISPLAY=:99
-  - sh -e /etc/init.d/xvfb start
-  - Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
-  - sleep 3
 
   # Download Latest Chrome Driver.
   -  CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
@@ -90,16 +79,6 @@ before_install:
   - mkdir -p $HOME/.composer/vendor/bin
   - mv -f chromedriver $HOME/.composer/vendor/bin/
   - rm chromedriver_linux64.zip
-
-  # Update to latest Chrome browser.
-  - export CHROME_BIN=/usr/bin/google-chrome
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo apt-get clean
-  - sudo apt-get update
-  - sudo apt-get install dpkg
-  - sudo dpkg -i google-chrome-stable_current_amd64.deb
-  - rm google-chrome-stable_current_amd64.deb
-  - google-chrome --version
 
   # Run selenium standalone server.
   - SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
@@ -136,6 +115,3 @@ script:
   - behat --strict tests/features/varbase/step1-init-tests/
   - behat --strict tests/features/varbase/step2-apply-tests/$AFATG
 #  - behat --strict tests/features/varbase/step3-cleanup-tests/  # no need as we build every time.
-
-matrix:
-  fast_finish: true
