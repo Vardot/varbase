@@ -23,7 +23,7 @@ Scenario: Add Entity Queue Test Queue to be used with Test Content type
     And I wait
    Then I should see "Configure entity queue"
    When I fill in "Test Queue" for "Name"
-    And I 5s
+    And I wait for 5 seconds
     And I press "Save"
     And I wait
    Then I should see "The entity queue Test Queue has been added."
