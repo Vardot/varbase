@@ -120,7 +120,6 @@ permissions:
   - 'rabbit hole bypass taxonomy_term'
   - 'reorder terms in blog_categories'
   - 'reorder terms in tags'
-  - 'revert all media revisions'
   - 'schedule publishing of nodes'
   - 'translate block_content'
   - 'translate landing_page node'
