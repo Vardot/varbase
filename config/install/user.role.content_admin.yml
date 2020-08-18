@@ -161,6 +161,7 @@ permissions:
   - 'reorder terms in blog_categories'
   - 'reorder terms in categories'
   - 'reorder terms in tags'
+  - 'revert all media revisions'
   - 'revert all revisions'
   - 'revert faq revisions'
   - 'revert landing_page revisions'
