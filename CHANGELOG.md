@@ -323,6 +323,12 @@
                   by Firass Ziedan
                  : Fixed not appearing Page Breadcrumb in
                   standard option
+* Issue [#3165419](https://www.drupal.org/i/3165419):
+                  Fixed Install Failure by Removing the English file with
+                  spaces and CAPITAL Letters.pdf and the other
+                  RTL - PDF file with other languages
+
+--------------------------------------------------------------------------------
 
 # 8.8.5
 
