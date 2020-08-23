@@ -1,3 +1,329 @@
+# 8.8.6
+
+### Highlighted important changes since Varbase 8.x-8.5:
+* Issue [#3159243](https://www.drupal.org/i/3159243):
+                  Switched to Homepage node with Layout Builder
+* Issue [#3150223](https://www.drupal.org/i/3150223):
+                  Added [Varbase Workflow] new module
+* Issue [#3151550](https://www.drupal.org/i/3151550):
+                  Changed default workflow starter config for Simple
+                  and Editorial workflows
+* Issue [#3155922](https://www.drupal.org/i/3155922):
+                  Changed default entityqueue form display for the
+                  [Media Hero Slider] entity queue
+* Issue [#3153614](https://www.drupal.org/i/3153614):
+                  Implemented a way to offer default config templates using
+                  Varbase’s ConfigBit to unify admin experience
+* Issue [#3153018](https://www.drupal.org/i/3153018):
+                  Added Varbase Landing Page (Layout builder) in the default
+                  Varbase components and moved Varbase Landing Page
+                  (Paragraphs) to the Extra components installation step
+* Issue [#3120212](https://www.drupal.org/i/3120212):
+                  Replaced the current embed media template with the
+                  Drupal core Media Library Embed media system
+* Issue [#3120214](https://www.drupal.org/i/3120214):
+                  Replaced the current CKEditor entity browser embed media
+                  button with the new Drupal core Media Library Embed
+                  media command button
+* Issue [#3163433](https://www.drupal.org/i/3163433):
+                  Update [Bootstrap 4] library from 4.5.0 to 4.5.1
+* Issue [#3163787](https://www.drupal.org/i/3163787):
+                  Changed hiding the Local Task block and use the
+                  moderation sidebar tasks menu in view page for all content
+* Issue [#3163245](https://www.drupal.org/i/3163245):
+                  Styled media library grid item in the node secondary
+                  region layout
+
+### Added since Varbase 8.x-8.5:
+* Issue [#3161550](https://www.drupal.org/i/3161550):
+                  Have more options for the Homepage node with Layout Builder
+                  to work when Varbase Media Hero slider is enabled or
+                  disabled on install
+* Issue [#3159255](https://www.drupal.org/i/3159255):
+                  Added [Prevent Homepage Deletion] module and enable
+                  under [Varbase Admin] module
+* Issue [#3159256](https://www.drupal.org/i/3159256):
+                  Added permissions for [Prevent Homepage Deletion] module
+* Issue [#3151759](https://www.drupal.org/i/3151759):
+                  Enabled Simple Workflow for all content types on 
+                  new Varbase Installations by Varbase Workflow and update Automated Functional Acceptance Testing
+* Issue [#3152475](https://www.drupal.org/i/3152475):
+                  Added number of custom permissions in optional configurations
+* Issue [#3152119](https://www.drupal.org/i/3152119):
+                  Added ( Access metatag plugins report ) custom permission in optional configurations
+* Issue [#3157145](https://www.drupal.org/i/3157145):
+                  Provided more useful "Moderated content" view in backend
+* Issue [#3157225](https://www.drupal.org/i/3157225):
+                  Added the patch for [Moderation Sidebar] module to
+                  fix RTL styling
+* Issue [#3145615](https://www.drupal.org/i/3145615):
+                  Added Media library enhancements behavior on the
+                  [Insert selected] button, which had no attributes that
+                  automated testing could not press on
+* Issue [#3151585](https://www.drupal.org/i/3151585):
+                  Added an automated content moderation workflow config
+                  on creation of new content types
+* Issue [#3151784](https://www.drupal.org/i/3151784):
+                  Added [OpenAPI for REST] module ( ~2.0 ) after
+                  OpenAPI had been updated to ~2.0
+* Issue [#3151781](https://www.drupal.org/i/3151781):
+                  Added [OpenAPI for JSON:API] module ( ~2.0 ) after
+                  OpenAPI had been updated to ~2.0
+* Issue [#3151545](https://www.drupal.org/i/3151545):
+                  Added "Scheduler content moderation integration" module
+                  to support scheduling revisions
+* Issue [#3155887](https://www.drupal.org/i/3155887):
+                  Have default options on the creation of content types
+* Issue [#3156138](https://www.drupal.org/i/3156138):
+                  Added patch for [Inline Entity Form] module to allow to
+                  hide the Edit button in Complex widget
+* Issue [#3156974](https://www.drupal.org/i/3156974):
+                  Added a patch for [Rabbit Hole] module to fix the issue
+                  of Rabbit Hole bundle settings is not created on content
+                  type creation, only on editing content type
+* Issue [#3163490](https://www.drupal.org/i/3163490):
+                  Added [Media Revisions UI] module ~2.0
+* Issue [#3165781](https://www.drupal.org/i/3165781):
+                  Added permissions for [Media Revisions UI] module
+* Issue [#3165824](https://www.drupal.org/i/3165824):
+                  Added permissions for SEO Admins to View all media revisions
+* Issue [#3163292](https://www.drupal.org/i/3163292):
+                  Have revisionable media entities in Varbase by default
+* Issue [#3163581](https://www.drupal.org/i/3163581):
+                  Added [Entity Usage] module ~2.0 and default entity
+                  usage settings
+* Issue [#3161957](https://www.drupal.org/i/3161957):
+                  Added [Media Library Edit] module
+* Issue [#3153878](https://www.drupal.org/i/3153878):
+                  Added field User Picture ( the picture for the user entity )
+                  from the Drupal core - Standard profile in [Varbase Core]
+                  module
+* Issue [#3164228](https://www.drupal.org/i/3164228):
+                  Added the [JQuery UI Touch Punch] library which needed
+                  for the [Better Exposed Filters] module ~5.0
+* Issue [#3166782](https://www.drupal.org/i/3166782):
+                  Added the figure-caption Bootstrap 4 CSS class
+                  for the filter caption template
+
+### Changed since Varbase 8.x-8.5:
+* Issue [#3159562](https://www.drupal.org/i/3159562):
+                  Deleted Homepage which was built by Page Manager
+* Issue [#3152921](https://www.drupal.org/i/3152921):
+                  Changed default permissions for (Authenticated user,
+                  Editor, Content Admin, Site Admin) default user roles
+* Issue [#3152116](https://www.drupal.org/i/3152116):
+                  Changed default permissions for (SEO Admin) user role
+* Issue [#3152698](https://www.drupal.org/i/3152698):
+                  Switched from [Event Log Track] to [Admin Audit Trail]
+                  maintained module
+* Issue [#3161691](https://www.drupal.org/i/3161691):
+                  Switched from [Events Log Track Workflows] module to
+                  [Admin Audit Trail Workflows] module
+* Issue [#3152487](https://www.drupal.org/i/3152487):
+                  Changed selected actions for Views Bulk Operations (VBO)
+                  in Content and People view pages
+* Issue [#3152489](https://www.drupal.org/i/3152489):
+                  Changed selected actions for Views Bulk Operations (VBO)
+                  in Media and Media Library view pages
+* Issue [#3163608](https://www.drupal.org/i/3163608):
+                  Changed Media Table page view: add a created column and
+                  remove sort by and sort order filters
+* Issue [#3143570](https://www.drupal.org/i/3143570):
+                  Optimized backend speed by providing default config for
+                  Metatags on all entities to show only Basic
+* Issue [#3151898](https://www.drupal.org/i/3151898):
+                  Removed [Slick Media] module dependencies from
+                  [Varbase Media] module and replace it with the main
+                  module Slick and uninstall
+* Issue [#3153481](https://www.drupal.org/i/3153481):
+                  Removed [Slick Media] module dependencies from
+                  [Varbase Carousels] module and configs
+* Issue [#3151674](https://www.drupal.org/i/3151674):
+                  Changed [Varbase Workflow] dependencies on install: enable
+                  or dependencies: enable of modules in the .info.yml
+* Issue [#3151548](https://www.drupal.org/i/3151548):
+                  Removed dependency for Varbase Landing module
+* Issue [#3151558](https://www.drupal.org/i/3151558):
+                  Set the scheduling options published/unpublished to
+                  default values
+* Issue [#3151557](https://www.drupal.org/i/3151557):
+                  Provided different default config for Content Planner to
+                  fit with Varbase Workflow
+* Issue [#3151549](https://www.drupal.org/i/3151549):
+                  Removed contrib [Workflow] module. as the module is using
+                  Workflow from Drupal core
+* Issue [#3151544](https://www.drupal.org/i/3151544):
+                  Updated description of [Varbase Workflow] module
+* Issue [#3156093](https://www.drupal.org/i/3156093):
+                  Made the overall elements smaller for Varbase admin
+* Issue [#3134364](https://www.drupal.org/i/3134364):
+                  Enhancements for [Vartheme Claro] on autocomplete deluxe
+                  field styles and media library styles
+* Issue [#3163706](https://www.drupal.org/i/3163706):
+                  Changed [Varbase Layout Builder] Entity Browser media
+                  form widget to Drupal core Media Library
+* Issue [#3163528](https://www.drupal.org/i/3163528):
+                  Changed to Hide the revision information fields without
+                  setting the #access to FALSE
+* Issue [#3163458](https://www.drupal.org/i/3163458):
+                  Change [Varbase Carousels] block type from Entity Browser
+                  media form widget to Drupal core Media Library
+* Issue [#3153621](https://www.drupal.org/i/3153621):
+                  Changed [Varbase Media Header] Entity Browser media form
+                  widget to Drupal core Media Library
+* Issue [#3163195](https://www.drupal.org/i/3163195):
+                  Changed [Varbase Media Hero Slider] Entity Browser media
+                  form widget to Drupal core Media Library
+* Issue [#3153620](https://www.drupal.org/i/3153620):
+                  Changed [Varbase Blog] Entity Browser media form widget
+                  to Drupal core Media Library
+* Issue [#3163213](https://www.drupal.org/i/3163213):
+                  Changed [Varbase Bootstrap Paragraphs] types from
+                  Entity Browser media form widget to Drupal core Media Library
+* Issue [#3164148](https://www.drupal.org/i/3164148):
+                  Changed [Gallery] media type form display from using Entity
+                  Browser media form widget to Drupal core Media Library
+* Issue [#3165654](https://www.drupal.org/i/3165654):
+                  Changed [Varbase Gallery Block] back to use inline entity
+                  form simple and entity browser
+* Issue [#3159252](https://www.drupal.org/i/3159252):
+                  Removed the region "Media Hero Slider" from Vartheme BS4
+* Issue [#3159290](https://www.drupal.org/i/3159290):
+                  Changed the script generator to create new Vartheme BS4
+                  sub theme ( Bootstrap 4 ) SASS
+* Issue [#3159295](https://www.drupal.org/i/3159295):
+                  Changed ( npm install ) to ( yarn install ) in the Script
+                  generator for a new Vartheme BS4 sub theme
+* Issue [#3158756](https://www.drupal.org/i/3158756):
+                  Changed the Drupal service module installer to install
+                  only one module for all list of modules in the install
+                  info data
+* Issue [#3159078](https://www.drupal.org/i/3159078):
+                  Changed the Drupal service module installer for
+                  [Varbase Layout Builder] to install only one module
+                  for all list of modules in the install info data
+* Issue [#3158662](https://www.drupal.org/i/3158662):
+                  Changed Automated Functional Acceptance Testing after
+                  having a default template for Entityqueue form display
+* Issue [#3159108](https://www.drupal.org/i/3159108):
+                  Change the name of content type from "Landing page"
+                  to "Landing page (Paragraphs)"
+* Issue [#3165857](https://www.drupal.org/i/3165857):
+                  Enabled Drupal core Seven admin theme on install for a
+                  better look on a number of contrib modules
+
+### Updates since Varbase 8.x-8.5:
+* Issue [#3145364](https://www.drupal.org/i/3145364):
+                  Updated [Drupal core] to be open for any Drupal core 8.x
+                  version ( ^8.9 || ~9.0.0 )
+* Issue [#3145784](https://www.drupal.org/i/3145784):
+                  Updated [Flood Unblock] module from ~1.0 to ~3.0
+* Issue [#3149582](https://www.drupal.org/i/3149582):
+                  Updated [Bootstrap Layouts] module from 5.1 to 5.2
+* Issue [#3149563](https://www.drupal.org/i/3149563):
+                  Updated [Autocomplete Deluxe] module from ~1.0 to ~2.0
+* Issue [#3152838](https://www.drupal.org/i/3152838):
+                  Updated [Entityqueue Form Widget] module from ~1.0 to ~2.0
+* Issue [#3153015](https://www.drupal.org/i/3153015):
+                  Updated [Devel] module from ~3.0 to ~4.0
+* Issue [#3153467](https://www.drupal.org/i/3153467):
+                  Updated [reCAPTCHA] module from ~2.0 to ~3.0
+* Issue [#3153471](https://www.drupal.org/i/3153471):
+                  Updated [Security Kit] module from ~1.0 to ~2.0
+* Issue [#3153504](https://www.drupal.org/i/3153504):
+                  Updated [Media Library Form API Element] module from ~1.0 to ~2.0
+* Issue [#3145344](https://www.drupal.org/i/3145344):
+                  Updated [Panels] module from 8.4.4 to 8.4.6 (~4.0)
+* Issue [#3152462](https://www.drupal.org/i/3152462):
+                  Updated [CKEditor BiDi Buttons] module from ~2.0 to ~3.0
+* Issue [#3151892](https://www.drupal.org/i/3151892):
+                  Updated [Persistent Login] module from 1.2 to 1.3
+* Issue [#3150944](https://www.drupal.org/i/3150944):
+                  Updated [OpenAPI] module from ~1.0 to ~2.0
+* Issue [#3143157](https://www.drupal.org/i/3143157):
+                  Updated [Swift Mailer] module from ( ~1.0 ) to ( ~2.0 )
+* Issue [#3150739](https://www.drupal.org/i/3150739):
+                  Updated [Fast 404] module from ~1.0 to ~2.0
+* Issue [#3150844](https://www.drupal.org/i/3150844):
+                  Updated [CSV Serialization] module from ~1.0 to ~2.0
+* Issue [#3163835](https://www.drupal.org/i/3163835):
+                  Updated [Better Exposed Filters] module from ~4.0 to ~5.0
+                  in [Varbase Media] module
+* Issue [#3163832](https://www.drupal.org/i/3163832):
+                  Updated [Better Exposed Filters] module from ~4.0 to ~5.0
+                  in [Varbase Core] module
+* Issue [#3164221](https://www.drupal.org/i/3164221):
+                  Updated [Better Exposed Filters] module from ~4.0 to ~5.0 
+                  in [Varbase Reports] module
+* Issue [#3159831](https://www.drupal.org/i/3159831):
+                  Updated [Content Planner] from 1.0-beta11 to 1.0-beta12
+* Issue [#3160150](https://www.drupal.org/i/3160150):
+                  Updated [Default Content] module from ~1.0 to ~2.0
+* Issue [#3151899](https://www.drupal.org/i/3151899):
+                  Updated [Update helper] module from 1.3 to 2.0.0
+* Issue [#3165462](https://www.drupal.org/i/3165462):
+                  Updated [Inline Entity Form] module from 1.0-rc6 to 1.0-rc7
+
+### Fixes since Varbase 8.x-8.5:
+* Issue [#3152518](https://www.drupal.org/i/3152518):
+                  Fixed media library form field default value and cardinality
+                  for the Background Media in latest Drupal core Layout
+                  Builder and Media defaults
+* Issue [#3150648](https://www.drupal.org/i/3150648)
+                  by jedgar1mx
+                 : Fixed The "n" entity type does not exist issue for
+                  Page Manager on the patch for Variants take entity
+                  label not the variant title
+* Issue [#3152572](https://www.drupal.org/i/3152572):
+                  Fixed issues after Entityqueue had changed schema
+                  config for [Entityqueue Form Widget] testing config
+* Issue [#3152533](https://www.drupal.org/i/3152533):
+                  Fixed composer file Entityqueue Form Widget to
+                  work with Drupal 9
+* Issue [#3151689](https://www.drupal.org/i/3151689):
+                  Fixed default none selected (Content moderation
+                  workflow) display value when editing content types
+* Issue [#3152002](https://www.drupal.org/i/3152002):
+                  Fixed unexpected alert in Automated Functional
+                  Acceptance Testing to Accept Alerts or Dismiss Alerts
+                  Before or After going to the next step
+* Issue [#3153635](https://www.drupal.org/i/3153635):
+                  Fixed [Coffee] module on issue of Could not
+                  load data for internal links
+* Issue [#3155903](https://www.drupal.org/i/3155903):
+                  Fixed Drupal coding standard and Drupal Practice
+                  warnings on yml files
+* Issue [#3162103](https://www.drupal.org/i/3162103):
+                  Fixed Focal point style of Focal point "Preview"
+                  link cover image for a Video
+* Issue [#3162227](https://www.drupal.org/i/3162227):
+                  Fixed Images preview style when we click on the
+                  "preview" link
+* Issue [#3161970](https://www.drupal.org/i/3161970):
+                  Fixed Focal point behaviors with Media Library
+                  and Claro admin theme
+* Issue [#3162133](https://www.drupal.org/i/3162133):
+                  Fixed issue of opening a modal from a modal closes
+                  the original
+* Issue [#3157982](https://www.drupal.org/i/3157982):
+                  Fixed RFS SCSS library located in Bootstrap 4.5.0 vendor
+                  which causing code standard notice for every font-size
+                  use in Vartheme BS4 and generated Sub-theme
+* Issue [#3152604](https://www.drupal.org/i/3152604):
+                  Fixed issues after Entityqueue had changed schema config for
+                  [Varbase Media Hero Slider] simple queue
+* Issue [#3157689](https://www.drupal.org/i/3157689):
+                  Fixed default revision value for [ In review ] state to fals
+                 e for the Editorial workflow
+* Issue [#3164237](https://www.drupal.org/i/3164237):
+                  Fixed Varbase Welcome message not showing up after install
+                  compilation after adding and enabling moderation sidebar on
+                  the homepage
+* Issue [#3164225](https://www.drupal.org/i/3164225)
+                  by Firass Ziedan
+                 : Fixed not appearing Page Breadcrumb in
+                  standard option
+
 # 8.8.5
 
 ### Highlighted important changes since Varbase 8.x-8.4:

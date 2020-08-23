@@ -3,7 +3,7 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.8.6"
+projects[drupal][version] = "8.9.3"
 ;; Issue #2869592: Disabled update module shouldn't produce a status report warning
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch
 ;; Issue #2815221: Add quickedit to the latest-revision route
@@ -22,3 +22,7 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-19/31012
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2019-12-03/2996114-99.patch
 ;; Issue #2985882: Fix Error: Call to a member function getLabel() after enabling layout_builder
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch
+;; Issue #2741877: Nested modals don't work: opening a modal from a modal closes the original
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-04-20/2741877-48.patch
+;; Issue #3165435: Fix tour <front> route as route name when a selected node had been set as the front page for the site
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-08-16/3165435-2.patch" https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch
