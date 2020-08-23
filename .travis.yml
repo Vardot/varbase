@@ -59,7 +59,7 @@ before_install:
   - echo 'max_execution_time = 1200' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
   - echo 'max_input_time = 180' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
   - echo 'max_input_vars = 10000' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
-  - echo 'memory_limit = 3000M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'memory_limit = -1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
   - echo 'error_reporting = E_ALL' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
   - echo 'post_max_size = 64M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
   - echo 'upload_max_filesize = 32M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
