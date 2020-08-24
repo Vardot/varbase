@@ -565,10 +565,10 @@ projects[allowed_formats][version] = 1.3
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.21
+projects[bootstrap][version] = 3.23
 
 projects[bootstrap_barrio][type] = theme
-projects[bootstrap_barrio][version] = 4.28
+projects[bootstrap_barrio][version] = 4.32
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.5
