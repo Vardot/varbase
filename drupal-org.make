@@ -184,9 +184,13 @@ projects[persistent_login][patch][] = https://www.drupal.org/files/issues/persis
 projects[userprotect][type] = module
 projects[userprotect][version] = 1.1
 
+core = ''
+
 projects[admin_audit_trail][type] = module
 projects[admin_audit_trail][download][type] = "git"
 projects[admin_audit_trail][download][branch] = 1.0.x
+
+core = 8.x
 
 projects[events_log_track][type] = module
 projects[events_log_track][version] = 1.1
@@ -504,9 +508,13 @@ projects[jquery_ui_draggable][type] = module
 projects[jquery_ui_droppable][type] = module
 projects[jquery_ui_slider][type] = module
 
+core = ''
+
 projects[jquery_ui_touch_punch][type] = module
 projects[jquery_ui_touch_punch][download][type] = "git"
 projects[jquery_ui_touch_punch][download][branch] = 1.0.x
+
+core = 8.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules

@@ -25,4 +25,4 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-01-20/29858
 ;; Issue #2741877: Nested modals don't work: opening a modal from a modal closes the original
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-04-20/2741877-48.patch
 ;; Issue #3165435: Fix tour <front> route as route name when a selected node had been set as the front page for the site
-projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-08-16/3165435-2.patch" https://www.drupal.org/files/issues/2020-01-20/2985882-53.patch
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-08-16/3165435-2.patch
