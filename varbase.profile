@@ -434,7 +434,6 @@ function varbase_config_bit_for_multilingual($enable_multilingual) {
 /**
  * Batch function to Install needed modules.
  *
- *
  * @param string|array $install_component
  *   Name of the extra component.
  */

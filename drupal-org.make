@@ -95,7 +95,7 @@ projects[entity_block][type] = module
 projects[entity_block][version] = 1.0-beta3
 
 projects[block_content_permissions][type] = module
-projects[block_content_permissions][version] = 1.11
+projects[block_content_permissions][version] = 1.10
 
 projects[extlink][type] = module
 projects[extlink][version] = 1.3
@@ -185,6 +185,8 @@ projects[userprotect][type] = module
 projects[userprotect][version] = 1.1
 
 projects[admin_audit_trail][type] = module
+projects[admin_audit_trail][download][type] = "git"
+projects[admin_audit_trail][download][branch] = 1.0.x
 
 projects[events_log_track][type] = module
 projects[events_log_track][version] = 1.1
@@ -499,7 +501,10 @@ projects[jquery_ui_datepicker][type] = module
 projects[jquery_ui_draggable][type] = module
 projects[jquery_ui_droppable][type] = module
 projects[jquery_ui_slider][type] = module
+
 projects[jquery_ui_touch_punch][type] = module
+projects[jquery_ui_touch_punch][download][type] = "git"
+projects[jquery_ui_touch_punch][download][branch] = 1.0.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
