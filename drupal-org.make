@@ -246,6 +246,8 @@ projects[webform_views][type] = module
 projects[webform_views][version] = 5.0-alpha8
 
 projects[default_content][type] = module
+projects[default_content][download][type] = "git"
+projects[default_content][download][branch] = 2.0.x
 ;; Issue #3160146: Add Layout Builder Normalizer and Denormalize
 projects[default_content][patch][] = https://www.drupal.org/files/issues/2020-07-22/3160146-22.patch
 
@@ -536,6 +538,8 @@ projects[libraries_ui][version] = 1.0
 projects[devel][type] = module
 
 projects[update_helper][type] = module
+projects[update_helper][download][type] = "git"
+projects[update_helper][download][branch] = 2.x
 ;; Issue #3024165: [PATCH] Enhancements, Better messages for the unable to apply updates, drush command and removed the Mark all updates as successful on install
 projects[update_helper][patch][] = https://www.drupal.org/files/issues/2020-08-16/3024165-40.patch
 
