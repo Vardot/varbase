@@ -6,6 +6,7 @@ label: Editor
 weight: -8
 is_admin: null
 permissions:
+  - 'access admin audit trail'
   - 'access administration pages'
   - 'access carousels_media_browser entity browser pages'
   - 'access coffee'
