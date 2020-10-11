@@ -1,3 +1,275 @@
+# 8.8.7
+
+### Highlighted important changes since Varbase 8.x-8.6:
+* Issue [#3169416](https://www.drupal.org/i/3169416):
+                 Themed Layout Builder Modal and Media Library to look like
+                 Claro admin theme
+* Issue [#3170980](https://www.drupal.org/i/3170980):
+                 Added Layout Builder Component Attributes module and support
+                 for Layout Builder Component Attributes extension integration
+                 with Layout Builder UX
+* Issue [#3151514](https://www.drupal.org/i/3151514):
+                 Styled the Moderation state control at the layout editing page
+* Issue [#3170682](https://www.drupal.org/i/3170682):
+                 Converted to use REM and EM instead of PX
+* Issue [#3170658](https://www.drupal.org/i/3170658):
+                 Upgraded [Bootstrap Barrio] base theme from ~4.0 to ~5.0
+* Issue [#3171962](https://www.drupal.org/i/3171962):
+                 Updated RFS from ~8.0 to ~9.0 for Vartheme BS4
+                 and VARTHEME_BS4_SUBTHEME
+
+
+### Added since Varbase 8.x-8.6:
+* Issue [#3170687](https://www.drupal.org/i/3170687):
+                 Added class "mt-n5" to the Media Hero Slider section
+                 in homepage Layout Builder
+* Issue [#3167692](https://www.drupal.org/i/3167692)
+                 by josebc
+                : Added [Stage File Proxy] module as a dependency
+* Issue [#3171126](https://www.drupal.org/i/3171126)
+                 by josebc
+                : Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Vartheme BS4 and VARTHEME_BS4_SUBTHEME
+* Issue [#3170255](https://www.drupal.org/i/3170255)
+                 by josebc
+                : Change .csscomb.json for better compliance with
+                 core eslint standards for Vartheme BS4
+* Issue [#3171951](https://www.drupal.org/i/3171951)
+                 by abu-zakham
+                : Added missing sort-order in .csscomb.jsonfor Vartheme BS4
+* Issue [#3172415](https://www.drupal.org/i/3172415):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Vartheme Claro
+* Issue [#3173247](https://www.drupal.org/i/3173247):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Core
+* Issue [#3174431](https://www.drupal.org/i/3174431):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Media
+* Issue [#3173258](https://www.drupal.org/i/3173258):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Editor
+* Issue [#3172649](https://www.drupal.org/i/3172649):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Blog
+* Issue [#3173443](https://www.drupal.org/i/3173443):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Layout Builder
+* Issue [#3171132](https://www.drupal.org/i/3171132):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Media Hero Slider
+* Issue [#3175492](https://www.drupal.org/i/3175492):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Total Control Dashboard
+* Issue [#3173236](https://www.drupal.org/i/3173236):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Carousels
+* Issue [#3172875](https://www.drupal.org/i/3172875):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Bootstrap Paragraphs
+* Issue [#3173376](https://www.drupal.org/i/3173394):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Email
+* Issue [#3173394](https://www.drupal.org/i/3173394):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase FAQs
+* Issue [#3173424](https://www.drupal.org/i/3173424):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Landing Page (Paragraphs)
+* Issue [#3172491](https://www.drupal.org/i/3172491):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase API
+* Issue [#3175093](https://www.drupal.org/i/3175093):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Media Header
+* Issue [#3172609](https://www.drupal.org/i/3172609):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Social Single Sign-On
+* Issue [#3175409](https://www.drupal.org/i/3175409):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Reports
+* Issue [#3175421](https://www.drupal.org/i/3175421):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Search
+* Issue [#3175432](https://www.drupal.org/i/3175432):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase SEO
+* Issue [#3175461](https://www.drupal.org/i/3175461):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Styleguide
+* Issue [#3175526](https://www.drupal.org/i/3175526):
+                 Added yarn script commands for Drupal coding standard
+                 and Drupal Practice for Varbase Workflow
+* Issue [#3175554](https://www.drupal.org/i/3175554):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for View Modes Inventory ( VMI )
+* Issue [#3173731](https://www.drupal.org/i/3173731):
+                 Added the 3173730-2.patch for [Layout Builder UX] module
+                 to Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section
+* Issue [#3170788](https://www.drupal.org/i/3170788):
+                 Added a patch to fix an issue for Paragraphs Features
+                 module after the update to 1.10
+
+### Changed since Varbase 8.x-8.6:
+* Issue [#3167441](https://www.drupal.org/i/3167441):
+                 Changed permission to Access admin audit trail for the Editor,
+                 Content Admin, and Site Admin user roles
+* Issue [#3167442](https://www.drupal.org/i/3167442):
+                 Changed permission to Access admin audit trail for
+                 the SEO Admin user role
+* Issue [#3170153](https://www.drupal.org/i/3170153):
+                 Changed default Help region settings to have a Clean
+                 wrapper for Help region and remove the row class
+* Issue [#3170890](https://www.drupal.org/i/3170890):
+                 Changed [Welcome to Varbase] block format: full_html
+                 to format: code_html to show SVG Images
+* Issue [#3170170](https://www.drupal.org/i/3170170)
+                 by mhawwari
+                : Disable the checkbox to delete the referenced
+                 entity from entityqueues
+* Issue [#3176100](https://www.drupal.org/i/3176100)
+                 by qusai taha
+                : Change to have a better logic to check if the remote
+                 video ended or not
+* Issue [#3170836](https://www.drupal.org/i/3170836):
+                 Changed deprecated path.alias_storage to revisionable entities
+* Issue [#3171094](https://www.drupal.org/i/3171094):
+                 Changed the view empty style values for Media Hero Slider
+* Issue [#3170678](https://www.drupal.org/i/3170678):
+                 Enabled [JSON API Defaults] module to have extra functionality
+* Issue [#3171299](https://www.drupal.org/i/3171299)
+                 by abu-zakham
+                , RajabNatshah
+                : Override Entity type / Group Mapping will be reflected
+                 on Metatags General form
+* Issue [#3172883](https://www.drupal.org/i/3172883)
+                 by akalam
+                , RajabNatshah
+                : Have a better logic for merging layout builder style options
+                 instead of overriding them
+* Issue [#3170149](https://www.drupal.org/i/3170149):
+                 Removed strict ui-dialog button style support for Bartik
+                 and Saven. So that Vartheme BS4 work better with
+                 Claro admin theme
+* Issue [#3167618](https://www.drupal.org/i/3167618):
+                 Remove [Events Log Track] module from the composer for
+                 step 2 to switch to [Admin Audit Trail] maintained module
+* Issue [#3176240](https://www.drupal.org/i/3176240):
+                 Changed default content for the Homepage to use the Bootstrap
+                 Layout layout_id: bs_1col for the section content
+                 moderation control, not Drupal core layout layout_id:
+                 layout_onecol
+* Issue [#3176242](https://www.drupal.org/i/3176242):
+                 Changed the default layout for Varbase Landing page
+                 (Layout Builder) to use Bootstrap Layout layout_id: bs_1col
+                 for the section content moderation control, not Drupal
+                 core layout layout_id: layout_onecol
+
+### Updates since Varbase 8.x-8.6:
+* Issue [#3172876](https://www.drupal.org/i/3172876):
+                 Updated RFS from ~8.0 to ~9.0 for Varbase Bootstrap Paragraphs
+* Issue [#3171963](https://www.drupal.org/i/3171963):
+                 Updated RFS from ~8.0 to ~9.0 for Varbase Media Hero Slider
+* Issue [#3175123](https://www.drupal.org/i/3175123):
+                 Updated RFS from ~8.0 to ~9.0 for Varbase Media Header
+* Issue [#3173395](https://www.drupal.org/i/3173395):
+                 Updated RFS from ~8.0 to ~9.0 for Varbase FAQs
+* Issue [#3171504](https://www.drupal.org/i/3171504):
+                 Updated [Paragraphs Features] module from 1.10 to 1.11
+                 ( ~1.0 ) and remove applied patches
+* Issue [#3170826](https://www.drupal.org/i/3170826):
+                 Upgraded [Schema.org Metatag] module from ~1.0 to ~2.0
+* Issue [#3170830](https://www.drupal.org/i/3170830):
+                 Upgraded [Schema.org Metatag] module from ~1.0 to ~2.0 for
+                 the [Varbase API] module needed default configs
+* Issue [#3168753](https://www.drupal.org/i/3168753):
+                 Updated [Webform] module from ~5.0 to ~6.0 in the Varbase
+                 Bootstrap Paragraphs module
+* Issue [#3168693](https://www.drupal.org/i/3168693):
+                 Updated [Taxonomy access fix] module from ~2.0 to ~3.0
+* Issue [#3168076](https://www.drupal.org/i/3168076):
+                 Updated [Focal Point] module from 1.4 to 1.5 ( ~1.0 ) and
+                 removed applied patches
+* Issue [#3176226](https://www.drupal.org/i/3176226):
+                 Updated [Inline Entity Form] module from 1.0-rc7 to 1.0-rc8
+
+### Fixes since Varbase 8.x-8.6:
+* Issue [#3169350](https://www.drupal.org/i/3169350):
+                 Fixed media modal does not respond after selecting
+                 a background for a section
+* Issue [#3175710](https://www.drupal.org/i/3175710):
+                 Fixed to make sure that we do have a list of config values
+                 in the style options
+* Issue [#3171237](https://www.drupal.org/i/3171237)
+                 by akalam
+                : Fixed deprecated function getCurrentUserId replaced by
+                 getDefaultEntityOwner
+                 in core.base_field_override.media.*.uid configs for
+                 Drupal 9 compatibility
+* Issue [#3175792](https://www.drupal.org/i/3175792):
+                 Fixed deprecated function getCurrentUserId replaced by
+                 getDefaultEntityOwner for all content types and media types
+* Issue [#3175810](https://www.drupal.org/i/3175810):
+                 Fixed deprecated function getCurrentUserId replaced by
+                 getDefaultEntityOwner in
+                 core.base_field_override.node.varbase_heroslider_media.uid
+                 config for Drupal 9 compatibility
+* Issue [#3175817](https://www.drupal.org/i/3175817):
+                 Fixed deprecated function getCurrentUserId replaced by
+                 getDefaultEntityOwner in
+                 core.base_field_override.node.landing_page.uid config
+                 for Drupal 9 compatibility
+* Issue [#3175756](https://www.drupal.org/i/3175756):
+                 Fixed deprecated function getCurrentUserId replaced by 
+                getDefaultEntityOwner in
+                 core.base_field_override.node.landing_page_lb.uid config
+* Issue [#3149234](https://www.drupal.org/i/3149234)
+                 by Project Update Bot
+                , akalam
+                , RajabNatshah
+                : Automated Drupal 9 compatibility fixes for Varbase Media
+* Issue [#3090778](https://www.drupal.org/i/3090778)
+                 by RajabNatshah
+                , Odai Atieh
+                : Fixed background media supports in [Varbase Media Header]
+                 for IE 9+, iOS 7-, and Android 4.4
+                 (Image, Video, Video, YouTube, Vimeo) Object-fit
+* Issue [#3136486](https://www.drupal.org/i/3136486)
+                 by alaa abbad
+                , mhawwari
+                : Fixed autoplay not working if the slider has one item
+* Issue [#3172235](https://www.drupal.org/i/3172235)
+                 by mhawwari
+                : Fixed First local video is not being called correctly
+* Issue [#3174660](https://www.drupal.org/i/3174660)
+                by qusai taha
+                : Fixed Notice: undefined index ratio in Blazy when try to
+                 adding images from Gallery media type in WYSIWYG
+* Issue [#3170882](https://www.drupal.org/i/3170882)
+                 by akalam
+                : Fixed fatal error on media block when media entity
+                 is not found
+* Issue [#3173547](https://www.drupal.org/i/3173547):
+                 Fixed drupal-off-canvas input type text and text area style
+* Issue [#3170292](https://www.drupal.org/i/3170292):
+                 Fixed the Moderation state control box with a better default
+                 style and fix a missing .css in the
+                 vartheme_bs4/moderation-state library
+* Issue [#3158746](https://www.drupal.org/i/3158746)
+                 Joachim Namyslo
+                : Fixed password policy forced to enter a new password when the
+                 role been changed for a user and try to save the profile
+* Issue [#3168965](https://www.drupal.org/i/3168965)
+                 by abu-zakham
+                : Fixed issue of user profile cant be edited because password
+                 policy validates even when password unchanged
+* Issue [#3168971](https://www.drupal.org/i/3168971)
+                 by mhawwari
+                : Fixed Varbase update helper hook implementations do not
+                 check the checklist id issue
+
+--------------------------------------------------------------------------------
+
 # 8.8.6
 
 ### Highlighted important changes since Varbase 8.x-8.5:
