@@ -148,34 +148,6 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
       And I should see "Rich Text test"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Tabs
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
-      And I wait
-      And I fill in "Test Landing page Tabs" for "Title"
-      And I fill in "Test Landing page description Tabs" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
-      And I press "+ Add"
-      And I wait for AJAX to finish
-      And I wait for 1 second
-      And I select the "bp_tabs" paragraph component
-      And I wait for AJAX to finish
-     Then I should see "Components"
-     When I fill in "Tab 1" for "Tab name"
-      And I press "field_lp_paragraphs[0][subform][bp_tab_section][0][subform][bp_tab_section_body][add_more][add_modal_form_area][add_more_delta]"
-      And I wait for AJAX to finish
-      And I select the "bp_simple" paragraph component
-      And I wait
-     Then I should see "Tab body"
-      And I fill in the rich text editor field "Text" with "Tab 1 - Body test"
-      And I select "published" from "edit-moderation-state-0-state"
-      And I press the "Save" button
-      And I wait
-     Then I should see "Landing page (Paragraphs) Test Landing page Tabs has been created"
-      And I should see "Tab 1"
-
-  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type WebForm
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"

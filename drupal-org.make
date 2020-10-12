@@ -12,7 +12,7 @@ projects[config_update][type] = module
 projects[config_update][version] = 1.7
 
 projects[config_filter][type] = module
-projects[config_filter][version] = 2.1
+projects[config_filter][version] = 2.2
 
 projects[config_ignore][type] = module
 projects[config_ignore][version] = 2.2
@@ -50,10 +50,12 @@ projects[layout_library][type] = module
 projects[layout_library][version] = 1.0-beta2
 
 projects[layout_builder_block_sanitizer][type] = module
-projects[layout_builder_block_sanitizer][version] = 1.0-alpha2
+projects[layout_builder_block_sanitizer][version] = 1.0-alpha4
 
 projects[media_library_theme_reset][type] = module
 projects[media_library_theme_reset][version] = 1.0
+
+projects[layout_builder_component_attributes][type] = module
 
 projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.11
@@ -67,9 +69,15 @@ projects[media_revisions_ui][type] = module
 
 projects[lb_ux][type] = module
 projects[lb_ux][version] = 1.0-beta2
+;; Issue #3173730: Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section
+projects[lb_ux][patch][] = https://www.drupal.org/files/issues/2020-09-29/3173730-2.patch
+;; Issue #3143804: Add support for Layout Builder Component Attributes extension integration with Layout Builder UX
+projects[lb_ux][patch][] = https://www.drupal.org/files/issues/2020-09-30/3143804-3.patch
+;; Issue #3150012: Fix RuntimeException: Callable LayoutBuilderAccessCheck::access requires a value for the $section_storage argument
+projects[lb_ux][patch][] = https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch
 
 projects[ds][type] = module
-projects[ds][version] = 3.8
+projects[ds][version] = 3.9
 
 projects[views_bootstrap][type] = module
 projects[views_bootstrap][version] = 4.3
@@ -98,7 +106,7 @@ projects[block_content_permissions][type] = module
 projects[block_content_permissions][version] = 1.10
 
 projects[extlink][type] = module
-projects[extlink][version] = 1.3
+projects[extlink][version] = 1.5
 
 projects[linkit][type] = module
 projects[linkit][version] = 4.3
@@ -122,7 +130,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.5
 
 projects[dropzonejs][type] = module
-projects[dropzonejs][version] = 2.1
+projects[dropzonejs][version] = 2.3
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.1
@@ -132,7 +140,7 @@ projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-07-25
 projects[entity_embed][patch][] = https://www.drupal.org/files/issues/2019-08-18/2679875-10.patch
 
 projects[inline_entity_form][type] = module
-projects[inline_entity_form][version] = 1.0-rc7
+projects[inline_entity_form][version] = 1.0-rc8
 ;; Issue #3143422: Allow to hide the Edit button in Complex widget
 projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/2020-05-28/optional_edit-3143422-2.patch
 
@@ -146,7 +154,7 @@ projects[crop][type] = module
 projects[crop][version] = 2.1
 
 projects[focal_point][type] = module
-projects[focal_point][version] = 1.4
+projects[focal_point][version] = 1.5
 
 projects[pathologic][type] = module
 projects[pathologic][version] = 1.0-alpha2
@@ -174,7 +182,7 @@ projects[imageapi_optimize][type] = module
 projects[imageapi_optimize][version] = 2.0-beta1
 
 projects[ultimate_cron][type] = module
-projects[ultimate_cron][version] = 2.0-alpha4
+projects[ultimate_cron][version] = 2.0-alpha5
 
 projects[persistent_login][type] = module
 projects[persistent_login][version] = 1.3
@@ -217,7 +225,7 @@ projects[prevent_homepage_deletion][type] = module
 projects[prevent_homepage_deletion][version] = 1.3
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 2.3
+projects[admin_toolbar][version] = 2.4
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.11
@@ -241,7 +249,6 @@ projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.2
 
 projects[webform][type] = module
-projects[webform][version] = 5.19
 
 projects[webform_analysis][type] = module
 projects[webform_analysis][version] = 1.0-beta7
@@ -262,7 +269,7 @@ projects[content_lock][type] = module
 projects[content_lock][version] = 2.1
 
 projects[node_edit_protection][type] = module
-projects[node_edit_protection][version] = 1.0-alpha1
+projects[node_edit_protection][version] = 1.0
 
 projects[rabbit_hole][type] = module
 projects[rabbit_hole][version] = 1.0-beta7
@@ -277,7 +284,7 @@ projects[swiftmailer][type] = module
 projects[swiftmailer][version] = 2.0-beta1
 
 projects[smtp][type] = module
-projects[smtp][version] = 1.0-rc4
+projects[smtp][version] = 1.0
 
 projects[length_indicator][type] = module
 projects[length_indicator][version] = 1.1
@@ -305,7 +312,7 @@ projects[better_exposed_filters][version] = 5.0-beta1
 projects[autocomplete_deluxe][type] = module
 
 projects[link_attributes][type] = module
-projects[link_attributes][version] = 1.10
+projects[link_attributes][version] = 1.11
 
 projects[paragraphs][type] = module
 projects[paragraphs][version] = 1.12
@@ -320,7 +327,7 @@ projects[paragraphs_previewer][version] = 1.5
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2019-02-20/2904917-8.patch
 
 projects[paragraphs_features][type] = module
-projects[paragraphs_features][version] = 1.9
+projects[paragraphs_features][version] = 1.11
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
 projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta4
@@ -344,7 +351,7 @@ projects[libraries][type] = module
 projects[libraries][version] = 3.0-alpha1
 
 projects[masonry][type] = module
-projects[masonry][version] = 1.1
+projects[masonry][version] = 1.2
 
 projects[charts][type] = module
 projects[charts][version] = 3.2
@@ -353,7 +360,7 @@ projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][version] = 3.0-rc3
 
 projects[login_destination][type] = module
-projects[login_destination][version] = 2.0-alpha1
+projects[login_destination][version] = 2.0-alpha3
 
 projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.5
@@ -394,7 +401,7 @@ projects[metatag][type] = module
 projects[metatag][version] = 1.14
 
 projects[schema_metatag][type] = module
-projects[schema_metatag][version] = 1.7
+projects[schema_metatag][version] = 2.1
 
 projects[simple_sitemap][type] = module
 projects[simple_sitemap][version] = 3.7
@@ -406,7 +413,7 @@ projects[google_tag][type] = module
 projects[google_tag][version] = 1.4
 
 projects[yoast_seo][type] = module
-projects[yoast_seo][version] = 1.5
+projects[yoast_seo][version] = 1.6
 
 projects[l10n_client][type] = module
 projects[l10n_client][version] = 1.x-dev
@@ -423,7 +430,7 @@ projects[genpass][version] = 1.0
 projects[seckit][type] = module
 
 projects[security_review][type] = module
-projects[security_review][version] = 1.0-alpha1
+projects[security_review][version] = 1.0-alpha2
 
 projects[honeypot][type] = module
 
@@ -466,13 +473,13 @@ projects[schemata][type] = module
 projects[schemata][version] = 1.0-beta2
 
 projects[openapi_ui][type] = module
-projects[openapi_ui][version] = 1.0-rc2
+projects[openapi_ui][version] = 1.0-rc3
 
 projects[openapi_ui_redoc][type] = module
-projects[openapi_ui_redoc][version] = 1.0-rc2
+projects[openapi_ui_redoc][version] = 1.0-rc3
 
 projects[openapi_ui_swagger][type] = module
-projects[openapi_ui_swagger][version] = 1.0-rc3
+projects[openapi_ui_swagger][version] = 1.0-rc4
 
 projects[simple_oauth][type] = module
 projects[simple_oauth][version] = 4.5
@@ -481,7 +488,7 @@ projects[restui][type] = module
 projects[restui][version] = 1.18
 
 projects[jsonapi_extras][type] = module
-projects[jsonapi_extras][version] = 3.15
+projects[jsonapi_extras][version] = 3.16
 
 projects[moderation_sidebar][type] = module
 projects[moderation_sidebar][version] = 1.4
@@ -545,6 +552,8 @@ projects[libraries_ui][version] = 1.0
 
 projects[devel][type] = module
 
+projects[stage_file_proxy][type] = module
+
 projects[update_helper][type] = module
 projects[update_helper][download][type] = "git"
 projects[update_helper][download][branch] = 2.x
@@ -571,7 +580,7 @@ projects[bootstrap_barrio][type] = theme
 projects[bootstrap_barrio][version] = 4.32
 
 projects[adminimal_theme][type] = theme
-projects[adminimal_theme][version] = 1.5
+projects[adminimal_theme][version] = 1.6
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; General Public contributed modules.
@@ -584,7 +593,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.6
+projects[vmi][version] = 2.7
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0
