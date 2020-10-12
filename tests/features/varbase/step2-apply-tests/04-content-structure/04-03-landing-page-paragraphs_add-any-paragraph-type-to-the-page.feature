@@ -163,7 +163,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
       And I wait for AJAX to finish
      Then I should see "Components"
      When I fill in "Tab 1" for "Tab name"
-      And I press "Add Component"
+      And I press "field_lp_paragraphs[0][subform][bp_tab_section][0][subform][bp_tab_section_body][add_more][add_modal_form_area][add_more_delta]"
       And I wait for AJAX to finish
       And I select the "bp_simple" paragraph component
       And I wait
