@@ -42,7 +42,8 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
       And I fill in the rich text editor field "Text" with "Lorem ipsum dolor sit amet1, consectetur adipiscing elit. Curabitur tortor diam, interdum in quam in, vehicula varius sem. Sed eu augue diam. Proin elementum bibendum tristique. Nam at ante sem. Mauris suscipit felis eget orci porttitor, feugiat viverra elit commodo. Proin quis erat laoreet, tempor nisl nec, varius quam. Maecenas malesuada est sollicitudin euismod posuere."
       And I select all text in "Text" field
       And I click on "justifycenter" command button in the rich text editor field "Text"
-      And I wait
+      And I wait for AJAX to finish
+      And I wait for 1 second
      Then I should see "Rich Text"
 
   # Add Text and Image -> image to the right
