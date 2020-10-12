@@ -1,7 +1,7 @@
 .toolbar-horizontal .toolbar-tray .menu-item + .menu-item,
 .toolbar .toolbar-tray-horizontal .menu-item:last-child {
-  border-left: none;
   border-right: none;
+  border-left: none;
 }
 
 .toolbar-horizontal .toolbar-tray {
@@ -9,14 +9,13 @@
   box-shadow: none;
 }
 
-
 #toolbar-administration.toolbar a {
   transition: all, 0.2s;
 }
 
 #toolbar-administration.toolbar .toolbar-bar {
-  box-shadow: none;
   background-color: #2d2d2d;
+  box-shadow: none;
 }
 
 #toolbar-administration.toolbar .toolbar-menu {
@@ -25,13 +24,13 @@
 
 #toolbar-administration .toolbar-tray .toolbar-menu a,
 #toolbar-administration .toolbar-tray .toolbar-menu span {
-  background: transparent;
   color: #ccc;
+  background: transparent;
 }
 
 #toolbar-item-administration-search-tray label {
-  background: transparent;
   color: #ccc !important;
+  background: transparent;
 }
 
 #toolbar-administration .toolbar-tray .toolbar-menu li {
@@ -57,8 +56,8 @@
 
 #toolbar-administration .toolbar-tray a,
 #toolbar-administration .toolbar-tray span {
-  background: #2d2d2d;
   color: #bbb;
+  background: #2d2d2d;
 }
 
 #toolbar-administration .toolbar-tray span {
@@ -69,15 +68,15 @@
 #toolbar-administration .toolbar-tray-horizontal a:hover,
 #toolbar-administration .toolbar-tray-horizontal a:active,
 #toolbar-administration .toolbar-tray-horizontal a:focus {
-  background: #0084d7;
-  color: #fff;
   text-decoration: none;
+  color: #fff;
+  background: #0084d7;
 }
 
 #toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover > a,
 #toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover > .toolbar-box > a {
-  background: #0084d7;
   color: #fff !important;
+  background: #0084d7;
 }
 
 .adminimal .toolbar .toolbar-bar .toolbar-tab:not(.workspaces-toolbar-tab) > .toolbar-item {
@@ -86,30 +85,30 @@
 }
 
 .adminimal .toolbar .toolbar-bar .toolbar-tab:not(.workspaces-toolbar-tab) > .toolbar-item:hover {
-  background-image: none;
-  background-color: #2d2d2d;
-  color: #fff;
   text-decoration: none;
+  color: #fff;
+  background-color: #2d2d2d;
+  background-image: none;
 }
 
 #toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item.is-active,
 #toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item:focus {
-  background-image: none;
-  background-color: rgba(255, 255, 255, .03);
   text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.03);
+  background-image: none;
 }
 
 #toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item + .menu-item,
 [dir="rtl"] #toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item + .menu-item,
 #toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item:last-child {
-  border-left: none; /* LTR */
   border-right: none;
+  border-left: none; /* LTR */
 }
 
 #toolbar-administration.toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
 #toolbar-administration.toolbar .toolbar-tray a.is-active {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
   font-weight: bold;
 }
 
@@ -127,7 +126,7 @@
 }
 
 #toolbar-administration.toolbar .toolbar-tray-vertical {
-  box-shadow: -2px 2px 12px rgba(0,0,0,0.85);
+  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.85);
 }
 
 #toolbar-administration.toolbar .toolbar-toggle-orientation {
@@ -139,13 +138,13 @@
 }
 
 #toolbar-administration.toolbar .toolbar-icon.toolbar-handle:before {
+  transition: 0.25s;
   background-image: url(../images/acacac/chevron-outline-disc-down.svg);
-  transition: .25s;
 }
 
 #toolbar-administration.toolbar .toolbar-icon.toolbar-handle.open:before {
-  background-image: url(../images/ffcfcf/chevron-outline-disc-close.svg) !important;
   transform: rotate(180deg);
+  background-image: url(../images/ffcfcf/chevron-outline-disc-close.svg) !important;
 }
 
 #toolbar-administration.toolbar .toolbar-menu .toolbar-menu .toolbar-icon.toolbar-handle:before {
@@ -165,22 +164,22 @@
   background-size: 100%;
 }
 
-toolbar-administration .level-1 .toolbar-handle.open,
+#toolbar-administration .level-1 .toolbar-handle.open,
 #toolbar-administration .toolbar-tray-vertical .level-2 {
   background: #3b3b3b !important;
 }
 
-toolbar-administration .level-2 .toolbar-handle.open,
+#toolbar-administration .level-2 .toolbar-handle.open,
 #toolbar-administration .toolbar-tray-vertical .level-3 {
   background: #434343 !important;
 }
 
-toolbar-administration .level-3 .toolbar-handle.open,
+#toolbar-administration .level-3 .toolbar-handle.open,
 #toolbar-administration .toolbar-tray-vertical .level-4 {
   background: #4c4c4c !important;
 }
 
-toolbar-administration .level-4 .toolbar-handle.open,
+#toolbar-administration .level-4 .toolbar-handle.open,
 #toolbar-administration .toolbar-tray-vertical .level-5 {
   background: #545454 !important;
 }
@@ -205,8 +204,8 @@ toolbar-administration .level-4 .toolbar-handle.open,
 
 #toolbar-administration .toolbar-tray-horizontal a:focus,
 #toolbar-administration .toolbar-box a:focus {
-  background: #333;
   text-decoration: none;
+  background: #333;
 }
 
 #toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu a {
@@ -215,9 +214,9 @@ toolbar-administration .level-4 .toolbar-handle.open,
 
 #toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu a:hover,
 #toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu a:focus {
+  text-decoration: none;
   color: #fff;
   background: #0084d7;
-  text-decoration: none;
 }
 
 #toolbar-administration.toolbar .toolbar-tray-vertical .toolbar-menu ul ul {
@@ -241,8 +240,8 @@ toolbar-administration .level-4 .toolbar-handle.open,
 }
 #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,
 [dir="rtl"] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded {
-  background-image: none;
   position: relative;
+  background-image: none;
 }
 
 #toolbar-administration .toolbar-tray-horizontal .toolbar-menu ul .toolbar-icon {
@@ -261,27 +260,27 @@ toolbar-administration .level-4 .toolbar-handle.open,
 }
 
 #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:after {
-  color: #8eacc0;
-  content: url(../images/0084d7/chevron-right.svg);
-  font-size: 16px;
-  pointer-events: none;
   position: absolute;
-  right: 5px;
   top: 50%;
+  right: 5px;
+  content: url(../images/0084d7/chevron-right.svg);
+  transition: all 0.2s;
   transform: translateY(-8px);
-  transition: all .2s;
+  pointer-events: none;
+  color: #8eacc0;
+  font-size: 16px;
 }
 
 [dir="rtl"] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:after {
+  top: 30%;
   right: auto;
   left: 5px;
-  top: 30%;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  filter: FlipH;
   -ms-filter: "FlipH";
+  filter: FlipH;
 }
 
 #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover:after {
@@ -290,13 +289,13 @@ toolbar-administration .level-4 .toolbar-handle.open,
 }
 
 [dir="rtl"] #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover:after {
-  transform-origin: 40% top;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  filter: FlipH;
+  transform-origin: 40% top;
   -ms-filter: "FlipH";
+  filter: FlipH;
 }
 
 #toolbar-administration.toolbar .toolbar-menu .toolbar-menu a {
@@ -315,11 +314,11 @@ toolbar-administration .level-4 .toolbar-handle.open,
 }
 
 #toolbar-administration.toolbar .toolbar-tray-horizontal .menu-item:last-child {
-  border-left: none;
   border-right: none;
+  border-left: none;
 }
 
-#toolbar-administration.toolbar .toolbar-tray-horizontal ul  ul li.menu-item:first-child {
+#toolbar-administration.toolbar .toolbar-tray-horizontal ul ul li.menu-item:first-child {
   border-top: 1px solid #0084d7;
 }
 
@@ -330,9 +329,9 @@ toolbar-administration .level-4 .toolbar-handle.open,
 
 /* Main menu icons. */
 #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
-  background-image: url('../images/varbase-x-small-emblem-white.png');
   margin: 0;
   padding: 0;
+  background-image: url("../images/varbase-x-small-emblem-white.png");
 }
 
 #toolbar-administration .toolbar-tray-vertical .toolbar-icon-admin-toolbar-tools-help:before {
@@ -375,7 +374,7 @@ toolbar-administration .level-4 .toolbar-handle.open,
 #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:hover:before,
 #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:active:before,
 #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.is-active:before {
-  background-image: url('../images/varbase-x-small-emblem-white.png');
+  background-image: url("../images/varbase-x-small-emblem-white.png");
 }
 
 #toolbar-administration .toolbar-tray-horizontal .menu-item--expanded:hover .toolbar-icon-system-admin-content:before,
@@ -435,14 +434,14 @@ toolbar-administration .level-4 .toolbar-handle.open,
 }
 
 #toolbar-administration .toolbar-tray-vertical .toolbar-icon-admin-toolbar-tools-help {
-  text-indent: 0;
   transition: none;
+  text-indent: 0;
 }
 
 span .cke_button__embed_icon {
-  background-image: url('../images/embed.png') !important;
+  background-image: url("../images/embed.png") !important;
 }
 
 span .cke_button__media_icon {
-  background-image: url('../images/embed-media.png') !important;
+  background-image: url("../images/embed-media.png") !important;
 }
