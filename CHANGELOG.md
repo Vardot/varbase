@@ -24,22 +24,25 @@
                  Added class "mt-n5" to the Media Hero Slider section
                  in homepage Layout Builder
 * Issue [#3167692](https://www.drupal.org/i/3167692)
-                 by josebc
+                 by [josebc](https://www.drupal.org/u/josebc)
                 : Added [Stage File Proxy] module as a dependency
 * Issue [#3171126](https://www.drupal.org/i/3171126)
-                 by josebc
+                 by [josebc](https://www.drupal.org/u/josebc)
                 : Added yarn script commands for Drupal coding standard and
                  Drupal Practice for Vartheme BS4 and VARTHEME_BS4_SUBTHEME
 * Issue [#3170255](https://www.drupal.org/i/3170255)
-                 by josebc
+                 by [josebc](https://www.drupal.org/u/josebc)
                 : Change .csscomb.json for better compliance with
                  core eslint standards for Vartheme BS4
 * Issue [#3171951](https://www.drupal.org/i/3171951)
-                 by abu-zakham
+                 by [abu-zakham](https://www.drupal.org/u/abu-zakham)
                 : Added missing sort-order in .csscomb.jsonfor Vartheme BS4
 * Issue [#3172415](https://www.drupal.org/i/3172415):
                  Added yarn script commands for Drupal coding standard and
                  Drupal Practice for Vartheme Claro
+* Issue [#3176371](https://www.drupal.org/i/3176371):
+                 Added yarn script commands for Drupal coding standard and
+                 Drupal Practice for Varbase Installation profile
 * Issue [#3173247](https://www.drupal.org/i/3173247):
                  Added yarn script commands for Drupal coding standard and
                  Drupal Practice for Varbase Core
@@ -124,11 +127,11 @@
                  Changed [Welcome to Varbase] block format: full_html
                  to format: code_html to show SVG Images
 * Issue [#3170170](https://www.drupal.org/i/3170170)
-                 by mhawwari
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
                 : Disable the checkbox to delete the referenced
                  entity from entityqueues
 * Issue [#3176100](https://www.drupal.org/i/3176100)
-                 by qusai taha
+                 by [qusai taha](https://www.drupal.org/u/qusai-taha)
                 : Change to have a better logic to check if the remote
                  video ended or not
 * Issue [#3170836](https://www.drupal.org/i/3170836):
@@ -138,13 +141,13 @@
 * Issue [#3170678](https://www.drupal.org/i/3170678):
                  Enabled [JSON API Defaults] module to have extra functionality
 * Issue [#3171299](https://www.drupal.org/i/3171299)
-                 by abu-zakham
-                , RajabNatshah
+                 by [abu-zakham](https://www.drupal.org/u/abu-zakham)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 : Override Entity type / Group Mapping will be reflected
                  on Metatags General form
 * Issue [#3172883](https://www.drupal.org/i/3172883)
-                 by akalam
-                , RajabNatshah
+                 by [akalam](https://www.drupal.org/u/akalam)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 : Have a better logic for merging layout builder style options
                  instead of overriding them
 * Issue [#3170149](https://www.drupal.org/i/3170149):
@@ -201,7 +204,7 @@
                  Fixed to make sure that we do have a list of config values
                  in the style options
 * Issue [#3171237](https://www.drupal.org/i/3171237)
-                 by akalam
+                 by [akalam](https://www.drupal.org/u/akalam)
                 : Fixed deprecated function getCurrentUserId replaced by
                  getDefaultEntityOwner
                  in core.base_field_override.media.*.uid configs for
@@ -225,28 +228,28 @@
                  core.base_field_override.node.landing_page_lb.uid config
 * Issue [#3149234](https://www.drupal.org/i/3149234)
                  by Project Update Bot
-                , akalam
-                , RajabNatshah
+                , [akalam](https://www.drupal.org/u/akalam)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 : Automated Drupal 9 compatibility fixes for Varbase Media
 * Issue [#3090778](https://www.drupal.org/i/3090778)
-                 by RajabNatshah
-                , Odai Atieh
+                 by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                , [Odai Atieh](https://www.drupal.org/u/odai-atieh)
                 : Fixed background media supports in [Varbase Media Header]
                  for IE 9+, iOS 7-, and Android 4.4
                  (Image, Video, Video, YouTube, Vimeo) Object-fit
 * Issue [#3136486](https://www.drupal.org/i/3136486)
                  by alaa abbad
-                , mhawwari
+                , [mhawwari](https://www.drupal.org/u/mhawwari)
                 : Fixed autoplay not working if the slider has one item
 * Issue [#3172235](https://www.drupal.org/i/3172235)
-                 by mhawwari
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
                 : Fixed First local video is not being called correctly
 * Issue [#3174660](https://www.drupal.org/i/3174660)
-                by qusai taha
+                by [qusai taha](https://www.drupal.org/u/qusai-taha)
                 : Fixed Notice: undefined index ratio in Blazy when try to
                  adding images from Gallery media type in WYSIWYG
 * Issue [#3170882](https://www.drupal.org/i/3170882)
-                 by akalam
+                 by [akalam](https://www.drupal.org/u/akalam)
                 : Fixed fatal error on media block when media entity
                  is not found
 * Issue [#3173547](https://www.drupal.org/i/3173547):
@@ -256,15 +259,15 @@
                  style and fix a missing .css in the
                  vartheme_bs4/moderation-state library
 * Issue [#3158746](https://www.drupal.org/i/3158746)
-                 Joachim Namyslo
+                by [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
                 : Fixed password policy forced to enter a new password when the
                  role been changed for a user and try to save the profile
 * Issue [#3168965](https://www.drupal.org/i/3168965)
-                 by abu-zakham
+                 by [abu-zakham](https://www.drupal.org/u/abu-zakham)
                 : Fixed issue of user profile cant be edited because password
                  policy validates even when password unchanged
 * Issue [#3168971](https://www.drupal.org/i/3168971)
-                 by mhawwari
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
                 : Fixed Varbase update helper hook implementations do not
                  check the checklist id issue
 
@@ -651,7 +654,7 @@
 * Issue [#3128213](https://www.drupal.org/node/3128213):
                  Added Automated Testing for the [Varbase Media] module
 * Issue [#3130971](https://www.drupal.org/node/3130971)
-                 by Odai Atieh
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
                 : Added a missing class for the accordion panel title in
                  the [Varbase Bootstrap Paragraphs] module
 * Issue [#3121642](https://www.drupal.org/node/3121642)
@@ -832,7 +835,7 @@
 ### Fixes since Varbase 8.x-8.4:
 * Issue [#3122537](https://www.drupal.org/node/3122537)
                  by yasmeensalah
-                , RajabNatshah
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 , Mohammed J. Razem
                 : Fixed CKEditor text-fields issue of not clickable texts due
                  to interaction with core/drupal.dialog in the [Varbase
@@ -841,14 +844,14 @@
                  Fixed [Layout Builder UX] position of alert message over
                  the layout editor to manage sections
 * Issue [#3126331](https://www.drupal.org/node/3126331)
-                 by RajabNatshah
+                 by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 , jjwfcd
                 : Fixed entity schema update for the entity_subqueue entity
                  type requires a data migration with Recall for Varbase Media
                  updates as they had changed as they introduced issues on
                  update with [entityqueue] latest release
 * Issue [#3125946](https://www.drupal.org/node/3125946)
-                 by Odai Atieh
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
                 : Fixed missing varbase media entity presave hook for remote
                  videos with fullback options
 * Issue [#3129510](https://www.drupal.org/node/3129510):
@@ -864,13 +867,13 @@
                  Fixed details style by using the default details
                  template and Claro changes over libraries only by Claro theme
 * Issue [#3138096](https://www.drupal.org/node/3138096)
-                 by RajabNatshah
+                 by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 , Abdelrahman Amer
                 : Fixed not loaded Claro libraries and overrides,
                  which the Drupal core bug still remain on sub themes
                  from Drupal back-end core themes
 * Issue [#3138171](https://www.drupal.org/node/3138171)
-                 by RajabNatshah
+                 by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
                 , mitchellwillocks
                 : Fixed Core Version Requirement Key ^8.8 || ^9 -
                  Uncaught PHP Exception by lowering requirements
