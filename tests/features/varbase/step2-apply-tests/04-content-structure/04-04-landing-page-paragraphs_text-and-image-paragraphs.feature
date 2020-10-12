@@ -38,7 +38,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
        And I scrolldown
       Then I should see "Text and image"
        And I should see "No media items are selected."
-      When I press "field_image-media-library-open-button-field_lp_paragraphs-1-subform"
+      When I press "field_image-media-library-open-button-field_lp_paragraphs-0-subform"
        And I wait for AJAX to finish
        And I should see "Name"
       When I fill in "Flag Earth" for "Name"
