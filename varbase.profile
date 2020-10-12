@@ -458,7 +458,7 @@ function varbase_after_install_finished(array &$install_state) {
     $config_factory->setData($config_data)->save(TRUE);
   }
 
-	// Enable Simple Workflow for all content types on new Varbase Installations.
+  // Enable Simple Workflow for all content types on new Varbase Installations.
   if (\Drupal::moduleHandler()->moduleExists('varbase_workflow')) {
     $node_types = \Drupal::entityTypeManager()->getStorage('node_type')->loadMultiple();
     foreach ($node_types as $node_type) {

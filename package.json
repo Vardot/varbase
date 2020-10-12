@@ -3,6 +3,14 @@
   "private": true,
   "version": "8.8.0",
   "description": "Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json .",
+    "stylelint": "npx stylelint --config=.stylelintrc.json .",
+    "phpcs": "phpcs --standard=./.phpcs.xml .",
+    "phpcbf": "phpcbf --standard=./.phpcs.xml .",
+    "install-libraries": "npm install && bower install"
+  },
   "keywords": [
     "Drupal",
     "Varbase",
@@ -11,13 +19,22 @@
   ],
   "author": "Vardot",
   "license": "GPL-2.0",
-  "scripts": {
-    "install-libraries": "npm install && bower install"
+  "dependencies": {  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "prettier": "^1.14.0",
+    "stylelint": "^9.10.1",
+    "stylelint-checkstyle-formatter": "^0.1.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-no-browser-hacks": "^1.2.1",
+    "stylelint-order": "^2.1.0"
   },
-  "dependencies": {
-    "bower": ">=1.8.8"
-  },
-  "license": "GPL-2.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:Vardot/varbase.git"
