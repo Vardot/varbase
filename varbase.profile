@@ -511,7 +511,7 @@ function varbase_after_install_finished(array &$install_state) {
   $output = [];
 
   // Clear all messages.
-  drupal_get_messages();
+  \Drupal::service('messenger')->deleteAll();
 
   $output = [
     '#title' => t('Varbase'),

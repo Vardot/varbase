@@ -38,7 +38,7 @@ class ScriptHandler {
    * Create required files.
    *
    * @param \Composer\EventDispatcher\Event $event
-   *   Event of creeate required files.
+   *   Event of create required files.
    */
   public static function createRequiredFiles(Event $event) {
 
