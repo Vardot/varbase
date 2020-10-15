@@ -10,7 +10,7 @@ cache:
     - "$HOME/.selenium/cache"
 
 php:
-  - 7.3
+  - 7.4
 
 env:
   - AFATG=01-website-base-requirements
@@ -22,27 +22,27 @@ env:
 matrix:
   exclude:
 # Automated Functional Acceptance Testing group: 01 website base requirements
-  - php: 7.3
+  - php: 7.4
     env: AFATG=01-website-base-requirements
 
 # Automated Functional Acceptance Testing group: 02 user management
-  - php: 7.3
+  - php: 7.4
     env: AFATG=02-user-management
 
 # Automated Functional Acceptance Testing group: 03 admin management
-  - php: 7.3
+  - php: 7.4
     env: AFATG=03-admin-management
 
 # Automated Functional Acceptance Testing group: 04 content structure
-  - php: 7.3
+  - php: 7.4
     env: AFATG=04-content-structure
 
 # Automated Functional Acceptance Testing group: 05 content-management
-  - php: 7.3
+  - php: 7.4
     env: AFATG=05-content-management
 
 mysql:
-  database: test_varbase808xxc
+  database: test_varbase9000xxc
   username: root
   encoding: utf8
 
@@ -51,6 +51,7 @@ before_install:
   - phpenv rehash
   - COMPOSER_AUTH_PATH="$HOME/.composer/auth.json"
   - if [[ -f $COMPOSER_AUTH_PATH ]]; then rm $COMPOSER_AUTH_PATH; fi
+  - composer clear
   - composer self-update
   - composer --version
 
@@ -66,7 +67,7 @@ before_install:
   - echo 'max_execution_time = 1200' >> varbase.php.ini;
   - echo 'max_input_time = 180' >> varbase.php.ini;
   - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 3000M' >> varbase.php.ini;
+  - echo 'memory_limit = 5000M' >> varbase.php.ini;
   - echo 'error_reporting = E_ALL' >> varbase.php.ini;
   - echo 'post_max_size = 64M' >> varbase.php.ini;
   - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
@@ -113,7 +114,7 @@ install:
 
   ## Install with drush.
   - cd docroot
-  - drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true
+  - drush site-install varbase --yes --site-name='Test Varbase9000xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase9000xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true
   - drush pm-enable varbase_development --yes
   - drush pm-enable varbase_styleguide --yes
   - drush pm-enable varbase_media_instagram --yes
