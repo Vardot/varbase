@@ -1,6 +1,14 @@
-dist: trusty
-  
+dist: xenial
 language: php
+php:
+  - 7.3
+services:
+  - mysql
+  - xvfb
+mysql:
+  database: test_varbase9000xxc
+  username: root
+  encoding: utf8
 cache:
   bundler: true
   directories:
@@ -8,17 +16,12 @@ cache:
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
     - "$HOME/.selenium/cache"
-
-php:
-  - 7.3
-
 env:
   - AFATG=01-website-base-requirements
   - AFATG=02-user-management
   - AFATG=03-admin-management
   - AFATG=04-content-structure
   - AFATG=05-content-management
-
 matrix:
   exclude:
 # Automated Functional Acceptance Testing group: 01 website base requirements
@@ -40,18 +43,11 @@ matrix:
 # Automated Functional Acceptance Testing group: 05 content-management
   - php: 7.3
     env: AFATG=05-content-management
-
-mysql:
-  database: test_varbase9000xxc
-  username: root
-  encoding: utf8
-
 before_install:
   - phpenv config-rm xdebug.ini
   - phpenv rehash
   - COMPOSER_AUTH_PATH="$HOME/.composer/auth.json"
   - if [[ -f $COMPOSER_AUTH_PATH ]]; then rm $COMPOSER_AUTH_PATH; fi
-  - composer clear
   - composer self-update
   - composer --version
 
@@ -59,33 +55,22 @@ before_install:
   - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
   - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
 
-  # MySQL Configurations.
-  - mysql -e 'SET GLOBAL wait_timeout = 5400;'
-  - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
-
   # PHP Configurations.
-  - echo 'max_execution_time = 1200' >> varbase.php.ini;
-  - echo 'max_input_time = 180' >> varbase.php.ini;
-  - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 5000M' >> varbase.php.ini;
-  - echo 'error_reporting = E_ALL' >> varbase.php.ini;
-  - echo 'post_max_size = 64M' >> varbase.php.ini;
-  - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
-  - echo 'max_file_uploads = 40' >> varbase.php.ini;
-  - echo 'sendmail_path = /bin/true' >> varbase.php.ini;
-  - phpenv config-add varbase.php.ini
+  - echo 'max_execution_time = 1200' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'max_input_time = 180' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'max_input_vars = 10000' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'memory_limit = -1' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'error_reporting = E_ALL' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'post_max_size = 64M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'upload_max_filesize = 32M' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'max_file_uploads = 40' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
+  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini ;
   - phpenv rehash
 
-  # Configure and run the virtual display.
-  - export DISPLAY=:99
-  - sh -e /etc/init.d/xvfb start
-  - Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
-  - sleep 3
-
   # Download Latest Chrome Driver.
-  -  CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
-  -  echo $CHROME_DRIVER_VERSION;
-  -  wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+  - CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+  - echo $CHROME_DRIVER_VERSION;
+  - wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - chmod +x chromedriver
   - mkdir -p $HOME/.composer/vendor/bin
@@ -114,7 +99,7 @@ install:
 
   ## Install with drush.
   - cd docroot
-  - drush site-install varbase --yes --site-name='Test Varbase9000xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase9000xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true
+  - drush site-install varbase --yes --site-name='Test Varbase9000xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase9000xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
   - drush pm-enable varbase_development --yes
   - drush pm-enable varbase_styleguide --yes
   - drush pm-enable varbase_media_instagram --yes
@@ -124,8 +109,6 @@ install:
   - drush pm-enable social_auth_facebook --yes
   - drush pm-enable social_auth_twitter --yes
   - drush pm-enable social_auth_linkedin --yes
-  - drush pm-enable varbase_layout_builder --yes
-  - drush pm-enable vlplb --yes
   - drush pm-enable varbase_content_planner --yes
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes
