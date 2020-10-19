@@ -279,8 +279,8 @@
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  -ms-filter: "FlipH";
-  filter: FlipH;
+  -ms-filter: "fliph";
+  filter: fliph;
 }
 
 #toolbar-administration .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:hover:after {
@@ -294,8 +294,8 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   transform-origin: 40% top;
-  -ms-filter: "FlipH";
-  filter: FlipH;
+  -ms-filter: "fliph";
+  filter: fliph;
 }
 
 #toolbar-administration.toolbar .toolbar-menu .toolbar-menu a {

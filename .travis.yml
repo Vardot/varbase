@@ -100,14 +100,9 @@ install:
   ## Install with drush.
   - cd docroot
   - drush site-install varbase --yes --site-name='Test Varbase9000xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase9000xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true varbase_extra_components.social_auth_google=true varbase_extra_components.social_auth_facebook=true varbase_extra_components.social_auth_twitter=true varbase_extra_components.social_auth_linkedin=true varbase_extra_components.varbase_api=true varbase_development_tools.varbase_development=true varbase_development_tools.varbase_styleguide=true
-  - drupal module:install varbase_landing --yes
-  - drupal module:install varbase_content_planner --yes
-  - drupal module:install varbase_media_instagram --yes
-  - drupal module:install varbase_media_twitter --yes
   - drupal config:override system.performance --key='css.preprocess' --value='0' --yes
   - drupal config:override system.performance --key='js.preprocess' --value='0' --yes
   - drupal config:override system.logging --key='error_level' --value='all' --yes
-  - drupal cache:rebuild
 before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - sleep 5
