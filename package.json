@@ -21,19 +21,20 @@
   "license": "GPL-2.0",
   "dependencies": {  },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^1.14.0",
-    "stylelint": "^9.10.1",
+    "stylelint": "^13.0.0",
     "stylelint-checkstyle-formatter": "^0.1.1",
-    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-standard": "^19.0.0",
     "stylelint-no-browser-hacks": "^1.2.1",
-    "stylelint-order": "^2.1.0"
+    "stylelint-order": "^4.0.0"
   },
   "repository": {
     "type": "git",
