@@ -124,7 +124,6 @@
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
       "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
-      "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
@@ -146,7 +145,6 @@
         {"name": "slick", "package": "npm-asset/slick-carousel"},
         {"name": "ace", "package": "npm-asset/ace-builds"},
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
-        {"name": "masonry", "package": "npm-asset/masonry-layout"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
       ]
