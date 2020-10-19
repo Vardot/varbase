@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=9.0.x)](https://travis-ci.com/github/Vardot/varbase) Varbase 9.0.x
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=9.0.0-alpha1)](https://travis-ci.com/github/Vardot/varbase) 9.0.0-alpha1
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -27,6 +27,10 @@ instructions.
 
 # Install with Composer
 
+To install the most recent stable release of Varbase 9.0.x run this command:
+```
+composer create-project Vardot/varbase-project:^9.0.0-alpha1 PROJECT_DIR_NAME --no-dev --no-interaction
+```
 
 To install the dev version of Varbase 9.0.x run this command:
 ```
@@ -39,7 +43,7 @@ composer create-project vardot/varbase-project:9.0.x-dev PROJECT_DIR_NAME --stab
 
 ## [Varbase Gherkin features](https://github.com/Vardot/varbase/blob/9.0.x/tests/features/varbase/README.md)
 
-## [Varbase 8.8.x Developer Guide](https://docs.varbase.vardot.com)
+## [Varbase Developer Guide](https://docs.varbase.vardot.com)
 
 ## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.0.x/CHANGELOG.md)
 
