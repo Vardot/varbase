@@ -7,6 +7,7 @@ weight: -7
 is_admin: null
 permissions:
   - 'Flush all caches from admin toolbar'
+  - 'access admin audit trail'
   - 'access administration pages'
   - 'access carousels_media_browser entity browser pages'
   - 'access coffee'
@@ -161,6 +162,7 @@ permissions:
   - 'reorder terms in blog_categories'
   - 'reorder terms in categories'
   - 'reorder terms in tags'
+  - 'revert all media revisions'
   - 'revert all revisions'
   - 'revert faq revisions'
   - 'revert landing_page revisions'
