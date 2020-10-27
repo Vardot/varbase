@@ -110,7 +110,6 @@ install:
   - drush pm-enable social_auth_facebook --yes
   - drush pm-enable social_auth_twitter --yes
   - drush pm-enable social_auth_linkedin --yes
-  - drush pm-enable varbase_content_planner --yes
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes
   - drush config-set system.logging error_level all --yes
