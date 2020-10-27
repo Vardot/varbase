@@ -48,7 +48,8 @@ default:
     html:
       output_path: "%paths.base%/tests/reports/"
   extensions:
-    Behat\MinkExtension:
+    Drupal\MinkExtension:
+      ajax_timeout: 20
       files_path: "%paths.base%/tests/assets/"
       goutte: ~
       selenium2:

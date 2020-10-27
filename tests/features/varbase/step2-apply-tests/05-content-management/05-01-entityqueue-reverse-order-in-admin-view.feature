@@ -32,7 +32,7 @@ Scenario: Check that Reverse order in admin view is working
     And I wait
    Then I should see "Edit subqueue Test Queue"
    When I press "Reverse"
-    And I wait
+    And I wait for AJAX to finish
     And I press "Save"
     And I wait
    Then I should see "The entity subqueue Test Queue has been updated."

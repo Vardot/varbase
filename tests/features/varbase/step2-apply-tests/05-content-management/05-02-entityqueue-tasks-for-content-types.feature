@@ -14,6 +14,8 @@ Scenario: Check if queuable content have the Entityqueue tab at the full content
     And I press "Save"
     And I wait
    Then I should see "Test Content Test tab content number 1 has been created."
+	 When I click "Tasks"
+		And I wait for AJAX to finish
     And I should see "Entityqueue"
    When I click "Entityqueue"
     And I wait

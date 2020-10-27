@@ -51,6 +51,14 @@ So that the "Landing page (Layout Builder)" will show up in the structured menu 
       And I should not see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
+  Scenario: Check that SEO Admin users can create a Landing page (Layout Builder)
+    Given I am a logged in user with the "test_seo_admin" user
+     When I go to "/node/add/landing_page_lb"
+      And I wait
+     Then I should not see "Access denied"
+      And I should not see "You are not authorized to access this page."
+
+  @javascript @local @development @staging @production
   Scenario: Check that Site Admin users can create a Landing page (Layout Builder)
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/node/add/landing_page_lb"

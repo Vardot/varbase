@@ -12,6 +12,13 @@ So that I can use them after the install or update.
       And I wait
      Then I should see "Content"
 
+  @check @local @development @staging @production
+  Scenario: Check the Homepage content with Layout Builder
+     When I go to "/admin/content"
+      And I wait
+     Then I should see "Homepage"
+      And I should see "Landing page (Layout Builder)" in the "Homepage" row
+
    @check @local @development @staging @production
    Scenario: Check Files admin page
       When I go to "/admin/content/files"
@@ -61,15 +68,6 @@ So that I can use them after the install or update.
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
-      And I should see "Homepage"
-      And I should see "Total Control dashboard"
-
-  @check @local @development @staging @production
-  Scenario: Check the Page Manager main page.
-     When I go to "/admin/structure/page_manager"
-      And I wait
-     Then I should see "Pages"
-      And I should see "Homepage"
       And I should see "Total Control dashboard"
 
   @check @local @development @staging @production

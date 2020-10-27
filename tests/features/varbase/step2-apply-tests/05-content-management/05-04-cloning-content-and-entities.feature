@@ -3,7 +3,7 @@ As a logged in user with a permission to mange entities
 I want to be able to clone an entity.
 
 @javascript @local @development
-  Scenario: Check if a user with a permission can clone a landing page
+  Scenario: Check if a user with a permission can clone a Landing page (Paragraphs)
     Given I am a logged in user with the "test_site_admin" user
      When I go to "node/add/landing_page"
       And I wait
@@ -11,7 +11,7 @@ I want to be able to clone an entity.
       And I fill in "Test landing page description text" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "Add Component"
+      And I press "+ Add"
       And I wait for AJAX to finish
       And I select the "bp_modal" paragraph component
       And I wait for AJAX to finish
@@ -20,7 +20,7 @@ I want to be able to clone an entity.
       And I fill in "Modal title" for "Modal title"
       And I wait for AJAX to finish
       And I wait
-      And I press "Add Component"
+      And I press "+ Add"
       And I wait for AJAX to finish
       And I wait
       And I select the "bp_simple" paragraph component
@@ -32,6 +32,20 @@ I want to be able to clone an entity.
       And I press the "Save" button
       And I wait
      Then I should see "Modal button"
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test Clone landing page" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test Clone landing page"
+     When I fill in "Test Clone landing page" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test Clone landing page"
+     When I click "Edit" in the "Test Clone landing page" row
+      And I wait
+     Then I should see "Clone"
      When I click "Clone"
       And I wait
      Then I should see "Clone Content"

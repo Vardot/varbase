@@ -2,7 +2,7 @@ Feature: Content Management - Add default [entityqueue] module testing content a
 
 @javascript @init @tools @local @development @staging
 Scenario: Create Test Content type
-  Given I am a logged in user with the "test_super_admin" user
+  Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/types/add"
     And I wait
    Then I should see "Add content type"
@@ -14,8 +14,8 @@ Scenario: Create Test Content type
    Then I should see "The content type Test Content has been added."
 
 @javascript @init @tools @local @development @staging
-Scenario: Add Entity Queue Test Queue and use Test Content type
-  Given I am a logged in user with the "test_super_admin" user
+Scenario: Add Entity Queue Test Queue to be used with Test Content type
+  Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/entityqueue"
     And I wait
    Then I should see "Add entity queue"
@@ -23,19 +23,14 @@ Scenario: Add Entity Queue Test Queue and use Test Content type
     And I wait
    Then I should see "Configure entity queue"
    When I fill in "Test Queue" for "Name"
-    And I wait for AJAX to finish
-    And I wait for 2 seconds
-    And I press "Entity settings"
-    And I wait
-   Then I should see "Content type"
-   When I check the box "Test Content"
+    And I wait for 5 seconds
     And I press "Save"
     And I wait
    Then I should see "The entity queue Test Queue has been added."
 
 @javascript @init @tools @local @development @staging
 Scenario: Add Test content N1, N2, N3 type of test content
-  Given I am a logged in user with the "test_super_admin" user
+  Given I am a logged in user with the "webmaster" user
    When I go to "/node/add/test_content"
     And I wait
    Then I should see "Create Test Content"
@@ -68,7 +63,7 @@ Scenario: Add Test content N1, N2, N3 type of test content
 
 @javascript @init @tools @local @development @staging
 Scenario: Add Test content N1, N2, N3 nodes to the Test Queue entityqueue
-  Given I am a logged in user with the "test_super_admin" user
+  Given I am a logged in user with the "webmaster" user
    When I go to "/admin/structure/entityqueue"
     And I wait
    Then I should see "Test Queue"
