@@ -26,21 +26,25 @@ So that will ease the work of adding internal links in the rich text editor fiel
      When I select "full_html" from "Text format"
       And I fill in "Linking to internal content #2 title" for "Title"
       And I fill in the rich text editor field "Body" with " Linking to internal content #2 body "
-      And I click on "linkit" command button in the rich text editor field "Body"
+      And I click on "drupallink" command button in the rich text editor field "Body"
       And I wait for AJAX to finish
-     Then I should see "Edit link"
-     When I fill in "Linking" for "Link"
-      And I press the " " key in the "Link" field
-      And I press the "t" key in the "Link" field
-      And I press the "o" key in the "Link" field
-      And I press the "enter" key in the "Link" field
+      And I wait 2s
+      And I wait for AJAX to finish
+     Then I should see "Add link"
+     When I fill in "Linking" for "URL"
+      And I press the " " key in the "URL" field
+      And I press the "t" key in the "URL" field
+      And I press the "o" key in the "URL" field
+      And I press the "enter" key in the "URL" field
       And I wait for AJAX to finish
       And I wait 2s
       And I wait for AJAX to finish
      Then I should see "Linking to internal content #1 title"
      When I click "Linking to internal content #1 title" in the "ul" element with the "class" attribute set to "ui-autocomplete"
-      And I wait for AJAX to finish
-     Then I should not see "Linking to internal content #1 title"
+     And I wait for AJAX to finish
+     And I wait 2s
+     And I wait for AJAX to finish
+     Then I should see "Linking to internal content #1 title"
      When I click "Save" in the "button" element with the "class" attribute set to "button js-form-submit form-submit ui-button ui-corner-all ui-widget"
       And I wait
       And I select "published" from "edit-moderation-state-0-state"
