@@ -49,7 +49,7 @@ default:
       output_path: "%paths.base%/tests/reports/"
   extensions:
     Drupal\MinkExtension:
-      ajax_timeout: 20
+      ajax_timeout: 60
       files_path: "%paths.base%/tests/assets/"
       goutte: ~
       selenium2:
