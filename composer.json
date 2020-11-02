@@ -52,7 +52,7 @@
     "drupal/varbase_styleguide": "9.0.x-dev",
     "drupal/varbase_email": "9.0.x-dev",
     "drupal/varbase_workflow": "2.0.x-dev",
-    "drupal/vartheme_bs4": "6.x-dev",
+    "drupal/vartheme_bs4": "9.0.x-dev",
     "drupal/vartheme_claro": "2.1.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "2.7.*",
