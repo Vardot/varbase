@@ -19,9 +19,9 @@ in every project.
 * Comes with a lot of needed functionalities/modules for every-day Drupal site.
 * [Tested, tested, and tested.](https://travis-ci.org/Vardot/varbase/builds)
 
-Starting a new project? Consider Varbase for Drupal 8.
+Starting a new project? Consider Varbase for Drupal 9.
 Installing Varbase 9.0.x comes with several extra automated installation
-steps, to take full advantage of Varbase, other than the Drupal 8 installation
+steps, to take full advantage of Varbase, other than the Drupal 9 installation
 instructions.
 
 
