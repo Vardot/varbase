@@ -48,7 +48,7 @@ before_install:
   - phpenv rehash
   - COMPOSER_AUTH_PATH="$HOME/.composer/auth.json"
   - if [[ -f $COMPOSER_AUTH_PATH ]]; then rm $COMPOSER_AUTH_PATH; fi
-  - composer self-update
+  - composer self-update --1
   - composer --version
 
   # Composer Configurations.
