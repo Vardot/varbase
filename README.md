@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=9.0.0-alpha1)](https://travis-ci.com/github/Vardot/varbase) 9.0.0-alpha1
+[![Build Status](https://travis-ci.org/Vardot/varbase.svg?branch=9.0.0-beta1)](https://travis-ci.com/github/Vardot/varbase/builds/197128591) 9.0.0-beta1
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
-## Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready)
+## Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready)
 
 The powerful Drupal distribution for faster development, with editor experience
 in mind. Brought to you by [Vardot](https://www.vardot.com/).
@@ -29,7 +29,7 @@ instructions.
 
 To install the most recent stable release of Varbase 9.0.x run this command:
 ```
-composer create-project Vardot/varbase-project:^9.0.0-alpha1 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/varbase-project:^9.0.0-beta1 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Varbase 9.0.x run this command:

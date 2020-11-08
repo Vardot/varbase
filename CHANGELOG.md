@@ -1,3 +1,124 @@
+# 9.0.0-beta1
+
+### Highlighted important changes since Varbase 9.0.0-alpha1:
+* Issue [#3179132](https://www.drupal.org/i/3179132):
+                 Changed Automated Functional Acceptance Testing to be
+                 Drupal 9 compatible on the Varbase 9.0.x branch
+* Issue [#3180204](https://www.drupal.org/i/3180204):
+                 Updated Varbase Theme (Bootstrap 4 - SASS) from ~6.0
+                 ( 8.x-6.x-dev ) to ~9.0 ( 9.0.x-dev ) on the 
+                Varbase 9.0.x branch and drop legacy support for Bootstrap 3
+* Issue [#3179010](https://www.drupal.org/i/3179010):
+                 Added support for dropzonejs widget with Media Library in core
+* Issue [#3178141](https://www.drupal.org/i/3178141):
+                 Updated Bootstrap library from 4.5.2 to 4.5.3
+
+### Added since Varbase 9.0.0-alpha1:
+* Issue [#3180094](https://www.drupal.org/i/3180094):
+                 Started a 9.0.x branch for [Vartheme BS4] theme to work
+                 with Varbase 9.0.x and Drupal 9 and drop legacy support
+                 for Bootstrap 3
+* Issue [#3180077](https://www.drupal.org/i/3180077):
+                 Added [jQuery UI Accordion] module to work with the
+                 [Field Group] under Drupal 9
+
+### Changed since Varbase 9.0.0-alpha1:
+* Issue [#3178799](https://www.drupal.org/i/3178799):
+                 Styled Content Moderation control. At the Draft view to
+                 look the same as moderation status in all locations
+* Issue [#3178826](https://www.drupal.org/i/3178826):
+                 Removed padding for unpublished nodes in editing mode
+                 or under the View existing Draft
+* Issue [#3178836](https://www.drupal.org/i/3178836):
+                 Changed the style of navigation pager, and mini pager display.
+                 To flex and justify content pager elements to the center
+* Issue [#3178884](https://www.drupal.org/i/3178884):
+                 Changed Schema Config to follow with [Bootstrap Barrio]
+                 theme ~5.0 and remove applied patches
+* Issue [#3178907](https://www.drupal.org/i/3178907)
+                 by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+                 Styled the Node View mode preview bar
+* Issue [#3179357](https://www.drupal.org/i/3179357):
+                 Changed extended libraries to follow with the latest
+                 Claro admin theme libraries in Drupal Core 9
+* Issue [#3180091](https://www.drupal.org/i/3180091):
+                 Changed Form Display configs for all paragraph types to
+                 update Field Group configs to work with Drupal 9
+* Issue [#3180646](https://www.drupal.org/i/3180646):
+                 Enhanced the logic on the creation of contents with layout
+                 library selected layout. the system should not redirect
+                 to change the layout
+* Issue [#3179613](https://www.drupal.org/i/3179613):
+                 Switched [CKEditor Media Embed plugin] module back to
+                 1.x-dev by drupal/ckeditor_media_embed to work on
+                 the 9.0.x branch
+* Issue [#3180829](https://www.drupal.org/i/3180829):
+                 Changed Varbase Bootstrap Paragraphs to only support
+                 Bootstrap 4 classes and droped legacy support for Bootstrap 3
+* Issue [#3180712](https://www.drupal.org/i/3180712):
+                 Changed the Varbase Bootstrap Elements in Varbase Styleguide
+                 to only support Bootstrap 4 elements and drop legacy
+                 support for Bootstrap 3
+
+### Updates since Varbase 9.0.0-alpha1:
+* Issue [#3176626](https://www.drupal.org/i/3176626):
+                 Updated [Media entity Instagram] from ~2.0 to ~3.0
+* Issue [#3179226](https://www.drupal.org/i/3179226):
+                 Updated [Style Guide] module from 1.x-dev to ~2.0 and
+                 removed applied patches to support Drupal 9 and
+                 the 9.0.x branch
+* Issue [#3180062](https://www.drupal.org/i/3180062):
+                 Updated [CKEditor Media Embed plugin] module
+                 from 1.x-dev to 1.10 ( ~1.0 )
+* Issue [#3180107](https://www.drupal.org/i/3180107):
+                 Updated [Charts] module from ~3.0 to ~5.0
+* Issue [#3180114](https://www.drupal.org/i/3180114):
+                 Updated [Checklist API] module from ~1.0 to ~2.0
+
+### Fixes since Varbase 9.0.0-alpha1:
+* Issue [#3179426](https://www.drupal.org/i/3179426):
+                 Fixed status of Varbase update instructions to 100% on
+                 install and on an installation for optional
+                 Varbase components or in a Varbase Sub Profile
+* Issue [#3177937](https://www.drupal.org/i/3177937)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                : Fixed Fatal error in layout page after deleting
+                 the media from the media library
+* Issue [#3179098](https://www.drupal.org/i/3179098)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Fixed Drupal 9 compatibility issues for
+                 [Varbase Styleguide] and added Drupal 9 compatibility
+                 Fix for the [styleguide] module
+* Issue [#3177432](https://www.drupal.org/i/3177432)
+                 by [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
+                : Fixed Drupal 9 compatibility for [Varbase Content Planner]
+                 by adding the patch for the Content Planner sub modules
+                 to work with Drupal 9
+* Issue [#3179173](https://www.drupal.org/i/3179173)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Fixed the RTL style for Content Calendar by adding
+                 a patch for the [Content Planner] module
+* Issue [#3179217](https://www.drupal.org/i/3179217):
+                 Fixed an Error on install by changing the default settings
+                 for Vartheme BS4 and VARTHEME_BS4_SUBTHEME to follow with
+                 the latest Barrio Schema Config
+* Issue [#3180121](https://www.drupal.org/i/3180121):
+                 Fixed Render #pre_render callbacks for Field group with
+                 Paragraphs asymmetric translation widgets and
+                 Field Group module
+* Issue [#3177725](https://www.drupal.org/i/3177725)
+                 by [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
+                , [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                , [akalam](https://www.drupal.org/u/akalam)
+                , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+                 Fixed Drush 10.x works just partly currently
+* Issue [#3181298](https://www.drupal.org/i/3181298):
+                 Fixed [Menu Position] issue when adding a new rule on
+                 Drupal 9 fails with Schema Incomplete Exception
+
+# ------------------------------------------------------------------------------
+
 # 9.0.0-alpha1
 
 ### Highlighted important changes since Varbase 8.x-8.7:
