@@ -56,7 +56,7 @@
     "drupal/vartheme_claro": "2.1.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "2.7.*",
-    "bower-asset/c3": "0.4.*",
+    "bower-asset/c3": "0.7.*",
     "bower-asset/d3": "~5.0",
     "bower-asset/jqueryui-touch-punch": "*",
     "npm-asset/masonry-layout": "~4.0",
