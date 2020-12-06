@@ -56,6 +56,8 @@ projects[media_library_theme_reset][type] = module
 projects[media_library_theme_reset][version] = 1.0
 
 projects[layout_builder_component_attributes][type] = module
+projects[layout_builder_component_attributes][download][type] = "git"
+projects[layout_builder_component_attributes][download][branch] = 1.1.x
 
 projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.11
@@ -193,6 +195,8 @@ projects[userprotect][type] = module
 projects[userprotect][version] = 1.1
 
 projects[admin_audit_trail][type] = module
+projects[admin_audit_trail][download][type] = "git"
+projects[admin_audit_trail][download][branch] = 1.0.x
 
 projects[events_log_track][type] = module
 projects[events_log_track][version] = 1.1
@@ -509,13 +513,9 @@ projects[jquery_ui_draggable][type] = module
 projects[jquery_ui_droppable][type] = module
 projects[jquery_ui_slider][type] = module
 
-core = ''
-
 projects[jquery_ui_touch_punch][type] = module
 projects[jquery_ui_touch_punch][download][type] = "git"
 projects[jquery_ui_touch_punch][download][branch] = 1.0.x
-
-core = 8.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
