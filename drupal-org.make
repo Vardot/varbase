@@ -55,14 +55,7 @@ projects[layout_builder_block_sanitizer][version] = 1.0-alpha4
 projects[media_library_theme_reset][type] = module
 projects[media_library_theme_reset][version] = 1.0
 
-
-core = ''
-
 projects[layout_builder_component_attributes][type] = module
-projects[layout_builder_component_attributes][download][type] = "git"
-projects[layout_builder_component_attributes][download][branch] = 1.1.x
-
-core = 8.x
 
 projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.11
@@ -199,13 +192,7 @@ projects[persistent_login][patch][] = https://www.drupal.org/files/issues/persis
 projects[userprotect][type] = module
 projects[userprotect][version] = 1.1
 
-core = ''
-
 projects[admin_audit_trail][type] = module
-projects[admin_audit_trail][download][type] = "git"
-projects[admin_audit_trail][download][branch] = 1.0.x
-
-core = 8.x
 
 projects[events_log_track][type] = module
 projects[events_log_track][version] = 1.1
@@ -584,7 +571,6 @@ projects[bootstrap][type] = theme
 projects[bootstrap][version] = 3.23
 
 projects[bootstrap_barrio][type] = theme
-projects[bootstrap_barrio][version] = 5.1.4
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.6
@@ -610,52 +596,52 @@ projects[total_control][version] = 2.0
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[varbase_core][type] = module
-projects[varbase_core][version] = 8.x-dev
+projects[varbase_core][version] = 8.27
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.14
 
 projects[varbase_media][type] = module
-projects[varbase_media][version] = 7.x-dev
+projects[varbase_media][version] = 7.31
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.17
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.13
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.10
 
 projects[varbase_layout_builder][type] = module
-projects[varbase_layout_builder][version] = 1.x-dev
+projects[varbase_layout_builder][version] = 1.23
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.16
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.7
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 8.x-dev
+projects[varbase_blog][version] = 8.6
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.8
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.18
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.13
 
 projects[varbase_auth][type] = module
-projects[varbase_auth][version] = 6.x-dev
+projects[varbase_auth][version] = 6.11
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.8
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.5
 
 projects[varbase_workflow][type] = module
 
@@ -664,13 +650,13 @@ projects[varbase_workflow][type] = module
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.x-dev
+projects[vartheme][version] = 6.9
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.x-dev
+projects[vartheme_bs4][version] = 6.26
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.x-dev
+projects[vartheme_admin][version] = 6.11
 
 projects[vartheme_claro][type] = theme
 
