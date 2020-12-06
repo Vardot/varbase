@@ -44,7 +44,7 @@ projects[layout_builder_modal][type] = module
 projects[layout_builder_modal][version] = 1.1
 
 projects[layout_builder_restrictions][type] = module
-projects[layout_builder_restrictions][version] = 2.7
+projects[layout_builder_restrictions][version] = 2.8
 
 projects[layout_library][type] = module
 projects[layout_library][version] = 1.0-beta2
@@ -98,7 +98,7 @@ projects[smart_trim][version] = 1.3
 projects[advanced_text_formatter][type] = module
 
 projects[block_class][type] = module
-projects[block_class][version] = 1.2
+projects[block_class][version] = 1.3
 
 projects[menu_block][type] = module
 projects[menu_block][version] = 1.6
@@ -128,7 +128,7 @@ projects[embed][type] = module
 projects[embed][version] = 1.4
 
 projects[entity][type] = module
-projects[entity][version] = 1.1
+projects[entity][version] = 1.2
 
 projects[entity_clone][type] = module
 projects[entity_clone][version] = 1.0-beta4
@@ -169,10 +169,10 @@ projects[pathologic][version] = 1.0-alpha2
 projects[ckeditor_bidi][type] = module
 
 projects[ace_editor][type] = module
-projects[ace_editor][version] = 1.2
+projects[ace_editor][version] = 1.3
 
 projects[entityqueue][type] = module
-projects[entityqueue][version] = 1.1
+projects[entityqueue][version] = 1.2
 
 projects[entityqueue_form_widget][type] = module
 
@@ -183,7 +183,7 @@ projects[file_mdm][type] = module
 projects[file_mdm][version] = 2.1
 
 projects[sophron][type] = module
-projects[sophron][version] = 1.0
+projects[sophron][version] = 1.1
 
 projects[imageapi_optimize][type] = module
 projects[imageapi_optimize][version] = 2.0-beta1
@@ -250,7 +250,7 @@ projects[views_bulk_operations][type] = module
 projects[views_bulk_operations][version] = 3.9
 
 projects[views_bulk_edit][type] = module
-projects[views_bulk_edit][version] = 2.4
+projects[views_bulk_edit][version] = 2.5
 
 projects[revision_log_default][type] = module
 projects[revision_log_default][version] = 1.2
@@ -279,7 +279,7 @@ projects[node_edit_protection][type] = module
 projects[node_edit_protection][version] = 1.0
 
 projects[rabbit_hole][type] = module
-projects[rabbit_hole][version] = 1.0-beta7
+projects[rabbit_hole][version] = 1.0-beta9
 
 projects[fast_404][type] = module
 projects[fast_404][version] = 2.0-alpha5
@@ -367,7 +367,7 @@ projects[google_analytics_reports][type] = module
 projects[google_analytics_reports][version] = 3.0-rc3
 
 projects[login_destination][type] = module
-projects[login_destination][version] = 2.0-alpha3
+projects[login_destination][version] = 2.0-beta1
 
 projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.5
@@ -376,7 +376,7 @@ projects[social_api][type] = module
 projects[social_api][version] = 2.0-rc3
 
 projects[social_auth][type] = module
-projects[social_auth][version] = 2.0-rc2
+projects[social_auth][version] = 2.0-rc3
 
 projects[social_auth_google][type] = module
 projects[social_auth_google][version] = 2.1
@@ -391,12 +391,12 @@ projects[social_auth_linkedin][type] = module
 projects[social_auth_linkedin][version] = 2.0-beta3
 
 projects[ckeditor_media_embed][type] = module
-projects[ckeditor_media_embed][version] = 1.9
+projects[ckeditor_media_embed][version] = 1.10
 ;; Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG
 projects[ckeditor_media_embed][patch][] = https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch
 
 projects[styleguide][type] = module
-projects[styleguide][version] = 1.0-alpha3
+projects[styleguide][version] = 1.0-beta1
 
 projects[pathauto][type] = module
 projects[pathauto][version] = 1.8
@@ -405,13 +405,13 @@ projects[redirect][type] = module
 projects[redirect][version] = 1.6
 
 projects[metatag][type] = module
-projects[metatag][version] = 1.14
+projects[metatag][version] = 1.15
 
 projects[schema_metatag][type] = module
 projects[schema_metatag][version] = 2.1
 
 projects[simple_sitemap][type] = module
-projects[simple_sitemap][version] = 3.7
+projects[simple_sitemap][version] = 3.8
 
 projects[google_analytics][type] = module
 projects[google_analytics][version] = 3.1
@@ -420,7 +420,7 @@ projects[google_tag][type] = module
 projects[google_tag][version] = 1.4
 
 projects[yoast_seo][type] = module
-projects[yoast_seo][version] = 1.6
+projects[yoast_seo][version] = 1.7
 
 projects[l10n_client][type] = module
 projects[l10n_client][version] = 1.x-dev
@@ -453,7 +453,7 @@ projects[recaptcha][type] = module
 projects[recaptcha][version] = 3.0
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.17
+projects[search_api][version] = 1.18
 
 projects[blazy][type] = module
 projects[blazy][version] = 2.1
@@ -471,7 +471,7 @@ projects[openapi][type] = module
 projects[openapi][version] = 2.0-rc3
 
 projects[openapi_jsonapi][type] = module
-projects[openapi_jsonapi][version] = 2.0-rc2
+projects[openapi_jsonapi][version] = 2.0
 
 projects[openapi_rest][type] = module
 projects[openapi_rest][version] = 2.0-rc2
@@ -492,7 +492,7 @@ projects[simple_oauth][type] = module
 projects[simple_oauth][version] = 4.5
 
 projects[restui][type] = module
-projects[restui][version] = 1.18
+projects[restui][version] = 1.19
 
 projects[jsonapi_extras][type] = module
 projects[jsonapi_extras][version] = 3.16
@@ -584,7 +584,7 @@ projects[bootstrap][type] = theme
 projects[bootstrap][version] = 3.23
 
 projects[bootstrap_barrio][type] = theme
-projects[bootstrap_barrio][version] = 4.32
+projects[bootstrap_barrio][version] = 5.1.4
 
 projects[adminimal_theme][type] = theme
 projects[adminimal_theme][version] = 1.6

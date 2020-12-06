@@ -1,3 +1,159 @@
+# 8.8.8
+
+### Highlighted important changes since Varbase 8.x-8.7:
+* Issue [#3180950](https://www.drupal.org/i/3180950):
+                 Allowed Varbase to work with Composer ~2.0
+
+### Added since Varbase 8.x-8.7:
+* Issue [#3179010](https://www.drupal.org/i/3179010):
+                 Added support for dropzonejs widget with Media Library in core
+* Issue [#3180926](https://www.drupal.org/i/3180926)
+                 by yasmeensalah
+                : Added the ability to hide breadcrumbs from the Media Header
+
+### Changed since Varbase 8.x-8.7:
+* Issue [#3178907](https://www.drupal.org/i/3178907)
+                 by Mohammed J. Razem
+                : Styled the Node View mode preview bar
+* Issue [#3178799](https://www.drupal.org/i/3178799)
+                : Styled Content Moderation control. At the Draft view to look the same as moderation 
+                status in all locations
+* Issue [#3178836](https://www.drupal.org/i/3178836):
+                 Changed the style of navigation pager, and mini pager display.
+                 To flex and justify content pager elements to the center
+* Issue [#3178826](https://www.drupal.org/i/3178826)
+                : Removed padding for unpublished nodes in editing mode or under the View existing Draft
+* Issue [#3180646](https://www.drupal.org/i/3180646)
+                : Enhanced the logic on the creation of contents with layout library selected layout.
+                 the system should not redirect to change the layout
+* Issue [#3185416](https://www.drupal.org/i/3185416):
+                 Removed container-fluid CSS class from container_attributes and only use when needed
+* Issue [#3179357](https://www.drupal.org/i/3179357):
+                 Changed extended libraries to follow with the latest Claro admin theme libraries in Drupal Core
+* Issue [#3178884](https://www.drupal.org/i/3178884):
+                 Changed Schema Config to follow with Bootstrap Barrio theme ~5.0 and remove applied patches
+* Issue [#3186298](https://www.drupal.org/i/3186298):
+                 Changed Vartheme Claro admin them on Drupal core require in composer from ~9.0.0 to ~9.0
+* Issue [#3186302](https://www.drupal.org/i/3186302):
+                 Changed Varbase Workflow module on Drupal core require in composer from ~9.0.0 to ~9.0
+* Issue [#3185544](https://www.drupal.org/i/3185544):
+                 Allowed Varbase Core module to work with Composer ~2.0
+* Issue [#3185580](https://www.drupal.org/i/3185580):
+                 Allowed Varbase Media module to work with Composer ~2.0
+* Issue [#3185550](https://www.drupal.org/i/3185550):
+                 Allowed Varbase Editor module to work with Composer ~2.0
+* Issue [#3185633](https://www.drupal.org/i/3185633):
+                 Allowed Varbase SEO module to work with Composer ~2.0
+* Issue [#3185641](https://www.drupal.org/i/3185641):
+                 Allowed Varbase Total Control Dashboard module to work with Composer ~2.0
+* Issue [#3185512](https://www.drupal.org/i/3185512):
+                 Allowed Varbase API module to work with Composer ~2.0
+* Issue [#3185521](https://www.drupal.org/i/3185521):
+                 Allowed Varbase Auth module to work with Composer ~2.0
+* Issue [#3185527](https://www.drupal.org/i/3185527):
+                 Allowed Varbase Blog module to work with Composer ~2.0
+* Issue [#3185529](https://www.drupal.org/i/3185529):
+                 Allowed Varbase Bootstrap Paragraphs module to work with Composer ~2.0
+* Issue [#3185536](https://www.drupal.org/i/3185536):
+                 Allowed Varbase Carousels module to work with Composer ~2.0
+* Issue [#3185555](https://www.drupal.org/i/3185555):
+                 Allowed Varbase Email module to work with Composer ~2.0
+* Issue [#3185563](https://www.drupal.org/i/3185563):
+                 Allowed Varbase FAQs module to work with Composer ~2.0
+* Issue [#3185570](https://www.drupal.org/i/3185570):
+                 Allowed Varbase Media Hero Slider module to work with Composer ~2.0
+* Issue [#3185609](https://www.drupal.org/i/3185609):
+                 Allowed Varbase Reports module to work with Composer ~2.0
+* Issue [#3185621](https://www.drupal.org/i/3185621):
+                 Allowed Varbase Search module to work with Composer ~2.0
+* Issue [#3185635](https://www.drupal.org/i/3185635):
+                 Allowed Varbase Styleguide module to work with Composer ~2.0
+* Issue [#3185650](https://www.drupal.org/i/3185650):
+                 Allowed Varbase Workflow module to work with Composer ~2.0
+* Issue [#3185679](https://www.drupal.org/i/3185679):
+                 Allowed Vartheme BS4 theme to work with Composer ~2.0
+* Issue [#3185763](https://www.drupal.org/i/3185763):
+                 Allowed Varbase Theme (Bootstrap 3 - LESS) theme to work with Composer ~2.0
+* Issue [#3185765](https://www.drupal.org/i/3185765):
+                 Allowed Vartheme Admin theme to work with Composer ~2.0
+* Issue [#3185574](https://www.drupal.org/i/3185574):
+                 Allowed Varbase Landing Page (Paragraphs) module to work with Composer ~2.0
+* Issue [#3185605](https://www.drupal.org/i/3185605):
+                 Allowed Varbase Media Header module to work with Composer ~2.0
+* Issue [#3185578](https://www.drupal.org/i/3185578):
+                 Allowed Varbase Layout Builder module to work with Composer ~2.0
+
+### Updates since Varbase 8.x-8.7:
+* Issue [#3178141](https://www.drupal.org/i/3178141):
+                 Updated Bootstrap library from 4.5.2 to 4.5.3
+* Issue [#3186048](https://www.drupal.org/i/3186048):
+                 Updated Rabbit Hole module from 1.0-beta7 to 1.0-beta8 ( ~1.0 ) and removed
+                 committed patches
+* Issue [#3184180](https://www.drupal.org/i/3184180):
+                 Updated bower-asset/d3 library from ~3.0 to ~5.0
+* Issue [#3177618](https://www.drupal.org/i/3177618):
+                 Updated yarn dependencies to match with Drupal 9
+* Issue [#3179226](https://www.drupal.org/i/3179226):
+                 Updated Style Guide module from 1.x-dev to ~2.0 and removed applied patches
+* Issue [#3179226](https://www.drupal.org/i/3179226):
+                 Updated Media entity Instagram module from ~2.0 to ~3.0
+* Issue [#3176795](https://www.drupal.org/i/3176795):
+                 Updated the patch for Page Manager on the fix of variants take entity label,
+                 not the variant title
+
+### Fixes since Varbase 8.x-8.7:
+* Issue [#3179426](https://www.drupal.org/i/3179426):
+                 Fixed status of Varbase update instructions to 100% on install and on an installation
+                 for optional Varbase components or in a Varbase Sub Profile
+* Issue [#3185637](https://www.drupal.org/i/3185637) by abedajam: Fixed Update Helper throws an 
+                exception after updating to Varbase 8.8.x
+* Issue [#3186010](https://www.drupal.org/i/3186010): Fixed Value assigned to "section" is not a
+                 valid section
+* Issue [#3109712](https://www.drupal.org/i/3109712)
+                 by das-peter
+                , Joachim Namyslo
+                , sameer
+                : Fixed Fatal Error from 8.7.11 to 8.8.1 by with plain array as returned by
+                 composer getConfig getRepositories #35
+* Issue [#3184211](https://www.drupal.org/i/3184211)
+                 by arawashdeh
+                : Fixed the path typo for RTL Tajawal font
+* Issue [#3126444](https://www.drupal.org/i/3126444)
+                 by Andrew Answer
+                , AHBJCB
+                , RajabNatshah
+                : Fixed Ajax failure: Drupal.ajax is undefined
+* Issue [#3175989](https://www.drupal.org/i/3175989)
+                 by Andrew Answer
+                : Fixed not visible Media Gallery
+* Issue [#3183988](https://www.drupal.org/i/3183988)
+                 by abedajam
+                : Fixed Claro admin theme style of gray fieldset on Google Chrome 87
+* Issue [#3179426](https://www.drupal.org/i/3179426):
+                 Fixed status of Varbase update instructions to 100% on install and
+                 on an installation for optional Varbase components or in a Varbase Sub Profile
+* Issue [#3179217](https://www.drupal.org/i/3179217):
+                 Fixed an Error on install by changing the default settings for Vartheme BS4 and
+                 VARTHEME_BS4_SUBTHEME to follow with the latest Barrio Schema Config
+* Issue [#3177432](https://www.drupal.org/i/3177432)
+                 by Joachim Namyslo
+                : Fixed Drupal 9 compatibility for Varbase Content Planner 
+                module by adding the patch
+                 for the Content Planner sub modules to work with Drupal 9
+* Issue [#3179173](https://www.drupal.org/i/3179173)
+                 by yasmeensalah
+                : Fixed the RTL style for Content Calendar by adding a patch
+                 for the Content Planner module
+* Issue [#3177937](https://www.drupal.org/i/3177937)
+                 by Firass Ziedan
+                : Fixed Fatal error in layout page after deleting the 
+                media from media library
+* Issue [#3176813](https://www.drupal.org/i/3176813)
+                : Fixed Chaos Tool Suite (ctools) issue by adding the patch
+                 for Entity BundleCondition Plugin does not work in all situations
+
+--------------------------------------------------------------------------------
+
 # 8.8.7
 
 ### Highlighted important changes since Varbase 8.x-8.6:
@@ -108,7 +264,9 @@
                  Drupal Practice for View Modes Inventory ( VMI )
 * Issue [#3173731](https://www.drupal.org/i/3173731):
                  Added the 3173730-2.patch for [Layout Builder UX] module
-                 to Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section
+                 to Remove the change of default for auto-submit
+                 controller on the existing route to have a better
+                 behavior when adding a new section
 * Issue [#3170788](https://www.drupal.org/i/3170788):
                  Added a patch to fix an issue for Paragraphs Features
                  module after the update to 1.10
@@ -321,11 +479,13 @@
                   Added permissions for [Prevent Homepage Deletion] module
 * Issue [#3151759](https://www.drupal.org/i/3151759):
                   Enabled Simple Workflow for all content types on 
-                  new Varbase Installations by Varbase Workflow and update Automated Functional Acceptance Testing
+                  new Varbase Installations by Varbase Workflow and update
+                 Automated Functional Acceptance Testing
 * Issue [#3152475](https://www.drupal.org/i/3152475):
                   Added number of custom permissions in optional configurations
 * Issue [#3152119](https://www.drupal.org/i/3152119):
-                  Added ( Access metatag plugins report ) custom permission in optional configurations
+                  Added ( Access metatag plugins report ) custom permission
+                 in optional configurations
 * Issue [#3157145](https://www.drupal.org/i/3157145):
                   Provided more useful "Moderated content" view in backend
 * Issue [#3157225](https://www.drupal.org/i/3157225):
