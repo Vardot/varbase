@@ -650,13 +650,13 @@ projects[varbase_workflow][type] = module
 ;;;;;;;;;;;;;;;;;;;;;
 
 projects[vartheme][type] = theme
-projects[vartheme][version] = 6.9
+projects[vartheme][version] = 6.x-dev
 
 projects[vartheme_bs4][type] = theme
-projects[vartheme_bs4][version] = 6.26
+projects[vartheme_bs4][version] = 6.x-dev
 
 projects[vartheme_admin][type] = theme
-projects[vartheme_admin][version] = 6.11
+projects[vartheme_admin][version] = 6.x-dev
 
 projects[vartheme_claro][type] = theme
 
