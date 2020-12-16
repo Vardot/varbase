@@ -238,7 +238,13 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   // Reset timestamp for nodes.
   $node_ids = \Drupal::entityQuery('node')->execute();
-  $batch['operations'][] = ['varbase_reset_timestamp_for_nodes', (array) $node_ids];
+  if (isset($node_ids)
+    && is_array($node_ids)
+    && count($node_ids) > 0) {
+
+    $batch['operations'][] = ['varbase_reset_timestamp_for_nodes', $node_ids];
+  }
+
 
   if (count($uninstall_components) > 0) {
     foreach ($uninstall_components as $uninstall_component) {
@@ -460,7 +466,7 @@ function varbase_uninstall_component($uninstall_component) {
 /**
  * Batch to reset timestamp for selected nodes.
  *
- * @param int|array $node_ids
+ * @param array $node_ids
  *   The Node IDs.
  */
 function varbase_reset_timestamp_for_nodes($node_ids) {
