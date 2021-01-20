@@ -62,7 +62,7 @@
     "bower-asset/jqueryui-touch-punch": "dev-master",
     "npm-asset/masonry-layout": "~4.0",
     "npm-asset/imagesloaded": "~4.0",
-    "npm-asset/dropzone": "~4.0",
+    "npm-asset/dropzone": "~5.0",
     "npm-asset/blazy": "~1.0",
     "npm-asset/slick-carousel": "~1.0",
     "npm-asset/ace-builds": "~1.0",
