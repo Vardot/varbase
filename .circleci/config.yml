@@ -19,10 +19,10 @@ jobs:
       - checkout
       - run: sudo apt update
       - run: sudo -E docker-php-ext-install zip
-      - run: sudo -E docker-php-ext-install libmcrypt-dev libpng12-dev iconv mcrypt
       - run: sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
+      - run: sudo -E docker-php-ext-install bcmath pdo_mysql
       - run: sudo -E docker-php-ext-configure gd --with-freetype --with-jpeg
-      - run: sudo -E docker-php-ext-install bcmath pdo_mysql gd
+      - run: sudo -E docker-php-ext-install gd
 
       - run:
       # Our primary container isn't MYSQL so run a sleep command until it's ready.
