@@ -21,7 +21,7 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-      - image: circleci/node:jessie-browsers
+      - image: cimg/openjdk:15.0
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
