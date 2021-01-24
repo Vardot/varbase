@@ -18,7 +18,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt update
-      - run: sudo -E docker-php-ext-install zip mbstring
+      - run: sudo -E docker-php-ext-install zip
       - run: sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
       - run: sudo -E docker-php-ext-install bcmath pdo_mysql
       - run: sudo -E docker-php-ext-install gd
