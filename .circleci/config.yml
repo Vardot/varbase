@@ -3,63 +3,69 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.4.9
-      - image: circleci/mysql:8.0.23
-        command: mysqld --default-authentication-plugin=mysql_native_password
-        environment:
-          MYSQL_USER: root
-          MYSQL_DATABASE: test_varbase808xxc
-          MYSQL_ROOT_PASSWORD: '123___'
-          MYSQL_PASSWORD: '123___'
     steps:
       - checkout
       - run: sudo apt update
       - run: sudo docker-php-ext-install zip
+
+      # Upgrade to MySQL 8.0.X
+      - run: wget https://repo.mysql.com//mysql-apt-config_0.8.16-1_all.deb
+      - run: sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
+      - run: sudo apt-get update -q
+      - run: sudo apt-get install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
+      - run: sudo systemctl restart mysql
+      - run: sudo mysql_upgrade
+      - run: mysql --version 
       - run:
           name: Install MySQL driver
           command: |
             sudo docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
             sudo docker-php-ext-install zip bcmath pdo_mysql
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "composer.json" }}
-            - v1-dependencies-
 
       # PHP Configurations.
-      - run: echo 'max_execution_time = 1200' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'max_input_time = 180' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'max_input_vars = 10000' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'memory_limit = -1' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'error_reporting = E_ALL' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'post_max_size = 64M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'upload_max_filesize = 32M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'max_file_uploads = 40' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
-      - run: echo 'sendmail_path = /bin/true' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo -e "[Date]\ndate.timezone = UTC" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+      - run: echo 'max_execution_time = 1200' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'max_input_time = 180' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'max_input_vars = 10000' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'memory_limit = -1' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'error_reporting = E_ALL' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'post_max_size = 64M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'upload_max_filesize = 32M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'max_file_uploads = 40' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+      - run: echo 'sendmail_path = /bin/true' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
       - run: phpenv rehash
 
       ## Update the composer.
       - run: composer self-update --2
       - run: composer --version
+      - run: sudo composer self-update
+      - restore_cache: 
+          keys:
+            - composer-v1-{{ checksum "composer.lock" }}
+            - composer-v1-
 
       ## Build with the composer.
       - run: composer install --no-interaction
-      - save_cache:
-          key: v1-dependencies-{{ checksum "composer.json" }}
+      - save_cache: 
+          key: composer-v1-{{ checksum "composer.lock" }}
           paths:
-            - ./vendor
+            - vendor
       - restore_cache:
           keys:
-            - node-v1-{{ checksum "package.json" }}
+            - node-v1-{{ checksum "package-lock.json" }}
             - node-v1-
       - run: yarn install
-      - save_cache:
-          key: node-v1-{{ checksum "package.json" }}
+      - save_cache: 
+          key: node-v1-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
+
       # Configure and run the virtual display.
       - run: export DISPLAY=:99
       - run: sh -e /etc/init.d/xvfb start
       - run: Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
       - run: sleep 3
+
      # Download Latest Chrome Driver.
       - run:  CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
       - run:  echo $CHROME_DRIVER_VERSION;
