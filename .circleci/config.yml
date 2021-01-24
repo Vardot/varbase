@@ -44,8 +44,8 @@ jobs:
 
      # Download Latest Chrome Driver.
       - run: CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
-      - run: echo $CHROME_DRIVER_VERSION;
-      - run: wget http://chromedriver.storage.googleapis.com/${CHROME_DRIVER_VERSION}/chromedriver_linux64.zip
+      - run: echo "${CHROME_DRIVER_VERSION}";
+      - run: wget "http://chromedriver.storage.googleapis.com/${CHROME_DRIVER_VERSION}/chromedriver_linux64.zip"
       - run: unzip chromedriver_linux64.zip
       - run: chmod +x chromedriver
       - run: mkdir -p $HOME/.composer/vendor/bin
