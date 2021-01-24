@@ -19,7 +19,6 @@ jobs:
       - checkout
       - run: sudo apt update
       - run: sudo -E docker-php-ext-install zip
-      - run: sudo -E docker-php-ext-install libjpeg62-turbo-dev libmcrypt-dev libpng12-dev iconv mcrypt
       - run: sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
       - run: sudo -E docker-php-ext-configure gd --with-freetype-dir=/usr/include/  --with-jpeg-dir=/usr/include/
       - run: sudo -E docker-php-ext-install bcmath pdo_mysql gd
