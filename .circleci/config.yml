@@ -37,13 +37,6 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
 
-      ## Update the composer.
-      - run: sudo composer self-update --2
-      - run: composer --version
-
-      ## Build with the composer.
-      - run: composer install --no-interaction
-
       # Configure and run the virtual display.
       - run: export DISPLAY=:99
       - run: sh -e /etc/init.d/xvfb start
@@ -75,6 +68,15 @@ jobs:
       - run: if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
       - run: java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
       - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
+
+      ## Update the composer.
+      - run: sudo composer self-update --2
+      - run: composer --version
+
+      ## Build with the composer.
+      - run: composer install --no-interaction -vvv
+      - run: mkdir docroot/profiles/contrib
+      - run: git clone --branch 9.0.x https://github.com/vardot/varbase.git docroot/profiles/contrib/varbase
 
       ## Install with drush.
       - run: cd docroot
