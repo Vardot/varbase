@@ -40,8 +40,8 @@ jobs:
       # Configure and run the virtual display.
       - run: sudo apt-get install -y xvfb
       - run: export DISPLAY=:99
-      - run: sudo -e /etc/init.d/xvfb start
-      - run: Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
+      - run: sudo /etc/init.d/xvfb start
+      - run: xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
       - run: sleep 3
 
      # Download Latest Chrome Driver.
