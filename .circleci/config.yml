@@ -3,7 +3,13 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.4.9
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
       - image: circleci/mysql:8.0.4
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
         environment:
           MYSQL_ROOT_PASSWORD: 123___
           MYSQL_DATABASE: test_varbase808xxc
