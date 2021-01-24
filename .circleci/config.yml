@@ -2,8 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:7.3-stretch
-      - image: circleci/mysql:8.0.20-ram
+      - image: circleci/php:7.4.9
+      - image: circleci/mysql:8
         command: mysqld --default-authentication-plugin=mysql_native_password
         environment:
           MYSQL_USER: root
@@ -24,7 +24,7 @@ jobs:
             - v1-dependencies-{{ checksum "composer.json" }}
             - v1-dependencies-
         ## Build with the composer.
-      - run: composer install --no-interactio
+      - run: composer install --no-interaction
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
           paths:
