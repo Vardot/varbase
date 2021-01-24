@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.1
 jobs:
   build:
     docker:
@@ -15,6 +17,7 @@ jobs:
           MYSQL_DATABASE: test_varbase808xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
+      - image: 'cimg/node:13.12-browser'
     steps:
       - checkout
       - run: sudo apt update
@@ -42,26 +45,16 @@ jobs:
       - run: xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
       - run: sleep 3
 
-     # Download Latest Chrome Driver.
-      - run: wget http://chromedriver.storage.googleapis.com/$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
-      - run: unzip chromedriver_linux64.zip
-      - run: chmod +x chromedriver
-      - run: mkdir -p $HOME/.composer/vendor/bin
-      - run: mv -f chromedriver $HOME/.composer/vendor/bin/
-      - run: rm chromedriver_linux64.zip
-
       # Update to latest Chrome browser.
-      - run: export CHROME_BIN=/usr/bin/google-chrome
-      - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - run: sudo apt-get clean
-      - run: sudo apt-get update
-      - run: sudo apt-get install dpkg
-      - run: sudo dpkg -i google-chrome-stable_current_amd64.deb
-      - run: rm google-chrome-stable_current_amd64.deb
+      - browser-tools/install-chrome
       - run: google-chrome --version
 
+     # Download Latest Chrome Driver.
+      - browser-tools/install-chromedriver
+      - run: chromedriver --version
+
       # Run selenium standalone server.
-      - run: if [[ ! -f /usr/local/bin/selenium.jar ]]; then wget -O /usr/local/bin/selenium.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
+      - run: java -jar /usr/local/bin/selenium.jar --version
       - run: java -jar /usr/local/bin/selenium.jar -port 4445 > /dev/null 2>&1 &
       - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
 
