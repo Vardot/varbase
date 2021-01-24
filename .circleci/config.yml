@@ -21,6 +21,7 @@ jobs:
       - run: sudo docker-php-ext-install zip
       - run: sudo docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
       - run: sudo docker-php-ext-install zip bcmath pdo_mysql
+      - run: sudo docker-php-ext-gd
       - run:
       # Our primary container isn't MYSQL so run a sleep command until it's ready.
           name: Waiting for MySQL to be ready
