@@ -1,96 +1,93 @@
-description: |
-  Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready) | by Vardot.
-usage:
-  version: 2.1
-  orbs:
-    browser-tools: circleci/browser-tools@1.1.1
-  jobs:
-    build:
-      executor: browser-tools/default
-      docker:
-        - image: circleci/php:7.4.9
-          auth:
-            username: mydockerhub-user
-            password: $DOCKERHUB_PASSWORD
-        - image: circleci/mysql:8.0.4
-          auth:
-            username: mydockerhub-user
-            password: $DOCKERHUB_PASSWORD
-          environment:
-            MYSQL_ROOT_PASSWORD: rootpw
-            MYSQL_DATABASE: test_varbase808xxc
-            MYSQL_USER: user
-            MYSQL_PASSWORD: passw0rd
-        - image: cimg/node:13.12-browser
-      steps:
-        - checkout
-        - run: sudo apt update
-        - run: sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
-        - run: sudo -E docker-php-ext-install zip
-        - run: sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-        - run: sudo -E docker-php-ext-install bcmath pdo_mysql
-        - run: sudo -E docker-php-ext-configure gd --with-freetype --with-jpeg
-        - run: sudo -E docker-php-ext-install gd
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.1
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.4.9
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+      - image: circleci/mysql:8.0.4
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+        environment:
+          MYSQL_ROOT_PASSWORD: rootpw
+          MYSQL_DATABASE: test_varbase808xxc
+          MYSQL_USER: user
+          MYSQL_PASSWORD: passw0rd
+      - image: cimg/node:13.12-browser
+    steps:
+      - checkout
+      - run: sudo apt update
+      - run: sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+      - run: sudo -E docker-php-ext-install zip
+      - run: sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
+      - run: sudo -E docker-php-ext-install bcmath pdo_mysql
+      - run: sudo -E docker-php-ext-configure gd --with-freetype --with-jpeg
+      - run: sudo -E docker-php-ext-install gd
 
-        - run:
-        # Our primary container isn't MYSQL so run a sleep command until it's ready.
-            name: Waiting for MySQL to be ready
-            command: |
-              for i in `seq 1 10`;
-              do
-                nc -z 127.0.0.1 3306 && echo Success && exit 0
-                echo -n .
-                sleep 1
-              done
-              echo Failed waiting for MySQL && exit 1
+      - run:
+      # Our primary container isn't MYSQL so run a sleep command until it's ready.
+          name: Waiting for MySQL to be ready
+          command: |
+            for i in `seq 1 10`;
+            do
+              nc -z 127.0.0.1 3306 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for MySQL && exit 1
 
-        # Configure and run the virtual display.
-        - run: export DISPLAY=:99
-        - run: xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
-        - run: sleep 3
+      # Configure and run the virtual display.
+      - run: export DISPLAY=:99
+      - run: xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
+      - run: sleep 3
 
-        # Update to latest Chrome browser.
-        - browser-tools/install-chrome
-        - run: google-chrome --version
+      # Update to latest Chrome browser.
+      - browser-tools/install-chrome
+      - run: google-chrome --version
 
-      # Download Latest Chrome Driver.
-        - browser-tools/install-chromedriver
-        - run: chromedriver --version
+    # Download Latest Chrome Driver.
+      - browser-tools/install-chromedriver
+      - run: chromedriver --version
 
-        # Run selenium standalone server.
-        - run: java -jar /usr/local/bin/selenium.jar --version
-        - run: java -jar /usr/local/bin/selenium.jar -port 4445 > /dev/null 2>&1 &
-        - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
+      # Run selenium standalone server.
+      - browser-tools/install-browser-tools
+      - run: java -jar /usr/local/bin/selenium.jar --version
+      - run: java -jar /usr/local/bin/selenium.jar -port 4445 > /dev/null 2>&1 &
+      - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
 
-        ## Update the composer.
-        - run: sudo composer self-update --2
-        - run: composer --version
+      ## Update the composer.
+      - run: sudo composer self-update --2
+      - run: composer --version
 
-        ## Build with the composer.
-        - run: composer install --no-interaction -vvv
-        - run: mkdir docroot/profiles/contrib
-        - run: git clone --branch 9.0.x https://github.com/vardot/varbase.git docroot/profiles/contrib/varbase
+      ## Build with the composer.
+      - run: composer install --no-interaction -vvv
+      - run: mkdir docroot/profiles/contrib
+      - run: git clone --branch 9.0.x https://github.com/vardot/varbase.git docroot/profiles/contrib/varbase
 
-        ## Install with drush.
-        - run: cd docroot
-        - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
-        - run: drush pm-enable varbase_development --yes
-        - run: drush pm-enable varbase_styleguide --yes
-        - run: drush pm-enable varbase_media_instagram --yes
-        - run: drush pm-enable varbase_media_twitter --yes
-        - run: drush pm-enable varbase_api --yes
-        - run: drush pm-enable social_auth_google --yes
-        - run: drush pm-enable social_auth_facebook --yes
-        - run: drush pm-enable social_auth_twitter --yes
-        - run: drush pm-enable social_auth_linkedin --yes
-        - run: drush pm-enable varbase_content_planner --yes
-        - run: drush config-set system.performance css.preprocess 0 --yes
-        - run: drush config-set system.performance js.preprocess 0 --yes
-        - run: drush config-set system.logging error_level all --yes
-        - run: drush cr
+      ## Install with drush.
+      - run: cd docroot
+      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+      - run: drush pm-enable varbase_development --yes
+      - run: drush pm-enable varbase_styleguide --yes
+      - run: drush pm-enable varbase_media_instagram --yes
+      - run: drush pm-enable varbase_media_twitter --yes
+      - run: drush pm-enable varbase_api --yes
+      - run: drush pm-enable social_auth_google --yes
+      - run: drush pm-enable social_auth_facebook --yes
+      - run: drush pm-enable social_auth_twitter --yes
+      - run: drush pm-enable social_auth_linkedin --yes
+      - run: drush pm-enable varbase_content_planner --yes
+      - run: drush config-set system.performance css.preprocess 0 --yes
+      - run: drush config-set system.performance js.preprocess 0 --yes
+      - run: drush config-set system.logging error_level all --yes
+      - run: drush cr
 
-        - run: drush runserver --default-server=builtin 8080 &>/dev/null &
-        - run: sleep 5
+      - run: drush runserver --default-server=builtin 8080 &>/dev/null &
+      - run: sleep 5
 
-        - run: cd ./profiles/varbase
-        - run: ../../../bin/behat --strict tests/features/varbase
+      - run: cd ./profiles/varbase
+      - run: ../../../bin/behat --strict tests/features/varbase
