@@ -5,11 +5,11 @@ jobs:
       - image: circleci/php:7.4.9
         auth:
           username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+          password: $DOCKERHUB_PASSWORD
       - image: circleci/mysql:8.0.4
         auth:
           username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+          password: $DOCKERHUB_PASSWORD
         environment:
           MYSQL_ROOT_PASSWORD: rootpw
           MYSQL_DATABASE: test_varbase808xxc
@@ -35,16 +35,16 @@ jobs:
 
       # PHP Configurations.
       - run: echo -e "[Date]\ndate.timezone = UTC" | sudo tee /usr/local/etc/php/php.ini > /dev/null
-      - run: echo 'max_execution_time = 1200' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'max_input_time = 180' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'max_input_vars = 10000' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'memory_limit = -1' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'error_reporting = E_ALL' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'post_max_size = 64M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'upload_max_filesize = 32M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'max_file_uploads = 40' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: echo 'sendmail_path = /bin/true' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-      - run: phpenv rehash
+      - run: echo 'max_execution_time = 1200' >>  /usr/local/etc/php/php.ini
+      - run: echo 'max_input_time = 180' >>  /usr/local/etc/php/php.ini
+      - run: echo 'max_input_vars = 10000' >>  /usr/local/etc/php/php.ini
+      - run: echo 'memory_limit = -1' >>  /usr/local/etc/php/php.ini
+      - run: echo 'error_reporting = E_ALL' >>  /usr/local/etc/php/php.ini
+      - run: echo 'post_max_size = 64M' >>  /usr/local/etc/php/php.ini
+      - run: echo 'upload_max_filesize = 32M' >>  /usr/local/etc/php/php.ini
+      - run: echo 'max_file_uploads = 40' >>  /usr/local/etc/php/php.ini
+      - run: echo 'sendmail_path = /bin/true' >>  /usr/local/etc/php/php.ini
+      - run: sudo /etc/init.d/apache2 restart
 
       ## Update the composer.
       - run: composer self-update --2
