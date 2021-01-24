@@ -45,7 +45,7 @@ jobs:
      # Download Latest Chrome Driver.
       - run: CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
       - run: echo $CHROME_DRIVER_VERSION;
-      - run: wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+      - run: wget http://chromedriver.storage.googleapis.com/${CHROME_DRIVER_VERSION}/chromedriver_linux64.zip
       - run: unzip chromedriver_linux64.zip
       - run: chmod +x chromedriver
       - run: mkdir -p $HOME/.composer/vendor/bin
@@ -64,8 +64,8 @@ jobs:
 
       # Run selenium standalone server.
       - run: SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
-      - run: if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
-      - run: java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
+      - run: if [[ ! -f ${SELENIUM} ]]; then wget -O ${SELENIUM} http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
+      - run: java -jar ${SELENIUM} -port 4445 > /dev/null 2>&1 &
       - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
 
       ## Update the composer.
