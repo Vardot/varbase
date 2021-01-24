@@ -1,0 +1,94 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.3-stretch
+      - image: circleci/mysql:8.0.20-ram
+        command: mysqld --default-authentication-plugin=mysql_native_password
+        environment:
+          MYSQL_USER: root
+          MYSQL_DATABASE: test_varbase808xxc
+          MYSQL_ROOT_PASSWORD: '123___'
+          MYSQL_PASSWORD: '123___'
+    steps:
+      - checkout
+      - run: sudo apt update
+      - run: sudo docker-php-ext-install zip
+      - run:
+          name: Install MySQL driver
+          command: |
+            sudo docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
+            sudo docker-php-ext-install zip bcmath pdo_mysql
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "composer.json" }}
+            - v1-dependencies-
+        ## Build with the composer.
+      - run: composer install --no-interactio
+      - save_cache:
+          key: v1-dependencies-{{ checksum "composer.json" }}
+          paths:
+            - ./vendor
+      - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package.json" }}
+            - node-v1-
+      - run: yarn install
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      # Configure and run the virtual display.
+      - run: export DISPLAY=:99
+      - run: sh -e /etc/init.d/xvfb start
+      - run: Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
+      - run: sleep 3
+     # Download Latest Chrome Driver.
+      - run:  CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+      - run:  echo $CHROME_DRIVER_VERSION;
+      - run:  wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+      - run: unzip chromedriver_linux64.zip
+      - run: chmod +x chromedriver
+      - run: mkdir -p $HOME/.composer/vendor/bin
+      - run: mv -f chromedriver $HOME/.composer/vendor/bin/
+      - run: rm chromedriver_linux64.zip
+
+      # Update to latest Chrome browser.
+      - run: export CHROME_BIN=/usr/bin/google-chrome
+      - run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - run: sudo apt-get clean
+      - run: sudo apt-get update
+      - run: sudo apt-get install dpkg
+      - run: sudo dpkg -i google-chrome-stable_current_amd64.deb
+      - run: rm google-chrome-stable_current_amd64.deb
+      - run: google-chrome --version
+
+      # Run selenium standalone server.
+      - run: SELENIUM="$HOME/.selenium/cache/selenium-server-standalone-2.53.1.jar";
+      - run: if [[ ! -f $SELENIUM ]]; then wget -O $SELENIUM http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
+      - run: java -jar $SELENIUM -port 4445 > /dev/null 2>&1 &
+      - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
+
+      ## Install with drush.
+      - run: cd docroot
+      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@localhost/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+      - run: drush pm-enable varbase_development --yes
+      - run: drush pm-enable varbase_styleguide --yes
+      - run: drush pm-enable varbase_media_instagram --yes
+      - run: drush pm-enable varbase_media_twitter --yes
+      - run: drush pm-enable varbase_api --yes
+      - run: drush pm-enable social_auth_google --yes
+      - run: drush pm-enable social_auth_facebook --yes
+      - run: drush pm-enable social_auth_twitter --yes
+      - run: drush pm-enable social_auth_linkedin --yes
+      - run: drush pm-enable varbase_content_planner --yes
+      - run: drush config-set system.performance css.preprocess 0 --yes
+      - run: drush config-set system.performance js.preprocess 0 --yes
+      - run: drush config-set system.logging error_level all --yes
+      - run: drush cr
+
+      - run: drush runserver --default-server=builtin 8080 &>/dev/null &
+      - run: sleep 5
+
+      - run: cd ./profiles/varbase
+      - run: ../../../bin/behat --strict tests/features/varbase
