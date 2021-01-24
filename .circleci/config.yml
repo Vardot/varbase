@@ -34,7 +34,7 @@ jobs:
             echo Failed waiting for MySQL && exit 1
 
       ## Update the composer.
-      - run: composer self-update --2
+      - run: sudo composer self-update --2
       - run: composer --version
       - restore_cache: 
           keys:
