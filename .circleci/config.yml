@@ -9,7 +9,7 @@ jobs:
       - run: sudo docker-php-ext-install zip
 
       # Install MySQL 8.0.X
-      - run: sudo apt install lsb_release
+      - run: sudo apt install lsb-core
       - run: wget https://repo.mysql.com/mysql-apt-config_0.8.16-1_all.deb
       - run: sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
       - run: sudo apt update -q
