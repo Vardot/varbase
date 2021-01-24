@@ -38,6 +38,7 @@ jobs:
             echo Failed waiting for MySQL && exit 1
 
       # Configure and run the virtual display.
+      - run: sudo apt-get install -y xvfb
       - run: export DISPLAY=:99
       - run: sh -e /etc/init.d/xvfb start
       - run: Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
