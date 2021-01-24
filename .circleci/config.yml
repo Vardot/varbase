@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 jobs:
   build:
     docker:
@@ -15,7 +15,6 @@ jobs:
           MYSQL_DATABASE: test_varbase808xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
-      - image: cimg/node:13.12-browser
     steps:
       - checkout
       - run: sudo apt update
