@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.4.9
-      - image: circleci/mysql:8
+      - image: circleci/mysql:8.0.23
         command: mysqld --default-authentication-plugin=mysql_native_password
         environment:
           MYSQL_USER: root
@@ -23,7 +23,24 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "composer.json" }}
             - v1-dependencies-
-        ## Build with the composer.
+
+      # PHP Configurations.
+      - run: echo 'max_execution_time = 1200' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'max_input_time = 180' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'max_input_vars = 10000' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'memory_limit = -1' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'error_reporting = E_ALL' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'post_max_size = 64M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'upload_max_filesize = 32M' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'max_file_uploads = 40' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: echo 'sendmail_path = /bin/true' >>  /opt/circleci/php/$(phpenv global)/etc/conf.d/memory.ini ;
+      - run: phpenv rehash
+
+      ## Update the composer.
+      - run: composer self-update --2
+      - run: composer --version
+
+      ## Build with the composer.
       - run: composer install --no-interaction
       - save_cache:
           key: v1-dependencies-{{ checksum "composer.json" }}
