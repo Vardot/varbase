@@ -9,11 +9,11 @@ jobs:
       - run: sudo docker-php-ext-install zip
 
       # Install MySQL 8.0.X
-      - run: apt install lsb_release
+      - run: sudo apt install lsb_release
       - run: wget https://repo.mysql.com/mysql-apt-config_0.8.16-1_all.deb
       - run: sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
-      - run: sudo apt-get update -q
-      - run: sudo apt-get install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
+      - run: sudo apt update -q
+      - run: sudo apt install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
       - run: sudo systemctl restart mysql
       - run: sudo mysql_upgrade
       - run: mysql --version 
