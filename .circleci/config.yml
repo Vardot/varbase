@@ -57,9 +57,9 @@ jobs:
       - run: chromedriver --version
 
       # Run selenium standalone server.
-      - run: wget -O /usr/local/bin/selenium.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
-      - run: java -jar /usr/local/bin/selenium.jar --version
-      - run: java -jar /usr/local/bin/selenium.jar -port 4445 > /dev/null 2>&1 &
+      - run: wget -O ~/selenium.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+      - run: java -jar ~/selenium.jar --version
+      - run: java -jar ~/selenium.jar -port 4445 > /dev/null 2>&1 &
       - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
 
       ## Update the composer.
