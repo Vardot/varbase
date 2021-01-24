@@ -21,6 +21,10 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
+      - image: circleci/node:jessie-browsers
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run: sudo apt update
@@ -57,9 +61,14 @@ jobs:
       - run: chromedriver --version
 
       # Run selenium standalone server.
-      - run: wget -O ~/selenium.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
-      - run: java -jar ~/selenium.jar --version
-      - run: java -jar ~/selenium.jar -port 4445 > /dev/null 2>&1 &
+      - run: mkdir test-reports
+      - run:
+          name: Download Selenium
+          command: curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+      - run:
+          name: Start Selenium
+          command: java -jar selenium-server-standalone-2.53.1.jar -port 4445 -log test-reports/selenium.log
+          background: true
       - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
 
       ## Update the composer.
