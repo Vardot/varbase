@@ -17,8 +17,12 @@ jobs:
           MYSQL_DATABASE: test_varbase808xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
-      - image: cimg/node:13.12-browser
+      - image: cimg/node:current-browsers
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
     steps:
+      - browser-tools/install-browser-tools
       - checkout
       - run: sudo apt update
       - run: sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
@@ -49,12 +53,11 @@ jobs:
       - browser-tools/install-chrome
       - run: google-chrome --version
 
-    # Download Latest Chrome Driver.
+      # Download Latest Chrome Driver.
       - browser-tools/install-chromedriver
       - run: chromedriver --version
 
       # Run selenium standalone server.
-      - browser-tools/install-browser-tools
       - run: java -jar /usr/local/bin/selenium.jar --version
       - run: java -jar /usr/local/bin/selenium.jar -port 4445 > /dev/null 2>&1 &
       - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
