@@ -33,19 +33,6 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
 
-      # PHP Configurations.
-      - run: sudo cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini
-      - run: sudo echo 'max_execution_time = 1200' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'max_input_time = 180' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'max_input_vars = 10000' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'memory_limit = -1' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'error_reporting = E_ALL' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'post_max_size = 64M' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'upload_max_filesize = 32M' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'max_file_uploads = 40' >> /usr/local/etc/php/php.ini
-      - run: sudo echo 'sendmail_path = /bin/true' >> /usr/local/etc/php/php.ini
-      - run: sudo /etc/init.d/apache2 restart
-
       ## Update the composer.
       - run: composer self-update --2
       - run: composer --version
