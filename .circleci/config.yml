@@ -61,7 +61,6 @@ jobs:
       - run: chromedriver --version
 
       # Run selenium standalone server.
-      - openjdk-install
       - run: mkdir test-reports
       - run:
           name: Download Selenium
