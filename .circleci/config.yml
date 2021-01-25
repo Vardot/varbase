@@ -27,8 +27,7 @@ jobs:
             sudo apt update
             sudo apt install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
             mysql --version
-            sudo apt install mysql-client
-            mysql -uroot --execute="CREATE DATABASE test_varbase808xxc;"
+             mysql -h 127.0.0.1 -u root --execute="CREATE DATABASE test_varbase808xxc;"
 
       # Configure and run the virtual display.
       - run:
