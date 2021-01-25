@@ -50,9 +50,8 @@ jobs:
           command: curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
       - run:
           name: Start Selenium
-          command: java -jar selenium-server-standalone-2.53.1.jar -port 4445 -log test-reports/selenium.log
+          command: java -jar selenium-server-standalone-2.53.1.jar -port 4445
           background: true
-      - run: echo "[  OK  ] Starting Selenium on the 4445 port ..."
 
       ## Update the composer.
       - run: sudo composer self-update --2
