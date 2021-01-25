@@ -17,7 +17,6 @@ jobs:
           java --version
           google-chrome --version
           chromedriver --version
-          mysql --version
 
       # Install and run MySQL 8.0.X
       - run:
@@ -28,7 +27,9 @@ jobs:
             sudo apt update
             sudo apt install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
             mysql --version
-            mysql -uroot -e "CREATE DATABASE test_varbase808xxc"
+            sudo systemctl start mysqld
+            sudo apt-get install default-mysql-client
+            mysql -uroot --execute="CREATE DATABASE test_varbase808xxc;"
 
       # Configure and run the virtual display.
       - run:
