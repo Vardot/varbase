@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.1.1
+  openjdk-install: cloudesire/openjdk-install@1.2.3
 jobs:
   build:
     docker:
@@ -18,10 +19,6 @@ jobs:
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
       - image: cimg/node:current-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: cimg/openjdk:11.0
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
@@ -61,6 +58,7 @@ jobs:
       - run: chromedriver --version
 
       # Run selenium standalone server.
+      - openjdk-install
       - run: mkdir test-reports
       - run:
           name: Download Selenium
@@ -77,7 +75,7 @@ jobs:
 
       ## Build with the composer.
       - run: composer install --no-interaction -vvv
-      - run: export PATH="/home/circleci/project/bin"
+      - run: export PATH="/home/circleci/project/bin:$PATH"
       - run: mkdir docroot/profiles/contrib
       - run: git clone --branch 8.x-8.x https://github.com/vardot/varbase.git docroot/profiles/contrib/varbase
 
