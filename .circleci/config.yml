@@ -21,7 +21,7 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-      - image: cimg/openjdk:15.0
+      - image: cimg/openjdk:11.0
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
@@ -77,6 +77,7 @@ jobs:
 
       ## Build with the composer.
       - run: composer install --no-interaction -vvv
+      - run: export PATH="/home/circleci/project/bin"
       - run: mkdir docroot/profiles/contrib
       - run: git clone --branch 8.x-8.x https://github.com/vardot/varbase.git docroot/profiles/contrib/varbase
 
