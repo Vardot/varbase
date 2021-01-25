@@ -26,10 +26,6 @@ jobs:
           java --version
           google-chrome --version
           chromedriver --version
-      - run: sudo apt update
-      - run: sudo apt install php-zip
-      - run: sudo apt install php-bcmath php-pdo_mysql
-      - run: sudo apt install php-gd
 
       - run:
       # Our primary container isn't MYSQL so run a sleep command until it's ready.
