@@ -8,15 +8,6 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:latest
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase808xxc
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
     steps:
       - browser-tools/install-browser-tools
       - checkout
@@ -27,17 +18,17 @@ jobs:
           google-chrome --version
           chromedriver --version
 
+      # Install and run MySQL 8.0.X
       - run:
-      # Our primary container isn't MYSQL so run a sleep command until it's ready.
-          name: Waiting for MySQL to be ready
+          name: Install and run MySQL 8.0.X
           command: |
-            for i in `seq 1 10`;
-            do
-              nc -z 127.0.0.1 3306 && echo Success && exit 0
-              echo -n .
-              sleep 1
-            done
-            echo Failed waiting for MySQL && exit 1
+            wget https://repo.mysql.com//mysql-apt-config_0.8.16-1_all.deb
+            sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
+            sudo apt-get update -q
+            sudo apt-get install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
+            sudo systemctl restart mysql
+            sudo mysql_upgrade
+            mysql --version 
 
       # Configure and run the virtual display.
       - run: export DISPLAY=:99
@@ -70,7 +61,7 @@ jobs:
 
       ## Install with drush.
       - run: cd docroot
-      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:@localhost/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
       - run: drush pm-enable varbase_development --yes
       - run: drush pm-enable varbase_styleguide --yes
       - run: drush pm-enable varbase_media_instagram --yes
