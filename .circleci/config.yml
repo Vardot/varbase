@@ -27,7 +27,6 @@ jobs:
             sudo apt update
             sudo apt install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
             mysql --version
-            sudo systemctl start mysqld
             sudo apt-get install default-mysql-client
             mysql -uroot --execute="CREATE DATABASE test_varbase808xxc;"
 
