@@ -17,6 +17,7 @@ jobs:
           java --version
           google-chrome --version
           chromedriver --version
+          mysql --version
 
       # Install and run MySQL 8.0.X
       - run:
