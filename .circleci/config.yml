@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.1.1
-  openjdk-install: cloudesire/openjdk-install@1.2.3
 jobs:
   build:
     docker:
@@ -9,7 +8,7 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:8.0.4
+      - image: circleci/mysql:latest
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
@@ -19,6 +18,10 @@ jobs:
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
       - image: cimg/node:current-browsers
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+      - image: circleci/openjdk:latest
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
