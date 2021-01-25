@@ -59,7 +59,6 @@ jobs:
 
       ## Build with the composer.
       - run: composer install --no-interaction -vvv
-      - run: mkdir docroot/profiles
       - run: git clone --branch 8.x-8.x https://github.com/vardot/varbase.git docroot/profiles/varbase
 
       ## Install with drush.
