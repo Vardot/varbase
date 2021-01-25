@@ -21,10 +21,6 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-      - image: circleci/openjdk:latest
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run: sudo apt update
@@ -61,7 +57,7 @@ jobs:
       - run: chromedriver --version
 
       # Run selenium standalone server.
-      - run: mkdir test-reports
+      - run: sudo apt-get install -y openjdk-8-jdk 
       - run:
           name: Download Selenium
           command: curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
@@ -77,30 +73,29 @@ jobs:
 
       ## Build with the composer.
       - run: composer install --no-interaction -vvv
-      - run: export PATH="/home/circleci/project/bin:$PATH"
       - run: mkdir docroot/profiles/contrib
       - run: git clone --branch 8.x-8.x https://github.com/vardot/varbase.git docroot/profiles/contrib/varbase
 
       ## Install with drush.
       - run: cd docroot
-      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
-      - run: drush pm-enable varbase_development --yes
-      - run: drush pm-enable varbase_styleguide --yes
-      - run: drush pm-enable varbase_media_instagram --yes
-      - run: drush pm-enable varbase_media_twitter --yes
-      - run: drush pm-enable varbase_api --yes
-      - run: drush pm-enable social_auth_google --yes
-      - run: drush pm-enable social_auth_facebook --yes
-      - run: drush pm-enable social_auth_twitter --yes
-      - run: drush pm-enable social_auth_linkedin --yes
-      - run: drush pm-enable varbase_content_planner --yes
-      - run: drush config-set system.performance css.preprocess 0 --yes
-      - run: drush config-set system.performance js.preprocess 0 --yes
-      - run: drush config-set system.logging error_level all --yes
-      - run: drush cr
+      - run: ../vendor/drush/drush/drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+      - run: ../vendor/drush/drush/drush pm-enable varbase_development --yes
+      - run: ../vendor/drush/drush/drush pm-enable varbase_styleguide --yes
+      - run: ../vendor/drush/drush/drush pm-enable varbase_media_instagram --yes
+      - run: ../vendor/drush/drush/drush pm-enable varbase_media_twitter --yes
+      - run: ../vendor/drush/drush/drush pm-enable varbase_api --yes
+      - run: ../vendor/drush/drush/drush pm-enable social_auth_google --yes
+      - run: ../vendor/drush/drush/drush pm-enable social_auth_facebook --yes
+      - run: ../vendor/drush/drush/drush pm-enable social_auth_twitter --yes
+      - run: ../vendor/drush/drush/drush pm-enable social_auth_linkedin --yes
+      - run: ../vendor/drush/drush/drush pm-enable varbase_content_planner --yes
+      - run: ../vendor/drush/drush/drush config-set system.performance css.preprocess 0 --yes
+      - run: ../vendor/drush/drush/drush config-set system.performance js.preprocess 0 --yes
+      - run: ../vendor/drush/drush/drush config-set system.logging error_level all --yes
+      - run: ../vendor/drush/drush/drush cr
 
-      - run: drush runserver --default-server=builtin 8080 &>/dev/null &
+      - run: ../vendor/drush/drush/drush runserver --default-server=builtin 8080 &>/dev/null &
       - run: sleep 5
 
       - run: cd ./profiles/varbase
-      - run: ../../../bin/behat --strict tests/features/varbase
+      - run: ../../../vendor/behat/behat/bin/behat/behat --strict tests/features/varbase
