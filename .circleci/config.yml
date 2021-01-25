@@ -27,7 +27,6 @@ jobs:
           google-chrome --version
           chromedriver --version
       - run: sudo apt update
-      - run: sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
       - run: sudo -E docker-php-ext-install zip
       - run: sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
       - run: sudo -E docker-php-ext-install bcmath pdo_mysql
