@@ -24,16 +24,18 @@ jobs:
           command: |
             wget https://repo.mysql.com//mysql-apt-config_0.8.16-1_all.deb
             sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb
-            sudo apt-get update -q
-            sudo apt-get install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
+            sudo apt install -q -y --allow-unauthenticated -o Dpkg::Options::=--force-confnew mysql-server
             sudo /etc/init.d/mysql start
             sudo mysql_upgrade
             mysql --version 
 
       # Configure and run the virtual display.
-      - run: export DISPLAY=:99
-      - run: xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
-      - run: sleep 3
+      - run:
+          name: Configure and run the virtual display
+          command: |
+            export DISPLAY=:99
+            xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
+            sleep 3
 
       # Run selenium standalone server.
       - run:
@@ -44,11 +46,11 @@ jobs:
           command: java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
           background: true
 
-      ## Update the composer.
+      ## Update the composer
       - run: sudo composer self-update --2
       - run: composer --version
 
-      ## Build with the composer.
+      ## Build with the composer
       - run: composer install --no-interaction -vvv
       - run: git clone --branch 8.x-8.x https://github.com/vardot/varbase.git docroot/profiles/varbase
 
