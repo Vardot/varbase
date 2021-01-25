@@ -18,7 +18,6 @@ jobs:
           MYSQL_USER: user
           MYSQL_PASSWORD: 123___
     steps:
-      - browser-tools/install-browser-tools
       - checkout
       - run:
           name: Waiting for MySQL to be ready
@@ -30,9 +29,9 @@ jobs:
               sleep 1
             done
             echo Failed waiting for MySQL && exit 1
+      - browser-tools/install-browser-tools
       - run: |
           php --version
-          mysql --version
           node --version
           java --version
           google-chrome --version
