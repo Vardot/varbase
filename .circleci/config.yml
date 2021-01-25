@@ -1,10 +1,10 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.1.1
+  browser-tools: circleci/browser-tools@1.1
 jobs:
   build:
     docker:
-      - image: circleci/php:7.4.9
+      - image: cimg/php:7.3-browsers
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
@@ -17,16 +17,15 @@ jobs:
           MYSQL_DATABASE: test_varbase808xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
-      - image: cimg/node:current-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: circleci/openjdk:8-jdk-stretch
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
     steps:
+      - browser-tools/install-browser-tools
       - checkout
+      - run: |
+          php --version
+          node --version
+          java --version
+          google-chrome --version
+          chromedriver --version
       - run: sudo apt update
       - run: sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
       - run: sudo -E docker-php-ext-install zip
@@ -51,14 +50,6 @@ jobs:
       - run: export DISPLAY=:99
       - run: xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
       - run: sleep 3
-
-      # Update to latest Chrome browser.
-      - browser-tools/install-chrome
-      - run: google-chrome --version
-
-      # Download Latest Chrome Driver.
-      - browser-tools/install-chromedriver
-      - run: chromedriver --version
 
       # Run selenium standalone server.
       - run:
