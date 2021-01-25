@@ -4,15 +4,35 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/php:7.3-browsers
+      - image: cimg/circleci/php:7.3-apache-node-browsers
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
+      - image: circleci/mysql:8.0.4
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+        environment:
+          MYSQL_ROOT_PASSWORD: 123___
+          MYSQL_DATABASE: test_varbase808xxc
+          MYSQL_USER: user
+          MYSQL_PASSWORD: 123___
     steps:
       - browser-tools/install-browser-tools
       - checkout
+      - run:
+          name: Waiting for MySQL to be ready
+          command: |
+            for i in `seq 1 10`;
+            do
+              nc -z 127.0.0.1 3306 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for MySQL && exit 1
       - run: |
           php --version
+          mysql --version
           node --version
           java --version
           google-chrome --version
@@ -63,7 +83,7 @@ jobs:
 
       ## Install with drush.
       - run: cd docroot
-      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:123___@localhost/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:123___@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
       - run: drush pm-enable varbase_development --yes
       - run: drush pm-enable varbase_styleguide --yes
       - run: drush pm-enable varbase_media_instagram --yes
