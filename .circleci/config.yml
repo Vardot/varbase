@@ -23,6 +23,7 @@ jobs:
           name: Install and run MySQL 8.0.X
           command: |
             sudo apt install mysql-server
+            sudo systemctl start mysql
             mysql --version
             sudo mysql
             ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123___';
