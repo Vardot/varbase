@@ -9,18 +9,16 @@ jobs:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
         environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: 1
           MYSQL_USER: root
-          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_ROOT_PASSWORD: '123___'
           MYSQL_DATABASE: test_varbase808xxc
       - image: circleci/mysql:8.0.4
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
         environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: 1
           MYSQL_USER: root
-          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_ROOT_PASSWORD: '123___'
           MYSQL_DATABASE: test_varbase808xxc
     steps:
       - checkout
@@ -35,7 +33,7 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
       - run: sudo apt install mysql-client
-      - run: mysql -uroot -h 127.0.0.1 -e "CREATE DATABASE test_varbase808xxc;"
+      - run: mysql -h 127.0.0.1 -u root -p 123___ -e "CREATE DATABASE test_varbase808xxc;"
       - browser-tools/install-browser-tools
       - run: |
           php --version
@@ -85,7 +83,7 @@ jobs:
 
       ## Install with drush.
       - run: cd docroot
-      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:123___@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
       - run: drush pm-enable varbase_development --yes
       - run: drush pm-enable varbase_styleguide --yes
       - run: drush pm-enable varbase_media_instagram --yes
