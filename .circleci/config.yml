@@ -8,15 +8,11 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase808xxc
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
       - image: circleci/mysql:8.0.4
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
+        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
         environment:
           MYSQL_ROOT_PASSWORD: rootpw
           MYSQL_DATABASE: test_varbase808xxc
