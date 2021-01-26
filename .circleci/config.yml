@@ -141,5 +141,5 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /home/circleci/project/docroot/profiles/varbase
-            behat --strict tests/features/varbase/step1-init-tests/
-            behat --strict tests/features/varbase/step2-apply-tests/
+            ../../../bin/behat tests/features/varbase/step1-init-tests
+            ../../../bin/behat tests/features/varbase/step2-apply-tests
