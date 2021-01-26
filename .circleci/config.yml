@@ -14,7 +14,7 @@ jobs:
           MYSQL_USER: root
           MYSQL_ALLOW_EMPTY_PASSWORD: 1
           MYSQL_PASSWORD: ''
-      - image: mysql:latest
+      - image: circleci/mysql:8.0
         command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin --innodb-large-prefix=true --innodb-file-format=Barracuda
         auth:
           username: mydockerhub-user
