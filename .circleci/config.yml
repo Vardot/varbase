@@ -20,6 +20,30 @@ jobs:
           MYSQL_PASSWORD: passw0rd
     steps:
       - checkout
+      ## Install PHP extra.
+      - run:
+          name: Configure and run the virtual display
+          command: |
+            sudo apt update
+            sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+            sudo -E docker-php-ext-install zip
+            sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
+            sudo -E docker-php-ext-install bcmath pdo_mysql
+            sudo -E docker-php-ext-install gd
+            phpenv rehash
+
+
+      ## Change PHP Configurations.
+      - run:
+          name: PHP Configurations
+          command: |
+            if [ ! -d /opt/circleci/php/$(phpenv global)/etc ]; then mkdir /opt/circleci/php/$(phpenv global)/etc; fi
+            if [ ! -d /opt/circleci/php/$(phpenv global)/etc/conf.d ]; then mkdir /opt/circleci/php/$(phpenv global)/etc/conf.d; fi
+            if [ ! -f /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini ]; then touch /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini; fi
+            echo "memory_limit = -1" >> /opt/circleci/php/$(phpenv global)/etc/php.ini
+            echo "memory_limit = -1" >> /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
+
+      ## Waiting for MySQL to be ready.
       - run:
           name: Waiting for MySQL to be ready
           command: |
@@ -30,24 +54,27 @@ jobs:
               sleep 1
             done
             echo Failed waiting for MySQL && exit 1
-      - run: sudo apt install mysql-client
-      - run: mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase808xxc;CREATE DATABASE test_varbase808xxc;"
+
+      ## Create test Varbase MySQL database and drop old one if exists.
+      - run:
+          name: Create test Varbase MySQL database and drop old one if exists
+          command: |
+            sudo apt install mysql-client
+            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase808xxc;CREATE DATABASE test_varbase808xxc;"
       - browser-tools/install-browser-tools
-      - run: |
-          php --version
-          node --version
-          java --version
-          google-chrome --version
-          chromedriver --version
 
-      - run: sudo apt update
-      - run: sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
-      - run: sudo -E docker-php-ext-install zip
-      - run: sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-      - run: sudo -E docker-php-ext-install bcmath pdo_mysql
-      - run: sudo -E docker-php-ext-install gd
+      ## List tool version.
+      - run:
+          name: List tool version
+          command: |
+            php --version
+            node --version
+            java --version
+            google-chrome --version
+            chromedriver --version
+            mysql --version
 
-      # Configure and run the virtual display.
+      ## Configure and run the virtual display.
       - run:
           name: Configure and run the virtual display
           command: |
@@ -55,12 +82,12 @@ jobs:
             xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
             sleep 3
 
-      # Run selenium standalone server.
+      ## Run selenium standalone server.
       - run:
           name: Download Selenium
           command: curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
       - run:
-          name: Start Selenium
+          name: Start Selenium at the 4445 port
           command: java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
           background: true
 
@@ -72,33 +99,44 @@ jobs:
       - run: composer install --no-interaction -vvv
       - run: git clone --branch 8.x-8.x https://github.com/vardot/varbase.git docroot/profiles/varbase
 
-      ## Update PATH and Define Environment Variable at Runtime.
+      ## Update PATH to point at the composer bin in the project.
       - run:
           name: Update PATH to point at the composer bin in the project
           command: |
             echo 'export PATH=/home/circleci/project/bin:$PATH' >> $BASH_ENV
             source $BASH_ENV
 
-      ## Install with drush.
-      - run: cd docroot
-      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
-      - run: drush pm-enable varbase_development --yes
-      - run: drush pm-enable varbase_styleguide --yes
-      - run: drush pm-enable varbase_media_instagram --yes
-      - run: drush pm-enable varbase_media_twitter --yes
-      - run: drush pm-enable varbase_api --yes
-      - run: drush pm-enable social_auth_google --yes
-      - run: drush pm-enable social_auth_facebook --yes
-      - run: drush pm-enable social_auth_twitter --yes
-      - run: drush pm-enable social_auth_linkedin --yes
-      - run: drush pm-enable varbase_content_planner --yes
-      - run: drush config-set system.performance css.preprocess 0 --yes
-      - run: drush config-set system.performance js.preprocess 0 --yes
-      - run: drush config-set system.logging error_level all --yes
-      - run: drush cr
+      ## Install Varbase 8.8.x with drush.
+      - run:
+          name: Install Varbase with drush
+          command: |
+            cd docroot
+            drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+            drush pm-enable varbase_development --yes
+            drush pm-enable varbase_styleguide --yes
+            drush pm-enable varbase_media_instagram --yes
+            drush pm-enable varbase_media_twitter --yes
+            drush pm-enable varbase_api --yes
+            drush pm-enable social_auth_google --yes
+            drush pm-enable social_auth_facebook --yes
+            drush pm-enable social_auth_twitter --yes
+            drush pm-enable social_auth_linkedin --yes
+            drush pm-enable varbase_content_planner --yes
+            drush config-set system.performance css.preprocess 0 --yes
+            drush config-set system.performance js.preprocess 0 --yes
+            drush config-set system.logging error_level all --yes
+            drush cr
 
-      - run: drush runserver --default-server=builtin 8080 &>/dev/null &
-      - run: sleep 5
+      ## Run Drush server on 8080 port.
+      - run:
+          name: Run Drush server on 8080 port
+          command: |
+            drush runserver --default-server=builtin 8080 &>/dev/null &
+            sleep 5
 
-      - run: cd ./profiles/varbase
-      - run: behat --strict tests/features/varbase
+      ## Automated Functional Acceptance Testing.
+      - run:
+          name: Automated Functional Acceptance Testing
+          command: |
+            cd ./profiles/varbase
+            behat --strict tests/features/varbase
