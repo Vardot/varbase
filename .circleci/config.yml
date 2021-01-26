@@ -132,5 +132,6 @@ jobs:
       - run:
           name: Automated Functional Acceptance Testing
           command: |
-            cd ./profiles/varbase
-            behat --strict tests/features/varbase
+            cd profiles/varbase
+            behat --strict tests/features/varbase/step1-init-tests/
+            behat --strict tests/features/varbase/step2-apply-tests/
