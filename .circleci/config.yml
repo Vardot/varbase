@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/php:7.4-apache-stretch-node-browsers
+      - image: circleci/php:7.3-apache-stretch-node-browsers
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
