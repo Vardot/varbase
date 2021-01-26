@@ -8,15 +8,20 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 1
+          MYSQL_USER: root
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_DATABASE: test_varbase808xxc
       - image: circleci/mysql:8.0.4
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
         environment:
-          MYSQL_ROOT_PASSWORD: rootpw
+          MYSQL_ALLOW_EMPTY_PASSWORD: 1
+          MYSQL_USER: root
+          MYSQL_ROOT_PASSWORD: ''
           MYSQL_DATABASE: test_varbase808xxc
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
     steps:
       - checkout
       - run:
@@ -65,17 +70,9 @@ jobs:
       ## Update the composer
       - run: sudo composer self-update --2
       - run: composer --version
-      - restore_cache:
-          keys:
-            - composer-v1-{{ checksum "composer.lock" }}
-            - composer-v1-
 
       ## Build with the composer
       - run: composer install --no-interaction -vvv
-      - save_cache:
-          key: composer-v1-{{ checksum "composer.lock" }}
-          paths:
-            - vendor
       - run: git clone --branch 8.x-8.x https://github.com/vardot/varbase.git docroot/profiles/varbase
 
       ## Update PATH and Define Environment Variable at Runtime.
@@ -87,7 +84,7 @@ jobs:
 
       ## Install with drush.
       - run: cd docroot
-      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+      - run: drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
       - run: drush pm-enable varbase_development --yes
       - run: drush pm-enable varbase_styleguide --yes
       - run: drush pm-enable varbase_media_instagram --yes
