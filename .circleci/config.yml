@@ -35,7 +35,7 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
       - run: sudo apt install mysql-client
-      - run: mysql -h 127.0.0.1 -u user -p passw0rd -e "CREATE DATABASE test_varbase808xxc;"
+      - run: mysql -h 127.0.0.1 -uuser -ppassw0rd -e "CREATE DATABASE test_varbase808xxc;"
       - browser-tools/install-browser-tools
       - run: |
           php --version
