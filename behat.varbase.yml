@@ -1,10 +1,10 @@
 default:
   autoload:
-    '': %paths.base%/tests/features/bootstrap
+    '': "%paths.base%/tests/features/bootstrap"
   suites:
     default:
       paths:
-        - %paths.base%/tests/features
+        - "%paths.base%/tests/features"
       contexts:
         - VarbaseContext:
             parameters:
@@ -43,15 +43,13 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
-      paths:
-        features: %paths.base%/tests/features
-        bootstrap: %paths.base%/tests/features/bootstrap
   formatters:
     pretty:
     html:
       output_path: "%paths.base%/tests/reports/"
   extensions:
-    Behat\MinkExtension:
+    Drupal\MinkExtension:
+      ajax_timeout: 60
       files_path: "%paths.base%/tests/assets/"
       goutte: ~
       selenium2:
