@@ -104,6 +104,7 @@ jobs:
       ## Install Varbase 8.8.x with drush.
       - run:
           name: Install Varbase with drush
+          no_output_timeout: 30m
           command: |
             cd docroot
             drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
@@ -131,6 +132,7 @@ jobs:
       ## Automated Functional Acceptance Testing.
       - run:
           name: Automated Functional Acceptance Testing
+          no_output_timeout: 30m
           command: |
             cd profiles/varbase
             behat --strict tests/features/varbase/step1-init-tests/
