@@ -35,8 +35,7 @@ jobs:
       - run:
           name: PHP Configurations
           command: |
-            echo -e "[Date]\ndate.timezone = UTC" | sudo tee /usr/local/etc/php/php.ini > /dev/null
-            sudo echo "memory_limit = -1" >> /usr/local/etc/php/php.ini
+            echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
             sudo service apache2 restart
 
       ## Waiting for MySQL to be ready.
