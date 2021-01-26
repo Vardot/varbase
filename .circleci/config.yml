@@ -30,22 +30,14 @@ jobs:
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
             sudo -E docker-php-ext-install bcmath pdo_mysql
             sudo -E docker-php-ext-install gd
-            git clone git://github.com/phpenv/phpenv.git ~/.phpenv
-            echo 'export PATH="$HOME/.phpenv/bin:$PATH"' >> ~/.bash_profile
-            echo 'eval "$(phpenv init -)"' >> ~/.bash_profile
-            phpenv rehash
-
 
       ## Change PHP Configurations.
       - run:
           name: PHP Configurations
           command: |
-            if [ ! -d /opt/circleci/php/$(phpenv global)/etc ]; then mkdir /opt/circleci/php/$(phpenv global)/etc; fi
-            if [ ! -d /opt/circleci/php/$(phpenv global)/etc/conf.d ]; then mkdir /opt/circleci/php/$(phpenv global)/etc/conf.d; fi
-            if [ ! -f /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini ]; then touch /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini; fi
-            echo "memory_limit = -1" >> /opt/circleci/php/$(phpenv global)/etc/php.ini
-            echo "memory_limit = -1" >> /opt/circleci/php/$(phpenv global)/etc/conf.d/php.ini
-            phpenv rehash
+            echo -e "[Date]\ndate.timezone = UTC" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo "memory_limit = -1" >> /usr/local/etc/php/php.ini
+            sudo service apache2 restart
 
       ## Waiting for MySQL to be ready.
       - run:
