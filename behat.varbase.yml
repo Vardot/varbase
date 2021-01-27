@@ -4,7 +4,7 @@ default:
       paths:
         - "%paths.base%/tests/features"
       contexts:
-        - VarbaseContext:
+        - Varbase\tests\features\bootstrap\VarbaseContext:
             parameters:
               varbase_users:
                 webmaster: { email: 'webmaster@vardot.com', password: 'dD.123123ddd' }
@@ -14,7 +14,7 @@ default:
                 test_seo_admin: { email: 'seo.admin.test@vardot.com', password: 'dD.123123ddd' }
                 test_site_admin: { email: 'site.admin.test@vardot.com', password: 'dD.123123ddd' }
                 test_super_admin: { email: 'super.admin.test@vardot.com', password: 'dD.123123ddd' }
-        - SelectorsContext:
+        - Varbase\tests\features\bootstrap\SelectorsContext:
            parameters:
              selectors:
                ## Add all css selectors which you will use in most features.
@@ -108,6 +108,6 @@ default:
       name: html
       renderer: Twig,Behat2
       file_name: index
-      print_args: false
-      print_outp: false
-      loop_break: false
+      print_args: true
+      print_outp: true
+      loop_break: true
