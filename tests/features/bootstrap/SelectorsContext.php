@@ -1,5 +1,7 @@
 <?php
 
+namespace Varbase\tests\features\bootstrap;
+
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Mink\Selector\CssSelector;

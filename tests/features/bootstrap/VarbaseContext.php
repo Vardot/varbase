@@ -1,5 +1,7 @@
 <?php
 
+namespace Varbase\tests\features\bootstrap;
+
 use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
