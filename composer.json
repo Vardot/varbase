@@ -86,7 +86,7 @@
   "autoload": {
     "psr-4": {
       "Varbase\\composer\\": "src/composer",
-      "Varbase\\tests\\features\\bootstrap": "src/tests/features/bootstrap"
+      "Varbase\\tests\\features\\bootstrap\\": "src/tests/features/bootstrap"
     }
   },
   "scripts": {
