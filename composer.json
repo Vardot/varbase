@@ -69,10 +69,9 @@
     "swagger-api/swagger-ui": "~3.0"
   },
   "require-dev": {
-    "drupal/core-dev": "^8.8.0",
+    "drupal/core-dev": "~8.0",
     "drupal/console": "~1.0",
     "drush/drush": "~9.0",
-    "phing/phing": "~2.0",
     "drupal/drupal-extension": "~3.0",
     "emuse/behat-html-formatter": "^0.2.0"
   },
