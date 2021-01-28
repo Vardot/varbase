@@ -1,0 +1,146 @@
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.3-apache-stretch-node-browsers
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+      - image: circleci/mysql:8.0.4
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
+        environment:
+          MYSQL_ROOT_PASSWORD: rootpw
+          MYSQL_DATABASE: test_varbase900xxc
+          MYSQL_USER: user
+          MYSQL_PASSWORD: passw0rd
+    steps:
+      - checkout
+      ## Install PHP extra.
+      - run:
+          name: Install PHP extra
+          command: |
+            sudo apt update
+            sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+            sudo -E docker-php-ext-install zip
+            sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
+            sudo -E docker-php-ext-install bcmath pdo_mysql
+            sudo -E docker-php-ext-install gd
+
+      ## Change PHP Configurations.
+      - run:
+          name: PHP Configurations
+          command: |
+            echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            sudo service apache2 restart
+
+      ## Waiting for MySQL to be ready.
+      - run:
+          name: Waiting for MySQL to be ready
+          command: |
+            for i in `seq 1 10`;
+            do
+              nc -z 127.0.0.1 3306 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for MySQL && exit 1
+
+      ## Create test Varbase MySQL database and drop old one if exists.
+      - run:
+          name: Create test Varbase MySQL database and drop old one if exists
+          command: |
+            sudo apt install mysql-client
+            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase900xxc;CREATE DATABASE test_varbase900xxc;"
+      - browser-tools/install-browser-tools
+
+      ## List tool version.
+      - run:
+          name: List tool version
+          command: |
+            php --version
+            node --version
+            java --version
+            google-chrome --version
+            chromedriver --version
+            mysql --version
+
+      ## Configure and run the virtual display.
+      - run:
+          name: Configure and run the virtual display
+          command: |
+            export DISPLAY=:99
+            xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
+            sleep 3
+
+      ## Run selenium standalone server.
+      - run:
+          name: Download Selenium
+          command: curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+      - run:
+          name: Start Selenium at the 4445 port
+          command: java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
+          background: true
+
+      ## Update the composer
+      - run:
+          name: Update the composer
+          command: |
+            sudo composer self-update --2
+            composer --version
+
+      ## Build Varbase 9.0.x with the composer.
+      - run:
+          name: Build Varbase 9.0.x with the composer
+          command: |
+            composer install --no-interaction -vvv
+            git clone --branch 9.0.x https://github.com/vardot/varbase.git /home/circleci/project/docroot/profiles/varbase
+
+      ## Update PATH to point at the composer bin in the project.
+      - run:
+          name: Update PATH to point at the composer bin in the project
+          command: |
+            echo 'export PATH=/home/circleci/project/bin:$PATH' >> $BASH_ENV
+            source $BASH_ENV
+
+      ## Install Varbase 9.0.x with drush.
+      - run:
+          name: Install Varbase with drush
+          no_output_timeout: 30m
+          command: |
+            cd /home/circleci/project/docroot/
+            drush site-install varbase --yes --site-name='Test Varbase900xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase900xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+            drush pm-enable varbase_development --yes
+            drush pm-enable varbase_styleguide --yes
+            drush pm-enable varbase_landing --yes
+            drush pm-enable varbase_media_instagram --yes
+            drush pm-enable varbase_media_twitter --yes
+            drush pm-enable varbase_api --yes
+            drush pm-enable social_auth_google --yes
+            drush pm-enable social_auth_facebook --yes
+            drush pm-enable social_auth_linkedin --yes
+            drush pm-enable varbase_content_planner --yes
+            drush config-set system.performance css.preprocess 0 --yes
+            drush config-set system.performance js.preprocess 0 --yes
+            drush config-set system.logging error_level all --yes
+            drush cr
+
+      ## Run Drush server on 8080 port.
+      - run:
+          name: Run Drush server on 8080 port
+          command: |
+            drush runserver --default-server=builtin 8080 &>/dev/null &
+            sleep 5
+
+      ## Automated Functional Acceptance Testing.
+      - run:
+          name: Automated Functional Acceptance Testing
+          no_output_timeout: 30m
+          command: |
+            cd /home/circleci/project/docroot/profiles/varbase
+            ../../../bin/behat tests/features/varbase/step1-init-tests
+            ../../../bin/behat tests/features/varbase/step2-apply-tests
