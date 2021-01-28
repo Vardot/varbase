@@ -18,6 +18,7 @@ jobs:
           MYSQL_DATABASE: test_varbase900xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
+    working_directory: /home/circleci/project/docroot
     steps:
       - checkout
       ## Install PHP extra.
