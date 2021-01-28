@@ -66,9 +66,7 @@
   },
   "require-dev": {
     "drupal/core-dev": "~9.0",
-    "drupal/console": "~1.0",
     "drush/drush": "~10.0",
-    "phing/phing": "~2.0",
     "drupal/drupal-extension": "~4.0",
     "emuse/behat-html-formatter": "^0.2.0"
   },
@@ -89,13 +87,11 @@
     "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
     "post-install-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-      "./bin/phing push"
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
     ],
     "post-update-cmd": [
       "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories",
-      "./bin/phing push"
+      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
     ],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"],
     "create-new-vartheme": "scripts/create-new-vartheme.sh"
