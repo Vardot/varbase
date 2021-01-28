@@ -533,7 +533,7 @@ function varbase_after_install_finished(array &$install_state) {
     if (count($alias_ids) > 0) {
       foreach ($alias_ids as $alias_id) {
 
-        if (!(end($alias_ids) == $alias_id)) {
+        if (!(end($alias_ids))) {
           $path_alias = PathAlias::load($alias_id);
           $path_alias->delete();
         }
