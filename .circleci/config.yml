@@ -129,13 +129,6 @@ jobs:
             drush config-set system.logging error_level all --yes
             drush cr
 
-      ## Run Drush server on 8080 port.
-      - run:
-          name: Run Drush server on 8080 port
-          command: |
-            drush runserver --default-server=builtin 8080 &>/dev/null &
-            sleep 5
-
       ## Automated Functional Acceptance Testing.
       - run:
           name: Automated Functional Acceptance Testing
