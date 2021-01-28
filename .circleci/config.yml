@@ -18,6 +18,7 @@ jobs:
           MYSQL_DATABASE: test_varbase808xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
+    working_directory: /home/circleci/project/docroot
     steps:
       - checkout
       ## Install PHP extra.
@@ -127,13 +128,6 @@ jobs:
             drush config-set system.performance js.preprocess 0 --yes
             drush config-set system.logging error_level all --yes
             drush cr
-
-      ## Run Drush server on 8080 port.
-      - run:
-          name: Run Drush server on 8080 port
-          command: |
-            drush runserver --default-server=builtin 8080 &>/dev/null &
-            sleep 5
 
       ## Automated Functional Acceptance Testing.
       - run:
