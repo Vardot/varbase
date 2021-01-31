@@ -1,6 +1,9 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.1
+aliases:
+  - &composer-cache
+      v4-composer-cache
 jobs:
   build:
     docker:
@@ -44,6 +47,9 @@ jobs:
           command: |
             sudo rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
             sudo service apache2 restart
+      - restore_cache:
+          keys:
+            - *composer-cache
 
       ## Waiting for MySQL to be ready.
       - run:
@@ -104,8 +110,13 @@ jobs:
       - run:
           name: Build Varbase 9.0.x with the composer
           command: |
+            cd /var/www/html/varbase
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
+      - save_cache:
+          key: *composer-cache
+          paths:
+            - ~/.composer/cache
 
       ## Update PATH to point at the composer bin in the project.
       - run:
