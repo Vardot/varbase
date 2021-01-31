@@ -25,7 +25,7 @@ jobs:
     steps:
       - checkout:
           path: /var/www/html/varbase
-      # Setup Apache to point varbase.test at /var/www/html/varbase/docroot
+      ## Setup Apache to point varbase.test at /var/www/html/varbase/docroot
       - run:
           name: Setup Apache to point varbase.test at /var/www/html/varbase/docroot
           command: |
@@ -33,14 +33,19 @@ jobs:
             sudo a2ensite varbase.test
             sudo service apache2 restart
             echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
+
+      ## Install Usefull must have utils for debugging with SSH into this box.
+      - run:
+          name: Install Usefull must have utils for debugging with SSH into this box
+          command: |
+            sudo apt -qq update && sudo apt -qqy upgrade
+            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libjpeg62-turbo-dev libpng-dev libapache2-mod-php xvfb
       ## Install PHP extra.
       - run:
           name: Install PHP extra
           command: |
-            sudo apt -qq update && sudo apt -qqy upgrade
-            sudo apt-get -yqq install libfreetype6-dev libjpeg62-turbo-dev libpng-dev xvfb zip
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-            sudo -E docker-php-ext-install zip gd mbstring bcmath pdo_mysql mysqli pdo pdo_mysql
+            sudo -E docker-php-ext-install zip gd mbstring bcmath pdo_mysql mysqli pdo pdo_mysql xml cgi cli common curl gd imap intl pspell sqlite3 tidy opcache json bz2 readline xmlrpc enchant xsl php-all-dev zip bcmath php-pear 
             sudo service apache2 restart
 
       ## Change PHP Configurations.
