@@ -39,13 +39,13 @@ jobs:
           name: Install Usefull must have utils for debugging with SSH into this box
           command: |
             sudo apt -qq update && sudo apt -qqy upgrade
-            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libjpeg62-turbo-dev libpng-dev libapache2-mod-php xvfb
+            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libjpeg62-turbo-dev libpng-dev xvfb
       ## Install PHP extra.
       - run:
           name: Install PHP extra
           command: |
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-            sudo -E docker-php-ext-install zip gd mbstring bcmath pdo_mysql mysqli pdo pdo_mysql xml cgi cli common curl gd imap intl pspell sqlite3 tidy opcache json bz2 readline xmlrpc enchant xsl php-all-dev zip bcmath php-pear 
+            sudo -E docker-php-ext-install zip gd mbstring bcmath pdo_mysql mysqli pdo pdo_mysql xml cgi cli common curl gd imap intl pspell sqlite3 tidy opcache json bz2 readline xmlrpc enchant xsl php-all-dev zip bcmath php-pear libapache2-mod-php
             sudo service apache2 restart
 
       ## Change PHP Configurations.
