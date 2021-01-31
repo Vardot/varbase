@@ -44,11 +44,13 @@ jobs:
       - run:
           name: Install PHP extra
           command: |
+            sudo apt update
+            sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
             sudo -E docker-php-ext-install zip
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-            sudo -E docker-php-ext-install bcmath pdo_mysql
+            sudo -E docker-php-ext-install mbstring bcmath pdo_mysql
             sudo -E docker-php-ext-install gd
-            sudo -E docker-php-ext-install mbstring xml common curl imap intl json xmlrpc xsl
+            sudo -E docker-php-ext-install xml common curl imap intl json xmlrpc xsl
             sudo service apache2 restart
 
       ## Change PHP Configurations.
