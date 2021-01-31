@@ -50,7 +50,6 @@ jobs:
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
             sudo -E docker-php-ext-install mbstring bcmath pdo_mysql
             sudo -E docker-php-ext-install gd
-            sudo -E docker-php-ext-install xml common curl imap intl json xmlrpc xsl
             sudo service apache2 restart
 
       ## Change PHP Configurations.
