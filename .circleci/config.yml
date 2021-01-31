@@ -18,7 +18,6 @@ jobs:
           MYSQL_DATABASE: test_varbase900xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
-    working_directory: /home/circleci/project/docroot
     steps:
       - checkout
       ## Install PHP extra.
@@ -37,6 +36,11 @@ jobs:
           name: PHP Configurations
           command: |
             echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            sudo service apache2 restart
+      - run:
+          name: Disable xdebug PHP extension
+          command: |
+            sudo rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
             sudo service apache2 restart
 
       ## Waiting for MySQL to be ready.
@@ -136,5 +140,5 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /home/circleci/project/docroot/profiles/varbase
-            ../../../bin/behat tests/features/varbase/step1-init-tests
-            ../../../bin/behat tests/features/varbase/step2-apply-tests
+            behat tests/features/varbase/step1-init-tests
+            behat tests/features/varbase/step2-apply-tests
