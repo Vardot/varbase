@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Setup Apache to point varbase.test at /var/www/html/varbase/docroot
           command: |
-            sudo cp /var/www/html/varbase/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
+            sudo cp /var/www/html/varbase/.circleci/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
             sudo a2ensite varbase.test
             sudo service apache2 restart
             echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
