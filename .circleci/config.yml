@@ -18,8 +18,10 @@ jobs:
           MYSQL_DATABASE: test_varbase900xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
+    working_directory: /project/docroot
     steps:
-      - checkout
+      - checkout:
+          path: /project
       ## Install PHP extra.
       - run:
           name: Install PHP extra

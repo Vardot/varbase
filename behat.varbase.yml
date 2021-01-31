@@ -86,7 +86,7 @@ default:
               - "disable-infobars"
               - "js-flags=--expose-gc"
               - "no-sandbox"
-      base_url: 'http://127.0.0.1/docroot'
+      base_url: 'http://localhost:8000/docroot'
       # browser_name: 'firefox'
       browser_name: 'chrome'
       # browser_name: 'phantomjs'
