@@ -18,10 +18,10 @@ jobs:
           MYSQL_DATABASE: test_varbase900xxc
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
-    working_directory: /project/docroot
+    working_directory: /var/www/html/varbase/docroot
     steps:
       - checkout:
-          path: /project
+          path: /var/www/html/varbase
       ## Install PHP extra.
       - run:
           name: Install PHP extra
@@ -105,13 +105,13 @@ jobs:
           name: Build Varbase 9.0.x with the composer
           command: |
             composer install --no-interaction -vvv
-            git clone --branch 9.0.x https://github.com/vardot/varbase.git /home/circleci/project/docroot/profiles/varbase
+            git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
 
       ## Update PATH to point at the composer bin in the project.
       - run:
           name: Update PATH to point at the composer bin in the project
           command: |
-            echo 'export PATH=/home/circleci/project/bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/var/www/html/varbase/bin:$PATH' >> $BASH_ENV
             source $BASH_ENV
 
       ## Install Varbase 9.0.x with drush.
@@ -119,7 +119,7 @@ jobs:
           name: Install Varbase with drush
           no_output_timeout: 30m
           command: |
-            cd /home/circleci/project/docroot/
+            cd /var/www/html/varbase/docroot/
             drush site-install varbase --yes --site-name='Test Varbase900xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase900xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
             drush pm-enable varbase_development --yes
             drush pm-enable varbase_styleguide --yes
@@ -141,6 +141,6 @@ jobs:
           name: Automated Functional Acceptance Testing
           no_output_timeout: 30m
           command: |
-            cd /home/circleci/project/docroot/profiles/varbase
+            cd /var/www/html/varbase/docroot/profiles/varbase
             behat tests/features/varbase/step1-init-tests
             behat tests/features/varbase/step2-apply-tests
