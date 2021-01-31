@@ -96,10 +96,12 @@ jobs:
       ## Run selenium standalone server.
       - run:
           name: Download Selenium
-          command: curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
+          command: if [[ ! -f /home/circleci/selenium-server-standalone-2.53.1.jar ]]; then wget -O /home/circleci/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
       - run:
           name: Start Selenium at the 4445 port
-          command: java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
+          command: |
+            cd /home/circleci/
+            java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
           background: true
 
       ## Update the composer
