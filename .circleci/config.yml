@@ -45,7 +45,7 @@ jobs:
           name: Install PHP extra
           command: |
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-            sudo -E docker-php-ext-install zip gd mbstring bcmath pdo_mysql mysqli pdo pdo_mysql xml cgi cli common curl gd imap intl pspell sqlite3 tidy opcache json bz2 readline xmlrpc enchant xsl php-all-dev zip bcmath php-pear libapache2-mod-php
+            sudo -E docker-php-ext-install libapache2-mod-php zip mbstring bcmath pdo pdo_mysql xml cgi cli common curl gd imap intl pspell sqlite3 tidy opcache json bz2 readline xmlrpc enchant xsl php-all-dev zip bcmath php-pear
             sudo service apache2 restart
 
       ## Change PHP Configurations.
