@@ -156,5 +156,5 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            behat tests/features/varbase/step1-init-tests
-            behat tests/features/varbase/step2-apply-tests
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests
