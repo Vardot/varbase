@@ -163,9 +163,8 @@ jobs:
             drush config-set system.logging error_level all --yes
             drush cr
   test:
-    setup:
-      resource_class: small
-      executor: varbase-build
+    resource_class: small
+    executor: varbase-build
     parallelism: 4
     steps:
       ## Automated Functional Acceptance Testing group - 01 website base requirements
