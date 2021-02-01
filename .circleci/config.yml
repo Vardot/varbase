@@ -199,9 +199,9 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
-      ## Automated Functional Acceptance Testing group - 04 content structure
+      ## Automated Functional Acceptance Testing group - 05 content-management
       - run:
-          name: Automated Functional Acceptance Testing group - 04 content structure
+          name: Automated Functional Acceptance Testing group - 05 content-management
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
@@ -213,6 +213,5 @@ workflows:
     jobs:
       - setup
       - test:
-          context: saas-tokens
           requires:
             - setup
