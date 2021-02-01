@@ -1,8 +1,8 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.1     
-jobs:
-  build:
+  browser-tools: circleci/browser-tools@1.1  
+executors:
+  varbase-build:
     docker:
       - image: circleci/php:7.3-apache-stretch-node-browsers
         auth:
@@ -19,6 +19,11 @@ jobs:
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
     working_directory: /var/www/html/varbase/docroot
+
+jobs:
+  setup:
+    resource_class: small
+    executor: varbase-build
     steps:
       - checkout:
           path: /var/www/html/varbase
@@ -157,14 +162,58 @@ jobs:
             drush config-set system.performance js.preprocess 0 --yes
             drush config-set system.logging error_level all --yes
             drush cr
-
-      ## Automated Functional Acceptance Testing.
+  test:
+    setup:
+      resource_class: small
+      executor: varbase-build
+    parallelism: 4
+    steps:
+      ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
-          name: Automated Functional Acceptance Testing
+          name: Automated Functional Acceptance Testing group - 01 website base requirements
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/
-          # behat --strict --no-snippets -f pretty -o std tests/features/varbase/step3-cleanup-tests/ # no need as we build every time.
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+      ## Automated Functional Acceptance Testing group - 02 user management
+      - run:
+          name: Automated Functional Acceptance Testing group - 02 user management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+      ## Automated Functional Acceptance Testing group - 03 admin management
+      - run:
+          name: Automated Functional Acceptance Testing group - 03 admin management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+      ## Automated Functional Acceptance Testing group - 04 content structure
+      - run:
+          name: Automated Functional Acceptance Testing group - 04 content structure
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+      ## Automated Functional Acceptance Testing group - 04 content structure
+      - run:
+          name: Automated Functional Acceptance Testing group - 04 content structure
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
+workflows:
+  build:
+    jobs:
+      - setup
+      - test:
+          context: saas-tokens
+          requires:
+            - setup
