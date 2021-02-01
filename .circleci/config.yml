@@ -1,9 +1,6 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.1
-aliases:
-  - &composer-cache
-      v4-composer-cache
+  browser-tools: circleci/browser-tools@1.1     
 jobs:
   build:
     docker:
@@ -18,7 +15,7 @@ jobs:
         entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
         environment:
           MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase900xxc
+          MYSQL_DATABASE: test_varbase
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
     working_directory: /var/www/html/varbase/docroot
@@ -61,7 +58,7 @@ jobs:
             sudo service apache2 restart
       - restore_cache:
           keys:
-            - *composer-cache
+            - v4-composer-cache
 
       ## Waiting for MySQL to be ready.
       - run:
@@ -80,7 +77,9 @@ jobs:
           name: Create test Varbase MySQL database and drop old one if exists
           command: |
             sudo apt install mysql-client
-            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase900xxc;CREATE DATABASE test_varbase900xxc;"
+            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
+      
+      ## Install browser tools
       - browser-tools/install-browser-tools
 
       ## List tool version.
@@ -104,13 +103,11 @@ jobs:
 
       ## Run selenium standalone server.
       - run:
-          name: Download Selenium
-          command: if [[ ! -f /home/circleci/selenium-server-standalone-2.53.1.jar ]]; then wget -O /home/circleci/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
-      - run:
-          name: Start Selenium at the 4445 port
+          name: Run selenium standalone server
           command: |
+            if [[ ! -f /home/circleci/selenium-server-standalone-2.53.1.jar ]]; then wget -O /home/circleci/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
+            java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /home/circleci/selenium.log
           background: true
 
       ## Update the composer
@@ -120,15 +117,15 @@ jobs:
             sudo composer self-update --2
             composer --version
 
-      ## Build Varbase 9.0.x with the composer.
+      ## Build Varbase with the composer.
       - run:
-          name: Build Varbase 9.0.x with the composer
+          name: Build Varbase with the composer
           command: |
             cd /var/www/html/varbase
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
       - save_cache:
-          key: *composer-cache
+          key: v4-composer-cache
           paths:
             - ~/.composer/cache
 
@@ -139,13 +136,13 @@ jobs:
             echo 'export PATH=/var/www/html/varbase/bin:$PATH' >> $BASH_ENV
             source $BASH_ENV
 
-      ## Install Varbase 9.0.x with drush.
+      ## Install Varbase with drush.
       - run:
           name: Install Varbase with drush
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/
-            drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase900xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+            drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
             drush pm-enable varbase_development --yes
             drush pm-enable varbase_styleguide --yes
             drush pm-enable varbase_landing --yes
@@ -167,5 +164,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/
+          # behat --strict --no-snippets -f pretty -o std tests/features/varbase/step3-cleanup-tests/ # no need as we build every time.
+
