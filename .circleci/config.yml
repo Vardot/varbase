@@ -165,7 +165,7 @@ defaults: &defaults
 jobs:
   varbase-build:
     <<: *defaults
-  varbase-testing-website-base-requirements:
+  varbase-testing-01-website-base-requirements:
     <<: *defaults
     steps:
       ## Automated Functional Acceptance Testing group - 01 website base requirements
