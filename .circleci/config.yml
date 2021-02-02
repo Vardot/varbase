@@ -156,6 +156,8 @@ defaults: &defaults
           drush config-set system.logging error_level all --yes
           drush cr
 jobs:
+  varbase-build:
+    <<: *defaults
   varbase-testing-01:
     <<: *defaults
     steps:
@@ -215,8 +217,19 @@ jobs:
 workflows:
   varbase-workflow:
     jobs:
-      - varbase-testing-01
-      - varbase-testing-02
-      - varbase-testing-03
-      - varbase-testing-04
-      - varbase-testing-05
+      - varbase-build
+      - varbase-testing-01:
+          requires:
+            - varbase-build
+      - varbase-testing-02:
+          requires:
+            - varbase-build
+      - varbase-testing-03:
+          requires:
+            - varbase-build
+      - varbase-testing-04:
+          requires:
+            - varbase-build
+      - varbase-testing-05:
+          requires:
+            - varbase-build
