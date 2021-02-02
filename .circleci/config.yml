@@ -21,7 +21,7 @@ executors:
     working_directory: /var/www/html/varbase/docroot
 
 jobs:
-  setup:
+  varbase-setup:
     resource_class: small
     executor: varbase-build
     steps:
@@ -161,11 +161,12 @@ jobs:
             drush config-set system.performance js.preprocess 0 --yes
             drush config-set system.logging error_level all --yes
             drush cr
-  test:
+  varbase-testings:
     resource_class: small
     executor: varbase-build
     parallelism: 4
     steps:
+      - varbase-setup
       ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
           name: Automated Functional Acceptance Testing group - 01 website base requirements
@@ -210,7 +211,4 @@ jobs:
 workflows:
   build:
     jobs:
-      - setup
-      - test:
-          requires:
-            - setup
+      - varbase-testings
