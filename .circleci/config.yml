@@ -1,28 +1,27 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.1
-executors:
-  varbase-executor:
-    docker:
-      - image: circleci/php:7.3-apache-stretch-node-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:8.0.4
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
-    working_directory: /var/www/html/varbase/docroot
-jobs:
+defaults: &defaults
+  docker:
+    - image: circleci/php:7.3-apache-stretch-node-browsers
+      auth:
+        username: mydockerhub-user
+        password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    - image: circleci/mysql:8.0.4
+      auth:
+        username: mydockerhub-user
+        password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+      entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
+      environment:
+        MYSQL_ROOT_PASSWORD: rootpw
+        MYSQL_DATABASE: test_varbase
+        MYSQL_USER: user
+        MYSQL_PASSWORD: passw0rd
+  working_directory: /var/www/html/varbase/docroot
+aliases:
+  - &composer-cache v4-composer-cache
+commands:
   varbase-build:
-    resource_class: small
-    executor: varbase-executor
     steps:
       - checkout:
           path: /var/www/html/varbase
@@ -62,7 +61,7 @@ jobs:
             sudo service apache2 restart
       - restore_cache:
           keys:
-            - v4-composer-cache
+            - *composer-cache
 
       ## Waiting for MySQL to be ready.
       - run:
@@ -122,7 +121,7 @@ jobs:
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
       - save_cache:
-          key: v4-composer-cache
+          key: *composer-cache
           paths:
             - ~/.composer/cache
 
@@ -167,13 +166,12 @@ jobs:
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+jobs:
   varbase-testing-01-website-base-requirements:
-    resource_class: small
-    executor: varbase-executor
+    <<: *defaults
     steps:
-      - checkout:
-          path: /var/www/html/varbase
-      ## Automated Functional Acceptance Testing group - 01 website base requirements
+      - varbase-build
+       ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
           name: Automated Functional Acceptance Testing group - 01 website base requirements
           no_output_timeout: 30m
@@ -181,12 +179,9 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
   varbase-testing-02-user-management-03-admin-management:
-    resource_class: small
-    executor: varbase-executor
-    working_directory: /var/www/html/varbase/docroot
+    <<: *defaults
     steps:
-      - checkout:
-          path: /var/www/html/varbase
+      - varbase-build
       ## Automated Functional Acceptance Testing group - 02 user management
       - run:
           name: Automated Functional Acceptance Testing group - 02 user management
@@ -196,11 +191,9 @@ jobs:
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
   varbase-testing-04-content-structure:
-    resource_class: small
-    executor: varbase-executor
+    <<: *defaults
     steps:
-      - checkout:
-          path: /var/www/html/varbase
+      - varbase-build
       ## Automated Functional Acceptance Testing group - 04 content structure
       - run:
           name: Automated Functional Acceptance Testing group - 04 content structure
@@ -209,11 +202,9 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
   varbase-testing-05-content-management:
-    resource_class: small
-    executor: varbase-executor
+    <<: *defaults
     steps:
-      - checkout:
-          path: /var/www/html/varbase
+      - varbase-build
       ## Automated Functional Acceptance Testing group - 05 content-management
       - run:
           name: Automated Functional Acceptance Testing group - 05 content-management
@@ -225,16 +216,7 @@ jobs:
 workflows:
   varbase-workflow:
     jobs:
-      - varbase-build
-      - varbase-testing-01-website-base-requirements:
-          requires:
-            - varbase-build
-      - varbase-testing-02-user-management-03-admin-management:
-          requires:
-            - varbase-build
-      - varbase-testing-04-content-structure:
-          requires:
-            - varbase-build
-      - varbase-testing-05-content-management:
-          requires:
-            - varbase-build
+      - varbase-testing-01-website-base-requirements
+      - varbase-testing-02-user-management-03-admin-management
+      - varbase-testing-04-content-structure
+      - varbase-testing-05-content-management
