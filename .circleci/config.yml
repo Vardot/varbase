@@ -22,7 +22,7 @@ executors:
 
 jobs:
   setup:
-    resource_class: small
+    resource_class: large
     executor: varbase-build
     steps:
       - checkout:
@@ -41,7 +41,7 @@ jobs:
           name: Install Usefull must have utils for debugging with SSH into this box
           command: |
             sudo apt -qq update && sudo apt -qqy upgrade
-            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libjpeg62-turbo-dev libpng-dev xvfb
+            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libjpeg62-turbo-dev libpng-dev xvfb mysql-client
       ## Install PHP extra.
       - run:
           name: Install PHP extra
@@ -77,13 +77,6 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
 
-      ## Create test Varbase MySQL database and drop old one if exists.
-      - run:
-          name: Create test Varbase MySQL database and drop old one if exists
-          command: |
-            sudo apt install mysql-client
-            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
-      
       ## Install browser tools
       - browser-tools/install-browser-tools
 
@@ -122,6 +115,10 @@ jobs:
             sudo composer self-update --2
             composer --version
 
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run: docker build .
+
       ## Build Varbase with the composer.
       - run:
           name: Build Varbase with the composer
@@ -140,6 +137,13 @@ jobs:
           command: |
             echo 'export PATH=/var/www/html/varbase/bin:$PATH' >> $BASH_ENV
             source $BASH_ENV
+
+      ## Create test Varbase MySQL database and drop old one if exists.
+      - run:
+          name: Create test Varbase MySQL database and drop old one if exists
+          command: |
+            sudo apt install mysql-client
+            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"s
 
       ## Install Varbase with drush.
       - run:
@@ -163,7 +167,7 @@ jobs:
             drush config-set system.logging error_level all --yes
             drush cr
   test:
-    resource_class: small
+    resource_class: large
     executor: varbase-build
     parallelism: 4
     steps:
