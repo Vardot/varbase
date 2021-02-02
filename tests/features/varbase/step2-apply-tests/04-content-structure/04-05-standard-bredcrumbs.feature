@@ -13,7 +13,7 @@ So that I can see path I followed to locate the current page usually near the to
       And I expand the field "edit-menu"
       And I wait
       And I check the box "Provide a menu link"
-      And I select "<Main navigation>" from "Parent item"
+      And I select "<Main navigation>" from "Parent link"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
@@ -30,7 +30,7 @@ So that I can see path I followed to locate the current page usually near the to
       And I expand the field "edit-menu"
       And I wait
       And I check the box "Provide a menu link"
-      And I select "Test Basic page root title" from "Parent item"
+      And I select "Test Basic page root title" from "Parent link"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
