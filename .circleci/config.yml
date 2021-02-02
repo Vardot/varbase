@@ -138,8 +138,7 @@ jobs:
       - run:
           name: Create test Varbase MySQL database and drop old one if exists
           command: |
-            sudo apt install mysql-client
-            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"s
+            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
 
       ## Install Varbase with drush.
       - run:
