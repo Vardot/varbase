@@ -155,10 +155,17 @@ defaults: &defaults
           drush config-set system.performance js.preprocess 0 --yes
           drush config-set system.logging error_level all --yes
           drush cr
+    ## Automated Functional Acceptance Testing - Step 1 init tests.
+    - run:
+        name: Automated Functional Acceptance Testing - Step 1 init tests
+        no_output_timeout: 30m
+        command: |
+          cd /var/www/html/varbase/docroot/profiles/varbase
+          behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
 jobs:
   varbase-build:
     <<: *defaults
-  varbase-testing-01:
+  varbase-testing-website-base-requirements:
     <<: *defaults
     steps:
       ## Automated Functional Acceptance Testing group - 01 website base requirements
@@ -167,9 +174,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
-  varbase-testing-02:
+  varbase-testing-02-user-management:
     <<: *defaults
     steps:
       ## Automated Functional Acceptance Testing group - 02 user management
@@ -178,9 +184,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
-  varbase-testing-03:
+  varbase-testing-03-admin-management:
     <<: *defaults
     steps:
       ## Automated Functional Acceptance Testing group - 03 admin management
@@ -189,9 +194,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
-  varbase-testing-04:
+  varbase-testing-04-content-structure:
     <<: *defaults
     steps:
       ## Automated Functional Acceptance Testing group - 04 content structure
@@ -200,9 +204,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
-  varbase-testing-05:
+  varbase-testing-05-content-management:
     <<: *defaults
     steps:
       ## Automated Functional Acceptance Testing group - 05 content-management
@@ -211,25 +214,24 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
   varbase-workflow:
     jobs:
       - varbase-build
-      - varbase-testing-01:
+      - varbase-testing-01-website-base-requirements:
           requires:
             - varbase-build
-      - varbase-testing-02:
+      - varbase-testing-02-user-management:
           requires:
             - varbase-build
-      - varbase-testing-03:
+      - varbase-testing-03-admin-management:
           requires:
             - varbase-build
-      - varbase-testing-04:
+      - varbase-testing-04-content-structure:
           requires:
             - varbase-build
-      - varbase-testing-05:
+      - varbase-testing-05-content-management:
           requires:
             - varbase-build
