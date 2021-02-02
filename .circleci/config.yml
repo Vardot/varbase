@@ -155,6 +155,7 @@ defaults: &defaults
           drush config-set system.performance js.preprocess 0 --yes
           drush config-set system.logging error_level all --yes
           drush cr
+jobs:
   varbase-testing:
     resource_class: small
     <<: *defaults
@@ -204,7 +205,4 @@ defaults: &defaults
 workflows:
   varbase-workflow:
     jobs:
-      - varbase-setup
-      - varbase-testing:
-          requires:
-            - varbase-setup
+      - varbase-testing
