@@ -18,8 +18,6 @@ defaults: &defaults
         MYSQL_USER: user
         MYSQL_PASSWORD: passw0rd
   working_directory: /var/www/html/varbase/docroot
-aliases:
-  - &composer-cache v4-composer-cache
 commands:
   varbase-build:
     steps:
@@ -61,7 +59,7 @@ commands:
             sudo service apache2 restart
       - restore_cache:
           keys:
-            - *composer-cache
+            - v4-composer-cache
 
       ## Waiting for MySQL to be ready.
       - run:
@@ -121,7 +119,7 @@ commands:
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
       - save_cache:
-          key: *composer-cache
+          key: v4-composer-cache
           paths:
             - ~/.composer/cache
 
@@ -214,6 +212,7 @@ jobs:
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
+  version: 2
   varbase-workflow:
     jobs:
       - varbase-testing-01-website-base-requirements
