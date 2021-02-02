@@ -208,8 +208,8 @@ jobs:
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
-  jobs:
-    varbase-workflow:
+  varbase-workflow:
+    jobs:
       - varbase-setup
       - varbase-testing:
           requires:
