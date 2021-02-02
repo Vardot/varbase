@@ -1,26 +1,43 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.1
-jobs:
-  build:
-    docker:
-      - image: circleci/php:7.3-apache-stretch-node-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:8.0.4
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase808xxc
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
-    working_directory: /home/circleci/project/docroot
+defaults: &defaults
+  docker:
+    - image: circleci/php:7.3-apache-stretch-node-browsers
+      auth:
+        username: mydockerhub-user
+        password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    - image: circleci/mysql:8.0.4
+      auth:
+        username: mydockerhub-user
+        password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+      entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
+      environment:
+        MYSQL_ROOT_PASSWORD: rootpw
+        MYSQL_DATABASE: test_varbase
+        MYSQL_USER: user
+        MYSQL_PASSWORD: passw0rd
+  working_directory: /var/www/html/varbase/docroot
+commands:
+  varbase-build:
     steps:
-      - checkout
+      - checkout:
+          path: /var/www/html/varbase
+      ## Setup Apache to point varbase.test at /var/www/html/varbase/docroot
+      - run:
+          name: Setup Apache to point varbase.test at /var/www/html/varbase/docroot
+          command: |
+            sudo cp /var/www/html/varbase/.circleci/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
+            sudo a2ensite varbase.test
+            sudo service apache2 restart
+            echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
+
+      ## Install Usefull must have utils for debugging with SSH into this box.
+      - run:
+          name: Install Usefull must have utils for debugging with SSH into this box
+          command: |
+            sudo apt -qq update && sudo apt -qqy upgrade
+            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libjpeg62-turbo-dev libpng-dev xvfb mysql-client
       ## Install PHP extra.
       - run:
           name: Install PHP extra
@@ -29,15 +46,20 @@ jobs:
             sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
             sudo -E docker-php-ext-install zip
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-            sudo -E docker-php-ext-install bcmath pdo_mysql
+            sudo -E docker-php-ext-install mbstring bcmath pdo_mysql
             sudo -E docker-php-ext-install gd
+            sudo service apache2 restart
 
       ## Change PHP Configurations.
       - run:
           name: PHP Configurations
           command: |
             echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            sudo rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
             sudo service apache2 restart
+      - restore_cache:
+          keys:
+            - v4-composer-cache
 
       ## Waiting for MySQL to be ready.
       - run:
@@ -51,12 +73,7 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
 
-      ## Create test Varbase MySQL database and drop old one if exists.
-      - run:
-          name: Create test Varbase MySQL database and drop old one if exists
-          command: |
-            sudo apt install mysql-client
-            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase808xxc;CREATE DATABASE test_varbase808xxc;"
+      ## Install browser tools
       - browser-tools/install-browser-tools
 
       ## List tool version.
@@ -80,11 +97,11 @@ jobs:
 
       ## Run selenium standalone server.
       - run:
-          name: Download Selenium
-          command: curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
-      - run:
-          name: Start Selenium at the 4445 port
-          command: java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /dev/null 2>&1 &
+          name: Run selenium standalone server
+          command: |
+            if [[ ! -f /home/circleci/selenium-server-standalone-2.53.1.jar ]]; then wget -O /home/circleci/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
+            cd /home/circleci/
+            java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /home/circleci/selenium.log
           background: true
 
       ## Update the composer
@@ -94,26 +111,37 @@ jobs:
             sudo composer self-update --2
             composer --version
 
-      ## Build Varbase 8.8.x with the composer.
+      ## Build Varbase with the composer.
       - run:
-          name: Build Varbase 8.8.x with the composer
+          name: Build Varbase with the composer
           command: |
+            cd /var/www/html/varbase
             composer install --no-interaction -vvv
-            git clone --branch 8.x-8.x https://github.com/vardot/varbase.git /home/circleci/project/docroot/profiles/varbase
+            git clone --branch 8.x-8.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
+      - save_cache:
+          key: v4-composer-cache
+          paths:
+            - ~/.composer/cache
 
       ## Update PATH to point at the composer bin in the project.
       - run:
           name: Update PATH to point at the composer bin in the project
           command: |
-            echo 'export PATH=/home/circleci/project/bin:$PATH' >> $BASH_ENV
+            echo 'export PATH=/var/www/html/varbase/bin:$PATH' >> $BASH_ENV
             source $BASH_ENV
 
-      ## Install Varbase 8.8.x with drush.
+      ## Create test Varbase MySQL database and drop old one if exists.
+      - run:
+          name: Create test Varbase MySQL database and drop old one if exists
+          command: |
+            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
+
+      ## Install Varbase with drush.
       - run:
           name: Install Varbase with drush
           no_output_timeout: 30m
           command: |
-            cd /home/circleci/project/docroot/
+            cd /var/www/html/varbase/docroot/
             drush site-install varbase --yes --site-name='Test Varbase808xxc' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase808xxc" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
             drush pm-enable varbase_development --yes
             drush pm-enable varbase_styleguide --yes
@@ -128,12 +156,65 @@ jobs:
             drush config-set system.performance js.preprocess 0 --yes
             drush config-set system.logging error_level all --yes
             drush cr
-
-      ## Automated Functional Acceptance Testing.
+      ## Automated Functional Acceptance Testing - Step 1 init tests.
       - run:
-          name: Automated Functional Acceptance Testing
+          name: Automated Functional Acceptance Testing - Step 1 init tests
           no_output_timeout: 30m
           command: |
-            cd /home/circleci/project/docroot/profiles/varbase
-            ../../../bin/behat tests/features/varbase/step1-init-tests
-            ../../../bin/behat tests/features/varbase/step2-apply-tests
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+jobs:
+  varbase-testing-01-website-base-requirements:
+    <<: *defaults
+    steps:
+      - varbase-build
+       ## Automated Functional Acceptance Testing group - 01 website base requirements
+      - run:
+          name: Automated Functional Acceptance Testing group - 01 website base requirements
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+  varbase-testing-02-user-management-03-admin-management:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+      - run:
+          name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+  varbase-testing-04-content-structure:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 04 content structure
+      - run:
+          name: Automated Functional Acceptance Testing group - 04 content structure
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+  varbase-testing-05-content-management:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 05 content-management
+      - run:
+          name: Automated Functional Acceptance Testing group - 05 content-management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
+
+workflows:
+  version: 2
+  varbase-workflow:
+    jobs:
+      - varbase-testing-01-website-base-requirements
+      - varbase-testing-02-user-management-03-admin-management
+      - varbase-testing-04-content-structure
+      - varbase-testing-05-content-management

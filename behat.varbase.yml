@@ -1,10 +1,12 @@
 default:
+  autoload:
+    '': "%paths.base%/tests/features/bootstrap"
   suites:
     default:
       paths:
         - "%paths.base%/tests/features"
       contexts:
-        - Varbase\tests\features\bootstrap\VarbaseContext:
+        - VarbaseContext:
             parameters:
               varbase_users:
                 webmaster: { email: 'webmaster@vardot.com', password: 'dD.123123ddd' }
@@ -14,7 +16,7 @@ default:
                 test_seo_admin: { email: 'seo.admin.test@vardot.com', password: 'dD.123123ddd' }
                 test_site_admin: { email: 'site.admin.test@vardot.com', password: 'dD.123123ddd' }
                 test_super_admin: { email: 'super.admin.test@vardot.com', password: 'dD.123123ddd' }
-        - Varbase\tests\features\bootstrap\SelectorsContext:
+        - SelectorsContext:
            parameters:
              selectors:
                ## Add all css selectors which you will use in most features.
@@ -84,7 +86,7 @@ default:
               - "disable-infobars"
               - "js-flags=--expose-gc"
               - "no-sandbox"
-      base_url: 'http://127.0.0.1'
+      base_url: 'http://varbase.test'
       # browser_name: 'firefox'
       browser_name: 'chrome'
       # browser_name: 'phantomjs'
@@ -108,6 +110,6 @@ default:
       name: html
       renderer: Twig,Behat2
       file_name: index
-      print_args: true
-      print_outp: true
-      loop_break: true
+      print_args: false
+      print_outp: false
+      loop_break: false

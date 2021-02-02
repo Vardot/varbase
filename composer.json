@@ -70,6 +70,7 @@
   },
   "require-dev": {
     "drupal/core-dev": "~8.0",
+    "phpunit/phpunit": "~7.0",
     "drush/drush": "~9.0",
     "drupal/drupal-extension": "~3.0",
     "emuse/behat-html-formatter": "^0.2.0"
@@ -83,8 +84,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Varbase\\composer\\": "src/composer",
-      "Varbase\\tests\\features\\bootstrap\\": "src/tests/features/bootstrap"
+      "Varbase\\composer\\": "src/composer"
     }
   },
   "scripts": {
