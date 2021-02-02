@@ -1,8 +1,8 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.1  
-jobs:
-  varbase-build:
+  browser-tools: circleci/browser-tools@1.1
+executors:
+  varbase-executor:
     docker:
       - image: circleci/php:7.3-apache-stretch-node-browsers
         auth:
@@ -19,6 +19,10 @@ jobs:
           MYSQL_USER: user
           MYSQL_PASSWORD: passw0rd
     working_directory: /var/www/html/varbase/docroot
+jobs:
+  varbase-build:
+    resource_class: small
+    executor: varbase-executor
     steps:
       - checkout:
           path: /var/www/html/varbase
@@ -164,22 +168,8 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
   varbase-testing-01-website-base-requirements:
-    docker:
-      - image: circleci/php:7.3-apache-stretch-node-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:8.0.4
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
-    working_directory: /var/www/html/varbase/docroot
+    resource_class: small
+    executor: varbase-executor
     steps:
       - checkout:
           path: /var/www/html/varbase
@@ -191,21 +181,8 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
   varbase-testing-02-user-management-03-admin-management:
-    docker:
-      - image: circleci/php:7.3-apache-stretch-node-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:8.0.4
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
+    resource_class: small
+    executor: varbase-executor
     working_directory: /var/www/html/varbase/docroot
     steps:
       - checkout:
@@ -219,22 +196,8 @@ jobs:
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
   varbase-testing-04-content-structure:
-    docker:
-      - image: circleci/php:7.3-apache-stretch-node-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:8.0.4
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
-    working_directory: /var/www/html/varbase/docroot
+    resource_class: small
+    executor: varbase-executor
     steps:
       - checkout:
           path: /var/www/html/varbase
@@ -246,22 +209,8 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
   varbase-testing-05-content-management:
-    docker:
-      - image: circleci/php:7.3-apache-stretch-node-browsers
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-      - image: circleci/mysql:8.0.4
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-        entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
-        environment:
-          MYSQL_ROOT_PASSWORD: rootpw
-          MYSQL_DATABASE: test_varbase
-          MYSQL_USER: user
-          MYSQL_PASSWORD: passw0rd
-    working_directory: /var/www/html/varbase/docroot
+    resource_class: small
+    executor: varbase-executor
     steps:
       - checkout:
           path: /var/www/html/varbase
