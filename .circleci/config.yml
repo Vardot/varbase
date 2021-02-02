@@ -161,12 +161,11 @@ jobs:
             drush config-set system.performance js.preprocess 0 --yes
             drush config-set system.logging error_level all --yes
             drush cr
-  varbase-testings:
+  varbase-testing:
     resource_class: small
     executor: varbase-build
     parallelism: 4
     steps:
-      - varbase-setup
       ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
           name: Automated Functional Acceptance Testing group - 01 website base requirements
@@ -209,6 +208,9 @@ jobs:
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
-  build:
-    jobs:
-      - varbase-testings
+  jobs:
+    varbase-workflow:
+      - varbase-setup
+      - varbase-testing:
+          requires:
+            - varbase-setup
