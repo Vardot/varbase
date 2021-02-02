@@ -115,10 +115,6 @@ jobs:
             sudo composer self-update --2
             composer --version
 
-      - setup_remote_docker:
-          docker_layer_caching: true
-      - run: docker build .
-
       ## Build Varbase with the composer.
       - run:
           name: Build Varbase with the composer
