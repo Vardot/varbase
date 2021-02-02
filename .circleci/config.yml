@@ -156,10 +156,8 @@ defaults: &defaults
           drush config-set system.logging error_level all --yes
           drush cr
 jobs:
-  varbase-testing:
-    resource_class: small
+  varbase-testing-01:
     <<: *defaults
-    parallelism: 4
     steps:
       ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
@@ -169,6 +167,9 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+  varbase-testing-02:
+    <<: *defaults
+    steps:
       ## Automated Functional Acceptance Testing group - 02 user management
       - run:
           name: Automated Functional Acceptance Testing group - 02 user management
@@ -177,6 +178,9 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+  varbase-testing-03:
+    <<: *defaults
+    steps:
       ## Automated Functional Acceptance Testing group - 03 admin management
       - run:
           name: Automated Functional Acceptance Testing group - 03 admin management
@@ -185,6 +189,9 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+  varbase-testing-04:
+    <<: *defaults
+    steps:
       ## Automated Functional Acceptance Testing group - 04 content structure
       - run:
           name: Automated Functional Acceptance Testing group - 04 content structure
@@ -193,6 +200,9 @@ jobs:
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+  varbase-testing-05:
+    <<: *defaults
+    steps:
       ## Automated Functional Acceptance Testing group - 05 content-management
       - run:
           name: Automated Functional Acceptance Testing group - 05 content-management
@@ -205,4 +215,8 @@ jobs:
 workflows:
   varbase-workflow:
     jobs:
-      - varbase-testing
+      - varbase-testing-01
+      - varbase-testing-02
+      - varbase-testing-03
+      - varbase-testing-04
+      - varbase-testing-05
