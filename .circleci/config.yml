@@ -22,7 +22,7 @@ executors:
 
 jobs:
   setup:
-    resource_class: large
+    resource_class: small
     executor: varbase-build
     steps:
       - checkout:
@@ -167,7 +167,7 @@ jobs:
             drush config-set system.logging error_level all --yes
             drush cr
   test:
-    resource_class: large
+    resource_class: small
     executor: varbase-build
     parallelism: 4
     steps:
