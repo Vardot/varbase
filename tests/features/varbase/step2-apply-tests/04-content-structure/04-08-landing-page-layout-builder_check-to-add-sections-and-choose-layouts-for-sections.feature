@@ -19,7 +19,9 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I click "Add section"
       And I wait for AJAX to finish
      Then I should see "Choose a layout for this section"
-      And I should see "One column"
-      And I should see "Two column"
-      And I should see "Three column"
-      And I should see "Four column"
+      And I should see "Bootstrap 1 Col"
+      And I should see "Bootstrap 2 Cols"
+      And I should see "Bootstrap 3 Cols"
+      And I should see "Bootstrap 4 Cols"
+      And I should see "Bootstrap 5 Cols"
+      And I should see "Bootstrap 6 Cols"
