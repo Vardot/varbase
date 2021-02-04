@@ -103,7 +103,8 @@
       }
     },
     "branch-alias": {
-      "dev-9.0.x": "9.0.x-dev"
+      "dev-9.0.x": "9.0.x-dev",
+      "dev-10.0.x": "10.0.x-dev"
     },
     "installer-types": [
       "bower-asset",
