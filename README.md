@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/8.x-8.9.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase?branch=8.x-8.9) Varbase 8.8.9
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/8.x-8.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase?tag=8.x-8.9) Varbase 8.8.9
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
