@@ -1,3 +1,95 @@
+# 8.8.9
+
+### Highlighted important changes since Varbase 8.x-8.8:
+* Issue [#3192175](https://www.drupal.org/i/3192175):
+                 Added WebP module ~1.0 and enable by default
+* Issue [#3193729](https://www.drupal.org/i/3193729):
+                 Updated Bootstrap library from 4.5.3 to 4.6.0
+* Issue [#3192508](https://www.drupal.org/i/3192508):
+                 Added Preloaded fonts include in Vartheme BS4
+* Issue [#3194401](https://www.drupal.org/i/3194401):
+                 Switched to CircleCI as the default automated testing platform
+
+### Added since Varbase 8.x-8.8:
+* Issue [#3195678](https://www.drupal.org/i/3195678)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Added lazy-loading for the Remote video iframe
+* Issue [#3190047](https://www.drupal.org/i/3190047)
+                 by [davyin](https://www.drupal.org/u/davyin)
+                : Added Length Indicator dependency in composer.json
+* Issue [#3188214](https://www.drupal.org/i/3188214)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Added section classes to the section attributes
+
+### Changed since Varbase 8.x-8.8:
+* Issue [#3188641](https://www.drupal.org/i/3188641):
+                 Changed the set front page to "/node" process from using static
+                 node id to front page path by the alias
+* Issue [#3196988](https://www.drupal.org/i/3196988):
+                 Changed Bootstrap Barrio theme version from ~5.0 to ~5.1 for using Bootstrap 4 only
+* Issue [#3189275](https://www.drupal.org/i/3189275)
+                 by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+                : Removed px-4 and text-center Bootstrap classes from bs-1col--vlb.html.twig template
+
+### Updates since Varbase 8.x-8.8:
+* Issue [#3193218](https://www.drupal.org/i/3193218):
+                 Updated Font Awesome Free library from v5.0.13 to v5.15.2
+* Issue [#3193863](https://www.drupal.org/i/3193863):
+                 Updated npm-asset/dropzone library from ~4.0 to ~5.0
+* Issue [#3188453](https://www.drupal.org/i/3188453)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                 : Updated Media Library Edit module from 1.0-alpha2 to ( ~2.0 )
+                  and removed committed patches
+* Issue [#3190301](https://www.drupal.org/i/3190301):
+                 Updated Content Planner module from 1.0-beta12 to 1.0-beta15 ( ~1.0 )
+                 and removed all committed patches
+
+### Fixes since Varbase 8.x-8.8:
+* Issue [#3194958](https://www.drupal.org/i/3194958):
+                 Fixed Drupal core Off-canvas style resets overriding styles issue
+                 after updating browsers for a new feature complex :not() CSS selector
+* Issue [#3190703](https://www.drupal.org/i/3190703)
+                 by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+                 : Fixed Composer 2.0 issue for bower-asset/jqueryui-touch-punch library default branch
+* Issue [#3192282](https://www.drupal.org/i/3192282)
+                 by [alaa abbad](https://www.drupal.org/u/alaa-abbad)
+                : Fixed Dropzonejs widget issue of adding _0 on all image file names
+* Issue [#3190218](https://www.drupal.org/i/3190218)
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
+                : Fixed error when navigating Layout library Trying to access
+                 array offset on value of type null in
+                 VarbaseLayoutBuilderThemeNegotiator->determineActiveTheme()
+* Issue [#3194571](https://www.drupal.org/i/3194571)
+                 by [Abdelrahman Amer](https://www.drupal.org/u/abdelrahman-amer)
+                : Fixed "maximum call stack size exceeded" JavaScript error
+* Issue [#3195789](https://www.drupal.org/i/3195789)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed 404 messing images for Claro admin theme in Varbase Layout Builder
+* Issue [#3196236](https://www.drupal.org/i/3196236)
+                 by [Abdulla Abu Zakham](https://www.drupal.org/u/abu-zakham)
+                : Fixed Error when no comment added to content type
+* Issue [#3171864](https://www.drupal.org/i/3171864)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed pages URL in google analytics summary view
+* Issue [#3115228](https://www.drupal.org/i/3115228)
+                 by [calmforce](https://www.drupal.org/u/calmforce)
+                : Fixed incorrect numbers in My Site Overview block if type_count above 1000
+* Issue [#3188457](https://www.drupal.org/i/3188457)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Update Media Library Form API Element module
+                 from 2.0.0 to 2.0.3 ( ~2.0 ) and removed committed patches
+* Issue [#3187189](https://www.drupal.org/i/3187189):
+                 Fixed composer require for Drupal core to ~8.0 || ~9.0 to work with
+                 latest Drupal 9.1.x versions
+* Issue [#3186916](https://www.drupal.org/i/3186916):
+                 Fixed install page function and style for Vartheme Claro admin theme
+                 to follow with latest Drupal core 9.1.0 Claro changes
+* Issue [#3186937](https://www.drupal.org/i/3186937)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Fixed PHP Exception for VMI module on escaped characters in
+                 sequences/mappings in *.yml files with latest Symfony/yaml
+--------------------------------------------------------------------------------
+
 # 8.8.8
 
 ### Highlighted important changes since Varbase 8.x-8.7:

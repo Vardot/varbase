@@ -3,7 +3,7 @@ core = 8.x
 
 ; Drupal Core
 projects[drupal][type] = "core"
-projects[drupal][version] = "8.9.11"
+projects[drupal][version] = "8.9.13"
 ;; Issue #2869592: Disabled update module shouldn't produce a status report warning
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch
 ;; Issue #2815221: Add quickedit to the latest-revision route
@@ -26,3 +26,5 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-01-20/29858
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-04-20/2741877-48.patch
 ;; Issue #3165435: Fix tour <front> route as route name when a selected node had been set as the front page for the site
 projects[drupal][patch][] = https://www.drupal.org/files/issues/2020-08-16/3165435-2.patch
+;; Issue #2958588: Off-canvas style resets are overriding styles (especially SVGs) in Safari, Firefox and Chromium Edge resulting in display issues
+projects[drupal][patch][] = https://www.drupal.org/files/issues/2021-01-06/off-canvas-style-resets-2958588-13.patch

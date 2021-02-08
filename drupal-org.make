@@ -15,7 +15,7 @@ projects[config_filter][type] = module
 projects[config_filter][version] = 2.2
 
 projects[config_ignore][type] = module
-projects[config_ignore][version] = 2.2
+projects[config_ignore][version] = 2.3
 
 projects[config_inspector][type] = module
 projects[config_inspector][version] = 1.1
@@ -24,7 +24,7 @@ projects[ctools][type] = module
 projects[ctools][version] = 3.4
 
 projects[token][type] = module
-projects[token][version] = 1.7
+projects[token][version] = 1.9
 
 projects[token_filter][type] = module
 projects[token_filter][version] = 1.2
@@ -63,7 +63,7 @@ projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.11
 
 projects[media_library_edit][type] = module
-projects[media_library_edit][version] = 1.0-alpha2 
+projects[media_library_edit][version] = 2.0
 
 projects[media_library_form_element][type] = module
 
@@ -99,7 +99,7 @@ projects[menu_block][type] = module
 projects[menu_block][version] = 1.6
 
 projects[block_form_alter][type] = module
-projects[block_form_alter][version] = 1.1
+projects[block_form_alter][version] = 1.2
 
 projects[entity_block][type] = module
 projects[entity_block][version] = 1.0-beta3
@@ -132,7 +132,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][version] = 2.5
 
 projects[dropzonejs][type] = module
-projects[dropzonejs][version] = 2.3
+projects[dropzonejs][version] = 2.4
 
 projects[entity_embed][type] = module
 projects[entity_embed][version] = 1.1
@@ -150,7 +150,7 @@ projects[media_entity_instagram][type] = module
 projects[media_entity_instagram][version] = 2.1
 
 projects[media_entity_twitter][type] = module
-projects[media_entity_twitter][version] = 2.4
+projects[media_entity_twitter][version] = 2.6
 
 projects[crop][type] = module
 projects[crop][version] = 2.1
@@ -238,7 +238,7 @@ projects[responsive_preview][type] = module
 projects[responsive_preview][version] = 1.0
 
 projects[views_bulk_operations][type] = module
-projects[views_bulk_operations][version] = 3.9
+projects[views_bulk_operations][version] = 3.10
 
 projects[views_bulk_edit][type] = module
 projects[views_bulk_edit][version] = 2.5
@@ -264,13 +264,13 @@ projects[better_normalizers][type] = module
 projects[better_normalizers][version] = 1.0-beta4
 
 projects[content_lock][type] = module
-projects[content_lock][version] = 2.1
+projects[content_lock][version] = 2.2
 
 projects[node_edit_protection][type] = module
 projects[node_edit_protection][version] = 1.0
 
 projects[rabbit_hole][type] = module
-projects[rabbit_hole][version] = 1.0-beta9
+projects[rabbit_hole][version] = 1.0-beta10
 
 projects[fast_404][type] = module
 projects[fast_404][version] = 2.0-alpha5
@@ -279,7 +279,7 @@ projects[mailsystem][type] = module
 projects[mailsystem][version] = 4.3
 
 projects[swiftmailer][type] = module
-projects[swiftmailer][version] = 2.0-beta1
+projects[swiftmailer][version] = 2.0
 
 projects[smtp][type] = module
 projects[smtp][version] = 1.0
@@ -346,7 +346,7 @@ projects[viewsreference][type] = module
 projects[viewsreference][version] = 2.0-beta2
 
 projects[libraries][type] = module
-projects[libraries][version] = 3.0-alpha1
+projects[libraries][version] = 3.0-beta1
 
 projects[masonry][type] = module
 projects[masonry][version] = 1.2
@@ -364,10 +364,10 @@ projects[betterlogin][type] = module
 projects[betterlogin][version] = 1.5
 
 projects[social_api][type] = module
-projects[social_api][version] = 2.0-rc3
+projects[social_api][version] = 2.0-rc4
 
 projects[social_auth][type] = module
-projects[social_auth][version] = 2.0-rc3
+projects[social_auth][version] = 2.0-rc4
 
 projects[social_auth_google][type] = module
 projects[social_auth_google][version] = 2.1
@@ -444,7 +444,7 @@ projects[recaptcha][type] = module
 projects[recaptcha][version] = 3.0
 
 projects[search_api][type] = module
-projects[search_api][version] = 1.18
+projects[search_api][version] = 1.19
 
 projects[blazy][type] = module
 projects[blazy][version] = 2.1
@@ -494,9 +494,7 @@ projects[moderation_sidebar][version] = 1.4
 projects[moderation_sidebar][patch][] = https://www.drupal.org/files/issues/2020-07-06/3157219-3.patch
 
 projects[content_planner][type] = module
-projects[content_planner][version] = 1.0-beta12
-;; Issue #3010615 Kanban Published to Draft workflow Issue
-projects[content_planner][patch][] = https://www.drupal.org/files/issues/2020-05-06/kanban-published-to-draft-workflow-issue-3010615-16.patch
+projects[content_planner][version] = 1.0-beta15
 
 projects[scheduler][type] = module
 projects[scheduler][version] = 1.3
@@ -586,7 +584,7 @@ projects[entity_browser_enhanced][type] = module
 projects[entity_browser_enhanced][version] = 1.0
 
 projects[vmi][type] = module
-projects[vmi][version] = 2.7
+projects[vmi][version] = 2.9
 
 projects[total_control][type] = module
 projects[total_control][version] = 2.0
