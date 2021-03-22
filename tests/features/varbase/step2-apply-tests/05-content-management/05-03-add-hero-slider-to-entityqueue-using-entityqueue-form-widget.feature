@@ -107,3 +107,41 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
      Then I should not see "Test hero slider #1"
+
+  @javascript @local @development @staging @production
+  Scenario: Delete Hero slider #1
+    Given I am a logged in user with the "test_super_admin" user
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test hero slider #1" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test hero slider #1"
+     When I click "Edit" in the "Test hero slider #1" row
+      And I wait
+      And I click "Delete"
+      And I wait
+     Then I should see "This action cannot be undone."
+     When I press the "Delete" button
+      And I wait
+     Then I should see "The Hero slider Test hero slider #1 has been deleted."
+
+  @javascript @local @development @staging @production
+  Scenario: Delete Hero slider #1
+    Given I am a logged in user with the "test_super_admin" user
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test hero slider #2" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test hero slider #2"
+     When I click "Edit" in the "Test hero slider #2" row
+      And I wait
+      And I click "Delete"
+      And I wait
+     Then I should see "This action cannot be undone."
+     When I press the "Delete" button
+      And I wait
+     Then I should see "The Hero slider Test hero slider #2 has been deleted."
