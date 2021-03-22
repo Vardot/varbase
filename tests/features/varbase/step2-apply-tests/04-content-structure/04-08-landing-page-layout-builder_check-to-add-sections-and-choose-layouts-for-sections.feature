@@ -23,5 +23,4 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Bootstrap 2 Cols"
       And I should see "Bootstrap 3 Cols"
       And I should see "Bootstrap 4 Cols"
-      And I should see "Bootstrap 5 Cols"
       And I should see "Bootstrap 6 Cols"
