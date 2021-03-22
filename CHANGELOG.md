@@ -1,3 +1,210 @@
+# 9.0.0-rc2
+
+### Highlighted important changes since Varbase 9.0.0-rc1:
+* Issue [#3196489](https://www.drupal.org/i/3196489):
+                Updated Varbase Layout Builder module from ~9.0 to ~10.0
+* Issue [#3190716](https://www.drupal.org/i/3190716):
+                 Started a 10.0.x branch for Varbase Layout Builder to use Bootstrap
+                 Styles and Bootstrap Layout Builder
+* Issue [#3204731](https://www.drupal.org/i/3204731):
+                 Changed default content for the Homepage to match with the 
+                Varbase Layout Builder ~10 config structure
+* Issue [#3163199](https://www.drupal.org/i/3163199):
+                 Switched Blog site section page, Blog post, Blog categories,
+                 and Tags to use Varbase Layout Builder ~10
+* Issue [#3202306](https://www.drupal.org/i/3202306):
+                 Changed style of Edit Layout page and preview of sections
+                 to look like the front end view of the page
+* Issue [#3202838](https://www.drupal.org/i/3202838):
+                 Changed Varbase Layout Builder default set of breakpoints,
+                 layouts, and styles
+* Issue [#3202093](https://www.drupal.org/i/3202093):
+                 Added a checkbox "Keep gutters between columns" to section layout
+                 and Default options for sections
+* Issue [#3199210](https://www.drupal.org/i/3199210):
+                 Fixed the style of ADD TO LIBRARY and IMPORT FROM LIBRARY
+                 for Layout Builder Section Library
+* Issue [#3199217](https://www.drupal.org/i/3199217):
+                 Made Edge to edge background default checked on
+* Issue [#3199224](https://www.drupal.org/i/3199224):
+                 Fixed Container type and Gutters layouts rendering
+
+### Added since Varbase 9.0.0-rc1:
+* Issue [#3192175](https://www.drupal.org/i/3192175):
+                 Added WebP module ~1.0 and enable by default
+* Issue [#3197899](https://www.drupal.org/i/3197899):
+                 Added Bootstrap 5 Utility aliases for Bootstrap 4
+* Issue [#3192508](https://www.drupal.org/i/3192508):
+                 Added Preloaded fonts include in Vartheme BS4
+* Issue [#3199553](https://www.drupal.org/i/3199553):
+                 Added vlb-section not styled CSS class to be used to grep and style all Varbase Layout Builder sections
+* Issue [#3195678](https://www.drupal.org/i/3195678)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Added lazy-loading for the Remote video iframe
+* Issue [#3190047](https://www.drupal.org/i/3190047)
+                 by [davyin](https://www.drupal.org/u/davyin)
+                : Added Length Indicator dependency in composer.json
+* Issue [#3188214](https://www.drupal.org/i/3188214)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Added section classes to the section attributes
+* Issue [#3202476](https://www.drupal.org/i/3202476):
+                 Applied a patch for the Layout Builder Library module on an
+                 issue with creating a new layout override for a node from selected
+                 Layout Library selection
+
+### Changed since Varbase 9.0.0-rc1:
+* Issue [#3194401](https://www.drupal.org/i/3194401):
+                 Switched to CircleCI as the default automated testing platform
+* Issue [#3188641](https://www.drupal.org/i/3188641):
+                 Changed the set front page to "/node" process from using static
+                 node id to front page path by the alias
+* Issue [#3196988](https://www.drupal.org/i/3196988):
+                 Changed Bootstrap Barrio theme version from ~5.0 to ~5.1 for using
+                 Bootstrap 4 only
+* Issue [#3189275](https://www.drupal.org/i/3189275)
+                 by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+                 : Removed px-4 and text-center Bootstrap classes from
+                 bs-1col--vlb.html.twig template
+* Issue [#3192092](https://www.drupal.org/i/3192092)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Removed duprecated uriScheme function and use Stream
+                 Wrapper Manager Interface getScheme for Drupal 9 compatibility
+* Issue [#3188647](https://www.drupal.org/i/3188647):
+                 Changed the reset timestamp for all nodes provided by all
+                 custom Default Content modules
+* Issue [#3204768](https://www.drupal.org/i/3204768):
+                 Removed the old vartheme_bs4/vlb-colors library for Vartheme BS4
+                 Varbase Layout Builder colors theme.
+                 As the varbase_layout_builder/vlb-colors had been removed from Varbase Layout Builder ~10
+* Issue [#3201146](https://www.drupal.org/i/3201146):
+                 Backported .gx- to Vartheme BS4 from Bootstrap 5 to be used
+                 with Bootstrap 4 using the gutter size in px, not in rem to
+                 be inline with Bootstrap 4
+* Issue [#3201141](https://www.drupal.org/i/3201141):
+                 Changed .px-4 to use the right .gx-* CSS class from Bootstrap 5
+                 to be used with Bootstrap 4 using the gutter size in px, not in
+                 rem to be inline with Bootstrap 4
+* Issue [#3201602](https://www.drupal.org/i/3201602):
+                 Switched definition class for the Layout Builder provider from
+                 Bootstrap Layout class to Varbase Layout Builder Bootstrap Layout class
+* Issue [#3202085](https://www.drupal.org/i/3202085):
+                 Switched Templates from Bootstrap Layout Builder to Varbase Layout Builder
+* Issue [#3197105](https://www.drupal.org/i/3197105):
+                 Changed all Default Content in Varbase Core for the Homepage to work
+                 with VLB ~10.0
+* Issue [#3197106](https://www.drupal.org/i/3197106):
+                 Changed Default Layout config and Default Content in Varbase Blog
+                 for the Blog site section page to work with VLB ~10.0
+* Issue [#3197938](https://www.drupal.org/i/3197938)
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
+                : Removed unused use statements for namespaces in .theme
+* Issue [#3192092](https://www.drupal.org/i/3192092)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Removed duprecated uriScheme function and use Stream Wrapper Manager
+                 Interface getScheme for Drupal 9 compatibility
+
+### Updates since Varbase 9.0.0-rc1:
+* Issue [#3201685](https://www.drupal.org/i/3201685):
+                 Updated Drupal core from 9.1.4 to 9.1.5 ( ~9.1 ) and remove
+                 committed patches
+* Issue [#3193729](https://www.drupal.org/i/3193729):
+                 Updated Bootstrap library from 4.5.3 to 4.6.0
+Bootstrap v4.6.0 was released
+* Issue [#3193218](https://www.drupal.org/i/3193218):
+                 Updated Font Awesome Free library from v5.0.13 to v5.15.2
+* Issue [#3193863](https://www.drupal.org/i/3193863):
+                 Updated npm-asset/dropzone library from ~4.0 to ~5.0
+* Issue [#3188453](https://www.drupal.org/i/3188453)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Updated Media Library Edit module from 1.0-alpha2 to ( ~2.0 ) and removed committed patches
+* Issue [#3190301](https://www.drupal.org/i/3190301):
+                 Updated Content Planner module from 1.0-beta12 to
+                 1.0-beta15 ( ~1.0 ) and removed all committed patches
+* Issue [#3204736](https://www.drupal.org/i/3204736):
+                 Updated Coffee module from 1.0 to 1.1 ( ~1.0 )
+                 and remove applied patches
+* Issue [#3191486](https://www.drupal.org/i/3191486):
+                 Updated Social Auth module from ~2.0 to ~3.0
+* Issue [#3191926](https://www.drupal.org/i/3191926):
+                 Updated Social Auth Google module from ~2.0 to ~3.0
+* Issue [#3191483](https://www.drupal.org/i/3191483):
+                 Updated Social Auth LinkedIn module from 8.x-2.0-beta3 ( ~2.0 ) to ~3.0
+* Issue [#3191931](https://www.drupal.org/i/3191931):
+                 Updated Social Auth Twitter module from ~2.0 to 2.x-dev to work with Social Auth ~3.0
+* Issue [#3191492](https://www.drupal.org/i/3191492):
+                 Updated Social Auth Facebook module from ~2.0 to ~3.0
+
+### Fixes since Varbase 9.0.0-rc1:
+* Issue [#3200073](https://www.drupal.org/i/3200073)
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+                : Fixed Blazy Blurry performance issues of not exist derivative
+                 image and enhance the logic of the encoding of base64 image
+* Issue [#3200242](https://www.drupal.org/i/3200242):
+                 Fixed creating Blazy Blurry derivatives only if necessary, and the
+                 creation of Image style or responsive image style derivatives only
+                 if necessary
+* Issue [#3194958](https://www.drupal.org/i/3194958):
+                 Fixed Drupal core Off-canvas style resets overriding styles
+                 issue after updating browsers for a new feature complex :not()
+                 CSS selector
+* Issue [#3188131](https://www.drupal.org/i/3188131):
+                 Fixed Ultimate Cron module issue with Drupal Core 9.1.x on
+                 ArgumentCountError: Too few arguments
+* Issue [#3190703](https://www.drupal.org/i/3190703)
+                 by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+                : Fixed Composer 2.0 issue for bower-asset/jqueryui-touch-punch
+                 library default branch
+* Issue [#3192282](https://www.drupal.org/i/3192282)
+                 by [alaa abbad](https://www.drupal.org/u/alaa-abbad)
+                : Fixed Dropzonejs widget issue of adding _0 on all image file names
+* Issue [#3190218](https://www.drupal.org/i/3190218)
+                 by [mhawwari](https://www.drupal.org/u/mhawwari)
+                : Fixed error when navigating Layout library Trying to access
+                 array offset on value of type null in
+                VarbaseLayoutBuilderThemeNegotiator->determineActiveTheme()
+* Issue [#3194571](https://www.drupal.org/i/3194571)
+                 by [Abdelrahman Amer](https://www.drupal.org/u/abdelrahman-amer)
+                : Fixed "maximum call stack size exceeded" JavaScript error
+* Issue [#3195789](https://www.drupal.org/i/3195789)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed 404 messing images for Claro admin theme in
+                 Varbase Layout Builder
+* Issue [#3196236](https://www.drupal.org/i/3196236)
+                 by [Abdulla Abu Zakham](https://www.drupal.org/u/abu-zakham)
+                : Fixed Error when no comment added to content type
+* Issue [#3171864](https://www.drupal.org/i/3171864)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed pages URL in google analytics summary view
+* Issue [#3115228](https://www.drupal.org/i/3115228)
+                 by calmforce
+                : Fixed incorrect numbers in My Site Overview block
+                 if type_count above 1000
+* Issue [#3188457](https://www.drupal.org/i/3188457)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Update Media Library Form API Element module
+                 from 2.0.0 to 2.0.3 ( ~2.0 ) and removed committed patches
+* Issue [#3187189](https://www.drupal.org/i/3187189):
+                 Fixed composer require for Drupal core to ~8.0 || ~9.0
+                 to work with latest Drupal 9.1.x versions
+* Issue [#3186916](https://www.drupal.org/i/3186916):
+                 Fixed install page function and style for Vartheme Claro
+                 admin theme to follow with latest Drupal core 9.1.0 Claro changes
+* Issue [#3186937](https://www.drupal.org/i/3186937)
+                 by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+                : Fixed PHP Exception for VMI module on escaped characters in
+                 sequences/mappings in *.yml files with latest Symfony/yaml
+* Issue [#3199598](https://www.drupal.org/i/3199598)
+                 by [Firass Ziedan](https://www.drupal.org/u/firass-ziedan)
+                : Fixed CKEditor background color in Vartheme base file
+* Issue [#3204734](https://www.drupal.org/i/3204734):
+                 Fixed default configs and remove leftover section configs
+* Issue [#3200994](https://www.drupal.org/i/3200994)
+                 by [Abdulla Abu Zakham](https://www.drupal.org/u/abu-zakham)
+                : Fixed LogicException & RuntimeException on user login and
+                 registration error when the Twitter social button clicked on
+
+---------------------------------------------------------------------------------
+
 # 9.0.0-rc1
 
 ### Highlighted important changes since Varbase 9.0.0-beta1:
