@@ -145,4 +145,4 @@ I want to be able to add and remove entities to any allowed entity queue.
      Then I should see "This action cannot be undone."
      When I press the "Delete" button
       And I wait
-     Then I should see "The Hero slider Test hero slider #1 has been deleted."
+     Then I should see "The Hero slider Test hero slider #2 has been deleted."
