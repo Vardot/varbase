@@ -120,7 +120,8 @@ I want to be able to add and remove entities to any allowed entity queue.
      Then I should see "Test hero slider #1"
      When I click "Edit" in the "Test hero slider #1" row
       And I wait
-      And I click "Delete"
+     Then I should see "Delete"
+     When I click "edit-delete"
       And I wait
      Then I should see "This action cannot be undone."
      When I press the "Delete" button
@@ -138,10 +139,10 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait
      Then I should see "Test hero slider #2"
      When I click "Edit" in the "Test hero slider #2" row
-      And I wait
-      And I click "Delete"
+     Then I should see "Delete"
+     When I click "edit-delete"
       And I wait
      Then I should see "This action cannot be undone."
      When I press the "Delete" button
       And I wait
-     Then I should see "The Hero slider Test hero slider #2 has been deleted."
+     Then I should see "The Hero slider Test hero slider #1 has been deleted."
