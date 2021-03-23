@@ -22,7 +22,7 @@ I want to be able to add and remove entities to any allowed entity queue.
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Add a Test hero slider number 1 to the heroslider entity queue.
+  Scenario: Add a Test hero sliders to the heroslider entity queue.
     Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
       And I wait max of 5s for the page to be ready and loaded
@@ -50,9 +50,6 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait
      Then I should see "Test hero slider #1"
 
-  @javascript @local @development @staging @production
-  Scenario: Add a Test hero slider number 2 to the heroslider entity queue
-    Given I am a logged in user with the "test_super_admin" user
      When I go to "node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
      Then I should see "Create Hero slider"
@@ -79,17 +76,11 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait
      Then I should see "Test hero slider #2"
 
-  @javascript @local @development @staging @production
-  Scenario: Check if the Hero slider added to the varbase hero slider media entity queue
-    Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
      Then I should see "Test hero slider #1"
       And I should see "Test hero slider #2"
 
-  @javascript @local @development @staging @production
-  Scenario: Remove a Hero slider from the varbase hero slider media entity queue
-    Given I am a logged in user with the "test_super_admin" user
      When I go to "admin/content"
       And I wait
      Then I should see "Content"
@@ -107,3 +98,36 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
      Then I should not see "Test hero slider #1"
+
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test hero slider #1" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test hero slider #1"
+     When I click "Edit" in the "Test hero slider #1" row
+      And I wait
+     Then I should see "Delete"
+     When I click "edit-delete"
+      And I wait
+     Then I should see "This action cannot be undone."
+     When I press the "Delete" button
+      And I wait
+     Then I should see "The Hero slider Test hero slider #1 has been deleted."
+
+     When I go to "admin/content"
+      And I wait
+     Then I should see "Content"
+     When I fill in "Test hero slider #2" for "Title"
+      And I press the "Filter" button
+      And I wait
+     Then I should see "Test hero slider #2"
+     When I click "Edit" in the "Test hero slider #2" row
+     Then I should see "Delete"
+     When I click "edit-delete"
+      And I wait
+     Then I should see "This action cannot be undone."
+     When I press the "Delete" button
+      And I wait
+     Then I should see "The Hero slider Test hero slider #2 has been deleted."
