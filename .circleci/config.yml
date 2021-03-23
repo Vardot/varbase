@@ -226,32 +226,32 @@ workflows:
   varbase-workflow:
     jobs:
       - varbase-testing-01-website-base-requirements:
-        filters:
-          tags:
-            ignore: /.*/
-          branches:
-            only: /^8.x-8.x/
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: /^8.x-8.x/
       - varbase-testing-02-user-management-03-admin-management:
-        filters:
-          tags:
-            ignore: /.*/
-          branches:
-            only: /^8.x-8.x/
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: /^8.x-8.x/
       - varbase-testing-04-content-structure:
-        filters:
-          tags:
-            ignore: /.*/
-          branches:
-            only: /^8.x-8.x/
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: /^8.x-8.x/
       - varbase-testing-05-content-management:
-        filters:
-          tags:
-            ignore: /.*/
-          branches:
-            only: /^8.x-8.x/
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: /^8.x-8.x/
       - release-varbase:
-        filters:
-          tags:
-            only: /^8.x-8.*/
-          branches:
-            ignore: /.*/
+          filters:
+            tags:
+              only: /^8.x-8.*/
+            branches:
+              ignore: /.*/
