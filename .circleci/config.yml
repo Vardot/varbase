@@ -209,6 +209,17 @@ jobs:
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
+  release-varbase:
+      <<: *defaults
+      steps:
+        - varbase-build
+        ## Automated Functional Acceptance Testing group - Release Varbase
+        - run:
+            name: Automated Functional Acceptance Testing group - Release Varbase
+            no_output_timeout: 30m
+            command: |
+              cd /var/www/html/varbase/docroot/profiles/varbase
+              behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/
 
 workflows:
   version: 2
@@ -218,3 +229,9 @@ workflows:
       - varbase-testing-02-user-management-03-admin-management
       - varbase-testing-04-content-structure
       - varbase-testing-05-content-management
+      - release-varbase
+        filters:
+          tags:
+            only: /^8.x-8.*/
+          branches:
+            ignore: /.*/
