@@ -70,6 +70,6 @@ Scenario: Check that Reverse order in admin view is working
    When I click "Edit items" in the "Test Queue" row
     And I wait
    Then I should see "Edit subqueue Test Queue"
-    And I should not see "Test content N3" in the "Test content N3" row
-    And I should not see "Test content N2" in the "Test content N2" row
-    And I should not see "Test content N1" in the "Test content N1" row
+    And I should not see "Test content N3"
+    And I should not see "Test content N2"
+    And I should not see "Test content N1"
