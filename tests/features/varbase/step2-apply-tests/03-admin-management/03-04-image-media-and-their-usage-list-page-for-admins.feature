@@ -26,7 +26,7 @@ So that I will be able to manage files, see where they have been used in content
        And I fill in "Flag Earth" for "name[0][value]"
        And I check the box "Show in media library"
        And I press the "Save" button
-       And I wait 5s
+       And I wait
       Then I should see "Flag Earth"
        And I wait
       When I go to "admin/content/media"
