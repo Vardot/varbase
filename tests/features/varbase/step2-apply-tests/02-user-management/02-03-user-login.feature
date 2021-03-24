@@ -5,7 +5,7 @@ So that I will be able to view/add/edit/ or delete content in the site
 
   @local @development @staging @production
   Scenario: Check if a visitor can login with a valid username and password
-    Given I am on "user/login"
+    Given I am on login"
       And I wait
      When I fill in "test_authenticated" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -15,7 +15,7 @@ So that I will be able to view/add/edit/ or delete content in the site
 
   @local @development @staging @production
   Scenario: Verify a form error after not entering the username or password when we login
-    Given I am on "user/login"
+    Given I am on login"
       And I wait
      When I press "Log in"
       And wait
