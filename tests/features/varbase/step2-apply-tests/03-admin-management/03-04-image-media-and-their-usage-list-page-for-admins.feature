@@ -3,11 +3,9 @@ As a user with permission to manage files in the site
 I want to be able to see the list of files
 So that I will be able to manage files, see where they have been used in contents.
 
-  Background:
-    Given I am a logged in user with the "test_site_admin" user
-
   @javascript @local @development @staging @production
   Scenario: Check if content admins can access the content files page
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"
@@ -15,6 +13,7 @@ So that I will be able to manage files, see where they have been used in content
 
   @local @development @staging @production
   Scenario: Check if we do have a file named Flag Earth, if not then upload the file dependently
+     Given I am a logged in user with the "test_site_admin" user
       When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
@@ -36,6 +35,7 @@ So that I will be able to manage files, see where they have been used in content
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can edit files
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"
@@ -54,6 +54,7 @@ So that I will be able to manage files, see where they have been used in content
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can delete files
+    Given I am a logged in user with the "test_site_admin" user
      When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"

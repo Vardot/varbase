@@ -61,7 +61,7 @@ Scenario: Check that Reverse order in admin view is working
      And I should see "Test content N2"
      And I should see "Test content N3"
     When I press "Execute action"
-     And I wait
+     And I wait max of 5s
     Then I should see "Action processing results: Delete entities (3)."
 
    When I go to "/admin/structure/entityqueue"
