@@ -5,7 +5,7 @@ I want to be able to clone an entity.
 @javascript @local @development
   Scenario: Check if a user with a permission can clone a Landing page (Paragraphs)
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Clone landing page" for "Title"
       And I fill in "Test landing page description text" for "Page description"
