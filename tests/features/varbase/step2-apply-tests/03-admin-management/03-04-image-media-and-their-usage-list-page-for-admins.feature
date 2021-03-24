@@ -71,7 +71,3 @@ So that I will be able to manage files, see where they have been used in content
      When I press the "Delete" button
       And I wait
      Then I should not see "Flag Earth after edit"
-     When I fill in "Flag Earth after edit" for "edit-name"
-      And I press the "Apply" button
-      And I wait
-     Then I should not see "Flag Earth after edit"

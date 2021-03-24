@@ -5,7 +5,7 @@ I want to be able to add and remove entities to any allowed entity queue.
   @local @development @staging @production
   Scenario: Upload the Flag Earth file
     Given I am a logged in user with the "test_site_admin" user
-     When I /image"
+     When I go to "/media/add/image"
       And I wait
      Then I should see "Allowed types: png gif jpg jpeg."
      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
@@ -26,7 +26,7 @@ I want to be able to add and remove entities to any allowed entity queue.
     Given I am a logged in user with the "test_super_admin" user
 
      # Add the "Test hero slier #1" content and to the hero slider queue.
-     When I /varbase_heroslider_media"
+     When I go to "/node/add/varbase_heroslider_media"
       And I wait max of 5s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #1" for "Slide title"
@@ -53,7 +53,7 @@ I want to be able to add and remove entities to any allowed entity queue.
      Then I should see "Test hero slider #1"
 
      # Add the "Test hero slier #2" content and to the hero slider queue.
-     When I /varbase_heroslider_media"
+     When I got to "/node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #2" for "Slide title"

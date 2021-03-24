@@ -61,7 +61,7 @@ So that the "Basic page" will show up in the structured menu under its parent pa
   @javascript @local @development @staging @production
   Scenario: Check if we can create a Test Basic page we can see Change layout floating button to change the layout
     Given I am a logged in user with the "test_super_admin" user
-     When I /page"
+     When I "/node/add/page"
       And I wait
       And I fill in "Test Basic page" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page body"
