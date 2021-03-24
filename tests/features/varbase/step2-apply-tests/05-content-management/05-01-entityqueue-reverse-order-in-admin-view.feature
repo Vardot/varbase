@@ -47,7 +47,7 @@ Scenario: Check that Reverse order in admin view is working
     And I should see "Test content N1" in the "Test content N1" row
 
     # Delete test content for subqueue test queue.
-    When I go to "admin/content"
+    When I go to "/admin/content"
      And I wait
     Then I should see "Content"
     When I check the box "Test content N1"
@@ -58,8 +58,8 @@ Scenario: Check that Reverse order in admin view is working
      And I wait
     Then I should see "Items selected:"
      And I should see "Test content N1"
-     And I should see "Test content N1"
-     And I should see "Test content N1"
+     And I should see "Test content N2"
+     And I should see "Test content N3"
     When I press "Execute action"
      And I wait
     Then I should see "Action processing results: Delete entities (3)."

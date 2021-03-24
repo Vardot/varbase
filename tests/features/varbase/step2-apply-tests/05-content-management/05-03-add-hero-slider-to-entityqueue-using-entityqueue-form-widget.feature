@@ -98,7 +98,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I should see "Test hero slider #1"
       And I should see "Test hero slider #2"
      When I press "Execute action"
-      And I wait
+      And I wait max of 5s
      Then I should see "Action processing results: Delete entities (2)."
 
      # Check that the 2 hero sliders had beend removed from the queue.
