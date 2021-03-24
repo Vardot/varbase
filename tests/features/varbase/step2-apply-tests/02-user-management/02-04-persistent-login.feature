@@ -15,7 +15,7 @@ Feature: User Management - Have persistent login options and configurations
   @javascript @check @local @development @staging @production
   Scenario: Check if an authenticated user can login and use the [Remember me] option
     Given I am not logged in
-     When I go to "/user"
+     When I go to "/user/login"
       And I wait
      Then I should see "Log in"
       And I should see "Remember me"
