@@ -8,7 +8,7 @@ distribution:
   name: Varbase
   install:
     theme: vartheme_claro
-version: 8.x-8.19
+version: 8.x-8.10
 install:
   - system
   - action
