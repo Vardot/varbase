@@ -55,7 +55,6 @@ projects[layout_builder_block_sanitizer][version] = 1.0-alpha4
 projects[media_library_theme_reset][type] = module
 projects[media_library_theme_reset][version] = 1.0
 
-projects[layout_builder_component_attributes][type] = module
 
 projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.11
@@ -197,23 +196,6 @@ projects[userprotect][type] = module
 projects[userprotect][version] = 1.1
 
 projects[admin_audit_trail][type] = module
-projects[admin_audit_trail][download][type] = "git"
-projects[admin_audit_trail][download][branch] = 1.0.x
-
-projects[events_log_track][type] = module
-projects[events_log_track][version] = 1.1
-;; Issue #2934036: Events Log Track breaks Entity Browser
-projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2018-04-19/2934036-check_empty_submit-5.patch
-;; Issue #2930817: Entities with title longer than 50 characters
-projects[events_log_track][patch][] =https://www.drupal.org/files/issues/increase-character-length-2930817-2.patch
-;; Issue #2974170: Event logs for change in workflows
-projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2018-06-26/events_log_track-add-workflows-2974170-7.patch
-;; Issue #2959769: Add handlers for file and media entities
-projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2018-06-26/events-log-track_add-file-media-2959769-9.patch
-;; Issue #3027463: Skip password logging during failed authentication attempt
-projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2019-01-22/event-log-track-auth-3027463-2.patch
-;; Issue #3060838: Fix fatal error when we request password with non-existing users/emails  on the Events Log Track User Authentication
-projects[events_log_track][patch][] =https://www.drupal.org/files/issues/2019-06-11/3060838-4.patch
 
 projects[config_perms][type] = module
 projects[config_perms][version] = 2.0
@@ -512,7 +494,6 @@ projects[jquery_ui_draggable][type] = module
 projects[jquery_ui_droppable][type] = module
 projects[jquery_ui_slider][type] = module
 
-projects[jquery_ui_touch_punch][type] = module
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
