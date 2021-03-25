@@ -6,7 +6,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
  @local @development @staging @production
   Scenario: Upload the Embed Flag Earth file
      Given I am a logged in user with the "test_site_admin" user
-      When I "/media/add/image"
+      When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
       When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
