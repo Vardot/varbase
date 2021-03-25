@@ -42,7 +42,7 @@ I want to be able to add and remove entities to any allowed entity queue.
 		  And I wait for AJAX to finish
 		  And I press "dialog-submit"
 		  And I wait for AJAX to finish
-      And wait max of 5s
+      And I wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
@@ -53,7 +53,7 @@ I want to be able to add and remove entities to any allowed entity queue.
      Then I should see "Test hero slider #1"
 
      # Add the "Test hero slier #2" content and to the hero slider queue.
-     When I got to "/node/add/varbase_heroslider_media"
+     When I go to "/node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #2" for "Slide title"
@@ -69,7 +69,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish
-      And wait max of 5s
+      And I wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
