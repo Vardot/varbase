@@ -195,8 +195,6 @@ projects[persistent_login][patch][] = https://www.drupal.org/files/issues/persis
 projects[userprotect][type] = module
 projects[userprotect][version] = 1.1
 
-projects[admin_audit_trail][type] = module
-
 projects[config_perms][type] = module
 projects[config_perms][version] = 2.0
 
