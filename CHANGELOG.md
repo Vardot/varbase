@@ -1,3 +1,59 @@
+# 8.8.10
+
+### Highlighted important changes since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
+Issue [#3205085](https://www.drupal.org/i/3205085):
+                Added a tag release-varbase workflow job for the CircleCI
+                automated testing pipelines
+Issue [#3200073](https://www.drupal.org/i/3200073)
+                 by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+                : Fixed Blazy Blurry performance issues of not exist derivative
+                image and enhance the logic of the encoding of base64 image
+Issue [#3200242](https://www.drupal.org/i/3200242):
+                Fixed creating Blazy Blurry derivatives only if necessary, and
+                the creation of Image style or responsive image style
+                derivatives only if necessary
+
+### Added since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
+No new features
+All new features are in Varbase 9.0.x
+Released [Varbase 9.0.0-rc2](https://www.drupal.org/project/varbase/releases/9.0.0-rc2)
+
+### Changed since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
+No changes
+All changes are in Varbase 9.0.x
+Released [Varbase 9.0.0-rc2](https://www.drupal.org/project/varbase/releases/9.0.0-rc2)
+
+### Updates since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
+Issue [#3204736](https://www.drupal.org/i/3204736):
+                Updated Coffee module from 1.0 to 1.1 ( ~1.0 ) and
+                remove applied patches
+Issue [#3191486](https://www.drupal.org/i/3191486):
+                Updated Social Auth module from ~2.0 to ~3.0
+Issue [#3191926](https://www.drupal.org/i/3191926):
+                Updated Social Auth Google module from ~2.0 to ~3.0
+Issue [#3191483](https://www.drupal.org/i/3191483):
+                Updated Social Auth LinkedIn module
+                from 8.x-2.0-beta3 ( ~2.0 ) to ~3.0
+Issue [#3191931](https://www.drupal.org/i/3191931):
+                Updated Social Auth Twitter module from ~2.0 to 2.x-dev to
+                work with Social Auth ~3.0
+Issue [#3191492](https://www.drupal.org/i/3191492):
+                Updated Social Auth Facebook module from ~2.0 to ~3.0
+
+### Fixes since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
+Issue [#3200994](https://www.drupal.org/i/3200994)
+                by [abu-zakham](https://www.drupal.org/u/abu-zakham)
+               : Fixed LogicException & RuntimeException on
+                user login and registration error when the Twitter social
+                button clicked on
+Issue [#3203824](https://www.drupal.org/i/3203824)
+                by [Dimitri Baudonck](https://www.drupal.org/u/dimitribaudonckdukeandgracecom)
+               : Fixed Access Denied issue on WebP module with
+                Image Optimize API
+
+--------------------------------------------------------------------------------
+
+
 # 8.8.9
 
 ### Highlighted important changes since Varbase 8.x-8.8:
