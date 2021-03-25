@@ -56,8 +56,6 @@ projects[media_library_theme_reset][type] = module
 projects[media_library_theme_reset][version] = 1.0
 
 projects[layout_builder_component_attributes][type] = module
-projects[layout_builder_component_attributes][download][type] = "git"
-projects[layout_builder_component_attributes][download][branch] = 1.1.x
 
 projects[layout_builder_at][type] = module
 projects[layout_builder_at][version] = 2.11
@@ -329,7 +327,6 @@ projects[paragraphs_previewer][version] = 1.5
 projects[paragraphs_previewer][patch][] = https://www.drupal.org/files/issues/2019-02-20/2904917-8.patch
 
 projects[paragraphs_features][type] = module
-projects[paragraphs_features][version] = 1.12
 
 projects[paragraphs_asymmetric_translation_widgets][type] = module
 projects[paragraphs_asymmetric_translation_widgets][version] = 1.0-beta4
@@ -516,8 +513,6 @@ projects[jquery_ui_droppable][type] = module
 projects[jquery_ui_slider][type] = module
 
 projects[jquery_ui_touch_punch][type] = module
-projects[jquery_ui_touch_punch][download][type] = "git"
-projects[jquery_ui_touch_punch][download][branch] = 1.0.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Development contrib modules
@@ -599,49 +594,49 @@ projects[varbase_core][type] = module
 projects[varbase_core][version] = 8.29 
 
 projects[varbase_api][type] = module
-projects[varbase_api][version] = 7.x-dev
+projects[varbase_api][version] = 7.14
 
 projects[varbase_media][type] = module
 projects[varbase_media][version] = 7.37
 
 projects[varbase_bootstrap_paragraphs][type] = module
-projects[varbase_bootstrap_paragraphs][version] = 7.x-dev
+projects[varbase_bootstrap_paragraphs][version] = 7.17
 
 projects[varbase_editor][type] = module
-projects[varbase_editor][version] = 7.x-dev
+projects[varbase_editor][version] = 7.13
 
 projects[varbase_landing][type] = module
-projects[varbase_landing][version] = 7.x-dev
+projects[varbase_landing][version] = 7.10
 
 projects[varbase_layout_builder][type] = module
-projects[varbase_layout_builder][version] = 1.x-dev
+projects[varbase_layout_builder][version] = 1.25
 
 projects[varbase_heroslider_media][type] = module
-projects[varbase_heroslider_media][version] = 7.x-dev
+projects[varbase_heroslider_media][version] = 7.16
 
 projects[varbase_carousels][type] = module
-projects[varbase_carousels][version] = 7.x-dev
+projects[varbase_carousels][version] = 7.7
 
 projects[varbase_blog][type] = module
-projects[varbase_blog][version] = 8.x-dev
+projects[varbase_blog][version] = 8.6
 
 projects[varbase_search][type] = module
-projects[varbase_search][version] = 6.x-dev
+projects[varbase_search][version] = 6.8
 
 projects[varbase_seo][type] = module
-projects[varbase_seo][version] = 6.x-dev
+projects[varbase_seo][version] = 6.18
 
 projects[varbase_total_control][type] = module
-projects[varbase_total_control][version] = 6.x-dev
+projects[varbase_total_control][version] = 6.14
 
 projects[varbase_auth][type] = module
 projects[varbase_auth][version] = 6.13
 
 projects[varbase_styleguide][type] = module
-projects[varbase_styleguide][version] = 6.x-dev
+projects[varbase_styleguide][version] = 6.8
 
 projects[varbase_email][type] = module
-projects[varbase_email][version] = 6.x-dev
+projects[varbase_email][version] = 6.5
 
 projects[varbase_workflow][type] = module
 
