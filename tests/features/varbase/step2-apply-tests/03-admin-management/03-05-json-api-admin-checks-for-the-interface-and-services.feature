@@ -52,15 +52,3 @@ So that I can use them to enable or disable API service for Varbase APIs.
      Then I should see "OpenAPI Resources"
       And I should see "Rest"
       And I should see "JSON:API"
-
-     When I go to "/admin/config/services/openapi/redoc/rest"
-      And I wait
-     Then I should see "The REST API provide by the core REST module"
-
-     When I go to "/admin/config/services/openapi/redoc/jsonapi"
-      And I wait
-     Then I should see "This is a JSON API compliant implementation"
-
-     When I go to "/admin/config/services/openapi/swagger/jsonapi"
-      And I wait
-     Then I should see "OpenAPI Documentation"
