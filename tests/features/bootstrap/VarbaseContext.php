@@ -3,6 +3,7 @@
 use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
+use Behat\Mink\Exception\ElementHtmlException;
 
 /**
  * Defines application features from the specific context.
@@ -86,12 +87,17 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
       $this->getSession()->visit($this->locatePath('/user/login'));
       $page = $this->getSession()->getPage();
-      $page->findField('edit-name');
-      $page->findField('edit-pass');
-      $page->fillField('edit-name', $username);
-      $page->fillField('edit-pass', $password);
-      $submit = $page->findButton('op');
-      $submit->click();
+      $username_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]');
+      $password_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-pass"]');
+      $submit_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-submit"]');
+
+      if ($username_in_page && $password_in_page && $submit_in_page) {
+        $page->fillField('name', $username);
+        $page->fillField('pass', $password);
+        $submit = $page->findButton('op');
+        $submit->click();
+      }
+
     }
     else {
       throw new \Exception("The '$username' user name is wrong or it was not listed in the list of default testing users.");
@@ -116,12 +122,16 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     // Login with the.
     $this->getSession()->visit($this->locatePath('/user/login'));
     $page = $this->getSession()->getPage();
-    $page->findField('edit-name');
-    $page->findField('edit-pass');
-    $page->fillField('edit-name', $username);
-    $page->fillField('edit-pass', $password);
-    $submit = $page->findButton('op');
-    $submit->click();
+    $username_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]');
+    $password_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-pass"]');
+    $submit_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-submit"]');
+
+    if ($username_in_page && $password_in_page && $submit_in_page) {
+      $page->fillField('name', $username);
+      $page->fillField('pass', $password);
+      $submit = $page->findButton('op');
+      $submit->click();
+    }
   }
 
   /**
@@ -1648,6 +1658,32 @@ JS;
    */
   public function iSelectTheParagraphComponent($value) {
     $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "' . $value . '")]')->click();
+  }
+
+  /**
+   * Matching element exists on the page after a wait.
+   *
+   * @param string $selector_type
+   *   The element selector type (css, xpath).
+   * @param string|array $selector
+   *   The element selector.
+   * @param int $timeout
+   *   (optional) Timeout in milliseconds, defaults to 10000.
+   */
+  public function matchingElementAfterWait($selector_type, $selector, $timeout = 10000) {
+    $start = microtime(TRUE);
+    $end = $start + ($timeout / 1000);
+    $page = $this->getSession()->getPage();
+
+    do {
+      $node = $page->find($selector_type, $selector);
+      if (empty($node)) {
+        return FALSE;
+      }
+      usleep(100000);
+    } while (microtime(TRUE) < $end);
+
+    return TRUE;
   }
 
   /**
