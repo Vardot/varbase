@@ -87,11 +87,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
       $this->getSession()->visit($this->locatePath('/user/login'));
       $page = $this->getSession()->getPage();
-      $username_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]');
-      $password_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-pass"]');
-      $submit_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-submit"]');
 
-      if ($username_in_page && $password_in_page && $submit_in_page) {
+      if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
         $page->fillField('name', $username);
         $page->fillField('pass', $password);
         $submit = $page->findButton('op');
@@ -122,11 +119,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     // Login with the.
     $this->getSession()->visit($this->locatePath('/user/login'));
     $page = $this->getSession()->getPage();
-    $username_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]');
-    $password_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-pass"]');
-    $submit_in_page = $this->matchingElementAfterWait('css', '[data-drupal-selector="edit-submit"]');
 
-    if ($username_in_page && $password_in_page && $submit_in_page) {
+    if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
       $page->fillField('name', $username);
       $page->fillField('pass', $password);
       $submit = $page->findButton('op');
