@@ -118,6 +118,7 @@ commands:
             cd /var/www/html/varbase
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
+            sudo chmod 777 -R /var/www/html/varbase
       - save_cache:
           key: v4-composer-cache
           paths:
@@ -180,9 +181,9 @@ jobs:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 02 user management
+      ## Automated Functional Acceptance Testing group - 02 user management - 03 admin management
       - run:
-          name: Automated Functional Acceptance Testing group - 02 user management
+          name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
@@ -215,7 +216,27 @@ workflows:
   version: 2
   varbase-workflow:
     jobs:
-      - varbase-testing-01-website-base-requirements
-      - varbase-testing-02-user-management-03-admin-management
-      - varbase-testing-04-content-structure
-      - varbase-testing-05-content-management
+      - varbase-testing-01-website-base-requirements:
+          filters:
+            tags:
+              only: /^9.*/
+            branches:
+              only: /^9.0.x/
+      - varbase-testing-02-user-management-03-admin-management:
+          filters:
+            tags:
+              only: /^9.*/
+            branches:
+              only: /^9.0.x/
+      - varbase-testing-04-content-structure:
+          filters:
+            tags:
+              only: /^9.*/
+            branches:
+              only: /^9.0.x/
+      - varbase-testing-05-content-management:
+          filters:
+            tags:
+              only: /^9.*/
+            branches:
+              only: /^9.0.x/

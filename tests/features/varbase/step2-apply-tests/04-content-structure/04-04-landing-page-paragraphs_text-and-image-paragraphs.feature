@@ -6,7 +6,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
  @local @development @staging @production
   Scenario: Upload the Embed Flag Earth file
      Given I am a logged in user with the "test_site_admin" user
-      When I go to "media/add/image"
+      When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
       When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
@@ -26,7 +26,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type create a new Landing page
 
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test landing page title for text and image paragraphs" for "Title"
       And I fill in "Test landing page body description." for "Page description"

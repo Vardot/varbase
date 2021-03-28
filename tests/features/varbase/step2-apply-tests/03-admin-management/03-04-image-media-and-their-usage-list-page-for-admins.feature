@@ -36,7 +36,7 @@ So that I will be able to manage files, see where they have been used in content
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can edit files
-     When I go to "admin/content/media"
+     When I go to "/admin/content/media"
       And I wait
      Then I should see "Add media"
      When I fill in "Flag Earth" for "edit-name"
@@ -54,7 +54,7 @@ So that I will be able to manage files, see where they have been used in content
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can delete files
-     When I go to "admin/content/media"
+     When I go to "/admin/content/media"
       And I wait
      Then I should see "Add media"
      When I fill in "Flag Earth after edit" for "edit-name"

@@ -5,7 +5,7 @@ I want to be able to add and remove entities to any allowed entity queue.
   @local @development @staging @production
   Scenario: Upload the Flag Earth file
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "media/add/image"
+     When I go to "/media/add/image"
       And I wait
      Then I should see "Allowed types: png gif jpg jpeg."
      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
@@ -22,9 +22,11 @@ I want to be able to add and remove entities to any allowed entity queue.
   #-----------------------------------------------------------------------------
 
   @javascript @local @development @staging @production
-  Scenario: Add a Test hero sliders to the heroslider entity queue.
+  Scenario: Add a Test hero sliders to the heroslider entity queue them remove them
     Given I am a logged in user with the "test_super_admin" user
-     When I go to "node/add/varbase_heroslider_media"
+
+     # Add the "Test hero slier #1" content and to the hero slider queue.
+     When I go to "/node/add/varbase_heroslider_media"
       And I wait max of 5s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #1" for "Slide title"
@@ -40,7 +42,7 @@ I want to be able to add and remove entities to any allowed entity queue.
 		  And I wait for AJAX to finish
 		  And I press "dialog-submit"
 		  And I wait for AJAX to finish
-      And wait max of 5s
+      And I wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
@@ -50,7 +52,8 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait
      Then I should see "Test hero slider #1"
 
-     When I go to "node/add/varbase_heroslider_media"
+     # Add the "Test hero slier #2" content and to the hero slider queue.
+     When I go to "/node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #2" for "Slide title"
@@ -66,7 +69,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish
-      And wait max of 5s
+      And I wait max of 5s
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
@@ -76,58 +79,30 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait
      Then I should see "Test hero slider #2"
 
-     When I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
+     # Check that both hero sliders are listed in the queue.
+     When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
      Then I should see "Test hero slider #1"
       And I should see "Test hero slider #2"
 
-     When I go to "admin/content"
+     # Delete both sliders.
+     When I go to "/admin/content"
       And I wait
      Then I should see "Content"
-     When I fill in "Test hero slider #1" for "Title"
-      And I press the "Filter" button
+     When I check the box "Test hero slider #1"
+      And I check the box "Test hero slider #2"
+      And I select "Delete selected entities / translations" from "action"
+     When I press "Apply to selected items"
       And I wait
-     Then I should see "Test hero slider #1"
-     When I click "Edit" in the "Test hero slider #1" row
-      And I wait
-      And I expand the field "edit-entityqueue-form-widget"
-     Then the "varbase_heroslider_media" checkbox should be checked
-     When I uncheck the box "varbase_heroslider_media"
-      And I select "published" from "edit-moderation-state-0-state"
-      And I press the "Save" button
-      And I go to "admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
+     Then I should see "Items selected:"
+      And I should see "Test hero slider #1"
+      And I should see "Test hero slider #2"
+     When I press "Execute action"
+      And I wait 10s
+     Then I should see "Action processing results: Delete entities (2)."
+
+     # Check that the 2 hero sliders had beend removed from the queue.
+     When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And I wait
      Then I should not see "Test hero slider #1"
-
-     When I go to "admin/content"
-      And I wait
-     Then I should see "Content"
-     When I fill in "Test hero slider #1" for "Title"
-      And I press the "Filter" button
-      And I wait
-     Then I should see "Test hero slider #1"
-     When I click "Edit" in the "Test hero slider #1" row
-      And I wait
-     Then I should see "Delete"
-     When I click "edit-delete"
-      And I wait
-     Then I should see "This action cannot be undone."
-     When I press the "Delete" button
-      And I wait
-     Then I should see "The Hero slider Test hero slider #1 has been deleted."
-
-     When I go to "admin/content"
-      And I wait
-     Then I should see "Content"
-     When I fill in "Test hero slider #2" for "Title"
-      And I press the "Filter" button
-      And I wait
-     Then I should see "Test hero slider #2"
-     When I click "Edit" in the "Test hero slider #2" row
-     Then I should see "Delete"
-     When I click "edit-delete"
-      And I wait
-     Then I should see "This action cannot be undone."
-     When I press the "Delete" button
-      And I wait
-     Then I should see "The Hero slider Test hero slider #2 has been deleted."
+      And I should not see "Test hero slider #2"

@@ -6,7 +6,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
  @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file
      Given I am a logged in user with the "test_site_admin" user
-      When I go to "media/add/image"
+      When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
       When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
@@ -35,7 +35,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Drupal Block
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Drupal Block" for "Title"
       And I fill in "Test Landing page description Drupal Block" for "Page description"
@@ -57,7 +57,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Columns Equal
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Equal)" for "Title"
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
@@ -76,7 +76,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Columns Two Uneven
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
@@ -95,7 +95,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Modal
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Modal" for "Title"
       And I fill in "Test Landing page description Modal" for "Page description"
@@ -128,7 +128,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Rich Text
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Landing page Rich Text" for "Title"
       And I fill in "Test Landing page description Rich Text" for "Page description"
@@ -150,7 +150,7 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type WebForm
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Landing page WebForm" for "Title"
       And I fill in "Test Landing page description WebForm" for "Page description"

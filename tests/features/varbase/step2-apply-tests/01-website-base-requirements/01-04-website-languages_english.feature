@@ -6,7 +6,7 @@ So that can be sure that the website is using the English language as one of the
   @javascript @local @development @staging @production
   Scenario: Check if we can Create Basic page with English for the language of the content
     Given I am a logged in user with the "test_content_admin" user
-      And I go to "node/add/page"
+      And I go to "/node/add/page"
       And I wait
      When I select "English" from "Language"
      Then I should see "Language"
@@ -21,7 +21,7 @@ So that can be sure that the website is using the English language as one of the
   @javascript @local @development @staging @production
   Scenario: Check if we can Create Landing page with English for the language of the content
     Given I am a logged in user with the "test_content_admin" user
-      And I go to "node/add/landing_page"
+      And I go to "/node/add/landing_page"
       And I wait
      When I select "English" from "Language"
      Then I should see "Language"
@@ -35,7 +35,7 @@ So that can be sure that the website is using the English language as one of the
   @javascript @local @development @staging @production
   Scenario: Check if we can Create Basic page with English for the language of the content
     Given I am a logged in user with the "test_site_admin" user
-      And I go to "node/add/page"
+      And I go to "/node/add/page"
       And I wait
      When I select "English" from "Language"
      Then I should see "Language"
@@ -50,7 +50,7 @@ So that can be sure that the website is using the English language as one of the
   @javascript @local @development @staging @production
   Scenario: Check if we can Create Landing page with English for the language of the content
     Given I am a logged in user with the "test_site_admin" user
-      And I go to "node/add/landing_page"
+      And I go to "/node/add/landing_page"
       And I wait
      When I select "English" from "Language"
      Then I should see "Language"

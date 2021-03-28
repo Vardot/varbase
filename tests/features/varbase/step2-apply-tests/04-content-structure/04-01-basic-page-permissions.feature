@@ -61,7 +61,7 @@ So that the "Basic page" will show up in the structured menu under its parent pa
   @javascript @local @development @staging @production
   Scenario: Check if we can create a Test Basic page we can see Change layout floating button to change the layout
     Given I am a logged in user with the "test_super_admin" user
-     When I go to "node/add/page"
+     When I go to "/node/add/page"
       And I wait
       And I fill in "Test Basic page" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page body"
@@ -73,7 +73,7 @@ So that the "Basic page" will show up in the structured menu under its parent pa
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Basic page content type
     Given I am a logged in user with the "test_super_admin" user
-     When I go to "admin/content"
+     When I go to "/admin/content"
       And I wait
      Then I should see "Content"
      When I fill in "Test Basic page" for "Title"
@@ -82,7 +82,7 @@ So that the "Basic page" will show up in the structured menu under its parent pa
      Then I should see "Test Basic page"
      When I click "Test Basic page"
       And I wait
-     When I go to "admin/content"
+     When I go to "/admin/content"
       And I wait
      Then I should see "Content"
      When I fill in "Test Basic page" for "Title"

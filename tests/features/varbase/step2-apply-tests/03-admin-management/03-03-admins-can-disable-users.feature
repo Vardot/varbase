@@ -5,7 +5,7 @@ So that they will be disabled and not be able to use the site.
 
   @javascript @local @development @staging @production
   Scenario: Check if the test_authenticated user is not blocked and can login
-    Given I am on "user/login"
+    Given I am on "/user/login"
       And I wait
      When I fill in "test_authenticated" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -33,7 +33,7 @@ So that they will be disabled and not be able to use the site.
 
   @javascript @local @development @staging @production
   Scenario: Check if the blocked user with user id of Test Blocked User ID can or can not login
-    Given I am on "user/login"
+    Given I am on "/user/login"
       And I wait
      When I fill in "test_authenticated" for "Username"
       And I fill in "dD.123123ddd" for "Password"

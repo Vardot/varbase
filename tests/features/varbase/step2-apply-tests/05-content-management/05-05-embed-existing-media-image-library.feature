@@ -10,7 +10,7 @@ So that it will show up under that rich text field without having to upload the 
   # ----------------------------------------------------------------------------
    @javascript @local @development @staging @production
    Scenario: Create the Test Basic page to embed existing files content
-      When I go to "node/add/page"
+      When I go to "/node/add/page"
        And I wait
        And I fill in "Test Basic page to embed existing files" for "Title"
        And I fill in the rich text editor field "Body" with "Test Basic page body to embed existing files"
@@ -39,7 +39,7 @@ So that it will show up under that rich text field without having to upload the 
 
 #  @javascript @local @development @staging @production
 #  Scenario: Check if we are able to embed existing files library in the rich text editor
-#     When I go to "admin/content"
+#     When I go to "/admin/content"
 #      And I wait
 #     Then I should see "Content"
 #     When I fill in "Test Basic page to embed existing files" for "Title"
@@ -77,7 +77,7 @@ So that it will show up under that rich text field without having to upload the 
 #      And I press the "Save" button
 #      And I wait
 #     Then I should see "Basic page Test Basic page to embed existing files has been updated."
-#     When I go to "admin/content"
+#     When I go to "/admin/content"
 #      And I wait
 #     Then I should see "Content"
 #     When I fill in "Test Basic page to embed existing files" for "Title"

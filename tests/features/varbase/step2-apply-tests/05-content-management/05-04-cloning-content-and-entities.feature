@@ -5,7 +5,7 @@ I want to be able to clone an entity.
   @javascript @local @development
   Scenario: Check if a user with a permission can clone a Landing page (Paragraphs)
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Clone landing page" for "Title"
       And I fill in "Test landing page description text" for "Page description"
@@ -32,7 +32,7 @@ I want to be able to clone an entity.
       And I press the "Save" button
       And I wait
      Then I should see "Modal button"
-     When I go to "admin/content"
+     When I go to "/admin/content"
       And I wait
      Then I should see "Content"
      When I fill in "Test Clone landing page" for "Title"
@@ -56,7 +56,7 @@ I want to be able to clone an entity.
   @javascript @local @development
   Scenario: Check if a user with a permission deleted a cloned entity the original will not affected
     Given I am a logged in user with the "test_super_admin" user
-     When I go to "admin/content"
+     When I go to "/admin/content"
       And I wait
      Then I should see "Content"
      When I fill in "Test Clone landing page - Cloned" for "Title"
@@ -71,7 +71,7 @@ I want to be able to clone an entity.
      When I press "Execute action"
       And I wait for 5s
      Then I should see "Action processing results: Delete entities (1)."
-     When I go to "admin/content"
+     When I go to "/admin/content"
       And I wait
      Then I should see "Content"
      When I fill in "Test Clone landing page - Cloned" for "Title"

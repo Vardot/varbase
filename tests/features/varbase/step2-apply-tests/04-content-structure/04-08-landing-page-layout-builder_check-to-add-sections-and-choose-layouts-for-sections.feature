@@ -6,7 +6,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Layout Builder) content type can add sections with any layouts to the page
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "node/add/landing_page_lb"
+     When I go to "/node/add/landing_page_lb"
       And I wait
      Then I should see "Create Landing page (Layout Builder)"
      When I fill in "Full Width - No Background Color - Text only" for "Title"
