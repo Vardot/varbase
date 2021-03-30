@@ -188,6 +188,7 @@ permissions:
   - 'update media'
   - 'update varbase_heroslider_media entityqueue'
   - 'use ipe with page manager'
+  - 'use media_bulk_upload bulk upload form'
   - 'use moderation sidebar'
   - 'use panels dashboard'
   - 'use text format basic_html'
