@@ -24,6 +24,10 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
+    },
+    "drupal-ckeditor-plugins": {
+      "type": "composer",
+      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
     }
   },
   "require": {
@@ -62,7 +66,9 @@
     "npm-asset/blazy": "~1.0",
     "npm-asset/slick-carousel": "~1.0",
     "npm-asset/ace-builds": "~1.0",
-    "swagger-api/swagger-ui": "~3.0"
+    "swagger-api/swagger-ui": "~3.0",
+    "drupal-ckeditor-plugin/link": "~4.0",
+    "drupal-ckeditor-plugin/fakeobjects": "~4.0"
   },
   "require-dev": {
     "drupal/core-dev": "~9.0",
@@ -140,7 +146,9 @@
         {"name": "ace", "package": "npm-asset/ace-builds"},
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
+        {"name": "link", "package": "drupal-ckeditor-plugin/link"},
+        {"name": "swagger-ui", "package": "drupal-ckeditor-plugin/fakeobjects"}
       ]
     },
     "enable-patching": true,
