@@ -148,7 +148,7 @@
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
         {"name": "link", "package": "drupal-ckeditor-plugin/link"},
-        {"name": "swagger-ui", "package": "drupal-ckeditor-plugin/fakeobjects"}
+        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"}
       ]
     },
     "enable-patching": true,
