@@ -66,9 +66,7 @@
     "npm-asset/blazy": "~1.0",
     "npm-asset/slick-carousel": "~1.0",
     "npm-asset/ace-builds": "~1.0",
-    "swagger-api/swagger-ui": "~3.0",
-    "drupal-ckeditor-plugin/link": "~4.0",
-    "drupal-ckeditor-plugin/fakeobjects": "~4.0"
+    "swagger-api/swagger-ui": "~3.0"
   },
   "require-dev": {
     "drupal/core-dev": "~9.0",
@@ -146,8 +144,7 @@
         {"name": "ace", "package": "npm-asset/ace-builds"},
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"},
-        {"name": "fakeobjects", "package": "drupal-ckeditor-plugin/fakeobjects"}
+        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
       ]
     },
     "enable-patching": true,
