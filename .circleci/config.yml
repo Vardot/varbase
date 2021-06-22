@@ -59,7 +59,7 @@ commands:
           name: PHP Configurations
           command: |
             php -i | grep 'php.ini'
-            echo -e "max_execution_time = 2200" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "max_execution_time = 1200" | sudo tee /usr/local/etc/php/php.ini > /dev/null
             echo -e "max_input_time = 180" | sudo tee /usr/local/etc/php/php.ini > /dev/null
             echo -e "max_input_vars = 10000" | sudo tee /usr/local/etc/php/php.ini > /dev/null
             echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
