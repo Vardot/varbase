@@ -79,7 +79,7 @@ commands:
       ## Install Java.
       - run:
           name: Install Java
-          command:
+          command: |
             sudo sed -i 's/\/\/archive.ubuntu.com/\/\/us.archive.ubuntu.com/g' /etc/apt/sources.list
             sudo add-apt-repository ppa:openjdk-r/ppa
             sudo apt-get install -y openjdk-8-jdk
