@@ -7,7 +7,7 @@ defaults: &defaults
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    - image: circleci/mysql:8.0.23
+    - image: circleci/mysql:8.0.4
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
