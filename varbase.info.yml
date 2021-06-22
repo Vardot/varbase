@@ -14,6 +14,7 @@ install:
   - user
   - node
   - block
+  - block_content
   - datetime
   - help
   - image
