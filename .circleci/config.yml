@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.1
+  openjdk-install: cloudesire/openjdk-install@1.2.3
 defaults: &defaults
   docker:
     - image: circleci/php:7.4.16-apache-buster-node
@@ -77,11 +78,7 @@ commands:
       - browser-tools/install-browser-tools
 
       ## Install Java.
-      - run:
-          name: Install Java
-          command: 
-            sudo apt -y install openjdk-8-jdk
-            sudo update-alternatives –config java
+      - openjdk-install/openjdk
 
       ## List tool version.
       - run:
