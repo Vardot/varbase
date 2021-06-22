@@ -59,6 +59,15 @@ commands:
           name: PHP Configurations
           command: |
             echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "max_execution_time = 1200" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "max_input_time = 180" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "max_input_vars = 10000" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "error_reporting = E_ALL" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "post_max_size = 64M" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "upload_max_filesize = 32M" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "max_file_uploads = 40" | sudo tee /usr/local/etc/php/php.ini > /dev/null
+            echo -e "xdebug.max_nesting_level" | sudo tee /usr/local/etc/php/php.ini > /dev/null
             sudo rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
             sudo service apache2 restart
       - restore_cache:
