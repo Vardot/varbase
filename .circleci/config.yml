@@ -142,10 +142,6 @@ commands:
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
             sudo chmod 777 -R /var/www/html/varbase
-      - save_cache:
-          key: v4-composer-cache
-          paths:
-            - ~/.composer/cache
 
       ## Update PATH to point at the composer bin in the project.
       - run:
