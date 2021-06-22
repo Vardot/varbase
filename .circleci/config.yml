@@ -3,11 +3,11 @@ orbs:
   browser-tools: circleci/browser-tools@1.1
 defaults: &defaults
   docker:
-    - image: circleci/php:7.3-apache-stretch-node-browsers
+    - image: circleci/php:7.4-apache-stretch-node-browsers
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    - image: circleci/mysql:8.0.4
+    - image: circleci/mysql:8.0.23
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
