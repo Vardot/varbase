@@ -3,7 +3,7 @@ orbs:
   browser-tools: circleci/browser-tools@1.1
 defaults: &defaults
   docker:
-    - image: circleci/php:7.4.16-apache-buster
+    - image: circleci/php:7.4.16-apache-buster-node
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
