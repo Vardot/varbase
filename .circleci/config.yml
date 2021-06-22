@@ -76,6 +76,12 @@ commands:
       ## Install browser tools
       - browser-tools/install-browser-tools
 
+      ## Install Java.
+      - run:
+          name: Install Java
+          command: 
+            sudo apt -yqq openjdk-8-jdk
+
       ## List tool version.
       - run:
           name: List tool version
