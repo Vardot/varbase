@@ -36,14 +36,18 @@ commands:
       - run:
           name: Install Usefull must have utils for debugging with SSH into this box
           command: |
-            sudo apt -qq update && sudo apt -qqy upgrade
-            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libonig-dev libjpeg62-turbo-dev libpng-dev xvfb default-mysql-client
+            sudo apt-get -qq update
+            sudo apt-get -qqy upgrade
+            sudo apt-get install software-properties-common
+            sudo apt-get -qq update
+            sudo apt-get -qqy upgrade
+            sudo apt-get -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libonig-dev libjpeg62-turbo-dev libpng-dev xvfb default-mysql-client
       ## Install PHP extra.
       - run:
           name: Install PHP extra
           command: |
-            sudo apt update
-            sudo apt install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+            sudo apt-get update
+            sudo apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
             sudo -E docker-php-ext-install zip
             sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
             sudo -E docker-php-ext-install mbstring bcmath pdo_mysql
