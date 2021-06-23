@@ -135,6 +135,8 @@ commands:
       - run:
           name: Build Varbase with the composer
           command: |
+            cp -r /var/www/html/varbase /var/www/html/varbase-profile
+            sudo rm -rf /var/www/html/varbase
             composer create-project vardot/varbase-project:9.0.x-dev /var/www/html/varbase --stability dev --no-interaction
             sudo chmod 777 -R /var/www/html/varbase
 
