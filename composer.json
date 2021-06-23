@@ -24,10 +24,6 @@
     "assets": {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    "drupal-ckeditor-plugins": {
-      "type": "composer",
-      "url": "https://panopoly.gitlab.io/drupal-ckeditor-plugins"
     }
   },
   "require": {
