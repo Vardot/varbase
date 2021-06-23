@@ -138,7 +138,7 @@ commands:
             cp -r /var/www/html/varbase /var/www/html/varbase-profile
             sudo rm -rf /var/www/html/varbase
             cd /var/www/html
-            composer create-project vardot/varbase-project:9.0.x-dev varbase --stability dev --no-interaction
+            composer create-project vardot/varbase-project:9.0.x-dev varbase --stability dev --prefer-dist --no-interaction
             sudo chmod 777 -R /var/www/html/varbase
             cd /var/www/html/varbase
             composer require "drupal/core-dev:~9.0" "drush/drush:~10.0" "drupal/drupal-extension:~4.0" "emuse/behat-html-formatter:^0.2.0"
