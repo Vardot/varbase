@@ -10,7 +10,7 @@ theme: vartheme_bs4
 region: footer
 weight: -5
 provider: null
-plugin: 'block_content:b858d97d-eaa5-4cfe-af6f-b92c21bbca95'
+plugin: 'block_content'
 settings:
   id: 'block_content:b858d97d-eaa5-4cfe-af6f-b92c21bbca95'
   label: Copyright
