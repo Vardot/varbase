@@ -137,7 +137,7 @@ commands:
           command: |
             cp -r /var/www/html/varbase /var/www/html/varbase-profile
             cd /var/www/html/varbase
-            composer install -prefer-dist --no-interaction -vvv
+            composer install --prefer-dist --no-interaction -vvv
             mv /var/www/html/varbase-profile /var/www/html/varbase/docroot/profiles/varbase
             sudo chmod 777 -R /var/www/html/varbase
 
