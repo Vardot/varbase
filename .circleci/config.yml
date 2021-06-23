@@ -136,13 +136,10 @@ commands:
           name: Build Varbase with the composer
           command: |
             cp -r /var/www/html/varbase /var/www/html/varbase-profile
-            sudo rm -rf /var/www/html/varbase
-            cd /var/www/html
-            composer create-project vardot/varbase-project:9.0.x-dev varbase --stability dev --prefer-dist --no-interaction
-            sudo chmod 777 -R /var/www/html/varbase
             cd /var/www/html/varbase
-            composer require "drupal/core-dev:~9.0" "drush/drush:~10.0" "drupal/drupal-extension:~4.0" "emuse/behat-html-formatter:^0.2.0"
-            cp -r /var/www/html/varbase-profile/.circleci /var/www/html/varbase/.circleci
+            composer install -prefer-dist --no-interaction -vvv
+            mv /var/www/html/varbase-profile /var/www/html/varbase/docroot/profiles/varbase
+            sudo chmod 777 -R /var/www/html/varbase
 
       ## Update PATH to point at the composer bin in the project.
       - run:
