@@ -135,10 +135,7 @@ commands:
       - run:
           name: Build Varbase with the composer
           command: |
-            cp -r /var/www/html/varbase /var/www/html/varbase-profile
-            cd /var/www/html/varbase
-            composer install --no-interaction
-            mv /var/www/html/varbase-profile /var/www/html/varbase/docroot/profiles/varbase
+            composer create-project vardot/varbase-project:9.0.x-dev /var/www/html/varbase --stability dev --no-interaction
             sudo chmod 777 -R /var/www/html/varbase
 
       ## Update PATH to point at the composer bin in the project.
