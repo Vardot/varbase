@@ -139,32 +139,30 @@ commands:
             composer install --no-interaction -vvv
             cp -r /var/www/html/varbase-profile /var/www/html/test/varbase/docroot/profiles/varbase
             sudo chmod 777 -R /var/www/html/test/varbase
-            echo 'export PATH=/var/www/html/test/varbase/bin:$PATH' >> $BASH_ENV
-            source $BASH_ENV
             mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
             cd /var/www/html/test/varbase/docroot
-            drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
-            drush pm-enable varbase_development --yes
-            drush pm-enable varbase_styleguide --yes
-            drush pm-enable varbase_landing --yes
-            drush pm-enable varbase_media_instagram --yes
-            drush pm-enable varbase_media_twitter --yes
-            drush pm-enable varbase_api --yes
-            drush pm-enable social_auth_google --yes
-            drush pm-enable social_auth_facebook --yes
-            drush pm-enable social_auth_linkedin --yes
-            drush pm-enable varbase_content_planner --yes
-            drush config-set system.performance css.preprocess 0 --yes
-            drush config-set system.performance js.preprocess 0 --yes
-            drush config-set system.logging error_level all --yes
-            drush cr
+            ../drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+            ../drush pm-enable varbase_development --yes
+            ../drush pm-enable varbase_styleguide --yes
+            ../drush pm-enable varbase_landing --yes
+            ../drush pm-enable varbase_media_instagram --yes
+            ../drush pm-enable varbase_media_twitter --yes
+            ../drush pm-enable varbase_api --yes
+            ../drush pm-enable social_auth_google --yes
+            ../drush pm-enable social_auth_facebook --yes
+            ../drush pm-enable social_auth_linkedin --yes
+            ../drush pm-enable varbase_content_planner --yes
+            ../drush config-set system.performance css.preprocess 0 --yes
+            ../drush config-set system.performance js.preprocess 0 --yes
+            ../drush config-set system.logging error_level all --yes
+            ../drush cr
       ## Automated Functional Acceptance Testing - Step 1 init tests.
       - run:
           name: Automated Functional Acceptance Testing - Step 1 init tests
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
 jobs:
   varbase-testing-01-website-base-requirements:
     <<: *defaults
@@ -176,7 +174,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
   varbase-testing-02-user-management-03-admin-management:
     <<: *defaults
     steps:
@@ -187,8 +185,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
     steps:
@@ -199,7 +197,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
   varbase-testing-05-content-management:
     <<: *defaults
     steps:
@@ -210,7 +208,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
   version: 2
