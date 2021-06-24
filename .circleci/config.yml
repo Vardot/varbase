@@ -135,7 +135,7 @@ commands:
             fi
             cp -r /var/www/html/test/varbase /var/www/html/varbase-profile
             cd /var/www/html/test/varbase
-            composer install --no-interaction
+            composer install --no-interaction --ignore-platform-reqs
             cp -r /var/www/html/varbase-profile /var/www/html/test/varbase/docroot/profiles/varbase
             sudo chmod 777 -R /var/www/html/test/varbase
             mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
