@@ -128,12 +128,14 @@ commands:
 
       ## Build Varbase with the composer and Install with drush.
       - run:
-          name: Build Varbase with the composer
+          name: Build Varbase with the composer and Install with drush
           command: |
             cd /var/www/html/varbase
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
             sudo chmod 777 -R /var/www/html/varbase
+            echo 'export PATH=/var/www/html/varbase/bin:$PATH' >> $BASH_ENV
+            source $BASH_ENV
             mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
             cd /var/www/html/varbase/docroot
             drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
@@ -157,7 +159,7 @@ commands:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            ../../../behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
 jobs:
   varbase-testing-01-website-base-requirements:
     <<: *defaults
@@ -169,7 +171,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            ../../../behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
   varbase-testing-02-user-management-03-admin-management:
     <<: *defaults
     steps:
@@ -180,8 +182,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            ../../../behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
-            ../../../behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
     steps:
@@ -192,7 +194,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            ../../../behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
   varbase-testing-05-content-management:
     <<: *defaults
     steps:
@@ -203,7 +205,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/varbase/docroot/profiles/varbase
-            ../../../behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
   version: 2
