@@ -141,21 +141,21 @@ commands:
             sudo chmod 777 -R /var/www/html/test/varbase
             mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
             cd /var/www/html/test/varbase/docroot
-            ../drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
-            ../drush pm-enable varbase_development --yes
-            ../drush pm-enable varbase_styleguide --yes
-            ../drush pm-enable varbase_landing --yes
-            ../drush pm-enable varbase_media_instagram --yes
-            ../drush pm-enable varbase_media_twitter --yes
-            ../drush pm-enable varbase_api --yes
-            ../drush pm-enable social_auth_google --yes
-            ../drush pm-enable social_auth_facebook --yes
-            ../drush pm-enable social_auth_linkedin --yes
-            ../drush pm-enable varbase_content_planner --yes
-            ../drush config-set system.performance css.preprocess 0 --yes
-            ../drush config-set system.performance js.preprocess 0 --yes
-            ../drush config-set system.logging error_level all --yes
-            ../drush cr
+            ../bin/drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
+            ../bin/drush pm-enable varbase_development --yes
+            ../bin/drush pm-enable varbase_styleguide --yes
+            ../bin/drush pm-enable varbase_landing --yes
+            ../bin/drush pm-enable varbase_media_instagram --yes
+            ../bin/drush pm-enable varbase_media_twitter --yes
+            ../bin/drush pm-enable varbase_api --yes
+            ../bin/drush pm-enable social_auth_google --yes
+            ../bin/drush pm-enable social_auth_facebook --yes
+            ../bin/drush pm-enable social_auth_linkedin --yes
+            ../bin/drush pm-enable varbase_content_planner --yes
+            ../bin/drush config-set system.performance css.preprocess 0 --yes
+            ../bin/drush config-set system.performance js.preprocess 0 --yes
+            ../bin/drush config-set system.logging error_level all --yes
+            ../bin/drush cr
       ## Automated Functional Acceptance Testing - Step 1 init tests.
       - run:
           name: Automated Functional Acceptance Testing - Step 1 init tests
