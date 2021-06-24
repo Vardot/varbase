@@ -50,7 +50,7 @@
     "drupal/varbase_email": "9.0.x-dev",
     "drupal/varbase_workflow": "2.0.x-dev",
     "drupal/vartheme_bs4": "9.0.x-dev",
-    "drupal/vartheme_claro": "2.1.x-dev",
+    "drupal/vartheme_claro": "3.0.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "2.7.*",
     "bower-asset/c3": "0.7.*",
