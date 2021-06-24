@@ -130,13 +130,12 @@ commands:
       - run:
           name: Build Varbase with the composer and Install with drush
           command: |
-            sudo chmod 777 -R /var/www/html/test/varbase
             if [ -d "/var/www/html/varbase-profile" ]; then
               sudo rm -rf /var/www/html/varbase-profile
             fi
             cp -r /var/www/html/test/varbase /var/www/html/varbase-profile
             cd /var/www/html/test/varbase
-            composer install --no-interaction -vvv
+            composer install --no-interaction
             cp -r /var/www/html/varbase-profile /var/www/html/test/varbase/docroot/profiles/varbase
             sudo chmod 777 -R /var/www/html/test/varbase
             mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
