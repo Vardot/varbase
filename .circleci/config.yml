@@ -130,9 +130,12 @@ commands:
       - run:
           name: Build Varbase with the composer and Install with drush
           command: |
+            sudo chmod 777 -R /var/www/html/test/varbase
+            if [ -d "/var/www/html/varbase-profile" ]; then sudo rm -rf /var/www/html/varbase-profile fi
+            cp -r /var/www/html/test/varbase /var/www/html/varbase-profile
             cd /var/www/html/test/varbase
             composer install --no-interaction -vvv
-            git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/test/varbase/docroot/profiles/varbase
+            cp -r /var/www/html/varbase-profile /var/www/html/test/varbase/docroot/profiles/varbase
             sudo chmod 777 -R /var/www/html/test/varbase
             echo 'export PATH=/var/www/html/test/varbase/bin:$PATH' >> $BASH_ENV
             source $BASH_ENV
