@@ -27,7 +27,7 @@
     }
   },
   "require": {
-		"composer/installers": "~1.0 || ~2.0",
+    "composer/installers": "~1.0 || ~2.0",
     "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "^9",
@@ -118,6 +118,7 @@
       "docroot/libraries/slick": ["npm-asset/slick-carousel"],
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
       "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
+      "docroot/libraries/swagger-ui": ["swagger-api/swagger-ui"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",

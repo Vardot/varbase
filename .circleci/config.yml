@@ -17,12 +17,14 @@ defaults: &defaults
         MYSQL_DATABASE: test_varbase
         MYSQL_USER: user
         MYSQL_PASSWORD: passw0rd
-  working_directory: /var/www/html/varbase/docroot
+  working_directory: /var/www/html/varbase/docroot/
 commands:
   varbase-build:
     steps:
       - checkout:
-          path: /var/www/html/varbase
+          path: /var/www/html/varbase/
+      - attach_workspace:
+          at: /var/www/html/varbase/docroot/
       ## Setup Apache to point varbase.test at /var/www/html/varbase/docroot
       - run:
           name: Setup Apache to point varbase.test at /var/www/html/varbase/docroot
