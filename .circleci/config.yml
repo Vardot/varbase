@@ -136,6 +136,7 @@ commands:
             cd /var/www/html/varbase
             composer install --no-interaction -vvv
             git clone --branch 9.0.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
+            sudo chmod 777 -R var/www/html/varbase
 
       - save_cache:
           key: v4-composer-cache
@@ -157,9 +158,9 @@ commands:
 
       ## Install Varbase with drush.
       - run:
-          name: Install Varbase with drush
-          no_output_timeout: 30m
+          name: Install Varbase 9.0.x with drush
           command: |
+            cd /var/www/html/varbase/docroot
             drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true
             drush pm-enable varbase_development --yes
             drush pm-enable varbase_styleguide --yes
