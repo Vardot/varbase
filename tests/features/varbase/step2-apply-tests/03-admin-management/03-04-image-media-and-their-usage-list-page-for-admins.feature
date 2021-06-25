@@ -3,17 +3,18 @@ As a user with permission to manage files in the site
 I want to be able to see the list of files
 So that I will be able to manage files, see where they have been used in contents.
 
+  Background:
+    Given I am a logged in user with the "test_site_admin" user
+
   @javascript @local @development @staging @production
   Scenario: Check if content admins can access the content files page
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "/admin/content/media"
+     When I go to "admin/content/media"
       And I wait
      Then I should see "Add media"
       And I should not see "Access denied"
 
   @local @development @staging @production
   Scenario: Check if we do have a file named Flag Earth, if not then upload the file dependently
-     Given I am a logged in user with the "test_site_admin" user
       When I go to "/media/add/image"
        And I wait
       Then I should see "Allowed types: png gif jpg jpeg."
@@ -35,7 +36,6 @@ So that I will be able to manage files, see where they have been used in content
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can edit files
-    Given I am a logged in user with the "test_site_admin" user
      When I go to "/admin/content/media"
       And I wait
      Then I should see "Add media"
@@ -54,7 +54,6 @@ So that I will be able to manage files, see where they have been used in content
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can delete files
-    Given I am a logged in user with the "test_site_admin" user
      When I go to "/admin/content/media"
       And I wait
      Then I should see "Add media"
@@ -70,4 +69,4 @@ So that I will be able to manage files, see where they have been used in content
      Then I should see "This action cannot be undone."
      When I press the "Delete" button
       And I wait
-     Then I should not see "Flag Earth after edit"
+     Then I should see "The media item Flag Earth after edit has been deleted."
