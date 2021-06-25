@@ -66,7 +66,7 @@
     "npm-asset/blazy": "~1.0",
     "npm-asset/slick-carousel": "~1.0",
     "npm-asset/ace-builds": "~1.0",
-    "swagger-api/swagger-ui": "~3.0"
+    "npm-asset/swagger-ui-dist": "~3.0"
   },
   "require-dev": {
     "drupal/core-dev": "~8.0",
@@ -122,6 +122,7 @@
       "docroot/libraries/ace": ["npm-asset/ace-builds"],
       "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
       "docroot/libraries/masonry": ["npm-asset/masonry-layout"],
+      "docroot/libraries/swagger-ui/dist": ["npm-asset/swagger-ui-dist"],
       "docroot/libraries/{$name}": [
         "type:drupal-library",
         "type:bower-asset",
@@ -145,7 +146,7 @@
         {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
         {"name": "masonry", "package": "npm-asset/masonry-layout"},
         {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "swagger-api/swagger-ui"}
+        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"}
       ]
     },
     "enable-patching": true,
