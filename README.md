@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/8.x-8.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase?tag=8.x-8.10) Varbase 8.8.10
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/8.x-8.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/334/workflows/532cc770-dbd4-4ab7-8b24-aa3661fa7901) Varbase 8.8.11
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -29,7 +29,7 @@ instructions.
 
 To install the most recent stable release of Varbase 8.8.x run this command:
 ```
-composer create-project vardot/varbase-project:^8.8.10 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project vardot/varbase-project:^8.8.11 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Varbase 8.8.x run this command:

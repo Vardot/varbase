@@ -1,52 +1,105 @@
+# 8.8.11
+
+### Highlighted important changes since Varbase 8.x-8.10:
+* Issue [#3212344](https://www.drupal.org/i/3212344):
+         Updated Drupal Core from 8.9.14 to 8.9.15 ( ~8.9 ) and remove committed patches
+
+### Added since Varbase 8.x-8.10:
+* Issue [#3210225](https://www.drupal.org/i/3210225)
+         by Omar Alahmed
+        : Added more options for pathauto user control.
+         To alter the list of punctuation characters for Pathauto
+
+### Changed since Varbase 8.x-8.10:
+* Issue [#3215775](https://www.drupal.org/i/3215775):
+         Locked Vartheme BS4 to require Bootstrap Barrio ~5.1.0 versions.
+         Not to let it require Bootstrap Barrio ~5.5.0 which using the Bootstrap ~5.0 library
+* Issue [#3213179](https://www.drupal.org/i/3213179):
+         Changed main js file in package.json from "main": "index.js" to "main": "gulpfile.js"
+
+### Updates since Varbase 8.x-8.10:
+* Issue [#3209310](https://www.drupal.org/i/3209310)
+         Update Inline Entity Form module from 1.0-rc8 to 1.0-rc9
+* Issue [#3209317](https://www.drupal.org/i/3209317):
+         Updated Chaos Tool Suite (ctools) module from 3.4 to 3.5 ( ~3.0 ) and
+         remove committed patches
+* Issue [#3209303](https://www.drupal.org/i/3209303):
+         Updated Blazy module from 2.1 to 2.2 ( ~2.0 ) and remove applied patches
+* Issue [#3219691](https://www.drupal.org/i/3219691):
+         Updated Total Control module from ~2.0 to ~3.0
+
+### Fixes since Varbase 8.x-8.10:
+* Issue [#3213156](https://www.drupal.org/i/3213156):
+         Fixed issues of not loading the Varbase Media Player and the Blazy Blurry
+         in Drupal 8 with Varbase 8 and caching issues
+* Issue [#3213517](https://www.drupal.org/i/3213517)
+         by earthday47
+        : Fixed PHP 7.4 + warnings = cannot add to entity queues
+* Issue [#3220659](https://www.drupal.org/i/3220659)
+         by jedgar1mx
+        , RajabNatshah
+        : Fixed missing Swagger-ui library
+* Issue [#3220406](https://www.drupal.org/i/3220406):
+         Fixed The specified library "claro/claro.tabledrag" does not exist upon
+         update to the latest theme with Drupal 8.x
+* Issue [#3175233](https://www.drupal.org/i/3175233)
+         by Abdelrahman Amer
+        : Fixed permission Issues on Subqueues
+* Issue [#3205399](https://www.drupal.org/i/3205399)
+        by mhawwari
+        : Fixed input width inside tables on mobile
+
+--------------------------------------------------------------------------------
+
 # 8.8.10
 
 ### Highlighted important changes since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
-Issue [#3205085](https://www.drupal.org/i/3205085):
+* Issue [#3205085](https://www.drupal.org/i/3205085):
                 Added a tag release-varbase workflow job for the CircleCI
                 automated testing pipelines
-Issue [#3200073](https://www.drupal.org/i/3200073)
+* Issue [#3200073](https://www.drupal.org/i/3200073)
                  by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
                 : Fixed Blazy Blurry performance issues of not exist derivative
                 image and enhance the logic of the encoding of base64 image
-Issue [#3200242](https://www.drupal.org/i/3200242):
+* Issue [#3200242](https://www.drupal.org/i/3200242):
                 Fixed creating Blazy Blurry derivatives only if necessary, and
                 the creation of Image style or responsive image style
                 derivatives only if necessary
 
 ### Added since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
-No new features
+* No new features
 All new features are in Varbase 9.0.x
 Released [Varbase 9.0.0-rc2](https://www.drupal.org/project/varbase/releases/9.0.0-rc2)
 
 ### Changed since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
-No changes
+* No changes
 All changes are in Varbase 9.0.x
 Released [Varbase 9.0.0-rc2](https://www.drupal.org/project/varbase/releases/9.0.0-rc2)
 
 ### Updates since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
-Issue [#3204736](https://www.drupal.org/i/3204736):
+* Issue [#3204736](https://www.drupal.org/i/3204736):
                 Updated Coffee module from 1.0 to 1.1 ( ~1.0 ) and
                 remove applied patches
-Issue [#3191486](https://www.drupal.org/i/3191486):
+* Issue [#3191486](https://www.drupal.org/i/3191486):
                 Updated Social Auth module from ~2.0 to ~3.0
-Issue [#3191926](https://www.drupal.org/i/3191926):
+* Issue [#3191926](https://www.drupal.org/i/3191926):
                 Updated Social Auth Google module from ~2.0 to ~3.0
-Issue [#3191483](https://www.drupal.org/i/3191483):
+* Issue [#3191483](https://www.drupal.org/i/3191483):
                 Updated Social Auth LinkedIn module
                 from 8.x-2.0-beta3 ( ~2.0 ) to ~3.0
-Issue [#3191931](https://www.drupal.org/i/3191931):
+* Issue [#3191931](https://www.drupal.org/i/3191931):
                 Updated Social Auth Twitter module from ~2.0 to 2.x-dev to
                 work with Social Auth ~3.0
-Issue [#3191492](https://www.drupal.org/i/3191492):
+* Issue [#3191492](https://www.drupal.org/i/3191492):
                 Updated Social Auth Facebook module from ~2.0 to ~3.0
 
 ### Fixes since [Varbase 8.x-8.9](https://www.drupal.org/project/varbase/releases/8.x-8.9):
-Issue [#3200994](https://www.drupal.org/i/3200994)
+* Issue [#3200994](https://www.drupal.org/i/3200994)
                 by [abu-zakham](https://www.drupal.org/u/abu-zakham)
                : Fixed LogicException & RuntimeException on
                 user login and registration error when the Twitter social
                 button clicked on
-Issue [#3203824](https://www.drupal.org/i/3203824)
+* Issue [#3203824](https://www.drupal.org/i/3203824)
                 by [Dimitri Baudonck](https://www.drupal.org/u/dimitribaudonckdukeandgracecom)
                : Fixed Access Denied issue on WebP module with
                 Image Optimize API
