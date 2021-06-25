@@ -6,7 +6,7 @@
 
 ### Added since Varbase 8.x-8.10:
 * Issue [#3210225](https://www.drupal.org/i/3210225)
-         by Omar Alahmed
+         by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
         : Added more options for pathauto user control.
          To alter the list of punctuation characters for Pathauto
 
@@ -33,20 +33,20 @@
          Fixed issues of not loading the Varbase Media Player and the Blazy Blurry
          in Drupal 8 with Varbase 8 and caching issues
 * Issue [#3213517](https://www.drupal.org/i/3213517)
-         by earthday47
+         by [earthday47](https://www.drupal.org/u/earthday47)
         : Fixed PHP 7.4 + warnings = cannot add to entity queues
 * Issue [#3220659](https://www.drupal.org/i/3220659)
-         by jedgar1mx
-        , RajabNatshah
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
         : Fixed missing Swagger-ui library
 * Issue [#3220406](https://www.drupal.org/i/3220406):
          Fixed The specified library "claro/claro.tabledrag" does not exist upon
          update to the latest theme with Drupal 8.x
 * Issue [#3175233](https://www.drupal.org/i/3175233)
-         by Abdelrahman Amer
+         by [Abdelrahman Amer](https://www.drupal.org/u/abdelrahman-amer)
         : Fixed permission Issues on Subqueues
 * Issue [#3205399](https://www.drupal.org/i/3205399)
-        by mhawwari
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
         : Fixed input width inside tables on mobile
 
 --------------------------------------------------------------------------------
