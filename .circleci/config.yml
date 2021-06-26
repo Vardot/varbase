@@ -17,17 +17,17 @@ defaults: &defaults
         MYSQL_DATABASE: test_varbase
         MYSQL_USER: user
         MYSQL_PASSWORD: passw0rd
-  working_directory: /var/www/html/test/varbase/docroot
+  working_directory: /var/www/html/varbase/docroot
 commands:
   varbase-build:
     steps:
       - checkout:
-          path: /var/www/html/test/varbase
-      ## Setup Apache to point varbase.test at /var/www/html/test/varbase/docroot
+          path: /var/www/html/varbase
+      ## Setup Apache to point varbase.test at /var/www/html/varbase/docroot
       - run:
-          name: Setup Apache to point varbase.test at /var/www/html/test/varbase/docroot
+          name: Setup Apache to point varbase.test at /var/www/html/varbase/docroot
           command: |
-            sudo cp /var/www/html/test/varbase/.circleci/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
+            sudo cp /var/www/html/varbase/.circleci/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
             sudo a2ensite varbase.test.conf
             sudo service apache2 restart
             echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
@@ -115,10 +115,10 @@ commands:
       - run:
           name: Build Varbase with the composer
           command: |
-            cd /var/www/html/test/varbase
+            cd /var/www/html/varbase
             composer install --no-interaction -vvv
-            git clone --branch 8.x-8.x https://github.com/vardot/varbase.git /var/www/html/test/varbase/docroot/profiles/varbase
-            sudo chmod 777 -R /var/www/html/test/varbase
+            git clone --branch 8.x-8.x https://github.com/vardot/varbase.git /var/www/html/varbase/docroot/profiles/varbase
+            sudo chmod 777 -R /var/www/html/varbase
       - save_cache:
           key: v4-composer-cache
           paths:
@@ -142,7 +142,7 @@ commands:
           name: Install Varbase with drush
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/test/varbase/docroot/
+            cd /var/www/html/varbase/docroot/
             drush site-install varbase --yes --site-name='Varbase test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true
             drush pm-enable varbase_development --yes
             drush pm-enable varbase_styleguide --yes
