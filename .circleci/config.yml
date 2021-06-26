@@ -3,7 +3,7 @@ orbs:
   browser-tools: circleci/browser-tools@1.1
 defaults: &defaults
   docker:
-    - image: circleci/php:7.4.16-apache-buster-node
+    - image: cimg/base:stable-20.04
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -13,57 +13,43 @@ defaults: &defaults
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
       entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
       environment:
-        MYSQL_ROOT_PASSWORD: rootpw
+        MYSQL_ROOT_PASSWORD: passw0rd
         MYSQL_DATABASE: test_varbase
         MYSQL_USER: user
         MYSQL_PASSWORD: passw0rd
-  working_directory: /var/www/html/test/varbase/docroot/
 commands:
   varbase-build:
     steps:
-      - checkout:
-          path: /var/www/html/test/varbase/
-      - attach_workspace:
-          at: /var/www/html/test/varbase/docroot/
-      ## Setup Apache to point varbase.test at /var/www/html/test/varbase/docroot
+      - checkout         
+      ## Usefull must have utils
       - run:
-          name: Setup Apache to point varbase.test at /var/www/html/test/varbase/docroot
+          name: Usefull must have utils
           command: |
-            sudo cp /var/www/html/test/varbase/.circleci/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
-            sudo a2ensite varbase.test
-            sudo service apache2 restart
-            echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
+            sudo apt -qq update
+            sudo apt -qqy upgrade
+            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev xvfb mysql-client
 
-      ## Install Usefull must have utils for debugging with SSH into this box.
+      ## Setup Apache2 to PHP7.4
       - run:
-          name: Install Usefull must have utils for debugging with SSH into this box
+          name: Setup Apache2 and PHP7.4
           command: |
-            sudo apt-get -qq update
-            sudo apt-get -qqy upgrade
-            sudo apt-get install -y software-properties-common
-            sudo apt-get -qq update
-            sudo apt-get -qqy upgrade
-            sudo apt-get -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libonig-dev libjpeg62-turbo-dev libpng-dev xvfb default-mysql-client
-      ## Install PHP extra.
-      - run:
-          name: Install PHP extra
-          command: |
-            sudo apt-get update
-            sudo apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
-            sudo -E docker-php-ext-install zip
-            sudo -E docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
-            sudo -E docker-php-ext-install mbstring bcmath pdo_mysql
-            sudo -E docker-php-ext-install gd
+            sudo add-apt-repository ppa:ondrej/php -y
+            sudo apt update
+            sudo apt upgrade
+            sudo apt install -yqq apache2 php7.4 libapache2-mod-php7.4 php7.4-mbstring php7.4-mysql php7.4-xml php7.4-cgi php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-imap php7.4-intl php7.4-pspell php7.4-sqlite3 php7.4-tidy php7.4-opcache php7.4-json php7.4-bz2 php7.4-readline php7.4-xmlrpc php7.4-enchant php7.4-xsl php-all-dev php7.4-zip php7.4-bcmath php-pear
+            sudo a2enmod php7.4
+            sudo a2enmod headers rewrite env mime expires ssl
+            sudo update-alternatives --set php /usr/bin/php7.4
+            echo -e "memory_limit = -1" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "max_execution_time = 1200" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "error_reporting = -1" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "max_input_time = 180" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "max_input_vars = 10000" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "post_max_size = 64M" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "upload_max_filesize = 32M" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "max_file_uploads = 40" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
             sudo service apache2 restart
-
-      ## Change PHP Configurations.
-      - run:
-          name: PHP Configurations
-          command: |
-            echo -e "memory_limit = -1" | sudo tee /usr/local/etc/php/php.ini > /dev/null
-            sudo rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-            sudo service apache2 restart
-
+            
       ## Waiting for MySQL to be ready.
       - run:
           name: Waiting for MySQL to be ready
@@ -76,6 +62,16 @@ commands:
             done
             echo Failed waiting for MySQL && exit 1
 
+      ## Install node js, npm, yarn, and gulp
+      - run:
+          name: Install node js
+          command: |
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+            sudo apt install -y nodejs 
+            sudo npm install -g yarn
+            sudo npm install gulp-cli -g ;
+            sudo npm install gulp -D ;
+
       ## Install browser tools
       - browser-tools/install-browser-tools
 
@@ -83,25 +79,80 @@ commands:
       - run:
           name: Install Java
           command: |
-            if grep -q Debian /etc/os-release && grep -q stretch /etc/os-release; then \
-              echo 'deb http://deb.debian.org/debian stretch-backports main' | sudo tee -a /etc/apt/sources.list.d/stretch-backports.list; \
-            elif grep -q Ubuntu /etc/os-release && grep -q xenial /etc/os-release; then \
-              sudo apt-get update && sudo apt-get install -y software-properties-common && \
-              sudo add-apt-repository -y ppa:openjdk-r/ppa; \
-            fi && \
             sudo apt-get update && sudo apt-get install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
 
-      ## List tool version.
+      ## Install composer ~2.1
       - run:
-          name: List tool version
+          name: Install composer ~2.1
+          command: |
+            sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
+
+
+      ## List tools versions.
+      - run:
+          name: List tools versions
           command: |
             php --version
             node --version
+            yarn --version
+            gulp --version
             java -version
             google-chrome --version
             chromedriver --version
             mysql --version
+            composer --version
+            php -m
 
+
+      ## Build Varbase with the composer and Install with drush.
+      - run:
+          name: Build Varbase with the composer
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/
+            sudo chmod 777 -R .;
+            composer config -g github-oauth.github.com $GITHUB_TOKEN
+            mkdir /var/www/html/test
+            cd /var/www/html/test/
+            cp -r /home/circleci/project /var/www/html/test/varbase
+            cd /var/www/html/test/varbase
+            composer install --no-interaction
+            cp -r /home/circleci/project /var/www/html/test/varbase/docroot/profiles/varbase
+            sudo chmod 777 -R .;
+            
+      ## Point varbase.test at /var/www/html/test/varbase/docroot
+      - run:
+          name: Point varbase.test at /var/www/html/test/varbase/docroot
+          command: |
+            sudo a2enmod headers rewrite env mime expires ssl
+            sudo cp /home/circleci/project/.circleci/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
+            sudo a2ensite varbase.test
+            echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
+            sudo service apache2 restart
+
+      ## Install Varbase with drush.
+      - run:
+          name: Install Varbase with drush
+          no_output_timeout: 30m
+          command: |
+            mysql -h 127.0.0.1 -uroot -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
+            cd /var/www/html/test/varbase/docroot
+            ../bin/drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://root:passw0rd@127.0.0.1:3306/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true
+            ../bin/drush pm-enable varbase_development --yes
+            ../bin/drush pm-enable varbase_styleguide --yes
+            ../bin/drush pm-enable varbase_landing --yes
+            ../bin/drush pm-enable varbase_media_instagram --yes
+            ../bin/drush pm-enable varbase_media_twitter --yes
+            ../bin/drush pm-enable varbase_api --yes
+            ../bin/drush pm-enable social_auth_google --yes
+            ../bin/drush pm-enable social_auth_facebook --yes
+            ../bin/drush pm-enable social_auth_linkedin --yes
+            ../bin/drush pm-enable varbase_content_planner --yes
+            ../bin/drush config-set system.performance css.preprocess 0 --yes
+            ../bin/drush config-set system.performance js.preprocess 0 --yes
+            ../bin/drush config-set system.logging error_level all --yes
+            ../bin/drush cr
+            
       ## Configure and run the virtual display.
       - run:
           name: Configure and run the virtual display
@@ -119,39 +170,6 @@ commands:
             java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /home/circleci/selenium.log
           background: true
 
-      ## Update the composer
-      - run:
-          name: Update the composer
-          command: |
-            sudo composer self-update --2
-            composer --version
-
-      ## Build Varbase with the composer and Install with drush.
-      - run:
-          name: Build Varbase with the composer and Install with drush
-          command: |
-            cp -r /var/www/html/test/varbase /var/www/html/varbase-profile
-            cd /var/www/html/test/varbase
-            composer install --no-interaction
-            mv /var/www/html/varbase-profile /var/www/html/test/varbase/docroot/profiles/varbase
-            sudo chmod 777 -R /var/www/html/test/varbase
-            mysql -h 127.0.0.1 -uuser -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
-            cd /var/www/html/test/varbase/docroot
-            ../bin/drush site-install varbase --yes --site-name='Varbase Test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_landing=true varbase_extra_components.varbase_auth=true --format=json 2>/dev/null
-            ../bin/drush pm-enable varbase_development --yes
-            ../bin/drush pm-enable varbase_styleguide --yes
-            ../bin/drush pm-enable varbase_landing --yes
-            ../bin/drush pm-enable varbase_media_instagram --yes
-            ../bin/drush pm-enable varbase_media_twitter --yes
-            ../bin/drush pm-enable varbase_api --yes
-            ../bin/drush pm-enable social_auth_google --yes
-            ../bin/drush pm-enable social_auth_facebook --yes
-            ../bin/drush pm-enable social_auth_linkedin --yes
-            ../bin/drush pm-enable varbase_content_planner --yes
-            ../bin/drush config-set system.performance css.preprocess 0 --yes
-            ../bin/drush config-set system.performance js.preprocess 0 --yes
-            ../bin/drush config-set system.logging error_level all --yes
-            ../bin/drush cr
       ## Automated Functional Acceptance Testing - Step 1 init tests.
       - run:
           name: Automated Functional Acceptance Testing - Step 1 init tests
