@@ -42,14 +42,22 @@ commands:
             sudo update-alternatives --set php /usr/bin/php7.4
             echo -e "memory_limit = -1" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
             echo -e "max_execution_time = 1200" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "error_reporting = -1" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "error_reporting = E_ALL" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
             echo -e "max_input_time = 180" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
             echo -e "max_input_vars = 10000" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
             echo -e "post_max_size = 64M" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
             echo -e "upload_max_filesize = 32M" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
             echo -e "max_file_uploads = 40" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            echo -e "memory_limit = -1" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
+            echo -e "max_execution_time = 1200" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
+            echo -e "error_reporting = E_ALL" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
+            echo -e "max_input_time = 180" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
+            echo -e "max_input_vars = 10000" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
+            echo -e "post_max_size = 64M" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
+            echo -e "upload_max_filesize = 32M" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
+            echo -e "max_file_uploads = 40" | sudo tee /etc/php/7.4/cli/php.ini > /dev/null
             sudo service apache2 restart
-            
+  
       ## Waiting for MySQL to be ready.
       - run:
           name: Waiting for MySQL to be ready
@@ -102,6 +110,8 @@ commands:
             mysql --version
             composer --version
             php -m
+            php -i | grep "Loaded Configuration File"
+            php --ini
 
 
       ## Build Varbase with the composer and Install with drush.
