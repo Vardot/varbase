@@ -70,7 +70,9 @@ default:
               w3c: false
           chrome:
             switches:
-#              - "--headless"
+              - "--headless"
+              - "no-sandbox"
+              - "--no-sandbox"
               - "--disable-web-security"
               - "--DNS-prefetch-disable"
               - "--whitelisted-ips"
@@ -85,7 +87,8 @@ default:
               - "ignore-certificate-errors"
               - "disable-infobars"
               - "js-flags=--expose-gc"
-              - "no-sandbox"
+              - "--profile-directory=Default"
+              - "--user-data-dir=~/.config/google-chrome"
       base_url: 'http://varbase.test'
       # browser_name: 'firefox'
       browser_name: 'chrome'

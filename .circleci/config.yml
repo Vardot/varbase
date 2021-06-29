@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  browser-tools: circleci/browser-tools@1.1
 defaults: &defaults
   docker:
     - image: cimg/base:stable-20.04
@@ -70,6 +68,62 @@ commands:
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
 
+      ## Install node js, npm, yarn, and gulp
+      - run:
+          name: Install node js
+          command: |
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+            sudo apt install -y nodejs 
+            sudo npm install -g yarn
+            sudo npm install gulp-cli -g ;
+            sudo npm install gulp -D ;
+
+      ## Install Java.
+      - run:
+          name: Install Java
+          command: |
+            sudo apt update
+            sudo apt install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
+
+      ## Install/Update Google Chrome browser.
+      - run:
+          name: Install/Update Google Chrome browser
+          command: |
+            sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
+            export CHROME_BIN=/usr/bin/google-chrome
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome-stable_current_amd64.deb
+            rm google-chrome-stable_current_amd64.deb
+
+      ## Install/Update Chrome Driver.
+      - run:
+          name: Install/Update Chrome Driver
+          command: |
+            CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+            echo $CHROME_DRIVER_VERSION;
+            wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip
+            sudo chmod +x chromedriver
+            sudo mv -f chromedriver /usr/bin/
+            rm chromedriver_linux64.zip
+
+      ## List tools versions.
+      - run:
+          name: List tools versions
+          command: |
+            php --version
+            node --version
+            yarn --version
+            gulp --version
+            java -version
+            google-chrome --version
+            chromedriver --version
+            mysql --version
+            composer --version
+            php -m
+            php -i | grep "Loaded Configuration File"
+            php --ini
+
       ## Build Varbase with the composer.
       - run:
           name: Build Varbase with the composer
@@ -107,7 +161,6 @@ commands:
             cd /var/www/html/test/varbase
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-            cat /var/www/html/test/varbase/docroot/sites/default/settings.php
                       
       ## Point varbase.test at /var/www/html/test/varbase/docroot
       - run:
@@ -115,7 +168,7 @@ commands:
           command: |
             sudo a2enmod headers rewrite env mime expires ssl
             sudo cp /home/circleci/project/.circleci/env/varbase.test.conf /etc/apache2/sites-available/varbase.test.conf
-            sudo a2ensite varbase.test.conf
+            sudo a2ensite varbase.test
             echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
             sudo service apache2 restart
 
@@ -143,49 +196,11 @@ commands:
             ../bin/drush config-set system.logging error_level all --yes
             ../bin/drush cr
 
-      ## Install browser tools
-      - browser-tools/install-browser-tools
-
-      ## Install node js, npm, yarn, and gulp
-      - run:
-          name: Install node js
-          command: |
-            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
-            sudo apt install -y nodejs 
-            sudo npm install -g yarn
-            sudo npm install gulp-cli -g ;
-            sudo npm install gulp -D ;
-
-      ## Install Java.
-      - run:
-          name: Install Java
-          command: |
-            sudo apt-get update && sudo apt-get install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
-
-      ## List tools versions.
-      - run:
-          name: List tools versions
-          command: |
-            php --version
-            node --version
-            yarn --version
-            gulp --version
-            java -version
-            google-chrome --version
-            chromedriver --version
-            mysql --version
-            composer --version
-            php -m
-            php -i | grep "Loaded Configuration File"
-            php --ini
-
       ## Configure and run the virtual display.
       - run:
-          name: Configure and run the virtual display
-          command: |
-            export DISPLAY=:99
-            xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
-            sleep 3
+          name: Configure and run the virtual display.
+          command: Xvfb -ac :99 -screen 0 1024x768x24 > /dev/null 2>&1
+          background: true
 
       ## Run selenium standalone server.
       - run:
@@ -193,7 +208,7 @@ commands:
           command: |
             if [[ ! -f /home/circleci/selenium-server-standalone-2.53.1.jar ]]; then wget -O /home/circleci/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /home/circleci/selenium.log
+            java -jar selenium-server-standalone-2.53.1.jar -port 4445
           background: true
 
       ## Automated Functional Acceptance Testing - Step 1 init tests.
