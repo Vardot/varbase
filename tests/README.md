@@ -14,7 +14,7 @@ the composer.
 ## Create a Varbase project with [Composer](https://getcomposer.org/download/):
 
 ```
-composer create-project vardot/varbase:8.8.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/varbase:9.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 --------------------------------------------------------------------------------

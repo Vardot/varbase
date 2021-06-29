@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/9.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/214/workflows/3460aa5c-ad6d-4f93-9c83-ac377ed27b5b) Varbase 9.0.0-rc2
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/9.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/350/workflows/5f4bd2b0-c2dd-4a5b-9ecf-4c53542a2913) Varbase 9.0.0
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -29,7 +29,7 @@ instructions.
 
 To install the most recent stable release of Varbase 9.0.x run this command:
 ```
-composer create-project Vardot/varbase-project:^9.0.0-rc2 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/varbase-project:~9 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of Varbase 9.0.x run this command:
@@ -41,6 +41,10 @@ composer create-project vardot/varbase-project:9.0.x-dev PROJECT_DIR_NAME --stab
 
 ## [Automated Functional Testing](https://github.com/Vardot/varbase/blob/9.0.x/tests/README.md)
 
+## [Varbase 9.0.x Developer Guide](https://docs.varbase.vardot.com)
+
+## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.0.x/CHANGELOG.md)
+
 ## [Varbase Gherkin features](https://github.com/Vardot/varbase/blob/9.0.x/tests/features/varbase/README.md)
 
 ## [Varbase Developer Guide](https://docs.varbase.vardot.com)
@@ -48,3 +52,13 @@ composer create-project vardot/varbase-project:9.0.x-dev PROJECT_DIR_NAME --stab
 ## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.0.x/CHANGELOG.md)
 
 ## [General instructions on how to update Varbase](https://github.com/Vardot/varbase/blob/9.0.x/UPDATE.md)
+
+## Local development with Lando
+
+1. Install Lando locally, steps for installing can be found [here](https://docs.lando.dev/basics/installation.html).
+2. Run Lando start.
+
+## Debugging using Lando
+
+- xDebug is enabled on Lando by default for PHP debugging.
+- The debugger is set to listen for the port 9003 but can be changed in .lando/.php.ini

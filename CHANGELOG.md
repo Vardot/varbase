@@ -1,3 +1,182 @@
+# 9.0.0
+
+### Highlighted important changes since Varbase 9.0.0-rc2:
+* Issue [#3218194](https://www.drupal.org/i/3218194):
+        Added Vertical and Horizontal alignments to section styling settings for
+        Varbase Layout Builder ~10
+* Issue [#3210657](https://www.drupal.org/i/3210657):
+        Added Boxed options ( Wide, Medium, Narrow, Tiny ) in Varbase Layout Builder ~10
+* Issue [#3207154](https://www.drupal.org/i/3207154):
+        Changed the style for Social Auth login buttons to go with the new standard branding and trust
+* Issue [#3206185](https://www.drupal.org/i/3206185):
+        Added Media Bulk Upload module
+
+### Added since Varbase 9.0.0-rc2:
+* Issue [#3152887](https://www.drupal.org/i/3152887)
+        by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+       : Added an operations link for nodes with Layout Builder enabled
+* Issue [#3207105](https://www.drupal.org/i/3207105):
+        Added Bootstrap Display headings sizes to CKEditor styles for the Rich editor in Varbase Editor
+* Issue [#3206775](https://www.drupal.org/i/3206775):
+        Added Editor Advanced link module 
+* Issue [#3206322](https://www.drupal.org/i/3206322
+        by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+       : Added permissions for Media Bulk Upload config. All roles (Editor and above can upload in bulk)
+* Issue [#3206323](https://www.drupal.org/i/3206323)
+        by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+       : Added permissions for Media Bulk Upload config for SEO admin user role to be able to upload in bulk
+* Issue [#3205085](https://www.drupal.org/i/3205085):
+        Added a tag release-varbase workflow job for the CircleCI automated testing pipelines
+* Issue [#3210225](https://www.drupal.org/i/3210225)
+        by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+       : Added more options for pathauto user control. To alter the list of punctuation characters for Pathauto
+
+### Changed since Varbase 9.0.0-rc2:
+* Issue [#3217858](https://www.drupal.org/i/3217858):
+        Support PHP7.4 for Varbase ~9.0 and all used components with automated testing
+* Issue [#3215775](https://www.drupal.org/i/3215775):
+        Locked Vartheme BS4 to require Bootstrap Barrio ~5.1.0 versions. Not to let it
+        require Bootstrap Barrio ~5.5.0 which using the Bootstrap ~5.0 library
+* Issue [#3213179](https://www.drupal.org/i/3213179):
+        Changed main js file in package.json from "main": "index.js" to "main": "gulpfile.js"
+* Issue [#3209964](https://www.drupal.org/i/3209964):
+        Removed VARTHEME_BS4_SUBTHEME/yarn.lock file to let new generated sub themes use latest packages
+* Issue [#3173409](https://www.drupal.org/i/3173409):
+        Started a 9.0.x branch for Varbase FAQs to work with Varbase ~9.0 and Drupal ~9.0
+* Issue [#3185563](https://www.drupal.org/i/3185563):
+        Allowed Varbase FAQs module to work with Composer ~2.0
+* Issue [#3211900](https://www.drupal.org/i/3211900):
+        Switched Varbase FAQs section page to use Varbase Layout Builder ~10
+* Issue [#3217842](https://www.drupal.org/i/3217842):
+        Dropped support for Bootstrap 3 in Bootstrap Layout Builder general scripts behaviors
+* Issue [#3220489](https://www.drupal.org/i/3220489):
+        Started a 3.0.x branch for Vartheme Claro admin theme to work with Varbase 9.0.x and Drupal 9
+* Issue [#3220899](https://www.drupal.org/i/3220899):
+        Updated the Normalizer and Denormalize patch for Layout Builder in the Default Content module
+* Issue [#3220904](https://www.drupal.org/i/3220904):
+        Updated Default Layout config for Varbase Landing page (Layout Builder)
+* Issue [#3220906](https://www.drupal.org/i/3220906):
+        Updated Default Layout config and Default Content in Varbase Blog for the Blog section
+* Issue [#3220965](https://www.drupal.org/i/3220965):
+        Moved block configs from config/install to config/optional for Vartheme Claro
+        which used at the time of Varbase install
+
+### Updates since Varbase 9.0.0-rc2:
+* Issue [#3220503](https://www.drupal.org/i/3220503):
+        Updated Vartheme Claro admin theme from ~2.0 to ~3.0
+* Issue [#3207629](https://www.drupal.org/i/3207629):
+        Updated Drupal core from 9.1.5 to 9.1.6 ( ~9.1 ) and remove committed patches
+* Issue [#3201723](https://www.drupal.org/i/3201723)
+        by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+       : Updated LinkIt module from ~5.0 to ~6.0
+* Issue [#3212948](https://www.drupal.org/i/3212948):
+        Updated Admin Toolbar module from ~2.0 to ~3.0
+* Issue [#3209303](https://www.drupal.org/i/3209303):
+        Updated Blazy module from 2.1 to 2.2 ( ~2.0 ) and remove applied patches
+* Issue [#3209310](https://www.drupal.org/i/3209310):
+        Updated Inline Entity Form module from 1.0-rc8 to 1.0-rc9
+* Issue [#3209317](https://www.drupal.org/i/3209317):
+        Updated Chaos Tool Suite (ctools) module from 3.4 to 3.5 ( ~3.0 ) and remove committed patches
+* Issue [#3219691](https://www.drupal.org/i/3219691):
+        Updated Total Control module from ~2.0 to ~3.0
+* Issue [#3219699](https://www.drupal.org/i/3219699):
+        Updated Editor Advanced Link module from ~1.0 to ~2.0
+* Issue [#3219700](https://www.drupal.org/i/3219700):
+        Updated OpenAPI for JSON:API module from ~2.0 to ~3.0
+* Issue [#3219707](https://www.drupal.org/i/3219707):
+        Updated Simple OAuth (OAuth2) & OpenID Connect module from ~4.0 to ~5.0
+* Issue [#3219834](https://www.drupal.org/i/3219834):
+        Updated Views Bulk Operations (VBO) module from ~3.0 to ~4.0
+* Issue [#3219836](https://www.drupal.org/i/3219836):
+        Updated Views Bulk Operations (VBO) module from ~3.0 to ~4.0 for Varbase Media
+* Issue [#3219841](https://www.drupal.org/i/3219841):
+        Updated Tour UI module from 1.x-dev to ~1.0
+
+### Fixes since Varbase 9.0.0-rc2:
+* Issue [#3211345](https://www.drupal.org/i/3211345):
+        Fixed order of the Language field when creating Landing page (Layout Builder) content on multilingual websites
+* Issue [#3207652](https://www.drupal.org/i/3207652):
+        Fixed width of fieldgroup after the fix of Off-canvas style resets in Drupal core
+* Issue [#3205399](https://www.drupal.org/i/3205399)
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
+       : Fixed input width inside tables on mobile
+* Issue [#3175233](https://www.drupal.org/i/3175233)
+        by [Abdelrahman Amer](https://www.drupal.org/u/abdelrahman-amer)
+       : Fixed permission Issues on Subqueues
+* Issue [#3207137](https://www.drupal.org/i/3207137):
+        Fixed Text format style in Edit Inline blocks with layout builder modal
+* Issue [#3209730](https://www.drupal.org/i/3209730):
+        Fixed code coverage for Node component style on NO node pages
+* Issue [#3209746](https://www.drupal.org/i/3209746):
+        Fixed code coverage for Comments component style on pages without comments
+* Issue [#3209687](https://www.drupal.org/i/3209687):
+        Fixed code coverage for Node preview component CSS style loaded for anonymous users
+* Issue [#3210581](https://www.drupal.org/i/3210581):
+        Fixed code coverage for Alerts component style on pages with no Alerts
+* Issue [#3210596](https://www.drupal.org/i/3210596):
+        Fixed code coverage for Indented component style for threaded comments on pages without comments
+* Issue [#3210583](https://www.drupal.org/i/3210583):
+        Fixed code coverage for Affix effect component style when the Affix theme settings is off
+* Issue [#3210580](https://www.drupal.org/i/3210580):
+        Fixed code coverage for Breadcrumbs component style on pages with no breadcrumbs
+* Issue [#3210577](https://www.drupal.org/i/3210577):
+        Fixed code coverage for file component style on pages with no files
+* Issue [#3210537](https://www.drupal.org/i/3210537):
+        Fixed code coverage for Collapsed sidebar styles on pages with no sidebar
+* Issue [#3210528](https://www.drupal.org/i/3210528):
+        Fixed code coverage for print layout CSS loaded for all medias, which
+        should only load for media: print
+* Issue [#3210526](https://www.drupal.org/i/3210526):
+        Fixed code coverage for Tabs and Vertical tabs components style loaded for anonymous or
+        basic authenticated users when no Tabs elements in the page
+* Issue [#3210524](https://www.drupal.org/i/3210524):
+        Fixed code coverage for Dropbutton component style loaded for anonymous or basic
+        authenticated users when no Dropbutton elements in the page
+* Issue [#3209928](https://www.drupal.org/i/3209928):
+        Fixed code coverage for vbp-colors library of custom Varbase Bootstrap Paragraphs colors
+        theme for Vartheme which are loading on a not paragraphs page
+* Issue [#3209905](https://www.drupal.org/i/3209905):
+        Fixed code coverage for navbar administration component style loaded for anonymous or
+        basic authenticated users when no toolbar in the page
+* Issue [#3210532](https://www.drupal.org/i/3210532):
+        Fixed code coverage for Better Login styling on not register, login, or reset password pages
+* Issue [#3210590](https://www.drupal.org/i/3210590):
+        Fixed code coverage for Book navigation component style on pages with
+        no book navigation elements
+* Issue [#3210575](https://www.drupal.org/i/3210575): Fixed code coverage for Form component style or Search form block on pages with no forms
+* Issue [#3209970](https://www.drupal.org/i/3209970):
+        Fixed code coverage for preloaded remote CDN Font Awesome library to a packaged
+        one for better pre-loading of icons
+* Issue [#3212956](https://www.drupal.org/i/3212956): Fixed code coverage for preloaded RTL fonts
+* Issue [#3216039](https://www.drupal.org/i/3216039)
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
+       : Fixed modules enabled condition always fails when value is empty
+* Issue [#3216704](https://www.drupal.org/i/3216704)
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
+       : Fixed W3C CSS validation issues
+* Issue [#3211878](https://www.drupal.org/i/3211878)
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
+       , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+       : Fixed call to non-existent file loading-small.gif by recompiling the scss
+        files for new changes in Claro admin theme
+* Issue [#3213517](https://www.drupal.org/i/3213517)
+        by [earthday47](https://www.drupal.org/u/earthday47)
+       : Fixed PHP 7.4 + warnings = cannot add to entity queues
+* Issue [#3220082](https://www.drupal.org/i/3220082)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+       : Fixed Draggable tables are not working in Drupal 9.2.x
+* Issue [#3220149](https://www.drupal.org/i/3220149):
+        Fixed warning Invalid argument in Update Checklist
+* Issue [#3220659](https://www.drupal.org/i/3220659)
+        by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+       , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+       : Fixed missing Swagger-ui library
+* Issue [#3219345](https://www.drupal.org/i/3219345):
+        Fixed Tour styling after the update to Drupal 9.2.0
+
+--------------------------------------------------------------------------------
+
 # 9.0.0-rc2
 
 ### Highlighted important changes since Varbase 9.0.0-rc1:
