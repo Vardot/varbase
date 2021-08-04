@@ -18,7 +18,7 @@ I want to be able to clone an entity.
       And I wait for AJAX to finish
      Then I should see "Choose a layout for this section"
       And I should see "Bootstrap 1 Col"
-     When I press the "Add section" button
+     When I click "Add section"
       And I wait
       And I press the "Save layout" button
      Then I should see "The layout override has been saved."
