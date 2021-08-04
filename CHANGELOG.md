@@ -1,3 +1,51 @@
+# 9.0.1
+### Highlighted important changes since Varbase 9.0.0:
+* This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites. Learn more about Varbase 9.
+
+### Added since Varbase 9.0.0:
+* Added support for the Varbase Updater ( Auto updater ) to
+        auto update Varbase ~8 sites to Varbase ~9.0
+        [#40](https://github.com/Vardot/varbase-updater/issues/40)
+* Added support for the Varbase Subprofile Generator to use Varbase 9
+        to generate Varbase Sub profile Basic template profile 
+        [#4](https://github.com/Vardot/varbase-subprofile-generator/issues/4)
+
+### Changed since Varbase 9.0.0:
+* Issue [#3222020](https://www.drupal.org/i/3222020)
+        by lanetterm
+        : Removed not used automated testing asset files, like the English file with
+        spaces and CAPITAL Letters.pdf and the other RTL - PDF file
+* Issue [#3222735](https://www.drupal.org/i/3222735)
+        by mohammad faqeh
+        : Removed divider div from node edit Edit a Blog post
+
+### Updates since Varbase 9.0.0:
+* Issue [#3222222](https://www.drupal.org/i/3222222):
+        Updated Block Content Permissions module from 1.x-dev to ~1.0
+* Issue [#3222221](https://www.drupal.org/i/3222221):
+        Updated Password Policy module from 3.0-beta1 to ~3.0 and remove committed patches
+* Issue [#3222234](https://www.drupal.org/i/3222234):
+        Updated Simple XML sitemap module from ~3.0 to ~4.0
+
+### Fixes since Varbase 9.0.0:
+* Issue [#3223560](https://www.drupal.org/i/3223560)
+        by Ahmad Abbad
+       : Fixed outdated Nodejs version and the steps for how to create a new sub theme
+* Issue [#3222411](https://www.drupal.org/i/3222411):
+        Fixed PHP 7.4 Warning: count(): Parameter must be an array or an object that
+        implements Countable
+* Issue [#3222053](https://www.drupal.org/i/3222053):
+        Fixed to allow content editors to use stored selected layouts on the Full content
+        display mode with layout builder
+* Issue [#3222375](https://www.drupal.org/i/3222375):
+        Fixed Notice: Undefined index: background_edgetoedge
+* Issue [#3225177](https://www.drupal.org/i/3225177)
+        by Joachim Namyslo
+       : Fixed Styleguide missing plugin ID. Which does not work in 9.x anymore
+* Issue [#3223393](https://www.drupal.org/i/3223393):
+        Fixed dependencies enable for Configuration Update Manager module by changing
+        drupal:config_update to config_update:config_update
+
 # 9.0.0
 
 ### Highlighted important changes since Varbase 9.0.0-rc2:
