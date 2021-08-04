@@ -20,7 +20,7 @@ I want to be able to clone an entity.
       And I should see "Bootstrap 1 Col"
      When I click "Add section"
       And I wait
-      And I press the "Save layout" button
+      And I press the "edit-submit" button
      Then I should see "The layout override has been saved."
       And I should see "Test Clone landing page"
 
