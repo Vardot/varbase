@@ -3,26 +3,26 @@ As a logged in user with a permission to mange entities
 I want to be able to clone an entity.
 
 @javascript @local @development
-  Scenario: Check if a user with a permission can clone a Landing page (Landing Page)
+  Scenario: Check if a user with a permission can clone a Landing page (Paragraphs)
     Given I am a logged in user with the "test_site_admin" user
-     When I go to "/node/add/landing_page_lb"
+     When I go to "/node/add/landing_page"
       And I wait
       And I fill in "Test Clone landing page" for "Title"
       And I fill in "Test landing page description text" for "Page description"
+      And I wait for AJAX to finish
+      And I wait for 1 second
+      And I press "+ Add"
+      And I wait for AJAX to finish
+      And I wait for 1 second
+      And I select the "bp_block" paragraph component
+      And I wait for AJAX to finish
+     Then I should see "Block"
+     When I select "Site branding" from "Block"
+      And I wait
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
      Then I should see "Test Clone landing page has been created"
-      And I should see "This layout builder tool allows you to configure the layout of the main content area."
-     When I click "Add section"
-      And I wait for AJAX to finish
-     Then I should see "Choose a layout for this section"
-      And I should see "Bootstrap 1 Col"
-     When I click "Add section"
-      And I wait
-      And I press the "edit-submit" button
-     Then I should see "The layout override has been saved."
-      And I should see "Test Clone landing page"
 
      When I go to "/admin/content"
       And I wait
