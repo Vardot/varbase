@@ -18,6 +18,14 @@
 * Issue [#3222735](https://www.drupal.org/i/3222735)
         by mohammad faqeh
         : Removed divider div from node edit Edit a Blog post
+* Issue [#3226647](https://www.drupal.org/i/3226647):
+        by lanetterm
+        Changed composer.json file to let Varbase Blog require
+        Varbase Layout Builder ~9.0 or ~10 for easier upgrade process
+* Issue [#3226646](https://www.drupal.org/i/3226646):
+        by lanetterm
+        Changed composer.json file to let Varbase FAQs require
+        Varbase Layout Builder ~9.0 or ~10 for easier upgrade process
 
 ### Updates since Varbase 9.0.0:
 * Issue [#3222222](https://www.drupal.org/i/3222222):
