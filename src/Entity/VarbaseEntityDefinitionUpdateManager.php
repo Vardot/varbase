@@ -52,4 +52,19 @@ final class VarbaseEntityDefinitionUpdateManager extends EntityDefinitionUpdateM
     $this->fieldStorageDefinitionListener = $field_storage_definition_listener;
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    /** @noinspection PhpParamsInspection */
+    return new static(
+      $container->get('entity.definition_update_manager'),
+      $container->get('entity_type.manager'),
+      $container->get('entity.last_installed_schema.repository'),
+      $container->get('entity_field.manager'),
+      $container->get('entity_type.listener'),
+      $container->get('field_storage_definition.listener')
+    );
+  }
+
 }
