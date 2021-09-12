@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityTypeListenerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Field\FieldStorageDefinitionListenerInterface;
 use Vardot\Entity\EntityDefinitionUpdateManager;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Varbase Entity Definition Update Manager.
