@@ -246,7 +246,6 @@ function varbase_assemble_extra_components(array &$install_state) {
     $batch['operations'][] = ['varbase_reset_timestamp_for_nodes', $node_ids];
   }
 
-
   if (count($uninstall_components) > 0) {
     foreach ($uninstall_components as $uninstall_component) {
       $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
@@ -471,7 +470,7 @@ function varbase_uninstall_component($uninstall_component) {
  *   The Node IDs.
  */
 function varbase_reset_timestamp_for_nodes($node_ids) {
-  foreach($node_ids as $nid) {
+  foreach ($node_ids as $nid) {
     $node = Node::load($nid);
     if (isset($node)) {
       $node->created = \Drupal::time()->getCurrentTime();
@@ -557,12 +556,13 @@ function varbase_after_install_finished(array &$install_state) {
           $page_front_path = PathAlias::load($alias_id)->getPath();
 
           \Drupal::configFactory()->getEditable('system.site')
-          ->set('page.front', $page_front_path)
-          ->save();
+            ->set('page.front', $page_front_path)
+            ->save();
         }
       }
     }
-  } catch (\Exception $e) {
+  }
+  catch (\Exception $e) {
     \Drupal::messenger()->addError($e->getMessage());
   }
 
