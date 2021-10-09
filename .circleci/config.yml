@@ -189,7 +189,7 @@ jobs:
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
-  varbase-testing-02-user-management-03-admin-management:
+  varbase-testing-02-user-management:
     <<: *defaults
     steps:
       - varbase-build
@@ -200,7 +200,7 @@ jobs:
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
-  varbase-testing-02-user-management-03-admin-management:
+  varbase-testing-03-admin-management:
     <<: *defaults
     steps:
       - varbase-build
