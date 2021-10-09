@@ -36,7 +36,7 @@ commands:
             sudo add-apt-repository ppa:ondrej/php -y
             sudo apt update
             sudo apt upgrade
-            sudo apt install -yqq apache2 php7.4 libapache2-mod-php7.4 php7.4-mbstring php7.4-mysql php7.4-xml php7.4-cgi php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-imap php7.4-intl php7.4-pspell php7.4-sqlite3 php7.4-tidy php7.4-opcache php7.4-json php7.4-bz2 php7.4-readline php7.4-xmlrpc php7.4-enchant php7.4-xsl php-all-dev php7.4-zip php7.4-bcmath php-pear
+            sudo apt install -yqq apache2 php7.4 libapache2-mod-php7.4 php7.4-mbstring php7.4-mysql php7.4-xml php7.4-cgi php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-imap php7.4-intl php7.4-pspell php7.4-sqlite3 php7.4-tidy php7.4-opcache php7.4-json php7.4-bz2 php7.4-readline php7.4-xmlrpc php7.4-enchant php7.4-xsl php7.4-zip php7.4-bcmath php-pear
             sudo a2enmod php7.4
             sudo a2enmod headers rewrite env mime expires ssl
             sudo update-alternatives --set php /usr/bin/php7.4
@@ -193,13 +193,23 @@ jobs:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+      ## Automated Functional Acceptance Testing group - 02 user management
       - run:
-          name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+          name: Automated Functional Acceptance Testing group - 02 user management
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+  varbase-testing-02-user-management-03-admin-management:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 03 admin management
+      - run:
+          name: Automated Functional Acceptance Testing group - 03 admin management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
