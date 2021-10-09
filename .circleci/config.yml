@@ -244,7 +244,13 @@ workflows:
               only: /^8.*/
             branches:
               only: /^8.x-8.x/
-      - varbase-testing-02-user-management-03-admin-management:
+      - varbase-testing-02-user-management:
+          filters:
+            tags:
+              only: /^8.*/
+            branches:
+              only: /^8.x-8.x/
+      - varbase-testing-03-admin-management:
           filters:
             tags:
               only: /^8.*/
