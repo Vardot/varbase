@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  browser-tools: circleci/browser-tools@1.1
 defaults: &defaults
   docker:
     - image: cimg/base:stable-20.04
@@ -13,7 +11,8 @@ defaults: &defaults
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
       entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
       environment:
-        MYSQL_ROOT_PASSWORD: passw0rd
+        MYSQL_ROOT_PASSWORD: rootpw
+        MYSQL_ROOT_HOST: "%"
         MYSQL_DATABASE: test_varbase
         MYSQL_USER: user
         MYSQL_PASSWORD: passw0rd
@@ -27,7 +26,7 @@ commands:
           command: |
             sudo apt -qq update
             sudo apt -qqy upgrade
-            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev xvfb mysql-client
+            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev xvfb mysql-client default-mysql-client
 
       ## Setup Apache2 to PHP7.4
       - run:
@@ -62,6 +61,13 @@ commands:
             done
             echo Failed waiting for MySQL && exit 1
 
+      ## Install composer ~2.1
+      - run:
+          name: Install composer ~2.1
+          command: |
+            sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
+            composer config -g github-oauth.github.com $GITHUB_TOKEN
+
       ## Install node js, npm, yarn, and gulp
       - run:
           name: Install node js
@@ -72,21 +78,34 @@ commands:
             sudo npm install gulp-cli -g ;
             sudo npm install gulp -D ;
 
-      ## Install browser tools
-      - browser-tools/install-browser-tools
-
       ## Install Java.
       - run:
           name: Install Java
           command: |
-            sudo apt-get update && sudo apt-get install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
+            sudo apt update
+            sudo apt install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
 
-      ## Install composer ~2.1
+      ## Install/Update Google Chrome browser.
       - run:
-          name: Install composer ~2.1
+          name: Install/Update Google Chrome browser
           command: |
-            sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
+            sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
+            export CHROME_BIN=/usr/bin/google-chrome
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome-stable_current_amd64.deb
+            rm google-chrome-stable_current_amd64.deb
 
+      ## Install/Update Chrome Driver.
+      - run:
+          name: Install/Update Chrome Driver
+          command: |
+            CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+            echo $CHROME_DRIVER_VERSION;
+            wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip
+            sudo chmod +x chromedriver
+            sudo mv -f chromedriver /usr/bin/
+            rm chromedriver_linux64.zip
 
       ## List tools versions.
       - run:
@@ -105,22 +124,44 @@ commands:
             php -i | grep "Loaded Configuration File"
             php --ini
 
-      ## Build Varbase with the composer and Install with drush.
+      ## Build Varbase with the composer.
       - run:
           name: Build Varbase with the composer
-          no_output_timeout: 30m
           command: |
+            if [ -d "/var/www/html/test" ]; then
+              sudo rm -rf /var/www/html/test -vvv
+            fi
             cd /var/www/
-            sudo chmod 777 -R .;
-            composer config -g github-oauth.github.com $GITHUB_TOKEN
+            sudo chmod 775 -R .
+            sudo chown www-data:circleci -R .
             mkdir /var/www/html/test
             cd /var/www/html/test/
-            cp -r /home/circleci/project /var/www/html/test/varbase
-            cd /var/www/html/test/varbase
-            composer install --no-interaction
+            sudo chmod 775 .
+            sudo chown www-data:circleci .
+            composer create-project vardot/varbase:8.8.x varbase --stability dev --no-interaction -vvv
             cp -r /home/circleci/project /var/www/html/test/varbase/docroot/profiles/varbase
-            sudo chmod 777 -R .;
-            
+            cd /var/www/html/test/varbase
+            sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
+            sudo chmod 775 -R .
+            sudo chown www-data:circleci -R .
+            cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
+            echo "\$databases['default']['default'] = [
+              'database' => 'test_varbase',
+              'username' => 'root',
+              'password' => 'rootpw',
+              'host' => '127.0.0.1',
+              'port' => '3306',
+              'driver' => 'mysql',
+              'prefix' => '',
+              'collation' => 'utf8mb4_general_ci',
+            ];" >> /var/www/html/test/varbase/docroot/sites/default/settings.php
+            mkdir /var/www/html/test/varbase/config
+            mkdir /var/www/html/test/varbase/config/sync
+            echo "\$settings['config_sync_directory'] = '../config/sync';" >> /var/www/html/test/varbase/docroot/sites/default/settings.php
+            cd /var/www/html/test/varbase
+            sudo chmod 775 -R .
+            sudo chown www-data:circleci -R .
+                      
       ## Point varbase.test at /var/www/html/test/varbase/docroot
       - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
@@ -134,32 +175,31 @@ commands:
       ## Install Varbase with drush.
       - run:
           name: Install Varbase with drush
-          no_output_timeout: 30m
           command: |
-            mysql -h 127.0.0.1 -uroot -ppassw0rd -e "DROP DATABASE IF EXISTS test_varbase;CREATE DATABASE test_varbase;"
+            mysql -h 127.0.0.1 -uroot -prootpw --execute="DROP DATABASE IF EXISTS test_varbase;" -vvv
+            mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_varbase;" -vvv
             cd /var/www/html/test/varbase/docroot
-            ../bin/drush site-install varbase --yes --site-name='Varbase test' --account-name=webmaster --account-pass=dD.123123ddd --account-mail=webmaster@vardot.com --db-url="mysql://user:passw0rd@127.0.0.1/test_varbase" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true
+            ../bin/drush site-install varbase --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
             ../bin/drush pm-enable varbase_development --yes
             ../bin/drush pm-enable varbase_styleguide --yes
+            ../bin/drush pm-enable varbase_api --yes
+            ../bin/drush pm-enable varbase_content_planner --yes
             ../bin/drush pm-enable varbase_media_instagram --yes
             ../bin/drush pm-enable varbase_media_twitter --yes
-            ../bin/drush pm-enable varbase_api --yes
             ../bin/drush pm-enable social_auth_google --yes
             ../bin/drush pm-enable social_auth_facebook --yes
+            ../bin/drush pm-enable social_auth_twitter --yes
             ../bin/drush pm-enable social_auth_linkedin --yes
-            ../bin/drush pm-enable varbase_content_planner --yes
             ../bin/drush config-set system.performance css.preprocess 0 --yes
             ../bin/drush config-set system.performance js.preprocess 0 --yes
             ../bin/drush config-set system.logging error_level all --yes
             ../bin/drush cr
-            
+
       ## Configure and run the virtual display.
       - run:
-          name: Configure and run the virtual display
-          command: |
-            export DISPLAY=:99
-            xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
-            sleep 3
+          name: Configure and run the virtual display.
+          command: Xvfb -ac :99 -screen 0 1024x768x24 > /dev/null 2>&1
+          background: true
 
       ## Run selenium standalone server.
       - run:
@@ -167,7 +207,7 @@ commands:
           command: |
             if [[ ! -f /home/circleci/selenium-server-standalone-2.53.1.jar ]]; then wget -O /home/circleci/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-standalone-2.53.1.jar -port 4445 > /home/circleci/selenium.log
+            java -jar selenium-server-standalone-2.53.1.jar -port 4445
           background: true
 
       ## Automated Functional Acceptance Testing - Step 1 init tests.
