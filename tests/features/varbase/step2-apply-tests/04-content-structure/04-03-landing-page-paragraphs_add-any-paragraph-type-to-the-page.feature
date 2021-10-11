@@ -93,39 +93,6 @@ So that the Landing page (Paragraphs)" will show up having paragrpahs of differe
      Then I should see "Landing page (Paragraphs) Test Landing page Columns (Two Uneven) has been created"
 
   @javascript @local @development @staging @production
-  Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Modal
-    Given I am a logged in user with the "test_site_admin" user
-     When I go to "/node/add/landing_page"
-      And I wait
-      And I fill in "Test Landing page Modal" for "Title"
-      And I fill in "Test Landing page description Modal" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
-      And I press "+ Add"
-      And I wait for AJAX to finish
-      And I wait for 1 second
-      And I select the "bp_modal" paragraph component
-      And I wait for AJAX to finish
-     Then I should see "Components"
-     When I fill in "Modal button" for "Modal button text"
-      And I fill in "Modal title" for "Modal title"
-      And I press "+ Add"
-      And I wait for AJAX to finish
-      And I select the "bp_simple" paragraph component
-      And I wait
-      And I wait for AJAX to finish
-      And I wait for 1 second
-     Then I should see "Modal body"
-     When I fill in the rich text editor field "Text" with "Modal Body test"
-      And I select "published" from "edit-moderation-state-0-state"
-      And I press the "Save" button
-     Then I should see "Landing page (Paragraphs) Test Landing page Modal has been created"
-     When I press "Modal button"
-      And I wait for AJAX to finish
-      And I wait 2 seconds
-     Then I should see "Modal title"
-
-  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Rich Text
     Given I am a logged in user with the "test_site_admin" user
      When I go to "/node/add/landing_page"

@@ -84,12 +84,15 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         $this->logout();
       }
 
-      $page = $this->getSession()->getPage();
       $this->getSession()->visit($this->locatePath('/user/login'));
-      $page->fillField('edit-name', $username);
-      $page->fillField('edit-pass', $password);
-      $submit = $page->findButton('op');
-      $submit->click();
+      $page = $this->getSession()->getPage();
+
+      if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+        $page->fillField('name', $username);
+        $page->fillField('pass', $password);
+        $submit = $page->findButton('op');
+        $submit->click();
+      }
     }
     else {
       throw new \Exception("The '$username' user name is wrong or it was not listed in the list of default testing users.");
@@ -111,13 +114,16 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $this->logout();
     }
 
-    // Login with the.
-    $page = $this->getSession()->getPage();
+    // Login with the passed username and password.
     $this->getSession()->visit($this->locatePath('/user/login'));
-    $page->fillField('edit-name', $username);
-    $page->fillField('edit-pass', $password);
-    $submit = $page->findButton('op');
-    $submit->click();
+    $page = $this->getSession()->getPage();
+
+    if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+      $page->fillField('name', $username);
+      $page->fillField('pass', $password);
+      $submit = $page->findButton('op');
+      $submit->click();
+    }
   }
 
   /**
@@ -1644,6 +1650,32 @@ JS;
    */
   public function iSelectTheParagraphComponent($value) {
     $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "' . $value . '")]')->click();
+  }
+
+  /**
+   * Matching element exists on the page after a wait.
+   *
+   * @param string $selector_type
+   *   The element selector type (css, xpath).
+   * @param string|array $selector
+   *   The element selector.
+   * @param int $timeout
+   *   (optional) Timeout in milliseconds, defaults to 10000.
+   */
+  public function matchingElementAfterWait($selector_type, $selector, $timeout = 10000) {
+    $start = microtime(TRUE);
+    $end = $start + ($timeout / 1000);
+    $page = $this->getSession()->getPage();
+
+    do {
+      $node = $page->find($selector_type, $selector);
+      if (empty($node)) {
+        return FALSE;
+      }
+      usleep(100000);
+    } while (microtime(TRUE) < $end);
+
+    return TRUE;
   }
 
   /**

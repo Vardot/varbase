@@ -70,7 +70,7 @@ default:
               w3c: false
           chrome:
             switches:
-              # - "--headless"
+              - "--headless"
               - "no-sandbox"
               - "--no-sandbox"
               - "--disable-web-security"

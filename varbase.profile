@@ -541,12 +541,13 @@ function varbase_after_install_finished(array &$install_state) {
           $page_front_path = PathAlias::load($alias_id)->getPath();
 
           \Drupal::configFactory()->getEditable('system.site')
-          ->set('page.front', $page_front_path)
-          ->save();
+            ->set('page.front', $page_front_path)
+            ->save();
         }
       }
     }
-  } catch (\Exception $e) {
+  }
+  catch (\Exception $e) {
     \Drupal::messenger()->addError($e->getMessage());
   }
 

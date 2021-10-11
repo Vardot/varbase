@@ -13,25 +13,17 @@ I want to be able to clone an entity.
       And I wait for 1 second
       And I press "+ Add"
       And I wait for AJAX to finish
-      And I select the "bp_modal" paragraph component
+      And I wait for 1 second
+      And I select the "bp_block" paragraph component
       And I wait for AJAX to finish
-     Then I should see "Components"
-     When I fill in "Modal button" for "Modal button text"
-      And I fill in "Modal title" for "Modal title"
-      And I wait for AJAX to finish
+     Then I should see "Block"
+     When I select "Site branding" from "Block"
       And I wait
-      And I press "+ Add"
-      And I wait for AJAX to finish
-      And I wait
-      And I select the "bp_simple" paragraph component
-      And I wait for AJAX to finish
-      And I wait
-     Then I should see "Modal body"
-     When I fill in the rich text editor field "Text" with "Modal Body test"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
-     Then I should see "Modal button"
+     Then I should see "Test Clone landing page has been created"
+
      When I go to "/admin/content"
       And I wait
      Then I should see "Content"
