@@ -4,7 +4,6 @@ namespace Drupal\varbase\Entity;
 
 use Vardot\Entity\EntityDefinitionUpdateManager;
 
-
 /**
  * Varbase Entity Definition Update Manager.
  *

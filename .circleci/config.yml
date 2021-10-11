@@ -212,7 +212,7 @@ commands:
           background: true
 
 jobs:
-  varbase-testing-automated-functional-acceptance-testing:
+  automated-functional-acceptance-testing:
     <<: *defaults
     steps:
       - varbase-build
@@ -228,7 +228,7 @@ workflows:
   version: 2
   varbase-workflow:
     jobs:
-      - varbase-testing-automated-functional-acceptance-testing:
+      - automated-functional-acceptance-testing:
           filters:
             tags:
               only: /^9.*/
