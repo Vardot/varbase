@@ -4,7 +4,8 @@ default:
   suites:
     default:
       paths:
-        - "%paths.base%/tests/features"
+        features: "%paths.base%/tests/features"
+        bootstrap: "%paths.base%/tests/features/bootstrap"
       contexts:
         - VarbaseContext:
             parameters:
@@ -48,8 +49,7 @@ default:
     html:
       output_path: "%paths.base%/tests/reports/"
   extensions:
-    Drupal\MinkExtension:
-      ajax_timeout: 60
+    Behat\MinkExtension:
       files_path: "%paths.base%/tests/assets/"
       goutte: ~
       selenium2:
