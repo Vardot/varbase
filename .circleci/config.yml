@@ -219,7 +219,7 @@ jobs:
        ## Automated Functional Acceptance Testing
       - run:
           name: Automated Functional Acceptance Testing
-          no_output_timeout: 40m
+          no_output_timeout: 80m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat --strict --tags '~@cleanup' --no-snippets -f pretty -o std tests/features/varbase/ 
