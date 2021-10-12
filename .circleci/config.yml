@@ -217,7 +217,7 @@ commands:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
 jobs:
   varbase-testing-01-website-base-requirements:
     <<: *defaults
@@ -229,7 +229,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
   varbase-testing-02-user-management-03-admin-management:
     <<: *defaults
     steps:
@@ -240,8 +240,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
     steps:
@@ -252,7 +252,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
   varbase-testing-05-content-management:
     <<: *defaults
     steps:
@@ -263,8 +263,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
-
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 workflows:
   version: 2
   varbase-workflow:
