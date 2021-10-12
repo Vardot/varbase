@@ -216,7 +216,7 @@ commands:
           name: Automated Functional Acceptance Testing - Step 1 init tests
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/varbase/docroot/profiles/varbase
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
 jobs:
   varbase-testing-01-website-base-requirements:
@@ -228,7 +228,7 @@ jobs:
           name: Automated Functional Acceptance Testing group - 01 website base requirements
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/varbase/docroot/profiles/varbase
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
   varbase-testing-02-user-management-03-admin-management:
     <<: *defaults
@@ -239,7 +239,7 @@ jobs:
           name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/varbase/docroot/profiles/varbase
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
   varbase-testing-04-content-structure:
@@ -251,7 +251,7 @@ jobs:
           name: Automated Functional Acceptance Testing group - 04 content structure
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/varbase/docroot/profiles/varbase
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
   varbase-testing-05-content-management:
     <<: *defaults
@@ -262,7 +262,7 @@ jobs:
           name: Automated Functional Acceptance Testing group - 05 content-management
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/varbase/docroot/profiles/varbase
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
