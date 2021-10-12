@@ -211,24 +211,83 @@ commands:
             java -jar selenium-server-standalone-2.53.1.jar -port 4445
           background: true
 
+      ## Automated Functional Acceptance Testing - Step 1 init tests.
+      - run:
+          name: Automated Functional Acceptance Testing - Step 1 init tests
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
 jobs:
-  automated-functional-acceptance-testing:
+  varbase-testing-01-website-base-requirements:
     <<: *defaults
     steps:
       - varbase-build
-       ## Automated Functional Acceptance Testing
+       ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
-          name: Automated Functional Acceptance Testing
-          no_output_timeout: 80m
+          name: Automated Functional Acceptance Testing group - 01 website base requirements
+          no_output_timeout: 30m
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat --strict --tags '~@cleanup' --no-snippets -f pretty -o std tests/features/varbase/ 
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+  varbase-testing-02-user-management-03-admin-management:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+      - run:
+          name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+  varbase-testing-04-content-structure:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 04 content structure
+      - run:
+          name: Automated Functional Acceptance Testing group - 04 content structure
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+  varbase-testing-05-content-management:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 05 content-management
+      - run:
+          name: Automated Functional Acceptance Testing group - 05 content-management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/varbase/docroot/profiles/varbase
+            behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
 
 workflows:
   version: 2
   varbase-workflow:
     jobs:
-      - automated-functional-acceptance-testing:
+      - varbase-testing-01-website-base-requirements:
+          filters:
+            tags:
+              only: /^8.*/
+            branches:
+              only: /^8.x-8.x/
+      - varbase-testing-02-user-management-03-admin-management:
+          filters:
+            tags:
+              only: /^8.*/
+            branches:
+              only: /^8.x-8.x/
+      - varbase-testing-04-content-structure:
+          filters:
+            tags:
+              only: /^8.*/
+            branches:
+              only: /^8.x-8.x/
+      - varbase-testing-05-content-management:
           filters:
             tags:
               only: /^8.*/
