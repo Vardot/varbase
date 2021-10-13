@@ -20,7 +20,7 @@ commands:
   varbase-build:
     steps:
       - checkout         
-      ## Usefull must have utils
+      ## Usefull must have utils.
       - run:
           name: Usefull must have utils
           command: |
@@ -28,7 +28,7 @@ commands:
             sudo apt -qqy upgrade
             sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev xvfb mysql-client default-mysql-client
 
-      ## Setup Apache2 to PHP7.4
+      ## Setup Apache2 and PHP7.4
       - run:
           name: Setup Apache2 and PHP7.4
           command: |
