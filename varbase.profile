@@ -498,16 +498,6 @@ function varbase_after_install_finished(array &$install_state) {
     $checkList->markAllUpdates();
   }
 
-  // Activate Varbase Bootstrap Paragraphs Settings in the active config.
-  if (\Drupal::moduleHandler()->moduleExists('varbase_bootstrap_paragraphs')) {
-    $profile_path = drupal_get_path('profile', 'varbase') . '/config/optional/';
-    $config_path = $profile_path . 'varbase_bootstrap_paragraphs.settings.yml';
-    $config_content = file_get_contents($config_path);
-    $config_data = (array) Yaml::parse($config_content);
-    $config_factory = \Drupal::configFactory()->getEditable('varbase_bootstrap_paragraphs.settings');
-    $config_factory->setData($config_data)->save(TRUE);
-  }
-
   // Import managed config to the active config at this time of install.
   $profile_path_managed = drupal_get_path('profile', 'varbase') . '/config/managed/';
   $managed_config_path = $profile_path_managed . 'block.block.vartheme_bs4_copyright.yml';
