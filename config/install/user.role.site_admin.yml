@@ -52,6 +52,8 @@ permissions:
   - "access varbase settings"
   - "access varbase users reports"
   - "access video_browser entity browser pages"
+  - "access view api docs entity operation"
+  - "access view json entity operation"
   - "access webform overview"
   - "add JS snippets for google analytics"
   - "add terms in blog_categories"

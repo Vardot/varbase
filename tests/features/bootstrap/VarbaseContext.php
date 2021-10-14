@@ -4,6 +4,8 @@ use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Mink\Exception\ElementHtmlException;
+use Behat\Mink\Element\Element;
+use Behat\Gherkin\Node\TableNode;
 
 /**
  * Defines application features from the specific context.
@@ -1652,6 +1654,73 @@ JS;
    */
   public function iSelectTheParagraphComponent($value) {
     $this->getSession()->getPage()->find('xpath', '//*[contains(@class, "paragraphs-add-dialog") and contains(@class, "ui-dialog-content")]//*[contains(@name, "' . $value . '")]')->click();
+  }
+
+  /**
+   * Retrieve a table row containing specified entity with operations.
+   *
+   * @param \Behat\Mink\Element\Element
+   * @param string
+   *   The text to search for in the table row.
+   *
+   * @return \Behat\Mink\Element\NodeElement
+   *
+   * @throws \Exception
+   */
+  public function getEntityRow(Element $element, $search) {
+    $rows = $element->findAll('css', 'tr');
+    if (empty($rows)) {
+      throw new \Exception(sprintf('Entity not found on the page %s', $this->getSession()->getCurrentUrl()));
+    }
+
+    foreach ($rows as $row) {
+      if (strpos($row->getText(), $search) !== false) {
+          return $row;
+      }
+    }
+    throw new \Exception(sprintf('Failed to find an entity containing "%s" on the page %s', $search, $this->getSession()->getCurrentUrl()));
+  }
+
+  /**
+   * Check if an entity has a specific operation link.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should see the "Edit" operation for the "Homepage" entity
+   * Example 2: Then I should see "Layout" operation for the "Homepage"
+   * Example 3: Then see "Edit" operation for "Homepage"
+   * Example 4: Then should see "Delete" operation for the "Blog" entity
+   * Example 5: Then I should see "Clone" operation for the "Homepage" entity
+   *
+   * @Then /^(?:|I )(?:|should )see (?:|the )"([^"]*)" operation for the "([^"]*)" (?:|entity|content|media|file|term|user)$/
+   */
+  public function iShouldSeetheOperationForTheEntity($operation, $entity) {
+    $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
+    $operation_elment = $row->find('xpath',"//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (empty($operation_elment)) {
+      throw new \Exception(sprintf('Found an entity containing "%s", but it did not have the operation "%s".', $entity, $operation));
+    }
+  }
+
+  /**
+   * Check if an entity not having a specific operation link.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should not see the "View API" operation for the "Homepage" entity
+   * Example 2: Then I should not see "View API Docs" operation for the "Homepage"
+   * Example 3: Then not see "Delete" operation for "Homepage"
+   * Example 4: Then should not see "Delete" operation for the "Blog" entity
+   * Example 5: Then I should not see "Clone" operation for the "Homepage" entity
+   *
+   * @Then /^(?:|I )(?:|should )not see (?:|the )"([^"]*)" operation for the "([^"]*)" (?:|entity|content|media|file|term|user)$/
+   */
+  public function iShouldNotSeetheOperationForTheEntity($operation, $entity) {
+    $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
+    $operation_elment = $row->find('xpath',"//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (!empty($operation_elment)) {
+      throw new \Exception(sprintf('Found an entity containing "%s", but it have the operation "%s".', $entity, $operation));
+    }
   }
 
   /**
