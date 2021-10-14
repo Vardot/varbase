@@ -1,6 +1,6 @@
 name: Varbase
 type: profile
-description: 'Varbase is an enhanced Drupal distribution with a lot of necessities.'
+description: "Varbase is an enhanced Drupal distribution with a lot of necessities."
 core_version_requirement: ^9
 project: varbase
 distribution:

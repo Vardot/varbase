@@ -1,8 +1,8 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: administrator
-label: 'Super Admin'
+label: "Super Admin"
 weight: -4
 is_admin: true
-permissions: {  }
+permissions: {}

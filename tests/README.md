@@ -36,6 +36,10 @@ composer create-project vardot/varbase:9.0.x-dev PROJECT_DIR_NAME --stability de
   http://www.seleniumhq.org/download/
   then you could run this command in the same location in the terminal
 
+
+
+
+
 ```
 $ java -jar selenium-*.jar -port 4445
 ```

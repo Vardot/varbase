@@ -18,11 +18,11 @@ config_bits:
         target_config_expected_to_have:
           title:
             settings:
-              placeholder: ''
+              placeholder: ""
         target_config_value:
           title:
             settings:
-              placeholder: 'Enter title here'
+              placeholder: "Enter title here"
     # -------------------------------------------------------------------------.
     # Add Length indicator to the title field for new content type.
     # -------------------------------------------------------------------------.

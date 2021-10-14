@@ -16,17 +16,17 @@ config_bit:
           config_form: false
         varbase_heroslider_media:
           title: "Media Hero Slider"
-          description: "A rich hero slider that allows you to display video and/or image slides. It implements the universal \"Hero Slider\" to be used in your homepage. Built using <a href=\"https://www.drupal.org/project/slick\" target=\"_blank\">Slick Carousel</a>."
+          description: 'A rich hero slider that allows you to display video and/or image slides. It implements the universal "Hero Slider" to be used in your homepage. Built using <a href="https://www.drupal.org/project/slick" target="_blank">Slick Carousel</a>.'
           selected: false
           config_form: false
         varbase_carousels:
           title: "Varbase Carousels"
-          description: "Provides the necessary tools to build carousels in your website. You will be able to create carousels on the spot and place it anywhere in the site. Built using <a href=\"https://www.drupal.org/project/slick\" target=\"_blank\">Slick Carousel</a>."
+          description: 'Provides the necessary tools to build carousels in your website. You will be able to create carousels on the spot and place it anywhere in the site. Built using <a href="https://www.drupal.org/project/slick" target="_blank">Slick Carousel</a>.'
           selected: false
           config_form: false
         varbase_search:
           title: "Varbase Search"
-          description: "A suite of site search engine tools to help you build better search performance, customization, and search experience. Built using <a href=\"https://www.drupal.org/project/search_api\" target=\"_blank\">Search API</a>."
+          description: 'A suite of site search engine tools to help you build better search performance, customization, and search experience. Built using <a href="https://www.drupal.org/project/search_api" target="_blank">Search API</a>.'
           selected: false
           config_form: false
         varbase_blog:
@@ -36,7 +36,7 @@ config_bit:
           config_form: false
         varbase_auth:
           title: "Varbase Social Single Sign-On"
-          description: "Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google. Built using <a href=\"https://www.drupal.org/project/social_api\" target=\"_blank\">Social API</a>."
+          description: 'Adds single sign-on using existing information from a social networking service such as Facebook, Twitter or Google. Built using <a href="https://www.drupal.org/project/social_api" target="_blank">Social API</a>.'
           selected: false
           config_form: true
           formbit: "src/FormBit/varbase_auth.formbit.php"
@@ -47,11 +47,11 @@ config_bit:
           config_form: false
         google_analytics:
           title: "Google Analytics"
-          description: "Adds the <a href=\"https://www.drupal.org/project/google_analytics\" target=\"_blank\">Google Analytics</a> web statistics tracking system to your website."
+          description: 'Adds the <a href="https://www.drupal.org/project/google_analytics" target="_blank">Google Analytics</a> web statistics tracking system to your website.'
           selected: false
           config_form: false
         google_tag:
           title: "Google Tag Manager"
-          description: "Adds an integration with the <a href=\"https://www.drupal.org/project/google_tag\" target=\"_blank\">Google Tag Manager</a> (GTM) application."
+          description: 'Adds an integration with the <a href="https://www.drupal.org/project/google_tag" target="_blank">Google Tag Manager</a> (GTM) application.'
           selected: false
           config_form: false

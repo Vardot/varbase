@@ -62,3 +62,9 @@ composer create-project vardot/varbase-project:9.0.x-dev PROJECT_DIR_NAME --stab
 
 - xDebug is enabled on Lando by default for PHP debugging.
 - The debugger is set to listen for the port 9003 but can be changed in .lando/.php.ini
+
+
+Join Our Slack Team for Feedback and Support
+http://slack.varbase.vardot.com/
+
+Sponsored and developed by [Vardot](https://www.drupal.org/vardot).

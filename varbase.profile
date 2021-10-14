@@ -106,7 +106,10 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   // Install default components first.
   foreach ($default_components as $default_component) {
-    $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $default_component];
+    $batch['operations'][] = [
+      'varbase_assemble_extra_component_then_install',
+      (array) $default_component,
+    ];
   }
 
   // Install selected extra features.
@@ -133,7 +136,10 @@ function varbase_assemble_extra_components(array &$install_state) {
         // If the extra feature was a module and not enabled, then enable it.
         if (!\Drupal::moduleHandler()->moduleExists($extra_feature_key)) {
           // Add the checked extra feature to the batch process to be enabled.
-          $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $extra_feature_key];
+          $batch['operations'][] = [
+            'varbase_assemble_extra_component_then_install',
+            (array) $extra_feature_key,
+          ];
         }
 
         if (count($selected_extra_features_configs) &&
@@ -160,10 +166,16 @@ function varbase_assemble_extra_components(array &$install_state) {
     }
 
     // Hide Wornings and status messages.
-    $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+    $batch['operations'][] = [
+      'varbase_hide_warning_and_status_messages',
+      (array) TRUE,
+    ];
 
     // Fix entity updates to clear up any mismatched entity.
-    $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+    $batch['operations'][] = [
+      'varbase_fix_entity_update',
+      (array) TRUE,
+    ];
   }
 
   // Install selected Demo content.
@@ -190,7 +202,10 @@ function varbase_assemble_extra_components(array &$install_state) {
         // If the demo content was a module and not enabled, then enable it.
         if (!\Drupal::moduleHandler()->moduleExists($demo_content_key)) {
           // Add the checked demo content to the batch process to be enabled.
-          $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $demo_content_key];
+          $batch['operations'][] = [
+            'varbase_assemble_extra_component_then_install',
+            (array) $demo_content_key,
+          ];
         }
 
         if (count($selected_demo_content_configs) &&
@@ -216,10 +231,16 @@ function varbase_assemble_extra_components(array &$install_state) {
     }
 
     // Hide Wornings and status messages.
-    $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+    $batch['operations'][] = [
+      'varbase_hide_warning_and_status_messages',
+      (array) TRUE,
+    ];
 
     // Fix entity updates to clear up any mismatched entity.
-    $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+    $batch['operations'][] = [
+      'varbase_fix_entity_update',
+      (array) TRUE,
+    ];
 
   }
 
@@ -229,11 +250,17 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   if (isset($selected_extra_features['varbase_heroslider_media'])
     && $selected_extra_features['varbase_heroslider_media'] == TRUE) {
-    $batch['operations'][] = ['varbase_install_component', (array) 'enabled_varbase_heroslider_media_content'];
+    $batch['operations'][] = [
+      'varbase_install_component',
+      (array) 'enabled_varbase_heroslider_media_content',
+    ];
     $uninstall_components[] = 'enabled_varbase_heroslider_media_content';
   }
   else {
-    $batch['operations'][] = ['varbase_install_component', (array) 'disabled_varbase_heroslider_media_content'];
+    $batch['operations'][] = [
+      'varbase_install_component',
+      (array) 'disabled_varbase_heroslider_media_content',
+    ];
     $uninstall_components[] = 'disabled_varbase_heroslider_media_content';
   }
 
@@ -248,7 +275,10 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   if (count($uninstall_components) > 0) {
     foreach ($uninstall_components as $uninstall_component) {
-      $batch['operations'][] = ['varbase_uninstall_component', (array) $uninstall_component];
+      $batch['operations'][] = [
+        'varbase_uninstall_component',
+        (array) $uninstall_component,
+      ];
     }
   }
 
@@ -292,7 +322,10 @@ function varbase_assemble_development_tools(array &$install_state) {
         // If the development tool was a module and not enabled, then enable it.
         if (!\Drupal::moduleHandler()->moduleExists($development_tool_key)) {
           // Add checked development tool to the batch process to be enabled.
-          $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) $development_tool_key];
+          $batch['operations'][] = [
+            'varbase_assemble_extra_component_then_install',
+            (array) $development_tool_key,
+          ];
         }
 
         if (count($selected_development_configs) &&
@@ -318,7 +351,10 @@ function varbase_assemble_development_tools(array &$install_state) {
     }
 
     // Hide Wornings and status messages.
-    $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+    $batch['operations'][] = [
+      'varbase_hide_warning_and_status_messages',
+      (array) TRUE,
+    ];
 
     // Fix entity updates to clear up any mismatched entity.
     $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
@@ -344,31 +380,49 @@ function varbase_configure_multilingual(array &$install_state) {
          && $install_state['varbase']['enable_multilingual'] == TRUE) {
 
     // Install the Varbase internationalization feature module.
-    $batch['operations'][] = ['varbase_assemble_extra_component_then_install', (array) 'varbase_internationalization'];
+    $batch['operations'][] = [
+      'varbase_assemble_extra_component_then_install',
+      (array) 'varbase_internationalization',
+    ];
 
     // Add all selected languages and then translatvarbase_hide_messagesion
     // will fetched for theme.
     if (isset($install_state['varbase']['multilingual_languages'])
         && is_array($install_state['varbase']['multilingual_languages'])) {
       foreach ($install_state['varbase']['multilingual_languages'] as $language_code) {
-        $batch['operations'][] = ['varbase_configure_language_and_fetch_traslation', (array) $language_code];
+        $batch['operations'][] = [
+          'varbase_configure_language_and_fetch_traslation',
+          (array) $language_code,
+        ];
       }
     }
 
     // Hide Wornings and status messages.
-    $batch['operations'][] = ['varbase_hide_warning_and_status_messages', (array) TRUE];
+    $batch['operations'][] = [
+      'varbase_hide_warning_and_status_messages',
+      (array) TRUE,
+    ];
 
     // Change configurations to work with enable_multilingual.
-    $batch['operations'][] = ['varbase_config_bit_for_multilingual', (array) TRUE];
+    $batch['operations'][] = [
+      'varbase_config_bit_for_multilingual',
+      (array) TRUE,
+    ];
 
   }
   else {
     // Change configurations to work with NO multilingual.
-    $batch['operations'][] = ['varbase_config_bit_for_multilingual', (array) FALSE];
+    $batch['operations'][] = [
+      'varbase_config_bit_for_multilingual',
+      (array) FALSE,
+    ];
   }
 
   // Fix entity updates to clear up any mismatched entity.
-  $batch['operations'][] = ['varbase_fix_entity_update', (array) TRUE];
+  $batch['operations'][] = [
+    'varbase_fix_entity_update',
+    (array) TRUE,
+  ];
 
   return $batch;
 }
@@ -469,7 +523,7 @@ function varbase_uninstall_component($uninstall_component) {
  * @param array $node_ids
  *   The Node IDs.
  */
-function varbase_reset_timestamp_for_nodes($node_ids) {
+function varbase_reset_timestamp_for_nodes(array $node_ids) {
   foreach ($node_ids as $nid) {
     $node = Node::load($nid);
     if (isset($node)) {

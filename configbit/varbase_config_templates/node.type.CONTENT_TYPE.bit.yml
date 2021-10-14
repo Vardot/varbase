@@ -17,7 +17,7 @@ config_bits:
             - node.type.CONTENT_TYPE
             - workflows.workflow.varbase_simple_workflow
         target_config_path: type_settings
-        expected_config_wild_card: 'workflows.workflow.'
+        expected_config_wild_card: "workflows.workflow."
         target_config_expected_not_to_have:
           entity_types:
             node:

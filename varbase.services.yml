@@ -2,12 +2,19 @@ services:
   varbase.form_helper:
     class: '\Drupal\varbase\Form\FormHelper'
     arguments:
-      - '@element_info'
+      - "@element_info"
   varbase.config_bit:
     class: '\Drupal\varbase\Config\ConfigBit'
-    arguments: ['@config.factory', '@config.manager', '@module_handler', '@database', '@plugin.cache_clearer']
+    arguments:
+      [
+        "@config.factory",
+        "@config.manager",
+        "@module_handler",
+        "@database",
+        "@plugin.cache_clearer"
+      ]
     tags:
-      - { name: 'event_subscriber' }
+      - { name: "event_subscriber" }
   varbase.definition_update_manager:
     class: '\Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager'
-    arguments: ['@class_resolver']
+    arguments: ["@class_resolver"]

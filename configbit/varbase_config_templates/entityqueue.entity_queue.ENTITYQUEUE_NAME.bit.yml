@@ -57,13 +57,13 @@ config_bits:
               region: content
               settings:
                 include_locked: true
-              third_party_settings: {  }
+              third_party_settings: {}
             title:
               type: string_textfield
               weight: -10
               region: content
               settings:
                 size: 60
-                placeholder: ''
-              third_party_settings: {  }
-          hidden: {  }
+                placeholder: ""
+              third_party_settings: {}
+          hidden: {}

@@ -1,168 +1,168 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: editor
 label: Editor
 weight: -8
 is_admin: null
 permissions:
-  - 'access admin audit trail'
-  - 'access administration pages'
-  - 'access carousels_media_browser entity browser pages'
-  - 'access coffee'
-  - 'access content overview'
-  - 'access contextual links'
-  - 'access editor_media_browser entity browser pages'
-  - 'access editor_multiple_image_browser entity browser pages'
-  - 'access editor_multiple_media_browser entity browser pages'
-  - 'access files overview'
-  - 'access google analytics reports'
-  - 'access heroslider_media_browser entity browser pages'
-  - 'access image_browser entity browser pages'
-  - 'access images_browser entity browser pages'
-  - 'access in-place editing'
-  - 'access media overview'
-  - 'access media_browser entity browser pages'
-  - 'access multiple_image_browser entity browser pages'
-  - 'access multiple_media_browser entity browser pages'
-  - 'access panels in-place editing'
-  - 'access paragraphs_library_items entity browser pages'
-  - 'access responsive preview'
-  - 'access shortcuts'
-  - 'access site in maintenance mode'
-  - 'access site reports'
-  - 'access taxonomy overview'
-  - 'access toolbar'
-  - 'access tour'
-  - 'access user profiles'
-  - 'access video_browser entity browser pages'
-  - 'add terms in blog_categories'
-  - 'add terms in tags'
-  - 'clone node entity'
-  - 'clone paragraph entity'
-  - 'configure all landing_page_lb node layout overrides'
-  - 'create and edit custom blocks'
-  - 'create audio media'
-  - 'create content translations'
-  - 'create faq content'
-  - 'create file media'
-  - 'create gallery media'
-  - 'create image media'
-  - 'create instagram media'
-  - 'create landing_page content'
-  - 'create landing_page_lb content'
-  - 'create media'
-  - 'create page content'
-  - 'create remote_video media'
-  - 'create terms in blog_categories'
-  - 'create terms in tags'
-  - 'create tweet media'
-  - 'create url aliases'
-  - 'create varbase_blog content'
-  - 'create varbase_heroslider_media content'
-  - 'create video media'
-  - 'customize shortcut links'
-  - 'delete any audio media'
-  - 'delete any file media'
-  - 'delete any gallery media'
-  - 'delete any image media'
-  - 'delete any instagram media'
-  - 'delete any remote_video media'
-  - 'delete any tweet media'
-  - 'delete any video media'
-  - 'delete media'
-  - 'delete own audio media'
-  - 'delete own file media'
-  - 'delete own gallery media'
-  - 'delete own image media'
-  - 'delete own instagram media'
-  - 'delete own landing_page content'
-  - 'delete own landing_page_lb content'
-  - 'delete own page content'
-  - 'delete own remote_video media'
-  - 'delete own tweet media'
-  - 'delete own varbase_blog content'
-  - 'delete own varbase_heroslider_media content'
-  - 'delete own video media'
-  - 'delete terms in blog_categories'
-  - 'delete terms in tags'
-  - 'dropzone upload files'
-  - 'ds switch view mode'
-  - 'edit any audio media'
-  - 'edit any file media'
-  - 'edit any gallery media'
-  - 'edit any image media'
-  - 'edit any instagram media'
-  - 'edit any landing_page content'
-  - 'edit any landing_page_lb content'
-  - 'edit any page content'
-  - 'edit any remote_video media'
-  - 'edit any tweet media'
-  - 'edit any varbase_blog content'
-  - 'edit any varbase_heroslider_media content'
-  - 'edit any video media'
-  - 'edit own audio media'
-  - 'edit own file media'
-  - 'edit own gallery media'
-  - 'edit own image media'
-  - 'edit own instagram media'
-  - 'edit own landing_page content'
-  - 'edit own landing_page_lb content'
-  - 'edit own page content'
-  - 'edit own remote_video media'
-  - 'edit own tweet media'
-  - 'edit own varbase_blog content'
-  - 'edit own varbase_heroslider_media content'
-  - 'edit own video media'
-  - 'edit terms in blog_categories'
-  - 'edit terms in tags'
-  - 'have total control'
-  - 'rabbit hole bypass node'
-  - 'rabbit hole bypass taxonomy_term'
-  - 'reorder terms in blog_categories'
-  - 'reorder terms in tags'
-  - 'schedule publishing of nodes'
-  - 'translate block_content'
-  - 'translate landing_page node'
-  - 'translate landing_page_lb node'
-  - 'translate page node'
-  - 'translate paragraph'
-  - 'update any media'
-  - 'update content translations'
-  - 'update media'
-  - 'update varbase_heroslider_media entityqueue'
-  - 'use ipe with page manager'
-  - 'use media_bulk_upload bulk upload form'
-  - 'use moderation sidebar'
-  - 'use text format basic_html'
-  - 'use text format full_html'
-  - 'use varbase_editorial_workflow transition archive'
-  - 'use varbase_editorial_workflow transition archived_published'
-  - 'use varbase_editorial_workflow transition create_new_draft'
-  - 'use varbase_editorial_workflow transition publish'
-  - 'use varbase_editorial_workflow transition review'
-  - 'use varbase_simple_workflow transition archive'
-  - 'use varbase_simple_workflow transition archived_published'
-  - 'use varbase_simple_workflow transition create_new_draft'
-  - 'use varbase_simple_workflow transition publish'
-  - 'use yoast seo'
-  - 'view all media revisions'
-  - 'view all revisions'
-  - 'view any paragraphs previewer'
-  - 'view any unpublished content'
-  - 'view content planner dashboard'
-  - 'view landing_page revisions'
-  - 'view landing_page_lb revisions'
-  - 'view latest version'
-  - 'view media'
-  - 'view own unpublished content'
-  - 'view page revisions'
-  - 'view pane admin links'
-  - 'view post access counter'
-  - 'view scheduled content'
-  - 'view terms in blog_categories'
-  - 'view terms in tags'
-  - 'view the administration theme'
-  - 'view unpublished paragraphs'
-  - 'view varbase_blog revisions'
-  - 'view varbase_heroslider_media revisions'
+  - "access admin audit trail"
+  - "access administration pages"
+  - "access carousels_media_browser entity browser pages"
+  - "access coffee"
+  - "access content overview"
+  - "access contextual links"
+  - "access editor_media_browser entity browser pages"
+  - "access editor_multiple_image_browser entity browser pages"
+  - "access editor_multiple_media_browser entity browser pages"
+  - "access files overview"
+  - "access google analytics reports"
+  - "access heroslider_media_browser entity browser pages"
+  - "access image_browser entity browser pages"
+  - "access images_browser entity browser pages"
+  - "access in-place editing"
+  - "access media overview"
+  - "access media_browser entity browser pages"
+  - "access multiple_image_browser entity browser pages"
+  - "access multiple_media_browser entity browser pages"
+  - "access panels in-place editing"
+  - "access paragraphs_library_items entity browser pages"
+  - "access responsive preview"
+  - "access shortcuts"
+  - "access site in maintenance mode"
+  - "access site reports"
+  - "access taxonomy overview"
+  - "access toolbar"
+  - "access tour"
+  - "access user profiles"
+  - "access video_browser entity browser pages"
+  - "add terms in blog_categories"
+  - "add terms in tags"
+  - "clone node entity"
+  - "clone paragraph entity"
+  - "configure all landing_page_lb node layout overrides"
+  - "create and edit custom blocks"
+  - "create audio media"
+  - "create content translations"
+  - "create faq content"
+  - "create file media"
+  - "create gallery media"
+  - "create image media"
+  - "create instagram media"
+  - "create landing_page content"
+  - "create landing_page_lb content"
+  - "create media"
+  - "create page content"
+  - "create remote_video media"
+  - "create terms in blog_categories"
+  - "create terms in tags"
+  - "create tweet media"
+  - "create url aliases"
+  - "create varbase_blog content"
+  - "create varbase_heroslider_media content"
+  - "create video media"
+  - "customize shortcut links"
+  - "delete any audio media"
+  - "delete any file media"
+  - "delete any gallery media"
+  - "delete any image media"
+  - "delete any instagram media"
+  - "delete any remote_video media"
+  - "delete any tweet media"
+  - "delete any video media"
+  - "delete media"
+  - "delete own audio media"
+  - "delete own file media"
+  - "delete own gallery media"
+  - "delete own image media"
+  - "delete own instagram media"
+  - "delete own landing_page content"
+  - "delete own landing_page_lb content"
+  - "delete own page content"
+  - "delete own remote_video media"
+  - "delete own tweet media"
+  - "delete own varbase_blog content"
+  - "delete own varbase_heroslider_media content"
+  - "delete own video media"
+  - "delete terms in blog_categories"
+  - "delete terms in tags"
+  - "dropzone upload files"
+  - "ds switch view mode"
+  - "edit any audio media"
+  - "edit any file media"
+  - "edit any gallery media"
+  - "edit any image media"
+  - "edit any instagram media"
+  - "edit any landing_page content"
+  - "edit any landing_page_lb content"
+  - "edit any page content"
+  - "edit any remote_video media"
+  - "edit any tweet media"
+  - "edit any varbase_blog content"
+  - "edit any varbase_heroslider_media content"
+  - "edit any video media"
+  - "edit own audio media"
+  - "edit own file media"
+  - "edit own gallery media"
+  - "edit own image media"
+  - "edit own instagram media"
+  - "edit own landing_page content"
+  - "edit own landing_page_lb content"
+  - "edit own page content"
+  - "edit own remote_video media"
+  - "edit own tweet media"
+  - "edit own varbase_blog content"
+  - "edit own varbase_heroslider_media content"
+  - "edit own video media"
+  - "edit terms in blog_categories"
+  - "edit terms in tags"
+  - "have total control"
+  - "rabbit hole bypass node"
+  - "rabbit hole bypass taxonomy_term"
+  - "reorder terms in blog_categories"
+  - "reorder terms in tags"
+  - "schedule publishing of nodes"
+  - "translate block_content"
+  - "translate landing_page node"
+  - "translate landing_page_lb node"
+  - "translate page node"
+  - "translate paragraph"
+  - "update any media"
+  - "update content translations"
+  - "update media"
+  - "update varbase_heroslider_media entityqueue"
+  - "use ipe with page manager"
+  - "use media_bulk_upload bulk upload form"
+  - "use moderation sidebar"
+  - "use text format basic_html"
+  - "use text format full_html"
+  - "use varbase_editorial_workflow transition archive"
+  - "use varbase_editorial_workflow transition archived_published"
+  - "use varbase_editorial_workflow transition create_new_draft"
+  - "use varbase_editorial_workflow transition publish"
+  - "use varbase_editorial_workflow transition review"
+  - "use varbase_simple_workflow transition archive"
+  - "use varbase_simple_workflow transition archived_published"
+  - "use varbase_simple_workflow transition create_new_draft"
+  - "use varbase_simple_workflow transition publish"
+  - "use yoast seo"
+  - "view all media revisions"
+  - "view all revisions"
+  - "view any paragraphs previewer"
+  - "view any unpublished content"
+  - "view content planner dashboard"
+  - "view landing_page revisions"
+  - "view landing_page_lb revisions"
+  - "view latest version"
+  - "view media"
+  - "view own unpublished content"
+  - "view page revisions"
+  - "view pane admin links"
+  - "view post access counter"
+  - "view scheduled content"
+  - "view terms in blog_categories"
+  - "view terms in tags"
+  - "view the administration theme"
+  - "view unpublished paragraphs"
+  - "view varbase_blog revisions"
+  - "view varbase_heroslider_media revisions"

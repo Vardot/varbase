@@ -1,0 +1,833 @@
+.toolbar-horizontal {
+	.toolbar-tray {
+		.menu-item {
+			+ {
+				.menu-item {
+					border-right: none;
+					border-left: none;
+				}
+			}
+		}
+		border-bottom-color: #000;
+		box-shadow: none;
+	}
+}
+
+.toolbar {
+	.toolbar-tray-horizontal {
+		.menu-item {
+			&:last-child {
+				border-right: none;
+				border-left: none;
+			}
+		}
+	}
+
+	.toolbar-tray-vertical {
+		.level-3 {
+			ul {
+				margin-left: 0 !important;
+			}
+		}
+	}
+}
+
+#toolbar-administration.toolbar {
+	a {
+		transition: all, 0.2s;
+	}
+
+	.toolbar-bar {
+		background-color: #2d2d2d;
+		box-shadow: none;
+
+		.toolbar-tab {
+			>.toolbar-item.is-active {
+				text-decoration: none;
+				background-color: rgba(255, 255, 255, 0.03);
+				background-image: none;
+			}
+
+			>.toolbar-item {
+				&:focus {
+					text-decoration: none;
+					background-color: rgba(255, 255, 255, 0.03);
+					background-image: none;
+				}
+			}
+		}
+	}
+
+	.toolbar-menu {
+		background: #333;
+ 
+		.toolbar-menu {
+			.toolbar-icon.toolbar-handle {
+				&:before {
+					background-image: url(../images/acacac/chevron-outline-disc-down.svg);
+					background-size: 100%;
+				}
+				&:hover {
+					&:before {
+						background-image: url(../images/ffffff/chevron-outline-disc-down.svg);
+					}
+				}
+			}
+
+			.toolbar-icon.toolbar-handle.open {
+				&:before {
+					background-image: url(../images/ffffff/chevron-outline-disc-close.svg);
+					background-size: 100%;
+				}
+			}
+
+			a {
+				color: #bbb;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+
+		.toolbar-box {
+			&:hover {
+				.toolbar-icon.toolbar-handle {
+					&:before {
+						background-image: url(../images/ffffff/chevron-outline-disc-down.svg);
+					}
+				}
+
+				.toolbar-icon.toolbar-handle.open {
+					&:before {
+						background-image: url(../images/ffffff/chevron-outline-disc-close.svg);
+						background-size: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.toolbar-tray-horizontal {
+		border-bottom: 1px solid #333;
+		box-shadow: none;
+
+		ul {
+			ul {
+				li.menu-item {
+					&:first-child {
+						border: none;
+						border-top: 1px solid #0084d7;
+					}
+				}
+			}
+		}
+
+		.menu-item {
+			+ {
+				.menu-item {
+					border-right: none;
+					border-left: none;
+				}
+			}
+
+			&:last-child {
+				border-right: none;
+				border-left: none;
+			}
+		}
+
+		.toolbar-toggle-orientation {
+			border: none;
+		}
+
+	}
+ 
+	.toolbar-tray-vertical {
+		border: none;
+		box-shadow: none;
+		box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.85);
+
+		.menu-item {
+			+ {
+				.menu-item {
+					border: 0 none;
+				}
+			}
+		}
+
+		.toolbar-menu {
+			a {
+				color: #bbb;
+				&:hover {
+					text-decoration: none;
+					color: #fff;
+					background: #0084d7;
+				}
+				&:focus {
+					text-decoration: none;
+					color: #fff;
+					background: #0084d7;
+				}
+			}
+			ul {
+				ul {
+					border: none;
+				}
+			}
+		}
+	}
+
+	.toolbar-tray {
+		.menu-item--active-trail {
+			>.toolbar-box {
+				a {
+					text-decoration: none;
+					color: inherit;
+					font-weight: bold;
+				}
+			}
+		}
+
+		a.is-active {
+			text-decoration: none;
+			color: inherit;
+			font-weight: bold;
+		}
+		background-color: #333;
+	}
+
+	.toolbar-toggle-orientation {
+		background-color: #333;
+	}
+
+	.toolbar-icon.toolbar-handle {
+		&:focus {
+			background-color: transparent;
+		}
+		&:before {
+			transition: 0.25s;
+			background-image: url(../images/acacac/chevron-outline-disc-down.svg);
+		}
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/chevron-outline-disc-down.svg);
+			}
+		}
+	}
+
+	.toolbar-icon.toolbar-handle.open {
+		&:before {
+			transform: rotate(180deg);
+			background-image: url(../images/ffcfcf/chevron-outline-disc-close.svg) !important;
+		}
+	}
+
+	.level-3 {
+		a {
+			color: #d5d5d5 !important;
+		}
+	}
+
+	.level-4 {
+		a {
+			color: #d5d5d5 !important;
+		}
+	}
+
+	.menu-item {
+		&:hover {
+			background-color: #333;
+		}
+	}
+
+	.menu-item--expanded {
+		background-color: #333;
+	}
+}
+
+#toolbar-administration {
+	.toolbar-tray {
+		.toolbar-menu {
+			a {
+				color: #ccc;
+				background: transparent;
+			}
+
+			span {
+				color: #ccc;
+				background: transparent;
+			}
+
+			li {
+				background: #333;
+			}
+		}
+
+		ul {
+			li.menu-item {
+				border: none;
+			}
+		}
+
+		a {
+			color: #bbb;
+			background: #2d2d2d;
+		}
+
+		span {
+			color: #bbb;
+			background: #2d2d2d;
+			display: block;
+			padding: 1em 1.3333em;
+		}
+	}
+
+	.toolbar-oriented {
+		.user-toolbar-tab {
+			float: right;
+		}
+	}
+
+	.toolbar-tray-horizontal {
+		a {
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+				background: #0084d7;
+			}
+
+			&:active {
+				text-decoration: none;
+				color: #fff;
+				background: #0084d7;
+			}
+
+			&:focus {
+				text-decoration: none;
+				color: #fff;
+				background: #333;
+			}
+		}
+
+		.menu-item--expanded {
+			&:hover {
+				>a {
+					color: #fff !important;
+					background: #0084d7;
+				}
+
+				>.toolbar-box {
+					>a {
+						color: #fff !important;
+						background: #0084d7;
+					}
+				}
+
+				.toolbar-icon-admin-toolbar-tools-help {
+					&:before {
+						background-image: url("../images/varbase-x-small-emblem-white.png");
+					}
+				}
+
+				.toolbar-icon-system-admin-content {
+					&:before {
+						background-image: url(../images/ffffff/file.svg);
+					}
+				}
+
+				.toolbar-icon-system-admin-structure {
+					&:before {
+						background-image: url(../images/ffffff/orgchart.svg);
+					}
+				}
+
+				.toolbar-icon-system-themes-page {
+					&:before {
+						background-image: url(../images/ffffff/paintbrush.svg);
+					}
+				}
+
+				.toolbar-icon-entity-user-collection {
+					&:before {
+						background-image: url(../images/ffffff/people.svg);
+					}
+				}
+
+				.toolbar-icon-system-modules-list {
+					&:before {
+						background-image: url(../images/ffffff/puzzlepiece.svg);
+					}
+				}
+
+				.toolbar-icon-system-admin-config {
+					&:before {
+						background-image: url(../images/ffffff/wrench.svg);
+					}
+				}
+
+				.toolbar-icon-system-admin-reports {
+					&:before {
+						background-image: url(../images/ffffff/barchart.svg);
+					}
+				}
+			}
+		}
+		.menu-item {
+			a {
+				&:focus {
+					background: #4c4c4c;
+				}
+			}
+		}
+		ul {
+			li.menu-item--expanded {
+				ul {
+					li.menu-item--expanded {
+						position: relative;
+						background-image: none;
+						&:after {
+							position: absolute;
+							top: 50%;
+							right: 5px;
+							content: url(../images/0084d7/chevron-right.svg);
+							transition: all 0.2s;
+							transform: translateY(-8px);
+							pointer-events: none;
+							color: #8eacc0;
+							font-size: 16px;
+						}
+
+						&:hover {
+							&:after {
+								content: url(../images/ffffff/chevron-right.svg);
+								transform: translate(6px, -8px);
+							}
+						}
+					}
+				}
+
+				.menu-item {
+					&:hover {
+						ul {
+							margin: -39px 0 0 200px;
+						}
+					}
+				}
+			}
+
+			li.menu-item {
+				border-top: none transparent;
+				border-right: none;
+				border-bottom: none;
+				border-left: none;
+			}
+
+			ul {
+				li {
+					li.menu-item {
+						&:first-child {
+							border-top: none !important;
+						}
+					}
+				}
+			}
+		}
+
+		.toolbar-menu {
+			ul {
+				.toolbar-icon {
+					padding: 1em 12px;
+				}
+			}
+		}
+	}
+
+	.level-1 {
+		.toolbar-handle.open {
+			background: #3b3b3b !important;
+		}
+	}
+
+	.toolbar-tray-vertical {
+		.level-2 {
+			background: #3b3b3b !important;
+		}
+
+		.level-3 {
+			background: #434343 !important;
+
+			a {
+				padding-left: 2.75em !important;
+			}
+		}
+
+		.level-4 {
+			background: #4c4c4c !important;
+		}
+
+		.level-5 {
+			background: #545454 !important;
+		}
+
+		.toolbar-icon-admin-toolbar-tools-help {
+			transition: none;
+			text-indent: 0;
+
+			&:before {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.level-2 {
+		.toolbar-handle.open {
+			background: #434343 !important;
+		}
+	}
+
+	.level-3 {
+		.toolbar-handle.open {
+			background: #4c4c4c !important;
+		}
+	}
+
+	.level-4 {
+		.toolbar-handle.open {
+			background: #545454 !important;
+		}
+	}
+
+	.toolbar-handle.open {
+		border-top-left-radius: 10px;
+	}
+
+	.toolbar-box {
+		a {
+			&:focus {
+				text-decoration: none;
+				background: #333;
+			}
+		}
+	}
+
+	.toolbar-icon-admin-toolbar-tools-help {
+		&:before {
+			margin: 0;
+			padding: 0;
+			background-image: url("../images/varbase-x-small-emblem-white.png");
+		}
+
+		&:hover {
+			&:before {
+				background-image: url("../images/varbase-x-small-emblem-white.png");
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url("../images/varbase-x-small-emblem-white.png");
+			}
+		}
+	}
+
+	.toolbar-icon-system-admin-content {
+		&:before {
+			background-image: url(../images/acacac/file.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/file.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/file.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-system-admin-structure {
+		&:before {
+			background-image: url(../images/acacac/orgchart.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/orgchart.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/orgchart.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-system-themes-page {
+		&:before {
+			background-image: url(../images/acacac/paintbrush.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/paintbrush.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/paintbrush.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-entity-user-collection {
+		&:before {
+			background-image: url(../images/acacac/people.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/people.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/people.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-system-modules-list {
+		&:before {
+			background-image: url(../images/acacac/puzzlepiece.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/puzzlepiece.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/puzzlepiece.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-system-admin-config {
+		&:before {
+			background-image: url(../images/acacac/wrench.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/wrench.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/wrench.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-system-admin-reports {
+		&:before {
+			background-image: url(../images/acacac/barchart.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/barchart.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/barchart.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-help-main {
+		&:before {
+			background-image: url(../images/acacac/questionmark-disc.svg);
+		}
+
+		&:hover {
+			&:before {
+				background-image: url(../images/ffffff/questionmark-disc.svg);
+			}
+		}
+
+		&:active {
+			&:before {
+				background-image: url(../images/ffffff/questionmark-disc.svg);
+			}
+		}
+	}
+
+	.toolbar-icon-admin-toolbar-tools-help.is-active {
+		&:before {
+			background-image: url("../images/varbase-x-small-emblem-white.png");
+		}
+	}
+
+	.toolbar-icon-system-admin-content.is-active {
+		&:before {
+			background-image: url(../images/ffffff/file.svg);
+		}
+	}
+
+	.toolbar-icon-system-admin-structure.is-active {
+		&:before {
+			background-image: url(../images/ffffff/orgchart.svg);
+		}
+	}
+
+	.toolbar-icon-system-themes-page.is-active {
+		&:before {
+			background-image: url(../images/ffffff/paintbrush.svg);
+		}
+	}
+
+	.toolbar-icon-entity-user-collection.is-active {
+		&:before {
+			background-image: url(../images/ffffff/people.svg);
+		}
+	}
+
+	.toolbar-icon-system-modules-list.is-active {
+		&:before {
+			background-image: url(../images/ffffff/puzzlepiece.svg);
+		}
+	}
+
+	.toolbar-icon-system-admin-config.is-active {
+		&:before {
+			background-image: url(../images/ffffff/wrench.svg);
+		}
+	}
+
+	.toolbar-icon-system-admin-reports.is-active {
+		&:before {
+			background-image: url(../images/ffffff/barchart.svg);
+		}
+	}
+
+	.menu-item--expanded {
+		&:hover {
+			.toolbar-icon-help-main {
+				&:before {
+					background-image: url(../images/ffffff/questionmark-disc.svg);
+				}
+			}
+		}
+	}
+
+	.toolbar-icon-help-main.is-active {
+		&:before {
+			background-image: url(../images/ffffff/questionmark-disc.svg);
+		}
+	}
+}
+
+#toolbar-item-administration-search-tray {
+	label {
+		color: #ccc !important;
+		background: transparent;
+	}
+}
+
+[dir="rtl"] {
+	#toolbar-administration.toolbar {
+		.toolbar-tray-horizontal {
+			.menu-item {
+				+ {
+					.menu-item {
+						border-right: none;
+						border-left: none;
+					}
+				}
+			}
+		}
+	}
+
+	#toolbar-administration {
+		.toolbar-tray-horizontal {
+			ul {
+				li.menu-item--expanded {
+					ul {
+						li.menu-item--expanded {
+							position: relative;
+							background-image: none;
+
+							&:after {
+								top: 30%;
+								right: auto;
+								left: 5px;
+								-moz-transform: scaleX(-1);
+								-o-transform: scaleX(-1);
+								-webkit-transform: scaleX(-1);
+								transform: scaleX(-1);
+								-ms-filter: "fliph";
+								filter: fliph;
+							}
+
+							&:hover {
+								&:after {
+									-moz-transform: scaleX(-1);
+									-o-transform: scaleX(-1);
+									-webkit-transform: scaleX(-1);
+									transform: scaleX(-1);
+									transform-origin: 40% top;
+									-ms-filter: "fliph";
+									filter: fliph;
+								}
+							}
+						}
+					}
+
+					.menu-item {
+						&:hover {
+							ul {
+								margin: -39px 200px 0 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.toolbar-tray-horizontal {
+	.toolbar-menu {
+		&:not(:first-child) {
+			li.menu-item--expanded {
+				>a {
+					&:focus {
+						background-image: none !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+span {
+	.cke_button__embed_icon {
+		background-image: url("../images/embed.png") !important;
+	}
+
+	.cke_button__media_icon {
+		background-image: url("../images/embed-media.png") !important;
+	}
+}
