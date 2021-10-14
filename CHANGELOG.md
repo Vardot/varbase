@@ -1,4 +1,223 @@
+# 9.0.2
+
+### Highlighted important changes since Varbase 9.0.1:
+This is a patch (bugfix) release of Varbase 9 and is ready for
+ use on production sites. Learn more about Varbase 9.
+
+* Issue [#3160148](https://www.drupal.org/i/3160148):
+        Added access permission check to "View JSON" operation link
+* Issue [#3160149](https://www.drupal.org/i/3160149):
+        Fixed "View API Documentation" link in entity operations
+* Issue [#3243594](https://www.drupal.org/i/3243594):
+        Added new permissions to Site Admin user role to access "View JSON"
+        and "View API Docs" entity operations
+* Issue [#3232568](https://www.drupal.org/i/3232568):
+        Switched Varbase Entity Definition Update Manager class to extend
+        the vardot/entity-definition-update-manager class library
+* Issue [#3236754](https://www.drupal.org/i/3236754):
+        Removed the Quick Edit module from Varbase install
+* Added drush ~10 to require-dev only for development workflow
+        [#115](https://github.com/Vardot/varbase-project/pull/115)
+        for the default vardot/varbase-project template
+* Added drupal/core-dev ~9 to require-dev only for development workflow
+        [#116](https://github.com/Vardot/varbase-project/pull/116)
+        for the default vardot/varbase-project template
+* Issue [#3243512](https://www.drupal.org/i/3243512):
+        Added lint:yaml and update the package.json for Varbase Installation
+        profile with latest Drupal 9.3.x dev tools
+
+
+### Added since Varbase 9.0.1:
+* Issue [#3233071](https://www.drupal.org/i/3233071):
+        Added lint:yaml and update the package.json for Varbase Core module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3238527](https://www.drupal.org/i/3238527):
+        Added lint:yaml and update the package.json for Varbase Editor module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3230811](https://www.drupal.org/i/3230811):
+        Added lint:yaml and update the package.json for Varbase Layout Builder module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3230881](https://www.drupal.org/i/3230881):
+        Added lint:yaml and update the package.json for Varbase API module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3232675](https://www.drupal.org/i/3232675):
+        Added lint:yaml and update the package.json for Vartheme BS4
+        with latest Drupal 9.3.x dev tools
+* Issue [#3233072](https://www.drupal.org/i/3233072):
+        Added lint:yaml and update the package.json for Varbase Media module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3236760](https://www.drupal.org/i/3236760):
+        Added lint:yaml and update the package.json for Varbase Carousels module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3232518](https://www.drupal.org/i/3232518):
+        Added lint:yaml and update the package.json for Varbase Blog (Corporate Blog) module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3239224](https://www.drupal.org/i/3239224):
+        Added lint:yaml and update the package.json for Varbase FAQs module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3239275](https://www.drupal.org/i/3239275):
+        Added lint:yaml and update the package.json for Varbase Landing Page (Paragraphs) module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3236550](https://www.drupal.org/i/3236550):
+        Added lint:yaml and update the package.json for Varbase Bootstrap Paragraphs module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3239735](https://www.drupal.org/i/3239735):
+        Added lint:yaml and update the package.json for Varbase Media Header module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3240009](https://www.drupal.org/i/3240009):
+        Added lint:yaml and update the package.json for Varbase Search module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3240022](https://www.drupal.org/i/3240022):
+        Added lint:yaml and update the package.json for Varbase SEO module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3240452](https://www.drupal.org/i/3240452):
+        Added lint:yaml and update the package.json for Varbase Style Guide module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3240580](https://www.drupal.org/i/3240580):
+        Added lint:yaml and update the package.json for Varbase Total Control Dashboard module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3240863](https://www.drupal.org/i/3240863):
+        Added lint:yaml and update the package.json for Varbase Workflow module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3241258](https://www.drupal.org/i/3241258):
+        Added lint:yaml and update the package.json for Vartheme Claro admin theme
+        with latest Drupal 9.3.x dev tools
+* Issue [#3239221](https://www.drupal.org/i/3239221):
+        Added lint:yaml and update the package.json for Varbase Email module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3238344](https://www.drupal.org/i/3238344):
+        Added lint:yaml and update the package.json for Varbase Media Hero Slider module
+        with latest Drupal 9.3.x dev tools
+* Issue [#3106983](https://www.drupal.org/i/3106983)
+        by [rjzaar](https://www.drupal.org/u/rjzaar)
+       , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+       : Added a documentation link for Configuring Varbase Media Header
+        with more examples after fixing vmh on install does not set
+        video (external) on Main Media (field_media)
+* Issue [#3128226](https://www.drupal.org/i/3128226):
+        Added Automated Testing for the Varbase SEO module
+* Issue [#3117658](https://www.drupal.org/i/3117658)
+        by [Mohammed J. Razem](https://www.drupal.org/u/mohammed-j-razem)
+       : Added automated tests to test the Javascript Snippets functionality
+* Issue [#3128228](https://www.drupal.org/i/3128228):
+        Added Automated Testing for the Varbase Style Guide module
+* Issue [#3076980](https://www.drupal.org/i/3076980):
+        Added Automated Testing for the Varbase Total Control Dashboard module
+* Issue [#3240880](https://www.drupal.org/i/3240880):
+        Added Automated Testing for the Varbase Workflow module
+* Added -O option to wget for twig-lint.phar
+        [#118](https://github.com/Vardot/varbase-project/pull/118)
+        by [Tolga Ozses](https://github.com/kartagis)
+        for the default vardot/varbase-project template
+
+### Changed since Varbase 9.0.1:
+* Issue [#3170679](https://www.drupal.org/i/3170679):
+        Changed JSON:API Resource overrides to disable all by
+        default for any entity config in JSON API. Only Enable for entity
+        content Content Types, Media, and Taxonomy
+* Issue [#3199617](https://www.drupal.org/i/3199617)
+        by [zterry95](https://www.drupal.org/u/zterry95)
+       : Switched Varbase Core to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3232612](https://www.drupal.org/i/3232612):
+        Switched Varbase API module to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3232617](https://www.drupal.org/i/3232617):
+        Switched Varbase Media to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3239227](https://www.drupal.org/i/3239227):
+        Switched Varbase FAQs to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3239282](https://www.drupal.org/i/3239282):
+        Switched Varbase Landing Page (Paragraphs) to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3232624](https://www.drupal.org/i/3232624):
+        Switched Varbase Layout Builder to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3239580](https://www.drupal.org/i/3239580):
+        Switched Varbase Bootstrap Paragraphs to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3239800](https://www.drupal.org/i/3239800):
+        Switched Varbase Media Header to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3240024](https://www.drupal.org/i/3240024):
+        Switched Varbase SEO to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3240875](https://www.drupal.org/i/3240875):
+        Switched Varbase Workflow to use Entity Definition Update Manager class
+        from vardot/entity-definition-update-manager class library
+* Issue [#3223249](https://www.drupal.org/i/3223249):
+        Changed Varbase API module project Description and images
+* Removed phpunit/phpunit from the services appserver build step in the .lando.yml file
+        [#117](https://github.com/Vardot/varbase-project/pull/117)
+        for the default vardot/varbase-project template
+* Removed duplicate line from README.md 
+        [#119](https://github.com/Vardot/varbase-project/pull/119)
+        by [Tolga Ozses](https://github.com/kartagis)
+        for the default vardot/varbase-project template
+
+### Updates since Varbase 9.0.1:
+* Issue [#3233381](https://www.drupal.org/i/3233381):
+        Updated Entity Embed module from 1.1 to 1.2
+* Issue [#3236467](https://www.drupal.org/i/3236467):
+        Updated Advanced Text Formatter module
+        from 2.1.0 to 2.1.1 ( ~2.0 ) and remove committed patches
+* Issue [#3202379](https://www.drupal.org/i/3202379)
+        by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Updated Taxonomy Menu module from 3.x-dev to ~3.0
+* Issue [#3238384](https://www.drupal.org/i/3238384)
+        : Updated OpenAPI for JSON:API module from 3.0.1 to 3.0.2
+* Issue [#3240886](https://www.drupal.org/i/3240886)
+        by [thejimbirch](https://www.drupal.org/u/thejimbirch)
+        : Updated Tour configurations for changes made to Tour Varbase Core module in Drupal 9.2
+* Issue [#3241720](https://www.drupal.org/i/3241720)
+        by [thejimbirch](https://www.drupal.org/u/thejimbirch)
+        : Updated Tour configurations for changes made to Tour Varbase Media Hero Slider module in Drupal 9.2
+
+### Fixes since Varbase 9.0.1:
+* Issue [#3228612](https://www.drupal.org/i/3228612)
+        by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed not working border classes from the Bootstrap Styles module
+        in Layout Builder pages for a default Bootstrap Theme
+* Issue [#3189326](https://www.drupal.org/i/3189326)
+        by [abu-zakham](https://www.drupal.org/u/abu-zakham)
+        : Added 2 patches for the OpenAPI for JSON:API module to fix issues with 
+        endpoints when JSON:API is configured to be read-only
+* Issue [#3232630](https://www.drupal.org/i/3232630):
+        Fixed Bootstrap Barrio theme schema for configuration files used in Vartheme BS4
+* Issue [#3233388](https://www.drupal.org/i/3233388)
+        by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Fixed not existing method notice for the Advanced Text Formatter
+        module and filter html tags in formatter
+* Issue [#3233478](https://www.drupal.org/i/3233478)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Fixed Validation error when saving untranslatable media field for node translation
+* Issue [#3222166](https://www.drupal.org/i/3222166)
+        : Fixed Entity Storage Exception on Column not found: 1054 Unknown column
+        field_media_carousel_slide_target_id in field list
+* Issue [#3232787](https://www.drupal.org/i/3232787)
+        by [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
+        , [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+        : Fixed Bootstrap Styles module uses of AOS animation external library only.
+        For better performance and GDPR Compliant
+* Issue [#3227717](https://www.drupal.org/i/3227717)
+        by [YousefAnbar](https://www.drupal.org/u/yousefanbar)
+        : Fixed Field field_media_single is unknown error on changing the default media field
+* Issue [#3241711](https://www.drupal.org/i/3241711):
+        Fixed Varbase install message
+* Issue [#3241751](https://www.drupal.org/i/3241751):
+        Fixed Varbase Workflow requires drupal/core ~8.9 || ~9.0.0 with ~8.0 || ~9.0
+* Issue [#3242196](https://www.drupal.org/i/3242196):
+        Fixed to have a better build and test with CircleCI with 4 concurrent jobs
+* Issue [#3239668](https://www.drupal.org/i/3239668)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed by removing config varbase_bootstrap_paragraphs.settings
+        from Varbase installation profile
+
+--------------------------------------------------------------------------------
+
 # 9.0.1
+
 ### Highlighted important changes since Varbase 9.0.0:
 * This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites. Learn more about Varbase 9.
 
@@ -53,6 +272,8 @@
 * Issue [#3223393](https://www.drupal.org/i/3223393):
         Fixed dependencies enable for Configuration Update Manager module by changing
         drupal:config_update to config_update:config_update
+
+--------------------------------------------------------------------------------
 
 # 9.0.0
 
