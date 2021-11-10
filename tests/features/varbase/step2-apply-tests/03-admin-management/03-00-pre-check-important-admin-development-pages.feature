@@ -109,3 +109,14 @@ So that I can use them after the install or update.
       Then I should see "Varbase update instructions"
        And I should see "100%"
        And I should not see "Pending updates"
+
+   @check @local @development @staging
+   Scenario: Check Varbase default Reroute Email settings
+      When I go to "/admin/config/development/reroute_email"
+       And I wait
+      Then I should see "Reroute Email"
+       And the "edit-enable" checkbox is checked
+       And I should see "dev-catchall@vardot.com" value in the "edit-address" input element
+       And I should see "*@vardot.com" value in the "edit-whitelist" input element
+       And the "edit-description" checkbox is checked
+       And the "edit-message" checkbox is checked
