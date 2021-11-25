@@ -40,3 +40,21 @@ So that they will be disabled and not be able to use the site.
       And I press "Log in"
       And I wait
      Then I should see "The username test_authenticated has not been activated or is blocked."
+
+  @javascript @local @development @staging @production
+  Scenario: Check flood control default settings
+    Given I am a logged in user with the "webmaster" user
+     When I go to "/admin/config/people/flood-control"
+      And I wait
+     Then I should see "Flood control"
+      And I should see "50" in the "#edit-ip-limit" element
+      And I should see "1 hour" in the "#edit-ip-window" element
+      And I should see "5" in the "#edit-user-limit" element
+      And I should see "6 hours" in the "#edit-user-window" element
+
+  @javascript @local @development @staging @production
+  Scenario: Check that the Site Admin have access to the flood unblock page
+    Given I am a logged in user with the "test_site_admin" user
+     When I go to "/admin/people/flood-unblock"
+      And I wait
+     Then I should see "Flood Unblock"
