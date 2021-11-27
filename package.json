@@ -1,7 +1,7 @@
 {
   "name": "varbase",
   "private": true,
-  "description": "Varbase: The Ultimate Drupal 9 CMS Starter Kit (Bootstrap Ready)",
+  "description": "Varbase: The Ultimate Drupal 9 CMS Starter Kit (Bootstrap Ready) | by Vardot",
   "license": "GPL-2.0",
   "main": "gulpfile.js",
   "engines": {
