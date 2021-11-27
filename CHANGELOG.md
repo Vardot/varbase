@@ -1,3 +1,114 @@
+# 9.0.3
+
+### Highlighted important changes since Varbase 9.0.2:
+* This is a **patch (bugfix) release of Varbase 9** and is ready for use
+ on production sites.
+  [Learn more about Varbase 9](https://docs.varbase.vardot.com/developers/understanding-varbase/basic-concepts).
+* Updated Drupal core to 9.2.10 for new builds. which is
+ a **patch (bugfix) release of Drupal 9** and is ready for use on production sites.
+  [Learn more about Drupal 9](https://www.drupal.org/about/9).
+* Issue [#3251062](https://www.drupal.org/i/3251062):
+        Updated Bootstrap library from 4.6.0 to 4.6.1
+
+### Added since Varbase 9.0.2:
+* Issue [#3227277](https://www.drupal.org/i/3227277):
+        Added "Authored by" filter to admin content views in Varbase Admin
+* Issue [#3249476](https://www.drupal.org/i/3249476):
+        Added "Authored by" filter to Media Table and Media Grid views in Varbase Media
+* Issue [#3248635](https://www.drupal.org/i/3248635):
+        Added Reroute Email ~2.0 module and enable with default config to
+         Varbase Development module
+* Issue [#3248644](https://www.drupal.org/i/3248644):
+        Added a formbit on install to setup the rerouting email address configs
+        for the Reroute Email module with default config checked for Varbase Development
+* Issue [#3187308](https://www.drupal.org/i/3187308):
+        Added Flood Control module to Varbase Security for login attempt limiting
+
+* Issue [#3245156](https://www.drupal.org/i/3245156):
+        Added the Block Library module ( ~1.0 ) with basic config for available block types
+* Issue [#3244846](https://www.drupal.org/i/3244846)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Added Bootstrap Border Color (side) variations to Bootstrap
+        Base Utilities list in Vartheme BS4
+* Issue [#3244910](https://www.drupal.org/i/3244910)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       , [n.ghunaim](https://www.drupal.org/u/nghunaim)
+       : Added a specific class when having background bg-color, bg-image, bg-video options
+* Issue [#3233072](https://www.drupal.org/i/3233072):
+        Added lint:yaml and update the package.json for Varbase Media
+        module with latest Drupal 9.3.x dev tools
+
+### Changed since Varbase 9.0.2:
+* Issue [#3250823](https://www.drupal.org/i/3250823):
+        Removed the Flood Unblock module as it will be discontinued by its maintainers
+        in favour of using the Flood Control module instead, which
+        now contains the functionality
+* Issue [#3249434](https://www.drupal.org/i/3249434):
+        Changed default width for selected admin exposed filters
+* Issue [#3248270](https://www.drupal.org/i/3248270):
+        Removed the Hero Slider region TWIG template file from Vartheme BS4
+* Issue [#3245803](https://www.drupal.org/i/3245803):
+        Allowed Varbase YouTube Import module to work with Composer ~2.0
+
+### Updates since Varbase 9.0.2:
+* Issue [#3246789](https://www.drupal.org/i/3246789):
+        Updated Fast 404 module from 2.x-dev to 2.0-alpha6 ( ~2.0 )
+* Issue [#3246778](https://www.drupal.org/i/3246778):
+        Updated Layout Builder Library module from 1.0-beta2 to 1.0-beta3 ( ~1.0 )
+        and remove committed patches
+* Issue [#3246796](https://www.drupal.org/i/3246796):
+        Updated Maxlength module from ~1.0 to ~2.0
+* Issue [#3246802](https://www.drupal.org/i/3246802):
+        Updated Maxlength module from ~1.0 to ~2.0 for the Varbase Landing Page (Paragraphs) module
+* Issue [#3246803](https://www.drupal.org/i/3246803):
+        Updated Maxlength module from ~1.0 to ~2.0 for the Varbase Media Hero Slider module
+* Issue [#3246800](https://www.drupal.org/i/3246800):
+        Updated Maxlength module from ~1.0 to ~2.0 for the Varbase FAQs module
+* Issue [#3246801](https://www.drupal.org/i/3246801):
+        Updated Maxlength module from ~1.0 to ~2.0 for the Varbase Bootstrap Paragraph module
+
+### Fixes since Varbase 9.0.2:
+* Issue [#3247625](https://www.drupal.org/i/3247625)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Fixed admin Content and User Admin People view old config
+        after change of schema config by the Views Bulk Operation module
+* Issue [#3218138](https://www.drupal.org/i/3218138)
+        by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+       , [ahillio](https://www.drupal.org/u/ahillio)
+       , [alexpott](https://www.drupal.org/u/alexpott)
+       : Fixed Invalid argument supplied for foreach() UpdateChecklist.php
+* Issue [#3249335](https://www.drupal.org/i/3249335)
+       : Fixed Media Table and Media Grid view old config after change
+        of schema config by the Views Bulk Operation module
+* Issue [#3244168](https://www.drupal.org/i/3244168)
+        by mohammad faqeh
+       : Fixed style for inline entity table inside layout builder modal
+* Issue [#3244849](https://www.drupal.org/i/3244849)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Fixed border color (side) variation classes in Bootstrap
+        Styles for Varbase Layout Builder default configs
+* Issue [#3214993](https://www.drupal.org/i/3214993)
+        by [solanas](https://www.drupal.org/u/solanas)
+       , [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
+       : Fix not working Gallery media type display mode with Slick Carousel
+        in text formatted with the CKEditor
+* Issue [#3245763](https://www.drupal.org/i/3245763)
+        by [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Fixed missing CircleCI commit branch filter
+* Issue [#3245889](https://www.drupal.org/i/3245889)
+        by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+       : Fixed broken Pager when items been selected by the views bulk operation
+* Issue [#3246182](https://www.drupal.org/i/3246182)
+        by [RajabNatshah](https://www.drupal.org/u/rajabnatshah)
+       , [Delana_Alkurdi](https://www.drupal.org/u/delana_alkurdi)
+       : Fixed Media library from Drupal core on user can add more than
+        one image if he swipe to add them from the next page from the media library window
+* Issue [#3245768](https://www.drupal.org/i/3245768)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Fixed IEF complex widget: Re-ordering issue
+
+--------------------------------------------------------------------------------
+
 # 9.0.2
 
 ### Highlighted important changes since Varbase 9.0.1:
