@@ -35,7 +35,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
        And I wait for 1 second
        And I select the "text_and_image" paragraph component
        And I wait for AJAX to finish
-       And I scrolldown
+       And I scroll down
       Then I should see "Text and image"
        And I should see "No media items are selected."
       When I press "field_image-media-library-open-button-field_lp_paragraphs-0-subform"
@@ -49,7 +49,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
        And I wait for AJAX to finish
        And I press "dialog-submit"
        And I wait for AJAX to finish
-       And I scrollup
+       And I scroll up
       Then I should see "The maximum number of media items have been selected."
       When I click "Text"
        And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."

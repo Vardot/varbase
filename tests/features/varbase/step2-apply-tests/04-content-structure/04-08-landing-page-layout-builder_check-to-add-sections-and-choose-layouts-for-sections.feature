@@ -17,6 +17,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      Then I should see "Landing page (Layout Builder) Full Width - No Background Color - Text only has been created"
       And I should see "This layout builder tool allows you to configure the layout of the main content area."
      When I scroll to the bottom of the page
+      And I wait 1s
      Then I should see "Add section at end of layout"
      When I click "Add section at end of layout"
       And I wait for AJAX to finish

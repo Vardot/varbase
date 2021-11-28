@@ -1500,13 +1500,13 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrolldown
-   * Example #2:  And I scrolldown.
+   * Example #1: When I scroll down
+   * Example #2:  And I scroll down.
    *
-   * @When /^(?:|I )scrolldown$/
+   * @When /^(?:|I )scroll down$/
    */
   public function iScrolldown() {
-    $this->getSession()->executeScript("javascript:window.scrollBy(200,350)");
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,350)");
   }
 
   /**
@@ -1514,9 +1514,9 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrollup.
+   * Example #1: When I scroll up.
    *
-   * @When /^(?:|I )scrollup$/
+   * @When /^(?:|I )scroll up$/
    */
   public function iScrollup() {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-350)");
@@ -1527,13 +1527,13 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrolldown 800
-   * Example #2:  And I scrolldown 2000
+   * Example #1: When I scroll down 800
+   * Example #2:  And I scroll down 2000
    *
-   * @When /^(?:|I )scrolldown (?P<value>\d+)$/
+   * @When /^(?:|I )scroll down (?P<value>\d+)$/
    */
   public function iScrolldownWithValue($value) {
-    $this->getSession()->executeScript("javascript:window.scrollBy(200," . $value . ")");
+    $this->getSession()->executeScript("javascript:window.scrollBy(0," . $value . ")");
   }
 
   /**
@@ -1541,9 +1541,9 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrollup 1000
+   * Example #1: When I scroll up 1000
    *
-   * @When /^(?:|I ) scrollup (?P<value>\d+)$/
+   * @When /^(?:|I ) scroll up (?P<value>\d+)$/
    */
   public function iScrollupWithValue($value) {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-" . $value . ")");
