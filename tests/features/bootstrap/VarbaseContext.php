@@ -1503,7 +1503,7 @@ JS;
    * Example #1: When I scrolldown
    * Example #2:  And I scrolldown.
    *
-   * @When I scrolldown
+   * @When /^(?:|I )scrolldown$/
    */
   public function iScrolldown() {
     $this->getSession()->executeScript("javascript:window.scrollBy(200,350)");
@@ -1516,7 +1516,7 @@ JS;
    *
    * Example #1: When I scrollup.
    *
-   * @When I scrollup
+   * @When /^(?:|I )scrollup$/
    */
   public function iScrollup() {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-350)");
@@ -1530,7 +1530,7 @@ JS;
    * Example #1: When I scrolldown 800
    * Example #2:  And I scrolldown 2000
    *
-   * @When I scrolldown (?P<value>\d+)
+   * @When /^(?:|I )scrolldown (?P<value>\d+)$/
    */
   public function iScrolldownWithValue($value) {
     $this->getSession()->executeScript("javascript:window.scrollBy(200," . $value . ")");
@@ -1543,7 +1543,7 @@ JS;
    *
    * Example #1: When I scrollup 1000
    *
-   * @When I scrollup (?P<value>\d+)
+   * @When /^(?:|I ) scrollup (?P<value>\d+)$/
    */
   public function iScrollupWithValue($value) {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-" . $value . ")");
@@ -1557,8 +1557,9 @@ JS;
    * Example #1: When I scroll to top
    * Example #2: When I scroll to the top
    * Example #3: When I scroll to the top of the page
+   * Example #4: And scroll to top
    *
-   * @When I scroll to (?:|the )top(?:| of the page)
+   * @When /^(?:|I )scroll to (?:|the )top(?:| of the page)$/
    */
   public function iScrollToTop() {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,0)");
@@ -1570,10 +1571,11 @@ JS;
    * Varbase Context #varbase.
    *
    * Example #1: When I scroll to bottom
-   * Example #2: When I scroll to the bottom
+   * Example #2: And I scroll to the bottom
    * Example #3: When I scroll to the bottom of the page
+   * Example #4: And scroll to bottom
    *
-   * @When I scroll to (?:|the )bottom(?:| of the page)
+   * @When /^(?:|I )scroll to (?:|the )bottom(?:| of the page)$/
    */
   public function iScrollToBottom() {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,document.body.scrollHeight)");

@@ -18,10 +18,10 @@ So that I can reset my password for the account
       And I wait
      Then I should see "Username or email address"
      When I fill in "not.existing.email@vardot.com" for "Username"
-      And I scroll to bottom
+      And I scroll to the bottom
       And I press the "edit-submit" button
       And I wait
-      And I scroll to bottom
+      And I scroll to the bottom
       And I fill in "not.existing.email@vardot.com" for "Username"
       And I wait 8 seconds
       And I press the "edit-submit" button
