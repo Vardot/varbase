@@ -1,13 +1,13 @@
 # Varbase Scripts
 
-## Vartheme BS4 Scripts
+## Vartheme BS5 Scripts
 
 ### Quick tip on how to use this script command file.
 
 Default settings could be changed in scripts.settings.yml
 
 
-# Create a Vartheme BS4 sub theme ( Bootstrap 4 ) SASS
+# Create a Vartheme BS5 sub theme ( Bootstrap 4 ) SASS
 
 Before we generate the new sub theme we need to have the following tools
 * 1. npm and nodejs : Helps getting the bootstrap 4 and popper packages. 
@@ -41,13 +41,13 @@ After we make sure that we do have all the tools we could change directory
  in the terminal to:
 
 ```
-$ cd PROJECT_DIR_NAME/docroot/themes/contrib/vartheme_bs4/scripts
-$ bash ./create-new-vartheme-bs4.sh "THEME_NAME"
+$ cd PROJECT_DIR_NAME/docroot/themes/contrib/vartheme_bs5/scripts
+$ bash ./create-new-vartheme-bs5.sh "THEME_NAME"
 ```
 
 We can use
 ```
-$ cd PROJECT_DIR_NAME/docroot/themes/contrib/vartheme_bs4
+$ cd PROJECT_DIR_NAME/docroot/themes/contrib/vartheme_bs5
 yarn theme:create-sub-theme "THEME_NAME"
 ``
 

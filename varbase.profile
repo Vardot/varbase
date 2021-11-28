@@ -554,10 +554,10 @@ function varbase_after_install_finished(array &$install_state) {
 
   // Import managed config to the active config at this time of install.
   $profile_path_managed = drupal_get_path('profile', 'varbase') . '/config/managed/';
-  $managed_config_path = $profile_path_managed . 'block.block.vartheme_bs4_copyright.yml';
+  $managed_config_path = $profile_path_managed . 'block.block.vartheme_bs5_copyright.yml';
   $managed_config_content = file_get_contents($managed_config_path);
   $managed_config_data = (array) Yaml::parse($managed_config_content);
-  $managed_config_factory = \Drupal::configFactory()->getEditable('block.block.vartheme_bs4_copyright');
+  $managed_config_factory = \Drupal::configFactory()->getEditable('block.block.vartheme_bs5_copyright');
   $managed_config_factory->setData($managed_config_data)->save(TRUE);
 
   // Entity updates to clear up any mismatched entity and/or field definitions
