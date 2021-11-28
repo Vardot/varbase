@@ -22,7 +22,7 @@ install:
   - file
 themes:
   - bootstrap_barrio
-  - vartheme_bs4
+  - vartheme_bs5
   - seven
   - claro
   - vartheme_claro
