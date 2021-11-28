@@ -138,7 +138,7 @@ commands:
             cd /var/www/html/test/
             sudo chmod 775 .
             sudo chown www-data:circleci .
-            composer create-project vardot/varbase:9.0.x varbase --stability dev --no-interaction -vvv
+            composer create-project vardot/varbase:9.1.x varbase --stability dev --no-interaction -vvv
             cp -r /home/circleci/project /var/www/html/test/varbase/docroot/profiles/varbase
             cd /var/www/html/test/varbase
             sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
@@ -274,22 +274,22 @@ workflows:
             tags:
               only: /^9.*/
             branches:
-              only: /^9.0.x/
+              only: /^9.1.x/
       - varbase-testing-02-user-management-03-admin-management:
           filters:
             tags:
               only: /^9.*/
             branches:
-              only: /^9.0.x/
+              only: /^9.1.x/
       - varbase-testing-04-content-structure:
           filters:
             tags:
               only: /^9.*/
             branches:
-              only: /^9.0.x/
+              only: /^9.1.x/
       - varbase-testing-05-content-management:
           filters:
             tags:
               only: /^9.*/
             branches:
-              only: /^9.0.x/
+              only: /^9.1.x/

@@ -8,13 +8,13 @@
  This page can help  you to have the list all steps, which you need to run the
  Behat Gherkin Features to test a varbase website in your localhost machine.
 
-To test varbase 9.0.x in the right way you will need to build varbase using
+To test varbase 9.1.x in the right way you will need to build varbase using
 the composer.
 
 ## Create a Varbase project with [Composer](https://getcomposer.org/download/):
 
 ```
-composer create-project vardot/varbase:9.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/varbase:9.1.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 --------------------------------------------------------------------------------
