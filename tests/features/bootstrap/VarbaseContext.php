@@ -1523,6 +1523,63 @@ JS;
   }
 
   /**
+   * Scroll down in the current status of the page and pass a value.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scrolldown 800
+   * Example #2:  And I scrolldown 2000
+   *
+   * @When I scrolldown (?P<value>\d+)
+   */
+  public function iScrolldownWithValue($value) {
+    $this->getSession()->executeScript("javascript:window.scrollBy(200," . $value . ")");
+  }
+
+  /**
+   * Scroll up in the current status of the page and pass a value.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scrollup 1000
+   *
+   * @When I scrollup (?P<value>\d+)
+   */
+  public function iScrollupWithValue($value) {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,-" . $value . ")");
+  }
+
+  /**
+   * Scroll to top
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to top
+   * Example #2: When I scroll to the top
+   * Example #3: When I scroll to the top of the page
+   *
+   * @When I scroll to (?:|the )top(?:| of the page)
+   */
+  public function iScrollToTop() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,0)");
+  }
+
+  /**
+   * Scroll to bottom
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to bottom
+   * Example #2: When I scroll to the bottom
+   * Example #3: When I scroll to the bottom of the page
+   *
+   * @When I scroll to (?:|the )bottom(?:| of the page)
+   */
+  public function iScrollToBottom() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,document.body.scrollHeight)");
+  }
+
+  /**
    * Check if the Image media browser opened.
    *
    * Varbase Context #varbase.
