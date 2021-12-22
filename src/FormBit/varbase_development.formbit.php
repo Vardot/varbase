@@ -21,7 +21,7 @@ function varbase_development_get_editable_config_names() {
     ],
     'reroute_email.settings' => [
       'address' => 'dev-catchall@vardot.com',
-      'whitelist' => '*@vardot.com',
+      'allowed' => '*@vardot.com',
     ],
   ];
 
@@ -56,16 +56,18 @@ function varbase_development_build_formbit(array &$formbit, FormStateInterface &
     '#type' => 'textfield',
     '#title' => t('Rerouting email addresses'),
     '#default_value' => 'dev-catchall@vardot.com',
-    '#description' => t('Provide a space, comma, or semicolon-delimited list of email addresses.<br/>Every destination email address which is not on "Whitelisted email addresses" list will be rerouted to these addresses.<br/>If the field is empty and no value is provided, all outgoing emails would be aborted and the email would be recorded in the recent log entries (if enabled).'),
-    '#element_validate' => ['validate_formbit_emails'],
+    '#description' => t('Provide a comma-delimited list of email addresses. Every destination email address which is not fit with "Skip email rerouting for" lists will be rerouted to these addresses.<br/>If this field is empty and no value is provided, all outgoing emails would be aborted and the email would be recorded in the recent log entries (if enabled).'),
+    '#element_validate' => ['validate_formbit_multiple_emails', 'validate_formbit_multiple_unique'],
+    '#reroute_config_delimiter' => ',',
   ];
 
-  $formbit['whitelist'] = [
-    '#type' => 'textfield',
-    '#title' => t('Whitelisted email addresses'),
+  $formbit['allowed'] = [
+    '#type' => 'textarea',
+    '#rows' => 2,
+    '#title' => t('Skip email rerouting for email addresses:'),
     '#default_value' => '*@vardot.com',
-    '#description' => ('Provide a space, comma, or semicolon-delimited list of email addresses to pass through. <br/>Every destination email address which is not on this list will be rerouted.<br/>If the field is empty and no value is provided, all outgoing emails would be rerouted.<br/>We can use wildcard email "*@example.com" to whitelist all emails by the domain.'),
-    '#element_validate' => ['validate_formbit_emails'],
+    '#description' => t('Provide a line-delimited list of email addresses to pass through. All emails to addresses from this list will not be rerouted.<br/>A patterns like "*@example.com" and "myname+*@example.com" can be used to add all emails by its domain or the pattern.'),
+    '#element_validate' => ['validate_formbit_multiple_emails', 'validate_formbit_multiple_unique'],
   ];
 
 }
@@ -86,7 +88,7 @@ function varbase_development_submit_formbit(array $editable_config_values) {
   // Save the changed values for reroute_email.settings config.
   $rerouteEmailSettingsConfig = \Drupal::configFactory()->getEditable('reroute_email.settings');
   $rerouteEmailSettingsConfig->set('address', $editable_config_values['reroute_email.settings']['address']);
-  $rerouteEmailSettingsConfig->set('whitelist', $editable_config_values['reroute_email.settings']['whitelist']);
+  $rerouteEmailSettingsConfig->set('allowed', $editable_config_values['reroute_email.settings']['allowed']);
   $rerouteEmailSettingsConfig->save(TRUE);
 }
 
@@ -98,7 +100,7 @@ function varbase_development_submit_formbit(array $editable_config_values) {
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  *   The current state of the form.
  */
-function validate_formbit_emails(array $element, FormStateInterface $form_state) {
+function validate_formbit_multiple_emails(array $element, FormStateInterface $form_state) {
   // Allow only valid email addresses.
   $addresses = formbit_reroute_email_split_string($form_state->getValue($element['#name']));
   $email_validator = new EmailValidator();
@@ -112,6 +114,20 @@ function validate_formbit_emails(array $element, FormStateInterface $form_state)
   // String "email@example.com; ;; , ,," save just as "email@example.com".
   // This will be ignored if any validation errors occur.
   $form_state->setValue($element['#name'], implode(',', $addresses));
+}
+
+/**
+ * Validate multiple email addresses field.
+ *
+ * @param array $element
+ *   A field array to validate.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The current state of the form.
+ */
+function validate_formbit_multiple_unique(array $element, FormStateInterface $form_state): void {
+  // String "email@example.com; ;; , ,," save just as "email@example.com".
+  // This will be ignored if any validation errors occur.
+  $form_state->setValue($element['#name'], implode($element['#reroute_config_delimiter'] ?? PHP_EOL, formbit_reroute_email_split_string($form_state->getValue($element['#name']))));
 }
 
 /**
@@ -133,4 +149,21 @@ function formbit_reroute_email_split_string($string) {
   $array = array_unique($array);
 
   return $array;
+}
+
+/**
+ * Adjust rows value according to the content size.
+ *
+ * @param array $element
+ *   The render array to add the access denied message to.
+ *
+ * @return array
+ *   The updated render array.
+ */
+function validate_formbit_textarea_rows_value(array $element): array {
+  $size = substr_count($element['#default_value'], PHP_EOL) + 1;
+  if ($size > $element['#rows']) {
+    $element['#rows'] = min($size, 10);
+  }
+  return $element;
 }
