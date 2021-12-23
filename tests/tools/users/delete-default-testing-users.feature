@@ -23,11 +23,11 @@ Feature: Delete default testing users.
      When I click "Edit"
       And I wait
      Then I should see "test_authenticated"
-     When I press "Cancel account"
+     When I press "Confirm"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_authenticated?"
-     When I select the radio button "Delete the account and its content."
-      And I press "Cancel account"
+     When I select the radio button "Delete the account and its content. This action cannot be undone."
+      And I press "Confirm"
       And I wait for the batch job to finish
      Then I should see "test_authenticated has been deleted."
 
@@ -45,11 +45,11 @@ Feature: Delete default testing users.
      When I click "Edit"
       And I wait
      Then I should see "test_editor"
-     When I press "Cancel account"
+     When I press "Confirm"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_editor?"
-     When I select the radio button "Delete the account and its content."
-      And I press "Cancel account"
+     When I select the radio button "Delete the account and its content. This action cannot be undone."
+      And I press "Confirm"
       And I wait for the batch job to finish
      Then I should see "test_editor has been deleted."
 
@@ -66,11 +66,11 @@ Feature: Delete default testing users.
      When I click "Edit"
       And I wait
      Then I should see "test_content_admin"
-     When I press "Cancel account"
+     When I press "Confirm"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_content_admin?"
-     When I select the radio button "Delete the account and its content."
-      And I press "Cancel account"
+     When I select the radio button "Delete the account and its content. This action cannot be undone."
+      And I press "Confirm"
       And I wait for the batch job to finish
      Then I should see "test_content_admin has been deleted."
 
@@ -88,11 +88,11 @@ Feature: Delete default testing users.
      When I click "Edit"
       And I wait
      Then I should see "test_site_admin"
-     When I press "Cancel account"
+     When I press "Confirm"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_site_admin?"
-     When I select the radio button "Delete the account and its content."
-      And I press "Cancel account"
+     When I select the radio button "Delete the account and its content. This action cannot be undone."
+      And I press "Confirm"
       And I wait for the batch job to finish
      Then I should see "test_site_admin has been deleted."
 
@@ -110,10 +110,10 @@ Feature: Delete default testing users.
      When I click "Edit"
       And I wait
      Then I should see "test_super_admin"
-     When I press "Cancel account"
+     When I press "Confirm"
       And I wait
      Then I should see "Are you sure you want to cancel the account test_super_admin?"
-     When I select the radio button "Delete the account and its content."
-      And I press "Cancel account"
+     When I select the radio button "Delete the account and its content. This action cannot be undone."
+      And I press "Confirm"
       And I wait for the batch job to finish
      Then I should see "test_super_admin has been deleted."
