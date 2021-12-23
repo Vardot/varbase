@@ -22,7 +22,7 @@ Feature: Delete default testing users
       And I select "Cancel the selected user accounts" from "action"
      When I press "Apply to selected items"
       And I wait
-      And I select the radio button "Delete the account and its content."
+      And I select the radio button "Delete the account and its content. This action cannot be undone."
       And I press "Apply"
       And I wait 15s
      Then I should see "Action processing results: (6)."

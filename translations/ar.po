@@ -5805,7 +5805,7 @@ msgstr "مُدخل @argument"
 msgid "Administer forums"
 msgstr "إدارة المنتديات"
 
-msgid "Cancel account"
+msgid "Confirm"
 msgstr "إلغاء الحساب"
 
 msgid "Dependencies"
@@ -8636,7 +8636,7 @@ msgstr "عند إلغاء هذه الحسابات"
 msgid "Are you sure you want to cancel these user accounts?"
 msgstr "هل أنت متأكد من إلغاء هذه الحسابات؟"
 
-msgid "Cancel accounts"
+msgid "Confirms"
 msgstr "إلغاء الحسابات"
 
 msgid "Add lowercase letters"
@@ -9410,7 +9410,7 @@ msgstr ""
 "حذف الحساب وجعل محتوياته ملكا "
 "للمستخدم %anonymous-name."
 
-msgid "Delete the account and its content."
+msgid "Delete the account and its content. This action cannot be undone."
 msgstr "حذف الحساب ومحتوياته."
 
 msgid "String settings"

@@ -39,10 +39,10 @@ So that they will be able to use the site.
      Then I should see "Tester"
      When I click "Edit" in the "Tester" row
       And I wait
-      And I press "Cancel account"
+      And I press "Confirm"
       And I wait
      Then I should see "Are you sure you want to cancel the account Tester?"
-     When I select the radio button "Delete the account and its content."
-      And I press "Cancel account"
+     When I select the radio button "Delete the account and its content. This action cannot be undone."
+      And I press "Confirm"
       And I wait 10s
      Then I should see "People"
