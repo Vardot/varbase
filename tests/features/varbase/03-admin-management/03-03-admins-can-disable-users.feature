@@ -9,6 +9,7 @@ So that they will be disabled and not be able to use the site.
       And I wait
      When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
+      And I scroll to bottom
       And I press "Log in"
       And I wait
      Then I should see "Normal user"
@@ -37,6 +38,7 @@ So that they will be disabled and not be able to use the site.
       And I wait
      When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
+      And I scroll to bottom
       And I press "Log in"
       And I wait
      Then I should see "The username Normal user has not been activated or is blocked."

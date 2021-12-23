@@ -9,6 +9,7 @@ So that I will be able to view/add/edit/ or delete content in the site
       And I wait
      When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
+      And I scroll to bottom
       And I press "Log in"
       And wait
      Then I should see "Normal user"
@@ -19,6 +20,7 @@ So that I will be able to view/add/edit/ or delete content in the site
       And I wait
      When I fill in " " for "Username"
       And I fill in " " for "Password"
+      And I scroll to bottom
      When I press "Log in"
       And wait
      Then I should see "Username field is required"
