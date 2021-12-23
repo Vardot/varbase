@@ -76,6 +76,14 @@
     "secure-http": false,
     "preferred-install": {
       "drupal/core": "dist"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "oomphinc/composer-installers-extender": true,
+      "drupal/core-composer-scaffold": true,
+      "drupal/core-project-message": true,
+      "vardot/varbase-updater": true
     }
   },
   "autoload": {
