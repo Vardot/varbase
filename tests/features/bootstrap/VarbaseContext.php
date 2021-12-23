@@ -68,7 +68,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase. If you want to see the list of users or add yours you can go and
    * edit the behat.varbase.yml file under the varbase_users list.
    *
-   * Example: I am a logged in user with the username "test_content_admin"
+   * Example: I am a logged in user with the username "Content admin"
    *
    * @Given /^I am a logged in user with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
    * @Then /^I login with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
@@ -93,6 +93,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
         $page->fillField('name', $username);
         $page->fillField('pass', $password);
+        $this->iScrollToBottom();
+        $this->iWaitForSeconds(2);
         $submit = $page->findButton('op');
         $submit->click();
       }
@@ -125,6 +127,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
       $page->fillField('name', $username);
       $page->fillField('pass', $password);
+      $this->iScrollToBottom();
+      $this->iWaitForSeconds(2);
       $submit = $page->findButton('op');
       $submit->click();
     }
@@ -664,7 +668,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
   }
 
-
   /**
    * Section Configuration Functions
    *
@@ -878,6 +881,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $animation = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$anime') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-animation-scroll-effects')]");
     $animation->click();
   }    
+
 
   /**
    * Images Functions.
@@ -1271,7 +1275,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeValueInTheInputElement($text, $selector) {
 
-    $elements = $this->getSession()->getPage()->findAll('xpath', "//input[@id='{$selector}']");
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@id='{$selector}']");
     if (empty($elements)) {
       throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
     }
