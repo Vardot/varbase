@@ -2,7 +2,7 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
 As a logged in user with a permission to mange entity queues
 I want to be able to add and remove entities to any allowed entity queue.
 
-  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Upload the Flag Earth file
     Given I am a logged in user with the "Site admin" user
      When I go to "/media/add/image"
