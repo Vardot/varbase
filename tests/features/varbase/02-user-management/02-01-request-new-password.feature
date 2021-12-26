@@ -17,14 +17,9 @@ So that I can reset my password for the account
      When I go to "/user/password"
       And I wait 6s
      Then I should see "Username or email address"
-     When I fill in "not.existing.email@vardot.com" for "Username"
+     When I fill in "not.existing.email@vardot.com" for "Username or email address"
       And I scroll to the bottom
       And I wait 2s
       And I press the "Submit" button
       And I wait
-      And I scroll to the bottom
-      And I fill in "not.existing.email@vardot.com" for "Username"
-      And I wait 8 seconds
-      And I press the "Submit" button
-      And I wait
-     Then I should see "Login with"
+     Then I should see "If the username or email address exists and is active, further instructions have been sent to your email address."
