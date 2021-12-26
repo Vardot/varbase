@@ -6,10 +6,11 @@ So that they will be disabled and not be able to use the site.
   @javascript @local @development @staging @production
   Scenario: Check if the Normal user user is not blocked and can login
     Given I am on "/user/login"
-      And I wait
+      And I wait 6s
      When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I scroll to bottom
+      And I wait 2s
       And I press "Log in"
       And I wait
      Then I should see "Normal user"
@@ -35,10 +36,11 @@ So that they will be disabled and not be able to use the site.
   @javascript @local @development @staging @production
   Scenario: Check if the blocked user with user id of Test Blocked User ID can or can not login
     Given I am on "/user/login"
-      And I wait
+      And I wait 6s
      When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I scroll to bottom
+      And I wait 2s
       And I press "Log in"
       And I wait
      Then I should see "The username Normal user has not been activated or is blocked."
