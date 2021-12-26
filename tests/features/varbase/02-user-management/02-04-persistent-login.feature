@@ -22,7 +22,8 @@ Feature: User Management - Have persistent login options and configurations
      When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I scroll to bottom
+      And I wait 2s
       And I check the box "Remember me"
-      And I press the "edit-submit" button
+      And I press the "Log in" button
       And I wait
      Then I should see "Normal user"

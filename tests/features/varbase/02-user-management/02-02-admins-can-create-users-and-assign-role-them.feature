@@ -41,7 +41,7 @@ So that they will be able to use the site.
      When I click "Edit" in the "Tester" row
       And I wait
       And I scroll to bottom
-      And I press "Confirm"
+      And I press "Cancel account"
       And I wait
      Then I should see "Are you sure you want to cancel the account Tester?"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
