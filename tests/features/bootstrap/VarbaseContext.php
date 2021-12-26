@@ -680,9 +680,9 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase
    *
    * Example #1: When I select the "Edge to Edge" container type
-   * Example #2: And I select the "Boxed" container type
+   * Example #2:  And I select the "Boxed" container type
    *
-   * @Then I select the :arg1 container type
+   * @When I select the :arg1 container type
    */
   public function iSelectTheContainerType($name) {
     $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$name') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-type')]");
@@ -695,9 +695,9 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase
    *
    * Example #1: When I select the "Tiny" container width
-   * Example #2: And I select the "Narrow" container width
+   * Example #2:  And I select the "Narrow" container width
    *
-   * @Then I select the :arg1 container width
+   * @When I select the :arg1 container width
    */
   public function iSelectTheContainerWidth($width) {
     $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$width') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-width')]");
@@ -709,11 +709,11 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   *
   * Varbase Context #varbase
   *
-  * Example #1: Then I select the "md" "33% 67%" breakpoint
-  * Example #2: Then I select the "xs" "75% 25%" breakpoint
+  * Example #1: When I select the "md" "33% 67%" breakpoint
+  * Example #2:  And I select the "xs" "75% 25%" breakpoint
   *
   *
-  * @Then I select the :arg1 :arg2 breakpoint
+  * @When I select the :arg1 :arg2 breakpoint
   */
   public function iSelectTheBreakpoint($size, $point) {
     $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class,'$size') and contains(.,'$point')]");
@@ -725,9 +725,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example: And I add gutters
+   * Example #1: When I add gutters
+   * Example #2:  And I add gutters
    *
-   * @Then I add gutters
+   * @When I add gutters
    */
   public function iAddGutters() {
     $with_gutters = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'With Gutters')]");
@@ -739,9 +740,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example: And I remove gutters between columns
+   * Example #1: When I remove gutters between columns
+   * Example #2:  And I remove gutters between columns
    *
-   * @Then I remove gutters between columns
+   * @When I remove gutters between columns
    */
   public function iRemoveGuttersBetweenColumns() {
     $no_gutters = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'vlb_gutters_between')]");
@@ -753,9 +755,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example: When I move to the styles tab
+   * Example #1: When I move to the styles tab
+   * Example #2:  And I move to the styles tab
    *
-   * @Then I move to the styles tab
+   * @When I move to the styles tab
    */
   public function iMoveToTheStylesTab() {
     $styles_tab = $this->getSession()->getPage()->find('xpath', "//a[contains(@data-target, 'appearance')]");
@@ -767,10 +770,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: And I open the "Background" settings menu
-   * Example #2: When I open the "Border" settings menu
+   * Example #1: When I open the "Background" settings menu
+   * Example #2:  And I open the "Border" settings menu
    *
-   * @Then I open the :arg1 settings menu
+   * @When I open the :arg1 settings menu
    */
   public function iOpenTheSettingsMenu($menu) {
     $menu = $this->getSession()->getPage()->find('xpath', "//span[contains(., '$menu') and contains(@class, 'bs-group-title')]");
@@ -782,10 +785,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: Then I select the "Primary" background color
-   * Example #2: And I select the "Light" background color
+   * Example #1: When I select the "Primary" background color
+   * Example #2:  And I select the "Light" background color
    *
-   * @Then I select the :arg1 background color
+   * @When I select the :arg1 background color
    */
   public function iSelectTheBackgroundColor($bg_color) {
     $bg_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$bg_color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-color')]");
@@ -797,9 +800,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Contaxt #varbase
    *
-   * Example: And I uncheck the Edge to Edge Background
+   * Example #1: When I uncheck the Edge to Edge Background
+   * Example #2:  And I uncheck the Edge to Edge Background
    *
-   * @Then I uncheck the Edge to Edge Background
+   * @When I uncheck the Edge to Edge Background
    */
   public function iUncheckTheEdgeToEdgeBackground() {
     $e2e = $this->getSession()->getPage()->find('xpath', "//input[contains(@class, 'field-background-edge-to-edge')]");
@@ -811,10 +815,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: Then I select the "Dark" text color
-   * Example #2: And I select the "White" text color
+   * Example #1: When I select the "Dark" text color
+   * Example #2:  And I select the "White" text color
    *
-   * @Then I select the :arg1 text color
+   * @When I select the :arg1 text color
    */
   public function iSelectTheTextColor($color) {
     $text_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-color-text')]");
@@ -826,10 +830,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: Then I set the alignment to "End"
-   * Example #2: And I set the alignment to "Start"
+   * Example #1: When I set the alignment to "End"
+   * Example #2:  And I set the alignment to "Start"
    *
-   * @Then I set the alignment to :arg1
+   * @When I set the alignment to :arg1
    */
   public function iSetTheAlignmentTo($align) {
     $alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-alignment')]");
@@ -841,47 +845,15 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: Then I set the Horizontal alignment to "Align center"
-   * Example #2: And I set the horizontal alignment to "Align start"
+   * Example #1: When I set the horizontal alignment to "Align center"
+   * Example #2:  And I set the horizontal alignment to "Align start"
    *
-   * @Then I set the Horizontal alignment to :arg1
+   * @When I set the horizontal alignment to :arg1
    */
   public function iSetTheHorizontalAlignmentTo($h_align) {
     $horizontal_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$h_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-horizontal-alignment-justify-content')]");
     $horizontal_alignment->click();
   }
-
-
-  /**
-   * Set vertical alignment for blocks
-   *
-   * Varbase Context #varbase
-   *
-   * Example #1: Then I set the Vertical alignment to "Align bottom"
-   * Example #2: And I set the Vertical alignment to "Align middle"
-   *
-   * @Then I set the Vertical alignment to :arg1
-   */
-  public function iSetTheVerticalAlignmentTo($v_align) {
-    $vertical_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$v_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-vertical-alignment-align-items')]");
-    $vertical_alignment->click();
-  }
-
-  /**
-   * Select an animation for a section
-   *
-   * Varbase Context #varbase
-   *
-   * Example #1: Then I select the "Flip Right" animation
-   * Example #2: When I select the "Zoom Out" animation
-   *
-   * @Then I select the :arg1 animation
-   */
-  public function iSelectTheAnimation($anime) {
-    $animation = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$anime') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-animation-scroll-effects')]");
-    $animation->click();
-  }    
-
 
   /**
    * Images Functions.
