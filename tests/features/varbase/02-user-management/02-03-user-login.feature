@@ -6,7 +6,7 @@ So that I will be able to view/add/edit/ or delete content in the site
   @javascript @local @development @staging @production
   Scenario: Check if a visitor can login with a valid username and password
     Given I am on "user/login"
-      And I wait
+      And I wait 6s
      When I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I scroll to bottom
@@ -18,7 +18,7 @@ So that I will be able to view/add/edit/ or delete content in the site
   @javascript @local @development @staging @production
   Scenario: Verify a form error after not entering the username or password when we login
     Given I am on "user/login"
-      And I wait
+      And I wait 6s
      When I fill in " " for "Username"
       And I fill in " " for "Password"
       And I scroll to bottom
