@@ -139,6 +139,8 @@ commands:
             sudo chmod 775 .
             sudo chown www-data:circleci .
             composer create-project vardot/varbase:9.0.x varbase --stability dev --no-interaction -vvv
+            cd /var/www/html/test/varbase
+            composer require drupal/drush_language:~1.0
             cp -r /home/circleci/project /var/www/html/test/varbase/docroot/profiles/varbase
             cd /var/www/html/test/varbase
             sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
@@ -161,7 +163,7 @@ commands:
             cd /var/www/html/test/varbase
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-                      
+
       ## Point varbase.test at /var/www/html/test/varbase/docroot
       - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
@@ -180,20 +182,20 @@ commands:
             mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_varbase;" -vvv
             cd /var/www/html/test/varbase/docroot
             ../bin/drush site-install varbase --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
-            ../bin/drush pm-enable varbase_development --yes
-            ../bin/drush pm-enable varbase_styleguide --yes
-            ../bin/drush pm-enable varbase_landing --yes
-            ../bin/drush pm-enable varbase_api --yes
-            ../bin/drush pm-enable varbase_content_planner --yes
-            ../bin/drush pm-enable varbase_media_instagram --yes
-            ../bin/drush pm-enable varbase_media_twitter --yes
-            ../bin/drush pm-enable social_auth_google --yes
-            ../bin/drush pm-enable social_auth_facebook --yes
-            ../bin/drush pm-enable social_auth_twitter --yes
-            ../bin/drush pm-enable social_auth_linkedin --yes
-            ../bin/drush config-set system.performance css.preprocess 0 --yes
-            ../bin/drush config-set system.performance js.preprocess 0 --yes
-            ../bin/drush config-set system.logging error_level all --yes
+            ../bin/drush pm:enable varbase_development --yes
+            ../bin/drush pm:enable varbase_styleguide --yes
+            ../bin/drush pm:enable varbase_landing --yes
+            ../bin/drush pm:enable varbase_api --yes
+            ../bin/drush pm:enable varbase_content_planner --yes
+            ../bin/drush pm:enable varbase_media_instagram --yes
+            ../bin/drush pm:enable varbase_media_twitter --yes
+            ../bin/drush pm:enable social_auth_google --yes
+            ../bin/drush pm:enable social_auth_facebook --yes
+            ../bin/drush pm:enable social_auth_twitter --yes
+            ../bin/drush pm:enable social_auth_linkedin --yes
+            ../bin/drush config:set system.performance css.preprocess 0 --yes
+            ../bin/drush config:set system.performance js.preprocess 0 --yes
+            ../bin/drush config:set system.logging error_level all --yes
             ../bin/drush cr
 
       ## Configure and run the virtual display.
@@ -211,13 +213,31 @@ commands:
             java -jar selenium-server-standalone-2.53.1.jar -port 4445
           background: true
 
-      ## Automated Functional Acceptance Testing - Step 1 init tests.
+      ## Add testing users.
       - run:
-          name: Automated Functional Acceptance Testing - Step 1 init tests
-          no_output_timeout: 30m
+          name: Add testing users.
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step1-init-tests/
+            cd /var/www/html/test/varbase/docroot/profiles/varbase/scripts
+            bash add-testing-users.sh
+
+      ## Enable the Drush Language Command module and add RTL language
+      - run:
+          name: Enable the Drush Language Command module and add RTL language
+          command: |
+            cd /var/www/html/test/varbase/docroot
+            ../bin/drush pm:enable drush_language --yes
+            ../bin/drush language-add ar
+            ../bin/drush language-info
+            ../bin/drush cr
+
+      ## Uninstall Antibot module to let the selenium bot work  
+      - run:
+          name: Uninstall Antibot module to let the selenium bot work 
+          command: |
+            cd /var/www/html/test/varbase/docroot
+            ../bin/drush pm:uninstall antibot --yes
+            ../bin/drush cr
+
 jobs:
   varbase-testing-01-website-base-requirements:
     <<: *defaults
@@ -229,7 +249,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/01-website-base-requirements/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/01-website-base-requirements/
   varbase-testing-02-user-management-03-admin-management:
     <<: *defaults
     steps:
@@ -240,8 +260,8 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/02-user-management/
-            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/03-admin-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/02-user-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
     steps:
@@ -252,7 +272,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/04-content-structure/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/04-content-structure/
   varbase-testing-05-content-management:
     <<: *defaults
     steps:
@@ -263,7 +283,7 @@ jobs:
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/step2-apply-tests/05-content-management/
+            ../../../bin/behat --strict --no-snippets -f pretty -o std tests/features/varbase/05-content-management/
 
 workflows:
   version: 2
@@ -272,13 +292,13 @@ workflows:
       - varbase-testing-01-website-base-requirements:
           filters:
             tags:
-              only: /^9.*/
+              only: /^9.0.*/
             branches:
               only: /^9.0.x/
       - varbase-testing-02-user-management-03-admin-management:
           filters:
             tags:
-              only: /^9.*/
+              only: /^9.0.*/
             branches:
               only: /^9.0.x/
       - varbase-testing-04-content-structure:
@@ -290,6 +310,6 @@ workflows:
       - varbase-testing-05-content-management:
           filters:
             tags:
-              only: /^9.*/
+              only: /^9.0.*/
             branches:
               only: /^9.0.x/

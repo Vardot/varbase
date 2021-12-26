@@ -16,23 +16,11 @@
 ##
 ################################################################################
 
-# Basic yaml parser.
-parse_yaml() {
-   local s='[[:space:]]*' w='[a-zA-Z0-9_]*' fs=$(echo @|tr @ '\034')
-   sed -ne "s|^\($s\)\($w\)$s:$s\"\(.*\)\"$s\$|\1$fs\2$fs\3|p" \
-        -e "s|^\($s\)\($w\)$s:$s\(.*\)$s\$|\1$fs\2$fs\3|p"  $1 |
-   awk -F$fs '{
-      indent = length($1)/2;
-      vname[indent] = $2;
-      for (i in vname) {if (i > indent) {delete vname[i]}}
-      if (length($3) > 0) {
-         vn=""; for (i=0; i<indent; i++) {vn=(vn)(vname[i])("_")}
-         printf("%s%s%s=\"%s\"\n", "",vn, $2, $3);
-      }
-   }'
-}
-
 current_path=$(pwd);
+
+# Include the Bash YAML library.
+source ${current_path}/libs/bash-yaml.sh || exit 1 ;
+
 drupal_root="$current_path";
 
 if [[ "${drupal_root: -1}" == "/" ]]; then
@@ -57,9 +45,6 @@ fi
 
 echo "Current path: $current_path";
 echo "Drupal root: $drupal_root";
-
-# Read scripts.settings.yml file
-eval $(parse_yaml $drupal_root/profiles/varbase/scripts/scripts.settings.yml);
 
 # Default theme name.
 theme_name=$default_theme_name;

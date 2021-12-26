@@ -1,0 +1,40 @@
+varbase:
+  title: "Varbase"
+users:
+  - authenticated
+  - editor
+  - content_admin
+  - seo_admin
+  - site_admin
+  - super_admin
+user:
+  authenticated:
+    name: Normal user
+    mail: test.authenticated@vardot.com
+    password: dD.123123ddd
+    role: null
+  editor:
+    name: Editor
+    mail: test.editor@vardot.com
+    password: dD.123123ddd
+    role: editor
+  content_admin:
+    name: Content admin
+    mail: test.content_admin@vardot.com
+    password: dD.123123ddd
+    role: content_admin
+  seo_admin:
+    name: SEO admin
+    mail: test.seo_admin@vardot.com
+    password: dD.123123ddd
+    role: seo_admin
+  site_admin:
+    name: Site admin
+    mail: test.site_admin@vardot.com
+    password: dD.123123ddd
+    role: site_admin
+  super_admin:
+    name: Super admin
+    mail: test.super_admin@vardot.com
+    password: dD.123123ddd
+    role: administrator

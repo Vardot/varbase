@@ -68,7 +68,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase. If you want to see the list of users or add yours you can go and
    * edit the behat.varbase.yml file under the varbase_users list.
    *
-   * Example: I am a logged in user with the username "test_content_admin"
+   * Example: I am a logged in user with the username "Content admin"
    *
    * @Given /^I am a logged in user with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
    * @Then /^I login with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
@@ -93,6 +93,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
         $page->fillField('name', $username);
         $page->fillField('pass', $password);
+        $this->iScrollToBottom();
+        $this->iWaitForSeconds(2);
         $submit = $page->findButton('op');
         $submit->click();
       }
@@ -125,6 +127,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
       $page->fillField('name', $username);
       $page->fillField('pass', $password);
+      $this->iScrollToBottom();
+      $this->iWaitForSeconds(2);
       $submit = $page->findButton('op');
       $submit->click();
     }
@@ -664,7 +668,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
   }
 
-  
   /**
    * Section Configuration Functions
    *
@@ -877,9 +880,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   public function iSelectTheAnimation($anime) {
     $animation = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$anime') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-animation-scroll-effects')]");
     $animation->click();
-  }
-
-
+  }    
 
 
   /**
@@ -1274,7 +1275,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeValueInTheInputElement($text, $selector) {
 
-    $elements = $this->getSession()->getPage()->findAll('xpath', "//input[@id='{$selector}']");
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@id='{$selector}']");
     if (empty($elements)) {
       throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
     }
@@ -1718,13 +1719,13 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrolldown
-   * Example #2:  And I scrolldown.
+   * Example #1: When I scroll down
+   * Example #2:  And I scroll down.
    *
-   * @When I scrolldown
+   * @When /^(?:|I )scroll down$/
    */
   public function iScrolldown() {
-    $this->getSession()->executeScript("javascript:window.scrollBy(200,350)");
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,350)");
   }
 
   /**
@@ -1732,12 +1733,71 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scrollup.
+   * Example #1: When I scroll up.
    *
-   * @When I scrollup
+   * @When /^(?:|I )scroll up$/
    */
   public function iScrollup() {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-350)");
+  }
+
+  /**
+   * Scroll down in the current status of the page and pass a value.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll down 800
+   * Example #2:  And I scroll down 2000
+   *
+   * @When /^(?:|I )scroll down (?P<value>\d+)$/
+   */
+  public function iScrolldownWithValue($value) {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0," . $value . ")");
+  }
+
+  /**
+   * Scroll up in the current status of the page and pass a value.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll up 1000
+   *
+   * @When /^(?:|I ) scroll up (?P<value>\d+)$/
+   */
+  public function iScrollupWithValue($value) {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,-" . $value . ")");
+  }
+
+  /**
+   * Scroll to top
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to top
+   * Example #2: When I scroll to the top
+   * Example #3: When I scroll to the top of the page
+   * Example #4: And scroll to top
+   *
+   * @When /^(?:|I )scroll to (?:|the )top(?:| of the page)$/
+   */
+  public function iScrollToTop() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,0)");
+  }
+
+  /**
+   * Scroll to bottom
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to bottom
+   * Example #2: And I scroll to the bottom
+   * Example #3: When I scroll to the bottom of the page
+   * Example #4: And scroll to bottom
+   *
+   * @When /^(?:|I )scroll to (?:|the )bottom(?:| of the page)$/
+   */
+  public function iScrollToBottom() {
+    $this->getSession()->executeScript("javascript:window.scrollBy(0,document.body.scrollHeight)");
   }
 
   /**
