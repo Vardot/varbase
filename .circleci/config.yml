@@ -160,6 +160,7 @@ commands:
             mkdir /var/www/html/test/varbase/config
             mkdir /var/www/html/test/varbase/config/sync
             echo "\$settings['config_sync_directory'] = '../config/sync';" >> /var/www/html/test/varbase/docroot/sites/default/settings.php
+            sed -i "s,- \"--headless\",#- \"--headless\",g" /var/www/html/test/varbase/docroot/profiles/varbase/behat.yml ;
             cd /var/www/html/test/varbase
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
