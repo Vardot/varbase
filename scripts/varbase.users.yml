@@ -12,7 +12,7 @@ user:
     name: Normal user
     mail: test.authenticated@vardot.com
     password: dD.123123ddd
-    role: null
+    role: _none_
   editor:
     name: Editor
     mail: test.editor@vardot.com

@@ -24,26 +24,26 @@ So that they will be able to use the site.
   Scenario: Check if admins can create a new user account as an authenticated user
      When I go to "/admin/people/create"
       And I wait
-     When I fill in "tester@vardot.com" for "Email address"
-      And I fill in "Tester" for "Username"
+     When I fill in "tester@vardot.com" for "Email"
+      And I fill in "tester" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
       And I scroll to bottom
       And I press "Create new account"
 
   @javascript @cleanup @local @development @staging @production
-  Scenario: Delete the Tester user
+  Scenario: Delete the tester user
      When I go to "/admin/people"
-      And I fill in "Tester" for "Name or email contains"
+      And I fill in "tester" for "Name or email contains"
       And I press "Filter"
       And I wait
-     Then I should see "Tester"
-     When I click "Edit" in the "Tester" row
+     Then I should see "tester"
+     When I click "Edit" in the "tester" row
       And I wait
       And I scroll to bottom
       And I press "Cancel account"
       And I wait
-     Then I should see "Are you sure you want to cancel the account Tester?"
+     Then I should see "Are you sure you want to cancel the account tester?"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
       And I press "Confirm"
