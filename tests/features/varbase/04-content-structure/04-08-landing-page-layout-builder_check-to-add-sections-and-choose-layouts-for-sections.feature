@@ -9,12 +9,12 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I go to "/node/add/landing_page_lb"
       And I wait
      Then I should see "Create Landing page (Layout Builder)"
-     When I fill in "Full Width - No Background Color - Text only" for "Title"
+     When I fill in "Automated test landing page" for "Title"
       And I fill in "Test Landing page (Layout Builder) description" for "Page description"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "Save as"
       And I press the "Save" button
       And I wait
-     Then I should see "Landing page (Layout Builder) Full Width - No Background Color - Text only has been created"
+     Then I should see "Landing page (Layout Builder) Automated test landing page has been created"
       And I should see "This layout builder tool allows you to configure the layout of the main content area."
      When I scroll to the bottom of the page
       And I wait 1s
@@ -27,3 +27,234 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Bootstrap 3 Cols"
       And I should see "Bootstrap 4 Cols"
       And I should see "Bootstrap 6 Cols"
+
+     Then I click "Bootstrap 1 Col"
+      And I wait for AJAX to finish
+     Then I press the "Add section" button
+      And I wait for AJAX to finish
+     Then I click "in Section 2, Col 1 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+     When I check the box "Display title"
+     Then I fill in "Rich text  in 1 col section" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet purus vitae augue lobortis accumsan ut nec nulla. Cras nisi mauris, gravida ac"
+     When I press the "Add block" button
+     Then I wait for AJAX to finish
+      And I scroll to the bottom of the page
+      And I wait 1s
+     Then I click "Add section at end of layout"
+      And I wait for AJAX to finish
+
+     Then I click "Bootstrap 2 Cols"
+      And I wait for AJAX to finish
+     Then I press the "Add section" button
+      And I click "in Section 3, Col 1 region"
+     Then I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     When I click "Rich text"
+      And I wait for AJAX to finish
+     Then I check the box "Display title"
+     Then I fill in "Rich text  in 2 cols section, col 1" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet purus vitae augue lobortis accumsan ut nec nulla. Cras nisi mauris, gravida ac"
+      And I press the "Add block" button
+
+     When I click "in Section 3, Col 2 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     When I click "Rich text"
+      And I wait for AJAX to finish
+     Then I check the box "Display title"
+     Then I fill in "Rich text  in 2 cols section, col 2" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet purus vitae augue lobortis accumsan ut nec nulla. Cras nisi mauris, gravida ac"
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+      And I scroll to the bottom of the page
+      And I wait 1s
+     Then I click "Add section at end of layout"
+      And I wait for AJAX to finish
+     Then I click "Bootstrap 3 Cols"
+      And I wait for AJAX to finish
+     Then I press the "Add section" button
+      And I wait for AJAX to finish
+     Then I click "in Section 4, Col 1 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 3 cols section, col 1" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 4, Col 2 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 3 cols section, col 2" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 4, Col 3 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 3 cols section, col 3" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+      And I scroll to the bottom of the page
+      And I wait 1s
+     Then I click "Add section at end of layout"
+      And I wait for AJAX to finish
+     Then I click "Bootstrap 4 Cols"
+      And I wait for AJAX to finish
+     Then I press the "Add section" button
+      And I wait for AJAX to finish
+      And I click "in Section 5, Col 1 region"
+     Then I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 4 cols section, col 1" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 5, Col 2 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 4 cols section, col 2" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 5, Col 3 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 4 cols section, col 3" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 5, Col 4 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 4 cols section, col 4" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+      And I scroll to the bottom of the page
+      And I wait 1s
+     Then I click "Add section at end of layout"
+      And I wait for AJAX to finish
+     Then I click "Bootstrap 6 Cols"
+      And I wait for AJAX to finish
+     Then I press the "Add section" button
+      And I wait for AJAX to finish 
+     Then I click "in Section 6, Col 1 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 6 cols section, col 1" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 6, Col 2 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 6 cols section, col 2" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 6, Col 3 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 6 cols section, col 3" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 6, Col 4 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 6 cols section, col 4" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 6, Col 5 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 6 cols section, col 5" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     Then I click "in Section 6, Col 6 region"
+      And I wait for AJAX to finish
+     Then I click "Create custom block"
+      And I wait for AJAX to finish
+     Then I click "Rich text"
+      And I wait for AJAX to finish
+      And I check the box "Display title"
+     Then I fill in "Rich text  in 6 cols section, col 6" for "Title"
+      And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
+     Then I press the "Add block" button
+      And I wait for AJAX to finish
+
+     When I scroll to the top of the page
+      And I wait 5s
+     Then I should see "Save layout"
+     Then I press the "Save layout" button

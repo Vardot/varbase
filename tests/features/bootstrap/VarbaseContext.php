@@ -1753,7 +1753,7 @@ JS;
    * @When /^(?:|I )scroll to (?:|the )top(?:| of the page)$/
    */
   public function iScrollToTop() {
-    $this->getSession()->executeScript("javascript:window.scrollBy(0,0)");
+    $this->getSession()->executeScript("document.documentElement.scrollTop = 0");
   }
 
   /**
