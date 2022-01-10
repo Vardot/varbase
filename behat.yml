@@ -66,29 +66,30 @@ default:
             chromeOptions:
               args:
                 - "--disable-gpu"
-                - "--window-size=1920,1080"
+                - "--window-size=1600,1200"
+                - "--no-sandbox"
+                - "--disable-dev-shm-usage"
+                - "--disable-setuid-sandbox"
               w3c: false
           chrome:
             switches:
               - "--headless"
-              - "no-sandbox"
+              - "--start-maximized"
+              - "--disable-gpu"
+              - "--window-size=1600,1200"
               - "--no-sandbox"
+              - "--disable-dev-shm-usage"
+              - "--disable-setuid-sandbox"
               - "--disable-web-security"
               - "--DNS-prefetch-disable"
               - "--whitelisted-ips"
-              - "--start-maximized"
               - "--disable-translate"
               - "--ignore-certificate-errors"
               - "--test-type"
-              - "--disable-dev-shm-usage"
               - "--disable-extensions"
-              - "incognito"
-              - "enable-precise-memory-info"
-              - "ignore-certificate-errors"
-              - "disable-infobars"
-              - "js-flags=--expose-gc"
-              - "--profile-directory=Default"
-              - "--user-data-dir=~/.config/google-chrome"
+              - "--incognito"
+              - "--ignore-certificate-errors"
+              - "--disable-infobars"
       base_url: 'http://varbase.test'
       # browser_name: 'firefox'
       browser_name: 'chrome'
