@@ -43,7 +43,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Test Landing page (Layout Builder)"
   
   @javascript @local @development
-  Scenario: Check that Site admins can add a one coloumn section and add a Rech text block in the section
+  Scenario: Check that Site admins can add a one coloumn section and add a Rich text block in the section
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
       And I wait
@@ -100,7 +100,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 1 col section"
 
   @javascript @local @development
-  Scenario: Check that Site admins can add a two coloumns section and add a Rech text blocks in each coloumns
+  Scenario: Check that Site admins can add a two coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
       And I wait
@@ -174,7 +174,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 2 cols section, col 2"
   
   @javascript @local @development
-  Scenario: Check that Site admins can add a three coloumns section and add a Rech text blocks in each coloumns
+  Scenario: Check that Site admins can add a three coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
       And I wait
@@ -267,7 +267,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 3 cols section, col 3"
 
   @javascript @local @development
-  Scenario: Check that Site admins can add a foure coloumns section and add a Rech text blocks in each coloumns
+  Scenario: Check that Site admins can add a foure coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
       And I wait
@@ -378,7 +378,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 4 cols section, col 4"
 
   @javascript @local @development
-  Scenario: Check that Site admins can add a six coloumns section and add a Rech text blocks in each coloumns
+  Scenario: Check that Site admins can add a six coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
       And I wait
