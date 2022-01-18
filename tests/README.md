@@ -86,7 +86,7 @@ composer require drupal/drush_language:~1.0
 
 ### Add testing users.
 Change directory in the terminal to the path of the project
- and `/PROJECT_DIR_NAME/docroot/docroot/profiles/varbase/scripts`
+ and `/PROJECT_DIR_NAME/docroot/profiles/varbase/scripts`
 And run the following base command
 ```
   bash add-testing-users.sh
