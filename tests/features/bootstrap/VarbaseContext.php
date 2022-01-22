@@ -856,6 +856,378 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Set vertical alignment for blocks
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I set the vertical alignment to "Align bottom"
+   * Example #2:  And I set the vertical alignment to "Align middle"
+   *
+   * @When I set the vertical alignment to :arg1
+   */
+  public function iSetTheVerticalAlignmentTo($v_align) {
+    $vertical_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$v_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-vertical-alignment-align-items')]");
+    $vertical_alignment->click();
+  }
+
+  /**
+   * Set the padding for a section (all sides)
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the padding to "5"
+   * Example #2: And I set the padding to "2"
+   * 
+    * @When I set the padding to :arg1
+    */
+    public function iSetThePaddingTo($padding) {
+      $this->getSession()->executeScript('jQuery(".bs-field-padding.form-range").val("' . $padding . '")');
+    }
+
+  /**
+   * Set the left padding for a section
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the left padding to "5"
+   * Example #2: And I set the left padding to "2"
+   * 
+    * @When I set the left padding to :arg1
+    */
+    public function iSetTheLeftPaddingTo($left_padding) {
+      $padding_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding left')]");
+      $padding_left->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-padding-left.form-range").val("' . $left_padding . '")');
+    }
+
+  /**
+   * Set the right padding for a section 
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the right padding to "5"
+   * Example #2: And I set the right padding to "1"
+   * 
+    * @When I set the right padding to :arg1
+    */
+    public function iSetTheRightPaddingTo($right_padding) {
+      $padding_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding right')]");
+      $padding_right->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-padding-right.form-range").val("' . $right_padding . '")');
+    }
+
+  /**
+   * Set the top padding for a section
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the top padding to "5"
+   * Example #2: And I set the top padding to "2"
+   * 
+    * @When I set the top padding to :arg1
+    */
+    public function iSetTheTopPaddingTo($top_padding) {
+      $padding_top = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding top')]");
+      $padding_top->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-padding-top.form-range").val("' . $top_padding . '")');
+    }
+
+  /**
+   * Set the bottom padding for a section 
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the bottom padding to "5"
+   * Example #2: And I set the bottom padding to "4"
+   * 
+   * @When I set the bottom padding to :arg1
+   */
+    public function iSetTheBottomPaddingTo($bottom_padding) {
+      $padding_bottom = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding bottom')]");
+      $padding_bottom->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-padding-bottom.form-range").val("' . $bottom_padding . '")');
+    }
+
+  /**
+   * Set the margin for a section (all sides)
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the margin to "5"
+   * Example #2: And I set the margin to "2"
+   * 
+   * @When I set the margin to :arg1
+   */
+    public function iSetTheMarginTo($margin) {
+      $this->getSession()->executeScript('jQuery(".bs-field-margin.form-range").val("' . $margin . '")');
+    }
+
+  /**
+   * Set the left margin for a section
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I set the left margin to "2"
+   * Example #2: When I set the left margin to "4"
+   * 
+   * @When I set the left margin to :arg1
+   */
+    public function iSetTheLeftMarginTo($left_margin) {
+      $margin_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin left')]");
+      $margin_left->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-margin-left.form-range").val("' . $left_margin . '")');
+    }
+
+  /**
+   * Set the top margin for a section
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I set the top margin to "2"
+   * Example #2: When I set the top margin to "4"
+   * 
+   * @When I set the top margin to :arg1
+   */
+    public function iSetTheTopMarginTo($top_margin)
+    {
+      $margin_top = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin top')]");
+      $margin_top->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-margin-top.form-range").val("' . $top_margin . '")');
+    }
+
+  /**
+   * Set the right margin for a section
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I set the right margin to "2"
+   * Example #2: When I set the right margin to "4"
+   * 
+   * @When I set the right margin to :arg1
+   */
+    public function iSetTheRightMarginTo($right_margin)
+    {
+      $margin_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin right')]");
+      $margin_right->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-margin-right.form-range").val("' . $right_margin . '")');
+    }
+
+  /**
+   * Set the bottom margin for a section
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I set the bottom margin to "2"
+   * Example #2: When I set the bottom margin to "4"
+   * 
+   * @When I set the bottom margin to :arg1
+   */
+    public function iSetTheBottomMarginTo($bottom_margin) {
+      $margin_bottom = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin bottom')]");
+      $margin_bottom->click();
+      $this->getSession()->executeScript('jQuery(".bs-field-margin-bottom.form-range").val("' . $bottom_margin . '")');
+    }
+
+  /**
+   * Select a border style
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I select the "Solid" border style
+   * Example #2: When I select the "Dotted" border style
+   * 
+   * @When I select the :arg1 border style
+   */
+  public function iSelectTheBorderStyle($b_style) {
+    $border_style = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$b_style') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-style-bs-border-style')]");
+    $border_style->click();
+  }
+
+  /**
+   * Set the border width
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the border width to "3"
+   * Example #2: And I set the border width to "2"
+   *  
+   * @When I set the border width to :arg1
+   */
+  public function iSetTheBorderWidthTo($b_width) {
+    $border_width = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'Border width')]");
+    $this->getSession()->executeScript('jQuery(".bs-field-border-width.form-range").val("' . $b_width . '")');
+  }
+
+  /**
+   * Set the border color
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I select the "Dark" border color
+   * Example #2: When I select the "Primary" border color
+   * 
+   * @When I select the :arg1 border color
+   */
+  public function iSelectTheBorderColor($b_color) {
+    $border_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$b_color') and contains (@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-color-border')]");
+    $border_color->click();
+  }
+
+  /**
+   * Set the border radius value
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the border radius to "2"
+   * Example #2: And I set the border radius to "3"
+   * 
+   * @When I set the border radius to :arg1
+   */
+  public function iSetTheBorderRadiusTo($b_radius) {
+    $border_radius = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Corners')]");
+    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corners.form-range").val("' . $b_radius . '")');
+  }
+
+  /**
+   * Set the top left border radius value
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the top left border radius to "1"
+   * Example #2: And I set the top left border radius to "2"
+   * 
+   * @When I set the top left border radius to :arg1
+   */
+  public function iSetTheTopLeftBorderRadiusTo($b_radius_top_left) {
+    $border_radius_top_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Top Left')]");
+    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-top_left.form-range").val("' . $b_radius_top_left . '")');
+  }
+
+  /**
+   * Set the top right border radius value
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I set the top right border radius to "3"
+   * Example #2: When I set the top right border radius to "1"
+   * 
+   * @When I set the top right border radius to :arg1
+   */
+  public function iSetTheTopRightBorderRadiusTo($b_radius_top_right) { 
+    $border_radius_top_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Top Right')]");
+    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-top_right.form-range").val("' . $b_radius_top_right . '")');
+  }
+
+  /**
+   * Set the bottom left border radius value
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I set the bottom left border radius to "3"
+   * Example #2: When I set the bottom left border radius to "1"
+   * 
+   * @When I set the bottom left border radius to :arg1
+   */
+  public function iSetTheBottomLeftBorderRadiusTo($b_radius_bottom_left) { 
+    $border_radius_bottom_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Bottom Left')]");
+    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-bottom_left.form-range").val("' . $b_radius_bottom_left . '")');
+  }
+
+  /**
+   * Set the bottom right border radius value
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I set the bottom right border radius to "3"
+   * Example #2: When I set the bottom right border radius to "1"
+   * 
+   * @When I set the bottom right border radius to :arg1
+   */
+  public function iSetTheBottomRightBorderRadiusTo($b_radius_bottom_right) { 
+    $border_radius_bottom_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Bottom Right')]");
+    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-bottom_right.form-range").val("' . $b_radius_bottom_right . '")');
+  }
+
+  /**
+   * Set the left border style
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I select the "Dotted" left border style
+   * Example #2: And I select the "Dashed" left border style
+   * 
+   * @When I select the :arg1 left border style
+   */
+  public function iSelectTheLeftBorderStyle($b_left_style) {
+    $left_border_side = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-left')]");
+    $left_border_side->click();
+    $left_border_style = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$b_left_style') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-left-style-bs-border-style')]");
+    $left_border_style->click();
+  }
+
+  /**
+   * Set the left border width
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the left border width to "1"
+   * Example #2: And I set the left border width to "2"
+   * 
+   * @When I set the left border width to :arg1
+   */
+  public function iSetTheLeftBorderWidthTo($b_left_width) {
+    $left_border_side = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-left')]");
+    $left_border_side->click();
+    $border_width = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'Border left width')]");
+    $this->getSession()->executeScript('jQuery(".bs-field-border-width-left.form-range").val("' . $b_left_width . '")');
+  }
+
+  /**
+   * Switch to the background image settings found under background styles settings
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I switch to background image settings
+   * 
+   * @When I switch to background image settings
+   */
+  public function iSwitchToBackgroundImageSettings() {
+    // $menu = $this->getSession()->getPage()->find('xpath', "//span[contains(., 'Background') and contains(@class, 'bs-group-title')]");
+    // $menu->click();
+    $bg_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-image')]");
+    $bg_image->click();
+  }
+
+  /**
+   * Switch to the background image settings found under background styles settings
+   * 
+   * Varbase Context #varbase
+   * 
+   * Exmaple #1: And I switch to background video settings
+   * 
+   * @When I switch to background video settings
+   */
+  public function iSwitchToBackgroundVideoSettings() {
+    $bg_video = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-video')]"); 
+    $bg_video->click();
+  }
+
+  /**
+   * Select an animation for a section
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I select the "Flip Right" animation
+   * Example #2:  And I select the "Zoom Out" animation
+   *
+   * @When I select the :arg1 animation
+   */
+  public function iSelectTheAnimation($anime) {
+    $animation = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$anime') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-animation-scroll-effects')]");
+    $animation->click();
+  }    
+
+  /**
    * Images Functions.
    *
    * ==========================================================================.
