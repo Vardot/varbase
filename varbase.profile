@@ -124,6 +124,20 @@ function varbase_assemble_extra_components(array &$install_state) {
     $selected_extra_features_configs = $install_state['varbase']['extra_features_configs'];
   }
 
+  if (isset($selected_extra_features['varbase_heroslider_media'])
+  && $selected_extra_features['varbase_heroslider_media'] == TRUE) {
+    $batch['operations'][] = [
+      'varbase_install_component',
+      (array) 'enabled_varbase_heroslider_media_content',
+    ];
+  }
+  else {
+    $batch['operations'][] = [
+      'varbase_install_component',
+      (array) 'disabled_varbase_heroslider_media_content',
+    ];
+  }
+
   // Get the list of extra features config bits.
   $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
 
@@ -250,17 +264,9 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   if (isset($selected_extra_features['varbase_heroslider_media'])
     && $selected_extra_features['varbase_heroslider_media'] == TRUE) {
-    $batch['operations'][] = [
-      'varbase_install_component',
-      (array) 'enabled_varbase_heroslider_media_content',
-    ];
     $uninstall_components[] = 'enabled_varbase_heroslider_media_content';
   }
   else {
-    $batch['operations'][] = [
-      'varbase_install_component',
-      (array) 'disabled_varbase_heroslider_media_content',
-    ];
     $uninstall_components[] = 'disabled_varbase_heroslider_media_content';
   }
 
