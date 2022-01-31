@@ -12,7 +12,7 @@ use Drupal\varbase\Config\ConfigBit;
 use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
-use Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager;
+use Vardot\Entity\EntityDefinitionUpdateManager;
 use Drupal\node\Entity\Node;
 use Drupal\path_alias\Entity\PathAlias;
 
@@ -480,7 +480,7 @@ function varbase_configure_language_and_fetch_traslation($language_code) {
 function varbase_fix_entity_update($entity_update) {
   if ($entity_update) {
     \Drupal::classResolver()
-      ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+      ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
       ->applyUpdates();
   }
 }
@@ -569,7 +569,7 @@ function varbase_after_install_finished(array &$install_state) {
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()
-    ->getInstanceFromDefinition(VarbaseEntityDefinitionUpdateManager::class)
+    ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
   // Full flash and clear cash and rebuilding newly created routes.

@@ -16,5 +16,5 @@ services:
     tags:
       - { name: "event_subscriber" }
   varbase.definition_update_manager:
-    class: '\Drupal\varbase\Entity\VarbaseEntityDefinitionUpdateManager'
+    class: '\Vardot\Entity\EntityDefinitionUpdateManager'
     arguments: ["@class_resolver"]
