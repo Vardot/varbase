@@ -13,7 +13,6 @@ use Drupal\varbase\Form\ConfigureMultilingualForm;
 use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
 use Vardot\Entity\EntityDefinitionUpdateManager;
-use Drupal\node\Entity\Node;
 use Drupal\path_alias\Entity\PathAlias;
 
 /**
@@ -270,14 +269,11 @@ function varbase_assemble_extra_components(array &$install_state) {
     $uninstall_components[] = 'disabled_varbase_heroslider_media_content';
   }
 
-  // Reset timestamp for nodes.
-  $node_ids = \Drupal::entityQuery('node')->execute();
-  if (isset($node_ids)
-    && is_array($node_ids)
-    && count($node_ids) > 0) {
-
-    $batch['operations'][] = ['varbase_reset_timestamp_for_nodes', $node_ids];
-  }
+  // Reset timestamp for default content.
+  $batch['operations'][] = [
+    'varbase_reset_timestamp_for_default_content',
+    (array) TRUE,
+  ];
 
   if (count($uninstall_components) > 0) {
     foreach ($uninstall_components as $uninstall_component) {
@@ -524,17 +520,60 @@ function varbase_uninstall_component($uninstall_component) {
 }
 
 /**
- * Batch to reset timestamp for selected nodes.
+ * Batch to reset timestamp for default content.
  *
- * @param array $node_ids
- *   The Node IDs.
+ * @param string|array $reset
+ *   To entity update or not.
  */
-function varbase_reset_timestamp_for_nodes(array $node_ids) {
-  foreach ($node_ids as $nid) {
-    $node = Node::load($nid);
-    if (isset($node)) {
-      $node->created = \Drupal::time()->getCurrentTime();
-      $node->save();
+function varbase_reset_timestamp_for_default_content($reset) {
+
+  if ($reset) {
+    // Reset timestamp for all file's default content.
+    $file_storage = \Drupal::service('entity_type.manager')->getStorage('file');
+    $file_ids = $file_storage->getQuery()->execute();
+    if (isset($file_ids)
+      && is_array($file_ids)
+      && count($file_ids) > 0) {
+
+      foreach ($file_ids as $fid) {
+        $file = \Drupal::service('entity_type.manager')->getStorage('file')->load($fid);
+        if (isset($file)) {
+          $file->set('created', \Drupal::time()->getCurrentTime());
+          $file->save();
+        }
+      }
+    }
+
+    // Reset timestamp for all Media's default content.
+    $media_storage = \Drupal::service('entity_type.manager')->getStorage('media');
+    $media_ids = $media_storage->getQuery()->execute();
+    if (isset($media_ids)
+      && is_array($media_ids)
+      && count($media_ids) > 0) {
+
+      foreach ($media_ids as $mid) {
+        $media = \Drupal::service('entity_type.manager')->getStorage('media')->load($mid);
+        if (isset($media)) {
+          $media->set('created', \Drupal::time()->getCurrentTime());
+          $media->save();
+        }
+      }
+    }
+
+    // Reset timestamp for all Node's default content.
+    $node_storage = \Drupal::service('entity_type.manager')->getStorage('node');
+    $node_ids = $node_storage->getQuery()->execute();
+    if (isset($node_ids)
+      && is_array($node_ids)
+      && count($node_ids) > 0) {
+
+      foreach ($node_ids as $nid) {
+        $node = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+        if (isset($node)) {
+          $node->set('created', \Drupal::time()->getCurrentTime());
+          $node->save();
+        }
+      }
     }
   }
 }
