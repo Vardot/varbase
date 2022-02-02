@@ -1,19 +1,24 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
 ( function() {
 	'use strict';
 
-	var doubleQuoteRegex = /"/g;
-
 	CKEDITOR.plugins.add( 'autolink', {
-		requires: 'clipboard,textmatch',
+		requires: 'clipboard,textmatch,link',
+
+		isSupportedEnvironment: function() {
+			return !CKEDITOR.env.ie || CKEDITOR.env.edge;
+		},
 
 		init: function( editor ) {
-			var urlTemplate = new CKEDITOR.template( '<a href="{link}">{text}</a>' ),
-				emailTemplate = new CKEDITOR.template( '<a href="mailto:{link}">{text}</a>' );
+
+			// (#2208)
+			if ( !this.isSupportedEnvironment() ) {
+				return;
+			}
 
 			editor.on( 'paste', function( evt ) {
 				if ( evt.data.dataTransfer.getTransferType( editor ) == CKEDITOR.DATA_TRANSFER_INTERNAL ) {
@@ -33,14 +38,9 @@
 				}
 			} );
 
-			// IE has its own link completion and we don't want to interfere with it.
-			if ( CKEDITOR.env.ie && !CKEDITOR.env.edge ) {
-				return;
-			}
-
-			var commitKeystrokes = editor.config.autolink_commitKeystrokes || CKEDITOR.config.autolink_commitKeystrokes;
+			// (#3156)
 			editor.on( 'key', function( evt ) {
-				if ( editor.mode !== 'wysiwyg' || CKEDITOR.tools.indexOf( commitKeystrokes, evt.data.keyCode ) == -1 ) {
+				if ( editor.mode !== 'wysiwyg' || CKEDITOR.tools.indexOf( editor.config.autolink_commitKeystrokes, evt.data.keyCode ) == -1 ) {
 					return;
 				}
 
@@ -73,38 +73,34 @@
 				}
 			}
 
-			function tryToEncodeLink( data ) {
-				// If enabled use link plugin to encode email link.
-				if ( editor.plugins.link ) {
-					var link = CKEDITOR.dom.element.createFromHtml( data ),
-						linkData = CKEDITOR.plugins.link.parseLinkAttributes( editor, link ),
-						attributes = CKEDITOR.plugins.link.getLinkAttributes( editor, linkData );
-
-					if ( !CKEDITOR.tools.isEmpty( attributes.set ) ) {
-						link.setAttributes( attributes.set );
-					}
-
-					if ( attributes.removed.length ) {
-						link.removeAttributes( attributes.removed );
-					}
-
-					link.removeAttribute( 'data-cke-saved-href' );
-
-					return link.getOuterHtml();
-				}
-				return data;
-			}
-
 			function getHtmlToInsert( text ) {
-				var opts = {
-						text: text,
-						link: text.replace( doubleQuoteRegex, '%22' )
-					},
-					template = opts.link.match( CKEDITOR.config.autolink_urlRegex ) ?
-						urlTemplate.output( opts )
-						: emailTemplate.output( opts );
+				// URL will be encoded later on with link.setAttribute method. Avoid
+				// double encoding of special characters (#4858).
+				text = CKEDITOR.tools.htmlDecodeAttr( text );
 
-				return tryToEncodeLink( template );
+				var link = new CKEDITOR.dom.element( 'a' ),
+					value = text.replace( /"/g, '%22' );
+
+				value = value.match( CKEDITOR.config.autolink_urlRegex ) ? value : 'mailto:' + value;
+
+				link.setText( text );
+				link.setAttribute( 'href', value );
+
+				// (#1824)
+				var linkData = CKEDITOR.plugins.link.parseLinkAttributes( editor, link ),
+					attributes = CKEDITOR.plugins.link.getLinkAttributes( editor, linkData );
+
+				if ( !CKEDITOR.tools.isEmpty( attributes.set ) ) {
+					link.setAttributes( attributes.set );
+				}
+
+				if ( attributes.removed.length ) {
+					link.removeAttributes( attributes.removed );
+				}
+
+				link.removeAttribute( 'data-cke-saved-href' );
+
+				return link.getOuterHtml();
 			}
 
 			function matchCallback( text, offset ) {
@@ -124,8 +120,8 @@
 			}
 
 			function matchLink( query ) {
-				return query.match( CKEDITOR.config.autolink_urlRegex ) ||
-					query.match( CKEDITOR.config.autolink_emailRegex );
+				return query.match( editor.config.autolink_urlRegex ) ||
+					query.match( editor.config.autolink_emailRegex );
 			}
 		}
 	} );
@@ -158,7 +154,7 @@
 	 * @since 4.11.0
 	 * @member CKEDITOR.config
 	 */
-	CKEDITOR.config.autolink_urlRegex = /^(https?|ftp):\/\/(-\.)?([^\s\/?\.#]+\.?)+(\/[^\s]*)?[^\s\.,]$/i;
+	CKEDITOR.config.autolink_urlRegex = /^(https?|ftp):\/\/(-\.)?([^\s\/?\.#]\.?)+(\/[^\s]*)?[^\s\.,]$/i;
 	// Regex by Imme Emosol.
 
 	/**
