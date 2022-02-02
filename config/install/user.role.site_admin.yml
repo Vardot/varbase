@@ -71,7 +71,6 @@ permissions:
   - "administer faq order"
   - "administer footer menu items"
   - "administer google analytics"
-  - "administer google analytics reports api"
   - "administer google tag manager"
   - "administer mail templates"
   - "administer main menu items"
