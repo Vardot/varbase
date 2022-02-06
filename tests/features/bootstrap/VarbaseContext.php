@@ -1199,7 +1199,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
-   * Switch to the background image settings found under background styles settings
+   * Switch to the background video settings found under background styles settings
    * 
    * Varbase Context #varbase
    * 
@@ -1211,6 +1211,37 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $bg_video = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-video')]"); 
     $bg_video->click();
   }
+
+  /**
+   * Set and image attachment to be fixed
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example: When I set the attachment to be fixed
+   * 
+   * @When I set the attachment to be fixed
+   */
+    public function iSetTheAttachmentToBeFixed()
+    {
+        $fixed_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-options-background-attachment-fixed')]");
+        $fixed_image->click();
+    }
+
+  /**
+   * Set the background image size
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: When I set the image size to "Contain"
+   * Example #2: And I set the image size to "Auto"
+   * 
+   * @When I set the image size to :arg1
+   */
+    public function iSetTheImageSizeTo($arg1)
+    {
+        $image_size = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-options-background-size') and contains(., '$arg1')]");
+        $image_size->click();
+    }
 
   /**
    * Select an animation for a section
@@ -1274,7 +1305,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase.
    *
-   * Example 1: I double on the image with the "Flag Earth image title" title text.
+   * Example 1: I double click on the image with the "Flag Earth image title" title text.
    *
    * @Given /^I double click on the image with the "([^"]*)" title text$/
    */
@@ -1638,6 +1669,38 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     if (!$found) {
       throw new \Exception(sprintf('"%s" value was not found in the "%s" input element', $text, $selector));
     }
+  }
+
+  /**
+   * Check if we can click a value in the input element.
+   *
+   * Example #1: When I click "your text" value in the "edit-items-2-target-id" input element
+   * Example #2:  And I click "Location property" value in the "edit-name" input element.
+   *
+   * @Then /^I click "(?P<text>[^"]*)" value in the "(?P<selector>[^"]*)" input element$/
+   */
+  public function iClickValueInTheInputElement($text, $selector) {
+
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@data-drupal-selector='{$selector}']");
+    if (empty($elements)) {
+      throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
+    }
+
+    $found = FALSE;
+    foreach ($elements as $element) {
+      $elementTextValue = $element->getValue();
+      $actual = preg_replace('/\s+/u', ' ', $elementTextValue);
+      $regex = "/" . preg_quote($text, '/') . "/";
+
+      if (preg_match($regex, $actual)) {
+        $found = TRUE;
+        break;
+      }
+    }
+    if (!$found) {
+      throw new \Exception(sprintf('"%s" value was not found in the "%s" input element', $text, $selector));
+    }
+    $element->click();
   }
 
   /**
