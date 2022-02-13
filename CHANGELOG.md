@@ -1,7 +1,98 @@
+# 9.0.5
+
+### Highlighted important changes since Varbase 9.0.4:
+This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
+
+* Issue [#3260567](https://www.drupal.org/i/3260567):
+        Updated the Update Helper module from `~2.0 to ~3.0`
+* Issue [#3259112](https://www.drupal.org/i/3259112):
+        Changed Drush from `~10.0` to `~10.0 || ~11.0` for easier
+        support, update, and upgrade process in development and production servers
+* Issue [#3261463](https://www.drupal.org/i/3261463):
+        Switched from deprecated class VarbaseEntityDefinitionUpdateManager
+        to EntityDefinitionUpdateManager
+
+### Added since Varbase 9.0.4:
+* Issue [#3259665](https://www.drupal.org/i/3259665)
+        by [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+        : Added more step definitions for Varbase Layout Builder
+        automated testing for section styling with padding , margin, border
+        style, border width, border color, border radius, background image settings,
+        background video settings
+* Issue [#3252219](https://www.drupal.org/i/3252219)
+        by [hanii.gerges](https://www.drupal.org/u/haniigerges)
+       : Added Container wrapper ID field to the advanced section settings tab
+* Issue [#3263079](https://www.drupal.org/i/3263079)
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
+       : Provided an out of the box styling for horizontal tabs
+        group inside Layout Builder Modal dialog
+
+### Changed since Varbase 9.0.4:
+* Issue [#3261917](https://www.drupal.org/i/3261917)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Changed permission to prevent the "Site admin" user role
+        from administering the Google Analytics Reports API settings
+* Issue [#3260809](https://www.drupal.org/i/3260809)
+        by [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Changed clicking input elements, and background
+        image settings step definitions for functional automated
+        testing the Layout Builder
+
+### Updates since Varbase 9.0.4:
+* Issue [#3260002](https://www.drupal.org/i/3260002):
+        Updated Views Bulk Operations (VBO) from `4.0.0` to `4.0.1`
+        and kept the patch for items per page
+* Issue [#3259098](https://www.drupal.org/i/3259098):
+        Updated WebP module from `1.0-beta5` to `~1.0`
+
+### Fixes since Varbase 9.0.4:
+* Issue [#3252657](https://www.drupal.org/i/3252657):
+        Fixed the match of default content creation date with install date
+* Issue [#3252656](https://www.drupal.org/i/3252656):
+        Fixed priority for homepage to be node/1
+* Issue [#3259999](https://www.drupal.org/i/3259999)
+        by [hanii.gerges](https://www.drupal.org/u/haniigerges)
+       , [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Fixed Flipped order of items on RTL pages for Layout Builder
+        breakpoints editing tools
+* Issue [#3259184](https://www.drupal.org/i/3259184)
+        by [Rajab Natshah](https://www.drupal.org/u/rajab-natshah)
+       , [jeanpaulbouvet](https://www.drupal.org/u/jeanpaulbouvet)
+       : Fixed Error when updating with field definitions by
+        changing the logic in `varbase_security_update_9001` not to bring
+        SQL errors on updates to Varbase `9.0.4`
+* Issue [#3258740](https://www.drupal.org/i/3258740):
+        Fixed some typos in automates testing scenarios
+        and testing `README.md` file
+* Issue [#3261520](https://www.drupal.org/i/3261520)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Fixed missing CKEditor Media Embed Plugins
+        after `8.x-1.11` and CKEditor `4.17.1` was released
+* Issue [#3263487](https://www.drupal.org/i/3263487):
+        Fixed Blazy `8.x-2.6` conflicting issues with the `blazy/loading`
+        library and the use of Varbase Media blazy blurry option
+* Issue [#3263106](https://www.drupal.org/i/3263106)
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
+       : Fixed last inline block item styling in the
+        Add a new custom block off canvas
+* Issue [#3251870](https://www.drupal.org/i/3251870)
+        by [Rahaf Albawab](https://www.drupal.org/u/rahaf-albawab)
+       : Fixed undefined field_link when deleting the
+        field link from Varbase media block
+* Issue [#3261685](https://www.drupal.org/i/3261685)
+        by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+       : Fixed issue when adding background color the class bg-color
+        adding, but when deleting the color the class will not be removed
+* Issue [#3262009](https://www.drupal.org/i/3262009)
+        by [mhawwari](https://www.drupal.org/u/mhawwari)
+       : Fixed print layout styling issues
+
+-------------------------------------------------------------------------------
+
 # 9.0.4
 
 ### Highlighted important changes since Varbase 9.0.3:
-This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites. Learn more about Varbase 9.
+This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
 
 ### Added since Varbase 9.0.3:
 * Issue [#3255863](https://www.drupal.org/i/3255863):
