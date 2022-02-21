@@ -669,10 +669,41 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * =========================================================
+   * 
    * Section Configuration Functions
    *
    * =========================================================
    */
+
+  /**
+   * Add a basic section at the end of layout
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I add a basic "4 Cols" section at the end of layout
+   * Example #2: And I add a basic section at the end of layout
+   * 
+   * @When I add a basic section at the end of layout
+   * @When I add a basic :arg1 section at the end of layout
+   * @And I add a basic (?:|arg1 ) section at the end of layout
+   */
+  public function iAddABasicSectionAtTheEndOfLayout($cols = "1 Col") {
+    $this->iScrollToBottom();
+    $this->iWaitForSeconds(1);
+    $end_layout = $this->getSession()->getPage()->find('xpath', "//a[contains(@class, 'use-ajax layout-builder__link layout-builder__link--add') and contains(., 'at end of layout')]")->click();
+    $this->iWaitForSeconds(1);
+    $section = $this->getSession()->getPage()->find('xpath', "//*[contains(., '$cols') and contains(@class, 'use-ajax')]")->click();
+    $this->iWaitForSeconds(1);
+  }
+  
+
+  /**
+   * @When I save the section
+   */
+  public function iSaveTheSection() {
+    $save = $this->getSession()->getPage()->find('xpath', "//button[contains(@value, 'Add section')]")->click();
+  }
 
   /**
    * Select a section container type
@@ -680,13 +711,16 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase
    *
    * Example #1: When I select the "Edge to Edge" container type
-   * Example #2:  And I select the "Boxed" container type
+   * Example #2:  And I select the "Boxed" container type with a "Tiny" width
    *
    * @When I select the :arg1 container type
+   * @When I select the :type container type with a :width width
    */
-  public function iSelectTheContainerType($name) {
-    $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$name') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-type')]");
-    $element->click();
+  public function iSelectTheContainerType($type, $width = NULL) {
+    $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$type') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-type')]")->click();
+    if($type === "Boxed" && isset($width)){
+      $this->iSelectTheContainerWidth($width);
+    }
   }
 
   /**
@@ -700,24 +734,22 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I select the :arg1 container width
    */
   public function iSelectTheContainerWidth($width) {
-    $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$width') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-width')]");
-    $element->click();
+    $element = $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$width') and contains(@for, 'edit-layout-settings-ui-tab-content-layout-container-width')]")->click();
   }
 
   /**
-  * Select a section breakpoint
-  *
-  * Varbase Context #varbase
-  *
-  * Example #1: When I select the "md" "33% 67%" breakpoint
-  * Example #2:  And I select the "xs" "75% 25%" breakpoint
-  *
-  *
-  * @When I select the :arg1 :arg2 breakpoint
-  */
-  public function iSelectTheBreakpoint($size, $point) {
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class,'$size') and contains(.,'$point')]");
-    $element->click();
+   * Select a section breakpoint
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: When I select the "md" "33% 67%" section breakpoint
+   * Example #2:  And I select the "xs" "75% 25%" section breakpoint
+   *
+   *
+   * @When I select the :arg1 :arg2 section breakpoint
+   */
+  public function iSelectTheSectionBreakpoint($size, $point) {
+    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class,'$size') and contains(.,'$point')]")->click();
   }
 
   /**
@@ -725,14 +757,13 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: When I add gutters
-   * Example #2:  And I add gutters
+   * Example #1: When I add section gutters
+   * Example #2:  And I add section gutters
    *
-   * @When I add gutters
+   * @When I add section gutters
    */
-  public function iAddGutters() {
-    $with_gutters = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'With Gutters')]");
-    $with_gutters->click();
+  public function iAddSectionGutters() {
+    $with_gutters = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'With Gutters')]")->click();
   }
 
   /**
@@ -740,29 +771,27 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: When I remove gutters between columns
-   * Example #2:  And I remove gutters between columns
+   * Example #1: When I remove gutters between section columns
+   * Example #2:  And I remove gutters between section columns
    *
-   * @When I remove gutters between columns
+   * @When I remove gutters between section columns
    */
-  public function iRemoveGuttersBetweenColumns() {
-    $no_gutters = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'vlb_gutters_between')]");
-    $no_gutters->click();
+  public function iRemoveGuttersBetweenSectionColumns() {
+    $no_gutters = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'vlb_gutters_between')]")->click();
   }
 
   /**
-   * Move to the styles tab
+   * Move to the section styles tab
    *
    * Varbase Context #varbase
    *
-   * Example #1: When I move to the styles tab
-   * Example #2:  And I move to the styles tab
+   * Example #1: When I move to the section styles tab
+   * Example #2:  And I move to the section styles tab
    *
-   * @When I move to the styles tab
+   * @When I move to the section styles tab
    */
-  public function iMoveToTheStylesTab() {
-    $styles_tab = $this->getSession()->getPage()->find('xpath', "//a[contains(@data-target, 'appearance')]");
-    $styles_tab->click();
+  public function iMoveToTheSectionStylesTab() {
+    $styles_tab = $this->getSession()->getPage()->find('xpath', "//a[contains(@data-target, 'appearance')]")->click();
   }
 
   /**
@@ -770,29 +799,36 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Example #1: When I open the "Background" settings menu
-   * Example #2:  And I open the "Border" settings menu
+   * Example #1: When I open the section "Background" settings menu
+   * Example #2: And I open the section "Border" settings menu
    *
-   * @When I open the :arg1 settings menu
+   * @When I open the section :arg1 settings menu
    */
-  public function iOpenTheSettingsMenu($menu) {
-    $menu = $this->getSession()->getPage()->find('xpath', "//span[contains(., '$menu') and contains(@class, 'bs-group-title')]");
-    $menu->click();
+  public function iOpenTheSectionSettingsMenu($menu) {
+    $this->iMoveToTheSectionStylesTab();
+    $js = <<<JS
+      var title = "$menu";
+      const xpath = "//span[contains(text(),'" + title + "')]";
+      const js_menu = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+      js_menu.closest("details").setAttribute("open", "");
+    JS;
+    $this->getSession()->executeScript($js);
   }
 
+
   /**
-   * Select a background color
+   * Select a section background color
    *
    * Varbase Context #varbase
    *
-   * Example #1: When I select the "Primary" background color
-   * Example #2:  And I select the "Light" background color
+   * Example #1: When I select the "Primary" section background color
+   * Example #2:  And I select the "Light" section background color
    *
-   * @When I select the :arg1 background color
+   * @When I select the :arg1 section background color
    */
-  public function iSelectTheBackgroundColor($bg_color) {
-    $bg_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$bg_color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-color')]");
-    $bg_color->click();
+  public function iSelectTheSectionBackgroundColor($bg_color) {
+    $this->iOpenTheSectionSettingsMenu("Background");
+    $bg_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$bg_color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-color')]")->click();
   }
 
   /**
@@ -801,28 +837,28 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Contaxt #varbase
    *
    * Example #1: When I uncheck the Edge to Edge Background
-   * Example #2:  And I uncheck the Edge to Edge Background
+   * Example #2: And I uncheck the Edge to Edge Background
    *
    * @When I uncheck the Edge to Edge Background
    */
   public function iUncheckTheEdgeToEdgeBackground() {
-    $e2e = $this->getSession()->getPage()->find('xpath', "//input[contains(@class, 'field-background-edge-to-edge')]");
-    $e2e->click();
+    $this->iOpenTheSectionSettingsMenu("Background");
+    $e2e = $this->getSession()->getPage()->find('xpath', "//input[contains(@class, 'field-background-edge-to-edge')]")->click();
   }
 
   /**
-   * Select a text color
+   * Select a section text color
    *
    * Varbase Context #varbase
    *
-   * Example #1: When I select the "Dark" text color
-   * Example #2:  And I select the "White" text color
+   * Example #1: When I select the "Dark" section text color
+   * Example #2:  And I select the "White" section text color
    *
-   * @When I select the :arg1 text color
+   * @When I select the :arg1 section text color
    */
-  public function iSelectTheTextColor($color) {
-    $text_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-color-text')]");
-    $text_color->click();
+  public function iSelectTheSectionTextColor($color) {
+    $this->iOpenTheSectionSettingsMenu("Typography");
+    $text_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-color-text')]")->click();
   }
 
   /**
@@ -836,8 +872,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I set the alignment to :arg1
    */
   public function iSetTheAlignmentTo($align) {
-    $alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-alignment')]");
-    $alignment->click();
+    $this->iOpenTheSectionSettingsMenu("Typography");
+    $alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-typography-text-alignment')]")->click();
   }
 
   /**
@@ -851,8 +887,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I set the horizontal alignment to :arg1
    */
   public function iSetTheHorizontalAlignmentTo($h_align) {
-    $horizontal_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$h_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-horizontal-alignment-justify-content')]");
-    $horizontal_alignment->click();
+    $this->iOpenTheSectionSettingsMenu("Blocks alignment");
+    $horizontal_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$h_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-horizontal-alignment-justify-content')]")->click();
   }
 
   /**
@@ -866,196 +902,121 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I set the vertical alignment to :arg1
    */
   public function iSetTheVerticalAlignmentTo($v_align) {
-    $vertical_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$v_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-vertical-alignment-align-items')]");
-    $vertical_alignment->click();
+    $this->iOpenTheSectionSettingsMenu("Blocks alignment");
+    $vertical_alignment = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$v_align') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-alignment-vertical-alignment-align-items')]")->click();
   }
 
   /**
-   * Set the padding for a section (all sides)
+   * Set the padding for a section
    * 
    * Varbase Context #varbase
    * 
-   * Example #1: When I set the padding to "5"
-   * Example #2: And I set the padding to "2"
+   * Example #1: When I set the section padding to "2"
+   * Example #2: And I set the section "top" padding to "1"
+   * Example #3: When I set the section "left" padding to "4"
+   * Example #4: And I set the section right padding to 3
+   * Example #5: And I set the section padding to 4
    * 
-    * @When I set the padding to :arg1
-    */
-    public function iSetThePaddingTo($padding) {
-      $this->getSession()->executeScript('jQuery(".bs-field-padding.form-range").val("' . $padding . '")');
-    }
-
-  /**
-   * Set the left padding for a section
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: When I set the left padding to "5"
-   * Example #2: And I set the left padding to "2"
-   * 
-    * @When I set the left padding to :arg1
-    */
-    public function iSetTheLeftPaddingTo($left_padding) {
-      $padding_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding left')]");
-      $padding_left->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-padding-left.form-range").val("' . $left_padding . '")');
-    }
-
-  /**
-   * Set the right padding for a section 
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: When I set the right padding to "5"
-   * Example #2: And I set the right padding to "1"
-   * 
-    * @When I set the right padding to :arg1
-    */
-    public function iSetTheRightPaddingTo($right_padding) {
-      $padding_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding right')]");
-      $padding_right->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-padding-right.form-range").val("' . $right_padding . '")');
-    }
-
-  /**
-   * Set the top padding for a section
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: When I set the top padding to "5"
-   * Example #2: And I set the top padding to "2"
-   * 
-    * @When I set the top padding to :arg1
-    */
-    public function iSetTheTopPaddingTo($top_padding) {
-      $padding_top = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding top')]");
-      $padding_top->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-padding-top.form-range").val("' . $top_padding . '")');
-    }
-
-  /**
-   * Set the bottom padding for a section 
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: When I set the bottom padding to "5"
-   * Example #2: And I set the bottom padding to "4"
-   * 
-   * @When I set the bottom padding to :arg1
+   * @When I set the section :side padding to :value
+   * @When I set the section padding to :value
    */
-    public function iSetTheBottomPaddingTo($bottom_padding) {
-      $padding_bottom = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding bottom')]");
-      $padding_bottom->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-padding-bottom.form-range").val("' . $bottom_padding . '")');
+  public function iSetTheSectionPaddingTo($side = NULL, $value) {
+    $this->iOpenTheSectionSettingsMenu("Spacing");
+    $padding_side = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Padding $side')]");
+    if(is_null($side)){
+      $this->getSession()->executeScript('jQuery(".bs-field-padding.form-range").val("' . $value . '")');
+    }else{
+      $padding_side->click();
+      $js = <<<JS
+      var js_side = "$side";
+      var js_value = "$value";
+      jQuery(".bs-field-padding-" + js_side).val(js_value);
+      JS;
+      $this->getSession()->executeScript($js);
     }
+  }
+
 
   /**
-   * Set the margin for a section (all sides)
+   * Set the margin for a section
    * 
    * Varbase Context #varbase
    * 
-   * Example #1: When I set the margin to "5"
-   * Example #2: And I set the margin to "2"
+   * Example #1: When I set the section margin to "3"
+   * Example #2: And I set the section "right" margin to "2"
+   * Example #3: When I set the section "top" margin to "1"
+   * Example #4: And I set the section left margin to 5
+   * Example #5: And I set the section margin to 4
    * 
-   * @When I set the margin to :arg1
+   * @When I set the section :side margin to :value
+   * @When I set the section margin to :value
    */
-    public function iSetTheMarginTo($margin) {
-      $this->getSession()->executeScript('jQuery(".bs-field-margin.form-range").val("' . $margin . '")');
+  public function iSetTheSectionMarginTo($side = NULL, $value) {
+    $this->iOpenTheSectionSettingsMenu("Spacing");
+    $margin_side = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin $side')]");
+    if(is_null($side)){
+      $this->getSession()->executeScript('jQuery(".bs-field-margin.form-range").val("' . $value . '")');
+    }else{
+      $margin_side->click();
+      $js = <<<JS
+      var js_side = "$side";
+      var js_value = "$value";
+      jQuery(".bs-field-margin-" + js_side).val(js_value);
+      JS;
+      $this->getSession()->executeScript($js);
     }
+  }
+
 
   /**
-   * Set the left margin for a section
+   * Select a border style for a section
    * 
    * Varbase Context #varbase
    * 
-   * Example #1: And I set the left margin to "2"
-   * Example #2: When I set the left margin to "4"
+   * Example #1: And I select the section "solid" border style
+   * Example #2: And I select the section dashed border style
+   * Example #3: When I select the section "solid" "left" border style
+   * Example #4: And I select the section dotted top border style
+   * Example #5: When I select the section solid "bottom" border style
    * 
-   * @When I set the left margin to :arg1
+   * @When I select the section :b_style border style
+   * @When I select the section :b_style :b_side border style
    */
-    public function iSetTheLeftMarginTo($left_margin) {
-      $margin_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin left')]");
-      $margin_left->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-margin-left.form-range").val("' . $left_margin . '")');
+  public function iSelectTheSectionBorderStyle($b_style, $b_side = NULL) {
+    $this->iOpenTheSectionSettingsMenu("Border");
+    if(is_null($b_side)){
+      $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-style-bs-border-style-$b_style')]")->click();
+    }else{
+      $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-$b_side')]")->click();
+      $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-$b_side-style-bs-border-style-$b_side-$b_style')]")->click();
     }
-
-  /**
-   * Set the top margin for a section
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: And I set the top margin to "2"
-   * Example #2: When I set the top margin to "4"
-   * 
-   * @When I set the top margin to :arg1
-   */
-    public function iSetTheTopMarginTo($top_margin)
-    {
-      $margin_top = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin top')]");
-      $margin_top->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-margin-top.form-range").val("' . $top_margin . '")');
-    }
-
-  /**
-   * Set the right margin for a section
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: And I set the right margin to "2"
-   * Example #2: When I set the right margin to "4"
-   * 
-   * @When I set the right margin to :arg1
-   */
-    public function iSetTheRightMarginTo($right_margin)
-    {
-      $margin_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin right')]");
-      $margin_right->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-margin-right.form-range").val("' . $right_margin . '")');
-    }
-
-  /**
-   * Set the bottom margin for a section
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: And I set the bottom margin to "2"
-   * Example #2: When I set the bottom margin to "4"
-   * 
-   * @When I set the bottom margin to :arg1
-   */
-    public function iSetTheBottomMarginTo($bottom_margin) {
-      $margin_bottom = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Margin bottom')]");
-      $margin_bottom->click();
-      $this->getSession()->executeScript('jQuery(".bs-field-margin-bottom.form-range").val("' . $bottom_margin . '")');
-    }
-
-  /**
-   * Select a border style
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: And I select the "Solid" border style
-   * Example #2: When I select the "Dotted" border style
-   * 
-   * @When I select the :arg1 border style
-   */
-  public function iSelectTheBorderStyle($b_style) {
-    $border_style = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$b_style') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-style-bs-border-style')]");
-    $border_style->click();
   }
 
   /**
-   * Set the border width
+   * Set the border width for a section
    * 
    * Varbase Context #varbase
    * 
-   * Example #1: When I set the border width to "3"
-   * Example #2: And I set the border width to "2"
+   * Example #1: When I set the section border width to "3"
+   * Example #2: And I set the section top border width to "2"
+   * Example #3: When I set the section left border width to 1
    *  
-   * @When I set the border width to :arg1
+   * @When I set the section border width to :b_width
+   * @When I set the section :b_side border width to :b_width
    */
-  public function iSetTheBorderWidthTo($b_width) {
-    $border_width = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'Border width')]");
-    $this->getSession()->executeScript('jQuery(".bs-field-border-width.form-range").val("' . $b_width . '")');
+  public function iSetTheSectionBorderWidthTo($b_width, $b_side = NULL) {
+    $this->iOpenTheSectionSettingsMenu("Border");
+    if(is_null($b_side)){
+      $this->getSession()->executeScript('jQuery(".bs-field-border-width.form-range").val("' . $b_width . '")');
+    }else{
+      $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-$b_side')]")->click();
+      $js = <<<JS
+        var js_side = "$b_side";
+        var js_width = "$b_width";
+        jQuery(".bs-field-border-width-" + js_side).val(js_width);
+      JS;
+      $this->getSession()->executeScript($js);
+    }
   }
 
   /**
@@ -1063,139 +1024,67 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * 
    * Varbase Context #varbase
    * 
-   * Example #1: And I select the "Dark" border color
-   * Example #2: When I select the "Primary" border color
+   * Example #1: And I select the section "Dark" border color
+   * Example #2: When I select the section "Primary" border color
+   * Example #3: And I select the section "Danger" top border color
+   * Example #4: When I select the section "Info" right border color
    * 
-   * @When I select the :arg1 border color
+   * @When I select the section :b_color border color
+   * @When I select the section :b_color :b_side border color
    */
-  public function iSelectTheBorderColor($b_color) {
-    $border_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$b_color') and contains (@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-color-border')]");
-    $border_color->click();
+  public function iSelectTheSectionBorderColor($b_color, $b_side = NULL) {
+    $this->iOpenTheSectionSettingsMenu("Border");
+    if(is_null($b_side)){
+      $this->getSession()->getPage()->find('xpath', "//label[contains(.,'$b_color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-color-border')]")->click();
+    }else{
+      $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-$b_side')]")->click();
+      $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-$b_side') and contains(.,'$b_color')]")->click();
+    }
+    
   }
 
   /**
-   * Set the border radius value
+   * Set the border radius
    * 
    * Varbase Context #varbase
    * 
-   * Example #1: When I set the border radius to "2"
-   * Example #2: And I set the border radius to "3"
+   * Example #1: When I set the section border radius to 2
+   * Example #2: And I set the section border radius to "2"
+   * Example #3: And I set the section "top left" border radius to 2
+   * Example #4: When I set the section "bottom right" border radius to "3"
+   * Example #5: And I set the section top right border radius to 1
    * 
-   * @When I set the border radius to :arg1
+   * @When I set the section border radius to :value
+   * @When I set the section :corner border radius to :value
    */
-  public function iSetTheBorderRadiusTo($b_radius) {
-    $border_radius = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Corners')]");
-    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corners.form-range").val("' . $b_radius . '")');
+  public function iSetTheSectionBorderRadiusTo($corner = NULL, $value) {
+    $this->iOpenTheSectionSettingsMenu("Border");
+    if(is_null($corner)){
+      $this->getSession()->executeScript('jQuery(".bs-field-rounded-corners").val("' . $value . '")');
+    }else{
+      $js = <<<JS
+      var js_corner = "$corner";
+      var js_value = "$value";
+      js_corner = js_corner.replace(' ', '_');
+      jQuery(".bs-field-rounded-corner-" + js_corner).val(js_value);
+      JS;
+      $this->getSession()->executeScript($js);
+    }
   }
 
-  /**
-   * Set the top left border radius value
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: When I set the top left border radius to "1"
-   * Example #2: And I set the top left border radius to "2"
-   * 
-   * @When I set the top left border radius to :arg1
-   */
-  public function iSetTheTopLeftBorderRadiusTo($b_radius_top_left) {
-    $border_radius_top_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Top Left')]");
-    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-top_left.form-range").val("' . $b_radius_top_left . '")');
-  }
-
-  /**
-   * Set the top right border radius value
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: And I set the top right border radius to "3"
-   * Example #2: When I set the top right border radius to "1"
-   * 
-   * @When I set the top right border radius to :arg1
-   */
-  public function iSetTheTopRightBorderRadiusTo($b_radius_top_right) { 
-    $border_radius_top_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Top Right')]");
-    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-top_right.form-range").val("' . $b_radius_top_right . '")');
-  }
-
-  /**
-   * Set the bottom left border radius value
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: And I set the bottom left border radius to "3"
-   * Example #2: When I set the bottom left border radius to "1"
-   * 
-   * @When I set the bottom left border radius to :arg1
-   */
-  public function iSetTheBottomLeftBorderRadiusTo($b_radius_bottom_left) { 
-    $border_radius_bottom_left = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Bottom Left')]");
-    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-bottom_left.form-range").val("' . $b_radius_bottom_left . '")');
-  }
-
-  /**
-   * Set the bottom right border radius value
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: And I set the bottom right border radius to "3"
-   * Example #2: When I set the bottom right border radius to "1"
-   * 
-   * @When I set the bottom right border radius to :arg1
-   */
-  public function iSetTheBottomRightBorderRadiusTo($b_radius_bottom_right) { 
-    $border_radius_bottom_right = $this->getSession()->getPage()->find('xpath', "//*[contains(., 'Bottom Right')]");
-    $this->getSession()->executeScript('jQuery(".bs-field-rounded-corner-bottom_right.form-range").val("' . $b_radius_bottom_right . '")');
-  }
-
-  /**
-   * Set the left border style
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: When I select the "Dotted" left border style
-   * Example #2: And I select the "Dashed" left border style
-   * 
-   * @When I select the :arg1 left border style
-   */
-  public function iSelectTheLeftBorderStyle($b_left_style) {
-    $left_border_side = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-left')]");
-    $left_border_side->click();
-    $left_border_style = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$b_left_style') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-left-style-bs-border-style')]");
-    $left_border_style->click();
-  }
-
-  /**
-   * Set the left border width
-   * 
-   * Varbase Context #varbase
-   * 
-   * Example #1: When I set the left border width to "1"
-   * Example #2: And I set the left border width to "2"
-   * 
-   * @When I set the left border width to :arg1
-   */
-  public function iSetTheLeftBorderWidthTo($b_left_width) {
-    $left_border_side = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-left')]");
-    $left_border_side->click();
-    $border_width = $this->getSession()->getPage()->find('xpath', "//label[contains(., 'Border left width')]");
-    $this->getSession()->executeScript('jQuery(".bs-field-border-width-left.form-range").val("' . $b_left_width . '")');
-  }
 
   /**
    * Switch to the background image settings found under background styles settings
    * 
    * Varbase Context #varbase
    * 
-   * Example #1: And I switch to background image settings
+   * Example #1: And I switch to section background image settings
    * 
    * @When I switch to background image settings
    */
-  public function iSwitchToBackgroundImageSettings() {
-    // $menu = $this->getSession()->getPage()->find('xpath', "//span[contains(., 'Background') and contains(@class, 'bs-group-title')]");
-    // $menu->click();
-    $bg_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-image')]");
-    $bg_image->click();
+  public function iSwitchToSectionBackgroundImageSettings() {
+    $this->iOpenTheSectionSettingsMenu("Background");
+    $bg_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-image')]")->click();
   }
 
   /**
@@ -1203,13 +1092,13 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * 
    * Varbase Context #varbase
    * 
-   * Exmaple #1: And I switch to background video settings
+   * Exmaple #1: And I switch to section background video settings
    * 
-   * @When I switch to background video settings
+   * @When I switch to section background video settings
    */
-  public function iSwitchToBackgroundVideoSettings() {
-    $bg_video = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-video')]"); 
-    $bg_video->click();
+  public function iSwitchToSectionBackgroundVideoSettings() {
+    $this->iOpenTheSectionSettingsMenu("Background");
+    $bg_video = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-video')]")->click();
   }
 
   /**
@@ -1221,10 +1110,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * 
    * @When I set the attachment to be fixed
    */
-    public function iSetTheAttachmentToBeFixed()
-    {
-        $fixed_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-options-background-attachment-fixed')]");
-        $fixed_image->click();
+    public function iSetTheAttachmentToBeFixed() {
+        $fixed_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-options-background-attachment-fixed')]")->click();
     }
 
   /**
@@ -1237,26 +1124,45 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * 
    * @When I set the image size to :arg1
    */
-    public function iSetTheImageSizeTo($arg1)
-    {
-        $image_size = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-options-background-size') and contains(., '$arg1')]");
-        $image_size->click();
+    public function iSetTheImageSizeTo($arg1) {
+        $image_size = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-options-background-size') and contains(., '$arg1')]")->click();
     }
+
 
   /**
    * Select an animation for a section
    *
    * Varbase Context #varbase
    *
-   * Example #1: When I select the "Flip Right" animation
-   * Example #2:  And I select the "Zoom Out" animation
+   * Example #1: When I select the section "Flip Right" animation
+   * Example #2:  And I select the section "Zoom Out" animation
    *
-   * @When I select the :arg1 animation
+   * @When I select the section :arg1 animation
    */
-  public function iSelectTheAnimation($anime) {
-    $animation = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$anime') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-animation-scroll-effects')]");
-    $animation->click();
+  public function iSelectTheSectionAnimation($anime) {
+    $this->iOpenTheSectionSettingsMenu("Animation");
+    $animation = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$anime') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-animation-scroll-effects')]")->click();
   }    
+
+  /**
+   * Add a block to a section
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I add a Heading block
+   * Example #2: When I add a "HTML code" block
+   * Example #3: And I add a "Rich text" block
+   * 
+   * @When I add a :block block
+   */
+  public function iAddABlock($block)
+  {
+    $add_block_btn = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'use-ajax layout-builder__link layout-builder__link--add') and contains(., 'Add block')]")->click();
+    $this->iWaitForSeconds(1);
+    $custom_block_btn = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'use-ajax inline-block-create-button') and contains(., 'Create custom block')]")->click();
+    $this->iWaitForSeconds(1);
+    $block = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'use-ajax js-layout-builder-block-link inline-block-list__item') and contains(., '$block')]")->click();
+  }
 
   /**
    * Images Functions.
@@ -1650,7 +1556,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeValueInTheInputElement($text, $selector) {
 
-    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@id='{$selector}']");
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@data-drupal-selector='{$selector}']");
     if (empty($elements)) {
       throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
     }
@@ -1670,6 +1576,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception(sprintf('"%s" value was not found in the "%s" input element', $text, $selector));
     }
   }
+
 
   /**
    * Check if we can click a value in the input element.
@@ -2204,7 +2111,7 @@ JS;
    * @When /^(?:|I )scroll to (?:|the )bottom(?:| of the page)$/
    */
   public function iScrollToBottom() {
-    $this->getSession()->executeScript("javascript:window.scrollBy(0,document.body.scrollHeight)");
+    $this->getSession()->executeScript("window.scrollTo(0,document.body.scrollHeight)");
   }
 
   /**

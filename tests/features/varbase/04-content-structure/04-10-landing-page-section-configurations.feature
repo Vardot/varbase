@@ -18,29 +18,19 @@ As a site admin, I will create a new landing page, add a section with different 
       And I wait 1s
      Then I should see "Add section at end of layout"
 
-     When I click "Add section at end of layout"
-      And I wait for AJAX to finish
-     Then I should see "Bootstrap 2 Cols"
-     When I click "Bootstrap 2 Cols"
-      And I wait for AJAX to finish
-      And I select the "Boxed" container type
-      And I wait for AJAX to finish
-     Then I should see "Container width"
-     When I select the "Tiny" container width
-      And I select the "md" "33% 67%" breakpoint
-      And I add gutters
+     When I add a basic "2 Cols" section at the end of layout
+      And I select the "Boxed" container type with a "Tiny" width
+      And I select the "md" "33% 67%" section breakpoint
+      And I add section gutters
      Then I should not see "Keep gutters between columns"
 
-     When I move to the styles tab
       And I wait for AJAX to finish
-      And I open the "Background" settings menu
-      And I wait for AJAX to finish
-      And I select the "Primary" background color
+      And I select the "Primary" section background color
       And I uncheck the Edge to Edge Background
-      And I open the "Typography" settings menu
-      And I select the "White" text color
+      And I select the "White" section text color
       And I set the alignment to "End"
-      And I press the "Add section" button
+      And I save the section
+      And I wait for AJAX to finish
      Then I should see "Add block in Section 2, Col 1 region"
 
      When I scroll to the bottom of the page
