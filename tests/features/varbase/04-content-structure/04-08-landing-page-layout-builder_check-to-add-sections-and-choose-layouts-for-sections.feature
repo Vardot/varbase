@@ -64,13 +64,8 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
-     When I click "Add section at end of layout"
-      And I wait for AJAX to finish
-     Then I should see "Choose a layout for this section"
-      And I should see "Bootstrap 1 Col"
-     When I click "Bootstrap 1 Col"
-      And I wait for AJAX to finish
-      And I press the "Add section" button
+     When I add a basic section at the end of layout
+      And I save the section
       And I wait for AJAX to finish
      Then I should see "Add block in Section 2, Col 1 region"
 
@@ -121,13 +116,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
-     When I click "Add section at end of layout"
+     When I add a basic "2 Cols" section at the end of layout
       And I wait for AJAX to finish
-     Then I should see "Choose a layout for this section"
-      And I should see "Bootstrap 2 Cols"
-     When I click "Bootstrap 2 Cols"
+      And I save the section
       And I wait for AJAX to finish
-      And I press the "Add section" button
      Then I should see "Add block in Section 3, Col 1 region"
       And I should see "Add block in Section 3, Col 2 region"
 
@@ -195,13 +187,8 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
-     When I click "Add section at end of layout"
-      And I wait for AJAX to finish
-     Then I should see "Choose a layout for this section"
-      And I should see "Bootstrap 3 Cols"
-     When I click "Bootstrap 3 Cols"
-      And I wait for AJAX to finish
-      And I press the "Add section" button
+     When I add a basic "3 Cols" section at the end of layout
+      And I save the section
       And I wait for AJAX to finish
      Then I should see "Add block in Section 4, Col 1 region"
       And I should see "Add block in Section 4, Col 2 region"
@@ -288,13 +275,8 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
-     When I click "Add section at end of layout"
-      And I wait for AJAX to finish
-     Then I should see "Choose a layout for this section"
-      And I should see "Bootstrap 4 Cols"
-     When I click "Bootstrap 4 Cols"
-      And I wait for AJAX to finish
-      And I press the "Add section" button
+     When I add a basic "4 Cols" section at the end of layout
+      And I save the section
       And I wait for AJAX to finish
      Then I should see "Add block in Section 5, Col 1 region"
       And I should see "Add block in Section 5, Col 2 region"
@@ -399,13 +381,8 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
-     When I click "Add section at end of layout"
-      And I wait for AJAX to finish
-     Then I should see "Choose a layout for this section"
-      And I should see "Bootstrap 6 Cols"
-     When I click "Bootstrap 6 Cols"
-      And I wait for AJAX to finish
-      And I press the "Add section" button
+     When I add a basic "6 Cols" section at the end of layout
+      And I save the section 
       And I wait for AJAX to finish
      Then I should see "Add block in Section 6, Col 1 region"
       And I should see "Add block in Section 6, Col 2 region"
