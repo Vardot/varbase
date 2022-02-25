@@ -1,10 +1,10 @@
 # Varbase Automated Functional Testing
 
  A set of Gherkin Features and custom Varbase Context with custom
- step definitions, and assets, which help with the automatic testing for
+ step definitions, and assets, that helps with automated testing for
  varbase project websites.
 
- This page can help  you to have the list all steps, which you need to run the
+ This page list all the steps needed, which you need to run the
  Behat Gherkin Features to test a varbase website in your localhost machine.
 
 To test varbase 9.1.x in the right way you will need to build varbase using
@@ -19,6 +19,7 @@ composer create-project vardot/varbase:9.1.x-dev PROJECT_DIR_NAME --stability de
 ### Add needed testing packages
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
+cd `/PROJECT_DIR_NAME/docroot`
 composer require --dev drupal/core-dev:~9.0
 composer require --dev drush/drush:~11.0
 composer require --dev drupal/drupal-extension:~4.0
@@ -60,24 +61,29 @@ Make sure that all varbase modules are insalled.
 ../bin/drush cr
 ```
 
-### Enable the Drush Language Command module and add RTL language
+### Enable the Drush Language Command module and add a RTL language
 Needed to add the extra languages.
 ```
+cd path to your files of the project/PROJECT_DIR_NAME
 composer require drupal/drush_language:~1.0
+cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush pm:enable drush_language --yes
 ../bin/drush language-add ar
 ../bin/drush language-info
 ../bin/drush cr
 ```
 
-### Uninstall Antibot module to let the 
+### Uninstall Antibot module to make the Selenium robot have more control 
+Needed to uninstall as the Antibot module will prevent the Selenium robot from performing effectively  
 ```
+cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush pm:uninstall antibot --yes
 ../bin/drush cr
 ```
 
-### Change config for error reporting and CSS/JS aggrigation
+### Change config for error reporting and CSS/JS aggregation
 ```
+cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush config:set system.performance css.preprocess 0 --yes
 ../bin/drush config:set system.performance js.preprocess 0 --yes
 ../bin/drush config:set system.logging error_level all --yes
