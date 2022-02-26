@@ -35,25 +35,25 @@ commands:
           command: Xvfb -ac :99 -screen 0 1600x1200x24 > /dev/null 2>&1
           background: true
 
-      ## Setup Apache2 and PHP7.4
+      ## Setup Apache2 and PHP8.1
       - run:
-          name: Setup Apache2 and PHP7.4
+          name: Setup Apache2 and PHP8.1
           command: |
             sudo add-apt-repository ppa:ondrej/php -y
             sudo apt update
             sudo apt upgrade
-            sudo apt install -yqq apache2 php7.4 libapache2-mod-php7.4 php7.4-mbstring php7.4-mysql php7.4-xml php7.4-cgi php7.4-cli php7.4-common php7.4-curl php7.4-gd php7.4-imap php7.4-intl php7.4-pspell php7.4-sqlite3 php7.4-tidy php7.4-opcache php7.4-json php7.4-bz2 php7.4-readline php7.4-xmlrpc php7.4-enchant php7.4-xsl php7.4-zip php7.4-bcmath php-pear
-            sudo a2enmod php7.4
+            sudo apt install -yqq apache2 php8.1 libapache2-mod-php8.1 php8.1-mbstring php8.1-mysql php8.1-xml php8.1-cgi php8.1-cli php8.1-common php8.1-curl php8.1-gd php8.1-imap php8.1-intl php8.1-pspell php8.1-sqlite3 php8.1-tidy php8.1-opcache php8.1-yaml php8.1-bz2 php8.1-readline php8.1-xmlrpc php8.1-enchant php8.1-xsl php8.1-zip php8.1-bcmath php-pear
+            sudo a2enmod php8.1
             sudo a2enmod headers rewrite env mime expires ssl
-            sudo update-alternatives --set php /usr/bin/php7.4
-            echo -e "memory_limit = -1" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "max_execution_time = 1200" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "error_reporting = E_ALL" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "max_input_time = 180" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "max_input_vars = 10000" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "post_max_size = 64M" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "upload_max_filesize = 32M" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
-            echo -e "max_file_uploads = 40" | sudo tee /etc/php/7.4/apache2/php.ini > /dev/null
+            sudo update-alternatives --set php /usr/bin/php8.1
+            echo -e "memory_limit = -1" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
+            echo -e "max_execution_time = 1200" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
+            echo -e "error_reporting = E_ALL" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
+            echo -e "max_input_time = 180" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
+            echo -e "max_input_vars = 10000" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
+            echo -e "post_max_size = 64M" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
+            echo -e "upload_max_filesize = 32M" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
+            echo -e "max_file_uploads = 40" | sudo tee /etc/php/8.1/apache2/php.ini > /dev/null
             sudo service apache2 restart
   
       ## Waiting for MySQL to be ready.
