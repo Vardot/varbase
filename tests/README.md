@@ -19,7 +19,6 @@ composer create-project vardot/varbase:9.1.x-dev PROJECT_DIR_NAME --stability de
 ### Add needed testing packages
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
-cd `/PROJECT_DIR_NAME/docroot`
 composer require --dev drupal/core-dev:~9.0
 composer require --dev drush/drush:~11.0
 composer require --dev drupal/drupal-extension:~4.0
