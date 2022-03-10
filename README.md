@@ -17,7 +17,7 @@ in every project.
 * Speeds up development.
 * Offers standardized configuration and best-practices.
 * Comes with a lot of needed functionalities/modules for every-day Drupal site.
-* [Tested, tested, and tested.](https://travis-ci.org/Vardot/varbase/builds)
+* [Tested, tested, and tested.](https://app.circleci.com/pipelines/github/Vardot/varbase)
 
 Starting a new project? Consider Varbase for Drupal 9.
 Installing Varbase 9.1.x comes with several extra automated installation
