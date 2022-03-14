@@ -6,7 +6,6 @@
   <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->
   <exclude-pattern>*/node_modules/*</exclude-pattern>
   <exclude-pattern>*/bower_components/*</exclude-pattern>
-  <exclude-pattern>*/tests/features/bootstrap/*</exclude-pattern>
 
   <!--Exclude minimized css.-->
   <exclude-pattern>*/*.min.css</exclude-pattern>
