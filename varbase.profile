@@ -32,7 +32,7 @@ function varbase_form_install_configure_form_alter(&$form, FormStateInterface $f
   $form['admin_account']['account']['name']['#default_value'] = 'webmaster';
   $form['admin_account']['account']['name']['#attributes']['disabled'] = TRUE;
   $form['admin_account']['account']['mail']['#default_value'] = 'webmaster@vardot.com';
-  $form['admin_account']['account']['mail']['#description'] = t('In most case, and for <a target="_blank" href="@link">Vardot</a> specific use, we recommend this to always be <em>webmaster@vardot.com</em>.', ['@link' => 'http://vardot.com']);
+  $form['admin_account']['account']['mail']['#description'] = t('In most cases, and for <a target="_blank" href="@link">Vardot</a>’s specific use, we recommend this to always be <em>webmaster@vardot.com</em>.', ['@link' => 'http://vardot.com']);
 }
 
 /**
