@@ -1,0 +1,4 @@
+# Varbase Robots additions to Robots.txt
+# --------------------------------------
+# Oembed media
+Disallow: /media/oembed
