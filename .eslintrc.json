@@ -1,29 +1,31 @@
 {
   "extends": [
-    "airbnb",
-    "plugin:react/recommended",
+    "airbnb-base",
     "plugin:prettier/recommended",
     "plugin:yml/recommended"
   ],
   "root": true,
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true,
+    "node": true
   },
   "globals": {
     "Drupal": true,
     "drupalSettings": true,
     "drupalTranslations": true,
-    "domready": true,
     "jQuery": true,
     "_": true,
-    "matchMedia": true,
+    "Cookies": true,
     "Backbone": true,
     "Modernizr": true,
+    "loadjs": true,
     "Popper": true,
     "Shepherd": true,
     "Sortable": true,
     "once": true,
     "CKEDITOR": true,
+    "CKEditor5": true,
     "tabbable": true
   },
   "settings": {
