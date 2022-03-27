@@ -2,3 +2,4 @@
 # --------------------------------------
 # Oembed media
 Disallow: /media/oembed
+Disallow: /*/media/oembed
