@@ -66,6 +66,7 @@
     "gulp-scss-lint": "~1",
     "gulp-sourcemaps": "~3",
     "gulp-uglify": "~3",
+    "gulp-rtlcss": "~1",
     "merge-stream": "~2",
     "minimatch": "~5",
     "minimist": "~1",

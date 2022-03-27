@@ -1,5 +1,6 @@
 node_modules/**/*.css
 vendor/**/*.css
+**/libraries/
 **/*.min.css"
 /css/variables.css
 /css/mixins/
@@ -18,4 +19,11 @@ config/**/*.yml
 *.ico
 *.json
 *.make
+*.md
+*.po
+*.xml
+*.js
+*.install
+*.profile
+*.lock
 package
