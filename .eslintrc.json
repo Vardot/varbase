@@ -1,40 +1,35 @@
 {
   "extends": [
-    "airbnb",
-    "plugin:react/recommended",
+    "airbnb-base",
     "plugin:prettier/recommended",
     "plugin:yml/recommended"
   ],
   "root": true,
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true,
+    "node": true
   },
   "globals": {
     "Drupal": true,
     "drupalSettings": true,
     "drupalTranslations": true,
-    "domready": true,
     "jQuery": true,
     "_": true,
-    "matchMedia": true,
+    "Cookies": true,
     "Backbone": true,
     "Modernizr": true,
+    "loadjs": true,
     "Popper": true,
     "Shepherd": true,
     "Sortable": true,
     "once": true,
     "CKEDITOR": true,
+    "CKEditor5": true,
     "tabbable": true
   },
-  "settings": {
-    "react": {
-      "version": "latest"
-    }
-  },
   "rules": {
-    "prettier/prettier": ["error", {
-      "trailingComma": "none"
-    }],
+    "prettier/prettier": "error",
     "consistent-return": ["off"],
     "no-underscore-dangle": ["off"],
     "max-nested-callbacks": ["warn", 3],
@@ -52,12 +47,6 @@
       "requireReturn": false
     }],
     "no-unused-vars": ["warn"],
-    "object-shorthand": 0,
-    "prefer-arrow-callback": 0,
-    "func-names": 0,
-    "no-use-before-define": 0,
-    "one-var": 0,
-    "operator-linebreak": ["error", "after", { "overrides": { "?": "ignore", ":": "ignore" } }],
-    "prefer-template": 0
+    "operator-linebreak": ["error", "after", { "overrides": { "?": "ignore", ":": "ignore" } }]
   }
 }

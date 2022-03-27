@@ -1,23 +1,32 @@
 {
   "extends": "stylelint-config-standard",
   "plugins": [
-    "stylelint-no-browser-hacks/lib",
     "stylelint-order"
   ],
   "rules": {
+    "alpha-value-notation": "number",
+    "at-rule-no-vendor-prefix": null,
+    "color-function-notation": "legacy",
     "comment-empty-line-before": null,
+    "custom-property-pattern": "^[a-z][-_a-z0-9IE]*$",
+    "declaration-block-no-redundant-longhand-properties": null,
     "function-linear-gradient-no-nonstandard-direction": null,
+    "function-url-quotes": null,
     "function-whitespace-after": null,
+    "hue-degree-notation": "number",
     "no-descending-specificity": null,
     "no-duplicate-selectors": null,
     "no-unknown-animations": true,
+    "max-line-length": null,
     "media-feature-name-no-unknown": [true, {
       "ignoreMediaFeatureNames": [
         "prefers-reduced-motion",
         "min--moz-device-pixel-ratio"
       ]
     }],
+    "media-feature-name-no-vendor-prefix": null,
     "number-leading-zero": "always",
+    "number-max-precision": 5,
     "order/order": [
       "custom-properties",
       "dollar-variables",
@@ -114,11 +123,19 @@
       "margin-right",
       "margin-bottom",
       "margin-left",
+      "margin-block-start",
+      "margin-block-end",
+      "margin-inline-start",
+      "margin-inline-end",
       "padding",
       "padding-top",
       "padding-right",
       "padding-bottom",
       "padding-left",
+      "padding-block-start",
+      "padding-block-end",
+      "padding-inline-start",
+      "padding-inline-end",
 
       "table-layout",
       "-webkit-columns",
@@ -325,6 +342,22 @@
       "border-left-width",
       "border-left-style",
       "border-left-color",
+      "border-block-start",
+      "border-block-start-width",
+      "border-block-start-style",
+      "border-block-start-color",
+      "border-inline-end",
+      "border-inline-end-width",
+      "border-inline-end-style",
+      "border-inline-end-color",
+      "border-block-end",
+      "border-block-end-width",
+      "border-block-end-style",
+      "border-block-end-color",
+      "border-inline-start",
+      "border-inline-start-width",
+      "border-inline-start-style",
+      "border-inline-start-color",
       "-webkit-border-radius",
       "-moz-border-radius",
       "border-radius",
@@ -421,27 +454,24 @@
       "font-smooth",
       "line-height"
     ],
-    "plugin/no-browser-hacks": [true, {
-      "browsers": [
-        "ie >= 9",
-        "edge >= 13",
-        "firefox >= 5",
-        "opera >= 12",
-        "safari >= 5",
-        "chrome >= 56"
-      ]
-    }],
     "property-no-unknown": null,
+    "property-no-vendor-prefix": null,
     "rule-empty-line-before": null,
+    "selector-attribute-quotes": null,
+    "selector-class-pattern": null,
+    "selector-id-pattern": "^[a-z][-_a-z0-9]*$",
+    "selector-no-vendor-prefix": null,
     "selector-pseudo-element-colon-notation": null,
     "shorthand-property-no-redundant-values": null,
     "string-quotes": "double",
-    "unit-allowed-list": ["deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"],
-    "font-family-no-missing-generic-family-keyword": [true, {
-      "ignoreFontFamilies": [
-        "Font Awesome 5 Brands",
-        "Font Awesome 5 Free"
+    "unit-allowed-list": ["ch", "deg", "em", "ex", "fr", "ms", "rem", "%", "s", "px", "vw", "vh"],
+    "value-keyword-case": ["lower", {
+      "camelCaseSvgKeywords": true,
+      "ignoreProperties": [
+        "--font-family",
+        "font-family"
       ]
-    }]
+    }],
+    "value-no-vendor-prefix": null
   }
 }

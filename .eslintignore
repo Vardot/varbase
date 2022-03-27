@@ -5,4 +5,4 @@ behat.yml
 behat.varbase.yml
 drupalci.yml
 **/drupalci.yml
-**/librarie
+**/libraries/
