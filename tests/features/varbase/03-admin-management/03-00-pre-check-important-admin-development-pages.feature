@@ -120,3 +120,38 @@ So that I can use them after the install or update.
        And I should see "*@vardot.com" value in the "edit-allowed" input element
        And the "edit-description" checkbox is checked
        And the "edit-message" checkbox is checked
+
+   @javascript @check @local @development @staging
+   Scenario: Check Varbase password suggestions settings
+      When I go to "admin/config/system/varbase/varbase-security/password-suggestions-settings"
+       And I wait
+      Then I should see "Password Suggestions settings"
+       And I should see "Passwords match:" value in the "edit-confirmtitle" input element
+       And I should see "yes" value in the "edit-confirmsuccess" input element
+       And I should see "no" value in the "edit-confirmfailure" input element
+       And I should see "Password strength:" value in the "edit-strengthtitle" input element
+       And I should see "Recommendations to make your password stronger:" value in the "edit-hasweaknesses" input element
+       And I should see "Make it at least 8 characters" value in the "edit-tooshort" input element
+       And I should see "Add lowercase letters" value in the "edit-addlowercase" input element
+       And I should see "Add uppercase letters" value in the "edit-adduppercase" input element
+       And I should see "Add numbers" value in the "edit-addnumbers" input element
+       And I should see "Add punctuation" value in the "edit-addpunctuation" input element
+       And I should see "Make it different from your username" value in the "edit-sameasusername" input element
+       And I should see "Weak" value in the "edit-weak" input element
+       And I should see "Fair" value in the "edit-fair" input element
+       And I should see "Good" value in the "edit-good" input element
+       And I should see "Strong" value in the "edit-strong" input element
+   
+   @javascript @check @local @development @staging
+   Scenario: Check password policy constraints
+      When I go to "admin/config/security/password-policy/default_policy/constraint"
+       And I wait
+      Then I should see "Configure Constraints"
+       And I should see "Number of allowed repeated passwords: 0"
+       And I should see "Password must not contain the user's username."
+       And I should see "Password character length of at least 8 characters"
+       And I should see "Minimum password character types: 4"
+       And I should see "Password must contain 1 special character"
+       And I should see "Password must contain 1 numeric character"
+       And I should see "Password must contain 1 uppercase character"
+       And I should see "Password must contain 1 lowercase character"

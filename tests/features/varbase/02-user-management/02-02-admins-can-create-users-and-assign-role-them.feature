@@ -29,6 +29,7 @@ So that they will be able to use the site.
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
       And I scroll to bottom
+      And I should not see "Default policy"
       And I press "Create new account"
 
   @javascript @cleanup @local @development @staging @production
