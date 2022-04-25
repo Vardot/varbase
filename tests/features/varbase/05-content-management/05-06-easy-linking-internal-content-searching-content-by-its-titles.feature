@@ -41,11 +41,10 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I wait for AJAX to finish
      Then I should see "Linking to internal content #1 title"
      When I click "Linking to internal content #1 title" in the "ul" element with the "class" attribute set to "ui-autocomplete"
-     And I wait for AJAX to finish
-     And I wait 2s
-     And I wait for AJAX to finish
-     Then I should see "Linking to internal content #1 title"
-     When I click "Save" in the "button" element with the "class" attribute set to "button js-form-submit form-submit ui-button ui-corner-all ui-widget"
+      And I wait for AJAX to finish
+      And I wait 2s
+      And I wait for AJAX to finish
+      And I click "Save" in the "button" element with the "class" attribute set to "button js-form-submit form-submit ui-button ui-corner-all ui-widget"
       And I wait
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
