@@ -32,7 +32,7 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core": "~9.0",
-    "drupal/varbase_core": "9.0.x-dev",
+    "drupal/varbase_core": "~9.0",
     "drupal/varbase_api": "~9.0",
     "drupal/varbase_media": "~9.0",
     "drupal/varbase_editor": "~9.0",

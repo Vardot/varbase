@@ -1,3 +1,173 @@
+# 9.0.6
+
+### Highlighted important changes since Varbase 9.0.5:
+This is a patch (bugfix) release of Varbase 9 and is ready
+ for use on production sites. Learn more about Varbase 9.
+
+* Issue [#3217859](https://www.drupal.org/i/3217859):
+        Support PHP8.1 and MySQL 8 for Varbase ~9.0 and all used components
+        with automated testing
+* Issue [#3256029](https://www.drupal.org/i/3256029):
+        Revised Password Policy and Password Confirmation Suggestions message
+* Issue [#3272417](https://www.drupal.org/i/3272417):
+        Switched to use the Module Installer Factory with Varbase distribution
+        and all Varbase components
+* Issue [#3271850](https://www.drupal.org/i/3271850):
+        Switched from deprecated Node Sass to Dart Sass compiler using Gulp
+        and changed minimum Nodejs version to 16.0 and later in
+        the Varbase distribution
+* Issue [#3264445](https://www.drupal.org/i/3264445):
+        Added and enabled CKEditor Paste Filter module
+* Issue [#3270457](https://www.drupal.org/i/3270457):
+        Have a default template for merge requests and issues for the
+        Varbase profile project and all Varbase components in Gitlab
+
+### Added since Varbase 9.0.5:
+* Issue [#3264779](https://www.drupal.org/i/3264779):
+        Added an update notice about adding the CKEditor Paste Filter
+        module to the updates checklist for Varbase 9.0.6
+* Issue [#3269806](https://www.drupal.org/i/3269806):
+        Included Disallow Oembed media link in the robots.txt file
+        for better Varbase SEO
+* Issue [#3263378](https://www.drupal.org/i/3263378):
+        Added smart step definitions related to adding sections, padding,
+        margin, border radius and adding blocks for Varbase Layout Builder
+* Issue [#3269421](https://www.drupal.org/i/3269421):
+        Added exception messages for VLB automated testing step definitions
+* Issue [#3264297](https://www.drupal.org/i/3264297)
+        by [hanii.gerges]()
+       : Added title attribute to oEmbed iframe for accessibility
+* Issue [#3272221](https://www.drupal.org/i/3272221)
+        by [Abdullah Yassin]()
+       : Added Section Library view with permission to
+        |view section library templates| to prevent anonymous
+        users from accessing the sections library page
+* Issue [#3274455](https://www.drupal.org/i/3274455)
+        by [Odai Atieh]()
+       : Added support to automatically create a clone for the existing
+        inline blocks in the layout in Layout Library
+* Issue [#3276911](https://www.drupal.org/i/3276911)
+        by [Alaa Jwiehan]()
+       : Added automated functional testing coverage for
+        Password Suggestions settings
+
+### Changed since Varbase 9.0.5:
+
+* Issue [#3268850](https://www.drupal.org/i/3268850):
+        Replaced TravisCI link with CircleCI link
+* Issue [#3269809](https://www.drupal.org/i/3269809):
+        Enhanced wording for Varbase install - configure site page
+* Issue [#3266504](https://www.drupal.org/i/3266504):
+        Updated Automated Functional Testing README.md File
+* Issue [#3266209](https://www.drupal.org/i/3266209):
+        Removed leftover configs after installation of additional modules
+        for Social Auth and fullback to the Social Auth and
+        its extra modules. To manage the installation and change of configs
+* Issue [#3264253](https://www.drupal.org/i/3264253):
+        Disabled Blazy per individual Video iframe for editor text formats
+* Issue [#3271959](https://www.drupal.org/i/3271959):
+        Improved accessibility for the Flood Unblock page
+* Issue [#3260019](https://www.drupal.org/i/3260019):
+        Enabled X-XSS-Protection header by default for Depth Web Application
+        Defense using CSP
+* Issue [#3273453](https://www.drupal.org/i/3273453):
+        Switched to use YAML Literal Style format to fix issues with
+        implicit keys in the updates_checklist.yml file
+* Issue [#3271885](https://www.drupal.org/i/3271885)
+        by [mhawwari]()
+       : Changed to optionally install the Views Infinite Scroll module
+        instead of requiring it in dependencies
+
+### Updates since Varbase 9.0.5:
+* Issue [#3271463](https://www.drupal.org/i/3271463):
+        Updated Moderation Sidebar module from 1.4 to ~1.0 and removed committed patches
+* Issue [#3268628](https://www.drupal.org/i/3268628):
+        Updated the Update Helper module from 3.0.1 to 3.0.2
+* Issue [#3267998](https://www.drupal.org/i/3267998):
+        Updated Antibot module from ~1.0 to ~2.0
+* Issue [#3267822](https://www.drupal.org/i/3267822):
+        Updated Views Bulk Operations module from 4.0.1 to 4.1.0
+* Issue [#3267992](https://www.drupal.org/i/3267992):
+        Updated Inline Entity Form module from 1.0-rc9 to 1.0-rc10 and updated applied patches
+* Issue [#3269838](https://www.drupal.org/i/3269838):
+        Updated Tour UI module from 1.0.0-beta3 to ~1.0 and removed committed patches
+* Issue [#3271527](https://www.drupal.org/i/3271527):
+        Updated Paragraphs module from 1.12 to 1.13
+* Issue [#3271292](https://www.drupal.org/i/3271292):
+        Updated Views Bulk Operations (VBO) from 4.1.0 to ~4.1 and removed committed patches
+* Issue [#3272381](https://www.drupal.org/i/3272381):
+        Updated Reroute Email module from 2.1.0 to ~2.0 and removed committed patches
+* Issue [#3273735](https://www.drupal.org/i/3273735):
+        Updated Inline Entity Form module from 1.0-rc10 to 1.0-rc11 and kept needed patches
+* Issue [#3274535](https://www.drupal.org/i/3274535):
+        Updated Media Bulk Upload module from ~1.0 to ~3.0 new stable and supported branch
+* Issue [#3265826](https://www.drupal.org/i/3265826):
+        Updated Social Aauth Twitter module from 2.x-dev to ~2.0 and remove committed patches
+
+### Fixes since Varbase 9.0.5:
+* Issue [#3274689](https://www.drupal.org/i/3274689):
+        Fixed image title background width in the media library modal dialog
+* Issue [#3271439](https://www.drupal.org/i/3271439):
+        Fixed Entity Browser bundle media type filter not to use and empty exposed operator
+* Issue [#3265975](https://www.drupal.org/i/3265975):
+        Fixed drush cim --partial --source=/app/config/sync on
+        Platform.sh app server, which bring up a blocker message
+        of |There were errors validating the config synchronization|
+* Issue [#3266217](https://www.drupal.org/i/3266217):
+        Fixed wrong Formbit process for Varbase Social Single Sign-On extra config. Not to use the simple.setting config
+* Issue [#3264905](https://www.drupal.org/i/3264905):
+        Fixed Fatal error if a source media was deleted
+* Issue [#3265632](https://www.drupal.org/i/3265632):
+        Fixed Errors for messing Enabled entity types and Safe tokens on the URL aliases settings page
+* Issue [#3276206](https://www.drupal.org/i/3276206):
+        Fixed default config for Allowed Formats in the Varbase Rich text and HTML code block types
+* Issue [#3273950](https://www.drupal.org/i/3273950)
+        by [Abdullah Yassin]()
+       : Fixed layout builder custom blocks modal background color
+* Issue [#3272735](https://www.drupal.org/i/3272735)
+        by [yasmeensalah]()
+       : Fixed not loading webp images when used with Image Widget
+        Crop and responsive images
+* Issue [#3275785](https://www.drupal.org/i/3275785)
+        by [Mohammad Fayoumi]()
+       : Fixed Accessibility issue on the order of the role attribute for the Paragraph tabs
+* Issue [#3275781](https://www.drupal.org/i/3275781)
+        by Mohammad Fayoumi:
+        Fixed Accessibility issue on  aria-*  attributes for Varbase Bootstrap Paragraphs
+* Issue [#3275689](https://www.drupal.org/i/3275689)
+        by [Mohammad Fayoumi]()
+       : Resolved accessibility issue related to required attributes
+        for the heading roles in Vartheme BS4
+* Issue [#3275684](https://www.drupal.org/i/3275684)
+        by [Mohammad Fayoumi]()
+       : Resolved Lighthouse SEO issue related to links are not crawlable
+        a#main-content in Vartheme BS4
+* Issue [#3273676](https://www.drupal.org/i/3273676)
+        by [Abdullah Yassin]()
+       : Fixed blocks search field to full width in the off-canvas
+        in the Layout Builder page
+* Issue [#3276912](https://www.drupal.org/i/3276912)
+        by [Abdullah Yassin]()
+       : Removed layout builder warning message - location icon
+* Issue [#3266745](https://www.drupal.org/i/3266745)
+        by [yousef_maraqa98]()
+       : Fixed RTL style for Media Library widget inside Layout Builder
+* Issue [#3274454](https://www.drupal.org/i/3274454)
+        by Odai Atieh
+       : Fixed Layout Library issue on Duplicate entry for
+        key block_content_field__uuid__value
+* Issue [#3276916](https://www.drupal.org/i/3276916)
+        by [Qusai Taha]()
+       : Fixed Email Registration issue of changing the user name
+        when creating a new account. As it always takes the first part of the email
+* Issue [#3277033](https://www.drupal.org/i/3277033)
+        by [Abdullah Yassin]()
+       : Fixed search icon overlapping long text in input auto complete fields
+* Issue [#3271883](https://www.drupal.org/i/3271883)
+        by mhawwari:
+        Fixed route does not exist error in the Total Control Dashboard
+
+-------------------------------------------------------------------------------
 # 9.0.5
 
 ### Highlighted important changes since Varbase 9.0.4:
