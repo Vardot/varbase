@@ -79,13 +79,7 @@ commands:
       - run:
           name: Install node js
           command: |
-            curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - 
-            sudo apt update
-            sudo apt install nodejs
-            sudo apt install build-essential
-            curl -L https://npmjs.com/install.sh | sudo -E bash -
-            sudo apt update
-            sudo apt install npm
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
             sudo apt install -y nodejs 
             sudo npm install -g yarn
             sudo npm install gulp-cli -g ;
