@@ -207,9 +207,9 @@ commands:
             ../bin/drush config:set system.logging error_level all --yes
             ../bin/drush cr
 
-      ## Run selenium standalone server.
+      ## Run Selenium Standalone server.
       - run:
-          name: Run selenium standalone server
+          name: Run Selenium Standalone server
           command: |
             if [[ ! -f /home/circleci/selenium-server-standalone-3.141.59.jar ]]; then wget -O /home/circleci/selenium-server-standalone-3.141.59.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar; fi
             cd /home/circleci/
