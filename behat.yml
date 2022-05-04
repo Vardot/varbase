@@ -68,7 +68,7 @@ default:
               browser: ALL
             chromeOptions:
               args:
-                # - "--headless"
+                - "--headless"
                 - "--start-maximized"
                 - "--disable-gpu"
                 - "--window-size=1600,1200"
@@ -91,8 +91,7 @@ default:
                 - "--disable-dev-shm-usage"
                 - "--disable-setuid-sandbox"
                 - "--remote-debugging-port=9222"
-                - "--allowed-ips='*'"
-                - "--whitelisted-ips='*'"
+                - "--allowed-ips=*"
               w3c: false
       base_url: 'http://varbase.test'
       # browser_name: 'firefox'
