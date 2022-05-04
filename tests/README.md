@@ -150,7 +150,7 @@ rm chromedriver_linux64.zip
 
 ### Get selenium standalone server.
 ```
-wget http://selenium-release.storage.googleapis.com/3.9/selenium-server-standalone-3.9.1.jar
+wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar
 ```
 
 ## Run selenium standalone server.
