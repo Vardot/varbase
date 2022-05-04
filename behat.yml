@@ -63,33 +63,30 @@ default:
           browserName: chrome
           version: "*"
           extra_capabilities:
+            loggingPrefs:
+              performance: ALL
+              browser: ALL
             chromeOptions:
+              w3c: false
               args:
+                - "--headless"
+                - "--start-maximized"
                 - "--disable-gpu"
                 - "--window-size=1600,1200"
                 - "--no-sandbox"
                 - "--disable-dev-shm-usage"
                 - "--disable-setuid-sandbox"
-              w3c: false
-          chrome:
-            switches:
-              - "--headless"
-              - "--start-maximized"
-              - "--disable-gpu"
-              - "--window-size=1600,1200"
-              - "--no-sandbox"
-              - "--disable-dev-shm-usage"
-              - "--disable-setuid-sandbox"
-              - "--disable-web-security"
-              - "--DNS-prefetch-disable"
-              - "--whitelisted-ips"
-              - "--disable-translate"
-              - "--ignore-certificate-errors"
-              - "--test-type"
-              - "--disable-extensions"
-              - "--incognito"
-              - "--ignore-certificate-errors"
-              - "--disable-infobars"
+                - "--disable-web-security"
+                - "--DNS-prefetch-disable"
+                - "--disable-translate"
+                - "--ignore-certificate-errors"
+                - "--test-type"
+                - "--disable-extensions"
+                - "--incognito"
+                - "--disable-infobars"
+                - "--remote-debugging-port=9222"
+                - "--allowed-ips=*"
+                - "--whitelisted-ips=*"
       base_url: 'http://varbase.test'
       # browser_name: 'firefox'
       browser_name: 'chrome'

@@ -68,9 +68,9 @@ commands:
             done
             echo Failed waiting for MySQL && exit 1
 
-      ## Install composer ~2.1
+      ## Install Composer
       - run:
-          name: Install composer ~2.1
+          name: Install Composer
           command: |
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
@@ -207,13 +207,13 @@ commands:
             ../bin/drush config:set system.logging error_level all --yes
             ../bin/drush cr
 
-      ## Run selenium standalone server.
+      ## Run Selenium Standalone server.
       - run:
-          name: Run selenium standalone server
+          name: Run Selenium Standalone server
           command: |
-            if [[ ! -f /home/circleci/selenium-server-standalone-2.53.1.jar ]]; then wget -O /home/circleci/selenium-server-standalone-2.53.1.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar; fi
+            if [[ ! -f /home/circleci/selenium-server-standalone-3.141.59.jar ]]; then wget -O /home/circleci/selenium-server-standalone-3.141.59.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-standalone-2.53.1.jar -port 4445
+            java -jar selenium-server-standalone-3.141.59.jar -port 4445
           background: true
 
       ## Add testing users.
