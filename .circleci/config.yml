@@ -213,7 +213,7 @@ commands:
           command: |
             if [[ ! -f /home/circleci/selenium-server-standalone-3.141.59.jar ]]; then wget -O /home/circleci/selenium-server-standalone-3.141.59.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar; fi
             cd /home/circleci/
-            xvfb-run java -jar selenium-server-standalone-3.141.59.jar -port 4445
+            java -jar selenium-server-standalone-3.141.59.jar -port 4445
           background: true
 
       ## Add testing users.
