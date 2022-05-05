@@ -58,13 +58,13 @@ At the end of the update process, two log files are useful to troubleshoot
 2. Edit your _composer.json_ file to be ready for updates. You have two choices.
  Edit your _composer.json_ to include
  all the new updates made in
- [varbase-project](https://github.com/Vardot/varbase-project/blob/9.1.x/composer.json).
+ [varbase-project](https://github.com/Vardot/varbase-project/blob/10.0.x/composer.json).
  This includes the new components required and its versions
  _"require"_, _"repositories"_, _"extra"_, and any other important config.
  You can use a diff tool such as [Meld](http://meldmerge.org/) or
  [DiffMerge](https://sourcegear.com/diffmerge/) to help you diff between
  your old _composer.json_ and the new one from
- [varbase-project](https://github.com/Vardot/varbase-project/blob/9.1.x/composer.json). 
+ [varbase-project](https://github.com/Vardot/varbase-project/blob/10.0.x/composer.json). 
 3. Back up your code and database 
 4. Execute Composer update to download updates to modules and libraries.
  `composer update`  
