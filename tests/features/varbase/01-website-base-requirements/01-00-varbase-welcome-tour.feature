@@ -28,7 +28,7 @@ The welcome message is made possible by having Varbase Tour module
      When I click "Next" in the "button" element with the "class" attribute set to "button button--primary shepherd-button "
      Then I should see "Define Your Site Settings"
      When I click "Next" in the "button" element with the "class" attribute set to "button button--primary shepherd-button "
-      And I wait 2 second
+      And I wait 2 seconds
      Then I should see "Site Content"
       And I should see "End tour"
       And I press the "End tour" button
