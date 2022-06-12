@@ -295,24 +295,24 @@ workflows:
       - varbase-testing-01-website-base-requirements:
           filters:
             tags:
-              only: /^9.1.*/
+              only: /^10.0*/
             branches:
-              only: /^9.1.x/
+              only: /^10.0x/
       - varbase-testing-02-user-management-03-admin-management:
           filters:
             tags:
-              only: /^9.1.*/
+              only: /^10.0*/
             branches:
-              only: /^9.1.x/
+              only: /^10.0x/
       - varbase-testing-04-content-structure:
           filters:
             tags:
-              only: /^9.1.*/
+              only: /^10.0*/
             branches:
-              only: /^9.1.x/
+              only: /^10.0x/
       - varbase-testing-05-content-management:
           filters:
             tags:
-              only: /^9.1.*/
+              only: /^10.0*/
             branches:
-              only: /^9.1.x/
+              only: /^10.0x/
