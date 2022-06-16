@@ -145,7 +145,7 @@ commands:
             cd /var/www/html/test/
             sudo chmod 775 .
             sudo chown www-data:circleci .
-            git clone --branch '10.0.x' https://github.com/AlaaJwiehan/varbase.git /var/www/html/test/varbase-code
+            git clone --branch '10.0.x' https://github.com/vardot/varbase.git /var/www/html/test/varbase-code
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer install --no-interaction -vvv
