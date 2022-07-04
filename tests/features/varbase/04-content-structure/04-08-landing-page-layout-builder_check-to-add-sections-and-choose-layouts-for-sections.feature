@@ -34,8 +34,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should not see "Bootstrap 10 Cols"
       And I should not see "Bootstrap 11 Cols"
       And I should not see "Bootstrap 12 Cols"
-      And I scroll to the top of the page
-      And I wait 1s
+     When I scroll to the top of the page
      Then I should see "Save layout"
      When I press the "Save layout" button
       And I wait

@@ -63,6 +63,7 @@ As a site admin, I will create a new landing page, add a section with different 
      Then I should see "Test Rich text in 2 cols section, col 2" 
 
      When I scroll to the top of the page
+      And I wait 2s
      Then I should see "Save layout"
       And I press the "Save layout" button
       And I wait

@@ -4,7 +4,7 @@ The welcome message is made possible by having Varbase Tour module
   @javascript @local @development @staging @production
   Scenario: Check if welcome message is enabled
     Given I am a logged in user with the "webmaster" user
-      And I go to "admin/config/varbase/settings"
+      And I go to "/admin/config/varbase/settings"
      Then I should see "Varbase general settings"
       And I should see "Allow site to show welcome message"
       And I check the box "Allow site to show welcome message"
@@ -15,9 +15,11 @@ The welcome message is made possible by having Varbase Tour module
   @javascript @local @development @staging @production
   Scenario: Check if welcome message and tour are displayed
     Given I am a logged in user with the "webmaster" user
-      And I go to "?welcome"
+      And I go to "/?welcome"
+      And I wait 2 seconds
+      And I scroll to the bottom
      Then I should see "Welcome to "
-      And I should see " Get started "
+      And I should see "Get started"
      When I click "Get started"
       And I wait 2 seconds
      Then I should see "Tour Switch"
@@ -33,7 +35,7 @@ The welcome message is made possible by having Varbase Tour module
   @javascript @local @development @staging @production
   Scenario: Check if welcome message is disabled after closing it
     Given I am a logged in user with the "webmaster" user
-      And I go to "admin/config/varbase/settings"
+      And I go to "/admin/config/varbase/settings"
      Then I should see "Varbase general settings"
       And I should see "Allow site to show welcome message"
       And the "Allow site to show welcome message" checkbox is unchecked
