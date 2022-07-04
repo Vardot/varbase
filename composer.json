@@ -70,7 +70,8 @@
     "drupal/core-dev": "~9.0",
     "drush/drush": "~10.0 || ~11.0",
     "drupal/drupal-extension": "~4.0",
-    "emuse/behat-html-formatter": "^0.2.0"
+    "emuse/behat-html-formatter": "^0.2.0",
+    "drevops/behat-screenshot": "~1.0"
   },
   "config": {
     "bin-dir": "bin/",

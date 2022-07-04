@@ -43,6 +43,7 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
+        - DrevOps\BehatScreenshotExtension\Context\ScreenshotContext
   formatters:
     pretty:
     html:
@@ -114,3 +115,8 @@ default:
       print_args: false
       print_outp: false
       loop_break: false
+    DrevOps\BehatScreenshotExtension:
+      dir: '%paths.base%/tests/screenshots'
+      fail: true
+      fail_prefix: 'failed_'
+      purge: false
