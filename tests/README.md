@@ -26,6 +26,26 @@ composer require --dev emuse/behat-html-formatter:^0.2.0
 
 ```
 
+### Add additional testing packages
+```
+cd path to yout files of the project/PROJECT_DIR_NAME
+BEHAT-SCREENSHOT to capture images on demand or when a test fails
+
+composer require --dev drevops/behat-screenshot
+
+Edit the behat.yml file, which is located in:
+`path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/varbase/behat.yml`
+- to have DrevOps\BehatScreenshotExtension\Context\ScreenshotContext under contexts
+- to have DrevOps\BehatScreenshotExtension:
+            dir: '%paths.base%/tests/screenshots'
+            fail: true
+            fail_prefix: 'failed_'
+            purge: false
+  under extensions
+Read more about it here: https://github.com/drevops/behat-screenshot
+
+```
+
 ### Install Varbase
 Have Varbase installed from the browser or using the `drush site:install` command.
 But make sure to have the webmaster user with the `dD.123123ddd` passwrod.
@@ -104,7 +124,7 @@ To delete testing users use
 
 ## 1. Change the base url
 
-Edit the behat.yml file, which located in:
+Edit the behat.yml file, which is located in:
 `path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/varbase/behat.yml`
  to the domain or the local virtual domain.
 ```
