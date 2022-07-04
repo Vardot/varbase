@@ -16,8 +16,10 @@ The welcome message is made possible by having Varbase Tour module
   Scenario: Check if welcome message and tour are displayed
     Given I am a logged in user with the "webmaster" user
       And I go to "?welcome"
+      And I wait 2 seconds
+      And I scroll to the bottom
      Then I should see "Welcome to "
-      And I should see " Get started "
+      And I should see "Get started"
      When I click "Get started"
       And I wait 2 seconds
      Then I should see "Tour Switch"
