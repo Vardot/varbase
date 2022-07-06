@@ -86,8 +86,7 @@ So that I can use them after the install or update.
       And I should see "Vartheme"
       And I should see "(Bootstrap 5 - SASS)"
       And I should see "Claro"
-      And I should see "Bootstrap"
-      And I should see "Bootstrap Barrio"
+      And I should see "Radix"
       And I should see "Vartheme Claro"
 
    @javascript @check @local @development @staging @production

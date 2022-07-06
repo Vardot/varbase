@@ -21,7 +21,7 @@ install:
   - views
   - file
 themes:
-  - bootstrap_barrio
+  - radix
   - vartheme_bs5
   - seven
   - claro

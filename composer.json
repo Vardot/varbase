@@ -49,7 +49,7 @@
     "drupal/varbase_styleguide": "10.0.x-dev",
     "drupal/varbase_email": "10.0.x-dev",
     "drupal/varbase_workflow": "3.0.x-dev",
-    "drupal/vartheme_bs5": "1.0.x-dev",
+    "drupal/vartheme_bs5": "2.0.x-dev",
     "drupal/vartheme_claro": "4.0.x-dev",
     "vardot/entity-definition-update-manager": "~1.0",
     "vardot/module-installer-factory": "~1.0",
