@@ -1,3 +1,101 @@
+# 9.0.7
+
+### Highlighted important changes since Varbase 9.0.5:
+This is a patch (bugfix) release of Varbase 9 and is ready
+ for use on production sites. Learn more about Varbase 9.
+
+### Added since Varbase 9.0.6:
+* Issue [#3277590](https://www.drupal.org/i/3277590)
+        by [Abdullah Yassin](https://www.drupal.org/u/abdullah-yassin)
+       : Have a Varbase installation requirement ( notification, not a blocker)
+* Issue [#3285082](https://www.drupal.org/i/3285082)
+        by [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Added Automated Testing Coverage For Varbase Tour Module
+* Issue [#3292847](https://www.drupal.org/i/3292847)
+        by [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Added `--with-all-dependencies` to automation testing readme file
+        on the drupal/drupal-extension package
+* Issue [#3293400](https://www.drupal.org/i/3293400)
+        by [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Added drevops/behat-screenshot Behat content to the installation
+        guide to automated testing readme file and Varbase default testing process
+* Issue [#3285361](https://www.drupal.org/i/3285361)
+        by [Mutasim Al-Shoura](https://www.drupal.org/u/mutasim-al-shoura)
+       : Added Bootstrap buttons (Light,Dark)
+
+### Changed since Varbase 9.0.6:
+* Issue [#3284419](https://www.drupal.org/i/3284419)
+        by [Abdullah Yassin](https://www.drupal.org/u/abdullah-yassin)
+       : Changed default Varbase Carousel option set from limited to infinity
+* Issue [#3284568](https://www.drupal.org/i/3284568)
+        by [Abdullah Yassin](https://www.drupal.org/u/abdullah-yassin)
+       , [Rajab Natshah](https://www.drupal.org/u/rajab-natshah)
+       : Hide media (image/video) field link title input
+* Issue [#3291994](https://www.drupal.org/i/3291994)
+        by [Odai Jaber](https://www.drupal.org/u/odai-jaber)
+        , [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+         : Changed to conditionally attach only needed
+        local or remote video libraries
+* Issue [#3279038](https://www.drupal.org/i/3279038)
+       : Support Drupal 10 and update all use of deprecation in the Vartheme BS4 theme
+* Issue [#3278730](https://www.drupal.org/i/3278730)
+        : Switched to use Selenium Server Standalone 3.141.59 to follow with
+        Latest Chrome Browser and Chrome Driver options
+
+### Updates since Varbase 9.0.6:
+* Issue [#3284166](https://www.drupal.org/i/3284166)
+       : Updated the Update Helper module from `3.0.2` to `3.0.3` and updated
+        the enhancements patch
+* Issue [#3291333](https://www.drupal.org/i/3291333)
+       : Updated Content Planner module from `1.0-beta16` to `1.0-beta17 ( ~1.0 )`
+        and removed committed patches
+* Issue [#3293847](https://www.drupal.org/i/3293847)
+       : Updated Chaos Tool Suite (ctools) module from `~3.0` to `~3.0 || ~4.0`
+        in Varbase Core
+* Issue [#3293844](https://www.drupal.org/i/3293844)
+       : Updated Chaos Tool Suite (ctools) module from `~3.0` to `~3.0 || ~4.0`
+        in Varbase Carousels
+* Issue [#3288722](https://www.drupal.org/i/3288722)
+        by [NaheemSays](https://www.drupal.org/u/naheemsays)
+       : Updated the Image Optimize module from `~3.0` to `~4.0` (first stable release)
+* Issue [#3283336](https://www.drupal.org/i/3283336)
+       : Updated Blazy module from `2.12` to `2.13 ( ~2.0 )`
+        and removed committed patches
+* Issue [#3277642](https://www.drupal.org/i/3277642)
+       : Updated Flood Control module from `2.2.2` to `~2.0`
+        and remove committed patches
+* Issue [#3277648](https://www.drupal.org/i/3277648)
+       : Updated Menu Position module from `1.0-beta1` to `~1.0`
+        and removed committed patches
+
+### Fixes since Varbase 9.0.6:
+* Issue [#3280063](https://www.drupal.org/i/3280063)
+        by [Abdullah Yassin](https://www.drupal.org/u/abdullah-yassin)
+       , [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Fixed footer position bottom when page have a little content in Vartheme BS4
+* Issue [#3223852](https://www.drupal.org/i/3223852)
+        by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+       , [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+       , [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+       : Fixed preview in nodes with workflows
+* Issue [#3290890](https://www.drupal.org/i/3290890):
+        Fixed deprecation issue for the Content Planner module with mysql driver on Drupal 9.4.0
+* Issue [#3285612](https://www.drupal.org/i/3285612)
+        by [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+       : Fixed deprecated PHP 8.1 function: strpos(): Passing null to parameter #1 ($haystack) of type string
+* Issue [#3277279](https://www.drupal.org/i/3277279)
+        by [Abdullah Yassin](https://www.drupal.org/u/abdullah-yassin)
+       : Fixed RTL style for media library menu popup
+* Issue [#3283172](https://www.drupal.org/i/3283172)
+        by [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+       : Fixed Blazy issue after updating to 2.12 Error: Call to a member function get ()
+* Issue [#3277617](https://www.drupal.org/i/3277617)
+        by [paskainos](https://www.drupal.org/u/paskainos):
+        Fixed Style Guide issue on [PHP 8.1] Deprecated function: strpos(): Passing null to parameter
+
+
+-------------------------------------------------------------------------------
+
 # 9.0.6
 
 ### Highlighted important changes since Varbase 9.0.5:
