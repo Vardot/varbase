@@ -175,6 +175,9 @@ This is a patch (bugfix) release of Varbase 9 and is ready
         by [mhawwari]()
        : Changed to optionally install the Views Infinite Scroll module
         instead of requiring it in dependencies
+* Issue [#3295313](https://www.drupal.org/i/3295313):
+        Removed enabling the Seven admin theme on new installations.
+        After Claro was sat as the default admin theme
 
 ### Updates since Varbase 9.0.5:
 * Issue [#3271463](https://www.drupal.org/i/3271463):
