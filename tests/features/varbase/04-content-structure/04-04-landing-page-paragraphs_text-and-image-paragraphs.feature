@@ -35,7 +35,6 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
        And I wait for 1 second
        And I select the "text_and_image" paragraph component
        And I wait for AJAX to finish
-       And I scroll down
       Then I should see "Text and image"
        And I should see "No media items are selected."
       When I press "field_image-media-library-open-button-field_lp_paragraphs-0-subform"
