@@ -23,7 +23,6 @@ install:
 themes:
   - radix
   - vartheme_bs5
-  - seven
   - claro
   - vartheme_claro
 
