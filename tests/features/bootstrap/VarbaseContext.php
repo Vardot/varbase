@@ -2241,6 +2241,40 @@ JS;
   }
 
   /**
+   * Check if a checkbox is unchecked
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I should see the "Accept" checkbox unchecked
+   * Example #1: Then I should see the "Enable" checkbox unchecked
+   * 
+   * @Then I should see the :label checkbox unchecked
+   */
+  public function iShouldSeeTheCheckboxUnchecked($label) {
+    $isChecked = (boolean) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
+    if ($isChecked) {
+      throw new \Exception("The '" . $label . "' checkbox is checked");
+    } 
+  }
+
+  /**
+   * Check if a checkbox is checked
+   * 
+   * Varbase Context #varbase
+   * 
+   * Example #1: And I should see the "Site Admin" checkbox checked
+   * Example #1: Then I should see the "Enable" checkbox checked
+   * 
+   * @Then I should see the :label checkbox checked
+   */
+  public function iShouldSeeTheCheckboxChecked($label) {
+    $isChecked = (boolean) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
+    if (!$isChecked) {
+      throw new \Exception("The '" . $label . "' checkbox is unchecked");
+    } 
+  }
+
+  /**
    * Check if the Image media browser opened.
    *
    * Varbase Context #varbase.

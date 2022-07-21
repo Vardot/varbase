@@ -8,6 +8,7 @@ The welcome message is made possible by having Varbase Tour module
      Then I should see "Varbase general settings"
       And I should see "Allow site to show welcome message"
       And I check the box "Allow site to show welcome message"
+     Then I should see the "Allow site to show welcome message" checkbox checked
       And I press "Save configuration"
       And I wait
      Then I should see "The configuration options have been saved."
@@ -38,4 +39,4 @@ The welcome message is made possible by having Varbase Tour module
       And I go to "admin/config/varbase/settings"
      Then I should see "Varbase general settings"
       And I should see "Allow site to show welcome message"
-      And the "Allow site to show welcome message" checkbox is unchecked
+      And I should see the "Allow site to show welcome message" checkbox unchecked
