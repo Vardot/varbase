@@ -108,18 +108,33 @@
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   },
   "extra": {
-    "drupal-scaffold": {
-      "locations": {
-        "web-root": "docroot/"
-      }
-    },
     "branch-alias": {
       "dev-10.0.x": "10.0.x-dev"
     },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "vardot/varbase"
+      ],
+      "gitignore": true,
+      "locations": {
+        "web-root": "docroot/"
+      },
+      "file-mapping": {
+        "[web-root]/sites/default/default.services.yml": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "docroot/core/assets/scaffold/files/default.services.yml"
+        },
+        "[web-root]/sites/default/default.settings.php": {
+          "mode": "replace",
+          "overwrite": false,
+          "path": "docroot/core/assets/scaffold/files/default.settings.php"
+        },
+        "[web-root]/robots.txt": {
+          "append": "docroot/profiles/varbase/src/assets/varbase-robots-additions.txt"
+        }
+      }
+    },
     "installer-paths": {
       "docroot/core": ["type:drupal-core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
@@ -138,6 +153,10 @@
       "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
@@ -158,6 +177,7 @@
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
-    }
+    },
+    "patches": {}
   }
 }
