@@ -1,3 +1,88 @@
+# 9.0.8
+
+### Highlighted important changes since Varbase 9.0.7:
+
+This is a patch (bugfix) release of Varbase 9 and is ready
+for use on production sites. Learn more about Varbase 9.
+
+* Issue [#3295950](https://www.drupal.org/i/3295950):
+        Changed the default `drush/drush` version
+        from `~10.0 || ~11.0` to `~11.0` in the `composer.json`
+        file for Varbase Profile and the Varbase Project Template
+* Issue [#3301451](https://www.drupal.org/i/3301451)
+        by [vacho](https://www.drupal.org/u/vacho)
+       : Have `drupal-scaffold` locations `web-root` for Varbase as `docroot`
+        to fix composer `web-root` folder in projects
+* Issue [#3302442](https://www.drupal.org/i/3302442):
+        Dropped support for Composer `~1.0` in Varbase profile
+        and only support Composer `~2.0` and later versions
+
+### Added since Varbase 9.0.7:
+* Issue [#3298632](https://www.drupal.org/i/3298632)
+        by [Alaa Jwiehan](https://www.drupal.org/u/alaa-jwiehan)
+       : Added Functional Automated Testing: Step Definition to validate if a checkbox input is checked or unchecked
+* Issue [#3300946](https://www.drupal.org/i/3300946):
+        Added max width `100%` to images in the Welcome
+        to Varbase message homepage default content
+
+### Changed since Varbase 9.0.7:
+* Issue [#3301364](https://www.drupal.org/i/3301364):
+        Changed `node_type` to `entity_bundle:node` for default
+         pathauto pattern configs for the Blog Post content type
+* Issue [#3301361](https://www.drupal.org/i/3301361):
+        Changed `node_type` to `entity_bundle:node` for default
+        pathauto pattern configs for the Basic Page content type
+* Issue [#3301363](https://www.drupal.org/i/3301363):
+        Changed `node_type` to `entity_bundle:node` for default
+        pathauto pattern configs for the Landing Page (Layout Builder) content type
+
+### Updates since Varbase 9.0.7:
+* Issue [#3298831](https://www.drupal.org/i/3298831):
+        Updated the Inline Entity Form module from `1.0-rc11` to `1.0-rc12`
+* Issue [#3298826](https://www.drupal.org/i/3298826):
+        Updated the Prevent Homepage Deletion module from `~1.0` to `~2.0`
+* Issue [#3300859](https://www.drupal.org/i/3300859):
+        Updated the Views Bootstrap module from `~4.0` to `~5.4.0`
+        on the `9.0.x` branch
+* Issue [#3298894](https://www.drupal.org/i/3298894):
+        Updated the Paragraphs module from `1.13` to `1.14`
+        and keep the not committed patches
+* Issue [#3298883](https://www.drupal.org/i/3298883):
+        Updated the Block Form Alter module from `~1.0` to `~2.0`
+* Issue [#3298556](https://www.drupal.org/i/3298556):
+        Updated Paragraphs Asymmetric Translation Widgets module
+        from `1.0-beta4` to `~1.0` and removed committed patches
+* Issue [#3303042](https://www.drupal.org/i/3303042):
+        Updated the CTools module from `3.11-rc1` to `3.11` stable ( `~3.0` )
+* Issue [#3290573](https://www.drupal.org/i/3290573)
+        by [Project Update Bot](https://www.drupal.org/u/project-update-bot)
+       : Automated Drupal 10 compatibility fixes for VMI on the 8.x-2.x-dev branch
+* Issue [#3290336](https://www.drupal.org/i/3290336)
+        by [Project Update Bot](https://www.drupal.org/u/project-update-bot)
+       : Automated Drupal 10 compatibility fixes for Vartheme BS4
+* Issue [#3290339](https://www.drupal.org/i/3290339)
+        by [Project Update Bot](https://www.drupal.org/u/project-update-bot)
+       : Automated Drupal 10 compatibility fixes for Vartheme Claro
+        admin theme on the `3.0.x` branch
+
+### Fixes since Varbase 9.0.7:
+* TEMP quick fix for Issue [#3302839](https://www.drupal.org/i/3302839):
+        Changed the CTools module from `~3.0 || ~4.0` to `3.11-rc1`
+        in `composer.json` as a TEMP quick fix until `3.11` stable releases
+* Issue [#3290804](https://www.drupal.org/i/3290804)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Fixed pathauto's options of punctuation character for
+        left and right double quotation
+* Issue [#3253519](https://www.drupal.org/i/3253519)
+        by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+       : Fixed redirects from aliased paths aren't triggered
+* Issue [#3243604](https://www.drupal.org/i/3243604)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Fixed Path field is required validation issue on adding url redirect
+
+
+-------------------------------------------------------------------------------
+
 # 9.0.7
 
 ### Highlighted important changes since Varbase 9.0.5:
