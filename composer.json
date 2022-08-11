@@ -109,7 +109,8 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-10.0.x": "10.0.x-dev"
+      "dev-10.0.x": "10.0.x-dev",
+      "dev-10.1.x": "10.1.x-dev"
     },
     "drupal-scaffold": {
       "allowed-packages": [
@@ -129,9 +130,6 @@
           "mode": "replace",
           "overwrite": false,
           "path": "docroot/core/assets/scaffold/files/default.settings.php"
-        },
-        "[web-root]/robots.txt": {
-          "append": "docroot/profiles/varbase/src/assets/varbase-robots-additions.txt"
         }
       }
     },
