@@ -114,11 +114,12 @@
     },
     "drupal-scaffold": {
       "allowed-packages": [
+        "drupal/core",
         "vardot/varbase"
       ],
       "gitignore": true,
       "locations": {
-        "web-root": "docroot/"
+        "web-root": "./docroot"
       },
       "file-mapping": {
         "[web-root]/sites/default/default.services.yml": {
@@ -130,6 +131,9 @@
           "mode": "replace",
           "overwrite": false,
           "path": "docroot/core/assets/scaffold/files/default.settings.php"
+        },
+        "[web-root]/.htaccess": {
+          "mode": "skip"
         }
       }
     },
