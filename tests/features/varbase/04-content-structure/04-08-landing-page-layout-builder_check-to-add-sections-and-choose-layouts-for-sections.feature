@@ -35,8 +35,8 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should not see "Bootstrap 11 Cols"
       And I should not see "Bootstrap 12 Cols"
      When I scroll to the top of the page
-     Then I should see "Save layout"
-     When I press the "Save layout" button
+      And I wait 2s
+      And I press the "Save layout" button
       And I wait
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
@@ -86,8 +86,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I scroll to the top of the page
       And I wait 2s
-     Then I should see "Save layout"
-     When I press the "Save layout" button
+      And I press the "Save layout" button
       And I wait
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
@@ -156,8 +155,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      When I scroll to the top of the page
       And I wait 2s
-     Then I should see "Save layout"
-     When I press the "Save layout" button
+      And I press the "Save layout" button
       And I wait
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
@@ -243,8 +241,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      When I scroll to the top of the page
       And I wait 2s
-     Then I should see "Save layout"
-     When I press the "Save layout" button
+      And I press the "Save layout" button
       And I wait
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
@@ -348,8 +345,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I scroll to the top of the page
       And I wait 2s
-     Then I should see "Save layout"
-     When I press the "Save layout" button
+      And I press the "Save layout" button
       And I wait
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
@@ -488,8 +484,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I scroll to the top of the page
       And I wait 2s
-     Then I should see "Save layout"
-     When I press the "Save layout" button
+      And I press the "Save layout" button
       And I wait
      Then I should see "The layout override has been saved."
       And I should see "Rich text in 6 cols section, col 1"
@@ -498,4 +493,3 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 6 cols section, col 4"
       And I should see "Rich text in 6 cols section, col 5"
       And I should see "Rich text in 6 cols section, col 6"
-

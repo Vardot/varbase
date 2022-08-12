@@ -25,5 +25,4 @@ So that I will be able to view/add/edit/ or delete content in the site
       And I wait 2s
      When I press "Log in"
       And wait
-     Then I should see "Email or username field is required."
-      And I should see "Password field is required"
+     Then I should see "2 errors have been found"

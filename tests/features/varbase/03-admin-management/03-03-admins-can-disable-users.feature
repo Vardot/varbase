@@ -43,7 +43,7 @@ So that they will be disabled and not be able to use the site.
       And I wait 2s
       And I press "Log in"
       And I wait
-     Then I should see "The username Normal user has not been activated or is blocked."
+     Then I should see "1 error has been found"
 
   @javascript @local @development @staging @production
   Scenario: Check flood control default settings

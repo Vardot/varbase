@@ -73,7 +73,7 @@ default:
                 - "--headless"
                 - "--start-maximized"
                 - "--disable-gpu"
-                - "--window-size=1600,1200"
+                - "--window-size=3000,1200"
                 - "--no-sandbox"
                 - "--disable-dev-shm-usage"
                 - "--disable-setuid-sandbox"

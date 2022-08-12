@@ -703,7 +703,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I save the section
    */
   public function iSaveTheSection() {
-    $save = $this->getSession()->getPage()->find('xpath', "//button[contains(@value, 'Add section')]");
+    $save = $this->getSession()->getPage()->find('xpath', "//input[contains(@value, 'Add section')]");
     if (is_null($save)) {
       throw new \Exception('The "Add section" button was not found or not visible');
     }
