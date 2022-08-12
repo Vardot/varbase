@@ -66,6 +66,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I add a basic section at the end of layout
       And I save the section
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Add block in Section 2, Col 1 region"
 
      When I click "Add block in Section 2, Col 1 region"
@@ -118,6 +119,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I save the section
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Add block in Section 3, Col 1 region"
       And I should see "Add block in Section 3, Col 2 region"
 
@@ -135,6 +137,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet purus vitae augue lobortis accumsan ut nec nulla. Cras nisi mauris, gravida ac"
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 2 cols section, col 1"
   
      When I click "Add block in Section 3, Col 2 region"
@@ -187,6 +190,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I add a basic "3 Cols" section at the end of layout
       And I save the section
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Add block in Section 4, Col 1 region"
       And I should see "Add block in Section 4, Col 2 region"
       And I should see "Add block in Section 4, Col 3 region"
@@ -205,6 +209,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 3 cols section, col 1"
 
      Then I click "Add block in Section 4, Col 2 region"
@@ -221,9 +226,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 3 cols section, col 2"
   
-     Then I click "Add block in Section 4, Col 3 region"
+     When I click "Add block in Section 4, Col 3 region"
       And I wait for AJAX to finish
      Then I should see "Create custom block"
      When I click "Create custom block"
@@ -274,6 +280,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I add a basic "4 Cols" section at the end of layout
       And I save the section
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Add block in Section 5, Col 1 region"
       And I should see "Add block in Section 5, Col 2 region"
       And I should see "Add block in Section 5, Col 3 region"
@@ -293,6 +300,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 4 cols section, col 1"
 
      When I click "Add block in Section 5, Col 2 region"
@@ -309,6 +317,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 4 cols section, col 2"
   
      Then I click "Add block in Section 5, Col 3 region"
@@ -325,6 +334,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 4 cols section, col 3"
   
      Then I click "Add block in Section 5, Col 4 region"
@@ -379,6 +389,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I add a basic "6 Cols" section at the end of layout
       And I save the section 
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Add block in Section 6, Col 1 region"
       And I should see "Add block in Section 6, Col 2 region"
       And I should see "Add block in Section 6, Col 3 region"
@@ -400,6 +411,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 6 cols section, col 1"
 
      Then I click "Add block in Section 6, Col 2 region"
@@ -416,6 +428,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 6 cols section, col 2"
 
      Then I click "Add block in Section 6, Col 3 region"
@@ -432,6 +445,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 6 cols section, col 3"
   
      Then I click "Add block in Section 6, Col 4 region"
@@ -448,6 +462,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 6 cols section, col 4"
   
      Then I click "Add block in Section 6, Col 5 region"
@@ -464,6 +479,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est"
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 6 cols section, col 5"
   
      When I click "Add block in Section 6, Col 6 region"
