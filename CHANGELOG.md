@@ -1,3 +1,135 @@
+# 9.0.9
+
+### Highlighted important changes since Varbase 9.0.8:
+This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites. Learn more about Varbase 9.
+
+* Updated Lando project configs for Vardot/varbase-project
+        template to use **PHP 8.1** [#154](https://github.com/Vardot/varbase-project/pull/154)
+* Updated Platform.sh app configs for Vardot/platformsh-varbase
+        template to use **PHP 8.1** [#35](https://github.com/Vardot/platformsh-varbase/pull/35)
+
+### Added since Varbase 9.0.8:
+* No additions in this release, All additions and major
+        changes will go into the Varbase 10.0.x branch
+
+* Issue [#3315983](https://www.drupal.org/i/3315983):
+        Added a patch for the **Webform** `6.1.3` module to have a better support for **PHP 8.1**
+* Issue [#3316015](https://www.drupal.org/i/3316015):
+        Added a patch for the Google Analytics module to have a better support for **PHP 8.1**
+
+### Changed since Varbase 9.0.8:
+* Issue [#3310593](https://www.drupal.org/i/3310593):
+        Changed default configs for **Password Policy** in Varbase Security
+         after the release of **Password Policy** `8.x-3.2`
+* Issue [#3189408](https://www.drupal.org/i/3189408)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       , [mahseri](https://www.drupal.org/u/mahseri)
+       : Hide preloader for remote video YouTube
+
+### Updates since Varbase 9.0.8:
+* Issue [#3315921](https://www.drupal.org/i/3315921)
+        by Qusai Taha
+       : Updated the **Update Helper** module from `3.0.3` to `3.0.4`
+* Issue [#3305198](https://www.drupal.org/i/3305198):
+        Updated **Bootstrap library** from `4.6.1` to `4.6.2`
+Bootstrap 4.6.2 was released Jul 19, 2022
+https://github.com/twbs/bootstrap/releases/tag/v4.6.2
+* Issue [#3317380](https://www.drupal.org/i/3317380):
+        Updated **Nodejs packages** to match with latest Drupal
+        core for compiling and linting
+* Issue [#3306927](https://www.drupal.org/i/3306927)
+        by Qusai Taha
+       : Updated **Email Registration** module from `1.1` to `~1.0` and
+        removed committed patches
+* Issue [#3307034](https://www.drupal.org/i/3307034):
+        Updated **Redirect module** from `1.7` to `1.8` an kept needed patches
+* Issue [#3312332](https://www.drupal.org/i/3312332):
+        Updated **Devel** module from `~4.0` to `~5.0`
+* Issue [#3312249](https://www.drupal.org/i/3312249):
+        Updated **Inline Entity Form** module from `1.0-rc13` to `1.0-rc14`
+         and kept needed patches
+* Issue [#3310277](https://www.drupal.org/i/3310277):
+        Updated **Better Exposed Filters** module from `~5.0` to `~6.0`
+* Issue [#3310279](https://www.drupal.org/i/3310279):
+        Updated **Better Exposed Filters** module from `~5.0` to `~6.0`
+         in Varbase Media
+* Issue [#3310275](https://www.drupal.org/i/3310275):
+        Updated **Inline Entity Form** module from `1.0-rc12` to `1.0-rc13`
+         and keep needed patches
+* Issue [#3316500](https://www.drupal.org/i/3316500):
+        Updated **Views Bulk Operation** module to `4.2.1` and 
+        **Views Bulk Edit** to `2.8.0` under **PHP 8.1**
+* Issue [#3317055](https://www.drupal.org/i/3317055):
+        Updated **Entity Embed** module from `1.2.0` to `1.3.0`
+         and kept needed patches
+* Issue [#3317061](https://www.drupal.org/i/3317061):
+        Update **Smart Trim** module from `~1.0` to `~2.0`
+* Issue [#3317074](https://www.drupal.org/i/3317074):
+        Updated **Smart Trim** module from `~1.0` to `~2.0`
+         in the **VMI** module
+* Issue [#3317066](https://www.drupal.org/i/3317066):
+        Updated **Social Auth Twitter** module from `~2.0` to `~3.0`
+* Issue [#3312430](https://www.drupal.org/i/3312430):
+        Updated **Views Bulk Edit** module from `2.7` to `~2.0`
+         and removed committed patches
+
+### Fixes since Varbase 9.0.8:
+* Issue [#3266114](https://www.drupal.org/i/3266114)
+        by [abu-zakham](https://www.drupal.org/u/abu-zakham)
+        : Fixed warnings as a follow up issue after added Container
+        wrapper ID field to the advanced section settings tab
+* Issue [#3311687](https://www.drupal.org/i/3311687)
+        by [abu-zakham](https://www.drupal.org/u/abu-zakham)
+        : Fixed Error when source media deleted, which breaks the page
+* Issue [#3307036](https://www.drupal.org/i/3307036)
+        by [RedwanJamous](https://www.drupal.org/u/redwanjamous)
+        : Fixed empty space between blocks' names when using search in blocks dialog
+* Issue [#3312122](https://www.drupal.org/i/3312122)
+        : Fixed an error for **Views Bulk Edit** with match method declarations
+        with interface after a new release for **Views Bulk Operations (VBO)** `4.1.5`
+* Issue [#3305787](https://www.drupal.org/i/3305787)
+        by [Odai Jaber](https://www.drupal.org/u/odai-jaber)
+        : Fixed will-change css property after the images are lazy loaded a shadow
+        appears around it on Safari
+* Issue [#3316549](https://www.drupal.org/i/3316549)
+        : Fixed some mandatory parameters are missing machine_name to generate
+         a URL for route in **Password Policy** when the **Devel** module was enabled
+* Issue [#3245893](https://www.drupal.org/i/3245893)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Fixed Linkit linking issues around Media entities and
+         brakes **Layout Builder** behaviors
+* Issue [#3305949](https://www.drupal.org/i/3305949)
+        by [RedwanJamous](https://www.drupal.org/u/redwanjamous)
+       : Fixed invalid margin-bottom value for node__meta class
+* Issue [#3307464](https://www.drupal.org/i/3307464)
+        by [mitthukumawat](https://www.drupal.org/u/mitthukumawat)
+       , [Dharti Patel](https://www.drupal.org/u/dharti-patel)
+       , [Rajab Natshah](https://www.drupal.org/u/rajab-natshah)
+       : Fixed Drupal coding standard and Drupal Practice for **Varbase Media Hero Slider**
+* Issue [#3282848](https://www.drupal.org/i/3282848)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+        : Fixed not working local video on **iOS** by adding a Drupal core patch fix
+        for `playsinline` & `muted` options
+* Issue [#3275939](https://www.drupal.org/i/3275939)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       : Fixed not working local video on **iOS** with `playsinline` & `muted` options
+* Issue [#3189410](https://www.drupal.org/i/3189410)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       , [mahseri](https://www.drupal.org/u/mahseri)
+       : Fixed remote video (YouTube) looping when only having a single video slide
+* Issue [#3189411](https://www.drupal.org/i/3189411)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+       , [mahseri](https://www.drupal.org/u/mahseri)
+       : Fixed remote video (Vimeo) looping when only having a single video slide
+* Issue [#3192099](https://www.drupal.org/i/3192099)
+        by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
+        : Fixed YouTube player issue: playVideo is not a function
+* Issue [#3317239](https://www.drupal.org/i/3317239:
+        Fixed **Ultrawide screens** with embed responsive in Varbase video player
+        for YouTube and Vimeo embedded Video Slides
+
+-------------------------------------------------------------------------------
+
 # 9.0.8
 
 ### Highlighted important changes since Varbase 9.0.7:
