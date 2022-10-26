@@ -124,6 +124,13 @@ https://github.com/twbs/bootstrap/releases/tag/v4.6.2
 * Issue [#3192099](https://www.drupal.org/i/3192099)
         by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
         : Fixed YouTube player issue: playVideo is not a function
+* Issue [#3317526](https://www.drupal.org/i/3317526):
+        Fixed Dart-SASS Deprecation nesting with `@include margin(-($spacer))`
+        which bring visual issues for unordered navigation list in sidebar or action tasks
+* Issue [#3317532](https://www.drupal.org/i/3317532):
+        Fixed Ultrawide screens with embed responsive in Varbase video player
+        for YouTube and Vimeo embedded Video Slides in Vartheme BS4 and in the
+        Vartheme Sub-theme template
 * Issue [#3317239](https://www.drupal.org/i/3317239:
         Fixed **Ultrawide screens** with embed responsive in Varbase video player
         for YouTube and Vimeo embedded Video Slides
