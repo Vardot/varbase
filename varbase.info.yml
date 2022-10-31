@@ -21,7 +21,6 @@ install:
   - views
   - file
 themes:
-  - radix
   - vartheme_bs5
   - claro
   - vartheme_claro
