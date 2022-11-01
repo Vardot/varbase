@@ -84,10 +84,8 @@ So that I can use them after the install or update.
       And I wait
      Then I should see "Appearance"
       And I should see "Vartheme"
-      And I should see "(Bootstrap 4 - SASS)"
+      And I should see "Base theme for Varbase standard websites. Based on Bootstrap 5 framework using SASS."
       And I should see "Claro"
-      And I should see "Bootstrap"
-      And I should see "Bootstrap Barrio"
       And I should see "Vartheme Claro"
 
    @javascript @check @local @development @staging @production
