@@ -15,14 +15,14 @@ const paths = {
 };
 
 // Compile sass into CSS & auto-inject into browsers.
-function compile () {
+function compile() {
   var sassOptions = {
     outputStyle: 'expanded',
-    indented: true,
+    indented: TRUE,
     indentType: 'space',
     indentWidth: 2,
     linefeed: 'lf',
-    sourceMap: false
+    sourceMap: FALSE
   };
 
   return gulp.src([paths.scss.src])
@@ -34,7 +34,7 @@ function compile () {
 }
 
 // Watching scss files.
-function watch () {
+function watch() {
   gulp.watch([paths.scss.watch], compile);
 }
 
