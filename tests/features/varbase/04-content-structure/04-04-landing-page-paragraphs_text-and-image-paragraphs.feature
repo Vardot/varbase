@@ -59,4 +59,4 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
        And I press the "Save" button
        And I wait
       Then I should see "In eros ipsum, mattis vitae vulputate eu, blandit"
-       And I should see image with the "Flag Earth all earth in space" title text
+       And I should see image with the "Embed Flag Earth in space" alt text
