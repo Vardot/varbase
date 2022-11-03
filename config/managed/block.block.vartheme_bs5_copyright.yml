@@ -9,7 +9,7 @@ dependencies:
     - vartheme_bs5
 id: vartheme_bs5_copyright
 theme: vartheme_bs5
-region: footer
+region: footer_top
 weight: -5
 provider: null
 plugin: "block_content:b858d97d-eaa5-4cfe-af6f-b92c21bbca95"
