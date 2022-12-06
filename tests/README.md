@@ -66,7 +66,6 @@ Make sure that all varbase modules are insalled.
 ../bin/drush pm:enable varbase_search --yes
 ../bin/drush pm:enable varbase_blog --yes
 ../bin/drush pm:enable varbase_development --yes
-../bin/drush pm:enable varbase_styleguide --yes
 ../bin/drush pm:enable varbase_landing --yes
 ../bin/drush pm:enable varbase_api --yes
 ../bin/drush pm:enable varbase_content_planner --yes
