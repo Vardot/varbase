@@ -22,7 +22,7 @@ install:
   - file
 themes:
   - vartheme_bs5
-  - claro
+  - gin
   - vartheme_claro
 
 interface translation project: varbase
