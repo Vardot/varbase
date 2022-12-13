@@ -40,7 +40,7 @@ function varbase_form_install_configure_form_alter(&$form, FormStateInterface $f
  * Implements hook_install_tasks().
  */
 function varbase_install_tasks(&$install_state) {
-  // Determine whether the enable multiligual option is selected during the
+  // Determine whether the enable multilingual option is selected during the
   // Multilingual configuration task.
   $needs_configure_multilingual = (isset($install_state['varbase']['enable_multilingual']) && $install_state['varbase']['enable_multilingual'] == TRUE);
 
@@ -179,7 +179,7 @@ function varbase_assemble_extra_components(array &$install_state) {
       }
     }
 
-    // Hide Wornings and status messages.
+    // Hide Warnings and status messages.
     $batch['operations'][] = [
       'varbase_hide_warning_and_status_messages',
       (array) TRUE,
@@ -244,7 +244,7 @@ function varbase_assemble_extra_components(array &$install_state) {
       }
     }
 
-    // Hide Wornings and status messages.
+    // Hide Warnings and status messages.
     $batch['operations'][] = [
       'varbase_hide_warning_and_status_messages',
       (array) TRUE,
@@ -353,7 +353,7 @@ function varbase_assemble_development_tools(array &$install_state) {
       }
     }
 
-    // Hide Wornings and status messages.
+    // Hide Warnings and status messages.
     $batch['operations'][] = [
       'varbase_hide_warning_and_status_messages',
       (array) TRUE,
@@ -378,7 +378,7 @@ function varbase_assemble_development_tools(array &$install_state) {
 function varbase_configure_multilingual(array &$install_state) {
   $batch = [];
 
-  // If the multiligual config checkbox were checked.
+  // If the multilingual config checkbox were checked.
   if (isset($install_state['varbase']['enable_multilingual'])
          && $install_state['varbase']['enable_multilingual'] == TRUE) {
 
@@ -388,7 +388,7 @@ function varbase_configure_multilingual(array &$install_state) {
       (array) 'varbase_internationalization',
     ];
 
-    // Add all selected languages and then translatvarbase_hide_messagesion
+    // Add all selected languages and then translate Varbase hide messages on
     // will fetched for theme.
     if (isset($install_state['varbase']['multilingual_languages'])
         && is_array($install_state['varbase']['multilingual_languages'])) {
@@ -400,7 +400,7 @@ function varbase_configure_multilingual(array &$install_state) {
       }
     }
 
-    // Hide Wornings and status messages.
+    // Hide Warnings and status messages.
     $batch['operations'][] = [
       'varbase_hide_warning_and_status_messages',
       (array) TRUE,
@@ -456,7 +456,7 @@ function varbase_save_editable_config_values($extra_component_machine_name, $for
 }
 
 /**
- * Batch function to add selected langauges then fetch all traslation.
+ * Batch function to add selected languages then fetch all traslation.
  *
  * @param string|array $language_code
  *   Language code to install and fetch all traslation.
@@ -486,7 +486,7 @@ function varbase_fix_entity_update($entity_update) {
  * Batch function to update configs with config bit configurations.
  *
  * @param bool $enable_multilingual
- *   Use multilignual in the site.
+ *   Use multilingual in the site.
  */
 function varbase_config_bit_for_multilingual($enable_multilingual) {
 
@@ -582,7 +582,7 @@ function varbase_reset_timestamp_for_default_content($reset) {
 /**
  * Varbase after install finished.
  *
- * Lanuch auto Varbase Tour auto launch after install.
+ * Launch auto Varbase Tour auto launch after install.
  *
  * @param array $install_state
  *   The current install state.
@@ -616,7 +616,7 @@ function varbase_after_install_finished(array &$install_state) {
   // After install of extra modules by install: in the .info.yml files.
   // In Varbase profile and all Varbase components.
   // ---------------------------------------------------------------------------
-  // * Necessary inlitilization for the entire system.
+  // * Necessary initialization for the entire system.
   // * Account for changed config by the end install.
   // * Flush all persistent caches.
   // * Flush asset file caches.
@@ -702,16 +702,6 @@ function varbase_after_install_finished(array &$install_state) {
 function varbase_hide_warning_and_status_messages($hide) {
   if ($hide && !isset($_SESSION['messages']['error'])) {
     unset($_SESSION['messages']);
-  }
-}
-
-/**
- * Implements hook_toolbar_alter().
- */
-function varbase_toolbar_alter(&$items) {
-  if (\Drupal::currentUser()->hasPermission('access toolbar')
-    && !empty($items['admin_toolbar_tools'])) {
-    $items['admin_toolbar_tools']['#attached']['library'][] = 'varbase/toolbar.icon';
   }
 }
 

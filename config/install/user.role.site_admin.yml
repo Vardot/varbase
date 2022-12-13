@@ -6,15 +6,6 @@ label: "Site Admin"
 weight: -5
 is_admin: null
 permissions:
-  - "Flush all caches from admin toolbar"
-  - "Flush css/js cache from admin toolbar"
-  - "Flush menu cache from admin toolbar"
-  - "Flush plugin cache from admin toolbar"
-  - "Flush render cache from admin toolbar"
-  - "Flush static cache from admin toolbar"
-  - "Flush twig cache from admin toolbar"
-  - "Flush views cache from admin toolbar"
-  - "Rebuild theme registry from admin toolbar"
   - "access admin audit trail"
   - "access administration pages"
   - "access carousels_media_browser entity browser pages"
