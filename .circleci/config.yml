@@ -222,9 +222,9 @@ commands:
             cd /var/www/html/test/varbase/docroot/profiles/varbase/scripts
             bash add-testing-users.sh
 
-      ## Enable the Drush Language Command module and add RTL language
+      ## Import and Update local RTL language
       - run:
-          name: Enable the Drush Language Command module and add RTL language
+          name: Import and Update local RTL language
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po

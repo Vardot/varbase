@@ -80,7 +80,7 @@ Make sure that all varbase modules are insalled.
 ../bin/drush cr
 ```
 
-### Import and Update a RTL language
+### Import and Update local RTL language
 Needed to add the extra languages.
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
