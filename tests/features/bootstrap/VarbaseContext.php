@@ -71,7 +71,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @Given /^I am a logged in user with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
    * @Then /^I login with (?:|the )"(?P<username>[^"]*)"(?:| user)$/
    */
-  public function iAmloggedInUserWithTheUser($username) {
+  public function iAmLoggedInUserWithTheUser($username) {
 
     if (isset($this->users[$username])) {
       try {
@@ -287,7 +287,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * @Then /^the editor media browser should be open$/
    */
-  public function theEitorMediaBrowserIsOpen() {
+  public function theEditorMediaBrowserIsOpen() {
     if (!$elem = $this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper')
     || !$this->getSession()->getPage()->find('css', '.ui-dialog.media-wrapper .media-browser-panes')) {
       throw new \Exception('The editor media browser failed to open.');
@@ -432,7 +432,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase.
    *
    * Example 1: Then I should see "this text" under editor media browser
-   * Example 2: Then I should see "this text" under the editormedia browser modal window.
+   * Example 2: Then I should see "this text" under the editor media browser modal window.
    *
    * @Then /^I should see "([^"]*)" under (?:|the )editor media browser(?:| modal window)$/
    */
@@ -523,10 +523,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $fieldId = $el->getAttribute('id');
 
     if ($fieldId == NULL) {
-      // If the WYSIWYG is in an ifream with no id.
-      $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
-      if (!empty($iFreamID)) {
-        $fieldId = $iFreamID;
+      // If the WYSIWYG is in an iframe with no id.
+      $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
+      if (!empty($iFrameID)) {
+        $fieldId = $iFrameID;
       }
     }
 
@@ -577,10 +577,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $fieldId = $el->getAttribute('id');
 
     if ($fieldId == NULL) {
-      // If the WYSIWYG is in an ifream with no id.
-      $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
-      if (!empty($iFreamID)) {
-        $fieldId = $iFreamID;
+      // If the WYSIWYG is in an iframe with no id.
+      $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
+      if (!empty($iFrameID)) {
+        $fieldId = $iFrameID;
       }
     }
 
@@ -607,10 +607,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $fieldId = $el->getAttribute('id');
 
     if ($fieldId == NULL) {
-      // If the WYSIWYG is in an ifream with no id.
-      $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
-      if (!empty($iFreamID)) {
-        $fieldId = $iFreamID;
+      // If the WYSIWYG is in an iframe with no id.
+      $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
+      if (!empty($iFrameID)) {
+        $fieldId = $iFrameID;
       }
     }
 
@@ -874,7 +874,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   /**
    * Uncheck the Edge to Edge Background option.
    *
-   * Varbase Contaxt #varbase
+   * Varbase Context #varbase
    *
    * Example #1: When I uncheck the Edge to Edge Background
    * Example #2: And I uncheck the Edge to Edge Background
@@ -929,7 +929,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
-   * Set the section blocks alignemnt.
+   * Set the section blocks alignment.
    *
    * #Varbase Context #varbase
    *
@@ -1438,8 +1438,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->executeScript("return CKEDITOR.instances[\"$fieldId\"].getData();");
 
     // Switch to the iframe.
-    $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', $fieldId, 'iframe');
-    $this->getSession()->switchToIFrame($iFreamID);
+    $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', $fieldId, 'iframe');
+    $this->getSession()->switchToIFrame($iFrameID);
 
     // Find an image with the title.
     $element = $this->getSession()->getPage()->findAll('xpath', "//img[contains(@title, '{$titleText}')]");
@@ -1463,8 +1463,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeImageWithTheAltTextUnder($altText, $filedName) {
     // Switch to the iframe.
-    $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', $filedName, 'iframe');
-    $this->getSession()->switchToIFrame($iFreamID);
+    $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', $filedName, 'iframe');
+    $this->getSession()->switchToIFrame($iFrameID);
 
     // Find an image with the title.
     $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
@@ -1821,8 +1821,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $panleRegionId = "panels-ipe-regionid-" . str_replace(' ', '-', strtolower($panleRegion));
     }
 
-    $elementpanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
-    if (empty($elementpanelRegion)) {
+    $elementPanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
+    if (empty($elementPanelRegion)) {
       throw new \Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
     }
 
@@ -2128,7 +2128,7 @@ JS;
    *
    * @When I expand the field :arg1
    */
-  public function iExpandThefield($fieldID) {
+  public function iExpandTheField($fieldID) {
     $js = <<<JS
 		var group = document.getElementById("{$fieldID}");
 		group.setAttribute("open","");
@@ -2241,37 +2241,37 @@ JS;
   }
 
   /**
-   * Check if a checkbox is unchecked
-   * 
+   * Check if a checkbox is unchecked.
+   *
    * Varbase Context #varbase
-   * 
+   *
    * Example #1: And I should see the "Accept" checkbox unchecked
    * Example #1: Then I should see the "Enable" checkbox unchecked
-   * 
+   *
    * @Then I should see the :label checkbox unchecked
    */
   public function iShouldSeeTheCheckboxUnchecked($label) {
     $isChecked = (boolean) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if ($isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is checked");
-    } 
+    }
   }
 
   /**
-   * Check if a checkbox is checked
-   * 
+   * Check if a checkbox is checked.
+   *
    * Varbase Context #varbase
-   * 
+   *
    * Example #1: And I should see the "Site Admin" checkbox checked
    * Example #1: Then I should see the "Enable" checkbox checked
-   * 
+   *
    * @Then I should see the :label checkbox checked
    */
   public function iShouldSeeTheCheckboxChecked($label) {
     $isChecked = (boolean) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if (!$isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is unchecked");
-    } 
+    }
   }
 
   /**
@@ -2344,7 +2344,7 @@ JS;
   }
 
   /**
-   * Switch to an ifram by its id.
+   * Switch to an iframe by its id.
    *
    * Varbase Context #varbase.
    *
@@ -2358,11 +2358,11 @@ JS;
   }
 
   /**
-   * Switch to the main frame or the parent ifram.
+   * Switch to the main frame or the parent iframe.
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I switch to main fram
+   * Example #1: When I switch to main frame
    * Example #2: When I switch to parent
    *
    * @When /^(?:|I )switch to main frame$/
@@ -2384,7 +2384,7 @@ JS;
    * @param string $otherAttributeValue
    *   The other attribute value.
    * @param string $htmlTagName
-   *   The HTML tag name you are filtring with.
+   *   The HTML tag name you are filtering with.
    *
    * @return string
    *   Attribute value for the first matching element.
@@ -2449,8 +2449,8 @@ JS;
    */
   public function iShouldSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_elment = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
-    if (empty($operation_elment)) {
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it did not have the operation "%s".', $entity, $operation));
     }
   }
@@ -2470,8 +2470,8 @@ JS;
    */
   public function iShouldNotSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_elment = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
-    if (!empty($operation_elment)) {
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (!empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it have the operation "%s".', $entity, $operation));
     }
   }

@@ -1,7 +1,55 @@
-# 9.0.9
+# 9.0.10
+This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
 
 ### Highlighted important changes since Varbase 9.0.8:
-This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites. Learn more about Varbase 9.
+* Issue [#3327421](https://www.drupal.org/i/3327421):
+        Updated **Drupal Core** to `~9.5.0` and removed committed patches
+* Drop the use of the varbase-robots-additions.txt as its content were committed to drupal-scaffold asset templates in Drupal 9.5.0 #158
+
+### Added since Varbase 9.0.9:
+* No additions in this release, All additions and major changes will go into the **Varbase** `10.0.x` branch
+* N/A
+
+### Changed since Varbase 9.0.9:
+* N/A
+
+### Updates since Varbase 9.0.9:
+* Issue [#3326096](https://www.drupal.org/i/3326096):
+        Updated OpenAPI for JSON:API module from `3.0.2` to `3.0.4` and kept needed patches
+* Issue [#3320949](https://www.drupal.org/i/3320949):
+        Updated Password Policy module from `~3.0` to `~4.0` and removed committed patches
+* Issue [#3319958](https://www.drupal.org/i/3319958):
+        Updated Security Review module from `1.0.x-dev` to stable `2.0.0` ( `~2.0` )
+* Issue [#3319302](https://www.drupal.org/i/3319302):
+        Updated Media Library Edit module from `~2.0` to `~3.0`
+* Issue [#3319306](https://www.drupal.org/i/3319306):
+        Updated Moderation Sidebar module from `1.5` to `1.6` ( `~1.0` ) and removed committed patches
+* Issue [#3320951](https://www.drupal.org/i/3320951):
+        Updated Page Manager module from `4.0-beta6` to `4.0-rc1` ( `~4.0` ) and removed no longer needed patches
+* Issue [#3323321](https://www.drupal.org/i/3323321):
+        Updated Allowed Formats module from `~1.0` to `~1.0 || ~2.0`
+* Issue [#3321437](https://www.drupal.org/i/3321437):
+        Updated Responsive Theme Preview module `~1.0` to `~2.0`
+* Issue [#3319307](https://www.drupal.org/i/3319307):
+        Updated Scheduler module from ~1.0 to ~2.0
+* Issue [#3319309](https://www.drupal.org/i/3319309):
+        Updated Scheduler Content Moderation Integration module from `~1.0` to `~2.0`
+
+### Fixes since Varbase 9.0.9:
+* Issue [#3318845](https://www.drupal.org/i/3318845):
+        Fixed flex wrap for secondary tabs when the tab is horizontal to show the full list of tabs
+* Issue [#3319346](https://www.drupal.org/i/3319346):
+        Fixed impossible to add media for node via media library when Scheduler content moderation
+        integration module is enabled
+
+
+
+# 9.0.9
+
+This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
+
+### Highlighted important changes since Varbase 9.0.8:
+
 
 * Updated Lando project configs for Vardot/varbase-project
         template to use **PHP 8.1** [#154](https://github.com/Vardot/varbase-project/pull/154)
