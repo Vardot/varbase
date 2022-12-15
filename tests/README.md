@@ -80,15 +80,13 @@ Make sure that all varbase modules are insalled.
 ../bin/drush cr
 ```
 
-### Enable the Drush Language Command module and add a RTL language
+### Import and Update a RTL language
 Needed to add the extra languages.
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
-composer require drupal/drush_language:~1.0
 cd `/PROJECT_DIR_NAME/docroot`
-../bin/drush pm:enable drush_language --yes
-../bin/drush language-add ar
-../bin/drush language-info
+../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
+../bin/drush locale-update --langcodes=ar
 ../bin/drush cr
 ```
 

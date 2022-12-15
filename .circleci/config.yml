@@ -149,7 +149,6 @@ commands:
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer install --no-interaction -vvv
-            composer require drupal/drush_language:~1.0
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/varbase
             cd /var/www/html/test/varbase
             sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
@@ -228,9 +227,8 @@ commands:
           name: Enable the Drush Language Command module and add RTL language
           command: |
             cd /var/www/html/test/varbase/docroot
-            ../bin/drush pm:enable drush_language --yes
-            ../bin/drush language-add ar
-            ../bin/drush language-info
+            ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
+            ../bin/drush locale-update --langcodes=ar
             ../bin/drush cr
 
       ## Uninstall Antibot module to let the selenium bot work  
