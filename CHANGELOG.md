@@ -4,10 +4,13 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
 ### Highlighted important changes since Varbase 9.0.8:
 * Issue [#3327421](https://www.drupal.org/i/3327421):
         Updated **Drupal Core** to `~9.5.0` and removed committed patches
-* Drop the use of the varbase-robots-additions.txt as its content were committed to drupal-scaffold asset templates in Drupal 9.5.0 #158
+* Drop the use of the `varbase-robots-additions.txt` as its content were
+   committed to `drupal-scaffold` asset templates in **Drupal 9.5.0**
+   [#158](https://github.com/Vardot/varbase-project/issues/158)
 
 ### Added since Varbase 9.0.9:
-* No additions in this release, All additions and major changes will go into the **Varbase** `10.0.x` branch
+* No additions in this release, All additions and
+   major changes will go into the **Varbase** `10.0.x` branch
 * N/A
 
 ### Changed since Varbase 9.0.9:
@@ -25,7 +28,8 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
 * Issue [#3319306](https://www.drupal.org/i/3319306):
         Updated Moderation Sidebar module from `1.5` to `1.6` ( `~1.0` ) and removed committed patches
 * Issue [#3320951](https://www.drupal.org/i/3320951):
-        Updated Page Manager module from `4.0-beta6` to `4.0-rc1` ( `~4.0` ) and removed no longer needed patches
+        Updated Page Manager module from `4.0-beta6` to `4.0-rc1` ( `~4.0` )
+        and removed no longer needed patches
 * Issue [#3323321](https://www.drupal.org/i/3323321):
         Updated Allowed Formats module from `~1.0` to `~1.0 || ~2.0`
 * Issue [#3321437](https://www.drupal.org/i/3321437):
@@ -34,6 +38,9 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
         Updated Scheduler module from ~1.0 to ~2.0
 * Issue [#3319309](https://www.drupal.org/i/3319309):
         Updated Scheduler Content Moderation Integration module from `~1.0` to `~2.0`
+* Issue [#3323336](https://www.drupal.org/i/3323336):
+        Updated Allowed Formats module from `~1.0` to `~2.0`
+         ( `~1.0 || ~2.0` ) in **Varbase Layout Builder**
 
 ### Fixes since Varbase 9.0.9:
 * Issue [#3318845](https://www.drupal.org/i/3318845):
@@ -41,8 +48,11 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
 * Issue [#3319346](https://www.drupal.org/i/3319346):
         Fixed impossible to add media for node via media library when Scheduler content moderation
         integration module is enabled
+* Issue [#3327858](https://www.drupal.org/i/3327858):
+        Fixed styling of primary button and inline block list in
+        `drupal-off-canvas` after **Drupal 9.5.0** release
 
-
+-------------------------------------------------------------------------------
 
 # 9.0.9
 
