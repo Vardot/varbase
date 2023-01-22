@@ -1,3 +1,7 @@
+# 9.0.11
+This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
+
+
 # 9.0.10
 This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
 
