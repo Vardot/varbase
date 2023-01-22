@@ -1,6 +1,93 @@
 # 9.0.11
-This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+### Highlighted important changes since Varbase 9.0.10:
+* Updated **Drupal Core** to `9.5.2` for new builds and new installation
 
+### Added since Varbase 9.0.10:
+* Issue [#3333820](https://www.drupal.org/i/3333820):
+        Added config for a correspondent `ckeditor5-stylesheets` configuration in **Vartheme BS4**
+* Issue [#3333839](https://www.drupal.org/i/3333839):
+        Added config for a correspondent `ckeditor5-stylesheets` configuration in **Vartheme Claro**
+* Issue [#3276452](https://www.drupal.org/i/3276452)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Added default config for the **Ultimate Cron** module
+* Add allow plugins for phpcodesniffer-composer-installer
+        [(#161)](https://github.com/Vardot/varbase-project/pull/161)
+        by [Jose Bajawi](https://www.drupal.org/u/josebc)
+
+### Changed since Varbase 9.0.10:
+* Issue [#3253315](https://www.drupal.org/i/3253315):
+        Switched from the deprecated Swift Mailer module replaced by **Symfony Mailer** on
+        the `10.0.x` branch, kept the **Swift Mailer** in the `9.0.x` branch, and
+        kept **Swift Mailer** as the default, But let developers use the **Symfony Mailer** module
+        and do the switch manually. Using the same style and **HTML** script for the template
+* Issue [#3270472](https://www.drupal.org/i/3270472):
+        Have a default template for merge requests and issues for
+        the **Varbase Email** project in **Gitlab**
+* Issue [#3272490](https://www.drupal.org/i/3272490):
+        Switched from deprecated Node Sass to Dart Sass compiler using **Gulp** and
+        changed minimum node version to `16.0` and later in the **Varbase Email** module
+* Issue [#3272285](https://www.drupal.org/i/3272285):
+        Switched to use the Module Installer Factory in the **Varbase Email** module
+* Issue [#3302423](https://www.drupal.org/i/3302423):
+        Dropped support for Composer `~1.0` in the **Varbase Email** module 
+       and only support Composer `~2.0` and later versions
+* Issue [#3175869](https://www.drupal.org/i/3175869)
+        by [Andrew Answer](https://www.drupal.org/u/andrew-answer)
+       : Unified upload location for **Media Gallery** type and other Media types
+* Issue [#3311233](https://www.drupal.org/i/3311233)
+        by [RedwanJamous](https://www.drupal.org/u/redwanjamous)
+       : Changed the way of using Bootstrap `4` variables
+* Issue [#3332656](https://www.drupal.org/i/3332656)
+        by [RedwanJamous](https://www.drupal.org/u/redwanjamous)
+       : Removed the hook implementation that unset `password_policy_status` key
+        and add `show_policy_table: false` to the configuration of the default policy
+
+### Updates since Varbase 9.0.10:
+* Issue [#3334257](https://www.drupal.org/i/3334257):
+        Updated **Bootstrap Layout Builder** module from `2.0.1` to `2.1.1`
+* Issue [#3334253](https://www.drupal.org/i/3334253):
+        Updated **Bootstrap Styles** module from `1.0.3` to `1.1.0` and kept needed patches
+* Issue [#3334238](https://www.drupal.org/i/3334238):
+        Updated **ACE Code Editor** module from `~1.0` to `~2.0`
+* Issue [#3327395](https://www.drupal.org/i/3327395):
+        Updated **Token** Filter module from `~1.0` to `~2.0` in Varbase Editor
+* Issue [#3327385](https://www.drupal.org/i/3327385):
+        Updated **Token** Filter module from `~1.0` to `~2.0` in Varbase Core
+* Issue [#3334288](https://www.drupal.org/i/3334288):
+        Updated **Style Guide** module from `2.0.0-beta1` to `stable 2.0.1` ( `~2.0` ) and removed committed patches
+* Issue [#3330616](https://www.drupal.org/i/3330616):
+        Updated **jQuery UI Accordion** module from `~1.0` to `~2.0`
+* Issue [#3330590](https://www.drupal.org/i/3330590):
+        Updated **Persistent Login** module from `1.3.0` to `1.4.0` and kept needed patches
+* Issue [#3330580](https://www.drupal.org/i/3330580):
+        Updated **Views Bulk Operations (VBO)** module from `4.2.1` to `4.2.2` ( `~4.0` )
+* Issue [#3333038](https://www.drupal.org/i/3333038):
+        Updated **Webform** from `6.1.3` to `6.1.4` ( `~6.1.0` ) and removed committed patches
+* Issue [#3331356](https://www.drupal.org/i/3331356):
+        Updated **Layout Library** module from 1.0-beta3 to 1.0-beta4 and kept needed patches
+* Issue [#3334654](https://www.drupal.org/i/3334654):
+        Updated **Paragraphs Previewer** module from `1.5.0` to `1.7.0` and kept needed patches
+
+### Fixes since Varbase 9.0.10:
+* Issue [#3330751](https://www.drupal.org/i/3330751)
+        by[Noor Ghunaim](https://www.drupal.org/u/nghunaim):
+        Fixed not reflected section settings on section header region
+* Issue [#3317720](https://www.drupal.org/i/3317720)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       , [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+       : Fixed not working change of blocks ordering when the section has a heading block
+* Issue [#3334544](https://www.drupal.org/i/3334544)
+       : Fixed regression issues between Layout Builder UX and Bootstrap Layout Builder Styles
+* Issue [#3334871](https://www.drupal.org/i/3334871)
+        by [Mohammad Faqeh](https://www.drupal.org/u/mohammad-faqeh)
+       : Fixed a regression issue with the Background Image style not showing
+        after the update to **Bootstrap Styles** `1.1.0`
+* Issue [#3332567](https://www.drupal.org/i/3332567)
+        by [RedwanJamous](https://www.drupal.org/u/redwanjamous)
+       : Fixed table width in **Gmail app**
+
+-------------------------------------------------------------------------------
 
 # 9.0.10
 This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
