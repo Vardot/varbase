@@ -156,7 +156,6 @@ permissions:
   - 'edit own video media'
   - 'edit paragraph library item'
   - 'edit terms in categories'
-  - 'have total control'
   - 'manipulate all entityqueues'
   - 'rabbit hole bypass node'
   - 'rabbit hole bypass taxonomy_term'

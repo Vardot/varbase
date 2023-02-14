@@ -197,7 +197,6 @@ permissions:
   - 'edit paragraph library item'
   - 'edit terms in categories'
   - 'edit webform assets'
-  - 'have total control'
   - 'manipulate all entityqueues'
   - 'manipulate entityqueues'
   - 'masquerade as authenticated'
