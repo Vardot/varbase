@@ -45,7 +45,7 @@
     "drupal/varbase_search": "10.0.x-dev",
     "drupal/varbase_seo": "10.0.x-dev",
     "drupal/varbase_auth": "10.0.x-dev",
-    "drupal/varbase_total_control": "10.0.x-dev",
+    "drupal/varbase_dashboards": "1.0.x-dev",
     "drupal/varbase_email": "10.0.x-dev",
     "drupal/varbase_workflow": "3.0.x-dev",
     "drupal/varbase_components": "1.0.x-dev",

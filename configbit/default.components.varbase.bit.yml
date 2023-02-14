@@ -23,7 +23,7 @@ config_bit:
         - varbase_page
         - varbase_layout_builder
         - vlplb
-        - varbase_total_control
+        - varbase_dashboards
         - varbase_default_content
         - varbase_tour
         - varbase_update_helper
