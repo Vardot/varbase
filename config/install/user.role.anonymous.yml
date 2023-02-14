@@ -1,9 +1,6 @@
 langcode: en
 status: true
-dependencies:
-  module:
-    - media
-    - system
+dependencies: {  }
 id: anonymous
 label: 'Anonymous user'
 weight: -10
