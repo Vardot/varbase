@@ -27,7 +27,7 @@ commands:
             sudo apt -qq update
             sudo apt -qqy upgrade
             sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev mysql-client default-mysql-client
-            sudo apt -yqq install xvfb libu2f-udev libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3
+            sudo apt -yqq install xvfb libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libu2f-udev
 
       ## Configure and run the virtual display.
       - run:
@@ -68,9 +68,9 @@ commands:
             done
             echo Failed waiting for MySQL && exit 1
 
-      ## Install Composer
+      ## Install Composer ~2
       - run:
-          name: Install Composer
+          name: Install composer ~2
           command: |
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
@@ -149,7 +149,6 @@ commands:
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer install --no-interaction -vvv
-            composer require drupal/drush_language:~1.0
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/varbase
             cd /var/www/html/test/varbase
             sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
@@ -222,14 +221,13 @@ commands:
             cd /var/www/html/test/varbase/docroot/profiles/varbase/scripts
             bash add-testing-users.sh
 
-      ## Enable the Drush Language Command module and add RTL language
+      ## Import and Update local RTL language
       - run:
-          name: Enable the Drush Language Command module and add RTL language
+          name: Import and Update local RTL language
           command: |
             cd /var/www/html/test/varbase/docroot
-            ../bin/drush pm:enable drush_language --yes
-            ../bin/drush language-add ar
-            ../bin/drush language-info
+            ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
+            ../bin/drush locale-update --langcodes=ar
             ../bin/drush cr
 
       ## Uninstall Antibot module to let the selenium bot work  
