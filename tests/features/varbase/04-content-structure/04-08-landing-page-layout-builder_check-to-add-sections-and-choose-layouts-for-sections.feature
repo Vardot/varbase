@@ -54,7 +54,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I click "Test Landing page (Layout Builder)"
   #     And I wait 
   #    Then I should see "Test Landing page (Layout Builder)"
-  #    When I click "moderation-sidebar-toolbar-tab"
+  #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"
@@ -106,7 +106,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I click "Test Landing page (Layout Builder)"
   #     And I wait 
   #    Then I should see "Test Landing page (Layout Builder)"
-  #    When I click "moderation-sidebar-toolbar-tab"
+  #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"
@@ -178,7 +178,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I click "Test Landing page (Layout Builder)"
   #     And I wait 
   #    Then I should see "Test Landing page (Layout Builder)"
-  #    When I click "moderation-sidebar-toolbar-tab"
+  #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"
@@ -268,7 +268,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I click "Test Landing page (Layout Builder)"
   #     And I wait 
   #    Then I should see "Test Landing page (Layout Builder)"
-  #    When I click "moderation-sidebar-toolbar-tab"
+  #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #    Then I should see "Layout"
   #    When I click "Layout"
@@ -377,7 +377,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I click "Test Landing page (Layout Builder)"
   #     And I wait 
   #    Then I should see "Test Landing page (Layout Builder)"
-  #    When I click "moderation-sidebar-toolbar-tab"
+  #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"

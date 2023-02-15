@@ -24,7 +24,7 @@ So that I will be able to create a content then I will have the option to transl
       And I wait
      Then I should see "Test English Basic page"
       And I should see "Test English Basic page body"
-     When I click "moderation-sidebar-toolbar-tab"
+     When I open the moderation sidebar
       And I wait for ajax to finish
      Then I should see "Translate"
      When I click "Translate" in the "a" element with the "class" attribute set to "moderation-sidebar-link button"

@@ -2384,7 +2384,7 @@ JS;
    * @param string $otherAttributeValue
    *   The other attribute value.
    * @param string $htmlTagName
-   *   The HTML tag name you are filtring with.
+   *   The HTML tag name you are filtering with.
    *
    * @return string
    *   Attribute value for the first matching element.
@@ -2473,6 +2473,34 @@ JS;
     $operation_elment = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
     if (!empty($operation_elment)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it have the operation "%s".', $entity, $operation));
+    }
+  }
+
+  /**
+   * Open the moderation sidebar from the administration toolbar.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: When I open the moderation sidebar
+   * Example 2:  And I open moderation sidebar
+   * Example 3:  And open moderation sidebar
+   * Example 4: When I click on tasks in the toolbar
+   * Example 5:  And click on tasks in the toolbar
+   *
+   * @When /^(?:|I )open (?:|the )moderation sidebar$/
+   * @When /^(?:|I )click on tasks in the toolbar$/
+   */
+  public function iOpenTheModerationSidebar() {
+    $moderationSidebarToolbarTab = $this->getSession()->getPage()->findAll('css', '#toolbar-bar .moderation-sidebar-toolbar-tab a');
+
+    if (!empty($moderationSidebarToolbarTab)
+      && is_array($moderationSidebarToolbarTab)
+      && count($moderationSidebarToolbarTab) > 0) {
+
+      $moderationSidebarToolbarTab[0]->click();
+    }
+    else {
+      throw new \Exception(sprintf('The moderation sidebar toolbar tab link was not found in the administration toolbar'));
     }
   }
 
