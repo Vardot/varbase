@@ -16,7 +16,7 @@ So that I will need a site admin or super admin to add me to the website
   Scenario: Check that only admin can create an account
      When I go to "/user/register"
       And I wait
-     Then I should see "Access denied"
+     Then I should see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Verify that anonymous users cannot access admin pages

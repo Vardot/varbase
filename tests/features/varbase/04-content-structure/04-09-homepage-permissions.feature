@@ -10,7 +10,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I wait
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
-     When I click "Tasks"
+     When I click "moderation-sidebar-toolbar-tab"
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should see "Delete"
@@ -28,7 +28,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I wait
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
-      And I should not see "Tasks"
+      And I should not see "moderation-sidebar-toolbar-tab"
       And I should not see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
@@ -45,7 +45,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I wait
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
-      And I should not see "Tasks"
+      And I should not see "moderation-sidebar-toolbar-tab"
       And I should not see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
@@ -62,7 +62,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I wait
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
-     When I click "Tasks"
+     When I click "moderation-sidebar-toolbar-tab"
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
@@ -80,7 +80,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I wait
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
-     When I click "Tasks"
+     When I click "moderation-sidebar-toolbar-tab"
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
@@ -98,7 +98,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I wait
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
-     When I click "Tasks"
+     When I click "moderation-sidebar-toolbar-tab"
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
@@ -116,7 +116,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I wait
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
-     When I click "Tasks"
+     When I click "moderation-sidebar-toolbar-tab"
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should see "Delete"

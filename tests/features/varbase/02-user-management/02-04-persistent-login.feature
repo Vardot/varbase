@@ -17,7 +17,7 @@ Feature: User Management - Have persistent login options and configurations
     Given I am not logged in
      When I go to "/user/login"
       And I wait
-     Then I should see "Login with"
+     Then I should see "Log in"
       And I should see "Remember me"
      When I fill in "Normal user" for "Email or username"
       And I fill in "dD.123123ddd" for "Password"
