@@ -40,7 +40,7 @@ I want to be able to clone an entity.
      Then I should see "Clone"
      When I click "Clone"
       And I wait
-     Then I should see "Clone Content"
+     Then I should see "Specify the child entities (the entities referenced by this entity) that should also be cloned as part of the cloning process."
      When I press "edit-clone"
       And I wait
      Then I should see "Test Clone landing page - Cloned"

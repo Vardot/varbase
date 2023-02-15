@@ -43,7 +43,6 @@ As a site admin, I will create a new landing page, add a section with different 
       And I wait for AJAX to finish
       And I click "Rich text"
       And I wait for AJAX to finish
-      And I check the box "Display title"
       And I fill in "Test Rich text in 2 cols section, col 1" for "Title"
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet diam nunc, ac dictum velit tincidunt quis. Integer ut imperdiet dui, sit amet tempus est. Curabitur molestie sem non purus dignissim pulvinar. Pellentesque id sapien consequat"
       And I press the "Add block" button
@@ -55,7 +54,6 @@ As a site admin, I will create a new landing page, add a section with different 
       And I wait for AJAX to finish
       And I click "Rich text"
       And I wait for AJAX to finish
-      And I check the box "Display title"
       And I fill in "Test Rich text in 2 cols section, col 2" for "Title"
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet diam nunc, ac dictum velit tincidunt quis. Integer ut imperdiet dui, sit amet tempus est. Curabitur molestie sem non purus dignissim pulvinar. Pellentesque id sapien consequat"
       And I press the "Add block" button
