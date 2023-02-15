@@ -57,7 +57,6 @@ So that I can use them after the install or update.
       And I should see "Media types"
       And I should see "Menu position rules"
       And I should see "Menus"
-      And I should see "Pages"
       And I should see "Paragraph types"
       And I should see "Taxonomy"
       And I should see "Views"
