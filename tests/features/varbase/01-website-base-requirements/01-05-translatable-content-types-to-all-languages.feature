@@ -35,10 +35,10 @@ So that I will be able to create a content then I will have the option to transl
       And I wait
       And I fill in "تجربة صفحة بسيطة عربية العنوان" for "edit-title-0-value"
       And I fill in the rich text editor field "edit-body-0-value" with "تجربة صفحة بسيطة عربية المحتوى"
-      And I press the "edit-submit" button
+      And I press the "حفظ (this translation)" button
       And I wait
      Then I should see "تجربة صفحة بسيطة عربية العنوان"
-     When I click "المهام"
+     When I open the moderation sidebar
       And I wait for ajax to finish
      Then I should see "ترجمة"
      When I click "ترجمة" in the "a" element with the "class" attribute set to "moderation-sidebar-link button"

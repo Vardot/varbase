@@ -91,4 +91,5 @@ So that the "Basic page" will show up in the structured menu under its parent pa
      Then I should see "Test Basic page"
      When I click "Edit" in the "Test Basic page" row
       And I wait
-     Then I should see "Edit Basic page Test Basic page"
+     Then I should see "Edit Basic page"
+      And I should see "Test Basic page"
