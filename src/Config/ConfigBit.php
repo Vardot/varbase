@@ -202,7 +202,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
     $token_variant = $this->configFactory->getEditable($saved_config_name)->get($supportedConfigType['token_variant']);
 
     // Have the config template file name.
-    $config_template_file = DRUPAL_ROOT . '/' . drupal_get_path('profile', 'varbase') . '/configbit/varbase_config_templates/' . $supportedConfigType['config_template_file'];
+    $config_template_file = DRUPAL_ROOT . '/' . \Drupal::service('extension.list.profile')->getPath('varbase') . '/configbit/varbase_config_templates/' . $supportedConfigType['config_template_file'];
 
     if (file_exists($config_template_file)) {
       // Get config file contents.
@@ -599,7 +599,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
   public static function getConfigBit($config_bit_file_name, $type = 'profile', $project = 'varbase') {
 
     // Generate full path to config file.
-    $full_config_bit_file_name = drupal_get_path($type, $project) . '/' . $config_bit_file_name;
+    $full_config_bit_file_name = \Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_file_name;
     if (file_exists($full_config_bit_file_name)) {
       // Pars the config bit file and have it as an array if it was not.
       $config_bit_data = (array) Yaml::parse(file_get_contents($full_config_bit_file_name));
@@ -630,7 +630,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    */
   public static function doWeHaveThisConfigBit($config_bit_file_name, $type = 'profile', $project = 'varbase') {
     // Generate full path to config file.
-    $full_config_bit_file_name = drupal_get_path($type, $project) . '/' . $config_bit_file_name;
+    $full_config_bit_file_name = \Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_file_name;
     return file_exists($full_config_bit_file_name);
   }
 
@@ -702,7 +702,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && isset($config_bit_data['action']['archive_files']['files'])) {
 
       foreach ($config_bit_data['action']['archive_files']['files'] as $language_config_file) {
-        $config_file = drupal_get_path($type, $project) . '/' . $language_config_file;
+        $config_file = \Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $language_config_file;
         if (file_exists($config_file)) {
           $config_file_backup = $config_file . $config_bit_data['action']['archive_files']['archive_extensiton'];
           \Drupal::service('file_system')->move($config_file, $config_file_backup);
@@ -737,7 +737,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && isset($config_bit_data['action']['unarchive_files']['files'])) {
 
       foreach ($config_bit_data['action']['unarchive_files']['files'] as $language_config_file) {
-        $config_file = drupal_get_path($type, $project) . '/' . $language_config_file;
+        $config_file = \Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $language_config_file;
         $config_file_backup = $config_file . $config_bit_data['action']['unarchive_files']['archive_extensiton'];
         if (!file_exists($config_file) && file_exists($config_file_backup)) {
           \Drupal::service('file_system')->move($config_file_backup, $config_file);
@@ -769,7 +769,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && $config_bit_data['type'] == 'action'
         && isset($config_bit_data['for'])
         && !empty($config_bit_data['for'])
-        && file_exists(drupal_get_path($type, $project) . '/' . $config_bit_data['for'])
+        && file_exists(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for'])
         && isset($config_bit_data['action'])
         && isset($config_bit_data['action']['add'])
         && isset($config_bit_data['action']['add']['when'])
@@ -779,7 +779,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && $config_bit_data['action']['add']['target'] == $target
         && isset($config_bit_data['action']['add'][$target])) {
 
-      $config_target_data = Yaml::parse(file_get_contents(drupal_get_path($type, $project) . '/' . $config_bit_data['for']));
+      $config_target_data = Yaml::parse(file_get_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for']));
 
       $configs_to_add = $config_bit_data['action']['add'][$target];
       foreach ($configs_to_add as $config_to_add) {
@@ -792,7 +792,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       $updated_config_target = Yaml::dump($config_target_data, 2, 2);
 
       // Save the updated config to the target file.
-      file_put_contents(drupal_get_path($type, $project) . '/' . $config_bit_data['for'], $updated_config_target);
+      file_put_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for'], $updated_config_target);
 
     }
   }
@@ -820,7 +820,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && $config_bit_data['type'] == 'action'
         && isset($config_bit_data['for'])
         && $config_bit_data['for'] !== ''
-        && file_exists(drupal_get_path($type, $project) . '/' . $config_bit_data['for'])
+        && file_exists(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for'])
         && isset($config_bit_data['action'])
         && isset($config_bit_data['action']['remove'])
         && isset($config_bit_data['action']['remove']['when'])
@@ -831,7 +831,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && isset($config_bit_data['action']['remove'][$target])) {
 
       // Read the Yaml config file. which this config bit for.
-      $config_target_data = Yaml::parse(file_get_contents(drupal_get_path($type, $project) . '/' . $config_bit_data['for']));
+      $config_target_data = Yaml::parse(file_get_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for']));
 
       $configs_to_remove = $config_bit_data['action']['remove'][$target];
       foreach ($configs_to_remove as $config_to_remove) {
@@ -845,7 +845,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       $updated_config_target = Yaml::dump($config_target_data, 2, 2);
 
       // Save the updated config to the target file.
-      file_put_contents(drupal_get_path($type, $project) . '/' . $config_bit_data['for'], $updated_config_target);
+      file_put_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for'], $updated_config_target);
     }
   }
 
