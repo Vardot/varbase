@@ -19,7 +19,49 @@
   "repositories": {
     "drupal": {
       "type": "composer",
-      "url": "https://packages.drupal.org/8"
+      "url": "https://packages.drupal.org/8",
+      "exclude": [
+        "drupal/node_edit_protection",
+        "drupal/menu_position",
+        "drupal/login_destination",
+        "drupal/media_bulk_upload",
+        "drupal/webp",
+        "drupal/imageapi_optimize_webp",
+        "drupal/roleassign",
+        "drupal/paragraphs_asymmetric_translation_widgets"
+      ]
+    },
+    "drupal/node_edit_protection": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/node_edit_protection-3288778.git"
+    },
+    "drupal/menu_position": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/menu_position-3288566.git"
+    },
+    "drupal/login_destination": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/login_destination-3288368.git"
+    },
+    "drupal/media_bulk_upload": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/media_bulk_upload-3333898.git"
+    },
+    "drupal/webp": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/webp-3290669.git"
+    },
+    "drupal/imageapi_optimize_webp": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/imageapi_optimize_webp-3297416.git"
+    },
+    "drupal/roleassign": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/roleassign-3297982.git"
+    },
+    "drupal/paragraphs_asymmetric_translation_widgets": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/paragraphs_asymmetric_translation_widgets-3297814.git"
     },
     "assets": {
       "type": "composer",
@@ -30,8 +72,16 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^9",
-    "drupal/core": "~9.0 || ~10.0",
+    "drupal/core-composer-scaffold": "~10.0",
+    "drupal/core": "~10.0",
+    "drupal/node_edit_protection": "dev-3288778-automated-drupal-10 as 1.0.0",
+    "drupal/menu_position": "dev-3288566-automated-drupal-10 as 1.0-beta2",
+    "drupal/login_destination": "dev-3288368-8-x-2-x as 2.0-beta5",
+    "drupal/media_bulk_upload": "dev-3333898-3-0-x as 3.0.0",
+    "drupal/webp": "dev-3290669-automated-drupal-10 as 1.0-beta6",
+    "drupal/imageapi_optimize_webp": "dev-3297416-automated-drupal-10 as 2.0.0-beta3",
+    "drupal/roleassign": "dev-3297982-automated-drupal-10 as 1.0.0-beta1",
+    "drupal/paragraphs_asymmetric_translation_widgets": "dev-3297814-automated-drupal-10 as 1.1.0",
     "drupal/varbase_core": "10.0.x-dev",
     "drupal/varbase_api": "10.0.x-dev",
     "drupal/varbase_media": "10.0.x-dev",
@@ -51,8 +101,8 @@
     "drupal/varbase_components": "1.0.x-dev",
     "drupal/vartheme_bs5": "2.0.x-dev",
     "drupal/vartheme_claro": "4.0.x-dev",
-    "vardot/entity-definition-update-manager": "~1.0",
-    "vardot/module-installer-factory": "~1.0",
+    "vardot/entity-definition-update-manager": "1.0.x-dev",
+    "vardot/module-installer-factory": "1.0.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "2.7.*",
     "bower-asset/c3": "0.7.*",
@@ -67,7 +117,7 @@
     "npm-asset/swagger-ui-dist": "~3.0"
   },
   "require-dev": {
-    "drupal/core-dev": "~9.0",
+    "drupal/core-dev": "~10.0",
     "drush/drush": "~11.0",
     "drupal/drupal-extension": "~4.0",
     "emuse/behat-html-formatter": "^0.2.0",
@@ -165,6 +215,6 @@
     "patchLevel": {
       "drupal/core": "-p2"
     },
-    "patches": {}
+    "patches": {  }
   }
 }

@@ -23,7 +23,7 @@ function varbase_install() {
 
   // Install optional configs.
   $config_installer = \Drupal::service('config.installer');
-  $optional_install_path = drupal_get_path('profile', 'varbase') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
+  $optional_install_path = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {
     // Install any optional config the profile provides.
     $storage = new FileStorage($optional_install_path, StorageInterface::DEFAULT_COLLECTION);
@@ -53,7 +53,7 @@ function varbase_install() {
   // After install of extra modules by install: in the .info.yml files.
   // In Varbase profile and all Varbase components.
   // ---------------------------------------------------------------------------
-  // * Necessary inlitilization for the entire system.
+  // * Necessary initialization for the entire system.
   // * Account for changed config by the end install.
   // * Flush all persistent caches.
   // * Flush asset file caches.
@@ -63,7 +63,7 @@ function varbase_install() {
   // * Rebuild the menu router based on all rebuilt data.
   drupal_flush_all_caches();
 
-  // If Varbase Tour were enabled then redirect to the homepage with activ tour.
+  // If Varbase Tour were enabled then redirect to the homepage with active tour.
   if (isset($GLOBALS['homepage_with_varbase_tour'])
     && $GLOBALS['homepage_with_varbase_tour'] == TRUE) {
     $homepage_with_tour = "/?tour";

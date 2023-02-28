@@ -5,13 +5,12 @@ dependencies:
     - system
     - node
     - block
-id: content_admin
-label: 'Content Admin'
-weight: -7
+id: seo_admin
+label: 'SEO Admin'
+weight: -6
 is_admin: null
 permissions:
   - 'access content overview'
-  - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'administer menu'
