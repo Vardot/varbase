@@ -136,6 +136,7 @@
       "drupal/core-composer-scaffold": true,
       "drupal/core-project-message": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true,
       "vardot/varbase-updater": true
     }
   },
