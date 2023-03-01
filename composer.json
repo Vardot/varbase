@@ -113,8 +113,7 @@
   "require-dev": {
     "drupal/core-dev": "~10",
     "drush/drush": "~11.0",
-    "drupal/drupal-extension": "~4.0",
-    "emuse/behat-html-formatter": "^0.2.0",
+    "drupal/drupal-extension": "~5.0",
     "drevops/behat-screenshot": "~1.0"
   },
   "config": {
