@@ -7,15 +7,15 @@ default:
         - "%paths.base%/tests/features"
       contexts:
         - VarbaseContext:
-          parameters:
-            varbase_users:
-              webmaster: { email: 'webmaster@vardot.com', password: 'dD.123123ddd' }
-              Normal user: { email: 'test.authenticated@vardot.com', password: 'dD.123123ddd' }
-              Editor: { email: 'test.editor@vardot.com', password: 'dD.123123ddd' }
-              Content admin: { email: 'test.content_admin@vardot.com', password: 'dD.123123ddd' }
-              SEO admin: { email: 'test.seo_admin@vardot.com', password: 'dD.123123ddd' }
-              Site admin: { email: 'test.site_admin@vardot.com', password: 'dD.123123ddd' }
-              Super admin: { email: 'test.super_admin@vardot.com', password: 'dD.123123ddd' }
+            parameters:
+              varbase_users:
+                webmaster: { email: 'webmaster@vardot.com', password: 'dD.123123ddd' }
+                Normal user: { email: 'test.authenticated@vardot.com', password: 'dD.123123ddd' }
+                Editor: { email: 'test.editor@vardot.com', password: 'dD.123123ddd' }
+                Content admin: { email: 'test.content_admin@vardot.com', password: 'dD.123123ddd' }
+                SEO admin: { email: 'test.seo_admin@vardot.com', password: 'dD.123123ddd' }
+                Site admin: { email: 'test.site_admin@vardot.com', password: 'dD.123123ddd' }
+                Super admin: { email: 'test.super_admin@vardot.com', password: 'dD.123123ddd' }
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\DrushContext
         - Drupal\DrupalExtension\Context\MessageContext
@@ -23,8 +23,18 @@ default:
         - Drupal\DrupalExtension\Context\MarkupContext
         - DrevOps\BehatScreenshotExtension\Context\ScreenshotContext
   formatters:
+    progress:
+      verbose: true
+      paths: false
+      snippets: true
     pretty:
-    html:
+      verbose: true
+      paths: false
+      snippets: true
+    junit:
+      verbose: true
+      paths: false
+      snippets: false
       output_path: "%paths.base%/tests/reports/"
   extensions:
     Drupal\MinkExtension:
