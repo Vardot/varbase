@@ -75,6 +75,18 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
+      region_map:
+        content: ".main-container"
+        footer: "#footer"
+        left header: "#header-left"
+        right header: "#header-right"
+        right sidebar: "#aside-region"
+        field body: "#edit-body-wrapper"
+      selectors:
+        message_selector: '.messages'
+        error_message_selector: '.messages.error'
+        success_message_selector: '.messages.status'
+        warning_message_selector: '.messages.warning'
     DrevOps\BehatScreenshotExtension:
       dir: '%paths.base%/tests/screenshots'
       fail: true
