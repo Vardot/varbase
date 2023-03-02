@@ -15,11 +15,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And I wait
-      And I should see "Linking to internal content #1 body"
-
-  @javascript @local @development @staging @production
-  Scenario: Check if inserted raw URL will convert into a link when we save when we are using the Visual editor text format
-    Given I am a logged in user with the "Site admin" user
+     Then I should see "Linking to internal content #1 body"
      When I go to "/node/add/page"
       And I wait
      Then I should see "Create Basic page"

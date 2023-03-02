@@ -647,8 +647,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I select all text in "Body" field
-   * Example #2:  And I select all text in "Body" field.
+   * Example #1: When I select all text in "Body" rich text editor field
+   * Example #2:  And I select all text in "Body" rich text editor field
    *
    * @When /^(?:|I )select all text in "(?P<selectedField>[^"]*)" rich text editor field$/
    */

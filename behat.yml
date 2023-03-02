@@ -23,14 +23,10 @@ default:
         - Drupal\DrupalExtension\Context\MarkupContext
         - DrevOps\BehatScreenshotExtension\Context\ScreenshotContext
   formatters:
-    progress:
-      verbose: true
-      paths: false
-      snippets: true
     pretty:
       verbose: true
       paths: false
-      snippets: true
+      snippets: false
     junit:
       verbose: true
       paths: false
