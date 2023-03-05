@@ -27,7 +27,7 @@ permissions:
   - "access entity usage statistics"
   - "access event log track"
   - "access files overview"
-  - "access flood unblock"
+  - "flood unblock ips"
   - "access google analytics reports"
   - "access heroslider_media_browser entity browser pages"
   - "access image_browser entity browser pages"
