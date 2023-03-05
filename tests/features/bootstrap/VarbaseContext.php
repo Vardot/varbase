@@ -534,7 +534,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\");");
+    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(\"$value\");");
   }
 
   /**
@@ -556,7 +556,14 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].execCommand( '$selectorCommand' );");
+    // Find the command button by the select command.
+    $element = $this->getSession()->getPage()->find('xpath', "//button[span[text()='$selectorCommand']]");
+
+    if (is_null($element)) {
+      throw new \Exception("The $selectorCommand command button in the rich text editor field $locator was not found");
+    }
+    $element->click();
+
 
   }
 
@@ -588,7 +595,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(CKEDITOR.instances[\"$fieldId\"].getData()+\"$value\");");
+    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData()+\"$value\");");
   }
 
   /**
@@ -618,7 +625,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\"+CKEDITOR.instances[\"$fieldId\"].getData());");
+    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(\"$value\"+Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData());");
   }
 
   /**
@@ -633,13 +640,12 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function moveFocusToTheRichTextEditorField($selectedField) {
     $el = $this->getSession()->getPage()->findField($selectedField);
-    $fieldid = $el->getAttribute('id');
+    $fieldId = $el->getAttribute('id');
 
-    if (empty($fieldid)) {
+    if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
-
-    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].focus();");
+    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).editing.view.focus()");
   }
 
   /**
@@ -654,16 +660,44 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function selectAllTextInTheRichTextEditorField($selectedField) {
     $el = $this->getSession()->getPage()->findField($selectedField);
-    $fieldid = $el->getAttribute('id');
+    $fieldId = $el->getAttribute('id');
 
-    if (empty($fieldid)) {
+    if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
 
-    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].execCommand('selectAll', false, null);");
-    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].forceNextSelectionCheck();");
-    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].selectionChange();");
+    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).execCommand('selectAll', false, null);");
+    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).forceNextSelectionCheck();");
+    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).selectionChange();");
 
+  }
+
+  /**
+   * Click on the save button in the the rich text editor field
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: I click on the save button in "Body" rich text editor field
+   *
+   * @Given /^I click on the save button in "(?P<selectedField>[^"]*)" rich text editor field$/
+   */
+  public function iClickOnTheSaveButtonInTheEditor($selectedField) {
+    $selectorFieldElement = $this->getSession()->getPage()->findField($selectedField);
+    $fieldId = $selectorFieldElement->getAttribute('id');
+
+    if (empty($fieldId)) {
+      throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
+    }
+
+    // Find the save button for the current selected field
+    $element = $this->getSession()->getPage()->find('css', "button.ck.ck-button.ck-off.ck-button-save");
+
+    if (empty($element)) {
+      throw new \Exception("No save button for the {$selectedField} rich text editor field.");
+    }
+
+    // Click the save button.
+    $element->click();
   }
 
   /**
@@ -1203,7 +1237,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase
    *
-   * Exmaple #1: And I switch to section background video settings
+   * Example #1: And I switch to section background video settings
    *
    * @When I switch to section background video settings
    */
@@ -1338,7 +1372,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase.
    *
-   * Example 1: I double click on the image with the "Flafg Earth image title" title text.
+   * Example 1: I double click on the image with the "Flag Earth image title" title text.
    *
    * @Given /^I double click on the image with the "([^"]*)" title text$/
    */
@@ -1435,7 +1469,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("return CKEDITOR.instances[\"$fieldId\"].getData();");
+    $this->getSession()->executeScript("return Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData();");
 
     // Switch to the iframe.
     $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', $fieldId, 'iframe');
@@ -2005,10 +2039,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception("Field '{$field}' not found");
     }
 
-    $fieldid = $elementField->getAttribute('id');
+    $fieldId = $elementField->getAttribute('id');
 
     $js = <<<JS
-var node = document.getElementById("{$fieldid}");
+var node = document.getElementById("{$fieldId}");
 var keyEvent = document.createEvent('KeyboardEvent');
 keyEvent.initKeyEvent('keypress',        // typeArg,
 											 true,             // canBubbleArg,

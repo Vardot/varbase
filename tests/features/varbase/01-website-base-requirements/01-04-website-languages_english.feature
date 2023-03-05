@@ -4,7 +4,7 @@ I want to be able to check if the site has got the English language Enabled
 So that can be sure that the website is using the English language as one of the languages.
 
   @javascript @local @development @staging @production
-  Scenario: Check if we can Create Basic page with English for the language of the content
+  Scenario: Check if a content admin user can Create Basic page with English for the language of the content
     Given I am a logged in user with the "Content admin" user
       And I go to "/node/add/page"
       And I wait
@@ -19,7 +19,7 @@ So that can be sure that the website is using the English language as one of the
      Then I should see "Test English Basic page title by content admin"
 
   @javascript @local @development @staging @production
-  Scenario: Check if we can Create Landing page with English for the language of the content
+  Scenario: Check if a content admin user can Create Landing page with English for the language of the content
     Given I am a logged in user with the "Content admin" user
       And I go to "/node/add/landing_page"
       And I wait
@@ -33,7 +33,7 @@ So that can be sure that the website is using the English language as one of the
      Then I should see "Test English Landing page title by content admin"
 
   @javascript @local @development @staging @production
-  Scenario: Check if we can Create Basic page with English for the language of the content
+  Scenario: Check if a site admin user can Create Basic page with English for the language of the content
     Given I am a logged in user with the "Site admin" user
       And I go to "/node/add/page"
       And I wait
@@ -48,7 +48,7 @@ So that can be sure that the website is using the English language as one of the
      Then I should see "Test English Basic page title by site admin"
 
   @javascript @local @development @staging @production
-  Scenario: Check if we can Create Landing page with English for the language of the content
+  Scenario: Check if a site admin user can can Create Landing page with English for the language of the content
     Given I am a logged in user with the "Site admin" user
       And I go to "/node/add/landing_page"
       And I wait
