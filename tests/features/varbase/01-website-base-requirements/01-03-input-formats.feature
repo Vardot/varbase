@@ -14,16 +14,16 @@ So that can use different type of rich text editors.
 
      When I select "full_html" from "body[0][format]"
       And I wait for AJAX to finish
-     Then I should see the "#cke_edit-body-0-value" element in the "field body"
+     Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "basic_html" from "body[0][format]"
       And I wait for AJAX to finish
-     Then I should see the "#cke_edit-body-0-value" element in the "field body"
+     Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "code_html" from "body[0][format]"
       And I wait for AJAX to finish
      Then I should see the "#edit-body-0-value" element in the "field body"
-      And I should not see the "#cke_edit-body-0-value" element in the "field body"
+      And I should not see the ".ck.ck-editor__main" element in the "field body"
 
   @javascript @local @development @staging @production
   Scenario: Check if Super Admin user can change the text format for the body of Basic page
@@ -35,13 +35,13 @@ So that can use different type of rich text editors.
 
      When I select "full_html" from "body[0][format]"
       And I wait for AJAX to finish
-     Then I should see the "#cke_edit-body-0-value" element in the "field body"
+     Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "basic_html" from "body[0][format]"
       And I wait for AJAX to finish
-     Then I should see the "#cke_edit-body-0-value" element in the "field body"
+     Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "code_html" from "body[0][format]"
       And I wait for AJAX to finish
      Then I should see the "#edit-body-0-value" element in the "field body"
-      And I should not see the "#cke_edit-body-0-value" element in the "field body"
+      And I should not see the ".ck.ck-editor__main" element in the "field body"

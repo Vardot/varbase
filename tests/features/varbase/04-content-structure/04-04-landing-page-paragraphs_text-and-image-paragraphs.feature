@@ -52,8 +52,6 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
       Then I should see "The maximum number of media items have been selected."
       When I click "Text"
        And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."
-       And I select all text in "Text" rich text editor field
-       And I click on "justifycenter" command button in the rich text editor field "Text"
        And I wait
        And I select "published" from "edit-moderation-state-0-state"
        And I press the "Save" button

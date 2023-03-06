@@ -504,7 +504,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
   /*
    * ===========================================================================
-   * Rich text editor Functions CKEditor.
+   * Rich text editor Functions CKEditor 5.
    * ===========================================================================
    */
 
@@ -521,14 +521,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   public function iFillInTheRichTextEditorField($locator, $value) {
     $el = $this->getSession()->getPage()->findField($locator);
     $fieldId = $el->getAttribute('id');
-
-    if ($fieldId == NULL) {
-      // If the WYSIWYG is in an ifream with no id.
-      $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
-      if (!empty($iFreamID)) {
-        $fieldId = $iFreamID;
-      }
-    }
 
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
@@ -583,14 +575,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $el = $this->getSession()->getPage()->findField($locator);
     $fieldId = $el->getAttribute('id');
 
-    if ($fieldId == NULL) {
-      // If the WYSIWYG is in an ifream with no id.
-      $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
-      if (!empty($iFreamID)) {
-        $fieldId = $iFreamID;
-      }
-    }
-
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
@@ -612,14 +596,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   public function prependTheRichTextEditorField($locator, $value) {
     $el = $this->getSession()->getPage()->findField($locator);
     $fieldId = $el->getAttribute('id');
-
-    if ($fieldId == NULL) {
-      // If the WYSIWYG is in an ifream with no id.
-      $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
-      if (!empty($iFreamID)) {
-        $fieldId = $iFreamID;
-      }
-    }
 
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
@@ -666,9 +642,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
 
-    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).execCommand('selectAll', false, null);");
-    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).forceNextSelectionCheck();");
-    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).selectionChange();");
+    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).execute( 'selectAll' );");
 
   }
 
@@ -1471,10 +1445,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $this->getSession()->executeScript("return Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData();");
 
-    // Switch to the iframe.
-    $iFreamID = $this->getAttributeByOtherAttributeValue('id', 'title', $fieldId, 'iframe');
-    $this->getSession()->switchToIFrame($iFreamID);
-
     // Find an image with the title.
     $element = $this->getSession()->getPage()->findAll('xpath', "//img[contains(@title, '{$titleText}')]");
 
@@ -1482,8 +1452,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text under [ ' . $locator . ' ].');
     }
 
-    // Switch back too the page from the iframe.
-    $this->getSession()->switchToIFrame(NULL);
   }
 
   /**
@@ -1767,104 +1735,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     if (!$found) {
       throw new \Exception(sprintf('"%s" value was not found in the "%s" input element', $text, $selector));
     }
-    $element->click();
-  }
-
-  /**
-   * Check if we do have the text in the selected panel region.
-   *
-   * Using the code name of the panel region. or the html id.
-   * Varbase Context #varbase.
-   *
-   * Example #1: Then I should see "Add new pane" in the "Center" panel region
-   * Example #2: Then I should see "custom pane title" in the "Right side" panel region
-   * Example #3:  And I should see "Add new pane" in the "panels-ipe-regionid-center" panel region.
-   *
-   * @Then /^I should see "(?P<text>[^"]*)" in the "(?P<panleRegion>[^"]*)" panel region$/
-   */
-  public function iShouldSeeInThePanelRegion($text, $panleRegion) {
-
-    if (strpos($panleRegion, "panels-ipe-regionid-")) {
-      $panleRegionId = $panleRegion;
-    }
-    else {
-      $panleRegionId = "panels-ipe-regionid-" . str_replace(' ', '-', strtolower($panleRegion));
-    }
-
-    $elementPanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
-    if (empty($elementPanelRegion)) {
-      throw new \Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
-    }
-
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]//*[text()='{$text}']");
-    if (empty($element)) {
-      throw new \Exception('The panle region "' . $panleRegion . '" dose not have "' . $text . '" in it.');
-    }
-  }
-
-  /**
-   * Check if we do not have the text in the selected panel region.
-   *
-   * Using the code name of the panel region. or the html id.
-   * Varbase Context #varbase.
-   *
-   * Example #1: Then I should not see "Add new pane" in the "Center" panel region
-   * Example #2: Then I should not see "custom pane title" in the "Right side" panel region
-   * Example #3:  And I should not see "Add new pane" in the "panels-ipe-regionid-center" panel region.
-   *
-   * @Then /^I should not see "(?P<text>[^"]*)" in the "(?P<panleRegion>[^"]*)" panel region$/
-   */
-  public function iShouldNotSeeInThePanelRegion($text, $panleRegion) {
-
-    if (strpos($panleRegion, "panels-ipe-regionid-")) {
-      $panleRegionId = $panleRegion;
-    }
-    else {
-      $panleRegionId = "panels-ipe-regionid-" . str_replace(' ', '-', strtolower($panleRegion));
-    }
-
-    $elementPanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
-    if (empty($elementPanelRegion)) {
-      throw new \Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
-    }
-
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]//*[text()='{$text}']");
-    if (!empty($element)) {
-      throw new \Exception('The panle region "' . $panleRegion . '" dose have "' . $text . '" in it.');
-    }
-  }
-
-  /**
-   * Click on the text in the selected panel region.
-   *
-   * Using the code name of the panel region. or the html id.
-   * Varbase Context #varbase.
-   *
-   * Example #1: When I click "Add new pane" in the "center" panel region
-   * Example #2: When I click "Region style" in the "left" panel region
-   * Example #3:  And I click "Add new pane" in the "panels-ipe-regionid-center" panel region.
-   *
-   * @When /^I click "(?P<text>[^"]*)" in the "(?P<panleRegion>[^"]*)" panel region$/
-   */
-  public function iClickInThePanelRegion($text, $panleRegion) {
-
-    if (strpos($panleRegion, "panels-ipe-regionid-")) {
-      $panleRegionId = $panleRegion;
-    }
-    else {
-      $panleRegionId = "panels-ipe-regionid-" . str_replace(' ', '-', strtolower($panleRegion));
-    }
-
-    $elementpanelRegion = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]");
-    if (empty($elementpanelRegion)) {
-      throw new \Exception('The panle region [ ' . $panleRegion . ' ] is not in the page.');
-    }
-
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@id, '{$panleRegionId}')]//*[text()='{$text}']");
-    if (empty($element)) {
-      throw new \Exception('The panle region "' . $panleRegion . '" dose not have "' . $text . '".');
-    }
-
     $element->click();
   }
 
