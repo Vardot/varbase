@@ -54,7 +54,7 @@
     "vardot/entity-definition-update-manager": "~1.0 || 1.0.x-dev",
     "vardot/module-installer-factory": "~1.0 || 1.0.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
-    "bower-asset/chartjs": "2.7.*",
+    "bower-asset/chartjs": "~4.0",
     "bower-asset/c3": "0.7.*",
     "bower-asset/d3": "~5.0",
     "bower-asset/jqueryui-touch-punch": "dev-master",
