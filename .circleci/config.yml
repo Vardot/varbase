@@ -200,10 +200,8 @@ commands:
             ../bin/drush pm:enable social_auth_facebook --yes
             ../bin/drush pm:enable social_auth_twitter --yes
             ../bin/drush pm:enable social_auth_linkedin --yes
-            ../bin/drush config:set system.performance css.preprocess 0 --yes
-            ../bin/drush config:set system.performance js.preprocess 0 --yes
-            ../bin/drush config:set system.logging error_level all --yes
-            ../bin/drush cr
+            ../bin/drush pm:enable varbase_update_helper --yes
+            ../bin/drush cache:rebuild
 
       ## Run Selenium Standalone server.
       - run:

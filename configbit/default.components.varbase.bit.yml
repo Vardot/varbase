@@ -26,4 +26,3 @@ config_bit:
         - varbase_dashboards
         - varbase_default_content
         - varbase_tour
-        - varbase_update_helper
