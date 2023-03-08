@@ -32,7 +32,7 @@ default:
                  rich text editor for body field: '//iframe[@title="Rich Text Editor, edit-body-und-0-value"]'
                  HTML editor for body field: '//*[@id="edit-body-und-0-value-aced"]'
 
-             ## You can add list of selectorrs which you will use in most features.
+             ## You can add list of selectors which you will use in most features.
              #  But by loading them from files.
              files_path: "%paths.base%/tests/selectors/"
              files:
@@ -46,19 +46,22 @@ default:
         - DrevOps\BehatScreenshotExtension\Context\ScreenshotContext
   formatters:
     pretty:
+      verbose: true
+      paths: false
+      snippets: false
     html:
+      verbose: true
+      paths: false
+      snippets: false
       output_path: "%paths.base%/tests/reports/"
   extensions:
     Drupal\MinkExtension:
       ajax_timeout: 60
       files_path: "%paths.base%/tests/assets/"
-      goutte: ~
       selenium2:
         wd_host: 127.0.0.1:4445/wd/hub
         capabilities:
-          # browser: 'firefox'
           browser: 'chrome'
-          # browser: 'phantomjs'
           nativeEvents: true
           marionette: true
           browserName: chrome
@@ -73,7 +76,7 @@ default:
                 - "--headless"
                 - "--start-maximized"
                 - "--disable-gpu"
-                - "--window-size=1600,1200"
+                - "--window-size=1920,1080"
                 - "--no-sandbox"
                 - "--disable-dev-shm-usage"
                 - "--disable-setuid-sandbox"
@@ -89,9 +92,7 @@ default:
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
       base_url: 'http://varbase.test'
-      # browser_name: 'firefox'
       browser_name: 'chrome'
-      # browser_name: 'phantomjs'
       javascript_session: selenium2
     Drupal\DrupalExtension:
       blackbox: ~

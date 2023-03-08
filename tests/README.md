@@ -28,7 +28,7 @@ composer require --dev emuse/behat-html-formatter:^0.2.0
 
 ### Add additional testing packages
 ```
-cd path to yout files of the project/PROJECT_DIR_NAME
+Change path to your files of the project/PROJECT_DIR_NAME
 BEHAT-SCREENSHOT to capture images on demand or when a test fails
 
 composer require --dev drevops/behat-screenshot
@@ -48,7 +48,7 @@ Read more about it here: https://github.com/drevops/behat-screenshot
 
 ### Install Varbase
 Have Varbase installed from the browser or using the `drush site:install` command.
-But make sure to have the webmaster user with the `dD.123123ddd` passwrod.
+But make sure to have the webmaster user with the `dD.123123ddd` password.
 
 Exmaple Drush install:
 Change directory in the terminal to the path of the project and `/PROJECT_DIR_NAME/docroot`
@@ -58,7 +58,7 @@ Change directory in the terminal to the path of the project and `/PROJECT_DIR_NA
 ```
 
 ### Enable all Varbase components
-Make sure that all varbase modules are insalled.
+Make sure that all varbase modules are installed.
 ```
 ../bin/drush pm:enable vmi --yes
 ../bin/drush pm:enable varbase_heroslider_media --yes
@@ -77,7 +77,8 @@ Make sure that all varbase modules are insalled.
 ../bin/drush pm:enable social_auth_facebook --yes
 ../bin/drush pm:enable social_auth_twitter --yes
 ../bin/drush pm:enable social_auth_linkedin --yes
-../bin/drush cr
+../bin/drush pm:enable varbase_update_helper --yes
+../bin/drush cache:rebuild
 ```
 
 ### Import and Update local RTL language
@@ -87,7 +88,7 @@ cd path to your files of the project/PROJECT_DIR_NAME
 cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
 ../bin/drush locale-update --langcodes=ar
-../bin/drush cr
+../bin/drush cache:rebuild
 ```
 
 ### Uninstall Antibot module to make the Selenium robot have more control 
@@ -95,16 +96,7 @@ Needed to uninstall as the Antibot module will prevent the Selenium robot from p
 ```
 cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush pm:uninstall antibot --yes
-../bin/drush cr
-```
-
-### Change config for error reporting and CSS/JS aggregation
-```
-cd `/PROJECT_DIR_NAME/docroot`
-../bin/drush config:set system.performance css.preprocess 0 --yes
-../bin/drush config:set system.performance js.preprocess 0 --yes
-../bin/drush config:set system.logging error_level all --yes
-../bin/drush cr
+../bin/drush cache:rebuild
 ```
 
 ### Add testing users.
@@ -186,13 +178,10 @@ To run the automated testing with behat you will need to change the [ wd_host an
     Drupal\MinkExtension:
       ajax_timeout: 60
       files_path: "%paths.base%/tests/assets/"
-      goutte: ~
       selenium2:
         wd_host: 127.0.0.1:4445/wd/hub
         capabilities:
-          # browser: 'firefox'
           browser: 'chrome'
-          # browser: 'phantomjs'
           nativeEvents: true
           marionette: true
           browserName: chrome
@@ -223,9 +212,7 @@ To run the automated testing with behat you will need to change the [ wd_host an
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
       base_url: 'http://varbase.test'
-      # browser_name: 'firefox'
       browser_name: 'chrome'
-      # browser_name: 'phantomjs'
       javascript_session: selenium2
 ```
 
@@ -323,7 +310,7 @@ $ ../../../bin/behat --tags '@development' tests/features/varbase/
 Which it will run Scenarios which has got the @development tag.
 
 ```
-$ ../../../bin/behat --tags '@staging' ftests/eatures/varbase/
+$ ../../../bin/behat --tags '@staging' tests/features/varbase/
 ```
 
 Which it will run Scenarios which has got the @staging tag.
