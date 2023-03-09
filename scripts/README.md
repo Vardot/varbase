@@ -49,7 +49,7 @@ We can use
 ```
 $ cd PROJECT_DIR_NAME/docroot/themes/contrib/vartheme_bs5
 yarn theme:create-sub-theme "THEME_NAME"
-``
+``` 
 
 * Activate your new sub theme by going to Appearance in our Varbase site.
 * Search for THEME_NAME of the generated new sub theme and click on Install
@@ -61,6 +61,7 @@ yarn theme:create-sub-theme "THEME_NAME"
 ```
 $ cd PROJECT_DIR_NAME/docroot/themes/custom/THEME_NAME
 $ gulp
+```
 [10:55:40] Using gulpfile PROJECT_DIR_NAME/docroot/themes/custom/THEME_NAME/gulpfile.js
 [10:55:40] Starting 'default'...
 [10:55:40] Starting 'compile'...
@@ -70,7 +71,7 @@ $ gulp
 [10:55:43] Starting 'move_popper_js_files'...
 [10:55:43] Finished 'move_popper_js_files' after 3.89 ms
 [10:55:43] Starting 'watch'...
-```
+
 We can use 
 ```
 yarn theme:init
