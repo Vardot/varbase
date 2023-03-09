@@ -249,17 +249,27 @@ jobs:
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat tests/features/varbase/01-website-base-requirements/
-  varbase-testing-02-user-management-03-admin-management:
+  varbase-testing-02-user-management:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+      ## Automated Functional Acceptance Testing group - 02 user management
       - run:
-          name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+          name: Automated Functional Acceptance Testing group - 02 user management
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat tests/features/varbase/02-user-management/
+  varbase-testing-03-admin-management:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 03 admin management
+      - run:
+          name: Automated Functional Acceptance Testing group - 03 admin management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat tests/features/varbase/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
@@ -294,7 +304,13 @@ workflows:
               only: /^9.0.*/
             branches:
               only: /^9.0.x/
-      - varbase-testing-02-user-management-03-admin-management:
+      - varbase-testing-02-user-management:
+          filters:
+            tags:
+              only: /^9.0.*/
+            branches:
+              only: /^9.0.x/
+      - varbase-testing-03-admin-management:
           filters:
             tags:
               only: /^9.0.*/
