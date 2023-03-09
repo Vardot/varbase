@@ -1,3 +1,93 @@
+# 9.0.12
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+### Highlighted important changes since Varbase 9.0.10:
+* Updated **Drupal Core** to `9.5.4` for new builds and new installation.
+
+### Added since Varbase 9.0.11:
+No addition. All new additions will be in **Varbase ~10.0**
+
+### Changed since Varbase 9.0.11:
+* Issue [#3346052](https://www.drupal.org/i/3346052):
+        Changed `access flood unblock` permission for **Site Admin** user role to
+        `flood unblock ips` after changes in **Flood Control** `2.3.1`
+* Issue [#3343681](https://www.drupal.org/i/3343681):
+        Changed filter `spaceless` to `apply spaceless` and `endapply`. As `spaceless`
+        was deprecated since **Twig** `2.7`
+* Issue [#3343658](https://www.drupal.org/i/3343658):
+        Changed `node_type` to `entity_bundle:node` for default pathauto pattern 
+        configs for the **Varbase Landing Page (Paragraphs)** content type
+* Issue [#3262760](https://www.drupal.org/i/3262760)
+        by [tresero](https://www.drupal.org/u/tresero)
+       , [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+       : Switched **Google Analytics** Module from `~3.0` to `~4.0`
+* Issue [#3346695](https://www.drupal.org/i/3346695):
+        Removed enabling the **Varbase Update Helper** module on
+        enabling **Varbase Core** module
+* Issue [#3346730](https://www.drupal.org/i/3346730):
+        Removed installing the **Varbase Update Helper** module from the
+        list of default Varbase components on installation
+
+### Updates since Varbase 9.0.11:
+* Issue [#3338164](https://www.drupal.org/i/3338164):
+        Updated **Advanced Text Formatter** module from `~2.0` to `~3.0`
+* Issue [#3335880](https://www.drupal.org/i/3335880):
+        Updated **DRD Agent** module from `~3.0` to `~4.0`
+* Issue [#3335877](https://www.drupal.org/i/3335877):
+        Updated **Stage File Proxy** module from `~1.0` to `~2.0`
+* Issue [#3335874](https://www.drupal.org/i/3335874):
+        Updated **Configuration Inspector** module from `~1.0` to `~2.0`
+* Issue [#3334055](https://www.drupal.org/i/3334055):
+        Updated **Config Ignore** module from `~2.0` to `~3.0`
+* Issue [#3338305](https://www.drupal.org/i/3338305):
+        Have a smooth update for **Config Ignore** module. Which removed the use
+        of **Config Filter** module using **core API** instead of **Config Filter**
+* Issue [#3317082](https://www.drupal.org/i/3317082):
+        Updated **Block Class** module from `~1.0` to `~2.0`
+* Issue [#3338170](https://www.drupal.org/i/3338170):
+        Updated **Bootstrap Layouts** module from `5.2.0` to `~5.0` and removed committed patches
+* Issue [#3338250](https://www.drupal.org/i/3338250):
+        Updated **Advanced Text Formatter** module from `~2.0` to `~2.0 || ~3.0`
+        in Varbase Media Hero Slider
+* Issue [#3338208](https://www.drupal.org/i/3338208):
+        Updated **Advanced Text Formatter** module from `~2.0` to `~2.0 || ~3.0`
+        in Varbase Bootstrap Paragraphs
+* Issue [#3338202](https://www.drupal.org/i/3338202):
+        Updated **Advanced Text Formatter** module from `~2.0` to `~2.0 || ~3.0`
+        in Varbase Landing Page (Paragraphs)
+* Issue [#3338570](https://www.drupal.org/i/3338570):
+        Updated **Advanced Text Formatter** module from `~2.0` to `~2.0 || ~3.0`
+        in *Varbase FAQs*
+* Issue [#3333634](https://www.drupal.org/i/3333634):
+        Updated **CKEditor BiDi Buttons** module from `~3.0` to `~4.0`
+* Issue [#3346079](https://www.drupal.org/i/3346079):
+        Updated **Linkit** module from `6.0.0-beta3` to `6.0.0-beta4` and kept needed
+         patches for **CKEditor 4**
+* Issue [#3319321](https://www.drupal.org/i/3319321)
+        by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+       : Updated **Entity Clone** module from `~1.0` to `~2.0`
+* Issue [#3339889](https://www.drupal.org/i/3339889):
+        Updated **Generate Password** module from `~1.0` to `~2.0`
+* Issue [#3343318](https://www.drupal.org/i/3343318):
+        Updated **Barrio Bootstrap** theme from `5.1.8` to `5.1.10` ( `~5.1.0` )
+        and removed committed patches
+* Issue [#3346247](https://www.drupal.org/i/3346247)
+        by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Updated **bower-asset/chartjs** library from `2.7.*` to `~4.0`
+
+### Fixes since Varbase 9.0.11:
+* Issue [#3337351](https://www.drupal.org/i/3337351):
+        Fixed empty/missing box shadow configs for the **Bootstrap Styles**
+* Issue [#3337369](https://www.drupal.org/i/3337369):
+        Fixed not loading `bootstrap_styles/aos.local` or
+        `bootstrap_styles/aos.remote` library
+* Issue [#3343096](https://www.drupal.org/i/3343096):
+        Fixed Additional uncaught exception for Barrio **Bootstrap 5** Theme thrown
+        while handling exception `(^9.4 || ^10)` requires the 'core' key not be set in themes
+* Issue [#3346706](https://www.drupal.org/i/3346706):
+        Fixed set attributes for HTML node preview templates
+
+-------------------------------------------------------------------------------
+
 # 9.0.11
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
 ### Highlighted important changes since Varbase 9.0.10:
