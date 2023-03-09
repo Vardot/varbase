@@ -75,8 +75,7 @@ default:
               args:
                 - "--headless"
                 - "--start-maximized"
-                - "--start-fullscreen"
-                # - "--window-size=1920,1080"
+                - "--window-size=1920,1080"
                 - "--disable-gpu"
                 - "--no-sandbox"
                 - "--disable-dev-shm-usage"
@@ -93,7 +92,6 @@ default:
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
-                - "--version"
       base_url: 'http://varbase.test'
       browser_name: 'chrome'
       javascript_session: selenium2
