@@ -531,7 +531,10 @@ function varbase_reset_timestamp_for_default_content($reset) {
   if ($reset) {
     // Reset timestamp for all file's default content.
     $file_storage = \Drupal::service('entity_type.manager')->getStorage('file');
-    $file_ids = $file_storage->getQuery()->accessCheck(FALSE)->execute();
+    $file_ids = $file_storage->getQuery()
+      ->accessCheck(FALSE)
+      ->execute();
+
     if (isset($file_ids)
       && is_array($file_ids)
       && count($file_ids) > 0) {
@@ -547,7 +550,10 @@ function varbase_reset_timestamp_for_default_content($reset) {
 
     // Reset timestamp for all Media's default content.
     $media_storage = \Drupal::service('entity_type.manager')->getStorage('media');
-    $media_ids = $media_storage->getQuery()->accessCheck(FALSE)->execute();
+    $media_ids = $media_storage->getQuery()
+      ->accessCheck(FALSE)
+      ->execute();
+
     if (isset($media_ids)
       && is_array($media_ids)
       && count($media_ids) > 0) {

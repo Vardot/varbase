@@ -416,13 +416,14 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    *   The name of the config.
    *
    * @return bool
-   *   The status of cofnig.
+   *   The status of config.
    */
   protected function configExists(string $config_name) {
 
     $query = $this->database->select('config', 'c');
-    $query->condition('c.name', $config_name, '=');
-    $query->addExpression('COUNT(*)', 'count');
+    $query->condition('c.name', $config_name, '=')
+      ->accessCheck(FALSE)
+      ->addExpression('COUNT(*)', 'count');
 
     $config_count = $query->execute()->fetchField();
 
@@ -464,7 +465,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       // containing all the values from [target config expected to have]
       // that are not present in [target config data].
       // ----------------------------------------------------------------------.
-      // Wild card exption to have in all listed configs.
+      // Wild card exception to have in all listed configs.
       if (isset($config_action['expected_config_wild_card'])) {
         $wild_card_configs = $this->configFactory->listAll($config_action['expected_config_wild_card']);
         foreach ($wild_card_configs as $wild_card_name) {
@@ -510,7 +511,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       // containing all the values from [target config expected NOT to
       // have] that are not present in [target config data] .
       // ----------------------------------------------------------------------.
-      // Wild card exption not to have in all listed configs.
+      // Wild card exception not to have in all listed configs.
       if (isset($config_action['expected_config_wild_card'])) {
         $wild_card_configs = $this->configFactory->listAll($config_action['expected_config_wild_card']);
         foreach ($wild_card_configs as $wild_card_name) {

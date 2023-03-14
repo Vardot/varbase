@@ -13,7 +13,7 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 
 /**
- * Defines form for selecting Varbase's Multiligual configuration options form.
+ * Defines form for selecting Varbase's Multilingual configuration options form.
  */
 class ConfigureMultilingualForm extends FormBase implements ContainerInjectionInterface {
 

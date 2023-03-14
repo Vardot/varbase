@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
 
 /**
- * Defines form for selecting extra compoennts for the assembler to install.
+ * Defines form for selecting extra components for the assembler to install.
  */
 class DevelopmentToolsAssemblerForm extends FormBase {
 
@@ -122,7 +122,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           '#default_value' => $checkbox_selected,
         ];
 
-        // If config_form is ture for this development tool.
+        // If config_form is true for this development tool.
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
           $form['development_tools'][$development_tool_key . '_config'] = [

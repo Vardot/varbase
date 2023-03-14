@@ -53,7 +53,7 @@ function varbase_auth_build_formbit(array &$formbit, FormStateInterface &$form_s
  * To update the editable config in drupal active config.
  *
  * @param array $editable_config_values
- *   Editable cofnig values.
+ *   Editable config values.
  */
 function varbase_auth_submit_formbit(array $editable_config_values) {
   $auth_modules = $editable_config_values['varbase_auth']['social_auth_type'];

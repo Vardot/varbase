@@ -78,7 +78,7 @@ function varbase_development_build_formbit(array &$formbit, FormStateInterface &
  * To update the editable config in drupal active config.
  *
  * @param array $editable_config_values
- *   Editable cofnig values.
+ *   Editable config values.
  */
 function varbase_development_submit_formbit(array $editable_config_values) {
   // Save the changed values for system.logging config.

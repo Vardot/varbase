@@ -77,7 +77,7 @@ class AssemblerForm extends FormBase {
    * {@inheritdoc}
    *
    * @return array
-   *   Extra compoments modules.
+   *   Extra components modules.
    */
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
     $form['#title'] = $this->t('Extra components');
