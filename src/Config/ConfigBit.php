@@ -424,9 +424,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
     $query->condition('c.name', $config_name, '=')
       ->addExpression('COUNT(*)', 'count');
 
-    $config_count = $query->accessCheck(FALSE)
-      ->execute()
-      ->fetchField();
+    $config_count = $query->execute()->fetchField();
 
     if ($config_count == 1) {
       return TRUE;
