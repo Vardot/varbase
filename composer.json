@@ -26,7 +26,6 @@
         "drupal/media_bulk_upload",
         "drupal/webp",
         "drupal/imageapi_optimize_webp",
-        "drupal/roleassign",
         "drupal/paragraphs_asymmetric_translation_widgets"
       ]
     },
@@ -50,10 +49,6 @@
       "type": "git",
       "url": "https://git.drupalcode.org/issue/imageapi_optimize_webp-3297416.git"
     },
-    "drupal/roleassign": {
-      "type": "git",
-      "url": "https://git.drupalcode.org/issue/roleassign-3297982.git"
-    },
     "drupal/paragraphs_asymmetric_translation_widgets": {
       "type": "git",
       "url": "https://git.drupalcode.org/issue/paragraphs_asymmetric_translation_widgets-3297814.git"
@@ -74,7 +69,6 @@
     "drupal/media_bulk_upload": "dev-3333898-3-0-x as 3.0.0",
     "drupal/webp": "dev-3290669-automated-drupal-10 as 1.0-beta6",
     "drupal/imageapi_optimize_webp": "dev-3297416-automated-drupal-10 as 2.0.0-beta3",
-    "drupal/roleassign": "dev-3297982-automated-drupal-10 as 1.0.0-beta1",
     "drupal/paragraphs_asymmetric_translation_widgets": "dev-3297814-automated-drupal-10 as 1.1.0",
     "drupal/varbase_core": "10.0.x-dev",
     "drupal/varbase_api": "10.0.x-dev",

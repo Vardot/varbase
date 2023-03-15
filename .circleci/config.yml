@@ -5,7 +5,7 @@ defaults: &defaults
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    - image: circleci/mysql:8.0.23
+    - image: cimg/mysql:8.0
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -226,7 +226,7 @@ commands:
             cd /var/www/html/test/varbase/docroot
             ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
             ../bin/drush locale-update --langcodes=ar
-            ../bin/drush cr
+            ../bin/drush cache:rebuild
 
       ## Uninstall Antibot module to let the selenium bot work  
       - run:
@@ -234,7 +234,10 @@ commands:
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush pm:uninstall antibot --yes
-            ../bin/drush cr
+            ../bin/drush config:set system.performance css.preprocess 0 --yes
+            ../bin/drush config:set system.performance js.preprocess 0 --yes
+            ../bin/drush config:set system.logging error_level all --yes
+            ../bin/drush cache:rebuild
 
 jobs:
   varbase-testing-01-website-base-requirements:
@@ -248,17 +251,27 @@ jobs:
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat tests/features/varbase/01-website-base-requirements/
-  varbase-testing-02-user-management-03-admin-management:
+  varbase-testing-02-user-management:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+      ## Automated Functional Acceptance Testing group - 02 user management
       - run:
-          name: Automated Functional Acceptance Testing group - 02 user management - 03 admin management
+          name: Automated Functional Acceptance Testing group - 02 user management
           no_output_timeout: 30m
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat tests/features/varbase/02-user-management/
+  varbase-testing-03-admin-management:
+    <<: *defaults
+    steps:
+      - varbase-build
+      ## Automated Functional Acceptance Testing group - 03 admin management
+      - run:
+          name: Automated Functional Acceptance Testing group - 03 admin management
+          no_output_timeout: 30m
+          command: |
+            cd /var/www/html/test/varbase/docroot/profiles/varbase
             ../../../bin/behat tests/features/varbase/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
@@ -293,7 +306,13 @@ workflows:
               only: /^10.0.*/
             branches:
               only: /^10.0.x/
-      - varbase-testing-02-user-management-03-admin-management:
+      - varbase-testing-02-user-management:
+          filters:
+            tags:
+              only: /^10.0.*/
+            branches:
+              only: /^10.0.x/
+      - varbase-testing-03-admin-management:
           filters:
             tags:
               only: /^10.0.*/
