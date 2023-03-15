@@ -2155,7 +2155,7 @@ JS;
    * @Then I should see the :label checkbox unchecked
    */
   public function iShouldSeeTheCheckboxUnchecked($label) {
-    $isChecked = (boolean) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
+    $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if ($isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is checked");
     } 
@@ -2172,7 +2172,7 @@ JS;
    * @Then I should see the :label checkbox checked
    */
   public function iShouldSeeTheCheckboxChecked($label) {
-    $isChecked = (boolean) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
+    $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if (!$isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is unchecked");
     } 

@@ -625,7 +625,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    * @param string $project
    *   Config bit file source eg. varbase.
    *
-   * @return boolan
+   * @return bool
    *   True/False if the file exists.
    */
   public static function doWeHaveThisConfigBit($config_bit_file_name, $type = 'profile', $project = 'varbase') {

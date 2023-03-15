@@ -722,7 +722,7 @@ function varbase_requirements($phase) {
   $maxExecutionTime = ini_get('max_execution_time');
 
   if ($phase === "install") {
-    if (version_compare($phpVersion, "8.0", "<")) {
+    if (version_compare($phpVersion, "8.1", "<")) {
       $requirements['php'] = [
         'title' => t('PHP'),
         'description' => t('Your PHP installation is too old. It is recommended to upgrade to PHP version <b>%php_version</b> or higher for the best ongoing support. See <a href="http://php.net/supported-versions.php">PHP\'s version support documentation</a>', ['%php_version' => "8.0"]),
