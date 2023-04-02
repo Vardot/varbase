@@ -22,7 +22,6 @@
       "url": "https://packages.drupal.org/8",
       "exclude": [
         "drupal/menu_position",
-        "drupal/login_destination",
         "drupal/media_bulk_upload",
         "drupal/webp",
         "drupal/imageapi_optimize_webp",
