@@ -151,7 +151,7 @@
       ],
       "gitignore": true,
       "locations": {
-        "web-root": "docroot/"
+        "web-root": "./docroot"
       }
     },
     "installer-paths": {
