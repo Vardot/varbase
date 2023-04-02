@@ -4,12 +4,12 @@ I want to be able to check if all content types are translatable
 So that I will be able to create a content then I will have the option to translate the content to other languages in the site
 
 # Run the following Gherkin Features to add Arabic language.
-# ../../../bin/behat tests/features/varbase/step1-init-tests/2-add-arabic.feature
+# ../../../../bin/behat tests/features/varbase/step1-init-tests/2-add-arabic.feature
 
 # Run the following Gherkin Features After you finish work
 # So that you can delete Arabic language.
 #
-# ../../../bin/behat tests/features/varbase/step3-cleanup-tests/2-delete-arabic.feature
+# ../../../../bin/behat tests/features/varbase/step3-cleanup-tests/2-delete-arabic.feature
 
   @javascript @local @development @staging @production
   Scenario: Check if site admin can translate an existing English Basic Page to an Arabic version.

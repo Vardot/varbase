@@ -27,11 +27,11 @@ if [[ "${drupal_root: -1}" == "/" ]]; then
   drupal_root="${drupal_root:0:${#drupal_root}-1}";
 fi
 
-if [[ "${drupal_root: -24}" == "profiles/varbase/scripts" ]]; then
+if [[ "${drupal_root: -24}" == "profiles/contrib/varbase/scripts" ]]; then
   drupal_root="${drupal_root:0:${#drupal_root}-24}";
 fi
 
-if [[ "${drupal_root: -16}" == "profiles/varbase" ]]; then
+if [[ "${drupal_root: -16}" == "profiles/contrib/varbase" ]]; then
   drupal_root="${drupal_root:0:${#drupal_root}-16}";
 fi
 

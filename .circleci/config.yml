@@ -149,7 +149,7 @@ commands:
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer install --no-interaction -vvv
-            cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/varbase
+            cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/contrib/varbase
             cd /var/www/html/test/varbase
             sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
             sudo chmod 775 -R .
@@ -216,7 +216,7 @@ commands:
       - run:
           name: Add testing users.
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase/scripts
+            cd /var/www/html/test/varbase/docroot/profiles/contrib/varbase/scripts
             bash add-testing-users.sh
 
       ## Import and Update local RTL language
@@ -224,7 +224,7 @@ commands:
           name: Import and Update local RTL language
           command: |
             cd /var/www/html/test/varbase/docroot
-            ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
+            ../bin/drush locale-import ar --autocreate-language profiles/contrib/varbase/translations/ar.po
             ../bin/drush locale-update --langcodes=ar
             ../bin/drush cache:rebuild
 
@@ -249,8 +249,8 @@ jobs:
           name: Automated Functional Acceptance Testing group - 01 website base requirements
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat tests/features/varbase/01-website-base-requirements/
+            cd /var/www/html/test/varbase/docroot/profiles/contrib/varbase
+            ../../../../bin/behat tests/features/varbase/01-website-base-requirements/
   varbase-testing-02-user-management:
     <<: *defaults
     steps:
@@ -260,8 +260,8 @@ jobs:
           name: Automated Functional Acceptance Testing group - 02 user management
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat tests/features/varbase/02-user-management/
+            cd /var/www/html/test/varbase/docroot/profiles/contrib/varbase
+            ../../../../bin/behat tests/features/varbase/02-user-management/
   varbase-testing-03-admin-management:
     <<: *defaults
     steps:
@@ -271,8 +271,8 @@ jobs:
           name: Automated Functional Acceptance Testing group - 03 admin management
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat tests/features/varbase/03-admin-management/
+            cd /var/www/html/test/varbase/docroot/profiles/contrib/varbase
+            ../../../../bin/behat tests/features/varbase/03-admin-management/
   varbase-testing-04-content-structure:
     <<: *defaults
     steps:
@@ -282,8 +282,8 @@ jobs:
           name: Automated Functional Acceptance Testing group - 04 content structure
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat tests/features/varbase/04-content-structure/
+            cd /var/www/html/test/varbase/docroot/profiles/contrib/varbase
+            ../../../../bin/behat tests/features/varbase/04-content-structure/
   varbase-testing-05-content-management:
     <<: *defaults
     steps:
@@ -293,8 +293,8 @@ jobs:
           name: Automated Functional Acceptance Testing group - 05 content-management
           no_output_timeout: 30m
           command: |
-            cd /var/www/html/test/varbase/docroot/profiles/varbase
-            ../../../bin/behat tests/features/varbase/05-content-management/
+            cd /var/www/html/test/varbase/docroot/profiles/contrib/varbase
+            ../../../../bin/behat tests/features/varbase/05-content-management/
 
 workflows:
   version: 2

@@ -1,6 +1,6 @@
 #!/bin/usr/env bash
 
-## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+## cd PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/scripts
 ## bash delete-testing-users.sh
 
 current_path=$(pwd);

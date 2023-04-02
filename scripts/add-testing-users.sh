@@ -1,7 +1,7 @@
 #!/bin/usr/env bash
 
 
-## cd PROJECT_DIR_NAME/docroot/profiles/varbase/scripts
+## cd PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/scripts
 ## bash add-testing-users.sh
 
 

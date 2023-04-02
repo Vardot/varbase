@@ -8,7 +8,7 @@ languages to the site.
 
 ## You can run the following command:
 ```
-  $ ../../../bin/behat tests/features/varbase/ --format pretty --out std  --format html  --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
+  $ ../../../../bin/behat tests/features/varbase/ --format pretty --out std  --format html  --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
 ```
 
 After that you can see the report in the ../behat/reports folder.
@@ -17,5 +17,5 @@ If you want to run the test in steps, if you are not interested in the
 initialization and cleaning up after the test.
 
 ```
-  $ ../../../bin/behat tests/features/varbase
+  $ ../../../../bin/behat tests/features/varbase
 ```

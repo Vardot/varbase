@@ -33,7 +33,7 @@ BEHAT-SCREENSHOT to capture images on demand or when a test fails
 composer require --dev drevops/behat-screenshot
 
 Edit the behat.yml file, which is located in:
-`path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/varbase/behat.yml`
+`path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/behat.yml`
 - to have DrevOps\BehatScreenshotExtension\Context\ScreenshotContext under contexts
 - to have DrevOps\BehatScreenshotExtension:
             dir: '%paths.base%/tests/screenshots'
@@ -84,7 +84,7 @@ Needed to add the extra languages.
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
 cd `/PROJECT_DIR_NAME/docroot`
-../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
+../bin/drush locale-import ar --autocreate-language profiles/contrib/varbase/translations/ar.po
 ../bin/drush locale-update --langcodes=ar
 ../bin/drush cache:rebuild
 ```
@@ -99,7 +99,7 @@ cd `/PROJECT_DIR_NAME/docroot`
 
 ### Add testing users.
 Change directory in the terminal to the path of the project
- and `/PROJECT_DIR_NAME/docroot/profiles/varbase/scripts`
+ and `/PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/scripts`
 And run the following base command
 ```
   bash add-testing-users.sh
@@ -113,7 +113,7 @@ To delete testing users use
 ## 1. Change the base url
 
 Edit the behat.yml file, which is located in:
-`path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/varbase/behat.yml`
+`path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/behat.yml`
  to the domain or the local virtual domain.
 ```
   base_url:  'http://localhost/testing/docroot'
@@ -214,16 +214,16 @@ To run the automated testing with behat you will need to change the [ wd_host an
       javascript_session: selenium2
 ```
 
-Then go to [ PROJECT_DIR_NAME/docroot/profiles/varbase ] in the
+Then go to [ PROJECT_DIR_NAME/docroot/profiles/contrib/varbase ] in the
 terminal then you could run the following command:
 
 ```
-$ ../../../bin/behat tests/features/varbase
+$ ../../../../bin/behat tests/features/varbase
 ```
-## 4. Run the behat command at PROJECT_DIR_NAME/docroot/profiles/varbase/tests
+## 4. Run the behat command at PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/tests
 
 ```
-$ ../../../bin/behat tests/features/varbase/01-website-base-requirements/01-01-user-registration_only-admins-login.feature
+$ ../../../../bin/behat tests/features/varbase/01-website-base-requirements/01-01-user-registration_only-admins-login.feature
 ```
 
 ```
@@ -262,13 +262,13 @@ So that I will need a site admin or super admin to add me to the website
 
 ## 5. Run this command with the .feature file to run the Gherkin Script in it to the installed site.
 
-$ ../../../bin/behat tests/features/varbase/your-gherkin-feature.feature
-$ ../../../bin/behat tests/features/project-name/your-gherkin-feature.feature
+$ ../../../../bin/behat tests/features/varbase/your-gherkin-feature.feature
+$ ../../../../bin/behat tests/features/project-name/your-gherkin-feature.feature
 
 --------------------------------------------------------------------------------
 ## 8. Run this command to print all available step definitions
 ```
-$ ../../../bin/behat -di
+$ ../../../../bin/behat -di
 
     - use -dl to just list definition expressions.
     - use -di to show definitions with extended info.
@@ -302,25 +302,25 @@ So that we only run bin/behat --tags with the right tag for the environment.
 
 Example:
 ```
-$ ../../../bin/behat --tags '@development' tests/features/varbase/
+$ ../../../../bin/behat --tags '@development' tests/features/varbase/
 ```
 
 Which it will run Scenarios which has got the @development tag.
 
 ```
-$ ../../../bin/behat --tags '@staging' tests/features/varbase/
+$ ../../../../bin/behat --tags '@staging' tests/features/varbase/
 ```
 
 Which it will run Scenarios which has got the @staging tag.
 
 ```
-$ ../../../bin/behat --tags '@production' tests/features/varbase/
+$ ../../../../bin/behat --tags '@production' tests/features/varbase/
 ```
 Which it will run Scenarios which has got the @production tag.
 
 
 ## 9. To see the report in HTML. Go and open this file in a browser.
-    PROJECT_DIR_NAME/docroot/profiles/varbase/tests/reports/index.html
+    PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/tests/reports/index.html
     You will see the latest report for latest run.
 
     if you want to custom a report you can add
@@ -331,7 +331,7 @@ Which it will run Scenarios which has got the @production tag.
 
     Example:
 
-    $ ../../../bin/behat tests/features/example.feature --format pretty --out std --format html --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
+    $ ../../../../bin/behat tests/features/example.feature --format pretty --out std --format html --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
 
 # 10. If you want to run all Gherkin Features over a new Varbase site.
 You will need to create the list of Testing users, and Add Arabic
@@ -340,15 +340,15 @@ languages to the site.
 You can run the following command:
 
 ```
-$ ../../../bin/behat tests/features/varbase/ --format pretty --out std  --format html  --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
+$ ../../../../bin/behat tests/features/varbase/ --format pretty --out std  --format html  --out reports/report-$( date '+%Y-%m-%d_%H-%M-%S' )
 ```
-After that you can see the report in the PROJECT_DIR_NAME/docroot/profiles/varbase/tests/reports folder.
+After that you can see the report in the PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/tests/reports folder.
 
 If you want to run the test in steps, if you are not interested in the
 initialization and cleaning up after the test.
 
 ```
-$ ../../../bin/behat tests/features/varbase
+$ ../../../../bin/behat tests/features/varbase
 ```
 
 ### Testing scenarios are tagged with the Behat tags of:
@@ -362,54 +362,54 @@ So that we only run bin/behat --tags with the right tag for the environment.
 
 Run the varbase check tests. Only to check, without any changes to the website.
 ```
-cd docroot/profiles/varbase;
-../../../bin/behat tests/features/varbase --tags '@check' --format pretty --out std  --format html  --out tests/reports/varbase-check-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
+cd docroot/profiles/contrib/varbase;
+../../../../bin/behat tests/features/varbase --tags '@check' --format pretty --out std  --format html  --out tests/reports/varbase-check-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
 ```
 
 Run the varbase full local tests. which developers could test all scenarios in their local machine environment.
 ```
-cd docroot/profiles/varbase;
-../../../bin/behat tests/features/varbase --tags '@local' --format pretty --out std  --format html  --out tests/reports/varbase-full-local-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
+cd docroot/profiles/contrib/varbase;
+../../../../bin/behat tests/features/varbase --tags '@local' --format pretty --out std  --format html  --out tests/reports/varbase-full-local-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
 ```
 
 Run the varbase full development tests. which developers could test scenarios on the website at the development environment.
 ```
-cd docroot/profiles/varbase;
-../../../bin/behat tests/features/varbase --tags '@development' --format pretty --out std  --format html  --out tests/reports/varbase-full-development-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
+cd docroot/profiles/contrib/varbase;
+../../../../bin/behat tests/features/varbase --tags '@development' --format pretty --out std  --format html  --out tests/reports/varbase-full-development-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
 ```
 
 Run the varbase full staging tests. which developers could test scenarios on the website at the staging environment.
 ```
-cd docroot/profiles/varbase;
-../../../bin/behat tests/features/varbase --tags '@staging' --format pretty --out std  --format html  --out tests/reports/varbase-full-staging-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
+cd docroot/profiles/contrib/varbase;
+../../../../bin/behat tests/features/varbase --tags '@staging' --format pretty --out std  --format html  --out tests/reports/varbase-full-staging-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
 ```
 
 Run the varbase full production only tests. not to change anything with test scenarios on the production environment.
 ```
-cd docroot/profiles/varbase;
-../../../bin/behat tests/features/varbase --tags '@production' --format pretty --out std  --format html  --out tests/reports/varbase-full-production-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
+cd docroot/profiles/contrib/varbase;
+../../../../bin/behat tests/features/varbase --tags '@production' --format pretty --out std  --format html  --out tests/reports/varbase-full-production-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
 ```
 
 Run the varbase full tests. init, apply, then cleanup.
 ```
-cd docroot/profiles/varbase;
+cd docroot/profiles/contrib/varbase;
 
-../../../bin/behat tests/features/varbase --format pretty --out std  --format html  --out tests/reports/varbase-apply-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
+../../../../bin/behat tests/features/varbase --format pretty --out std  --format html  --out tests/reports/varbase-apply-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
 
 ```
 
 Run the varbase full tests. Which equivalent to varbase-init-tests, varbase-apply-tests, varbase-cleanup-tests
 ```
-cd docroot/profiles/varbase;
-../../../bin/behat tests/features/varbase --format pretty --out std  --format html  --out tests/reports/varbase-full-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
+cd docroot/profiles/contrib/varbase;
+../../../../bin/behat tests/features/varbase --format pretty --out std  --format html  --out tests/reports/varbase-full-tests-report-$( date '+%Y-%m-%d_%H-%M-%S' );
 ```
 
 We could run behat tests with this set
-Go to [ PROJECT_DIR_NAME/docroot/profiles/varbase ] in the terminal then you could run the following command:
+Go to [ PROJECT_DIR_NAME/docroot/profiles/contrib/varbase ] in the terminal then you could run the following command:
 ```
-$ ../../../bin/behat tests/features/varbase
+$ ../../../../bin/behat tests/features/varbase
 
 ```
 
 Then you will be able to open the full report for the automated test in a web browser at the following path:
-[ PROJECT_DIR_NAME/docroot/profiles/varbase/tests/reports ]
+[ PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/tests/reports ]

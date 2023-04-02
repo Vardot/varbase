@@ -26,4 +26,4 @@ themes:
   - vartheme_claro
 
 interface translation project: varbase
-interface translation server pattern: profiles/varbase/translations/%language.po
+interface translation server pattern: profiles/contrib/varbase/translations/%language.po

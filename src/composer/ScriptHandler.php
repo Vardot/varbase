@@ -142,13 +142,13 @@ class ScriptHandler {
     $fs = new Filesystem();
     $drupal_root = static::getDrupalRoot(getcwd());
 
-    if ($fs->exists($drupal_root . '/profiles/varbase/src/assets/robots-staging.txt')) {
+    if ($fs->exists($drupal_root . '/profiles/contrib/varbase/src/assets/robots-staging.txt')) {
       // Create staging robots file.
-      copy($drupal_root . '/profiles/varbase/src/assets/robots-staging.txt', $drupal_root . '/robots-staging.txt');
+      copy($drupal_root . '/profiles/contrib/varbase/src/assets/robots-staging.txt', $drupal_root . '/robots-staging.txt');
     }
 
     if ($fs->exists($drupal_root . '/.htaccess')
-      && $fs->exists($drupal_root . '/profiles/varbase/src/assets/htaccess_extra')) {
+      && $fs->exists($drupal_root . '/profiles/contrib/varbase/src/assets/htaccess_extra')) {
 
       // Alter .htaccess file.
       $htaccess_path = $drupal_root . '/.htaccess';
@@ -157,16 +157,16 @@ class ScriptHandler {
       foreach ($htaccess_lines as $line) {
         $lines[] = $line;
         if (strpos($line, "RewriteEngine on") !== FALSE) {
-          $lines = array_merge($lines, file($drupal_root . '/profiles/varbase/src/assets/htaccess_extra'));
+          $lines = array_merge($lines, file($drupal_root . '/profiles/contrib/varbase/src/assets/htaccess_extra'));
         }
       }
       file_put_contents($htaccess_path, $lines);
     }
 
-    if ($fs->exists($drupal_root . '/profiles/varbase/src/assets/development.services.yml')) {
+    if ($fs->exists($drupal_root . '/profiles/contrib/varbase/src/assets/development.services.yml')) {
       // Alter development.services.yml to have Varbase's Local development
       // services.
-      copy($drupal_root . '/profiles/varbase/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
+      copy($drupal_root . '/profiles/contrib/varbase/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
   }
 

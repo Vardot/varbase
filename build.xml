@@ -13,7 +13,7 @@
   <property name="db.database" value="test_varbase9000xxc" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
   <property name="docroot" value="docroot" />
-  <property name="profile" value="${docroot}/profiles/varbase" />
+  <property name="profile" value="${docroot}/profiles/contrib/varbase" />
   <property name="site" value="${docroot}/sites/default" />
   <property name="version" value="HEAD" />
 
