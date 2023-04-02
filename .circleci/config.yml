@@ -149,6 +149,7 @@ commands:
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer install --no-interaction -vvv
+            mkdir -p /var/www/html/test/varbase/docroot/profiles/contrib
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/contrib/varbase
             cd /var/www/html/test/varbase
             sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
