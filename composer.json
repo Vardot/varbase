@@ -85,7 +85,6 @@
     "drupal/vartheme_claro": "4.0.x-dev",
     "vardot/entity-definition-update-manager": "1.0.x-dev",
     "vardot/module-installer-factory": "1.0.x-dev",
-    "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "~4.0",
     "bower-asset/c3": "0.7.*",
     "bower-asset/d3": "~5.0",
@@ -180,7 +179,6 @@
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
-        {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
         {"name": "chartjs", "package": "bower-asset/chartjs"},
         {"name": "c3","package": "bower-asset/c3"},
         {"name": "d3", "package": "bower-asset/d3"},
