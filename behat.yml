@@ -27,7 +27,7 @@ default:
       verbose: true
       paths: false
       snippets: false
-    junit:
+    html:
       verbose: true
       paths: false
       snippets: false
@@ -74,7 +74,11 @@ default:
       javascript_session: selenium2
     Drupal\DrupalExtension:
       blackbox: ~
-      api_driver: 'drupal'
+      api_driver: 'drupal' 
+      drush:
+        alias: 'local'
+      drupal: 
+        drupal_root: '/var/www/html/test/varbase/docroot' 
       region_map:
         content: ".main-container"
         footer: "#footer"
@@ -87,6 +91,13 @@ default:
         error_message_selector: '.messages.error'
         success_message_selector: '.messages.status'
         warning_message_selector: '.messages.warning'
+    webship\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: false
+      print_outp: false
+      loop_break: false
     DrevOps\BehatScreenshotExtension:
       dir: '%paths.base%/tests/screenshots'
       fail: true

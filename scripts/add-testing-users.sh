@@ -13,7 +13,7 @@ source ${current_path}/libs/bash-yaml.sh || exit 1 ;
 # Load the list of default users for Varbase.
 eval $(parse_yaml ${current_path}/varbase.users.yml);
 
-cd ../../../ ;
+cd ../../../../ ;
 for user in ${users[@]}
 do
   user_name="user_${user}_name";
