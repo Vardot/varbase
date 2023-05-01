@@ -19,14 +19,7 @@
   "repositories": {
     "drupal": {
       "type": "composer",
-      "url": "https://packages.drupal.org/8",
-      "exclude": [
-        "drupal/menu_position"
-      ]
-    },
-    "drupal/menu_position": {
-      "type": "git",
-      "url": "https://git.drupalcode.org/issue/menu_position-3288566.git"
+      "url": "https://packages.drupal.org/8"
     },
     "assets": {
       "type": "composer",
@@ -39,7 +32,6 @@
     "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "~10",
     "drupal/core": "~10.0",
-    "drupal/menu_position": "dev-3288566-automated-drupal-10 as 1.0-beta2",
     "drupal/varbase_core": "10.0.x-dev",
     "drupal/varbase_api": "10.0.x-dev",
     "drupal/varbase_media": "10.0.x-dev",
