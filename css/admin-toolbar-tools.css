@@ -18,6 +18,11 @@
 #toolbar-administration.toolbar a {
   transition: all, 0.2s;
 }
+#toolbar-administration.toolbar .level-2 a:hover,
+#toolbar-administration.toolbar .level-2 a:focus,
+#toolbar-administration.toolbar .level-2 a:active {
+  width: 100%;
+}
 #toolbar-administration.toolbar .toolbar-bar {
   background-color: #2d2d2d;
   box-shadow: none;
@@ -164,7 +169,7 @@
   background: #2d2d2d;
 }
 #toolbar-administration .toolbar-tray span {
-  display: block;
+  display: initial;
   padding: 1em 1.3333em;
   color: #bbb;
   background: #2d2d2d;
@@ -255,6 +260,12 @@
 }
 #toolbar-administration .toolbar-tray-horizontal .toolbar-menu ul .toolbar-icon {
   padding: 1em 12px;
+}
+#toolbar-administration .toolbar-tray-horizontal .toolbar-menu .level-1:first-child > .toolbar-box .toolbar-icon.toolbar-handle {
+  display: none;
+}
+#toolbar-administration .toolbar-tray-horizontal .level-1 .menu-item--expanded .toolbar-handle {
+  display: none;
 }
 #toolbar-administration .level-1 .toolbar-handle.open {
   background: #3b3b3b !important;
