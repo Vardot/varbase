@@ -1,3 +1,31 @@
+# 9.0.13
+
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+
+### Highlighted important changes since Varbase 9.0.12:
+* Issue [#3357957](https://www.drupal.org/i/3357957):
+        Updated **Drupal core** to `9.5.9` ( `~9.5.0` ) and removed committed patches
+### Added since Varbase 9.0.11:
+No addition. All new additions will be in **Varbase ~10.0**
+### Changed since Varbase 9.0.12:
+* Issue [#3357860](https://www.drupal.org/i/3357860):
+        Changed **Varbase Admin toolbar** style to fit and follow with the new `HTML` elements and styles form **Admin Toolbar** `3.3.2`
+### Updates since Varbase 9.0.12:
+* Issue [#3356225](https://www.drupal.org/i/3356225):
+        Updated **Linkit** module from `6.0.0-beta4` to `6.0.0-rc1` and kept needed patches
+* Issue [#3353076](https://www.drupal.org/i/3353076):
+        Updated **WebP** module from `1.0-beta6` to `1.0-beta7` and kept needed patches
+* Issue [#3349835](https://www.drupal.org/i/3349835):
+        Updated **Persistent Login** module from `1.4.0` to `1.6.0` and kept needed patches
+* Issue [#3348520](https://www.drupal.org/i/3348520):
+        Updated **Inline Entity** Form module from `1.0-rc14` to `1.0-rc15` and kept needed patches
+* Issue [#3349253](https://www.drupal.org/i/3349253)
+        by [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
+        : Updated **RoleAssign** module from `~1.0` to `~2.0`
+### Fixes since Varbase 9.0.12:
+* Issue [#3357880](https://www.drupal.org/i/3357880):
+        Fixed tour regression on z-index position for shepherd element after **Admin Toolbar** `3.3.2` had a change for the z-index for the admin toolbar
+
 # 9.0.12
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
 ### Highlighted important changes since Varbase 9.0.10:
