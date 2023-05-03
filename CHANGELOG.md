@@ -9,7 +9,8 @@ This is a patch (bugfix) release of **Varbase 9** and is ready for use on produc
 No addition. All new additions will be in **Varbase ~10.0**
 ### Changed since Varbase 9.0.12:
 * Issue [#3357860](https://www.drupal.org/i/3357860):
-        Changed **Varbase Admin toolbar** style to fit and follow with the new `HTML` elements and styles form **Admin Toolbar** `3.3.2`
+        Changed **Varbase Admin toolbar** style to fit and follow
+        with the new `HTML` elements and styles form **Admin Toolbar** `3.3.2`
 ### Updates since Varbase 9.0.12:
 * Issue [#3356225](https://www.drupal.org/i/3356225):
         Updated **Linkit** module from `6.0.0-beta4` to `6.0.0-rc1` and kept needed patches
@@ -24,7 +25,13 @@ No addition. All new additions will be in **Varbase ~10.0**
         : Updated **RoleAssign** module from `~1.0` to `~2.0`
 ### Fixes since Varbase 9.0.12:
 * Issue [#3357880](https://www.drupal.org/i/3357880):
-        Fixed tour regression on z-index position for shepherd element after **Admin Toolbar** `3.3.2` had a change for the z-index for the admin toolbar
+        Fixed tour regression on z-index position for shepherd element
+         after **Admin Toolbar** `3.3.2` had a change for the z-index for the admin toolbar
+* Issue [#3351731](https://www.drupal.org/i/3351731):
+        Fixed Configuration objects (content_calendar.settings) provided by
+        varbase_content_planner already exist in active configuration
+
+-------------------------------------------------------------------------------
 
 # 9.0.12
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
