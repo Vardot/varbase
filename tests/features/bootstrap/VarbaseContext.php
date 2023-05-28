@@ -224,7 +224,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @throws \WebDriver\Exception
    *   If timeout is reached.
    */
-  public function iWaitMaxOfSecondsForThePageToBeReadyAndLoaded($time = 10000) {
+  public function iWaitMaxOfSecondsForThePageToBeReadyAndLoaded($time = 20000) {
     if (!$this->getSession()->getDriver() instanceof Selenium2Driver) {
       return;
     }
@@ -239,6 +239,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     "!$.active",
     // Page is displayed (no progress bar)
     "$('#page').css('display') == 'block'",
+    // Page is displayed (no progress bar)
+    "$('.main-container').css('display') == 'block'",
     // Page is not loading (no black mask loading page)
     "$('.loading-mask').css('display') == 'none'",
     // Jstree has finished loading.
@@ -246,7 +248,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    ];
     $condition = implode(' && ', $conditions);
     // Make sure the AJAX calls are fired up before checking the condition.
-    $this->getSession()->wait(100, FALSE);
+    $this->getSession()->wait(200, FALSE);
     $this->getSession()->wait($time, $condition);
     // Check if we reached the timeout unless the condition is false to explicitly wait the specified time.
     if ($condition !== FALSE && microtime(TRUE) > $end) {
@@ -2443,7 +2445,7 @@ JS;
     try {
       $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
     }
-    catch (Exception $e) {
+    catch (\Exception $e) {
       // no-op, alert might not be present.
     }
   }
@@ -2457,7 +2459,7 @@ JS;
     try {
       $this->getSession()->getDriver()->getWebDriverSession()->accept_alert();
     }
-    catch (Exception $e) {
+    catch (\Exception $e) {
       // no-op, alert might not be present.
     }
   }
@@ -2471,7 +2473,7 @@ JS;
     try {
       $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
     }
-    catch (Exception $e) {
+    catch (\Exception $e) {
       // no-op, alert might not be present.
     }
   }
@@ -2485,7 +2487,7 @@ JS;
     try {
       $this->getSession()->getDriver()->getWebDriverSession()->dismiss_alert();
     }
-    catch (Exception $e) {
+    catch (\Exception $e) {
       // no-op, alert might not be present.
     }
   }
