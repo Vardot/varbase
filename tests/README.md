@@ -22,6 +22,8 @@ cd path to your files of the project/PROJECT_DIR_NAME
 composer require --dev drupal/core-dev:~10
 composer require --dev drush/drush:~11.0
 composer require --dev drupal/drupal-extension:~5.0 --with-all-dependencies
+composer require --dev webship/behat-html-formatter:~1.0
+composer require --dev drevops/behat-screenshot:~1.0
 
 ```
 
@@ -29,8 +31,6 @@ composer require --dev drupal/drupal-extension:~5.0 --with-all-dependencies
 ```
 Change path to your files of the project/PROJECT_DIR_NAME
 BEHAT-SCREENSHOT to capture images on demand or when a test fails
-
-composer require --dev drevops/behat-screenshot
 
 Edit the behat.yml file, which is located in:
 `path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/contrib/varbase/behat.yml`
@@ -49,7 +49,7 @@ Read more about it here: https://github.com/drevops/behat-screenshot
 Have Varbase installed from the browser or using the `drush site:install` command.
 But make sure to have the webmaster user with the `dD.123123ddd` password.
 
-Exmaple Drush install:
+Example Drush install:
 Change directory in the terminal to the path of the project and `/PROJECT_DIR_NAME/docroot`
 ```
 ../bin/drush site-install varbase --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
