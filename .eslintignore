@@ -1,8 +1,3 @@
-**/*.min.js
-**/gulpfile.js
-**/node_modules
-behat.yml
-behat.varbase.yml
+node_modules/**/*
+# Ignore deliberately malformed YAML files.
 drupalci.yml
-**/drupalci.yml
-**/libraries/

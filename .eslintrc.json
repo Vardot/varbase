@@ -20,11 +20,9 @@
     "Backbone": true,
     "Modernizr": true,
     "loadjs": true,
-    "Popper": true,
     "Shepherd": true,
     "Sortable": true,
     "once": true,
-    "CKEDITOR": true,
     "CKEditor5": true,
     "tabbable": true
   },
@@ -47,6 +45,7 @@
       "requireReturn": false
     }],
     "no-unused-vars": ["warn"],
-    "operator-linebreak": ["error", "after", { "overrides": { "?": "ignore", ":": "ignore" } }]
+    "operator-linebreak": ["error", "after", { "overrides": { "?": "ignore", ":": "ignore" } }],
+    "yml/indent": ["error", 2]
   }
 }
