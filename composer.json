@@ -68,7 +68,7 @@
   "require-dev": {
     "drupal/core-dev": "~10",
     "drush/drush": "~11.0",
-    "drupal/drupal-extension": "~5.0",
+    "drupal/drupal-extension": "5.0.0rc1",
     "webship/behat-html-formatter": "~1.0",
     "drevops/behat-screenshot": "~1.0"
   },
