@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase?branch=10.0.x) Varbase 10.0.x
+Varbase 10.0.0-alpha1
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -21,12 +21,17 @@ in every project.
 
 Starting a new project? Consider Varbase for Drupal 10.
 Installing Varbase 10.0.x comes with several extra automated installation
-steps, to take full advantage of Varbase, other than the Drupal 9 installation
+steps, to take full advantage of Varbase, other than the Drupal 10 installation
 instructions.
 
 
 # Install with Composer
 
+
+To install the most recent stable release of Varbase 10.0.x run this command:
+```
+composer create-project Vardot/varbase-project:10.0.0-alpha1 PROJECT_DIR_NAME --no-dev --no-interaction
+```
 
 To install the dev version of Varbase 10.0.x run this command:
 ```
