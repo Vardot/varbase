@@ -224,7 +224,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @throws \WebDriver\Exception
    *   If timeout is reached.
    */
-  public function iWaitMaxOfSecondsForThePageToBeReadyAndLoaded($time = 30000) {
+  public function iWaitMaxOfSecondsForThePageToBeReadyAndLoaded($time = 10000) {
     if (!$this->getSession()->getDriver() instanceof Selenium2Driver) {
       return;
     }
@@ -237,12 +237,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     "typeof $ != 'undefined'",
     // No ajax request is active.
     "!$.active",
-    // Page title
-    "$('.page-title').css('display') == 'block'",
-    // Page is displayed (no progress bar)
-    "$('.page').css('display') == 'block'",
-    // Page is displayed (no progress bar)
-    "$('#page').css('display') == 'block'",
     // Page is displayed (no progress bar)
     "$('#main-content').css('display') == 'block'",
     // Page is not loading (no black mask loading page)
@@ -252,7 +246,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    ];
     $condition = implode(' && ', $conditions);
     // Make sure the AJAX calls are fired up before checking the condition.
-    $this->getSession()->wait(10000, FALSE);
+    $this->getSession()->wait(100, FALSE);
     $this->getSession()->wait($time, $condition);
     // Check if we reached the timeout unless the condition is false to explicitly wait the specified time.
     if ($condition !== FALSE && microtime(TRUE) > $end) {
