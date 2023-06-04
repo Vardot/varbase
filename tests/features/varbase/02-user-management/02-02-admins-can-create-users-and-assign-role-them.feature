@@ -9,7 +9,7 @@ So that they will be able to use the site.
   @javascript @local @development @staging @production
   Scenario: Check if admins can see all parts and filters in the People administration page
      When I go to "/admin/people"
-      And I wait
+      And I wait 1s
      Then I should see "People"
       And I should see "Add user"
       And I should see "Name or email contains"
@@ -23,7 +23,7 @@ So that they will be able to use the site.
   @javascript @local @development @staging @production
   Scenario: Check if admins can create a new user account as an authenticated user
      When I go to "/admin/people/create"
-      And I wait
+      And I wait 1s
      When I fill in "tester@vardot.com" for "Email"
       And I fill in "tester" for "Username"
       And I fill in "dD.123123ddd" for "Password"
@@ -36,13 +36,13 @@ So that they will be able to use the site.
      When I go to "/admin/people"
       And I fill in "tester" for "Name or email contains"
       And I press "Filter"
-      And I wait
+      And I wait 1s
      Then I should see "tester"
      When I click "Edit" in the "tester" row
-      And I wait
+      And I wait 1s
       And I scroll to bottom
       And I click "Cancel account"
-      And I wait
+      And I wait 1s
      Then I should see "Are you sure you want to cancel the account tester?"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom

@@ -9,7 +9,7 @@ So that I can reset my password for the account
   @javascript @local @development @staging @production
   Scenario: Check that an anonymous user can reset his or her password
      When I go to "/user/login"
-      And I wait
+      And I wait 1s
      Then I should see "Forgot your password?"
 
   @javascript @local @development @staging @production
@@ -21,5 +21,5 @@ So that I can reset my password for the account
       And I scroll to the bottom
       And I wait 2s
       And I press the "Reset" button
-      And I wait
+      And I wait 1s
      Then I should see "If the username or email address exists and is active, further instructions have been sent to your email address."

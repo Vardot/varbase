@@ -7,7 +7,7 @@ So that can be sure that the website is using the English language as one of the
   Scenario: Check if a content admin user can Create Basic page with English for the language of the content
     Given I am a logged in user with the "Content admin" user
       And I go to "/node/add/page"
-      And I wait
+      And I wait 1s
      When I select "English" from "Language"
      Then I should see "Language"
      When I select "English" from "Language"
@@ -15,28 +15,28 @@ So that can be sure that the website is using the English language as one of the
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And I wait
+      And I wait 1s
      Then I should see "Test English Basic page title by content admin"
 
   @javascript @local @development @staging @production
   Scenario: Check if a content admin user can Create Landing page with English for the language of the content
     Given I am a logged in user with the "Content admin" user
       And I go to "/node/add/landing_page"
-      And I wait
+      And I wait 1s
      When I select "English" from "Language"
      Then I should see "Language"
      When I select "English" from "Language"
       And I fill in "Test English Landing page title by content admin" for "Title"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And I wait
+      And I wait 1s
      Then I should see "Test English Landing page title by content admin"
 
   @javascript @local @development @staging @production
   Scenario: Check if a site admin user can Create Basic page with English for the language of the content
     Given I am a logged in user with the "Site admin" user
       And I go to "/node/add/page"
-      And I wait
+      And I wait 1s
      When I select "English" from "Language"
      Then I should see "Language"
      When I select "English" from "Language"
@@ -44,19 +44,19 @@ So that can be sure that the website is using the English language as one of the
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And I wait
+      And I wait 1s
      Then I should see "Test English Basic page title by site admin"
 
   @javascript @local @development @staging @production
   Scenario: Check if a site admin user can can Create Landing page with English for the language of the content
     Given I am a logged in user with the "Site admin" user
       And I go to "/node/add/landing_page"
-      And I wait
+      And I wait 1s
      When I select "English" from "Language"
      Then I should see "Language"
      When I select "English" from "Language"
       And I fill in "Test English Landing page title by site admin" for "Title"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And I wait
+      And I wait 1s
      Then I should see "Test English Landing page title by site admin"
