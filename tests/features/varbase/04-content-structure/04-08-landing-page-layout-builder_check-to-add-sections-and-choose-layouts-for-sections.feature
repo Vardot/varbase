@@ -7,13 +7,13 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   Scenario: Check if a user with a permission to manage Landing page (Layout Builder) content type can add sections with any layouts to the page
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Create Landing page (Layout Builder)"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I fill in "Test Landing page (Layout Builder) description" for "Page description"
       And I select "published" from "Save as"
       And I press the "Save" button
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Landing page (Layout Builder) Test Landing page (Layout Builder) has been created"
       And I should see "This layout builder tool allows you to configure the layout of the main content area."
      When I scroll to the bottom of the page
@@ -37,7 +37,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      When I scroll to the top of the page
       And I wait 2s
       And I press the "Save layout" button
-      And I wait 1s
+      And wait max of 2s
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
   
@@ -45,20 +45,20 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   # Scenario: Check that Site admins can add a one coloumn section and add a Rich text block in the section
   #   Given I am a logged in user with the "Site admin" user
   #    When I go to "/admin/content"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Content"
   #    When I fill in "Test Landing page (Layout Builder)" for "Title"
   #     And I press the "Filter" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I click "Test Landing page (Layout Builder)"
-  #     And I wait 1s 
+  #     And wait max of 2s 
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "This layout builder tool allows you to configure the layout of the main content area."
   #    When I scroll to the bottom of the page
   #     And I wait 2s
@@ -88,7 +88,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I scroll to the top of the page
   #     And I wait 2s
   #     And I press the "Save layout" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "The layout override has been saved."
   #     And I should see "Test Landing page (Layout Builder)"
   #     And I should see "Rich text in 1 col section"
@@ -97,20 +97,20 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   # Scenario: Check that Site admins can add a two coloumns section and add a Rich text blocks in each coloumns
   #   Given I am a logged in user with the "Site admin" user
   #    When I go to "/admin/content"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Content"
   #    When I fill in "Test Landing page (Layout Builder)" for "Title"
   #     And I press the "Filter" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I click "Test Landing page (Layout Builder)"
-  #     And I wait 1s 
+  #     And wait max of 2s 
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "This layout builder tool allows you to configure the layout of the main content area."
   #    When I scroll to the bottom of the page
   #     And I wait 2s
@@ -159,7 +159,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I scroll to the top of the page
   #     And I wait 2s
   #     And I press the "Save layout" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "The layout override has been saved."
   #     And I should see "Test Landing page (Layout Builder)"
   #     And I should see "Rich text in 2 cols section, col 1"
@@ -169,20 +169,20 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   # Scenario: Check that Site admins can add a three coloumns section and add a Rich text blocks in each coloumns
   #   Given I am a logged in user with the "Site admin" user
   #    When I go to "/admin/content"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Content"
   #    When I fill in "Test Landing page (Layout Builder)" for "Title"
   #     And I press the "Filter" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I click "Test Landing page (Layout Builder)"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "This layout builder tool allows you to configure the layout of the main content area."
   #    When I scroll to the bottom of the page
   #     And I wait 2s
@@ -248,7 +248,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I scroll to the top of the page
   #     And I wait 2s
   #     And I press the "Save layout" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "The layout override has been saved."
   #     And I should see "Test Landing page (Layout Builder)"
   #     And I should see "Rich text in 3 cols section, col 1"
@@ -259,20 +259,20 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   # Scenario: Check that Site admins can add a foure coloumns section and add a Rich text blocks in each coloumns
   #   Given I am a logged in user with the "Site admin" user
   #    When I go to "/admin/content"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Content"
   #    When I fill in "Test Landing page (Layout Builder)" for "Title"
   #     And I press the "Filter" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I click "Test Landing page (Layout Builder)"
-  #     And I wait 1s 
+  #     And wait max of 2s 
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #    Then I should see "Layout"
   #    When I click "Layout"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "This layout builder tool allows you to configure the layout of the main content area."
   #    When I scroll to the bottom of the page
   #     And I wait 2s
@@ -356,7 +356,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I scroll to the top of the page
   #     And I wait 2s
   #     And I press the "Save layout" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "The layout override has been saved."
   #     And I should see "Test Landing page (Layout Builder)"
   #     And I should see "Rich text in 4 cols section, col 1"
@@ -368,20 +368,20 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   # Scenario: Check that Site admins can add a six coloumns section and add a Rich text blocks in each coloumns
   #   Given I am a logged in user with the "Site admin" user
   #    When I go to "/admin/content"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Content"
   #    When I fill in "Test Landing page (Layout Builder)" for "Title"
   #     And I press the "Filter" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I click "Test Landing page (Layout Builder)"
-  #     And I wait 1s 
+  #     And wait max of 2s 
   #    Then I should see "Test Landing page (Layout Builder)"
   #    When I open the moderation sidebar
   #     And I wait for AJAX to finish
   #     And I should see "Layout"
   #    When I click "Layout"
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "This layout builder tool allows you to configure the layout of the main content area."
   #    When I scroll to the bottom of the page
   #     And I wait 2s
@@ -501,7 +501,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   #    When I scroll to the top of the page
   #     And I wait 2s
   #     And I press the "Save layout" button
-  #     And I wait 1s
+  #     And wait max of 2s
   #    Then I should see "The layout override has been saved."
   #     And I should see "Rich text in 6 cols section, col 1"
   #     And I should see "Rich text in 6 cols section, col 2"

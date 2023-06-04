@@ -7,7 +7,7 @@ So that they must be (Editor, Site Admin, Content Admin, Super Admin)
   Scenario: Check that all default list of roles are present
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/people/roles"
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Editor"
       And I should see "Content Admin"
       And I should see "SEO Admin"

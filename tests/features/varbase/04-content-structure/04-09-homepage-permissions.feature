@@ -7,7 +7,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
   Scenario: Check that user Number 1 can see and have all options to edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "webmaster" user
      When I go to the homepage
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
@@ -25,7 +25,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
   Scenario: Check that an anonymous users can only see the Homepage which built by the Landing page (Layout Builder)
     Given I am an anonymous user
      When I go to the homepage
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
       And I should not see "Tasks"
@@ -41,7 +41,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
   Scenario: Check that an authenticated user can not edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Normal user" user
      When I go to the homepage
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
       And I should not see "Tasks"
@@ -57,7 +57,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
   Scenario: Check that Editor users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Editor" user
      When I go to the homepage
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
@@ -75,7 +75,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
   Scenario: Check that Content Admin users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Content admin" user
      When I go to the homepage
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
@@ -93,7 +93,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
   Scenario: Check that SEO Admin users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "SEO admin" user
      When I go to the homepage
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
@@ -110,7 +110,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
   Scenario: Check that Site Admin users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Site admin" user
      When I go to the homepage
-      And I wait 1s
+      And wait max of 2s
      Then I should see "Welcome to Varbase"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
