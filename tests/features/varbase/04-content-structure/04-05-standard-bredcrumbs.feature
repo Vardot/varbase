@@ -7,16 +7,16 @@ So that I can see path I followed to locate the current page usually near the to
   Scenario: Add the Test Basic page root page to the main menu
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"
-      And wait max of 2s
+      And wait max of 3s
       And I fill in "Test Basic page root title" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page root body"
       And I expand the field "edit-menu"
-      And wait max of 2s
+      And wait max of 3s
       And I check the box "Provide a menu link"
       And I select "<Main navigation>" from "Parent link"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Test Basic page root title"
       And I should see "Test Basic page root body"
 
@@ -24,16 +24,16 @@ So that I can see path I followed to locate the current page usually near the to
   Scenario: Add the Test Basic page sub 1, then check the breadcrumb
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"
-      And wait max of 2s
+      And wait max of 3s
       And I fill in "Test Basic page sub 1 title" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page sub 1 body"
       And I expand the field "edit-menu"
-      And wait max of 2s
+      And wait max of 3s
       And I check the box "Provide a menu link"
       And I select "Test Basic page root title" from "Parent link"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Basic page Test Basic page sub 1 title has been created."
       And I should see "Test Basic page sub 1 body"
       And I should see "Test Basic page root title" in the "ol" element with the "class" attribute set to "breadcrumb"

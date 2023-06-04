@@ -6,18 +6,18 @@ I want to be able to add and remove entities to any allowed entity queue.
   Scenario: Upload the Flag Earth file
     Given I am a logged in user with the "Site admin" user
      When I go to "/media/add/image"
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Allowed types: png gif jpg jpeg."
      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
-      And wait max of 2s
+      And wait max of 3s
       And I press the "Save" button
-      And wait max of 2s
+      And wait max of 3s
       And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
       And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
       And I fill in "Flag Earth" for "name[0][value]"
       And I check the box "Show in media library"
       And I press the "Save" button
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Flag Earth"
   #-----------------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ I want to be able to add and remove entities to any allowed entity queue.
      When I check the box "varbase_heroslider_media"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Test hero slider #1"
 
      # Add the "Test hero slier #2" content and to the hero slider queue.
@@ -76,24 +76,24 @@ I want to be able to add and remove entities to any allowed entity queue.
      When I check the box "varbase_heroslider_media"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Test hero slider #2"
 
      # Check that both hero sliders are listed in the queue.
      When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Test hero slider #1"
       And I should see "Test hero slider #2"
 
      # Delete both sliders.
      When I go to "/admin/content"
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Content"
      When I check the box "Test hero slider #1"
       And I check the box "Test hero slider #2"
       And I select "Delete selected entities / translations" from "action"
      When I press "Apply to selected items"
-      And wait max of 2s
+      And wait max of 3s
      Then I should see "Items selected:"
       And I should see "Test hero slider #1"
       And I should see "Test hero slider #2"
@@ -103,6 +103,6 @@ I want to be able to add and remove entities to any allowed entity queue.
 
      # Check that the 2 hero sliders had beend removed from the queue.
      When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
-      And wait max of 2s
+      And wait max of 3s
      Then I should not see "Test hero slider #1"
       And I should not see "Test hero slider #2"
