@@ -9,17 +9,17 @@ So that I will need a site admin or super admin to add me to the website
   @javascript @local @development @staging @production 
   Scenario: Check that create new account options does not appear for anonymous users
      When I go to "/user"
-      And wait max of 3s
+      And wait
      Then I should not see "Create new account"
 
   @javascript @local @development @staging @production
   Scenario: Check that only admin can create an account
      When I go to "/user/register"
-      And wait max of 3s
+      And wait
      Then I should see "You are not authorized to access this page."
 
   @javascript @local @development @staging @production
   Scenario: Verify that anonymous users cannot access admin pages
      When I go to "/admin"
-      And wait max of 3s
+      And wait
      Then I should see "Access denied"

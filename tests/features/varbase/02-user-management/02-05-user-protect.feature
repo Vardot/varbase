@@ -7,7 +7,7 @@ So that the protections can be specific to a user, or applied to all users in a 
   Scenario: Check the User protect configuration
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/people/userprotect"
-      And wait max of 3s
+      And wait
      Then I should see "Protected site admin"
       And I should see "Protected super admin"
       And I should see "Protected webmaster"
