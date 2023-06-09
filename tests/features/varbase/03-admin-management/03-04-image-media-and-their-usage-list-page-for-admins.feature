@@ -67,6 +67,6 @@ So that I will be able to manage files, see where they have been used in content
      When I click "edit-delete"
       And wait
      Then I should see "This action cannot be undone."
-     When I press the "Delete" button
+     When I click the delete button
       And wait
      Then I should see "The media item Flag Earth after edit has been deleted."

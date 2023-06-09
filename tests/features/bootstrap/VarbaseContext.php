@@ -397,6 +397,20 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * @When I click the delete button
+   */
+  public function iClickTheDeleteButton() {
+    // Find the file by text.
+    $element = $this->getSession()->getPage()->find('xpath', "//button[text()='Delete']");
+
+    if (empty($element)) {
+      throw new \Exception('Did not find the delete action button.');
+    }
+
+    $element->click();
+  }
+
+  /**
    * Fill in a form field with id|name|title|alt|value.
    *
    * Under the editor media browser.
@@ -1630,10 +1644,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase.
    *
-   * Example #1: Then I click "your text" in the "ol" element with the "class" attribute set to "breadcrumb"
+   * Example #1: When I click "your text" in the "ol" element with the "class" attribute set to "breadcrumb"
    * Example #2:  And I click "your text" in the "div" element with the "id" attribute set to "right-panel"
    *
-   * @Then /^I click "(?P<text>[^"]*)" in the "(?P<htmlTagName>[^"]*)" element with the "(?P<attribute>[^"]*)" attribute set to "(?P<value>[^"]*)"$/
+   * @When /^I click "(?P<text>[^"]*)" in the "(?P<htmlTagName>[^"]*)" element with the "(?P<attribute>[^"]*)" attribute set to "(?P<value>[^"]*)"$/
    */
   public function iClickTextInTheHtmlTagElement($text, $htmlTagName, $attribute, $value) {
 
