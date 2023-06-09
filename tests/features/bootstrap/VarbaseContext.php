@@ -404,7 +404,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('xpath', "//button[text()='Delete']");
 
     if (empty($element)) {
-      throw new \Exception('Did not find the delete action button.');
+      throw new \Exception('The delete action button is not found.');
     }
 
     $element->click();
@@ -415,10 +415,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function shouldBeInTheBreadcrumb($text) {
     // Find a text in the breadcrumb.
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'breadcrumb')]//*[text()='{$text}']");
+    $element = $this->getSession()->getPage()->find('xpath', "//ol[contains(@class, 'breadcrumb')]//*[text()='{$text}']");
 
     if (empty($element)) {
-      throw new \Exception('Did not find the delete action button.');
+      throw new \Exception('The {$text} not found in the breadcrumb');
     }
   }
 
