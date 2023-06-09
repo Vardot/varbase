@@ -400,7 +400,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I click the delete button
    */
   public function iClickTheDeleteButton() {
-    // Find the file by text.
+    // Find the delete button by text.
     $element = $this->getSession()->getPage()->find('xpath', "//button[text()='Delete']");
 
     if (empty($element)) {
@@ -409,6 +409,19 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $element->click();
   }
+
+  /**
+   * @Then :text should be in the breadcrumb
+   */
+  public function shouldBeInTheBreadcrumb($text) {
+    // Find a text in the breadcrumb.
+    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'breadcrumb')]//*[text()='{$text}']");
+
+    if (empty($element)) {
+      throw new \Exception('Did not find the delete action button.');
+    }
+  }
+
 
   /**
    * Fill in a form field with id|name|title|alt|value.

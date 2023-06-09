@@ -36,4 +36,4 @@ So that I can see path I followed to locate the current page usually near the to
       And wait
      Then I should see "Basic page Test Basic page sub 1 title has been created."
       And I should see "Test Basic page sub 1 body"
-      And I should see "Test Basic page root title" in the "ol" element with the "class" attribute set to "breadcrumb bg-light py-2 px-3 my-2"
+      And "Test Basic page root title" should be in the breadcrumb
