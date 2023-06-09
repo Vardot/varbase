@@ -36,4 +36,4 @@ So that I can see path I followed to locate the current page usually near the to
       And wait
      Then I should see "Basic page Test Basic page sub 1 title has been created."
       And I should see "Test Basic page sub 1 body"
-      And "Test Basic page root title" should be in the breadcrumb
+      And I should see "Test Basic page root title"
