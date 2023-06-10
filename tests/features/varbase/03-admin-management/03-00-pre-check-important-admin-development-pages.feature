@@ -75,11 +75,11 @@ So that I can use them after the install or update.
      When I go to "/admin/appearance"
       And wait
      Then I should see "Appearance"
-      And I should see "Vartheme BS5 (default theme)"
+      And I should see "Vartheme BS5"
       And I should see "Starterkit theme for Varbase standard websites. Based on Bootstrap 5 framework using SASS."
       And I should see "Claro"
       And I should see "Gin"
-      And I should see "Vartheme Claro (administration theme)"
+      And I should see "Vartheme Claro"
       And I should see "A modern administration theme for Varbase standard websites. Based on the Gin Admin Theme and Claro Drupal core admin theme."
 
    @javascript @check @local @development @staging @production

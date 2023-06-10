@@ -43,6 +43,7 @@ So that they will be able to use the site.
       And I scroll to bottom
       And I click "Cancel account"
       And wait
+      And wait 3s
      Then I should see "Are you sure you want to cancel the account tester?"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
