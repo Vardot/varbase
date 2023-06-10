@@ -59,6 +59,7 @@ I want to be able to clone an entity.
       And I select "Delete selected entities" from "Action"
       And I press "Apply to selected items"
       And wait
+      And wait 3s
      Then I should see "Are you sure you wish to perform"
      When I press "Execute action"
       And I wait for 5s

@@ -56,6 +56,7 @@ Scenario: Check that Reverse order in admin view is working
      And I select "Delete selected entities / translations" from "action"
     When I press "Apply to selected items"
      And wait
+     And wait 3s
     Then I should see "Items selected:"
      And I should see "Test content N1"
      And I should see "Test content N2"

@@ -94,6 +94,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I select "Delete selected entities / translations" from "action"
      When I press "Apply to selected items"
       And wait
+      And wait 3s
      Then I should see "Items selected:"
       And I should see "Test hero slider #1"
       And I should see "Test hero slider #2"

@@ -38,6 +38,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait 2s
       And I press the "Save layout" button
       And wait
+      And I wait 2s
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
   
