@@ -1,3 +1,42 @@
+# 10.0.0-alpha2
+
+### Highlighted important changes since Varbase 10.0.0-alpha1:
+* Updated **Drupal Core** from `10.1.0-beta1` to `10.1.0-rc1`
+* Issue [#3364705](https://www.drupal.org/i/3364705): Fixed Automated Functional testing for **Varbase `10.0.x`** with **SDC** and **Vartheme BS5**
+* Issue [#3313097](https://www.drupal.org/i/3313097): Allowed starterkit theme generator tool to clone **Vartheme BS5**
+* Started a **Varbase Docs `10.0.x`** workspace. Following up with changes over **Varbase** `~10` documentation
+
+
+### Added since Varbase 10.0.0-alpha1:
+* Issue [#3364710](https://www.drupal.org/i/3364710): Added Fast 404 module ~3.0 back after a tag was released with support for Drupal 10
+* Issue [#3363615](https://www.drupal.org/i/3363615): Added a Bash script to Install Needed Tools for theme development with Vartheme BS5
+
+### Changed since Varbase 10.0.0-alpha1:
+* Issue [#3364909](https://www.drupal.org/i/3364909): Removed **Block Content Permissions** module. As of **Drupal 10.1.x**, it is no longer needed
+* Issue [#3365011](https://www.drupal.org/i/3365011): Changed **Block Content Permissions** to Drupal Core permissions. As of **Drupal 10.1.x**, it is no longer needed
+* Issue [#3364708](https://www.drupal.org/i/3364708): Moved enabling of the Display Suite module from dependencies: to install: in Varbase Core
+* Issue [#3364691](https://www.drupal.org/i/3364691): Switched **Custom Permissions** module from `2.0.x-dev` to `~2.0` after a tag release with support for **Drupal 10**
+
+### Updates since Varbase 10.0.0-alpha1:
+* Issue [#3364816](https://www.drupal.org/i/3364816): Updated **Admin Toolbar** module from `3.4.0` to `3.4.1` and kept needed patches
+* Issue [#3365138](https://www.drupal.org/i/3365138): Updated **Simple OAuth (OAuth2) & OpenID Connect** from `~5.0` to `~6.0`
+* Issue [#3364734](https://www.drupal.org/i/3364734): Updated **Drupal Symfony Mailer** from `~2.0` to `~2.3.0` and removed enabling Symfony Mailer Override Backward Compatibility sub module
+* Issue [#3365540](https://www.drupal.org/i/3365540): Updated **Configuration Inspector** module from `~2.0.0` to `~2.1.0`
+* Issue [#3365568](https://www.drupal.org/i/3365568): Updated **Component Libraries: Style Selector Field** module from `~1.0` to `~2.0`
+* Issue [#3365741](https://www.drupal.org/i/3365741): Updated **Devel** from `~5.0` to `~5.1.0`
+
+### Fixes since Varbase 10.0.0-alpha1:
+* Issue [#3365284](https://www.drupal.org/i/3365284): Fixed JSON:API Extras no longer returns array with Symfony 6.0
+* Issue [#3365317](https://www.drupal.org/i/3365317): Fixed SCSS compilation for custom plugin Bootstrap Styles and resolve missing CSS files in varbase_layout_builder/gin library
+* Issue [#3364872](https://www.drupal.org/i/3364872): Fixed No moderated content available in the Moderated Content Admin View
+): Fixed No moderated content available in the Moderated Content Admin View
+* Issue [#3365595](https://www.drupal.org/i/3365595): Fixed Component Libraries: Blocks issue when saving configurations
+* Issue [#3364276](https://www.drupal.org/i/3364276): Fixed Error in Varbase Components - declared in both as a prop and as a slot
+* Issue [#3365677](https://www.drupal.org/i/3365677): Fixed Error in Vartheme BS5 Components - declared in both as a prop and as a slot
+* Issue [#3366029](https://www.drupal.org/i/3366029): Fixed style of Close Button for Drupal Messages on Varbase 10.0.x installation
+
+-------------------------------------------------------------------------------
+
 # 10.0.0-alpha1
 
 ### Highlighted important changes since Varbase 9.0.13:
