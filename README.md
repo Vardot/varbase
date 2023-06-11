@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/693/workflows/051bfe0f-0735-463c-90dc-96a206fc4026) Varbase 10.0.0-alpha2
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/696/workflows/ba97d13c-bf4f-4572-bb2f-fa2ab1f2f5b2) Varbase 10.0.0-alpha2
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
