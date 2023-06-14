@@ -118,20 +118,6 @@ class ScriptHandler {
   }
 
   /**
-   * Remove .git folder from modules, themes, profiles of development branches.
-   */
-  public static function removeGitDirectories() {
-    $drupal_root = static::getDrupalRoot(getcwd());
-
-    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-      self::removeWindowsGitDirectories($drupal_root);
-    }
-    else {
-      exec("find " . $drupal_root . " -name '.git' | xargs rm -rf");
-    }
-  }
-
-  /**
    * Post Drupal Scaffold Procedure.
    *
    * @param \Composer\EventDispatcher\Event $event

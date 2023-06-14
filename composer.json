@@ -98,12 +98,10 @@
     "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
     "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
     "post-install-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles"
     ],
     "post-update-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
+      "Varbase\\composer\\ScriptHandler::createRequiredFiles"
     ],
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   },
