@@ -1,6 +1,6 @@
 {
   "name": "vardot/varbase",
-  "description": "Varbase: The Ultimate Drupal 9 CMS Starter Kit (Bootstrap Ready) | by Vardot",
+  "description": "Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready) | by Vardot",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
@@ -30,8 +30,8 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^9",
-    "drupal/core": "~9.5.0",
+    "drupal/core-composer-scaffold": "^9 || ^10",
+    "drupal/core": "~9.0 || ~10.0",
     "drupal/varbase_core": "9.0.x-dev",
     "drupal/varbase_api": "9.0.x-dev",
     "drupal/varbase_media": "9.0.x-dev",
@@ -67,7 +67,7 @@
     "npm-asset/swagger-ui-dist": "~3.0"
   },
   "require-dev": {
-    "drupal/core-dev": "~9.0",
+    "drupal/core-dev": "~9.0 || ~10.0",
     "drush/drush": "~11.0",
     "drupal/drupal-extension": "~4.0",
     "emuse/behat-html-formatter": "^0.2.0",
@@ -86,7 +86,8 @@
       "drupal/core-composer-scaffold": true,
       "drupal/core-project-message": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "vardot/varbase-updater": true
+      "vardot/varbase-updater": true,
+      "phpstan/extension-installer": true
     }
   },
   "autoload": {
