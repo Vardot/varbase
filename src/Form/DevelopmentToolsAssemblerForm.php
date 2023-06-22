@@ -59,11 +59,10 @@ class DevelopmentToolsAssemblerForm extends FormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->getParameter('app.root'),
-      $container->get('app.root'),
-      $container->get('info_parser'),
-      $container->get('string_translation'),
-      $container->get('varbase.form_helper')
+    $container->getParameter('app.root'),
+    $container->get('info_parser'),
+    $container->get('string_translation'),
+    $container->get('varbase.form_helper')
     );
   }
 
@@ -123,7 +122,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           '#default_value' => $checkbox_selected,
         ];
 
-        // If config_form is ture for this development tool.
+        // If config_form is true for this development tool.
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
           $form['development_tools'][$development_tool_key . '_config'] = [
