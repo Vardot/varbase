@@ -59,10 +59,11 @@ class DevelopmentToolsAssemblerForm extends FormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-    $container->get('app.root'),
-    $container->get('info_parser'),
-    $container->get('string_translation'),
-    $container->get('varbase.form_helper')
+      $container->getParameter('app.root'),
+      $container->get('app.root'),
+      $container->get('info_parser'),
+      $container->get('string_translation'),
+      $container->get('varbase.form_helper')
     );
   }
 
