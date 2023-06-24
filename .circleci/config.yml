@@ -110,8 +110,6 @@ commands:
           command: |
             php --version
             node --version
-            yarn --version
-            gulp --version
             java -version
             google-chrome --version
             chromedriver --version
