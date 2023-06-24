@@ -75,16 +75,6 @@ commands:
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
 
-      ## Install node js, npm, yarn, and gulp
-      - run:
-          name: Install node js
-          command: |
-            curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
-            sudo apt install -y nodejs 
-            sudo npm install -g yarn
-            sudo npm install gulp-cli -g ;
-            sudo npm install gulp -D ;
-
       ## Install Java.
       - run:
           name: Install Java
