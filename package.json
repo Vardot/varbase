@@ -6,7 +6,7 @@
   "main": "gulpfile.js",
   "engines": {
     "yarn": ">= 1.6",
-    "node": ">= 16.0"
+    "node": ">= 18.0"
   },
   "scripts": {
     "install-libraries": "npm install && bower install",
