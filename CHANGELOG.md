@@ -1,3 +1,81 @@
+# 9.0.14
+
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+Paving the way for a smoother upgrade process to Drupal 10
+
+### Highlighted important changes since Varbase 9.0.13:
+
+* Issue [#3368170](https://www.drupal.org/i/3368170):
+        Updated Drupal Core from `~9.5.0` to `~9.0 || ~10.0` in **Varbase Profile** to allow for a smooth upgrade process to **Drupal 10**
+* Issue [#3369885](https://www.drupal.org/i/3369885):
+        Updated minimum **Node.js** version for **Vartheme BS4** to `>= 18.0`
+
+### Added since Varbase 9.0.13:
+* No addition. All new additions will be in **Varbase** `~10.0`
+* Issue [#3368719](https://www.drupal.org/i/3368719):
+        Added **Resource Description Framework (RDF)** module with `~2.0` as the replacement of core's **RDF** in **Varbase SEO** `9.0.x` branch to allow for a smooth upgrade process to **Drupal 10**
+
+### Changed since Varbase 9.0.13:
+* Issue [#3367015](https://www.drupal.org/i/3367015):
+        Refactored **Layout Builder Form Alter** with a better logic
+* Issue [#3368817](https://www.drupal.org/i/3368817):
+        Removed attaching the deprecated `seven tour` styling library for **Varbase Tour**
+* Issue [#3368783](https://www.drupal.org/i/3368783):
+        Switched **Varbase Search** to add permissions using the **Module Installer Factory**
+        to support **Drupal 10**
+
+
+### Updates since Varbase 9.0.13:
+* Issue [#3368144](https://www.drupal.org/i/3368144):
+        Updated Drupal Core from `~9.5.0` to `~9.0 || ~10.0` in **Varbase Core**
+        to allow for a smooth upgrade process to **Drupal 10**
+* Issue [#3368532](https://www.drupal.org/i/3368532):
+        Updated **Configuration Update Manager** module from `~1.0` to `~1.0 || ~2.0` in 
+        **Varbase Core** to allow for smoother upgrade to **Drupal 10**
+* Issue [#3360963](https://www.drupal.org/i/3360963):
+        Updated Ctools module from `~3.0` to `~3.0.0 || ~4.0.0` for smoother updates
+* Issue [#3368604](https://www.drupal.org/i/3368604):
+        Updated Pathologic from `~1.0` to `~1.0 || ~2.0` in **Varbase Editor**
+        to allow for smoother upgrade to Drupal 10
+* Issue [#3368617](https://www.drupal.org/i/3368617):
+        Updated Paragraphs Features module from `~1.0` to `~1.0 || ~2.0` in 
+        **Varbase Landing Page (Paragraphs)** to allow for smoother upgrade to Drupal 10
+* Issue [#3368624](https://www.drupal.org/i/3368624):
+        Updated **Script Manager** module from `~1.0` to `~1.0 || ~2.0` in **Varbase SEO**
+        to allow for a smooth upgrade process to **Drupal 10**
+* Issue [#3359655](https://www.drupal.org/i/3359655):
+        Updated **GoogleTagManager** module from `~1.0` to `~2.0.0`
+* Issue [#3359647](https://www.drupal.org/i/3359647):
+        Updated **Inline Entity Form** module from `1.0.0-rc15` to `2.0.0-beta6` and kept needed patches
+* Issue [#3361019](https://www.drupal.org/i/3361019):
+        Updated **Inline Entity Form** module from `2.0.0-beta6` to `2.0.0-rc2` and keep needed patches
+* Issue [#3359667](https://www.drupal.org/i/3359667):
+        Updated **Inline Entity Form** module from ~1.0 to `~1.0.0 || ~2.0.0` allowing for a smooth update
+* Issue [#3362770](https://www.drupal.org/i/3362770):
+        Reverted **Inline Entity Form** back to `8.x-1.0-rc15` and kept needed patches
+* Issue [#3363227](https://www.drupal.org/i/3363227):
+        Reverted **Inline Entity Form** module back to `~1.0` in **Varbase Media**
+* Issue [#3360254](https://www.drupal.org/i/3360254):
+        Updated **Admin Toolbar** from `~3.0` to `~3.4.0`
+* Issue [#3359615](https://www.drupal.org/i/3359615):
+        Updated **Taxonomy Access Fix** module from `~3.0` to `~4.0.0` stable
+* Issue [#3359308](https://www.drupal.org/i/3359308):
+        Updated **Focal Point** module from `~1.0` to `~2.0.0`
+
+### Fixes since Varbase 9.0.13:
+* Issue [#3364872](https://www.drupal.org/i/3364872):
+        Fixed No moderated content available in the Moderated Content Admin View
+* Issue [#3368943](https://www.drupal.org/i/3368943):
+        Fixed change of entity_embed as embed route name
+* Issue [#3368724](https://www.drupal.org/i/3368724):
+        Fixed Drupal 10 Error message update for not requesting a non-existent service app.root
+* Issue [#3367501](https://www.drupal.org/i/3367501):
+        Fixed Error When Using Vartheme Claro `3.0.x` on **Drupal 10** and **CKEditor 4** libraries
+* Issue [#3369858](https://www.drupal.org/i/3369858):
+        Fixed layout styling for node forms with **Claro** and **Drupal 10**
+
+-------------------------------------------------------------------------------
+
 # 9.0.13
 
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.

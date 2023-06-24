@@ -68,9 +68,9 @@ commands:
             done
             echo Failed waiting for MySQL && exit 1
 
-      ## Install composer ~2.1
+      ## Install composer ~2
       - run:
-          name: Install composer ~2.1
+          name: Install composer ~2
           command: |
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
@@ -79,7 +79,7 @@ commands:
       - run:
           name: Install node js
           command: |
-            curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+            curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
             sudo apt install -y nodejs 
             sudo npm install -g yarn
             sudo npm install gulp-cli -g ;
