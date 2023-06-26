@@ -78,14 +78,6 @@ commands:
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
 
-      ## Install node js, npm, yarn, and gulp
-      - run:
-          name: Install node js
-          command: |
-            curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
-            sudo apt install -y nodejs 
-            sudo npm install -g yarn
-
       ## Install Java.
       - run:
           name: Install Java
@@ -120,8 +112,6 @@ commands:
           name: List tools versions
           command: |
             php --version
-            node --version
-            yarn --version
             java -version
             google-chrome --version
             chromedriver --version
@@ -223,6 +213,7 @@ commands:
       ## Import and Update local RTL language
       - run:
           name: Import and Update local RTL language
+          shell: /bin/bash
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush locale-import ar --autocreate-language profiles/contrib/varbase/translations/ar.po
@@ -231,7 +222,8 @@ commands:
 
       ## Uninstall Antibot module to let the selenium bot work  
       - run:
-          name: Uninstall Antibot module to let the selenium bot work 
+          name: Uninstall Antibot module to let the selenium bot work
+          shell: /bin/bash
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush pm:uninstall antibot --yes
