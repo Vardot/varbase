@@ -203,7 +203,7 @@ commands:
           command: |
             if [[ ! -f /home/circleci/selenium-server-4.1.2.jar ]]; then wget -O /home/circleci/selenium-server-4.1.2.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.2.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-4.1.2.jar standalone
+            java -jar selenium-server-4.1.2.jar standalone -port 4445
           background: true
 
       ## Add testing users.
