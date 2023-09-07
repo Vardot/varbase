@@ -86,17 +86,19 @@ commands:
       - run:
           name: Install/Update Google Chrome browser
           command: |
-            sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
+            sudo apt install libu2f-udev
+            sudo apt install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
             export CHROME_BIN=/usr/bin/google-chrome
-            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-            sudo dpkg -i google-chrome-stable_current_amd64.deb
-            rm google-chrome-stable_current_amd64.deb
+            CHROME_VERSION="115.0.5790.110-1"
+            wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb
+            sudo dpkg -i google-chrome-stable_${CHROME_VERSION}_amd64.deb
+            rm google-chrome-stable_${CHROME_VERSION}_amd64.deb
 
       ## Install/Update Chrome Driver.
       - run:
           name: Install/Update Chrome Driver
           command: |
-            CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+            CHROME_DRIVER_VERSION=114.0.5735.90;
             echo $CHROME_DRIVER_VERSION;
             wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
             unzip chromedriver_linux64.zip
@@ -195,9 +197,9 @@ commands:
       - run:
           name: Run Selenium Standalone server
           command: |
-            if [[ ! -f /home/circleci/selenium-server-standalone-3.141.59.jar ]]; then wget -O /home/circleci/selenium-server-standalone-3.141.59.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar; fi
+            if [[ ! -f /home/circleci/selenium-server-4.1.2.jar ]]; then wget -O /home/circleci/selenium-server-4.1.2.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.2.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-standalone-3.141.59.jar -port 4445
+            java -jar selenium-server-4.1.2.jar standalone
           background: true
 
       ## Add testing users.
