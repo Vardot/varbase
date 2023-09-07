@@ -5,11 +5,15 @@ defaults: &defaults
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    - image: cimg/mysql:8.0
+    - image: circleci/mysql:8.0.23
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
+      entrypoint: 
+        [
+          "docker-entrypoint.sh",
+          "--default-authentication-plugin=mysql_native_password",
+        ]
       environment:
         MYSQL_ROOT_PASSWORD: rootpw
         MYSQL_ROOT_HOST: "%"
@@ -25,10 +29,10 @@ commands:
           name: Usefull must have utils
           command: |
             sudo apt -qq update
+            sudo apt install docker-buildx-plugin
             sudo apt -qqy upgrade
             sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev mysql-client default-mysql-client
-            sudo apt -yqq install xvfb libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libu2f-udev
-
+            sudo apt -yqq install xvfb libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3
       ## Configure and run the virtual display.
       - run:
           name: Configure and run the virtual display.
@@ -87,7 +91,7 @@ commands:
           name: Install/Update Google Chrome browser
           command: |
             sudo apt install libu2f-udev
-            sudo apt install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
+            sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
             export CHROME_BIN=/usr/bin/google-chrome
             CHROME_VERSION="115.0.5790.110-1"
             wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb
