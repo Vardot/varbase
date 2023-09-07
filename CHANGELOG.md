@@ -1,3 +1,169 @@
+# 9.0.15
+
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+Paving the way for a smoother upgrade process to **Drupal 10**
+
+### Highlighted important changes since Varbase 9.0.14:
+* Issue [#3370459](https://www.drupal.org/i/3370459):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Core** module
+* Issue [#3343169](https://www.drupal.org/i/3343169)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Changed the add heading button to redirect to add a **Heading Block** directly
+Add heading for the section
+* Issue [#3374928](https://www.drupal.org/i/3374928)
+        by [jjwfcd](https://www.drupal.org/u/jjwfcd)
+       : Enhanced the visibility of the blog menu for **Blog Categories** and **Tags** terms on mobile browsers
+* Issue [#3380384](https://www.drupal.org/i/3380384)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Changed the logic for Background Edge to Edge style plugin after change of logic
+        for rendering both Background Color and Background Image or video
+
+### Added since Varbase 9.0.14:
+##### No addition. All new additions will be in Varbase ~10.0.0
+* Issue [#3319641](https://www.drupal.org/i/3319641)
+        by [YazanMajadba](https://www.drupal.org/u/yazanmajadba)
+       : Added support to enable **Varbase Media Header** on **Taxonomy Terms** entity type
+* Issue [#3375779](https://www.drupal.org/i/3375779):
+        Added a filter for not existed fields to ensure config coherence with the current bundle
+        existing fields
+* Issue [#3344814](https://www.drupal.org/i/3344814):
+        Added **Permissions** for user roles to **Varbase Media Header** from scanned `config/permissions`
+        directory
+* Issue [#3344815](https://www.drupal.org/i/3344815):
+        Added **Permissions** for user roles to **Varbase Reports** from scanned `config/permissions`
+        directory
+* Issue [#3369937](https://www.drupal.org/i/3369937):
+        Added logo image for **Varbase Core** project
+* Issue [#3370734](https://www.drupal.org/i/3370734):
+        Added the logo image for the **Varbase API** project
+* Issue [#3370736](https://www.drupal.org/i/3370736):
+        Added the logo image for the **Varbase Bootstrap Paragraphs** project
+* Issue [#3370737](https://www.drupal.org/i/3370737):
+        Added the logo image for the **Varbase Carousels** project
+* Issue [#3370735](https://www.drupal.org/i/3370735):
+        Added the logo image for the **Varbase Blog (Corporate Blog)** project
+* Issue [#3370741](https://www.drupal.org/i/3370741):
+        Added the logo image for the **Varbase Editor** project
+* Issue [#3370742](https://www.drupal.org/i/3370742):
+        Added the logo image for the **Varbase Email** project
+* Issue [#3370744](https://www.drupal.org/i/3370744):
+        Added the logo image for the **Varbase Landing Page (Paragraphs)** project
+* Issue [#3370745](https://www.drupal.org/i/3370745):
+        Added the logo image for the **Varbase Layout Builder** project
+* Issue [#3370750](https://www.drupal.org/i/3370750):
+        Added the logo image for the **Varbase Search** project
+* Issue [#3370751](https://www.drupal.org/i/3370751):
+        Added the logo image for the **Varbase SEO** project
+* Issue [#3370754](https://www.drupal.org/i/3370754):
+        Added the logo image for the **Varbase Total Control Dashboard** project
+* Issue [#3370755](https://www.drupal.org/i/3370755):
+        Added the logo image for the **Varbase Workflow** project
+* Issue [#3370743](https://www.drupal.org/i/3370743):
+        Added the logo image for the **Varbase FAQs** project
+* Issue [#3370753](https://www.drupal.org/i/3370753):
+        Added the logo image for the **Varbase Style Guide** project
+* Issue [#3370749](https://www.drupal.org/i/3370749):
+        Added the logo image for the **Varbase Reports** project
+* Issue [#3370756](https://www.drupal.org/i/3370756):
+        Added the logo image for the **Varbase YouTube Import** project
+* Issue [#3370752](https://www.drupal.org/i/3370752):
+        Added the logo image for the **Varbase Social Single Sign-On** project
+* Issue [#3370738](https://www.drupal.org/i/3370738):
+        Added the logo image for the **Varbase Commerce (Merchandise)** project
+* Issue [#3370748](https://www.drupal.org/i/3370748):
+        Added the logo image for the **Varbase Media Header** project
+* Issue [#3370747](https://www.drupal.org/i/3370747):
+        Added the logo image for the **Varbase Media Hero Slider** project
+* Issue [#3370746](https://www.drupal.org/i/3370746):
+        Added the logo image for the **Varbase Media** project
+* Issue [#3369946](https://www.drupal.org/i/3369946):
+        Added the logo image for the **Varbase** distribution project to be used
+        in the ecosystem
+
+### Changed since Varbase 9.0.14:
+* Issue [#3373397](https://www.drupal.org/i/3373397)
+        by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+        : Improved the preview option view for the full content view mode when a
+        media header is present
+* Issue [#3383937](https://www.drupal.org/i/3383937)
+        by [delacosta456](https://www.drupal.org/u/delacosta456)
+        : Removed the remaining optional `layout_builder_iframe_modal.settings` config
+* Issue [#3370454](https://www.drupal.org/i/3370454):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase API** module
+* Issue [#3370457](https://www.drupal.org/i/3370457):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Carousels** module
+* Issue [#3370455](https://www.drupal.org/i/3370455):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Blog (Corporate Blog)** module
+* Issue [#3370479](https://www.drupal.org/i/3370479):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Commerce (Merchandise)** module
+* Issue [#3370461](https://www.drupal.org/i/3370461):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Editor** module
+* Issue [#3370462](https://www.drupal.org/i/3370462):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Email** module
+* Issue [#3370464](https://www.drupal.org/i/3370464):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Landing Page (Paragraphs)** module
+* Issue [#3370465](https://www.drupal.org/i/3370465):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Layout Builder** module
+* Issue [#3370466](https://www.drupal.org/i/3370466):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Media** module
+* Issue [#3370468](https://www.drupal.org/i/3370468):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Media Hero Slider** module
+* Issue [#3370470](https://www.drupal.org/i/3370470):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Search** module
+* Issue [#3370471](https://www.drupal.org/i/3370471):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase SEO** module
+* Issue [#3370476](https://www.drupal.org/i/3370476):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Total Control Dashboard** module
+* Issue [#3370477](https://www.drupal.org/i/3370477):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Workflow** module
+* Issue [#3370463](https://www.drupal.org/i/3370463):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase FAQs** module
+* Issue [#3370469](https://www.drupal.org/i/3370469):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Reports** module
+* Issue [#3370482](https://www.drupal.org/i/3370482):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase YouTube Import** module
+* Issue [#3370474](https://www.drupal.org/i/3370474):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Vartheme BS4** theme
+* Issue [#3370467](https://www.drupal.org/i/3370467):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Varbase Media Header** module
+* Issue [#3370478](https://www.drupal.org/i/3370478):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Vartheme Claro** admin theme
+* Issue [#3370481](https://www.drupal.org/i/3370481):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **Entity Browser Enhance(d|r)** module
+* Issue [#3370480](https://www.drupal.org/i/3370480):
+        Changed Drupal support to `~9.5.0 || ~10.1.0` for the **View Modes Inventory (VMI)** module
+
+### Updates since Varbase 9.0.14:
+* Issue [#3369934](https://www.drupal.org/i/3369934):
+        Updated **Link Attributes** widget module from `~1.0` to `~2.0.0`
+* Issue [#3370143](https://www.drupal.org/i/3370143):
+        Updated the **CAPTCHA** module from `~1.0` to `~1.0 || ~2.0` in **Varbase Security** to allow
+        for a smooth upgrade process to Drupal 10
+* Issue [#3315988](https://www.drupal.org/i/3315988):
+        Updated **Better Exposed Filters** module from `~5.0` to `~6.0` in **Varbase Commerce**
+* Issue [#3316536](https://www.drupal.org/i/3316536):
+        Updated **Better Exposed Filters** module from `~5.0` to `~6.0` in Varbase Reports
+* Issue [#3372829](https://www.drupal.org/i/3372829):
+        Updated **Tour UI** module from `~1.0` to `~2.0.0`
+* Issue [#3377449](https://www.drupal.org/i/3377449):
+        Updated **Bootstrap Layout Builder** module from `2.1.1` to `2.1.2` and removed committed patches
+* Issue [#3377442](https://www.drupal.org/i/3377442):
+        Updated **Bootstrap Styles** module from `1.1.0` to `1.1.1` and removed committed patches
+* Issue [#3378806](https://www.drupal.org/i/3378806):
+        Updated **Link Attributes** widget module from `~2.0.0` to `~2.1.0` and enable the new
+        Link attributes: Menu Link Content integration sub module
+* Issue [#3382652](https://www.drupal.org/i/3382652):
+        Updated **WebP** module from `1.0-beta7` to `~1.0` and removed committed patches
+
+### Fixes since Varbase 9.0.14:
+* Issue [#3376371](https://www.drupal.org/i/3376371)
+        by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed to ensure that **Media Library** widget display returns to the first
+        page when applying filters
+
+
+-------------------------------------------------------------------------------
+
 # 9.0.14
 
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
