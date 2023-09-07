@@ -154,6 +154,8 @@ Add heading for the section
         Link attributes: Menu Link Content integration sub module
 * Issue [#3382652](https://www.drupal.org/i/3382652):
         Updated **WebP** module from `1.0-beta7` to `~1.0` and removed committed patches
+* Issue [#3385965](https://www.drupal.org/i/3385965):
+        Updated **Redirect** module from `1.8` to `1.9` and kept needed patches
 
 ### Fixes since Varbase 9.0.14:
 * Issue [#3376371](https://www.drupal.org/i/3376371)
