@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/727/workflows/6f824c3c-b7f7-431b-9cb7-2c914ae83b0c) Varbase 10.0.0-beta1
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/729/workflows/8bd6b418-3ba0-4033-be62-19080556833c) Varbase 10.0.0-beta1
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -19,21 +19,21 @@ in every project.
 * Comes with a lot of needed functionalities/modules for every-day Drupal site.
 * [Tested, tested, and tested.](https://app.circleci.com/pipelines/github/Vardot/varbase)
 
-Starting a new project? Consider Varbase for Drupal 10.
-Installing Varbase 10.0.x comes with several extra automated installation
-steps, to take full advantage of Varbase, other than the Drupal 10 installation
+Starting a new project? Consider **Varbase** for **Drupal 10**.
+Installing **Varbase `10.0.x`** comes with several extra automated installation
+steps, to take full advantage of Varbase, other than the **Drupal 10** installation
 instructions.
 
 
 # Install with Composer
 
 
-To install the most recent stable release of Varbase 10.0.x run this command:
+To install the most recent stable release of **Varbase `10.0.x`** run this command:
 ```
 composer create-project Vardot/varbase-project:10.0.0-beta1 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
-To install the dev version of Varbase 10.0.x run this command:
+To install the dev version of **Varbase `10.0.x`** run this command:
 ```
 composer create-project vardot/varbase-project:10.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
@@ -62,7 +62,7 @@ composer create-project vardot/varbase-project:10.0.x-dev PROJECT_DIR_NAME --sta
 ## Debugging using Lando
 
 - xDebug is enabled on Lando by default for PHP debugging.
-- The debugger is set to listen for the port 9003 but can be changed in .lando/.php.ini
+- The debugger is set to listen for the port 9003 but can be changed in `.lando/.php.ini`
 
 
 Join Our Slack Team for Feedback and Support
