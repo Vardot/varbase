@@ -86,9 +86,9 @@ commands:
             sudo apt update
             sudo apt install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
 
-      ## Install/Update Google Chrome browser.
+      ## Install/Update Google Chrome browser 115.0.5790.110-1 version.
       - run:
-          name: Install/Update Google Chrome browser
+          name: Install/Update Google Chrome browser 115.0.5790.110-1 version
           command: |
             sudo apt install libu2f-udev
             sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
@@ -98,9 +98,9 @@ commands:
             sudo dpkg -i google-chrome-stable_${CHROME_VERSION}_amd64.deb
             rm google-chrome-stable_${CHROME_VERSION}_amd64.deb
 
-      ## Install/Update Chrome Driver.
+      ## Install/Update Chrome Driver 114.0.5735.90 version.
       - run:
-          name: Install/Update Chrome Driver
+          name: Install/Update Chrome Driver 114.0.5735.90 version
           command: |
             CHROME_DRIVER_VERSION=114.0.5735.90;
             echo $CHROME_DRIVER_VERSION;
@@ -197,9 +197,9 @@ commands:
             ../bin/drush pm:enable varbase_update_helper --yes
             ../bin/drush cache:rebuild
 
-      ## Run Selenium Standalone server.
+      ## Install/Run Selenium Standalone server 4.1.2 on 4445 port.
       - run:
-          name: Run Selenium Standalone server
+          name: Install/Run Selenium Standalone server 4.1.2 on 4445 port
           command: |
             if [[ ! -f /home/circleci/selenium-server-4.1.2.jar ]]; then wget -O /home/circleci/selenium-server-4.1.2.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.2.jar; fi
             cd /home/circleci/
@@ -216,6 +216,7 @@ commands:
       ## Import and Update local RTL language
       - run:
           name: Import and Update local RTL language
+          shell: /bin/bash
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
@@ -225,6 +226,7 @@ commands:
       ## Uninstall Antibot module to let the selenium bot work  
       - run:
           name: Uninstall Antibot module to let the selenium bot work 
+          shell: /bin/bash
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush pm:uninstall antibot --yes
