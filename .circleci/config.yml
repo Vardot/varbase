@@ -5,11 +5,15 @@ defaults: &defaults
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    - image: cimg/mysql:8.0
+    - image: circleci/mysql:8.0.23
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      entrypoint: ['docker-entrypoint.sh', '--default-authentication-plugin=mysql_native_password']
+      entrypoint: 
+        [
+          "docker-entrypoint.sh",
+          "--default-authentication-plugin=mysql_native_password",
+        ]
       environment:
         MYSQL_ROOT_PASSWORD: rootpw
         MYSQL_ROOT_HOST: "%"
@@ -25,17 +29,14 @@ commands:
           name: Usefull must have utils
           command: |
             sudo apt -qq update
+            sudo apt install docker-buildx-plugin
             sudo apt -qqy upgrade
             sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev mysql-client default-mysql-client
-            sudo apt -yqq install xvfb libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libu2f-udev
-
+            sudo apt -yqq install xvfb libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3
       ## Configure and run the virtual display.
       - run:
           name: Configure and run the virtual display.
-          command: |
-            export DISPLAY=:99.0
-            Xvfb -ac :99 -screen 0 1920x1080x24 > /dev/null 2>&1
-            sleep 10
+          command: Xvfb -ac :99 -screen 0 1920x1080x24 > /dev/null 2>&1
           background: true
 
       ## Setup Apache2 and PHP8.1
@@ -71,7 +72,7 @@ commands:
             done
             echo Failed waiting for MySQL && exit 1
 
-      ## Install Composer ~2
+      ## Install composer ~2
       - run:
           name: Install composer ~2
           command: |
@@ -85,21 +86,23 @@ commands:
             sudo apt update
             sudo apt install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
 
-      ## Install/Update Google Chrome browser.
+      ## Install/Update Google Chrome browser 115.0.5790.110-1 version.
       - run:
-          name: Install/Update Google Chrome browser
+          name: Install/Update Google Chrome browser 115.0.5790.110-1 version
           command: |
+            sudo apt install libu2f-udev
             sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
             export CHROME_BIN=/usr/bin/google-chrome
-            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-            sudo dpkg -i google-chrome-stable_current_amd64.deb
-            rm google-chrome-stable_current_amd64.deb
+            CHROME_VERSION="115.0.5790.110-1"
+            wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb
+            sudo dpkg -i google-chrome-stable_${CHROME_VERSION}_amd64.deb
+            rm google-chrome-stable_${CHROME_VERSION}_amd64.deb
 
-      ## Install/Update Chrome Driver.
+      ## Install/Update Chrome Driver 114.0.5735.90 version.
       - run:
-          name: Install/Update Chrome Driver
+          name: Install/Update Chrome Driver 114.0.5735.90 version
           command: |
-            CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+            CHROME_DRIVER_VERSION=114.0.5735.90;
             echo $CHROME_DRIVER_VERSION;
             wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
             unzip chromedriver_linux64.zip
@@ -194,13 +197,13 @@ commands:
             ../bin/drush pm:enable varbase_update_helper --yes
             ../bin/drush cache:rebuild
 
-      ## Run Selenium Standalone server.
+      ## Install/Run Selenium Standalone server 4.1.2 on 4445 port.
       - run:
-          name: Run Selenium Standalone server
+          name: Install/Run Selenium Standalone server 4.1.2 on 4445 port
           command: |
-            if [[ ! -f /home/circleci/selenium-server-standalone-3.141.59.jar ]]; then wget -O /home/circleci/selenium-server-standalone-3.141.59.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar; fi
+            if [[ ! -f /home/circleci/selenium-server-4.1.2.jar ]]; then wget -O /home/circleci/selenium-server-4.1.2.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.2.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-standalone-3.141.59.jar -port 4445
+            java -jar selenium-server-4.1.2.jar standalone --port 4445
           background: true
 
       ## Add testing users.
@@ -218,11 +221,11 @@ commands:
             cd /var/www/html/test/varbase/docroot
             ../bin/drush locale-import ar --autocreate-language profiles/contrib/varbase/translations/ar.po
             ../bin/drush locale-update --langcodes=ar
-            ../bin/drush cache:rebuild
+            ../bin/drush cr
 
       ## Uninstall Antibot module to let the selenium bot work  
       - run:
-          name: Uninstall Antibot module to let the selenium bot work
+          name: Uninstall Antibot module to let the selenium bot work 
           shell: /bin/bash
           command: |
             cd /var/www/html/test/varbase/docroot
