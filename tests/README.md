@@ -158,13 +158,13 @@ rm chromedriver_linux64.zip
 
 ### Get Selenium Standalone server.
 ```
-wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar
+wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.2.jar
 ```
 
 ## Run Selenium Standalone server.
 
 ```
-$ java -jar selenium-*.jar -port 4445
+$ java -jar selenium-server-4.1.2.jar standalone --port 4445
 ```
 
 --------------------------------------------------------------------------------
