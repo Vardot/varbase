@@ -1,39 +1,366 @@
+# 10.0.0-beta1
+
+### Highlighted important changes since Varbase 10.0.0-alpha2:
+* Issue [#3369922](https://www.drupal.org/i/3369922):
+        Updated Drupal Core from `~10.0` to `~10.1.0` and removed committed patches
+Integrated Varbase Project template with **Storybook** using **Component Libraries: Theme Server** for **Varbase Components** and **Vartheme BS5** with and **Bootstrap `5.3.0`** #182
+* Issue [#3372551](https://www.drupal.org/i/3372551):
+        Integrated **Varbase Components** with **Storybook** using **Component Libraries: Theme Server** and **Bootstrap `5.3.0`**
+* Issue [#3372546](https://www.drupal.org/i/3372546):
+        Integrated **Vartheme BS5** with **Storybook** using **Component Libraries: Theme Server** for **Varbase Components**
+* Issue [#3367498](https://www.drupal.org/i/3367498):
+        Refactor default Card components and patterns with media and Card Style Size integrations
+* Issue [#3367867](https://www.drupal.org/i/3367867):
+        Refactored default config templates for **View Modes Inventory** to use default **SDC Card components** with patterns
+* Issue [#3376289](https://www.drupal.org/i/3376289):
+        Integrated the **Bootstrap `~5.3.0`** Utility API, along with its utility classes, to elevate the
+        design and enhance the functionality of Card components, encompassing Card/Media/Content utility classes
+* Issue [#3374858](https://www.drupal.org/i/3374858):
+        Added **SDC Display** module to **Varbase Components**
+
+### Added since Varbase 10.0.0-alpha2:
+* Issue [#3366134](https://www.drupal.org/i/3366134):
+        Added **Vartheme BS5** settings and default configurations
+* Issue [#3366302](https://www.drupal.org/i/3366302):
+        Added all Page components to **Vartheme BS5**
+* Issue [#3369946](https://www.drupal.org/i/3369946):
+        Added the logo image for the **Varbase** distribution project to be used in the ecosystem
+* Issue [#3371836](https://www.drupal.org/i/3371836):
+        Added all moved **Vartheme BS5** components in **Varbase Components** with option to include or
+         embed in Generated themes
+* Issue [#3379722](https://www.drupal.org/i/3379722):
+        Added more stories to the **Varbase Storybook** from **Varbase Components**
+* Issue [#3375779](https://www.drupal.org/i/3375779):
+        Added a filter for not existed fields to ensure config coherence with the current bundle existing fields
+* Issue [#3371604](https://www.drupal.org/i/3371604):
+        Added **Permissions** for user roles to **Varbase FAQs** from scanned `config/permissions` directory
+* Issue [#3373881](https://www.drupal.org/i/3373881):
+        Added the **Gin dark mode** to the **Drupal** off canvas for Layout Builder. Even tho if the
+         user was using the Gin light mode at the back-end
+* Issue [#3344814](https://www.drupal.org/i/3344814):
+        Added **Permissions** for user roles to **Varbase Media Header** from scanned `config/permissions` directory
+* Issue [#3344815](https://www.drupal.org/i/3344815):
+        Added **Permissions** for user roles to **Varbase Reports** from scanned `config/permissions` directory
+* Issue [#3374893](https://www.drupal.org/i/3374893):
+        Added **Card styling** for Card Border, Anchor All, Card Size and Equal height variations
+* Issue [#3381177](https://www.drupal.org/i/3381177):
+        Added stories for the **Page Title** molecule component
+* Issue [#3381664](https://www.drupal.org/i/3381664):
+        Added stories for the Link component in **Varbase Storybook** with improved Bootstrap `~5.3.0` Link helpers and utility classes
+* Issue [#3382141](https://www.drupal.org/i/3382141):
+        Added standard **Drupal heading** for the **Textarea** template with Theme override for a textarea #type form element
+* Issue [#3381665](https://www.drupal.org/i/3381665)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Added missing wrapper and properties for the **Textarea** component
+* Issue [#3370740](https://www.drupal.org/i/3370740):
+        Added the logo image for the Varbase Dashboards project
+
+### Changed since Varbase 10.0.0-alpha2:
+* Issue [#3372546](https://www.drupal.org/i/3372546):
+        Integrated **Vartheme BS5** with **Storybook** using **Component Libraries: Theme Server** for **Varbase Components**
+* Issue [#3376792](https://www.drupal.org/i/3376792):
+        Restored **SDC Component** Schema of `10.1.x` to components (referenced in Drupal Core)
+* Issue [#3370171](https://www.drupal.org/i/3370171):
+        Switched display modes for the **Varbase Blog** content type to use Card view modes with **SDC Card** components
+         and UI Patterns layouts
+* Issue [#3367479](https://www.drupal.org/i/3367479):
+        Restricted **Component Libraries: Editorial** module to `~2.0` and added a patch fix for **Component Libraries: Blocks**
+* Issue [#3367015](https://www.drupal.org/i/3367015)
+        by [abu-zakham](https://www.drupal.org/u/abu-zakham)
+        : Refactored **Layout Builder** Form Alter with a better logic
+* Issue [#3377994](https://www.drupal.org/i/3377994):
+        Changed Entity Display mode for the **Varbase Blog** content type to match with **Varbase Components**
+* Issue [#3366303](https://www.drupal.org/i/3366303):
+        Removed all **Page component**s out from **Varbase Components** to **Vartheme BS5**
+* Issue [#3364721](https://www.drupal.org/i/3364721):
+        Moved enabling of the Display Suite module from `dependencies:` to `install:` in Varbase Media
+* Issue [#3370478](https://www.drupal.org/i/3370478):
+        Changed **Drupal** support to `~9.5.0 || ~10.1.0`` for the **Vartheme Claro** admin theme
+* Issue [#3371906](https://www.drupal.org/i/3371906):
+        Removed pre-loading of fonts on RTL for the admin theme
+* Issue [#3362495](https://www.drupal.org/i/3362495):
+        Switched from `core/jquery.once` to `core/once`
+* Issue [#3371835](https://www.drupal.org/i/3371835):
+        Removed all **SDC components** out from **Vartheme BS5** and include them from
+         **Varbase Components** for a smoother out of the box working **Generated theme management**
+* Issue [#3374962](https://www.drupal.org/i/3374962):
+        Changed default entity view display config templates for content types to match with
+         pattern settings provided by Varbase SDC Cards components
+* Issue [#3367479](https://www.drupal.org/i/3367479):
+        Restricted **Component Libraries: Editorial** module to `~2.0` and added a patch fix for **Component Libraries: Blocks**
+* Issue [#3371599](https://www.drupal.org/i/3371599):
+        Switched compiling SCSS to **Webpack ~5**, **SASS**, and **PostCSS** for the **Varbase FAQs** module
+* Issue [#3343169](https://www.drupal.org/i/3343169)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Changed the add heading button to redirect to add a Heading Block directly
+* Issue [#3373633](https://www.drupal.org/i/3373633)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Removed duplicate detected key for impressedCard
+* Issue [#3375307](https://www.drupal.org/i/3375307)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Switched field templates for patterns from Only content to Default for sending
+         rendered HTML to the layout region
+* Issue [#3370480](https://www.drupal.org/i/3370480):
+        Changed **Drupa** support to `~10.1.0` for the **View Modes Inventory (VMI)** module
+* Issue [#3370481](https://www.drupal.org/i/3370481):
+        Changed **Drupal** support to `~10.1.0` for the **Entity Browser Enhance(d|r)** module
+* Issue [#3375073](https://www.drupal.org/i/3375073):
+        Changed Default display modes for the **Varbase Blog** content type to have **Anchor All** and **Equal Height** for Cards
+* Issue [#3374343](https://www.drupal.org/i/3374343):
+        Changed assets of default entity view display config templates for content types in
+         **VMI** to follow with **UI Pattern** optimization for **SDC Card** components
+* Issue [#3376362](https://www.drupal.org/i/3376362):
+        Removed **Card Attributes**, **Content Attributes** from default asset templates
+         and switch to **Utility Classes** for **UI Patterns** layout regions
+* Issue [#3324539](https://www.drupal.org/i/3324539):
+        Changed default media display to **Dynamic Responsive Image** (or drimage) in the **Varbase Media Header** module
+* Issue [#3374928](https://www.drupal.org/i/3374928)
+        by [jjwfcd](https://www.drupal.org/u/jjwfcd)
+        : Enhanced the visibility of the blog menu for **Blog Categories** and **Tags** terms on mobile browsers
+* Issue [#3372987](https://www.drupal.org/i/3372987):
+        Optimization for **SDC Card** components with **Style Size** and **Storybook**
+* Issue [#3374337](https://www.drupal.org/i/3374337):
+        Changed **VLB Card** Blocks to use **SDC Card** components with new **UI Pattern** layouts
+* Issue [#3374946](https://www.drupal.org/i/3374946):
+        Switched from the old **View Modes Inventory (VMI)**'s variables to the Card naming convention
+         following **Varbase SDC Cards** components
+* Issue [#3374369](https://www.drupal.org/i/3374369):
+        Changed default entity view display config for the **Varbase Blog** content type to match
+         with changes in **VMI** to follow with **UI Pattern** optimization for **SDC Card** components
+* Issue [#3375233](https://www.drupal.org/i/3375233):
+        Changed default spacing method for Default content, and configs for Layout library, Blog full content
+         , Tags and Blog Categories views to follow with Varbase Card components and **Bootstrap `~5.3.0`**
+* Issue [#3378044](https://www.drupal.org/i/3378044):
+        Rearranged **RTL SCSS** files next to their respective **LTR** files and use the -rtl suffix
+         with combined mode for RTL flipping
+* Issue [#3377931](https://www.drupal.org/i/3377931):
+        Changed default starterkit/recipe asset config template for Featured Cards view modes to have Gutters Between
+* Issue [#3383937](https://www.drupal.org/i/3383937)
+        by [delacosta456](https://www.drupal.org/u/delacosta456)
+        : Removed the remaining optional layout_builder_iframe_modal.settings config
+* Issue [#3383538](https://www.drupal.org/i/3383538):
+        Removed Allowed Formats module, as it was added in Drupal `~10.1.0` core
+* Issue [#3380384](https://www.drupal.org/i/3380384)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Changed the logic for Background Edge to Edge style plugin after change of
+        logic for rendering both Background Color and Background Image or video
+* Issue [#3373397](https://www.drupal.org/i/3373397)
+        by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+        : Improved the preview option view for the full content view 
+        mode when a media header is present
+* Issue [#3370459](https://www.drupal.org/i/3370459):
+        Changed Drupal support to `~10.1.0` for the **Varbase Core** module
+* Issue [#3370466](https://www.drupal.org/i/3370466):
+        Changed Drupal support to `~10.1.0` for the **Varbase Media** module
+* Issue [#3370454](https://www.drupal.org/i/3370454):
+        Changed Drupal support to `~10.1.0` for the **Varbase API** module
+* Issue [#3370458](https://www.drupal.org/i/3370458):
+        Change Drupal support to `~10.1.0` for the **Varbase Components** module
+* Issue [#3370455](https://www.drupal.org/i/3370455):
+        Changed Drupal support to `~10.1.0` for the **Varbase Blog (Corporate Blog)** module
+* Issue [#3370475](https://www.drupal.org/i/3370475):
+        Changed Drupal support to `~10.1.0` for the **Vartheme BS5** theme
+* Issue [#3370463](https://www.drupal.org/i/3370463):
+        Changed Drupal support to `~10.1.0` for the **Varbase FAQs** module
+* Issue [#3370460](https://www.drupal.org/i/3370460):
+        Changed Drupal support to `~10.1.0` for the **Varbase Dashboards** module
+* Issue [#3370467](https://www.drupal.org/i/3370467):
+        Changed Drupal support to `~10.1.0` for the **Varbase Media Header** module
+* Issue [#3370472](https://www.drupal.org/i/3370472):
+        Changed Drupal support to `~10.1.0` for the **Varbase Social Single Sign-On** module
+* Issue [#3370482](https://www.drupal.org/i/3370482):
+        Changed Drupal support to `~10.1.0` for the **Varbase YouTube Import** module
+* Issue [#3370477](https://www.drupal.org/i/3370477):
+        Changed Drupal support to `~10.1.0` for the **Varbase Workflow** module
+* Issue [#3370476](https://www.drupal.org/i/3370476):
+        Change Drupal support to `~10.1.0` for the **Varbase Total Control Dashboard** module
+* Issue [#3370471](https://www.drupal.org/i/3370471):
+        Changed Drupal support to `~10.1.0` for the **Varbase SEO** module
+* Issue [#3370470](https://www.drupal.org/i/3370470):
+        Changed Drupal support to `~10.1.0` for the **Varbase Search** module
+* Issue [#3370468](https://www.drupal.org/i/3370468):
+        Changed Drupal support to `~10.1.0` for the **Varbase Media Hero Slider** module
+* Issue [#3370465](https://www.drupal.org/i/3370465):
+        Changed Drupal support to `~10.1.0` for the **Varbase Layout Builder** module
+* Issue [#3370464](https://www.drupal.org/i/3370464):
+        Changed Drupal support to `~10.1.0` for the **Varbase Landing Page (Paragraphs)** module
+* Issue [#3370462](https://www.drupal.org/i/3370462):
+        Changed Drupal support to `~10.1.0` for the **Varbase Email** module
+* Issue [#3370461](https://www.drupal.org/i/3370461):
+        Changed Drupal support to `~10.1.0` for the **Varbase Editor** module
+* Issue [#3370457](https://www.drupal.org/i/3370457):
+        Changed Drupal support to `~10.1.0` for the **Varbase Carousels** module
+* Issue [#3370456](https://www.drupal.org/i/3370456):
+        Changed Drupal support to `~10.1.0` for the **Varbase Bootstrap Paragraphs** module
+
+### Updates since Varbase 10.0.0-alpha2:
+* Issue [#3386304](https://www.drupal.org/i/3386304):
+        Updated **Selenium Standalone server** to `4.1.2` on `4445` port with
+        **Chrome Browser** `115.0.5790.110-1` and **Chrome Driver** `114.0.5735.90` version
+         for automated testing in **Circle CI**
+* Issue [#3372818](https://www.drupal.org/i/3372818):
+        Updated **Drupal core** from `10.1.0` to `10.1.1` and updated needed patches
+* Issue [#3366299](https://www.drupal.org/i/3366299):
+        Updated **Bootstrap 5** from `~5.2.0` to `~5.3.0` in **Vartheme BS5**
+* Issue [#3366298](https://www.drupal.org/i/3366298):
+        Updated **Bootstrap 5** from `~5.2.0` to `~5.3.0` in **Varbase Components**
+* Issue [#3366416](https://www.drupal.org/i/3366416):
+        Updated **Webform** module from `6.2.0-beta5` to `6.2.0-beta6` ( `~6.2.0` ) and removed committed patches
+* Issue [#3364805](https://www.drupal.org/i/3364805):
+        Updated **Metatag** module from `~1.0` to `~2.0.0` in **Varbase SEO**
+* Issue [#3366429](https://www.drupal.org/i/3366429):
+        Updated **Metatag** module from `~1.0.0` to `~2.0.0` in **Varbase Media**
+* Issue [#3366421](https://www.drupal.org/i/3366421):
+        Updated **Schema.org Metatag** module from `~2.0.0` to `~3.0.0` in **Varbase SEO**
+* Issue [#3366426](https://www.drupal.org/i/3366426):
+        Updated **Schema.org Metatag** module from `~2.0.0` to `~3.0.0` in Varbase API
+* Issue [#3365734](https://www.drupal.org/i/3365734):
+        Updated **Entity Embed** from `1.x-dev` to `~1.0` after a supported Drupal 10 tag was released
+* Issue [#3316536](https://www.drupal.org/i/3316536):
+        Updated **Better Exposed Filters** module from `~5.0` to `~6.0` in Varbase Reports
+* Issue [#3372829](https://www.drupal.org/i/3372829):
+        Updated **Tour UI** module from `~1.0` to `~2.0.0`
+* Issue [#3372433](https://www.drupal.org/i/3372433):
+        Updated **Gin Admin Theme** from `3.0.0-rc3` to `3.0.0-rc4` and kept needed patches
+* Issue [#3376479](https://www.drupal.org/i/3376479):
+        Updated The **Gin Admin theme** from `3.0.0-rc4` to `3.0.0-rc5` and kept needed patches
+* Issue [#3371349](https://www.drupal.org/i/3371349):
+        Updated **Rabbit Hole** module from `~1.0` to `~2.0.0` in **Varbase Core** and removed deprecated modules and permissions
+* Issue [#3374871](https://www.drupal.org/i/3374871):
+        Updated **CSV Serialization** module from `~2.0` to `~3.0.0`
+* Issue [#3371355](https://www.drupal.org/i/3371355):
+        Updated **Rabbit Hole** module from `~1.0` to `~2.0.0` in Varbase Media Hero Slider
+* Issue [#3371346](https://www.drupal.org/i/3371346):
+        Updated **Persistent Login** module from `2.0.0` to `2.1.0` and keen needed patches
+* Issue [#3371443](https://www.drupal.org/i/3371443):
+        Updated **Section Library** module from `1.1.0` to `1.1.1` ( `~1.1.0` ) and removed committed patches
+* Issue [#3379457](https://www.drupal.org/i/3379457):
+        Updated **Single Directory Components: Display** module from `1.x-dev` to `~1.0.0`
+* Issue [#3384004](https://www.drupal.org/i/3384004):
+        Updated the **Gin Admin Theme** from `3.0.0-rc5` to `3.0.0-rc6` and kept needed patches
+* Issue [#3382645](https://www.drupal.org/i/3382645):
+        Updated **Persistent Login** from `2.1.0` to `2.1.1` and kept needed patches
+* Issue [#3382652](https://www.drupal.org/i/3382652):
+        Updated **WebP** module from `1.0-beta7` to `~1.0` and removed committed patches
+* Issue [#3378806](https://www.drupal.org/i/3378806):
+        Updated **Link Attributes widget** module from `~2.0.0` to `~2.1.0` and enable the
+         new **Link attributes: Menu Link Content integration** sub module
+* Issue [#3377442](https://www.drupal.org/i/3377442):
+        Updated **Bootstrap Styles** module from `1.1.0` to `1.1.1` and removed committed patches
+* Issue [#3377449](https://www.drupal.org/i/3377449):
+        Updated **Bootstrap Layout Builder** module from `2.1.1` to `2.1.2` and removed committed patches
+* Issue [#3369934](https://www.drupal.org/i/3369934):
+        Updated **Link Attributes widget** module from `~1.0` to `~2.0.0`
+
+### Fixes since Varbase 10.0.0-alpha2:
+* Issue [#3366991](https://www.drupal.org/i/3366991):
+        Fixed Varbase's welcome message carousel indicator style following **Bootstrap `~5.3.0`** upgrade
+* Issue [#3366308](https://www.drupal.org/i/3366308):
+        Fixed Warning: Undefined array key properties
+* Issue [#3368943](https://www.drupal.org/i/3368943)
+        by [emircanerkul](https://www.drupal.org/u/emircanerkul)
+        : Fixed change of entity_embed as embed route name
+* Issue [#3371723](https://www.drupal.org/i/3371723):
+        Fixed **VBP Associate background** and foreground colors with CSS3 variables in SASS with PostCSS
+* Issue [#3375938](https://www.drupal.org/i/3375938):
+        Fixed Incomplete library definition for definition faq-styles in extension Varbase FAQs
+* Issue [#3371685](https://www.drupal.org/i/3371685):
+        Fixed missing **de2e (Display Edge-to-Edge auto)** fall back default background image
+         style after switching to Drimage
+* Issue [#3371370](https://www.drupal.org/i/3371370):
+        Fixed default color value in the enumeration of colors for `varbase_components:progress-bar`
+* Issue [#3374487](https://www.drupal.org/i/3374487):
+        Fixed Field tags label_display String value found, but a boolean or an object is required
+* Issue [#3373832](https://www.drupal.org/i/3373832)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed missing attributes for heading block
+* Issue [#3375184](https://www.drupal.org/i/3375184)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed duplicate key 'default_value' for 'impressed card' pattern
+* Issue [#3377189](https://www.drupal.org/i/3377189):
+        Fixed the style of media items when Media Library in Grid mode in LTR and RTL
+* Issue [#3376381](https://www.drupal.org/i/3376381):
+        Fixed **right-to-left (RTL)** view of video cover images when used with the Edge to Edge option
+* Issue [#3376371](https://www.drupal.org/i/3376371)
+        by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed to ensure that **Media Library widget display** returns to the first page when applying filters
+* Issue [#3378039](https://www.drupal.org/i/3378039):
+        Fixed **Varbase Media Video Player** icon for anonymous users
+* Issue [#3375286](https://www.drupal.org/i/3375286):
+        Fixed position to relative for Varbase Card components when having the Anchor All switcher option
+* Issue [#3377004](https://www.drupal.org/i/3377004)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Fixed spacing between columns for Featured Card with better Gutters Between prop and support Card Border with bordered
+* Issue [#3384268](https://www.drupal.org/i/3384268):
+        Fixed **Tour Switcher** selector and position after a fix in **Gin** for **Tour** module button missing in frontend themes
+* Issue [#3381466](https://www.drupal.org/i/3381466):
+        Fixed the **Button component** when having the HTML tag prop as anchor to provide a Link functionality caveat
+* Issue [#3381162](https://www.drupal.org/i/3381162):
+        Fixed **Heading component** on **Display Heading** and move content from props to slots
+* Issue [#3377592](https://www.drupal.org/i/3377592):
+        Fixed **Layout Builder style** of Dark by the **Gin** Admin them over **Claro** and **Bootstrap `~5.3.0`** and the Dark style by Bootstrap Styles module
+
+-------------------------------------------------------------------------------
+
 # 10.0.0-alpha2
 
 ### Highlighted important changes since Varbase 10.0.0-alpha1:
 * Updated **Drupal Core** from `10.1.0-beta1` to `10.1.0-rc1`
-* Issue [#3364705](https://www.drupal.org/i/3364705): Fixed Automated Functional testing for **Varbase `10.0.x`** with **SDC** and **Vartheme BS5**
-* Issue [#3313097](https://www.drupal.org/i/3313097): Allowed starterkit theme generator tool to clone **Vartheme BS5**
+* Issue [#3364705](https://www.drupal.org/i/3364705):
+        Fixed Automated Functional testing for **Varbase `10.0.x`** with **SDC** and **Vartheme BS5**
+* Issue [#3313097](https://www.drupal.org/i/3313097):
+        Allowed starterkit theme generator tool to clone **Vartheme BS5**
 * Started a **Varbase Docs `10.0.x`** workspace. Following up with changes over **Varbase** `~10` documentation
 
 
 ### Added since Varbase 10.0.0-alpha1:
-* Issue [#3364710](https://www.drupal.org/i/3364710): Added Fast 404 module ~3.0 back after a tag was released with support for Drupal 10
-* Issue [#3363615](https://www.drupal.org/i/3363615): Added a Bash script to Install Needed Tools for theme development with Vartheme BS5
+* Issue [#3364710](https://www.drupal.org/i/3364710):
+        Added Fast 404 module ~3.0 back after a tag was released with support for Drupal 10
+* Issue [#3363615](https://www.drupal.org/i/3363615):
+        Added a Bash script to Install Needed Tools for theme development with Vartheme BS5
 
 ### Changed since Varbase 10.0.0-alpha1:
-* Issue [#3364909](https://www.drupal.org/i/3364909): Removed **Block Content Permissions** module. As of **Drupal 10.1.x**, it is no longer needed
-* Issue [#3365011](https://www.drupal.org/i/3365011): Changed **Block Content Permissions** to Drupal Core permissions. As of **Drupal 10.1.x**, it is no longer needed
-* Issue [#3364708](https://www.drupal.org/i/3364708): Moved enabling of the Display Suite module from dependencies: to install: in Varbase Core
-* Issue [#3364691](https://www.drupal.org/i/3364691): Switched **Custom Permissions** module from `2.0.x-dev` to `~2.0` after a tag release with support for **Drupal 10**
+* Issue [#3364909](https://www.drupal.org/i/3364909):
+        Removed **Block Content Permissions** module. As of **Drupal 10.1.x**, it is no longer needed
+* Issue [#3365011](https://www.drupal.org/i/3365011):
+        Changed **Block Content Permissions** to Drupal Core permissions. As of **Drupal 10.1.x**, it is no longer needed
+* Issue [#3364708](https://www.drupal.org/i/3364708):
+        Moved enabling of the Display Suite module from dependencies: to install: in Varbase Core
+* Issue [#3364691](https://www.drupal.org/i/3364691):
+        Switched **Custom Permissions** module from `2.0.x-dev` to `~2.0` after a tag release with support for **Drupal 10**
 
 ### Updates since Varbase 10.0.0-alpha1:
-* Issue [#3364816](https://www.drupal.org/i/3364816): Updated **Admin Toolbar** module from `3.4.0` to `3.4.1` and kept needed patches
-* Issue [#3365138](https://www.drupal.org/i/3365138): Updated **Simple OAuth (OAuth2) & OpenID Connect** from `~5.0` to `~6.0`
-* Issue [#3364734](https://www.drupal.org/i/3364734): Updated **Drupal Symfony Mailer** from `~2.0` to `~2.3.0` and removed enabling Symfony Mailer Override Backward Compatibility sub module
-* Issue [#3365540](https://www.drupal.org/i/3365540): Updated **Configuration Inspector** module from `~2.0.0` to `~2.1.0`
-* Issue [#3365568](https://www.drupal.org/i/3365568): Updated **Component Libraries: Style Selector Field** module from `~1.0` to `~2.0`
-* Issue [#3365741](https://www.drupal.org/i/3365741): Updated **Devel** from `~5.0` to `~5.1.0`
+* Issue [#3364816](https://www.drupal.org/i/3364816):
+        Updated **Admin Toolbar** module from `3.4.0` to `3.4.1` and kept needed patches
+* Issue [#3365138](https://www.drupal.org/i/3365138):
+        Updated **Simple OAuth (OAuth2) & OpenID Connect** from `~5.0` to `~6.0`
+* Issue [#3364734](https://www.drupal.org/i/3364734):
+        Updated **Drupal Symfony Mailer** from `~2.0` to `~2.3.0` and removed enabling Symfony Mailer Override Backward Compatibility sub module
+* Issue [#3365540](https://www.drupal.org/i/3365540):
+        Updated **Configuration Inspector** module from `~2.0.0` to `~2.1.0`
+* Issue [#3365568](https://www.drupal.org/i/3365568):
+        Updated **Component Libraries: Style Selector Field** module from `~1.0` to `~2.0`
+* Issue [#3365741](https://www.drupal.org/i/3365741):
+        Updated **Devel** from `~5.0` to `~5.1.0`
 
 ### Fixes since Varbase 10.0.0-alpha1:
-* Issue [#3365284](https://www.drupal.org/i/3365284): Fixed JSON:API Extras no longer returns array with Symfony 6.0
-* Issue [#3365317](https://www.drupal.org/i/3365317): Fixed SCSS compilation for custom plugin Bootstrap Styles and resolve missing CSS files in varbase_layout_builder/gin library
-* Issue [#3364872](https://www.drupal.org/i/3364872): Fixed No moderated content available in the Moderated Content Admin View
-): Fixed No moderated content available in the Moderated Content Admin View
-* Issue [#3365595](https://www.drupal.org/i/3365595): Fixed Component Libraries: Blocks issue when saving configurations
-* Issue [#3364276](https://www.drupal.org/i/3364276): Fixed Error in Varbase Components - declared in both as a prop and as a slot
-* Issue [#3365677](https://www.drupal.org/i/3365677): Fixed Error in Vartheme BS5 Components - declared in both as a prop and as a slot
-* Issue [#3366029](https://www.drupal.org/i/3366029): Fixed style of Close Button for Drupal Messages on Varbase 10.0.x installation
+* Issue [#3365284](https://www.drupal.org/i/3365284):
+        Fixed JSON:API Extras no longer returns array with Symfony 6.0
+* Issue [#3365317](https://www.drupal.org/i/3365317):
+        Fixed SCSS compilation for custom plugin Bootstrap Styles and resolve missing CSS files in varbase_layout_builder/gin library
+* Issue [#3364872](https://www.drupal.org/i/3364872):
+        Fixed No moderated content available in the Moderated Content Admin View
+* Issue [#3277336](https://www.drupal.org/i/3277336):
+        Fixed Component Libraries: Blocks issue when saving configurations
+* Issue [#3364276](https://www.drupal.org/i/3364276):
+* Issue [#3277336](https://www.drupal.org/i/3277336):
+        Fixed Error in Varbase Components - declared in both as a prop and as a slot
+* Issue [#3365677](https://www.drupal.org/i/3365677):
+* Issue [#3277336](https://www.drupal.org/i/3277336):
+        Fixed Error in Vartheme BS5 Components - declared in both as a prop and as a slot
+* Issue [#3366029](https://www.drupal.org/i/3366029):
+* Issue [#3277336](https://www.drupal.org/i/3277336):
+        Fixed style of Close Button for Drupal Messages on Varbase 10.0.x installation
 
 -------------------------------------------------------------------------------
 
@@ -914,7 +1241,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
 
 ### Updates since Varbase 9.0.8:
 * Issue [#3315921](https://www.drupal.org/i/3315921)
-        by Qusai Taha
+        by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
        : Updated the **Update Helper** module from `3.0.3` to `3.0.4`
 * Issue [#3305198](https://www.drupal.org/i/3305198):
         Updated **Bootstrap library** from `4.6.1` to `4.6.2`
@@ -924,7 +1251,7 @@ https://github.com/twbs/bootstrap/releases/tag/v4.6.2
         Updated **Nodejs packages** to match with latest Drupal
         core for compiling and linting
 * Issue [#3306927](https://www.drupal.org/i/3306927)
-        by Qusai Taha
+        by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
        : Updated **Email Registration** module from `1.1` to `~1.0` and
         removed committed patches
 * Issue [#3307034](https://www.drupal.org/i/3307034):
@@ -1943,7 +2270,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
 
 ### Fixes since Varbase 9.0.0:
 * Issue [#3223560](https://www.drupal.org/i/3223560)
-        by Ahmad Abbad
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
        : Fixed outdated Nodejs version and the steps for how to create a new sub theme
 * Issue [#3222411](https://www.drupal.org/i/3222411):
         Fixed PHP 7.4 Warning: count(): Parameter must be an array or an object that
@@ -3798,7 +4125,7 @@ Bootstrap v4.6.0 was released
                 : Fixed js error appear when the theme request
                  quickedit.css file form core theme
 * Issue [#3143270](https://www.drupal.org/node/3143270)
-                 by abu-zakham
+                 by [abu-zakham](https://www.drupal.org/u/abu-zakham)
                 : Fixed minor code standard on generated Vartheme BS4 Sub-theme
 * Issue [#3142973](https://www.drupal.org/node/3142973)
                  by yasmeensalah
@@ -5391,7 +5718,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
 
 ### Fixes since Varbase 9.0.0:
 * Issue [#3223560](https://www.drupal.org/i/3223560)
-        by Ahmad Abbad
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
        : Fixed outdated Nodejs version and the steps for how to create a new sub theme
 * Issue [#3222411](https://www.drupal.org/i/3222411):
         Fixed PHP 7.4 Warning: count(): Parameter must be an array or an object that
@@ -7246,7 +7573,7 @@ Bootstrap v4.6.0 was released
                 : Fixed js error appear when the theme request
                  quickedit.css file form core theme
 * Issue [#3143270](https://www.drupal.org/node/3143270)
-                 by abu-zakham
+                 by [abu-zakham](https://www.drupal.org/u/abu-zakham)
                 : Fixed minor code standard on generated Vartheme BS4 Sub-theme
 * Issue [#3142973](https://www.drupal.org/node/3142973)
                  by yasmeensalah
