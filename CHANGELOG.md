@@ -1,3 +1,91 @@
+# 10.0.0-beta2
+
+### Highlighted important changes since Varbase 10.0.0-beta1:
+* Issue [#3385546](https://www.drupal.org/i/3385546):
+        Improved stories and **Auto-Docs** for Atomic components + integrate
+        with **Varbase Figma project Stylesheet**
+* Issue [#3388833](https://www.drupal.org/i/3388833):
+        Changed auto docs tags for stories in **Varbase Components** to the
+        `main.js` storybook file to update Storybook from `~7.0` to `~7.4.0`
+* Issue [#3387416](https://www.drupal.org/i/3387416):
+        Updated **Bootstrap** build from `5.3.1` to `5.3.2` for all **Varbase Components**
+* Issue [#3389272](https://www.drupal.org/i/3389272):
+        Switched **UI Patterns** from `2.0.x-dev` to `~1.0` version and added the **UI Patterns Field Formatters** module
+
+### Added since Varbase 10.0.0-beta1:
+* Issue [#3386522](https://www.drupal.org/i/3386522):
+        Added **Bootstrap** `~5.3.0` Carousel component with Auto-Doc MDX for Storybook
+* Issue [#3386988](https://www.drupal.org/i/3386988)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Added the **Bootstrap Ratio Utilities** package and import the
+        **Responsive Ratio Utility** in the Base Bootstrap SCSS
+* Issue [#3389775](https://www.drupal.org/i/3389775):
+        Added a new **Dynamic Responsive Image** component in Varbase Component library
+* Issue [#3388573](https://www.drupal.org/i/3388573):
+        Added **No Markup** module and enable it by default
+* Issue [#3388592](https://www.drupal.org/i/3388592):
+        Added the `league/commonmark` PHP library for better **Component Libraries: Editorial**
+* Issue [#3386986](https://www.drupal.org/i/3386986):
+        Added the **Responsive Ratio Utility** provided by the
+         **Bootstrap Ratio Utilities** for media video displays with cover images
+
+### Changed since Varbase 10.0.0-beta1:
+* Issue [#3391903](https://www.drupal.org/i/3391903):
+        Disabled **Component Libraries: Blocks, Editorial, and Selector Field** modules
+* Issue [#3389767](https://www.drupal.org/i/3389767):
+        Changed the default **Drimage implementation** to display a dynamic responsive image to use the `varbase_components:dynamic-responsive-image` SDC component
+* Issue [#3389809](https://www.drupal.org/i/3389809):
+        Sat the media original view mode as the default when creating a new
+        **Varbase Media (image/video) block** in Layout Builder
+* Issue [#3387914](https://www.drupal.org/i/3387914)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Removed **Allowed Formats** module from **Varbase Core**, as it was added in Drupal `~10.1.0` core
+* Issue [#3388011](https://www.drupal.org/i/3388011)
+        by [Rahaf Albawab](https://www.drupal.org/u/rahaf-albawab)
+       : Freezed the use of wiled card over **Blazy** and **Slick** modules, at `blazy-2.16.0`,
+        `slick-2.9.0`, and `slick_views-2.7.0`
+* Issue [#3391932](https://www.drupal.org/i/3391932):
+        Changed the Blocks available for placement (all layouts & regions) for the
+        **Varbase Landing Page** content type with Layout Builder
+* Issue [#3391925](https://www.drupal.org/i/3391925):
+        Removed no longer needed `chartjs`, `c3`, and `d3` charts libraries
+
+### Updates since Varbase 10.0.0-beta1:
+* Issue [#3391006](https://www.drupal.org/i/3391006):
+        Updated **Admin Toolbar** module from `3.4.1` to `3.4.2` and kept needed patches
+* Issue [#3387268](https://www.drupal.org/i/3387268):
+        Updated **JSON:API Extras** module from `3.23.0` to `3.24.0` ( `~3.0` ) and removed committed patches
+* Issue [#3391678](https://www.drupal.org/i/3391678):
+        Updated the **Swagger UI for OpenAPI UI** module from `1.x-dev` to `~1.0` stable
+        release with full support for Drupal `~10.1.0`
+* Issue [#3386828](https://www.drupal.org/i/3386828):
+        Updated **Bootstrap Styles** module from `1.1.1` to `1.1.2` and removed committed patches
+* Issue [#3389387](https://www.drupal.org/i/3389387):
+        Updated **Bootstrap Styles** module from `1.1.2` to `1.1.4` and kept needed patches
+* Issue [#3390239](https://www.drupal.org/i/3390239):
+        Updated **Bootstrap Styles** module from `1.1.4` to `1.1.5` and kept needed patches
+* Issue [#3390250](https://www.drupal.org/i/3390250):
+        Updated **Content Moderation Notifications** module
+        from `3.5.0` to `3.6.0` and kept needed patches
+
+### Fixes since Varbase 10.0.0-beta1:
+* Issue [#3390496](https://www.drupal.org/i/3390496):
+        Fixed passing the alt text for the image in the theme implementation to display a
+        dynamic responsive image component
+* Issue [#3386684](https://www.drupal.org/i/3386684):
+        Fixed **Layout Builder Modal dialog UI**s z-index over the overlay after
+        Drupal `10.1.3` and Gin `3.0-rc6`
+* Issue [#3390982](https://www.drupal.org/i/3390982)
+        by [YazanMajadba](https://www.drupal.org/u/yazanmajadba)
+       : Fixed with a switch to support generate Absolute String using
+        the **Drupal 10** file_url_generator service as the function was deprecated
+* Issue [#3389764](https://www.drupal.org/i/3389764):
+        Fixed the template for the inline **Varbase HTML code block**
+* Issue [#3389779](https://www.drupal.org/i/3389779):
+        Fixed label and content for the **Varbase HTML code block** component
+
+-------------------------------------------------------------------------------
+
 # 10.0.0-beta1
 
 ### Highlighted important changes since Varbase 10.0.0-alpha2:
