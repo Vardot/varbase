@@ -10,7 +10,7 @@ The welcome message is made possible by having Varbase Tour module
      When I check the box "Allow site to show welcome message"
      Then I should see the "Allow site to show welcome message" checkbox checked
      When I press "Save configuration"
-      And I wait
+      And wait
      Then I should see "The configuration options have been saved."
 
   @javascript @local @development @staging @production
