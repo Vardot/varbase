@@ -866,7 +866,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   public function iOpenTheSectionSettingsMenu($menu) {
     $this->iMoveToTheSectionStylesTab();
     $js = <<<JS
-			var title = "$menu";
+      var title = "$menu";
 			const xpath = "//span[contains(text(),'" + title + "')]";
 			const js_menu = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 			js_menu.closest("details").setAttribute("open", "");
@@ -1002,7 +1002,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 					var js_side = "$side";
 					var js_value = "$value";
 					jQuery(".bs-field-padding-" + js_side).val(js_value);
-                    JS;
+          JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1043,7 +1043,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 					var js_side = "$side";
 					var js_value = "$value";
 					jQuery(".bs-field-margin-" + js_side).val(js_value);
-                    JS;
+          JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1115,10 +1115,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         else {
           $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-$b_side')]")->click();
           $js = <<<JS
-						var js_side = "$b_side";
-						var js_width = "$b_width";
-						jQuery(".bs-field-border-width-" + js_side).val(js_width);
-                    JS;
+					var js_side = "$b_side";
+					var js_width = "$b_width";
+					jQuery(".bs-field-border-width-" + js_side).val(js_width);
+          JS;  
           $this->getSession()->executeScript($js);
         }
       }
@@ -1194,7 +1194,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 					var js_value = "$value";
 					js_corner = js_corner.replace(' ', '_');
 					jQuery(".bs-field-rounded-corner-" + js_corner).val(js_value);
-                    JS;
+          JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -2055,7 +2055,7 @@ JS;
     $js = <<<JS
 		var group = document.getElementById("{$fieldID}");
 		group.setAttribute("open","");
-JS;
+    JS;
     $this->getSession()->executeScript($js);
   }
 
@@ -2073,7 +2073,7 @@ JS;
     $js = <<<JS
 		var group = document.getElementsByClassName("{$listClassName}")[{$index}];
 		group.className += "open";
-JS;
+    JS;
     $this->getSession()->executeScript($js);
   }
 
