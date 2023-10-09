@@ -11,7 +11,7 @@ So that I will be able to create a content then I will have the option to transl
 #
 # ../../../../bin/behat tests/features/varbase/step3-cleanup-tests/2-delete-arabic.feature
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if site admin can translate an existing English Basic Page to an Arabic version.
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"

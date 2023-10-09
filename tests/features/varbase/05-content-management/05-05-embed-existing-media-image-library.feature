@@ -8,7 +8,7 @@ So that it will show up under that rich text field without having to upload the 
 
   # Create the Basic page and upload the file to the library before the test case.
   # ----------------------------------------------------------------------------
-   @javascript @local @development @staging @production
+   @javascript @insulated @local @development @staging @production
    Scenario: Create the Test Basic page to embed existing files content
       When I go to "/node/add/page"
        And wait
@@ -19,7 +19,7 @@ So that it will show up under that rich text field without having to upload the 
        And wait
       Then I should see "Basic page Test Basic page to embed existing files has been created."
 
-   @javascript @local @development @staging @production
+   @javascript @insulated @local @development @staging @production
    Scenario: Upload the  Embed Flag Earth file
       When I go to "/media/add/image"
        And wait

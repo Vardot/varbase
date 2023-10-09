@@ -6,35 +6,35 @@ So that I can use them to enable or disable API service for Varbase APIs.
   Background:
     Given I am a logged in user with the "webmaster" user
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check the Varbase API settings in admin configurations page
      When I go to "/admin/config"
       And wait
      Then I should see "JSON:API"
       And I should see "Varbase API settings"
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check JSON:API configurations
      When I go to "/admin/config/services/jsonapi"
       And wait
      Then I should see "JSON:API"
       And I should see "Allowed operations"
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check JSON:API Extras configurations
      When I go to "/admin/config/services/jsonapi/extras"
       And wait
      Then I should see "JSON:API Extras"
       And I should see "api" value in the "edit-path-prefix" input element
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check JSON:API Resource overrides
      When I go to "/admin/config/services/jsonapi/resource_types"
       And wait
      Then I should see "JSON:API Resource overrides"
       And I should see "The following table shows the list of JSON:API resource types available."
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check Varbase API settings and Generate keys
      When I go to "/admin/config/system/varbase/api"
       And wait
@@ -45,7 +45,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And wait
      Then I should see "Path to the directory in which to store the generated keys."
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check Open API settings and documentation pages
      When I go to "/admin/config/services/openapi"
       And wait
@@ -53,7 +53,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And I should see "Rest"
       And I should see "JSON:API"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Upload a Media entity test for API
      Given I am a logged in user with the "Site admin" user
       When I go to "/media/add/image"
@@ -70,7 +70,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
        And wait
       Then I should see "Media entity test"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Add a term "space" tag term for JSON:API to test.
      Given I am a logged in user with the "Site admin" user
       When I go to "/admin/structure/taxonomy/manage/tags/add"
@@ -83,7 +83,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       Then I should see "Tags"
        And I should see "space"
 
- @javascript @check @local @development @staging @production
+ @javascript @insulated @check @local @development @staging @production
   Scenario: Check that Site Admin users can access "View JSON" and "View API Docs" entity operations
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
@@ -118,7 +118,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       But I should not see the "Edit items" operation for the "Media Hero Slider" entity
       
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check that Content Admin users can not access "View JSON" and "View API Docs" entity operations
     Given I am a logged in user with the "Content admin" user
      When I go to "/admin/content"
@@ -151,7 +151,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       But I should not see the "Edit items" operation for the "Media Hero Slider" entity
 
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check that Editor users can access "View JSON" and "View API Docs" entity operations
     Given I am a logged in user with the "Editor" user
      When I go to "/admin/content"

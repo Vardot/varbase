@@ -3,7 +3,7 @@ As a logged in user with a permission to mange Landing pages
 I want to be able to add any paragraph type to the page
 So that the Landing page (Paragraphs) will show up having paragrpahs of different types
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file
      Given I am a logged in user with the "Site admin" user
       When I go to "/media/add/image"
@@ -22,7 +22,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       Then I should see "Embed Flag Earth"
   #-----------------------------------------------------------------------------
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check Varbase Bootstrap Paragraphs settings
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/varbase/varbase-bootstrap-paragraphs"
@@ -32,7 +32,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I press "Save configuration"
      Then I should see "The configuration options have been saved."
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Drupal Block
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page"
@@ -54,7 +54,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page Drupal Block has been created"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Columns Equal
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page"
@@ -73,7 +73,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page Columns (Equal) has been created"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Columns Two Uneven
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page"
@@ -92,7 +92,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page Columns (Two Uneven) has been created"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type Rich Text
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page"
@@ -114,7 +114,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
      Then I should see "Landing page (Paragraphs) Test Landing page Rich Text has been created"
       And I should see "Rich Text test"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type can add paragraphs of type WebForm
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page"

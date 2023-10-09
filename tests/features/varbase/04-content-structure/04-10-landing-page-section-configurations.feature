@@ -1,7 +1,7 @@
 Feature: Demo for newly added step definitions 
 As a site admin, I will create a new landing page, add a section with different section settings/configurations
 
-@javascript @local @development
+@javascript @insulated @local @development
   Scenario: Check if a site admin can create a landing page and add sections to it with different container types
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"

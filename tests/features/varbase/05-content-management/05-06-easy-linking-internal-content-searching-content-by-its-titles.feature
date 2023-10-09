@@ -3,7 +3,7 @@ As a content admin
 I want to be able to add internal links searching the title of an internal content
 So that will ease the work of adding internal links in the rich text editor fields.
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if inserted raw URL will convert into a link when we save when We are using the Visual editor text format
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"

@@ -6,14 +6,14 @@ So that I will be able to manage files, see where they have been used in content
   Background:
     Given I am a logged in user with the "Site admin" user
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if content admins can access the content files page
      When I go to "admin/content/media"
       And wait
      Then I should see "Add media"
       And I should not see "Access denied"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if we do have a file named Flag Earth, if not then upload the file dependently
       When I go to "/media/add/image"
        And wait
@@ -34,7 +34,7 @@ So that I will be able to manage files, see where they have been used in content
       Then I should see "Add media"
        And I should see the "Edit" in the "Flag Earth" row
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if content admins can edit files
      When I go to "/admin/content/media"
       And wait
@@ -52,7 +52,7 @@ So that I will be able to manage files, see where they have been used in content
       And wait
      Then I should see "Image Flag Earth after edit has been updated."
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Check if content admins can delete files
      When I go to "/admin/content/media"
       And wait

@@ -3,7 +3,7 @@ As a Visitor to the site
 I want to be able to see the back path
 So that I can see path I followed to locate the current page usually near the top of the page
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Add the Test Basic page root page to the main menu
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"
@@ -20,7 +20,7 @@ So that I can see path I followed to locate the current page usually near the to
      Then I should see "Test Basic page root title"
       And I should see "Test Basic page root body"
 
-  @javascript @local @development @staging @production
+  @javascript @insulated @local @development @staging @production
   Scenario: Add the Test Basic page sub 1, then check the breadcrumb
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"

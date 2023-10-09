@@ -3,7 +3,7 @@ As a logged in user with a permission to mange Landing (Layout Builder) pages
 I want to be able to add sections with any layouts to the page
 So that the "Landing (Layout Builder) page" will show up having the listed section with their content
 
-@javascript @local @development @staging @production
+@javascript @insulated @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Layout Builder) content type can add sections with any layouts to the page
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
@@ -42,7 +42,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
   
-  @javascript @local @development
+  @javascript @insulated @local @development
   Scenario: Check that Site admins can add a two coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
@@ -113,7 +113,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 2 cols section, col 1"
       And I should see "Rich text in 2 cols section, col 2"
   
-  @javascript @local @development
+  @javascript @insulated @local @development
   Scenario: Check that Site admins can add a three coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
@@ -201,7 +201,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 3 cols section, col 2"
       And I should see "Rich text in 3 cols section, col 3"
 
-  @javascript @local @development
+  @javascript @insulated @local @development
   Scenario: Check that Site admins can add a foure coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
@@ -307,7 +307,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 4 cols section, col 3"
       And I should see "Rich text in 4 cols section, col 4"
 
-  @javascript @local @development
+  @javascript @insulated @local @development
   Scenario: Check that Site admins can add a six coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"

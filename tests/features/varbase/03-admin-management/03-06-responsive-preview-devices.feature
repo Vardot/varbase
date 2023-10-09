@@ -6,7 +6,7 @@ So that I can make sure that the site looks good in small devices too.
   Background:
     Given I am a logged in user with the "webmaster" user
 
-  @javascript @check @local @development @staging @production
+  @javascript @insulated @check @local @development @staging @production
   Scenario: Check the site in a number of responsive preview devices
      When I go to the homepage
       And wait
