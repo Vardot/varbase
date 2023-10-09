@@ -525,7 +525,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
   /*
    * ===========================================================================
-   * Rich text editor Functions CKEditor 5.
+   * Rich text editor Functions CKEditor 4.
    * ===========================================================================
    */
 
@@ -543,11 +543,19 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $el = $this->getSession()->getPage()->findField($locator);
     $fieldId = $el->getAttribute('id');
 
+    if ($fieldId == NULL) {
+      // If the WYSIWYG is in an iframe with no id.
+      $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
+      if (!empty($iFrameID)) {
+        $fieldId = $iFrameID;
+      }
+    }
+
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(\"$value\");");
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\");");
   }
 
   /**
@@ -569,14 +577,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    // Find the command button by the select command.
-    $element = $this->getSession()->getPage()->find('xpath', "//button[span[text()='$selectorCommand']]");
-
-    if (is_null($element)) {
-      throw new \Exception("The $selectorCommand command button in the rich text editor field $locator was not found");
-    }
-    $element->click();
-
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].execCommand( '$selectorCommand' );");
 
   }
 
@@ -596,11 +597,19 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $el = $this->getSession()->getPage()->findField($locator);
     $fieldId = $el->getAttribute('id');
 
+    if ($fieldId == NULL) {
+      // If the WYSIWYG is in an iframe with no id.
+      $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
+      if (!empty($iFrameID)) {
+        $fieldId = $iFrameID;
+      }
+    }
+
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData()+\"$value\");");
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(CKEDITOR.instances[\"$fieldId\"].getData()+\"$value\");");
   }
 
   /**
@@ -618,11 +627,19 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $el = $this->getSession()->getPage()->findField($locator);
     $fieldId = $el->getAttribute('id');
 
+    if ($fieldId == NULL) {
+      // If the WYSIWYG is in an iframe with no id.
+      $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', "Rich Text Editor, " . $el->getAttribute('id'), 'iframe');
+      if (!empty($iFrameID)) {
+        $fieldId = $iFrameID;
+      }
+    }
+
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(\"$value\"+Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData());");
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\"+CKEDITOR.instances[\"$fieldId\"].getData());");
   }
 
   /**
@@ -637,12 +654,13 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function moveFocusToTheRichTextEditorField($selectedField) {
     $el = $this->getSession()->getPage()->findField($selectedField);
-    $fieldId = $el->getAttribute('id');
+    $fieldid = $el->getAttribute('id');
 
-    if (empty($fieldId)) {
+    if (empty($fieldid)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
-    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).editing.view.focus()");
+
+    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].focus();");
   }
 
   /**
@@ -650,49 +668,23 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I select all text in "Body" rich text editor field
-   * Example #2:  And I select all text in "Body" rich text editor field
+   * Example #1: When I select all text in "Body" field
+   * Example #2:  And I select all text in "Body" field.
    *
    * @When /^(?:|I )select all text in "(?P<selectedField>[^"]*)" rich text editor field$/
    */
   public function selectAllTextInTheRichTextEditorField($selectedField) {
     $el = $this->getSession()->getPage()->findField($selectedField);
-    $fieldId = $el->getAttribute('id');
+    $fieldid = $el->getAttribute('id');
 
-    if (empty($fieldId)) {
+    if (empty($fieldid)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
 
-    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).execute( 'selectAll' );");
+    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].execCommand('selectAll', false, null);");
+    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].forceNextSelectionCheck();");
+    $this->getSession()->getDriver()->evaluateScript("CKEDITOR.instances[\"$fieldid\"].selectionChange();");
 
-  }
-
-  /**
-   * Click on the save button in the the rich text editor field
-   *
-   * Varbase Context #varbase.
-   *
-   * Example 1: I click on the save button in "Body" rich text editor field
-   *
-   * @Given /^I click on the save button in "(?P<selectedField>[^"]*)" rich text editor field$/
-   */
-  public function iClickOnTheSaveButtonInTheEditor($selectedField) {
-    $selectorFieldElement = $this->getSession()->getPage()->findField($selectedField);
-    $fieldId = $selectorFieldElement->getAttribute('id');
-
-    if (empty($fieldId)) {
-      throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
-    }
-
-    // Find the save button for the current selected field
-    $element = $this->getSession()->getPage()->find('css', "button.ck.ck-button.ck-off.ck-button-save");
-
-    if (empty($element)) {
-      throw new \Exception("No save button for the {$selectedField} rich text editor field.");
-    }
-
-    // Click the save button.
-    $element->click();
   }
 
   /**
