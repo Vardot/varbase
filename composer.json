@@ -30,9 +30,9 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^9 || ^10",
-    "drupal/core": "~9.0 || ~10.0",
-    "drupal/varbase_core": "9.0.x-dev",
+    "drupal/core-composer-scaffold": "~10",
+    "drupal/core": "~10.1.0",
+    "drupal/varbase_core": "9.1.x-dev",
     "drupal/varbase_api": "9.0.x-dev",
     "drupal/varbase_media": "9.0.x-dev",
     "drupal/varbase_editor": "9.0.x-dev",
@@ -51,8 +51,8 @@
     "drupal/varbase_workflow": "2.0.x-dev",
     "drupal/vartheme_bs4": "9.0.x-dev",
     "drupal/vartheme_claro": "3.0.x-dev",
-    "vardot/entity-definition-update-manager": "~1.0 || 1.0.x-dev",
-    "vardot/module-installer-factory": "~1.0 || 1.0.x-dev",
+    "vardot/entity-definition-update-manager": "1.0.x-dev",
+    "vardot/module-installer-factory": "1.0.x-dev",
     "bower-asset/objectfitpolyfill": "~2.0",
     "bower-asset/chartjs": "~4.0",
     "bower-asset/c3": "0.7.*",
@@ -67,10 +67,10 @@
     "npm-asset/swagger-ui-dist": "~3.0"
   },
   "require-dev": {
-    "drupal/core-dev": "~9.0 || ~10.0",
+    "drupal/core-dev": "~10",
     "drush/drush": "~11.0",
-    "drupal/drupal-extension": "~4.0",
-    "emuse/behat-html-formatter": "^0.2.0",
+    "drupal/drupal-extension": "5.0.0alpha1",
+    "webship/behat-html-formatter": "~1.0",
     "drevops/behat-screenshot": "~1.0"
   },
   "config": {
@@ -86,8 +86,8 @@
       "drupal/core-composer-scaffold": true,
       "drupal/core-project-message": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "vardot/varbase-updater": true,
-      "phpstan/extension-installer": true
+      "phpstan/extension-installer": true,
+      "vardot/varbase-updater": true
     }
   },
   "autoload": {

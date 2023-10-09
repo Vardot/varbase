@@ -5,15 +5,12 @@ dependencies:
     - system
     - node
     - block
-    - user
-id: site_admin
-label: 'Site Admin'
-weight: -5
+id: seo_admin
+label: 'SEO Admin'
+weight: -6
 is_admin: null
 permissions:
-  - 'administer blocks'
   - 'access content overview'
-  - 'revert all revisions'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'administer menu'
@@ -21,5 +18,3 @@ permissions:
   - 'access site in maintenance mode'
   - 'access site reports'
   - 'view the administration theme'
-  - 'administer account settings'
-  - 'administer users'

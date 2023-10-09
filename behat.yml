@@ -16,28 +16,6 @@ default:
                 SEO admin: { email: 'test.seo_admin@vardot.com', password: 'dD.123123ddd' }
                 Site admin: { email: 'test.site_admin@vardot.com', password: 'dD.123123ddd' }
                 Super admin: { email: 'test.super_admin@vardot.com', password: 'dD.123123ddd' }
-        - VarbaseSelectorsContext:
-           parameters:
-             selectors:
-               ## Add all css selectors which you will use in most features.
-               css:
-                 breadcrumb: ".breadcrumb"
-                 breadcrumb first link: ".breadcrumb li:nth-child(1) a"
-                 image button in rich text editor body field: "#cke_edit-body-und-0-value .cke_button__image"
-
-               ## Add all XPath selectors which you will use in most features.
-               xpath:
-                 page title: '//h1[contains(@class, "page-header")'
-                 textarea for body field: '//*[@id="edit-body-und-0-value"]'
-                 rich text editor for body field: '//iframe[@title="Rich Text Editor, edit-body-und-0-value"]'
-                 HTML editor for body field: '//*[@id="edit-body-und-0-value-aced"]'
-
-             ## You can add list of selectors which you will use in most features.
-             #  But by loading them from files.
-             files_path: "%paths.base%/tests/selectors/"
-             files:
-               - "varbase/front-end-selectors.yml"
-               - "varbase/back-end-selectors.yml"
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\DrushContext
         - Drupal\DrupalExtension\Context\MessageContext
@@ -97,7 +75,11 @@ default:
       javascript_session: selenium2
     Drupal\DrupalExtension:
       blackbox: ~
-      api_driver: 'drupal'
+      api_driver: 'drupal' 
+      drush:
+        alias: 'local'
+      drupal: 
+        drupal_root: '/var/www/html/test/varbase/docroot' 
       region_map:
         content: ".main-container"
         footer: "#footer"
@@ -110,7 +92,7 @@ default:
         error_message_selector: '.messages.error'
         success_message_selector: '.messages.status'
         warning_message_selector: '.messages.warning'
-    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+    webship\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
       renderer: Twig,Behat2
       file_name: index
