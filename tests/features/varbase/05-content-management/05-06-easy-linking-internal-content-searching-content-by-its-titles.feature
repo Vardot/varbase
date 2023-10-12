@@ -22,11 +22,11 @@ So that will ease the work of adding internal links in the rich text editor fiel
      When I select "full_html" from "Text format"
       And I fill in "Linking to internal content #2 title" for "Title"
       And I fill in the rich text editor field "Body" with " Linking to internal content #2 body "
-      And I click on "Link" command button in the rich text editor field "Body"
+      And I click on "drupallink" command button in the rich text editor field "Body"
       And I wait for AJAX to finish
       And I wait 2s
       And I wait for AJAX to finish
-     Then I should see "Add link"
+     Then I should see "Add Link"
      When I fill in "Linking" for "URL"
       And I press the " " key in the "URL" field
       And I press the "t" key in the "URL" field
