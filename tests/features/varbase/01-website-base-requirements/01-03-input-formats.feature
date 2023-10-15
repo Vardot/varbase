@@ -3,7 +3,7 @@ As a logged in user with a permission to edit content
 I want to be able to switch between input formats
 So that can use different type of rich text editors.
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check if Site Admin user can change the text format for the body of Basic page
     Given I am a logged in user with the "Site admin"
      When I go to "/node/add/page"
@@ -25,7 +25,7 @@ So that can use different type of rich text editors.
      Then I should see the "#edit-body-0-value" element in the "field body"
       And I should not see the "#cke_edit-body-0-value" element in the "field body"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check if Super Admin user can change the text format for the body of Basic page
     Given I am a logged in user with the "Super admin"
      When I go to "/node/add/page"

@@ -3,7 +3,7 @@ As a logged in user with a permission to manage entity queues
 I well be able to see an Entity queue tab inside the full content page of a selected content
 So that I can Add to queue or Remove from queue for the content.
 
-@javascript @insulated @local @development
+@javascript  @local @development
 Scenario: Check if queuable content have the Entityqueue tab at the full content page and can Add to queue or Remove from queue
   Given I am a logged in user with the "Super admin" user
    When I go to "/node/add/test_content"

@@ -1,7 +1,7 @@
 Feature: The welcome message should be displayed on first visit to the site
 The welcome message is made possible by having Varbase Tour module
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check if welcome message is enabled
     Given I am a logged in user with the "webmaster" user
       And I go to "/admin/config/varbase/settings"
@@ -13,7 +13,7 @@ The welcome message is made possible by having Varbase Tour module
       And wait
      Then I should see "The configuration options have been saved."
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check if welcome message and tour are displayed
     Given I am a logged in user with the "webmaster" user
       And I go to "/?welcome"
@@ -33,7 +33,7 @@ The welcome message is made possible by having Varbase Tour module
      When I click "Next" in the "button" element with the "class" attribute set to "button button--primary shepherd-button "
      Then I should see "Site Content"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check if welcome message is disabled after closing it
     Given I am a logged in user with the "webmaster" user
       And I go to "/admin/config/varbase/settings"

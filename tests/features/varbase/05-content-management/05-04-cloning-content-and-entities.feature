@@ -2,7 +2,7 @@ Feature: Content Management - Cloning content and entities
 As a logged in user with a permission to mange entities
 I want to be able to clone an entity.
 
-@javascript @insulated @local @development
+@javascript  @local @development
   Scenario: Check if a user with a permission can clone a Landing page (Paragraphs)
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page"
@@ -45,7 +45,7 @@ I want to be able to clone an entity.
       And wait
      Then I should see "Test Clone landing page - Cloned"
 
-  @javascript @insulated @local @development
+  @javascript  @local @development
   Scenario: Check if a user with a permission deleted a cloned entity the original will not affected
     Given I am a logged in user with the "Super admin" user
      When I go to "/admin/content"

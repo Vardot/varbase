@@ -1,3 +1,148 @@
+# 9.0.16
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+
+> Paving the way for a smoother upgrade process to **Drupal 10**
+
+### Highlighted important changes since Varbase 9.0.15:
+
+* Issue [#3392564](https://www.drupal.org/i/3392564):
+        Updated the **Varbase `9.0.x`** branch to use **Drupal `~10.1.0`**
+* [Updating Varbase `~9.0` to Drupal `10`](https://docs.varbase.vardot.com/developers/updating-varbase/version-update-guides/updating-varbase-9.0-to-drupal-10)
+* Issue [#3392444](https://www.drupal.org/i/3392444):
+         Revamped the `9.1.x` branch for Varbase Core module to work with
+         **Drupal** `~10.1.0` and custom needed changes for a smoother upgrade process
+* Issue [#3392577](https://www.drupal.org/i/3392577):
+        Revamped the `9.1.x` branch for **Varbase Editor** to work with
+        **Drupal** `~10.1.0` and custom needed changes for a smoother upgrade process
+* Issue [#3394196](https://www.drupal.org/i/3394196):
+        Updated default used **Drush** from `~11.0` to `~12.0`
+* [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers/updating-varbase/updating-drush-to-the-latest-stable-version)
+
+
+> Absolutely, additional checks and status updates are required for extra used contrib modules and themes in the projects.
+
+> In numerous projects, contrib modules frequently contain outdated PHP code, including deprecated classes, functions, or libraries. Moreover, many of these projects make use of deprecated JavaScript components, such as JQuery UI libraries, or employ outdated Drupal 9 methods.
+
+> [Drupal 9 support will end in November 2023](https://www.drupal.org/docs/understanding-drupal/drupal-9-release-date-and-what-it-means/how-long-will-drupal-9-be-supported#s-drupal-9-support-will-end-in-november-2023)
+> November 1, 2023 (UTC) Drupal 9 reaches end-of-life due to its dependency on Symfony 4.
+Reference: Symfony 4.4 release checker.
+> [What to do about Drupal 9's end of life in November 2023](https://dev.acquia.com/blog/what-do-about-drupal-9s-end-life-november-2023)
+
+
+> [Drush 11 support will end in November 2023](https://www.drush.org/12.x/install/#drupal-compatibility)
+
+All old **Varbase** `9.0.x` sites are ready to upgrade to **Drupal** `~10.1.0`
+
+### Added since Varbase 9.0.15:
+* Issue [#3393168](https://www.drupal.org/i/3393168):
+        Support **Drupal** `~10.1.0`, **CKEditor** `4`, **CKEditor** `5` at the same time
+        in **Varbase Media** with number of fixes for **Embed** and **Entity Embed** modules
+* Issue [#3392696](https://www.drupal.org/i/3392696):
+        Added a patch for **CKEditor** `4` module to fix issue with
+        **Drupal** `~10.1.0` and added the `textmatch` vendor plugin
+* Issue [#3393696](https://www.drupal.org/i/3393696):
+        Added **Drush 12 compatibility** for the **CKEditor Media Embed Plugin** module
+* Issue [#3344805](https://www.drupal.org/i/3344805):
+        Added Permissions for user roles to **Varbase Core** from scanned `config/permissions` directory
+* Issue [#3344813](https://www.drupal.org/i/3344813):
+        Added Permissions for user roles to **Varbase Media** from scanned `config/permissions` directory
+* Issue [#3344807](https://www.drupal.org/i/3344807):
+        Added Permissions for user roles to **Varbase Editor** from scanned Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) `config/permissions` directory
+* Issue [#3344811](https://www.drupal.org/i/3344811):
+        Added Permissions for user roles to **Varbase Layout** Builder from scanned Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) `config/permissions` directory
+* Issue [#3344791](https://www.drupal.org/i/3344791):
+        Added Permissions for user roles to **Varbase API** from scanned `config/permissions` Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) directory
+* Issue [#3344818](https://www.drupal.org/i/3344818):
+        Added Permissions for user roles to **Varbase Social Single Sign-On** from scanned Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) `config/permissions` directory
+* Issue [#3344801](https://www.drupal.org/i/3344801):
+        Added Permissions for user roles to **Varbase Carousels** from scanned `config/permissions` directory
+* Issue [#3344808](https://www.drupal.org/i/3344808):
+        Added Permissions for user roles to **Varbase Email** from scanned `config/permissions` Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) directory
+* Issue [#3344810](https://www.drupal.org/i/3344810):
+        Added Permissions for user roles to **Varbase Landing Page (Paragraphs)** from scanned Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) `config/permissions` directory
+* Issue [#3344800](https://www.drupal.org/i/3344800):
+        Added Permissions for user roles to **Varbase Bootstrap Paragraphs** from scanned Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) `config/permissions` directory
+* Issue [#3344821](https://www.drupal.org/i/3344821):
+        Added Permissions for user roles to **Varbase Workflow** from scanned Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) `config/permissions` directory
+* Issue [#3393952](https://www.drupal.org/i/3393952):
+        Added Permissions for user roles to **Varbase Total Control Dashboard** from scanned Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first ) `config/permissions` directory
+* Issue [#3341637](https://www.drupal.org/i/3341637):
+        Added permissions to the **SEO Admin user** role for **Varbase Dashboards** default dashboard
+
+### Changed since *Varbase 9.0.15:
+* Issue [#3388011](https://www.drupal.org/i/3388011)
+        by [Rahaf Albawab](https://www.drupal.org/u/rahaf-albawab)
+       : Freezed the use of wiled card over **Blazy** and **Slic** modules, at **`blazy-2.16.0`**, **`slick-2.9.0`**, and **`slick_views-2.7.0`**
+* Issue [#3392945](https://www.drupal.org/i/3392945):
+        Removed the **Better Normalizers** module from **Varbase Core** ( Uninstall first )
+* Issue [#3383538](https://www.drupal.org/i/3383538):
+        Removed **Allowed Formats** module, as it was added in **Drupal `~10.1.0`** core
+
+
+### Updates since Varbase 9.0.15:
+* Issue [#3393654](https://www.drupal.org/i/3393654):
+        Updated the **Update Helper** module from `3.0.4` to `3.0.4 || 4.0.0` to support **Drush** `~12.0` and kept needed patches
+* Issue [#3393644](https://www.drupal.org/i/3393644):
+        Updated **Checklist API** module from `2.1.1` to `~2.1.0` and removed committed patches
+* Issue [#3386304](https://www.drupal.org/i/3386304):
+        Updated **Selenium Standalone server** to `4.1.2` on `4445` port with **Chrome browser** `115.0.5790.110-1` and **Chrome Driver** `114.0.5735.90` version for automated testing in **Circle CI**
+* Issue [#3392590](https://www.drupal.org/i/3392590):
+        Updated **Rabbit Hole** module from `~1.0` to `~2.0`
+* Issue [#3386828](https://www.drupal.org/i/3386828):
+        Updated **Bootstrap Styles** module from `1.1.1` to `1.1.2` and removed committed patches
+* Issue [#3389387](https://www.drupal.org/i/3389387):
+        Updated **Bootstrap Styles** module from `1.1.2` to `1.1.4` and kept needed patches
+* Issue [#3390239](https://www.drupal.org/i/3390239):
+        Updated **Bootstrap Styles** module from `1.1.4` to `1.1.5` and kept needed patches
+* Issue [#3390250](https://www.drupal.org/i/3390250):
+        Updated **Content Moderation Notifications** module from `3.5.0` to `3.6.0` and kept needed patches
+* Issue [#3393303](https://www.drupal.org/i/3393303):
+        Updated **Linkit** module from `6.1.1` to `6.1.2` and kept needed patches to keep supporting CKEditor 4 under Drupal 10
+* Issue [#3393631](https://www.drupal.org/i/3393631):
+        Updated the **Paragraphs** module from `1.15.0` to `1.16.0` and kept needed patches
+* Issue [#3394030](https://www.drupal.org/i/3394030):
+        Updated the **Entity Browser Enhance(d|r)** module from `~1.0` to `~1.0 || ~2.0.0` to support a smoother upgrade process
+* Issue [#3393299](https://www.drupal.org/i/3393299):
+        Updated **Linkit** module from `6.0.0-rc2` to `6.0.2` and kept needed patches to keep support for **Drupal** `~9.0`
+
+### Fixes since Varbase 9.0.15:
+* Issue [#3391602](https://www.drupal.org/i/3391602):
+        by [Mohammad Faqeh](https://www.drupal.org/u/mohammad-faqeh)
+       : Fixed video transitions prematurely to the next slide:
+        before its completion when the slider have dots
+* Issue [#3391046](https://www.drupal.org/i/3391046):
+        by [YazanMajadba](https://www.drupal.org/u/yazanmajadba)
+       : Fixed with a switch to support **Drupal 10 extension** path resolver
+        and file repository services and remove deprecation
+* Issue [#3390982](https://www.drupal.org/i/3390982):
+        by [YazanMajadba](https://www.drupal.org/u/yazanmajadba)
+       : Fixed with a switch to support generate Absolute String using the **Drupal 10** `file_url_generator` service as the function was deprecated
+* Issue [#3386649](https://www.drupal.org/i/3386649):
+        by [YazanMajadba](https://www.drupal.org/u/yazanmajadba)
+       : Fixed deprecated **PHP 8.1** function: strpos(): Passing null to parameter No. 1 ($haystack) of type string on the Old **VLB `~9.0`**
+* Issue [#3388795](https://www.drupal.org/i/3388795):
+        by [YazanMajadba](https://www.drupal.org/u/yazanmajadba)
+       : Fixed **Drupal `10` PHP `8.1`** Fatal error : Declaration of:
+        **Varbase Update Helper** Commands setLogger must be compatible with **Drush Commands** setLogger
+* Issue [#3392457](https://www.drupal.org/i/3392457):
+        Fixed Webform Views Integration Fatal error of Too few arguments to function passed
+* Issue [#3392777](https://www.drupal.org/i/3392777):
+        Fixed Error: Call to undefined `function drupal_get_path()` in `varbase_layout_builder_library_info_alter()`
+* Issue [#3348097](https://www.drupal.org/i/3348097):
+        Fixed Entity queries must explicitly set whether the query should be access:
+        checked or not in **Varbase Core**
+* Issue [#3347912](https://www.drupal.org/i/3347912)::
+        Fixed Entity queries must explicitly set whether the query should:
+        be access checked or not in **Varbase Layout Builde**
+* Issue [#3394143](https://www.drupal.org/i/3394143)::
+        Fixed visual regressions issues with the off-canvas **Claro** under:
+        **Drupal `~10.1.0`** issues with **Varbase Layout Builder** and **Layout Builder UX**
+* Issue [#3345517](https://www.drupal.org/i/3345517)::
+        Fixed **Drupal `~10.0`** and **TWIG `~3.0`** Unexpected token name of value:
+        if (end of statement block expected)
+
+-------------------------------------------------------------------------------
+
 # 9.0.15
 
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.

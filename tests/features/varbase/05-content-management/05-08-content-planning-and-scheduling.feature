@@ -3,7 +3,7 @@ As a content admin
 I want to be able to add plan content publishing for internal content
 So that they will be scheduled to publish or publish on the planed time.
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check Content planner dashboard page
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/content-planner/dashboard"
@@ -13,14 +13,14 @@ So that they will be scheduled to publish or publish on the planed time.
       And I should see "Recent Calendar Publications Widget"
       And I should see "Recent Kanban Activities"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check Content Calendar page
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/content-calendar/show-current-year"
       And wait
      Then I should see "Content Calendar"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check Content Kanban page
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/content-kanban"

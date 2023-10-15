@@ -6,13 +6,13 @@ So that I can reset my password for the account
   Background:
     Given I am not logged in
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that an anonymous user can reset his or her password
      When I go to "/user/login"
       And wait
      Then I should see "Forgot your password?"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Verify that the system cannot send an email to non-existing users or emails
      When I go to "/user/password"
       And I wait 6s

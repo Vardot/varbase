@@ -3,7 +3,7 @@ As a logged in user with a permission to manage Landing (Layout Builder) pages.
 I want to be able to edit the page layouts sections and blocks
 So that the homepage can be changed with permission in an easy way and be sure it will not deleted.
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that user Number 1 can see and have all options to edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "webmaster" user
      When I go to the homepage
@@ -21,7 +21,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should see "Clone"
       And I should see "Translate"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that an anonymous users can only see the Homepage which built by the Landing page (Layout Builder)
     Given I am an anonymous user
      When I go to the homepage
@@ -37,7 +37,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should not see "Clone"
       And I should not see "Translate"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that an authenticated user can not edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Normal user" user
      When I go to the homepage
@@ -53,7 +53,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should not see "Clone"
       And I should not see "Translate"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that Editor users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Editor" user
      When I go to the homepage
@@ -71,7 +71,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should see "Clone"
       And I should see "Translate"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that Content Admin users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Content admin" user
      When I go to the homepage
@@ -89,7 +89,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should see "Clone"
       And I should see "Translate"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that SEO Admin users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "SEO admin" user
      When I go to the homepage
@@ -106,7 +106,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should not see "Clone"
       And I should see "Translate"
 
-  @javascript @insulated @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check that Site Admin users can edit the Homepage which built by the Landing page (Layout Builder)
     Given I am a logged in user with the "Site admin" user
      When I go to the homepage

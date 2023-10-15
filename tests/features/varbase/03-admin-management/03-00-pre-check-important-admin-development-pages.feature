@@ -6,32 +6,32 @@ So that I can use them after the install or update.
   Background:
     Given I am a logged in user with the "webmaster" user
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check the content page
      When I go to "/admin/content"
       And wait
      Then I should see "Content"
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check the Homepage content with Layout Builder
      When I go to "/admin/content"
       And wait
      Then I should see "Homepage"
       And I should see "Landing page (Layout Builder)" in the "Homepage" row
 
-   @javascript @insulated @check @local @development @staging @production
+   @javascript  @check @local @development @staging @production
    Scenario: Check Files admin page
       When I go to "/admin/content/files"
        And wait
       Then I should see "Files"
 
-   @javascript @insulated @check @local @development @staging @production
+   @javascript  @check @local @development @staging @production
    Scenario: Check Media Grid admin page
       When I go to "/admin/content/media"
        And wait
       Then I should see "Media"
 
-   @javascript @insulated @check @local @development @staging @production
+   @javascript  @check @local @development @staging @production
    Scenario: Check Media Table admin page
       When I go to "/admin/content/media"
        And wait
@@ -45,7 +45,7 @@ So that I can use them after the install or update.
        And I should see "Updated"
        And I should see "Operations"
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check the structure page
      When I go to "/admin/structure"
       And wait
@@ -63,14 +63,14 @@ So that I can use them after the install or update.
       And I should see "Views"
       And I should see "Webforms"
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check the structure page
      When I go to "/admin/structure/page_manager"
       And I wait
      Then I should see "Pages"
       And I should see "Total Control dashboard"
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check the views page
      When I go to "/admin/structure/views"
       And wait
@@ -78,7 +78,7 @@ So that I can use them after the install or update.
       And I should see "Browser"
       And I should see "Media Hero Slider"
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check the Appearance page
      When I go to "/admin/appearance"
       And wait
@@ -90,7 +90,7 @@ So that I can use them after the install or update.
       And I should see "Bootstrap Barrio"
       And I should see "Vartheme Claro"
 
-   @javascript @insulated @check @local @development @staging @production
+   @javascript  @check @local @development @staging @production
    Scenario: Check active type of media types
       When I go to "/media/add"
        And wait
@@ -102,7 +102,7 @@ So that I can use them after the install or update.
        And I should see "Instagram"
        And I should see "Tweet"
 
-   @javascript @insulated @check @local @development @staging @production
+   @javascript  @check @local @development @staging @production
    Scenario: Check Varbase update instructions page
       When I go to "/admin/config/development/update-helper"
        And wait
@@ -110,7 +110,7 @@ So that I can use them after the install or update.
        And I should see "100%"
        And I should not see "Pending updates"
 
-   @javascript @insulated @check @local @development @staging
+   @javascript  @check @local @development @staging
    Scenario: Check Varbase default Reroute Email settings
       When I go to "/admin/config/development/reroute_email"
        And wait
@@ -121,7 +121,7 @@ So that I can use them after the install or update.
        And the "edit-description" checkbox is checked
        And the "edit-message" checkbox is checked
 
-   @javascript @insulated @check @local @development @staging
+   @javascript  @check @local @development @staging
    Scenario: Check Varbase password suggestions settings
       When I go to "admin/config/system/varbase/varbase-security/password-suggestions-settings"
        And wait
@@ -142,7 +142,7 @@ So that I can use them after the install or update.
        And I should see "Good" value in the "edit-good" input element
        And I should see "Strong" value in the "edit-strong" input element
 
-   @javascript @insulated @check @local @development @staging
+   @javascript  @check @local @development @staging
    Scenario: Check password policy constraints
       When I go to "admin/config/security/password-policy/default_policy"
        And wait

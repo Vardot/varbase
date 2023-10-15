@@ -3,7 +3,7 @@ Feature: User Management - Have persistent login options and configurations
   I want to have the option to have "Remember Me" option on the user login form.
   So I can persistent my login session independent of setting of a long session lifetime.
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check the persistent login configuration
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/system/persistent_login"
@@ -12,7 +12,7 @@ Feature: User Management - Have persistent login options and configurations
       And I should see "30" value in the "edit-lifetime" input element
       And I should see "0" value in the "edit-max-tokens" input element
 
-  @javascript @insulated @check @local @development @staging @production
+  @javascript  @check @local @development @staging @production
   Scenario: Check if an authenticated user can login and use the [Remember me] option
     Given I am not logged in
      When I go to "/user/login"
