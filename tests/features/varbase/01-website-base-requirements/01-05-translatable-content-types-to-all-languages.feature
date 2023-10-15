@@ -27,8 +27,9 @@ So that I will be able to create a content then I will have the option to transl
      When I open the moderation sidebar
       And I wait for ajax to finish
      Then I should see "Translate"
-     When I click "Translate" in the "a" element with the "class" attribute set to "moderation-sidebar-link button"
+     When I click "Translate" in the "a" element with the "class" attribute set to "moderation-sidebar-link button use-ajax"
       And I wait for ajax to finish
+      And wait for 2s
      Then I should see "Translate"
       And I should see "View all translations"
      When I click "Create translation"
@@ -41,7 +42,7 @@ So that I will be able to create a content then I will have the option to transl
      When I open the moderation sidebar
       And I wait for ajax to finish
      Then I should see "ترجمة"
-     When I click "ترجمة" in the "a" element with the "class" attribute set to "moderation-sidebar-link button"
+     When I click "ترجمة" in the "a" element with the "class" attribute set to "moderation-sidebar-link button use-ajax"
       And I wait for ajax to finish
       And wait 2s
      Then I should see "ترجمة"

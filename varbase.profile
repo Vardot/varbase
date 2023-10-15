@@ -582,7 +582,7 @@ function varbase_reset_timestamp_for_default_content($reset) {
 /**
  * Varbase after install finished.
  *
- * Lanuch auto Varbase Tour auto launch after install.
+ * Lunch auto Varbase Tour auto launch after install.
  *
  * @param array $install_state
  *   The current install state.
@@ -631,10 +631,10 @@ function varbase_after_install_finished(array &$install_state) {
   // using static node id to front page path by the alias.
   // https://www.drupal.org/project/varbase_core/issues/3188641
   try {
-    $path_alias_query = \Drupal::entityQuery('path_alias');
-    $path_alias_query->accessCheck(FALSE)
-      ->condition('alias', '/node', '=');
-    $alias_ids = $path_alias_query->execute();
+    $alias_ids = \Drupal::entityQuery('path_alias')
+      ->accessCheck(FALSE)
+      ->condition('alias', '/node', '=')
+      ->execute();
 
     if (count($alias_ids) > 0) {
       foreach ($alias_ids as $alias_id) {
