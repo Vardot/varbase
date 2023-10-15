@@ -884,7 +884,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I select the :color section background color
    */
   public function iSelectTheSectionBackgroundColor($color) {
-    $this->iOpenTheSectionSettingsMenu("Background");
+    $this->iSwitchToSectionBackgroundColorSettings();
     $bg_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-color')]");
     if (is_null($bg_color)) {
       throw new \Exception('The "' . $color . '" option was not found or not visible');
@@ -895,7 +895,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   /**
    * Uncheck the Edge to Edge Background option.
    *
-   * Varbase Contaxt #varbase
+   * Varbase Context #varbase
    *
    * Example #1: When I uncheck the Edge to Edge Background
    * Example #2: And I uncheck the Edge to Edge Background
@@ -1201,6 +1201,24 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
   }
 
+  /**
+   * Switch to the background color settings found under background styles settings.
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: And I switch to section background color settings
+   *
+   * @When I switch to section background color settings
+   */
+  public function iSwitchToSectionBackgroundColorSettings() {
+    $this->iOpenTheSectionSettingsMenu("Background");
+    $bg_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-color')]");
+    if (is_null($bg_image)) {
+      throw new \Exception('The section background color tab was not found or not visible');
+    }
+    $bg_image->click();
+  }
+s
   /**
    * Switch to the background image settings found under background styles settings.
    *
@@ -2162,13 +2180,13 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scroll to the top of "#drupal-off-canvas"
-   * Example #2: And I scroll to the top of the "#media-library-wrapper"
-   * Example #3: And I scroll to the top of the "#layout-builder-modal"
+   * Example #1: When I scroll to top of "#drupal-off-canvas"
+   * Example #2: And I scroll to top of "#media-library-wrapper"
+   * Example #3: And scroll to top of "#layout-builder-modal"
    *
-   * @When I scroll to the top of (?:|the ):selector
+   * @When /^(?:|I )scroll to top of :selector
    */
-  public function iScrollToTheTopOf($selector) {
+  public function iScrollToTopOf($selector) {
     $this->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
     $this->getSession()->wait(2000);
   }
@@ -2178,13 +2196,13 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I scroll to the bottom of "#drupal-off-canvas"
-   * Example #2: And I scroll to the bottom of the "#media-library-wrapper"
-   * Example #3: And I scroll to the bottom of the "#layout-builder-modal"
+   * Example #1: When I scroll to bottom of "#drupal-off-canvas"
+   * Example #2: And I scroll to bottom of "#media-library-wrapper"
+   * Example #3: And scroll to bottom of "#layout-builder-modal"
    *
-   * @When I scroll to the bottom of (?:|the ):selector
+   * @When /^(?:|I )scroll to bottom of :selector
    */
-  public function iScrollToTheBottomOf($selector) {
+  public function iScrollToBottomOf($selector) {
     $this->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
     $this->getSession()->wait(2000); 
   }

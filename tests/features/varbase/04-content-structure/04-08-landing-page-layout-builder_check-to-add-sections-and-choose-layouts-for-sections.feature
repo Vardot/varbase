@@ -66,7 +66,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      Then I should see "Add section at end of layout"
      When I add a basic "2 Cols" section at the end of layout
       And I wait for AJAX to finish
-      And I scroll to the bottom of "#drupal-off-canvas"
+      And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
       And I wait for AJAX to finish
      Then I should see "Add block in Section 3, Col 1 region"
@@ -137,7 +137,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And wait 2s
      Then I should see "Add section at end of layout"
      When I add a basic "3 Cols" section at the end of layout
-      And I scroll to the bottom of "#drupal-off-canvas"
+      And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
       And I wait for AJAX to finish
      Then I should see "Add block in Section 4, Col 1 region"
@@ -226,7 +226,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And wait 2s
      Then I should see "Add section at end of layout"
      When I add a basic "4 Cols" section at the end of layout
-      And I scroll to the bottom of "#drupal-off-canvas"
+      And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
       And I wait for AJAX to finish
      Then I should see "Add block in Section 5, Col 1 region"
@@ -333,7 +333,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And wait 2s
      Then I should see "Add section at end of layout"
      When I add a basic "6 Cols" section at the end of layout
-      And I scroll to the bottom of "#drupal-off-canvas"
+      And I scroll to bottom of "#drupal-off-canvas"
       And I save the section 
       And I wait for AJAX to finish
      Then I should see "Add block in Section 6, Col 1 region"
