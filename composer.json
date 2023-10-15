@@ -30,7 +30,7 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "~10",
+    "drupal/core-composer-scaffold": "~9.0 || ~10",
     "drupal/core": "~9.5.0 || ~10.1.0",
     "drupal/varbase_core": "9.1.x-dev",
     "drupal/varbase_api": "9.0.x-dev",
@@ -68,7 +68,7 @@
   },
   "require-dev": {
     "drupal/core-dev": "~9.0 || ~10.0",
-    "drush/drush": "~11.0",
+    "drush/drush": "~11.0 || ~12.0",
     "drupal/drupal-extension": "~4.0 || 5.0.0alpha1",
     "webship/behat-html-formatter": "~1.0",
     "drevops/behat-screenshot": "~1.0"
