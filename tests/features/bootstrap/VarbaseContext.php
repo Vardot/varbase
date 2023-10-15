@@ -1218,7 +1218,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
     $bg_image->click();
   }
-s
+
   /**
    * Switch to the background image settings found under background styles settings.
    *
