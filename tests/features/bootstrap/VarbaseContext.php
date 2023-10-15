@@ -2158,6 +2158,38 @@ JS;
   }
 
   /**
+   * Scroll to the top of an element.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to the top of "#drupal-off-canvas"
+   * Example #2: And I scroll to the top of the "#media-library-wrapper"
+   * Example #3: And I scroll to the top of the "#layout-builder-modal"
+   *
+   * @When I scroll to the top of (?:|the ):selector
+   */
+  public function iScrollToTheTopOf($selector) {
+    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
+    $this->getSession()->wait(2000);
+  }
+
+  /**
+   * Scroll to the bottom of an element.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to the bottom of "#drupal-off-canvas"
+   * Example #2: And I scroll to the bottom of the "#media-library-wrapper"
+   * Example #3: And I scroll to the bottom of the "#layout-builder-modal"
+   *
+   * @When I scroll to the bottom of (?:|the ):selector
+   */
+  public function iScrollToTheBottomOf($selector) {
+    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
+    $this->getSession()->wait(2000); 
+  }
+
+  /**
    * Check if a checkbox is unchecked.
    *
    * Varbase Context #varbase
