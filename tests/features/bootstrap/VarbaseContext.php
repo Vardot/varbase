@@ -547,7 +547,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(\"$value\");");
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\");");
   }
 
   /**
@@ -600,7 +600,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData()+\"$value\");");
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(CKEDITOR.instances[\"$fieldId\"].getData()+\"$value\");");
   }
 
   /**
@@ -622,7 +622,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).setData(\"$value\"+Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData());");
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].setData(\"$value\"+CKEDITOR.instances[\"$fieldId\"].getData());");
   }
 
   /**
@@ -903,7 +903,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   /**
    * Uncheck the Edge to Edge Background option.
    *
-   * Varbase Contaxt #varbase
+   * Varbase Context #varbase
    *
    * Example #1: When I uncheck the Edge to Edge Background
    * Example #2: And I uncheck the Edge to Edge Background
@@ -1207,6 +1207,24 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     else {
       throw new \Exception('The border radius value entered should be an integer');
     }
+  }
+
+  /**
+   * Switch to the background color settings found under background styles settings.
+   *
+   * Varbase Context #varbase
+   *
+   * Example #1: And I switch to section background color settings
+   *
+   * @When I switch to section background color settings
+   */
+  public function iSwitchToSectionBackgroundColorSettings() {
+    $this->iOpenTheSectionSettingsMenu("Background");
+    $bg_image = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-type-color')]");
+    if (is_null($bg_image)) {
+      throw new \Exception('The section background color tab was not found or not visible');
+    }
+    $bg_image->click();
   }
 
   /**
@@ -2166,13 +2184,45 @@ JS;
   }
 
   /**
-   * Check if a checkbox is unchecked
-   * 
+   * Scroll to the top of an element.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to top of "#drupal-off-canvas"
+   * Example #2: And I scroll to top of "#media-library-wrapper"
+   * Example #3: And scroll to top of "#layout-builder-modal"
+   *
+   * @When /^(?:|I )scroll to top of :selector
+   */
+  public function iScrollToTopOf($selector) {
+    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
+    $this->getSession()->wait(2000);
+  }
+
+  /**
+   * Scroll to the bottom of an element.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I scroll to bottom of "#drupal-off-canvas"
+   * Example #2: And I scroll to bottom of "#media-library-wrapper"
+   * Example #3: And scroll to bottom of "#layout-builder-modal"
+   *
+   * @When /^(?:|I )scroll to bottom of :selector
+   */
+  public function iScrollToBottomOf($selector) {
+    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
+    $this->getSession()->wait(2000); 
+  }
+
+  /**
+   * Check if a checkbox is unchecked.
+   *
    * Varbase Context #varbase
-   * 
+   *
    * Example #1: And I should see the "Accept" checkbox unchecked
    * Example #1: Then I should see the "Enable" checkbox unchecked
-   * 
+   *
    * @Then I should see the :label checkbox unchecked
    */
   public function iShouldSeeTheCheckboxUnchecked($label) {
@@ -2183,13 +2233,13 @@ JS;
   }
 
   /**
-   * Check if a checkbox is checked
-   * 
+   * Check if a checkbox is checked.
+   *
    * Varbase Context #varbase
-   * 
+   *
    * Example #1: And I should see the "Site Admin" checkbox checked
    * Example #1: Then I should see the "Enable" checkbox checked
-   * 
+   *
    * @Then I should see the :label checkbox checked
    */
   public function iShouldSeeTheCheckboxChecked($label) {
@@ -2426,6 +2476,42 @@ JS;
     }
     else {
       throw new \Exception(sprintf('The moderation sidebar toolbar tab link was not found in the administration toolbar'));
+    }
+  }
+
+  /**
+   * Check if can see the accessibility checker.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should see the accessibility checker
+   * Example 2: Then should see accessibility checker
+   * Example 3: Then see the accessibility checker
+   *
+   * @Then /^(?:|I )(?:|should )see (?:|the )accessibility checker$/
+   */
+  public function iShouldSeeTheAccessibilityChecker() {
+    $elements = $this->getSession()->getPage()->findAll('xpath', "/html/body/ed11y-element-panel");
+    if (empty($elements)) {
+      throw new \Exception('The Editorial Accessibility Checker was not found in the page');
+    }
+  }
+
+  /**
+   * Check if can NOT see the accessibility checker.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should not see the accessibility checker
+   * Example 2: Then should not see accessibility checker
+   * Example 3: Then not see the accessibility checker
+   *
+   * @Then /^(?:|I )(?:|should )not see (?:|the )accessibility checker$/
+   */
+  public function iShouldNotSeeTheAccessibilityChecker() {
+    $elements = $this->getSession()->getPage()->findAll('xpath', "/html/body/ed11y-element-panel");
+    if (!empty($elements)) {
+      throw new \Exception('The Editorial Accessibility Checker was found in the page');
     }
   }
 
