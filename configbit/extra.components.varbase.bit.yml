@@ -55,3 +55,8 @@ config_bit:
           description: 'Adds an integration with the <a href="https://www.drupal.org/project/google_tag" target="_blank">Google Tag Manager</a> (GTM) application.'
           selected: false
           config_form: false
+        editoria11y:
+          title: "Editorial Accessibility Checker"
+          description: 'Adds an automatic checker tool for accessibility with the integration of the <a href="https://www.drupal.org/project/editoria11y" target="_blank">Editoria11y Accessibility Checker</a>, a user-friendly tool dedicated to automatically identifying and addressing straightforward accessibility issues in various contexts.'
+          selected: false
+          config_form: false
