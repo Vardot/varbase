@@ -195,6 +195,7 @@ commands:
             ../bin/drush pm:enable social_auth_twitter --yes
             ../bin/drush pm:enable social_auth_linkedin --yes
             ../bin/drush pm:enable varbase_update_helper --yes
+            ../bin/drush pm:enable editoria11y --yes
             ../bin/drush cache:rebuild
 
       ## Install/Run Selenium Standalone server 4.1.2 on 4445 port.

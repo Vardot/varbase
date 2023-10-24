@@ -2472,6 +2472,44 @@ JS;
   }
 
   /**
+   * Check if can see the accessibility checker.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should see the accessibility checker
+   * Example 2: Then should see accessibility checker
+   * Example 3: Then see the accessibility checker
+   *
+   * @Then /^(?:|I )(?:|should )see (?:|the )accessibility checker$/
+   */
+  public function iShouldSeeTheAccessibilityChecker() {
+    $this->getSession()->wait(4000);
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//ed11y-element-panel");
+    if (empty($elements)) {
+      throw new \Exception('The Editorial Accessibility Checker was not found in the page');
+    }
+  }
+
+  /**
+   * Check if can NOT see the accessibility checker.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: Then I should not see the accessibility checker
+   * Example 2: Then should not see accessibility checker
+   * Example 3: Then not see the accessibility checker
+   *
+   * @Then /^(?:|I )(?:|should )not see (?:|the )accessibility checker$/
+   */
+  public function iShouldNotSeeTheAccessibilityChecker() {
+    $this->getSession()->wait(4000);
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//ed11y-element-panel");
+    if (!empty($elements)) {
+      throw new \Exception('The Editorial Accessibility Checker was found in the page');
+    }
+  }
+
+  /**
    * Matching element exists on the page after a wait.
    *
    * @param string $selector_type
