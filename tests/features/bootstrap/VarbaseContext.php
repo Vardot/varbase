@@ -2491,7 +2491,8 @@ JS;
    * @Then /^(?:|I )(?:|should )see (?:|the )accessibility checker$/
    */
   public function iShouldSeeTheAccessibilityChecker() {
-    $elements = $this->getSession()->getPage()->findAll('xpath', "/html/body/ed11y-element-panel");
+    $this->getSession()->wait(4000);
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//ed11y-element-panel");
     if (empty($elements)) {
       throw new \Exception('The Editorial Accessibility Checker was not found in the page');
     }
@@ -2509,7 +2510,8 @@ JS;
    * @Then /^(?:|I )(?:|should )not see (?:|the )accessibility checker$/
    */
   public function iShouldNotSeeTheAccessibilityChecker() {
-    $elements = $this->getSession()->getPage()->findAll('xpath', "/html/body/ed11y-element-panel");
+    $this->getSession()->wait(4000);
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//ed11y-element-panel");
     if (!empty($elements)) {
       throw new \Exception('The Editorial Accessibility Checker was found in the page');
     }

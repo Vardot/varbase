@@ -101,11 +101,12 @@ So that only users with permission can see and use the tool
       And I should see "Access denied"
 
   @javascript @check @local @development @staging @production
-  Scenario: Check that Editor users can view the dashboard for accessibility checked results 
+  Scenario: Check that Editor users can view the dashboard for accessibility checked results
     Given I am a logged in user with the "Editor" user
      When I go to "/admin/config/content/editoria11y"
       And wait
-     Then I should see "Editoria11y Settings"
+     Then I should not see "Editoria11y Settings"
+      And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
      Then I should see "All issues"
@@ -124,7 +125,8 @@ So that only users with permission can see and use the tool
     Given I am a logged in user with the "Content admin" user
      When I go to "/admin/config/content/editoria11y"
       And wait
-     Then I should see "Editoria11y Settings"
+     Then I should not see "Editoria11y Settings"
+      And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
      Then I should see "All issues"
@@ -143,7 +145,7 @@ So that only users with permission can see and use the tool
     Given I am a logged in user with the "SEO admin" user
      When I go to "/admin/config/content/editoria11y"
       And wait
-     Then I should see "Editoria11y Settings"
+     Then I should not see "Editoria11y Settings"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
      Then I should see "All issues"
