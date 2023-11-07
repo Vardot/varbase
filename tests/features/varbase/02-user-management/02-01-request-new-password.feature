@@ -20,6 +20,6 @@ So that I can reset my password for the account
      When I fill in "not.existing.email@vardot.com" for "Username or email address"
       And I scroll to the bottom
       And I wait 2s
-      And I press the "Reset" button
+      And I press the "Submit" button
       And wait
      Then I should see "If the username or email address exists and is active, further instructions have been sent to your email address."
