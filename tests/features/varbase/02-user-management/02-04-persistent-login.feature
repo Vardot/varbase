@@ -19,7 +19,7 @@ Feature: User Management - Have persistent login options and configurations
       And wait
      Then I should see "Log in"
       And I should see "Remember me"
-     When I fill in "Normal user" for "Email or username"
+     When I fill in "Normal user" for "Email address or username"
       And I fill in "dD.123123ddd" for "Password"
       And I scroll to bottom
       And I wait 2s

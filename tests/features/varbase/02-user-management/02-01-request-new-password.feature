@@ -16,8 +16,8 @@ So that I can reset my password for the account
   Scenario: Verify that the system cannot send an email to non-existing users or emails
      When I go to "/user/password"
       And I wait 6s
-     Then I should see "Email"
-     When I fill in "not.existing.email@vardot.com" for "Email"
+     Then I should see "Username or email address"
+     When I fill in "not.existing.email@vardot.com" for "Username or email address"
       And I scroll to the bottom
       And I wait 2s
       And I press the "Reset" button
