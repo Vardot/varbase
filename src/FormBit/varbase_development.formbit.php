@@ -2,7 +2,7 @@
 
 /**
  * @file
- * FormBit file for varbase_development feature mdoule.
+ * FormBit file for varbase_development feature module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -50,6 +50,7 @@ function varbase_development_build_formbit(array &$formbit, FormStateInterface &
       ERROR_REPORTING_DISPLAY_VERBOSE => t('All messages, with backtrace information'),
     ],
     '#description' => t('It is recommended that sites running on production environments do not display any errors.'),
+    '#prefix' => '<p class="fieldset__description">' . t('Configure Level of Logging and Errors on installation.') . ' <a href="https://docs.varbase.vardot.com/v/10.0.x/developers/configuring-a-varbase-site/configure-level-of-logging-and-errors" target="_blank">' . t('Read more') . '</a></p>',
   ];
 
   $formbit['address'] = [
@@ -59,6 +60,7 @@ function varbase_development_build_formbit(array &$formbit, FormStateInterface &
     '#description' => t('Provide a comma-delimited list of email addresses. Every destination email address which is not fit with "Skip email rerouting for" lists will be rerouted to these addresses.<br/>If this field is empty and no value is provided, all outgoing emails would be aborted and the email would be recorded in the recent log entries (if enabled).'),
     '#element_validate' => ['validate_formbit_multiple_emails', 'validate_formbit_multiple_unique'],
     '#reroute_config_delimiter' => ',',
+    '#prefix' => '<hr /><p class="fieldset__description">' . t('Configure Reroute Email Settings on installation.') . ' <a href="https://docs.varbase.vardot.com/v/10.0.x/developers/development-components/reroute-email" target="_blank">' . t('Read more') . '</a></p>',
   ];
 
   $formbit['allowed'] = [

@@ -2145,7 +2145,7 @@ JS;
    *
    * Example #1: When I scroll up 1000
    *
-   * @When /^(?:|I ) scroll up (?P<value>\d+)$/
+   * @When /^(?:|I )scroll up (?P<value>\d+)$/
    */
   public function iScrollupWithValue($value) {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-" . $value . ")");
