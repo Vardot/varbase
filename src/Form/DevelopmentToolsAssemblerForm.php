@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\varbase\Config\ConfigBit;
 
 /**
- * Defines form for selecting extra compoennts for the assembler to install.
+ * Defines form for selecting extra components for the assembler to install.
  */
 class DevelopmentToolsAssemblerForm extends FormBase {
 
@@ -59,7 +59,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-    $container->get('app.root'),
+    $container->getParameter('app.root'),
     $container->get('info_parser'),
     $container->get('string_translation'),
     $container->get('varbase.form_helper')
@@ -122,7 +122,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           '#default_value' => $checkbox_selected,
         ];
 
-        // If config_form is ture for this development tool.
+        // If config_form is true for this development tool.
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
           $form['development_tools'][$development_tool_key . '_config'] = [
@@ -139,7 +139,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
           ];
 
           if (isset($development_tool_info['formbit'])) {
-            $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $development_tool_info['formbit'];
+            $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $development_tool_info['formbit'];
             if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
@@ -188,7 +188,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
 
         if (isset($development_tool_info['config_form']) &&
                   $development_tool_info['config_form'] == TRUE) {
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $development_tool_info['formbit'];
+          $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $development_tool_info['formbit'];
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;

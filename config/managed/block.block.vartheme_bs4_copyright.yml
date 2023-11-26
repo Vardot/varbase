@@ -6,9 +6,9 @@ dependencies:
   module:
     - block_content
   theme:
-    - vartheme_bs5
-id: vartheme_bs5_copyright
-theme: vartheme_bs5
+    - vartheme_bs4
+id: vartheme_bs4_copyright
+theme: vartheme_bs4
 region: footer
 weight: -5
 provider: null

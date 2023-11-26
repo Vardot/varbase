@@ -1,6 +1,6 @@
 {
   "name": "vardot/varbase",
-  "description": "Varbase: The Ultimate Drupal 9 CMS Starter Kit (Bootstrap Ready) | by Vardot",
+  "description": "Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready) | by Vardot",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
@@ -27,50 +27,51 @@
     }
   },
   "require": {
-    "composer/installers": "~1.0 || ~2.0",
-    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
-    "cweagans/composer-patches": "~1.0",
-    "drupal/core-composer-scaffold": "^9",
-    "drupal/core": "~9.0",
+    "composer/installers": "~2",
+    "oomphinc/composer-installers-extender": "~2",
+    "cweagans/composer-patches": "~1",
+    "drupal/core-composer-scaffold": "~10",
+    "drupal/core": "~10",
     "drupal/varbase_core": "9.1.x-dev",
-    "drupal/varbase_api": "9.0.x-dev",
+    "drupal/varbase_api": "9.1.x-dev",
     "drupal/varbase_media": "9.1.x-dev",
     "drupal/varbase_editor": "9.1.x-dev",
     "drupal/varbase_landing": "9.1.x-dev",
-    "drupal/varbase_layout_builder": "10.1.x-dev",
+    "drupal/varbase_layout_builder": "10.0.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "9.1.x-dev",
     "drupal/varbase_heroslider_media": "9.1.x-dev",
     "drupal/varbase_carousels": "9.1.x-dev",
     "drupal/varbase_blog": "9.1.x-dev",
-    "drupal/varbase_search": "9.0.x-dev",
-    "drupal/varbase_seo": "9.0.x-dev",
-    "drupal/varbase_auth": "9.0.x-dev",
-    "drupal/varbase_total_control": "9.0.x-dev",
+    "drupal/varbase_search": "9.1.x-dev",
+    "drupal/varbase_seo": "9.1.x-dev",
+    "drupal/varbase_auth": "9.1.x-dev",
+    "drupal/varbase_total_control": "9.1.x-dev",
     "drupal/varbase_styleguide": "9.1.x-dev",
     "drupal/varbase_email": "9.1.x-dev",
-    "drupal/varbase_workflow": "2.0.x-dev",
-    "drupal/vartheme_bs5": "1.0.x-dev",
+    "drupal/varbase_workflow": "2.1.x-dev",
+    "drupal/vartheme_bs4": "9.0.x-dev",
     "drupal/vartheme_claro": "3.0.x-dev",
-    "vardot/entity-definition-update-manager": "~1.0",
-    "vardot/module-installer-factory": "~1.0",
-    "bower-asset/objectfitpolyfill": "~2.0",
-    "bower-asset/chartjs": "2.7.*",
+    "vardot/entity-definition-update-manager": "~1",
+    "vardot/module-installer-factory": "~1",
+    "bower-asset/objectfitpolyfill": "~2",
+    "bower-asset/chartjs": "~4",
     "bower-asset/c3": "0.7.*",
-    "bower-asset/d3": "~5.0",
+    "bower-asset/d3": "~5",
     "bower-asset/jqueryui-touch-punch": "dev-master",
-    "npm-asset/masonry-layout": "~4.0",
-    "npm-asset/imagesloaded": "~4.0",
-    "npm-asset/dropzone": "~5.0",
-    "npm-asset/blazy": "~1.0",
-    "npm-asset/slick-carousel": "~1.0",
-    "npm-asset/ace-builds": "~1.0",
-    "npm-asset/swagger-ui-dist": "~3.0"
+    "npm-asset/masonry-layout": "~4",
+    "npm-asset/imagesloaded": "~4",
+    "npm-asset/dropzone": "~5",
+    "npm-asset/blazy": "~1",
+    "npm-asset/slick-carousel": "~1",
+    "npm-asset/ace-builds": "~1",
+    "npm-asset/swagger-ui-dist": "~3"
   },
   "require-dev": {
-    "drupal/core-dev": "~9.0",
-    "drush/drush": "~10.0 || ~11.0",
-    "drupal/drupal-extension": "~4.0",
-    "emuse/behat-html-formatter": "^0.2.0"
+    "drupal/core-dev": "~10",
+    "drush/drush": "~12",
+    "drupal/drupal-extension": "5.0.0alpha1",
+    "webship/behat-html-formatter": "~1",
+    "drevops/behat-screenshot": "~1"
   },
   "config": {
     "bin-dir": "bin/",
@@ -85,6 +86,7 @@
       "drupal/core-composer-scaffold": true,
       "drupal/core-project-message": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true,
       "vardot/varbase-updater": true
     }
   },
@@ -107,20 +109,20 @@
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   },
   "extra": {
-    "drupal-scaffold": {
-      "locations": {
-        "web-root": "docroot/"
-      }
-    },
     "branch-alias": {
       "dev-9.0.x": "9.0.x-dev",
-      "dev-9.1.x": "9.1.x-dev",
       "dev-10.0.x": "10.0.x-dev"
     },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
+    "drupal-scaffold": {
+      "allowed-packages": [
+        "drupal/core",
+        "vardot/varbase"
+      ],
+      "gitignore": true,
+      "locations": {
+        "web-root": "./docroot"
+      }
+    },
     "installer-paths": {
       "docroot/core": ["type:drupal-core"],
       "docroot/profiles/{$name}": ["type:drupal-profile"],
@@ -139,6 +141,10 @@
       "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
       "drush/contrib/{$name}": ["type:drupal-drush"]
     },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
     "drupal-libraries": {
       "library-directory": "docroot/libraries",
       "libraries": [
@@ -159,6 +165,7 @@
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
-    }
+    },
+    "patches": {  }
   }
 }

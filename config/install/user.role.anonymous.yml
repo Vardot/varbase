@@ -1,11 +1,12 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies:
+  module:
+    - system
+    - node
 id: anonymous
-label: "Anonymous user"
+label: 'Anonymous user'
 weight: -10
 is_admin: false
 permissions:
-  - "access content"
-  - "search content"
-  - "view media"
+  - 'access content'

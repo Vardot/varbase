@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/9.1.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase?branch=9.1.x) Varbase 9.1.x
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/9.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/763/workflows/6c407254-aafc-4bc4-9583-99a402960b75) Varbase 9.0.16
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -20,34 +20,38 @@ in every project.
 * [Tested, tested, and tested.](https://app.circleci.com/pipelines/github/Vardot/varbase)
 
 Starting a new project? Consider Varbase for Drupal 9.
-Installing Varbase 9.1.x comes with several extra automated installation
+Installing Varbase 9.0.x comes with several extra automated installation
 steps, to take full advantage of Varbase, other than the Drupal 9 installation
 instructions.
 
 
 # Install with Composer
 
-
-To install the dev version of Varbase 9.1.x run this command:
+To install the most recent stable release of Varbase 9.0.x run this command:
 ```
-composer create-project vardot/varbase-project:9.1.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project Vardot/varbase-project:~9.0 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
-## [Create a new Vartheme sub theme for a project](https://github.com/Vardot/varbase/tree/9.1.x/scripts/README.md)
+To install the dev version of Varbase 9.0.x run this command:
+```
+composer create-project vardot/varbase-project:9.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+```
 
-## [Automated Functional Testing](https://github.com/Vardot/varbase/blob/9.1.x/tests/README.md)
+## [Create a new Vartheme sub theme for a project](https://github.com/Vardot/varbase/tree/9.0.x/scripts/README.md)
 
-## [Varbase 9.1.x Developer Guide](https://docs.varbase.vardot.com)
+## [Automated Functional Testing](https://github.com/Vardot/varbase/blob/9.0.x/tests/README.md)
 
-## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.1.x/CHANGELOG.md)
+## [Varbase 9.0.x Developer Guide](https://docs.varbase.vardot.com)
 
-## [Varbase Gherkin features](https://github.com/Vardot/varbase/blob/9.1.x/tests/features/varbase/README.md)
+## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.0.x/CHANGELOG.md)
+
+## [Varbase Gherkin features](https://github.com/Vardot/varbase/blob/9.0.x/tests/features/varbase/README.md)
 
 ## [Varbase Developer Guide](https://docs.varbase.vardot.com)
 
-## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.1.x/CHANGELOG.md)
+## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.0.x/CHANGELOG.md)
 
-## [General instructions on how to update Varbase](https://github.com/Vardot/varbase/blob/9.1.x/UPDATE.md)
+## [General instructions on how to update Varbase](https://github.com/Vardot/varbase/blob/9.0.x/UPDATE.md)
 
 ## Local development with Lando
 

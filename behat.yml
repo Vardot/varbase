@@ -32,7 +32,7 @@ default:
                  rich text editor for body field: '//iframe[@title="Rich Text Editor, edit-body-und-0-value"]'
                  HTML editor for body field: '//*[@id="edit-body-und-0-value-aced"]'
 
-             ## You can add list of selectorrs which you will use in most features.
+             ## You can add list of selectors which you will use in most features.
              #  But by loading them from files.
              files_path: "%paths.base%/tests/selectors/"
              files:
@@ -43,21 +43,25 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
+        - DrevOps\BehatScreenshotExtension\Context\ScreenshotContext
   formatters:
     pretty:
+      verbose: true
+      paths: false
+      snippets: false
     html:
+      verbose: true
+      paths: false
+      snippets: false
       output_path: "%paths.base%/tests/reports/"
   extensions:
     Drupal\MinkExtension:
       ajax_timeout: 60
       files_path: "%paths.base%/tests/assets/"
-      goutte: ~
       selenium2:
         wd_host: 127.0.0.1:4445/wd/hub
         capabilities:
-          # browser: 'firefox'
           browser: 'chrome'
-          # browser: 'phantomjs'
           nativeEvents: true
           marionette: true
           browserName: chrome
@@ -71,8 +75,8 @@ default:
               args:
                 - "--headless"
                 - "--start-maximized"
+                - "--window-size=1920,1080"
                 - "--disable-gpu"
-                - "--window-size=1600,1200"
                 - "--no-sandbox"
                 - "--disable-dev-shm-usage"
                 - "--disable-setuid-sandbox"
@@ -84,17 +88,20 @@ default:
                 - "--disable-extensions"
                 - "--incognito"
                 - "--disable-infobars"
+                - "--disable-popup-blocking"
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
       base_url: 'http://varbase.test'
-      # browser_name: 'firefox'
       browser_name: 'chrome'
-      # browser_name: 'phantomjs'
       javascript_session: selenium2
     Drupal\DrupalExtension:
       blackbox: ~
-      api_driver: 'drupal'
+      api_driver: 'drupal' 
+      drush:
+        alias: 'local'
+      drupal: 
+        drupal_root: '/var/www/html/test/varbase/docroot' 
       region_map:
         content: ".main-container"
         footer: "#footer"
@@ -107,10 +114,15 @@ default:
         error_message_selector: '.messages.error'
         success_message_selector: '.messages.status'
         warning_message_selector: '.messages.warning'
-    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+    webship\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
       renderer: Twig,Behat2
       file_name: index
       print_args: false
       print_outp: false
       loop_break: false
+    DrevOps\BehatScreenshotExtension:
+      dir: '%paths.base%/tests/screenshots'
+      fail: true
+      fail_prefix: 'failed_'
+      purge: false

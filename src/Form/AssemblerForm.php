@@ -59,10 +59,10 @@ class AssemblerForm extends FormBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-    $container->get('app.root'),
-    $container->get('info_parser'),
-    $container->get('string_translation'),
-    $container->get('varbase.form_helper')
+      $container->getParameter('app.root'),
+      $container->get('info_parser'),
+      $container->get('string_translation'),
+      $container->get('varbase.form_helper')
     );
   }
 
@@ -77,7 +77,7 @@ class AssemblerForm extends FormBase {
    * {@inheritdoc}
    *
    * @return array
-   *   Extra compoments modules.
+   *   Extra components modules.
    */
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
     $form['#title'] = $this->t('Extra components');
@@ -138,7 +138,7 @@ class AssemblerForm extends FormBase {
           ];
 
           if (isset($extra_feature_info['formbit'])) {
-            $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
+            $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extra_feature_info['formbit'];
             if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
@@ -206,7 +206,7 @@ class AssemblerForm extends FormBase {
           ];
 
           if (isset($demo_content_info['formbit'])) {
-            $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
+            $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $demo_content_info['formbit'];
             if (file_exists($formbit_file_name)) {
 
               include_once $formbit_file_name;
@@ -257,7 +257,7 @@ class AssemblerForm extends FormBase {
 
         if (isset($extra_feature_info['config_form']) &&
                   $extra_feature_info['config_form'] == TRUE) {
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extra_feature_info['formbit'];
+          $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extra_feature_info['formbit'];
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;
@@ -295,7 +295,7 @@ class AssemblerForm extends FormBase {
 
         if (isset($demo_content_info['config_form']) &&
                   $demo_content_info['config_form'] == TRUE) {
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demo_content_info['formbit'];
+          $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $demo_content_info['formbit'];
           if (file_exists($formbit_file_name)) {
 
             include_once $formbit_file_name;

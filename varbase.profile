@@ -14,6 +14,7 @@ use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
 use Vardot\Entity\EntityDefinitionUpdateManager;
 use Drupal\path_alias\Entity\PathAlias;
+use Drupal\Component\Utility\Environment;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
@@ -39,7 +40,7 @@ function varbase_form_install_configure_form_alter(&$form, FormStateInterface $f
  * Implements hook_install_tasks().
  */
 function varbase_install_tasks(&$install_state) {
-  // Determine whether the enable multiligual option is selected during the
+  // Determine whether the enable multilingual option is selected during the
   // Multilingual configuration task.
   $needs_configure_multilingual = (isset($install_state['varbase']['enable_multilingual']) && $install_state['varbase']['enable_multilingual'] == TRUE);
 
@@ -160,7 +161,7 @@ function varbase_assemble_extra_components(array &$install_state) {
             $extraFeatures[$extra_feature_key]['config_form'] == TRUE &&
             isset($extraFeatures[$extra_feature_key]['formbit'])) {
 
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
+          $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
 
           if (file_exists($formbit_file_name)) {
 
@@ -226,7 +227,7 @@ function varbase_assemble_extra_components(array &$install_state) {
             $demoContent[$demo_content_key]['config_form'] == TRUE &&
             isset($demoContent[$demo_content_key]['formbit'])) {
 
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $demoContent[$demo_content_key]['formbit'];
+          $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $demoContent[$demo_content_key]['formbit'];
           if (file_exists($formbit_file_name)) {
 
             // Added the selected development configs to the batch process
@@ -335,7 +336,7 @@ function varbase_assemble_development_tools(array &$install_state) {
             $developmentTools[$development_tool_key]['config_form'] == TRUE &&
             isset($developmentTools[$development_tool_key]['formbit'])) {
 
-          $formbit_file_name = drupal_get_path('profile', 'varbase') . '/' . $developmentTools[$development_tool_key]['formbit'];
+          $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $developmentTools[$development_tool_key]['formbit'];
           if (file_exists($formbit_file_name)) {
 
             // Added the selected development configs to the batch process
@@ -530,7 +531,7 @@ function varbase_reset_timestamp_for_default_content($reset) {
   if ($reset) {
     // Reset timestamp for all file's default content.
     $file_storage = \Drupal::service('entity_type.manager')->getStorage('file');
-    $file_ids = $file_storage->getQuery()->execute();
+    $file_ids = $file_storage->getQuery()->accessCheck(FALSE)->execute();
     if (isset($file_ids)
       && is_array($file_ids)
       && count($file_ids) > 0) {
@@ -546,7 +547,7 @@ function varbase_reset_timestamp_for_default_content($reset) {
 
     // Reset timestamp for all Media's default content.
     $media_storage = \Drupal::service('entity_type.manager')->getStorage('media');
-    $media_ids = $media_storage->getQuery()->execute();
+    $media_ids = $media_storage->getQuery()->accessCheck(FALSE)->execute();
     if (isset($media_ids)
       && is_array($media_ids)
       && count($media_ids) > 0) {
@@ -562,7 +563,7 @@ function varbase_reset_timestamp_for_default_content($reset) {
 
     // Reset timestamp for all Node's default content.
     $node_storage = \Drupal::service('entity_type.manager')->getStorage('node');
-    $node_ids = $node_storage->getQuery()->execute();
+    $node_ids = $node_storage->getQuery()->accessCheck(FALSE)->execute();
     if (isset($node_ids)
       && is_array($node_ids)
       && count($node_ids) > 0) {
@@ -581,7 +582,7 @@ function varbase_reset_timestamp_for_default_content($reset) {
 /**
  * Varbase after install finished.
  *
- * Lanuch auto Varbase Tour auto launch after install.
+ * Lunch auto Varbase Tour auto launch after install.
  *
  * @param array $install_state
  *   The current install state.
@@ -598,11 +599,11 @@ function varbase_after_install_finished(array &$install_state) {
   }
 
   // Import managed config to the active config at this time of install.
-  $profile_path_managed = drupal_get_path('profile', 'varbase') . '/config/managed/';
-  $managed_config_path = $profile_path_managed . 'block.block.vartheme_bs5_copyright.yml';
+  $profile_path_managed = \Drupal::service('extension.list.profile')->getPath('varbase') . '/config/managed/';
+  $managed_config_path = $profile_path_managed . 'block.block.vartheme_bs4_copyright.yml';
   $managed_config_content = file_get_contents($managed_config_path);
   $managed_config_data = (array) Yaml::parse($managed_config_content);
-  $managed_config_factory = \Drupal::configFactory()->getEditable('block.block.vartheme_bs5_copyright');
+  $managed_config_factory = \Drupal::configFactory()->getEditable('block.block.vartheme_bs4_copyright');
   $managed_config_factory->setData($managed_config_data)->save(TRUE);
 
   // Entity updates to clear up any mismatched entity and/or field definitions
@@ -615,7 +616,7 @@ function varbase_after_install_finished(array &$install_state) {
   // After install of extra modules by install: in the .info.yml files.
   // In Varbase profile and all Varbase components.
   // ---------------------------------------------------------------------------
-  // * Necessary inlitilization for the entire system.
+  // * Necessary initialization for the entire system.
   // * Account for changed config by the end install.
   // * Flush all persistent caches.
   // * Flush asset file caches.
@@ -630,9 +631,10 @@ function varbase_after_install_finished(array &$install_state) {
   // using static node id to front page path by the alias.
   // https://www.drupal.org/project/varbase_core/issues/3188641
   try {
-    $path_alias_query = \Drupal::entityQuery('path_alias');
-    $path_alias_query->condition('alias', '/node', '=');
-    $alias_ids = $path_alias_query->execute();
+    $alias_ids = \Drupal::entityQuery('path_alias')
+      ->accessCheck(FALSE)
+      ->condition('alias', '/node', '=')
+      ->execute();
 
     if (count($alias_ids) > 0) {
       foreach ($alias_ids as $alias_id) {
@@ -712,4 +714,50 @@ function varbase_toolbar_alter(&$items) {
     && !empty($items['admin_toolbar_tools'])) {
     $items['admin_toolbar_tools']['#attached']['library'][] = 'varbase/toolbar.icon';
   }
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function varbase_requirements($phase) {
+  $requirements = [];
+  $phpVersion = phpversion();
+  $memoryLimit = ini_get('memory_limit');
+  $maxExecutionTime = ini_get('max_execution_time');
+
+  if ($phase === "install") {
+    if (version_compare($phpVersion, "8.0", "<")) {
+      $requirements['php'] = [
+        'title' => t('PHP'),
+        'description' => t('Your PHP installation is too old. It is recommended to upgrade to PHP version <b>%php_version</b> or higher for the best ongoing support. See <a href="http://php.net/supported-versions.php">PHP\'s version support documentation</a>', ['%php_version' => "8.0"]),
+        'severity' => REQUIREMENT_WARNING,
+      ];
+    }
+
+    if (!Environment::checkMemoryLimit(256, $memoryLimit)) {
+      $requirements['php_memory_limit'] = [
+        'title' => t('PHP memory limit'),
+        'description' => t('Consider increasing your PHP memory limit to <b>%memory_recommended_limit</b> M to help prevent errors in the installation process.', ['%memory_recommended_limit' => 256]),
+        'severity' => REQUIREMENT_WARNING,
+      ];
+    }
+
+    if ($maxExecutionTime < 180) {
+      $requirements['max_execution_time'] = [
+        'title' => t('Recommended maximum execution time'),
+        'description' => t('Your current setting for <b>max_execution_time</b> is less than <b>%recommended_max_execution_time</b>. Change your PHP settings or contact your server administrator to set it to the recommended value.', ['%recommended_max_execution_time' => 180]),
+        'severity' => REQUIREMENT_WARNING,
+      ];
+    }
+
+    if (!extension_loaded('yaml')) {
+      $requirements['php_yaml_extension'] = [
+        'title' => 'PHP YAML extension',
+        'description' => t('The PHP YAML extension is not enabled. It is recommended that you enable the PHP YAML extension for your server.'),
+        'severity' => REQUIREMENT_WARNING,
+      ];
+    }
+  }
+
+  return $requirements;
 }

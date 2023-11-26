@@ -37,6 +37,16 @@
 		transition: all, 0.2s;
 	}
 
+	.level-2 {
+		a {
+			&:hover,
+			&:focus,
+			&:active {
+				width: 100%;
+			}
+		}
+	}
+
 	.toolbar-bar {
 		background-color: #2d2d2d;
 		box-shadow: none;
@@ -277,7 +287,7 @@
 		span {
 			color: #bbb;
 			background: #2d2d2d;
-			display: block;
+			display: initial;
 			padding: 1em 1.3333em;
 		}
 	}
@@ -439,7 +449,25 @@
 					padding: 1em 12px;
 				}
 			}
+
+			.level-1:first-child {
+				> .toolbar-box {
+					.toolbar-icon.toolbar-handle {
+						display: none;
+					}
+				}
+			}
 		}
+
+		.level-1 {
+      .menu-item--expanded {
+				.toolbar-handle {
+					display: none;
+				}
+			}
+		} 
+
+
 	}
 
 	.level-1 {

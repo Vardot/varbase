@@ -1,7 +1,7 @@
 Feature: Demo for newly added step definitions 
 As a site admin, I will create a new landing page, add a section with different section settings/configurations
 
-@javascript @local @development
+@javascript  @local @development
   Scenario: Check if a site admin can create a landing page and add sections to it with different container types
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
@@ -29,6 +29,7 @@ As a site admin, I will create a new landing page, add a section with different 
       And I uncheck the Edge to Edge Background
       And I select the "White" section text color
       And I set the alignment to "End"
+      And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
       And I wait for AJAX to finish
      Then I should see "Add block in Section 2, Col 1 region"

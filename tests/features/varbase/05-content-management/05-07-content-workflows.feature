@@ -3,11 +3,11 @@ As a content admin
 I want to be able to manage the workflow of content in simple and editorial workflows
 So that will have an easy publishing workflow with revisions.
 
-  @javascript @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check Simple workflow on Draft, Published, and Archived and content types
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/workflow/workflows/manage/varbase_simple_workflow"
-      And I wait
+      And wait
      Then I should see "Simple"
       And I should see "Draft"
       And I should see "Published"
@@ -22,11 +22,11 @@ So that will have an easy publishing workflow with revisions.
       And I should see "Blog post"
       And I should see "Hero slider"
 
-  @javascript @local @development @staging @production
+  @javascript  @local @development @staging @production
   Scenario: Check Editorial workflow on Draft, Published, In review, and Archived
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/workflow/workflows/manage/varbase_editorial_workflow"
-      And I wait
+      And wait
      Then I should see "Editorial"
       And I should see "Draft"
       And I should see "In review"

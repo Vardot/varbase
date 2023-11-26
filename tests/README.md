@@ -7,28 +7,49 @@
  This page list all the steps needed, which you need to run the
  Behat Gherkin Features to test a varbase website in your localhost machine.
 
-To test varbase 9.1.x in the right way you will need to build varbase using
+To test varbase 9.0.x in the right way you will need to build varbase using
 the composer.
 
 ## Create a Varbase project with [Composer](https://getcomposer.org/download/):
 
 ```
-composer create-project vardot/varbase:9.1.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project vardot/varbase:9.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 ### Add needed testing packages
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
-composer require --dev drupal/core-dev:~9.0
-composer require --dev drush/drush:~11.0
-composer require --dev drupal/drupal-extension:~4.0
-composer require --dev emuse/behat-html-formatter:^0.2.0
+composer require --dev drupal/core-dev:~10
+composer require --dev drush/drush:~12.0
+composer require --dev drupal/drupal-extension:~5.0 --with-all-dependencies
+composer require --dev webship/behat-html-formatter:~1.0
+composer require --dev drevops/behat-screenshot:~1.0
+
+```
+
+### Add additional testing packages
+```
+Change path to your files of the project/PROJECT_DIR_NAME
+BEHAT-SCREENSHOT to capture images on demand or when a test fails
+
+composer require --dev drevops/behat-screenshot
+
+Edit the behat.yml file, which is located in:
+`path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/varbase/behat.yml`
+- to have DrevOps\BehatScreenshotExtension\Context\ScreenshotContext under contexts
+- to have DrevOps\BehatScreenshotExtension:
+            dir: '%paths.base%/tests/screenshots'
+            fail: true
+            fail_prefix: 'failed_'
+            purge: false
+  under extensions
+Read more about it here: https://github.com/drevops/behat-screenshot
 
 ```
 
 ### Install Varbase
 Have Varbase installed from the browser or using the `drush site:install` command.
-But make sure to have the webmaster user with the `dD.123123ddd` passwrod.
+But make sure to have the webmaster user with the `dD.123123ddd` password.
 
 Exmaple Drush install:
 Change directory in the terminal to the path of the project and `/PROJECT_DIR_NAME/docroot`
@@ -38,7 +59,7 @@ Change directory in the terminal to the path of the project and `/PROJECT_DIR_NA
 ```
 
 ### Enable all Varbase components
-Make sure that all varbase modules are insalled.
+Make sure that all varbase modules are installed.
 ```
 ../bin/drush pm:enable vmi --yes
 ../bin/drush pm:enable varbase_heroslider_media --yes
@@ -57,19 +78,18 @@ Make sure that all varbase modules are insalled.
 ../bin/drush pm:enable social_auth_facebook --yes
 ../bin/drush pm:enable social_auth_twitter --yes
 ../bin/drush pm:enable social_auth_linkedin --yes
-../bin/drush cr
+../bin/drush pm:enable varbase_update_helper --yes
+../bin/drush cache:rebuild
 ```
 
-### Enable the Drush Language Command module and add a RTL language
+### Import and Update local RTL language
 Needed to add the extra languages.
 ```
 cd path to your files of the project/PROJECT_DIR_NAME
-composer require drupal/drush_language:~1.0
 cd `/PROJECT_DIR_NAME/docroot`
-../bin/drush pm:enable drush_language --yes
-../bin/drush language-add ar
-../bin/drush language-info
-../bin/drush cr
+../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
+../bin/drush locale-update --langcodes=ar
+../bin/drush cache:rebuild
 ```
 
 ### Uninstall Antibot module to make the Selenium robot have more control 
@@ -77,16 +97,7 @@ Needed to uninstall as the Antibot module will prevent the Selenium robot from p
 ```
 cd `/PROJECT_DIR_NAME/docroot`
 ../bin/drush pm:uninstall antibot --yes
-../bin/drush cr
-```
-
-### Change config for error reporting and CSS/JS aggregation
-```
-cd `/PROJECT_DIR_NAME/docroot`
-../bin/drush config:set system.performance css.preprocess 0 --yes
-../bin/drush config:set system.performance js.preprocess 0 --yes
-../bin/drush config:set system.logging error_level all --yes
-../bin/drush cr
+../bin/drush cache:rebuild
 ```
 
 ### Add testing users.
@@ -104,7 +115,7 @@ To delete testing users use
 
 ## 1. Change the base url
 
-Edit the behat.yml file, which located in:
+Edit the behat.yml file, which is located in:
 `path to your files of the project/PROJECT_DIR_NAME/docroot/profiles/varbase/behat.yml`
  to the domain or the local virtual domain.
 ```
@@ -150,13 +161,13 @@ rm chromedriver_linux64.zip
 
 ### Get Selenium Standalone server.
 ```
-wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar
+wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.1.0/selenium-server-4.1.2.jar
 ```
 
 ## Run Selenium Standalone server.
 
 ```
-$ java -jar selenium-*.jar -port 4445
+$ java -jar selenium-server-4.1.2.jar standalone --port 4445
 ```
 
 --------------------------------------------------------------------------------
@@ -168,13 +179,10 @@ To run the automated testing with behat you will need to change the [ wd_host an
     Drupal\MinkExtension:
       ajax_timeout: 60
       files_path: "%paths.base%/tests/assets/"
-      goutte: ~
       selenium2:
         wd_host: 127.0.0.1:4445/wd/hub
         capabilities:
-          # browser: 'firefox'
           browser: 'chrome'
-          # browser: 'phantomjs'
           nativeEvents: true
           marionette: true
           browserName: chrome
@@ -205,9 +213,7 @@ To run the automated testing with behat you will need to change the [ wd_host an
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
       base_url: 'http://varbase.test'
-      # browser_name: 'firefox'
       browser_name: 'chrome'
-      # browser_name: 'phantomjs'
       javascript_session: selenium2
 ```
 
@@ -305,7 +311,7 @@ $ ../../../bin/behat --tags '@development' tests/features/varbase/
 Which it will run Scenarios which has got the @development tag.
 
 ```
-$ ../../../bin/behat --tags '@staging' ftests/eatures/varbase/
+$ ../../../bin/behat --tags '@staging' tests/features/varbase/
 ```
 
 Which it will run Scenarios which has got the @staging tag.
