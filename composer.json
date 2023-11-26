@@ -31,7 +31,7 @@
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "~10",
-    "drupal/core": "~10.1.0",
+    "drupal/core": "~10",
     "drupal/varbase_core": "10.0.x-dev",
     "drupal/varbase_components": "2.0.x-dev",
     "drupal/varbase_api": "10.0.x-dev",
@@ -54,15 +54,15 @@
     "vardot/entity-definition-update-manager": "1.0.x-dev",
     "vardot/module-installer-factory": "1.0.x-dev",
     "bower-asset/jqueryui-touch-punch": "dev-master",
-    "npm-asset/dropzone": "~5.0",
-    "npm-asset/blazy": "~1.0",
-    "npm-asset/slick-carousel": "~1.0",
-    "npm-asset/ace-builds": "~1.0",
-    "npm-asset/swagger-ui-dist": "~3.0"
+    "npm-asset/dropzone": "~5",
+    "npm-asset/blazy": "~1",
+    "npm-asset/slick-carousel": "~1",
+    "npm-asset/ace-builds": "~1",
+    "npm-asset/swagger-ui-dist": "~3"
   },
   "require-dev": {
     "drupal/core-dev": "~10",
-    "drush/drush": "~11.0 || ~12.0",
+    "drush/drush": "~12",
     "drupal/drupal-extension": "5.0.0alpha1",
     "webship/behat-html-formatter": "~1.0",
     "drevops/behat-screenshot": "~1.0"
@@ -103,10 +103,6 @@
     "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
   },
   "extra": {
-    "branch-alias": {
-      "dev-10.0.x": "10.0.x-dev",
-      "dev-10.1.x": "10.1.x-dev"
-    },
     "drupal-scaffold": {
       "allowed-packages": [
         "drupal/core",
