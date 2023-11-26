@@ -2187,7 +2187,7 @@ JS;
    * @When /^(?:|I )scroll to top of "([^"]*)"$/
    */
   public function iScrollToTopOf($selector) {
-    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
+    $this->getSession()->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
     $this->getSession()->wait(2000);
   }
 
@@ -2203,7 +2203,7 @@ JS;
    * @When /^(?:|I )scroll to bottom of "([^"]*)"$/
    */
   public function iScrollToBottomOf($selector) {
-    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
+    $this->getSession()->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
     $this->getSession()->wait(2000); 
   }
 
