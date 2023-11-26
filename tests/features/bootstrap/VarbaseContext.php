@@ -2137,7 +2137,7 @@ JS;
    *
    * Example #1: When I scroll up 1000
    *
-   * @When /^(?:|I ) scroll up (?P<value>\d+)$/
+   * @When /^(?:|I )scroll up (?P<value>\d+)$/
    */
   public function iScrollupWithValue($value) {
     $this->getSession()->executeScript("javascript:window.scrollBy(0,-" . $value . ")");
@@ -2184,7 +2184,7 @@ JS;
    * Example #2: And I scroll to top of "#media-library-wrapper"
    * Example #3: And scroll to top of "#layout-builder-modal"
    *
-   * @When /^(?:|I )scroll to top of :selector
+   * @When /^(?:|I )scroll to top of "([^"]*)"$/
    */
   public function iScrollToTopOf($selector) {
     $this->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
@@ -2200,7 +2200,7 @@ JS;
    * Example #2: And I scroll to bottom of "#media-library-wrapper"
    * Example #3: And scroll to bottom of "#layout-builder-modal"
    *
-   * @When /^(?:|I )scroll to bottom of :selector
+   * @When /^(?:|I )scroll to bottom of "([^"]*)"$/
    */
   public function iScrollToBottomOf($selector) {
     $this->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
