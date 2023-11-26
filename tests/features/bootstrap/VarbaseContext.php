@@ -525,7 +525,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
   /*
    * ===========================================================================
-   * Rich text editor Functions CKEditor 5.
+   * Rich text editor Functions CKEditor 4.
    * ===========================================================================
    */
 
@@ -892,7 +892,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I select the :color section background color
    */
   public function iSelectTheSectionBackgroundColor($color) {
-    $this->iOpenTheSectionSettingsMenu("Background");
+    $this->iSwitchToSectionBackgroundColorSettings();
     $bg_color = $this->getSession()->getPage()->find('xpath', "//label[contains(., '$color') and contains(@for, 'edit-layout-settings-ui-tab-content-appearance-background-background-color')]");
     if (is_null($bg_color)) {
       throw new \Exception('The "' . $color . '" option was not found or not visible');
@@ -958,7 +958,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
-   * Set the section blocks alignemnt.
+   * Set the section blocks alignment.
    *
    * #Varbase Context #varbase
    *
@@ -2192,10 +2192,10 @@ JS;
    * Example #2: And I scroll to top of "#media-library-wrapper"
    * Example #3: And scroll to top of "#layout-builder-modal"
    *
-   * @When /^(?:|I )scroll to top of :selector
+   * @When /^(?:|I )scroll to top of "([^"]*)"$/
    */
   public function iScrollToTopOf($selector) {
-    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
+    $this->getSession()->executeScript('document.querySelector("' . $selector . '").scrollTop = 0');
     $this->getSession()->wait(2000);
   }
 
@@ -2208,10 +2208,10 @@ JS;
    * Example #2: And I scroll to bottom of "#media-library-wrapper"
    * Example #3: And scroll to bottom of "#layout-builder-modal"
    *
-   * @When /^(?:|I )scroll to bottom of :selector
+   * @When /^(?:|I )scroll to bottom of "([^"]*)"$/
    */
   public function iScrollToBottomOf($selector) {
-    $this->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
+    $this->getSession()->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
     $this->getSession()->wait(2000); 
   }
 
@@ -2424,8 +2424,8 @@ JS;
    */
   public function iShouldSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_elment = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
-    if (empty($operation_elment)) {
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it did not have the operation "%s".', $entity, $operation));
     }
   }
@@ -2445,8 +2445,8 @@ JS;
    */
   public function iShouldNotSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_elment = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
-    if (!empty($operation_elment)) {
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (!empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it have the operation "%s".', $entity, $operation));
     }
   }
