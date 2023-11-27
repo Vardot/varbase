@@ -49,8 +49,10 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
       And I press "dialog-submit"
       And I wait for AJAX to finish
       And I scroll up
+      And I wait 1s
      Then I should see "The maximum number of media items have been selected."
-     When I click "Text"
+     When I scroll up
+      And I click "Text"
       And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."
       And wait
       And I select "published" from "edit-moderation-state-0-state"

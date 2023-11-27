@@ -36,7 +36,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should not see "Bootstrap 12 Cols"
      When I scroll to the top of the page
       And wait 2s
-      And I press the "Save layout" button
+      And I press "Save layout"
       And wait
       And wait 2s
      Then I should see "The layout override has been saved."
@@ -69,13 +69,13 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
       And I wait for AJAX to finish
-     Then I should see "Add block in Section 3, Col 1 region"
-      And I should see "Add block in Section 3, Col 2 region"
+     Then I should see "Add block in Section 2, Col 1 region"
+      And I should see "Add block in Section 2, Col 2 region"
 
-     When I click "Add block in Section 3, Col 1 region"
+     When I click "Add block in Section 2, Col 1 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -88,10 +88,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 2 cols section, col 1"
   
-     When I click "Add block in Section 3, Col 2 region"
+     When I click "Add block in Section 2, Col 2 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -140,14 +140,14 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
       And I wait for AJAX to finish
-     Then I should see "Add block in Section 4, Col 1 region"
-      And I should see "Add block in Section 4, Col 2 region"
-      And I should see "Add block in Section 4, Col 3 region"
+     Then I should see "Add block in Section 3, Col 1 region"
+      And I should see "Add block in Section 3, Col 2 region"
+      And I should see "Add block in Section 3, Col 3 region"
 
-     When I click "Add block in Section 4, Col 1 region"
+     When I click "Add block in Section 3, Col 1 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -160,10 +160,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 3 cols section, col 1"
 
-     Then I click "Add block in Section 4, Col 2 region"
+     Then I click "Add block in Section 3, Col 2 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -176,10 +176,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 3 cols section, col 2"
   
-     Then I click "Add block in Section 4, Col 3 region"
+     Then I click "Add block in Section 3, Col 3 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -229,15 +229,15 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
       And I wait for AJAX to finish
-     Then I should see "Add block in Section 5, Col 1 region"
-      And I should see "Add block in Section 5, Col 2 region"
-      And I should see "Add block in Section 5, Col 3 region"
-      And I should see "Add block in Section 5, Col 4 region"
+     Then I should see "Add block in Section 4, Col 1 region"
+      And I should see "Add block in Section 4, Col 2 region"
+      And I should see "Add block in Section 4, Col 3 region"
+      And I should see "Add block in Section 4, Col 4 region"
 
-     When I click "Add block in Section 5, Col 1 region"
+     When I click "Add block in Section 4, Col 1 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -250,10 +250,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 4 cols section, col 1"
 
-     When I click "Add block in Section 5, Col 2 region"
+     When I click "Add block in Section 4, Col 2 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -266,10 +266,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 4 cols section, col 2"
   
-     Then I click "Add block in Section 5, Col 3 region"
+     Then I click "Add block in Section 4, Col 3 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -282,10 +282,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 4 cols section, col 3"
   
-     Then I click "Add block in Section 5, Col 4 region"
+     Then I click "Add block in Section 4, Col 4 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -336,17 +336,17 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I scroll to bottom of "#drupal-off-canvas"
       And I save the section 
       And I wait for AJAX to finish
-     Then I should see "Add block in Section 6, Col 1 region"
-      And I should see "Add block in Section 6, Col 2 region"
-      And I should see "Add block in Section 6, Col 3 region"
-      And I should see "Add block in Section 6, Col 5 region"
-      And I should see "Add block in Section 6, Col 6 region"
+     Then I should see "Add block in Section 5, Col 1 region"
+      And I should see "Add block in Section 5, Col 2 region"
+      And I should see "Add block in Section 5, Col 3 region"
+      And I should see "Add block in Section 5, Col 5 region"
+      And I should see "Add block in Section 5, Col 6 region"
 
 
-     When I click "Add block in Section 6, Col 1 region"
+     When I click "Add block in Section 5, Col 1 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -359,10 +359,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 6 cols section, col 1"
 
-     Then I click "Add block in Section 6, Col 2 region"
+     Then I click "Add block in Section 5, Col 2 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -375,10 +375,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 6 cols section, col 2"
 
-     Then I click "Add block in Section 6, Col 3 region"
+     Then I click "Add block in Section 5, Col 3 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -391,10 +391,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 6 cols section, col 3"
   
-     Then I click "Add block in Section 6, Col 4 region"
+     Then I click "Add block in Section 5, Col 4 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -407,10 +407,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 6 cols section, col 4"
   
-     Then I click "Add block in Section 6, Col 5 region"
+     Then I click "Add block in Section 5, Col 5 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -423,10 +423,10 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
      Then I should see "Rich text in 6 cols section, col 5"
   
-     When I click "Add block in Section 6, Col 6 region"
+     When I click "Add block in Section 5, Col 6 region"
       And I wait for AJAX to finish
-     Then I should see "Create custom block"
-     When I click "Create custom block"
+     Then I should see "Create content block"
+     When I click "Create content block"
       And I wait for AJAX to finish
      Then I should see "Rich text"
      When I click "Rich text"
@@ -451,4 +451,3 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Rich text in 6 cols section, col 4"
       And I should see "Rich text in 6 cols section, col 5"
       And I should see "Rich text in 6 cols section, col 6"
-
