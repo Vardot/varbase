@@ -40,7 +40,7 @@ As a site admin, I will create a new landing page, add a section with different 
 
      When I click "Add block in Section 2, Col 1 region"
       And I wait for AJAX to finish
-      And I click "Create custom block"
+      And I click "Create content block"
       And I wait for AJAX to finish
       And I click "Rich text"
       And I wait for AJAX to finish
@@ -52,7 +52,7 @@ As a site admin, I will create a new landing page, add a section with different 
 
      When I click "Add block in Section 2, Col 2 region"
       And I wait for AJAX to finish
-      And I click "Create custom block"
+      And I click "Create content block"
       And I wait for AJAX to finish
       And I click "Rich text"
       And I wait for AJAX to finish
