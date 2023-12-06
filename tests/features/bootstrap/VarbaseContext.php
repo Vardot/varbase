@@ -2477,16 +2477,16 @@ JS;
    * Varbase Context #varbase.
    *
    * Example 1: Then I should see the accessibility checker
-   * Example 2: Then should see accessibility checker
+   * Example 2: Then should see a11y checker
    * Example 3: Then see the accessibility checker
    *
-   * @Then /^(?:|I )(?:|should )see (?:|the )accessibility checker$/
+   * @Then /^(?:|I )(?:|should )see (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iShouldSeeTheAccessibilityChecker() {
     $this->getSession()->wait(4000);
     $elements = $this->getSession()->getPage()->findAll('xpath', "//ed11y-element-panel");
     if (empty($elements)) {
-      throw new \Exception('The Editorial Accessibility Checker was not found in the page');
+      throw new \Exception('The Accessibility Checker was not found in the page');
     }
   }
 
@@ -2496,17 +2496,37 @@ JS;
    * Varbase Context #varbase.
    *
    * Example 1: Then I should not see the accessibility checker
-   * Example 2: Then should not see accessibility checker
+   * Example 2: Then should not see a11y checker
    * Example 3: Then not see the accessibility checker
    *
-   * @Then /^(?:|I )(?:|should )not see (?:|the )accessibility checker$/
+   * @Then /^(?:|I )(?:|should )not see (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iShouldNotSeeTheAccessibilityChecker() {
     $this->getSession()->wait(4000);
     $elements = $this->getSession()->getPage()->findAll('xpath', "//ed11y-element-panel");
     if (!empty($elements)) {
-      throw new \Exception('The Editorial Accessibility Checker was found in the page');
+      throw new \Exception('The Accessibility Checker was found in the page');
     }
+  }
+
+  /**
+   * Close the accessibility checker, to clear space for more actions.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: When I close the accessibility checker
+   * Example 2:  And I close the a11y checker
+   *
+   * @When /^(?:|I )close (?:|the )(?:|accessibility|a11y )checker$/
+   */
+  public function iCloseTheAccessibilityChecker() {
+    $page = $this->getSession()->getPage();
+    $accessibilityCheckerClose = $page->findAll('xpath', "//ed11y-element-panel");
+    if (empty($accessibilityCheckerClose)) {
+      throw new \Exception('The Accessibility Checker was not found in the page');
+    }
+
+    $this->getSession()->executeScript('document.querySelector("body > ed11y-element-panel").shadowRoot.querySelector("#toggle").click();');
   }
 
   /**
