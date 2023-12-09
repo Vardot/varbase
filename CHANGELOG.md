@@ -1,4 +1,270 @@
 # 9.0.16
+
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+
+> Paved the way for a smoother upgrade process to **Drupal 10**
+
+###  Highlighted important changes since Varbase 9.0.16:
+
+> #### Notice: Drupal 9 is end of life!!, Drush 11 is end of life!!
+> * [Drupal 9 is end of life - PSA-2023-11-01](https://www.drupal.org/psa-2023-11-01)
+> * [Drush 11 is end of life](https://www.drush.org/12.x/install/#drupal-compatibility)
+
+> #### What to do about Drupal 9's and Drush 11's end of life?
+> * [Updating Varbase ~9.0 to Drupal 10](https://docs.varbase.vardot.com/developers/updating-varbase/version-update-guides/updating-varbase-9.0-to-drupal-10)
+> * [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers/updating-varbase/updating-drush-to-the-latest-stable-version)
+
+All old **Varbase 9.0.x** sites are ready to upgrade to **latest Drupal ~10 version** with **Varbase 9.1.x**
+
+
+## Added since Varbase 9.0.16:
+All new features are in **Varbase ~10**
+
+* Issue [#3394686](https://www.drupal.org/i/3394686):
+         Added **Editoria11y Accessibility Checker** `~2.1.0` module
+* Issue [#3404332](https://www.drupal.org/i/3404332):
+         Included the default configuration for Editoria11y Settings as a
+         "recipe" to be automatically imported whenever Editoria11y is activated
+* Issue [#3344809](https://www.drupal.org/i/3344809):
+         Added Permissions for user roles to **Varbase FAQs** from scanned
+         config/permissions directory
+* Issue [#3404454](https://www.drupal.org/i/3404454):
+         Added translate any entity and content translations permissions
+         "recipes" for user roles when installing the **Varbase Internationalization** module
+* Issue [#3399834](https://www.drupal.org/i/3399834):
+         Added `"Allow custom account name"` to **Varbase** general settings to
+         work with **Email Registration** `~2.0.0`
+
+### Changed since Varbase 9.0.16:
+* Issue [#3401085](https://www.drupal.org/i/3401085):
+         Allowed to upgrade **Allowed Formats** module to `~3.0` with migration
+         to **Drupal `~10`** in **Varbase Layout Builder**
+* Issue [#3404910](https://www.drupal.org/i/3404910)
+         by [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+        : Improved implementation of the Theme Negotiator for Layout
+         Builder Routes with Regular Expression Purge Match
+* Issue [#3394530](https://www.drupal.org/i/3394530):
+         Switched **Metatag** module from `^1.12` to `~1.0 ||~2.0.0` to
+         have a smooth update process and keep legacy support too
+* Issue [#3394479](https://www.drupal.org/i/3394479)
+         by [emircanerkul](https://www.drupal.org/u/emircanerkul)
+        : Switched **Google Tag** module from `~2.0.0` only to `~1.0 || ~2.0.0` to
+         have a smooth update process and keep legacy support too
+* Issue [#3399879](https://www.drupal.org/i/3399879):
+         Changed functional automated testing features to match with
+         **Email Registration** `~2.0.0` for `create/update` and login with
+         `"Email address or username"`
+* Issue [#3397659](https://www.drupal.org/i/3397659)
+         by [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+        : Enabled Video Looping for Single Video Slides and Minimize Initial Slide Delay
+* Issue [#3394303](https://www.drupal.org/i/3394303):
+         Allowed **Varbase Media Demo Assets** `~10` to be installed with
+         Drupal `~9.0` or Drupal `~10` sites
+* Issue [#3395943](https://www.drupal.org/i/3395943):
+         Revamped the `9.1.x` branch for Varbase Bootstrap Paragraphs to work with
+         **Drupal `~10`** and custom needed changes for a smoother upgrade process
+* Issue [#3400136](https://www.drupal.org/i/3400136):
+         Refactored updates for **Varbase Core** by moving hook updates to
+         `include/updates` with load Include based on major branches
+* Issue [#3400109](https://www.drupal.org/i/3400109):
+         Refactored updates for **Varbase API** by moving hook updates to `include/updates`
+         with load Include based on major branches
+* Issue [#3400209](https://www.drupal.org/i/3400209):
+         Refactored updates for **Varbase Media** by moving hook updates to `include/updates`
+         with load Include based on major branches
+* Issue [#3400234](https://www.drupal.org/i/3400234):
+         Refactored updates for **Varbase Editor** by moving hook updates to `include/updates`
+         with load Include based on major branches
+* Issue [#3400241](https://www.drupal.org/i/3400241):
+         Refactored updates for **Varbase Blog** by moving hook updates to `include/updates`
+         with load Include based on major branches
+* Issue [#3400422](https://www.drupal.org/i/3400422):
+         Refactored updates for **Varbase Landing Page (Paragraphs)** by moving hook updates
+         to include/updates with load Include based on major branches
+* Issue [#3400246](https://www.drupal.org/i/3400246):
+         Refactored updates for **Varbase Media Hero Slider** by moving hook updates to
+         `include/updates` with load Include based on major branches
+* Issue [#3400356](https://www.drupal.org/i/3400356):
+         Refactored updates for **Varbase Bootstrap Paragraphs** by moving hook updates
+         to `include/updates` with load Include based on major branches
+* Issue [#3400376](https://www.drupal.org/i/3400376):
+         Refactored updates for **Varbase Email** by moving hook updates to
+         `include/updates` with load Include based on major branches
+* Issue [#3400441](https://www.drupal.org/i/3400441):
+         Refactored updates for **Varbase Search** by moving hook updates to
+         `include/updates` with load Include based on major branches
+* Issue [#3400506](https://www.drupal.org/i/3400506):
+         Refactored updates for **Varbase Layout Builder** by moving hook updates
+         to `include/updates` with load Include based on major branches
+* Issue [#3400465](https://www.drupal.org/i/3400465):
+         Refactored updates for **Varbase Workflow** by moving hook updates
+         to `include/updates` with load Include based on major branches
+* Issue [#3400453](https://www.drupal.org/i/3400453):
+         Refactored updates for **Varbase SEO** by moving hook updates to `include/updates`
+         with load Include based on major branches
+* Issue [#3400484](https://www.drupal.org/i/3400484):
+         Refactored updates for **Varbase Social Single Sign-On** by moving hook updates
+         to `include/updates` with load Include based on major branches
+* Issue [#3400630](https://www.drupal.org/i/3400630):
+         Refactored updates for **Varbase Media Header** by moving hook updates to
+         `include/updates` with load Include based on major branches
+* Issue [#3400369](https://www.drupal.org/i/3400369):
+         Refactored updates for **Varbase Carousels** by moving hook updates to 
+        `include/updates` with load Include based on major branches
+* Issue [#3400484](https://www.drupal.org/i/3400484):
+         Refactored updates for **Varbase Social Single Sign-On** by moving hook
+         updates to `include/updates` with load Include based on major branches
+* Issue [#3405741](https://www.drupal.org/i/3405741):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Core** to include all `helpers` and `updates`
+* Issue [#3405812](https://www.drupal.org/i/3405812):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Editor** to include all `helpers` and `updates`
+* Issue [#3406592](https://www.drupal.org/i/3406592):
+         Switched from Drupal module load Include to native PHP include once for
+         **Varbase Social Single Sign-On** to include all `helpers` and `updates`
+* Issue [#3406567](https://www.drupal.org/i/3406567):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase SEO** to include all `helpers` and `updates`
+* Issue [#3406416](https://www.drupal.org/i/3406416):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Media Header** to include all `helpers` and `updates`
+* Issue [#3406549](https://www.drupal.org/i/3406549):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Search** to include all `helpers` and `updates`
+* Issue [#3406686](https://www.drupal.org/i/3406686):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Workflow** to include all `helpers` and `updates`
+* Issue [#3406275](https://www.drupal.org/i/3406275):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Media** to include all `helpers` and `update`
+* Issue [#3406182](https://www.drupal.org/i/3406182):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Layout Builder** to include all `helpers` and `updates`
+* Issue [#3406150](https://www.drupal.org/i/3406150):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase FAQs** to include all `helpers` and `updates`
+* Issue [#3405970](https://www.drupal.org/i/3405970)
+         by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+        : Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Email** to include all `helpers` and `updates`
+* Issue [#3406025](https://www.drupal.org/i/3406025):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Media Hero Slider** to include all `helpers` and `updates`
+* Issue [#3405729](https://www.drupal.org/i/3405729):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Carousels** to include all `helpers` and `updates`
+* Issue [#3405720](https://www.drupal.org/i/3405720):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Landing Page (Paragraphs)** to include all `helpers` and `updates`
+* Issue [#3405702](https://www.drupal.org/i/3405702):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Bootstrap Paragraphs** to include all `helpers` and `updates`
+* Issue [#3405693](https://www.drupal.org/i/3405693):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase Blog (Corporate Blog)** to include all `helpers` and `updates`
+* Issue [#3405344](https://www.drupal.org/i/3405344):
+         Switched from Drupal module load Include to **native PHP include once** for
+         **Varbase API** to include all `helpers` and `updates`
+
+### Updates since Varbase 9.0.16:
+* Issue [#3396694](https://www.drupal.org/i/3396694)
+         by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
+        : Updated **Fast 404** module from `~2.0` to `~2.0 || ~3.0` for a smoother
+         update process on the `9.0.x` branch
+* Issue [#3396822](https://www.drupal.org/i/3396822)
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Updated **Rabbit Hole** module from `~1.0` to `~1.0 || ~2.0.0` for
+         a smoother update process on the `9.0.x` branch
+* Issue [#3405239](https://www.drupal.org/i/3405239)
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Updated **Paragraphs Edit** module from `~2` to `~3`
+* Issue [#3397775](https://www.drupal.org/i/3397775):
+         Updated **Paragraphs Previewer** module from `1.7.0` to `1.8.0`
+         and kept needed patches
+* Issue [#3395944](https://www.drupal.org/i/3395944):
+         Updated **Varbase Bootstrap Paragraphs** module from `9.0.x-dev` to `9.1.x-dev`
+         to work with Drupal `~10` and for a smoother upgrade process
+* Issue [#3397744](https://www.drupal.org/i/3397744):
+         Updated **Webform** module from `~6.1.0` to `~6.2.0`
+* Issue [#3399955](https://www.drupal.org/i/3399955):
+         Updated **Entity Embed** module from `1.4.0` to `1.5.0` and kept needed patches
+* Issue [#3399770](https://www.drupal.org/i/3399770):
+         Updated **Email Registration** module from `~1.0` to `~2.0.0`
+* Issue [#3399759](https://www.drupal.org/i/3399759):
+         Updated **Config Ignore** module from `3.0.0` to `3.0.1` ( `~3.0` ) and removed committed patches
+* Issue [#3399632](https://www.drupal.org/i/3399632):
+         Updated **Config Ignore** module from `3.0.0-rc1` to `3.0.0` and added a needed patch for a smoother upgrade process
+* Issue [#3395925](https://www.drupal.org/i/3395925):
+         Updated the **Embed** module from `1.6.0` to `1.7.0` ( `~1.0` ) and removed committed patches
+* Issue [#3394554](https://www.drupal.org/i/3394554):
+         Updated **Schema.org Metatag** module from `~2.0` to `~2.0 || ~3.0.0`
+* Issue [#3394562](https://www.drupal.org/i/3394562):
+         Updated **Schema.org Metatag** module from `~2.0` to `~2.0 || ~3.0.0` in Varbase API
+* Issue [#3394558](https://www.drupal.org/i/3394558):
+         Updated **Metatag** module from `^1.12` to `~1.0 ||~2.0.0`
+* Issue [#3393381](https://www.drupal.org/i/3393381):
+         Updated **Taxonomy Term Reference** Tree Widget from `~1.0` to `~2.0.0`
+* Issue [#3393384](https://www.drupal.org/i/3393384):
+         Updated **Colorbox** module from `~1.0` to `~2.0.0`
+
+### Fixes since Varbase 9.0.16:
+* Issue [#3397497](https://www.drupal.org/i/3397497)
+         by josebc
+        : Fixed visual regression issues with the media library and
+         custom **Vartheme Claro** style for **Layout Builder**
+* Issue [#3401833](https://www.drupal.org/i/3401833)
+         by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed pager behavior and style in **Media Library** widget with or without
+         AJAX issues in deep level 4 or 5 AJAxing
+* Issue [#3401834](https://www.drupal.org/i/3401834)
+         by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed **Request-URI Too Long 414** for deep level 4 or 5+ AJAX requests
+* Issue [#3387135](https://www.drupal.org/i/3387135)
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Fixed null returns for **Background colors** with columns
+* Issue [#3394665](https://www.drupal.org/i/3394665)
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Fixed Broken and deprecated twig templates on for loops
+         and limited the `9.0.x` branch to **Drupal `~9.0`** only
+* Issue [#3401563](https://www.drupal.org/i/3401563)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed not properly working **Claro** theme **Media Library** styling
+         with the latest **Drupal core 9 version** `9.5.11`
+* Issue [#3398691](https://www.drupal.org/i/3398691)
+         by [Ibrahim Tameme](https://www.drupal.org/u/ibrahim-tameme)
+        : Fixed not rendered selection checkbox for **Media Library** grid widget after searching
+* Issue [#3394268](https://www.drupal.org/i/3394268)
+         by [emircanerkul](https://www.drupal.org/u/emircanerkul)
+        : Fixed **Drupal `10`** Warning: Undefined array key item for
+         blazy blurry pre-process of media field
+* Issue [#3404207](https://www.drupal.org/i/3404207):
+         Fixed missing **Cover Image** column for videos in the **Media Library**
+         table and widget view display option
+* Issue [#3405991](https://www.drupal.org/i/3405991)
+         by [RaniaMashaqbeh](https://www.drupal.org/u/raniamashaqbeh)
+         : Fixed console error that appears because
+         of requesting a leftover `quickedit.css` **Drupal `~9`** file
+         in `vartheme_claro.info.yml` in **Drupal `~10`**
+* Issue [#3404913](https://www.drupal.org/i/3404913)
+         by [RaniaMashaqbeh](https://www.drupal.org/u/raniamashaqbeh)
+         : Fixed **Class ModuleInstallerFactory** not found
+         when updating for **Varbase Core**
+* Issue [#3405260](https://www.drupal.org/i/3405260):
+         Fixed **Class ModuleInstallerFactory** not found when updating for
+         **Varbase Bootstrap Paragraphs**
+* Issue [#3404635](https://www.drupal.org/i/3404635)
+         by [emircanerkul](https://www.drupal.org/u/emircanerkul)
+        : Fixed to always attach **claro9** or **claro10** libraries in forms
+         in **Layout Builder Modal**
+* Issue [#3404615](https://www.drupal.org/i/3404615)
+         by [emircanerkul](https://www.drupal.org/u/emircanerkul)
+        : Fixed not needed condition for parent theme is front-end theme
+         and `_drupal_ajax` in **Drupal `~10`** compatibility of **VarbaseLayoutBuilderThemeNegotiator**
+
+-------------------------------------------------------------------------------
+
+# 9.0.16
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
 
 > Paving the way for a smoother upgrade process to **Drupal 10**
