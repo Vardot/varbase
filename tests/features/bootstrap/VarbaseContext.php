@@ -577,16 +577,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    // Find the command button by the select command.
-    $element = $this->getSession()->getPage()->find('xpath', "//button[span[text()='$selectorCommand']]");
-
-    if (is_null($element)) {
-      throw new \Exception("The $selectorCommand command button in the rich text editor field $locator was not found");
-    }
-    $element->click();
-
+    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].execCommand( '$selectorCommand' );");
 
   }
+
 
   /**
    * Append text at the end of a rich text editor field  WYSIWYG with content.
