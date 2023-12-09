@@ -1,13 +1,13 @@
 name: Varbase
 type: profile
-description: "Varbase is an enhanced Drupal distribution with a lot of necessities."
+description: Varbase is an enhanced Drupal distribution with a lot of necessities.
 core_version_requirement: ~10
 project: varbase
 distribution:
   name: Varbase
   install:
     theme: vartheme_claro
-version: 9.1.x-dev
+version: 9.1.0
 install:
   - system
   - action
