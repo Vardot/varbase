@@ -2484,11 +2484,11 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example 1: Then I should see the accessibility checker
+   * Example 1: Then I should see the a11y checker
    * Example 2: Then should see a11y checker
    * Example 3: Then see the accessibility checker
    *
-   * @Then /^(?:|I )(?:|should )see (?:|the )(?:|accessibility|a11y )checker$/
+   * @Then /^(?:|I )should see (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iShouldSeeTheAccessibilityChecker() {
     $this->getSession()->wait(4000);
@@ -2503,11 +2503,11 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example 1: Then I should not see the accessibility checker
+   * Example 1: Then I should not see thea a11y checker
    * Example 2: Then should not see a11y checker
    * Example 3: Then not see the accessibility checker
    *
-   * @Then /^(?:|I )(?:|should )not see (?:|the )(?:|accessibility|a11y )checker$/
+   * @Then /^(?:|I )should not see (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iShouldNotSeeTheAccessibilityChecker() {
     $this->getSession()->wait(4000);
