@@ -422,6 +422,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
   }
 
+
   /**
    * Fill in a form field with id|name|title|alt|value.
    *
@@ -452,7 +453,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase.
    *
    * Example 1: Then I should see "this text" under editor media browser
-   * Example 2: Then I should see "this text" under the editormedia browser modal window.
+   * Example 2: Then I should see "this text" under the editor media browser modal window.
    *
    * @Then /^I should see "([^"]*)" under (?:|the )editor media browser(?:| modal window)$/
    */
@@ -576,7 +577,14 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("CKEDITOR.instances[\"$fieldId\"].execCommand( '$selectorCommand' );");
+    // Find the command button by the select command.
+    $element = $this->getSession()->getPage()->find('xpath', "//button[span[text()='$selectorCommand']]");
+
+    if (is_null($element)) {
+      throw new \Exception("The $selectorCommand command button in the rich text editor field $locator was not found");
+    }
+    $element->click();
+
 
   }
 
@@ -667,8 +675,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I select all text in "Body" field
-   * Example #2:  And I select all text in "Body" field.
+   * Example #1: When I select all text in "Body" rich text editor field
+   * Example #2:  And I select all text in "Body" rich text editor field
    *
    * @When /^(?:|I )select all text in "(?P<selectedField>[^"]*)" rich text editor field$/
    */
@@ -859,11 +867,11 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   public function iOpenTheSectionSettingsMenu($menu) {
     $this->iMoveToTheSectionStylesTab();
     $js = <<<JS
-      var title = "$menu";
-      const xpath = "//span[contains(text(),'" + title + "')]";
-      const js_menu = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-      js_menu.closest("details").setAttribute("open", "");
-        JS;
+			var title = "$menu";
+			const xpath = "//span[contains(text(),'" + title + "')]";
+			const js_menu = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+			js_menu.closest("details").setAttribute("open", "");
+		JS;
     try {
       $this->getSession()->executeScript($js);
     }
@@ -949,7 +957,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
-   * Set the section blocks alignemnt.
+   * Set the section blocks alignment.
    *
    * #Varbase Context #varbase
    *
@@ -992,10 +1000,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         else {
           $padding_side->click();
           $js = <<<JS
-          var js_side = "$side";
-          var js_value = "$value";
-          jQuery(".bs-field-padding-" + js_side).val(js_value);
-                    JS;
+					var js_side = "$side";
+					var js_value = "$value";
+					jQuery(".bs-field-padding-" + js_side).val(js_value);
+					JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1033,10 +1041,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         else {
           $margin_side->click();
           $js = <<<JS
-          var js_side = "$side";
-          var js_value = "$value";
-          jQuery(".bs-field-margin-" + js_side).val(js_value);
-                    JS;
+					var js_side = "$side";
+					var js_value = "$value";
+					jQuery(".bs-field-margin-" + js_side).val(js_value);
+					JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1108,10 +1116,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         else {
           $this->getSession()->getPage()->find('xpath', "//label[contains(@for, 'edit-layout-settings-ui-tab-content-appearance-border-border-type-border-$b_side')]")->click();
           $js = <<<JS
-            var js_side = "$b_side";
-            var js_width = "$b_width";
-            jQuery(".bs-field-border-width-" + js_side).val(js_width);
-                    JS;
+						var js_side = "$b_side";
+						var js_width = "$b_width";
+						jQuery(".bs-field-border-width-" + js_side).val(js_width);
+					JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1183,11 +1191,11 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         }
         else {
           $js = <<<JS
-          var js_corner = "$corner";
-          var js_value = "$value";
-          js_corner = js_corner.replace(' ', '_');
-          jQuery(".bs-field-rounded-corner-" + js_corner).val(js_value);
-                    JS;
+					var js_corner = "$corner";
+					var js_value = "$value";
+					js_corner = js_corner.replace(' ', '_');
+					jQuery(".bs-field-rounded-corner-" + js_corner).val(js_value);
+					JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1473,7 +1481,11 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $locator);
     }
 
-    $this->getSession()->executeScript("return Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData();");
+    $this->getSession()->executeScript("return CKEDITOR.instances[\"$fieldId\"].getData();");
+
+    // Switch to the iframe.
+    $iFrameID = $this->getAttributeByOtherAttributeValue('id', 'title', $fieldId, 'iframe');
+    $this->getSession()->switchToIFrame($iFrameID);
 
     // Find an image with the title.
     $element = $this->getSession()->getPage()->findAll('xpath', "//img[contains(@title, '{$titleText}')]");
@@ -1482,6 +1494,8 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text under [ ' . $locator . ' ].');
     }
 
+    // Switch back too the page from the iframe.
+    $this->getSession()->switchToIFrame(NULL);
   }
 
   /**
@@ -1585,7 +1599,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * @Then /^I should see "(?P<text>[^"]*)" in the "(?P<htmlTagName>[^"]*)" element with the "(?P<attribute>[^"]*)" attribute set to "(?P<value>[^"]*)"$/
    */
-  public function ishouldSeeTextInTheHtmlTagElement($text, $htmlTagName, $attribute, $value) {
+  public function iShouldSeeTextInTheHtmlTagElement($text, $htmlTagName, $attribute, $value) {
 
     $elements = $this->getSession()->getPage()->findAll('css', $htmlTagName);
     if (empty($elements)) {
@@ -1945,16 +1959,16 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 var node = document.getElementById("{$fieldId}");
 var keyEvent = document.createEvent('KeyboardEvent');
 keyEvent.initKeyEvent('keypress',        // typeArg,
-                       true,             // canBubbleArg,
-                       true,             // cancelableArg,
-                       window,             // viewArg,
-                       {$isCtrlKeyArg},             // ctrlKeyArg,
-                       {$isAltKeyArg},            // altKeyArg,
-                       {$isShiftKeyArg},            // shiftKeyArg,
-                       false,            // metaKeyArg,
-                       {$key},       // keyCodeArg,
-                       {$key}      // charCodeArg);
-                     );
+											 true,             // canBubbleArg,
+											 true,             // cancelableArg,
+											 window,             // viewArg,
+											 {$isCtrlKeyArg},             // ctrlKeyArg,
+											 {$isAltKeyArg},            // altKeyArg,
+											 {$isShiftKeyArg},            // shiftKeyArg,
+											 false,            // metaKeyArg,
+											 {$key},       // keyCodeArg,
+											 {$key}      // charCodeArg);
+										 );
 node.dispatchEvent(keyEvent);
 JS;
 
@@ -2064,8 +2078,8 @@ JS;
    */
   public function iExpandThefield($fieldID) {
     $js = <<<JS
-    var group = document.getElementById("{$fieldID}");
-    group.setAttribute("open","");
+		var group = document.getElementById("{$fieldID}");
+		group.setAttribute("open","");
 JS;
     $this->getSession()->executeScript($js);
   }
@@ -2082,8 +2096,8 @@ JS;
    */
   public function iExpandTheSelectList($index, $listClassName) {
     $js = <<<JS
-    var group = document.getElementsByClassName("{$listClassName}")[{$index}];
-    group.className += "open";
+		var group = document.getElementsByClassName("{$listClassName}")[{$index}];
+		group.className += "open";
 JS;
     $this->getSession()->executeScript($js);
   }
@@ -2203,7 +2217,7 @@ JS;
    */
   public function iScrollToBottomOf($selector) {
     $this->getSession()->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
-    $this->getSession()->wait(2000);
+    $this->getSession()->wait(2000); 
   }
 
   /**
@@ -2220,7 +2234,7 @@ JS;
     $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if ($isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is checked");
-    }
+    } 
   }
 
   /**
@@ -2237,7 +2251,7 @@ JS;
     $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if (!$isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is unchecked");
-    }
+    } 
   }
 
   /**
@@ -2310,7 +2324,7 @@ JS;
   }
 
   /**
-   * Switch to an ifram by its id.
+   * Switch to an iframe by its id.
    *
    * Varbase Context #varbase.
    *
@@ -2324,11 +2338,11 @@ JS;
   }
 
   /**
-   * Switch to the main frame or the parent ifram.
+   * Switch to the main frame or the parent iframe.
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I switch to main fram
+   * Example #1: When I switch to main frame
    * Example #2: When I switch to parent
    *
    * @When /^(?:|I )switch to main frame$/
@@ -2415,8 +2429,8 @@ JS;
    */
   public function iShouldSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_elment = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
-    if (empty($operation_elment)) {
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it did not have the operation "%s".', $entity, $operation));
     }
   }
@@ -2436,8 +2450,8 @@ JS;
    */
   public function iShouldNotSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_elment = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
-    if (!empty($operation_elment)) {
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    if (!empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it have the operation "%s".', $entity, $operation));
     }
   }

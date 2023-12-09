@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="custom_code">
-  <description>Default PHP CodeSniffer configuration for custom code.</description>
-  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml,css"/>
+  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml"/>
+  <description>Default PHP CodeSniffer configuration for Drupal core.</description>
 
   <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->
-  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>varbase.info.yml</exclude-pattern>
   <exclude-pattern>*/bower_components/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>tests/features/bootstrap/*</exclude-pattern>
 
-  <!--Exclude minimized css.-->
-  <exclude-pattern>*/*.min.css</exclude-pattern>
-  <exclude-pattern>css/variables.css</exclude-pattern>
+  <file>.</file>
 
   <!-- Only include specific sniffs that pass. This ensures that, if new sniffs are added, HEAD does not fail.-->
+
   <!-- Drupal sniffs -->
   <rule ref="Drupal.Arrays.Array">
-    <!-- Sniff for these errors: CommaLastItem -->
-    <exclude name="Drupal.Arrays.Array.ArrayClosingIndentation"/>
-    <exclude name="Drupal.Arrays.Array.ArrayIndentation"/>
+    <!-- Sniff for these errors: ArrayClosingIndentation, ArrayIndentation, CommaLastItem -->
     <exclude name="Drupal.Arrays.Array.LongLineDeclaration"/>
   </rule>
+  <rule ref="Drupal.CSS.ClassDefinitionNameSpacing"/>
+  <rule ref="Drupal.CSS.ColourDefinition"/>
   <rule ref="Drupal.Classes.ClassCreateInstance"/>
   <rule ref="Drupal.Classes.ClassDeclaration"/>
   <rule ref="Drupal.Classes.ClassFileName"/>
@@ -28,8 +29,6 @@
   <rule ref="Drupal.Classes.UnusedUseStatement"/>
   <rule ref="Drupal.Classes.UseGlobalClass"/>
   <rule ref="Drupal.Classes.UseLeadingBackslash"/>
-  <rule ref="Drupal.CSS.ClassDefinitionNameSpacing"/>
-  <rule ref="Drupal.CSS.ColourDefinition"/>
   <rule ref="Drupal.Commenting.ClassComment">
     <exclude name="Drupal.Commenting.ClassComment.Missing"/>
   </rule>
@@ -42,12 +41,11 @@
       TagsNotGrouped, ParamGroup -->
     <!-- ParamNotFirst still not decided for PHPUnit-based tests.
       @see https://www.drupal.org/node/2253915 -->
-    <exclude name="Drupal.Commenting.DocComment.ParamNotFirst"/>
-    <exclude name="Drupal.Commenting.DocComment.SpacingBeforeTags"/>
     <exclude name="Drupal.Commenting.DocComment.LongFullStop"/>
-    <exclude name="Drupal.Commenting.DocComment.ShortNotCapital"/>
-    <exclude name="Drupal.Commenting.DocComment.ShortSingleLine"/>
     <exclude name="Drupal.Commenting.DocComment.MissingShort"/>
+    <exclude name="Drupal.Commenting.DocComment.ParamNotFirst"/>
+    <exclude name="Drupal.Commenting.DocComment.ShortNotCapital"/>
+    <exclude name="Drupal.Commenting.DocComment.SpacingBeforeTags"/>
   </rule>
   <rule ref="Drupal.Commenting.DocCommentAlignment"/>
   <rule ref="Drupal.Commenting.DocCommentStar"/>
@@ -55,23 +53,13 @@
   <rule ref="Drupal.Commenting.FunctionComment">
     <exclude name="Drupal.Commenting.FunctionComment.InvalidNoReturn"/>
     <exclude name="Drupal.Commenting.FunctionComment.Missing"/>
-    <exclude name="Drupal.Commenting.FunctionComment.MissingParamComment"/>
     <exclude name="Drupal.Commenting.FunctionComment.MissingParamType"/>
     <exclude name="Drupal.Commenting.FunctionComment.MissingReturnComment"/>
-    <exclude name="Drupal.Commenting.FunctionComment.MissingReturnType"/>
     <exclude name="Drupal.Commenting.FunctionComment.ParamCommentFullStop"/>
     <exclude name="Drupal.Commenting.FunctionComment.TypeHintMissing"/>
   </rule>
-  <rule ref="Drupal.Commenting.HookComment"/>
   <rule ref="Drupal.Commenting.GenderNeutralComment"/>
-  <rule ref="Drupal.Commenting.InlineVariableComment"/>
-  <rule ref="Drupal.Commenting.VariableComment">
-    <!-- Sniff for: DuplicateVar, EmptyVar, InlineVariableName, WrongStyle -->
-    <exclude name="Drupal.Commenting.VariableComment.IncorrectVarType"/>
-    <exclude name="Drupal.Commenting.VariableComment.Missing"/>
-    <exclude name="Drupal.Commenting.VariableComment.MissingVar"/>
-    <exclude name="Drupal.Commenting.VariableComment.VarOrder"/>
-  </rule>
+  <rule ref="Drupal.Commenting.HookComment"/>
   <rule ref="Drupal.Commenting.InlineComment">
     <!-- Sniff for: NoSpaceBefore, SpacingBefore, WrongStyle -->
     <exclude name="Drupal.Commenting.InlineComment.DocBlock"/>
@@ -79,9 +67,17 @@
     <exclude name="Drupal.Commenting.InlineComment.NotCapital"/>
     <exclude name="Drupal.Commenting.InlineComment.SpacingAfter"/>
   </rule>
+  <rule ref="Drupal.Commenting.InlineVariableComment"/>
   <rule ref="Drupal.Commenting.PostStatementComment"/>
-  <rule ref="Drupal.ControlStructures.ElseIf"/>
+  <rule ref="Drupal.Commenting.VariableComment">
+    <!-- Sniff for: DuplicateVar, EmptyVar, InlineVariableName, WrongStyle -->
+    <exclude name="Drupal.Commenting.VariableComment.IncorrectVarType"/>
+    <exclude name="Drupal.Commenting.VariableComment.Missing"/>
+    <exclude name="Drupal.Commenting.VariableComment.MissingVar"/>
+    <exclude name="Drupal.Commenting.VariableComment.VarOrder"/>
+  </rule>
   <rule ref="Drupal.ControlStructures.ControlSignature"/>
+  <rule ref="Drupal.ControlStructures.ElseIf"/>
   <rule ref="Drupal.ControlStructures.InlineControlStructure"/>
   <rule ref="Drupal.Files.EndFileNewline"/>
   <rule ref="Drupal.Files.FileEncoding"/>
@@ -101,9 +97,12 @@
       Drupal.NamingConventions.ValidFunctionName.ScopeNotCamelCaps. -->
     <exclude name="Drupal.Methods.MethodDeclaration.Underscore"/>
   </rule>
-  <rule ref="Drupal.NamingConventions.ValidVariableName">
-    <!-- Sniff for: LowerStart -->
-    <exclude name="Drupal.NamingConventions.ValidVariableName.LowerCamelName"/>
+  <rule ref="Drupal.NamingConventions.ValidClassName"/>
+  <rule ref="Drupal.NamingConventions.ValidGlobal"/>
+  <rule ref="Drupal.NamingConventions.ValidVariableName"/>
+  <rule ref="Drupal.NamingConventions.ValidVariableName.LowerCamelName">
+    <!-- Views plugins do not conform to this sniff. -->
+    <include-pattern>**/tests/*</include-pattern>
   </rule>
   <rule ref="Drupal.Scope.MethodScope"/>
   <rule ref="Drupal.Semantics.EmptyInstall"/>
@@ -131,9 +130,27 @@
   <rule ref="Drupal.WhiteSpace.ScopeIndent"/>
 
   <!-- Drupal Practice sniffs -->
+  <rule ref="DrupalPractice.CodeAnalysis.VariableAnalysis">
+    <!-- @todo exclude tests -->
+    <exclude-pattern>*/tests/*</exclude-pattern>
+    <properties>
+      <property name="allowUnusedFunctionParameters" value="true"/>
+    </properties>
+  </rule>
+  <rule ref="DrupalPractice.CodeAnalysis.VariableAnalysis.UndefinedUnsetVariable">
+    <severity>0</severity>
+  </rule>
+  <rule ref="DrupalPractice.CodeAnalysis.VariableAnalysis.UndefinedVariable">
+    <!-- Setting severity to 0 to completely disable an error message in this sniff, without excluding the whole sniff -->
+    <!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Configuration-Options#changing-the-default-severity-levels -->
+    <severity>0</severity>
+  </rule>
   <rule ref="DrupalPractice.Commenting.ExpectedException"/>
   <rule ref="DrupalPractice.General.ExceptionT"/>
   <rule ref="DrupalPractice.InfoFiles.NamespacedDependency"/>
+  <rule ref="DrupalPractice.Objects.GlobalFunction">
+    <include-pattern>*/Plugin/*</include-pattern>
+  </rule>
 
   <!-- Generic sniffs -->
   <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
@@ -148,8 +165,6 @@
       <property name="checkClosures" value="true"/>
     </properties>
   </rule>
-  <rule ref="Drupal.NamingConventions.ValidClassName"/>
-  <rule ref="Drupal.NamingConventions.ValidGlobal"/>
   <rule ref="Generic.NamingConventions.ConstructorName"/>
   <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
   <rule ref="Generic.PHP.DeprecatedFunctions"/>
@@ -170,30 +185,29 @@
   <!-- PEAR sniffs -->
   <rule ref="PEAR.Files.IncludingFile"/>
   <!-- Disable some error messages that we do not want. -->
-  <rule ref="PEAR.Files.IncludingFile.UseIncludeOnce">
-    <severity>0</severity>
-  </rule>
   <rule ref="PEAR.Files.IncludingFile.UseInclude">
     <severity>0</severity>
   </rule>
-  <rule ref="PEAR.Files.IncludingFile.UseRequireOnce">
+  <rule ref="PEAR.Files.IncludingFile.UseIncludeOnce">
     <severity>0</severity>
   </rule>
   <rule ref="PEAR.Files.IncludingFile.UseRequire">
     <severity>0</severity>
   </rule>
-  <rule ref="PEAR.Functions.ValidDefaultValue"/>
-
-  <!-- PEAR sniffs -->
+  <rule ref="PEAR.Files.IncludingFile.UseRequireOnce">
+    <severity>0</severity>
+  </rule>
   <rule ref="PEAR.Functions.FunctionCallSignature"/>
   <!-- The sniffs inside PEAR.Functions.FunctionCallSignature silenced below are
     also silenced in Drupal CS' ruleset.xml. The code below is a 1-on-1 copy
     from that file. -->
-  <!-- Disable some error messages that we already cover. -->
-  <rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket">
+  <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
     <severity>0</severity>
   </rule>
-  <rule ref="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket">
+  <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+    <severity>0</severity>
+  </rule>
+  <rule ref="PEAR.Functions.FunctionCallSignature.EmptyLine">
     <severity>0</severity>
   </rule>
   <!-- Disable some error messages that we do not want. -->
@@ -203,15 +217,14 @@
   <rule ref="PEAR.Functions.FunctionCallSignature.OpeningIndent">
     <severity>0</severity>
   </rule>
-  <rule ref="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket">
+  <!-- Disable some error messages that we already cover. -->
+  <rule ref="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket">
     <severity>0</severity>
   </rule>
-  <rule ref="PEAR.Functions.FunctionCallSignature.CloseBracketLine">
+  <rule ref="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket">
     <severity>0</severity>
   </rule>
-  <rule ref="PEAR.Functions.FunctionCallSignature.EmptyLine">
-    <severity>0</severity>
-  </rule>
+  <rule ref="PEAR.Functions.ValidDefaultValue"/>
 
   <!-- PSR-2 sniffs -->
   <rule ref="PSR2.Classes.PropertyDeclaration">
@@ -222,11 +235,28 @@
   <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
   <rule ref="PSR2.Namespaces.UseDeclaration"/>
 
+  <!-- SlevomatCodingStandard sniffs -->
+  <rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
+    <properties>
+      <property name="forbiddenAnnotations" type="array">
+        <element value="@inheritDoc"/>
+        <element value="@inheritdoc"/>
+      </property>
+    </properties>
+  </rule>
+  <rule ref="SlevomatCodingStandard.Commenting.ForbiddenComments">
+    <properties>
+       <property name="forbiddenCommentPatterns" type="array">
+         <element value="/@inheritDoc/"/>
+       </property>
+    </properties>
+  </rule>
+
   <!-- Squiz sniffs -->
   <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
   <rule ref="Squiz.Arrays.ArrayDeclaration">
-    <exclude name="Squiz.Arrays.ArrayDeclaration.NoKeySpecified"/>
     <exclude name="Squiz.Arrays.ArrayDeclaration.KeySpecified"/>
+    <exclude name="Squiz.Arrays.ArrayDeclaration.NoKeySpecified"/>
   </rule>
   <!-- Disable some error messages that we do not want. -->
   <rule ref="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned">
@@ -256,10 +286,10 @@
   <rule ref="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed">
     <severity>0</severity>
   </rule>
-  <rule ref="Squiz.Arrays.ArrayDeclaration.ValueNotAligned">
+  <rule ref="Squiz.Arrays.ArrayDeclaration.ValueNoNewline">
     <severity>0</severity>
   </rule>
-  <rule ref="Squiz.Arrays.ArrayDeclaration.ValueNoNewline">
+  <rule ref="Squiz.Arrays.ArrayDeclaration.ValueNotAligned">
     <severity>0</severity>
   </rule>
   <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration"/>
@@ -316,8 +346,19 @@
   <rule ref="Squiz.ControlStructures.SwitchDeclaration.SpacingBeforeBreak">
     <severity>0</severity>
   </rule>
+  <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
+    <properties>
+      <property name="equalsSpacing" value="1"/>
+    </properties>
+  </rule>
+  <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing.NoSpaceBeforeArg">
+    <severity>0</severity>
+  </rule>
   <rule ref="Squiz.Functions.MultiLineFunctionDeclaration"/>
   <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine">
+    <severity>0</severity>
+  </rule>
+  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine">
     <severity>0</severity>
   </rule>
   <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.ContentAfterBrace">
@@ -328,17 +369,6 @@
     <severity>0</severity>
   </rule>
   <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.Indent">
-    <severity>0</severity>
-  </rule>
-  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine">
-    <severity>0</severity>
-  </rule>
-  <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
-    <properties>
-      <property name="equalsSpacing" value="1"/>
-    </properties>
-  </rule>
-  <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing.NoSpaceBeforeArg">
     <severity>0</severity>
   </rule>
   <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
