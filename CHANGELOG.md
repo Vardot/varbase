@@ -1,4 +1,4 @@
-# 9.0.16
+# 9.0.17
 
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
 
@@ -210,7 +210,7 @@ All new features are in **Varbase ~10**
 
 ### Fixes since Varbase 9.0.16:
 * Issue [#3397497](https://www.drupal.org/i/3397497)
-         by josebc
+         by [josebc](https://www.drupal.org/u/josebc)
         : Fixed visual regression issues with the media library and
          custom **Vartheme Claro** style for **Layout Builder**
 * Issue [#3401833](https://www.drupal.org/i/3401833)
