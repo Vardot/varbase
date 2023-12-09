@@ -422,7 +422,6 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
   }
 
-
   /**
    * Fill in a form field with id|name|title|alt|value.
    *
@@ -864,7 +863,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 			const xpath = "//span[contains(text(),'" + title + "')]";
 			const js_menu = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 			js_menu.closest("details").setAttribute("open", "");
-		JS;
+        JS;
     try {
       $this->getSession()->executeScript($js);
     }
@@ -996,7 +995,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 					var js_side = "$side";
 					var js_value = "$value";
 					jQuery(".bs-field-padding-" + js_side).val(js_value);
-					JS;
+                    JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1037,7 +1036,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 					var js_side = "$side";
 					var js_value = "$value";
 					jQuery(".bs-field-margin-" + js_side).val(js_value);
-					JS;
+                    JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1112,7 +1111,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 						var js_side = "$b_side";
 						var js_width = "$b_width";
 						jQuery(".bs-field-border-width-" + js_side).val(js_width);
-					JS;
+                    JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -1188,7 +1187,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 					var js_value = "$value";
 					js_corner = js_corner.replace(' ', '_');
 					jQuery(".bs-field-rounded-corner-" + js_corner).val(js_value);
-					JS;
+                    JS;
           $this->getSession()->executeScript($js);
         }
       }
@@ -2204,7 +2203,7 @@ JS;
    */
   public function iScrollToBottomOf($selector) {
     $this->getSession()->executeScript('document.querySelector("' . $selector . '").scrollTop = document.querySelector("' . $selector . '").scrollHeight');
-    $this->getSession()->wait(2000); 
+    $this->getSession()->wait(2000);
   }
 
   /**
@@ -2221,7 +2220,7 @@ JS;
     $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if ($isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is checked");
-    } 
+    }
   }
 
   /**
@@ -2238,7 +2237,7 @@ JS;
     $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
     if (!$isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is unchecked");
-    } 
+    }
   }
 
   /**
@@ -2311,7 +2310,7 @@ JS;
   }
 
   /**
-   * Switch to an ifram by its id.
+   * Switch to an Iframe by its id.
    *
    * Varbase Context #varbase.
    *
@@ -2476,11 +2475,11 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example 1: Then I should see the accessibility checker
+   * Example 1: Then I should see the a11y checker
    * Example 2: Then should see a11y checker
    * Example 3: Then see the accessibility checker
    *
-   * @Then /^(?:|I )(?:|should )see (?:|the )(?:|accessibility|a11y )checker$/
+   * @Then /^(?:|I )should see (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iShouldSeeTheAccessibilityChecker() {
     $this->getSession()->wait(4000);
@@ -2495,11 +2494,11 @@ JS;
    *
    * Varbase Context #varbase.
    *
-   * Example 1: Then I should not see the accessibility checker
+   * Example 1: Then I should not see thea a11y checker
    * Example 2: Then should not see a11y checker
    * Example 3: Then not see the accessibility checker
    *
-   * @Then /^(?:|I )(?:|should )not see (?:|the )(?:|accessibility|a11y )checker$/
+   * @Then /^(?:|I )should not see (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iShouldNotSeeTheAccessibilityChecker() {
     $this->getSession()->wait(4000);

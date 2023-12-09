@@ -18,7 +18,7 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
   protected $cssSelectors = [];
 
   /**
-   * Holed a list of XPaht Selectors.
+   * Holed a list of XPath Selectors.
    *
    * @var array
    */
@@ -72,8 +72,8 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
 
               // Add all list of CSS selectors to the cssSelectors Array.
               if (isset($fileSelectors['css']) && count($fileSelectors['css'])) {
-                foreach ($fileSelectors['css'] as $selectorName => $cssSelecter) {
-                  $this->cssSelectors[$selectorName] = $cssSelecter;
+                foreach ($fileSelectors['css'] as $selectorName => $cssSelector) {
+                  $this->cssSelectors[$selectorName] = $cssSelector;
                 }
               }
 
@@ -140,19 +140,19 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
    *                         xpath:
    *                           page title: "//h1[contains(@class, 'page-header')"
    *
-   * @When /^I add "(?P<selectorName>[^"]*)" selector for "(?P<cssSelecter>[^"]*)" css selector$/
+   * @When /^I add "(?P<selectorName>[^"]*)" selector for "(?P<cssSelector>[^"]*)" css selector$/
    */
-  public function addSelectorNameForCssSelector($selectorName, $cssSelecter) {
+  public function addSelectorNameForCssSelector($selectorName, $cssSelector) {
 
-    if (!empty($selectorName) && $selectorName != '' && !empty($cssSelecter) && $cssSelecter != '') {
+    if (!empty($selectorName) && $selectorName != '' && !empty($cssSelector) && $cssSelector != '') {
       // Add the selector name for the css selector to the selectors array.
-      $this->cssSelectors[$selectorName] = $cssSelecter;
+      $this->cssSelectors[$selectorName] = $cssSelector;
 
       // Translate the CSS selector to XPath selector.
       $css = new CssSelector();
-      $xpathSelector = $css->translateToXPath($cssSelecter);
+      $xpathSelector = $css->translateToXPath($cssSelector);
 
-      // Registor the name for the XPath selector.
+      // Register the name for the XPath selector.
       $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
@@ -164,7 +164,7 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
   /**
    * Selector : To add a new selector name with a XPath selector.
    *
-   * Exmaple 1: When I add "page title" selector for "//h1[contains(@class, 'page-header')" xpath selector
+   * Example 1: When I add "page title" selector for "//h1[contains(@class, 'page-header')" xpath selector
    * Example 2:  And I add "Dashboard" selector for "//*[@id='navbar-link-admin-dashboard']" xpath selector
    * Example 3:  And I add "Vertical orientation" selector for "//*[@id='navbar-item--2-tray']/div/div[2]/div/button" xpath selector.
    *
@@ -190,7 +190,7 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
       // Add the selector name for the XPath selector to the selectors array.
       $this->xpathSelectors[$selectorName] = $xpathSelector;
 
-      // Registor the name for the XPath selecor.
+      // Register the name for the XPath selector.
       $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
       $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
     }
@@ -221,15 +221,15 @@ class VarbaseSelectorsContext extends RawDrupalContext implements SnippetAccepti
 
         // Register all CSS selectors in the file.
         if (isset($fileSelectors['css']) && count($fileSelectors['css'])) {
-          foreach ($fileSelectors['css'] as $selectorName => $cssSelecter) {
+          foreach ($fileSelectors['css'] as $selectorName => $cssSelector) {
             // Add the css selector to the css selector array.
-            $this->cssSelectors[$selectorName] = $cssSelecter;
+            $this->cssSelectors[$selectorName] = $cssSelector;
 
             // Translate the CSS selector to XPath selector.
             $css = new CssSelector();
-            $xpathSelector = $css->translateToXPath($cssSelecter);
+            $xpathSelector = $css->translateToXPath($cssSelector);
 
-            // Registor the name for the CSS selecor.
+            // Register the name for the CSS selector.
             $selectorHandler = $this->getSession()->getSelectorsHandler()->getSelector('named');
             $selectorHandler->registerNamedXpath($selectorName, $xpathSelector);
           }

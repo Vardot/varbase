@@ -1,5 +1,5 @@
 Feature: Accessibility - Use the automatically Editorial Accessibility Checker tool
-As a logged in site admin or editor with permission to access the accessibility checker tools
+As a logged in site admin or editor with permission to access the a11y checker tools
 I will be able to use the tool to automatically identifying and addressing straightforward accessibility issues in various contexts.
 So that only users with permission can see and use the tool
 
@@ -8,49 +8,49 @@ So that only users with permission can see and use the tool
     Given I am an anonymous user
      When I go to the homepage
       And wait
-     Then I should not see the accessibility checker
+     Then I should not see the a11y checker
 
   @javascript @check @local @development @staging @production
   Scenario: Check that an authenticated user can not access the Editorial Accessibility Checker
     Given I am a logged in user with the "Normal user" user
      When I go to the homepage
       And wait
-     Then I should not see the accessibility checker
+     Then I should not see the a11y checker
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Editor users can access the Editorial Accessibility Checker
     Given I am a logged in user with the "Editor" user
      When I go to the homepage
       And wait
-     Then I should see the accessibility checker
+     Then I should see the a11y checker
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Content Admin users can access the Editorial Accessibility Checker
     Given I am a logged in user with the "Content admin" user
      When I go to the homepage
       And wait
-     Then I should see the accessibility checker
+     Then I should see the a11y checker
 
   @javascript @check @local @development @staging @production
   Scenario: Check that SEO Admin users can access the Editorial Accessibility Checker
     Given I am a logged in user with the "SEO admin" user
      When I go to the homepage
       And wait
-     Then I should see the accessibility checker
+     Then I should see the a11y checker
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Site Admin users can access the Editorial Accessibility Checker
     Given I am a logged in user with the "Site admin" user
      When I go to the homepage
       And wait
-     Then I should see the accessibility checker
+     Then I should see the a11y checker
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can access the Editorial Accessibility Checker
     Given I am a logged in user with the "webmaster" user
      When I go to the homepage
       And wait
-     Then I should see the accessibility checker
+     Then I should see the a11y checker
 
   @javascript @check @local @development @staging @production
   Scenario: Check that anonymous users can not view the dashboard for accessibility checked results
