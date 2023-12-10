@@ -34,7 +34,7 @@
     "drupal/core": "~10",
     "drupal/varbase_core": "~10",
     "drupal/varbase_components": "~2",
-    "drupal/varbase_api": "~10v",
+    "drupal/varbase_api": "~10",
     "drupal/varbase_media": "~10",
     "drupal/varbase_editor": "~10",
     "drupal/varbase_landing": "~10",
