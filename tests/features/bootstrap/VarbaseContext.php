@@ -4,6 +4,7 @@ use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Mink\Element\Element;
+use Symfony\Component\CssSelector\CssSelectorConverter;
 
 /**
  * Defines application features from the specific context.
@@ -1965,6 +1966,96 @@ keyEvent.initKeyEvent('keypress',        // typeArg,
 											 {$key}      // charCodeArg);
 										 );
 node.dispatchEvent(keyEvent);
+JS;
+
+    $this->getSession()->executeScript($js);
+  }
+
+  /**
+   * Keypress in a field.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I keypress " " in "#search" field
+   * Example #2: When I keypress "tab" in "#first-name" field
+   * Example #3:  And I keypress "enter" in "#body" field
+   *
+   * @When I keypress :char in :field field
+   *
+   * @param mixed $char could be either char ('b') or char-code (98)
+   * @throws \Exception
+   */
+  public function iPressKeyboardKeyInField($key, $field) {
+
+    static $keys = [
+    'backspace' => 8,
+    'tab' => 9,
+    'enter' => 13,
+    'shift' => 16,
+    'ctrl' => 17,
+    'alt' => 18,
+    'pause' => 19,
+    'break' => 19,
+    'escape' => 27,
+    'esc' => 27,
+    'end' => 35,
+    'home' => 36,
+    'left' => 37,
+    'up' => 38,
+    'right' => 39,
+    'down' => 40,
+    'insert' => 45,
+    'delete' => 46,
+    'pageup' => 33,
+    'pagedown' => 34,
+    'capslock' => 20,
+   ];
+
+    $key = is_numeric($key) ? $key : ord($key);
+
+
+    // Validate the other key.
+    if (is_string($key)) {
+      if (strlen($key) < 1) {
+        throw new \Exception('Key parameter was empty.');
+      }
+      elseif (strlen($key) > 1) {
+        // Support for all variations, e.g. ESC, Esc, page up, pageup.
+        $filteredKey = strtolower(str_replace(' ', '', $key));
+        if (isset($keys[$filteredKey])) {
+          $key = $keys[$filteredKey];
+        }
+        else {
+          throw new \Exception('Key parameter must a keyboard key');
+        }
+      }
+    }
+
+    $elementField = $this->getSession()->getPage()->findField($field);
+    if (!$elementField) {
+      throw new \Exception("Field '{$field}' not found");
+    }
+
+    $fieldId = $elementField->getAttribute('id');
+
+    $js = <<<JS
+var keyboardEvent = document.createEvent("KeyboardEvent");
+var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+
+
+keyboardEvent[initMethod](
+                   "keydown", // event type : keydown, keyup, keypress
+                    true,     // bubbles
+                    true,     // cancelable  
+                    window,   // viewArg: should be window  
+                    false,    // ctrlKeyArg  
+                    false,    // altKeyArg
+                    false,    // shiftKeyArg
+                    false,    // metaKeyArg
+                    {$key},   // keyCodeArg : unsigned long the virtual key code, else 0  
+                    0         // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
+);
+document.getElementById('$fieldId').dispatchEvent(keyboardEvent); 
 JS;
 
     $this->getSession()->executeScript($js);

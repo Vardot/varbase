@@ -28,10 +28,10 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I wait for AJAX to finish
      Then I should see "Link URL"
      When I fill in "Linking" for "Link URL"
-      And I press the " " key in the "Link URL" field
-      And I press the "t" key in the "Link URL" field
-      And I press the "o" key in the "Link URL" field
-      And I press the "enter" key in the "Link URL" field
+      And I keypress " " in "Link URL" field
+      And I keypress "t" in "Link URL" field
+      And I keypress "o" in "Link URL" field
+      And I keypress "enter" in "Link URL" field
       And I wait for AJAX to finish
       And I wait 2s
       And I wait for AJAX to finish
