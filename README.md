@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/743/workflows/f1c4f049-7a48-48dd-935e-e60a49990f75) Varbase 10.0.0-beta2
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/798/workflows/7d0b19f8-4e4e-46b0-941b-227455def833) Varbase 10.0.0-rc1
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -30,7 +30,7 @@ instructions.
 
 To install the most recent stable release of **Varbase `10.0.x`** run this command:
 ```
-composer create-project Vardot/varbase-project:10.0.0-beta2 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/varbase-project:10.0.0-rc1 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of **Varbase `10.0.x`** run this command:
