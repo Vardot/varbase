@@ -1,6 +1,6 @@
 [![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/815/workflows/2002001c-2e3a-44d8-bf56-39ec1ce8f38a) Varbase 10.0.0-rc1
 
-[![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
+[![](https://www.drupal.org/files/project-images/varbase-medium-logo-color-with-padding.png)](https://www.drupal.org/project/varbase)
 
 ## Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready)
 
