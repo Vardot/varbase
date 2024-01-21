@@ -37,7 +37,7 @@
     "drupal/varbase_media": "9.1.x-dev",
     "drupal/varbase_editor": "9.1.x-dev",
     "drupal/varbase_landing": "9.1.x-dev",
-    "drupal/varbase_layout_builder": "10.0.x-dev",
+    "drupal/varbase_layout_builder": "9.0.x-dev || 10.0.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "9.1.x-dev",
     "drupal/varbase_heroslider_media": "9.1.x-dev",
     "drupal/varbase_carousels": "9.1.x-dev",
