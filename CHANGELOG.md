@@ -1,5 +1,11 @@
 # 9.0.18
 
+> Last release for **Varbase `~9.0.0`** for **Drupal `~9.5.0`**
+
+> Dropped support for **Drupal `9`**
+
+> Update your site to **Varbase `~9.1.0`**
+
 This is a **patch (bugfix)** release of **Varbase 9** and is ready for use on production sites.
 
 ### Highlighted important changes since Varbase 9.0.17:

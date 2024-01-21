@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/9.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/807/workflows/97595ba6-aff9-4e92-8d99-b0d866794f86) Varbase 9.0.18
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/9.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/824/workflows/b9a4c14a-0102-4666-8925-008c64d1d044) Varbase 9.0.18
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -10,6 +10,15 @@ in mind. Brought to you by [Vardot](https://www.vardot.com/).
 Varbase is an enhanced Drupal distribution with a lot of necessities.
 Necessities are all the modules, features, configurations that we include
 in every project.
+
+> Last release for **Varbase `~9.0.0`** for **Drupal `~9.5.0`**
+
+> Dropped support for **Drupal `9`**
+
+> Update your site to **Varbase `~9.1.0`**
+
+
+Recommended to start new projects with **Varbase ~10.0.0**
 
 
 ## It's made with the following benefits in mind:
