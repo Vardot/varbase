@@ -1,3 +1,61 @@
+# 9.0.18
+
+This is a **patch (bugfix)** release of **Varbase 9** and is ready for use on production sites.
+
+### Highlighted important changes since Varbase 9.0.17:
+
+* Issue [#3404221](https://www.drupal.org/i/3404221): Changed default **PHP** version to **PHP `8.2`** for **Varbase development** and **automated testing**
+
+### Added since Varbase 9.0.17:
+* All new features are in **Varbase `~10`**
+
+### Changed since Varbase 9.0.17:
+* Issue [#3408369](https://www.drupal.org/i/3408369):
+         Opened requirements for **Blazy**, **Slick**, **Slick Views** to `~2`
+* Issue [#3415842](https://www.drupal.org/i/3415842):
+         Disabled Layout Builder Block Sanitizer module and uninstalled
+         it, as it is no longer supported
+
+### Updates since Varbase 9.0.17:
+* Issue [#3413115](https://www.drupal.org/i/3413115):
+         Updated **Inline Entity Form** from `1.0-rc15` to `1.0-rc17` and keep needed patches
+* Issue [#3413143](https://www.drupal.org/i/3413143):
+         Updated **Display Suite** from `3.15.0` to `3.16.0` and keep needed patches
+* Issue [#3415867](https://www.drupal.org/i/3415867):
+         Updated **Paragraphs Features** from `~1` to default supported `~2`
+* Issue [#3415851](https://www.drupal.org/i/3415851):
+         Updated **Paragraphs** module `1.16.0` to `1.17.0` and kept needed patches
+* Issue [#3415825](https://www.drupal.org/i/3415825):
+         Updated **Configuration Update Manager** from `~1` to default supported `~2`
+
+### Fixes since Varbase 9.0.17:
+* Issue [#3408371](https://www.drupal.org/i/3408371):
+         Fixed **PHP `8.2`** Ultimate Cron deprecation issue with CronRule-class
+* Issue [#3408505](https://www.drupal.org/i/3408505):
+         Fixed **PHP `8.2`** Real-time SEO issue of Deprecated function: Creation of dynamic property
+* Issue [#3408378](https://www.drupal.org/i/3408378):
+         Fixed **PHP `8.2`** Display Suite Deprecated function: Creation of dynamic property
+* Issue [#3408876](https://www.drupal.org/i/3408876):
+         Fixed **PHP `8.2`** Deprecated function: Creation of dynamic property $renderer
+* Issue [#3411198](https://www.drupal.org/i/3411198)
+         by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+         : Fixed Deprecated function: Creation of dynamic property
+         in VarbaseMediaHeaderBlock under **PHP `8.2+`**
+* Issue [#3413168](https://www.drupal.org/i/3413168):
+         Fixed PHP Fatal error: Cannot redeclare varbase_media_requirements()
+         previously declared when installed with **Drush `~12`** and **PHP `8.3`**
+* Issue [#3412378](https://www.drupal.org/i/3412378):
+         Fixed vertical tabs and media library styling issues within Dialog
+         and **Media Library Modal** by **Claro** after the **Drupal `10.2.0`** Release
+* Issue [#3412276](https://www.drupal.org/i/3412276):
+         Fixed OpenAPI with **PHP `8.2+`** of Deprecated function:
+         Creation of dynamic property
+* Issue [#3408486](https://www.drupal.org/i/3408486):
+         Fixed **PHP `8.2`** **CKEditor Media Embed Plugin** issue
+         of Deprecated function: Creation of dynamic property
+
+-------------------------------------------------------------------------------
+
 # 9.0.17
 
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.

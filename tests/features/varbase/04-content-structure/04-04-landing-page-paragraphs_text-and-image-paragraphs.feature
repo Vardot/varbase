@@ -30,7 +30,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
       And I wait
       And I fill in "Test landing page title for text and image paragraphs" for "Title"
       And I fill in "Test landing page body description." for "Page description"
-      When I press "+ Add"
+      When I press "Add Component"
        And I wait for AJAX to finish
        And I wait for 1 second
        And I select the "text_and_image" paragraph component
