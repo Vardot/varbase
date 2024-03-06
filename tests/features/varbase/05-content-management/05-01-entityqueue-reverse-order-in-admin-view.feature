@@ -32,7 +32,7 @@ Scenario: Check that Reverse order in admin view is working
     And wait
    Then I should see "Edit subqueue Test Queue"
    When I press "Reverse"
-    And wait for AJAX to finish
+    And I wait for AJAX to finish
     And I press "Save"
     And wait
    Then I should see "The entity subqueue Test Queue has been updated."
@@ -62,7 +62,7 @@ Scenario: Check that Reverse order in admin view is working
      And I should see "Test content N2"
      And I should see "Test content N3"
     When I press "Execute action"
-     And wait 10s
+     And I wait 10s
     Then I should see "Action processing results: Delete entities (3)."
 
    When I go to "/admin/structure/entityqueue"

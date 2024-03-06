@@ -48,7 +48,7 @@ So that they will be able to use the site.
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
       And I press "Confirm"
-      And wait 10s
+      And I wait 10s
      Then I should see "People"
 
   @javascript @local @development @staging @production
@@ -84,7 +84,7 @@ So that they will be able to use the site.
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
       And I press "Confirm"
-      And wait 5s
+      And I wait 5s
      Then I should see "People"
 
   @javascript @local @development @staging @production
@@ -119,7 +119,7 @@ So that they will be able to use the site.
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
       And I press "Confirm"
-      And wait 5s
+      And I wait 5s
      Then I should see "People"
 
   @javascript @local @development @staging @production
@@ -154,20 +154,20 @@ So that they will be able to use the site.
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
       And I press "Confirm"
-      And wait 5s
+      And I wait 5s
      Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and provided username
     Given I am a logged in user with the "webmaster" user
       And I go to "/admin/config/varbase/settings"
-      And wait
+      And I wiat
      Then I should see "Varbase general settings"
       And I should see "Allow custom account name"
      When I check the box "Allow custom account name"
      Then I should see the "Allow custom account name" checkbox checked
      When I press "Save configuration"
-      And a
+      And wait
      Then I should see "The configuration options have been saved."
 
      When I go to "/admin/people/create"
@@ -192,5 +192,5 @@ So that they will be able to use the site.
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
       And I press "Confirm"
-      And wait 5s
+      And I wait 5s
      Then I should see "People"

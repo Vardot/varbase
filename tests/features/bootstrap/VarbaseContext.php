@@ -168,11 +168,11 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase.
    *
    * Example 1:  And wait for "1" second
-   * Example 2: When wait for "5" seconds
+   * Example 2: When I wait for "5" seconds
    * Example 3:  And wait 1 second
-   * Example 4: When wait for 60 seconds
+   * Example 4: When I wait for 60 seconds
    * Example 5:  And wait 1s
-   * Example 6: When wait for 60s.
+   * Example 6: When I wait for 60s.
    *
    * @When /^(?:|I )wait (?:|for )"(?P<seconds>\d+)" second(?:|s)$/
    * @When /^(?:|I )wait (?:|for )(?P<seconds>\d+) second(?:|s)$/
@@ -187,12 +187,12 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * Varbase Context #varbase.
    *
-   * Example 1:  And wait for "1" minute
-   * Example 2: When wait for "2" minutes
+   * Example 1:  And I wait for "1" minute
+   * Example 2: When I wait for "2" minutes
    * Example 3:  And wait 1 minute
-   * Example 4: When wait for 3 minutes
+   * Example 4: When I wait for 3 minutes
    * Example 5:  And wait 1m
-   * Example 6: When wait for 3m.
+   * Example 6: When I wait for 3m.
    *
    * @When /^(?:|I )wait (?:|for )"(?P<minutes>\d+)" minute(?:|s)$/
    * @When /^(?:|I )wait (?:|for )(?P<minutes>\d+) minute(?:|s)$/
@@ -208,14 +208,14 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase.
    *
    * Example 1: And wait
-   * Example 2: And wait
+   * Example 2: And I wait
    * Example 3: And wait for the page
-   * Example 4: And wait for the page
+   * Example 4: And I wait for the page
    * Example 5: And wait max of 5 seconds
    * Example 6: And wait max of 5s
-   * Example 7: And wait max of 5s
-   * Example 8: And wait max of "5" seconds
-   * Example 9: And wait max of "5" seconds for the page to be ready and loaded.
+   * Example 7: And I wait max of 5s
+   * Example 8: And I wait max of "5" seconds
+   * Example 9: And I wait max of "5" seconds for the page to be ready and loaded.
    *
    * @Given /^(?:|I )wait max of "(?P<time>\d+)" second(?:|s)(?:| for the page to be ready and loaded)$/
    * @Given /^(?:|I )wait max of (?P<time>\d+) second(?:|s)(?:| for the page to be ready and loaded)$/

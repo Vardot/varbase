@@ -13,15 +13,15 @@ So that can use different type of rich text editors.
       And I should not see "HTML Editor"
 
      When I select "full_html" from "body[0][format]"
-      And wait for AJAX to finish
+      And I wait for AJAX to finish
      Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "basic_html" from "body[0][format]"
-      And wait for AJAX to finish
+      And I wait for AJAX to finish
      Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "code_html" from "body[0][format]"
-      And wait for AJAX to finish
+      And I wait for AJAX to finish
      Then I should see the "#edit-body-0-value" element in the "field body"
       And I should not see the ".ck.ck-editor__main" element in the "field body"
 
@@ -34,14 +34,14 @@ So that can use different type of rich text editors.
       And I should see "Body"
 
      When I select "full_html" from "body[0][format]"
-      And wait for AJAX to finish
+      And I wait for AJAX to finish
      Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "basic_html" from "body[0][format]"
-      And wait for AJAX to finish
+      And I wait for AJAX to finish
      Then I should see the ".ck.ck-editor__main" element in the "field body"
 
      When I select "code_html" from "body[0][format]"
-      And wait for AJAX to finish
+      And I wait for AJAX to finish
      Then I should see the "#edit-body-0-value" element in the "field body"
       And I should not see the ".ck.ck-editor__main" element in the "field body"

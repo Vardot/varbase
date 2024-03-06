@@ -15,11 +15,11 @@ So that I can reset my password for the account
   @javascript @local @development @staging @production
   Scenario: Verify that the system cannot send an email to non-existing users or emails
      When I go to "/user/password"
-      And wait 6s
+      And I wait 6s
      Then I should see "Username or email address"
      When I fill in "not.existing.email@vardot.com" for "Username or email address"
       And I scroll to the bottom
-      And wait 2s
+      And I wait 2s
       And I press the "Reset" button
       And wait
      Then I should see "If the username or email address exists and is active, further instructions have been sent to your email address."

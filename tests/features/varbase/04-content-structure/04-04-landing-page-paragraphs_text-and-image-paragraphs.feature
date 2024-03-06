@@ -31,23 +31,23 @@
   #     And I fill in "Test landing page title for text and image paragraphs" for "Title"
   #     And I fill in "Test landing page body description." for "Page description"
   #    When I press "Add Component"
-  #     And wait for AJAX to finish
-  #     And wait for 1 second
+  #     And I wait for AJAX to finish
+  #     And I wait for 1 second
   #     And I select the "text_and_image" paragraph component
-  #     And wait for AJAX to finish
+  #     And I wait for AJAX to finish
   #    Then I should see "Text and image"
   #     And I should see "No media items are selected."
   #    When I press "field_image-media-library-open-button-field_lp_paragraphs-0-subform"
-  #     And wait for AJAX to finish
+  #     And I wait for AJAX to finish
   #     And I should see "Name"
   #    When I fill in "Flag Earth" for "Name"
   #     And I press the "Apply filters" button
-  #     And wait for AJAX to finish
+  #     And I wait for AJAX to finish
   #    Then I should see image with the "Flag Earth all earth in space" title text
   #    When I check the box "media_library_select_form[0]"
-  #     And wait for AJAX to finish
+  #     And I wait for AJAX to finish
   #     And I press "dialog-submit"
-  #     And wait for AJAX to finish
+  #     And I wait for AJAX to finish
   #     And I scroll up
   #    Then I should see "Flag Earth"
   #    When I scroll up

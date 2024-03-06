@@ -6,10 +6,10 @@ So that I will be able to save the status of the page at that time.
   @javascript @tools
   Scenario: To have a screenshot for the Vardot's the team page.
     Given I go to "https://www.vardot.com" website
-      And wait
+      And I wait
      When I click "About"
-      And wait
-      And wait
+      And I wait
+      And I wait
      Then I should see "Meet the team"
       And I save a screenshot in "vardot_the-team-page.png"
   
