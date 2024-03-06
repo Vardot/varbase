@@ -23,23 +23,23 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I fill in "Linking to internal content #2 title" for "Title"
       And I fill in the rich text editor field "Body" with " Linking to internal content #2 body "
       And I click on "Link" command button in the rich text editor field "Body"
-      And I wait for AJAX to finish
-      And I wait 2s
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
+      And wait 2s
+      And wait for AJAX to finish
      Then I should see "Link URL"
      When I fill in "Linking" for "Link URL"
       And I keypress " " in "Link URL" field
       And I keypress "t" in "Link URL" field
       And I keypress "o" in "Link URL" field
       And I keypress "enter" in "Link URL" field
-      And I wait for AJAX to finish
-      And I wait 2s
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
+      And wait 2s
+      And wait for AJAX to finish
      Then I should see "Linking to internal content #1 title"
      When I click "Linking to internal content #1 title" in the "ul" element with the "class" attribute set to "ui-autocomplete"
-      And I wait for AJAX to finish
-      And I wait 2s
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
+      And wait 2s
+      And wait for AJAX to finish
       And I click on the save button in "Body" rich text editor field
       And wait
       And I select "published" from "edit-moderation-state-0-state"

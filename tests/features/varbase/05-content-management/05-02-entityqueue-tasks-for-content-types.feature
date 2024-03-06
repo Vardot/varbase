@@ -15,15 +15,15 @@ Scenario: Check if queuable content have the Entityqueue tab at the full content
     And wait
    Then I should see "Test Content Test tab content number 1 has been created."
 	 When I open the moderation sidebar
-		And I wait for AJAX to finish
+		And wait for AJAX to finish
     And I scroll to bottom of "#drupal-off-canvas"
    Then I should see "Entityqueue"
    When I click "Entityqueue"
     And wait
    Then I should see "Add to queue"
    When I click "Add to queue"
-    And I wait for AJAX to finish
+    And wait for AJAX to finish
    Then I should see "Remove from queue"
    When I click "Remove from queue"
-    And I wait for AJAX to finish
+    And wait for AJAX to finish
    Then I should see "Add to queue"

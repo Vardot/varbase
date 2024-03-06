@@ -11,7 +11,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Hero Slider"
      When I open the moderation sidebar
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
       And I should see "Edit content"
       And I should see "Delete"
       And I should see "Manage display"
@@ -61,7 +61,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Hero Slider"
      When I open the moderation sidebar
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
@@ -79,7 +79,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Hero Slider"
      When I open the moderation sidebar
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
@@ -97,7 +97,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Hero Slider"
      When I open the moderation sidebar
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
@@ -114,7 +114,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Hero Slider"
      When I open the moderation sidebar
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
       And I should see "Edit content"
       And I should see "Delete"
       And I should not see "Manage display"

@@ -39,13 +39,13 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
       And I fill in "Test Landing page Drupal Block" for "Title"
       And I fill in "Test Landing page description Drupal Block" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I press "Add Component"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I select the "bp_block" paragraph component
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
      Then I should see "Block"
      When I select "Site branding" from "Block"
       And wait
@@ -61,13 +61,13 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
       And I fill in "Test Landing page Columns (Equal)" for "Title"
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I press "Add Component"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I select the "bp_columns" paragraph component
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
@@ -80,13 +80,13 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
       And I fill in "Test Landing page Columns (Two Uneven)" for "Title"
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I press "Add Component"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I select the "bp_columns_two_uneven" paragraph component
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
@@ -99,13 +99,13 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
       And I fill in "Test Landing page Rich Text" for "Title"
       And I fill in "Test Landing page description Rich Text" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I press "Add Component"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I select the "bp_simple" paragraph component
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
      Then I should see "Components"
      When I fill in the rich text editor field "Text" with "Rich Text test"
       And I select "published" from "edit-moderation-state-0-state"
@@ -121,13 +121,13 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And wait
       And I fill in "Test Landing page WebForm" for "Title"
       And I fill in "Test Landing page description WebForm" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I press "Add Component"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I select the "bp_webform" paragraph component
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
      Then I should see "Components"
      When I select "Contact" from "Webform"
       And wait

@@ -13,20 +13,20 @@ Feature: Create default testing users
   @javascript @init @tools @local @development @staging
   Scenario: Create the Normal user user
      When I go to "/admin/people/create"
-      And I wait
+      And wait
      Then I should see "Add user"
      When I fill in "test.authenticated@vardot.com" for "Email address"
       And I fill in "Normal user" for "Username"
       And I fill in "dD.123123ddd" for "Password"
       And I fill in "dD.123123ddd" for "Confirm password"
       And I press "Create new account"
-      And I wait
+      And wait
      Then I should not see "The name Normal user is already taken."
 
   @javascript @init @tools @local @development @staging
   Scenario: Create the Editor user
      When I go to "/admin/people/create"
-      And I wait
+      And wait
      Then I should see "Add user"
      When I fill in "test.editor@vardot.com" for "Email address"
       And I fill in "Editor" for "Username"
@@ -34,13 +34,13 @@ Feature: Create default testing users
       And I fill in "dD.123123ddd" for "Confirm password"
       And I check the box "Editor"
       And I press "Create new account"
-      And I wait
+      And wait
      Then I should not see "The name Editor is already taken."
 
   @javascript @init @tools @local @development @staging
   Scenario: Create the Content admin user
      When I go to "/admin/people/create"
-      And I wait
+      And wait
      Then I should see "Add user"
      When I fill in "test.content_admin@vardot.com" for "Email address"
       And I fill in "Content admin" for "Username"
@@ -48,13 +48,13 @@ Feature: Create default testing users
       And I fill in "dD.123123ddd" for "Confirm password"
       And I check the box "Content Admin"
       And I press "Create new account"
-      And I wait
+      And wait
      Then I should not see "The name Content admin is already taken."
 
   @javascript @init @tools @local @development @staging
   Scenario: Create the SEO admin user
      When I go to "/admin/people/create"
-      And I wait
+      And wait
      Then I should see "Add user"
      When I fill in "test.seo_admin@vardot.com" for "Email address"
       And I fill in "SEO admin" for "Username"
@@ -62,13 +62,13 @@ Feature: Create default testing users
       And I fill in "dD.123123ddd" for "Confirm password"
       And I check the box "SEO Admin"
       And I press "Create new account"
-      And I wait
+      And wait
      Then I should not see "The name SEO admin is already taken."
 
   @javascript @init @tools @local @development @staging
   Scenario: Create the Site admin user
      When I go to "/admin/people/create"
-      And I wait
+      And wait
      Then I should see "Add user"
      When I fill in "test.site_admin@vardot.com" for "Email address"
       And I fill in "Site admin" for "Username"
@@ -76,13 +76,13 @@ Feature: Create default testing users
       And I fill in "dD.123123ddd" for "Confirm password"
       And I check the box "Site Admin"
       And I press "Create new account"
-      And I wait
+      And wait
      Then I should not see "The name Site admin is already taken."
 
   @javascript @init @tools @local @development @staging
   Scenario: Create the Super admin user
      When I go to "/admin/people/create"
-      And I wait
+      And wait
      Then I should see "Add user"
      When I fill in "test.super_admin@vardot.com" for "Email address"
       And I fill in "Super admin" for "Username"
@@ -90,5 +90,5 @@ Feature: Create default testing users
       And I fill in "dD.123123ddd" for "Confirm password"
       And I check the box "Super Admin"
       And I press "Create new account"
-      And I wait
+      And wait
      Then I should not see "The name Super admin is already taken."

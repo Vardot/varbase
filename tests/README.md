@@ -238,19 +238,19 @@ So that I will need a site admin or super admin to add me to the website
   @local @development @staging @production 
   Scenario: Check that create new account options does not appear for anonymous users.
      When I go to "/user"
-      And I wait
+      And wait
      Then I should not see "Create new account"
   
   @local @development @staging @production
   Scenario: Check that only admin can create an account.
      When I go to "/user/register"
-      And I wait
+      And wait
      Then I should see "Access denied"
   
   @local @development @staging @production
   Scenario: Verify that anonymous users cannot access admin pages.
      When I go to "/admin"
-      And I wait
+      And wait
      Then I should see "Access denied"
 
 3 scenarios (3 passed)

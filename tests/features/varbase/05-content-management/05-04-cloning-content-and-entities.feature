@@ -9,13 +9,13 @@ I want to be able to clone an entity.
       And wait
       And I fill in "Test Clone landing page" for "Title"
       And I fill in "Test landing page description text" for "Page description"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I press "Add Component"
-      And I wait for AJAX to finish
-      And I wait for 1 second
+      And wait for AJAX to finish
+      And wait for 1 second
       And I select the "bp_block" paragraph component
-      And I wait for AJAX to finish
+      And wait for AJAX to finish
      Then I should see "Block"
      When I select "Site branding" from "Block"
       And wait
@@ -62,7 +62,7 @@ I want to be able to clone an entity.
       And wait 3s
      Then I should see "Are you sure you wish to perform"
      When I press "Execute action"
-      And I wait for 5s
+      And wait for 5s
      Then I should see "Action processing results: Delete entities (1)."
      When I go to "/admin/content"
       And wait
