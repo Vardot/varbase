@@ -19,14 +19,14 @@ config_bit:
           description: "The most common view modes you'll need for almost any site. This will provide you with a set of content <em>View Modes</em> for various teaser styles. All of which are mobile-first, media-aware, and ready for you to customize your site."
           selected: true
           config_form: false
-        varbase_heroslider_media:
-          title: "Media Hero Slider"
-          description: 'A rich hero slider that allows you to display video and/or image slides. It implements the universal "Hero Slider" to be used in your homepage. Built using <a href="https://www.drupal.org/project/slick" target="_blank">Slick Carousel</a>.'
+        varbase_heroslider:
+          title: "Hero Slider"
+          description: 'A rich hero slider that allows you to display video and/or image slides. It implements the universal "Hero Slider" to be used in your homepage.</a>.'
           selected: false
           config_form: false
         varbase_carousels:
           title: "Varbase Carousels"
-          description: 'Provides the necessary tools to build carousels in your website. You will be able to create carousels on the spot and place it anywhere in the site. Built using <a href="https://www.drupal.org/project/slick" target="_blank">Slick Carousel</a>.'
+          description: 'Provides the necessary tools to build carousels in your website. You will be able to create carousels on the spot and place it anywhere in the site.'
           selected: false
           config_form: false
         varbase_search:

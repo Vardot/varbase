@@ -8,7 +8,7 @@ So that I can make sure that the site looks good in small and medium devices too
     Given I am an anonymous user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should not see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
 
   @javascript @check @local @development @staging @production
@@ -16,7 +16,7 @@ So that I can make sure that the site looks good in small and medium devices too
     Given I am a logged in user with the "Normal user" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should not see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
 
   @javascript @check @local @development @staging @production
@@ -24,7 +24,7 @@ So that I can make sure that the site looks good in small and medium devices too
     Given I am a logged in user with the "Editor" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone XS"
@@ -49,7 +49,7 @@ So that I can make sure that the site looks good in small and medium devices too
     Given I am a logged in user with the "Content admin" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone XS"
@@ -74,7 +74,7 @@ So that I can make sure that the site looks good in small and medium devices too
     Given I am a logged in user with the "SEO admin" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone XS"
@@ -99,7 +99,7 @@ So that I can make sure that the site looks good in small and medium devices too
     Given I am a logged in user with the "Site admin" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone XS"
@@ -124,7 +124,7 @@ So that I can make sure that the site looks good in small and medium devices too
     Given I am a logged in user with the "webmaster" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone XS"

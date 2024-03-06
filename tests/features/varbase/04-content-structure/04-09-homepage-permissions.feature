@@ -8,7 +8,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
     Given I am a logged in user with the "webmaster" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -26,7 +26,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
     Given I am an anonymous user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Media Hero Slider"
       And I should not see "Tasks"
       And I should not see "Edit content"
@@ -42,7 +42,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
     Given I am a logged in user with the "Normal user" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Media Hero Slider"
       And I should not see "Tasks"
       And I should not see "Edit content"
@@ -58,7 +58,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
     Given I am a logged in user with the "Editor" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -76,7 +76,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
     Given I am a logged in user with the "Content admin" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -94,7 +94,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
     Given I am a logged in user with the "SEO admin" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -111,7 +111,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
     Given I am a logged in user with the "Site admin" user
      When I go to the homepage
       And wait
-     Then I should see "Welcome to Varbase"
+     Then I should see "Build Your Site Using Varbase!"
       And I should see "Media Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish

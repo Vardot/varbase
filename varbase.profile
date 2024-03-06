@@ -124,17 +124,17 @@ function varbase_assemble_extra_components(array &$install_state) {
     $selected_extra_features_configs = $install_state['varbase']['extra_features_configs'];
   }
 
-  if (isset($selected_extra_features['varbase_heroslider_media'])
-  && $selected_extra_features['varbase_heroslider_media'] == TRUE) {
+  if (isset($selected_extra_features['varbase_heroslider'])
+  && $selected_extra_features['varbase_heroslider'] == TRUE) {
     $batch['operations'][] = [
       'varbase_install_component',
-      (array) 'enabled_varbase_heroslider_media_content',
+      (array) 'enabled_varbase_heroslider_content',
     ];
   }
   else {
     $batch['operations'][] = [
       'varbase_install_component',
-      (array) 'disabled_varbase_heroslider_media_content',
+      (array) 'disabled_varbase_heroslider_content',
     ];
   }
 
@@ -262,12 +262,12 @@ function varbase_assemble_extra_components(array &$install_state) {
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
 
-  if (isset($selected_extra_features['varbase_heroslider_media'])
-    && $selected_extra_features['varbase_heroslider_media'] == TRUE) {
-    $uninstall_components[] = 'enabled_varbase_heroslider_media_content';
+  if (isset($selected_extra_features['varbase_heroslider'])
+    && $selected_extra_features['varbase_heroslider'] == TRUE) {
+    $uninstall_components[] = 'enabled_varbase_heroslider_content';
   }
   else {
-    $uninstall_components[] = 'disabled_varbase_heroslider_media_content';
+    $uninstall_components[] = 'disabled_varbase_heroslider_content';
   }
 
   // Reset timestamp for default content.

@@ -52,7 +52,7 @@ But make sure to have the webmaster user with the `dD.123123ddd` password.
 Example Drush install:
 Change directory in the terminal to the path of the project and `/PROJECT_DIR_NAME/docroot`
 ```
-../bin/drush site-install varbase --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
+../bin/drush site-install varbase --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
 
 ```
 
@@ -60,7 +60,7 @@ Change directory in the terminal to the path of the project and `/PROJECT_DIR_NA
 Make sure that all varbase modules are installed.
 ```
 ../bin/drush pm:enable vmi --yes
-../bin/drush pm:enable varbase_heroslider_media --yes
+../bin/drush pm:enable varbase_heroslider --yes
 ../bin/drush pm:enable varbase_carousels --yes
 ../bin/drush pm:enable varbase_search --yes
 ../bin/drush pm:enable varbase_blog --yes

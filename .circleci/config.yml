@@ -183,7 +183,7 @@ commands:
             mysql -h 127.0.0.1 -uroot -prootpw --execute="DROP DATABASE IF EXISTS test_varbase;" -vvv
             mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_varbase;" -vvv
             cd /var/www/html/test/varbase/docroot
-            ../bin/drush site-install varbase --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.editoria11y=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider_media=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
+            ../bin/drush site-install varbase --yes --account-name="webmaster" --account-pass="dD.123123ddd" --account-mail="webmaster@vardot.com" --db-url="mysql://root:rootpw@127.0.0.1/test_varbase" --locale="en" varbase_multilingual_configuration.enable_multilingual=true varbase_extra_components.editoria11y=true varbase_extra_components.vmi=true varbase_extra_components.varbase_heroslider=true varbase_extra_components.varbase_carousels=true varbase_extra_components.varbase_search=true varbase_extra_components.varbase_blog=true varbase_extra_components.varbase_auth=true install_configure_form.enable_update_status_emails=NULL -vvv
             ../bin/drush pm:enable varbase_development --yes
             ../bin/drush pm:enable varbase_landing --yes
             ../bin/drush pm:enable varbase_api --yes

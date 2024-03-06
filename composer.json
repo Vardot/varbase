@@ -40,6 +40,7 @@
     "drupal/varbase_landing": "10.0.x-dev",
     "drupal/varbase_layout_builder": "10.1.x-dev",
     "drupal/varbase_bootstrap_paragraphs": "10.0.x-dev",
+    "drupal/varbase_heroslider": "1.0.x-dev",
     "drupal/varbase_heroslider_media": "10.0.x-dev",
     "drupal/varbase_carousels": "10.0.x-dev",
     "drupal/varbase_blog": "10.0.x-dev",

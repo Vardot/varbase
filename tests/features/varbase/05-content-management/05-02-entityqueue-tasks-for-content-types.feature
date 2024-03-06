@@ -14,8 +14,7 @@ Scenario: Check if queuable content have the Entityqueue tab at the full content
     And I press "Save"
     And wait
    Then I should see "Test Content Test tab content number 1 has been created."
-	 When I close the a11y checker
-    And I open the moderation sidebar
+	 When I open the moderation sidebar
 		And I wait for AJAX to finish
     And I scroll to bottom of "#drupal-off-canvas"
    Then I should see "Entityqueue"

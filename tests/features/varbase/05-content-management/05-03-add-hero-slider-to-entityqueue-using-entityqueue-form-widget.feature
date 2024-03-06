@@ -26,7 +26,7 @@ I want to be able to add and remove entities to any allowed entity queue.
     Given I am a logged in user with the "Super admin" user
 
      # Add the "Test hero slier #1" content and to the hero slider queue.
-     When I go to "/node/add/varbase_heroslider_media"
+     When I go to "/node/add/varbase_heroslider"
       And I wait max of 5s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #1" for "Slide title"
@@ -46,14 +46,14 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
-     When I check the box "varbase_heroslider_media"
+     When I check the box "varbase_heroslider"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
      Then I should see "Test hero slider #1"
 
      # Add the "Test hero slier #2" content and to the hero slider queue.
-     When I go to "/node/add/varbase_heroslider_media"
+     When I go to "/node/add/varbase_heroslider"
       And I wait max of 2s for the page to be ready and loaded
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #2" for "Slide title"
@@ -73,14 +73,14 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I expand the field "edit-entityqueue-form-widget"
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
-     When I check the box "varbase_heroslider_media"
+     When I check the box "varbase_heroslider"
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
      Then I should see "Test hero slider #2"
 
      # Check that both hero sliders are listed in the queue.
-     When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
+     When I go to "/admin/structure/entityqueue/varbase_heroslider/varbase_heroslider"
       And wait
      Then I should see "Test hero slider #1"
       And I should see "Test hero slider #2"
@@ -103,7 +103,7 @@ I want to be able to add and remove entities to any allowed entity queue.
      Then I should see "Action processing results: Delete entities (2)."
 
      # Check that the 2 hero sliders had beend removed from the queue.
-     When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
+     When I go to "/admin/structure/entityqueue/varbase_heroslider/varbase_heroslider"
       And wait
      Then I should not see "Test hero slider #1"
       And I should not see "Test hero slider #2"

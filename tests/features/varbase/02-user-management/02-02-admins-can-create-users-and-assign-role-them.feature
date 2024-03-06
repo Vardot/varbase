@@ -108,14 +108,14 @@ So that they will be able to use the site.
       And I scroll to bottom
       And I press "Create new account"
      When I go to "/admin/people"
-     Then I should see "test.not.allwed.with.username"
-     When I click "Edit" in the "test.not.allwed.with.username" row
+     Then I should see "Some username"
+     When I click "Edit" in the "Some username" row
       And wait
       And I scroll to bottom
       And I click "Cancel account"
       And wait
       And wait 3s
-     Then I should see "Are you sure you want to cancel the account test.not.allwed.with.username"
+     Then I should see "Are you sure you want to cancel the account Some username"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I scroll to bottom
       And I press "Confirm"
@@ -161,6 +161,7 @@ So that they will be able to use the site.
   Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and provided username
     Given I am a logged in user with the "webmaster" user
       And I go to "/admin/config/varbase/settings"
+      And I wiat
      Then I should see "Varbase general settings"
       And I should see "Allow custom account name"
      When I check the box "Allow custom account name"
