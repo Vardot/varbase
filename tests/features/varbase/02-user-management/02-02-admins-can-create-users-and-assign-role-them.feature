@@ -161,7 +161,7 @@ So that they will be able to use the site.
   Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and provided username
     Given I am a logged in user with the "webmaster" user
       And I go to "/admin/config/varbase/settings"
-      And I wiat
+      And wait
      Then I should see "Varbase general settings"
       And I should see "Allow custom account name"
      When I check the box "Allow custom account name"
