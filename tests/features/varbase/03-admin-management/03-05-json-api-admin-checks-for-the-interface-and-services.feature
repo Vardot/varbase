@@ -113,9 +113,9 @@ So that I can use them to enable or disable API service for Varbase APIs.
      When I go to "/admin/structure/entityqueue"
       And wait
      Then I should see "Entityqueues"
-      And I should not see the "View JSON" operation for the "Media Hero Slider" entity
-      And I should not see the "View API Docs" operation for the "Media Hero Slider" entity
-      But I should not see the "Edit items" operation for the "Media Hero Slider" entity
+      And I should not see the "View JSON" operation for the "Hero Slider" entity
+      And I should not see the "View API Docs" operation for the "Hero Slider" entity
+      But I should not see the "Edit items" operation for the "Hero Slider" entity
       
 
   @javascript @check @local @development @staging @production
@@ -146,9 +146,9 @@ So that I can use them to enable or disable API service for Varbase APIs.
      When I go to "/admin/structure/entityqueue"
       And wait
      Then I should see "Entityqueues"
-      And I should not see the "View JSON" operation for the "Media Hero Slider" entity
-      And I should not see the "View API Docs" operation for the "Media Hero Slider" entity
-      But I should not see the "Edit items" operation for the "Media Hero Slider" entity
+      And I should not see the "View JSON" operation for the "Hero Slider" entity
+      And I should not see the "View API Docs" operation for the "Hero Slider" entity
+      But I should not see the "Edit items" operation for the "Hero Slider" entity
 
 
   @javascript @check @local @development @staging @production

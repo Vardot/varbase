@@ -9,7 +9,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -27,7 +27,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
       And I should not see "Tasks"
       And I should not see "Edit content"
       And I should not see "Delete"
@@ -43,7 +43,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
       And I should not see "Tasks"
       And I should not see "Edit content"
       And I should not see "Delete"
@@ -59,7 +59,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -77,7 +77,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -95,7 +95,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -112,7 +112,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"

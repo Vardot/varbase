@@ -68,7 +68,7 @@ So that I can use them after the install or update.
       And wait
      Then I should see "Views"
       And I should see "Browser"
-      And I should see "Media Hero Slider"
+      And I should see "Hero Slider"
 
   @javascript @check @local @development @staging @production
   Scenario: Check the Appearance page
