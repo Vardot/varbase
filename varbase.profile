@@ -757,3 +757,14 @@ function varbase_requirements($phase) {
 
   return $requirements;
 }
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function varbase_library_info_alter(&$libraries, $extension) {
+  if ($extension === 'claro' && isset($libraries['install-page'])) {
+    unset($libraries['install-page']['css']);
+    $libraries['claro']['dependencies'][] = 'varbase/install-styling';
+    $libraries['claro']['dependencies'][] = 'varbase/install-scripts';
+  }
+}
