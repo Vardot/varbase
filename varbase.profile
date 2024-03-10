@@ -759,12 +759,24 @@ function varbase_requirements($phase) {
 }
 
 /**
+ * Implements hook_theme().
+ */
+function varbase_theme($existing, $type, $theme, $path) {
+  return [
+    'install_page' => [
+      'template' => 'install-page.html',
+      'path' => $path . '/templates'
+    ],
+  ];
+}
+
+/**
  * Implements hook_library_info_alter().
  */
 function varbase_library_info_alter(&$libraries, $extension) {
   if ($extension === 'claro' && isset($libraries['install-page'])) {
     unset($libraries['install-page']['css']);
-    $libraries['claro']['dependencies'][] = 'varbase/install-styling';
-    $libraries['claro']['dependencies'][] = 'varbase/install-scripts';
+    $libraries['install-page']['dependencies'][] = 'varbase/install-styling';
+    $libraries['install-page']['dependencies'][] = 'varbase/install-scripts';
   }
 }
