@@ -1,0 +1,95 @@
+body.install-page {
+  background-image: url(../../images/varbase-bg.jpg);
+  background-position-x: center !important;
+  background-position-y: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-origin: initial !important;
+  background-clip: initial !important;
+  background-color: initial !important;
+  object-fit: cover;
+}
+
+body.install-page .other-lang-warn {
+  display: none;
+}
+
+body.install-page .other-lang-warn .visible {
+  display: block;
+}
+
+body.install-page .logo a {
+  background-image: url(../../images/vardot-white-logo.png);
+  background-position-x: 0px;
+  background-position-y: 0px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: transparent;
+}
+
+body.install-page .site-version {
+  vertical-align: initial !important;
+  padding-left: 10px;
+  color: #4192c8;
+  font-weight: bold;
+  font-size: .6em;
+}
+
+@media screen and (min-width: 38em) {
+  .layout-sidebar-first {
+    width: 35%;
+    float: left;
+  }
+
+  [dir=rtl] .layout-sidebar-first {
+    float: right;
+  }
+
+  main {
+    width: 60%;
+    float: right;
+  }
+
+  [dir=rtl] main {
+    float: left;
+  }
+}
+
+footer.installer-footer {
+  margin: 0 auto;
+  width: 75%;
+  max-width: 770px;
+  border-radius: 5px;
+  color: white;
+}
+
+footer.installer-footer #credit {
+  float: right;
+  padding: 20px 0 40px;
+  font-size: 11px;
+}
+
+footer.installer-footer #credit a {
+  clear: right;
+  float: right;
+  height: 0;
+  overflow: hidden;
+  padding: 50px 0 0;
+  width: 125px;
+}
+
+[dir=rtl] footer.installer-footer #credit {
+  float: left;
+  text-align: left;
+  padding: 20px 0 40px;
+  font-size: 11px;
+}
+
+.installer-logo {
+  width: 18rem;
+}
+

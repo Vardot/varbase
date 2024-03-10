@@ -6,7 +6,7 @@ project: varbase
 distribution:
   name: Varbase
   install:
-    theme: vartheme_claro
+    theme: gin
 version: 10.0.x-dev
 install:
   - system
@@ -23,7 +23,6 @@ install:
 themes:
   - vartheme_bs5
   - gin
-  - vartheme_claro
 
 interface translation project: varbase
 interface translation server pattern: profiles/contrib/varbase/translations/%language.po
