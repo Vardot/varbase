@@ -9,4 +9,5 @@ install-scripts:
   js:
     js/install-scripts.js: { }
   dependencies:
+    - core/jquery
     - gin/gin_accent

@@ -31,9 +31,24 @@ body.install-page {
     background-color: transparent;
   }
 
+  .site-name {
+    background-image: url(../../images/varbase-medium-logo.png);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
+    height: 3rem;
+    width: 30rem;
+    color: transparent;
+  }
+
   .site-version {
     vertical-align: initial !important;
-    padding-left: 10px;
+    padding-left: 10rem;
     color: #4192c8;
     font-weight: bold;
     font-size: 0.6em;

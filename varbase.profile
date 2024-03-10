@@ -759,18 +759,6 @@ function varbase_requirements($phase) {
 }
 
 /**
- * Implements hook_theme().
- */
-function varbase_theme($existing, $type, $theme, $path) {
-  return [
-    'install_page' => [
-      'template' => 'install-page.html',
-      'path' => $path . '/templates'
-    ],
-  ];
-}
-
-/**
  * Implements hook_library_info_alter().
  */
 function varbase_library_info_alter(&$libraries, $extension) {
