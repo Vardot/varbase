@@ -35,7 +35,7 @@ function varbase_api_get_editable_config_names() {
  *   Install state.
  */
 function varbase_ai_build_formbit(array &$formbit, FormStateInterface &$form_state, array &$install_state = NULL) {
-  $form['api_key'] = [
+  $formbit['api_key'] = [
     '#required' => TRUE,
     '#type' => 'textfield',
     '#title' => ('API Key'),
@@ -43,16 +43,12 @@ function varbase_ai_build_formbit(array &$formbit, FormStateInterface &$form_sta
     '#description' => t('The API key is required to interface with OpenAI services. Get your API key by signing up on the <a href=":link" target="_blank">OpenAI website</a>.', [':link' => 'https://openai.com/api']),
   ];
 
-  $form['api_org'] = [
+  $formbit['api_org'] = [
     '#required' => TRUE,
     '#type' => 'textfield',
     '#title' => t('Organization ID'),
     '#default_value' => "",
     '#description' => t('The organization ID on your OpenAI account. This is required for some OpenAI services to work correctly.'),
-  ];
-
-  $form['message'] = [
-    '#markup' => '<p>If you recently renewed or added more funds to OpenAI, please note that it can take a few hours for API access to be restored.</p>',
   ];
 
 }
