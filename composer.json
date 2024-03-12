@@ -35,6 +35,7 @@
     "drupal/varbase_core": "10.0.x-dev",
     "drupal/varbase_components": "2.0.x-dev",
     "drupal/varbase_api": "10.0.x-dev",
+    "drupal/varbase_ai": "1.0.x-dev",
     "drupal/varbase_media": "10.0.x-dev",
     "drupal/varbase_editor": "10.0.x-dev",
     "drupal/varbase_landing": "10.0.x-dev",
@@ -83,7 +84,7 @@
       "drupal/core-project-message": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "phpstan/extension-installer": true,
-      "vardot/varbase-updater": true
+      "php-http/discovery": true
     }
   },
   "autoload": {

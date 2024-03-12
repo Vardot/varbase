@@ -67,6 +67,7 @@ Make sure that all varbase modules are installed.
 ../bin/drush pm:enable varbase_development --yes
 ../bin/drush pm:enable varbase_landing --yes
 ../bin/drush pm:enable varbase_api --yes
+../bin/drush pm:enable varbase_ai --yes
 ../bin/drush pm:enable varbase_content_planner --yes
 ../bin/drush pm:enable varbase_media_instagram --yes
 ../bin/drush pm:enable varbase_media_twitter --yes
