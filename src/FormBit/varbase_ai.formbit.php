@@ -13,7 +13,7 @@ use Drupal\Core\Form\FormStateInterface;
  * @return array
  *   Array of config names, and list of values.
  */
-function varbase_api_get_editable_config_names() {
+function varbase_ai_get_editable_config_names() {
   $editable_configs = [
     'openai.settings' => [
       'api_key' => '',
