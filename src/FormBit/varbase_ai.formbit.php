@@ -38,7 +38,7 @@ function varbase_ai_build_formbit(array &$formbit, FormStateInterface &$form_sta
   $formbit['api_key'] = [
     '#type' => 'textfield',
     '#title' => ('API Key'),
-    '#default_value' => "",
+    '#default_value' => "sk-change-this",
     '#description' => t('The API key is required to interface with OpenAI services. Get your API key by signing up on the <a href=":link" target="_blank">OpenAI website</a>.', [':link' => 'https://openai.com/api']),
     '#element_validate' => ['validate_formbit_openai_api_key'],
   ];
@@ -46,7 +46,7 @@ function varbase_ai_build_formbit(array &$formbit, FormStateInterface &$form_sta
   $formbit['api_org'] = [
     '#type' => 'textfield',
     '#title' => t('Organization ID'),
-    '#default_value' => "",
+    '#default_value' => "org-change-this",
     '#description' => t('The organization ID on your OpenAI account. This is required for some OpenAI services to work correctly.'),
     '#element_validate' => ['validate_formbit_openai_api_org'],
   ];
