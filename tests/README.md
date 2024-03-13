@@ -72,7 +72,6 @@ Make sure that all varbase modules are installed.
 ../bin/drush pm:enable varbase_media_instagram --yes
 ../bin/drush pm:enable varbase_media_twitter --yes
 ../bin/drush pm:enable varbase_auth --yes
-../bin/drush pm:enable social_auth_google --yes
 ../bin/drush pm:enable social_auth_facebook --yes
 ../bin/drush pm:enable social_auth_twitter --yes
 ../bin/drush pm:enable social_auth_linkedin --yes

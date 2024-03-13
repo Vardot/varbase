@@ -104,7 +104,6 @@
     <exec command="${drush} en vbp_text_and_image --yes" dir="${docroot}" />
     <exec command="${drush} en varbase_media_instagram --yes" dir="${docroot}" />
     <exec command="${drush} en varbase_media_twitter --yes" dir="${docroot}" />
-    <exec command="${drush} en social_auth_google --yes" dir="${docroot}" />
     <exec command="${drush} en social_auth_facebook --yes" dir="${docroot}" />
     <exec command="${drush} en social_auth_twitter --yes" dir="${docroot}" />
     <exec command="${drush} en social_auth_linkedin --yes" dir="${docroot}" />
