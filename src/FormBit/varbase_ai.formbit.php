@@ -2,7 +2,7 @@
 
 /**
  * @file
- * FormBit file for varbase_ai module.
+ * FormBit file for varbase_ai recipe module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -16,8 +16,8 @@ use Drupal\Core\Form\FormStateInterface;
 function varbase_ai_get_editable_config_names() {
   $editable_configs = [
     'openai.settings' => [
-      'api_key' => '',
-      'api_org' => '',
+      'api_key' => 'sk-change-this',
+      'api_org' => 'org-change-this',
     ],
   ];
 

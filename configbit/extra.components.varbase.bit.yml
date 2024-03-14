@@ -9,6 +9,12 @@ config_bit:
     show_extra_components: true
     list:
       dependencies:
+        varbase_ai:
+          title: "Varbase AI"
+          description: 'Collection of provided and configured recipes for AI tools, to empower Varbase editorial teams with more advanced Artificial Intelligence (AI) options. Built using <a href="https://www.drupal.org/project/ai_interpolator" target="_blank">AI Interpolator</a> and <a href="https://www.drupal.org/project/openai" target="_blank">OpenAI</a>.'
+          selected: false
+          config_form: true
+          formbit: "src/FormBit/varbase_ai.formbit.php"
         editoria11y:
           title: "Editorial Accessibility Checker"
           description: 'Adds an automatic checker tool for accessibility with the integration of the <a href="https://www.drupal.org/project/editoria11y" target="_blank">Editoria11y Accessibility Checker</a>, a user-friendly tool dedicated to automatically identifying and addressing straightforward accessibility issues in various contexts.'
@@ -50,12 +56,6 @@ config_bit:
           description: "A JSON:API implementation with authentication and authorization that allows for easy ingestion of content by other applications."
           selected: false
           config_form: false
-        varbase_ai:
-          title: "Varbase AI"
-          description: 'Collection of provided and configured recipes for AI tools, to empower Varbase editorial teams with more advanced Artificial Intelligence (AI) options. Built using <a href="https://www.drupal.org/project/ai_interpolator" target="_blank">AI Interpolator</a> and <a href="https://www.drupal.org/project/openai" target="_blank">OpenAI</a>.'
-          selected: false
-          config_form: true
-          formbit: "src/FormBit/varbase_ai.formbit.php"
         google_analytics:
           title: "Google Analytics"
           description: 'Adds the <a href="https://www.drupal.org/project/google_analytics" target="_blank">Google Analytics</a> web statistics tracking system to your website.'

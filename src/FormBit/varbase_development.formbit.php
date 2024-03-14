@@ -2,7 +2,7 @@
 
 /**
  * @file
- * FormBit file for varbase_development feature module.
+ * FormBit file for varbase_development recipe module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -15,7 +15,7 @@ use Drupal\Component\Utility\EmailValidator;
  *   Array of config names, and list of values.
  */
 function varbase_development_get_editable_config_names() {
-  $editable_cofnigs = [
+  $editable_configs = [
     'system.logging' => [
       'error_level' => ERROR_REPORTING_HIDE,
     ],
@@ -25,7 +25,7 @@ function varbase_development_get_editable_config_names() {
     ],
   ];
 
-  return $editable_cofnigs;
+  return $editable_configs;
 }
 
 /**

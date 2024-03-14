@@ -78,4 +78,3 @@ function varbase_install() {
     exit;
   }
 }
-

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * FormBit file for varbase_auth feature mdoule.
+ * FormBit file for varbase_auth recipe module.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -56,7 +56,12 @@ function varbase_auth_build_formbit(array &$formbit, FormStateInterface &$form_s
  *   Editable config values.
  */
 function varbase_auth_submit_formbit(array $editable_config_values) {
-  $auth_modules = $editable_config_values['varbase_auth']['social_auth_type'];
+
+  $auth_module = [];
+  if (isset($editable_config_values['varbase_auth'])
+    && isset($editable_config_values['varbase_auth']['social_auth_type'])) {
+    $auth_modules = $editable_config_values['varbase_auth']['social_auth_type'];
+  }
 
   if (isset($auth_modules) && is_array($auth_modules) && count($auth_modules) > 0) {
 
