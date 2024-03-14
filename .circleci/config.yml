@@ -196,6 +196,11 @@ commands:
             ../bin/drush pm:enable social_auth_linkedin --yes
             ../bin/drush pm:enable varbase_update_helper --yes
             ../bin/drush cache:rebuild
+            ## Set the API key and org for OpenAI.
+            openai_api_key="sk-change-this"
+            openai_api_org="org-change-this"
+            ../bin/drush -y config:set openai.settings api_key ${openai_api_key};
+            ../bin/drush -y config:set openai.settings api_org ${openai_api_org};
 
       ## Install/Run Selenium Standalone server 4.1.2 on 4445 port.
       - run:
