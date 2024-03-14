@@ -41,7 +41,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I fill in "Test Landing page description Drupal Block" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "Add Component"
+      And I press "+ Add"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_block" paragraph component
@@ -63,7 +63,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I fill in "Test Landing page description Columns (Equal)" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "Add Component"
+      And I press "+ Add"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_columns" paragraph component
@@ -82,7 +82,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I fill in "Test Landing page description Columns (Two Uneven)" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "Add Component"
+      And I press "+ Add"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_columns_two_uneven" paragraph component
@@ -101,7 +101,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I fill in "Test Landing page description Rich Text" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "Add Component"
+      And I press "+ Add"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_simple" paragraph component
@@ -123,7 +123,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I fill in "Test Landing page description WebForm" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "Add Component"
+      And I press "+ Add"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_webform" paragraph component
