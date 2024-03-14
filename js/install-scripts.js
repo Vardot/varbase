@@ -3,7 +3,7 @@
  * JavaScript behaviors for Varbase installer.
  */
 
-(function ($, Drupal) {
+(($, Drupal) => {
 
   'use strict';
 
@@ -17,8 +17,9 @@
   Drupal.behaviors.varbaseGinAccent = {
     attach: function attach(context) {
 
-      // Set accent color to blue on while installing.
-      document.body.setAttribute('data-gin-accent', 'blue');
+      // Set accent color to #0D6EFD while installing.
+      document.body.setAttribute('data-gin-accent', 'custom');
+      Drupal.ginAccent.setCustomAccentColor('#0D6EFD');
 
       // Set focus color to default gin while installing.
       document.body.setAttribute('data-gin-focus', 'gin');
