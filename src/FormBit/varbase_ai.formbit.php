@@ -16,8 +16,8 @@ use Drupal\Core\Form\FormStateInterface;
 function varbase_ai_get_editable_config_names() {
   $editable_configs = [
     'openai.settings' => [
-      'api_key' => 'sk-change-this',
-      'api_org' => 'org-change-this',
+      'api_key' => '',
+      'api_org' => '',
     ],
   ];
 
