@@ -15,7 +15,7 @@ use Drupal\Component\Utility\EmailValidator;
  *   Array of config names, and list of values.
  */
 function varbase_development_get_editable_config_names() {
-  $editable_configs = [
+  $varbase_development_editable_configs = [
     'system.logging' => [
       'error_level' => ERROR_REPORTING_HIDE,
     ],
@@ -25,7 +25,7 @@ function varbase_development_get_editable_config_names() {
     ],
   ];
 
-  return $editable_configs;
+  return $varbase_development_editable_configs;
 }
 
 /**

@@ -122,8 +122,9 @@ class AssemblerForm extends FormBase {
           '#default_value' => $checkbox_selected,
         ];
 
-        if (isset($extra_feature_info['config_form']) &&
-                   $extra_feature_info['config_form'] == TRUE) {
+        if (isset($extra_feature_info['config_form'])
+          && $extra_feature_info['config_form'] == TRUE) {
+
           $form['extra_features'][$extra_feature_key . '_config'] = [
             '#type' => 'fieldset',
             '#title' => $checkbox_title,
@@ -190,8 +191,9 @@ class AssemblerForm extends FormBase {
           '#default_value' => $checkbox_selected,
         ];
 
-        if (isset($demo_content_info['config_form']) &&
-                  $demo_content_info['config_form'] == TRUE) {
+        if (isset($demo_content_info['config_form'])
+          && $demo_content_info['config_form'] == TRUE) {
+
           $form['demo_content'][$demo_content_key . '_config'] = [
             '#type' => 'fieldset',
             '#title' => $checkbox_title,
@@ -255,8 +257,9 @@ class AssemblerForm extends FormBase {
           $extra_features_values[$extra_feature_key] = $form_state->getValue($extra_feature_key);
         }
 
-        if (isset($extra_feature_info['config_form']) &&
-                  $extra_feature_info['config_form'] == TRUE) {
+        if (isset($extra_feature_info['config_form'])
+          && $extra_feature_info['config_form'] == TRUE) {
+
           $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extra_feature_info['formbit'];
           if (file_exists($formbit_file_name)) {
 
@@ -273,7 +276,7 @@ class AssemblerForm extends FormBase {
               }
             }
 
-            $GLOBALS['install_state']['varbase']['extra_features_configs'] = $extra_features_editable_configs;
+            $GLOBALS['install_state']['varbase']['extra_features_configs'][$extra_feature_key] = $extra_features_editable_configs;
           }
         }
       }
@@ -293,8 +296,9 @@ class AssemblerForm extends FormBase {
           $demo_content_values[$demo_content_key] = $form_state->getValue($demo_content_key);
         }
 
-        if (isset($demo_content_info['config_form']) &&
-                  $demo_content_info['config_form'] == TRUE) {
+        if (isset($demo_content_info['config_form'])
+          && $demo_content_info['config_form'] == TRUE) {
+
           $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $demo_content_info['formbit'];
           if (file_exists($formbit_file_name)) {
 

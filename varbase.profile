@@ -114,14 +114,9 @@ function varbase_assemble_extra_components(array &$install_state) {
 
   // Install selected extra features.
   $selected_extra_features = [];
-  $selected_extra_features_configs = [];
 
   if (isset($install_state['varbase']['extra_features_values'])) {
     $selected_extra_features = $install_state['varbase']['extra_features_values'];
-  }
-
-  if (isset($install_state['varbase']['extra_features_configs'])) {
-    $selected_extra_features_configs = $install_state['varbase']['extra_features_configs'];
   }
 
   if (isset($selected_extra_features['varbase_heroslider'])
@@ -156,10 +151,16 @@ function varbase_assemble_extra_components(array &$install_state) {
           ];
         }
 
-        if (count($selected_extra_features_configs) &&
-            isset($extraFeatures[$extra_feature_key]['config_form']) &&
-            $extraFeatures[$extra_feature_key]['config_form'] == TRUE &&
-            isset($extraFeatures[$extra_feature_key]['formbit'])) {
+        $selected_extra_features_configs = [];
+        if (isset($install_state['varbase']['extra_features_configs'])
+          && isset($install_state['varbase']['extra_features_configs'][$extra_feature_key])) {
+          $selected_extra_features_configs = $install_state['varbase']['extra_features_configs'][$extra_feature_key];
+        }
+
+        if (count($selected_extra_features_configs)
+          && isset($extraFeatures[$extra_feature_key]['config_form'])
+          && $extraFeatures[$extra_feature_key]['config_form'] == TRUE
+          && isset($extraFeatures[$extra_feature_key]['formbit'])) {
 
           $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extraFeatures[$extra_feature_key]['formbit'];
 
@@ -222,10 +223,10 @@ function varbase_assemble_extra_components(array &$install_state) {
           ];
         }
 
-        if (count($selected_demo_content_configs) &&
-            isset($demoContent[$demo_content_key]['config_form']) &&
-            $demoContent[$demo_content_key]['config_form'] == TRUE &&
-            isset($demoContent[$demo_content_key]['formbit'])) {
+        if (count($selected_demo_content_configs)
+          && isset($demoContent[$demo_content_key]['config_form'])
+          && $demoContent[$demo_content_key]['config_form'] == TRUE
+          && isset($demoContent[$demo_content_key]['formbit'])) {
 
           $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $demoContent[$demo_content_key]['formbit'];
           if (file_exists($formbit_file_name)) {
@@ -331,10 +332,10 @@ function varbase_assemble_development_tools(array &$install_state) {
           ];
         }
 
-        if (count($selected_development_configs) &&
-            isset($developmentTools[$development_tool_key]['config_form']) &&
-            $developmentTools[$development_tool_key]['config_form'] == TRUE &&
-            isset($developmentTools[$development_tool_key]['formbit'])) {
+        if (count($selected_development_configs)
+          && isset($developmentTools[$development_tool_key]['config_form'])
+          && $developmentTools[$development_tool_key]['config_form'] == TRUE
+          && isset($developmentTools[$development_tool_key]['formbit'])) {
 
           $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $developmentTools[$development_tool_key]['formbit'];
           if (file_exists($formbit_file_name)) {
@@ -380,7 +381,7 @@ function varbase_configure_multilingual(array &$install_state) {
 
   // If the multilingual config checkbox were checked.
   if (isset($install_state['varbase']['enable_multilingual'])
-         && $install_state['varbase']['enable_multilingual'] == TRUE) {
+    && $install_state['varbase']['enable_multilingual'] == TRUE) {
 
     // Install the Varbase internationalization feature module.
     $batch['operations'][] = [

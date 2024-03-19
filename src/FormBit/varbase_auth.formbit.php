@@ -14,13 +14,13 @@ use Drupal\Core\Form\FormStateInterface;
  *   Array of config names, and list of values.
  */
 function varbase_auth_get_editable_config_names() {
-  $editable_configs = [
+  $varbase_auth_editable_configs = [
     'varbase_auth' => [
       'social_auth_type' => ['social_auth_google'],
     ],
   ];
 
-  return $editable_configs;
+  return $varbase_auth_editable_configs;
 }
 
 /**
