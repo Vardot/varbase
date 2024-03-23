@@ -76,7 +76,7 @@
     "svg-spritemap-webpack-plugin": "^4.4.0",
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.0",
-    "webpack-dev-middleware": "^4.1.0",
+    "webpack-dev-middleware": "^5.3.4",
     "webpack-merge": "^5.7.3",
     "webpack-notifier": "^1.13.0",
     "webpack-remove-empty-scripts": "^0.7.1",
