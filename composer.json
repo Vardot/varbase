@@ -27,11 +27,11 @@
     }
   },
   "require": {
-    "composer/installers": "~2",
-    "oomphinc/composer-installers-extender": "~2",
-    "cweagans/composer-patches": "~1",
-    "drupal/core-composer-scaffold": "~10",
     "drupal/core": "~10",
+    "vardot/varbase-patches": "~10.0.0",
+    "vardot/entity-definition-update-manager": "~1",
+    "vardot/module-installer-factory": "~1",
+    "drupal/core-composer-scaffold": "~10",
     "drupal/varbase_core": "10.0.x-dev",
     "drupal/varbase_components": "2.0.x-dev",
     "drupal/varbase_api": "10.0.x-dev",
@@ -53,8 +53,6 @@
     "drupal/varbase_workflow": "3.0.x-dev",
     "drupal/vartheme_bs5": "3.0.x-dev",
     "drupal/vartheme_claro": "4.0.x-dev",
-    "vardot/entity-definition-update-manager": "1.0.x-dev",
-    "vardot/module-installer-factory": "1.0.x-dev",
     "bower-asset/jqueryui-touch-punch": "dev-master",
     "npm-asset/dropzone": "~5",
     "npm-asset/blazy": "~1",
@@ -155,7 +153,6 @@
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
-    },
-    "patches": {  }
+    }
   }
 }
