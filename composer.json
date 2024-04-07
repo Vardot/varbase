@@ -26,8 +26,11 @@
       "url": "https://asset-packagist.org"
     }
   },
+  "replace": {
+    "drupal/statistics": "*"
+  },
   "require": {
-    "drupal/core": "~10",
+    "drupal/core": "~10.2.0",
     "vardot/varbase-patches": "~9.1.0",
     "vardot/entity-definition-update-manager": "~1",
     "vardot/module-installer-factory": "~1",
