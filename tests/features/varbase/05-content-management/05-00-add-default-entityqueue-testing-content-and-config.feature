@@ -57,7 +57,7 @@ Scenario: Add Test content N1, N2, N3 type of test content
    When I fill in "Test content N3" for "Title"
     And I fill in the rich text editor field "Body" with "Test content N3 Body"
     And I select "published" from "edit-moderation-state-0-state"
-    And I press the "Save" button
+    And I press the "Save as" button
     And wait
    Then I should see "Test Content Test content N3 has been created."
 

@@ -11,7 +11,7 @@ Scenario: Check if queuable content have the Entityqueue tab at the full content
    Then I should see "Create Test Content"
    When I fill in "Test tab content number 1" for "Title"
     And I fill in the rich text editor field "Body" with "Test tab content number 1 Body"
-    And I press "Save"
+    And I press "Save as"
     And wait
    Then I should see "Test Content Test tab content number 1 has been created."
 	 When I open the moderation sidebar

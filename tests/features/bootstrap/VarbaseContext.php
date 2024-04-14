@@ -1688,15 +1688,18 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception(sprintf('The element "%s" was not found in the page', $htmlTagName));
     }
 
+    $firstIndex = -1;
+
     $found = FALSE;
-    foreach ($elements as $element) {
+    foreach ($elements as $index => $element) {
       $actual = $element->getText();
+
       $actual = preg_replace('/\s+/u', ' ', $actual);
       $regex = '/' . preg_quote($text, '/') . '/ui';
 
       if (preg_match($regex, $actual)) {
         $found = TRUE;
-        $element->click();
+        $firstIndex = $index;
         break;
       }
     }
@@ -1713,6 +1716,11 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
         throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
       }
     }
+
+    if ($firstIndex !== -1) {
+      $elements[$firstIndex]->click();
+    }
+
   }
 
   /**

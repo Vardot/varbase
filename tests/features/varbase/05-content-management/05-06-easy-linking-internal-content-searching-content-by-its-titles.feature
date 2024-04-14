@@ -13,7 +13,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I fill in "Linking to internal content #1 title" for "Title"
       And I fill in the rich text editor field "Body" with "Linking to internal content #1 body"
       And I select "published" from "edit-moderation-state-0-state"
-      And I press the "Save" button
+      And I press the "Save as" button
       And wait
      Then I should see "Linking to internal content #1 body"
      When I go to "/node/add/page"
@@ -43,6 +43,6 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I click on the save button in "Body" rich text editor field
       And wait
       And I select "published" from "edit-moderation-state-0-state"
-      And I press the "Save" button
+      And I press the "Save as" button
       And wait
       And I should see "Linking to internal content #2 body"

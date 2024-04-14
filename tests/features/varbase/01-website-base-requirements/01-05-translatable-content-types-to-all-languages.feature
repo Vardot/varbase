@@ -20,7 +20,7 @@ So that I will be able to create a content then I will have the option to transl
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
       And I select "en" from "Language"
       And I select "published" from "edit-moderation-state-0-state"
-      And I press the "Save" button
+      And I press the "Save as" button
       And wait 2s
      Then I should see "Test English Basic page"
       And I should see "Test English Basic page body"
