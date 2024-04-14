@@ -12,7 +12,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
      When I select "full_html" from "Text format"
       And I fill in "Linking to internal content #1 title" for "Title"
       And I fill in the rich text editor field "Body" with "Linking to internal content #1 body"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
       And I press the "Save as" button
       And wait
      Then I should see "Linking to internal content #1 body"
@@ -42,7 +42,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I wait for AJAX to finish
       And I click on the save button in "Body" rich text editor field
       And wait
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
       And I press the "Save as" button
       And wait
       And I should see "Linking to internal content #2 body"

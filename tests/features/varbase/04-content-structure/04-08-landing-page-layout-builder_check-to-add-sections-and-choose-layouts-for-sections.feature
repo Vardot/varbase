@@ -11,7 +11,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
      Then I should see "Create Landing page (Layout Builder)"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I fill in "Test Landing page (Layout Builder) description" for "Page description"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
       And I press the "Save as" button
       And wait
      Then I should see "Landing page (Layout Builder) Test Landing page (Layout Builder) has been created"

@@ -57,7 +57,7 @@
   #    When I click "Text"
   #     And I fill in the rich text editor field "Text" with "In eros ipsum, mattis vitae vulputate eu, blandit non risus. Maecenas ultricies volutpat massa id hendrerit. Phasellus magna quam, lacinia sed justo pulvinar, tristique finibus felis. Quisque in sagittis tellus. Curabitur in est at quam maximus elementum. Pellentesque interdum tincidunt nisl, ac efficitur elit aliquam id. Integer egestas neque ut risus tincidunt semper."
   #     And wait
-  #     And I select "published" from "edit-moderation-state-0-state"
+  #     And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
   #     And I press the "Save as" button
   #     And wait
   #    Then I should see "In eros ipsum, mattis vitae vulputate eu, blandit"
