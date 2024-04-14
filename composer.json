@@ -30,8 +30,6 @@
     "drupal/statistics": "*"
   },
   "require": {
-    "drupal/core": "~10.2.0",
-    "vardot/varbase-patches": "~9.1.0",
     "drupal/varbase_core": "~9.1.0",
     "drupal/varbase_api": "~9.1.0",
     "drupal/varbase_media": "~9.1.0",
@@ -50,9 +48,7 @@
     "drupal/varbase_email": "~9.1.0",
     "drupal/varbase_workflow": "~2.1.0",
     "drupal/vartheme_bs4": "~9",
-    "drupal/vartheme_claro": "~3.0",
-    "vardot/entity-definition-update-manager": "~1",
-    "vardot/module-installer-factory": "~1",
+    "drupal/vartheme_claro": "~3",
     "bower-asset/objectfitpolyfill": "~2",
     "bower-asset/chartjs": "~4",
     "bower-asset/c3": "0.7.*",
