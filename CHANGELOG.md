@@ -1,3 +1,76 @@
+# 9.1.2
+
+### Highlighted important changes since Varbase 9.1.1:
+
+This is a **patch (bugfix)** release of **Varbase 9** and is ready for use on production sites.
+
+* Issue [#3437217](https://www.drupal.org/i/3437217):
+         Switched to a local patching system using `vardot/varbase-patches` and `cweagans/composer-patches` `"~2"` within **Varbase**
+* Issue [#3439284](https://www.drupal.org/i/3439284):
+         Restricted **Drupal Core** to `~10.2.0` NOT to update to an `alpha`/`beta`/`dev` version of **Drupal Core** `10.3.x`
+
+### Added since Varbase 9.1.1:
+All new features are in Varbase `~10`
+
+* Issue [#3424034](https://www.drupal.org/i/3424034)
+         by [Redwan Jamous](https://www.drupal.org/u/redwan-jamous)
+        : Added 3422610-4.patch to Better Login to fix Redirect loop when accessing a forbidden route with 'user' query parameter
+
+### Changed since Varbase 9.1.1:
+* Issue [#3419067](https://www.drupal.org/i/3419067):
+         Removed (Deprecated) Rabbit Hole nodes module and changed refactored config schema
+* Issue [#3417077](https://www.drupal.org/i/3417077)
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Removed **swiftmailer** from dependencies
+
+### Updates since Varbase 9.1.1:
+* Issue [#3422174](https://www.drupal.org/i/3422174):
+         Updated **Display Suite** from `3.18.0` to `3.19.0` ( `~3.0` ) and removed reverted patches and logic
+* Issue [#3422109](https://www.drupal.org/i/3422109):
+         Updated **Composer Patches** from `~1` to `~2` for Varbase API
+* Issue [#3419078](https://www.drupal.org/i/3419078):
+         Updated Ultimate Cron module from `2.0.0-alpha6` to `2.0.0-alpha7` ( `~2` ) and remove committed patches
+* Issue [#3425982](https://www.drupal.org/i/3425982):
+         Updated **Drupal** from `10.2.3` to `10.2.4` ( `~10.2.0` ) and removed committed patches
+* Issue [#3436516](https://www.drupal.org/i/3436516):
+         Updated **Paragraph Previewer** module from `1.8.0` to `1.9.0` and kept needed patches
+* Issue [#3429648](https://www.drupal.org/i/3429648):
+         Updated **Security Review** module from `~2` to `~3`
+* Issue [#3436504](https://www.drupal.org/i/3436504):
+         Updated **Devel module** from `~5.1.0` to `~5.2.0`
+* Issue [#3436508](https://www.drupal.org/i/3436508):
+         Updated **Entity Clone module** from `2.0.0-beta4` to `2.0.0-beta5` and kept needed patches
+* Issue [#3432613](https://www.drupal.org/i/3432613):
+         Updated **Bootstrap Styles** module from `1.1.5` to `1.1.6` and removed committed and kept needed patches
+* Issue [#3429641](https://www.drupal.org/i/3429641):
+         Updated **Linkit** from `6.1.2` to `6.1.3` and kept needed patches
+* Issue [#3425712](https://www.drupal.org/i/3425712):
+         Updated **Better Login** module from `2.0.1` to `2.0.2` ( `~2` ) and removed committed patches
+* Issue [#3418282](https://www.drupal.org/i/3418282):
+         Updated **DRD Agent** module from `4.0.4` to `4.1.0` ( `~4` ) and removed committed patches
+* Issue [#3417537](https://www.drupal.org/i/3417537):
+         Updated **Better Login** from `~1` to `~2`
+
+### Fixes since Varbase 9.1.1:
+* Issue [#3419075](https://www.drupal.org/i/3419075):
+         Fixed fatal error when editing settings for **Rabbit Hole** configurations over entity types
+* Issue [#3421085](https://www.drupal.org/i/3421085):
+         Fixed default config for the new format for rabbit hole settings for the varbase_heroslider_media content type
+* Issue [#3422776](https://www.drupal.org/i/3422776)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed deprecated `PHP 8.2` function: strtolower(): Passing null to parameter #1 ($string) of type string is deprecated when embedding a media in CKEditor
+* Issue [#3420749](https://www.drupal.org/i/3420749)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        , [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        , [Lubna hmeid](https://www.drupal.org/u/lubna-hmeid)
+        : Fixed disappearing header sections/regions and heading blocks
+* Issue [#3427289](https://www.drupal.org/i/3427289)
+         by [IbrahimTameme](https://www.drupal.org/u/ibrahimtameme)
+        : Fixed Failed theme switch to Admin theme in insert media in 3rd AJAX level in **CKEditor 5**
+
+
+-------------------------------------------------------------------------------
+
 # 9.1.1
 
 ### Highlighted important changes since Varbase 9.1.0:
