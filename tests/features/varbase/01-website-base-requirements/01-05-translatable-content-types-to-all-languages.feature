@@ -35,7 +35,7 @@ So that I will be able to create a content then I will have the option to transl
       And wait 2s
       And I fill in "تجربة صفحة بسيطة عربية العنوان" for "edit-title-0-value"
       And I fill in the rich text editor field "edit-body-0-value" with "تجربة صفحة بسيطة عربية المحتوى"
-      And I press the "حفظ (this translation)" button
+      And I press the "حفظ كـ (this translation)" button
       And wait 2s
      Then I should see "تجربة صفحة بسيطة عربية العنوان"
      When I open the moderation sidebar
