@@ -1,3 +1,274 @@
+# 10.0.0-rc2
+
+###  Highlighted important changes since Varbase 10.0.0-rc1:
+Following with the new Varbase Design System
+
+### Added since Varbase 10.0.0-rc1:
+* Issue [#3425676](https://www.drupal.org/i/3425676):
+        Initialized **Varbase AI** module with default requirements, and recipes
+* Issue [#3425679](https://www.drupal.org/i/3425679):
+        Added **Varbase AI** module to Varbase and the Extra Components installation step, with a required a mini config form
+* Issue [#3426062](https://www.drupal.org/i/3426062):
+        Added the local patch from **Drupal Distributions Recipes** patch for Drupal core in **Varbase Core** to have Recipes functionality
+* Issue [#3427611](https://www.drupal.org/i/3427611):
+        Added Default **Varbase Auth recipe** to manage default installed modules, configs and permissions
+* Issue [#3426473](https://www.drupal.org/i/3426473):
+        Added **Default Social Auth icons** and style to work with **Gin** and **Gin Login**
+* Issue [#3425191](https://www.drupal.org/i/3425191):
+        Added **Flip Ratio Utility** to **Bootstrap Ratio Utilities** in **Vartheme BS5** for flipping ratios for media breakpoints
+* Issue [#3426299](https://www.drupal.org/i/3426299):
+        Added the **Gin Admin theme** to **Varbase Core** and deprecated **Vartheme Claro theme**
+* Issue [#3426342](https://www.drupal.org/i/3426342):
+        Added **Gin Everywhere** `~1` module to **Varbase Admin**
+* Issue [#3426347](https://www.drupal.org/i/3426347):
+        Added **Taxonomy Manager** `~2` module to **Varbase Admin**
+* Issue [#3421553](https://www.drupal.org/i/3421553):
+        Added a new Padded property to card components to allow for adding default padding to selected card
+* Issue [#3421069](https://www.drupal.org/i/3421069):
+        Added new **Heroslider** component to use **Card Hero UI Pattern** with **Varbase Heroslider**
+* Issue [#3417610](https://www.drupal.org/i/3417610):
+        Added the **Taxonomy atom** component and use in for the **Field Tags** field targeted for taxonomy terms as tags
+* Issue [#3423174](https://www.drupal.org/i/3423174):
+        Added **Bootstrap** `~5.3.0` JavaScript libraries in **Varbase Components** and only attache
+         them with needed **SDC** components
+* Issue [#3416956](https://www.drupal.org/i/3416956):
+        Added an **Icon SDC component** to utilize the **Bootstrap Icons** library
+* Issue [#3416955](https://www.drupal.org/i/3416955):
+        Added **Bootstrap Icons library** to be used with the `varbase_components:icon` SDC component
+* Issue [#3418719](https://www.drupal.org/i/3418719):
+        Added a new **Accordion Item** and **Accordion** components with stories for **storybook** following with **Varbase Design System**
+* Issue [#3419117](https://www.drupal.org/i/3419117):
+        Added **Varbase Accordion Block** module in accordance with the **Varbase Design System** standards
+* Issue [#3417790](https://www.drupal.org/i/3417790):
+        Added the new **Varbase** white logo svg file and `logo_white` patch variable
+* Issue [#3439281](https://www.drupal.org/i/3439281):
+        Added **Sitewide Alert** module to **Varbase Core**
+* Issue [#3439283](https://www.drupal.org/i/3439283):
+        Added **Schema.org Blueprints** module to **Varbase Core**
+
+### Changed since Varbase 10.0.0-rc1:
+* Issue [#3437217](https://www.drupal.org/i/3437217):
+        Switched to a **local patching system** using 
+         [vardot/varbase-patches](https://github.com/vardot/varbase-patches)
+         and `cweagans/composer-patches` `"~2"` within **Varbase**
+* Issue [#3426073](https://www.drupal.org/i/3426073):
+        Switched **Default Hero Slider** to **Varbase Heroslider** with **Bootstrap carousel**
+* Issue [#3388221](https://www.drupal.org/i/3388221):
+        Initialized **Varbase Heroslider** with **Bootstrap** `~5.3.0` Carousals and Single Directory Components (SDC)
+* Issue [#3426304](https://www.drupal.org/i/3426304):
+        Deprecated **Vartheme Claro** theme in fever of using the **Gin Admin** theme directly in **Varbase**
+* Issue [#3426873](https://www.drupal.org/i/3426873):
+        Switched default admin theme to the **Gin Admin theme** as **Vartheme Claro** is deprecated
+* Issue [#3426039](https://www.drupal.org/i/3426039):
+        Switched Default Content for the **Homepage with Hero Slider** from **Varbase Media Hero Slider** to **Varbase Heroslider**
+* Issue [#3404221](https://www.drupal.org/i/3404221):
+        Changed default **PHP** version to `PHP 8.2+` for **Varbase development** and automated testing
+* Issue [#3415298](https://www.drupal.org/i/3415298):
+        Changed the **Varbase Branding Logo** within the Welcome to Varbase message upon completion of the installation process
+* Issue [#3415239](https://www.drupal.org/i/3415239):
+        Changed Varbase Branding Logo, Colors, fonts, Bootstrap 5 general change variables
+* Issue [#3415240](https://www.drupal.org/i/3415240):
+        Changed Varbase Branding Logo, Colors, fonts, Bootstrap 5 general change variables in Varbase Components and Varbase Storybook
+* Issue [#3415241](https://www.drupal.org/i/3415241):
+        Changed Varbase Branding Logo, Colors in Vartheme Claro admin theme
+* Issue [#3417718](https://www.drupal.org/i/3417718):
+        Changed default content at the homepage with the Build Your Site Using Varbase! block
+* Issue [#3417638](https://www.drupal.org/i/3417638):
+        Changed defaults style for the **Breadcrumb Component** to follow with Varbase Design System
+* Issue [#3417636](https://www.drupal.org/i/3417636):
+        Changed default **Breadcrumb Component** to follow with Varbase Design System
+* Issue [#3418151](https://www.drupal.org/i/3418151):
+        Change **Pagination component** and stories to follow with Varbase Design System
+* Issue [#3419518](https://www.drupal.org/i/3419518):
+        Changed default **Progress Bar** component to follow with Varbase Design System
+* Issue [#3416943](https://www.drupal.org/i/3416943):
+        Opened the **Bootstrap** library from `5.3.0` to `5.3.2` ( `~5.3.0`, `~5.0`, `~5` )
+         in packaging , docs, and Storybook in Varbase Components
+* Issue [#3416944](https://www.drupal.org/i/3416944):
+        Opened the **Bootstrap** library from `5.3.0` to `5.3.2` ( `~5.3.0`, `~5.0`, `~5` )
+         in packaging , docs, and Storybook in Vartheme BS5
+* Issue [#3408369](https://www.drupal.org/i/3408369):
+        Opened requirements for Blazy, Slick, Slick Views to ~2
+* Issue [#3413598](https://www.drupal.org/i/3413598):
+        Changed to a re-rolled **Drupal** `10.2.1` fix for **PHP** message - Error: Call to a 
+        member function getEntityTypeId() on null (Layout Builder)
+* Issue [#3416495](https://www.drupal.org/i/3416495):
+        Removed `py-2` `px-3` from **Block Rich Text** and **Block CTA components** to be managed from
+         **Vartheme BS5** or the Layout Builder
+* Issue [#3419067](https://www.drupal.org/i/3419067):
+        Removed (Deprecated) **Rabbit Hole nodes** module and changed refactored config schema
+* Issue [#3420667](https://www.drupal.org/i/3420667):
+        Changed default **View Modes Inventory** not to have **Card Border** on default initiation following
+         with Varbase Design System
+* Issue [#3436163](https://www.drupal.org/i/3436163):
+        Moved the Save as Draft moderation state element next to preview and Save in the Edit content with workflow
+* Issue [#3436397](https://www.drupal.org/i/3436397):
+        Limited Media View Modes list for the **Varbase Media Block**
+* Issue [#3415598](https://www.drupal.org/i/3415598):
+        Changed the **Varbase Branding Logo**
+* Issue [#3425973](https://www.drupal.org/i/3425973):
+        Changed the status of **Varbase Media Hero Slider** to deprecated in
+         favor of the new **Varbase Heroslider** with **Bootstrap carousel**
+* Issue [#3419232](https://www.drupal.org/i/3419232):
+        Moved the **Alert component** back from Atoms to Molecules in **Storybook** and update **Varbase Docs**
+* Issue [#3420696](https://www.drupal.org/i/3420696):
+        Changed **Varbase Cards component's** default props and styling to follow with **Varbase Design System**
+* Issue [#3417981](https://www.drupal.org/i/3417981):
+        Changed default Link Underline offset to match the new **Varbase Design System**
+* Issue [#3416491](https://www.drupal.org/i/3416491):
+        Changed default **Regular desktop** and mobile `font-size`, quote, and headings font sizes
+* Issue [#3419517](https://www.drupal.org/i/3419517):
+        Removed the progress bar library, as it will be overridden, compiled and attached
+         by the varbase_components:progress-bar component.
+* Issue [#3421245](https://www.drupal.org/i/3421245):
+        Changed default Bootstrap Carousal variables to follow with **Varbase Design System**
+* Issue [#3419412](https://www.drupal.org/i/3419412):
+        Changed the style of **Alerts** to follow with **Varbase Design System**
+* Issue [#3416399](https://www.drupal.org/i/3416399):
+        Changed overrides for **headings**, **displays**, and lead styling to follow with **Varbase Design System**
+* Issue [#3423178](https://www.drupal.org/i/3423178):
+        Moved all **Bootstrap** `~5.3.0` JavaScript libraries to Single Directory Components (SDC) in **Varbase Components**
+* Issue [#3418780](https://www.drupal.org/i/3418780):
+        Changed the style of **Accordion** and **Accordion Items** to follow with **Varbase Design System**
+* Issue [#3420695](https://www.drupal.org/i/3420695):
+        Changed default **Bootstrap Card** variables to follow with **Varbase Design System**
+* Issue [#3420671](https://www.drupal.org/i/3420671):
+        Changed default display modes for the **Varbase Blog** content type
+* Issue [#3436405](https://www.drupal.org/i/3436405):
+        Updated mixed styling with Layout Builder with latest **Gin** and **Claro** changes
+* Issue [#3439284](https://www.drupal.org/i/3439284):
+        Restricted **Drupal Core** to `~10.2.0` **NOT** to update to an
+         `alpha`/`beta`/`dev` version of **Drupal Core** `10.3.x`
+
+### Updates since Varbase 10.0.0-rc1:
+* Issue [#3409214](https://www.drupal.org/i/3409214):
+        Updated **Drupal Core** from `~10.1.0` to `~10.2.0` and
+         re-roled/updated/removed committed patches
+* Issue [#3425982](https://www.drupal.org/i/3425982):
+        Updated **Drupal** from `10.2.3` to `10.2.4` ( `~10.2.0` ) and removed committed patches
+* Issue [#3423245](https://www.drupal.org/i/3423245):
+        Updated **Bootstrap** from `5.3.2` to `5.3.3` in the **Varbase Components**
+         `theme:build` and `components:build`
+* Issue [#3423244](https://www.drupal.org/i/3423244):
+        Updated **Bootstrap** from `5.3.2` to `5.3.3` in the **Vartheme BS5** `theme:build`
+* Issue [#3409235](https://www.drupal.org/i/3409235):
+        Updated The **Gin Admin theme** from `3.0.0-rc7` to `3.0.0-rc8` and kept needed patches
+* Issue [#3418571](https://www.drupal.org/i/3418571):
+        Updated the **Gin Admin Theme** from `3.0.0-rc8` to `3.0.0-rc9` kept needed and removed committed patches
+* Issue [#3408249](https://www.drupal.org/i/3408249):
+        Updated **Layout Builder Blocks** module from `1.1.0` to `1.1.1` and kept needed patches
+* Issue [#3414917](https://www.drupal.org/i/3414917):
+        Updated **Display Suite** from `3.16.0` to `3.18.0` ( `~3` ) and removed committed patches
+* Issue [#3415851](https://www.drupal.org/i/3415851):
+        Updated **Paragraphs** module `1.16.0` to `1.17.0` and kept needed patches
+* Issue [#3429648](https://www.drupal.org/i/3429648):
+        Updated **Security Review** module from `~2` to `~3`
+* Issue [#3413143](https://www.drupal.org/i/3413143):
+        Updated **Display Suite** from `3.15.0` to `3.16.0` and keep needed patches
+* Issue [#3413115](https://www.drupal.org/i/3413115):
+        Updated **Inline Entity Form** from `1.0-rc15` to `1.0-rc17` and keep needed patches
+* Issue [#3419078](https://www.drupal.org/i/3419078):
+        Updated **Ultimate Cron** module from `2.0.0-alpha6` to `2.0.0-alpha7` ( `~2` ) and remove committed patches
+* Issue [#3422109](https://www.drupal.org/i/3422109):
+        Updated **Composer Patches** from `~1` to `~2` for **Varbase API**
+* Issue [#3422174](https://www.drupal.org/i/3422174):
+        Updated **Display Suite** from `3.18.0` to `3.19.0` ( `~3.0` ) and removed reverted patches and logic
+* Issue [#3436516](https://www.drupal.org/i/3436516):
+        Updated **Paragraph Previewer** module from `1.8.0` to `1.9.0` and kept needed patches
+* Issue [#3436504](https://www.drupal.org/i/3436504):
+        Updated **Devel** module from `~5.1.0` to `~5.2.0`
+* Issue [#3436508](https://www.drupal.org/i/3436508):
+        Updated **Entity Clone** module from `2.0.0-beta4` to `2.0.0-beta5` and kept needed patches
+* Issue [#3433225](https://www.drupal.org/i/3433225):
+        Updated **Dashboards with Layout Builder** module from `2.1.6` to `2.1.7` ( `~2` ) and removed committed patches
+* Issue [#3432613](https://www.drupal.org/i/3432613):
+        Updated **Bootstrap Styles** module from `1.1.5` to `1.1.6` and removed committed and kept needed patches
+
+### Fixes since Varbase 10.0.0-rc1:
+* Issue [#3402234](https://www.drupal.org/i/3402234)
+        by [Joachim Namyslo](https://www.drupal.org/u/joachim-namyslo)
+       , [torstenzenk](https://www.drupal.org/u/torstenzenk)
+       , [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Fixed not showing inline images in Node edit form ( **CKEditor 5** )
+        when inserted using the media library button
+* Issue [#3413435](https://www.drupal.org/i/3413435)
+        by [Rahaf Albawab](https://www.drupal.org/u/rahaf-albawab)
+       : Fixed Deprecated function: strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+* Issue [#3408809](https://www.drupal.org/i/3408809):
+        Fixed `PHP 8.2+` **Drupal Core** issues by resolving deprecated function occurrences involving the passing of null
+* Issue [#3409310](https://www.drupal.org/i/3409310):
+        Fixed `PHP 8.2` issues with **Dashboards with Layout Builder** and **Drupal** `~10.2.0` calling of a static method on a multilingual site
+* Issue [#3408371](https://www.drupal.org/i/3408371):
+        Fixed `PHP 8.2` **Ultimate Cron** deprecation issue with CronRule-class
+* Issue [#3408505](https://www.drupal.org/i/3408505):
+        Fixed `PHP 8.2` **Real-time SEO** issue of Deprecated function: Creation of dynamic property
+* Issue [#3408378](https://www.drupal.org/i/3408378):
+        Fixed `PHP 8.2` **Display Suite** Deprecated function: Creation of dynamic property
+* Issue [#3408876](https://www.drupal.org/i/3408876):
+        Fixed `PHP 8.2` Deprecated function: Creation of dynamic property $renderer
+* Issue [#3411198](https://www.drupal.org/i/3411198)
+        by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+       : Fixed Deprecated function: Creation of dynamic property in VarbaseMediaHeaderBlock under PHP 8.2+
+* Issue [#3412132](https://www.drupal.org/i/3412132):
+        Fixed **Storybook** issues with **Drupal** `10.2.0` after cl_server `2.0.0-beta5` and `@lullabot/storybook-drupal-addon 2.0.6`
+* Issue [#3412276](https://www.drupal.org/i/3412276):
+        Fixed **OpenAPI** with `PHP 8.2+` of Deprecated function: Creation of dynamic property
+* Issue [#3412378](https://www.drupal.org/i/3412378):
+        Fixed vertical tabs and media library styling issues within Dialog and **Media Library Modal**
+        by **Claro** after the **Drupal** `10.2.0` Release
+* Issue [#3413168](https://www.drupal.org/i/3413168):
+        Fixed PHP Fatal error: Cannot redeclare varbase_media_requirements() previously declared
+        when installed with **Drush** `~12` and **PHP** `8.3`
+* Issue [#3413103](https://www.drupal.org/i/3413103)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed Fatal error on cloning a menu link (D10 site)
+* Issue [#3413673](https://www.drupal.org/i/3413673):
+        Fixed **Gin** `3.0.0-rc8` issue of no longer rendered Primary tabs, or the Secondary
+        tabs are not shown out in number of cases in the header or pre-content region
+* Issue [#3412390](https://www.drupal.org/i/3412390):
+        Fixed horizontal and vertical tabs styling issues within Dialog and **Layout Library Modal**
+        by **Claro** or **Gin** after the **Drupal** `~10.2.0` Release
+* Issue [#3408146](https://www.drupal.org/i/3408146)
+        by [impol](https://www.drupal.org/u/impol)
+       : Fixed missing Add heading after fresh install, which needs a clear cache to show up in Layout editing
+* Issue [#3415574](https://www.drupal.org/i/3415574):
+        Fixed to allow updating existing node entities in `Views Bulk Operations (VBO)` to
+        support changing the ID while using delete action
+* Issue [#3414084](https://www.drupal.org/i/3414084)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Fixed UI Patterns Settings issue of TypeError: array_unshift(): Argument #1 ($array)
+        must be of type array, null given in array_unshift() Caused by Deprecated Hooks in Drupal ~10.2.0
+* Issue [#3414651](https://www.drupal.org/i/3414651)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Fixed not shown Media header when node status is Draft
+* Issue [#3413529](https://www.drupal.org/i/3413529):
+        Fixed Big Pipe issue in **Drupal** `10.2.1` of Uncaught TypeError: Cannot read properties of null (reading nodeType)
+* Issue [#3416440](https://www.drupal.org/i/3416440):
+        Fixed **CKEditor 5 Source** code editing area
+* Issue [#3419075](https://www.drupal.org/i/3419075):
+        Fixed fatal error when editing settings for **Rabbit Hole** configurations over entity types
+* Issue [#3421085](https://www.drupal.org/i/3421085):
+        Fixed default config for the new format for rabbit hole settings for the varbase_heroslider_media content type
+* Issue [#3422776](https://www.drupal.org/i/3422776)
+        by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+       : Fixed deprecated `PHP 8.2` function: strtolower(): Passing null to parameter #1 ($string) of type string is deprecated when embedding a media in CKEditor
+* Issue [#3420749](https://www.drupal.org/i/3420749)
+        by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+       , [n.ghunaim](https://www.drupal.org/u/nghunaim)
+       , [Lubna hmeid](https://www.drupal.org/u/lubna-hmeid)
+       : Fixed disappearing header sections/regions and heading blocks
+* Issue [#3422645](https://www.drupal.org/i/3422645)
+        by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+       : Fixed not working selected **Focal point** with default images and **webp** generated images
+* Issue [#3420059](https://www.drupal.org/i/3420059)
+        by [Rahaf Albawab](https://www.drupal.org/u/rahaf-albawab)
+       : Fixed overlap between the alert message and the close button in Media library Modal and improperly Grid and Table tabs styling by the Gin Admin theme
+* Issue [#3427289](https://www.drupal.org/i/3427289)
+        by [IbrahimTameme](https://www.drupal.org/u/ibrahimtameme)
+       : Fixed Failed theme switch to **Admin theme** in insert media in 3rd AJAX level in **CKEditor 5**
+
+-------------------------------------------------------------------------------
+
 # 10.0.0-rc1
 
 ### Highlighted important changes since Varbase 10.0.0-beta2:

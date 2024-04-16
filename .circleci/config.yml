@@ -141,6 +141,9 @@ commands:
             git clone --branch '10.0.x' https://github.com/vardot/varbase.git /var/www/html/test/varbase-code
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
+            composer require cweagans/composer-patches:~1 --no-update
+            composer require vardot/varbase-patches:~9.1.0 --no-update
+            composer require drupal/core-composer-scaffold:~10 --no-update
             composer install --no-interaction -vvv
             mkdir -p /var/www/html/test/varbase/docroot/profiles/contrib
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/contrib/varbase
