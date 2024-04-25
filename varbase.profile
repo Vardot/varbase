@@ -119,21 +119,26 @@ function varbase_assemble_extra_components(array &$install_state) {
     $selected_extra_features = $install_state['varbase']['extra_features_values'];
   }
 
-  if (!(isset($selected_extra_features['varbase_demo']) && $selected_extra_features['varbase_demo'] == TRUE)) {
-
-    if (isset($selected_extra_features['varbase_heroslider'])
+  if (isset($install_state['varbase']['demo_content_values'])
+    && isset($install_state['varbase']['demo_content_values']['varbase_demo'])
+    && $install_state['varbase']['demo_content_values']['varbase_demo'] == TRUE) {
+    $batch['operations'][] = [
+      'varbase_install_component',
+      (array) 'varbase_demo_homepage',
+    ];
+  }
+  elseif (isset($selected_extra_features['varbase_heroslider'])
     && $selected_extra_features['varbase_heroslider'] == TRUE) {
-      $batch['operations'][] = [
-        'varbase_install_component',
-        (array) 'enabled_varbase_heroslider_content',
-      ];
-    }
-    else {
-      $batch['operations'][] = [
-        'varbase_install_component',
-        (array) 'disabled_varbase_heroslider_content',
-      ];
-    }
+    $batch['operations'][] = [
+      'varbase_install_component',
+      (array) 'varbase_heroslider_homepage',
+    ];
+  }
+  else {
+    $batch['operations'][] = [
+      'varbase_install_component',
+      (array) 'varbase_default_homepage',
+    ];
   }
 
   // Get the list of extra features config bits.
@@ -266,15 +271,17 @@ function varbase_assemble_extra_components(array &$install_state) {
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
 
-  if (!(isset($selected_extra_features['varbase_demo']) && $selected_extra_features['varbase_demo'] == TRUE)) {
-
-    if (isset($selected_extra_features['varbase_heroslider'])
-      && $selected_extra_features['varbase_heroslider'] == TRUE) {
-      $uninstall_components[] = 'enabled_varbase_heroslider_content';
-    }
-    else {
-      $uninstall_components[] = 'disabled_varbase_heroslider_content';
-    }
+  if (isset($install_state['varbase']['demo_content_values'])
+    && isset($install_state['varbase']['demo_content_values']['varbase_demo'])
+    && $install_state['varbase']['demo_content_values']['varbase_demo'] == TRUE) {
+    $uninstall_components[] = 'varbase_demo_homepage';
+  }
+  elseif (isset($selected_extra_features['varbase_heroslider'])
+    && $selected_extra_features['varbase_heroslider'] == TRUE) {
+    $uninstall_components[] = 'varbase_heroslider_homepage';
+  }
+  else {
+    $uninstall_components[] = 'varbase_default_homepage';
   }
 
   // Reset timestamp for default content.
