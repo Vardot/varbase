@@ -119,8 +119,7 @@ function varbase_assemble_extra_components(array &$install_state) {
     $selected_extra_features = $install_state['varbase']['extra_features_values'];
   }
 
-  if (!isset($selected_extra_features['varbase_demo'])
-    || $selected_extra_features['varbase_demo'] == FALSE) {
+  if (!(isset($selected_extra_features['varbase_demo']) && $selected_extra_features['varbase_demo'] == TRUE)) {
 
     if (isset($selected_extra_features['varbase_heroslider'])
     && $selected_extra_features['varbase_heroslider'] == TRUE) {
@@ -267,8 +266,7 @@ function varbase_assemble_extra_components(array &$install_state) {
   // To be loaded from a ConfigBit yml file.
   $uninstall_components = ['varbase_default_content'];
 
-  if (!isset($selected_extra_features['varbase_demo'])
-    || $selected_extra_features['varbase_demo'] == FALSE) {
+  if (!(isset($selected_extra_features['varbase_demo']) && $selected_extra_features['varbase_demo'] == TRUE)) {
 
     if (isset($selected_extra_features['varbase_heroslider'])
       && $selected_extra_features['varbase_heroslider'] == TRUE) {
