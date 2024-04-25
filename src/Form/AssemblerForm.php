@@ -80,7 +80,7 @@ class AssemblerForm extends FormBase {
    *   Extra components modules.
    */
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
-    $form['#title'] = $this->t('Extra components');
+    $form['#title'] = $this->t('Extra recipes');
     $form['extra_components_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',
@@ -94,7 +94,7 @@ class AssemblerForm extends FormBase {
 
       $form['extra_features'] = [
         '#type' => 'fieldset',
-        '#title' => $this->t('Site features'),
+        '#title' => $this->t('Recipes'),
       ];
 
       foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
@@ -163,7 +163,7 @@ class AssemblerForm extends FormBase {
     if (count($demoContent) > 0) {
       $form['demo_content'] = [
         '#type' => 'fieldset',
-        '#title' => $this->t('Demo content'),
+        '#title' => $this->t('Demo'),
       ];
 
       foreach ($demoContent as $demo_content_key => $demo_content_info) {

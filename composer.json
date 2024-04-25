@@ -49,6 +49,7 @@
     "drupal/varbase_dashboards": "1.0.x-dev",
     "drupal/varbase_email": "10.0.x-dev",
     "drupal/varbase_workflow": "3.0.x-dev",
+    "drupal/varbase_demo": "1.0.x-dev",
     "drupal/vartheme_bs5": "3.0.x-dev",
     "drupal/vartheme_claro": "4.0.x-dev",
     "bower-asset/jqueryui-touch-punch": "dev-master",
@@ -151,6 +152,18 @@
     "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
+    },
+    "patches-ignore": {
+      "drupal/schemadotorg": {
+        "drupal/field_group": {
+          "Issue #3409719: [Drupal 10.2] Deprecated sequence type schema definition":
+          "https://www.drupal.org/files/issues/2024-03-26/field_group-issue-3409719-mr-43.patch"
+        },
+        "drupal/scheduler": {
+          "Issue #3437739: [error]  TypeError: Drupal\\scheduler\\SchedulerManager::__construct()":
+          "https://www.drupal.org/files/issues/2024-04-06/scheduler-issues-3437739-comment-4.patch"
+        }
+      }
     }
   }
 }
