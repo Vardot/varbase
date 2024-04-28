@@ -80,7 +80,7 @@ class AssemblerForm extends FormBase {
    *   Extra components modules.
    */
   public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
-    $form['#title'] = $this->t('Extra recipes');
+    $form['#title'] = $this->t('Recipes');
     $form['extra_components_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',
@@ -88,82 +88,12 @@ class AssemblerForm extends FormBase {
       '#suffix' => '</p>',
     ];
 
-    // Extra Features.
-    $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
-    if (count($extraFeatures)) {
-
-      $form['extra_features'] = [
-        '#type' => 'fieldset',
-        '#title' => $this->t('Recipes'),
-      ];
-
-      foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
-
-        $checkbox_title = '';
-        $checkbox_description = '';
-        $checkbox_selected = FALSE;
-
-        if (isset($extra_feature_info['title'])) {
-          $checkbox_title = $extra_feature_info['title'];
-        }
-
-        if (isset($extra_feature_info['description'])) {
-          $checkbox_description = $extra_feature_info['description'];
-        }
-
-        if (isset($extra_feature_info['selected'])) {
-          $checkbox_selected = $extra_feature_info['selected'];
-        }
-
-        $form['extra_features'][$extra_feature_key] = [
-          '#type' => 'checkbox',
-          '#title' => $checkbox_title,
-          '#description' => $checkbox_description,
-          '#default_value' => $checkbox_selected,
-        ];
-
-        if (isset($extra_feature_info['config_form'])
-          && $extra_feature_info['config_form'] == TRUE) {
-
-          $form['extra_features'][$extra_feature_key . '_config'] = [
-            '#type' => 'fieldset',
-            '#title' => $checkbox_title,
-            '#states' => [
-              'visible' => [
-                ':input[name="' . $extra_feature_key . '"]' => ['checked' => TRUE],
-              ],
-              'invisible' => [
-                ':input[name="' . $extra_feature_key . '"]' => ['checked' => FALSE],
-              ],
-            ],
-          ];
-
-          if (isset($extra_feature_info['formbit'])) {
-            $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extra_feature_info['formbit'];
-            if (file_exists($formbit_file_name)) {
-
-              include_once $formbit_file_name;
-              // Add configuration form element in the formbit position.
-              call_user_func_array($extra_feature_key . "_build_formbit",
-                [&$form['extra_features'][$extra_feature_key . '_config'],
-                  &$form_state,
-                  &$install_state,
-                ]
-              );
-            }
-          }
-
-        }
-
-      }
-    }
-
     // Demo Content.
     $demoContent = ConfigBit::getList('configbit/demo.content.varbase.bit.yml', 'show_demo', TRUE, 'dependencies', 'profile', 'varbase');
     if (count($demoContent) > 0) {
       $form['demo_content'] = [
         '#type' => 'fieldset',
-        '#title' => $this->t('Demo'),
+        // '#title' => $this->t('Demo'),
       ];
 
       foreach ($demoContent as $demo_content_key => $demo_content_info) {
@@ -215,6 +145,76 @@ class AssemblerForm extends FormBase {
               // Add configuration form element in the formbit position.
               call_user_func_array($demo_content_key . "_build_formbit",
                 [&$form['demo_content'][$demo_content_key . '_config'],
+                  &$form_state,
+                  &$install_state,
+                ]
+              );
+            }
+          }
+
+        }
+
+      }
+    }
+
+    // Extra Features.
+    $extraFeatures = ConfigBit::getList('configbit/extra.components.varbase.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'varbase');
+    if (count($extraFeatures)) {
+
+      $form['extra_features'] = [
+        '#type' => 'fieldset',
+        // '#title' => $this->t('Recipes'),
+      ];
+
+      foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
+
+        $checkbox_title = '';
+        $checkbox_description = '';
+        $checkbox_selected = FALSE;
+
+        if (isset($extra_feature_info['title'])) {
+          $checkbox_title = $extra_feature_info['title'];
+        }
+
+        if (isset($extra_feature_info['description'])) {
+          $checkbox_description = $extra_feature_info['description'];
+        }
+
+        if (isset($extra_feature_info['selected'])) {
+          $checkbox_selected = $extra_feature_info['selected'];
+        }
+
+        $form['extra_features'][$extra_feature_key] = [
+          '#type' => 'checkbox',
+          '#title' => $checkbox_title,
+          '#description' => $checkbox_description,
+          '#default_value' => $checkbox_selected,
+        ];
+
+        if (isset($extra_feature_info['config_form'])
+          && $extra_feature_info['config_form'] == TRUE) {
+
+          $form['extra_features'][$extra_feature_key . '_config'] = [
+            '#type' => 'fieldset',
+            '#title' => $checkbox_title,
+            '#states' => [
+              'visible' => [
+                ':input[name="' . $extra_feature_key . '"]' => ['checked' => TRUE],
+              ],
+              'invisible' => [
+                ':input[name="' . $extra_feature_key . '"]' => ['checked' => FALSE],
+              ],
+            ],
+          ];
+
+          if (isset($extra_feature_info['formbit'])) {
+            $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extra_feature_info['formbit'];
+            if (file_exists($formbit_file_name)) {
+
+              include_once $formbit_file_name;
+              // Add configuration form element in the formbit position.
+              call_user_func_array($extra_feature_key . "_build_formbit",
+                [&$form['extra_features'][$extra_feature_key . '_config'],
                   &$form_state,
                   &$install_state,
                 ]
