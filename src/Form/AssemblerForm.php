@@ -84,7 +84,7 @@ class AssemblerForm extends FormBase {
     $form['extra_components_introduction'] = [
       '#weight' => -1,
       '#prefix' => '<p>',
-      '#markup' => $this->t("Install additional ready-to-use features in your site."),
+      '#markup' => $this->t("Effortlessly integrate ready-to-use feature recipes for immediate website functionality."),
       '#suffix' => '</p>',
     ];
 
@@ -171,6 +171,7 @@ class AssemblerForm extends FormBase {
         $checkbox_title = '';
         $checkbox_description = '';
         $checkbox_selected = FALSE;
+        $in_varbase_demo = FALSE;
 
         if (isset($extra_feature_info['title'])) {
           $checkbox_title = $extra_feature_info['title'];
@@ -184,20 +185,57 @@ class AssemblerForm extends FormBase {
           $checkbox_selected = $extra_feature_info['selected'];
         }
 
+        if (isset($extra_feature_info['in_varbase_demo'])) {
+          $in_varbase_demo = $extra_feature_info['in_varbase_demo'];
+        }
+
         $form['extra_features'][$extra_feature_key] = [
           '#type' => 'checkbox',
           '#title' => $checkbox_title,
           '#description' => $checkbox_description,
           '#default_value' => $checkbox_selected,
-          '#states' => [
-            'disabled' => [
-              ':input[name="varbase_demo"]' => ['checked' => TRUE],
-            ],
-            'enabled' => [
-              ':input[name="varbase_demo"]' => ['checked' => FALSE],
-            ],
-          ],
         ];
+
+        if ($in_varbase_demo) {
+          if ($checkbox_selected) {
+            $form['extra_features'][$extra_feature_key]['#states'] = [
+              'disabled' => [
+                ':input[name="varbase_demo"]' => ['checked' => TRUE],
+              ],
+              'enabled' => [
+                ':input[name="varbase_demo"]' => ['checked' => FALSE],
+              ],
+            ];
+          }
+          else {
+            $form['extra_features'][$extra_feature_key]['#states'] = [
+              'disabled' => [
+                ':input[name="varbase_demo"]' => ['checked' => TRUE],
+              ],
+              'enabled' => [
+                ':input[name="varbase_demo"]' => ['checked' => FALSE],
+              ],
+              'checked' => [
+                ':input[name="varbase_demo"]' => ['checked' => TRUE],
+              ],
+              'unchecked' => [
+                ':input[name="varbase_demo"]' => ['checked' => FALSE],
+              ],
+            ];
+          }
+        }
+        else {
+          if ($checkbox_selected) {
+            $form['extra_features'][$extra_feature_key]['#states'] = [
+              'disabled' => [
+                ':input[name="varbase_demo"]' => ['checked' => TRUE],
+              ],
+              'enabled' => [
+                ':input[name="varbase_demo"]' => ['checked' => FALSE],
+              ],
+            ];
+          }
+        }
 
         if (isset($extra_feature_info['config_form'])
           && $extra_feature_info['config_form'] == TRUE) {
@@ -205,15 +243,35 @@ class AssemblerForm extends FormBase {
           $form['extra_features'][$extra_feature_key . '_config'] = [
             '#type' => 'fieldset',
             '#title' => $checkbox_title,
-            '#states' => [
+          ];
+
+          if ($in_varbase_demo) {
+            $form['extra_features'][$extra_feature_key . '_config']['#states'] = [
+              'visible' => [
+                ':input[name="' . $extra_feature_key . '"]' => ['checked' => TRUE],
+                'and',
+                ':input[name="varbase_demo"]' => ['checked' => TRUE],
+              ],
+              'invisible' => [
+                ':input[name="' . $extra_feature_key . '"]' => ['checked' => FALSE],
+                'and',
+                ':input[name="varbase_demo"]' => ['checked' => FALSE],
+              ],
+              'disabled' => [
+                ':input[name="varbase_demo"]' => ['checked' => TRUE],
+              ],
+            ];
+          }
+          else {
+            $form['extra_features'][$extra_feature_key . '_config']['#states'] = [
               'visible' => [
                 ':input[name="' . $extra_feature_key . '"]' => ['checked' => TRUE],
               ],
               'invisible' => [
                 ':input[name="' . $extra_feature_key . '"]' => ['checked' => FALSE],
               ],
-            ],
-          ];
+            ];
+          }
 
           if (isset($extra_feature_info['formbit'])) {
             $formbit_file_name = \Drupal::service('extension.list.profile')->getPath('varbase') . '/' . $extra_feature_info['formbit'];

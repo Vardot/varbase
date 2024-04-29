@@ -11,6 +11,6 @@ config_bit:
       dependencies:
         varbase_demo:
           title: 'Varbase Demo'
-          description: '<p>If you''re evaluating Varbase, installing demo content will help you get an idea of how Varbase works, and what features are included.</p><div class="messages-list__item messages messages--info"><div class="messages__header"><h2 id="message-status-title" class="messages__title">Uncheck to be able to select recipes.</h2></div><div class="messages__content">As Varbase Demo will enable all features to demo them.</p></div></div>'
+          description: '<p>Installing demo content gives you a taste of what Varbase offers and its key features. It''s a handy way to explore Varbase''s functionality and see it in action.</p><div class="messages-list__item messages messages--info"><div class="messages__header"><h2 id="message-status-title" class="messages__title">Please note:</h2></div><div class="messages__content">You have the option to uncheck the Varbase Demo box to select specific recipes. Varbase Demo enables all features for demonstration purposes.</p></div></div>'
           selected: true
           config_form: false
