@@ -189,6 +189,14 @@ class AssemblerForm extends FormBase {
           '#title' => $checkbox_title,
           '#description' => $checkbox_description,
           '#default_value' => $checkbox_selected,
+          '#states' => [
+            'disabled' => [
+              ':input[name="varbase_demo"]' => ['checked' => TRUE],
+            ],
+            'enabled' => [
+              ':input[name="varbase_demo"]' => ['checked' => FALSE],
+            ],
+          ],
         ];
 
         if (isset($extra_feature_info['config_form'])
