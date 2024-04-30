@@ -168,6 +168,14 @@ class ScriptHandler {
       // services.
       copy($drupal_root . '/profiles/varbase/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
+
+    if ($fs->exists($drupal_root . '/sites/default/services.yml')) {
+      // Alter services.yml to have cookie_lifetime 0
+      $services_path = $drupal_root . '/sites/default/services.yml';
+      $services_lines = file($services_path);
+      $services_lines = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $services_lines);
+      file_put_contents($services_path, $services_lines);
+    }
   }
 
   /**
