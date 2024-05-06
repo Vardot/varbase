@@ -2632,7 +2632,7 @@ JS;
       throw new \Exception('The Accessibility Checker was not found in the page');
     }
 
-    $this->getSession()->executeScript('document.querySelector("body > ed11y-element-panel").shadowRoot.querySelector("#toggle").click();');
+    $this->getSession()->executeScript('document.querySelector("body > ed11y-element-panel").shadowRoot.querySelector("#ed11y-toggle").click();');
   }
 
   /**
