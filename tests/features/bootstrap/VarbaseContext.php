@@ -4,7 +4,6 @@ use WebDriver\Exception;
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Mink\Element\Element;
-use Symfony\Component\CssSelector\CssSelectorConverter;
 
 /**
  * Defines application features from the specific context.
@@ -332,7 +331,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the Tab by txt.
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'button') and text() = '{$text}']");
+    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'button') and text() = '" . $text ."']");
 
     if (empty($element)) {
       throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] button.');
@@ -359,7 +358,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the Tab by txt.
-    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'ui-tabs-anchor') and text() = '{$text}']");
+    $element = $this->getSession()->getPage()->find('xpath', "//*[contains(@class, 'ui-tabs-anchor') and text() = '" . $text . "']");
 
     if (empty($element)) {
       throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] tab.');
@@ -385,7 +384,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find the file by text.
-    $element = $this->getSession()->getPage()->find('xpath', "//div[contains(@class, 'media-item') and contains(@title, '{$text}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//div[contains(@class, 'media-item') and contains(@title, '" . $text ."')]");
 
     if (empty($element)) {
       throw new \Exception('The editor media browser dose not have [ ' . $text . ' ] file.');
@@ -398,6 +397,10 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Click on the first delete button.
+   *
+   * Varbase Context #varbase.
+   *
    * @When I click the delete button
    */
   public function iClickTheDeleteButton() {
@@ -412,14 +415,33 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Click on the first Next button in the tour.
+   *
+   * Varbase Context #varbase.
+   *
+   * @When I click next button in tour
+   */
+  public function iClickNextInTour() {
+    // Find the next button in tour by text.
+    $element = $this->getSession()->getPage()->find('xpath', "//footer[contains(@class, 'shepherd-footer')]//button[text()='Next']");
+
+    if (empty($element)) {
+      throw new \Exception('The Next action button in the tour is not found.');
+    }
+
+    $this->getSession()->executeScript('document.querySelector("body > div.drupal-tour.shepherd-enabled > div.shepherd-content > footer > button").click();');
+
+  }
+
+  /**
    * @Then :text should be in the breadcrumb
    */
   public function shouldBeInTheBreadcrumb($text) {
     // Find a text in the breadcrumb.
-    $element = $this->getSession()->getPage()->find('xpath', "//ol[contains(@class, 'breadcrumb')]//*[text()='{$text}']");
+    $element = $this->getSession()->getPage()->find('xpath', "//ol[contains(@class, 'breadcrumb')]//*[text()='" . $text ."']");
 
     if (empty($element)) {
-      throw new \Exception('The {$text} not found in the breadcrumb');
+      throw new \Exception('The ' . $text . ' not found in the breadcrumb');
     }
   }
 
@@ -454,7 +476,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * Varbase Context #varbase.
    *
    * Example 1: Then I should see "this text" under editor media browser
-   * Example 2: Then I should see "this text" under the editormedia browser modal window.
+   * Example 2: Then I should see "this text" under the editor media browser modal window.
    *
    * @Then /^I should see "([^"]*)" under (?:|the )editor media browser(?:| modal window)$/
    */
@@ -488,7 +510,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->switchToIFrame('entity_browser_iframe_editor_media_browser');
 
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '" . $titleText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The editor media browser dose not have an image with the [ ' . $titleText . ' ] title text.');
@@ -643,7 +665,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     if (empty($fieldId)) {
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
-    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).editing.view.focus()");
+    $this->getSession()->getDriver()->evaluateScript("Drupal.CKEditor5Instances.get(document.getElementById(\"" . $fieldId ."\").dataset[\"ckeditor5Id\"]).editing.view.focus()");
   }
 
   /**
@@ -689,7 +711,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $element = $this->getSession()->getPage()->find('css', "button.ck.ck-button.ck-off.ck-button-save");
 
     if (empty($element)) {
-      throw new \Exception("No save button for the {$selectedField} rich text editor field.");
+      throw new \Exception("No save button for the " . $selectedField . " rich text editor field.");
     }
 
     // Click the save button.
@@ -733,7 +755,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    * @When I save the section
    */
   public function iSaveTheSection() {
-    $save = $this->getSession()->getPage()->find('xpath', "//input[contains(@value, 'Add section')]");
+    $save = $this->getSession()->getPage()->find('xpath', "//*[contains(@value, 'Add section')]");
     if (is_null($save)) {
       throw new \Exception('The "Add section" button was not found or not visible');
     }
@@ -1356,7 +1378,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeImageWithTheTitleText($titleText) {
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '" . $titleText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
@@ -1374,7 +1396,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeImageWithTheAltText($altText) {
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '" . $altText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] Alt Text.');
@@ -1392,7 +1414,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iDoubleClickOnTheImageWithTheTitleText($titleText) {
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '" . $titleText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
@@ -1413,7 +1435,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iClickOnTheImageWithTheTitleText($titleText) {
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$titleText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '" . $titleText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text.');
@@ -1434,7 +1456,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iDoubleClickOnTheImageWithTheAltText($altText) {
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '" . $altText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] alt text.');
@@ -1455,7 +1477,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iClickOnTheImageWithTheAltText($altText) {
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '{$altText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@title, '" . $altText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] title text.');
@@ -1486,7 +1508,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->executeScript("return Drupal.CKEditor5Instances.get(document.getElementById(\"$fieldId\").dataset[\"ckeditor5Id\"]).getData();");
 
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->findAll('xpath', "//img[contains(@title, '{$titleText}')]");
+    $element = $this->getSession()->getPage()->findAll('xpath', "//img[contains(@title, '" . $titleText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $titleText . ' ] title text under [ ' . $locator . ' ].');
@@ -1509,7 +1531,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->switchToIFrame($iFreamID);
 
     // Find an image with the title.
-    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '{$altText}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//img[contains(@alt, '" . $altText . "')]");
 
     if (empty($element)) {
       throw new \Exception('The page dose not have an image with the [ ' . $altText . ' ] Alt Text under [ ' . $filedName . ' ].');
@@ -1595,7 +1617,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    *
    * @Then /^I should see "(?P<text>[^"]*)" in the "(?P<htmlTagName>[^"]*)" element with the "(?P<attribute>[^"]*)" attribute set to "(?P<value>[^"]*)"$/
    */
-  public function ishouldSeeTextInTheHtmlTagElement($text, $htmlTagName, $attribute, $value) {
+  public function iShouldSeeTextInTheHtmlTagElement($text, $htmlTagName, $attribute, $value) {
 
     $elements = $this->getSession()->getPage()->findAll('css', $htmlTagName);
     if (empty($elements)) {
@@ -1712,7 +1734,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       if (empty($attr)) {
         throw new \Exception(sprintf('The "%s" attribute is not present on the element "%s"', $attribute, $htmlTagName));
       }
-      if (strpos($attr, "$value") === FALSE) {
+      if (strpos($attr, (string) $value) === FALSE) {
         throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
       }
     }
@@ -1733,7 +1755,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iShouldSeeValueInTheInputElement($text, $selector) {
 
-    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@data-drupal-selector='{$selector}']");
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@data-drupal-selector='" . $selector . "']");
     if (empty($elements)) {
       throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
     }
@@ -1764,7 +1786,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iClickValueInTheInputElement($text, $selector) {
 
-    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@data-drupal-selector='{$selector}']");
+    $elements = $this->getSession()->getPage()->findAll('xpath', "//*[@data-drupal-selector='" . $selector . "']");
     if (empty($elements)) {
       throw new \Exception(sprintf('The input element "%s" was not found in the page', $selector));
     }
@@ -1954,7 +1976,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $elementField = $this->getSession()->getPage()->findField($field);
     if (!$elementField) {
-      throw new \Exception("Field '{$field}' not found");
+      throw new \Exception("Field '" . $field . "' not found");
     }
 
     $fieldId = $elementField->getAttribute('id');
@@ -2041,7 +2063,7 @@ JS;
 
     $elementField = $this->getSession()->getPage()->findField($field);
     if (!$elementField) {
-      throw new \Exception("Field '{$field}' not found");
+      throw new \Exception("Field '" . $field . "' not found");
     }
 
     $fieldId = $elementField->getAttribute('id');
@@ -2151,7 +2173,7 @@ JS;
    * @Given /^I click on the radio label for "([^"]*)" value$/
    */
   public function iClickOnTheRadioLabelForValue($value) {
-    $radio_label = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, '{$value}')]");
+    $radio_label = $this->getSession()->getPage()->find('xpath', "//label[contains(@for, '" . $value . "')]");
     if ($radio_label) {
       $radio_label->click();
     }
@@ -2325,7 +2347,7 @@ JS;
    * @Then I should see the :label checkbox unchecked
    */
   public function iShouldSeeTheCheckboxUnchecked($label) {
-    $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
+    $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '" . $label . "')]/preceding-sibling::input");
     if ($isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is checked");
     } 
@@ -2342,7 +2364,7 @@ JS;
    * @Then I should see the :label checkbox checked
    */
   public function iShouldSeeTheCheckboxChecked($label) {
-    $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '${label}')]/preceding-sibling::input");
+    $isChecked = (bool) $this->getSession()->getDriver()->isChecked("//label[contains(text(), '" . $label . "')]/preceding-sibling::input");
     if (!$isChecked) {
       throw new \Exception("The '" . $label . "' checkbox is unchecked");
     } 
@@ -2418,7 +2440,7 @@ JS;
   }
 
   /**
-   * Switch to an ifram by its id.
+   * Switch to an iframe by its id.
    *
    * Varbase Context #varbase.
    *
@@ -2432,11 +2454,11 @@ JS;
   }
 
   /**
-   * Switch to the main frame or the parent ifram.
+   * Switch to the main frame or the parent frame.
    *
    * Varbase Context #varbase.
    *
-   * Example #1: When I switch to main fram
+   * Example #1: When I switch to main frame
    * Example #2: When I switch to parent
    *
    * @When /^(?:|I )switch to main frame$/
@@ -2464,7 +2486,7 @@ JS;
    *   Attribute value for the first matching element.
    */
   private function getAttributeByOtherAttributeValue($attributeName, $otherAttributeName, $otherAttributeValue, $htmlTagName = "*") {
-    $element = $this->getSession()->getPage()->find('xpath', "//{$htmlTagName}[contains(@{$otherAttributeName}, '{$otherAttributeValue}')]");
+    $element = $this->getSession()->getPage()->find('xpath', "//" . $htmlTagName . "[contains(@" . $otherAttributeName . ", '" . $otherAttributeValue . "')]");
     return $element->getAttribute($attributeName);
   }
 
@@ -2523,7 +2545,7 @@ JS;
    */
   public function iShouldSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='" . $operation . "']");
     if (empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it did not have the operation "%s".', $entity, $operation));
     }
@@ -2544,7 +2566,7 @@ JS;
    */
   public function iShouldNotSeetheOperationForTheEntity($operation, $entity) {
     $row = $this->getEntityRow($this->getSession()->getPage(), $entity);
-    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='{$operation}']");
+    $operation_element = $row->find('xpath', "//*[contains(@headers, 'view-operations-table-column')]//*[text()='" . $operation . "']");
     if (!empty($operation_element)) {
       throw new \Exception(sprintf('Found an entity containing "%s", but it have the operation "%s".', $entity, $operation));
     }
@@ -2633,7 +2655,7 @@ JS;
       throw new \Exception('The Accessibility Checker was not found in the page');
     }
 
-    $this->getSession()->executeScript('document.querySelector("body > ed11y-element-panel").shadowRoot.querySelector("#toggle").click();');
+    $this->getSession()->executeScript('document.querySelector("body > ed11y-element-panel").shadowRoot.querySelector("#ed11y-toggle").click();');
   }
 
   /**

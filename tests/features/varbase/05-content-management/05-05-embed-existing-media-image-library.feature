@@ -23,7 +23,7 @@ So that it will show up under that rich text field without having to upload the 
    Scenario: Upload the  Embed Flag Earth file
       When I go to "/media/add/image"
        And wait
-      Then I should see "Allowed types: png gif jpg jpeg."
+      Then I should see "Allowed types: png gif jpg jpeg webp."
       When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
        And wait
        And I press the "Save" button

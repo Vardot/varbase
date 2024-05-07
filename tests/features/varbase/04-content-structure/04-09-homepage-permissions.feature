@@ -9,7 +9,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Hero Slider"
+      And I should see "Varbase; Better Than Ever"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -17,7 +17,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should see "Devel"
+      And I should see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should see "Clone"
       And I should see "Translate"
 
@@ -27,13 +27,13 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Hero Slider"
+      And I should see "Varbase; Better Than Ever"
       And I should not see "Tasks"
       And I should not see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should not see "Revisions"
-      And I should not see "Devel"
+      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should not see "Clone"
       And I should not see "Translate"
 
@@ -43,13 +43,13 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Hero Slider"
+      And I should see "Varbase; Better Than Ever"
       And I should not see "Tasks"
       And I should not see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should not see "Revisions"
-      And I should not see "Devel"
+      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should not see "Clone"
       And I should not see "Translate"
 
@@ -59,7 +59,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Hero Slider"
+      And I should see "Varbase; Better Than Ever"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -67,7 +67,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should not see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should not see "Devel"
+      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should see "Clone"
       And I should see "Translate"
 
@@ -77,7 +77,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Hero Slider"
+      And I should see "Varbase; Better Than Ever"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -85,7 +85,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should not see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should not see "Devel"
+      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should see "Clone"
       And I should see "Translate"
 
@@ -95,14 +95,14 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Hero Slider"
+      And I should see "Varbase; Better Than Ever"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should see "Revisions"
-      And I should not see "Devel"
+      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should not see "Clone"
       And I should see "Translate"
 
@@ -112,7 +112,7 @@ So that the homepage can be changed with permission in an easy way and be sure i
      When I go to the homepage
       And wait
      Then I should see "Build Your Site Using Varbase!"
-      And I should see "Hero Slider"
+      And I should see "Varbase; Better Than Ever"
      When I open the moderation sidebar
       And I wait for AJAX to finish
       And I should see "Edit content"
@@ -120,6 +120,6 @@ So that the homepage can be changed with permission in an easy way and be sure i
       And I should not see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should not see "Devel"
+      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should see "Clone"
       And I should see "Translate"

@@ -58,7 +58,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
      Given I am a logged in user with the "Site admin" user
       When I go to "/media/add/image"
        And wait
-      Then I should see "Allowed types: png gif jpg jpeg."
+      Then I should see "Allowed types: png gif jpg jpeg webp."
       When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
        And wait
        And I press the "Save" button

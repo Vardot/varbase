@@ -22,15 +22,15 @@ The welcome message is made possible by having Varbase Tour module
      Then I should see "Welcome to "
       And I should see "Get started"
      When I click "Get started"
-      And I wait 2 seconds
+      And I wait 6s
      Then I should see "Tour Switch"
-     When I click "Next" in the "button" element with the "class" attribute set to "button button--primary shepherd-button "
+     When I click next button in tour
      Then I should see "Editing Your Homepage Layout"
-     When I click "Next" in the "button" element with the "class" attribute set to "button button--primary shepherd-button "
+     When I click next button in tour
      Then I should see "Start Configuring Your Site Structure"
-     When I click "Next" in the "button" element with the "class" attribute set to "button button--primary shepherd-button "
+     When I click next button in tour
      Then I should see "Define Your Site Settings"
-     When I click "Next" in the "button" element with the "class" attribute set to "button button--primary shepherd-button "
+     When I click next button in tour
      Then I should see "Site Content"
 
   @javascript @local @development @staging @production

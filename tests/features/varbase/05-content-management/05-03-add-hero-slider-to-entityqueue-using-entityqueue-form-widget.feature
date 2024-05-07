@@ -7,7 +7,7 @@ I want to be able to add and remove entities to any allowed entity queue.
     Given I am a logged in user with the "Site admin" user
      When I go to "/media/add/image"
       And wait
-     Then I should see "Allowed types: png gif jpg jpeg."
+     Then I should see "Allowed types: png gif jpg jpeg webp."
      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
       And wait
       And I press the "Save" button

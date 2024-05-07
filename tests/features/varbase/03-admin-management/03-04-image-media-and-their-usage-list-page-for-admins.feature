@@ -17,7 +17,7 @@ So that I will be able to manage files, see where they have been used in content
   Scenario: Check if we do have a file named Flag Earth, if not then upload the file dependently
       When I go to "/media/add/image"
        And wait
-      Then I should see "Allowed types: png gif jpg jpeg."
+      Then I should see "Allowed types: png gif jpg jpeg webp."
       When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
        And wait
        And I press the "Save" button
@@ -60,6 +60,7 @@ So that I will be able to manage files, see where they have been used in content
      When I fill in "Flag Earth after edit" for "edit-name"
       And I press the "Apply" button
       And wait
+      And I scroll to top
      Then I should see "Flag Earth after edit"
      When I click "Edit" in the "Flag Earth after edit" row
       And wait
