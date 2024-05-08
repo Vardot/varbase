@@ -169,20 +169,28 @@ class ScriptHandler {
       copy($drupal_root . '/profiles/contrib/varbase/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
 
+    // Alter the 'default.services.yml' file to have 'cookie_lifetime: 0' not any other values.
     if ($fs->exists($drupal_root . '/sites/default/default.services.yml')) {
-      // Alter default.services.yml to have cookie_lifetime 0
-      $services_path = $drupal_root . '/sites/default/default.services.yml';
-      $services_lines = file($services_path);
-      $services_lines = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $services_lines);
-      file_put_contents($services_path, $services_lines);
+      $default_services_path = $drupal_root . '/sites/default/default.services.yml';
+      $default_services_content = file($default_services_path);
+
+      // Only change and save the 'default.services.yml' file once.
+      if (!str_contains($default_services_content, 'cookie_lifetime: 0')) {
+        $default_services_content = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $default_services_content);
+        file_put_contents($default_services_path, $default_services_content);
+      }
     }
 
+    // Alter the 'services.yml' file to have 'cookie_lifetime: 0' not any other values.
     if ($fs->exists($drupal_root . '/sites/default/services.yml')) {
-      // Alter services.yml to have cookie_lifetime 0
       $services_path = $drupal_root . '/sites/default/services.yml';
-      $services_lines = file($services_path);
-      $services_lines = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $services_lines);
-      file_put_contents($services_path, $services_lines);
+      $services_content = file($services_path);
+
+      // Only change and save the 'services.yml' file once.
+      if (!str_contains($services_content, 'cookie_lifetime: 0')) {
+        $services_content = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $services_content);
+        file_put_contents($services_path, $services_content);
+      }
     }
   }
 
