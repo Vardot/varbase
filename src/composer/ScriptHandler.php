@@ -172,24 +172,24 @@ class ScriptHandler {
     // Alter the 'default.services.yml' file to have 'cookie_lifetime: 0' not any other values.
     if ($fs->exists($drupal_root . '/sites/default/default.services.yml')) {
       $default_services_path = $drupal_root . '/sites/default/default.services.yml';
-      $default_services_content = file($default_services_path);
+      $default_services_contents = file_get_contents($default_services_path);
 
       // Only change and save the 'default.services.yml' file once.
-      if (!str_contains($default_services_content, 'cookie_lifetime: 0')) {
-        $default_services_content = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $default_services_content);
-        file_put_contents($default_services_path, $default_services_content);
+      if (!str_contains($default_services_contents, 'cookie_lifetime: 0')) {
+        $default_services_contents = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $default_services_contents);
+        file_put_contents($default_services_path, $default_services_contents);
       }
     }
 
     // Alter the 'services.yml' file to have 'cookie_lifetime: 0' not any other values.
     if ($fs->exists($drupal_root . '/sites/default/services.yml')) {
       $services_path = $drupal_root . '/sites/default/services.yml';
-      $services_content = file($services_path);
+      $services_contents = file_get_contents($services_path);
 
       // Only change and save the 'services.yml' file once.
-      if (!str_contains($services_content, 'cookie_lifetime: 0')) {
-        $services_content = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $services_content);
-        file_put_contents($services_path, $services_content);
+      if (!str_contains($services_contents, 'cookie_lifetime: 0')) {
+        $services_contents = preg_replace('/cookie_lifetime: \d+/', 'cookie_lifetime: 0', $services_contents);
+        file_put_contents($services_path, $services_contents);
       }
     }
   }
