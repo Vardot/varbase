@@ -93,7 +93,6 @@ class AssemblerForm extends FormBase {
     if (count($demoContent) > 0) {
       $form['demo_content'] = [
         '#type' => 'fieldset',
-        // '#title' => $this->t('Demo'),
       ];
 
       foreach ($demoContent as $demo_content_key => $demo_content_info) {
@@ -163,7 +162,6 @@ class AssemblerForm extends FormBase {
 
       $form['extra_features'] = [
         '#type' => 'fieldset',
-        // '#title' => $this->t('Recipes'),
       ];
 
       foreach ($extraFeatures as $extra_feature_key => $extra_feature_info) {
@@ -202,9 +200,6 @@ class AssemblerForm extends FormBase {
               'disabled' => [
                 ':input[name="varbase_demo"]' => ['checked' => TRUE],
               ],
-              'enabled' => [
-                ':input[name="varbase_demo"]' => ['checked' => FALSE],
-              ],
             ];
           }
           else {
@@ -212,26 +207,8 @@ class AssemblerForm extends FormBase {
               'disabled' => [
                 ':input[name="varbase_demo"]' => ['checked' => TRUE],
               ],
-              'enabled' => [
-                ':input[name="varbase_demo"]' => ['checked' => FALSE],
-              ],
               'checked' => [
                 ':input[name="varbase_demo"]' => ['checked' => TRUE],
-              ],
-              'unchecked' => [
-                ':input[name="varbase_demo"]' => ['checked' => FALSE],
-              ],
-            ];
-          }
-        }
-        else {
-          if ($checkbox_selected) {
-            $form['extra_features'][$extra_feature_key]['#states'] = [
-              'disabled' => [
-                ':input[name="varbase_demo"]' => ['checked' => TRUE],
-              ],
-              'enabled' => [
-                ':input[name="varbase_demo"]' => ['checked' => FALSE],
               ],
             ];
           }

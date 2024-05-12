@@ -542,58 +542,15 @@ function varbase_uninstall_component($uninstall_component) {
  */
 function varbase_reset_timestamp_for_default_content($reset) {
 
+  // Reset timestamp for default content.
   if ($reset) {
-    // Reset timestamp for all file's default content.
-    $file_storage = \Drupal::service('entity_type.manager')->getStorage('file');
-    $file_ids = $file_storage->getQuery()
-      ->accessCheck(FALSE)
-      ->execute();
-
-    if (isset($file_ids)
-      && is_array($file_ids)
-      && count($file_ids) > 0) {
-
-      foreach ($file_ids as $fid) {
-        $file = \Drupal::service('entity_type.manager')->getStorage('file')->load($fid);
-        if (isset($file)) {
-          $file->set('created', \Drupal::time()->getCurrentTime());
-          $file->save();
-        }
-      }
-    }
-
-    // Reset timestamp for all Media's default content.
-    $media_storage = \Drupal::service('entity_type.manager')->getStorage('media');
-    $media_ids = $media_storage->getQuery()
-      ->accessCheck(FALSE)
-      ->execute();
-
-    if (isset($media_ids)
-      && is_array($media_ids)
-      && count($media_ids) > 0) {
-
-      foreach ($media_ids as $mid) {
-        $media = \Drupal::service('entity_type.manager')->getStorage('media')->load($mid);
-        if (isset($media)) {
-          $media->set('created', \Drupal::time()->getCurrentTime());
-          $media->save();
-        }
-      }
-    }
-
-    // Reset timestamp for all Node's default content.
-    $node_storage = \Drupal::service('entity_type.manager')->getStorage('node');
-    $node_ids = $node_storage->getQuery()->accessCheck(FALSE)->execute();
-    if (isset($node_ids)
-      && is_array($node_ids)
-      && count($node_ids) > 0) {
-
-      foreach ($node_ids as $nid) {
-        $node = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
-        if (isset($node)) {
-          $node->set('created', \Drupal::time()->getCurrentTime());
-          $node->save();
-        }
+    // Only for the Homepage, blog, and Contact Us default content pages.
+    $node_ids = [1, 2, 3];
+    foreach ($node_ids as $nid) {
+      $node = \Drupal::service('entity_type.manager')->getStorage('node')->load($nid);
+      if (isset($node)) {
+        $node->set('created', \Drupal::time()->getCurrentTime());
+        $node->save();
       }
     }
   }

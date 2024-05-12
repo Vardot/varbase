@@ -21,7 +21,7 @@ config_bit:
           description: 'Adds an automatic checker tool for accessibility with the integration of the <a href="https://www.drupal.org/project/editoria11y" target="_blank">Editoria11y Accessibility Checker</a>, a user-friendly tool dedicated to automatically identifying and addressing straightforward accessibility issues in various contexts.'
           selected: true
           config_form: false
-          in_varbase_demo: true
+          in_varbase_demo: false
         vmi:
           title: "View Modes Inventory"
           description: "The most common view modes you'll need for almost any site. This will provide you with a set of content <em>View Modes</em> for various teaser styles. All of which are mobile-first, media-aware, and ready for you to customize your site."
@@ -39,13 +39,13 @@ config_bit:
           description: 'Provides the necessary tools to build carousels in your website. You will be able to create carousels on the spot and place it anywhere in the site.'
           selected: false
           config_form: false
-          in_varbase_demo: true
+          in_varbase_demo: false
         varbase_search:
           title: "Varbase Search"
           description: 'A suite of site search engine tools to help you build better search performance, customization, and search experience. Built using <a href="https://www.drupal.org/project/search_api" target="_blank">Search API</a>.'
           selected: false
           config_form: false
-          in_varbase_demo: true
+          in_varbase_demo: false
         varbase_blog:
           title: "Varbase Blog"
           description: "Provides the necessary tools to build blogs in your website."
@@ -58,22 +58,22 @@ config_bit:
           selected: false
           config_form: true
           formbit: "src/FormBit/varbase_auth.formbit.php"
-          in_varbase_demo: true
+          in_varbase_demo: false
         varbase_api:
           title: "Varbase API"
           description: "A JSON:API implementation with authentication and authorization that allows for easy ingestion of content by other applications."
           selected: false
           config_form: false
-          in_varbase_demo: true
+          in_varbase_demo: false
         google_analytics:
           title: "Google Analytics"
           description: 'Adds the <a href="https://www.drupal.org/project/google_analytics" target="_blank">Google Analytics</a> web statistics tracking system to your website.'
           selected: false
           config_form: false
-          in_varbase_demo: true
+          in_varbase_demo: false
         google_tag:
           title: "Google Tag Manager"
           description: 'Adds an integration with the <a href="https://www.drupal.org/project/google_tag" target="_blank">Google Tag Manager</a> (GTM) application.'
           selected: false
           config_form: false
-          in_varbase_demo: true
+          in_varbase_demo: false
