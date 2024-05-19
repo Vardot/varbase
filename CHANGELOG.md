@@ -1,3 +1,94 @@
+# 10.0.0-rc3
+
+Highlighted important changes since Varbase 10.0.0-rc2:
+* Issue [#3442343](https://www.drupal.org/i/3442343):
+        Added **Varbase Demo** module to the list of **Varbase Recipes**
+         as the **Extra Components** installation step
+
+* 💡 [Live Varbase Demo Example](https://demo.varbase.vardot.com/)
+* 💡 [Live Varbase Storybook](https://storybook.demo.varbase.vardot.com/?path=/docs/varbase-components-organisms-featured-card--docs)
+* 💡 [Varbase Design System](https://www.figma.com/file/ARfcW5i5Euid8Yv1QFhgSq/VB---Design-System)
+
+### Added since Varbase 10.0.0-rc2:
+* Issue [#3443948](https://www.drupal.org/i/3443948)
+        by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+       : Added an auto config for the **maximum cookie services** with Drupal scaffolding for the **Persistent Login**
+* Issue [#3446776](https://www.drupal.org/i/3446776)
+        by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+       : Added default configuration for the **Sitewide Alert** module
+* Issue [#3442854](https://www.drupal.org/i/3442854)
+        by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+       : Added **CKEditor 5 Paste Filter** module to **Varbase Editor**
+* Issue [#3444361](https://www.drupal.org/i/3444361):
+        Added **CKEditor Media Embed Plugin** module to **Varbase Editor** `10`
+* Issue [#3446927](https://www.drupal.org/i/3446927):
+        Added **Social media menu** and **Footer sitemap menu** blocks to follow with **Varbase Design System**
+* Issue [#3443236](https://www.drupal.org/i/3443236):
+        Added a custom Homepage default demo content when **Varbase Demo** is enabled
+* Issue [#3442316](https://www.drupal.org/i/3442316):
+        Added a default **Contact Us** layout builder landing page in **Varbase Default Content**
+* Issue [#3446935](https://www.drupal.org/i/3446935):
+        Added default content for the **Footer Logo**, **Social Media menu** links, and updates
+        to follow with **Varbase Design System**
+* Issue [#3441744](https://www.drupal.org/i/3441744):
+        Added **Varbase Media Demo Assets** for the new **Varbase Demo** website
+* Issue [#3445408](https://www.drupal.org/i/3445408):
+        Added **CKEditor 5** and **ACE libraries** using `asset-packagist.org` in **Varbase Editor**
+* Issue [#3446773](https://www.drupal.org/i/3446773)
+        by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+       : Added a **Bootstrap Alert** styling library from the **Alert component**, to be used with
+        the **Sitewide Alert** mapped template
+
+### Changed since Varbase 10.0.0-rc2:
+* Issue [#3390013](https://www.drupal.org/i/3390013):
+        Initialized the **Varbase Demo** module
+* Issue [#3442970](https://www.drupal.org/i/3442970)
+        by [Alshami](https://www.drupal.org/u/alshami)
+       : Disabled no longer needed **Media Revisions UI** contrib module as it's functionality was added to **Drupal Core**
+* Issue [#3441752](https://www.drupal.org/i/3441752):
+        Allow to upload `webp` file extensions in the **media image entity type**
+* Issue [#3443979](https://www.drupal.org/i/3443979):
+        Changed default content for **Blog posts** to have better demo with Tags
+* Issue [#3446704](https://www.drupal.org/i/3446704):
+        Changed **Varbase Demo** not to enable other modules, which are not yet in the Demo
+* Issue [#3442771](https://www.drupal.org/i/3442771):
+        Changed the style of **Blog listing** to follow with **Varbase Design System**
+* Issue [#3446300](https://www.drupal.org/i/3446300):
+        Changed the **Contact Us** default content page, and improve the **Business Contact**
+        webform to follow with **Varbase Design System**
+* Issue [#3444678](https://www.drupal.org/i/3444678):
+        Switched to a **Default Varbase Editor recipe** and drop the use of the **Module Installer Factory**
+        class in favour of **Drupal Recipes**
+* Issue [#3443115](https://www.drupal.org/i/3443115)
+        by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+       : Changed the list of **responsive devices** in Preview Page layout
+* Issue [#3378723](https://www.drupal.org/i/3378723):
+        Changed **Navbar Branding Logo** component to follow with **Drupal** `10.2.x` and **Bootstrap** `~5.3.0`
+* Issue [#3446921](https://www.drupal.org/i/3446921):
+        Changed the style for the **Page Footer** component to follow with **Varbase Design System**
+* Issue [#3446774](https://www.drupal.org/i/3446774)
+        by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+       : Styled the **Sitewide Alert** to follow with **Bootstrap** `~5.3.0` and **Varbase Design System**
+
+### Updates since Varbase 10.0.0-rc2:
+* N/A - All extensions are updatable
+
+### Fixes since Varbase 10.0.0-rc2:
+* Issue [#3444475](https://www.drupal.org/i/3444475):
+        Fixed **Malformed inline YAML** string in used `yml` files
+* Issue [#3394223](https://www.drupal.org/i/3394223)
+        by [hamidtiouti](https://www.drupal.org/u/hamidtiouti)
+       : Fixed Status Report for updates with **Embed button CKEditor5** compatibility after updating
+* Issue [#3442973](https://www.drupal.org/i/3442973):
+        Fixed demo taxonomy term blog categories content
+* Issue [#3442875](https://www.drupal.org/i/3442875):
+        Fixed revision log in default content for media and asset of files
+* Issue [#3441506](https://www.drupal.org/i/3441506):
+        Fixed mobile overlaps of hero slider with dropdown navbar menus when the
+        header Container for Top bar region as `container`
+
+-------------------------------------------------------------------------------
+
 # 10.0.0-rc2
 
 ###  Highlighted important changes since Varbase 10.0.0-rc1:
