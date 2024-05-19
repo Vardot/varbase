@@ -1,3 +1,53 @@
+# 9.1.3
+
+### Highlighted important changes since Varbase 9.1.2:
+This is a **patch (bugfix)** release of **Varbase 9** and is ready for use on production sites.
+
+### Added since Varbase 9.1.2:
+All new features are in **Varbase ~10**
+
+* Issue [#3443948](https://www.drupal.org/i/3443948)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Added an auto config for the **maximum cookie services** with **Drupal scaffolding** for the **Persistent Login**
+* Issue [#3442854](https://www.drupal.org/i/3442854)
+         by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+         : Added **CKEditor 5** Paste Filter module to Varbase Editor
+* Issue [#3445408](https://www.drupal.org/i/3445408):
+         Added **CKEditor 5** and **ACE** libraries using `asset-packagist.org` in **Varbase Editor**
+
+### Changed since Varbase 9.1.2:
+* Issue [#3442752](https://www.drupal.org/i/3442752):
+         Started a new 9.2.x branch for Varbase Editor to support **CKEditor 5** and drop support for **CKEditor 4**
+* Issue [#3442767](https://www.drupal.org/i/3442767):
+         Changed Varbase Editor to 9.2.x in Varbase profile to support **CKEditor 5** and drop support for **CKEditor 4**
+* Issue [#3414834](https://www.drupal.org/i/3414834)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Switched default config for Rich editor and Simple editor from **CKEditor 4** to **CKEditor 5**
+* Issue [#3445309](https://www.drupal.org/i/3445309):
+         Removed CKEditor 4 dependencies/install for full switch to **CKEditor 5** in **Varbase Editor**
+* Issue [#3445308](https://www.drupal.org/i/3445308):
+         Removed CKEditor 4 dependencies/install for full switch to **CKEditor 5** in **Varbase Layout Builder**
+* Issue [#3445313](https://www.drupal.org/i/3445313):
+         Removed CKEditor 4 dependencies/install for full switch to **CKEditor 5** in **Varbase Bootstrap Paragraphs**
+* Issue [#3442970](https://www.drupal.org/i/3442970)
+         by [Alshami](https://www.drupal.org/u/alshami)
+        : Disabled no longer needed **Media Revisions UI** contrib module as it's functionality was added to **Drupal Core**
+### Updates since Varbase 9.1.2:
+N/A - All extensions are updatable
+
+### Fixes since Varbase 9.1.2:
+* Issue [#3394223](https://www.drupal.org/i/3394223)
+         by [hamidtiouti](https://www.drupal.org/u/hamidtiouti)
+        : Fixed Status Report for updates with **Embed button CKEditor5** compatibility after updating
+* Issue [#3441524](https://www.drupal.org/i/3441524)
+         by [emircanerkul](https://www.drupal.org/u/emircanerkul)
+        : Fixed compatible toggle affix with **D10** by switching from **jQuery once** to `drupal/once` library
+* Issue [#3447093](https://www.drupal.org/i/3447093)
+         by [Redwan Jamous](https://www.drupal.org/u/redwan-jamous)
+        : Fixed buttons colors by fixing `claro.jquery.ui` css assets issues
+
+-------------------------------------------------------------------------------
+
 # 9.1.2
 
 ### Highlighted important changes since Varbase 9.1.1:
