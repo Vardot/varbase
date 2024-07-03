@@ -61,12 +61,12 @@
     "npm-asset/slick-carousel": "~1",
     "npm-asset/ace-builds": "~1",
     "npm-asset/swagger-ui-dist": "~3",
-    "npm-asset/northernco--ckeditor5-anchor-drupal": "^0.4.0",
+    "npm-asset/northernco--ckeditor5-anchor-drupal": "^0.5.0",
     "npm-asset/ckeditor--ckeditor5-media-embed": "*"
   },
   "require-dev": {
-    "drupal/core-dev": "~10",
-    "drush/drush": "~12",
+    "drupal/core-dev": "~10 || ~11",
+    "drush/drush": "~12 || ~13",
     "drupal/drupal-extension": "5.0.0alpha1",
     "webship/behat-html-formatter": "~1",
     "drevops/behat-screenshot": "~1"
