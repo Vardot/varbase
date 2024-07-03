@@ -101,9 +101,10 @@ commands:
           name: Install/Update Chrome Driver 114.0.5735.90 version
           command: |
             wget http://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
-            unzip chromedriver_linux.zip
+            unzip chromedriver_linux64.zip
             sudo chmod +x chromedriver
             sudo mv -f chromedriver /usr/bin/
+            rm chromedriver_linux64.zip
 
       ## List tools versions.
       - run:
