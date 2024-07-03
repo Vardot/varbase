@@ -93,19 +93,17 @@ commands:
             sudo apt install libu2f-udev
             sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
             export CHROME_BIN=/usr/bin/google-chrome
-            wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_115.0.5790.110-1_amd64.deb
-            sudo dpkg -i google-chrome-stable_115.0.5790.110-1_amd64.deb
-            rm google-chrome-stable_115.0.5790.110-1_amd64.deb
+            if [[ ! -f /home/circleci/google-chrome-stable_115.0.5790.110-1_amd64.deb ]]; then wget -O /home/circleci/google-chrome-stable_115.0.5790.110-1_amd64.deb https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_115.0.5790.110-1_amd64.deb ; fi
+            sudo dpkg -i /home/circleci/google-chrome-stable_115.0.5790.110-1_amd64.deb
 
       ## Install/Update Chrome Driver 114.0.5735.90 version.
       - run:
           name: Install/Update Chrome Driver 114.0.5735.90 version
           command: |
-            wget http://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+            if [[ ! -f /home/circleci/chromedriver_linux.zip ]]; then wget -O /home/circleci/chromedriver_linux.zip http://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
             unzip chromedriver_linux64.zip
             sudo chmod +x chromedriver
-            sudo mv -f chromedriver /usr/bin/
-            rm chromedriver_linux64.zip
+            sudo mv -f /home/circleci/chromedriver /usr/bin/
 
       ## List tools versions.
       - run:
