@@ -100,10 +100,10 @@ commands:
       - run:
           name: Install/Update Chrome Driver 114.0.5735.90 version
           command: |
-            if [[ ! -f /home/circleci/chromedriver_linux64-114-0-5735-90.zip ]]; then wget -O /home/circleci/chromedriver_linux64-114-0-5735-90.zip http://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip ; fi
-            unzip /home/circleci/chromedriver_linux64-114-0-5735-90.zip
-            sudo chmod +x /home/circleci/chromedriver
-            sudo mv -f /home/circleci/chromedriver /usr/bin/
+            wget http://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+            unzip chromedriver_linux.zip
+            sudo chmod +x chromedriver
+            sudo mv -f chromedriver /usr/bin/
 
       ## List tools versions.
       - run:
