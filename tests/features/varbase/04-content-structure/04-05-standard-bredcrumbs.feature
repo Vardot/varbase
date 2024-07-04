@@ -14,7 +14,7 @@ So that I can see path I followed to locate the current page usually near the to
       And wait
       And I check the box "Provide a menu link"
       And I select "<Main navigation>" from "Parent link"
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save as" button
       And wait
      Then I should see "Test Basic page root title"
@@ -31,7 +31,7 @@ So that I can see path I followed to locate the current page usually near the to
       And wait
       And I check the box "Provide a menu link"
       And I select "Test Basic page root title" from "Parent link"
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save as" button
       And wait
      Then I should see "Basic page Test Basic page sub 1 title has been created."

@@ -49,7 +49,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
      Then I should see "Block"
      When I select "Site branding" from "Block"
       And wait
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page Drupal Block has been created"
@@ -68,7 +68,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I wait for 1 second
       And I select the "bp_columns" paragraph component
       And I wait for AJAX to finish
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page Columns (Equal) has been created"
@@ -87,7 +87,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I wait for 1 second
       And I select the "bp_columns_two_uneven" paragraph component
       And I wait for AJAX to finish
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page Columns (Two Uneven) has been created"
@@ -108,7 +108,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
       And I wait for AJAX to finish
      Then I should see "Components"
      When I fill in the rich text editor field "Text" with "Rich Text test"
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page Rich Text has been created"
@@ -131,7 +131,7 @@ So that the Landing page (Paragraphs) will show up having paragrpahs of differen
      Then I should see "Components"
      When I select "Contact" from "Webform"
       And wait
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
       And wait
      Then I should see "Landing page (Paragraphs) Test Landing page WebForm has been created"

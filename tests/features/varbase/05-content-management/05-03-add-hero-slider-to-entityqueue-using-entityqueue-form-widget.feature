@@ -47,7 +47,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider"
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save as" button
       And wait
      Then I should see "Test hero slider #1"
@@ -74,7 +74,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I wait for AJAX to finish
      Then I should see "Choose from the available entityqueues below to push this content to."
      When I check the box "varbase_heroslider"
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save as" button
       And wait
      Then I should see "Test hero slider #2"

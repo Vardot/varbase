@@ -19,7 +19,7 @@ I want to be able to clone an entity.
      Then I should see "Block"
      When I select "Site branding" from "Block"
       And wait
-      And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+      And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save as" button
       And wait
      Then I should see "Test Clone landing page has been created"

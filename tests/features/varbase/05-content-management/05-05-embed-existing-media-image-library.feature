@@ -14,7 +14,7 @@ So that it will show up under that rich text field without having to upload the 
        And wait
        And I fill in "Test Basic page to embed existing files" for "Title"
        And I fill in the rich text editor field "Body" with "Test Basic page body to embed existing files"
-       And I select "published" from "edit-moderation-state-0-state--2--gin-edit-form"
+       And I select "published" from "edit-moderation-state-0-state"
        And I press the "Save as" button
        And wait
       Then I should see "Basic page Test Basic page to embed existing files has been created."
