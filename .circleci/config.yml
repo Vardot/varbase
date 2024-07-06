@@ -93,14 +93,17 @@ commands:
             sudo apt install libu2f-udev
             sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
             export CHROME_BIN=/usr/bin/google-chrome
-            if [[ ! -f /home/circleci/google-chrome-stable_115.0.5790.110-1_amd64.deb ]]; then wget -O /home/circleci/google-chrome-stable_115.0.5790.110-1_amd64.deb https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_115.0.5790.110-1_amd64.deb ; fi
-            sudo dpkg -i /home/circleci/google-chrome-stable_115.0.5790.110-1_amd64.deb
+            wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_115.0.5790.110-1_amd64.deb
+            sudo dpkg -i google-chrome-stable_115.0.5790.110-1_amd64.deb
+            rm google-chrome-stable_115.0.5790.110-1_amd64.deb
 
       ## Install/Update Chrome Driver 114.0.5735.90 version.
       - run:
           name: Install/Update Chrome Driver 114.0.5735.90 version
           command: |
-            wget http://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+            CHROME_DRIVER_VERSION=114.0.5735.90;
+            echo $CHROME_DRIVER_VERSION;
+            wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
             unzip chromedriver_linux64.zip
             sudo chmod +x chromedriver
             sudo mv -f chromedriver /usr/bin/
@@ -199,13 +202,13 @@ commands:
             ../bin/drush -y config:set openai.settings api_key ${openai_api_key};
             ../bin/drush -y config:set openai.settings api_org ${openai_api_org};
 
-      ## Install/Run Selenium Standalone server 4.6.0 on 4445 port.
+      ## Install/Run Selenium Standalone server 4.4.0 on 4445 port.
       - run:
-          name: Install/Run Selenium Standalone server 4.6.0 on 4445 port
+          name: Install/Run Selenium Standalone server 4.4.0 on 4445 port
           command: |
-            if [[ ! -f /home/circleci/selenium-server-4.6.0.jar ]]; then wget -O /home/circleci/selenium-server-4.6.0.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.6.0/selenium-server-4.6.0.jar; fi
+            if [[ ! -f /home/circleci/selenium-server-4.4.0.jar ]]; then wget -O /home/circleci/selenium-server-4.4.0.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.4.0/selenium-server-4.4.0.jar; fi
             cd /home/circleci/
-            java -jar selenium-server-4.6.0.jar standalone --port 4445
+            java -jar selenium-server-4.4.0.jar standalone --port 4445
           background: true
 
       ## Add testing users.
