@@ -5,7 +5,6 @@
  * Enables modules and site configuration for a Varbase site installation.
  */
 
-use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\varbase\Config\ConfigBit;

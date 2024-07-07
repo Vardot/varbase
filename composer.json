@@ -64,9 +64,8 @@
   "require-dev": {
     "drupal/core-dev": "~10 || ~11",
     "drush/drush": "~12 || ~13",
-    "drupal/drupal-extension": "5.0.0alpha1",
-    "webship/behat-html-formatter": "~1.0",
-    "drevops/behat-screenshot": "~1.0"
+    "drupal/drupal-extension": "~5",
+    "webship/behat-html-formatter": "~1"
   },
   "config": {
     "bin-dir": "bin/",
