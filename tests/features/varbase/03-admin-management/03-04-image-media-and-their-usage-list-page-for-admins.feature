@@ -65,7 +65,7 @@ So that I will be able to manage files, see where they have been used in content
      When I click "Edit" in the "Flag Earth after edit" row
       And wait
      Then I should see "Flag Earth after edit"
-     When I click "edit-delete--2"
+     When I click "edit-delete"
       And wait
      Then I should see "This action cannot be undone."
      When I click the delete button

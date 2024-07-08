@@ -48,7 +48,7 @@ default:
               performance: ALL
               browser: ALL
             chromeOptions:
-              w3c: true
+              w3c: false
               args:
                 - "--headless"
                 - "--start-maximized"
@@ -69,6 +69,9 @@ default:
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
+                - "--user-data-dir=/home/circleci/.config/google-chrome/"
+                - "--profile-directory=Default"
+                - "--crash-dumps-dir=/tmp"
       base_url: 'http://varbase.test'
       browser_name: 'chrome'
       javascript_session: selenium2
