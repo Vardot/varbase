@@ -3,11 +3,9 @@ As a site admin user
 I want to be able to check the JSON:API available interface options
 So that I can use them to enable or disable API service for Varbase APIs.
 
-  Background:
-    Given I am a logged in user with the "webmaster" user
-
   @javascript @check @local @development @staging @production
   Scenario: Check the Varbase API settings in admin configurations page
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config"
       And wait
      Then I should see "JSON:API"
@@ -15,6 +13,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
 
   @javascript @check @local @development @staging @production
   Scenario: Check JSON:API configurations
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/services/jsonapi"
       And wait
      Then I should see "JSON:API"
@@ -22,6 +21,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
 
   @javascript @check @local @development @staging @production
   Scenario: Check JSON:API Extras configurations
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/services/jsonapi/extras"
       And wait
      Then I should see "JSON:API Extras"
@@ -29,6 +29,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
 
   @javascript @check @local @development @staging @production
   Scenario: Check JSON:API Resource overrides
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/services/jsonapi/resource_types"
       And wait
      Then I should see "JSON:API Resource overrides"
@@ -36,6 +37,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
 
   @javascript @check @local @development @staging @production
   Scenario: Check Varbase API settings and Generate keys
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/system/varbase/api"
       And wait
      Then I should see "Varbase API settings"
@@ -47,6 +49,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
 
   @javascript @check @local @development @staging @production
   Scenario: Check Open API settings and documentation pages
+    Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/services/openapi"
       And wait
      Then I should see "OpenAPI Resources"

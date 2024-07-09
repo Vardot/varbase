@@ -95,7 +95,6 @@ commands:
             wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_115.0.5790.110-1_amd64.deb
             sudo dpkg -i google-chrome-stable_115.0.5790.110-1_amd64.deb
             rm google-chrome-stable_115.0.5790.110-1_amd64.deb
-            export CHROME_BIN=/usr/bin/google-chrome
 
       ## Install/Update Chrome Driver 114.0.5735.90 version.
       - run:
@@ -114,9 +113,7 @@ commands:
           name: Install/Run Selenium Standalone server 4.6.0 on 4445 port
           command: |
             wget -O selenium-server.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.6.0/selenium-server-4.6.0.jar
-            sudo chmod +x selenium-server.jar
-            sudo mv -f selenium-server.jar /usr/bin/
-            java -jar /usr/bin/selenium-server.jar standalone --port 4445
+            java -jar selenium-server.jar standalone --port 4445
           background: true  
 
       ## List tools versions.
