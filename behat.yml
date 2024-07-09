@@ -58,7 +58,8 @@ default:
       ajax_timeout: 60
       files_path: "%paths.base%/tests/assets/"
       selenium2:
-        wd_host: 127.0.0.1:4445/wd/hub
+        browser: "chrome"
+        wd_host: http://varbase.test:4445/wd/hub
         capabilities:
           browser: 'chrome'
           nativeEvents: true

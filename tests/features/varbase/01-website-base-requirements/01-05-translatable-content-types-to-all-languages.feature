@@ -11,7 +11,7 @@ So that I will be able to create a content then I will have the option to transl
 #
 # ../../../../bin/behat tests/features/varbase/step3-cleanup-tests/2-delete-arabic.feature
 
-  @javascript  @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check if site admin can translate an existing English Basic Page to an Arabic version.
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/page"
@@ -26,6 +26,7 @@ So that I will be able to create a content then I will have the option to transl
       And I should see "Test English Basic page body"
      When I open the moderation sidebar
       And I wait for ajax to finish
+      And I close the a11y checker
      Then I should see "Translate"
      When I click "Translate" in the "a" element with the "class" attribute set to "moderation-sidebar-link button use-ajax"
       And I wait for ajax to finish
