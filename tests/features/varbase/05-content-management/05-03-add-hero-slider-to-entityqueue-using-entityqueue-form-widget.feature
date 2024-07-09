@@ -38,7 +38,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I press the "Apply filters" button
      Then I should see image with the "Flag Earth all earth in space" title text
       And I wait for AJAX to finish
-     When I check the box "media_library_select_form[0]"
+     When I check the box "Select Flag Earth"
 		  And I wait for AJAX to finish
 		  And I press "dialog-submit"
 		  And I wait for AJAX to finish
@@ -65,7 +65,7 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I press the "Apply filters" button
      Then I should see image with the "Flag Earth all earth in space" title text
       And I wait for AJAX to finish
-     When I check the box "media_library_select_form[0]"
+     When I check the box "Select Flag Earth"
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish

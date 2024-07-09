@@ -44,7 +44,7 @@ So that the "Landing page (Paragraphs)" will have text and images in right and l
       And I press the "Apply filters" button
       And I wait for AJAX to finish
      Then I should see image with the "Flag Earth all earth in space" title text
-     When I check the box "media_library_select_form[0]"
+     When I check the box "Select Embed Flag Earth"
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish

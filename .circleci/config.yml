@@ -197,13 +197,12 @@ commands:
             ../bin/drush pm:enable editoria11y --yes
             ../bin/drush cache:rebuild
 
-      ## Install/Run Selenium Standalone server 4.4.0 on 4445 port.
+      ## Install/Run Selenium Standalone server 4.6.0 on 4445 port.
       - run:
-          name: Install/Run Selenium Standalone server 4.4.0 on 4445 port
+          name: Install/Run Selenium Standalone server 4.6.0 on 4445 port
           command: |
-            if [[ ! -f /home/circleci/selenium-server-4.4.0.jar ]]; then wget -O /home/circleci/selenium-server-4.4.0.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.4.0/selenium-server-4.4.0.jar; fi
-            cd /home/circleci/
-            java -jar selenium-server-4.4.0.jar standalone --port 4445
+            wget -O selenium-server.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.6.0/selenium-server-4.6.0.jar
+            java -jar selenium-server-4.6.0.jar standalone --port 4445 --selenium-manager true --detect-drivers true --enable-managed-downloads true
           background: true
 
       ## Add testing users.
