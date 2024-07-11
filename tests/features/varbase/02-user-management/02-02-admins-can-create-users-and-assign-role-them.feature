@@ -40,8 +40,9 @@ So that they will be able to use the site.
      Then I should see "tester"
      When I click "Edit" in the "tester" row
       And wait
-      And I scroll to bottom
-      And I click "Cancel account"
+      And I click "More actions"
+     Then I should see "Cancel account"
+     When I click "Cancel account"
       And wait
       And wait 3s
      Then I should see "Are you sure you want to cancel the account tester?"
@@ -76,8 +77,9 @@ So that they will be able to use the site.
       And I should not see "email_registration"
      When I click "Edit" in the "test.not.allwed.no.username" row
       And wait
-      And I scroll to bottom
-      And I click "Cancel account"
+      And I click "More actions"
+     Then I should see "Cancel account"
+     When I click "Cancel account"
       And wait
       And wait 3s
      Then I should see "Are you sure you want to cancel the account test.not.allwed.no.username"
@@ -111,8 +113,9 @@ So that they will be able to use the site.
      Then I should see "Some username"
      When I click "Edit" in the "Some username" row
       And wait
-      And I scroll to bottom
-      And I click "Cancel account"
+      And I click "More actions"
+     Then I should see "Cancel account"
+     When I click "Cancel account"
       And wait
       And wait 3s
      Then I should see "Are you sure you want to cancel the account Some username"
@@ -146,8 +149,9 @@ So that they will be able to use the site.
      Then I should see "email_registration"
      When I click "Edit" in the "email_registration" row
       And wait
-      And I scroll to bottom
-      And I click "Cancel account"
+      And I click "More actions"
+     Then I should see "Cancel account"
+     When I click "Cancel account"
       And wait
       And wait 3s
      Then I should see "Are you sure you want to cancel the account email_registration"
@@ -184,8 +188,9 @@ So that they will be able to use the site.
       And I should not see "email_registration"
      When I click "Edit" in the "Test Account Name" row
       And wait
-      And I scroll to bottom
-      And I click "Cancel account"
+      And I click "More actions"
+     Then I should see "Cancel account"
+     When I click "Cancel account"
       And wait
       And wait 3s
      Then I should see "Are you sure you want to cancel the account Test Account Name?"

@@ -1,7 +1,7 @@
 version: 2.1
 defaults: &defaults
   docker:
-    - image: cimg/base:stable-20.04
+    - image: cimg/base:2022.09
       auth:
         username: mydockerhub-user
         password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -84,37 +84,50 @@ commands:
           name: Install Java
           command: |
             sudo apt update
-            sudo apt install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
+            sudo apt install -y openjdk-11-jdk
 
-      ## Install/Update Google Chrome browser 115.0.5790.110-1 version.
+      ## Install/Update Google Chrome browser.
       - run:
-          name: Install/Update Google Chrome browser 115.0.5790.110-1 version
+          name: Install/Update Google Chrome browser
           command: |
             sudo apt install libu2f-udev
-            sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
-            wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_115.0.5790.110-1_amd64.deb
-            sudo dpkg -i google-chrome-stable_115.0.5790.110-1_amd64.deb
-            rm google-chrome-stable_115.0.5790.110-1_amd64.deb
+            sudo apt-get install libgbm1 libvulkan1 libnss3 libgconf-2-4 libxss1 fonts-liberation libappindicator3-1 libatk-bridge2.0-0 xdg-utils
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome-stable_current_amd64.deb
+            sudo apt-get install -f
+            rm google-chrome-stable_current_amd64.deb
+            sudo chmod +x /usr/bin/google-chrome
+            /usr/bin/google-chrome --version
+            google-chrome --version
 
-      ## Install/Update Chrome Driver 114.0.5735.90 version.
+      ## Install/Update Chrome Driver
       - run:
-          name: Install/Update Chrome Driver 114.0.5735.90 version
+          name: Install/Update Chrome Driver
           command: |
-            CHROME_DRIVER_VERSION=114.0.5735.90;
-            echo $CHROME_DRIVER_VERSION;
-            wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
-            unzip chromedriver_linux64.zip
-            sudo chmod +x chromedriver
-            sudo mv -f chromedriver /usr/bin/
-            rm chromedriver_linux64.zip
+            CHROME_VERSION=$(google-chrome --product-version);
+            echo $CHROME_VERSION;
+            wget https://storage.googleapis.com/chrome-for-testing-public/$CHROME_VERSION/linux64/chromedriver-linux64.zip
+            unzip chromedriver-linux64.zip
+            sudo chmod +x chromedriver-linux64/chromedriver
+            sudo mv -f chromedriver-linux64/chromedriver /usr/bin/
+            rm -rf chromedriver-linux64.zip chromedriver-linux64
+            chromedriver --version
 
-      ## Install/Run Selenium Standalone server 4.6.0 on 4445 port.
+      ## Run Selenium standalone server on the 4445 port.
       - run:
-          name: Install/Run Selenium Standalone server 4.6.0 on 4445 port
+          name: Run Selenium standalone server on the 4445 port.
           command: |
-            wget -O selenium-server.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.6.0/selenium-server-4.6.0.jar
+            wget -O selenium-server.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.22.0/selenium-server-4.22.0.jar
             java -jar selenium-server.jar standalone --port 4445
-          background: true  
+            sleep 30
+          background: true
+
+      ## Check the status of Selenium Standalone server.
+      - run:
+          name: Check the status of Selenium Standalone server.
+          command: |
+            sleep 20
+            curl -s http://127.0.0.1:4445/wd/hub/status 
 
       ## List tools versions.
       - run:
