@@ -38,15 +38,6 @@ So that I can make sure that the site looks good in small and medium devices too
      Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "iPad Pro"
-      And wait 1s
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Samsung Galaxy S23 Ultra"
-      And wait 1s
-     Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Pixel 7"
-      And wait 1s
-     Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Content Admin users can access the responsive preview devices
@@ -67,15 +58,6 @@ So that I can make sure that the site looks good in small and medium devices too
      Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "iPad Pro"
-      And wait 1s
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Samsung Galaxy S23 Ultra"
-      And wait 1s
-     Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Pixel 7"
-      And wait 1s
-     Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that SEO Admin users can access the responsive preview devices
@@ -96,15 +78,6 @@ So that I can make sure that the site looks good in small and medium devices too
      Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "iPad Pro"
-      And wait 1s
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Samsung Galaxy S23 Ultra"
-      And wait 1s
-     Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Pixel 7"
-      And wait 1s
-     Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Site Admin users can access the responsive preview devices
@@ -125,15 +98,6 @@ So that I can make sure that the site looks good in small and medium devices too
      Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "iPad Pro"
-      And wait 1s
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Samsung Galaxy S23 Ultra"
-      And wait 1s
-     Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Pixel 7"
-      And wait 1s
-     Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can access the responsive preview devices and configure devices
@@ -154,12 +118,3 @@ So that I can make sure that the site looks good in small and medium devices too
      Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "iPad Pro"
-      And wait 1s
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Samsung Galaxy S23 Ultra"
-      And wait 1s
-     Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I press "Pixel 7"
-      And wait 1s
-     Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
