@@ -16,33 +16,13 @@ default:
                 SEO admin: { email: 'test.seo_admin@vardot.com', password: 'dD.123123ddd' }
                 Site admin: { email: 'test.site_admin@vardot.com', password: 'dD.123123ddd' }
                 Super admin: { email: 'test.super_admin@vardot.com', password: 'dD.123123ddd' }
-        - VarbaseSelectorsContext:
-           parameters:
-             selectors:
-               ## Add all css selectors which you will use in most features.
-               css:
-                 breadcrumb: ".breadcrumb"
-                 breadcrumb first link: ".breadcrumb li:nth-child(1) a"
-                 image button in rich text editor body field: "#cke_edit-body-und-0-value .cke_button__image"
-
-               ## Add all XPath selectors which you will use in most features.
-               xpath:
-                 page title: '//h1[contains(@class, "page-header")'
-                 textarea for body field: '//*[@id="edit-body-und-0-value"]'
-                 rich text editor for body field: '//iframe[@title="Rich Text Editor, edit-body-und-0-value"]'
-                 HTML editor for body field: '//*[@id="edit-body-und-0-value-aced"]'
-
-             ## You can add list of selectors which you will use in most features.
-             #  But by loading them from files.
-             files_path: "%paths.base%/tests/selectors/"
-             files:
-               - "varbase/front-end-selectors.yml"
-               - "varbase/back-end-selectors.yml"
+        - Drupal\DrupalExtension\Context\ConfigContext
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\DrushContext
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
+        - Drupal\DrupalExtension\Context\RandomContext
   formatters:
     pretty:
       verbose: true
@@ -55,28 +35,26 @@ default:
       output_path: "%paths.base%/tests/reports/"
   extensions:
     Drupal\MinkExtension:
-      ajax_timeout: 60
+      base_url: http://varbase.test
+      browser_name: chrome
+      default_session: selenium2
+      javascript_session: selenium2
+      ajax_timeout: 120
       files_path: "%paths.base%/tests/assets/"
       selenium2:
-        browser: "chrome"
-        wd_host: http://varbase.test:4445/wd/hub
+        browser: chrome
+        wd_host: 'http://127.0.0.1:4445/wd/hub'
         capabilities:
-          browser: 'chrome'
-          nativeEvents: true
-          marionette: true
+          browser: chrome
           browserName: chrome
-          version: "*"
           extra_capabilities:
-            loggingPrefs:
-              performance: ALL
-              browser: ALL
             chromeOptions:
-              w3c: false
+              w3c: true
               args:
                 - "--headless"
                 - "--start-maximized"
-                - "--window-size=1920,1080"
                 - "--disable-gpu"
+                - "--window-size=1600,1200"
                 - "--no-sandbox"
                 - "--disable-dev-shm-usage"
                 - "--disable-setuid-sandbox"
@@ -88,13 +66,10 @@ default:
                 - "--disable-extensions"
                 - "--incognito"
                 - "--disable-infobars"
-                - "--disable-popup-blocking"
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
-      base_url: 'http://varbase.test'
-      browser_name: 'chrome'
-      javascript_session: selenium2
+                - "--allow-insecure-localhost"
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal' 

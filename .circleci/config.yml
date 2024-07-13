@@ -1,14 +1,14 @@
 version: 2.1
 defaults: &defaults
   docker:
-    - image: cimg/base:stable-20.04
+    - image: cimg/base:2022.09
       auth:
         username: mydockerhub-user
-        password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-    - image: circleci/mysql:8.0.23
+        password: $DOCKERHUB_PASSWORD
+    - image: cimg/mysql:8.0
       auth:
         username: mydockerhub-user
-        password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+        password: $DOCKERHUB_PASSWORD
       entrypoint: 
         [
           "docker-entrypoint.sh",
@@ -23,30 +23,28 @@ defaults: &defaults
 commands:
   varbase-build:
     steps:
-      - checkout         
-      ## Usefull must have utils.
+      - checkout
       - run:
           name: Usefull must have utils
           command: |
             sudo apt -qq update
-            sudo apt install docker-buildx-plugin
+            sudo apt -qqy install docker-buildx-plugin
             sudo apt -qqy upgrade
-            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++ make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev mysql-client default-mysql-client
-            sudo apt -yqq install xvfb libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 libnss3
-      ## Configure and run the virtual display.
-      - run:
-          name: Configure and run the virtual display.
-          command: Xvfb -ac :99 -screen 0 1920x1080x24 > /dev/null 2>&1
-          background: true
-
-      ## Setup Apache2 and PHP8.3
+            sudo apt -yqq install vim links lynx git diffutils htop curl wget p7zip-full unzip zip sed gcc g++
+            sudo apt -yqq install make libfreetype6-dev libaio1 libaio-dev libonig-dev libpng-dev mysql-client default-mysql-client xvfb
+            sudo apt -yqq install gtk2-engines-pixbuf xserver-xorg-core xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable
+            sudo apt -yqq install libxpm4 libgtk2.0-0 imagemagick dbus-x11 x11-apps libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3
+            sudo apt -yqq install libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0
+            sudo apt -yqq install libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6
+            sudo apt -yqq install libxrandr2 libxrender1 libxss1 libxtst6 libnss3 libu2f-udev libgbm1 libvulkan1 fonts-liberation libappindicator3-1
+            sudo apt -yqq install libatk-bridge2.0-0 xdg-utils gnupg2 apt-transport-https ca-certificates
       - run:
           name: Setup Apache2 and PHP8.3
           command: |
             sudo add-apt-repository ppa:ondrej/php -y
             sudo apt update
             sudo apt upgrade
-            sudo apt install -yqq apache2 php8.3 libapache2-mod-php8.3 php8.3-mbstring php8.3-mysql php8.3-xml php8.3-cgi php8.3-cli php8.3-common php8.3-curl php8.3-gd php8.3-imap php8.3-intl php8.3-pspell php8.3-sqlite3 php8.3-tidy php8.3-opcache php8.3-yaml php8.3-bz2 php8.3-readline php8.3-xmlrpc php8.3-enchant php8.3-xsl php8.3-zip php8.3-bcmath php-pear
+            sudo apt -yqq install apache2 php8.3 libapache2-mod-php8.3 php8.3-mbstring php8.3-mysql php8.3-xml php8.3-cgi php8.3-cli php8.3-common php8.3-curl php8.3-gd php8.3-imap php8.3-intl php8.3-pspell php8.3-sqlite3 php8.3-tidy php8.3-opcache php8.3-yaml php8.3-bz2 php8.3-readline php8.3-xmlrpc php8.3-enchant php8.3-xsl php8.3-zip php8.3-bcmath php-pear
             sudo a2enmod php8.3
             sudo a2enmod headers rewrite env mime expires ssl
             sudo update-alternatives --set php /usr/bin/php8.3
@@ -59,8 +57,6 @@ commands:
             echo -e "upload_max_filesize = 32M" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
             echo -e "max_file_uploads = 40" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
             sudo service apache2 restart
-  
-      ## Waiting for MySQL to be ready.
       - run:
           name: Waiting for MySQL to be ready
           command: |
@@ -71,46 +67,56 @@ commands:
               sleep 1
             done
             echo Failed waiting for MySQL && exit 1
-
-      ## Install composer ~2
       - run:
-          name: Install composer ~2
+          name: Start D-Bus
+          command: sudo service dbus start
+      - run:
+          name: Configure and run the virtual display.
           command: |
-            sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
-            composer config -g github-oauth.github.com $GITHUB_TOKEN
-
-      ## Install Java.
+            export DISPLAY=:99
+            Xvfb -ac :99 -screen 0 1600x1200x24 > /dev/null 2>&1
+          background: true
+      - run:
+          name: Install/Update Google Chrome browser
+          command: |
+            sudo apt install libu2f-udev
+            sudo apt-get install libgbm1 libvulkan1 libnss3 libgconf-2-4 libxss1 fonts-liberation libappindicator3-1 libatk-bridge2.0-0 xdg-utils libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome-stable_current_amd64.deb
+            sudo apt-get install -f
+            rm google-chrome-stable_current_amd64.deb
+            sudo chmod +x /usr/bin/google-chrome
+            /usr/bin/google-chrome --version
+            google-chrome --version
+      - run:
+          name: Install/Update Chrome Driver
+          command: |
+            CHROME_VERSION=$(google-chrome --product-version);
+            echo $CHROME_VERSION;
+            wget https://storage.googleapis.com/chrome-for-testing-public/$CHROME_VERSION/linux64/chromedriver-linux64.zip
+            unzip chromedriver-linux64.zip
+            sudo chmod +x chromedriver-linux64/chromedriver
+            sudo mv -f chromedriver-linux64/chromedriver /usr/bin/
+            rm -rf chromedriver-linux64.zip chromedriver-linux64
+            chromedriver --version
       - run:
           name: Install Java
           command: |
             sudo apt update
             sudo apt install -y openjdk-11-jre openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jdk-headless
-
-      ## Install/Update Google Chrome browser 115.0.5790.110-1 version.
       - run:
-          name: Install/Update Google Chrome browser 115.0.5790.110-1 version
+          name: Run Selenium Standalone server
           command: |
-            sudo apt install libu2f-udev
-            sudo apt-get install libappindicator1 fonts-liberation libgbm1 libgtk-3-0 xdg-utils
-            export CHROME_BIN=/usr/bin/google-chrome
-            wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_115.0.5790.110-1_amd64.deb
-            sudo dpkg -i google-chrome-stable_115.0.5790.110-1_amd64.deb
-            sudo apt-get install -f
-            export CHROME_BIN=/usr/bin/google-chrome
-            rm google-chrome-stable_115.0.5790.110-1_amd64.deb
-            google-chrome --version
-
-      ## Install/Update Chrome Driver 114.0.5735.90 version.
+            export DISPLAY=:99
+            if [[ ! -f /home/circleci/selenium-server-4.4.0.jar ]]; then wget -O /home/circleci/selenium-server-4.4.0.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.4.0/selenium-server-4.4.0.jar; fi
+            cd /home/circleci/
+            java -jar selenium-server-4.4.0.jar standalone --port 4445
+          background: true
       - run:
-          name: Install/Update Chrome Driver 114.0.5735.90 version
+          name: Install composer ~2
           command: |
-            wget http://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
-            unzip chromedriver_linux64.zip
-            sudo chmod +x chromedriver
-            sudo mv -f chromedriver /usr/bin/
-            rm chromedriver_linux64.zip
-
-      ## List tools versions.
+            sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
+            composer config -g github-oauth.github.com $GITHUB_TOKEN
       - run:
           name: List tools versions
           command: |
@@ -123,8 +129,6 @@ commands:
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
-
-      ## Build Varbase with the composer.
       - run:
           name: Build Varbase with the composer
           command: |
@@ -142,7 +146,7 @@ commands:
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer require cweagans/composer-patches:~1 --no-update
-            composer require vardot/varbase-patches:~9.2.0 --no-update
+            composer require vardot/varbase-patches:9.2.x-dev --no-update
             composer require drupal/core-composer-scaffold:~10 --no-update
             composer install --no-interaction -vvv
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/varbase
@@ -167,8 +171,6 @@ commands:
             cd /var/www/html/test/varbase
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-
-      ## Point varbase.test at /var/www/html/test/varbase/docroot
       - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
           command: |
@@ -177,8 +179,6 @@ commands:
             sudo a2ensite varbase.test
             echo 127.0.0.1 varbase.test | sudo tee -a /etc/hosts
             sudo service apache2 restart
-
-      ## Install Varbase with drush.
       - run:
           name: Install Varbase with drush
           command: |
@@ -200,23 +200,11 @@ commands:
             ../bin/drush pm:enable varbase_update_helper --yes
             ../bin/drush pm:enable editoria11y --yes
             ../bin/drush cache:rebuild
-
-      ## Install/Run Selenium Standalone server 4.12.0 on 4445 port.
-      - run:
-          name: Install/Run Selenium Standalone server 4.12.0 on 4445 port
-          command: |
-            wget -O selenium-server.jar https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.12.0/selenium-server-4.12.0.jar
-            java -jar selenium-server standalone --port 4445 --selenium-manager true --detect-drivers true --enable-managed-downloads true
-          background: true
-
-      ## Add testing users.
       - run:
           name: Add testing users.
           command: |
             cd /var/www/html/test/varbase/docroot/profiles/varbase/scripts
             bash add-testing-users.sh
-
-      ## Import and Update local RTL language
       - run:
           name: Import and Update local RTL language
           shell: /bin/bash
@@ -225,8 +213,6 @@ commands:
             ../bin/drush locale-import ar --autocreate-language profiles/varbase/translations/ar.po
             ../bin/drush locale-update --langcodes=ar
             ../bin/drush cr
-
-      ## Uninstall Antibot module to let the selenium bot work  
       - run:
           name: Uninstall Antibot module to let the selenium bot work 
           shell: /bin/bash
@@ -240,7 +226,6 @@ jobs:
     <<: *defaults
     steps:
       - varbase-build
-       ## Automated Functional Acceptance Testing group - 01 website base requirements
       - run:
           name: Automated Functional Acceptance Testing group - 01 website base requirements
           no_output_timeout: 30m
@@ -251,7 +236,6 @@ jobs:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 02 user management
       - run:
           name: Automated Functional Acceptance Testing group - 02 user management
           no_output_timeout: 30m
@@ -262,7 +246,6 @@ jobs:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 03 admin management
       - run:
           name: Automated Functional Acceptance Testing group - 03 admin management
           no_output_timeout: 30m
@@ -273,7 +256,6 @@ jobs:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 04 content structure
       - run:
           name: Automated Functional Acceptance Testing group - 04 content structure
           no_output_timeout: 30m
@@ -284,7 +266,6 @@ jobs:
     <<: *defaults
     steps:
       - varbase-build
-      ## Automated Functional Acceptance Testing group - 05 content-management
       - run:
           name: Automated Functional Acceptance Testing group - 05 content-management
           no_output_timeout: 30m
