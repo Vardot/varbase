@@ -16,11 +16,13 @@ default:
                 SEO admin: { email: 'test.seo_admin@vardot.com', password: 'dD.123123ddd' }
                 Site admin: { email: 'test.site_admin@vardot.com', password: 'dD.123123ddd' }
                 Super admin: { email: 'test.super_admin@vardot.com', password: 'dD.123123ddd' }
+        - Drupal\DrupalExtension\Context\ConfigContext
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\DrushContext
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
+        - Drupal\DrupalExtension\Context\RandomContext
   formatters:
     pretty:
       verbose: true
@@ -33,27 +35,26 @@ default:
       output_path: "%paths.base%/tests/reports/"
   extensions:
     Drupal\MinkExtension:
-      ajax_timeout: 60
+      base_url: http://varbase.test
+      browser_name: chrome
+      default_session: selenium2
+      javascript_session: selenium2
+      ajax_timeout: 120
       files_path: "%paths.base%/tests/assets/"
       selenium2:
-        wd_host: 127.0.0.1:4445/wd/hub
+        browser: chrome
+        wd_host: 'http://127.0.0.1:4445/wd/hub'
         capabilities:
-          browser: 'chrome'
-          nativeEvents: true
-          marionette: true
+          browser: chrome
           browserName: chrome
-          version: "*"
           extra_capabilities:
-            loggingPrefs:
-              performance: ALL
-              browser: ALL
             chromeOptions:
-              w3c: false
+              w3c: true
               args:
                 - "--headless"
                 - "--start-maximized"
-                - "--window-size=1920,1080"
                 - "--disable-gpu"
+                - "--window-size=1600,1200"
                 - "--no-sandbox"
                 - "--disable-dev-shm-usage"
                 - "--disable-setuid-sandbox"
@@ -65,13 +66,10 @@ default:
                 - "--disable-extensions"
                 - "--incognito"
                 - "--disable-infobars"
-                - "--disable-popup-blocking"
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"
-      base_url: 'http://varbase.test'
-      browser_name: 'chrome'
-      javascript_session: selenium2
+                - "--allow-insecure-localhost"
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal' 
