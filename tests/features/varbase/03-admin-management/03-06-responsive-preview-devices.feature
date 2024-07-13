@@ -6,25 +6,25 @@ So that I can make sure that the site looks good in small and medium devices too
   @javascript @check @local @development @staging @production
   Scenario: Check that an anonymous users can not access the responsive preview devices
     Given I am an anonymous user
-     When I go to the homepage
+     When I go to "contact-us"
       And wait
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should see "Contact Us"
       And I should not see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that an authenticated user can not access the responsive preview devices
     Given I am a logged in user with the "Normal user" user
-     When I go to the homepage
+     When I go to "contact-us"
       And wait
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should see "Contact Us"
       And I should not see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Editor users can access the responsive preview devices
     Given I am a logged in user with the "Editor" user
-     When I go to the homepage
+     When I go to "contact-us"
       And wait
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should see "Contact Us"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone 15"
@@ -39,18 +39,21 @@ So that I can make sure that the site looks good in small and medium devices too
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPad Pro"
+      And wait 1s
      Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Samsung Galaxy S23 Ultra"
+      And wait 1s
      Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Pixel 7"
+      And wait 1s
      Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Content Admin users can access the responsive preview devices
     Given I am a logged in user with the "Content admin" user
-     When I go to the homepage
+     When I go to "contact-us"
       And wait
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should see "Contact Us"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone 15"
@@ -65,18 +68,21 @@ So that I can make sure that the site looks good in small and medium devices too
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPad Pro"
+      And wait 1s
      Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Samsung Galaxy S23 Ultra"
+      And wait 1s
      Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Pixel 7"
+      And wait 1s
      Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that SEO Admin users can access the responsive preview devices
     Given I am a logged in user with the "SEO admin" user
-     When I go to the homepage
+     When I go to "contact-us"
       And wait
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should see "Contact Us"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone 15"
@@ -91,18 +97,21 @@ So that I can make sure that the site looks good in small and medium devices too
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPad Pro"
+      And wait 1s
      Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Samsung Galaxy S23 Ultra"
+      And wait 1s
      Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Pixel 7"
+      And wait 1s
      Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Site Admin users can access the responsive preview devices
     Given I am a logged in user with the "Site admin" user
-     When I go to the homepage
+     When I go to "contact-us"
       And wait
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should see "Contact Us"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone 15"
@@ -117,18 +126,21 @@ So that I can make sure that the site looks good in small and medium devices too
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPad Pro"
+      And wait 1s
      Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Samsung Galaxy S23 Ultra"
+      And wait 1s
      Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Pixel 7"
+      And wait 1s
      Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can access the responsive preview devices and configure devices
     Given I am a logged in user with the "webmaster" user
-     When I go to the homepage
+     When I go to "contact-us"
       And wait
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should see "Contact Us"
       And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
      When I press "Preview page layout"
      Then I should see "iPhone 15"
@@ -143,8 +155,11 @@ So that I can make sure that the site looks good in small and medium devices too
      When I press "iPhone 15 Pro Max"
      Then I should see "iPhone 15 Pro Max" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "iPad Pro"
+      And wait 1s
      Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Samsung Galaxy S23 Ultra"
+      And wait 1s
      Then I should see "Samsung Galaxy S23 Ultra" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
      When I press "Pixel 7"
+      And wait 1s
      Then I should see "Pixel 7" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"

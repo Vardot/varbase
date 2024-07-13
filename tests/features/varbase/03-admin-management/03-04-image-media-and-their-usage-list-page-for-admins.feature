@@ -66,6 +66,7 @@ So that I will be able to manage files, see where they have been used in content
       And wait
      Then I should see "Flag Earth after edit"
      When I click "More actions"
+      And wait 1s
      Then I should see "Delete"
      When I click "edit-delete"
       And wait

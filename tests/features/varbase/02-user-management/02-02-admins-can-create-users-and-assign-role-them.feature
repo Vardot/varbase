@@ -41,6 +41,7 @@ So that they will be able to use the site.
      When I click "Edit" in the "tester" row
       And wait
       And I click "More actions"
+      And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
       And wait
@@ -78,6 +79,7 @@ So that they will be able to use the site.
      When I click "Edit" in the "test.not.allwed.no.username" row
       And wait
       And I click "More actions"
+      And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
       And wait
@@ -114,6 +116,7 @@ So that they will be able to use the site.
      When I click "Edit" in the "Some username" row
       And wait
       And I click "More actions"
+      And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
       And wait
@@ -150,6 +153,7 @@ So that they will be able to use the site.
      When I click "Edit" in the "email_registration" row
       And wait
       And I click "More actions"
+      And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
       And wait
@@ -189,6 +193,7 @@ So that they will be able to use the site.
      When I click "Edit" in the "Test Account Name" row
       And wait
       And I click "More actions"
+      And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
       And wait
