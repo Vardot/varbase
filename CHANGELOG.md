@@ -1,3 +1,192 @@
+# 10.0.0
+
+### Highlighted important changes since Varbase 10.0.0-rc3:
+* Issue [#3458615](https://www.drupal.org/i/3458615):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Profile** version requirements
+* Issue [#3451094](https://www.drupal.org/i/3451094):
+         Switched from **Drimage** to **Drimage Improved** in **Varbase Media**
+* Issue [#3458473](https://www.drupal.org/i/3458473):
+         Added **Project Browser** module to **Varbase Core**
+* Issue [#3448085](https://www.drupal.org/i/3448085)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Added **Gin Type Tray** module to **Varbase Admin** and enable it by default
+* Issue [#3322829](https://www.drupal.org/i/3322829)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        , [abu-zakham](https://www.drupal.org/u/abu-zakham)
+        , [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Added Hide action to the section actions
+* Issue [#3409288](https://www.drupal.org/i/3409288)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        , [Rahaf Albawab](https://www.drupal.org/u/rahaf-albawab)
+        : Added the **Layout Builder Advanced Permissions** module and enable it by default
+* Issue [#3448429](https://www.drupal.org/i/3448429)
+         by [abu-zakham](https://www.drupal.org/u/abu-zakham)
+        : Added `varbase:composer:cleanup:patches` **drush command** to
+         clean up `composer.json` from any merge request patches
+
+### Changed since Varbase 10.0.0-rc3:
+* Issue [#3453714](https://www.drupal.org/i/3453714):
+         Switched `metadata.schema.json` in **Varbase Components** from `10.2.x`
+         to **HEAD** as in **Drupal core** `10.3.x` assets schemas v1
+* Issue [#3437227](https://www.drupal.org/i/3437227):
+         Switched to a local patching system and `cweagans/composer-patches` `~2`
+         within **Varbase Commerce**
+* Issue [#3456007](https://www.drupal.org/i/3456007):
+         Changed Call to deprecated function openssl_pkey_free() in **PHP ~8**
+* Issue [#3450607](https://www.drupal.org/i/3450607):
+         Removed the **Layout Builder Restrictions** module from **Varbase Core**
+         as it was moved to **Varbase Layout Builder**
+* Issue [#3451924](https://www.drupal.org/i/3451924):
+         Switched from **Drimage** to **Drimage Improved** in **Varbase Core**
+* Issue [#3451135](https://www.drupal.org/i/3451135):
+         Switched from **Drimage** to **Drimage Improved** in **Varbase Components**
+* Issue [#3451190](https://www.drupal.org/i/3451190):
+         Switched from **Drimage** to **Drimage Improved** in **Varbase Heroslider**
+* Issue [#3451203](https://www.drupal.org/i/3451203):
+         Switched from **Drimage** to **Drimage Improved** in **Varbase Media Hero Slider**
+* Issue [#3451213](https://www.drupal.org/i/3451213):
+         Switched from **Drimage** to **Drimage Improved** in **Varbase Media Header**
+* Issue [#3451915](https://www.drupal.org/i/3451915):
+         Switched from **Drimage** to **Drimage Improved** in **Varbase Bootstrap Paragraphs**
+* Issue [#3459779](https://www.drupal.org/i/3459779):
+         **Reverted**: moving the delete action button as a gin action item and kept
+         in the more actions with Default Gin provided behaviour API for sticky form actions
+
+### Updates since Varbase 10.0.0-rc3:
+* Issue [#3456041](https://www.drupal.org/i/3456041):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Core** version requirements
+* Issue [#3456578](https://www.drupal.org/i/3456578):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Components** version requirements
+* Issue [#3457305](https://www.drupal.org/i/3457305):
+         Update **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Media** version requirements
+* Issue [#3457062](https://www.drupal.org/i/3457062):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Editor** version requirements
+* Issue [#3456799](https://www.drupal.org/i/3456799):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Demo** version requirements
+* Issue [#3456832](https://www.drupal.org/i/3456832):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Media Demo** Assets version requirements
+* Issue [#3458264](https://www.drupal.org/i/3458264):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Layout Builder** version requirements
+* Issue [#3458158](https://www.drupal.org/i/3458158):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Media Hero Slider** version requirements
+* Issue [#3458150](https://www.drupal.org/i/3458150):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in Varbase Workflow version requirements
+* Issue [#3458094](https://www.drupal.org/i/3458094):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Social Single Sign-On** version requirements
+* Issue [#3457641](https://www.drupal.org/i/3457641):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in Varbase SEO version requirements
+* Issue [#3457604](https://www.drupal.org/i/3457604):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Search** version requirements
+* Issue [#3456545](https://www.drupal.org/i/3456545):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Bootstrap Paragraphs** version requirements
+* Issue [#3455968](https://www.drupal.org/i/3455968):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase API** version requirements
+* Issue [#3458154](https://www.drupal.org/i/3458154):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **View Modes Inventory - Bootstrap Ready** version requirements
+* Issue [#3457374](https://www.drupal.org/i/3457374):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Media Header** version requirements
+* Issue [#3457232](https://www.drupal.org/i/3457232):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase FAQs** version requirements
+* Issue [#3457083](https://www.drupal.org/i/3457083):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Email** version requirements
+* Issue [#3456747](https://www.drupal.org/i/3456747):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Dashboards** version requirements
+* Issue [#3456539](https://www.drupal.org/i/3456539):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Blog (Corporate Blog)** version requirements
+* Issue [#3455962](https://www.drupal.org/i/3455962):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase AI** version requirements
+* Issue [#3454406](https://www.drupal.org/i/3454406):
+         Updated **MaxLength** module from `~2` to `~2 || ~3` in **Varbase Landing Page (Paragraphs)**
+         to allow a smoother update process
+* Issue [#3456569](https://www.drupal.org/i/3456569):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Commerce (Merchandise)** version requirements
+* Issue [#3456554](https://www.drupal.org/i/3456554):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Varbase Carousels** version requirements
+* Issue [#3458143](https://www.drupal.org/i/3458143):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` with support for recipes
+         in **Vartheme BS5** version requirements
+* Issue [#3456503](https://www.drupal.org/i/3456503):
+         Updated **Drupal Core** to `~10.3.0` and `~11.0.0` and drop support for `~9.5.0` in **Vartheme Claro** version requirements
+* Issue [#3454390](https://www.drupal.org/i/3454390):
+         Updated **MaxLength** module from `~2` to `~2 || ~3` in Varbase Core to allow
+         a smoother update process
+* Issue [#3454398](https://www.drupal.org/i/3454398):
+         Updated **MaxLength** module from `~2` to `~2 || ~3` in **Varbase Media Hero Slider**
+         to allow a smoother update process
+* Issue [#3454394](https://www.drupal.org/i/3454394):
+         Updated **MaxLength** module from `~2` to `~2 || ~3` in **Varbase Medi** to allow a smoother update process
+* Issue [#3457236](https://www.drupal.org/i/3457236):
+         Updated **MaxLength** module from `~2` to `~2 || ~3` in **Varbase FAQs** to allow a smoother update process
+* Issue [#3454402](https://www.drupal.org/i/3454402):
+         Updated **MaxLength** module from `~2` to `~2 || ~3` in **Varbase Heroslider** to allow a smoother update process
+* Issue [#3454403](https://www.drupal.org/i/3454403):
+         Updated **MaxLength** module from `~2` to `~2 || ~3` in **Varbase Bootstrap Paragraphs** to allow a smoother update process
+* Issue [#3454451](https://www.drupal.org/i/3454451):
+         Updated **ImageMagick** module from `~3` to `~3 || ~4` to allow for a smoother update process
+* Issue [#3450589](https://www.drupal.org/i/3450589):
+         Updated **Layout Builder Restrictions** module from `~2` to `~2 || ~3` for a smoother update process
+* Issue [#3458849](https://www.drupal.org/i/3458849):
+         Updated the `npm-asset/northernco--ckeditor5-anchor-drupal` library from `^0.4.0` to `^0.5.0`
+
+### Fixes since Varbase 10.0.0-rc3:
+* Issue [#3454204](https://www.drupal.org/i/3454204)
+         by [Ahmad Abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed to limit Entity embed dialog alter from altering all entity types or bundle type
+* Issue [#3457568](https://www.drupal.org/i/3457568):
+         Fixed implicitly nullable type declarations in Varbase Media
+* Issue [#3447162](https://www.drupal.org/i/3447162)
+         by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed Update aborted by: `varbase_core_update_90006`
+* Issue [#3456558](https://www.drupal.org/i/3456558):
+         Fixed implicitly nullable type declarations in **Varbase Bootstrap Paragraphs**
+* Issue [#3456016](https://www.drupal.org/i/3456016):
+         Fixed implicitly nullable type declarations in **Varbase API**
+* Issue [#3447559](https://www.drupal.org/i/3447559)
+         by [Redwan Jamous](https://www.drupal.org/u/redwan-jamous)
+        : Fixed admin theme library not attached for entity types other than node
+* Issue [#3444384](https://www.drupal.org/i/3444384)
+         by [Andrew Answer](https://www.drupal.org/u/andrew-answer)
+        , [VVS](https://www.drupal.org/u/vvs)
+        : Fixed mismatched **Varbase Components** types with **Drupal** `10.2.5/10.2.6`
+* Issue [#3418152](https://www.drupal.org/i/3418152)
+         by [Andrew Answer](https://www.drupal.org/u/andrew-answer)
+        , [VVS](https://www.drupal.org/u/vvs)
+        : Fixed Malformed changes for the Pagination ( the pager ) to follow with
+         **Varbase Design System**
+* Issue [#3418152](https://www.drupal.org/i/3418152)
+         by [Andrew Answer](https://www.drupal.org/u/andrew-answer)
+        , [VVS](https://www.drupal.org/u/vvs)
+        : Fixed Malformed changes for the Pagination ( the pager ) to follow with **Varbase Design System**
+* Issue [#3459076](https://www.drupal.org/i/3459076):
+        Fixed regression for the moderation state element in **Action buttons in sticky header**,
+         which **Gin provided a new API** for sticky form actions
+
+-------------------------------------------------------------------------------
+
 # 10.0.0-rc3
 
 Highlighted important changes since Varbase 10.0.0-rc2:
