@@ -74,7 +74,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I click "Add block in Section 2, Col 1 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -91,7 +91,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      When I click "Add block in Section 2, Col 2 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -148,7 +148,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I click "Add block in Section 3, Col 1 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -165,7 +165,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      Then I click "Add block in Section 3, Col 2 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -182,7 +182,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      Then I click "Add block in Section 3, Col 3 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -241,7 +241,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I click "Add block in Section 4, Col 1 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -258,7 +258,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I click "Add block in Section 4, Col 2 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -275,7 +275,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      Then I click "Add block in Section 4, Col 3 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -292,7 +292,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      Then I click "Add block in Section 4, Col 4 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -354,7 +354,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      When I click "Add block in Section 5, Col 1 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -371,7 +371,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      Then I click "Add block in Section 5, Col 2 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -388,7 +388,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
 
      Then I click "Add block in Section 5, Col 3 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -405,7 +405,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      Then I click "Add block in Section 5, Col 4 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -422,7 +422,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      Then I click "Add block in Section 5, Col 5 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
@@ -439,7 +439,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
   
      When I click "Add block in Section 5, Col 6 region"
       And I wait for AJAX to finish
-      And I wait 4s
+      And I wait 5s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
