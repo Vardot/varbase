@@ -4,25 +4,6 @@ I want to be able to add any paragraph type to the page
 So that the Landing page (Paragraphs) will show up having paragrpahs of different types
 
   @javascript @local @development @staging @production
-  Scenario: Upload the "Embed Flag Earth" file
-     Given I am a logged in user with the "Site admin" user
-      When I go to "/media/add/image"
-       And wait
-      Then I should see "Allowed types: png gif jpg jpeg webp."
-      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
-       And wait
-       And I press the "Save" button
-       And wait
-       And I fill in "Embed Flag Earth in space" for "field_media_image[0][alt]"
-       And I fill in "Embed Flag Earth all earth in space" for "field_media_image[0][title]"
-       And I fill in "Embed Flag Earth" for "name[0][value]"
-       And I check the box "Show in media library"
-       And I press the "Save" button
-       And wait
-      Then I should see "Embed Flag Earth"
-  #-----------------------------------------------------------------------------
-
-  @javascript @local @development @staging @production
   Scenario: Check Varbase Bootstrap Paragraphs settings
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/varbase/varbase-bootstrap-paragraphs"

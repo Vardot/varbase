@@ -57,23 +57,6 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And I should see "JSON:API"
 
   @javascript @local @development @staging @production
-  Scenario: Upload a Media entity test for API
-     Given I am a logged in user with the "Site admin" user
-      When I go to "/media/add/image"
-       And wait
-      Then I should see "Allowed types: png gif jpg jpeg webp."
-      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
-       And wait
-       And I press the "Save" button
-       And wait
-       And I fill in "Media entity test" for "field_media_image[0][alt]"
-       And I fill in "Media entity test" for "field_media_image[0][title]"
-       And I fill in "Media entity test" for "name[0][value]"
-       And I press the "Save" button
-       And wait
-      Then I should see "Media entity test"
-
-  @javascript @local @development @staging @production
   Scenario: Add a term "space" tag term for JSON:API to test.
      Given I am a logged in user with the "Site admin" user
       When I go to "/admin/structure/taxonomy/manage/tags/add"
@@ -102,9 +85,9 @@ So that I can use them to enable or disable API service for Varbase APIs.
      When I go to "/admin/content/media"
       And wait
      Then I should see "Media"
-      And I should see the "View JSON" operation for the "Media entity test" media
-      And I should see the "View API Docs" operation for the "Media entity test" media
-      And I should see the "Edit" operation for the "Media entity test" media
+      And I should see the "View JSON" operation for the "Skyscraper" media
+      And I should see the "View API Docs" operation for the "Skyscraper" media
+      And I should see the "Edit" operation for the "Skyscraper" media
 
      When I go to "/admin/structure/taxonomy/manage/tags/overview"
       And wait
@@ -135,9 +118,9 @@ So that I can use them to enable or disable API service for Varbase APIs.
      When I go to "/admin/content/media"
       And wait
      Then I should see "Media"
-      And I should not see the "View JSON" operation for the "Media entity test" media
-      And I should not see the "View API Docs" operation for the "Media entity test" media
-      But I should see the "Edit" operation for the "Media entity test" media
+      And I should not see the "View JSON" operation for the "Skyscraper" media
+      And I should not see the "View API Docs" operation for the "Skyscraper" media
+      But I should see the "Edit" operation for the "Skyscraper" media
 
      When I go to "/admin/structure/taxonomy/manage/tags/overview"
       And wait
@@ -168,9 +151,9 @@ So that I can use them to enable or disable API service for Varbase APIs.
      When I go to "/admin/content/media"
       And wait
      Then I should see "Media"
-      And I should not see the "View JSON" operation for the "Media entity test" media
-      And I should not see the "View API Docs" operation for the "Media entity test" media
-      But I should see the "Edit" operation for the "Media entity test" media
+      And I should not see the "View JSON" operation for the "Skyscraper" media
+      And I should not see the "View API Docs" operation for the "Skyscraper" media
+      But I should see the "Edit" operation for the "Skyscraper" media
 
      When I go to "/admin/structure/taxonomy/manage/tags/overview"
       And wait

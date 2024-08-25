@@ -3,25 +3,6 @@ As a logged in user with a permission to mange entity queues
 I want to be able to add and remove entities to any allowed entity queue.
 
   @javascript @local @development @staging @production
-  Scenario: Upload the Flag Earth file
-    Given I am a logged in user with the "Site admin" user
-     When I go to "/media/add/image"
-      And wait
-     Then I should see "Allowed types: png gif jpg jpeg webp."
-     When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
-      And wait
-      And I press the "Save" button
-      And wait
-      And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
-      And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
-      And I fill in "Flag Earth" for "name[0][value]"
-      And I check the box "Show in media library"
-      And I press the "Save" button
-      And wait
-     Then I should see "Flag Earth"
-  #-----------------------------------------------------------------------------
-
-  @javascript @local @development @staging @production
   Scenario: Add a Test hero sliders to the heroslider entity queue them remove them
     Given I am a logged in user with the "Super admin" user
 
@@ -34,11 +15,11 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I press "field_media_single-media-library-open-button"
       And I wait for AJAX to finish
      Then I should see "Name"
-     When I fill in "Flag Earth" for "Name"
+     When I fill in "Background Image 2" for "Name"
       And I press the "Apply filters" button
-     Then I should see image with the "Flag Earth all earth in space" title text
+     Then I should see image with the "Background Image 2" title text
       And I wait for AJAX to finish
-     When I check the box "Select Flag Earth"
+     When I check the box "Select Background Image 2"
 		  And I wait for AJAX to finish
 		  And I press "dialog-submit"
 		  And I wait for AJAX to finish
@@ -61,11 +42,11 @@ I want to be able to add and remove entities to any allowed entity queue.
       And I press "field_media_single-media-library-open-button"
       And I wait for AJAX to finish
      Then I should see "Name"
-     When I fill in "Flag Earth" for "Name"
+     When I fill in "SAAS 1" for "Name"
       And I press the "Apply filters" button
-     Then I should see image with the "Flag Earth all earth in space" title text
+     Then I should see image with the "SAAS 1" title text
       And I wait for AJAX to finish
-     When I check the box "Select Flag Earth"
+     When I check the box "Select SAAS 1"
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish
