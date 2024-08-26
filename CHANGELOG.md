@@ -1,3 +1,106 @@
+# 10.0.1
+
+### Highlighted important changes since Varbase 10.0.0:
+Made content creation simpler with new features like fullscreen mode and emojis.
+ Improved styling and enhanced social media sharing,
+  making layout and inline editing smoother and more reliable.
+
+### Added since Varbase 10.0.0:
+* Issue [#3460065](https://www.drupal.org/i/3460065)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Added **CKEditor Plug-in Pack** module and enable the **fullscreen**, **find** and **replace**, **show blocks**, and **wproof reader** plugins
+* Issue [#3462267](https://www.drupal.org/i/3462267)
+         by [Qusai Taha](https://www.drupal.org/u/qusai-taha)
+        : Added **CKEditor(5) Emoji** module to **CKEditor 5** in **Varbase Editor** and enable it by default
+* Issue [#3462276](https://www.drupal.org/i/3462276)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Added a **Root component** as a **Base**, Contains root `CSS3` Bootstrap variables to **Vartheme BS5**
+* Issue [#3461722](https://www.drupal.org/i/3461722)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Added a **Callout component** to function as a **Bootstrap Callout** element
+* Issue [#3462855](https://www.drupal.org/i/3462855)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Added `ckeditor5-styles` library with dependencies from other
+         used components to use it for ckeditor5 styles
+* Issue [#3464179](https://www.drupal.org/i/3464179)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Added a smart [node:share-image] token with option for a
+         fallback URL for node social media tokens when the media field is empty
+* Issue [#3468403](https://www.drupal.org/i/3468403):
+         Added an **automatic inline block title** feature that hides the
+         title field when the `"Display title"` option is unchecked
+
+### Changed since Varbase 10.0.0:
+* Issue [#3466509](https://www.drupal.org/i/3466509)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Changed the list of styles for heading with display, callout,
+         alert and remove leftover **BS3** and **BS4** legacy classes and logic
+         in favour of the new logic in **Bootstrap 5**
+* Issue [#3469016](https://www.drupal.org/i/3469016)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+         : Changed default **global**, **front page**, and 
+        general node metatag configs in Varbase SEO to use the smart `[node:share-image]` token
+* Issue [#3468993](https://www.drupal.org/i/3468993)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Changed default metatag config for **Varbase Blog** content type to use the smart `[node:share-image]` token
+* Issue [#3469120](https://www.drupal.org/i/3469120)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Changed default metatag config in **Varbase Page** for
+         the **Basic page** content type to use the smart `[node:share-image]` token
+* Issue [#3469139](https://www.drupal.org/i/3469139)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Changed default metatag config in **Varbase Layout Builder**
+         for landing page content type to use the smart `[node:share-image]` token
+* Issue [#3469148](https://www.drupal.org/i/3469148)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Changed default **global** metatag config in
+         Varbase Landing for the **Landing page (paragraphs)** content type to use the smart `[node:share-image]` token
+* Issue [#3470134](https://www.drupal.org/i/3470134):
+         Replaced `jquery/fancytree` in the composer with `npm-asset/jquery.fancytree:~2`
+* Issue [#3470129](https://www.drupal.org/i/3470129):
+         Improved **Automated Functional Acceptance Testing** to match with latest
+         changes to Varbase modules and components
+
+### Updates since Varbase 10.0.0:
+* Issue [#3465162](https://www.drupal.org/i/3465162):
+         Updated **Stage File Proxy** module from `~2` to `~3.1.0`
+* Issue [#3467613](https://www.drupal.org/i/3467613):
+         Updated **External Links** module from `~1` to `~2` in **Varbase Editor**
+* Issue [#3467612](https://www.drupal.org/i/3467612):
+         Updated **External Links** module from `~1` to `~2` in **Varbase Core**
+* Issue [#3467591](https://www.drupal.org/i/3467591):
+         Updated **Block Class** module from `~2` to `~3`
+* Issue [#3469400](https://www.drupal.org/i/3469400):
+         Updated **Honeypot** module from `~2` to `~2.1.0` as a **TEMP** step for smoother update process
+
+### Fixes since Varbase 10.0.0:
+* Issue [#3443217](https://www.drupal.org/i/3443217)
+         by [RaniaMashaqbeh](https://www.drupal.org/u/raniamashaqbeh)
+        : Fixed thrown error when adding a background image to a custom block type
+* Issue [#3456935](https://www.drupal.org/i/3456935)
+        by [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed dropdown menu limited to only two levels
+* Issue [#3468733](https://www.drupal.org/i/3468733)
+         by [Ammar_Jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        , [Ahmad Khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed the `start`, `play`, and `pause` events for remote videos when switching slider
+         in **Hero Slider** causing disruptive user experience
+* Issue [#3467445](https://www.drupal.org/i/3467445)
+         by [duntuk](https://www.drupal.org/u/duntuk)
+        : Fixed Theme source theme `vartheme_bs5` is not a valid starter kit when Create new
+         **Vartheme BS5 Cloned Generated Theme**
+* Issue [#3463761](https://www.drupal.org/i/3463761)
+         by [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+        : Fixed missing admin styling options for components in Bootstrap paragraphs
+* Issue [#3463558](https://www.drupal.org/i/3463558)
+         by [Lubna hmeid](https://www.drupal.org/u/lubna-hmeid)
+        : Fixed the styling of the admin editing the **Configure Block Style** tab in the modal dialog
+* Issue [#3470160](https://www.drupal.org/i/3470160):
+         Fixed the exposed date filters widget for Media to use the default settings
+         with Better Exposed Filters in **Drupal 10.3**
+
+-------------------------------------------------------------------------------
+
 # 10.0.0
 
 ### Highlighted important changes since Varbase 10.0.0-rc3:
