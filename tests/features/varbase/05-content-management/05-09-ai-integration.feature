@@ -1,7 +1,7 @@
 Feature: AI Agent integration and interpolation
-As a site and content admin
-I want to be able to use AI Agents
-So that an interpolation to content can be assisted with AI
+      As a site and content admin
+      I want to be able to use AI Agents
+      So that an interpolation to content can be assisted with AI
 
   @javascript @local @development @staging @production
   Scenario: Check OpenAI Settings

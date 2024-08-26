@@ -1,7 +1,7 @@
 Feature: Content Management - Content moderation workflows. Simple workflow, and Editorial workflow
-As a content admin
-I want to be able to manage the workflow of content in simple and editorial workflows
-So that will have an easy publishing workflow with revisions.
+      As a content admin
+      I want to be able to manage the workflow of content in simple and editorial workflows
+      So that will have an easy publishing workflow with revisions.
 
   @javascript @local @development @staging @production
   Scenario: Check Simple workflow on Draft, Published, and Archived and content types

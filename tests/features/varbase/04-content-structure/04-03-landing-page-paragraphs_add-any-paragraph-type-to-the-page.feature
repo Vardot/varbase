@@ -1,7 +1,7 @@
 Feature: Landing page (Paragraphs) - Add any paragraph types to the page
-As a logged in user with a permission to mange Landing pages
-I want to be able to add any paragraph type to the page
-So that the Landing page (Paragraphs) will show up having paragrpahs of different types
+      As a logged in user with a permission to mange Landing pages
+      I want to be able to add any paragraph type to the page
+      So that the Landing page (Paragraphs) will show up having paragrpahs of different types
 
   @javascript @local @development @staging @production
   Scenario: Check Varbase Bootstrap Paragraphs settings

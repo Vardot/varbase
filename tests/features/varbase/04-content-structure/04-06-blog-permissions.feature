@@ -1,6 +1,6 @@
 Feature: Content Structure - Blog post
-As a logged in user with a permission to manage Blogs.
-I want to be able to add a "Blog" 
+      As a logged in user with a permission to manage Blogs.
+      I want to be able to add a "Blog"
 
   @javascript @local @development @staging @production
   Scenario: Check if we do have the Blog content type
@@ -8,7 +8,7 @@ I want to be able to add a "Blog"
      When I go to "/admin/structure/types"
       And wait
      Then I should see "Blog"
-  
+
   @javascript @local @development @staging @production
   Scenario: Check that Anonymous users can not create a Landing page
     Given I am an anonymous user

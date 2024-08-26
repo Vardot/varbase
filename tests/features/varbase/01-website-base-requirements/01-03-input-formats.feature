@@ -1,7 +1,7 @@
 Feature: Content Editing - Rich Text Editor - Input formats
-As a logged in user with a permission to edit content
-I want to be able to switch between input formats
-So that can use different type of rich text editors.
+      As a logged in user with a permission to edit content
+      I want to be able to switch between input formats
+      So that can use different type of rich text editors.
 
   @javascript @local @development @staging @production
   Scenario: Check if Site Admin user can change the text format for the body of Basic page

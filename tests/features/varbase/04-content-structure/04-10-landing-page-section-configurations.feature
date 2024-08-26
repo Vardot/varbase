@@ -1,9 +1,9 @@
 Feature: Content Structure - Change section settings in Landing Pages with Layout Builder
-As a logged in user with a permission to mange Landing (Layout Builder) pages
-I want to be able to add sections with any layouts to the page
-So that a section with different section settings/configurations
+      As a logged in user with a permission to mange Landing (Layout Builder) pages
+      I want to be able to add sections with any layouts to the page
+      So that a section with different section settings/configurations
 
-@javascript  @local @development
+  @javascript  @local @development
   Scenario: Check if a site admin can create a landing page and add sections to it with different container types
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
@@ -62,8 +62,8 @@ So that a section with different section settings/configurations
       And I fill in "Test Rich text in 2 cols section, col 2" for "Title"
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet diam nunc, ac dictum velit tincidunt quis. Integer ut imperdiet dui, sit amet tempus est. Curabitur molestie sem non purus dignissim pulvinar. Pellentesque id sapien consequat"
       And I press the "Add block" button
-      And I wait for AJAX to finish 
-     Then I should see "Test Rich text in 2 cols section, col 2" 
+      And I wait for AJAX to finish
+     Then I should see "Test Rich text in 2 cols section, col 2"
 
      When I scroll to the top of the page
       And I wait 2s

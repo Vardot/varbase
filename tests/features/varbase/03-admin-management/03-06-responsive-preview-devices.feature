@@ -1,7 +1,7 @@
 Feature: Preview the site in a number of responsive devices
-As a site admin
-I want to be able to preview the look and feel of the site in a number of devices
-So that I can make sure that the site looks good in small and medium devices too.
+      As a site admin
+      I want to be able to preview the look and feel of the site in a number of devices
+      So that I can make sure that the site looks good in small and medium devices too.
 
   @javascript @check @local @development @staging @production
   Scenario: Check that an anonymous users can not access the responsive preview devices

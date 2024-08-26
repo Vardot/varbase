@@ -1,7 +1,7 @@
 Feature: Content Structure - Homepage Permissions with Landing Pages with Layout Builder
-As a logged in user with a permission to manage Landing (Layout Builder) pages.
-I want to be able to edit the page layouts sections and blocks
-So that the homepage can be changed with permission in an easy way and be sure it will not deleted.
+      As a logged in user with a permission to manage Landing (Layout Builder) pages.
+      I want to be able to edit the page layouts sections and blocks
+      So that the homepage can be changed with permission in an easy way and be sure it will not deleted.
 
   @javascript @local @development @staging @production
   Scenario: Check that user Number 1 can see and have all options to edit the Homepage which built by the Landing page (Layout Builder)

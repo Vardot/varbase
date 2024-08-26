@@ -1,7 +1,7 @@
 Feature: User Management - Standard User Management - Admins can disable users
-As a site admin user
-I want to be able Block user accounts
-So that they will be disabled and not be able to use the site.
+      As a site admin user
+      I want to be able Block user accounts
+      So that they will be disabled and not be able to use the site.
 
   @javascript @local @development @staging @production
   Scenario: Check if the Normal user user is not blocked and can login

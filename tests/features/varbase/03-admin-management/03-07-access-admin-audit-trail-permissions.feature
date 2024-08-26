@@ -1,7 +1,7 @@
 Feature: User Management - Standard User Management - Users with permission to access the Admin audit trails
-As a logged in site admin or editor with permission to access the Admin audit trails
-I will be able to trails of actions on the site by the same user and or users
-So that only users with permission can see trails of audit changes on the website
+      As a logged in site admin or editor with permission to access the Admin audit trails
+      I will be able to trails of actions on the site by the same user and or users
+      So that only users with permission can see trails of audit changes on the website
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can access the Admin audit trails

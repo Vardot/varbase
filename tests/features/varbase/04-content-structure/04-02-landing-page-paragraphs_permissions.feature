@@ -1,7 +1,7 @@
 Feature: Content Structure - Landing page (Paragraphs)
-As a logged in user with a permission to manage Landing page (Paragraphs).
-I want to be able to add a "Landing page" which has got predefined set of paragrphs
-So that the "Landing page (Paragraphs)" will show up in the structured menu under its parent page
+      As a logged in user with a permission to manage Landing page (Paragraphs).
+      I want to be able to add a "Landing page" which has got predefined set of paragrphs
+      So that the "Landing page (Paragraphs)" will show up in the structured menu under its parent page
 
   @javascript @local @development @staging @production
   Scenario: Check if we do have the Landing page (Paragraphs) content type
@@ -15,7 +15,7 @@ So that the "Landing page (Paragraphs)" will show up in the structured menu unde
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/structure/types/manage/landing_page/fields"
       And wait
-      Then I should see "field_lp_paragraphs"
+     Then I should see "field_lp_paragraphs"
 
   @javascript @local @development @staging @production
   Scenario: Check that an Anonymous users can not create a Landing page (Paragraphs)

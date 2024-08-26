@@ -1,7 +1,7 @@
 Feature: User Management - Standard User Management - Admins can create users and assign a role to them
-As a site admin user
-I want to be able to create new user accounts and assign roles to them
-So that they will be able to use the site.
+      As a site admin user
+      I want to be able to create new user accounts and assign roles to them
+      So that they will be able to use the site.
 
   @javascript @local @development @staging @production
   Scenario: Check if admins can see all parts and filters in the People administration page

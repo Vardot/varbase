@@ -1,7 +1,7 @@
 Feature: User Management - Standard User Management - Users with permission to assign roles may select which roles are available for assignment
-As a logged in site admin and a permission to Assign roles
-I will be able to assign roles to other users.
-So that only users with permission to assign roles may select which roles are available for assignment
+      As a logged in site admin and a permission to Assign roles
+      I will be able to assign roles to other users.
+      So that only users with permission to assign roles may select which roles are available for assignment
 
   @javascript @check @local @development @staging @production
   Scenario: Check the Role Assign configuration

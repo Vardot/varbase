@@ -1,7 +1,7 @@
 Feature: Admin management - Standard User Management - Users with permission to bulk upload media
-As a logged in user with permission to use media bulk upload bulk upload form
-I will be able to bulk upload media
-So that large number of asset files can be uploaded at onces
+      As a logged in user with permission to use media bulk upload bulk upload form
+      I will be able to bulk upload media
+      So that large number of asset files can be uploaded at onces
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can bulk upload media

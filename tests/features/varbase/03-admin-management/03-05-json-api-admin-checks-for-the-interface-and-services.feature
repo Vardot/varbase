@@ -1,7 +1,7 @@
 Feature: Check JSON API admin interface and services and Varbase API settings
-As a site admin user
-I want to be able to check the JSON:API available interface options
-So that I can use them to enable or disable API service for Varbase APIs.
+      As a site admin user
+      I want to be able to check the JSON:API available interface options
+      So that I can use them to enable or disable API service for Varbase APIs.
 
   @javascript @check @local @development @staging @production
   Scenario: Check the Varbase API settings in admin configurations page
@@ -58,18 +58,18 @@ So that I can use them to enable or disable API service for Varbase APIs.
 
   @javascript @local @development @staging @production
   Scenario: Add a term "space" tag term for JSON:API to test.
-     Given I am a logged in user with the "Site admin" user
-      When I go to "/admin/structure/taxonomy/manage/tags/add"
-       And wait
-      Then I should see "Add term"
-      When I fill in "space" for "Name"
-       And I press the "Save" button
-       And wait
-       And I go to "/admin/structure/taxonomy/manage/tags/overview"
-      Then I should see "Tags"
-       And I should see "space"
+    Given I am a logged in user with the "Site admin" user
+     When I go to "/admin/structure/taxonomy/manage/tags/add"
+      And wait
+     Then I should see "Add term"
+     When I fill in "space" for "Name"
+      And I press the "Save" button
+      And wait
+      And I go to "/admin/structure/taxonomy/manage/tags/overview"
+     Then I should see "Tags"
+      And I should see "space"
 
- @javascript @check @local @development @staging @production
+  @javascript @check @local @development @staging @production
   Scenario: Check that Site Admin users can access "View JSON" and "View API Docs" entity operations
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content"
@@ -102,7 +102,7 @@ So that I can use them to enable or disable API service for Varbase APIs.
       And I should not see the "View JSON" operation for the "Hero Slider" entity
       And I should not see the "View API Docs" operation for the "Hero Slider" entity
       But I should not see the "Edit items" operation for the "Hero Slider" entity
-      
+
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Content Admin users can not access "View JSON" and "View API Docs" entity operations

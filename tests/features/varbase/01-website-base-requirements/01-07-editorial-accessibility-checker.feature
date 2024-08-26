@@ -1,7 +1,7 @@
 Feature: Accessibility - Use the automatically Editorial Accessibility Checker tool
-As a logged in site admin or editor with permission to access the a11y checker tools
-I will be able to use the tool to automatically identifying and addressing straightforward accessibility issues in various contexts.
-So that only users with permission can see and use the tool
+      As a logged in site admin or editor with permission to access the a11y checker tools
+      I will be able to use the tool to automatically identifying and addressing straightforward accessibility issues in various contexts.
+      So that only users with permission can see and use the tool
 
   @javascript @check @local @development @staging @production
   Scenario: Check that an anonymous users can not access the Editorial Accessibility Checker
@@ -121,7 +121,7 @@ So that only users with permission can see and use the tool
      Then I should see "Dismissed accessibility alerts"
 
   @javascript @check @local @development @staging @production
-  Scenario: Check that Content Admin users can view the dashboard for accessibility checked results  
+  Scenario: Check that Content Admin users can view the dashboard for accessibility checked results
     Given I am a logged in user with the "Content admin" user
      When I go to "/admin/config/content/editoria11y"
       And wait

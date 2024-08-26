@@ -1,7 +1,7 @@
 Feature: Content Structure - Landing Pages with Layout Builder
-As a logged in user with a permission to manage Landing (Layout Builder) pages.
-I want to be able to add a "Landing page (Layout Builder)" which has got predefined set of layouts
-So that the "Landing page (Layout Builder)" will show up in the structured menu under its parent page
+      As a logged in user with a permission to manage Landing (Layout Builder) pages.
+      I want to be able to add a "Landing page (Layout Builder)" which has got predefined set of layouts
+      So that the "Landing page (Layout Builder)" will show up in the structured menu under its parent page
 
   @javascript @local @development @staging @production
   Scenario: Check if we do have the Landing page (Layout Builder) content type

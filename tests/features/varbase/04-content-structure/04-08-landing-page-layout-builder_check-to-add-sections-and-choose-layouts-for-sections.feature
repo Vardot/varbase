@@ -1,9 +1,9 @@
 Feature: Content Structure - Landing (Layout Builder) Pages - Check to add sections and choose layouts for sections
-As a logged in user with a permission to mange Landing (Layout Builder) pages
-I want to be able to add sections with any layouts to the page
-So that the "Landing (Layout Builder) page" will show up having the listed section with their content
+      As a logged in user with a permission to mange Landing (Layout Builder) pages
+      I want to be able to add sections with any layouts to the page
+      So that the "Landing (Layout Builder) page" will show up having the listed section with their content
 
-@javascript @local @development @staging @production
+  @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Layout Builder) content type can add sections with any layouts to the page
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
@@ -41,7 +41,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait 2s
      Then I should see "The layout override has been saved."
       And I should see "Test Landing page (Layout Builder)"
-  
+
   @javascript @local @development
   Scenario: Check that Site admins can add a one coloumn section and add a Rich text block in the section
     Given I am a logged in user with the "Site admin" user
@@ -53,7 +53,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
-      And wait 
+      And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -105,7 +105,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
-      And wait 
+      And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -140,7 +140,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Rich text in 2 cols section, col 1"
-  
+
      When I click "Add block in Section 3, Col 2 region"
       And I wait for AJAX to finish
      Then I should see "Create content block"
@@ -156,7 +156,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I press the "Add block" button
       And I wait for AJAX to finish
      Then I should see "Rich text in 2 cols section, col 2"
-  
+
      When I scroll to the top of the page
       And I wait 2s
       And I press the "Save layout" button
@@ -165,7 +165,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I should see "Test Landing page (Layout Builder)"
       And I should see "Rich text in 2 cols section, col 1"
       And I should see "Rich text in 2 cols section, col 2"
-  
+
   @javascript @local @development
   Scenario: Check that Site admins can add a three coloumns section and add a Rich text blocks in each coloumns
     Given I am a logged in user with the "Site admin" user
@@ -229,7 +229,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Rich text in 3 cols section, col 2"
-  
+
      When I click "Add block in Section 4, Col 3 region"
       And I wait for AJAX to finish
      Then I should see "Create content block"
@@ -245,7 +245,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I press the "Add block" button
       And I wait for AJAX to finish
      Then I should see "Rich text in 3 cols section, col 3"
-  
+
      When I scroll to the top of the page
       And I wait 2s
       And I press the "Save layout" button
@@ -267,7 +267,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
-      And wait 
+      And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -320,7 +320,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Rich text in 4 cols section, col 2"
-  
+
      Then I click "Add block in Section 5, Col 3 region"
       And I wait for AJAX to finish
      Then I should see "Create content block"
@@ -337,7 +337,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Rich text in 4 cols section, col 3"
-  
+
      Then I click "Add block in Section 5, Col 4 region"
       And I wait for AJAX to finish
      Then I should see "Create content block"
@@ -352,7 +352,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque."
       And I press the "Add block" button
       And I wait for AJAX to finish
-     Then I should see "Rich text in 4 cols section, col 4" 
+     Then I should see "Rich text in 4 cols section, col 4"
 
      When I scroll to the top of the page
       And I wait 2s
@@ -376,7 +376,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
-      And wait 
+      And wait
      Then I should see "Test Landing page (Layout Builder)"
      When I open the moderation sidebar
       And I wait for AJAX to finish
@@ -388,7 +388,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait 2s
      Then I should see "Add section at end of layout"
      When I add a basic "6 Cols" section at the end of layout
-      And I save the section 
+      And I save the section
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Add block in Section 6, Col 1 region"
@@ -448,7 +448,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Rich text in 6 cols section, col 3"
-  
+
      Then I click "Add block in Section 6, Col 4 region"
       And I wait for AJAX to finish
      Then I should see "Create content block"
@@ -465,7 +465,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Rich text in 6 cols section, col 4"
-  
+
      Then I click "Add block in Section 6, Col 5 region"
       And I wait for AJAX to finish
      Then I should see "Create content block"
@@ -482,7 +482,7 @@ So that the "Landing (Layout Builder) page" will show up having the listed secti
       And I wait for AJAX to finish
       And I wait 2s
      Then I should see "Rich text in 6 cols section, col 5"
-  
+
      When I click "Add block in Section 6, Col 6 region"
       And I wait for AJAX to finish
      Then I should see "Create content block"

@@ -1,7 +1,7 @@
 Feature: Website Base Requirements - Website Languages - English
-As a logged in user with the permission to add content
-I want to be able to check if the site has got the English language Enabled
-So that can be sure that the website is using the English language as one of the languages.
+      As a logged in user with the permission to add content
+      I want to be able to check if the site has got the English language Enabled
+      So that can be sure that the website is using the English language as one of the languages.
 
   @javascript @local @development @staging @production
   Scenario: Check if a content admin user can Create Basic page with English for the language of the content

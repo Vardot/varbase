@@ -1,7 +1,7 @@
 Feature: Content Structure - Landing page (Paragraphs) - Varbase text and image paragraphs
-  As a logged in user with a permission to mange Landing page (Paragraphs)
-  I want to be able to add number of Text and image paragraph compoments
-  So that the "Landing page (Paragraphs)" will have text and images in right and left view.
+      As a logged in user with a permission to mange Landing page (Paragraphs)
+      I want to be able to add number of Text and image paragraph compoments
+      So that the "Landing page (Paragraphs)" will have text and images in right and left view.
 
   @javascript @local @development @staging @production
   Scenario: Check if a user with a permission to manage Landing page (Paragraphs) content type create a new Landing page
@@ -26,9 +26,9 @@ Feature: Content Structure - Landing page (Paragraphs) - Varbase text and image 
      Then I should see image with the "Skyscraper" title text
       And I wait for AJAX to finish
      When I check the box "Select Skyscraper"
-	    And I wait for AJAX to finish
-	    And I press "dialog-submit"
-	    And I wait for AJAX to finish
+      And I wait for AJAX to finish
+      And I press "dialog-submit"
+      And I wait for AJAX to finish
       And I scroll up
      Then I should see "Skyscraper"
      When I scroll up

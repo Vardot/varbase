@@ -1,10 +1,7 @@
 Feature: Content Structure - Basic Page
-As a logged in user with a permission to mange Basic pages
-I want to be able to add a "Basic page" to the site with a fixed layout
-So that the "Basic page" will show up in the structured menu under its parent page
-
-# Check if users with the ( "authenticated user", "Editor", "Content Admin",
-# "Site Admin", or "Super Admin" ) role can add [Basic page]
+      As a logged in user with a permission to mange Basic pages
+      I want to be able to add a "Basic page" to the site with a fixed layout
+      So that the "Basic page" will show up in the structured menu under its parent page
 
   @javascript @local @development @staging @production
   Scenario: Check if an authenticated user can add content of Basic page type

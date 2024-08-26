@@ -1,5 +1,5 @@
 Feature: The welcome message should be displayed on first visit to the site
-The welcome message is made possible by having Varbase Tour module
+  The welcome message is made possible by having Varbase Tour module
 
   @javascript @local @development @staging @production
   Scenario: Check if welcome message is enabled
