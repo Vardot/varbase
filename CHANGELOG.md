@@ -1,3 +1,48 @@
+# 9.1.5
+
+### Highlighted important changes since Varbase 9.1.3:
+
+This is a **patch (bugfix)** release of **Varbase 9** and is ready for use on production sites.
+
+### Added since Varbase 9.1.4:
+* All new features are in **Varbase ~10**
+
+### Changed since Varbase 9.1.4:
+* Issue [#3471788](https://www.drupal.org/i/3471788)
+         by [ammar_jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+         : Replaced the **twbs/bootstrap** package not to
+         bring a **Bootstrap Cross-Site Scripting (XSS) vulnerability**
+         when building with composer
+* Issue [#3471627](https://www.drupal.org/i/3471627):
+         Moved command helper for optional update hooks to **Varbase Core Commands Drush**
+         service for **Drupal `10.3`** support
+
+### Updates since Varbase 9.1.4:
+* Issue [#3467867](https://www.drupal.org/i/3467867):
+         Updated **Webform Views Integration** module from `~5.2.0` to `~5.3.0` ( `~5` )
+* Issue [#3465162](https://www.drupal.org/i/3465162):
+         Updated **Stage File Proxy** module from `~2` to `~3.1.0`
+* Issue [#3467613](https://www.drupal.org/i/3467613):
+         Updated **External Links** module from `~1` to `~2` in **Varbase Editor**
+* Issue [#3467612](https://www.drupal.org/i/3467612):
+         Updated **External Links** module from `~1` to `~2` in **Varbase Core**
+* Issue [#3467591](https://www.drupal.org/i/3467591):
+         Updated **Block Class** module from `~2` to `~3`
+* Issue [#3469400](https://www.drupal.org/i/3469400):
+         Updated **Honeypot** module from `~2` to `~2.1.0` as a **TEMP** step for smoother update process
+* Issue [#3467669](https://www.drupal.org/i/3467669):
+         Updated **Devel** module from `~5.2.0` to `~5.3.0` ( `~5` )
+
+### Fixes since Varbase 9.1.4:
+* Issue [#3463761](https://www.drupal.org/i/3463761)
+         by [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+        : Fixed missing admin styling options for components in Bootstrap paragraphs
+* Issue [#3471573](https://www.drupal.org/i/3471573)
+         by [ammar_jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Fixed Error Call to undefined function module_load_install() in **Varbase Update Helper**
+
+-------------------------------------------------------------------------------
+
 # 9.1.4
 
 Highlighted important changes since Varbase 9.1.3:
