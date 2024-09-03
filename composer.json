@@ -27,7 +27,8 @@
     }
   },
   "replace": {
-    "drupal/statistics": "*"
+    "drupal/statistics": "*",
+    "twbs/bootstrap": "*"
   },
   "require": {
     "drupal/varbase_core": "9.1.x-dev",
