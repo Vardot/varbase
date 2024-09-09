@@ -22,4 +22,4 @@ Feature: User Management - Standard User Management - Request new password
       And I wait 2s
       And I press the "Reset" button
       And wait
-     Then I should see "If the username or email address exists and is active, further instructions have been sent to your email address."
+     Then I should see "If not.existing.email@vardot.com is a valid account, an email will be sent with instructions to reset your password."
