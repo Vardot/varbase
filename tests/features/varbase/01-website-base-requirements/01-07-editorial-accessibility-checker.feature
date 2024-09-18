@@ -1,7 +1,7 @@
 Feature: Accessibility - Use the automatically Editorial Accessibility Checker tool
-As a logged in site admin or editor with permission to access the a11y checker tools
-I will be able to use the tool to automatically identifying and addressing straightforward accessibility issues in various contexts.
-So that only users with permission can see and use the tool
+      As a logged in site admin or editor with permission to access the a11y checker tools
+      I will be able to use the tool to automatically identifying and addressing straightforward accessibility issues in various contexts.
+      So that only users with permission can see and use the tool
 
   @javascript @check @local @development @staging @production
   Scenario: Check that an anonymous users can not access the Editorial Accessibility Checker
@@ -61,19 +61,19 @@ So that only users with permission can see and use the tool
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
-     Then I should not see "All issues"
+     Then I should not see "Issue types"
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/pages"
       And wait
-     Then I should not see "Pages with accessibility issues"
+     Then I should not see "Pages with issues"
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/recent"
       And wait
-     Then I should not see "Recent accessibility issues"
+     Then I should not see "Recent issues"
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/dismissals"
       And wait
-     Then I should not see "Dismissed accessibility alerts"
+     Then I should not see "Dismissed Alerts"
       And I should see "Access denied"
 
   @javascript @check @local @development @staging @production
@@ -85,19 +85,19 @@ So that only users with permission can see and use the tool
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
-     Then I should not see "All issues"
+     Then I should not see "Issue types"
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/pages"
       And wait
-     Then I should not see "Pages with accessibility issues"
+     Then I should not see "Pages with issues"
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/recent"
       And wait
-     Then I should not see "Recent accessibility issues"
+     Then I should not see "Recent issues"
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/dismissals"
       And wait
-     Then I should not see "Dismissed accessibility alerts"
+     Then I should not see "Dismissed Alerts"
       And I should see "Access denied"
 
   @javascript @check @local @development @staging @production
@@ -109,19 +109,19 @@ So that only users with permission can see and use the tool
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
-     Then I should see "All issues"
+     Then I should see "Issue types"
      When I go to "/admin/reports/editoria11y/pages"
       And wait
-     Then I should see "Pages with accessibility issues"
+     Then I should see "Pages with issues"
      When I go to "/admin/reports/editoria11y/recent"
       And wait
-     Then I should see "Recent accessibility issues"
+     Then I should see "Recent issues"
      When I go to "/admin/reports/editoria11y/dismissals"
       And wait
-     Then I should see "Dismissed accessibility alerts"
+     Then I should see "Dismissed Alerts"
 
   @javascript @check @local @development @staging @production
-  Scenario: Check that Content Admin users can view the dashboard for accessibility checked results  
+  Scenario: Check that Content Admin users can view the dashboard for accessibility checked results
     Given I am a logged in user with the "Content admin" user
      When I go to "/admin/config/content/editoria11y"
       And wait
@@ -129,16 +129,16 @@ So that only users with permission can see and use the tool
       And I should see "Access denied"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
-     Then I should see "All issues"
+     Then I should see "Issue types"
      When I go to "/admin/reports/editoria11y/pages"
       And wait
-     Then I should see "Pages with accessibility issues"
+     Then I should see "Pages with issues"
      When I go to "/admin/reports/editoria11y/recent"
       And wait
-     Then I should see "Recent accessibility issues"
+     Then I should see "Recent issues"
      When I go to "/admin/reports/editoria11y/dismissals"
       And wait
-     Then I should see "Dismissed accessibility alerts"
+     Then I should see "Dismissed Alerts"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that SEO Admin users can view the dashboard for accessibility checked results
@@ -148,16 +148,16 @@ So that only users with permission can see and use the tool
      Then I should not see "Editoria11y Settings"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
-     Then I should see "All issues"
+     Then I should see "Issue types"
      When I go to "/admin/reports/editoria11y/pages"
       And wait
-     Then I should see "Pages with accessibility issues"
+     Then I should see "Pages with issues"
      When I go to "/admin/reports/editoria11y/recent"
       And wait
-     Then I should see "Recent accessibility issues"
+     Then I should see "Recent issues"
      When I go to "/admin/reports/editoria11y/dismissals"
       And wait
-     Then I should see "Dismissed accessibility alerts"
+     Then I should see "Dismissed Alerts"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Site Admin users can view the dashboard for accessibility checked results
@@ -167,16 +167,16 @@ So that only users with permission can see and use the tool
      Then I should see "Editoria11y Settings"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
-     Then I should see "All issues"
+     Then I should see "Issue types"
      When I go to "/admin/reports/editoria11y/pages"
       And wait
-     Then I should see "Pages with accessibility issues"
+     Then I should see "Pages with issues"
      When I go to "/admin/reports/editoria11y/recent"
       And wait
-     Then I should see "Recent accessibility issues"
+     Then I should see "Recent issues"
      When I go to "/admin/reports/editoria11y/dismissals"
       And wait
-     Then I should see "Dismissed accessibility alerts"
+     Then I should see "Dismissed Alerts"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can view the dashboard for accessibility checked results
@@ -186,13 +186,13 @@ So that only users with permission can see and use the tool
      Then I should see "Editoria11y Settings"
      When I go to "/admin/reports/editoria11y/issues"
       And wait
-     Then I should see "All issues"
+     Then I should see "Issue types"
      When I go to "/admin/reports/editoria11y/pages"
       And wait
-     Then I should see "Pages with accessibility issues"
+     Then I should see "Pages with issues"
      When I go to "/admin/reports/editoria11y/recent"
       And wait
-     Then I should see "Recent accessibility issues"
+     Then I should see "Recent issues"
      When I go to "/admin/reports/editoria11y/dismissals"
       And wait
-     Then I should see "Dismissed accessibility alerts"
+     Then I should see "Dismissed Alerts"
