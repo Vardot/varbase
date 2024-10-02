@@ -3,10 +3,17 @@
 ### Highlighted important changes since Varbase 10.0.1:
 This is a patch (bugfix) release of Varbase 10 and is ready for use on production sites.
 
+brings new features like media editing in a modal and accessibility improvements.
+It also includes updates for smoother dependency management and essential bug fixes,
+making it ready for production use. 
+
 ### Added since Varbase 10.0.1:
 * Issue [#3471017](https://www.drupal.org/i/3471017)
          by [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
         : Added **Edit Media Entity in Modal** module and enable by default
+* Added support for **Gitpod** [#248](https://github.com/Vardot/varbase-project/issues/248) to Varbase Project template.
+* Added support for **Tugboat.qa** [#250](https://github.com/Vardot/varbase-project/issues/250) to Varbase Project template.
+* Added support for `.vscode` and `xdebug` [#251](https://github.com/Vardot/varbase-project/issues/251) to Varbase Project template. To be able to debug with [Gitpod](https://gitpod.io), or [Tugboat.qa](https://www.tugboatqa.com)        
 
 ### Changed since Varbase 10.0.1:
 * Issue [#3475152](https://www.drupal.org/i/3475152):
@@ -71,6 +78,7 @@ This is a patch (bugfix) release of Varbase 10 and is ready for use on productio
          Updated **Better Exposed Filters** from `~6` to `~6 || ~7` to allow for a smoother update process
 * Issue [#3477997](https://www.drupal.org/i/3477997):
          Updated **Flood Control** module from `~2` to `~3`
+* Updated **Drush** from `~12` to `~13` [#253](https://github.com/Vardot/varbase-project/issues/253)
 
 ### Fixes since Varbase 10.0.0:
 * Issue [#3472383](https://www.drupal.org/i/3472383):

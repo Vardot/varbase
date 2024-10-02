@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/975/workflows/bea8c670-cb66-45c5-beb7-5b8afdebff08) [![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more) Varbase 10.0.2
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/976/workflows/3374c481-0525-49ec-b3d2-689b988fa1d2) [![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more) Varbase 10.0.2
 
 [![](https://www.drupal.org/files/project-images/varbase-medium-logo-color-with-padding.png)](https://www.drupal.org/project/varbase)
 
@@ -66,6 +66,10 @@ composer create-project vardot/varbase-project:10.0.x-dev PROJECT_DIR_NAME --sta
 
 1. Install DDEV locally, steps for installing can be found [here](https://ddev.readthedocs.io/en/stable/).
 2. Run `ddev start`.
+
+## Remote Development Environment (IDE)
+> - [Gitpod](https://gitpod.io/#https://github.com/vardot/varbase-project)
+> - [Tugboat.qa](https://www.tugboatqa.com)
 
 Join Our Slack Team for Feedback and Support
 http://slack.varbase.vardot.com/
