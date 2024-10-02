@@ -1,3 +1,96 @@
+# 10.0.2
+
+### Highlighted important changes since Varbase 10.0.1:
+This is a patch (bugfix) release of Varbase 10 and is ready for use on production sites.
+
+### Added since Varbase 10.0.1:
+* Issue [#3471017](https://www.drupal.org/i/3471017)
+         by [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
+        : Added **Edit Media Entity in Modal** module and enable by default
+
+### Changed since Varbase 10.0.1:
+* Issue [#3475152](https://www.drupal.org/i/3475152):
+         Changed checks on scenarios to fix context issues after
+         **Editoria11y Accessibility Checker**  `2.1.19` was released
+* Issue [#3473037](https://www.drupal.org/i/3473037):
+         Changed the **Automated Functional Testing scenario** to verify that
+         the system cannot send an email to non-existing users or emails after **Drupal `10.3.3`**
+* Issue [#3477623](https://www.drupal.org/i/3477623)
+         by [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Changed Default **Webpack CSS/JS Build Mode** from `Production` to `Development` to
+         Let Drupal Handle Minify and Aggregate
+* Issue [#3471627](https://www.drupal.org/i/3471627):
+         Moved command helper for optional update hooks to Varbase Core
+          Commands Drush service for **Drupal** `10.3` support
+* Issue [#3471555](https://www.drupal.org/i/3471555):
+         Switched all icons in components to **Varbase Bootstrap Icon** component
+* Issue [#3448563](https://www.drupal.org/i/3448563)
+         by [alshami](https://www.drupal.org/u/alshami)
+        : Commented any use of deprecated `font-awesome icon` library in **Vartheme BS5 starterkit**
+* Issue [#3471479](https://www.drupal.org/i/3471479):
+         Changed default config for the **Main Navigation** menu with Number of
+          levels to display to three levels and Expand all menu links
+* Issue [#3471411](https://www.drupal.org/i/3471411):
+         Reordered **Heading** and **Style** Buttons in **CKEditor Toolbar** items
+* Issue [#3470979](https://www.drupal.org/i/3470979):
+         Granted Access to **Entity Usage Statistics** for `Site Admins` and **Editorial Team**
+* Issue [#3470648](https://www.drupal.org/i/3470648):
+         Removed Tabs from Taxonomy Terms to Match Node Pages
+
+### Updates since Varbase 10.0.1:
+* Issue [#3473811](https://www.drupal.org/i/3473811):
+         Updated **Better Exposed Filters** from `~6` to `~6 || ~7` in
+          **Varbase Core** for a smoother update process
+* Issue [#3473819](https://www.drupal.org/i/3473819):
+         Updated **Views Bulk Edit** from `~2` to `~2 || ~3` in **Varbase Core** for a smoother update process
+* Issue [#3473813](https://www.drupal.org/i/3473813):
+         Updated **Better Exposed Filters** from `~6` to `~6 || ~7` in **Varbase Media** for a smoother update process
+* Issue [#3473818](https://www.drupal.org/i/3473818):
+         Updated **Views Bulk Edit** from `~2` to `~2 || ~3` in **Varbase Media** for a smoother update process
+* Issue [#3473832](https://www.drupal.org/i/3473832):
+         Updated **Scheduler Content Moderation Integration** from `~2` to `~3`
+* Issue [#3473011](https://www.drupal.org/i/3473011):
+         Updated **Default Content** from `2.0.x-dev` to `~2`
+* Issue [#3476028](https://www.drupal.org/i/3476028):
+         Updated **Blazy** from `~2.0` to `~2 || ~3` in **Varbase Media** to allow for a smoother update process
+* Issue [#3476030](https://www.drupal.org/i/3476030):
+         Updated **Slick Carousel** from `~2.0` to `~2 || ~3` in **Varbase Media** to allow for a smoother update process
+* Issue [#3476032](https://www.drupal.org/i/3476032):
+         Updated **Slick Views** from `~2.0` to `~2 || ~3` in **Varbase Media** to allow for a smoother update process
+* Issue [#3476028](https://www.drupal.org/i/3476028):
+         Updated **Blazy** from `~2.0` to `~2 || ~3` to allow for a smoother update process
+* Issue [#3476041](https://www.drupal.org/i/3476041):
+         Updated **Slick Carousel** from `~2.0` to `~2 || ~3` in **Varbase Editor** to allow for a smoother update process
+* Issue [#3475525](https://www.drupal.org/i/3475525):
+         Updated **CKEditor BiDi Buttons** from `~4` to `~5`
+* Issue [#3475521](https://www.drupal.org/i/3475521):
+         Updated **Color Field** from `~2` to `~2 || ~3` to allow for a smoother update process
+* Issue [#3475515](https://www.drupal.org/i/3475515):
+         Updated **CSV Serialization** from `~3` to `~3 || ~4` to allow for a smoother update process
+* Issue [#3475517](https://www.drupal.org/i/3475517):
+         Updated **Better Exposed Filters** from `~6` to `~6 || ~7` to allow for a smoother update process
+* Issue [#3477997](https://www.drupal.org/i/3477997):
+         Updated **Flood Control** module from `~2` to `~3`
+
+### Fixes since Varbase 10.0.0:
+* Issue [#3472383](https://www.drupal.org/i/3472383):
+         Fixed **Varbase Editor Default Recipe** to Import/Update Configs
+         and Follow Schema with Configuration Inspector
+* Issue [#3471573](https://www.drupal.org/i/3471573)
+         by [ammar_jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Fixed Error Call to undefined function module_load_install() in **Varbase Update Helper**
+* Issue [#3470409](https://www.drupal.org/i/3470409)
+         by [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed **Layout Builder Access operation** Without Enabled Functionality
+* Issue [#3471477](https://www.drupal.org/i/3471477):
+         Fixed **Popper.js** Error When Adding Navbar Dropdown in **Varbase Components**
+* Issue [#3469222](https://www.drupal.org/i/3469222)
+         by [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        , [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
+        : Fixed **Popper.js** Error When Adding Navbar Dropdown in **Vartheme BS5**
+
+-------------------------------------------------------------------------------
+
 # 10.0.1
 
 ### Highlighted important changes since Varbase 10.0.0:
