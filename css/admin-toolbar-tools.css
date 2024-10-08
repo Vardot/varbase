@@ -31,6 +31,10 @@
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.03);
   background-image: none;
+  color: #fff;
+}
+#toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item.is-active::before {
+  filter: none;
 }
 #toolbar-administration.toolbar .toolbar-bar .toolbar-tab > .toolbar-item:focus {
   text-decoration: none;
