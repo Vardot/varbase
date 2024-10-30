@@ -142,7 +142,7 @@ commands:
             cd /var/www/html/test/
             sudo chmod 775 .
             sudo chown www-data:circleci .
-            git clone --branch '10.0.x' https://github.com/vardot/varbase.git /var/www/html/test/varbase-code
+            git clone --branch '10.1.x' https://github.com/vardot/varbase.git /var/www/html/test/varbase-code
             cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer clear
@@ -287,30 +287,30 @@ workflows:
       - varbase-testing-01-website-base-requirements:
           filters:
             tags:
-              only: /^10.0.*/
+              only: /^10.1.*/
             branches:
-              only: /^10.0.x/
+              only: /^10.1.x/
       - varbase-testing-02-user-management:
           filters:
             tags:
-              only: /^10.0.*/
+              only: /^10.1.*/
             branches:
-              only: /^10.0.x/
+              only: /^10.1.x/
       - varbase-testing-03-admin-management:
           filters:
             tags:
-              only: /^10.0.*/
+              only: /^10.1.*/
             branches:
-              only: /^10.0.x/
+              only: /^10.1.x/
       - varbase-testing-04-content-structure:
           filters:
             tags:
-              only: /^10.0.*/
+              only: /^10.1.*/
             branches:
-              only: /^10.0.x/
+              only: /^10.1.x/
       - varbase-testing-05-content-management:
           filters:
             tags:
-              only: /^10.0.*/
+              only: /^10.1.*/
             branches:
-              only: /^10.0.x/
+              only: /^10.1.x/

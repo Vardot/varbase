@@ -2,7 +2,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: varbase-10.0.x\n"
+"Project-Id-Version: varbase-10.1.x\n"
 "POT-Creation-Date: 2023-03-15 14:05+0300\n"
 "PO-Revision-Date: 2023-03-15 14:05+0300\n"
 "Last-Translator: Vardot <translation@vardot.com>\n"
