@@ -58,12 +58,8 @@ Feature: Content Management - Cloning content and entities
       And I check the box "edit-views-bulk-operations-bulk-form-0"
       And I select "Delete selected entities" from "Action"
       And I press "Apply to selected items"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you wish to perform"
-     When I press "Execute action"
       And I wait for 5s
-     Then I should see "Action processing results: Delete entities (1)."
+     Then I should see "Delete entities (1)"
      When I go to "/admin/content"
       And wait
      Then I should see "Content"

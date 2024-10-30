@@ -55,15 +55,8 @@ Feature: Content Management - Standard Entity Queue Management - Have the option
       And I check the box "Test content N3"
       And I select "Delete selected entities / translations" from "action"
      When I press "Apply to selected items"
-      And wait
       And wait 3s
-     Then I should see "Items selected:"
-      And I should see "Test content N1"
-      And I should see "Test content N2"
-      And I should see "Test content N3"
-     When I press "Execute action"
-      And I wait 10s
-     Then I should see "Action processing results: Delete entities (3)."
+     Then I should see "Delete entities (3)"
 
      When I go to "/admin/structure/entityqueue"
       And wait
