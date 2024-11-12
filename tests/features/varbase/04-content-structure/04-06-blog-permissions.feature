@@ -1,6 +1,6 @@
 Feature: Content Structure - Blog post
-As a logged in user with a permission to manage Blogs.
-I want to be able to add a "Blog" 
+      As a logged in user with a permission to manage Blogs.
+      I want to be able to add a "Blog"
 
   @javascript  @local @development @staging @production
   Scenario: Check if we do have the Blog content type

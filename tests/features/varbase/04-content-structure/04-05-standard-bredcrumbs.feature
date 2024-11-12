@@ -1,7 +1,7 @@
 Feature: Navigational Features - Breadcrumbs - Standard breadcrumbs
-As a Visitor to the site
-I want to be able to see the back path
-So that I can see path I followed to locate the current page usually near the top of the page
+      As a Visitor to the site
+      I want to be able to see the back path
+      So that I can see path I followed to locate the current page usually near the top of the page
 
   @javascript  @local @development @staging @production
   Scenario: Add the Test Basic page root page to the main menu

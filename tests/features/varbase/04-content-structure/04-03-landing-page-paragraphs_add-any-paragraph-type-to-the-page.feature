@@ -1,25 +1,25 @@
 Feature: Landing page (Paragraphs) - Add any paragraph types to the page
-As a logged in user with a permission to mange Landing pages
-I want to be able to add any paragraph type to the page
-So that the Landing page (Paragraphs) will show up having paragrpahs of different types
+      As a logged in user with a permission to mange Landing pages
+      I want to be able to add any paragraph type to the page
+      So that the Landing page (Paragraphs) will show up having paragrpahs of different types
 
   @javascript  @local @development @staging @production
   Scenario: Upload the "Embed Flag Earth" file
-     Given I am a logged in user with the "Site admin" user
-      When I go to "/media/add/image"
-       And wait
-      Then I should see "Allowed types: png gif jpg jpeg."
-      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
-       And wait
-       And I press the "Save" button
-       And wait
-       And I fill in "Embed Flag Earth in space" for "field_media_image[0][alt]"
-       And I fill in "Embed Flag Earth all earth in space" for "field_media_image[0][title]"
-       And I fill in "Embed Flag Earth" for "name[0][value]"
-       And I check the box "Show in media library"
-       And I press the "Save" button
-       And wait
-      Then I should see "Embed Flag Earth"
+    Given I am a logged in user with the "Site admin" user
+     When I go to "/media/add/image"
+      And wait
+     Then I should see "Allowed types: png gif jpg jpeg."
+     When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
+      And wait
+      And I press the "Save" button
+      And wait
+      And I fill in "Embed Flag Earth in space" for "field_media_image[0][alt]"
+      And I fill in "Embed Flag Earth all earth in space" for "field_media_image[0][title]"
+      And I fill in "Embed Flag Earth" for "name[0][value]"
+      And I check the box "Show in media library"
+      And I press the "Save" button
+      And wait
+     Then I should see "Embed Flag Earth"
   #-----------------------------------------------------------------------------
 
   @javascript  @local @development @staging @production

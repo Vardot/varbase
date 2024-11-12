@@ -1,7 +1,7 @@
 Feature: Content Editing - Rich Text Editor - Convert URLs into links
-As a logged in user with a permission to use the rich text editor
-I want to add raw URLs and links in the rich text editor
-So that they will be converted to links and visitors can click on them.
+      As a logged in user with a permission to use the rich text editor
+      I want to add raw URLs and links in the rich text editor
+      So that they will be converted to links and visitors can click on them.
 
   @javascript  @local @development @staging @production
   Scenario: Check if inserted raw URL will convert into a link using the "Rich editor" text format when we save a new Basic page

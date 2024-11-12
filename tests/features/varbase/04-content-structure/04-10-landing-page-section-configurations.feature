@@ -1,7 +1,7 @@
-Feature: Demo for newly added step definitions 
-As a site admin, I will create a new landing page, add a section with different section settings/configurations
+Feature: Demo for newly added step definitions
+      As a site admin, I will create a new landing page, add a section with different section settings/configurations
 
-@javascript  @local @development
+  @javascript  @local @development
   Scenario: Check if a site admin can create a landing page and add sections to it with different container types
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
@@ -60,8 +60,8 @@ As a site admin, I will create a new landing page, add a section with different 
       And I fill in "Test Rich text in 2 cols section, col 2" for "Title"
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet diam nunc, ac dictum velit tincidunt quis. Integer ut imperdiet dui, sit amet tempus est. Curabitur molestie sem non purus dignissim pulvinar. Pellentesque id sapien consequat"
       And I press the "Add block" button
-      And I wait for AJAX to finish 
-     Then I should see "Test Rich text in 2 cols section, col 2" 
+      And I wait for AJAX to finish
+     Then I should see "Test Rich text in 2 cols section, col 2"
 
      When I scroll to the top of the page
      Then I should see "Save layout"
