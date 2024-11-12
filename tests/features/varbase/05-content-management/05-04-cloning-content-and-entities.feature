@@ -2,7 +2,7 @@ Feature: Content Management - Cloning content and entities
       As a logged in user with a permission to mange entities
       I want to be able to clone an entity.
 
-  @javascript @local @development
+  @javascript  @local @development
   Scenario: Check if a user with a permission can clone a Landing page (Paragraphs)
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page"
@@ -11,7 +11,7 @@ Feature: Content Management - Cloning content and entities
       And I fill in "Test landing page description text" for "Page description"
       And I wait for AJAX to finish
       And I wait for 1 second
-      And I press "+ Add"
+      And I press "Add Component"
       And I wait for AJAX to finish
       And I wait for 1 second
       And I select the "bp_block" paragraph component
@@ -20,7 +20,7 @@ Feature: Content Management - Cloning content and entities
      When I select "Site branding" from "Block"
       And wait
       And I select "published" from "edit-moderation-state-0-state"
-      And I press the "Save as" button
+      And I press the "Save" button
       And wait
      Then I should see "Test Clone landing page has been created"
 
@@ -45,7 +45,7 @@ Feature: Content Management - Cloning content and entities
       And wait
      Then I should see "Test Clone landing page - Cloned"
 
-  @javascript @local @development
+  @javascript  @local @development
   Scenario: Check if a user with a permission deleted a cloned entity the original will not affected
     Given I am a logged in user with the "Super admin" user
      When I go to "/admin/content"
