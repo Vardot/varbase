@@ -1,3 +1,41 @@
+# 9.1.7
+
+###  Highlighted important changes since Varbase 9.1.6:
+This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
+
+* Issue [#3490913](https://www.drupal.org/i/3490913):
+         Updated **Editoria11y Accessibility Checker** module from `~2.1.0` to `~2.2.0`
+
+### Added since Varbase 9.1.6:
+* All new features are in Varbase ~10
+
+### Changed since Varbase 9.1.6:
+* Issue [#3487059](https://www.drupal.org/i/3487059):
+         Changed automated functional testing steps in scenarios for
+         compatibility with **Drupal** `10.3.8`, **VBO** `4.3.1`, and `4.3.2`
+
+### Updates since Varbase 9.1.6:
+* Issue [#3485265](https://www.drupal.org/i/3485265):
+         Updated Block Class from ~2 || ~3 to ~3 || ~4 to support a smoother update process
+* Issue [#3482025](https://www.drupal.org/i/3482025):
+         Updated Layout Builder Modal module from ~1 to ~2
+* Issue [#3482017](https://www.drupal.org/i/3482017):
+         Updated Prevent Page Deletion module from ~2 to ~3
+
+### Fixes since Varbase 9.1.6:
+* Issue [#3479338](https://www.drupal.org/i/3479338)
+         by [mohammad-fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+        : Fixed style for active menu in **Admin Toolbar** on **Claro Theme** after updating to **Drupal Core** `10.3.6`
+* Issue [#3480375](https://www.drupal.org/i/3480375)
+         by [oways23](https://www.drupal.org/u/oways23)
+        , [alshami](https://www.drupal.org/u/alshami)
+        : Fixed Blocks Filter Not Showing Placeholder in Off-Canvas or **Layout Builder Modal**
+* Issue [#3488025](https://www.drupal.org/i/3488025)
+         by [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed visual style issues on layout builder
+
+-------------------------------------------------------------------------------
+
 # 9.1.6
 
 ### Highlighted important changes since Varbase 9.1.5:
