@@ -1,13 +1,13 @@
 # 9.1.7
 
 ###  Highlighted important changes since Varbase 9.1.6:
-This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
 
 * Issue [#3490913](https://www.drupal.org/i/3490913):
          Updated **Editoria11y Accessibility Checker** module from `~2.1.0` to `~2.2.0`
 
 ### Added since Varbase 9.1.6:
-* All new features are in Varbase ~10
+* All new features are in **Varbase ~10**
 
 ### Changed since Varbase 9.1.6:
 * Issue [#3487059](https://www.drupal.org/i/3487059):
@@ -16,11 +16,11 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
 
 ### Updates since Varbase 9.1.6:
 * Issue [#3485265](https://www.drupal.org/i/3485265):
-         Updated Block Class from ~2 || ~3 to ~3 || ~4 to support a smoother update process
+         Updated **Block Class** from `~2 || ~3` to `~3 || ~4` to support a smoother update process
 * Issue [#3482025](https://www.drupal.org/i/3482025):
-         Updated Layout Builder Modal module from ~1 to ~2
+         Updated **Layout Builder Modal** module from `~1` to `~2`
 * Issue [#3482017](https://www.drupal.org/i/3482017):
-         Updated Prevent Page Deletion module from ~2 to ~3
+         Updated **Prevent Page Deletion** module from `~2` to `~3`
 
 ### Fixes since Varbase 9.1.6:
 * Issue [#3479338](https://www.drupal.org/i/3479338)
