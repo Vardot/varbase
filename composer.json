@@ -66,7 +66,7 @@
     "npm-asset/ckeditor--ckeditor5-media-embed": "*"
   },
   "require-dev": {
-    "drupal/core-dev": "~10 || ~11",
+    "drupal/core-dev": "~10",
     "drush/drush": "~12 || ~13",
     "drupal/drupal-extension": "5.0.0alpha1",
     "webship/behat-html-formatter": "~1"
