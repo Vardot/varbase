@@ -147,7 +147,7 @@ commands:
             cd /var/www/html/test/varbase
             composer clear
             composer require cweagans/composer-patches:~1 --no-update
-            composer require vardot/varbase-patches:~10 --no-update
+            composer require vardot/varbase-patches:10.1.x-dev --no-update
             composer require drupal/core-composer-scaffold:~10 --no-update
             composer require "drupal/schemadotorg:^1.0.0-alpha24 || ~1.0" --no-update
             composer install --no-interaction -vvv
