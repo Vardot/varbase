@@ -20,6 +20,7 @@ defaults: &defaults
         MYSQL_DATABASE: test_varbase
         MYSQL_USER: user
         MYSQL_PASSWORD: passw0rd
+  resource_class: large
 commands:
   varbase-build:
     steps:
