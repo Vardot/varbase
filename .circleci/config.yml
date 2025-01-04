@@ -49,7 +49,7 @@ commands:
             sudo a2enmod headers rewrite env mime expires ssl
             sudo update-alternatives --set php /usr/bin/php8.3
             echo -e "memory_limit = -1" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
-            echo -e "max_execution_time = 3000" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
+            echo -e "max_execution_time = 1200" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
             echo -e "error_reporting = E_ALL" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
             echo -e "max_input_time = 180" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
             echo -e "max_input_vars = 10000" | sudo tee /etc/php/8.3/apache2/php.ini > /dev/null
@@ -131,7 +131,6 @@ commands:
             php --ini
       - run:
           name: Build Varbase with the composer
-          no_output_timeout: 30m
           command: |
             if [ -d "/var/www/html/test" ]; then
               sudo rm -rf /var/www/html/test -vvv
@@ -145,6 +144,7 @@ commands:
             sudo chown www-data:circleci .
             git clone --branch '10.0.x' https://github.com/vardot/varbase-project.git /var/www/html/test/varbase
             cd /var/www/html/test/varbase
+            composer install --no-interaction -vvv
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
@@ -174,7 +174,6 @@ commands:
             sudo service apache2 restart
       - run:
           name: Install Varbase with drush
-          no_output_timeout: 30m
           command: |
             mysql -h 127.0.0.1 -uroot -prootpw --execute="DROP DATABASE IF EXISTS test_varbase;" -vvv
             mysql -h 127.0.0.1 -uroot -prootpw --execute="CREATE DATABASE test_varbase;" -vvv
