@@ -137,8 +137,12 @@ commands:
               sudo rm -rf /var/www/html/test -vvv
             fi
             cd /var/www/
+            sudo chmod 775 -R .
+            sudo chown www-data:circleci -R .
             mkdir /var/www/html/test
             cd /var/www/html/test/
+            sudo chmod 775 .
+            sudo chown www-data:circleci .
             git clone --branch '10.0.x' https://github.com/vardot/varbase-project.git /var/www/html/test/varbase
             cd /var/www/html/test/varbase
             composer require --dev drupal/core-dev:~10 --with-all-dependencies;
