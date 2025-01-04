@@ -143,17 +143,8 @@ commands:
             cd /var/www/html/test/
             sudo chmod 775 .
             sudo chown www-data:circleci .
-            git clone --branch '10.0.x' https://github.com/vardot/varbase.git /var/www/html/test/varbase-code
-            cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
+            git clone --branch '10.0.x' https://github.com/vardot/varbase-project.git /var/www/html/test/varbase
             cd /var/www/html/test/varbase
-            composer require cweagans/composer-patches:~1 --no-update
-            composer require vardot/varbase-patches:10.0.x-dev --no-update
-            composer require drupal/core-composer-scaffold:~10 --no-update
-            composer install --no-interaction -vvv
-            mkdir -p /var/www/html/test/varbase/docroot/profiles/contrib
-            cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/contrib/varbase
-            cd /var/www/html/test/varbase
-            sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
