@@ -10,7 +10,7 @@ Feature: File & Media Management - Assets Management - Ability to embed existing
       And wait
       And I fill in "Test Basic page to embed existing media" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page body to embed existing media"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait
      Then I should see "Basic page Test Basic page to embed existing media has been created."

@@ -11,7 +11,7 @@ Feature: Website Base Requirements - Website Languages - All content translatabl
       And I fill in "Test English Basic page" for "Title"
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
       And I select "en" from "Language"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait 2s
      Then I should see "Test English Basic page"
