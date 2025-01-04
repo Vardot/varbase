@@ -20,6 +20,7 @@ defaults: &defaults
         MYSQL_DATABASE: test_varbase
         MYSQL_USER: user
         MYSQL_PASSWORD: passw0rd
+  resource_class: large
 commands:
   varbase-build:
     steps:
@@ -142,17 +143,16 @@ commands:
             cd /var/www/html/test/
             sudo chmod 775 .
             sudo chown www-data:circleci .
-            git clone --branch '9.1.x' https://github.com/vardot/varbase.git /var/www/html/test/varbase-code
-            cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase
+            git clone --branch '9.1.x' https://github.com/vardot/varbase-project.git /var/www/html/test/varbase
             cd /var/www/html/test/varbase
-            composer clear
-            composer require cweagans/composer-patches:~1 --no-update
-            composer require vardot/varbase-patches:9.2.x-dev --no-update
-            composer require drupal/core-composer-scaffold:~10 --no-update
+            composer require --dev drupal/core-dev:~10 --no-update
+            composer require --dev drush/drush:~13 --no-update
+            composer require --dev drupal/drupal-extension:5.0.0alpha1 --no-update
+            composer require --dev webship/behat-html-formatter:~1.0 --no-update
+            composer require --dev drevops/behat-screenshot:~1.0 --no-update
+            sudo chmod 775 -R .
+            sudo chown www-data:circleci -R .
             composer install --no-interaction -vvv
-            cp -r /var/www/html/test/varbase-code /var/www/html/test/varbase/docroot/profiles/varbase
-            cd /var/www/html/test/varbase
-            sudo rm -rf config configbit css images libraries scripts src tests traslations varbase.info.yml varbase.install varbase.libraries.yml varbase.profile varbase.services.yml yarn.lock
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
