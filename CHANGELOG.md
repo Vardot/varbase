@@ -1,3 +1,84 @@
+# 10.0.3
+
+### Highlighted important changes since Varbase 10.0.2:
+This is a patch (bugfix) release of Varbase 10 and is ready for use on production sites.
+
+Enhanced media handling and mobile responsiveness with smoother updates, improved performance, and more accessible web solutions.
+
+* Issue [#3495360](https://www.drupal.org/i/3495360):
+         Updated **Drupal Core** from `~10.3.0` to `~10.4.0`
+* Issue [#3490913](https://www.drupal.org/i/3490913):
+         Updated **Editoria11y Accessibility Checker** module from `~2.1.0` to `~2.2.0`
+* Issue [#3460610](https://www.drupal.org/i/3460610)
+         by [ammar_jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Added **CKEditor Media Resize** module and integrate it with **Dynamic Responsive Image (Drimage) – Improved**
+
+### Added since Varbase 10.0.2:
+* Issue [#3482424](https://www.drupal.org/i/3482424):
+         Added all display modes by **CKEditor Media Resize** to the list of default ignored view modes
+         
+### Changed since Varbase 10.0.2:
+* Issue [#3487059](https://www.drupal.org/i/3487059):
+         Changed automated functional testing steps in scenarios for compatibility with **Drupal** `10.3.8`, **VBO** `4.3.1`, and `4.3.2`
+* Issue [#3483891](https://www.drupal.org/i/3483891):
+         Changed the logic of styling align (`default`, `center`, `left`, `right`) and
+          figcaption in picture, `image`, `figure`, `media`, and `embedded entity` for **Varbase media** common library with CSS Logical Properties
+
+### Updates since Varbase 10.0.2:
+* Issue [#3485265](https://www.drupal.org/i/3485265):
+         Updated **Block Class** from `~2 || ~3` to `~3 || ~4` to support a smoother update process
+* Issue [#3484569](https://www.drupal.org/i/3484569):
+         Updated **Component Libraries: Editorial** module from `~2` to `~3`
+* Issue [#3487041](https://www.drupal.org/i/3487041):
+         Updated **Coffee** module from `~1` to `~2`
+* Issue [#3482025](https://www.drupal.org/i/3482025):
+         Updated **Layout Builder Modal** module from `~1` to `~2`
+* Issue [#3482017](https://www.drupal.org/i/3482017):
+         Updated **Prevent Page Deletion** module from `~2` to `~3`
+* Issue [#3497352](https://www.drupal.org/i/3497352):
+         Updated **league/commonmark** library from `~2.4.0` to `~2.6.0` ( `~2` )
+* Issue [#3493635](https://www.drupal.org/i/3493635):
+         Updated **Linkit** module from `~6.1.0` to `~7`
+* Issue [#3492619](https://www.drupal.org/i/3492619):
+         Updated **Inline Entity Form** module from `~1` to `~3` in **Varbase Core**
+* Issue [#3496404](https://www.drupal.org/i/3496404):
+         Updated **Sitewide Alert** module from `~2` to `~3`
+* Issue [#3492639](https://www.drupal.org/i/3492639):
+         Updated **Single Directory Components: Display** from `~1` to `~2`
+* Issue [#3482749](https://www.drupal.org/i/3482749):
+         Updated **Honeypot** module from `~2.1.0` to `~2.2.0`
+
+### Fixes since Varbase 10.0.2:
+* Issue [#3487489](https://www.drupal.org/i/3487489)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed **Homepage Blog View Responsiveness** on Mobile by Switching to Single-Column Layout
+* Issue [#3488025](https://www.drupal.org/i/3488025)
+         by [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed visual style issues on layout builder
+* Issue [#3487440](https://www.drupal.org/i/3487440)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed **Featured Card Block Responsiveness** on Mobile by Moving Image Above Text
+* Issue [#3480375](https://www.drupal.org/i/3480375)
+         by [oways23](https://www.drupal.org/u/oways23)
+        , [alshami](https://www.drupal.org/u/alshami)
+        : Fixed **Blocks Filter** Not Showing Placeholder in Off-Canvas or Layout Builder Modal
+* Issue [#3484267](https://www.drupal.org/i/3484267)
+         by [das-peter](https://www.drupal.org/u/das-peter)
+        : Fixed Missing **Popper.js** in Dashboard by Adding popper-script to Responsive Preview Dependencies
+* Issue [#3489463](https://www.drupal.org/i/3489463):
+         Fixed messing publishing status from the sticky action toolbar after the **Gin Admin theme** `8.x-3.0-rc14` was released
+* Issue [#3496917](https://www.drupal.org/i/3496917)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed moderation state dropdown issue after **Gin Theme** update to version `8.x-3.0`
+* Issue [#3467763](https://www.drupal.org/i/3467763)
+         by [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
+        : Fixed exceeding Video size screen boundaries in **CKEditor** when adding a video or remote video
+* Issue [#3492468](https://www.drupal.org/i/3492468)
+         by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+        : Fixed **Admin Filters Alignment** for Views with Exposed Date Field
+
+-------------------------------------------------------------------------------
+
 # 10.0.2
 
 ### Highlighted important changes since Varbase 10.0.1:
