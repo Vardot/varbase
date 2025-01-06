@@ -1,5 +1,7 @@
-Feature: Demo for newly added step definitions
-      As a site admin, I will create a new landing page, add a section with different section settings/configurations
+Feature: Content Structure - Change section settings in Landing Pages with Layout Builder
+      As a logged in user with a permission to mange Landing (Layout Builder) pages
+      I want to be able to add sections with any layouts to the page
+      So that a section with different section settings/configurations
 
   @javascript  @local @development
   Scenario: Check if a site admin can create a landing page and add sections to it with different container types
@@ -19,15 +21,15 @@ Feature: Demo for newly added step definitions
      Then I should see "Add section at end of layout"
 
      When I add a basic "2 Cols" section at the end of layout
-      And I select the "Boxed" container type with a "Tiny" width
+      And I select the "Boxed" container type with a "Medium" width
       And I select the "md" "33% 67%" section breakpoint
       And I add section gutters
      Then I should not see "Keep gutters between columns"
 
       And I wait for AJAX to finish
-      And I select the "Primary" section background color
+      And I select the "Light" section background color
       And I uncheck the Edge to Edge Background
-      And I select the "White" section text color
+      And I select the "Dark" section text color
       And I set the alignment to "End"
       And I scroll to bottom of "#drupal-off-canvas"
       And I save the section
@@ -47,6 +49,8 @@ Feature: Demo for newly added step definitions
       And I check the box "Display title"
       And I fill in "Test Rich text in 2 cols section, col 1" for "Title"
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet diam nunc, ac dictum velit tincidunt quis. Integer ut imperdiet dui, sit amet tempus est. Curabitur molestie sem non purus dignissim pulvinar. Pellentesque id sapien consequat"
+      And I scroll to the bottom of the page
+      And I wait 1s
       And I press the "Add block" button
      Then I should see "Test Rich text in 2 cols section, col 1"
 
@@ -59,13 +63,17 @@ Feature: Demo for newly added step definitions
       And I check the box "Display title"
       And I fill in "Test Rich text in 2 cols section, col 2" for "Title"
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquet diam nunc, ac dictum velit tincidunt quis. Integer ut imperdiet dui, sit amet tempus est. Curabitur molestie sem non purus dignissim pulvinar. Pellentesque id sapien consequat"
+      And I scroll to the bottom of the page
+      And I wait 1s
       And I press the "Add block" button
       And I wait for AJAX to finish
      Then I should see "Test Rich text in 2 cols section, col 2"
 
      When I scroll to the top of the page
+      And I wait 2s
      Then I should see "Save layout"
-      And I press the "Save layout" button
-      And I wait
+
+     When I press the "Save layout" button
+      And wait
       And I should see "Test Rich text in 2 cols section, col 1"
       And I should see "Test Rich text in 2 cols section, col 2"
