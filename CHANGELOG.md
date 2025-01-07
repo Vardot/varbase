@@ -3,21 +3,23 @@
 ### Highlighted important changes since Varbase 9.1.7:
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
 
-Ensures stability and smoother updates for **Varbase 9.1** to **Drupal Core** `~10.4.0`, and pave the way to upgrade to **Drupal 11**.
+Ensures stability and smoother updates for **Varbase** `~9.1` to **Drupal Core** `~10.4`, and pave the way to upgrade to **Drupal 11**.
 
 * Issue [#3495360](https://www.drupal.org/i/3495360):
          Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Profile**
+* Issue [#3497720](https://www.drupal.org/i/3497720):
+        Fixed not intractable Add block and Update element action buttons for layout builder modal
 
 ### Added since Varbase 9.1.7:
 * All new features are in **Varbase ~10**
 
 ### Changed since Varbase 9.1.7:
 * Changed a patch for Inline Entity Form module on Issue [#3136514](https://www.drupal.org/i/3136514):
-         IEF complex widget: Re-ordering / weight sometimes not updated #111
+         IEF complex widget: Re-ordering / weight sometimes not updated [#111](https://github.com/Vardot/varbase-patches/issues/111)
 * Changed a patch for the Default Content module on Issue [#3160146](https://www.drupal.org/i/3160146):
-         Add a Normalizer and Denormalizer to support Layout Builder #100
+         Add a Normalizer and Denormalizer to support Layout Builder [#100](https://github.com/Vardot/varbase-patches/issues/100)
 * Added a patch for Inline Entity Form module on Issue [#2913571](https://www.drupal.org/i/2913571):
-         Add a setting to enable/disable inline editing for existing entities #108
+         Add a setting to enable/disable inline editing for existing entities [#108](https://github.com/Vardot/varbase-patches/issues/108)
 
 ### Updates since Varbase 9.1.7:
 * Issue [#3493635](https://www.drupal.org/i/3493635):
@@ -78,15 +80,13 @@ Ensures stability and smoother updates for **Varbase 9.1** to **Drupal Core** `~
          Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Vartheme Claro**
 
 ### Fixes since Varbase 9.1.7:
-* Issue [#3497720](https://www.drupal.org/i/3497720):
-        Fixed not intractable Add block and Update element action buttons for layout builder modal
 * Changed a patch for Drupal Core on Issue [#3496329](https://www.drupal.org/i/3496329): Fix not loading CKEditor 5 and Tour with BigPipe enabled after Drupal 10.4 update #110
 * Removed a patch for Editoria11y Accessibility Checker module on Issue [#3492469](https://www.drupal.org/i/3492469):
-         Fix Error: Call to Member Function id() on Null in editoria11y Page Attachments() During Content Type Creation #103
+         Fix Error: Call to Member Function id() on Null in editoria11y Page Attachments() During Content Type Creation [#103](https://github.com/Vardot/varbase-patches/issues/103)
 * Removed a patch for Content Moderation Notifications module on Issue [#3347958](https://www.drupal.org/i/3347958):
-         Fix Entity queries must explicitly set whether the query should be access checked or not in Content Moderation Notifications #101
+         Fix Entity queries must explicitly set whether the query should be access checked or not in Content Moderation Notifications [#101](https://github.com/Vardot/varbase-patches/issues/101)
 * Removed a patch for Security Review module on Issue [#3463712](https://www.drupal.org/i/3463712):
-         Fix fatal error when pressing Run checklist button #98
+         Fix fatal error when pressing Run checklist button [#98](https://github.com/Vardot/varbase-patches/issues/98)
 
 -------------------------------------------------------------------------------
 
