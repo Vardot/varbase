@@ -1,6 +1,98 @@
+# 9.1.8
+
+### Highlighted important changes since Varbase 9.1.7:
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+
+Ensures stability and smoother updates for **Varbase 9.1** to **Drupal Core** `~10.4.0`, and pave the way to upgrade to **Drupal 11**.
+
+* Issue [#3495360](https://www.drupal.org/i/3495360):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Profile**
+
+### Added since Varbase 9.1.7:
+* All new features are in **Varbase ~10**
+
+### Changed since Varbase 9.1.7:
+* Changed a patch for Inline Entity Form module on Issue [#3136514](https://www.drupal.org/i/3136514):
+         IEF complex widget: Re-ordering / weight sometimes not updated #111
+* Changed a patch for the Default Content module on Issue [#3160146](https://www.drupal.org/i/3160146):
+         Add a Normalizer and Denormalizer to support Layout Builder #100
+* Added a patch for Inline Entity Form module on Issue [#2913571](https://www.drupal.org/i/2913571):
+         Add a setting to enable/disable inline editing for existing entities #108
+
+### Updates since Varbase 9.1.7:
+* Issue [#3493635](https://www.drupal.org/i/3493635):
+         Updated **Linkit** module from `~6.1.0` to `~7`
+* Issue [#3492619](https://www.drupal.org/i/3492619):
+         Updated **Inline Entity Form** module from `~1` to `~3` in **Varbase Core**
+* Issue [#3492621](https://www.drupal.org/i/3492621):
+         Updated **Inline Entity Form** module from `~1` to `~3` in **Varbase Media**
+* Issue [#3482749](https://www.drupal.org/i/3482749):
+         Updated **Honeypot** module from `~2.1.0` to `~2.2.0`
+* Issue [#3495573](https://www.drupal.org/i/3495573):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Core**
+* Issue [#3495646](https://www.drupal.org/i/3495646):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Media**
+* Issue [#3495815](https://www.drupal.org/i/3495815):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Editor**
+* Issue [#3495771](https://www.drupal.org/i/3495771):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Media Hero Slider**
+* Issue [#3495777](https://www.drupal.org/i/3495777):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase API**
+* Issue [#3495790](https://www.drupal.org/i/3495790):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Blog (Corporate Blog)**
+* Issue [#3495794](https://www.drupal.org/i/3495794):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Bootstrap Paragraphs**
+* Issue [#3495795](https://www.drupal.org/i/3495795):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Carousels**
+* Issue [#3495800](https://www.drupal.org/i/3495800):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Commerce (Merchandise)**
+* Issue [#3495903](https://www.drupal.org/i/3495903):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase SEO**
+* Issue [#3495825](https://www.drupal.org/i/3495825):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Email**
+* Issue [#3495853](https://www.drupal.org/i/3495853):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase FAQs**
+* Issue [#3495870](https://www.drupal.org/i/3495870):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Landing Page (Paragraphs)**
+* Issue [#3495874](https://www.drupal.org/i/3495874):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Layout Builder**
+* Issue [#3495896](https://www.drupal.org/i/3495896):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Media Header**
+* Issue [#3495902](https://www.drupal.org/i/3495902):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Search**
+* Issue [#3495908](https://www.drupal.org/i/3495908):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Social Single Sign-On**
+* Issue [#3495911](https://www.drupal.org/i/3495911):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Style Guide**
+* Issue [#3496072](https://www.drupal.org/i/3496072):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase YouTube Import**
+* Issue [#3496076](https://www.drupal.org/i/3496076):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **VMI**
+* Issue [#3495913](https://www.drupal.org/i/3495913):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Vartheme BS4**
+* Issue [#3495916](https://www.drupal.org/i/3495916):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Total Control Dashboard**
+* Issue [#3496067](https://www.drupal.org/i/3496067):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Varbase Workflow**
+* Issue [#3496075](https://www.drupal.org/i/3496075):
+         Updated **Drupal Core** from `~10.3.0 || ~11.0.0` to `~10.4.0 || ~11.1.0` for **Vartheme Claro**
+
+### Fixes since Varbase 9.1.7:
+* Issue [#3497720](https://www.drupal.org/i/3497720):
+        Fixed not intractable Add block and Update element action buttons for layout builder modal
+* Changed a patch for Drupal Core on Issue [#3496329](https://www.drupal.org/i/3496329): Fix not loading CKEditor 5 and Tour with BigPipe enabled after Drupal 10.4 update #110
+* Removed a patch for Editoria11y Accessibility Checker module on Issue [#3492469](https://www.drupal.org/i/3492469):
+         Fix Error: Call to Member Function id() on Null in editoria11y Page Attachments() During Content Type Creation #103
+* Removed a patch for Content Moderation Notifications module on Issue [#3347958](https://www.drupal.org/i/3347958):
+         Fix Entity queries must explicitly set whether the query should be access checked or not in Content Moderation Notifications #101
+* Removed a patch for Security Review module on Issue [#3463712](https://www.drupal.org/i/3463712):
+         Fix fatal error when pressing Run checklist button #98
+
+-------------------------------------------------------------------------------
+
 # 9.1.7
 
-###  Highlighted important changes since Varbase 9.1.6:
+### Highlighted important changes since Varbase 9.1.6:
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
 
 * Issue [#3490913](https://www.drupal.org/i/3490913):
