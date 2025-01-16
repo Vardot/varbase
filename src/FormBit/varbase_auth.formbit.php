@@ -42,7 +42,6 @@ function varbase_auth_build_formbit(array &$formbit, FormStateInterface &$form_s
       'social_auth_google' => t('Google'),
       'social_auth_facebook' => t('Facebook'),
       'social_auth_linkedin' => t('Linkedin'),
-      'social_auth_twitter' => t('Twitter'),
     ],
   ];
 }
