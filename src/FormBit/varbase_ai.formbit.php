@@ -16,7 +16,7 @@ use Drupal\Core\Form\FormStateInterface;
 function varbase_ai_get_editable_config_names() {
   $varbase_ai_editable_configs = [
     'key.key.open_ai_key' => [
-      'key_value' => '',
+      'key_value' => 'sk-change-this',
     ],
   ];
 
@@ -37,7 +37,7 @@ function varbase_ai_build_formbit(array &$formbit, FormStateInterface &$form_sta
   $formbit['key_value'] = [
     '#type' => 'textfield',
     '#title' => ('API Key'),
-    '#default_value' => '',
+    '#default_value' => 'sk-change-this',
     '#description' => t('The API key is required to interface with OpenAI services. Get your API key by signing up on the <a href=":link" target="_blank">OpenAI website</a>.', [':link' => 'https://openai.com/api']),
     '#element_validate' => ['validate_formbit_openai_api_key'],
   ];
