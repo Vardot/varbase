@@ -17,7 +17,7 @@ Feature: The welcome message should be displayed on first visit to the site
   Scenario: Check if welcome message and tour are displayed
     Given I am a logged in user with the "webmaster" user
       And I go to "/?welcome"
-      And I wait 2 seconds
+      And I wait 2s
       And I scroll to the bottom
      Then I should see "Welcome to "
       And I should see "Get started"
@@ -25,12 +25,16 @@ Feature: The welcome message should be displayed on first visit to the site
       And I wait 6s
      Then I should see "Tour Switch"
      When I click next button in tour
+      And I wait 2s
      Then I should see "Editing Your Homepage Layout"
      When I click next button in tour
+      And I wait 2s
      Then I should see "Start Configuring Your Site Structure"
      When I click next button in tour
+      And I wait 2s
      Then I should see "Define Your Site Settings"
      When I click next button in tour
+      And I wait 2s
      Then I should see "Site Content"
 
   @javascript @local @development @staging @production
