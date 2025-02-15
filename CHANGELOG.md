@@ -1,3 +1,89 @@
+# 10.0.4
+
+This is a patch (bugfix) release of Varbase 10 and is ready for use on production sites.
+
+### Highlighted important changes since Varbase 10.0.3:
+
+> Supercharged workflow with AI-powered automation, from smart content editing to intelligent tagging and seamless media enhancements.
+
+Issue [#3502524](https://www.drupal.org/i/3502524):
+         Switched default **AI Module** and **AI Recipes** to work with **Drupal AI**
+Issue [#3505583](https://www.drupal.org/i/3505583):
+         Enabled the new administration **Navigation** module and
+          remove **Admin Toolbar** & **Admin Toolbar Extra Tools** for improved admin UX
+Issue [#3496408](https://www.drupal.org/i/3496408):
+         Updated **the Gin Admin Theme** from `~3` to `~4`
+
+### Added since Varbase 10.0.3:
+* Issue [#3502443](https://www.drupal.org/i/3502443):
+         Initialized the **Varbase AI Default recipe**
+* Issue [#3502278](https://www.drupal.org/i/3502278):
+         Initialized the **Varbase AI Editor Assistant recipe**
+* Issue [#3502267](https://www.drupal.org/i/3502267):
+         Initialized the **Varbase AI Image Alt recipe**
+* Issue [#3501744](https://www.drupal.org/i/3501744):
+         Initialized the **Varbase AI Taxonomy Tagging recipe**
+* Issue [#3502286](https://www.drupal.org/i/3502286):
+         Initialized the **Varbase AI Agents recipe**
+* Issue [#3502844](https://www.drupal.org/i/3502844):
+         Added the **league/commonmark** library to allow formats messages in the **AI Chatbot** module
+
+### Changes since Varbase 10.0.3:
+* Issue [#3503473](https://www.drupal.org/i/3503473):
+         Switched the default **AI Agent** from **AI Chatbot** to **AI DeepChat Chatbot**
+* Issue [#3502527](https://www.drupal.org/i/3502527):
+         Changed default installation config form for **Varbase AI** recipe
+          to integrate with **Drupal AI** and **Keys**
+* Issue [#3503292](https://www.drupal.org/i/3503292):
+         Renamed **Varbase Agent** to **AI Agent** and **acknowledge Drupal AI community contributions**
+* Issue [#3500358](https://www.drupal.org/i/3500358):
+         Removed **Media Revisions UI** module
+* Issue [#3499644](https://www.drupal.org/i/3499644):
+         Removed the **Tour UI** module as it has officially been merged into **Tour ~2.0**
+* Issue [#3506504](https://www.drupal.org/i/3506504):
+         Removed **Content Planner link** from **Toolbar** to prevent conflicts
+* Issue [#3501434](https://www.drupal.org/i/3501434):
+         Switched the dependency for the Statistics module from **Drupal Core** to a contrib module
+* Issue [#3505384](https://www.drupal.org/i/3505384):
+         Styled Exposed Operator for Select Element in Views Exposed Filter Form for Improved User Experience
+* Issue [#3505828](https://www.drupal.org/i/3505828):
+         Ensured **Navigation Block Page** Uses Admin Theme in Layout Builder
+* Issue [#3505925](https://www.drupal.org/i/3505925):
+         Support **Drupal Core Navigation** System and Adjust **Varbase Dashboards** Toolbar Styling
+
+### Updates since Varbase 10.0.3:
+* Issue [#3498208](https://www.drupal.org/i/3498208):
+         Updated **Image Optimize** module from `~4.0.0` to `~4.1.0`
+* Issue [#3499819](https://www.drupal.org/i/3499819):
+         Updated **Real-time SEO** from `~1` to `~2` for **Varbase Core**
+* Issue [#3498129](https://www.drupal.org/i/3498129):
+         Updated **Reroute Email** module from `~2.2.0` to `~2.3.0`
+* Issue [#3505494](https://www.drupal.org/i/3505494)
+         by [mohammad-fayoumi](https://www.drupal.org/u/nghunaim)
+        : Updated **vardot/varbase-patches** version from `~10` to `~10.0.0`
+         for the `10.0.x` branch
+* Issue [#3499773](https://www.drupal.org/i/3499773):
+         Updated **Entity Blocks** module from `~1` to `~2`
+* Issue [#3505524](https://www.drupal.org/i/3505524):
+         Updated **Layout Builder Asymmetric Translation** from `~2` to `~3`
+* Issue [#3499818](https://www.drupal.org/i/3499818):
+         Updated **Real-time SEO** from `~1` to `~2` for **Varbase SEO**
+
+### Fixes since Varbase 10.0.3:
+* Issue [#3497720](https://www.drupal.org/i/3497720):
+         Fixed not intractable Add block and Update element action buttons for layout builder modal
+* Issue [#3499199](https://www.drupal.org/i/3499199)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Nested Layout Builder Blocks Trigger Frontend Theme on AJAX Calls
+* Issue [#3502553](https://www.drupal.org/i/3502553):
+         Fixed parser error of invalid config exception for editor.editor.full_html in
+         ckeditor5 plugin find and replace
+* Issue [#3500728](https://www.drupal.org/i/3500728):
+         Fixed machine name id of tours to follow the machine-readable name must contain
+         only lowercase letters, numbers, and underscores in **Tours ~2.0**
+
+-------------------------------------------------------------------------------
+
 # 10.0.3
 
 ### Highlighted important changes since Varbase 10.0.2:
