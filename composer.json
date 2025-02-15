@@ -30,7 +30,20 @@
     "drupal/statistics": "*",
     "jquery/fancytree": "*",
     "fancytree/fancytree": "*",
-    "npm-asset/ckeditor5": "*"
+    "npm-asset/ckeditor5": "*",
+    "npm-asset/ckeditor5-dll-inline": "*",
+    "npm-asset/ckeditor5-core": "*",
+    "npm-asset/ckeditor5-engine":"*",
+    "npm-asset/ckeditor5-ui": "*",
+    "npm-asset/ckeditor5-utils": "*",
+    "npm-asset/ckeditor5-widget": "*",
+    "npm-asset/ckeditor--ckeditor5": "*",
+    "npm-asset/ckeditor--ckeditor5-dll-inline": "*",
+    "npm-asset/ckeditor--ckeditor5-core": "*",
+    "npm-asset/ckeditor--ckeditor5-engine":"*",
+    "npm-asset/ckeditor--ckeditor5-ui": "*",
+    "npm-asset/ckeditor--ckeditor5-utils": "*",
+    "npm-asset/ckeditor--ckeditor5-widget": "*"
   },
   "require": {
     "drupal/varbase_core": "~10",
