@@ -29,7 +29,8 @@
   "replace": {
     "drupal/statistics": "*",
     "jquery/fancytree": "*",
-    "fancytree/fancytree": "*"
+    "fancytree/fancytree": "*",
+    "npm-asset/ckeditor--ckeditor5-dll-inline": "*"
   },
   "require": {
     "drupal/varbase_core": "~10",
