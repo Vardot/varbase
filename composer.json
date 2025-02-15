@@ -30,7 +30,7 @@
     "drupal/statistics": "*",
     "jquery/fancytree": "*",
     "fancytree/fancytree": "*",
-    "npm-asset/ckeditor--ckeditor5-dll-inline": "*"
+    "npm-asset/ckeditor5": "*"
   },
   "require": {
     "drupal/varbase_core": "~10",
