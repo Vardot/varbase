@@ -43,7 +43,14 @@
     "npm-asset/ckeditor--ckeditor5-engine":"*",
     "npm-asset/ckeditor--ckeditor5-ui": "*",
     "npm-asset/ckeditor--ckeditor5-utils": "*",
-    "npm-asset/ckeditor--ckeditor5-widget": "*"
+    "npm-asset/ckeditor--ckeditor5-widget": "*",
+    "npm-asset/lodash-es": "*",
+    "npm-asset/lodash.debounce": "*",
+    "npm-asset/lodash.throttle": "*",
+    "npm-asset/nouislider": "*",
+    "npm-asset/rtseo.js": "*",
+    "bower-asset/jquery": "*",
+    "bower-asset/jquery-ui": "*"
   },
   "require": {
     "drupal/varbase_core": "~10",
