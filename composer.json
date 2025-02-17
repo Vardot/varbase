@@ -27,7 +27,6 @@
     }
   },
   "replace": {
-    "drupal/statistics": "*",
     "jquery/fancytree": "*",
     "fancytree/fancytree": "*",
     "drupal/openapi_rest": "*",
