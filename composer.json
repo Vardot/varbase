@@ -55,7 +55,7 @@
   "require": {
     "drupal/varbase_core": "10.1.x-dev",
     "drupal/varbase_components": "3.0.x-dev",
-    "drupal/varbase_api": "10.0.x-dev",
+    "drupal/varbase_api": "10.1.x-dev",
     "drupal/varbase_ai": "2.0.x-dev",
     "drupal/varbase_media": "10.1.x-dev",
     "drupal/varbase_editor": "10.1.x-dev",
