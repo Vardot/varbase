@@ -30,6 +30,10 @@
     "drupal/statistics": "*",
     "jquery/fancytree": "*",
     "fancytree/fancytree": "*",
+    "drupal/openapi_rest": "*",
+    "drupal/ckeditor_media_embed": "*",
+    "drupal/media_bulk_upload": "*",
+    "drupal/config_perms": "*",
     "npm-asset/ckeditor5": "*",
     "npm-asset/ckeditor5-dll-inline": "*",
     "npm-asset/ckeditor5-core": "*",
@@ -82,5 +86,10 @@
     "npm-asset/northernco--ckeditor5-anchor-drupal": "^0.5.0",
     "npm-asset/ckeditor--ckeditor5-media-embed": "*",
     "npm-asset/jquery.fancytree": "~2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Varbase\\composer\\": "src/composer"
+    }
   }
 }
