@@ -8,7 +8,7 @@ dependencies:
 id: content_admin
 label: 'Content Admin'
 weight: -7
-is_admin: null
+is_admin: false
 permissions:
   - 'access content overview'
   - 'revert all revisions'

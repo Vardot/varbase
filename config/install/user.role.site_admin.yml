@@ -9,7 +9,7 @@ dependencies:
 id: site_admin
 label: 'Site Admin'
 weight: -5
-is_admin: null
+is_admin: false
 permissions:
   - 'administer blocks'
   - 'access content overview'

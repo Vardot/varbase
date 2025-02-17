@@ -145,11 +145,9 @@ commands:
             sudo chown www-data:circleci .
             git clone --branch '10.1.x' https://github.com/vardot/varbase-project.git /var/www/html/test/varbase
             cd /var/www/html/test/varbase
-            composer require --dev drupal/core-dev:~10 --no-update
-            composer require --dev drush/drush:~13 --no-update
-            composer require --dev drupal/drupal-extension:5.0.0alpha1 --no-update
-            composer require --dev webship/behat-html-formatter:~1.0 --no-update
-            composer require --dev drevops/behat-screenshot:~1.0 --no-update
+            composer require drupal/drupal-extension:5.0.0alpha1 --no-update
+            composer require webship/behat-html-formatter:~1.0 --no-update
+            composer require drevops/behat-screenshot:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             composer install --no-interaction -vvv

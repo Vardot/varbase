@@ -8,7 +8,7 @@ dependencies:
 id: editor
 label: Editor
 weight: -8
-is_admin: null
+is_admin: false
 permissions:
   - 'access content overview'
   - 'view all revisions'
