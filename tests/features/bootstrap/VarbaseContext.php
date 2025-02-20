@@ -88,7 +88,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $this->getSession()->visit($this->locatePath('/user/login'));
       $page = $this->getSession()->getPage();
 
-      if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+      if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 2000)) {
         $page->fillField('name', $username);
         $page->fillField('pass', $password);
         $this->iScrollToBottom();
@@ -122,7 +122,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->visit($this->locatePath('/user/login'));
     $page = $this->getSession()->getPage();
 
-    if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+    if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 2000)) {
       $page->fillField('name', $username);
       $page->fillField('pass', $password);
       $this->iScrollToBottom();
@@ -423,13 +423,13 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function iClickNextInTour() {
     // Find the next button in tour by text.
-    $element = $this->getSession()->getPage()->find('xpath', "//footer[contains(@class, 'shepherd-footer')]//button[text()='Next']");
+    $element = $this->getSession()->getPage()->find('xpath', "//button[text()='Next']");
 
     if (empty($element)) {
       throw new \Exception('The Next action button in the tour is not found.');
     }
 
-    $this->getSession()->executeScript('document.querySelector("body > div.drupal-tour.shepherd-enabled > div.shepherd-content > footer > button").click();');
+    $this->getSession()->executeScript('document.querySelector("body > dialog.drupal-tour.shepherd-enabled > div.shepherd-content > footer > button.button--primary.shepherd-button").click();');
 
   }
 
