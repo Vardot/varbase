@@ -3,22 +3,38 @@ Feature: AI Agent integration and interpolation
       I want to be able to use AI Agents
       So that an interpolation to content can be assisted with AI
 
-  @javascript @local @development @staging @production
-  Scenario: Check OpenAI Settings
+  @javascript @local @development @stating @production
+  Scenario: Check AI Providers and keys
     Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/config/openai/settings"
-      And wait
-     Then I should see "OpenAI Settings"
-      And I should see "API Key"
-      And I should see "Organization ID"
+     When I go to "admin/config/ai/providers"
+      And I wait
+     Then I should see "AI Providers"
+      And I should see "OpenAI Authentication"
+     When I click "OpenAI Authentication"
+      And I wait
+     Then I should see "Setup OpenAI Authentication"
+     When I go to "admin/config/system/keys"
+      And I wait
+     Then I should see "Keys"
+      And I should see "Open AI Key"
 
   @javascript @local @development @staging @production
-  Scenario: Check OpenAI and interpolation options to content
+  Scenario: Check AI Settings
+    Given I am a logged in user with the "webmaster" user
+     When I go to "/admin/config/ai/settings"
+      And wait
+     Then I should see "AI Settings"
+      And I should see "Chat with Image Vision"
+
+  @javascript @local @development @staging @production
+  Scenario: Check AI Assistant and interpolation options to content
     Given I am a logged in user with the "webmaster" user
      When I go to "/node/add/varbase_blog"
       And wait
-     Then I should see "Analyze text"
-      And I should see "Adjust content tone"
-      And I should see "Summarize text"
-      And I should see "Suggest content title"
-      And I should see "Suggest taxonomy"
+     Then I should see "AI Assistant"
+     When I click on "AI Assistant" command button in the rich text editor field "Body"
+     Then I should see "Generate with AI"
+      And I should see "Reformat HTML"
+      And I should see "Fix spelling"
+      And I should see "Summarize"
+      And I should see "Tone"

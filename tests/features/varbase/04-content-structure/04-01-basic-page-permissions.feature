@@ -62,7 +62,7 @@ Feature: Content Structure - Basic Page
       And wait
       And I fill in "Test Basic page" for "Title"
       And I fill in the rich text editor field "Body" with "Test Basic page body"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait
      Then I should see "Basic page Test Basic page has been created."

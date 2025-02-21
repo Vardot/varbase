@@ -13,7 +13,7 @@ Feature: Website Base Requirements - Website Languages - English
      When I select "English" from "Language"
       And I fill in "Test English Basic page title by content admin" for "Title"
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait
      Then I should see "Test English Basic page title by content admin"
@@ -27,7 +27,7 @@ Feature: Website Base Requirements - Website Languages - English
      Then I should see "Language"
      When I select "English" from "Language"
       And I fill in "Test English Landing page title by content admin" for "Title"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait
      Then I should see "Test English Landing page title by content admin"
@@ -42,7 +42,7 @@ Feature: Website Base Requirements - Website Languages - English
      When I select "English" from "Language"
       And I fill in "Test English Basic page title by site admin" for "Title"
       And I fill in the rich text editor field "Body" with "Test English Basic page body"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait
      Then I should see "Test English Basic page title by site admin"
@@ -56,7 +56,7 @@ Feature: Website Base Requirements - Website Languages - English
      Then I should see "Language"
      When I select "English" from "Language"
       And I fill in "Test English Landing page title by site admin" for "Title"
-      And I select "published" from "edit-moderation-state-0-state"
+      And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait
      Then I should see "Test English Landing page title by site admin"
