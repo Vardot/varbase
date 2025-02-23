@@ -12,7 +12,7 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #1" for "Slide title"
       And I fill in "Test hero slider slide text #1" for "Slide text"
-      And I press "field_media_single-media-library-open-button"
+      And I press "Add media"
       And I wait for AJAX to finish
      Then I should see "Name"
      When I fill in "Background Image 2" for "Name"
@@ -39,7 +39,7 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
      Then I should see "Create Hero slider"
      When I fill in "Test hero slider #2" for "Slide title"
       And I fill in "Test hero slider slide text #2" for "Slide text"
-      And I press "field_media_single-media-library-open-button"
+      And I press "Add media"
       And I wait for AJAX to finish
      Then I should see "Name"
      When I fill in "SAAS 1" for "Name"

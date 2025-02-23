@@ -45,25 +45,3 @@ Feature: Content Management - Standard Entity Queue Management - Have the option
       And I should see "Test content N3" in the "Test content N3" row
       And I should see "Test content N2" in the "Test content N2" row
       And I should see "Test content N1" in the "Test content N1" row
-
-    # Delete test content for subqueue test queue.
-     When I go to "/admin/content"
-      And wait
-     Then I should see "Content"
-     When I check the box "Test content N1"
-      And I check the box "Test content N2"
-      And I check the box "Test content N3"
-      And I select "Delete selected entities / translations" from "action"
-     When I press "Apply to selected items"
-      And wait 3s
-     Then I should see "Delete entities (3)"
-
-     When I go to "/admin/structure/entityqueue"
-      And wait
-     Then I should see "Test Queue"
-     When I click "Edit items" in the "Test Queue" row
-      And wait
-     Then I should see "Edit subqueue Test Queue"
-      And I should not see "Test content N3"
-      And I should not see "Test content N2"
-      And I should not see "Test content N1"

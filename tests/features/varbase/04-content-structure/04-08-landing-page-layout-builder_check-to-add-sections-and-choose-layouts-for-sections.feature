@@ -15,7 +15,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I press the "Save as" button
       And wait
      Then I should see "Landing page (Layout Builder) Test Landing page (Layout Builder) has been created"
-      And I should see "This layout builder tool allows you to configure the layout of the main content area."
+      And I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
@@ -60,7 +60,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I should see "Layout"
      When I click "Layout"
       And wait
-     Then I should see "This layout builder tool allows you to configure the layout of the main content area."
+     Then I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
@@ -112,7 +112,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I should see "Layout"
      When I click "Layout"
       And wait
-     Then I should see "This layout builder tool allows you to configure the layout of the main content area."
+     Then I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
@@ -184,7 +184,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I should see "Layout"
      When I click "Layout"
       And wait
-     Then I should see "This layout builder tool allows you to configure the layout of the main content area."
+     Then I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
@@ -274,7 +274,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Layout"
      When I click "Layout"
       And wait
-     Then I should see "This layout builder tool allows you to configure the layout of the main content area."
+     Then I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"
@@ -383,7 +383,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I should see "Layout"
      When I click "Layout"
       And wait
-     Then I should see "This layout builder tool allows you to configure the layout of the main content area."
+     Then I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 2s
      Then I should see "Add section at end of layout"

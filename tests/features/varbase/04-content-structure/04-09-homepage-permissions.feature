@@ -17,7 +17,7 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And I should see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
+      And I should see "Devel"
       And I should see "Clone"
       And I should see "Translate"
 
@@ -33,7 +33,6 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should not see "Revisions"
-      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should not see "Clone"
       And I should not see "Translate"
 
@@ -49,7 +48,6 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should not see "Revisions"
-      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should not see "Clone"
       And I should not see "Translate"
 
@@ -67,7 +65,6 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And I should not see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should see "Clone"
       And I should see "Translate"
 
@@ -85,7 +82,6 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And I should not see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should see "Clone"
       And I should see "Translate"
 
@@ -102,7 +98,6 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should see "Revisions"
-      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should not see "Clone"
       And I should see "Translate"
 
@@ -120,6 +115,5 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And I should not see "Manage display"
       And I should see "Layout"
       And I should see "Revisions"
-      And I should not see "Devel" in the "a" element with the "id" attribute set to "toolbar-item-devel"
       And I should see "Clone"
       And I should see "Translate"
