@@ -1,3 +1,49 @@
+# 9.1.9
+
+### Highlighted important changes since Varbase 9.1.8:
+
+This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
+
+###  Added since Varbase 9.1.8:
+* All new features are in Varbase ~10
+
+### Changed since Varbase 9.1.8:
+* Issue [#3505828](https://www.drupal.org/i/3505828)
+         by [mohammad faqeh](https://www.drupal.org/u/mohammad-faqeh)
+        : Ensure **Navigation Block Page** Uses **Admin Theme** in Layout Builder
+* Issue [#3501122](https://www.drupal.org/i/3501122):
+         Removed **Layout Builder Block Sanitizer** module
+* Issue [#3499644](https://www.drupal.org/i/3499644):
+         Removed the **Tour UI** module as it has officially been merged into **Tour** `~2.0`
+* Issue [#3500358](https://www.drupal.org/i/3500358):
+         Removed **Media Revisions UI** module
+
+### Updates since Varbase 9.1.8:
+* Issue [#3501127](https://www.drupal.org/i/3501127):
+         Updated **RDF** module to `~3.0` to support **Drupal** `11`
+* Issue [#3505524](https://www.drupal.org/i/3505524):
+         Updated **Layout Builder Asymmetric Translation** from `~2` to `~3`
+* Issue [#3499773](https://www.drupal.org/i/3499773):
+         Updated **Entity Blocks** module from `~1` to `~2`
+* Issue [#3499818](https://www.drupal.org/i/3499818):
+         Updated **Real-time SEO** from `~1` to `~2` for **Varbase SEO**
+* Issue [#3499819](https://www.drupal.org/i/3499819):
+         Updated **Real-time SEO** from `~1` to `~2` for Varbase Core
+* Issue [#3498129](https://www.drupal.org/i/3498129):
+         Updated **Reroute Email** module from `~2.2.0` to `~2.3.0`
+* Issue [#3498208](https://www.drupal.org/i/3498208):
+         Updated **Image Optimize** module from `~4.0.0` to `~4.1.0`
+
+### Fixes since Varbase 9.1.7:
+* Issue [#3500725](https://www.drupal.org/i/3500725)
+         Fixed machine name id of tours to follow the machine-readable name must contain only
+         lowercase letters, numbers, and underscores in **Tours** `~2.0`
+* Issue [#3499199](https://www.drupal.org/i/3499199)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Nested Layout Builder Blocks Trigger Frontend Theme on AJAX Calls
+
+-------------------------------------------------------------------------------
+
 # 9.1.8
 
 ### Highlighted important changes since Varbase 9.1.7:
