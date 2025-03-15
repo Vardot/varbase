@@ -34,7 +34,7 @@ This is a patch (bugfix) release of **Varbase 9** and is ready for use on produc
 * Issue [#3498208](https://www.drupal.org/i/3498208):
          Updated **Image Optimize** module from `~4.0.0` to `~4.1.0`
 
-### Fixes since Varbase 9.1.7:
+### Fixes since Varbase 9.1.8:
 * Issue [#3500725](https://www.drupal.org/i/3500725)
          Fixed machine name id of tours to follow the machine-readable name must contain only
          lowercase letters, numbers, and underscores in **Tours** `~2.0`
