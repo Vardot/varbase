@@ -21,8 +21,10 @@ Feature: File & Media Management - Assets Management - Image media and their usa
      When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
       And wait
       And I press the "Save" button
-      And wait
-      And I fill in "Flag Earth in space" for "field_media_image[0][alt]"
+      And wait 2s
+     Then I should see "Alternative text"
+     Then I should see "Title"
+     When I fill in "Flag Earth in space" for "field_media_image[0][alt]"
       And I fill in "Flag Earth all earth in space" for "field_media_image[0][title]"
       And I fill in "Flag Earth" for "name[0][value]"
       And I check the box "Show in media library"

@@ -48,8 +48,7 @@ default:
           browser: chrome
           browserName: chrome
           extra_capabilities:
-            chromeOptions:
-              w3c: true
+            "goog:chromeOptions":
               args:
                 - "--headless"
                 - "--start-maximized"
@@ -66,6 +65,8 @@ default:
                 - "--disable-extensions"
                 - "--incognito"
                 - "--disable-infobars"
+                - "--disable-popup-blocking"
+                - "--no-first-run"
                 - "--remote-debugging-port=9222"
                 - "--allowed-ips=*"
                 - "--whitelisted-ips=*"

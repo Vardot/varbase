@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.1.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase?branch=10.0.x) [![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more) Varbase 10.1.x
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.1.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase?branch=10.1.x) [![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more) Varbase 10.1.0-alpha1
 
 [![](https://www.drupal.org/files/project-images/varbase-medium-logo-color-with-padding.png)](https://www.drupal.org/project/varbase)
 
@@ -19,16 +19,21 @@ in every project.
 * Comes with a lot of needed functionalities/modules for every-day Drupal site.
 * [Tested, tested, and tested.](https://app.circleci.com/pipelines/github/Vardot/varbase)
 
-Starting a new project? Consider **Varbase** for **Drupal 10/11**.
+Starting a new project? Consider **Varbase** for **Drupal 11**.
 Installing **Varbase `10.1.x`** comes with several extra automated installation
-steps, to take full advantage of Varbase, other than the **Drupal 10/11** installation
+steps, to take full advantage of Varbase, other than the **Drupal 11** installation
 instructions.
 
 
 # Install with Composer
 
 
-To install the dev version of **Varbase `10.0.x`** run this command:
+To install the most recent stable release of **Varbase `10.0.x`** run this command:
+```
+composer create-project Vardot/varbase-project:10.1.0-alpha1 PROJECT_DIR_NAME --no-dev --no-interaction
+```
+
+To install the dev version of **Varbase `10.1.x`** run this command:
 ```
 composer create-project vardot/varbase-project:10.1.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
