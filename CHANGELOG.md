@@ -1,3 +1,58 @@
+# 10.0.5
+
+This is a patch (bugfix) release of Varbase ~10.0 and is ready for use on production sites.
+
+### Highlighted important changes since Varbase 10.0.4:
+* Issue [#3513391](https://www.drupal.org/i/3513391):
+         Added **Varbase Privacy** recipe for optional default configs for Cookie & Consent Management
+* Issue [#3511969](https://www.drupal.org/i/3511969):
+         Added **Autosave** Form `~1` module
+
+### Added since Varbase 10.0.4:
+* Issue [#3513242](https://www.drupal.org/i/3513242):
+         Added **Navigation Extra Tools** `~1.0` module to **Varbase Admin** and enable by default
+* Issue [#3511975](https://www.drupal.org/i/3511975):
+         Added **Klaro Cookie & Consent Management** `~3` module
+
+### Changes since Varbase 10.0.4:
+* Issue [#3514878](https://www.drupal.org/i/3514878)
+         by [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Disabled **Statistics** module due to performance issues
+* Issue [#3516136](https://www.drupal.org/i/3516136)
+        : Removed the **Vartheme Claro** preprocess install page
+* Issue [#3513239](https://www.drupal.org/i/3513239)
+        : Initialized the **Varbase Privacy** recipe
+* Issue [#3519781](https://www.drupal.org/i/3519781)
+        : Removed leftover libraries-override on varbase_components/root: vartheme_bs5/root
+
+### Updates since Varbase 10.0.4:
+* All modules are updatable by basic composer update
+
+### Fixes since Varbase 10.0.4:
+* Issue [#3518954](https://www.drupal.org/i/3518954)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        , [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed ArgumentCountError in VarbaseMediaHeaderSettingsForm constructor
+* Issue [#3512382](https://www.drupal.org/i/3512382)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed Incorrect path for varbase-admin.admin-toolbar.theme.css causes warning after updating
+* Issue [#3507787](https://www.drupal.org/i/3507787):
+         Fixed Warning - Undefined array key social_networks in varbase_auth_preprocess_login_with()
+* Issue [#3501338](https://www.drupal.org/i/3501338)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Cache Context Conflict in Breadcrumbs Causes Cache Redirect Overwrite Warning After **Drupal 10.4** Upgrade
+* Issue [#3514505](https://www.drupal.org/i/3514505)
+         by [jedgar1mx]()
+        : Fixed missing `.xs` breakpoint in content.field_media_gallery during clean install
+* Issue [#3507250](https://www.drupal.org/i/3507250)
+         by [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+        , [mohammad-fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+        : Fixed to prevent Bootstrap root.css conflicts with custom Bootstrap themes in CKEditor
+* Issue [#3520073](https://www.drupal.org/i/3520073):
+         Fixed Autosave Form Settings to Exclude Media Bundles from Allowed Content Entity Types and Focal Points
+
+-------------------------------------------------------------------------------
+
 # 10.0.4
 
 This is a patch (bugfix) release of Varbase 10 and is ready for use on production sites.
@@ -6,12 +61,12 @@ This is a patch (bugfix) release of Varbase 10 and is ready for use on productio
 
 > Supercharged workflow with AI-powered automation, from smart content editing to intelligent tagging and seamless media enhancements.
 
-Issue [#3502524](https://www.drupal.org/i/3502524):
+* Issue [#3502524](https://www.drupal.org/i/3502524):
          Switched default **AI Module** and **AI Recipes** to work with **Drupal AI**
-Issue [#3505583](https://www.drupal.org/i/3505583):
+* Issue [#3505583](https://www.drupal.org/i/3505583):
          Enabled the new administration **Navigation** module and
           remove **Admin Toolbar** & **Admin Toolbar Extra Tools** for improved admin UX
-Issue [#3496408](https://www.drupal.org/i/3496408):
+* Issue [#3496408](https://www.drupal.org/i/3496408):
          Updated **the Gin Admin Theme** from `~3` to `~4`
 
 ### Added since Varbase 10.0.3:
