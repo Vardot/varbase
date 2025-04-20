@@ -1,3 +1,389 @@
+# 10.1.0-alpha1
+
+### Highlighted important changes since Varbase 10.0.5:
+* Issue [#3484640](https://www.drupal.org/i/3484640):
+         Started a `10.1.x` branch for **Varbase** to support **UI Pattern ~2.0**, **Storybook**,
+         and pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3484597](https://www.drupal.org/i/3484597):
+         Started a `3.0.x` branch for **Varbase Components** to support **UI Patterns ~2.0** and **Storybook**
+         and pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3484616](https://www.drupal.org/i/3484616):
+         Started a `4.0.x` branch for **Vartheme BS5** to support **UI Patterns ~2.0** and **Storybook**,
+         and pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3484717](https://www.drupal.org/i/3484717):
+         Started a `4.0.x` branch for **View Modes Inventory (VMI)** to use **UI Patterns ~2.0**, **Varbase Components ~3.0**
+* Issue [#3485916](https://www.drupal.org/i/3485916):
+         Added the **Storybook ~1.0** module as the default for providing **Varbase Storybook** stories for components
+
+### Added since Varbase 10.0.5:
+* Issue [#3509379](https://www.drupal.org/i/3509379)
+         by [alaa abbad](https://www.drupal.org/u/alaa-abbad)
+        : Added the name of the component before `utility_classes` in all components
+         to avoid inheriting `utility_classes` from parent components
+* Issue [#3499885](https://www.drupal.org/i/3499885):
+         Added **SDC Devel** module to the default **Varbase Development recipe**
+* Issue [#3485280](https://www.drupal.org/i/3485280)
+         by [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
+        : Added a simple URL Link property to Heading component
+* Issue [#3511842](https://www.drupal.org/i/3511842):
+         Added and enable **UI Patterns Display Suite** module
+* Issue [#3484947](https://www.drupal.org/i/3484947):
+         Started a `10.1.x` branch for **Varbase Core** to support **UI Patterns ~2.0**,
+         **Varbase Components ~3.0**, and **VMI ~4.0** and pave the way for a smoother
+          upgrade process to **Drupal 11**
+* Issue [#3495787](https://www.drupal.org/i/3495787):
+         Started a `10.1.x` branch for **Varbase API** to pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3492627](https://www.drupal.org/i/3492627):
+         Started a `10.1.x` branch for **Varbase Media** to support **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         and **VMI ~4.0** and pave the way for a smoother upgrade process to **Drupal 11**
+* Issue [#3495822](https://www.drupal.org/i/3495822):
+         Started a `10.1.x` branch for **Varbase Editor** to pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3484668](https://www.drupal.org/i/3484668):
+         Started a `10.1.x` branch for **Varbase Blog** to use **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         Storybook and pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3496070](https://www.drupal.org/i/3496070):
+         Started a `10.1.x` branch for **Varbase Workflow** to pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3495910](https://www.drupal.org/i/3495910):
+         Started a `10.1.x` branch for **Varbase Social Single Sign-On** to
+         pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3495907](https://www.drupal.org/i/3495907):
+         Started a `10.1.x` branch for **Varbase SEO** to pave the way for
+         a smooth upgrade process to **Drupal 11**
+* Issue [#3492703](https://www.drupal.org/i/3492703):
+         Started a `10.1.x` branch for **Varbase Search** to pave the way for a smoother upgrade process to **Drupal 11**
+* Issue [#3484675](https://www.drupal.org/i/3484675):
+         Started a `10.1.x` branch for **Varbase Media Header** to use **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         Storybook and pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3484684](https://www.drupal.org/i/3484684):
+         Started a `10.1.x` branch for **Varbase Media Hero Slider** to use **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         Storybook and pave the way for a smooth upgrade process to Drupal 11
+* Issue [#3492682](https://www.drupal.org/i/3492682):
+         Started a `1.1.x` branch for **Varbase Demo** to support **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         and **VMI ~4.0** and pave the way for a smoother upgrade process to **Drupal 11**
+* Issue [#3492674](https://www.drupal.org/i/3492674):
+         Started a `10.1.x` branch for **Varbase Media Demo Assets** to support **UI Patterns ~2.0**,
+         **Varbase Components ~3.0**, and **VMI ~4.0** and pave the way for a smoother upgrade process to **Drupal 11**
+* Issue [#3484660](https://www.drupal.org/i/3484660):
+         Started a `10.2.x` branch for **Varbase Layout Builder** to use **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         Storybook and pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3496081](https://www.drupal.org/i/3496081):
+         Started a `1.1.x` branch for **Varbase Dashboards** to pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3492695](https://www.drupal.org/i/3492695):
+         Started a `10.1.x` branch for **Varbase Landing Page (Paragraphs)** to support **UI Patterns ~2.0**,
+         **Varbase Components ~3.0**, and **VMI ~4.0** and pave the way for a smoother upgrade process to **Drupal 11**
+* Issue [#3484691](https://www.drupal.org/i/3484691):
+         Started a `1.1.x` branch for **Varbase Heroslider** to use **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         Storybook and pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3495858](https://www.drupal.org/i/3495858):
+         Started a `10.1.x` branch for **Varbase FAQs** to pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3495852](https://www.drupal.org/i/3495852):
+         Started a `10.1.x` branch for **Varbase Email** to pave the way for a smooth upgrade process to **Drupal 11**
+* Issue [#3492690](https://www.drupal.org/i/3492690):
+         Started a `10.1.x` branch for **Varbase Carousels** to support **UI Patterns ~2.0**, **Varbase Components ~3.0**,
+         and VMI ~4.0 and pave the way for a smoother upgrade process to Drupal 11
+* Issue [#3492550](https://www.drupal.org/i/3492550):
+         Started a `10.1.x` branch for **Varbase Bootstrap Paragraphs** to support **UI Patterns ~2.0**,
+         **Varbase Components ~3.0**, and **VMI ~4.0** and pave the way for a smoother upgrade process to **Drupal 11**
+
+### Changed since Varbase 10.0.5:
+* Issue [#3507413](https://www.drupal.org/i/3507413):
+         Switched to a **Default Varbase API recipe** and dropped the use of the
+         Module Installer Factory class in favour of **Drupal Recipes**
+* Issue [#3504402](https://www.drupal.org/i/3504402):
+         Improved Performance of composer create and composer update with `asset-packagist.org`
+          due to slow response times
+* Issue [#3518961](https://www.drupal.org/i/3518961):
+         Changed `utility_classes` to `COMPONETNT_NAME_utility_classes` for all used components in **Vartheme BS5**
+* Issue [#3498437](https://www.drupal.org/i/3498437):
+         `[TEMP]` Removed **Social Auth X-Twitter** from **Varbase Auth** `10.1.x` branch
+* Issue [#3485282](https://www.drupal.org/i/3485282)
+         by [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
+        : Removed custom styling of card-title in all card components and switched
+         to display classes with the heading component
+* Issue [#3484643](https://www.drupal.org/i/3484643)
+         by [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
+        : Changed All Card Stories to Reflect content in slots from Real Components Instead of Static HTML
+* Issue [#3485861](https://www.drupal.org/i/3485861):
+         Removed **Component Libraries: Components** module from Varbase **Components ~3.0** and Integrate with **UI Patterns ~2.0**
+* Issue [#3485872](https://www.drupal.org/i/3485872):
+         Removed **Component Libraries: Blocks** module from **Varbase Components ~3.0** and Integrate with **UI Patterns ~2.0**
+* Issue [#3485868](https://www.drupal.org/i/3485868):
+         Removed **Component Libraries: Editorial** module from **Varbase Components ~3.0** and Integrate with **UI Patterns ~2.0**
+* Issue [#3485876](https://www.drupal.org/i/3485876):
+         Removed **Component Libraries: Devel** module from **Varbase Components ~3.0** and Integrate with **UI Patterns Devel `~2.0`**
+* Issue [#3485874](https://www.drupal.org/i/3485874):
+         Removed **Component Libraries: Style Selector Field** module from **Varbase Components ~3.0** and Integrate with **UI Patterns Field Formatters `~2.0`**
+* Issue [#3485901](https://www.drupal.org/i/3485901):
+         Removed **Single Directory Components: Display** and **No Markup** modules from **Varbase Components ~3.0** and Integrate with **UI Patterns Layouts `~2.0`**
+* Issue [#3518962](https://www.drupal.org/i/3518962):
+         Removed the **Statistics** module from default installation due to performance issues
+* Issue [#3520089](https://www.drupal.org/i/3520089):
+         Switched navigation context and navigation menus in front-end and Layout Builder contexts
+
+### Updates since Varbase 10.0.5:
+* Issue [#3492540](https://www.drupal.org/i/3492540):
+         Updated **Webform** module from `~6.2.0` to `~6.3.0`
+* Issue [#3492614](https://www.drupal.org/i/3492614):
+         Updated **Diff** module from `~1` to `~2`
+* Issue [#3492605](https://www.drupal.org/i/3492605):
+         Updated **Content locking (anti-concurrent editing)** module from `~2` to `~3`
+* Issue [#3492544](https://www.drupal.org/i/3492544):
+         Updated **Field Group** module from `~3` to `~4 `in **Varbase Core**
+* Issue [#3492570](https://www.drupal.org/i/3492570):
+         Updated **Field Group** module from `~3` to `~4` in **View Modes Inventory (VMI)**
+* Issue [#3492567](https://www.drupal.org/i/3492567):
+         Updated **Field Group** module from `~3` to `~4` in **Varbase Media Hero Slider**
+* Issue [#3492556](https://www.drupal.org/i/3492556):
+         Updated **Field Group** module from `~3` to `~4` in **Varbase Heroslider**
+* Issue [#3492552](https://www.drupal.org/i/3492552):
+         Updated **Field Group** module from `~3` to `~4` in **Varbase Bootstrap Paragraphs**
+* Issue [#3492539](https://www.drupal.org/i/3492539):
+         Updated **Sitewide Alert** module from `~2` to `~3`
+* Issue [#3359600](https://www.drupal.org/i/3359600):
+         Updated the **Social API**, **Social Auth** modules and extra extensions from `~3` to `~4`
+* Issue [#3492647](https://www.drupal.org/i/3492647):
+         Updated **Media entity Instagram** module from `~3` to `~4`
+* Issue [#3498214](https://www.drupal.org/i/3498214):
+         Updated **ImageAPI Optimize WebP** module from `~2` to `~3`
+* Issue [#3492553](https://www.drupal.org/i/3492553):
+         Updated **Webform** module from `~6.2.0` to `~6.3.0` in **Varbase Bootstrap Paragraphs**
+
+### Fixes since Varbase 10.0.5:
+* Issue [#3498507](https://www.drupal.org/i/3498507):
+         Fixed invalid uri argument exception by using a valid uri scheme and condition
+* Issue [#3520223](https://www.drupal.org/i/3520223)
+         by [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Fixed quotation conflicts during the compilation of `.stories.twig` files into `.stories.json` using the `storybook:generate-all-stories` command
+* Issue [#3520088](https://www.drupal.org/i/3520088):
+         Fixed navigation context and navigation menus and input submit types
+
+
+-------------------------------------------------------------------------------
+
+# 10.0.5
+
+This is a patch (bugfix) release of Varbase ~10.0 and is ready for use on production sites.
+
+### Highlighted important changes since Varbase 10.0.4:
+* Issue [#3513391](https://www.drupal.org/i/3513391):
+         Added **Varbase Privacy** recipe for optional default configs for Cookie & Consent Management
+* Issue [#3511969](https://www.drupal.org/i/3511969):
+         Added **Autosave** Form `~1` module
+
+### Added since Varbase 10.0.4:
+* Issue [#3513242](https://www.drupal.org/i/3513242):
+         Added **Navigation Extra Tools** `~1.0` module to **Varbase Admin** and enable by default
+* Issue [#3511975](https://www.drupal.org/i/3511975):
+         Added **Klaro Cookie & Consent Management** `~3` module
+
+### Changes since Varbase 10.0.4:
+* Issue [#3514878](https://www.drupal.org/i/3514878)
+         by [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+        : Disabled **Statistics** module due to performance issues
+* Issue [#3516136](https://www.drupal.org/i/3516136)
+        : Removed the **Vartheme Claro** preprocess install page
+* Issue [#3513239](https://www.drupal.org/i/3513239)
+        : Initialized the **Varbase Privacy** recipe
+* Issue [#3519781](https://www.drupal.org/i/3519781)
+        : Removed leftover libraries-override on varbase_components/root: vartheme_bs5/root
+
+### Updates since Varbase 10.0.4:
+* All modules are updatable by basic composer update
+
+### Fixes since Varbase 10.0.4:
+* Issue [#3518954](https://www.drupal.org/i/3518954)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        , [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed ArgumentCountError in VarbaseMediaHeaderSettingsForm constructor
+* Issue [#3512382](https://www.drupal.org/i/3512382)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed Incorrect path for varbase-admin.admin-toolbar.theme.css causes warning after updating
+* Issue [#3507787](https://www.drupal.org/i/3507787):
+         Fixed Warning - Undefined array key social_networks in varbase_auth_preprocess_login_with()
+* Issue [#3501338](https://www.drupal.org/i/3501338)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Cache Context Conflict in Breadcrumbs Causes Cache Redirect Overwrite Warning After **Drupal 10.4** Upgrade
+* Issue [#3514505](https://www.drupal.org/i/3514505)
+         by [jedgar1mx]()
+        : Fixed missing `.xs` breakpoint in content.field_media_gallery during clean install
+* Issue [#3507250](https://www.drupal.org/i/3507250)
+         by [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+        , [mohammad-fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+        : Fixed to prevent Bootstrap root.css conflicts with custom Bootstrap themes in CKEditor
+* Issue [#3520073](https://www.drupal.org/i/3520073):
+         Fixed Autosave Form Settings to Exclude Media Bundles from Allowed Content Entity Types and Focal Points
+* Issue [#3520246](https://www.drupal.org/i/3520246):
+        Fixed Drupal Routing Path for Vartheme BS5 Theme to Preload Fonts and Webfonts Correctly
+
+-------------------------------------------------------------------------------
+
+# 10.0.4
+
+This is a patch (bugfix) release of Varbase 10 and is ready for use on production sites.
+
+### Highlighted important changes since Varbase 10.0.3:
+
+> Supercharged workflow with AI-powered automation, from smart content editing to intelligent tagging and seamless media enhancements.
+
+* Issue [#3502524](https://www.drupal.org/i/3502524):
+         Switched default **AI Module** and **AI Recipes** to work with **Drupal AI**
+* Issue [#3505583](https://www.drupal.org/i/3505583):
+         Enabled the new administration **Navigation** module and
+          remove **Admin Toolbar** & **Admin Toolbar Extra Tools** for improved admin UX
+* Issue [#3496408](https://www.drupal.org/i/3496408):
+         Updated **the Gin Admin Theme** from `~3` to `~4`
+
+### Added since Varbase 10.0.3:
+* Issue [#3502443](https://www.drupal.org/i/3502443):
+         Initialized the **Varbase AI Default recipe**
+* Issue [#3502278](https://www.drupal.org/i/3502278):
+         Initialized the **Varbase AI Editor Assistant recipe**
+* Issue [#3502267](https://www.drupal.org/i/3502267):
+         Initialized the **Varbase AI Image Alt recipe**
+* Issue [#3501744](https://www.drupal.org/i/3501744):
+         Initialized the **Varbase AI Taxonomy Tagging recipe**
+* Issue [#3502286](https://www.drupal.org/i/3502286):
+         Initialized the **Varbase AI Agents recipe**
+* Issue [#3502844](https://www.drupal.org/i/3502844):
+         Added the **league/commonmark** library to allow formats messages in the **AI Chatbot** module
+
+### Changes since Varbase 10.0.3:
+* Issue [#3503473](https://www.drupal.org/i/3503473):
+         Switched the default **AI Agent** from **AI Chatbot** to **AI DeepChat Chatbot**
+* Issue [#3502527](https://www.drupal.org/i/3502527):
+         Changed default installation config form for **Varbase AI** recipe
+          to integrate with **Drupal AI** and **Keys**
+* Issue [#3503292](https://www.drupal.org/i/3503292):
+         Renamed **Varbase Agent** to **AI Agent** and **acknowledge Drupal AI community contributions**
+* Issue [#3500358](https://www.drupal.org/i/3500358):
+         Removed **Media Revisions UI** module
+* Issue [#3499644](https://www.drupal.org/i/3499644):
+         Removed the **Tour UI** module as it has officially been merged into **Tour ~2.0**
+* Issue [#3506504](https://www.drupal.org/i/3506504):
+         Removed **Content Planner link** from **Toolbar** to prevent conflicts
+* Issue [#3501434](https://www.drupal.org/i/3501434):
+         Switched the dependency for the Statistics module from **Drupal Core** to a contrib module
+* Issue [#3505384](https://www.drupal.org/i/3505384):
+         Styled Exposed Operator for Select Element in Views Exposed Filter Form for Improved User Experience
+* Issue [#3505828](https://www.drupal.org/i/3505828):
+         Ensured **Navigation Block Page** Uses Admin Theme in Layout Builder
+* Issue [#3505925](https://www.drupal.org/i/3505925):
+         Support **Drupal Core Navigation** System and Adjust **Varbase Dashboards** Toolbar Styling
+
+### Updates since Varbase 10.0.3:
+* Issue [#3498208](https://www.drupal.org/i/3498208):
+         Updated **Image Optimize** module from `~4.0.0` to `~4.1.0`
+* Issue [#3499819](https://www.drupal.org/i/3499819):
+         Updated **Real-time SEO** from `~1` to `~2` for **Varbase Core**
+* Issue [#3498129](https://www.drupal.org/i/3498129):
+         Updated **Reroute Email** module from `~2.2.0` to `~2.3.0`
+* Issue [#3505494](https://www.drupal.org/i/3505494)
+         by [mohammad-fayoumi](https://www.drupal.org/u/nghunaim)
+        : Updated **vardot/varbase-patches** version from `~10` to `~10.0.0`
+         for the `10.0.x` branch
+* Issue [#3499773](https://www.drupal.org/i/3499773):
+         Updated **Entity Blocks** module from `~1` to `~2`
+* Issue [#3505524](https://www.drupal.org/i/3505524):
+         Updated **Layout Builder Asymmetric Translation** from `~2` to `~3`
+* Issue [#3499818](https://www.drupal.org/i/3499818):
+         Updated **Real-time SEO** from `~1` to `~2` for **Varbase SEO**
+
+### Fixes since Varbase 10.0.3:
+* Issue [#3497720](https://www.drupal.org/i/3497720):
+         Fixed not intractable Add block and Update element action buttons for layout builder modal
+* Issue [#3499199](https://www.drupal.org/i/3499199)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Nested Layout Builder Blocks Trigger Frontend Theme on AJAX Calls
+* Issue [#3502553](https://www.drupal.org/i/3502553):
+         Fixed parser error of invalid config exception for editor.editor.full_html in
+         ckeditor5 plugin find and replace
+* Issue [#3500728](https://www.drupal.org/i/3500728):
+         Fixed machine name id of tours to follow the machine-readable name must contain
+         only lowercase letters, numbers, and underscores in **Tours ~2.0**
+
+-------------------------------------------------------------------------------
+
+# 10.0.3
+
+### Highlighted important changes since Varbase 10.0.2:
+This is a patch (bugfix) release of Varbase 10 and is ready for use on production sites.
+
+Enhanced media handling and mobile responsiveness with smoother updates, improved performance, and more accessible web solutions.
+
+* Issue [#3495360](https://www.drupal.org/i/3495360):
+         Updated **Drupal Core** from `~10.3.0` to `~10.4.0`
+* Issue [#3490913](https://www.drupal.org/i/3490913):
+         Updated **Editoria11y Accessibility Checker** module from `~2.1.0` to `~2.2.0`
+* Issue [#3460610](https://www.drupal.org/i/3460610)
+         by [ammar_jeetawi](https://www.drupal.org/u/ammar_jeetawi)
+        : Added **CKEditor Media Resize** module and integrate it with **Dynamic Responsive Image (Drimage) – Improved**
+
+### Added since Varbase 10.0.2:
+* Issue [#3482424](https://www.drupal.org/i/3482424):
+         Added all display modes by **CKEditor Media Resize** to the list of default ignored view modes
+         
+### Changed since Varbase 10.0.2:
+* Issue [#3487059](https://www.drupal.org/i/3487059):
+         Changed automated functional testing steps in scenarios for compatibility with **Drupal** `10.3.8`, **VBO** `4.3.1`, and `4.3.2`
+* Issue [#3483891](https://www.drupal.org/i/3483891):
+         Changed the logic of styling align (`default`, `center`, `left`, `right`) and
+          figcaption in picture, `image`, `figure`, `media`, and `embedded entity` for **Varbase media** common library with CSS Logical Properties
+
+### Updates since Varbase 10.0.2:
+* Issue [#3485265](https://www.drupal.org/i/3485265):
+         Updated **Block Class** from `~2 || ~3` to `~3 || ~4` to support a smoother update process
+* Issue [#3484569](https://www.drupal.org/i/3484569):
+         Updated **Component Libraries: Editorial** module from `~2` to `~3`
+* Issue [#3487041](https://www.drupal.org/i/3487041):
+         Updated **Coffee** module from `~1` to `~2`
+* Issue [#3482025](https://www.drupal.org/i/3482025):
+         Updated **Layout Builder Modal** module from `~1` to `~2`
+* Issue [#3482017](https://www.drupal.org/i/3482017):
+         Updated **Prevent Page Deletion** module from `~2` to `~3`
+* Issue [#3497352](https://www.drupal.org/i/3497352):
+         Updated **league/commonmark** library from `~2.4.0` to `~2.6.0` ( `~2` )
+* Issue [#3493635](https://www.drupal.org/i/3493635):
+         Updated **Linkit** module from `~6.1.0` to `~7`
+* Issue [#3492619](https://www.drupal.org/i/3492619):
+         Updated **Inline Entity Form** module from `~1` to `~3` in **Varbase Core**
+* Issue [#3496404](https://www.drupal.org/i/3496404):
+         Updated **Sitewide Alert** module from `~2` to `~3`
+* Issue [#3492639](https://www.drupal.org/i/3492639):
+         Updated **Single Directory Components: Display** from `~1` to `~2`
+* Issue [#3482749](https://www.drupal.org/i/3482749):
+         Updated **Honeypot** module from `~2.1.0` to `~2.2.0`
+
+### Fixes since Varbase 10.0.2:
+* Issue [#3487489](https://www.drupal.org/i/3487489)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed **Homepage Blog View Responsiveness** on Mobile by Switching to Single-Column Layout
+* Issue [#3488025](https://www.drupal.org/i/3488025)
+         by [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed visual style issues on layout builder
+* Issue [#3487440](https://www.drupal.org/i/3487440)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed **Featured Card Block Responsiveness** on Mobile by Moving Image Above Text
+* Issue [#3480375](https://www.drupal.org/i/3480375)
+         by [oways23](https://www.drupal.org/u/oways23)
+        , [alshami](https://www.drupal.org/u/alshami)
+        : Fixed **Blocks Filter** Not Showing Placeholder in Off-Canvas or Layout Builder Modal
+* Issue [#3484267](https://www.drupal.org/i/3484267)
+         by [das-peter](https://www.drupal.org/u/das-peter)
+        : Fixed Missing **Popper.js** in Dashboard by Adding popper-script to Responsive Preview Dependencies
+* Issue [#3489463](https://www.drupal.org/i/3489463):
+         Fixed messing publishing status from the sticky action toolbar after the **Gin Admin theme** `8.x-3.0-rc14` was released
+* Issue [#3496917](https://www.drupal.org/i/3496917)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed moderation state dropdown issue after **Gin Theme** update to version `8.x-3.0`
+* Issue [#3467763](https://www.drupal.org/i/3467763)
+         by [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
+        : Fixed exceeding Video size screen boundaries in **CKEditor** when adding a video or remote video
+* Issue [#3492468](https://www.drupal.org/i/3492468)
+         by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+        : Fixed **Admin Filters Alignment** for Views with Exposed Date Field
+
+-------------------------------------------------------------------------------
+
 # 10.0.2
 
 ### Highlighted important changes since Varbase 10.0.1:
