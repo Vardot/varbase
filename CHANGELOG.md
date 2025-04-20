@@ -50,6 +50,8 @@ This is a patch (bugfix) release of Varbase ~10.0 and is ready for use on produc
         : Fixed to prevent Bootstrap root.css conflicts with custom Bootstrap themes in CKEditor
 * Issue [#3520073](https://www.drupal.org/i/3520073):
          Fixed Autosave Form Settings to Exclude Media Bundles from Allowed Content Entity Types and Focal Points
+* Issue [#3520246](https://www.drupal.org/i/3520246):
+        Fixed Drupal Routing Path for Vartheme BS5 Theme to Preload Fonts and Webfonts Correctly
 
 -------------------------------------------------------------------------------
 
