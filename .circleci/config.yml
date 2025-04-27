@@ -144,6 +144,9 @@ commands:
             sudo chmod 775 .
             sudo chown www-data:circleci .
             git clone --branch '10.1.x' https://github.com/vardot/varbase-project.git /var/www/html/test/varbase
+            if [ -f "/var/www/html/test/varbase/composer.lock" ]; then
+              rm /var/www/html/test/varbase/composer.lock
+            fi
             cd /var/www/html/test/varbase
             composer require drupal/drupal-extension:5.0.0alpha1 --no-update
             composer require webship/behat-html-formatter:~1.0 --no-update
