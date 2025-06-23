@@ -20,10 +20,6 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
     }
   },
   "replace": {
@@ -88,102 +84,9 @@
     "npm-asset/northernco--ckeditor5-anchor-drupal": "^0.5.0",
     "npm-asset/ckeditor--ckeditor5-media-embed": "*"
   },
-  "require-dev": {
-    "drupal/core-dev": "~10 || ~11",
-    "drush/drush": "~12 || ~13"
-  },
-  "config": {
-    "bin-dir": "bin/",
-    "secure-http": false,
-    "preferred-install": {
-      "drupal/core": "dist"
-    },
-    "allow-plugins": {
-      "composer/installers": true,
-      "cweagans/composer-patches": true,
-      "oomphinc/composer-installers-extender": true,
-      "drupal/core-composer-scaffold": true,
-      "drupal/core-project-message": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true,
-      "phpstan/extension-installer": true,
-      "vardot/varbase-updater": true
-    }
-  },
   "autoload": {
     "psr-4": {
       "Varbase\\composer\\": "src/composer"
-    }
-  },
-  "scripts": {
-    "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-    "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-    "post-install-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-update-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
-  },
-  "extra": {
-    "drupal-scaffold": {
-      "allowed-packages": [
-        "drupal/core",
-        "vardot/varbase"
-      ],
-      "gitignore": true,
-      "locations": {
-        "web-root": "./docroot"
-      }
-    },
-    "installer-paths": {
-      "docroot/core": ["type:drupal-core"],
-      "docroot/profiles/{$name}": ["type:drupal-profile"],
-      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
-      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-      "docroot/libraries/slick": ["npm-asset/slick-carousel"],
-      "docroot/libraries/ace": ["npm-asset/ace-builds"],
-      "docroot/libraries/jquery-ui-touch-punch": ["bower-asset/jqueryui-touch-punch"],
-      "docroot/libraries/swagger-ui/dist": ["npm-asset/swagger-ui-dist"],
-      "docroot/libraries/ckeditor5-anchor-drupal": ["npm-asset/northernco--ckeditor5-anchor-drupal"],
-      "docroot/libraries/ckeditor5/plugins/media-embed": ["npm-asset/ckeditor--ckeditor5-media-embed"],
-      "docroot/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "docroot/modules/custom/{$name}": ["type:drupal-custom-module"],
-      "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
-    },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "drupal-libraries": {
-      "library-directory": "docroot/libraries",
-      "libraries": [
-        {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
-        {"name": "chartjs", "package": "bower-asset/chartjs"},
-        {"name": "c3","package": "bower-asset/c3"},
-        {"name": "d3", "package": "bower-asset/d3"},
-        {"name": "dropzone","package": "npm-asset/dropzone"},
-        {"name": "blazy", "package": "npm-asset/blazy"},
-        {"name": "slick", "package": "npm-asset/slick-carousel"},
-        {"name": "ace", "package": "npm-asset/ace-builds"},
-        {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
-        {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
-        {"name": "swagger-ui", "package": "npm-asset/swagger-ui-dist"},
-        {"name": "ckeditor5-anchor-drupal", "package": "npm-asset/northernco--ckeditor5-anchor-drupal"},
-        {"name": "ckeditor5-media-embed", "package": "npm-asset/ckeditor--ckeditor5-media-embed"}
-      ]
-    },
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patchLevel": {
-      "drupal/core": "-p2"
     }
   }
 }
