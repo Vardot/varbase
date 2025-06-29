@@ -3,8 +3,6 @@
   "description": "Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready) | by Vardot",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "authors": [
     {
       "name": "Vardot",
@@ -15,38 +13,6 @@
   "support": {
     "issues": "http://drupal.org/project/issues/varbase",
     "source": "http://cgit.drupalcode.org/varbase"
-  },
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    }
-  },
-  "replace": {
-    "drupal/statistics": "*",
-    "jquery/fancytree": "*",
-    "fancytree/fancytree": "*",
-    "npm-asset/ckeditor5": "*",
-    "npm-asset/ckeditor5-dll-inline": "*",
-    "npm-asset/ckeditor5-core": "*",
-    "npm-asset/ckeditor5-engine":"*",
-    "npm-asset/ckeditor5-ui": "*",
-    "npm-asset/ckeditor5-utils": "*",
-    "npm-asset/ckeditor5-widget": "*",
-    "npm-asset/ckeditor--ckeditor5": "*",
-    "npm-asset/ckeditor--ckeditor5-dll-inline": "*",
-    "npm-asset/ckeditor--ckeditor5-core": "*",
-    "npm-asset/ckeditor--ckeditor5-engine":"*",
-    "npm-asset/ckeditor--ckeditor5-ui": "*",
-    "npm-asset/ckeditor--ckeditor5-utils": "*",
-    "npm-asset/ckeditor--ckeditor5-widget": "*",
-    "npm-asset/lodash-es": "*",
-    "npm-asset/lodash.debounce": "*",
-    "npm-asset/lodash.throttle": "*",
-    "npm-asset/nouislider": "*",
-    "npm-asset/rtseo.js": "*",
-    "bower-asset/jquery": "*",
-    "bower-asset/jquery-ui": "*"
   },
   "require": {
     "drupal/varbase_core": "10.0.x-dev",
@@ -70,15 +36,7 @@
     "drupal/varbase_workflow": "3.0.x-dev",
     "drupal/varbase_demo": "1.0.x-dev",
     "drupal/vartheme_bs5": "3.0.x-dev",
-    "drupal/vartheme_claro": "4.0.x-dev",
-    "bower-asset/jqueryui-touch-punch": "dev-master",
-    "npm-asset/dropzone": "~5",
-    "npm-asset/blazy": "~1",
-    "npm-asset/slick-carousel": "~1",
-    "npm-asset/ace-builds": "~1",
-    "npm-asset/swagger-ui-dist": "~3",
-    "npm-asset/ckeditor--ckeditor5-media-embed": "*",
-    "npm-asset/jquery.fancytree": "~2"
+    "drupal/vartheme_claro": "4.0.x-dev"
   },
   "autoload": {
     "psr-4": {
