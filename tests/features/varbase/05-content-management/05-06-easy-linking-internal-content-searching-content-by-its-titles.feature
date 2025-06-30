@@ -40,7 +40,7 @@ Feature: Content Editing - Rich Text Editor - Easy linking to internal content b
       And I wait for AJAX to finish
       And I wait 2s
       And I wait for AJAX to finish
-      And I click on the save button in "Body" rich text editor field
+      And I click on the insert button in "Body" rich text editor field
       And wait
       And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button

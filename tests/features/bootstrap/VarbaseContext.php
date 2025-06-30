@@ -691,13 +691,15 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
-   * Click on the save button in the the rich text editor field
+   * Click on the Action button in the rich text editor field
    *
    * Varbase Context #varbase.
    *
    * Example 1: I click on the save button in "Body" rich text editor field
+   * Example 2: I click on the insert button in "Body" rich text editor field
+   * Example 3: I click on the action button in "Body" rich text editor field
    *
-   * @Given /^I click on the save button in "(?P<selectedField>[^"]*)" rich text editor field$/
+   * @Given /^I click on(?:| the)(?:| save| insert| action| apply) button in "(?P<selectedField>[^"]*)" rich text editor field$/
    */
   public function iClickOnTheSaveButtonInTheEditor($selectedField) {
     $selectorFieldElement = $this->getSession()->getPage()->findField($selectedField);
@@ -707,8 +709,13 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('Could not find an id for the rich text editor field : ' . $selectedField);
     }
 
-    // Find the save button for the current selected field
+    // Find the save button for the current selected field.
     $element = $this->getSession()->getPage()->find('css', "button.ck.ck-button.ck-off.ck-button-save");
+
+    if (empty($element)) {
+      // Find the action button for the current selected field.
+      $element = $this->getSession()->getPage()->find('css', "button.ck.ck-button.ck-button-action.ck-off.ck-button_with-text");
+    }
 
     if (empty($element)) {
       throw new \Exception("No save button for the " . $selectedField . " rich text editor field.");
