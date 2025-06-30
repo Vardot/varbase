@@ -1,6 +1,6 @@
 Feature: Content Editing - Rich Text Editor - Easy linking to internal content by searching for content by its titles
-As a content admin
-I want to be able to add internal links searching the title of an internal content
+      As a content admin
+      I want to be able to add internal links searching the title of an internal content
 So that will ease the work of adding internal links in the rich text editor fields.
 
   @javascript @local @development @staging @production
@@ -40,7 +40,7 @@ So that will ease the work of adding internal links in the rich text editor fiel
       And I wait for AJAX to finish
       And I wait 2s
       And I wait for AJAX to finish
-      And I click on the save button in "Body" rich text editor field
+      And I click on the insert button in "Body" rich text editor field
       And wait
       And I select "published" from "edit-moderation-state-0-state"
       And I press the "Save" button
