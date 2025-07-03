@@ -142,6 +142,9 @@ commands:
             if [ -e "/var/www/html/storage/composer.lock" ]; then
               echo "composer.lock exists from last build."
             else
+              cd /var/www/
+              sudo chmod 775 -R .
+              sudo chown www-data:circleci -R .
               mkdir /var/www/html/storage
               touch /var/www/html/storage/composer.lock
             fi
