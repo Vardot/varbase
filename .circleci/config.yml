@@ -136,9 +136,17 @@ commands:
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
+      - run:
+          name: Ensure composer.lock exists
+          command: |
+            if [ -e "/var/www/html/composer.lock" ]; then
+              echo "composer.lock exists from last build."
+            else
+              touch /var/www/html/composer.lock
+            fi
       - restore_cache:
           keys:
-            - composer-v2-{{ checksum "/var/www/html/test/varbase/composer.lock" }}
+            - composer-v2-{{ checksum "/var/www/html/composer.lock" }}
             - composer-v2-
       - run:
           name: Build Varbase with the composer
@@ -182,8 +190,12 @@ commands:
             cd /var/www/html/test/varbase
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
+      - run:
+          name: Copy composer.lock after the build
+          command: |
+            cp /var/www/html/test/varbase/composer.lock /var/www/html/
       - save_cache:
-          key: composer-v2-{{ checksum "/var/www/html/test/varbase/composer.lock" }}
+          key: composer-v2-{{ checksum "/var/www/html/composer.lock" }}
           paths:
             - /home/circleci/.composer/cache
       - run:
