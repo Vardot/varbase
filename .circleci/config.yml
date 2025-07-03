@@ -120,7 +120,10 @@ commands:
             composer config -g github-oauth.github.com $GITHUB_TOKEN
             composer global config cache-files-ttl 604800
             composer config --global process-timeout 0
-            composer config --global cache-dir ~/.composer/cache
+            composer config --global cache-dir /home/circleci/.composer/cache
+            composer config --global repo.packagist composer https://repo.packagist.org
+            composer config --global repo.drupal composer https://packages.drupal.org/8
+            composer config --global repo.assets composer https://asset-packagist.org
       - run:
           name: List tools versions
           command: |
@@ -135,7 +138,7 @@ commands:
             php --ini
       - restore_cache:
           keys:
-            - composer-v2-{{ checksum "composer.lock" }}
+            - composer-v2-{{ checksum "/var/www/html/test/varbase/composer.lock" }}
             - composer-v2-
       - run:
           name: Build Varbase with the composer
@@ -180,9 +183,9 @@ commands:
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
       - save_cache:
-          key: composer-v2-{{ checksum "composer.lock" }}
+          key: composer-v2-{{ checksum "/var/www/html/test/varbase/composer.lock" }}
           paths:
-            - ~/.composer/cache
+            - /home/circleci/.composer/cache
       - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
           command: |
