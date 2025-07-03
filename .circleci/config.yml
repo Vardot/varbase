@@ -199,7 +199,7 @@ commands:
           command: |
             cp /var/www/html/test/varbase/composer.lock /var/www/html/storage/
       - save_cache:
-          key: composer-v2-{{ checksum "/var/www/html/composer.lock" }}
+          key: composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
           paths:
             - /home/circleci/.composer/cache
       - run:
