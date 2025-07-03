@@ -121,7 +121,6 @@ commands:
             composer global config cache-files-ttl 604800
             composer config --global process-timeout 0
             composer config --global cache-dir ~/.composer/cache
-            composer global require hirak/prestissimo
       - run:
           name: List tools versions
           command: |
