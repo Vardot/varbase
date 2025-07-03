@@ -150,7 +150,7 @@ commands:
             fi
       - restore_cache:
           keys:
-            - composer-v2-{{ checksum "/var/www/html/composer.lock" }}
+            - composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
             - composer-v2-
       - run:
           name: Build Varbase with the composer
