@@ -1,3 +1,117 @@
+# 9.1.10
+
+### Highlighted important changes since [Varbase 9.1.9](https://www.drupal.org/project/varbase/releases/9.1.9):
+
+This is a **patch (bugfix) release of Varbase 9** and is ready for use on production sites. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.0.x).
+
+* Issue [#3531853](https://www.drupal.org/i/3531853):
+         Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0`
+
+### Added since [Varbase 9.1.8](https://www.drupal.org/project/varbase/releases/9.1.8):
+* All new features are in **Varbase ~10.1.0**
+* Issue [#3533025](https://www.drupal.org/i/3533025):
+         Added [**Varbase Libraries**](https://github.com/vardot/varbase-libraries) to Varbase Profile
+* Issue [#3533027](https://www.drupal.org/i/3533027):
+         Added [**Varbase Replaces**](https://github.com/vardot/varbase-replaces) to Varbase Profile
+
+### Changed since [Varbase 9.1.9](https://www.drupal.org/project/varbase/releases/9.1.9):
+* Issue [#3530993](https://www.drupal.org/i/3530993):
+         Changed **Drupal Core** requirements from `>=10.4 || >=11.1` to `~10.5.0 || ~11.2.0`
+* Issue [#3531067](https://www.drupal.org/i/3531067):
+         Changed **The Gin Admin Theme** from `~3 || ~4` to `~4 || ~5` to allow for a smoother upgrade
+* Issue [#3532399](https://www.drupal.org/i/3532399):
+         Removed `npm-asset/northernco--ckeditor5-anchor-drupal` library as the
+         **CKEditor Anchor Link** module switched to [**vardot/ckeditor5-anchor-drupal**](https://github.com/Vardot/ckeditor5-anchor-drupal)
+* Issue [#3532943](https://www.drupal.org/i/3532943):
+         Removed `npm-asset/northernco--ckeditor5-anchor-drupal` library as 
+        the **CKEditor Anchor Link** module from **Varbase Editor**
+* Issue [#3533023](https://www.drupal.org/i/3533023):
+         Removed `repositories`, `minimum-stability`, `prefer-stable`, `replace` from
+         `composer.json` file for Varbase
+* Issue [#3516136](https://www.drupal.org/i/3516136):
+         Removed the Vartheme Claro preprocess install page
+* Issue [#3533172](https://www.drupal.org/i/3533172):
+         Changed Click on the Action button in the rich text editor field test
+
+### Updates since [Varbase 9.1.9](https://www.drupal.org/project/varbase/releases/9.1.9):
+* Issue [#3505506](https://www.drupal.org/i/3505506)
+         by [mohammad-fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+        : Updated **vardot/varbase-patches** version to `~9 || ~10` for
+         the `9.1.x` branch to support a smoother upgrade process
+* Issue [#3532463](https://www.drupal.org/i/3532463): 
+        Updated **Drupal Symfony Mailer** module from `~1` to `~2`
+* Issue [#3532456](https://www.drupal.org/i/3532456): 
+        Updated **Content locking (anti-concurrent editing)** from `~2` to `~3`
+* Issue [#3532461](https://www.drupal.org/i/3532461): 
+        Updated **Diff** module from `~1` to `~2`
+* Issue [#3532567](https://www.drupal.org/i/3532567): 
+        Updated **Field Group** module from `~3` to `~4` in **Varbase Core**
+* Issue [#3532572](https://www.drupal.org/i/3532572): 
+        Updated **Field Group** module from `~3` to `~4` in **Varbase Bootstrap Paragraphs**
+* Issue [#3532710](https://www.drupal.org/i/3532710): 
+        Updated **Simple OAuth (OAuth2) & OpenID Connect** from `~5` to `~6`
+* Issue [#3531124](https://www.drupal.org/i/3531124): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Core
+* Issue [#3531845](https://www.drupal.org/i/3531845): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for VMI
+* Issue [#3531839](https://www.drupal.org/i/3531839): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Vartheme Claro
+* Issue [#3531830](https://www.drupal.org/i/3531830): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Workflow
+* Issue [#3531822](https://www.drupal.org/i/3531822): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Total Control Dashboard
+* Issue [#3531770](https://www.drupal.org/i/3531770): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Theme (Bootstrap 4 - SASS)
+* Issue [#3531755](https://www.drupal.org/i/3531755): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Style Guide
+* Issue [#3531743](https://www.drupal.org/i/3531743): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Social Single Sign-On
+* Issue [#3531676](https://www.drupal.org/i/3531676): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase SEO
+* Issue [#3531654](https://www.drupal.org/i/3531654): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Search
+* Issue [#3531639](https://www.drupal.org/i/3531639): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Media Hero Slider
+* Issue [#3531627](https://www.drupal.org/i/3531627): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Media Header
+* Issue [#3531617](https://www.drupal.org/i/3531617): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Media
+* Issue [#3531568](https://www.drupal.org/i/3531568): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Layout Builder
+* Issue [#3531563](https://www.drupal.org/i/3531563): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Landing Page (Paragraphs)
+* Issue [#3531477](https://www.drupal.org/i/3531477): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase FAQs
+* Issue [#3531458](https://www.drupal.org/i/3531458): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Email
+* Issue [#3531444](https://www.drupal.org/i/3531444): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Editor
+* Issue [#3531078](https://www.drupal.org/i/3531078): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Carousels
+* Issue [#3531036](https://www.drupal.org/i/3531036): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Bootstrap Paragraphs
+* Issue [#3531021](https://www.drupal.org/i/3531021): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for Varbase Blog
+* Issue [#3531005](https://www.drupal.org/i/3531005): 
+        Updated **Drupal Core** from `~10.4.0 || ~11.1.0` to `~10.5.0 || ~11.2.0` for **Varbase API**
+* Issue [#3532663](https://www.drupal.org/i/3532663): 
+        Updated **Media entity Instagram** from `~3` to `~3 || ~4` to allow for a smoother update process
+
+### Fixes since [Varbase 9.1.9](https://www.drupal.org/project/varbase/releases/9.1.9):
+* Issue [#3501338](https://www.drupal.org/i/3501338)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Cache Context Conflict in Breadcrumbs Causes Cache Redirect
+         Overwrite Warning After Drupal 10.4 Upgrade
+* Issue [#3518954](https://www.drupal.org/i/3518954)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        , [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed ArgumentCountError in VarbaseMediaHeaderSettingsForm constructor
+* Issue [#3514505](https://www.drupal.org/i/3514505)
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Fixed missing .xs breakpoint in content.field_media_gallery during clean install
+
+-------------------------------------------------------------------------------
+
 # 9.1.9
 
 ### Highlighted important changes since Varbase 9.1.8:
