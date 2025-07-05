@@ -175,7 +175,7 @@ commands:
             composer require --dev drevops/behat-screenshot:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-            composer install --no-interaction --prefer-dist -vvv
+            composer install --no-interaction --no-progress --optimize-autoloader -vvv
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
