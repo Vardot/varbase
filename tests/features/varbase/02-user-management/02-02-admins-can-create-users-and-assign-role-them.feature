@@ -105,6 +105,7 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I fill in "dD.123123ddd" for "Confirm password"
       And I scroll to bottom
       And I press "Create new account"
+      And I wait 3s
      Then I should see "Created a new user account"
      When I go to "/admin/people"
       And I wait 3s
