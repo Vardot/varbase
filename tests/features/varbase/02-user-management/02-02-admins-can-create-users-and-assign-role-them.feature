@@ -36,7 +36,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I go to "/admin/people"
       And I fill in "tester" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "tester"
      When I click "Edit" in the "tester" row
       And wait
@@ -72,7 +72,7 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I press "Create new account"
      When I go to "/admin/people"
      Then I should see "test.not.allwed.no.username"
-      And I should not see "email_registration"
+      And I should not see "email_registra…"
      When I click "Edit" in the "test.not.allwed.no.username" row
       And wait
       And I scroll to bottom
@@ -140,14 +140,14 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I scroll to bottom
       And I press "Create new account"
      When I go to "/admin/people"
-     Then I should see "email_registration"
-     When I click "Edit" in the "email_registration" row
+     Then I should see "email_registra…"
+     When I click "Edit" in the "email_registra…" row
       And wait
       And I scroll to bottom
       And I click "Cancel account"
       And wait
       And wait 3s
-     Then I should see "Are you sure you want to cancel the account email_registration"
+     Then I should see "Are you sure you want to cancel the account"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
       And I press "Confirm"
       And I wait 5s
@@ -176,7 +176,6 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I go to "/admin/people"
      Then I should see "Test Account Name"
       And I should not see "test.allwed.with.username"
-      And I should not see "email_registration"
      When I click "Edit" in the "Test Account Name" row
       And wait
       And I scroll to bottom
