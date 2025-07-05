@@ -118,6 +118,11 @@ commands:
           command: |
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
+            composer global config cache-files-ttl 604800
+            composer config --global process-timeout 0
+            composer config --global cache-dir /home/circleci/.composer/cache
+            composer config --global repo.packagist composer https://repo.packagist.org
+            composer config --global repo.assets composer https://asset-packagist.org
       - run:
           name: List tools versions
           command: |
@@ -130,6 +135,22 @@ commands:
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
+      - run:
+          name: Ensure composer.lock exists
+          command: |
+            if [ -e "/var/www/html/storage/composer.lock" ]; then
+              echo "composer.lock exists from last build."
+            else
+              cd /var/www/
+              sudo chmod 775 -R .
+              sudo chown www-data:circleci -R .
+              mkdir /var/www/html/storage
+              touch /var/www/html/storage/composer.lock
+            fi
+      - restore_cache:
+          keys:
+            - composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
+            - composer-v2-
       - run:
           name: Build Varbase with the composer
           command: |
@@ -155,7 +176,7 @@ commands:
             composer require --dev drevops/behat-screenshot:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-            composer install --no-interaction -vvv
+            composer install --no-interaction --prefer-dist -vvv
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
@@ -175,6 +196,14 @@ commands:
             cd /var/www/html/test/varbase
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
+      - run:
+          name: Copy composer.lock after the build
+          command: |
+            cp /var/www/html/test/varbase/composer.lock /var/www/html/storage/
+      - save_cache:
+          key: composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
+          paths:
+            - /home/circleci/.composer/cache
       - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
           command: |
@@ -219,9 +248,6 @@ commands:
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush pm:uninstall antibot --yes
-            ../bin/drush config:set system.performance css.preprocess 0 --yes
-            ../bin/drush config:set system.performance js.preprocess 0 --yes
-            ../bin/drush config:set system.logging error_level all --yes
             ../bin/drush cache:rebuild
 
 jobs:
