@@ -46,9 +46,8 @@ Feature: User Management - Standard User Management - Admins can create users an
       And wait 3s
      Then I should see "Are you sure you want to cancel the account tester?"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
       And I press "Confirm"
-      And I wait 10s
+      And I wait 5s
      Then I should see "People"
 
   @javascript @local @development @staging @production
@@ -82,7 +81,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And wait 3s
      Then I should see "Are you sure you want to cancel the account test.not.allwed.no.username"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
       And I press "Confirm"
       And I wait 5s
      Then I should see "People"
@@ -117,7 +115,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And wait 3s
      Then I should see "Are you sure you want to cancel the account Some username"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
       And I press "Confirm"
       And I wait 5s
      Then I should see "People"
@@ -152,7 +149,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And wait 3s
      Then I should see "Are you sure you want to cancel the account email_registration"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
       And I press "Confirm"
       And I wait 5s
      Then I should see "People"
@@ -189,7 +185,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And wait 3s
      Then I should see "Are you sure you want to cancel the account Test Account Name?"
      When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
       And I press "Confirm"
       And I wait 5s
      Then I should see "People"
