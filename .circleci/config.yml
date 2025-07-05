@@ -121,8 +121,6 @@ commands:
             composer global config cache-files-ttl 604800
             composer config --global process-timeout 0
             composer config --global cache-dir /home/circleci/.composer/cache
-            composer config --global repo.packagist composer https://repo.packagist.org
-            composer config --global repo.assets composer https://asset-packagist.org
       - run:
           name: List tools versions
           command: |
