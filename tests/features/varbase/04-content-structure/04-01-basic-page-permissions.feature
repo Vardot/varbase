@@ -78,7 +78,7 @@ Feature: Content Structure - Basic Page
      Then I should see "Content"
      When I fill in "Test Basic page" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Basic page"
      When I click "Test Basic page"
       And wait
@@ -87,7 +87,7 @@ Feature: Content Structure - Basic Page
      Then I should see "Content"
      When I fill in "Test Basic page" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Basic page"
      When I click "Edit" in the "Test Basic page" row
       And wait

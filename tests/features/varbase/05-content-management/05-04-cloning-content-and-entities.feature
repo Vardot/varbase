@@ -29,11 +29,11 @@ Feature: Content Management - Cloning content and entities
      Then I should see "Content"
      When I fill in "Test Clone landing page" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Clone landing page"
      When I fill in "Test Clone landing page" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Clone landing page"
      When I click "Edit" in the "Test Clone landing page" row
       And wait
@@ -53,7 +53,7 @@ Feature: Content Management - Cloning content and entities
      Then I should see "Content"
      When I fill in "Test Clone landing page - Cloned" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Clone landing page - Cloned"
       And I check the box "edit-views-bulk-operations-bulk-form-0"
       And I select "Delete selected entities" from "Action"
@@ -65,11 +65,11 @@ Feature: Content Management - Cloning content and entities
      Then I should see "Content"
      When I fill in "Test Clone landing page - Cloned" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should not see "Test Clone landing page - Cloned"
      When I fill in "Test Clone landing page" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Clone landing page"
      When I click "Test Clone landing page"
       And wait
