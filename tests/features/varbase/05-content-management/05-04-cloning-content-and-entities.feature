@@ -43,6 +43,7 @@ Feature: Content Management - Cloning content and entities
      Then I should see "Specify the child entities (the entities referenced by this entity) that should also be cloned as part of the cloning process."
      When I press "edit-clone"
       And wait
+      And wait 4s
      Then I should see "Test Clone landing page - Cloned"
 
   @javascript  @local @development
