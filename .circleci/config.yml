@@ -118,9 +118,6 @@ commands:
           command: |
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
-            composer global config cache-files-ttl 604800
-            composer config --global process-timeout 0
-            composer config --global cache-dir /home/circleci/.cache/composer
       - run:
           name: List tools versions
           command: |
@@ -133,22 +130,6 @@ commands:
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
-      - run:
-          name: Ensure composer.lock exists
-          command: |
-            if [ -e "/var/www/html/storage/composer.lock" ]; then
-              echo "composer.lock exists from last build."
-            else
-              cd /var/www/
-              sudo chmod 775 -R .
-              sudo chown www-data:circleci -R .
-              mkdir /var/www/html/storage
-              touch /var/www/html/storage/composer.lock
-            fi
-      - restore_cache:
-          keys:
-            - composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
-            - composer-v2-
       - run:
           name: Build Varbase with the composer
           no_output_timeout: 30m
@@ -196,14 +177,6 @@ commands:
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
       - run:
-          name: Copy composer.lock after the build
-          command: |
-            cp /var/www/html/test/varbase/composer.lock /var/www/html/storage/
-      - save_cache:
-          key: composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
-          paths:
-            - /home/circleci/.cache/composer
-      - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
           command: |
             sudo a2enmod headers rewrite env mime expires ssl
@@ -227,6 +200,8 @@ commands:
             ../bin/drush pm:enable social_auth_twitter --yes
             ../bin/drush pm:enable social_auth_linkedin --yes
             ../bin/drush pm:enable varbase_update_helper --yes
+            ../bin/drush cache:rebuild
+            ../bin/drush ckeditor_media_embed:install
             ../bin/drush cache:rebuild
       - run:
           name: Add testing users.
