@@ -23,7 +23,7 @@ Feature: User Management - Standard User Management - Admins can disable users
      Then I should see "People"
      When I fill in "Normal user" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Normal user"
      When I click "Edit" in the "Normal user" row
       And wait

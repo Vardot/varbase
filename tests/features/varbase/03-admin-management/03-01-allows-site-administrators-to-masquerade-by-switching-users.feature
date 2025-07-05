@@ -12,7 +12,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Normal user" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Normal user"
      When I click "Normal user"
       And wait
@@ -23,7 +23,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Content admin" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Content admin"
      When I click "Content admin"
       And wait
@@ -34,7 +34,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Site admin" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Site admin"
      When I click "Site admin"
       And wait
@@ -45,7 +45,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Super admin" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Super admin"
      When I click "Super admin"
       And wait
@@ -60,7 +60,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Normal user" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Normal user"
      When I click "Normal user"
       And wait
@@ -71,7 +71,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Content admin" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Content admin"
      When I click "Content admin"
       And wait
@@ -82,7 +82,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Site admin" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Site admin"
      When I click "Site admin"
       And wait
@@ -106,30 +106,18 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Normal user" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Normal user"
      When I click "Normal user"
       And wait
      Then I should see "Masquerade as Normal user"
-
-  # Check if a site admin user can masquerade as an Editor user.
-  #  When I go to "/admin/people"
-  #   And wait
-  #   And I fill in "Editor" for "Name or email contains"
-  #   And I press "Filter"
-  #   And wait
-  #   And I scroll to bottom
-  #  Then I should see "Editor"
-  #  When I click "Editor"
-  #   And wait
-  #  Then I should see "Masquerade as Editor"
 
   # Check if a site admin user can masquerade as a content admin user.
      When I go to "/admin/people"
       And wait
       And I fill in "Content admin" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Content admin"
      When I click "Content admin"
       And wait
