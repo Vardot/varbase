@@ -120,8 +120,7 @@ commands:
             composer config -g github-oauth.github.com $GITHUB_TOKEN
             composer global config cache-files-ttl 604800
             composer config --global process-timeout 0
-            composer config --global cache-dir /home/circleci/.composer/cache
-            composer config repositories.assets composer https://asset-packagist.org --json='{"canonical": false}'
+            composer config --global cache-dir /home/circleci/.cache/composer
       - run:
           name: List tools versions
           command: |
@@ -203,7 +202,7 @@ commands:
       - save_cache:
           key: composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
           paths:
-            - /home/circleci/.composer/cache
+            - /home/circleci/.cache/composer
       - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
           command: |
