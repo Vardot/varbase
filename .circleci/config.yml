@@ -121,6 +121,7 @@ commands:
             composer global config cache-files-ttl 604800
             composer config --global process-timeout 0
             composer config --global cache-dir /home/circleci/.composer/cache
+            composer config repositories.assets composer https://asset-packagist.org --json='{"canonical": false}'
       - run:
           name: List tools versions
           command: |
@@ -175,7 +176,7 @@ commands:
             composer require --dev drevops/behat-screenshot:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-            composer install --no-interaction --no-progress --optimize-autoloader -vvv
+            composer install --no-interaction --optimize-autoloader -vvv
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
