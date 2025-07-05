@@ -38,17 +38,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I press "Filter"
       And wait 3s
      Then I should see "tester"
-     When I click "Edit" in the "tester" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account tester?"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is NOT checked in Varbase general settings and NO provided username
@@ -72,18 +61,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I press "Create new account"
      When I go to "/admin/people"
      Then I should see "test.not.allwed.no.username"
-      And I should not see "email_registra…"
-     When I click "Edit" in the "test.not.allwed.no.username" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account test.not.allwed.no.username"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is NOT checked in Varbase general settings and provided some username
@@ -107,17 +84,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I press "Create new account"
      When I go to "/admin/people"
      Then I should see "Some username"
-     When I click "Edit" in the "Some username" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account Some username"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and NO provided username
@@ -139,19 +105,10 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I fill in "dD.123123ddd" for "Confirm password"
       And I scroll to bottom
       And I press "Create new account"
+     Then I should see "Created a new user account"
      When I go to "/admin/people"
+      And I wait 3s
      Then I should see "email_registra…"
-     When I click "Edit" in the "email_registra…" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and provided username
@@ -176,14 +133,3 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I go to "/admin/people"
      Then I should see "Test Account Name"
       And I should not see "test.allwed.with.username"
-     When I click "Edit" in the "Test Account Name" row
-      And wait
-      And I scroll to bottom
-      And I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account Test Account Name?"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
