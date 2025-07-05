@@ -153,6 +153,7 @@ commands:
             - composer-v2-
       - run:
           name: Build Varbase with the composer
+          no_output_timeout: 30m
           command: |
             if [ -d "/var/www/html/test" ]; then
               sudo rm -rf /var/www/html/test -vvv
