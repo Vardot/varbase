@@ -50,7 +50,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Content"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
       And wait
@@ -102,7 +102,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Content"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
       And wait
@@ -174,7 +174,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Content"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
       And wait
@@ -264,7 +264,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Content"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
       And wait
@@ -373,7 +373,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Content"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Test Landing page (Layout Builder)"
      When I click "Test Landing page (Layout Builder)"
       And wait

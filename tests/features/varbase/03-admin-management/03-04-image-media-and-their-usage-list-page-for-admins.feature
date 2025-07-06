@@ -43,7 +43,7 @@ Feature: File & Media Management - Assets Management - Image media and their usa
      Then I should see "Add media"
      When I fill in "Flag Earth" for "edit-name"
       And I press the "Filter" button
-      And wait
+      And wait 3s
      Then I should see "Flag Earth"
      When I click "Edit" in the "Flag Earth" row
       And wait
