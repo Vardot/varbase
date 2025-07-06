@@ -71,7 +71,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I uncheck the box "Allow custom account name"
      Then I should see the "Allow custom account name" checkbox unchecked
      When I press "Save configuration"
-      And wait
+      And wait 3s
      Then I should see "The configuration options have been saved."
 
      When I go to "/admin/people/create"
@@ -94,7 +94,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I check the box "Allow custom account name"
      Then I should see the "Allow custom account name" checkbox checked
      When I press "Save configuration"
-      And wait
+      And wait 3s
      Then I should see "The configuration options have been saved."
 
      When I go to "/admin/people/create"
@@ -120,7 +120,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I check the box "Allow custom account name"
      Then I should see the "Allow custom account name" checkbox checked
      When I press "Save configuration"
-      And wait
+      And wait 3s
      Then I should see "The configuration options have been saved."
 
      When I go to "/admin/people/create"
