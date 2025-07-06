@@ -55,7 +55,7 @@ Feature: Support Requirements - Standard Support Navigation - Allow site super a
       And wait
       And I fill in "Super admin" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s
      Then I should see "Super admin"
      When I click "View user profile."
       And wait
