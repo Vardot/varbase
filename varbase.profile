@@ -724,7 +724,7 @@ function varbase_requirements($phase) {
  * Implements hook_library_info_alter().
  */
 function varbase_library_info_alter(&$libraries, $extension) {
-  if ($extension === 'claro' && isset($libraries['install-page'])) {
+  if (($extension === 'claro' || $extension === 'gin') && isset($libraries['install-page'])) {
     unset($libraries['install-page']['css']);
     $libraries['install-page']['dependencies'][] = 'varbase/install-styling';
     $libraries['install-page']['dependencies'][] = 'varbase/install-scripts';
