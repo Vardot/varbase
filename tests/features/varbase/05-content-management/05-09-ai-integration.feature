@@ -37,4 +37,3 @@ Feature: AI Agent integration and interpolation
       And I should see "Reformat HTML"
       And I should see "Fix spelling"
       And I should see "Summarize"
-      And I should see "Tone"

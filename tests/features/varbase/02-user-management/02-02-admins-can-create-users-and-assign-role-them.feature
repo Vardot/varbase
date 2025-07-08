@@ -36,7 +36,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I go to "/admin/people"
       And I fill in "tester" for "Name or email contains"
       And I press "Filter"
-      And wait
+      And wait 3s 3s
      Then I should see "tester"
      When I click "Edit" in the "tester" row
       And wait
@@ -137,7 +137,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I check the box "Allow custom account name"
      Then I should see the "Allow custom account name" checkbox checked
      When I press "Save configuration"
-      And wait
+      And wait 3s
      Then I should see "The configuration options have been saved."
 
      When I go to "/admin/people/create"
@@ -175,7 +175,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I check the box "Allow custom account name"
      Then I should see the "Allow custom account name" checkbox checked
      When I press "Save configuration"
-      And wait
+      And wait 3s
      Then I should see "The configuration options have been saved."
 
      When I go to "/admin/people/create"

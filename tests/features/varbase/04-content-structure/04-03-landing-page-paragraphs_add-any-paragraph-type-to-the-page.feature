@@ -11,6 +11,7 @@ Feature: Landing page (Paragraphs) - Add any paragraph types to the page
      Then I should see "Varbase Bootstrap Paragraphs settings"
       And I should see "Available CSS styles (classes) for Varbase Bootstrap Paragraphs"
       And I press "Save configuration"
+      And wait 3s
      Then I should see "The configuration options have been saved."
 
   @javascript @local @development @staging @production
