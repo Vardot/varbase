@@ -36,7 +36,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I go to "/admin/people"
       And I fill in "tester" for "Name or email contains"
       And I press "Filter"
-      And wait 3s 3s
+      And wait 3s
      Then I should see "tester"
      When I click "Edit" in the "tester" row
       And wait
