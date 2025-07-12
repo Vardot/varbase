@@ -10,9 +10,8 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
+      And I should see "Edit"
      When I open the top bar page actions menu
-      And I wait for AJAX to finish
-      And I should see "Edit content"
       And I should see "Delete"
       And I should see "Manage display"
       And I should see "Layout"
@@ -29,7 +28,6 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
       And I should not see "Tasks"
-      And I should not see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should not see "Revisions"
@@ -44,7 +42,7 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
       And I should not see "Tasks"
-      And I should not see "Edit content"
+      And I should not see "top-bar__actions"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should not see "Revisions"
@@ -58,9 +56,8 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
+      And I should see "Edit"
      When I open the top bar page actions menu
-      And I wait for AJAX to finish
-      And I should see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should see "Layout"
@@ -75,9 +72,8 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
+      And I should see "Edit"
      When I open the top bar page actions menu
-      And I wait for AJAX to finish
-      And I should see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should see "Layout"
@@ -92,9 +88,8 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
+      And I should see "Edit"
      When I open the top bar page actions menu
-      And I wait for AJAX to finish
-      And I should see "Edit content"
       And I should not see "Delete"
       And I should not see "Manage display"
       And I should see "Revisions"
@@ -108,9 +103,8 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
+      And I should see "Edit"
      When I open the top bar page actions menu
-      And I wait for AJAX to finish
-      And I should see "Edit content"
       And I should see "Delete"
       And I should not see "Manage display"
       And I should see "Layout"

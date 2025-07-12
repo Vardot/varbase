@@ -35,7 +35,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I should not see "Bootstrap 11 Cols"
       And I should not see "Bootstrap 12 Cols"
      When I scroll to the top of the page
-      And I wait 2s
+      And I wait 4s
       And I press the "Save layout" button
       And wait
       And I wait 2s
@@ -87,7 +87,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Rich text in 1 col section"
 
      When I scroll to the top of the page
-      And I wait 2s
+      And I wait 4s
       And I press the "Save layout" button
       And wait
      Then I should see "The layout override has been saved."
