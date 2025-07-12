@@ -10,7 +10,7 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should see "Delete"
@@ -58,7 +58,7 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
@@ -75,7 +75,7 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
@@ -92,7 +92,7 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should not see "Delete"
@@ -108,7 +108,7 @@ Feature: Content Structure - Homepage Permissions with Landing Pages with Layout
       And wait
      Then I should see "Build Your Site Using Varbase!"
       And I should see "Varbase; Better Than Ever"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for AJAX to finish
       And I should see "Edit content"
       And I should see "Delete"

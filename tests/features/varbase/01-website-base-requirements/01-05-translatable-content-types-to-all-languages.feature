@@ -16,29 +16,22 @@ Feature: Website Base Requirements - Website Languages - All content translatabl
       And wait 2s
      Then I should see "Test English Basic page"
       And I should see "Test English Basic page body"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for ajax to finish
      Then I should see "Translate"
-     When I click "Translate" in the "a" element with the "class" attribute set to "moderation-sidebar-link button"
-      And I wait for ajax to finish
-     Then I should see "Translate"
-      And I should see "View all translations"
-     When I click "Create translation"
+     When I click "Translate"
+      And wait
+      And I should see "Test English Basic page"
+     When I click "Add" in the "Arabic" row
       And wait 2s
       And I fill in "تجربة صفحة بسيطة عربية العنوان" for "edit-title-0-value"
       And I fill in the rich text editor field "edit-body-0-value" with "تجربة صفحة بسيطة عربية المحتوى"
       And I press the "حفظ كـ (this translation)" button
       And wait 2s
      Then I should see "تجربة صفحة بسيطة عربية العنوان"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for ajax to finish
      Then I should see "ترجمة"
-     When I click "ترجمة" in the "a" element with the "class" attribute set to "moderation-sidebar-link button"
-      And I wait for ajax to finish
-      And wait 2s
-     Then I should see "ترجمة"
-      And I should see "View all translations"
-      And wait 2s
-     When I click "View all translations"
-      And wait 2s
+     When I click "ترجمة"
+      And wait
      Then I should see "Test English Basic page"

@@ -40,7 +40,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      Then I should see "tester"
      When I click "Edit" in the "tester" row
       And wait
-      And I click "More actions"
+      And I open the top bar page actions menu
       And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
@@ -78,7 +78,7 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I should not see "email_registration"
      When I click "Edit" in the "test.not.allwed.no.username" row
       And wait
-      And I click "More actions"
+      And I open the top bar page actions menu
       And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
@@ -115,7 +115,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      Then I should see "Some username"
      When I click "Edit" in the "Some username" row
       And wait
-      And I click "More actions"
+      And I open the top bar page actions menu
       And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
@@ -152,7 +152,7 @@ Feature: User Management - Standard User Management - Admins can create users an
      Then I should see "email_registration"
      When I click "Edit" in the "email_registration" row
       And wait
-      And I click "More actions"
+      And I open the top bar page actions menu
       And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"
@@ -192,7 +192,7 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I should not see "email_registration"
      When I click "Edit" in the "Test Account Name" row
       And wait
-      And I click "More actions"
+      And I open the top bar page actions menu
       And wait 1s
      Then I should see "Cancel account"
      When I click "Cancel account"

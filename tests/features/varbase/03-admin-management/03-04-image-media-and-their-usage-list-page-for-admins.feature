@@ -67,7 +67,7 @@ Feature: File & Media Management - Assets Management - Image media and their usa
      When I click "Edit" in the "Flag Earth after edit" row
       And wait
      Then I should see "Flag Earth after edit"
-     When I click "More actions"
+     When I open the top bar page actions menu
       And wait 1s
      Then I should see "Delete"
      When I click "edit-delete"

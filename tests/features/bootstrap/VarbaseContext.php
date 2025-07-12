@@ -2608,6 +2608,34 @@ JS;
   }
 
   /**
+   * Open the top bar page actions menu from the top navigation.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: When I open top bar page actions
+   * Example 2:  And I open the top bar page actions menu
+   * Example 3:  And open top bar page actions
+   * Example 4: When I hit the more actions
+   * Example 5:  And hit more actions
+   *
+   * @When /^(?:|I )open (?:|the )top bar page actions(?:| menu)$/
+   * @When /^(?:|I )hit (?:|the )more actions(?:| button)$/
+   */
+  public function iOpenTopBarPageActions() {
+    $topBarPageActionsButton = $this->getSession()->getPage()->findAll('css', 'button.toolbar-button.toolbar-button--icon--dots');
+
+    if (!empty($topBarPageActionsButton)
+      && is_array($topBarPageActionsButton)
+      && count($topBarPageActionsButton) > 0) {
+
+      $topBarPageActionsButton[0]->click();
+    }
+    else {
+      throw new \Exception(sprintf('The top bar page actions button was not found in the top navigation'));
+    }
+  }
+
+  /**
    * Check if can see the accessibility checker.
    *
    * Varbase Context #varbase.

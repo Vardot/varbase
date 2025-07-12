@@ -55,7 +55,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      When I click "Test Landing page (Layout Builder)"
       And wait
      Then I should see "Test Landing page (Layout Builder)"
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for AJAX to finish
       And I should see "Layout"
      When I click "Layout"

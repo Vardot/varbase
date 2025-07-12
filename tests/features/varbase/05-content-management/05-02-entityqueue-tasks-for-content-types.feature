@@ -13,7 +13,7 @@ Feature: Content Management - Standard Entity Queue Management - Have Entity que
       And I press "Save as"
       And wait
      Then I should see "Test Content Test tab content number 1 has been created."
-     When I open the moderation sidebar
+     When I open the top bar page actions menu
       And I wait for AJAX to finish
       And I scroll to bottom of "#drupal-off-canvas"
      Then I should see "Entityqueue"
