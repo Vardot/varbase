@@ -70,7 +70,7 @@ Feature: File & Media Management - Assets Management - Image media and their usa
      When I open the top bar page actions menu
       And wait 1s
      Then I should see "Delete"
-     When I click "edit-delete"
+     When I click "gin-sticky-edit-delete"
       And wait
      Then I should see "This action cannot be undone."
      When I click the delete button
