@@ -1753,6 +1753,28 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Press a responsive preview device button.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I press the "desktop" responsive preview device button
+   * Example #2:  And I press the "mobile" responsive preview device button
+   *
+   * @When /^I press the "(?P<deviceName>[^"]*)" responsive preview device button$/
+   */
+  public function iPressResponsivePreviewDeviceButton($deviceName) {
+
+    $button = $this->getSession()->getPage()->find('xpath', "//*[@data-responsive-preview-name='" . $deviceName . "']");
+    
+    if (empty($button)) {
+      throw new \Exception(sprintf('The "%s" responsive preview device option was not found in the page', $deviceName));
+    }
+
+    $this->getSession()->executeScript('document.querySelector(\'[data-responsive-preview-name="' . $deviceName . '"]\').click();');
+
+  }
+
+  /**
    * Check if we do have a text in the input element.
    *
    * Example #1: Then I should see "your text" value in the "edit-items-2-target-id" input element

@@ -9,7 +9,8 @@ Feature: Preview the site in a number of responsive devices
      When I go to "/contact-us"
       And wait
      Then I should see "Contact Us"
-      And I should not see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
+      And I should not see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
+      And I should not see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that an authenticated user can not access the responsive preview devices
@@ -17,7 +18,8 @@ Feature: Preview the site in a number of responsive devices
      When I go to "/contact-us"
       And wait
      Then I should see "Contact Us"
-      And I should not see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
+      And I should not see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
+      And I should not see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Editor users can access the responsive preview devices
@@ -25,24 +27,11 @@ Feature: Preview the site in a number of responsive devices
      When I go to "/contact-us"
       And wait
      Then I should see "Contact Us"
-      And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
-     When I press "Preview page layout"
-     Then I should see "iPhone 15"
-      And I should see "iPhone 15 Pro Max"
-      And I should see "Galaxy Tab S9 Ultra"
-      And I should see "iPad Pro"
-      And I should see "Samsung Galaxy S23 Ultra"
-      And I should see "Pixel 7"
-      And I should not see "Configure devices"
-     When I press "iPhone 15"
-     Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I go to "/contact-us"
-      And wait
-     Then I should see "Contact Us"
-     When I press "Preview page layout"
-     Then I should see "iPad Pro"
-     When I press "iPad Pro"
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
+      And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
+      And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
+     When I press the "mobile" responsive preview device button
+      And I wait 3s
+     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Content Admin users can access the responsive preview devices
@@ -50,24 +39,11 @@ Feature: Preview the site in a number of responsive devices
      When I go to "/contact-us"
       And wait
      Then I should see "Contact Us"
-      And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
-     When I press "Preview page layout"
-     Then I should see "iPhone 15"
-      And I should see "iPhone 15 Pro Max"
-      And I should see "Galaxy Tab S9 Ultra"
-      And I should see "iPad Pro"
-      And I should see "Samsung Galaxy S23 Ultra"
-      And I should see "Pixel 7"
-      And I should not see "Configure devices"
-     When I press "iPhone 15"
-     Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I go to "/contact-us"
-      And wait
-     Then I should see "Contact Us"
-     When I press "Preview page layout"
-     Then I should see "iPad Pro"
-     When I press "iPad Pro"
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
+      And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
+      And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
+     When I press the "mobile" responsive preview device button
+      And I wait 3s
+     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that SEO Admin users can access the responsive preview devices
@@ -75,24 +51,11 @@ Feature: Preview the site in a number of responsive devices
      When I go to "/contact-us"
       And wait
      Then I should see "Contact Us"
-      And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
-     When I press "Preview page layout"
-     Then I should see "iPhone 15"
-      And I should see "iPhone 15 Pro Max"
-      And I should see "Galaxy Tab S9 Ultra"
-      And I should see "iPad Pro"
-      And I should see "Samsung Galaxy S23 Ultra"
-      And I should see "Pixel 7"
-      And I should not see "Configure devices"
-     When I press "iPhone 15"
-     Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I go to "/contact-us"
-      And wait
-     Then I should see "Contact Us"
-     When I press "Preview page layout"
-     Then I should see "iPad Pro"
-     When I press "iPad Pro"
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
+      And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
+      And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
+     When I press the "mobile" responsive preview device button
+      And I wait 3s
+     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Site Admin users can access the responsive preview devices
@@ -100,24 +63,11 @@ Feature: Preview the site in a number of responsive devices
      When I go to "/contact-us"
       And wait
      Then I should see "Contact Us"
-      And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
-     When I press "Preview page layout"
-     Then I should see "iPhone 15"
-      And I should see "iPhone 15 Pro Max"
-      And I should see "Galaxy Tab S9 Ultra"
-      And I should see "iPad Pro"
-      And I should see "Samsung Galaxy S23 Ultra"
-      And I should see "Pixel 7"
-      And I should not see "Configure devices"
-     When I press "iPhone 15"
-     Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I go to "/contact-us"
-      And wait
-     Then I should see "Contact Us"
-     When I press "Preview page layout"
-     Then I should see "iPad Pro"
-     When I press "iPad Pro"
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
+      And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
+      And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
+     When I press the "mobile" responsive preview device button
+      And I wait 3s
+     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can access the responsive preview devices and configure devices
@@ -125,21 +75,8 @@ Feature: Preview the site in a number of responsive devices
      When I go to "/contact-us"
       And wait
      Then I should see "Contact Us"
-      And I should see "Layout preview" in the "button" element with the "title" attribute set to "Preview page layout"
-     When I press "Preview page layout"
-     Then I should see "iPhone 15"
-      And I should see "iPhone 15 Pro Max"
-      And I should see "Galaxy Tab S9 Ultra"
-      And I should see "iPad Pro"
-      And I should see "Samsung Galaxy S23 Ultra"
-      And I should see "Pixel 7"
-      And I should see "Configure devices"
-     When I press "iPhone 15"
-     Then I should see "iPhone 15" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
-     When I go to "/contact-us"
-      And wait
-     Then I should see "Contact Us"
-     When I press "Preview page layout"
-     Then I should see "iPad Pro"
-     When I press "iPad Pro"
-     Then I should see "iPad Pro" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
+      And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
+      And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
+     When I press the "mobile" responsive preview device button
+      And I wait 3s
+     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
