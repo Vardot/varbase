@@ -65,6 +65,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I wait 2s
      Then I should see "Add section at end of layout"
      When I add a basic section at the end of layout
+      And I scroll to the bottom of the page
       And I save the section
       And I wait for AJAX to finish
       And I wait 2s
