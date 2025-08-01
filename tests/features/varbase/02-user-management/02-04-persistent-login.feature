@@ -16,7 +16,7 @@ Feature: User Management - Have persistent login options and configurations
   Scenario: Check if an authenticated user can login and use the [Remember me] option
     Given I am not logged in
      When I go to "/user/login"
-      And wait
+      And I wait 3s
      Then I should see "Log in"
       And I should see "Remember me"
      When I fill in "Normal user" for "Email address or username"
@@ -25,5 +25,5 @@ Feature: User Management - Have persistent login options and configurations
       And I wait 2s
       And I check the box "Remember me"
       And I press the "Log in" button
-      And wait
+      And I wait 2s
      Then I should see "Normal user"

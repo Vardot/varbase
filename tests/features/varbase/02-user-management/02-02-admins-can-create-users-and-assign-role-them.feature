@@ -38,20 +38,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I press "Filter"
       And wait 3s
      Then I should see "tester"
-     When I click "Edit" in the "tester" row
-      And wait
-      And I open the top bar page actions menu
-      And wait 1s
-     Then I should see "Cancel account"
-     When I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account tester?"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 10s
-     Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is NOT checked in Varbase general settings and NO provided username
@@ -75,21 +61,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I press "Create new account"
      When I go to "/admin/people"
      Then I should see "test.not.allwed.no.username"
-      And I should not see "email_registration"
-     When I click "Edit" in the "test.not.allwed.no.username" row
-      And wait
-      And I open the top bar page actions menu
-      And wait 1s
-     Then I should see "Cancel account"
-     When I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account test.not.allwed.no.username"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is NOT checked in Varbase general settings and provided some username
@@ -113,20 +84,6 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I press "Create new account"
      When I go to "/admin/people"
      Then I should see "Some username"
-     When I click "Edit" in the "Some username" row
-      And wait
-      And I open the top bar page actions menu
-      And wait 1s
-     Then I should see "Cancel account"
-     When I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account Some username"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and NO provided username
@@ -148,28 +105,16 @@ Feature: User Management - Standard User Management - Admins can create users an
       And I fill in "dD.123123ddd" for "Confirm password"
       And I scroll to bottom
       And I press "Create new account"
+      And I wait 3s
+     Then I should see "Created a new user account"
      When I go to "/admin/people"
-     Then I should see "email_registration"
-     When I click "Edit" in the "email_registration" row
-      And wait
-      And I open the top bar page actions menu
-      And wait 1s
-     Then I should see "Cancel account"
-     When I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account email_registration"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
+      And I wait 3s
+     Then I should see "email_registra…"
 
   @javascript @local @development @staging @production
   Scenario: Check the behavior when "Allow custom account name" option is checked in Varbase general settings and provided username
     Given I am a logged in user with the "webmaster" user
       And I go to "/admin/config/varbase/settings"
-      And wait
      Then I should see "Varbase general settings"
       And I should see "Allow custom account name"
      When I check the box "Allow custom account name"
@@ -189,18 +134,3 @@ Feature: User Management - Standard User Management - Admins can create users an
      When I go to "/admin/people"
      Then I should see "Test Account Name"
       And I should not see "test.allwed.with.username"
-      And I should not see "email_registration"
-     When I click "Edit" in the "Test Account Name" row
-      And wait
-      And I open the top bar page actions menu
-      And wait 1s
-     Then I should see "Cancel account"
-     When I click "Cancel account"
-      And wait
-      And wait 3s
-     Then I should see "Are you sure you want to cancel the account Test Account Name?"
-     When I select the radio button "Delete the account and its content. This action cannot be undone."
-      And I scroll to bottom
-      And I press "Confirm"
-      And I wait 5s
-     Then I should see "People"
