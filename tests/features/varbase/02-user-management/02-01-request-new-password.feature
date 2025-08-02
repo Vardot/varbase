@@ -19,7 +19,7 @@ Feature: User Management - Standard User Management - Request new password
      When I fill in "not-existing-email@vardot.com" for "Username or email address"
       And I press the "Reset" button
       And I wait 3s
-      And I should see "Build Your Site Using Varbase!"
+     Then I should see "Build Your Site Using Varbase!"
 
   @javascript @local @development @staging @production
   Scenario: Verify password reset with non-existing username
