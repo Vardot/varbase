@@ -12,6 +12,7 @@ Feature: User Management - Standard User Management - Request new password
 
   @javascript @local @development @staging @production
   Scenario: Verify that the system cannot send an email to non-existing users or emails
+    Given I am not logged in
      When I go to "/user/password"
       And I wait 6s
      Then I should see "Username or email address"
@@ -20,4 +21,4 @@ Feature: User Management - Standard User Management - Request new password
       And I wait 2s
       And I press the "Reset" button
       And I wait 6s
-     Then I should see "an email will be sent with instructions to reset your password."
+     Then I should see "If not.existing.email@vardot.com is a valid account, an email will be sent with instructions to reset your password."
