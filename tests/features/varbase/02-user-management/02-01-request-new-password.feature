@@ -13,7 +13,7 @@ Feature: User Management - Standard User Management - Request new password
   @javascript @local @development @staging @production
   Scenario: Verify that the system cannot send an email to non-existing emails and redirect to the homepage
     Given I am not logged in
-      And I  am on the homepage
+      And I am on the homepage
       And I wait 3s
      Then I should see "Build Your Site Using Varbase!"
      When I go to "/user/password"
