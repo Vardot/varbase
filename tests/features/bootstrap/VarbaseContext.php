@@ -1633,26 +1633,33 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $found = FALSE;
     foreach ($elements as $element) {
-      $actual = $element->getText();
-      $actual = preg_replace('/\s+/u', ' ', $actual);
-      $regex = '/' . preg_quote($text, '/') . '/ui';
+      // Check if attribute matches (if specified)
+      $attributeMatches = TRUE;
+      if (!empty($attribute)) {
+        $attr = $element->getAttribute($attribute);
+        if (empty($attr) || strpos($attr, "$value") === FALSE) {
+          $attributeMatches = FALSE;
+        }
+      }
 
-      if (preg_match($regex, $actual)) {
-        $found = TRUE;
-        break;
+      // Only check text if attribute matches (or no attribute specified)
+      if ($attributeMatches) {
+        $actual = $element->getText();
+        $actual = preg_replace('/\s+/u', ' ', $actual);
+        $regex = '/' . preg_quote($text, '/') . '/ui';
+
+        if (preg_match($regex, $actual)) {
+          $found = TRUE;
+          break;
+        }
       }
     }
+
     if (!$found) {
-      throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
-    }
-
-    if (!empty($attribute)) {
-      $attr = $element->getAttribute($attribute);
-      if (empty($attr)) {
-        throw new \Exception(sprintf('The "%s" attribute is not present on the element "%s"', $attribute, $htmlTagName));
-      }
-      if (strpos($attr, "$value") === FALSE) {
-        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      if (!empty($attribute)) {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element with the "%s" attribute set to "%s"', $text, $htmlTagName, $attribute, $value));
+      } else {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
       }
     }
   }
@@ -1676,26 +1683,33 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $found = FALSE;
     foreach ($elements as $element) {
-      $actual = $element->getText();
-      $actual = preg_replace('/\s+/u', ' ', $actual);
-      $regex = '/' . preg_quote($text, '/') . '/ui';
+      // Check if attribute matches (if specified)
+      $attributeMatches = TRUE;
+      if (!empty($attribute)) {
+        $attr = $element->getAttribute($attribute);
+        if (empty($attr) || strpos($attr, "$value") === FALSE) {
+          $attributeMatches = FALSE;
+        }
+      }
 
-      if (preg_match($regex, $actual)) {
-        $found = TRUE;
-        break;
+      // Only check text if attribute matches (or no attribute specified)
+      if ($attributeMatches) {
+        $actual = $element->getText();
+        $actual = preg_replace('/\s+/u', ' ', $actual);
+        $regex = '/' . preg_quote($text, '/') . '/ui';
+
+        if (preg_match($regex, $actual)) {
+          $found = TRUE;
+          break;
+        }
       }
     }
+
     if ($found) {
-      throw new \Exception(sprintf('"%s" was found in the "%s" element', $text, $htmlTagName));
-    }
-
-    if (empty($attribute)) {
-      $attr = $element->getAttribute($attribute);
-      if (empty($attr)) {
-        throw new \Exception(sprintf('The "%s" attribute is present on the element "%s"', $attribute, $htmlTagName));
-      }
-      if (strpos($attr, "$value") === FALSE) {
-        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      if (!empty($attribute)) {
+        throw new \Exception(sprintf('"%s" was found in the "%s" element with the "%s" attribute set to "%s"', $text, $htmlTagName, $attribute, $value));
+      } else {
+        throw new \Exception(sprintf('"%s" was found in the "%s" element', $text, $htmlTagName));
       }
     }
   }
@@ -1717,39 +1731,40 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception(sprintf('The element "%s" was not found in the page', $htmlTagName));
     }
 
-    $firstIndex = -1;
+    $targetElement = null;
 
-    $found = FALSE;
-    foreach ($elements as $index => $element) {
-      $actual = $element->getText();
-
-      $actual = preg_replace('/\s+/u', ' ', $actual);
-      $regex = '/' . preg_quote($text, '/') . '/ui';
-
-      if (preg_match($regex, $actual)) {
-        $found = TRUE;
-        $firstIndex = $index;
-        break;
+    foreach ($elements as $element) {
+      // Check if attribute matches (if specified)
+      $attributeMatches = TRUE;
+      if (!empty($attribute)) {
+        $attr = $element->getAttribute($attribute);
+        if (empty($attr) || strpos($attr, (string) $value) === FALSE) {
+          $attributeMatches = FALSE;
+        }
       }
-    }
-    if (!$found) {
-      throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
-    }
 
-    if (!empty($attribute)) {
-      $attr = $element->getAttribute($attribute);
-      if (empty($attr)) {
-        throw new \Exception(sprintf('The "%s" attribute is not present on the element "%s"', $attribute, $htmlTagName));
-      }
-      if (strpos($attr, (string) $value) === FALSE) {
-        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      // Only check text if attribute matches (or no attribute specified)
+      if ($attributeMatches) {
+        $actual = $element->getText();
+        $actual = preg_replace('/\s+/u', ' ', $actual);
+        $regex = '/' . preg_quote($text, '/') . '/ui';
+
+        if (preg_match($regex, $actual)) {
+          $targetElement = $element;
+          break;
+        }
       }
     }
 
-    if ($firstIndex !== -1) {
-      $elements[$firstIndex]->click();
+    if ($targetElement === null) {
+      if (!empty($attribute)) {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element with the "%s" attribute set to "%s"', $text, $htmlTagName, $attribute, $value));
+      } else {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
+      }
     }
 
+    $targetElement->click();
   }
 
   /**
