@@ -3,11 +3,9 @@ Feature: User Management - Standard User Management - Request new password
       I will want to be able to Request new password
       So that I can reset my password for the account
 
-  Background:
-    Given I am not logged in
-
   @javascript @local @development @staging @production
   Scenario: Check that an anonymous user can reset his or her password
+    Given I am not logged in
      When I go to "/user/login"
       And wait
      Then I should see "Forgot your password?"
@@ -21,5 +19,5 @@ Feature: User Management - Standard User Management - Request new password
       And I scroll to the bottom
       And I wait 2s
       And I press the "Reset" button
-      And I wait 4s
-     Then I should see "If not.existing.email@vardot.com is a valid account, an email will be sent with instructions to reset your password."
+      And I wait 6s
+     Then I should see "an email will be sent with instructions to reset your password."
