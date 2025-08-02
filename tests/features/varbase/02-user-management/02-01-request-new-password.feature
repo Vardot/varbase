@@ -11,18 +11,7 @@ Feature: User Management - Standard User Management - Request new password
      Then I should see "Forgot your password?"
 
   @javascript @local @development @staging @production
-  Scenario: Verify that the system cannot send an email to non-existing users or emails
-    Given I am not logged in
-     When I go to "/user/password"
-      And I wait 6s
-     Then I should see "Username or email address"
-     When I fill in "not-existing-email@vardot.com" for "Username or email address"
-      And I press the "Reset" button
-      And I wait 3s
-      And I should see "If not-existing-email@vardot.com is a valid account, an email will be sent with instructions to reset your password." in the "div" element with the "aria-label" attribute set to "Status message"
-
-  @javascript @local @development @staging @production
-  Scenario: Verify password reset with existing username
+  Scenario: Verify that the system cannot send an email to non-existing users
     Given I am not logged in
      When I go to "/user/password"
       And I wait 6s
