@@ -13,13 +13,16 @@ Feature: User Management - Standard User Management - Request new password
   @javascript @local @development @staging @production
   Scenario: Verify that the system cannot send an email to non-existing emails and redirect to the homepage
     Given I am not logged in
+      And I  am on the homepage
+      And I wait 3s
+     Then I should see "Build Your Site Using Varbase!"
      When I go to "/user/password"
       And I wait 3s
      Then I should see "Username or email address"
      When I fill in "not-existing-email@vardot.com" for "Username or email address"
       And I press the "Reset" button
       And I wait 3s
-     Then I should see "Build Your Site Using Varbase!"
+     Then I should be on the homepage
 
   @javascript @local @development @staging @production
   Scenario: Verify password reset with non-existing username
