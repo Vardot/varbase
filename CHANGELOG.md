@@ -1,3 +1,261 @@
+# 10.1.0-alpha2
+
+### Highlighted important changes since [10.1.0-alpha1](https://www.drupal.org/project/varbase/releases/10.1.0-alpha1):
+* Issue [#3531853](https://www.drupal.org/i/3531853):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0`
+* Issue [#3531067](https://www.drupal.org/i/3531067):
+         Updated **The Gin Admin Theme** from `~4` to `~5` to work with **Drupal ~11.2.0**
+* Issue [#3526556](https://www.drupal.org/i/3526556)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Switched From **Dashboards** to **Dashboard** Module
+* Issue [#3521945](https://www.drupal.org/i/3521945):
+         Added Getting Started welcome and about Varbase pages with foundation stories
+* Issue [#3537397](https://www.drupal.org/i/3537397):
+         Added **ECA: Event - Condition - Action** and **BPMN.iO** modules to **Varbase Core**
+* Issue [#3537129](https://www.drupal.org/i/3537129):
+         Switched Tags field widget from ***Autocomplete Deluxe*** to **Tagify** for the **Blog post** content type
+* Issue [#3526581](https://www.drupal.org/i/3526581)
+         by [ahmad.estaitia](https://www.drupal.org/u/ahmadestaitia)
+        : Have all **Varbase Components** in the **Vartheme BS5 starterkit** theme
+* Issue [#3526576](https://www.drupal.org/i/3526576)
+         by [ahmad.estaitia](https://www.drupal.org/u/ahmadestaitia)
+        , [qusai taha](https://www.drupal.org/u/qusai-taha)
+        : Removed all components as they were moved to **Vartheme BS5 starterkit** theme
+
+
+### Added since [10.1.0-alpha1](https://www.drupal.org/project/varbase/releases/10.1.0-alpha1):
+* Issue [#3525777](https://www.drupal.org/i/3525777):
+         Added a new **Views View Grid**  & **Grid Responsive View** component to be
+         used with **UI Patterns ~2.0** and **views**
+* Issue [#3524001](https://www.drupal.org/i/3524001):
+         Added a new **Views View Heroslier** component to be used with **UI Patterns ~2.0** and **views**
+* Issue [#3527891](https://www.drupal.org/i/3527891):
+         Added a new **Views View Table** & **Responsive Table** component to be used with **UI Patterns ~2.0** and **views**
+* Issue [#3533025](https://www.drupal.org/i/3533025):
+         Added **[Varbase Libraries](https://github.com/vardot/varbase-libraries)** to
+         Varbase Profile, Allowing local libraries management in projects
+* Issue [#3533027](https://www.drupal.org/i/3533027):
+         Added **[Varbase Replaces](https://github.com/vardot/varbase-replaces)** to
+         Varbase Profile, Allowing local replaces management in projects
+* Issue [#3538590](https://www.drupal.org/i/3538590):
+         Added managed configs in optional for custom block content
+* Issue [#3534994](https://www.drupal.org/i/3534994)
+        : Added config action import for the **Gin social auth** login block in
+         the default **Varbase Auth** recipe
+* Issue [#3537130](https://www.drupal.org/i/3537130)
+        : Added **Tagify** module and set it as default widget for entity reference fields
+
+### Changed since [10.1.0-alpha1](https://www.drupal.org/project/varbase/releases/10.1.0-alpha1):
+* Issue [#3538850](https://www.drupal.org/i/3538850)
+        : Enabled **Responsive Preview Navigation** module in **Varbase Admin** default
+         recipe with top bar integration and style fixes
+* Issue [#3528092](https://www.drupal.org/i/3528092)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim): Ensure Correct Theme Is
+         Loaded When Using the Dashboard Module
+* Issue [#3530747](https://www.drupal.org/i/3530747)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Changed The Social Auth Component To Match The New **Social Auth ~4** Module Changes
+* Issue [#3533387](https://www.drupal.org/i/3533387):
+         Changed applying of **AI recipe** when installing the **Varbase AI** module for
+         flexible recipes management
+* Issue [#3533375](https://www.drupal.org/i/3533375):
+         Changed **Varbase AI default recipe** to only configure AI settings for flexible recipes management
+* Issue [#3533377](https://www.drupal.org/i/3533377):
+         Changed **Varbase AI Image Alt recipe** for flexible recipes management  
+* Issue [#3533378](https://www.drupal.org/i/3533378):
+         Changed **Varbase AI Editor Assistant recipe** for flexible recipes management
+* Issue [#3533381](https://www.drupal.org/i/3533381):
+         Changed **Varbase AI Agents recipe** for flexible recipes management
+* Issue [#3533379](https://www.drupal.org/i/3533379): Changed **Varbase AI Taxonomy Tagging recipe** for
+         flexible recipes management
+* Issue [#3524006](https://www.drupal.org/i/3524006):
+         Changed **Varbase Heroslider** to use **UI Patterns ~2.0** mapping in the Heroslider block view not in twig
+* Issue [#3524011](https://www.drupal.org/i/3524011):
+         Changed **Varbase Demo Homepage** with **Varbase Heroslider block** using the **UI Patterns ~2.0**
+* Issue [#3524009](https://www.drupal.org/i/3524009):
+         Changed the default Varbase Heroslider to Heroslider block with **UI Patterns ~2.0** in the default content
+* Issue [#3525780](https://www.drupal.org/i/3525780):
+         Switched to **Grid** & **Grid Responsive view** component
+         with **UI Patterns views ~2.0** from the old Bootstrap Grid Format by Views Bootstrap
+* Issue [#3530993](https://www.drupal.org/i/3530993):
+         Changed **Drupal Core** requirements from  `>=10.4 || >=11.1` to `~11.2.0`
+* Issue [#3537893](https://www.drupal.org/i/3537893):
+         Removed **Moderation Sidebar** from **Varbase Workflow**
+* Issue [#3537894](https://www.drupal.org/i/3537894):
+         Removed **Gin Moderation Sidebar** from **Varbase Admin**
+* Issue [#3533023](https://www.drupal.org/i/3533023):
+         Removed `repositories`, `minimum-stability`, `prefer-stable`, `replace` from `composer.json` file for Varbase
+* Issue [#3532399](https://www.drupal.org/i/3532399):
+        
+         Removed `npm-asset/northernco--ckeditor5-anchor-drupal` library as
+         the **CKEditor Anchor Link** module switched
+         to **[vardot/ckeditor5-anchor-drupal](https://github.com/Vardot/ckeditor5-anchor-drupal)**
+* Issue [#3532943](https://www.drupal.org/i/3532943):
+         Removed `npm-asset/northernco--ckeditor5-anchor-drupal` library as the **CKEditor Anchor Link** module
+         from **Varbase Editor**
+* Issue [#3522703](https://www.drupal.org/i/3522703):
+         Remove Replace for Media Bulk Upload and Custom Permissions Modules After They Were
+         Released with Drupal 11 Support
+* Issue [#3525805](https://www.drupal.org/i/3525805):
+         Removed the manual mapping of **Views View Grid** component as we
+         switched to **UI Patterns views ~2.0** mapping from **Drupal UI**
+* Issue [#3525844](https://www.drupal.org/i/3525844):
+         Changed **URL links** in components to use `$ref: ui-patterns://url` for better admin
+         UI/UX and extra  validation 
+* Issue [#3533023](https://www.drupal.org/i/3533023):
+         Removed `repositories`, `minimum-stability`, `prefer-stable`, `replace` from
+         `composer.json` file for Varbase
+* Issue [#3533172](https://www.drupal.org/i/3533172):
+         Changed Click on the Action button in the rich text editor field test
+* Issue [#3539112](https://www.drupal.org/i/3539112):
+         Changed Varbase welcome tour to follow with new **Drupal Core Navigation Top Bar** changes
+* Issue [#3539433](https://www.drupal.org/i/3539433):
+         Moved **Unlock** and **Delete** action buttons to the More Actions menu in the Navigation Top Bar
+* Issue [#3538586](https://www.drupal.org/i/3538586):
+         Removed conditional import of managed configs for **Vartheme BS5 blocks** after
+         `varbase_default_content` installation
+* Issue [#3526691](https://www.drupal.org/i/3526691)
+         by [ahmad.estaitia](https://www.drupal.org/u/ahmadestaitia)
+        : Switched **Varbase Media Hero Slider** to use **Vartheme BS5's components**  instead
+         of the old **Varbase Components** logic
+* Issue [#3526699](https://www.drupal.org/i/3526699)
+         by [ahmad.estaitia](https://www.drupal.org/u/ahmadestaitia)
+        : Changed **Varbase Layout Builder** to use **Vartheme BS5's components**  instead
+         of the old **Varbase Components** logic
+* Issue [#3538600](https://www.drupal.org/i/3538600)
+        : Removed custom theme hook and template for **varbase_heroslider** view override as
+         switched to **UI Patterns ~2.**0 with a `views-view-heroslider` component in **Vartheme BS5**
+* Issue [#3526697](https://www.drupal.org/i/3526697)
+         by [ahmad.estaitia](https://www.drupal.org/u/ahmadestaitia)
+        : Changed default configs in **Varbase Blog** to use **Vartheme BS5's components** instead
+         of the old **Varbase Components** logic
+* Issue [#3527895](https://www.drupal.org/i/3527895):
+         Removed the manual mapping of **Views View Table** component as we
+         switched to **UI Patterns views ~2.0** mapping from Drupal UI
+* Issue [#3534452](https://www.drupal.org/i/3534452):
+         Converted **UI Patterns *enums* ~2.0** to **Drupal Core *enum*** format after `~11.2.0` adoption
+
+### Updates since [10.1.0-alpha1](https://www.drupal.org/project/varbase/releases/10.1.0-alpha1):
+* Issue [#3532101](https://www.drupal.org/i/3532101):
+         Updated **Varbase Dashboards** from `~1.0` to `~2.0`
+* Issue [#3529651](https://www.drupal.org/i/3529651):
+         Updated **Drupal Core** from `~11.1.0` to  `>=11.1` to allow for **Drupal ~11.1** and
+         **~11.2** for Varbase AI
+* Issue [#3532981](https://www.drupal.org/i/3532981):
+         Updated **Drupal AI** to `~1.1.0` for the **Varbase AI Agents recipe**
+* Issue [#3532979](https://www.drupal.org/i/3532979):
+         Updated **Drupal AI** to `~1.1.0` for the **Varbase AI Image Alt recipe** 
+* Issue [#3532982](https://www.drupal.org/i/3532982):
+         Updated **Drupal AI** to `~1.1.0` for the **Varbase AI Default recipe**
+* Issue [#3531124](https://www.drupal.org/i/3531124):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Core  
+* Issue [#3532463](https://www.drupal.org/i/3532463):
+         Updated **Drupal Symfony Mailer** module from `~1` to `~2`
+* Issue [#3532456](https://www.drupal.org/i/3532456):
+         Updated **Content locking (anti-concurrent editing)** from `~2` to `~3`
+* Issue [#3531477](https://www.drupal.org/i/3531477):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase FAQs
+* Issue [#3531845](https://www.drupal.org/i/3531845):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for VMI
+* Issue [#3531830](https://www.drupal.org/i/3531830):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Workflow
+* Issue [#3531780](https://www.drupal.org/i/3531780):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Vartheme BS5
+* Issue [#3531743](https://www.drupal.org/i/3531743):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Social Single Sign-On
+* Issue [#3531676](https://www.drupal.org/i/3531676):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase SEO
+* Issue [#3531654](https://www.drupal.org/i/3531654):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Search
+* Issue [#3531639](https://www.drupal.org/i/3531639):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Media Hero Slider
+* Issue [#3531627](https://www.drupal.org/i/3531627):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Media Header
+* Issue [#3531621](https://www.drupal.org/i/3531621):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Media Demo Assets
+* Issue [#3531617](https://www.drupal.org/i/3531617):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Media
+* Issue [#3531568](https://www.drupal.org/i/3531568):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Layout Builder
+* Issue [#3531563](https://www.drupal.org/i/3531563):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Landing Page (Paragraphs)
+* Issue [#3531557](https://www.drupal.org/i/3531557):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Heroslider
+* Issue [#3531458](https://www.drupal.org/i/3531458):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Email
+* Issue [#3531444](https://www.drupal.org/i/3531444):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Editor
+* Issue [#3531161](https://www.drupal.org/i/3531161):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Demo
+* Issue [#3531153](https://www.drupal.org/i/3531153):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Dashboards
+* Issue [#3531092](https://www.drupal.org/i/3531092):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Components
+* Issue [#3531078](https://www.drupal.org/i/3531078):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Carousels
+* Issue [#3531036](https://www.drupal.org/i/3531036):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Bootstrap Paragraphs
+* Issue [#3531021](https://www.drupal.org/i/3531021):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for Varbase Blog
+* Issue [#3522567](https://www.drupal.org/i/3522567):
+         Updated **Media Bulk Upload** module to `3.0.3` with support for **Drupal 11**
+* Issue [#3522565](https://www.drupal.org/i/3522565):
+         Updated **Custom Permissions** module to `2.3.0` with support for **Drupal 11**
+* Issue [#3529663](https://www.drupal.org/i/3529663)
+         Updated **Automatic Updates** module from `~3` to `~3 || ~4` to support smoother update process
+* Issue [#3531005](https://www.drupal.org/3531005):
+         Updated **Drupal Core** from `~11.1.0` to `~11.2.0` for **Varbase API**
+* Issue [#3532978](https://www.drupal.org/i/3532978):
+         Updated **Drupal AI** to **~1.1.0** for the **Varbase AI Editor Assistant recipe**
+* Issue [#3532980](https://www.drupal.org/i/3532980):
+         Updated **Drupal AI** to `~1.1.0` for the **Varbase AI Taxonomy Tagging recipe**
+
+### Fixes since [10.1.0-alpha1](https://www.drupal.org/project/varbase/releases/10.1.0-alpha1):
+
+* Issue [#3530703](https://www.drupal.org/i/3530703)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Missing Social Auth Icons on Login Page
+* Issue [#3530711](https://www.drupal.org/i/3530711)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Undefined array key social_networks in vartheme_bs5_preprocess_login_with()
+* Issue [#3501338](https://www.drupal.org/i/3501338)
+         by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+        : Fixed Cache Context Conflict in Breadcrumbs Causes Cache Redirect Overwrite Warning After Drupal 10.4 Upgrade  
+* Issue [#3528338](https://www.drupal.org/i/3528338)
+         by [abdallahta20](https://www.drupal.org/u/abdallahta20)
+        , [qusai taha](https://www.drupal.org/u/qusai-taha)
+        : Fixed horizontal scrolling when the navigator toolbar is open and use the bg-edge2edge class
+* Issue [#3518954](https://www.drupal.org/i/3518954)
+         by [qusai taha](https://www.drupal.org/u/qusai-taha)
+        , [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+        : Fixed ArgumentCountError in VarbaseMediaHeaderSettingsForm constructor
+* Issue [#3514505](https://www.drupal.org/i/3514505)
+         by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
+        : Fixed missing .xs breakpoint in content.field_media_gallery during clean install
+* Issue [#3521391](https://www.drupal.org/i/3521391):
+         Fixed Navigation Toolbar Misalignment in RTL Layout
+* Issue [#3539233](https://www.drupal.org/i/3539233):
+         Fixed The Accessibility Checker was not found in the page
+* Issue [#3535703](https://www.drupal.org/i/3535703):
+         Fixed [error]  Non-existent permission(s) assigned to roles by moving configs to config
+         install before applying the default recipe
+* Issue [#3535812](https://www.drupal.org/i/3535812):
+         Fixed unmet dependencies in Text and Image with Varbase Landing by removing target bundles
+         and reordering config to avoid install issues
+* Issue [#3534520](https://www.drupal.org/i/3534520):
+         Fixed Missing varbase_heroslider bundle breaks Varbase installation
+         with LogicException
+* Issue [#3535704](https://www.drupal.org/i/3535704):
+         Fixed [error]  Calculating entity usage for field field_link on default content
+         using the link plugin threw InvalidArgumentException: The URI in Drupal ~11.2.0
+* Issue [#3535706](https://www.drupal.org/i/3535706):
+         Fixed Missing Demo Files in Varbase Media Demo Recipe Content
+* Issue [#3535511](https://www.drupal.org/i/3535511):
+         Fixed position of the **Save as** button for the default Workflow
+         in **Gin ~5.0** and **Drupal ~11.2.0**
+
+-------------------------------------------------------------------------------
+
 # 10.1.0-alpha1
 
 ### Highlighted important changes since Varbase 10.0.5:
