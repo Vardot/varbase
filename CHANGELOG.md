@@ -24,6 +24,8 @@
 
 
 ### Added since [10.1.0-alpha1](https://www.drupal.org/project/varbase/releases/10.1.0-alpha1):
+* Issue [#3539556](https://www.drupal.org/i/3539556):
+         Added **Varbase Installer Theme** for use during installation on **Drupal 11.2.0+**
 * Issue [#3525777](https://www.drupal.org/i/3525777):
          Added a new **Views View Grid**  & **Grid Responsive View** component to be
          used with **UI Patterns ~2.0** and **views**
