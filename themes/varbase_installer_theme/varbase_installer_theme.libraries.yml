@@ -1,0 +1,13 @@
+# Varbase install page styling.
+install-styling:
+  css:
+    theme:
+      css/theme/install-page.css: {}
+
+# Varbase install page scripts.
+install-scripts:
+  js:
+    js/install-scripts.js: {}
+  dependencies:
+    - core/jquery
+    - gin/gin_accent

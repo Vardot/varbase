@@ -1,0 +1,10 @@
+name: Varbase Install Theme
+type: theme
+hidden: true
+description: 'A minimal install theme that extends Gin with Varbase install styling.'
+base theme: gin
+core_version_requirement: ~11.2.0
+
+libraries:
+  - varbase_installer_theme/install-styling
+  - varbase_installer_theme/install-scripts

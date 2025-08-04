@@ -9,14 +9,10 @@
   },
   "keywords": [
     "Drupal",
-    "Varbase",
-    "JSON API",
-    "Open API"
+    "Varbase"
   ],
   "author": "Vardot",
   "scripts": {
-    "theme:build": "webpack --progress --config webpack.config.build.js",
-    "theme:watch": "webpack --progress --config webpack.config.dev.js --watch",
     "phpcs": "phpcs --standard=./.phpcs.xml .",
     "phpcbf": "phpcbf --standard=./.phpcs.xml .",
     "lint:js": "node ./node_modules/eslint/bin/eslint.js .",
@@ -96,5 +92,6 @@
     "last 1 ChromeAndroid version",
     "last 1 Samsung version",
     "Firefox ESR"
-  ]
+  ],
+  "packageManager": "yarn@4.9.2"
 }

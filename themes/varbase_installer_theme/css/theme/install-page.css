@@ -1,5 +1,5 @@
 body.install-page {
-  background-image: url(../../images/varbase-bg.jpg);
+  background-image: url(../../../../images/varbase-bg.jpg);
   background-position-x: center !important;
   background-position-y: center !important;
   background-size: cover !important;
@@ -20,7 +20,7 @@ body.install-page .other-lang-warn .visible {
 }
 
 body.install-page .logo a {
-  background-image: url(../../images/vardot-white-logo.png);
+  background-image: url(../../../../images/vardot-white-logo.png);
   background-position-x: 0px;
   background-position-y: 0px;
   background-size: 100%;
@@ -32,7 +32,7 @@ body.install-page .logo a {
 }
 
 body.install-page .site-name {
-  background-image: url(../../images/varbase-medium-logo.png);
+  background-image: url(../../../../images/varbase-medium-logo.png);
   background-position-x: 0px;
   background-position-y: 0px;
   background-size: 50%;
@@ -107,4 +107,3 @@ footer.installer-footer #credit a {
 .installer-logo {
   width: 18rem;
 }
-
