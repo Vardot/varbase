@@ -7,8 +7,7 @@ distribution:
   name: Varbase
   install:
     theme: varbase_installer_theme
-version: 10.1.0-alpha2
-install:
+version: 10.1.x-dev
   - system
   - user
   - node
