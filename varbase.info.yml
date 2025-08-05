@@ -8,6 +8,7 @@ distribution:
   install:
     theme: varbase_installer_theme
 version: 10.1.x-dev
+install:
   - system
   - user
   - node
