@@ -3,7 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting Drupal libraries scaffolding...');
+console.log('🚀 Starting Drupal Libraries sync from NPM packages to Drupal libraries...');
+console.log('📋 This script copies files from node_modules/ to docroot/libraries/ as configured in package.json');
 
 // Read package.json
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -40,7 +41,7 @@ if (!configuredTarget) {
 console.log(`📂 Creating target directory: ${baseTarget}`);
 fs.mkdirSync(baseTarget, { recursive: true });
 
-console.log(`\n📦 Processing ${drupalLibs.libraries.length} libraries...`);
+console.log(`\n📦 Syncing ${drupalLibs.libraries.length} NPM packages to Drupal libraries...`);
 
 let successCount = 0;
 let errorCount = 0;
@@ -49,7 +50,7 @@ drupalLibs.libraries.forEach((lib, index) => {
   const src = path.join('node_modules', lib.package);
   const dest = path.join(baseTarget, lib.name);
   
-  console.log(`\n[${index + 1}/${drupalLibs.libraries.length}] Processing: ${lib.name}`);
+  console.log(`\n[${index + 1}/${drupalLibs.libraries.length}] Syncing library: ${lib.name}`);
   console.log(`  📥 Source: ${src}`);
   console.log(`  📤 Destination: ${dest}`);
 
@@ -81,20 +82,20 @@ drupalLibs.libraries.forEach((lib, index) => {
   try {
     // Recursive copy
     copyRecursiveSync(src, dest);
-    console.log(`  ✅ Successfully copied ${lib.package} → ${lib.name}`);
+    console.log(`  ✅ Successfully synced NPM package '${lib.package}' to Drupal library '${lib.name}'`);
     successCount++;
   } catch (error) {
-    console.error(`  ❌ Failed to copy ${lib.package}: ${error.message}`);
+    console.error(`  ❌ Failed to sync NPM package '${lib.package}': ${error.message}`);
     errorCount++;
   }
 });
 
-console.log(`\n🎉 Scaffolding complete!`);
+console.log(`\n🎉 Drupal Libraries sync complete!`);
 console.log(`📊 Summary: ${successCount} successful, ${errorCount} errors`);
 console.log(`📍 Target directory: ${baseTarget}`);
 
 if (errorCount > 0) {
-  console.log(`\n⚠️  ${errorCount} libraries failed to copy. Check the errors above.`);
+  console.log(`\n⚠️  ${errorCount} libraries failed to sync. Check the errors above.`);
   process.exit(1);
 }
 
