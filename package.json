@@ -1,11 +1,11 @@
 {
   "name": "varbase",
   "description": "Varbase: The Ultimate Drupal 10 CMS Starter Kit (Bootstrap Ready) | by Vardot",
-  "private": true,
   "license": "GPL-2.0",
+  "private": true,
   "engines": {
-    "yarn": ">= 1.6",
-    "node": ">= 18.0"
+    "yarn": ">= 4.6.0",
+    "node": ">= 20.0"
   },
   "keywords": [
     "Drupal",
