@@ -169,6 +169,7 @@ commands:
             composer install --no-interaction -vvv
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
+            composer drupal-libraries-sync
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
             echo "\$databases['default']['default'] = [
               'database' => 'test_varbase',
