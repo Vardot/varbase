@@ -123,8 +123,12 @@ commands:
           command: |
             curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
             sudo apt-get install -y nodejs
-            corepack enable
-            corepack prepare yarn@4.6.0 --activate
+            rm -rf ~/.yarn
+            mkdir -p ~/.yarn/releases
+            curl -L https://repo.yarnpkg.com/4.6.0/packages/yarnpkg-cli/bin/yarn.js -o ~/.yarn/releases/yarn-4.6.0.cjs
+            chmod +x ~/.yarn/releases/yarn-4.6.0.cjs
+            echo "yarnPath: .yarn/releases/yarn-4.6.0.cjs" > ~/.yarnrc.yml
+            sudo ln -sf ~/.yarn/releases/yarn-4.6.0.cjs /usr/local/bin/yarn
       - run:
           name: List tools versions
           command: |
