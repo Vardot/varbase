@@ -119,6 +119,13 @@ commands:
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
       - run:
+          name: Install Node.js and Yarn 4.6.0
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            corepack enable
+            corepack prepare yarn@4.6.0 --activate
+      - run:
           name: List tools versions
           command: |
             php --version
@@ -127,6 +134,8 @@ commands:
             chromedriver --version
             mysql --version
             composer --version
+            node --version
+            yarn --version
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
