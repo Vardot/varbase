@@ -119,6 +119,17 @@ commands:
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
       - run:
+          name: Install Node.js and Yarn 4.6.0
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            rm -rf ~/.yarn
+            mkdir -p ~/.yarn/releases
+            curl -L https://repo.yarnpkg.com/4.6.0/packages/yarnpkg-cli/bin/yarn.js -o ~/.yarn/releases/yarn-4.6.0.cjs
+            chmod +x ~/.yarn/releases/yarn-4.6.0.cjs
+            echo "yarnPath: .yarn/releases/yarn-4.6.0.cjs" > ~/.yarnrc.yml
+            sudo ln -sf ~/.yarn/releases/yarn-4.6.0.cjs /usr/local/bin/yarn
+      - run:
           name: List tools versions
           command: |
             php --version
@@ -127,6 +138,8 @@ commands:
             chromedriver --version
             mysql --version
             composer --version
+            node --version
+            yarn --version
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
@@ -159,6 +172,7 @@ commands:
             composer install --no-interaction -vvv
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
+            composer drupal-libraries-sync
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
             echo "\$databases['default']['default'] = [
               'database' => 'test_varbase',
