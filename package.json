@@ -1,12 +1,11 @@
 {
   "name": "varbase",
-  "description": "Varbase: The Ultimate Drupal 10 CMS Starter Kit (Bootstrap Ready) | by Vardot",
+  "description": "Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready) | by Vardot",
+  "license": "GPL-2.0-or-later",
   "private": true,
-  "license": "GPL-2.0",
-  "main": "gulpfile.js",
   "engines": {
-    "yarn": ">= 1.6",
-    "node": ">= 18.0"
+    "yarn": ">= 4.6.0",
+    "node": ">= 20.0"
   },
   "scripts": {
     "install-libraries": "npm install && bower install",
@@ -30,10 +29,10 @@
     "rfs": "~9"
   },
   "devDependencies": {
-    "autoprefixer": "~9",
     "@babel/core": "~7",
     "@babel/preset-env": "~7",
     "@babel/register": "^7.7.7",
+    "autoprefixer": "~9",
     "browser-sync": "~2",
     "chalk": "~2",
     "chokidar": "~3",
@@ -48,11 +47,8 @@
     "eslint-plugin-jquery": "^1.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-yml": "^0.14.0",
-    "farbtastic": "https://github.com/mattfarina/farbtastic/archive/1.3u.tar.gz",
     "glob": "~7",
     "glob-watcher": "~5",
-    "joyride": "https://github.com/zurb/joyride/archive/refs/heads/v2.1.tar.gz",
-    "sass": "~1",
     "gulp": "~4",
     "gulp-autoprefixer": "~8",
     "gulp-clean-css": "~4",
@@ -62,11 +58,12 @@
     "gulp-html-replace": "~1",
     "gulp-postcss": "~8",
     "gulp-rename": "~2",
+    "gulp-rtlcss": "~1",
     "gulp-sass": "~5",
     "gulp-scss-lint": "~1",
     "gulp-sourcemaps": "~3",
     "gulp-uglify": "~3",
-    "gulp-rtlcss": "~1",
+    "joyride": "*",
     "merge-stream": "~2",
     "minimatch": "~5",
     "minimist": "~1",
@@ -80,6 +77,7 @@
     "postcss-url": "^8.0.0",
     "prettier": "^2.1.2",
     "raw-loader": "^4.0.2",
+    "sass": "~1",
     "shepherd.js": "^9.0.0",
     "sortablejs": "^1.13.0",
     "stylelint": "^14.0.1",
@@ -92,34 +90,6 @@
     "underscore": "^1.13.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.4.0"
-  },
-  "//": "'development is the default environment, and legacy is for transpiling the old jQuery codebase",
-  "babel": {
-    "env": {
-      "development": {
-        "presets": [
-          [
-            "@babel/preset-env",
-            {
-              "modules": "commonjs",
-              "targets": {
-                "node": "current"
-              }
-            }
-          ]
-        ]
-      },
-      "legacy": {
-        "presets": [
-          [
-            "@babel/preset-env",
-            {
-              "modules": false
-            }
-          ]
-        ]
-      }
-    }
   },
   "browserslist": [
     "last 2 Chrome major versions",
@@ -137,5 +107,6 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:Vardot/varbase.git"
-  }
+  },
+  "packageManager": "yarn@4.9.2"
 }

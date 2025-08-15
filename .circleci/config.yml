@@ -118,11 +118,17 @@ commands:
           command: |
             sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin/ --filename=composer --2;
             composer config -g github-oauth.github.com $GITHUB_TOKEN
-            composer global config cache-files-ttl 604800
-            composer config --global process-timeout 0
-            composer config --global cache-dir /home/circleci/.composer/cache
-            composer config --global repo.packagist composer https://repo.packagist.org
-            composer config --global repo.assets composer https://asset-packagist.org
+      - run:
+          name: Install Node.js and Yarn 4.6.0
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+            rm -rf ~/.yarn
+            mkdir -p ~/.yarn/releases
+            curl -L https://repo.yarnpkg.com/4.6.0/packages/yarnpkg-cli/bin/yarn.js -o ~/.yarn/releases/yarn-4.6.0.cjs
+            chmod +x ~/.yarn/releases/yarn-4.6.0.cjs
+            echo "yarnPath: .yarn/releases/yarn-4.6.0.cjs" > ~/.yarnrc.yml
+            sudo ln -sf ~/.yarn/releases/yarn-4.6.0.cjs /usr/local/bin/yarn
       - run:
           name: List tools versions
           command: |
@@ -132,25 +138,11 @@ commands:
             chromedriver --version
             mysql --version
             composer --version
+            node --version
+            yarn --version
             php -m
             php -i | grep "Loaded Configuration File"
             php --ini
-      - run:
-          name: Ensure composer.lock exists
-          command: |
-            if [ -e "/var/www/html/storage/composer.lock" ]; then
-              echo "composer.lock exists from last build."
-            else
-              cd /var/www/
-              sudo chmod 775 -R .
-              sudo chown www-data:circleci -R .
-              mkdir /var/www/html/storage
-              touch /var/www/html/storage/composer.lock
-            fi
-      - restore_cache:
-          keys:
-            - composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
-            - composer-v2-
       - run:
           name: Build Varbase with the composer
           command: |
@@ -165,17 +157,20 @@ commands:
             sudo chmod 775 .
             sudo chown www-data:circleci .
             git clone --branch '9.1.x' https://github.com/vardot/varbase-project.git /var/www/html/test/varbase
+            if [ -f "/var/www/html/test/varbase/composer.lock" ]; then
+              rm /var/www/html/test/varbase/composer.lock
+            fi
             cd /var/www/html/test/varbase
             composer require --dev drupal/core-dev:~10 --no-update
-            composer require --dev drush/drush:~13 --no-update
             composer require --dev drupal/drupal-extension:5.0.0alpha1 --no-update
             composer require --dev webship/behat-html-formatter:~1.0 --no-update
             composer require --dev drevops/behat-screenshot:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-            composer install --no-interaction --prefer-dist -vvv
+            composer install --no-interaction -vvv
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
+            composer drupal-libraries-sync
             cp /var/www/html/test/varbase/docroot/sites/default/default.settings.php /var/www/html/test/varbase/docroot/sites/default/settings.php
             echo "\$databases['default']['default'] = [
               'database' => 'test_varbase',
@@ -193,14 +188,6 @@ commands:
             cd /var/www/html/test/varbase
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
-      - run:
-          name: Copy composer.lock after the build
-          command: |
-            cp /var/www/html/test/varbase/composer.lock /var/www/html/storage/
-      - save_cache:
-          key: composer-v2-{{ checksum "/var/www/html/storage/composer.lock" }}
-          paths:
-            - /home/circleci/.composer/cache
       - run:
           name: Point varbase.test at /var/www/html/test/varbase/docroot
           command: |
