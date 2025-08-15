@@ -1,17 +1,15 @@
 {
   "name": "varbase",
-  "description": "Varbase: The Ultimate Drupal 10 CMS Starter Kit (Bootstrap Ready) | by Vardot",
+  "description": "Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready) | by Vardot",
+  "license": "GPL-2.0-or-later",
   "private": true,
-  "license": "GPL-2.0",
   "engines": {
-    "yarn": ">= 1.6",
-    "node": ">= 18.0"
+    "yarn": ">= 4.6.0",
+    "node": ">= 20.0"
   },
   "keywords": [
     "Drupal",
-    "Varbase",
-    "JSON API",
-    "Open API"
+    "Varbase"
   ],
   "author": "Vardot",
   "scripts": {
@@ -96,5 +94,6 @@
     "last 1 ChromeAndroid version",
     "last 1 Samsung version",
     "Firefox ESR"
-  ]
+  ],
+  "packageManager": "yarn@4.9.2"
 }
