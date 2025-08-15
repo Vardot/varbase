@@ -1,7 +1,7 @@
 {
   "name": "varbase",
   "description": "Varbase: The Ultimate Drupal 10 CMS Starter Kit (Bootstrap Ready) | by Vardot",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-or-later",
   "private": true,
   "engines": {
     "yarn": ">= 4.6.0",
