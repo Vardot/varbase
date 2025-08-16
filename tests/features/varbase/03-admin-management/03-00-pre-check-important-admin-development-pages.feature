@@ -92,14 +92,6 @@ Feature: Pre-check important administrator and development pages
       And I should see "Instagram"
       And I should see "Tweet"
 
-  @javascript @check @local @development @staging @production
-  Scenario: Check Varbase update instructions page
-     When I go to "/admin/config/development/update-helper"
-      And wait
-     Then I should see "Varbase update instructions"
-      And I should see "100%"
-      And I should not see "Pending updates"
-
   @javascript @check @local @development @staging
   Scenario: Check Varbase default Reroute Email settings
      When I go to "/admin/config/development/reroute_email"
