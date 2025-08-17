@@ -21,6 +21,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Add section at end of layout"
      When I click "Add section at end of layout"
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Choose a layout for this section"
       And I should see "Bootstrap 1 Col"
       And I should see "Bootstrap 2 Cols"
@@ -57,6 +58,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
      Then I should see "Test Landing page (Layout Builder)"
      When I open the top bar page actions menu
       And I wait for AJAX to finish
+      And I wait 2s
       And I should see "Layout"
      When I click "Layout"
       And wait
@@ -73,18 +75,22 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
 
      When I click "Add block in Section 2, Col 1 region"
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Create content block"
      When I click "Create content block"
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text"
      When I click "Rich text"
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Configure block"
      When I check the box "Display title"
       And I fill in "Rich text in 1 col section" for "Title"
       And I fill in the rich text editor field "Body" with "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia sapien quis tempor placerat. Nulla faucibus rhoncus est, vel malesuada nisl pulvinar ut. Sed vulputate est nec dui finibus, tempus lobortis quam mattis. Fusce facilisis ut nunc ut scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet purus vitae augue lobortis accumsan ut nec nulla. Cras nisi mauris, gravida ac"
       And I press the "Add block" button
       And I wait for AJAX to finish
+      And I wait 2s
      Then I should see "Rich text in 1 col section"
 
      When I scroll to the top of the page
