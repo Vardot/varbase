@@ -1,3 +1,37 @@
+# 10.1.0-alpha3
+
+### Highlighted important changes since [10.1.0-alpha2](https://www.drupal.org/project/varbase/releases/10.1.0-alpha2):
+* Issue [#3541158](https://www.drupal.org/i/3541158):
+         Switched from **Asset Packagist** to **NPM/Yarn** with `drupal-libraries-sync` for **Varbase Libraries Management**
+
+### Added since [10.1.0-alpha2](https://www.drupal.org/project/varbase/releases/10.1.0-alpha2):
+* Issue [#3540295](https://www.drupal.org/i/3540295):
+         Added **GitLab CI pipelines** for **Varbase Workflow** with Drupal standards, practice checks, and functional Workflow moderation tests
+
+### Changed since [10.1.0-alpha2](https://www.drupal.org/project/varbase/releases/10.1.0-alpha2):
+* Issue [#3540822](https://www.drupal.org/i/3540822):
+         Changed Drupal to 11 and links in the Welcome to Varbase message after installation
+* Issue [#3541376](https://www.drupal.org/i/3541376):
+         Removed no longer needed `varbase_carousels_requirements()` function
+* Issue [#3541662](https://www.drupal.org/i/3541662):
+         Removed outdated **Varbase Updates Helper** module in favour of **Drupal Recipes** to update and **Automatic Updates**, **Package Manager** modules
+
+### Updates since [10.1.0-alpha2](https://www.drupal.org/project/varbase/releases/10.1.0-alpha2):
+* All packages can be updated by basic `composer update`
+
+### Fixes since [10.1.0-alpha2](https://www.drupal.org/project/varbase/releases/10.1.0-alpha2):
+* Issue [#3539964](https://www.drupal.org/i/3539964)
+         by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+        : Fixed Ajax error when adding a section background image
+* Issue [#3540195](https://www.drupal.org/i/3540195):
+         Fixed to Get the default active theme not the current theme
+* Issue [#3540283](https://www.drupal.org/i/3540283):
+         Fixed fatal error on **Varbase Workflow** settings form after **Drupal 11.2.0**
+* Issue [#3540819](https://www.drupal.org/i/3540819):
+         Fixed warning on **Diff** General Settings form: Undefined array key `"visual_default_view_mode"`
+
+-------------------------------------------------------------------------------
+
 # 10.1.0-alpha2
 
 ### Highlighted important changes since [10.1.0-alpha1](https://www.drupal.org/project/varbase/releases/10.1.0-alpha1):
