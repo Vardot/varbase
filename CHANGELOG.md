@@ -1,3 +1,49 @@
+# 10.0.7
+
+This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on production sites.
+
+### Highlighted important changes since [Varbase 10.0.5](https://www.drupal.org/project/varbase/releases/10.0.5):
+
+* Issue [#3541158](https://www.drupal.org/i/3541158): Switched from **Asset Packagist** to **NPM/Yarn** with `drupal-libraries-sync` for **Varbase Libraries Management**
+
+> **[Varbase Libraries](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries)** Management
+> * [The NPM/Yarn Method](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries#the-npm-yarn-method)
+> * [Available Drupal Libraries Sync Commands](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries#available-drupal-libraries-sync-commands)
+> * [Adding New Libraries](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries#adding-new-libraries)
+> * **[Example](https://docs.varbase.vardot.com/developers/varbase-libraries#example)**
+> * [Removing No Longer Needed Libraries](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries#removing-no-longer-needed-libraries)
+> * [Troubleshooting](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries#troubleshooting)
+
+> [Migrating Existing Projects to **NPM/YARN** with **drupal-libraries-sync**](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries/migrating-existing-projects-to-npm-yarn-with-drupal-libraries-sync)
+
+> [The Composer Method (**Deprecated**)](https://docs.varbase.vardot.com/10.0.x/developers/varbase-libraries/the-composer-method-deprecated)
+
+### Added since [Varbase 10.0.6](https://www.drupal.org/project/varbase/releases/10.0.6):
+
+* All new features are in **Varbase ~10.1.0**
+
+* Issue [#3537397](https://www.drupal.org/i/3537397): Added **ECA: Event - Condition - Action** and **BPMN.iO** modules to **Varbase Core**
+
+### Changes since [Varbase 10.0.6](https://www.drupal.org/project/varbase/releases/10.0.6):
+
+* Issue [#3536129](https://www.drupal.org/i/3536129) by [mahseri](https://www.drupal.org/u/mahseri): Allowed using **Simple Oauth** `~5` or `~6` for a smoother update process
+* Issue [#3541376](https://www.drupal.org/i/3541376): Removed no longer needed `varbase_carousels_requirements()` function
+* Issue [#3541662](https://www.drupal.org/i/3541662): Removed outdated **Varbase Updates Helper** module in favour of **Drupal Recipes** to update and **Automatic Updates**, **Package Manager** modules
+
+### Updates since [Varbase 10.0.6](https://www.drupal.org/project/varbase/releases/10.0.6):
+
+* All packages can be updated by basic `composer update`
+
+* Issue [#3534493](https://www.drupal.org/i/3534493): Updated **CKEditor 5 Plugin Pack** from `~1.3.0` to `~1.4.0`
+
+### Fixes since [Varbase 10.0.6](https://www.drupal.org/project/varbase/releases/10.0.6):
+
+* Issue [#3540623](https://www.drupal.org/i/3540623) by [n.ghunaim](https://www.drupal.org/u/nghunaim): Fixed Various CSS and UI Issues Affecting Usability and Consistency while editing the layout with Layout Builder
+* Issue [#3540819](https://www.drupal.org/i/3540819): Fixed warning on **Diff** General Settings form: Undefined array key `"visual_default_view_mode"`
+* Issue [#3539233](https://www.drupal.org/i/3539233): Fixed The Accessibility Checker was not found in the page
+
+---
+
 # 10.0.6
 
 This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on production sites.
@@ -141,7 +187,7 @@ This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on prod
          by [jedgar1mx](https://www.drupal.org/u/jedgar1mx)
         : Fixed missing .xs breakpoint in content.field_media_gallery during clean install
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.5
 
@@ -198,7 +244,7 @@ This is a patch (bugfix) release of Varbase ~10.0 and is ready for use on produc
 * Issue [#3520246](https://www.drupal.org/i/3520246):
         Fixed Drupal Routing Path for Vartheme BS5 Theme to Preload Fonts and Webfonts Correctly
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.4
 
@@ -284,7 +330,7 @@ This is a patch (bugfix) release of Varbase 10 and is ready for use on productio
          Fixed machine name id of tours to follow the machine-readable name must contain
          only lowercase letters, numbers, and underscores in **Tours ~2.0**
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.3
 
@@ -365,7 +411,7 @@ Enhanced media handling and mobile responsiveness with smoother updates, improve
          by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
         : Fixed **Admin Filters Alignment** for Views with Exposed Date Field
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.2
 
@@ -466,7 +512,7 @@ making it ready for production use.
         , [mohammedodeh](https://www.drupal.org/u/mohammedodeh)
         : Fixed **Popper.js** Error When Adding Navbar Dropdown in **Vartheme BS5**
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.1
 
@@ -569,7 +615,7 @@ Made content creation simpler with new features like fullscreen mode and emojis.
          Fixed the exposed date filters widget for Media to use the default settings
          with Better Exposed Filters in **Drupal 10.3**
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0
 
@@ -758,7 +804,7 @@ Made content creation simpler with new features like fullscreen mode and emojis.
         Fixed regression for the moderation state element in **Action buttons in sticky header**,
          which **Gin provided a new API** for sticky form actions
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0-rc3
 
@@ -849,7 +895,7 @@ Highlighted important changes since Varbase 10.0.0-rc2:
         Fixed mobile overlaps of hero slider with dropdown navbar menus when the
         header Container for Top bar region as `container`
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0-rc2
 
@@ -1120,7 +1166,7 @@ Following with the new Varbase Design System
         by [IbrahimTameme](https://www.drupal.org/u/ibrahimtameme)
        : Fixed Failed theme switch to **Admin theme** in insert media in 3rd AJAX level in **CKEditor 5**
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0-rc1
 
@@ -1387,7 +1433,7 @@ Following with the new Varbase Design System
 * Issue [#3405260](https://www.drupal.org/i/3405260):
         Fixed Class ModuleInstallerFactory not found when updating **Varbase Bootstrap Paragraphs**
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0-beta2
 
@@ -1475,7 +1521,7 @@ Following with the new Varbase Design System
 * Issue [#3389779](https://www.drupal.org/i/3389779):
         Fixed label and content for the **Varbase HTML code block** component
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0-beta1
 
@@ -1779,7 +1825,7 @@ Integrated Varbase Project template with **Storybook** using **Component Librari
 * Issue [#3377592](https://www.drupal.org/i/3377592):
         Fixed **Layout Builder style** of Dark by the **Gin** Admin them over **Claro** and **Bootstrap `~5.3.0`** and the Dark style by Bootstrap Styles module
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0-alpha2
 
@@ -1841,7 +1887,7 @@ Integrated Varbase Project template with **Storybook** using **Component Librari
 * Issue [#3277336](https://www.drupal.org/i/3277336):
         Fixed style of Close Button for Drupal Messages on Varbase 10.0.x installation
 
--------------------------------------------------------------------------------
+---
 
 # 10.0.0-alpha1
 
@@ -2414,7 +2460,7 @@ Integrated Varbase Project template with **Storybook** using **Component Librari
         Automated Drupal 10 compatibility fixes for VMI on the 3.0.x branch
 
 
--------------------------------------------------------------------------------
+---
 
 # 9.1.0
 
@@ -2573,7 +2619,7 @@ All old **Varbase 9.0.x** sites are ready to upgrade to **latest Drupal ~10 vers
        : Fixed editing and viewing paragraphs issues of incorrect revision
         of its parent when content moderation is involved
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.17
 
@@ -2839,7 +2885,7 @@ All new features are in **Varbase ~10**
         : Fixed not needed condition for parent theme is front-end theme
          and `_drupal_ajax` in **Drupal `~10`** compatibility of **VarbaseLayoutBuilderThemeNegotiator**
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.16
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
@@ -2984,7 +3030,7 @@ All old **Varbase** `9.0.x` sites are ready to upgrade to **Drupal** `~10.1.0`
         Fixed **Drupal `~10.0`** and **TWIG `~3.0`** Unexpected token name of value:
         if (end of statement block expected)
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.15
 
@@ -3152,7 +3198,7 @@ Add heading for the section
         page when applying filters
 
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.14
 
@@ -3230,7 +3276,7 @@ Paving the way for a smoother upgrade process to Drupal 10
 * Issue [#3369858](https://www.drupal.org/i/3369858):
         Fixed layout styling for node forms with **Claro** and **Drupal 10**
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.13
 
@@ -3265,7 +3311,7 @@ No addition. All new additions will be in **Varbase ~10.0**
         Fixed Configuration objects (content_calendar.settings) provided by
         varbase_content_planner already exist in active configuration
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.12
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
@@ -3355,7 +3401,7 @@ No addition. All new additions will be in **Varbase ~10.0**
 * Issue [#3346706](https://www.drupal.org/i/3346706):
         Fixed set attributes for HTML node preview templates
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.11
 This is a patch (bugfix) release of **Varbase 9** and is ready for use on production sites.
@@ -3446,7 +3492,7 @@ This is a patch (bugfix) release of **Varbase 9** and is ready for use on produc
         by [RedwanJamous](https://www.drupal.org/u/redwanjamous)
        : Fixed table width in **Gmail app**
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.10
 This is a patch (bugfix) release of Varbase 9 and is ready for use on production sites.
@@ -3502,7 +3548,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
         Fixed styling of primary button and inline block list in
         `drupal-off-canvas` after **Drupal 9.5.0** release
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.9
 
@@ -3643,7 +3689,7 @@ https://github.com/twbs/bootstrap/releases/tag/v4.6.2
         Fixed **Ultrawide screens** with embed responsive in Varbase video player
         for YouTube and Vimeo embedded Video Slides
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.8
 
@@ -3728,7 +3774,7 @@ for use on production sites. Learn more about Varbase 9.
        : Fixed Path field is required validation issue on adding url redirect
 
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.7
 
@@ -3826,7 +3872,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready
         Fixed Style Guide issue on [PHP 8.1] Deprecated function: strpos(): Passing null to parameter
 
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.6
 
@@ -4000,7 +4046,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready
         by mhawwari:
         Fixed route does not exist error in the Total Control Dashboard
 
--------------------------------------------------------------------------------
+---
 # 9.0.5
 
 ### Highlighted important changes since Varbase 9.0.4:
@@ -4090,7 +4136,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
         by [mhawwari](https://www.drupal.org/u/mhawwari)
        : Fixed print layout styling issues
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.4
 
@@ -4194,7 +4240,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
         : Fixed the ampersand issue written in buggy
         Varbase Tour Tip #5: "Site's Content"
 
--------------------------------------------------------------------------------
+---
 
 # 9.0.3
 
@@ -4305,7 +4351,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
         by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
        : Fixed IEF complex widget: Re-ordering issue
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.2
 
@@ -4523,7 +4569,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
         : Fixed by removing config varbase_bootstrap_paragraphs.settings
         from Varbase installation profile
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.1
 
@@ -4582,7 +4628,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
         Fixed dependencies enable for Configuration Update Manager module by changing
         drupal:config_update to config_update:config_update
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.0
 
@@ -4761,7 +4807,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
 * Issue [#3219345](https://www.drupal.org/i/3219345):
         Fixed Tour styling after the update to Drupal 9.2.0
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.0-rc2
 
@@ -4968,7 +5014,7 @@ Bootstrap v4.6.0 was released
                 : Fixed LogicException & RuntimeException on user login and
                  registration error when the Twitter social button clicked on
 
----------------------------------------------------------------------------------
+-----
 
 # 9.0.0-rc1
 
@@ -5087,7 +5133,7 @@ Bootstrap v4.6.0 was released
                  with latest Drupal 9.1.x versions
 
 
----------------------------------------------------------------------------------
+-----
 
 # 9.0.0-beta1
 
@@ -5371,7 +5417,7 @@ Bootstrap v4.6.0 was released
                  core.base_field_override.node.landing_page.uid
                  config for Drupal 9 compatibility
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.8
 
@@ -5529,7 +5575,7 @@ Bootstrap v4.6.0 was released
                 : Fixed Chaos Tool Suite (ctools) issue by adding the patch
                  for Entity BundleCondition Plugin does not work in all situations
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.7
 
@@ -5806,7 +5852,7 @@ Bootstrap v4.6.0 was released
                 : Fixed Varbase update helper hook implementations do not
                  check the checklist id issue
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.6
 
@@ -6140,7 +6186,7 @@ Bootstrap v4.6.0 was released
                   spaces and CAPITAL Letters.pdf and the other
                   RTL - PDF file with other languages
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.5
 
@@ -6461,7 +6507,7 @@ Bootstrap v4.6.0 was released
                  Media (Version >= 6.6 required))
 
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.4
 
@@ -6754,7 +6800,7 @@ Bootstrap v4.6.0 was released
                 by [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
                  : Fixed support of clear button in IE11/Edge
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.3
 
@@ -6794,7 +6840,7 @@ file to clear the security flag for Drupal.org packaging
                   by [mhawwari](https://www.drupal.org/u/mhawwari)
                   : Fixed oEmbed issue of not recognizing Vimeo arguments
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.2
 
@@ -6953,7 +6999,7 @@ file to clear the security flag for Drupal.org packaging
                   by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
                   : Fixed Autocomplete Deluxe issue of no auto suggestion
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.1
 
@@ -7020,7 +7066,7 @@ file to clear the security flag for Drupal.org packaging
                 an Undefined index: render element in
                 drupal_find_theme_templates()
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.0
 
@@ -7122,7 +7168,7 @@ file to clear the security flag for Drupal.org packaging
                   change of Embed API as they had dropped icon_uuid and
                   change of config schema
 
---------------------------------------------------------------------------------
+----
 
 # 8.7.2
 
@@ -7291,7 +7337,7 @@ breakpoint.
                  : Fixed paragraphs styling regression issue by removing
                  make-row() mixin call from scss base file
 
---------------------------------------------------------------------------------
+----
 
 # 8.7.1
 
@@ -7438,7 +7484,7 @@ breakpoint.
                  Fixed project: varbase_auth in .info.yml for the Drupal
                  project usage statistics report and update counter
 
---------------------------------------------------------------------------------
+----
 
 # 8.7.0
 
@@ -7753,7 +7799,7 @@ breakpoint.
         by [Odai Atieh](https://www.drupal.org/u/odai-atieh)
        : Fixed IEF complex widget: Re-ordering issue
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.2
 
@@ -7971,7 +8017,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
         : Fixed by removing config varbase_bootstrap_paragraphs.settings
         from Varbase installation profile
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.1
 
@@ -8030,7 +8076,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
         Fixed dependencies enable for Configuration Update Manager module by changing
         drupal:config_update to config_update:config_update
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.0
 
@@ -8209,7 +8255,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for
 * Issue [#3219345](https://www.drupal.org/i/3219345):
         Fixed Tour styling after the update to Drupal 9.2.0
 
---------------------------------------------------------------------------------
+----
 
 # 9.0.0-rc2
 
@@ -8416,7 +8462,7 @@ Bootstrap v4.6.0 was released
                 : Fixed LogicException & RuntimeException on user login and
                  registration error when the Twitter social button clicked on
 
----------------------------------------------------------------------------------
+-----
 
 # 9.0.0-rc1
 
@@ -8535,7 +8581,7 @@ Bootstrap v4.6.0 was released
                  with latest Drupal 9.1.x versions
 
 
----------------------------------------------------------------------------------
+-----
 
 # 9.0.0-beta1
 
@@ -8819,7 +8865,7 @@ Bootstrap v4.6.0 was released
                  core.base_field_override.node.landing_page.uid
                  config for Drupal 9 compatibility
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.8
 
@@ -8977,7 +9023,7 @@ Bootstrap v4.6.0 was released
                 : Fixed Chaos Tool Suite (ctools) issue by adding the patch
                  for Entity BundleCondition Plugin does not work in all situations
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.7
 
@@ -9254,7 +9300,7 @@ Bootstrap v4.6.0 was released
                 : Fixed Varbase update helper hook implementations do not
                  check the checklist id issue
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.6
 
@@ -9588,7 +9634,7 @@ Bootstrap v4.6.0 was released
                   spaces and CAPITAL Letters.pdf and the other
                   RTL - PDF file with other languages
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.5
 
@@ -9909,7 +9955,7 @@ Bootstrap v4.6.0 was released
                  Media (Version >= 6.6 required))
 
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.4
 
@@ -10202,7 +10248,7 @@ Bootstrap v4.6.0 was released
                 by [Mohammad Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
                  : Fixed support of clear button in IE11/Edge
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.3
 
@@ -10242,7 +10288,7 @@ file to clear the security flag for Drupal.org packaging
                   by [mhawwari](https://www.drupal.org/u/mhawwari)
                   : Fixed oEmbed issue of not recognizing Vimeo arguments
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.2
 
@@ -10401,7 +10447,7 @@ file to clear the security flag for Drupal.org packaging
                   by [Omar Alahmed](https://www.drupal.org/u/omar-alahmed)
                   : Fixed Autocomplete Deluxe issue of no auto suggestion
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.1
 
@@ -10468,7 +10514,7 @@ file to clear the security flag for Drupal.org packaging
                 an Undefined index: render element in
                 drupal_find_theme_templates()
 
---------------------------------------------------------------------------------
+----
 
 # 8.8.0
 
@@ -10570,7 +10616,7 @@ file to clear the security flag for Drupal.org packaging
                   change of Embed API as they had dropped icon_uuid and
                   change of config schema
 
---------------------------------------------------------------------------------
+----
 
 # 8.7.2
 
@@ -10739,7 +10785,7 @@ breakpoint.
                  : Fixed paragraphs styling regression issue by removing
                  make-row() mixin call from scss base file
 
---------------------------------------------------------------------------------
+----
 
 # 8.7.1
 
@@ -10886,7 +10932,7 @@ breakpoint.
                  Fixed project: varbase_auth in .info.yml for the Drupal
                  project usage statistics report and update counter
 
---------------------------------------------------------------------------------
+----
 
 # 8.7.0
 
