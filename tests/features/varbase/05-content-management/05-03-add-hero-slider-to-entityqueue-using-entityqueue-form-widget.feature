@@ -98,6 +98,6 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
 
      # Check that the 2 hero sliders had beend removed from the queue.
      When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
-      And wait
+      And wait 3s
      Then I should not see "Test hero slider #1"
       And I should not see "Test hero slider #2"
