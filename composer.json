@@ -16,6 +16,7 @@
   },
   "require": {
     "vardot/varbase-patches": "10.0.x-dev",
+    "vardot/varbase-replaces": "10.0.x-dev",
     "drupal/varbase_core": "10.0.x-dev",
     "drupal/varbase_components": "2.0.x-dev",
     "drupal/varbase_api": "10.0.x-dev",
