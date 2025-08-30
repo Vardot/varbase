@@ -55,6 +55,32 @@ function varbase_install() {
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
+  // Clear cached definitions.
+  \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
+  \Drupal::service('plugin.manager.block')->clearCachedDefinitions();
+
+  \Drupal::service('plugin.manager.menu.contextual_link')->clearCachedDefinitions();
+  \Drupal::service('plugin.manager.menu.local_task')->clearCachedDefinitions();
+  \Drupal::service('plugin.manager.menu.local_action')->clearCachedDefinitions();
+
+  // Invalidating.
+  \Drupal::service('cache.menu')->invalidateAll();
+  \Drupal::service('cache.render')->invalidateAll();
+
+  // Rebuilding.
+  \Drupal::service('plugin.manager.menu.link')->rebuild();
+
+  // Rebuild permissions. The content access permissions need to be rebuilt.
+  node_access_rebuild();
+
+  // Rebuild the menu router based on all rebuilt data.
+  // Important: This rebuild must happen last, so the menu router is guaranteed
+  // to be based on up to date information.
+  \Drupal::service('router.builder')->rebuild();
+
+  // Resets all static caches.
+  drupal_static_reset();
+  
   // Full flash and clear cash and rebuilding newly created routes.
   // After install of extra modules by install: in the .info.yml files.
   // In Varbase profile and all Varbase components.

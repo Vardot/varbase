@@ -228,6 +228,12 @@ function varbase_assemble_extra_components(array &$install_state) {
             'varbase_assemble_extra_component_then_install',
             (array) $demo_content_key,
           ];
+          // Clear plugin caches after module installation to ensure
+          // all block plugins are available before content import
+          $batch['operations'][] = [
+            'varbase_clear_caches',
+            (array) TRUE,
+          ];
         }
 
         if (count($selected_demo_content_configs)
@@ -580,20 +586,6 @@ function varbase_after_install_finished(array &$install_state) {
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
-  // Full flash and clear cash and rebuilding newly created routes.
-  // After install of extra modules by install: in the .info.yml files.
-  // In Varbase profile and all Varbase components.
-  // ---------------------------------------------------------------------------
-  // * Necessary initialization for the entire system.
-  // * Account for changed config by the end install.
-  // * Flush all persistent caches.
-  // * Flush asset file caches.
-  // * Wipe the Twig PHP Storage cache.
-  // * Rebuild module and theme data.
-  // * Clear all plugin caches.
-  // * Rebuild the menu router based on all rebuilt data.
-  drupal_flush_all_caches();
-
   // Set front page to "/node".
   // Issue #3188641: Change the set front page to "/node" process from
   // using static node id to front page path by the alias.
@@ -624,6 +616,8 @@ function varbase_after_install_finished(array &$install_state) {
   catch (\Exception $e) {
     \Drupal::messenger()->addError($e->getMessage());
   }
+
+  varbase_clear_caches(TRUE);
 
   global $base_url;
 
@@ -671,6 +665,56 @@ function varbase_after_install_finished(array &$install_state) {
 function varbase_hide_warning_and_status_messages($hide) {
   if ($hide && !isset($_SESSION['messages']['error'])) {
     unset($_SESSION['messages']);
+  }
+}
+
+/**
+ * Batch function to clear caches to prevent block plugin warnings.
+ *
+ * @param bool $clear
+ *   Whether to clear plugin caches.
+ */
+function varbase_clear_caches($clear = TRUE) {
+  if ($clear) {
+    // Clear cached definitions.
+    \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
+    \Drupal::service('plugin.manager.block')->clearCachedDefinitions();
+
+    \Drupal::service('plugin.manager.menu.contextual_link')->clearCachedDefinitions();
+    \Drupal::service('plugin.manager.menu.local_task')->clearCachedDefinitions();
+    \Drupal::service('plugin.manager.menu.local_action')->clearCachedDefinitions();
+
+    // Invalidating.
+    \Drupal::service('cache.menu')->invalidateAll();
+    \Drupal::service('cache.render')->invalidateAll();
+
+    // Rebuilding.
+    \Drupal::service('plugin.manager.menu.link')->rebuild();
+
+    // Rebuild permissions. The content access permissions need to be rebuilt.
+    node_access_rebuild();
+
+    // Rebuild the menu router based on all rebuilt data.
+    // Important: This rebuild must happen last, so the menu router is guaranteed
+    // to be based on up to date information.
+    \Drupal::service('router.builder')->rebuild();
+
+    // Resets all static caches.
+    drupal_static_reset();
+
+    // Full flash and clear cash and rebuilding newly created routes.
+    // After install of extra modules by install: in the .info.yml files.
+    // In Varbase profile and all Varbase components.
+    // ---------------------------------------------------------------------------
+    // * Necessary initialization for the entire system.
+    // * Account for changed config by the end install.
+    // * Flush all persistent caches.
+    // * Flush asset file caches.
+    // * Wipe the Twig PHP Storage cache.
+    // * Rebuild module and theme data.
+    // * Clear all plugin caches.
+    // * Rebuild the menu router based on all rebuilt data.
+    drupal_flush_all_caches();
   }
 }
 
