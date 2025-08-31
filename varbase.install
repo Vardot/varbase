@@ -55,6 +55,18 @@ function varbase_install() {
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
+  // ---------------------------------------------------------------------------
+  // Remove all leftover configs related to varbase_installer_theme.
+  $all_configs = \Drupal::service('config.storage')->listAll();
+
+  $matches = array_filter($all_configs, function ($name) {
+    return str_contains($name, 'varbase_installer_theme');
+  });
+
+  foreach ($matches as $config_name) {
+    \Drupal::configFactory()->getEditable($config_name)->delete();
+  }
+  // ---------------------------------------------------------------------------
   // Clear cached definitions.
   \Drupal::service('plugin.cache_clearer')->clearCachedDefinitions();
   \Drupal::service('plugin.manager.block')->clearCachedDefinitions();
