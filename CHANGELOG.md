@@ -1,3 +1,26 @@
+# 9.1.11
+
+### Highlighted important changes since [Varbase 9.1.10](https://www.drupal.org/project/varbase/releases/9.1.10):
+* Issue [#3541158](https://www.drupal.org/i/3541158): Switched from **Asset Packagist** to **NPM/Yarn** with `drupal-libraries-sync` for **Varbase Libraries Management**
+
+### Added since [Varbase 9.1.10](https://www.drupal.org/project/varbase/releases/9.1.10):
+* All new features are in **Varbase ~10.1.0**
+
+### Changed since [Varbase 9.1.10](https://www.drupal.org/project/varbase/releases/9.1.10):
+* Issue [#3536129](https://www.drupal.org/i/3536129) by [mahseri](https://www.drupal.org/u/mahseri): Allowed using **Simple Oauth** `~5` or `~6` for a smoother update process
+* Issue [#3541376](https://www.drupal.org/i/3541376): Removed no longer needed `varbase_carousels_requirements()` function
+
+### Updates since [Varbase 9.1.10](https://www.drupal.org/project/varbase/releases/9.1.10):
+* All packages can be updated by basic `composer update`
+* Issue [#3534348](https://www.drupal.org/i/3534348): Updated **Editor Advanced link** from `~2.2.0` to `~2.3.0`
+
+### Fixes since [Varbase 9.1.10](https://www.drupal.org/project/varbase/releases/9.1.10):
+* Issue [#3540819](https://www.drupal.org/i/3540819): Fixed warning on **Diff** General Settings form: Undefined array key `"visual_default_view_mode"`
+* Issue [#3539233](https://www.drupal.org/i/3539233): Fixed The Accessibility Checker was not found in the page
+* Issue [#3543304](https://www.drupal.org/i/3543304): Fixed default config for Linkit in the Rich text format
+
+-------------------------------------------------------------------------------
+
 # 9.1.10
 
 ### Highlighted important changes since [Varbase 9.1.9](https://www.drupal.org/project/varbase/releases/9.1.9):
