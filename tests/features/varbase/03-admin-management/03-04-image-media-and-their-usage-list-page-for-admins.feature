@@ -72,7 +72,8 @@ Feature: File & Media Management - Assets Management - Image media and their usa
      Then I should see "Delete"
      When I click "gin-sticky-edit-delete"
       And wait
-     Then I should see "This action cannot be undone."
+     Then I should see "Are you sure you want to delete the media item Flag Earth after edit?"
+      And I should see "Deleting this media item will move it to the trash. You can restore it from the trash for a limited period of time (2 months) if necessary."
      When I click the delete button
       And wait
      Then I should see "The media item Flag Earth after edit has been deleted."
