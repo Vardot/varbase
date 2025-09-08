@@ -4,42 +4,50 @@ Feature: Content Management - Trash Management
       So that I can soft-delete, restore, and permanently purge content.
 
   @javascript @local @development @staging @production
-  Scenario: Test trash module permissions and interface access for all user roles
+  Scenario: Test trash module permissions and interface access for Normal users
     Given I am a logged in user with the "Normal user" user
      When I go to "/admin/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Access denied"
-     
+
+  @javascript @local @development @staging @production
+  Scenario: Test trash module permissions and interface access for Editors
     Given I am a logged in user with the "Editor" user
      When I go to "/admin/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Trash"
      When I go to "/admin/config/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Access denied"
-     
+
+  @javascript @local @development @staging @production
+  Scenario: Test trash module permissions and interface access for content admins
     Given I am a logged in user with the "Content admin" user
      When I go to "/admin/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Trash"
      When I go to "/admin/config/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Access denied"
-     
+
+  @javascript @local @development @staging @production
+  Scenario: Test trash module permissions and interface access for site admins
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Trash"
      When I go to "/admin/config/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Access denied"
-     
+
+  @javascript @local @development @staging @production
+  Scenario: Test trash module permissions and interface access for webmaster
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Trash"
      When I go to "/admin/config/content/trash"
-      And wait
+      And wait 2s
      Then I should see "Trash"
 
   @javascript @local @development @staging @production
@@ -167,17 +175,4 @@ Feature: Content Management - Trash Management
      When I wait 2s
       And I scroll to bottom
       And I wait 2s
-     Then I should see "Trash"
-
-  @javascript @local @development @staging @production  
-  Scenario: Test trash module configuration access
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/config/content/trash"
-      And wait
-     Then I should see "Trash"
-
-    # Test that lower privilege users have limited access
-    Given I am a logged in user with the "Content admin" user
-     When I go to "/admin/config/content/trash"
-      And wait
      Then I should see "Trash"
