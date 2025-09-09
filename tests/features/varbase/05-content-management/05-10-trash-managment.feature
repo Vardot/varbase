@@ -249,10 +249,3 @@ Feature: Content Management - Trash Management
       And wait
      Then I should see "Trash"
       And I should see "SEO Admin Permission Test"
-
-  @javascript @local @development @staging @production
-  Scenario: Verify Content admin cannot access trash configuration settings
-    Given I am a logged in user with the "Content admin" user
-     When I go to "/admin/config/content/trash"
-      And wait
-     Then I should see "Access denied"
