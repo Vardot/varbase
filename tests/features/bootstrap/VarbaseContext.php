@@ -445,6 +445,55 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     }
   }
 
+  /**
+   * Press the confirm button in modal dialog for trash restore.
+   *
+   * Varbase Context #varbase.
+   *
+   * @When I press the confirm button in modal
+   */
+  public function iPressTheConfirmButton() {
+    // Wait for modal to be visible and try multiple selectors for the confirm button
+    $this->getSession()->wait(2000);
+    
+    $selectors = [
+      "//button[text()='Restore']",
+      "//input[@value='Restore']",
+      "//button[contains(@class, 'button--primary')]",
+      "//input[@type='submit'][contains(@class, 'button--primary')]",
+      ".ui-dialog-buttonset button:first-child"
+    ];
+    
+    foreach ($selectors as $selector) {
+      if (strpos($selector, '//') === 0) {
+        $element = $this->getSession()->getPage()->find('xpath', $selector);
+      } else {
+        $element = $this->getSession()->getPage()->find('css', $selector);
+      }
+      
+      if (!empty($element) && $element->isVisible()) {
+        try {
+          $element->click();
+          return;
+        } catch (\Exception $e) {
+          // Try next selector
+          continue;
+        }
+      }
+    }
+    
+    // If no button found, try JavaScript click
+    $this->getSession()->executeScript('
+      var buttons = document.querySelectorAll(".ui-dialog-buttonset button, .ui-dialog button");
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].textContent.includes("Restore")) {
+          buttons[i].click();
+          return;
+        }
+      }
+    ');
+  }
+
 
   /**
    * Fill in a form field with id|name|title|alt|value.
