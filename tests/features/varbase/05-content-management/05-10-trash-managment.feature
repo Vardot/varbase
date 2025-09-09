@@ -4,7 +4,7 @@ Feature: Content Management - Trash Management
      So that I can soft-delete, restore, and permanently purge content individually.
 
   @javascript @local @development @staging @production
-  Scenario: Test trash module permissions for Normal user
+  Scenario: Verify Normal user cannot access trash management pages
     Given I am a logged in user with the "Normal user" user
      When I go to "/admin/content/trash"
       And wait
@@ -14,7 +14,7 @@ Feature: Content Management - Trash Management
      Then I should see "Access denied"
 
   @javascript @local @development @staging @production
-  Scenario: Test trash module permissions for Editor
+  Scenario: Verify Editor can access trash content but not configuration
     Given I am a logged in user with the "Editor" user
      When I go to "/admin/content/trash"
       And wait
@@ -24,7 +24,7 @@ Feature: Content Management - Trash Management
      Then I should see "Access denied"
 
   @javascript @local @development @staging @production
-  Scenario: Test trash module permissions for Content admin
+  Scenario: Verify Content admin can access trash content but not configuration
     Given I am a logged in user with the "Content admin" user
      When I go to "/admin/content/trash"
       And wait
@@ -34,7 +34,7 @@ Feature: Content Management - Trash Management
      Then I should see "Access denied"
 
   @javascript @local @development @staging @production
-  Scenario: Test trash module permissions for SEO admin
+  Scenario: Verify SEO admin can access trash content but not configuration
     Given I am a logged in user with the "SEO admin" user
      When I go to "/admin/content/trash"
       And wait
@@ -44,7 +44,7 @@ Feature: Content Management - Trash Management
      Then I should see "Access denied"
 
   @javascript @local @development @staging @production
-  Scenario: Test trash module permissions for Site admin
+  Scenario: Verify Site admin can access trash content but not configuration
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content/trash"
       And wait
@@ -54,7 +54,7 @@ Feature: Content Management - Trash Management
      Then I should see "Access denied"
 
   @javascript @local @development @staging @production
-  Scenario: Test trash module permissions for webmaster
+  Scenario: Verify webmaster has full access to trash content and configuration
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/content/trash"
       And wait
@@ -64,7 +64,7 @@ Feature: Content Management - Trash Management
      Then I should see "Trash"
 
   @javascript @local @development @staging @production
-  Scenario: Test trash default settings and auto-purge configuration
+  Scenario: Verify default trash settings include auto-purge enabled for 2 months
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/content/trash"
       And wait
@@ -75,7 +75,7 @@ Feature: Content Management - Trash Management
       And the "auto_purge[after]" field should contain "2 months"
 
   @javascript @local @development @staging @production
-  Scenario: Test complete trash workflow - delete, restore, and purge content individually
+  Scenario: Verify complete trash workflow allows deleting, restoring, and purging content individually
     Given I am a logged in user with the "Site admin" user
     
     # Create test content for complete workflow
@@ -166,7 +166,7 @@ Feature: Content Management - Trash Management
       And I should see "Purge Test Page"
 
   @javascript @local @development @staging @production
-  Scenario: Test Editor permissions for individual trash operations
+  Scenario: Verify Editor can create, delete, and restore content through trash workflow
     Given I am a logged in user with the "Editor" user
      When I go to "/node/add/page"
       And wait
@@ -208,7 +208,10 @@ Feature: Content Management - Trash Management
       And wait 3s
 
   @javascript @local @development @staging @production
-  Scenario: Test SEO admin permissions for trash viewing
+  Scenario: Verify Editor can successfully restore content from trash
+  
+  @javascript @local @development @staging @production
+  Scenario: Verify SEO admin can view and delete content but has limited trash operations
     Given I am a logged in user with the "SEO admin" user
      When I go to "/node/add/page"
       And wait
@@ -248,7 +251,7 @@ Feature: Content Management - Trash Management
       And I should see "SEO Admin Permission Test"
 
   @javascript @local @development @staging @production
-  Scenario: Test Content admin trash configuration access
+  Scenario: Verify Content admin cannot access trash configuration settings
     Given I am a logged in user with the "Content admin" user
      When I go to "/admin/config/content/trash"
       And wait
