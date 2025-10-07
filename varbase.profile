@@ -617,6 +617,18 @@ function varbase_after_install_finished(array &$install_state) {
     \Drupal::messenger()->addError($e->getMessage());
   }
 
+  // Deletes configuration items that depend on the Varbase Installer Theme.
+  varbase_cleanup_varbase_installer_theme_config();
+
+  // Rebuild the state of subscribed events for ECA.
+  // This is equivalent to running: drush eca:subscriber:rebuild
+  if (\Drupal::moduleHandler()->moduleExists('eca')) {
+    $entity_type_manager = \Drupal::service('entity_type.manager');
+    /** @var \Drupal\eca\Entity\EcaStorage $storage */
+    $storage = $entity_type_manager->getStorage('eca');
+    $storage->rebuildSubscribedEvents();
+  }
+
   varbase_clear_caches(TRUE);
 
   global $base_url;
@@ -715,6 +727,29 @@ function varbase_clear_caches($clear = TRUE) {
     // * Clear all plugin caches.
     // * Rebuild the menu router based on all rebuilt data.
     drupal_flush_all_caches();
+  }
+}
+
+/**
+ * Deletes configuration items that depend on the Varbase Installer Theme.
+ */
+function varbase_cleanup_varbase_installer_theme_config() {
+  $factory = \Drupal::configFactory();
+  $storage = \Drupal::service('config.storage');
+
+  // Find all configuration names that contain "varbase_installer_theme".
+  $config_names = array_filter($storage->listAll(), function ($name) {
+    return str_contains($name, 'varbase_installer_theme');
+  });
+
+  // Delete each matching configuration.
+  foreach ($config_names as $name) {
+    try {
+      $factory->getEditable($name)->delete();
+    }
+    catch (\Exception $e) {
+      // Silently skip on failure.
+    }
   }
 }
 

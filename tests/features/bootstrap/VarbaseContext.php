@@ -429,8 +429,46 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('The Next action button in the tour is not found.');
     }
 
-    $this->getSession()->executeScript('document.querySelector("body > dialog.drupal-tour.shepherd-enabled > div.shepherd-content > footer > button.button--primary.shepherd-button").click();');
+    // Scroll element into view and click using JavaScript to handle animations
+    $xpath = $element->getXpath();
+    $this->getSession()->executeScript(
+      "var element = document.evaluate(\"" . addslashes($xpath) . "\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; element.scrollIntoView({block: 'center'}); element.click();"
+    );
 
+  }
+
+  /**
+   * Varbase Context #varbase.
+   *
+   * @When I close the tour
+   */
+  public function iCloseTour() {
+    // Try to find the close button by common selectors
+    $selectors = [
+      "//button[contains(@class, 'shepherd-cancel-icon') or contains(@aria-label, 'Close') or contains(@class, 'close')]",
+      "//button[text()='×']",
+      "//button[contains(@class, 'shepherd-button') and contains(text(), 'Done')]",
+    ];
+
+    $element = NULL;
+    foreach ($selectors as $selector) {
+      $element = $this->getSession()->getPage()->find('xpath', $selector);
+      if (!empty($element)) {
+        break;
+      }
+    }
+
+    if (empty($element)) {
+      // If no close button found, try pressing Escape key
+      $this->getSession()->evaluateScript("document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'Escape'}));");
+      return;
+    }
+
+    // Use JavaScript to click the close button
+    $xpath = $element->getXpath();
+    $this->getSession()->executeScript(
+      "var element = document.evaluate(\"" . addslashes($xpath) . "\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; element.scrollIntoView({block: 'center'}); element.click();"
+    );
   }
 
   /**

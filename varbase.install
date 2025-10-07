@@ -90,15 +90,6 @@ function varbase_install() {
   // to be based on up to date information.
   \Drupal::service('router.builder')->rebuild();
 
-  // Rebuild the state of subscribed events for ECA.
-  // This is equivalent to running: drush eca:subscriber:rebuild
-  if (\Drupal::moduleHandler()->moduleExists('eca')) {
-    $entity_type_manager = \Drupal::service('entity_type.manager');
-    /** @var \Drupal\eca\Entity\EcaStorage $storage */
-    $storage = $entity_type_manager->getStorage('eca');
-    $storage->rebuildSubscribedEvents();
-  }
-
   // Resets all static caches.
   drupal_static_reset();
 

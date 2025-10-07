@@ -37,6 +37,13 @@ Feature: The welcome message should be displayed on first visit to the site
      When I click next button in tour
       And I wait 2s
      Then I should see "Site Content"
+     When I close the tour
+      And I wait 2s
+      And I go to "/admin/config/varbase/settings"
+     Then I should see "Varbase general settings"
+     When I uncheck the box "Allow site to show welcome message"
+      And I press "Save configuration"
+      And wait 2s
 
   @javascript @local @development @staging @production
   Scenario: Check if welcome message is disabled after closing it
