@@ -1582,6 +1582,19 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Submit the media library dialog.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example: When I submit the media library dialog
+   *
+   * @When /^(?:|I )submit (?:|the )media library dialog$/
+   */
+  public function iSubmitMediaLibraryDialog() {
+    $this->getSession()->executeScript("document.querySelector(\".media-library-select[value='dialog-submit']\").click();");
+  }
+
+  /**
    * Find an image with the title text attribute under a custom iframe.
    *
    * Varbase Context #varbase.
@@ -2808,6 +2821,7 @@ JS;
    * @When /^(?:|I )close (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iCloseTheAccessibilityChecker() {
+    $this->getSession()->wait(5000, 'document.querySelector("body > ed11y-element-panel")');
     $page = $this->getSession()->getPage();
     $accessibilityCheckerClose = $page->findAll('xpath', "//ed11y-element-panel");
     if (empty($accessibilityCheckerClose)) {

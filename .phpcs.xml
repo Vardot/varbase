@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- cspell:ignore Openercase -->
 <ruleset name="custom_code">
-  <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml"/>
+  <arg name="extensions" value="engine,inc,install,module,php,profile,test,theme,yml"/>
   <description>Default PHP CodeSniffer configuration for Drupal core.</description>
 
   <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->
@@ -18,8 +19,6 @@
     <!-- Sniff for these errors: ArrayClosingIndentation, ArrayIndentation, CommaLastItem -->
     <exclude name="Drupal.Arrays.Array.LongLineDeclaration"/>
   </rule>
-  <rule ref="Drupal.CSS.ClassDefinitionNameSpacing"/>
-  <rule ref="Drupal.CSS.ColourDefinition"/>
   <rule ref="Drupal.Classes.ClassCreateInstance"/>
   <rule ref="Drupal.Classes.ClassDeclaration"/>
   <rule ref="Drupal.Classes.ClassFileName"/>
@@ -29,9 +28,7 @@
   <rule ref="Drupal.Classes.UnusedUseStatement"/>
   <rule ref="Drupal.Classes.UseGlobalClass"/>
   <rule ref="Drupal.Classes.UseLeadingBackslash"/>
-  <rule ref="Drupal.Commenting.ClassComment">
-    <exclude name="Drupal.Commenting.ClassComment.Missing"/>
-  </rule>
+  <rule ref="Drupal.Commenting.ClassComment"/>
   <rule ref="Drupal.Commenting.DataTypeNamespace"/>
   <rule ref="Drupal.Commenting.Deprecated"/>
   <rule ref="Drupal.Commenting.DocComment">
@@ -39,15 +36,14 @@
       ContentAfterOpen, SpacingBeforeShort, TagValueIndent, ShortStartSpace,
       SpacingAfter, LongNotCapital, ShortFullStop, TagGroupSpacing, Empty,
       TagsNotGrouped, ParamGroup -->
-    <!-- ParamNotFirst still not decided for PHPUnit-based tests.
-      @see https://www.drupal.org/node/2253915 -->
     <exclude name="Drupal.Commenting.DocComment.LongFullStop"/>
-    <exclude name="Drupal.Commenting.DocComment.MissingShort"/>
-    <exclude name="Drupal.Commenting.DocComment.ParamNotFirst"/>
-    <exclude name="Drupal.Commenting.DocComment.ShortNotCapital"/>
-    <exclude name="Drupal.Commenting.DocComment.SpacingBeforeTags"/>
+  </rule>
+  <rule  ref="Drupal.Commenting.DocComment.MissingShort">
+    <include-pattern>core/*/Unit/*</include-pattern>
+    <include-pattern>core/*/FunctionalJavascript/*</include-pattern>
   </rule>
   <rule ref="Drupal.Commenting.DocCommentAlignment"/>
+  <rule ref="Drupal.Commenting.DocCommentLongArraySyntax"/>
   <rule ref="Drupal.Commenting.DocCommentStar"/>
   <rule ref="Drupal.Commenting.FileComment"/>
   <rule ref="Drupal.Commenting.FunctionComment">
@@ -58,24 +54,19 @@
     <exclude name="Drupal.Commenting.FunctionComment.ParamCommentFullStop"/>
     <exclude name="Drupal.Commenting.FunctionComment.TypeHintMissing"/>
   </rule>
+  <rule ref="Drupal.Commenting.FunctionComment.MissingParamType"/>
+  <rule ref="Drupal.Commenting.FunctionComment.MissingReturnComment"/>
   <rule ref="Drupal.Commenting.GenderNeutralComment"/>
   <rule ref="Drupal.Commenting.HookComment"/>
   <rule ref="Drupal.Commenting.InlineComment">
     <!-- Sniff for: NoSpaceBefore, SpacingBefore, WrongStyle -->
-    <exclude name="Drupal.Commenting.InlineComment.DocBlock"/>
     <exclude name="Drupal.Commenting.InlineComment.InvalidEndChar"/>
-    <exclude name="Drupal.Commenting.InlineComment.NotCapital"/>
     <exclude name="Drupal.Commenting.InlineComment.SpacingAfter"/>
   </rule>
   <rule ref="Drupal.Commenting.InlineVariableComment"/>
   <rule ref="Drupal.Commenting.PostStatementComment"/>
-  <rule ref="Drupal.Commenting.VariableComment">
-    <!-- Sniff for: DuplicateVar, EmptyVar, InlineVariableName, WrongStyle -->
-    <exclude name="Drupal.Commenting.VariableComment.IncorrectVarType"/>
-    <exclude name="Drupal.Commenting.VariableComment.Missing"/>
-    <exclude name="Drupal.Commenting.VariableComment.MissingVar"/>
-    <exclude name="Drupal.Commenting.VariableComment.VarOrder"/>
-  </rule>
+  <rule ref="Drupal.Commenting.TodoComment" />
+  <rule ref="Drupal.Commenting.VariableComment"/>
   <rule ref="Drupal.ControlStructures.ControlSignature"/>
   <rule ref="Drupal.ControlStructures.ElseIf"/>
   <rule ref="Drupal.ControlStructures.InlineControlStructure"/>
@@ -88,6 +79,7 @@
   <rule ref="Drupal.Formatting.SpaceUnaryOperator"/>
   <rule ref="Drupal.Functions.DiscouragedFunctions"/>
   <rule ref="Drupal.Functions.FunctionDeclaration"/>
+  <rule ref="Drupal.Functions.MultiLineFunctionDeclaration"/>
   <rule ref="Drupal.InfoFiles.AutoAddedKeys"/>
   <rule ref="Drupal.InfoFiles.ClassFiles"/>
   <rule ref="Drupal.InfoFiles.DuplicateEntry"/>
@@ -98,18 +90,16 @@
     <exclude name="Drupal.Methods.MethodDeclaration.Underscore"/>
   </rule>
   <rule ref="Drupal.NamingConventions.ValidClassName"/>
+  <rule ref="Drupal.NamingConventions.ValidEnumCase"/>
   <rule ref="Drupal.NamingConventions.ValidGlobal"/>
   <rule ref="Drupal.NamingConventions.ValidVariableName"/>
-  <rule ref="Drupal.NamingConventions.ValidVariableName.LowerCamelName">
-    <!-- Views plugins do not conform to this sniff. -->
-    <include-pattern>**/tests/*</include-pattern>
-  </rule>
+  <rule ref="Drupal.NamingConventions.ValidVariableName.LowerCamelName"/>
   <rule ref="Drupal.Scope.MethodScope"/>
+  <rule ref="Drupal.Semantics.ConstantName.ConstantStart"/>
   <rule ref="Drupal.Semantics.EmptyInstall"/>
   <rule ref="Drupal.Semantics.FunctionAlias"/>
-  <rule ref="Drupal.Semantics.FunctionT">
-    <exclude name="Drupal.Semantics.FunctionT.NotLiteralString"/>
-  </rule>
+  <rule ref="Drupal.Semantics.FunctionT"/>
+  <rule ref="Drupal.Semantics.FunctionTriggerError"/>
   <rule ref="Drupal.Semantics.FunctionWatchdog"/>
   <rule ref="Drupal.Semantics.InstallHooks"/>
   <rule ref="Drupal.Semantics.LStringTranslatable"/>
@@ -117,7 +107,6 @@
   <rule ref="Drupal.Semantics.RemoteAddress"/>
   <rule ref="Drupal.Semantics.TInHookMenu"/>
   <rule ref="Drupal.Semantics.TInHookSchema"/>
-  <rule ref="Drupal.Strings.UnnecessaryStringConcat"/>
   <rule ref="Drupal.WhiteSpace.CloseBracketSpacing"/>
   <rule ref="Drupal.WhiteSpace.Comma"/>
   <rule ref="Drupal.WhiteSpace.EmptyLines"/>
@@ -148,9 +137,7 @@
   <rule ref="DrupalPractice.Commenting.ExpectedException"/>
   <rule ref="DrupalPractice.General.ExceptionT"/>
   <rule ref="DrupalPractice.InfoFiles.NamespacedDependency"/>
-  <rule ref="DrupalPractice.Objects.GlobalFunction">
-    <include-pattern>*/Plugin/*</include-pattern>
-  </rule>
+  <rule ref="DrupalPractice.Objects.GlobalFunction"/>
 
   <!-- Generic sniffs -->
   <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
@@ -160,27 +147,25 @@
   <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
   <rule ref="Generic.Formatting.SpaceAfterCast"/>
   <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
-  <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie">
-    <properties>
-      <property name="checkClosures" value="true"/>
-    </properties>
-  </rule>
   <rule ref="Generic.NamingConventions.ConstructorName"/>
   <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
   <rule ref="Generic.PHP.DeprecatedFunctions"/>
   <rule ref="Generic.PHP.DisallowShortOpenTag"/>
   <rule ref="Generic.PHP.LowerCaseKeyword"/>
   <rule ref="Generic.PHP.UpperCaseConstant"/>
+  <rule ref="Generic.Strings.UnnecessaryStringConcat">
+    <properties>
+      <property name="allowMultiline" value="true"/>
+    </properties>
+  </rule>
   <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+  <rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
 
   <!-- Internal sniffs -->
   <rule ref="Internal.NoCodeFound">
     <!-- No PHP code in *.yml -->
     <exclude-pattern>*.yml</exclude-pattern>
   </rule>
-
-  <!-- MySource sniffs -->
-  <rule ref="MySource.Debug.DebugCode"/>
 
   <!-- PEAR sniffs -->
   <rule ref="PEAR.Files.IncludingFile"/>
@@ -232,15 +217,18 @@
        Drupal.Classes.PropertyDeclaration. -->
     <exclude name="PSR2.Classes.PropertyDeclaration.Underscore"/>
   </rule>
+  <rule ref="PSR2.ControlStructures.SwitchDeclaration.WrongOpenercase"/>
   <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
   <rule ref="PSR2.Namespaces.UseDeclaration"/>
 
   <!-- SlevomatCodingStandard sniffs -->
+  <rule ref="SlevomatCodingStandard.Classes.BackedEnumTypeSpacing"/>
   <rule ref="SlevomatCodingStandard.Commenting.ForbiddenAnnotations">
     <properties>
       <property name="forbiddenAnnotations" type="array">
         <element value="@inheritDoc"/>
         <element value="@inheritdoc"/>
+        <element value="@returns"/>
       </property>
     </properties>
   </rule>
@@ -354,23 +342,6 @@
   <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing.NoSpaceBeforeArg">
     <severity>0</severity>
   </rule>
-  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration"/>
-  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine">
-    <severity>0</severity>
-  </rule>
-  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine">
-    <severity>0</severity>
-  </rule>
-  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.ContentAfterBrace">
-    <severity>0</severity>
-  </rule>
-  <!-- Standard yet to be finalized on this (https://www.drupal.org/node/1539712). -->
-  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.FirstParamSpacing">
-    <severity>0</severity>
-  </rule>
-  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration.Indent">
-    <severity>0</severity>
-  </rule>
   <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
   <rule ref="Squiz.PHP.NonExecutableCode"/>
   <rule ref="Squiz.Strings.ConcatenationSpacing">
@@ -384,7 +355,6 @@
       <property name="spacing" value="1"/>
     </properties>
   </rule>
-  <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
   <rule ref="Squiz.WhiteSpace.OperatorSpacing">
     <properties>
       <property name="ignoreNewlines" value="true"/>

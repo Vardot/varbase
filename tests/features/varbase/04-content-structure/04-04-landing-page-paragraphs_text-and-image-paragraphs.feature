@@ -27,7 +27,7 @@ Feature: Content Structure - Landing page (Paragraphs) - Varbase text and image 
       And I wait for AJAX to finish
      When I check the box "Select Skyscraper"
       And I wait for AJAX to finish
-      And I press "dialog-submit"
+      And I submit the media library dialog
       And I wait for AJAX to finish
       And I scroll up
      Then I should see "Skyscraper"
