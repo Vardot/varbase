@@ -15,11 +15,11 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And I press "Add media"
       And I wait for AJAX to finish
      Then I should see "Name"
-     When I fill in "Background Image 2" for "Name"
+     When I fill in "Audience facing blue stage in theater" for "Name"
       And I press the "Apply filters" button
-     Then I should see image with the "Background Image 2" title text
+     Then I should see image with the "Audience facing blue stage" title text
       And I wait for AJAX to finish
-     When I check the box "Select Background Image 2"
+     When I check the box "Select Audience facing blue stage in theater"
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish
@@ -42,11 +42,11 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And I press "Add media"
       And I wait for AJAX to finish
      Then I should see "Name"
-     When I fill in "SAAS 1" for "Name"
+     When I fill in "Four people shaking hands and smiling" for "Name"
       And I press the "Apply filters" button
-     Then I should see image with the "SAAS 1" title text
+     Then I should see image with the "Four people having a cordial handshake and smiling." title text
       And I wait for AJAX to finish
-     When I check the box "Select SAAS 1"
+     When I check the box "Select Four people shaking hands and smiling"
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish
@@ -75,7 +75,7 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And I select "Delete selected entities / translations" from "action"
      When I press "Apply to selected items"
       And wait 3s
-     Then I should see "Delete entities (2)"
+     Then I should see "Delete content item entities (2)"
 
     # Check that the 2 hero sliders had beend removed from the queue.
      When I go to "/admin/structure/entityqueue/varbase_heroslider/varbase_heroslider"

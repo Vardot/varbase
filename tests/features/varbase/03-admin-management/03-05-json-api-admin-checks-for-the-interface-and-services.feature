@@ -75,17 +75,17 @@ Feature: Check JSON API admin interface and services and Varbase API settings
      When I go to "/admin/content"
       And wait
      Then I should see "Content"
-      And I should see the "View JSON" operation for the "Homepage" content
+      And I should not see the "View JSON" operation for the "Homepage" content
       And I should see the "View API Docs" operation for the "Homepage" content
       And I should see the "Edit" operation for the "Homepage" content
       And I should see the "Layout" operation for the "Homepage" content
-      And I should see the "View JSON" operation for the "Blog" content
+      And I should not see the "View JSON" operation for the "Blog" content
       And I should see the "View API Docs" operation for the "Blog" content
 
      When I go to "/admin/content/media"
       And wait
      Then I should see "Media"
-      And I should see the "View JSON" operation for the "Skyscraper" media
+      And I should not see the "View JSON" operation for the "Skyscraper" media
       And I should see the "View API Docs" operation for the "Skyscraper" media
       And I should see the "Edit" operation for the "Skyscraper" media
 

@@ -1,3 +1,77 @@
+# 10.1.0-beta1
+
+### Highlighted important changes since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
+* [#3548006](https://www.drupal.org/i/3548006) feat: Added a **User Login Notification ECA Model** with one workflow sequence to send notification emails when users login
+* [#3551835](https://www.drupal.org/i/3551835) feat: Have a new **Admin Change Role Notification ECA model** as standalone workflow sequence
+* [#3548019](https://www.drupal.org/i/3548019) feat: Added a **Draft Reminder ECA Model** with workflow sequence to notify admins about outdated drafts
+* [#3548011](https://www.drupal.org/i/3548011) feat: Added a **User Recertification ECA model** with workflow sequences for role changes and inactive users
+* [#3548025](https://www.drupal.org/i/3548025) feat: Added an optional not enabled **Redirect 403 to Login ECA Model** with a ready workflow sequence
+
+### Added since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
+* [#3552652](https://www.drupal.org/i/3552652) chore(a11y): Added **Alt Text** to Default Demo Content in **Varbase Media Demo** Module
+* [#3543084](https://www.drupal.org/i/3543084) feat: Enabled more **ECA: Event - Condition - Action** integration modules by default in **Varbase Core**
+* [#3544187](https://www.drupal.org/i/3544187): Enabled **ECA Metatag** integration module by default in **Varbase SEO**
+* [#3547929](https://www.drupal.org/i/3547929) feat: Added **[ECA Tamper Integration](https://www.drupal.org/project/eca_tamper)** module to **Varbase Core** and Enable by default
+* [#3549569](https://www.drupal.org/i/3549569) feat: Added **ECA Helper** module and enable by default
+* [#3550509](https://www.drupal.org/i/3550509) feat: Add missing template for remote video Hero Slider view mode
+* [#3543089](https://www.drupal.org/i/3543089) feat: Enabled **AI ECA integration** module by default in **Varbase AI**
+* [#3543094](https://www.drupal.org/i/3543094) feat: Enabled **ECA Workflow** module by default in **Varbase Workflow**
+* [#3542860](https://www.drupal.org/i/3542860) feat: Added **Trash** module to **Varbase Admin**
+
+### Changed since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
+* [#3548746](https://www.drupal.org/i/3548746) feat: Switched to AI Integration - ECA from the deprecated AI ECA sub module
+* [#3544275](https://www.drupal.org/i/3544275) chore: Change Varbase Editor requirements to follow with Drupal Libraries Management with Varbase Libraries
+* [#3552538](https://www.drupal.org/i/3552538) chore: Switched **OpenAPI for REST** module back from the `vardot/openapi_rest` **fork** for **Drupal 11** to `drupal/openapi_rest` `~2` after `2.0` stable was released
+* [#3550491](https://www.drupal.org/i/3550491) feat(oembed-formatter): Make iframe loading attribute configurable instead of hardcoded to `lazy`
+* [#3547948](https://www.drupal.org/i/3547948) perf(ui): Optimization round 2 for Layout Builder modal and block editing combined styling by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+* [#3542887](https://www.drupal.org/i/3542887) chore: Switched back from `vardot/ckeditor_media_embed` fork to `drupal/ckeditor_media_embed` after **CKEditor Media Embed Plugin 2.0.3** was released with support for **Drupal 11**
+* [#3540163](https://www.drupal.org/i/3540163) chore: Changed the **Gin/Claro** for **Layout Builder Modal** to use Layout Builder Modal Gin/Claro Theme after **Gin ~5** and Claro in **Drupal ~11.2**
+
+### Updates since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
+* [#3550266](https://www.drupal.org/i/3550266) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Core** module to align with Drupal Core with GitLab CI/CD
+* [#3551403](https://www.drupal.org/i/3551403) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Layout Builder** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553117](https://www.drupal.org/i/3553117) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Demo Assets** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553229](https://www.drupal.org/i/3553229) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Search** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553239](https://www.drupal.org/i/3553239) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase SEO** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553266](https://www.drupal.org/i/3553266) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Workflow** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553137](https://www.drupal.org/i/3553137) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Hero Slider** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553122](https://www.drupal.org/i/3553122) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Header** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550183](https://www.drupal.org/i/3550183) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Auth** module to align with **Drupal Core** with GitLab CI/CD
+* [#3551392](https://www.drupal.org/i/3551392) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Landing Page (Paragraphs)** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3551364](https://www.drupal.org/i/3551364) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Heroslider** module to align with **Drupal Core** with GitLab CI/CD
+* [#3550332](https://www.drupal.org/i/3550332) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Demo** module to align with **Drupal Core** with GitLab CI/CD
+* [#3550323](https://www.drupal.org/i/3550323) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Dashboards** module to align with **Drupal Core** with GitLab CI/CD
+* [#3550245](https://www.drupal.org/i/3550245) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Components** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550099](https://www.drupal.org/i/3550099) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Bootstrap Paragraphs** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550073](https://www.drupal.org/i/3550073) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Blog** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3549187](https://www.drupal.org/i/3549187) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase API** module to align with Drupal Core with GitLab CI/CD
+* [#3549184](https://www.drupal.org/i/3549184) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase AI** to align with **Drupal Core** with GitLab CI/CD
+
+### Fixes since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
+* [#3552431](https://www.drupal.org/i/3552431) fix(a11y): Enabled **Alt Text Field** for **Cover Image** in Remote Video and Local Video Media Types to Improve Accessibility
+* [#3553382](https://www.drupal.org/i/3553382) fix(a11y): Changed External Links in Varbase Demo Content to Comply with **WCAG 3.0 Accessibility Standards**
+* [#3553410](https://www.drupal.org/i/3553410) fix(a11y): Integrate **Varbase Bootstrap Button Link** with **External Links** Do not alter links with a default target value option to comply with **WCAG 3.0 Accessibility Standards**
+* [#3553367](https://www.drupal.org/i/3553367) fix(a11y): Changed Default Settings for External Links in Demo Content to Not Alter Links with a Default Target Value
+* [#3553390](https://www.drupal.org/i/3553390) fix(a11y): Changed External Links in **Varbase Blog** site section default Content to Comply with **WCAG 3.0 Accessibility Standards**
+* [#3552334](https://www.drupal.org/i/3552334) fix(a11y): Corrected missing H2 heading in Blog listing view to correct heading hierarchy
+* [#3553436](https://www.drupal.org/i/3553436) fix(a11y): Added proper heading structure for Contact Information section on **Contact Us** page to comply with **WCAG 3.0 accessibility standards**
+* [#3552361](https://www.drupal.org/i/3552361) fix(a11y): Corrected skipped heading levels by adding visually hidden Page Content in H2 to Default Blog Post Layouts in Layout Library
+* [#3545316](https://www.drupal.org/i/3545316) fix: Theme negotiator rendering Layout Builder preview blocks after saving a block using Media Library dialog by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+* [#3555623](https://www.drupal.org/i/3555623) fix: InvalidConfigException in varbase_ai_install() when processing recipes with missing media_edit_media_modal configuration
+* [#3555624](https://www.drupal.org/i/3555624) fix: Added media_edit_media_modal plugin configuration to basic_html and full_html editors
+* [#3543975](https://www.drupal.org/i/3543975) fix: plugin caches when installing Varbase Demo to ensure field_block plugins are available for optional configurations that reference them
+* [#3542906](https://www.drupal.org/i/3542906) fix: theme negotiator rendering Layout Builder preview blocks with admin theme after saving a block by [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+* [#3550904](https://www.drupal.org/i/3550904) fix: Prevent array_key_exists(): Argument #2 ($array) must be of type array, null given Error in Varbase Dashboards Block by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+* [#3545253](https://www.drupal.org/i/3545253) fix: Input component to preserve special link values (`<front>`, `<nolink>`) in Layout Builder blocks by [n.ghunaim](https://www.drupal.org/u/nghunaim)
+* [#3542882](https://www.drupal.org/i/3542882) fix: extra spacing in email template when header is empty by [odai.atieh](https://www.drupal.org/u/odai-atieh)
+* [#3543649](https://www.drupal.org/i/3543649) fix: plugin caches when installing **Varbase Blog** to ensure field_block plugins are available for optional configurations that reference them
+* [#3543978](https://www.drupal.org/i/3543978) fix: plugin caches when installing Varbase Core to ensure field_block plugins are available for optional configurations that reference them
+* [#3548616](https://www.drupal.org/i/3548616) fix: Removed responsive preview icon in the Back-end add/edit of all entity types and general setting pages
+* [#3548626](https://www.drupal.org/i/3548626) fix: GoTo ( Coffee icon ) Alignment content with the Breadcrumb in the Top Navigation toolbar
+* [#3553624](https://www.drupal.org/i/3553624) fix(api): Improve **Default JSON:API Resource Overrides** to Limit Vulnerabilities in Varbase API
+
+-------------------------------------------------------------------------------
+
 # 10.1.0-alpha3
 
 ### Highlighted important changes since [10.1.0-alpha2](https://www.drupal.org/project/varbase/releases/10.1.0-alpha2):
