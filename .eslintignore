@@ -1,3 +1,5 @@
 node_modules/**/*
 # Ignore deliberately malformed YAML files.
 drupalci.yml
+# Ignore drupal-libraries-sync.js
+drupal-libraries-sync.js

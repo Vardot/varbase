@@ -413,7 +413,7 @@ function varbase_configure_multilingual(array &$install_state) {
         && is_array($install_state['varbase']['multilingual_languages'])) {
       foreach ($install_state['varbase']['multilingual_languages'] as $language_code) {
         $batch['operations'][] = [
-          'varbase_configure_language_and_fetch_traslation',
+          'varbase_configure_language_and_fetch_translation',
           (array) $language_code,
         ];
       }
@@ -475,12 +475,12 @@ function varbase_save_editable_config_values($extra_component_machine_name, $for
 }
 
 /**
- * Batch function to add selected languages then fetch all traslation.
+ * Batch function to add selected languages then fetch all translation.
  *
  * @param string|array $language_code
- *   Language code to install and fetch all traslation.
+ *   Language code to install and fetch all translation.
  */
-function varbase_configure_language_and_fetch_traslation($language_code) {
+function varbase_configure_language_and_fetch_translation($language_code) {
   ConfigurableLanguage::createFromLangcode($language_code)->save();
 }
 

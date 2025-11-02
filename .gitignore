@@ -20,9 +20,8 @@ bower_components/
 .vim
 
 # Ignore Yarn
-.yarn/*
-.pnp.cjs
-.pnp.loader.mjs
+.yarn/
+.pnp.*
 
 # Eclipse settings files.
 .project

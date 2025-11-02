@@ -5530,7 +5530,7 @@ Bootstrap v4.6.0 was released
                  the 9.0.x branch
 * Issue [#3180829](https://www.drupal.org/i/3180829):
                  Changed Varbase Bootstrap Paragraphs to only support
-                 Bootstrap 4 classes and droped legacy support for Bootstrap 3
+                 Bootstrap 4 classes and dropped legacy support for Bootstrap 3
 * Issue [#3180712](https://www.drupal.org/i/3180712):
                  Changed the Varbase Bootstrap Elements in Varbase Styleguide
                  to only support Bootstrap 4 elements and drop legacy
@@ -6072,7 +6072,7 @@ Bootstrap v4.6.0 was released
                  instead of overriding them
 * Issue [#3170149](https://www.drupal.org/i/3170149):
                  Removed strict ui-dialog button style support for Bartik
-                 and Saven. So that Vartheme BS4 work better with
+                 and Seven. So that Vartheme BS4 work better with
                  Claro admin theme
 * Issue [#3167618](https://www.drupal.org/i/3167618):
                  Remove [Events Log Track] module from the composer for
@@ -6510,8 +6510,8 @@ Bootstrap v4.6.0 was released
                   Fixed issues after Entityqueue had changed schema config for
                   [Varbase Media Hero Slider] simple queue
 * Issue [#3157689](https://www.drupal.org/i/3157689):
-                  Fixed default revision value for [ In review ] state to fals
-                 e for the Editorial workflow
+                  Fixed default revision value for [ In review ] state to false
+                 for the Editorial workflow
 * Issue [#3164237](https://www.drupal.org/i/3164237):
                   Fixed Varbase Welcome message not showing up after install
                   compilation after adding and enabling moderation sidebar on
@@ -8978,7 +8978,7 @@ Bootstrap v4.6.0 was released
                  the 9.0.x branch
 * Issue [#3180829](https://www.drupal.org/i/3180829):
                  Changed Varbase Bootstrap Paragraphs to only support
-                 Bootstrap 4 classes and droped legacy support for Bootstrap 3
+                 Bootstrap 4 classes and dropped legacy support for Bootstrap 3
 * Issue [#3180712](https://www.drupal.org/i/3180712):
                  Changed the Varbase Bootstrap Elements in Varbase Styleguide
                  to only support Bootstrap 4 elements and drop legacy
@@ -9520,7 +9520,7 @@ Bootstrap v4.6.0 was released
                  instead of overriding them
 * Issue [#3170149](https://www.drupal.org/i/3170149):
                  Removed strict ui-dialog button style support for Bartik
-                 and Saven. So that Vartheme BS4 work better with
+                 and Seven. So that Vartheme BS4 work better with
                  Claro admin theme
 * Issue [#3167618](https://www.drupal.org/i/3167618):
                  Remove [Events Log Track] module from the composer for
@@ -9958,8 +9958,8 @@ Bootstrap v4.6.0 was released
                   Fixed issues after Entityqueue had changed schema config for
                   [Varbase Media Hero Slider] simple queue
 * Issue [#3157689](https://www.drupal.org/i/3157689):
-                  Fixed default revision value for [ In review ] state to fals
-                 e for the Editorial workflow
+                  Fixed default revision value for [ In review ] state to false
+                 for the Editorial workflow
 * Issue [#3164237](https://www.drupal.org/i/3164237):
                   Fixed Varbase Welcome message not showing up after install
                   compilation after adding and enabling moderation sidebar on

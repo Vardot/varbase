@@ -195,7 +195,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
    */
   protected function processConfigBits(array $supportedConfigType, Config $saved_config) {
 
-    // Get saved cofnig name.
+    // Get saved config name.
     $saved_config_name = $saved_config->getName();
 
     // Get token variant for entity type name.
@@ -260,7 +260,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
               // Save target config after finishing all config action changes.
               $target_config_bit_factory->save(TRUE);
 
-              // Flushes plugins caches on requisted.
+              // Flushes plugins caches on requested.
               if (isset($supportedConfigType['plugin.cache_clearer'])
                 && $supportedConfigType['plugin.cache_clearer'] == TRUE) {
 
@@ -616,7 +616,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
   }
 
   /**
-   * Do we have this cofnigbit file.
+   * Do we have this configbit file.
    *
    * @param string $config_bit_file_name
    *   Config bit file name in the root configbit folder.
@@ -704,7 +704,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       foreach ($config_bit_data['action']['archive_files']['files'] as $language_config_file) {
         $config_file = \Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $language_config_file;
         if (file_exists($config_file)) {
-          $config_file_backup = $config_file . $config_bit_data['action']['archive_files']['archive_extensiton'];
+          $config_file_backup = $config_file . $config_bit_data['action']['archive_files']['archive_extension'];
           \Drupal::service('file_system')->move($config_file, $config_file_backup);
         }
       }
@@ -738,7 +738,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
 
       foreach ($config_bit_data['action']['unarchive_files']['files'] as $language_config_file) {
         $config_file = \Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $language_config_file;
-        $config_file_backup = $config_file . $config_bit_data['action']['unarchive_files']['archive_extensiton'];
+        $config_file_backup = $config_file . $config_bit_data['action']['unarchive_files']['archive_extension'];
         if (!file_exists($config_file) && file_exists($config_file_backup)) {
           \Drupal::service('file_system')->move($config_file_backup, $config_file);
         }
