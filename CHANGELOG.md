@@ -17,6 +17,8 @@
 * [#3543089](https://www.drupal.org/i/3543089) feat: Enabled **AI ECA integration** module by default in **Varbase AI**
 * [#3543094](https://www.drupal.org/i/3543094) feat: Enabled **ECA Workflow** module by default in **Varbase Workflow**
 * [#3542860](https://www.drupal.org/i/3542860) feat: Added **Trash** module to **Varbase Admin**
+* [#3545544](https://www.drupal.org/i/3545544) test: Added automated functional acceptance testing for Trash module integration in Varbase
+* [#3550753](https://www.drupal.org/i/3550753) feat(eca): Added process to rebuild state of subscribed events for **ECA** models
 
 ### Changed since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
 * [#3548746](https://www.drupal.org/i/3548746) feat: Switched to AI Integration - ECA from the deprecated AI ECA sub module
@@ -28,6 +30,9 @@
 * [#3540163](https://www.drupal.org/i/3540163) chore: Changed the **Gin/Claro** for **Layout Builder Modal** to use Layout Builder Modal Gin/Claro Theme after **Gin ~5** and Claro in **Drupal ~11.2**
 
 ### Updates since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
+* Updated **Bootstrap library** to `5.3.8`
+* [#3555655](https://www.drupal.org/i/3555655) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Profile** to align with **Drupal Core** with **GitLab CI/CD**
+* [#3555742](https://www.drupal.org/i/3555742) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Vartheme BS5** to align with **Drupal Core** with **GitLab CI/CD**
 * [#3550266](https://www.drupal.org/i/3550266) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Core** module to align with Drupal Core with GitLab CI/CD
 * [#3551403](https://www.drupal.org/i/3551403) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Layout Builder** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553117](https://www.drupal.org/i/3553117) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Demo Assets** module to align with **Drupal Core** with **GitLab CI/CD**
@@ -48,13 +53,14 @@
 * [#3549184](https://www.drupal.org/i/3549184) chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase AI** to align with **Drupal Core** with GitLab CI/CD
 
 ### Fixes since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
+* Fixed number of WCAG 2.2 accessibility standards issues
 * [#3552431](https://www.drupal.org/i/3552431) fix(a11y): Enabled **Alt Text Field** for **Cover Image** in Remote Video and Local Video Media Types to Improve Accessibility
-* [#3553382](https://www.drupal.org/i/3553382) fix(a11y): Changed External Links in Varbase Demo Content to Comply with **WCAG 3.0 Accessibility Standards**
-* [#3553410](https://www.drupal.org/i/3553410) fix(a11y): Integrate **Varbase Bootstrap Button Link** with **External Links** Do not alter links with a default target value option to comply with **WCAG 3.0 Accessibility Standards**
+* [#3553382](https://www.drupal.org/i/3553382) fix(a11y): Changed External Links in Varbase Demo Content to Comply with **WCAG 2.2 Accessibility Standards**
+* [#3553410](https://www.drupal.org/i/3553410) fix(a11y): Integrate **Varbase Bootstrap Button Link** with **External Links** Do not alter links with a default target value option to comply with **WCAG 2.2 Accessibility Standards**
 * [#3553367](https://www.drupal.org/i/3553367) fix(a11y): Changed Default Settings for External Links in Demo Content to Not Alter Links with a Default Target Value
-* [#3553390](https://www.drupal.org/i/3553390) fix(a11y): Changed External Links in **Varbase Blog** site section default Content to Comply with **WCAG 3.0 Accessibility Standards**
+* [#3553390](https://www.drupal.org/i/3553390) fix(a11y): Changed External Links in **Varbase Blog** site section default Content to Comply with **WCAG 2.2 Accessibility Standards**
 * [#3552334](https://www.drupal.org/i/3552334) fix(a11y): Corrected missing H2 heading in Blog listing view to correct heading hierarchy
-* [#3553436](https://www.drupal.org/i/3553436) fix(a11y): Added proper heading structure for Contact Information section on **Contact Us** page to comply with **WCAG 3.0 accessibility standards**
+* [#3553436](https://www.drupal.org/i/3553436) fix(a11y): Added proper heading structure for Contact Information section on **Contact Us** page to comply with **WCAG 2.2 accessibility standards**
 * [#3552361](https://www.drupal.org/i/3552361) fix(a11y): Corrected skipped heading levels by adding visually hidden Page Content in H2 to Default Blog Post Layouts in Layout Library
 * [#3545316](https://www.drupal.org/i/3545316) fix: Theme negotiator rendering Layout Builder preview blocks after saving a block using Media Library dialog by [n.ghunaim](https://www.drupal.org/u/nghunaim)
 * [#3555623](https://www.drupal.org/i/3555623) fix: InvalidConfigException in varbase_ai_install() when processing recipes with missing media_edit_media_modal configuration
@@ -66,9 +72,11 @@
 * [#3542882](https://www.drupal.org/i/3542882) fix: extra spacing in email template when header is empty by [odai.atieh](https://www.drupal.org/u/odai-atieh)
 * [#3543649](https://www.drupal.org/i/3543649) fix: plugin caches when installing **Varbase Blog** to ensure field_block plugins are available for optional configurations that reference them
 * [#3543978](https://www.drupal.org/i/3543978) fix: plugin caches when installing Varbase Core to ensure field_block plugins are available for optional configurations that reference them
+* [#3544034](https://www.drupal.org/i/3544034) fix: config import issue by removing all leftover configs related to varbase_installer_theme after Varbase installation finishes
 * [#3548616](https://www.drupal.org/i/3548616) fix: Removed responsive preview icon in the Back-end add/edit of all entity types and general setting pages
 * [#3548626](https://www.drupal.org/i/3548626) fix: GoTo ( Coffee icon ) Alignment content with the Breadcrumb in the Top Navigation toolbar
 * [#3553624](https://www.drupal.org/i/3553624) fix(api): Improve **Default JSON:API Resource Overrides** to Limit Vulnerabilities in Varbase API
+* [#3553800](https://www.drupal.org/i/3553800) fix: Stop YouTube/Vimeo Video Playback When Switching Slides in Hero Slider
 
 -------------------------------------------------------------------------------
 
