@@ -11,8 +11,9 @@
 * [#3558121](https://www.drupal.org/i/3558121) feat: Added `vartheme_bs5.icons.yml` **Bootstrap Icons library** to **Vartheme BS5 Starter Kit** theme
 
 ### Changed since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
-* Ensure only `drupal/core` is required in `allowed-packages` for `drupal-scaffold` to avoid conflicts with **Automatic Updates**, **Package Manager**, and **TUF**
-* Refactor `install-varbase` **ddev** command: Add `minimal`/`full`/`demo` options with improved structure
+* [#3558339](https://www.drupal.org/i/3558339) chore(ai): Changed **AI Assistant** to use new API introduced in **Drupal AI ~1.2.0**
+* Ensure only `drupal/core` is required in `allowed-packages` for `drupal-scaffold` to avoid conflicts with **Automatic Updates**, **Package Manager**, and **TUF** [#313](https://github.com/Vardot/varbase-project/issues/313)
+* Refactor `install-varbase` **ddev** command: Add `minimal`/`full`/`demo` options with improved structure [#309](https://github.com/Vardot/varbase-project/issues/309)
   * [Quick Install Varbase with DDEV](https://docs.varbase.vardot.com/10.1.x/developers/installing-varbase/installing-varbase-with-ddev#quick-install-varbase-with-ddev)
   * Option Examples:
     * `ddev install-varbase demo`: Full installation including demo content and sample data
@@ -24,6 +25,7 @@
 
 ### Fixes since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
 * [#3557605](https://www.drupal.org/i/3557605) fix: Background image field not working due an issue with drimage_improve By: [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+* [#3558331](https://www.drupal.org/i/3558331) fix: Chrome 142.0.7444.162 (64-bit) regression causing Social Media Menu icons to break layout in Vartheme BS5
 
 -------------------------------------------------------------------------------
 
