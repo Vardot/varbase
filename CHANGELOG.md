@@ -1,3 +1,32 @@
+# 10.1.0-rc1
+
+### Highlighted important changes since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
+* Updated **Drupal Core** to **[11.2.8](https://www.drupal.org/project/drupal/releases/11.2.8)**
+* Officially paved the way for Automatic Updates in Varbase projects.
+  * [Enabling Automatic Updates Documentation Page for Varbase](https://docs.varbase.vardot.com/10.1.x/developers/updating-varbase/enabling-automatic-updates)
+  * Configuring secure automatic updates in **Varbase ~10.1.0** using **Drupal ~11**, **[Automatic Updates](https://www.drupal.org/docs/8/update/automatic-updates)**, **[Package Manager](https://www.drupal.org/docs/develop/core-modules-and-themes/core-modules/package-manager-module)** module and **[The Update Framework (TUF)](https://theupdateframework.io/)**.
+
+### Added since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
+* [#3558118](https://www.drupal.org/i/3558118) feat: Add **UI Icons ~1.1.0** module integration and enable related submodules
+* [#3558121](https://www.drupal.org/i/3558121) feat: Added `vartheme_bs5.icons.yml` **Bootstrap Icons library** to **Vartheme BS5 Starter Kit** theme
+
+### Changed since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
+* Ensure only `drupal/core` is required in `allowed-packages` for `drupal-scaffold` to avoid conflicts with **Automatic Updates**, **Package Manager**, and **TUF**
+* Refactor `install-varbase` **ddev** command: Add `minimal`/`full`/`demo` options with improved structure
+  * [Quick Install Varbase with DDEV](https://docs.varbase.vardot.com/10.1.x/developers/installing-varbase/installing-varbase-with-ddev#quick-install-varbase-with-ddev)
+  * Option Examples:
+    * `ddev install-varbase demo`: Full installation including demo content and sample data
+    * `ddev install-varbase full`: Complete Varbase installation with all components enabled except demo content
+    * `ddev install-varbase minimal`: Core Varbase installation with all extra components explicitly disabled
+
+### Updates since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
+* All packages can be updated by basic `composer update`
+
+### Fixes since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
+* [#3557605](https://www.drupal.org/i/3557605) fix: Background image field not working due an issue with drimage_improve By: [yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+
+-------------------------------------------------------------------------------
+
 # 10.1.0-beta1
 
 ### Highlighted important changes since [10.1.0-alpha3](https://www.drupal.org/project/varbase/releases/10.1.0-alpha3):
