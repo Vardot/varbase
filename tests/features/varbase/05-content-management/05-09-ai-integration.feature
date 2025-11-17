@@ -22,7 +22,7 @@ Feature: AI Agent integration and interpolation
   Scenario: Check AI Settings
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/ai/settings"
-      And wait 2s
+      And wait 5s
      Then I should see "AI Settings"
       And I should see "Chat with Image Vision"
 
