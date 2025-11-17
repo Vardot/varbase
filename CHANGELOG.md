@@ -1,3 +1,72 @@
+# 10.0.8
+
+This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on production sites.
+
+### Highlighted important changes since [Varbase 10.0.7](https://www.drupal.org/project/varbase/releases/10.0.7):
+
+[![Varbase 10.0.8 CircleCI Build Passing](https://app.circleci.com/pipelines/github/Vardot/varbase)](/files/issues/2025-03-09/CCI-passed.png)
+
+* Updated **Drupal Core** to **[10.5.6](https://www.drupal.org/project/drupal/releases/10.5.6)**
+* Officially paved the way for Automatic Updates in Varbase projects.
+
+> #### [Enabling Automatic Updates Documentation Page for Varbase](https://docs.varbase.vardot.com/10.0.x/developers/updating-varbase/enabling-automatic-updates)
+>
+> Configuring secure automatic updates in **Varbase ~10.0.0** using **Drupal ~10.5**, **[Automatic Updates](https://www.drupal.org/docs/8/update/automatic-updates)**, **[Package Manager](https://www.drupal.org/docs/develop/core-modules-and-themes/core-modules/package-manager-module)** module and **[The Update Framework (TUF)](https://theupdateframework.io/)**.
+
+### Added since [Varbase 10.0.7](https://www.drupal.org/project/varbase/releases/10.0.7):
+
+* All new features are in **Varbase ~10.1.0**
+
+### Changes since [Varbase 10.0.7](https://www.drupal.org/project/varbase/releases/10.0.7):
+
+* [#3547948] perf(ui): Optimization round 2 for Layout Builder modal and block editing combined styling  By: [n.ghunaim](https://www.drupal.org/u/nghunaim)
+* Ensure only `drupal/core` is required in `allowed-packages` for `drupal-scaffold` to avoid conflicts with **Automatic Updates**, **Package Manager**, and **TUF** [#313](https://github.com/Vardot/varbase-project/issues/313)
+* Refactor `install-varbase` **ddev** command: Add `minimal`/`full`/`demo` options with improved structure [#309](https://github.com/Vardot/varbase-project/issues/309)
+
+> #### Option Examples
+>
+> **[Quick Install Varbase with DDEV](https://docs.varbase.vardot.com/10.0.x/developers/installing-varbase/installing-varbase-with-ddev#quick-install-varbase-with-ddev)**
+> * `ddev install-varbase demo`: Full installation including demo content and sample data
+> * `ddev install-varbase full`: Complete Varbase installation with all components enabled except demo content
+> * `ddev install-varbase minimal`:  Core Varbase installation with all extra components explicitly disabled
+
+### Updates since [Varbase 10.0.7](https://www.drupal.org/project/varbase/releases/10.0.7):
+
+* [#3553229] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Search** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553239] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase SEO** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553266] chore(tooling): Update **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Workflow** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3551364] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Heroslider** module to align with **Drupal Core** with GitLab CI/CD
+* [#3553122] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Header** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553137] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Hero Slider** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550183] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Auth** module to align with **Drupal Core** with GitLab CI/CD
+* [#3550332] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Demo** module to align with **Drupal Core**  with GitLab CI/CD
+* [#3550323] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Dashboards** module to align with **Drupal Core** with GitLab CI/CD
+* [#3550073] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Blog** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3549187] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to **4.9.3** for **Varbase API** module to align with Drupal Core with GitLab CI/CD
+* [#3550337] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Editor** module to align with **Drupal Core** with GitLab CI/CD
+* [#3550245] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Components** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3551392] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Landing Page (Paragraphs)** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550099] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Bootstrap Paragraphs** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3551325] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase FAQs** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3551698] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550172] chore(test): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Carousels** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553624] fix(api): Improve **Default JSON:API Resource Overrides** to Limit Vulnerabilities in Varbase API
+* [#3553117] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Demo Assets** module to align with **Drupal Core** with **GitLab CI/CD**
+
+### Fixes since [Varbase 10.0.7](https://www.drupal.org/project/varbase/releases/10.0.7):
+
+* [#3550266] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Core** module to align with Drupal Core with GitLab CI/CD
+* [#3551403] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Layout Builder** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553390] fix(a11y): Changed External Links in **Varbase Blog** site section default Content to Comply with **WCAG 2.2 Accessibility Standards**
+* [#3553367] fix(a11y): Changed Default Settings for External Links in Demo Content to Not Alter Links with a Default Target Value
+* [#3553410] fix(a11y): Integrate **Varbase Bootstrap Button Link** with **External Links** Do not alter links with a default target value option to comply with **WCAG 2.2 Accessibility Standards**
+* [#3553382] fix(a11y): Changed External Links in Varbase Demo Content to Comply with **WCAG 3.0 Accessibility Standards**
+* [#3557605] fix: Background image field not working due an issue with drimage_improve By: [@yasmeensalah](https://www.drupal.org/u/yasmeensalah)
+* [#3542882] fix: extra spacing in email template when header is empty by [odai atieh](https://www.drupal.org/u/odai-atieh)
+* [#3555624] fix: Added media_edit_media_modal plugin configuration to basic_html and full_html editors
+
+---
+
 # 10.0.7
 
 This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on production sites.
