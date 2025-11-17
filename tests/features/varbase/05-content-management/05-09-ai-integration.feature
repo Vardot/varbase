@@ -7,14 +7,14 @@ Feature: AI Agent integration and interpolation
   Scenario: Check AI Providers and keys
     Given I am a logged in user with the "webmaster" user
      When I go to "admin/config/ai/providers"
-      And I wait
+      And wait 2s
      Then I should see "AI Providers"
       And I should see "OpenAI Authentication"
      When I click "OpenAI Authentication"
-      And I wait
+      And wait 2s
      Then I should see "Setup OpenAI Authentication"
      When I go to "admin/config/system/keys"
-      And I wait
+      And wait 2s
      Then I should see "Keys"
       And I should see "Open AI Key"
 
@@ -22,7 +22,7 @@ Feature: AI Agent integration and interpolation
   Scenario: Check AI Settings
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/ai/settings"
-      And wait
+      And wait 2s
      Then I should see "AI Settings"
       And I should see "Chat with Image Vision"
 
@@ -30,7 +30,7 @@ Feature: AI Agent integration and interpolation
   Scenario: Check AI Assistant and interpolation options to content
     Given I am a logged in user with the "webmaster" user
      When I go to "/node/add/varbase_blog"
-      And wait
+      And wait 2s
      Then I should see "AI Assistant"
      When I click on "AI Assistant" command button in the rich text editor field "Body"
      Then I should see "Generate with AI"
