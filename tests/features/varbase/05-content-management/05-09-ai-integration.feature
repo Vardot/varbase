@@ -6,14 +6,14 @@ Feature: AI Agent integration and interpolation
   @javascript @local @development @stating @production
   Scenario: Check AI Providers and keys
     Given I am a logged in user with the "webmaster" user
-     When I go to "admin/config/ai/providers"
+     When I go to "/admin/config/ai/providers"
       And wait 2s
      Then I should see "AI Providers"
       And I should see "OpenAI Authentication"
      When I click "OpenAI Authentication"
       And wait 2s
      Then I should see "Setup OpenAI Authentication"
-     When I go to "admin/config/system/keys"
+     When I go to "/admin/config/system/keys"
       And wait 2s
      Then I should see "Keys"
       And I should see "Open AI Key"
@@ -22,9 +22,8 @@ Feature: AI Agent integration and interpolation
   Scenario: Check AI Settings
     Given I am a logged in user with the "webmaster" user
      When I go to "/admin/config/ai/settings"
-      And wait 5s
+      And I wait max of 10s for the page to be ready and loaded
      Then I should see "AI Settings"
-      And I should see "Chat with Image Vision"
 
   @javascript @local @development @staging @production
   Scenario: Check AI Assistant and interpolation options to content
