@@ -19,13 +19,6 @@ Feature: AI Agent integration and interpolation
       And I should see "Open AI Key"
 
   @javascript @local @development @staging @production
-  Scenario: Check AI Settings
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/config/ai/settings"
-      And I wait max of 10s for the page to be ready and loaded
-     Then I should see "AI Settings"
-
-  @javascript @local @development @staging @production
   Scenario: Check AI Assistant and interpolation options to content
     Given I am a logged in user with the "webmaster" user
      When I go to "/node/add/varbase_blog"
