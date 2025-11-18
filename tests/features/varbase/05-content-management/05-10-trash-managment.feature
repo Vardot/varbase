@@ -206,9 +206,6 @@ Feature: Content Management - Trash Management
       And I should see "Editor Permission Test"
      When I click "Restore" in the "Editor Permission Test" row
       And wait 3s
-
-  @javascript @local @development @staging @production
-  Scenario: Verify Editor can successfully restore content from trash
   
   @javascript @local @development @staging @production
   Scenario: Verify SEO admin can view and delete content but has limited trash operations
