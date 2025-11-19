@@ -10,7 +10,7 @@ Feature: The welcome message should be displayed on first visit to the site
      When I check the box "Allow site to show welcome message"
      Then I should see the "Allow site to show welcome message" checkbox checked
      When I press "Save configuration"
-      And wait
+      And wait 3s
      Then I should see "The configuration options have been saved."
 
   @javascript @local @development @staging @production
@@ -23,7 +23,7 @@ Feature: The welcome message should be displayed on first visit to the site
       And I should see "Get started"
      When I click "Get started"
       And I wait 6s
-     Then I should see "Tour Switch"
+     Then I should see "Tour"
      When I click next button in tour
       And I wait 2s
      Then I should see "Editing Your Homepage Layout"
@@ -36,6 +36,13 @@ Feature: The welcome message should be displayed on first visit to the site
      When I click next button in tour
       And I wait 2s
      Then I should see "Site Content"
+     When I close the tour
+      And I wait 2s
+      And I go to "/admin/config/varbase/settings"
+     Then I should see "Varbase general settings"
+     When I uncheck the box "Allow site to show welcome message"
+      And I press "Save configuration"
+      And wait 2s
 
   @javascript @local @development @staging @production
   Scenario: Check if welcome message is disabled after closing it

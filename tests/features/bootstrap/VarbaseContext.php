@@ -88,7 +88,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       $this->getSession()->visit($this->locatePath('/user/login'));
       $page = $this->getSession()->getPage();
 
-      if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+      if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 2000)) {
         $page->fillField('name', $username);
         $page->fillField('pass', $password);
         $this->iScrollToBottom();
@@ -122,7 +122,7 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     $this->getSession()->visit($this->locatePath('/user/login'));
     $page = $this->getSession()->getPage();
 
-    if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 6000)) {
+    if ($this->matchingElementAfterWait('css', '[data-drupal-selector="edit-name"]', 2000)) {
       $page->fillField('name', $username);
       $page->fillField('pass', $password);
       $this->iScrollToBottom();
@@ -429,8 +429,46 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception('The Next action button in the tour is not found.');
     }
 
-    $this->getSession()->executeScript('document.querySelector("body > dialog.drupal-tour.shepherd-enabled > div.shepherd-content > footer > button.button--primary.shepherd-button").click();');
+    // Scroll element into view and click using JavaScript to handle animations
+    $xpath = $element->getXpath();
+    $this->getSession()->executeScript(
+      "var element = document.evaluate(\"" . addslashes($xpath) . "\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; element.scrollIntoView({block: 'center'}); element.click();"
+    );
 
+  }
+
+  /**
+   * Varbase Context #varbase.
+   *
+   * @When I close the tour
+   */
+  public function iCloseTour() {
+    // Try to find the close button by common selectors
+    $selectors = [
+      "//button[contains(@class, 'shepherd-cancel-icon') or contains(@aria-label, 'Close') or contains(@class, 'close')]",
+      "//button[text()='×']",
+      "//button[contains(@class, 'shepherd-button') and contains(text(), 'Done')]",
+    ];
+
+    $element = NULL;
+    foreach ($selectors as $selector) {
+      $element = $this->getSession()->getPage()->find('xpath', $selector);
+      if (!empty($element)) {
+        break;
+      }
+    }
+
+    if (empty($element)) {
+      // If no close button found, try pressing Escape key
+      $this->getSession()->evaluateScript("document.dispatchEvent(new KeyboardEvent('keydown', {'key': 'Escape'}));");
+      return;
+    }
+
+    // Use JavaScript to click the close button
+    $xpath = $element->getXpath();
+    $this->getSession()->executeScript(
+      "var element = document.evaluate(\"" . addslashes($xpath) . "\", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue; element.scrollIntoView({block: 'center'}); element.click();"
+    );
   }
 
   /**
@@ -443,6 +481,55 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
     if (empty($element)) {
       throw new \Exception('The ' . $text . ' not found in the breadcrumb');
     }
+  }
+
+  /**
+   * Press the confirm button in modal dialog for trash restore.
+   *
+   * Varbase Context #varbase.
+   *
+   * @When I press the confirm button in modal
+   */
+  public function iPressTheConfirmButton() {
+    // Wait for modal to be visible and try multiple selectors for the confirm button
+    $this->getSession()->wait(2000);
+    
+    $selectors = [
+      "//button[text()='Restore']",
+      "//input[@value='Restore']",
+      "//button[contains(@class, 'button--primary')]",
+      "//input[@type='submit'][contains(@class, 'button--primary')]",
+      ".ui-dialog-buttonset button:first-child"
+    ];
+    
+    foreach ($selectors as $selector) {
+      if (strpos($selector, '//') === 0) {
+        $element = $this->getSession()->getPage()->find('xpath', $selector);
+      } else {
+        $element = $this->getSession()->getPage()->find('css', $selector);
+      }
+      
+      if (!empty($element) && $element->isVisible()) {
+        try {
+          $element->click();
+          return;
+        } catch (\Exception $e) {
+          // Try next selector
+          continue;
+        }
+      }
+    }
+    
+    // If no button found, try JavaScript click
+    $this->getSession()->executeScript('
+      var buttons = document.querySelectorAll(".ui-dialog-buttonset button, .ui-dialog button");
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].textContent.includes("Restore")) {
+          buttons[i].click();
+          return;
+        }
+      }
+    ');
   }
 
 
@@ -1495,6 +1582,19 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
   }
 
   /**
+   * Submit the media library dialog.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example: When I submit the media library dialog
+   *
+   * @When /^(?:|I )submit (?:|the )media library dialog$/
+   */
+  public function iSubmitMediaLibraryDialog() {
+    $this->getSession()->executeScript("document.querySelector(\".media-library-select[value='dialog-submit']\").click();");
+  }
+
+  /**
    * Find an image with the title text attribute under a custom iframe.
    *
    * Varbase Context #varbase.
@@ -1633,26 +1733,33 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $found = FALSE;
     foreach ($elements as $element) {
-      $actual = $element->getText();
-      $actual = preg_replace('/\s+/u', ' ', $actual);
-      $regex = '/' . preg_quote($text, '/') . '/ui';
+      // Check if attribute matches (if specified)
+      $attributeMatches = TRUE;
+      if (!empty($attribute)) {
+        $attr = $element->getAttribute($attribute);
+        if (empty($attr) || strpos($attr, "$value") === FALSE) {
+          $attributeMatches = FALSE;
+        }
+      }
 
-      if (preg_match($regex, $actual)) {
-        $found = TRUE;
-        break;
+      // Only check text if attribute matches (or no attribute specified)
+      if ($attributeMatches) {
+        $actual = $element->getText();
+        $actual = preg_replace('/\s+/u', ' ', $actual);
+        $regex = '/' . preg_quote($text, '/') . '/ui';
+
+        if (preg_match($regex, $actual)) {
+          $found = TRUE;
+          break;
+        }
       }
     }
+
     if (!$found) {
-      throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
-    }
-
-    if (!empty($attribute)) {
-      $attr = $element->getAttribute($attribute);
-      if (empty($attr)) {
-        throw new \Exception(sprintf('The "%s" attribute is not present on the element "%s"', $attribute, $htmlTagName));
-      }
-      if (strpos($attr, "$value") === FALSE) {
-        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      if (!empty($attribute)) {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element with the "%s" attribute set to "%s"', $text, $htmlTagName, $attribute, $value));
+      } else {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
       }
     }
   }
@@ -1676,26 +1783,33 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
 
     $found = FALSE;
     foreach ($elements as $element) {
-      $actual = $element->getText();
-      $actual = preg_replace('/\s+/u', ' ', $actual);
-      $regex = '/' . preg_quote($text, '/') . '/ui';
+      // Check if attribute matches (if specified)
+      $attributeMatches = TRUE;
+      if (!empty($attribute)) {
+        $attr = $element->getAttribute($attribute);
+        if (empty($attr) || strpos($attr, "$value") === FALSE) {
+          $attributeMatches = FALSE;
+        }
+      }
 
-      if (preg_match($regex, $actual)) {
-        $found = TRUE;
-        break;
+      // Only check text if attribute matches (or no attribute specified)
+      if ($attributeMatches) {
+        $actual = $element->getText();
+        $actual = preg_replace('/\s+/u', ' ', $actual);
+        $regex = '/' . preg_quote($text, '/') . '/ui';
+
+        if (preg_match($regex, $actual)) {
+          $found = TRUE;
+          break;
+        }
       }
     }
+
     if ($found) {
-      throw new \Exception(sprintf('"%s" was found in the "%s" element', $text, $htmlTagName));
-    }
-
-    if (empty($attribute)) {
-      $attr = $element->getAttribute($attribute);
-      if (empty($attr)) {
-        throw new \Exception(sprintf('The "%s" attribute is present on the element "%s"', $attribute, $htmlTagName));
-      }
-      if (strpos($attr, "$value") === FALSE) {
-        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      if (!empty($attribute)) {
+        throw new \Exception(sprintf('"%s" was found in the "%s" element with the "%s" attribute set to "%s"', $text, $htmlTagName, $attribute, $value));
+      } else {
+        throw new \Exception(sprintf('"%s" was found in the "%s" element', $text, $htmlTagName));
       }
     }
   }
@@ -1717,38 +1831,61 @@ class VarbaseContext extends RawDrupalContext implements SnippetAcceptingContext
       throw new \Exception(sprintf('The element "%s" was not found in the page', $htmlTagName));
     }
 
-    $firstIndex = -1;
+    $targetElement = null;
 
-    $found = FALSE;
-    foreach ($elements as $index => $element) {
-      $actual = $element->getText();
-
-      $actual = preg_replace('/\s+/u', ' ', $actual);
-      $regex = '/' . preg_quote($text, '/') . '/ui';
-
-      if (preg_match($regex, $actual)) {
-        $found = TRUE;
-        $firstIndex = $index;
-        break;
+    foreach ($elements as $element) {
+      // Check if attribute matches (if specified)
+      $attributeMatches = TRUE;
+      if (!empty($attribute)) {
+        $attr = $element->getAttribute($attribute);
+        if (empty($attr) || strpos($attr, (string) $value) === FALSE) {
+          $attributeMatches = FALSE;
+        }
       }
-    }
-    if (!$found) {
-      throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
-    }
 
-    if (!empty($attribute)) {
-      $attr = $element->getAttribute($attribute);
-      if (empty($attr)) {
-        throw new \Exception(sprintf('The "%s" attribute is not present on the element "%s"', $attribute, $htmlTagName));
-      }
-      if (strpos($attr, (string) $value) === FALSE) {
-        throw new \Exception(sprintf('The "%s" attribute does not equal "%s" on the element "%s"', $attribute, $value, $htmlTagName));
+      // Only check text if attribute matches (or no attribute specified)
+      if ($attributeMatches) {
+        $actual = $element->getText();
+        $actual = preg_replace('/\s+/u', ' ', $actual);
+        $regex = '/' . preg_quote($text, '/') . '/ui';
+
+        if (preg_match($regex, $actual)) {
+          $targetElement = $element;
+          break;
+        }
       }
     }
 
-    if ($firstIndex !== -1) {
-      $elements[$firstIndex]->click();
+    if ($targetElement === null) {
+      if (!empty($attribute)) {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element with the "%s" attribute set to "%s"', $text, $htmlTagName, $attribute, $value));
+      } else {
+        throw new \Exception(sprintf('"%s" was not found in the "%s" element', $text, $htmlTagName));
+      }
     }
+
+    $targetElement->click();
+  }
+
+  /**
+   * Press a responsive preview device button.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example #1: When I press the "desktop" responsive preview device button
+   * Example #2:  And I press the "mobile" responsive preview device button
+   *
+   * @When /^I press the "(?P<deviceName>[^"]*)" responsive preview device button$/
+   */
+  public function iPressResponsivePreviewDeviceButton($deviceName) {
+
+    $button = $this->getSession()->getPage()->find('xpath', "//*[@data-responsive-preview-name='" . $deviceName . "']");
+    
+    if (empty($button)) {
+      throw new \Exception(sprintf('The "%s" responsive preview device option was not found in the page', $deviceName));
+    }
+
+    $this->getSession()->executeScript('document.querySelector(\'[data-responsive-preview-name="' . $deviceName . '"]\').click();');
 
   }
 
@@ -2608,6 +2745,34 @@ JS;
   }
 
   /**
+   * Open the top bar page actions menu from the top navigation.
+   *
+   * Varbase Context #varbase.
+   *
+   * Example 1: When I open top bar page actions
+   * Example 2:  And I open the top bar page actions menu
+   * Example 3:  And open top bar page actions
+   * Example 4: When I hit the more actions
+   * Example 5:  And hit more actions
+   *
+   * @When /^(?:|I )open (?:|the )top bar page actions(?:| menu)$/
+   * @When /^(?:|I )hit (?:|the )more actions(?:| button)$/
+   */
+  public function iOpenTopBarPageActions() {
+    $topBarPageActionsButton = $this->getSession()->getPage()->findAll('css', 'button.toolbar-button.toolbar-button--icon--dots');
+
+    if (!empty($topBarPageActionsButton)
+      && is_array($topBarPageActionsButton)
+      && count($topBarPageActionsButton) > 0) {
+
+      $topBarPageActionsButton[0]->click();
+    }
+    else {
+      throw new \Exception(sprintf('The top bar page actions button was not found in the top navigation'));
+    }
+  }
+
+  /**
    * Check if can see the accessibility checker.
    *
    * Varbase Context #varbase.
@@ -2656,6 +2821,7 @@ JS;
    * @When /^(?:|I )close (?:|the )(?:|accessibility|a11y )checker$/
    */
   public function iCloseTheAccessibilityChecker() {
+    $this->getSession()->wait(5000, 'document.querySelector("body > ed11y-element-panel")');
     $page = $this->getSession()->getPage();
     $accessibilityCheckerClose = $page->findAll('xpath', "//ed11y-element-panel");
     if (empty($accessibilityCheckerClose)) {

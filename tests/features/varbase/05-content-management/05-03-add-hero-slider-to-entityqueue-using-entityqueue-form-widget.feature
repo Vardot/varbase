@@ -75,7 +75,7 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And I select "Delete selected entities / translations" from "action"
      When I press "Apply to selected items"
       And wait 3s
-     Then I should see "Delete entities (2)"
+     Then I should see "Delete content item entities (2)"
 
     # Check that the 2 hero sliders had beend removed from the queue.
      When I go to "/admin/structure/entityqueue/varbase_heroslider/varbase_heroslider"

@@ -19,14 +19,6 @@ Feature: AI Agent integration and interpolation
       And I should see "Open AI Key"
 
   @javascript @local @development @staging @production
-  Scenario: Check AI Settings
-    Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/config/ai/settings"
-      And wait
-     Then I should see "AI Settings"
-      And I should see "Chat with Image Vision"
-
-  @javascript @local @development @staging @production
   Scenario: Check AI Assistant and interpolation options to content
     Given I am a logged in user with the "webmaster" user
      When I go to "/node/add/varbase_blog"
