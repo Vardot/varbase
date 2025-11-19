@@ -3,18 +3,17 @@ Feature: File & Media Management - Assets Management - Image media and their usa
       I want to be able to see the list of files
       So that I will be able to manage files, see where they have been used in contents.
 
-  Background:
-    Given I am a logged in user with the "Site admin" user
-
   @javascript @local @development @staging @production
   Scenario: Check if content admins can access the content files page
-     When I go to "admin/content/media"
+    Given I am a logged in user with the "Site admin" user
+     When I go to "/admin/content/media"
       And wait
      Then I should see "Add media"
       And I should not see "Access denied"
 
   @javascript @local @development @staging @production
   Scenario: Check if we do have a file named Flag Earth, if not then upload the file dependently
+    Given I am a logged in user with the "Site admin" user
      When I go to "/media/add/image"
       And wait
      Then I should see "Allowed types: png gif jpg jpeg webp."
@@ -32,12 +31,13 @@ Feature: File & Media Management - Assets Management - Image media and their usa
       And wait
      Then I should see "Flag Earth"
       And wait
-     When I go to "admin/content/media"
+     When I go to "/admin/content/media"
      Then I should see "Add media"
       And I should see the "Edit" in the "Flag Earth" row
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can edit files
+    Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content/media"
       And wait
      Then I should see "Add media"
@@ -56,6 +56,7 @@ Feature: File & Media Management - Assets Management - Image media and their usa
 
   @javascript @local @development @staging @production
   Scenario: Check if content admins can delete files
+    Given I am a logged in user with the "Site admin" user
      When I go to "/admin/content/media"
       And wait
      Then I should see "Add media"
@@ -70,7 +71,7 @@ Feature: File & Media Management - Assets Management - Image media and their usa
      When I click "More actions"
       And wait 1s
      Then I should see "Delete"
-     When I click "edit-delete"
+     When I click "gin-sticky-edit-delete"
       And wait
      Then I should see "This action cannot be undone."
      When I click the delete button
