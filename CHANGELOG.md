@@ -34,7 +34,7 @@ This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on prod
 
 * [#3553229] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Search** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553239] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase SEO** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3553266] chore(tooling): Update **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Workflow** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553266] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Workflow** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3551364] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Heroslider** module to align with **Drupal Core** with GitLab CI/CD
 * [#3553122] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Header** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553137] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Hero Slider** module to align with **Drupal Core** with **GitLab CI/CD**
@@ -49,14 +49,13 @@ This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on prod
 * [#3550099] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Bootstrap Paragraphs** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3551325] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase FAQs** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3551698] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3550172] chore(test): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Carousels** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3553624] fix(api): Improve **Default JSON:API Resource Overrides** to Limit Vulnerabilities in Varbase API
+* [#3550172] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Carousels** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553117] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Demo Assets** module to align with **Drupal Core** with **GitLab CI/CD**
-
-### Fixes since [Varbase 10.0.7](https://www.drupal.org/project/varbase/releases/10.0.7):
-
 * [#3550266] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Core** module to align with Drupal Core with GitLab CI/CD
 * [#3551403] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Layout Builder** module to align with **Drupal Core** with **GitLab CI/CD**
+
+### Fixes since [Varbase 10.0.7](https://www.drupal.org/project/varbase/releases/10.0.7):
+* [#3553624] fix(api): Improve **Default JSON:API Resource Overrides** to Limit Vulnerabilities in Varbase API
 * [#3553390] fix(a11y): Changed External Links in **Varbase Blog** site section default Content to Comply with **WCAG 2.2 Accessibility Standards**
 * [#3553367] fix(a11y): Changed Default Settings for External Links in Demo Content to Not Alter Links with a Default Target Value
 * [#3553410] fix(a11y): Integrate **Varbase Bootstrap Button Link** with **External Links** Do not alter links with a default target value option to comply with **WCAG 2.2 Accessibility Standards**
@@ -64,6 +63,7 @@ This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on prod
 * [#3557605] fix: Background image field not working due an issue with drimage_improve By: [@yasmeensalah](https://www.drupal.org/u/yasmeensalah)
 * [#3542882] fix: extra spacing in email template when header is empty by [odai atieh](https://www.drupal.org/u/odai-atieh)
 * [#3555624] fix: Added media_edit_media_modal plugin configuration to basic_html and full_html editors
+* [#3558776] fix: Chrome 142.0.7444.162 (64-bit) regression causing Social Media Menu icons to break layout in Page Footer component
 
 ---
 
