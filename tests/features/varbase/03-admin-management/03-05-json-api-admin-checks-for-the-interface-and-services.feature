@@ -56,7 +56,24 @@ Feature: Check JSON API admin interface and services and Varbase API settings
       And I should see "Rest"
       And I should see "JSON:API"
 
-  @javascript @local @development @staging @production
+  @javascript  @local @development @staging @production
+  Scenario: Upload a Media entity test for API
+    Given I am a logged in user with the "Site admin" user
+     When I go to "/media/add/image"
+      And wait
+     Then I should see "Allowed types: png gif jpg jpeg."
+     When I attach the file "flag-earth.jpg" to "edit-field-media-image-0-upload"
+      And wait
+      And I press the "Save" button
+      And wait
+      And I fill in "Media entity test" for "field_media_image[0][alt]"
+      And I fill in "Media entity test" for "field_media_image[0][title]"
+      And I fill in "Media entity test" for "name[0][value]"
+      And I press the "Save" button
+      And wait
+     Then I should see "Media entity test"
+
+  @javascript  @local @development @staging @production
   Scenario: Add a term "space" tag term for JSON:API to test.
     Given I am a logged in user with the "Site admin" user
      When I go to "/admin/structure/taxonomy/manage/tags/add"
@@ -85,9 +102,9 @@ Feature: Check JSON API admin interface and services and Varbase API settings
      When I go to "/admin/content/media"
       And wait
      Then I should see "Media"
-      And I should not see the "View JSON" operation for the "Skyscraper" media
-      And I should see the "View API Docs" operation for the "Skyscraper" media
-      And I should see the "Edit" operation for the "Skyscraper" media
+      And I should not see the "View JSON" operation for the "Media entity test" media
+      And I should see the "View API Docs" operation for the "Media entity test" media
+      And I should see the "Edit" operation for the "Media entity test" media
 
      When I go to "/admin/structure/taxonomy/manage/tags/overview"
       And wait
@@ -99,10 +116,10 @@ Feature: Check JSON API admin interface and services and Varbase API settings
      When I go to "/admin/structure/entityqueue"
       And wait
      Then I should see "Entityqueues"
-      And I should not see the "View JSON" operation for the "Hero Slider" entity
-      And I should not see the "View API Docs" operation for the "Hero Slider" entity
-      But I should not see the "Edit items" operation for the "Hero Slider" entity
-
+      And I should not see the "View JSON" operation for the "Media Hero Slider" entity
+      And I should not see the "View API Docs" operation for the "Media Hero Slider" entity
+      But I should not see the "Edit items" operation for the "Media Hero Slider" entity
+      
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Content Admin users can not access "View JSON" and "View API Docs" entity operations
@@ -118,9 +135,9 @@ Feature: Check JSON API admin interface and services and Varbase API settings
      When I go to "/admin/content/media"
       And wait
      Then I should see "Media"
-      And I should not see the "View JSON" operation for the "Skyscraper" media
-      And I should not see the "View API Docs" operation for the "Skyscraper" media
-      But I should see the "Edit" operation for the "Skyscraper" media
+      And I should not see the "View JSON" operation for the "Media entity test" media
+      And I should not see the "View API Docs" operation for the "Media entity test" media
+      But I should see the "Edit" operation for the "Media entity test" media
 
      When I go to "/admin/structure/taxonomy/manage/tags/overview"
       And wait
@@ -132,9 +149,9 @@ Feature: Check JSON API admin interface and services and Varbase API settings
      When I go to "/admin/structure/entityqueue"
       And wait
      Then I should see "Entityqueues"
-      And I should not see the "View JSON" operation for the "Hero Slider" entity
-      And I should not see the "View API Docs" operation for the "Hero Slider" entity
-      But I should not see the "Edit items" operation for the "Hero Slider" entity
+      And I should not see the "View JSON" operation for the "Media Hero Slider" entity
+      And I should not see the "View API Docs" operation for the "Media Hero Slider" entity
+      But I should not see the "Edit items" operation for the "Media Hero Slider" entity
 
 
   @javascript @check @local @development @staging @production
@@ -151,9 +168,9 @@ Feature: Check JSON API admin interface and services and Varbase API settings
      When I go to "/admin/content/media"
       And wait
      Then I should see "Media"
-      And I should not see the "View JSON" operation for the "Skyscraper" media
-      And I should not see the "View API Docs" operation for the "Skyscraper" media
-      But I should see the "Edit" operation for the "Skyscraper" media
+      And I should not see the "View JSON" operation for the "Media entity test" media
+      And I should not see the "View API Docs" operation for the "Media entity test" media
+      But I should see the "Edit" operation for the "Media entity test" media
 
      When I go to "/admin/structure/taxonomy/manage/tags/overview"
       And wait
