@@ -1,9 +1,8 @@
 # 9.1.12
 
+This is a **patch (bugfix) release of Varbase 9** and is ready for use on production sites. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.0.x).
+
 ### Highlighted important changes since [Varbase 9.1.11](https://www.drupal.org/project/varbase/releases/9.1.11):
-
-[![Varbase 9.1.12 CircleCI Build Passing](https://app.circleci.com/pipelines/github/Vardot/varbase)](/files/issues/2021-01-24/circleci-passing-h24.png)
-
 * Updated **Drupal Core** to [10.5.6](https://www.drupal.org/project/drupal/releases/10.5.6)
 * Officially paved the way for Automatic Updates in Varbase projects.
 
@@ -12,13 +11,11 @@
 > Configuring secure automatic updates in **Varbase ~9.1.0** using **Drupal ~10.5**, **[Automatic Updates](https://www.drupal.org/docs/8/update/automatic-updates)**, **[Package Manager](https://www.drupal.org/docs/develop/core-modules-and-themes/core-modules/package-manager-module)** module and **[The Update Framework (TUF)](https://theupdateframework.io/)**.
 
 ### Added since [Varbase 9.1.11](https://www.drupal.org/project/varbase/releases/9.1.11):
-
 * All new features are in **Varbase ~10.1.0**
 
 ### Changed since [Varbase 9.1.11](https://www.drupal.org/project/varbase/releases/9.1.11):
-
-* Ensure only `drupal/core` is required in `allowed-packages` for `drupal-scaffold` to avoid conflicts with **Automatic Updates**, **Package Manager**, and **TUF** [#313](https://github.com/Vardot/varbase-project/issues/313)
-* Refactor `install-varbase` **ddev** command: Add `minimal`/`full` options with improved structure [#309](https://github.com/Vardot/varbase-project/issues/309)
+* Ensured only `drupal/core` is required in `allowed-packages` for `drupal-scaffold` to avoid conflicts with **Automatic Updates**, **Package Manager**, and **TUF** [#313](https://github.com/Vardot/varbase-project/issues/313)
+* Refactored `install-varbase` **ddev** command: Add `minimal`/`full` options with improved structure [#309](https://github.com/Vardot/varbase-project/issues/309)
 
 > #### Option Examples
 >
@@ -27,29 +24,27 @@
 > * `ddev install-varbase minimal`:  Core Varbase installation with all extra components explicitly disabled
 
 ### Updates since [Varbase 9.1.11](https://www.drupal.org/project/varbase/releases/9.1.11):
-
-* [#3550266] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Core** module to align with Drupal Core with GitLab CI/CD
-* [#3553266] chore(tooling): Update **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Workflow** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550266] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Core** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3553266] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Workflow** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553239] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase SEO** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3551403] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Layout Builder** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3550183] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Auth** module to align with **Drupal Core** with GitLab CI/CD
+* [#3550183] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Auth** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553229] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Search** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553137] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Hero Slider** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553122] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media Header** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3550073] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Blog** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3549187] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to **4.9.3** for **Varbase API** module to align with Drupal Core with GitLab CI/CD
-* [#3550337] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Editor** module to align with **Drupal Core** with GitLab CI/CD
+* [#3549187] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase API** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550337] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Editor** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3551698] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Media** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3550172] chore(test): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Carousels** module to align with **Drupal Core** with **GitLab CI/CD**
+* [#3550172] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Carousels** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3551392] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Landing Page (Paragraphs)** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3550099] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Bootstrap Paragraphs** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3553260] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Total Control Dashboard** module to align with **Drupal Core** with GitLab CI/CD
+* [#3553260] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Total Control Dashboard** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3551325] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase FAQs** module to align with **Drupal Core** with **GitLab CI/CD**
 * [#3553244] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Style Guide** module to align with **Drupal Core** with **GitLab CI/CD**
-* [#3550354] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Email** module to align with Drupal Core with GitLab CI/CD
+* [#3550354] chore(tooling): Updated **Node.js** to `>=20.0` and **Yarn** to `4.9.3` for **Varbase Email** module to align with **Drupal Core** with **GitLab CI/CD**
 
 ### Fixes since [Varbase 9.1.11](https://www.drupal.org/project/varbase/releases/9.1.11):
-
 * [#3553367] fix(a11y): Changed Default Settings for External Links in Demo Content to Not Alter Links with a Default Target Value
 * [#3553624] fix(api): Improve **Default JSON:API Resource Overrides** to Limit Vulnerabilities in Varbase API
 

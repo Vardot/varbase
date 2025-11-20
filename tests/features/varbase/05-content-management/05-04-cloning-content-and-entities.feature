@@ -60,7 +60,7 @@ Feature: Content Management - Cloning content and entities
       And I select "Delete selected entities" from "Action"
       And I press "Apply to selected items"
       And I wait for 5s
-     Then I should see "Delete entities (1)"
+     Then I should see "Delete content item entities (1)"
      When I go to "/admin/content"
       And wait
      Then I should see "Content"

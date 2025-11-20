@@ -25,7 +25,7 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
   Scenario: Add a Test hero sliders to the heroslider entity queue them remove them
     Given I am a logged in user with the "Super admin" user
 
-     # Add the "Test hero slier #1" content and to the hero slider queue.
+    # Add the "Test hero slier #1" content and to the hero slider queue.
      When I go to "/node/add/varbase_heroslider_media"
       And I wait max of 5s for the page to be ready and loaded
      Then I should see "Create Hero slider"
@@ -52,7 +52,7 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And wait
      Then I should see "Test hero slider #1"
 
-     # Add the "Test hero slier #2" content and to the hero slider queue.
+    # Add the "Test hero slier #2" content and to the hero slider queue.
      When I go to "/node/add/varbase_heroslider_media"
       And I wait max of 2s for the page to be ready and loaded
      Then I should see "Create Hero slider"
@@ -79,13 +79,13 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And wait
      Then I should see "Test hero slider #2"
 
-     # Check that both hero sliders are listed in the queue.
+    # Check that both hero sliders are listed in the queue.
      When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And wait
      Then I should see "Test hero slider #1"
       And I should see "Test hero slider #2"
 
-     # Delete both sliders.
+    # Delete both sliders.
      When I go to "/admin/content"
       And wait
      Then I should see "Content"
@@ -94,9 +94,9 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And I select "Delete selected entities / translations" from "action"
      When I press "Apply to selected items"
       And wait 3s
-     Then I should see "Delete entities (2)"
+     Then I should see "Delete content item entities (2)"
 
-     # Check that the 2 hero sliders had beend removed from the queue.
+    # Check that the 2 hero sliders had beend removed from the queue.
      When I go to "/admin/structure/entityqueue/varbase_heroslider_media/varbase_heroslider_media"
       And wait 3s
      Then I should not see "Test hero slider #1"
