@@ -38,7 +38,7 @@ function varbase_development_get_editable_config_names() {
  * @param array $install_state
  *   Install state.
  */
-function varbase_development_build_formbit(array &$formbit, FormStateInterface &$form_state, array &$install_state = NULL) {
+function varbase_development_build_formbit(array &$formbit, FormStateInterface &$form_state, ?array &$install_state = NULL) {
   $formbit['error_level'] = [
     '#type' => 'radios',
     '#title' => t('Error messages to display'),

@@ -79,7 +79,7 @@ class DevelopmentToolsAssemblerForm extends FormBase {
    * @return array
    *   Development tools modules.
    */
-  public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state, ?array &$install_state = NULL) {
     $form['#title'] = $this->t('Development tools');
     $form['development_tools_introduction'] = [
       '#weight' => -1,

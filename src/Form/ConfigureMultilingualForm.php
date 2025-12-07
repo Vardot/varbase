@@ -92,7 +92,7 @@ class ConfigureMultilingualForm extends FormBase implements ContainerInjectionIn
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state, ?array &$install_state = NULL) {
 
     $standard_languages = LanguageManager::getStandardLanguageList();
     $select_options = [];

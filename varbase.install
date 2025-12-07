@@ -63,7 +63,7 @@ function varbase_install() {
   // * Rebuild the menu router based on all rebuilt data.
   drupal_flush_all_caches();
 
-  // If Varbase Tour were enabled then redirect to the homepage with active tour.
+  // Redirect to the homepage with active tour.
   if (isset($GLOBALS['homepage_with_varbase_tour'])
     && $GLOBALS['homepage_with_varbase_tour'] == TRUE) {
     $homepage_with_tour = "/?tour";

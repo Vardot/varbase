@@ -33,7 +33,7 @@ function varbase_auth_get_editable_config_names() {
  * @param array $install_state
  *   Install state.
  */
-function varbase_auth_build_formbit(array &$formbit, FormStateInterface &$form_state, array &$install_state = NULL) {
+function varbase_auth_build_formbit(array &$formbit, FormStateInterface &$form_state, ?array &$install_state = NULL) {
   $formbit['social_auth_type'] = [
     '#type' => 'checkboxes',
     '#title' => t('Social authentications to enable'),
