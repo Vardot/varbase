@@ -79,7 +79,7 @@ class AssemblerForm extends FormBase {
    * @return array
    *   Extra components modules.
    */
-  public function buildForm(array $form, FormStateInterface $form_state, array &$install_state = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state, ?array &$install_state = NULL) {
     $form['#title'] = $this->t('Recipes');
     $form['extra_components_introduction'] = [
       '#weight' => -1,

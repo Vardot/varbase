@@ -80,7 +80,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
     ConfigManagerInterface $config_manager,
     ModuleHandlerInterface $module_handler,
     Connection $database,
-    CachedDiscoveryClearerInterface $plugin_cache_clearer
+    CachedDiscoveryClearerInterface $plugin_cache_clearer,
   ) {
     $this->configFactory = $config_factory;
     $this->configManager = $config_manager;

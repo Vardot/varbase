@@ -33,7 +33,7 @@ function varbase_ai_get_editable_config_names() {
  * @param array $install_state
  *   Install state.
  */
-function varbase_ai_build_formbit(array &$formbit, FormStateInterface &$form_state, array &$install_state = NULL) {
+function varbase_ai_build_formbit(array &$formbit, FormStateInterface &$form_state, ?array &$install_state = NULL) {
   $formbit['key_value'] = [
     '#type' => 'textfield',
     '#title' => ('API Key'),

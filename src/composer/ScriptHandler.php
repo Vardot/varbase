@@ -169,7 +169,7 @@ class ScriptHandler {
       copy($drupal_root . '/profiles/contrib/varbase/src/assets/development.services.yml', $drupal_root . '/sites/development.services.yml');
     }
 
-    // Alter the 'default.services.yml' file to have 'cookie_lifetime: 0' not any other values.
+    // Alter the 'default.services.yml' file to have 'cookie_lifetime: 0'.
     if ($fs->exists($drupal_root . '/sites/default/default.services.yml')) {
       $default_services_path = $drupal_root . '/sites/default/default.services.yml';
       $default_services_contents = file_get_contents($default_services_path);
@@ -181,7 +181,7 @@ class ScriptHandler {
       }
     }
 
-    // Alter the 'services.yml' file to have 'cookie_lifetime: 0' not any other values.
+    // Alter the 'services.yml' file to have 'cookie_lifetime: 0'.
     if ($fs->exists($drupal_root . '/sites/default/services.yml')) {
       $services_path = $drupal_root . '/sites/default/services.yml';
       $services_contents = file_get_contents($services_path);
