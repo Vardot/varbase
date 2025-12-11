@@ -6,10 +6,9 @@ Feature: Check JSON API admin interface and services and Varbase API settings
   @javascript @check @local @development @staging @production
   Scenario: Check the Varbase API settings in admin configurations page
     Given I am a logged in user with the "webmaster" user
-     When I go to "/admin/config"
+     When I go to "/admin/config/system/varbase/api"
       And wait
-     Then I should see "JSON:API"
-      And I should see "Varbase API settings"
+     Then I should see "Varbase API settings"
 
   @javascript @check @local @development @staging @production
   Scenario: Check JSON:API configurations

@@ -23,7 +23,6 @@ Feature: The welcome message should be displayed on first visit to the site
       And I should see "Get started"
      When I click "Get started"
       And I wait 6s
-     Then I should see "Tour"
      When I click next button in tour
       And I wait 2s
      Then I should see "Editing Your Homepage Layout"

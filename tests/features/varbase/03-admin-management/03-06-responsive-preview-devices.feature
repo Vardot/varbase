@@ -33,6 +33,7 @@ Feature: Preview the site in a number of responsive devices
       And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
       And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
      When I press the "mobile" responsive preview device button
+      And I wait for AJAX to finish
       And I wait 3s
      Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
@@ -46,6 +47,7 @@ Feature: Preview the site in a number of responsive devices
       And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
       And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
      When I press the "mobile" responsive preview device button
+      And I wait for AJAX to finish
       And I wait 3s
      Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
@@ -59,6 +61,7 @@ Feature: Preview the site in a number of responsive devices
       And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
       And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
      When I press the "mobile" responsive preview device button
+      And I wait for AJAX to finish
       And I wait 3s
      Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
@@ -72,6 +75,7 @@ Feature: Preview the site in a number of responsive devices
       And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
       And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
      When I press the "mobile" responsive preview device button
+      And I wait for AJAX to finish
       And I wait 3s
      Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
@@ -85,5 +89,6 @@ Feature: Preview the site in a number of responsive devices
       And I should see "Desktop" in the "button" element with the "data-responsive-preview-name" attribute set to "desktop"
       And I should see "Mobile" in the "button" element with the "data-responsive-preview-name" attribute set to "mobile"
      When I press the "mobile" responsive preview device button
+      And I wait for AJAX to finish
       And I wait 3s
      Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
