@@ -70,9 +70,14 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
      When I go to "/admin/content"
       And wait
      Then I should see "Content"
-     When I check the box "Test hero slider #1"
-      And I check the box "Test hero slider #2"
-      And I select "Delete selected entities / translations" from "action"
+     When I fill in "Test hero slider" for "Title"
+      And I press the "Filter" button
+      And wait 3s
+     Then I should see "Test hero slider #1"
+      And I should see "Test hero slider #2"
+      And I check the box "edit-views-bulk-operations-bulk-form-0"
+      And I check the box "edit-views-bulk-operations-bulk-form-1"
+      And I select "Delete selected entities" from "Action"
      When I press "Apply to selected items"
       And wait 3s
      Then I should see "Delete content item entities (2)"
