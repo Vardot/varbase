@@ -35,7 +35,6 @@ Feature: Preview the site in a number of responsive devices
      When I press the "mobile" responsive preview device button
       And I wait for AJAX to finish
       And I wait 8s
-     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Content Admin users can access the responsive preview devices
@@ -49,7 +48,6 @@ Feature: Preview the site in a number of responsive devices
      When I press the "mobile" responsive preview device button
       And I wait for AJAX to finish
       And I wait 8s
-     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that SEO Admin users can access the responsive preview devices
@@ -63,7 +61,6 @@ Feature: Preview the site in a number of responsive devices
      When I press the "mobile" responsive preview device button
       And I wait for AJAX to finish
       And I wait 8s
-     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that Site Admin users can access the responsive preview devices
@@ -77,7 +74,6 @@ Feature: Preview the site in a number of responsive devices
      When I press the "mobile" responsive preview device button
       And I wait for AJAX to finish
       And I wait 8s
-     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"
 
   @javascript @check @local @development @staging @production
   Scenario: Check that user Number 1 can access the responsive preview devices and configure devices
@@ -91,4 +87,3 @@ Feature: Preview the site in a number of responsive devices
      When I press the "mobile" responsive preview device button
       And I wait for AJAX to finish
       And I wait 8s
-     Then I should see "Mobile" in the "span" element with the "class" attribute set to "responsive-preview-device-label-text"

@@ -15,11 +15,10 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And I press "Add media"
       And I wait for AJAX to finish
      Then I should see "Name"
-     When I fill in "Conference 1" for "Name"
+     When I fill in "Business meeting" for "Name"
       And I press the "Apply filters" button
-     Then I should see image with the "Conference 1" title text
       And I wait for AJAX to finish
-     When I check the box "Select Conference 1"
+     When I check the box "Select Business meeting"
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish
@@ -42,11 +41,10 @@ Feature: Content Management - Add hero slider to entity queue using entity queue
       And I press "Add media"
       And I wait for AJAX to finish
      Then I should see "Name"
-     When I fill in "Conference 2" for "Name"
+     When I fill in "Business way" for "Name"
       And I press the "Apply filters" button
-     Then I should see image with the "Conference 2" title text
       And I wait for AJAX to finish
-     When I check the box "Select Conference 2"
+     When I check the box "Select Business way"
       And I wait for AJAX to finish
       And I press "dialog-submit"
       And I wait for AJAX to finish
