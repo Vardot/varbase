@@ -23,7 +23,7 @@ Feature: Content Structure - Landing page (Paragraphs) - Varbase text and image 
      When I fill in "Skyscraper" for "Name"
       And I press the "Apply filters" button
       And I wait for AJAX to finish
-     Then I should see image with the "Glass skyscraper reflecting clouds" title text
+     Then I should see image with the "Skyscraper" title text
       And I wait for AJAX to finish
      When I check the box "Select Skyscraper"
       And I wait for AJAX to finish
@@ -42,4 +42,4 @@ Feature: Content Structure - Landing page (Paragraphs) - Varbase text and image 
       And I press the "Save as" button
       And wait
      Then I should see "In eros ipsum, mattis vitae vulputate eu, blandit"
-      And I should see image with the "Tall glass skyscraper with cloudy sky reflection." alt text
+      And I should see image with the "Skyscraper" alt text
