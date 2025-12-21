@@ -18,14 +18,13 @@ Feature: The welcome message should be displayed on first visit to the site
     Given I am a logged in user with the "webmaster" user
       And I go to "/?welcome"
       And I wait 2s
-      And I scroll to the bottom
      Then I should see "Welcome to "
       And I should see "Get started"
      When I click "Get started"
       And I wait 6s
      Then I should see "Tour"
      When I click next button in tour
-      And I wait 10s
+      And I wait 2s
      Then I should see "Editing Your Homepage Layout"
       And I should see "You can change your homepage layout and customize what appears in it from the More Actions navigation top bar button"
      When I click next button in tour
