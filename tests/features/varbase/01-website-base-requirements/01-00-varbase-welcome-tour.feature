@@ -14,6 +14,29 @@ Feature: The welcome message should be displayed on first visit to the site
      Then I should see "The configuration options have been saved."
 
   @javascript @local @development @staging @production
+  Scenario: Check if the Homepage tour was sat ready to navigate throw
+    Given I am a logged in user with the "webmaster" user
+      And I go to homepage
+      And I wait 2s
+     Then I should see "Tour"
+     When I press "Tour"
+      And I wait 2s
+     Then I should see "You can always switch on or off the tour from this button."
+     When I click next button in tour
+      And I wait 2s
+     Then I should see "Editing Your Homepage Layout"
+      And I should see "You can change your homepage layout and customize what appears in it from the More Actions navigation top bar button"
+     When I click next button in tour
+      And I wait 2s
+     Then I should see "Configure Your Site Structure"
+     When I click next button in tour
+      And I wait 2s
+     Then I should see "Define Your Site Settings"
+     When I click next button in tour
+      And I wait 2s
+     Then I should see "Site Content"
+
+  @javascript @local @development @staging @production
   Scenario: Check if welcome message and tour are displayed
     Given I am a logged in user with the "webmaster" user
       And I go to "/?welcome"
