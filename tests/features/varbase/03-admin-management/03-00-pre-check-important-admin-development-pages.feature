@@ -9,32 +9,26 @@ Feature: Pre-check important administrator and development pages
   @javascript @check @local @development @staging @production
   Scenario: Check the content page
      When I go to "/admin/content"
-      And wait
+      And wait 2s
      Then I should see "Content"
 
   @javascript @check @local @development @staging @production
   Scenario: Check the Homepage content with Layout Builder
      When I go to "/admin/content"
-      And wait
+      And wait 2s
      Then I should see "Homepage"
       And I should see "Landing page (Layout Builder)" in the "Homepage" row
 
   @javascript @check @local @development @staging @production
   Scenario: Check Files admin page
      When I go to "/admin/content/files"
-      And wait
+      And wait 2s
      Then I should see "Files"
 
   @javascript @check @local @development @staging @production
-  Scenario: Check Media Grid admin page
+  Scenario: Check Media admin page
      When I go to "/admin/content/media"
-      And wait
-     Then I should see "Media"
-
-  @javascript @check @local @development @staging @production
-  Scenario: Check Media Table admin page
-     When I go to "/admin/content/media"
-      And wait
+      And wait 2s
      Then I should see "Media"
       And I should see "Thumbnail"
       And I should see "Cover Image"
