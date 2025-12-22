@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.1.x.svg)](https://app.circleci.com/pipelines/github/Vardot/varbase/1222/workflows/c28a6034-c759-4e49-96a4-ac7c26d09296) **Varbase 10.1.0-rc1**
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.1.x.svg)](https://app.circleci.com/pipelines/github/Vardot/varbase/1250/workflows/8e26a6d1-569d-4e16-a89c-6b8781f72ca5) **Varbase 10.1.0**
 
 [![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
 
@@ -33,7 +33,7 @@ instructions.
 
 To install the most recent stable release of **Varbase `10.1.x`** run this command:
 ```
-composer create-project Vardot/varbase-project:10.1.0-rc1 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project Vardot/varbase-project:~10.1.0 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of **Varbase `10.1.x`** run this command:

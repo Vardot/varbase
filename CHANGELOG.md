@@ -1,3 +1,54 @@
+# 10.1.0
+
+### Highlighted important changes since [10.1.0-rc1](https://www.drupal.org/project/varbase/releases/10.1.0-rc1):
+* [#3561803](https://www.drupal.org/i/3561803) chore: Update **Drupal Core** to `~11.3.0`
+* [#3563146](https://www.drupal.org/i/3563146) chore: Change default PHP version to **PHP 8.4** for **Varbase**
+
+### Added since [10.1.0-rc1](https://www.drupal.org/project/varbase/releases/10.1.0-rc1):
+* [#3560774](https://www.drupal.org/i/3560774) feat: Add responsive inline layout for AI Generate button with alt-to-title auto-copy functionality
+* [#3563972](https://www.drupal.org/i/3563972) chore: Add **Navigation Dashboard icon block** to the Navigation layout block in **Varbase Admin default recipe**
+
+### Changed since [10.1.0-rc1](https://www.drupal.org/project/varbase/releases/10.1.0-rc1):
+* [#3561315](https://www.drupal.org/i/3561315) feat: Typography Page in Varbase Storybook to Use Bootstrap Utility Classes and Showcase (Text, heading, links, ...) Components
+* [#3563965](https://www.drupal.org/i/3563965) chore: Switch from custom Varbase Dashboard icon to the **Dashboard block icon**, which was messing
+* [#3558512](https://www.drupal.org/i/3558512) chore: Remove Deprecated YouTube and Vimeo Player Libraries Usage By: [Mohammad-Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+* [#3561461](https://www.drupal.org/i/3561461) chore: Remove deprecated **Webform Bootstrap** module from default **Varbase Webform recipe**
+* [#3564346](https://www.drupal.org/i/3564346) feat: Remove **BigPipe** from the default **Varbase Core recipe**
+
+### Updates since [10.1.0-rc1](https://www.drupal.org/project/varbase/releases/10.1.0-rc1):
+* [#3561815](https://www.drupal.org/i/3561815) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Core**
+* [#3561814](https://www.drupal.org/i/3561814) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Components**
+* [#3561805](https://www.drupal.org/i/3561805) chore: Update **Drupal Core** to `~11.3.0` for **Varbase API**
+* [#3561804](https://www.drupal.org/i/3561804) chore: Update **Drupal Core** to `~11.3.0` for **Varbase AI**
+* [#3561834](https://www.drupal.org/i/3561834) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Media**
+* [#3561820](https://www.drupal.org/i/3561820) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Editor**
+* [#3561831](https://www.drupal.org/i/3561831) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Landing Page (Paragraphs)**
+* [#3561833](https://www.drupal.org/i/3561833) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Layout Builder**
+* [#3561809](https://www.drupal.org/i/3561809) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Bootstrap Paragraphs**
+* [#3561830](https://www.drupal.org/i/3561830) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Heroslider**
+* [#3561811](https://www.drupal.org/i/3561811) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Carousels**
+* [#3561808](https://www.drupal.org/i/3561808) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Blog (Corporate Blog)**
+* [#3561840](https://www.drupal.org/i/3561840) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Search**
+* [#3561842](https://www.drupal.org/i/3561842) chore: Update **Drupal Core** to `~11.3.0` for **Varbase SEO**
+* [#3561843](https://www.drupal.org/i/3561843) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Social Single Sign-On**
+* [#3561816](https://www.drupal.org/i/3561816) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Dashboards**
+* [#3561822](https://www.drupal.org/i/3561822) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Email**
+* [#3561848](https://www.drupal.org/i/3561848) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Workflow**
+* [#3561818](https://www.drupal.org/i/3561818) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Demo**
+* [#3561853](https://www.drupal.org/i/3561853) chore: Update **Drupal Core** to `~11.3.0` for **Vartheme BS5**
+* [#3561851](https://www.drupal.org/i/3561851) chore: Update **Drupal Core** to `~11.3.0` for **View Modes Inventory**
+* [#3561836](https://www.drupal.org/i/3561836) chore: Update **Drupal Core** to `~11.3.0` for **Varbase Media Demo Assets**
+
+### Fixes since [10.1.0-rc1](https://www.drupal.org/project/varbase/releases/10.1.0-rc1):
+* [#3559604](https://www.drupal.org/i/3559604) fix: accessibility for repeated **Read Article** links by adding contextual aria-labels in **Varbase blog** cards and list views
+* [#3560128](https://www.drupal.org/i/3560128) fix: Hero Slider Pause Button Triggering Slide Movement Instead of Pausing
+* [#3559617](https://www.drupal.org/i/3559617) fix: Missing default URL in `vartheme_bs5:link` pattern causing rendering exception
+* [#3473611](https://www.drupal.org/i/3473611) fix: No link field over media image in inline media block modal By: [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+* [#3561009](https://www.drupal.org/i/3561009) fix: Field Label Color and Description Visibility for **Deep (4th/5th Level) AJAX Media Library** Forms
+* [#3561879](https://www.drupal.org/i/3561879) fix: Implicit nullable array parameter for **PHP 8.4** compatibility
+
+-------------------------------------------------------------------------------
+
 # 10.1.0-rc1
 
 ### Highlighted important changes since [10.1.0-beta1](https://www.drupal.org/project/varbase/releases/10.1.0-beta1):
