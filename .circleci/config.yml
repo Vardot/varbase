@@ -161,9 +161,8 @@ commands:
               rm /var/www/html/test/varbase/composer.lock
             fi
             cd /var/www/html/test/varbase
-            composer require drupal/drupal-extension:~5 --no-update
+            composer require drupal/drupal-extension:~5.0 --no-update
             composer require webship/behat-html-formatter:~1.0 --no-update
-            composer require drevops/behat-screenshot:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             composer install --no-interaction -vvv
