@@ -15,7 +15,7 @@ Feature: Content Structure - Change section settings in Landing Pages with Layou
       And I press the "Save" button
       And I wait
      Then I should see "Landing page (Layout Builder) Test Landing page (Layout Builder) by Site Admin has been created"
-      And I should see "This layout builder tool allows you to configure the layout of the main content area."
+      And I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 1s
      Then I should see "Add section at end of layout"
