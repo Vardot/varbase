@@ -1,3 +1,57 @@
+# 9.1.13
+
+This is a **patch (bugfix) release of Varbase 9** and is ready for use on production sites. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.0.x).
+
+### Highlighted important changes since [Varbase 10.0.8](https://www.drupal.org/project/varbase/releases/10.0.8):
+* chore: [#3561803](https://www.drupal.org/i/3561803) Update **Drupal Core** to `~10.6.0 || ~11.3.0`
+* chore: [#3563146](https://www.drupal.org/i/3563146) Change default PHP version to **PHP 8.4**
+
+### Added since [Varbase 10.0.8](https://www.drupal.org/project/varbase/releases/10.0.8):
+* All new features are in **Varbase ~10.1.0**
+
+### Changed since [Varbase 10.0.8](https://www.drupal.org/project/varbase/releases/10.0.8):
+* chore: [#3564346](https://www.drupal.org/i/3564346) Remove **BigPipe** from the default **Varbase Core recipe**
+* chore: [#3561461](https://www.drupal.org/i/3561461) Remove deprecated **Webform Bootstrap** module from default **Varbase Webform recipe**
+* chore: [#3558512](https://www.drupal.org/i/3558512) Remove Deprecated YouTube and Vimeo Player Libraries Usage By: [Mohammad-Fayoumi](https://www.drupal.org/u/mohammad-fayoumi)
+
+### Updates since [Varbase 10.0.8](https://www.drupal.org/project/varbase/releases/10.0.8):
+* chore: [#3564724](https://www.drupal.org/i/3564724) Change **Webform** module from `~6.2.0` to `~6.3.0` to support PHP 8.4 and Drupal ~11.3.0
+* chore: [#3561815](https://www.drupal.org/i/3561815) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Core**
+* chore: [#3561804](https://www.drupal.org/i/3561804) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase AI**
+* chore: [#3561805](https://www.drupal.org/i/3561805) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase API**
+* chore: [#3561814](https://www.drupal.org/i/3561814) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Components**
+* chore: [#3561834](https://www.drupal.org/i/3561834) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Media**
+* chore: [#3561820](https://www.drupal.org/i/3561820) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Editor**
+* chore: [#3561833](https://www.drupal.org/i/3561833) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Layout Builder**
+* chore: [#3561830](https://www.drupal.org/i/3561830) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Heroslider**
+* chore: [#3561831](https://www.drupal.org/i/3561831) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Landing Page (Paragraphs)**
+* chore: [#3561809](https://www.drupal.org/i/3561809) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Bootstrap Paragraphs**
+* chore: [#3561811](https://www.drupal.org/i/3561811) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Carousels**
+* chore: [#3561808](https://www.drupal.org/i/3561808) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Blog (Corporate Blog)**
+* chore: [#3561840](https://www.drupal.org/i/3561840) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Search**
+* chore: [#3561842](https://www.drupal.org/i/3561842) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase SEO**
+* chore: [#3561843](https://www.drupal.org/i/3561843) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Social Single Sign-On**
+* chore: [#3561816](https://www.drupal.org/i/3561816) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Dashboards**
+* chore: [#3561822](https://www.drupal.org/i/3561822) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Email**
+* chore: [#3561848](https://www.drupal.org/i/3561848) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Workflow**
+* chore: [#3561818](https://www.drupal.org/i/3561818) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Demo**
+* chore: [#3561853](https://www.drupal.org/i/3561853) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Vartheme BS5**
+* chore: [#3561850](https://www.drupal.org/i/3561850) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Vartheme Claro**
+* chore: [#3561851](https://www.drupal.org/i/3561851) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **View Modes Inventory**
+* chore: [#3561838](https://www.drupal.org/i/3561838) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Media Hero Slider**
+* chore: [#3561837](https://www.drupal.org/i/3561837) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Media Header**
+* chore: [#3561836](https://www.drupal.org/i/3561836) Update **Drupal Core** to `~10.6.0 || ~11.3.0` for **Varbase Media Demo Assets**
+
+### Fixes since [Varbase 10.0.8](https://www.drupal.org/project/varbase/releases/10.0.8):
+* fix: [#3561061](https://www.drupal.org/i/3561061) Edge-to-Edge Sections Showing Horizontal Scroll When Navigation Toolbar Is Open
+* fix: [#3561009](https://www.drupal.org/i/3561009) Field Label Color and Description Visibility for **Deep (4th/5th Level) AJAX Media Library** Forms
+* fix: [#3473611](https://www.drupal.org/i/3473611) No link field over media image in inline media block modal By: [ahmad abbad](https://www.drupal.org/u/ahmad-abbad)
+* fix: [#3564723](https://www.drupal.org/i/3564723) Layout Builder preview renders with admin theme instead of frontend theme after adding sections or updating paragraphs By: [n.ghunaim](https://www.drupal.org/u/nghunaim)
+* fix: [#3561879](https://www.drupal.org/i/3561879) Implicit nullable array parameter for **PHP 8.4** compatibility
+* fix: [#3561880](https://www.drupal.org/i/3561880) Implicit nullable parameters in Varbase profile form builders for **PHP 8.4 compatibility**
+
+-------------------------------------------------------------------------------
+
 # 9.1.12
 
 This is a **patch (bugfix) release of Varbase 9** and is ready for use on production sites. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.0.x).

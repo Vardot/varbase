@@ -10,7 +10,7 @@ Feature: Content Management - Add default [entityqueue] module testing content a
       And I wait for AJAX to finish
       And I wait for 2 seconds
       And I press "Save and manage fields"
-      And wait
+      And wait 5s
      Then I should see "The content type Test Content has been added."
 
   @javascript  @init @tools @local @development @staging
