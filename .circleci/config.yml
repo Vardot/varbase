@@ -49,16 +49,7 @@ commands:
             sudo a2enmod php8.4
             sudo a2enmod headers rewrite env mime expires ssl
             sudo update-alternatives --set php /usr/bin/php8.4
-            sudo tee -a /etc/php/8.4/apache2/php.ini > /dev/null <<EOF
-            memory_limit = -1
-            max_execution_time = 1200
-            error_reporting = E_ALL
-            max_input_time = 180
-            max_input_vars = 10000
-            post_max_size = 64M
-            upload_max_filesize = 32M
-            max_file_uploads = 40
-            EOF
+            echo -e "memory_limit = -1\nmax_execution_time = 1200\nerror_reporting = E_ALL\nmax_input_time = 180\nmax_input_vars = 10000\npost_max_size = 64M\nupload_max_filesize = 32M\nmax_file_uploads = 40" | sudo tee -a /etc/php/8.4/apache2/php.ini > /dev/null
             sudo service apache2 restart
       - run:
           name: Waiting for MySQL to be ready
