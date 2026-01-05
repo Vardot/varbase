@@ -7,13 +7,13 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
   Scenario: Check if a user with a permission to manage Landing page (Layout Builder) content type can add sections with any layouts to the page
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
-      And wait
+      And wait 3s
      Then I should see "Create Landing page (Layout Builder)"
      When I fill in "Test Landing page (Layout Builder)" for "Title"
       And I fill in "Test Landing page (Layout Builder) description" for "Page description"
       And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
-      And wait
+      And wait 3s
      Then I should see "Test Landing page (Layout Builder)"
       And I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
