@@ -118,10 +118,10 @@ commands:
             sudo apt-get install -y nodejs
             rm -rf ~/.yarn
             mkdir -p ~/.yarn/releases
-            curl -L https://repo.yarnpkg.com/4.6.0/packages/yarnpkg-cli/bin/yarn.js -o ~/.yarn/releases/yarn-4.6.0.cjs
-            chmod +x ~/.yarn/releases/yarn-4.6.0.cjs
-            echo "yarnPath: .yarn/releases/yarn-4.6.0.cjs" > ~/.yarnrc.yml
-            sudo ln -sf ~/.yarn/releases/yarn-4.6.0.cjs /usr/local/bin/yarn
+            curl -L https://repo.yarnpkg.com/4.9.3/packages/yarnpkg-cli/bin/yarn.js -o ~/.yarn/releases/yarn-4.9.3.cjs
+            chmod +x ~/.yarn/releases/yarn-4.9.3.cjs
+            echo "yarnPath: .yarn/releases/yarn-4.9.3.cjs" > ~/.yarnrc.yml
+            sudo ln -sf ~/.yarn/releases/yarn-4.9.3.cjs /usr/local/bin/yarn
       - run:
           name: List tools versions
           command: |
@@ -155,9 +155,8 @@ commands:
               rm /var/www/html/test/varbase/composer.lock
             fi
             cd /var/www/html/test/varbase
-            composer require --dev drupal/drupal-extension:~5.0 --no-update
-            composer require --dev webship/behat-html-formatter:~1.0 --no-update
-            composer require --dev drevops/behat-screenshot:~1.0 --no-update
+            composer require drupal/drupal-extension:~5.0 --no-update
+            composer require webship/behat-html-formatter:~1.0 --no-update
             sudo chmod 775 -R .
             sudo chown www-data:circleci -R .
             composer install --no-interaction -vvv
@@ -226,6 +225,9 @@ commands:
           command: |
             cd /var/www/html/test/varbase/docroot
             ../bin/drush pm:uninstall antibot --yes
+            ../bin/drush config:set system.performance css.preprocess 0 --yes
+            ../bin/drush config:set system.performance js.preprocess 0 --yes
+            ../bin/drush config:set system.logging error_level all --yes
             ../bin/drush cache:rebuild
 
 jobs:
