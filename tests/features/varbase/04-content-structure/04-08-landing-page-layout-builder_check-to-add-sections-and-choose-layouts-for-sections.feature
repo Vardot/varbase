@@ -14,7 +14,7 @@ Feature: Content Structure - Landing (Layout Builder) Pages - Check to add secti
       And I select "published" from "edit-moderation-state-0-state--2"
       And I press the "Save as" button
       And wait
-     Then I should see "Landing page (Layout Builder) Test Landing page (Layout Builder) has been created"
+     Then I should see "Test Landing page (Layout Builder)"
       And I should see "You are editing the layout for this Landing page (Layout Builder) content item."
      When I scroll to the bottom of the page
       And I wait 2s
