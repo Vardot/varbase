@@ -15,8 +15,8 @@
     "source": "http://cgit.drupalcode.org/varbase"
   },
   "require": {
-    "vardot/varbase-patches": "~10.0.0",
-    "vardot/varbase-replaces": "~10.0.0",
+    "vardot/varbase-patches": "~10",
+    "vardot/varbase-replaces": "~10",
     "drupal/varbase_core": "~10.0.0",
     "drupal/varbase_components": "~2.0.0",
     "drupal/varbase_api": "~10.0.0",

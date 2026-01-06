@@ -50,6 +50,8 @@ This is a patch (bugfix) release of Varbase ~10.0.0 and is ready for use on prod
 * fix: [#3473611](https://www.drupal.org/i/3473611) No link field over media image in inline media block modal By: [@ahmad-abbad](https://www.drupal.org/u/ahmad-abbad)
 * fix: [#3564723](https://www.drupal.org/i/3564723) Layout Builder preview renders with admin theme instead of frontend theme after adding sections or updating paragraphs  By: [@n.ghunaim](https://www.drupal.org/u/nghunaim)
 * fix: [#3523080](https://www.drupal.org/i/3523080) Hidden CKEditor 5 table configuration options By: [ahmad khader](https://www.drupal.org/u/ahmad-khader)
+* fix: [#3565875](https://www.drupal.org/i/3565875) fatal error: undefined varbase_layout_builder__is_dashboards_route() in Theme Negotiator
+* fix: [#3565819](https://www.drupal.org/i/3565819) Remove deprecated ckeditor5_list.properties.styles config key for Drupal 10.6+ compatibility
 * fix: [#3561879](https://www.drupal.org/i/3561879) Implicit nullable array parameter for **PHP 8.4** compatibility
 * fix: [#3561880](https://www.drupal.org/i/3561880) Implicit nullable parameters in Varbase profile form builders for **PHP 8.4 compatibility**
 
