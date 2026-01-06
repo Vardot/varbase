@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg)](https://app.circleci.com/pipelines/github/Vardot/varbase/1227/workflows/0346f0f4-236c-4f40-8e0c-3596f06baf99) **Varbase 10.0.8**
+[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/10.0.x.svg)](https://app.circleci.com/pipelines/github/Vardot/varbase/1227/workflows/0346f0f4-236c-4f40-8e0c-3596f06baf99) **Varbase 10.0.9**
 
 [![Ceasefire Now](https://badge.techforpalestine.org/ceasefire-now)](https://techforpalestine.org/learn-more)
 
@@ -21,9 +21,9 @@ in every project.
 * Comes with a lot of needed functionalities/modules for every-day Drupal site.
 * [Tested, tested, and tested.](https://app.circleci.com/pipelines/github/Vardot/varbase)
 
-Starting a new project? Consider **Varbase** for **Drupal 10**.
-Installing **Varbase `10.0.x`** comes with several extra automated installation
-steps, to take full advantage of Varbase, other than the **Drupal 10** installation
+Starting a new project? Consider **Varbase** for **Drupal 11**.
+Installing **Varbase `10.1.x`** comes with several extra automated installation
+steps, to take full advantage of Varbase, other than the **Drupal 11** installation
 instructions.
 
 

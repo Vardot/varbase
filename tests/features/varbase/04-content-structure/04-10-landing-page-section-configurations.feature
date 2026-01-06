@@ -7,15 +7,15 @@ Feature: Content Structure - Change section settings in Landing Pages with Layou
   Scenario: Check if a site admin can create a landing page and add sections to it with different container types
     Given I am a logged in user with the "Site admin" user
      When I go to "/node/add/landing_page_lb"
-      And wait 2s
+      And I wait
      Then I should see "Create Landing page (Layout Builder)"
      When I fill in "Test Landing page (Layout Builder) by Site Admin" for "Title"
       And I fill in "Test Landing page (Layout Builder) description" for "Page description"
       And I select "published" from "Save as"
       And I press the "Save" button
-      And wait 3s
-     Then I should see "Test Landing page (Layout Builder) by Site Admin"
-      And I should see "You are editing the layout for this Landing page (Layout Builder) content item."
+      And I wait
+     Then I should see "Landing page (Layout Builder) Test Landing page (Layout Builder) by Site Admin has been created"
+      And I should see "This layout builder tool allows you to configure the layout of the main content area."
      When I scroll to the bottom of the page
       And I wait 1s
      Then I should see "Add section at end of layout"
