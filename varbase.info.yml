@@ -1,0 +1,48 @@
+name: Varbase
+type: profile
+description: Varbase is an enhanced Drupal distribution with a lot of necessities.
+core_version_requirement: ~11.3.0
+project: varbase
+distribution:
+  name: Varbase
+  install:
+    theme: varbase_installer_theme
+    finish_url: '/'
+version: 11.0.x-dev
+forms:
+  - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
+  - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'
+
+recipes:
+  required: []
+  # A list of recipe package names that will be applied if no additional recipes
+  # are chosen by the user.
+  default:
+    - drupal/varbase_admin_base
+
+  # This should be a set of recipe combinations to show to the user as choices at the
+  # start of the install process. The keys can be any machine name (such as `blog`),
+  # and the values should be associative arrays with two elements:
+  # - `name`: The human-readable name of the combination, which will be shown to users.
+  # - `packages`: A list of the Composer package names of the recipes in this combination.
+  #
+  # Example:
+  #
+  # special:
+  #   name: Special Sauce
+  #   packages:
+  #     - drupal/drupal_cms_blog
+  #     - kanopi/gin-admin-experience
+  #
+  optional:
+    varbase_search_base:
+      name: Varbase Search
+      packages:
+        - drupal/varbase_search_base
+
+# This allows you to suppress messages set by the Drupal installer, or various modules,
+# which you might not want to display to users during or after the install process.
+# Each item in this list can either be a string, which is the untranslated message
+# to suppress, or an array of two untranslated strings for pluralized messages which
+# have singular and plural forms.
+hide_messages: []

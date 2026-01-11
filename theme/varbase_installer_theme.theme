@@ -1,0 +1,174 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\File\FileUrlGeneratorInterface;
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\Core\Language\LanguageManager;
+use Drupal\RecipeKit\Installer\Hooks;
+
+/**
+ * Implements template_preprocess_install_page().
+ */
+function varbase_installer_theme_preprocess_install_page(array &$variables): void {
+  $theme_path = \Drupal::theme()->getActiveTheme()->getPath();
+  $variables['theme_path'] = \Drupal::service(FileUrlGeneratorInterface::class)
+    ->generateString($theme_path);
+
+  // Only show the language switcher if there is no batch job in progress.
+  $batch = &batch_get();
+  if (empty($batch)) {
+    $variables['languages'] = [];
+    foreach (LanguageManager::getStandardLanguageList() as $langcode => $language) {
+      // Pass the language's native name to the template, along with its
+      // direction (if defined).
+      $variables['languages'][$langcode] = [
+        'name' => $language[1],
+        'direction' => $language[2] ?? LanguageInterface::DIRECTION_LTR,
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_installer_theme_theme(): array {
+  return [
+    'step_svg' => [
+      'variables' => [
+        'id' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for installer_site_name_form.
+ */
+function varbase_installer_theme_form_installer_site_name_form_alter(array &$form): void {
+  $form['#title'] = t('Give your site a name');
+
+  $form['help'] = [
+    '#prefix' => '<p class="cms-installer__subhead">',
+    '#markup' => t('You can change this later.'),
+    '#suffix' => '</p>',
+    '#weight' => -100,
+  ];
+  $form['site_name'] += [
+    '#prefix' => '<div class="cms-installer__form-group">',
+    '#suffix' => '</div>',
+  ];
+  $form['svg'] = [
+    '#theme' => 'step_svg',
+    '#id' => 'name',
+    '#weight' => 1000,
+  ];
+  $form['actions']['submit']['#attributes']['class'] = ['button--next'];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for installer_recipes_form.
+ */
+function varbase_installer_theme_form_installer_site_template_form_alter(array &$form): void {
+  $form['help'] = [
+    '#prefix' => '<p class="cms-installer__subhead">',
+    '#markup' => t('Site templates provide a starting point with styling and features already included. You can customize the look and feel and add new features using Drupal\'s powerful extensibility.'),
+    '#suffix' => '</p>',
+    '#weight' => -100,
+  ];
+  $form['add_ons'] += [
+    '#prefix' => '<div class="cms-installer__form-group">',
+    '#suffix' => '</div>',
+    '#default_value' => 'varbase_starter',
+  ];
+  // Put the varbase_starter template before the others.
+  $form['add_ons']['varbase_starter']['#weight'] = -100;
+  $form['add_ons']['#required'] = TRUE;
+
+  $form['actions']['submit']['#attributes']['class'] = ['button--next'];
+  unset($form['actions']['skip']);
+}
+
+/**
+ * Implements template_preprocess_form_element() for site template choices.
+ */
+function varbase_installer_theme_preprocess_form_element(array &$variables, string $hook): void {
+  if ($hook !== 'form_element__site_template') {
+    return;
+  }
+  $path = Hooks::getRecipePath('drupal/' . $variables['element']['#return_value']);
+
+  // If the site template has a screenshot, embed it as a base64-encoded data
+  // URI. We can't generate a URL to it because recipes are normally stored
+  // outside of the web root.
+  $screenshot = $path . '/screenshot.webp';
+  if (file_exists($screenshot)) {
+    $screenshot = file_get_contents($screenshot);
+    $variables['screenshot'] = sprintf('data:image/webp;base64,%s', base64_encode($screenshot));
+  }
+
+  $package_info = $path . '/composer.json';
+  if (file_exists($package_info)) {
+    $package_info = file_get_contents($package_info);
+    $package_info = Json::decode($package_info);
+    $variables['url'] = $package_info['homepage'] ?? NULL;
+  }
+
+  $variables['name'] = $variables['element']['#title'];
+  $variables['id'] = $variables['element']['#id'];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for install_settings_form.
+ */
+function varbase_installer_theme_form_install_settings_form_alter(array &$form): void {
+  $form['help'] = [
+    '#prefix' => '<p class="cms-installer__subhead">',
+    '#markup' => t("You don't need to change anything here unless you want to use a different database type."),
+    '#suffix' => '</p>',
+    '#weight' => -50,
+  ];
+  $form['svg'] = [
+    '#theme' => 'step_svg',
+    '#id' => 'settings',
+    '#weight' => 1000,
+  ];
+  $form['driver']['#type'] = 'select';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for install_configure_form.
+ */
+function varbase_installer_theme_form_install_configure_form_alter(array &$form): void {
+  $form['#title'] = t('Create your account');
+
+  $form['help'] = [
+    '#prefix' => '<p class="cms-installer__subhead">',
+    '#markup' => t('Creating an account allows you to log in to your site.'),
+    '#suffix' => '</p>',
+    '#weight' => -40,
+  ];
+
+  // Use isset() to guard against the possibility that core will change the
+  // structure of this form in a minor release.
+  if (isset($form['admin_account']['account']['name'])) {
+    $form['admin_account']['account']['mail'] += [
+      '#prefix' => '<div class="cms-installer__form-group">',
+      '#suffix' => '</div>',
+    ];
+  }
+  if (isset($form['admin_account']['account']['pass'])) {
+    $form['admin_account']['account']['pass'] += [
+      '#prefix' => '<div class="cms-installer__form-group">',
+      '#suffix' => '</div>',
+    ];
+  }
+  $form['svg'] = [
+    '#theme' => 'step_svg',
+    '#id' => 'account',
+    '#weight' => 1000,
+  ];
+  $form['actions']['submit']['#value'] = t('Finish');
+}
