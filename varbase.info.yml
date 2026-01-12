@@ -30,9 +30,6 @@ recipes:
     - drupal_cms_seo_basic
     - easy_email_express
     - drupal/varbase_admin_base
-    - drupal/varbase_security_base
-    - drupal/varbase_seo_base
-    - drupal/varbase_webform_base
   optional:
     varbase_search_base:
       name: Search
