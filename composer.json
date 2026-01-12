@@ -23,6 +23,12 @@
         }
     },
     "require": {
+        "drupal/drupal_cms_admin_ui": "~2",
+        "drupal/drupal_cms_anti_spam": "~2",
+        "drupal/drupal_cms_authentication": "~2",
+        "drupal/drupal_cms_media": "~2",
+        "drupal/drupal_cms_privacy_basic": "~2",
+        "drupal/drupal_cms_seo_basic": "~2",
         "drupal/varbase_admin_base": "1.0.x-dev",
         "drupal/varbase_dev_base": "1.0.x-dev",
         "drupal/varbase_security_base": "1.0.x-dev",

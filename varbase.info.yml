@@ -18,6 +18,16 @@ recipes:
   # A list of recipe package names that will be applied if no additional recipes
   # are chosen by the user.
   default:
+    - core/recipes/administrator_role
+    - core/recipes/core_recommended_maintenance
+    - core/recipes/core_recommended_performance
+    - drupal_cms_admin_ui
+    - drupal_cms_anti_spam
+    - drupal_cms_authentication
+    - drupal_cms_media
+    - drupal_cms_privacy_basic
+    - drupal_cms_seo_basic
+    - easy_email_express
     - drupal/varbase_admin_base
     - drupal/varbase_security_base
     - drupal/varbase_seo_base
