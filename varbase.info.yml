@@ -22,36 +22,6 @@ recipes:
     - drupal/varbase_security_base
     - drupal/varbase_seo_base
     - drupal/varbase_webform_base
-install:
-  - system
-  - user
-  - node
-  - block
-  - block_content
-  - datetime
-  - help
-  - image
-  - views
-  - file
-themes:
-  - gin
-  - vartheme_bs5
-
-
-  # This should be a set of recipe combinations to show to the user as choices at the
-  # start of the install process. The keys can be any machine name (such as `blog`),
-  # and the values should be associative arrays with two elements:
-  # - `name`: The human-readable name of the combination, which will be shown to users.
-  # - `packages`: A list of the Composer package names of the recipes in this combination.
-  #
-  # Example:
-  #
-  # special:
-  #   name: Special Sauce
-  #   packages:
-  #     - drupal/drupal_cms_blog
-  #     - kanopi/gin-admin-experience
-  #
   optional:
     varbase_ai_base:
       name: AI
@@ -73,6 +43,21 @@ themes:
       name: Privacy
       packages:
         - drupal/varbase_dev_base
+
+install:
+  - system
+  - user
+  - node
+  - block
+  - block_content
+  - datetime
+  - help
+  - image
+  - views
+  - file
+themes:
+  - gin
+  - vartheme_bs5
 
 # This allows you to suppress messages set by the Drupal installer, or various modules,
 # which you might not want to display to users during or after the install process.
