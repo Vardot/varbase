@@ -25,6 +25,7 @@ recipes:
     - drupal_cms_anti_spam
     - drupal_cms_authentication
     - drupal_cms_media
+    - drupal_cms_page
     - drupal_cms_privacy_basic
     - drupal_cms_seo_basic
     - easy_email_express
@@ -45,18 +46,6 @@ recipes:
       name: Privacy
       packages:
         - drupal/varbase_dev_base
-
-install:
-  - system
-  - user
-  - node
-  - block
-  - block_content
-  - datetime
-  - help
-  - image
-  - views
-  - file
 themes:
   - gin
   - vartheme_bs5
