@@ -34,12 +34,6 @@
         "drupal/drupal_cms_search": "^2",
         "drupal/drupal_cms_seo_basic": "^2",
         "drupal/easy_email_express": "^1.0.2",
-        "drupal/varbase_admin_base": "1.0.x-dev",
-        "drupal/varbase_dev_base": "1.0.x-dev",
-        "drupal/varbase_security_base": "1.0.x-dev",
-        "drupal/varbase_seo_base": "1.0.x-dev",
-        "drupal/varbase_search_base": "1.0.x-dev",
-        "drupal/varbase_webform_base": "1.0.x-dev",
-        "drupal/varbase_privacy": "1.0.x-dev"
+        "drupal/varbase_starter": "1.0.x-dev"
     }
 }
