@@ -19,6 +19,24 @@ recipes:
   # are chosen by the user.
   default:
     - drupal/varbase_admin_base
+    - drupal/varbase_security_base
+    - drupal/varbase_seo_base
+    - drupal/varbase_webform_base
+install:
+  - system
+  - user
+  - node
+  - block
+  - block_content
+  - datetime
+  - help
+  - image
+  - views
+  - file
+themes:
+  - gin
+  - vartheme_bs5
+
 
   # This should be a set of recipe combinations to show to the user as choices at the
   # start of the install process. The keys can be any machine name (such as `blog`),
@@ -35,10 +53,26 @@ recipes:
   #     - kanopi/gin-admin-experience
   #
   optional:
+    varbase_ai_base:
+      name: AI
+      packages:
+        - drupal/varbase_ai_base
+    varbase_i18n_base:
+      name: Internationalization
+      packages:
+        - drupal/varbase_i18n_base
     varbase_search_base:
-      name: Varbase Search
+      name: Search
       packages:
         - drupal/varbase_search_base
+    varbase_privacy:
+      name: Privacy
+      packages:
+        - drupal/varbase_privacy
+    varbase_dev_base:
+      name: Privacy
+      packages:
+        - drupal/varbase_dev_base
 
 # This allows you to suppress messages set by the Drupal installer, or various modules,
 # which you might not want to display to users during or after the install process.
