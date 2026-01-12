@@ -1,14 +1,8 @@
 langcode: en
 status: true
-dependencies:
-  module:
-    - system
-    - node
-    - user
+dependencies: {  }
 id: authenticated
 label: 'Authenticated user'
 weight: -9
 is_admin: false
-permissions:
-  - 'access content'
-  - 'access user profiles'
+permissions: {  }
