@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - node
+    - block
+id: editor
+label: Editor
+weight: -8
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'access administration pages'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'view the administration theme'

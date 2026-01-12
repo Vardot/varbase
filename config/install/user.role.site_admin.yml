@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - node
+    - block
+    - user
+id: site_admin
+label: 'Site Admin'
+weight: -5
+is_admin: false
+permissions:
+  - 'administer blocks'
+  - 'access content overview'
+  - 'revert all revisions'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'administer menu'
+  - 'access administration pages'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'view the administration theme'
+  - 'administer account settings'
+  - 'administer users'

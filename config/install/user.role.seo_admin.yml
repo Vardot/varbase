@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - node
+    - block
+id: seo_admin
+label: 'SEO Admin'
+weight: -6
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'administer menu'
+  - 'access administration pages'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'view the administration theme'

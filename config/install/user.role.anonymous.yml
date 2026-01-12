@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - node
+id: anonymous
+label: 'Anonymous user'
+weight: -10
+is_admin: false
+permissions:
+  - 'access content'
