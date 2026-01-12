@@ -24,7 +24,6 @@
     },
     "require": {
         "drupal/varbase_admin_base": "1.0.x-dev",
-        "drupal/varbase_ai_base": "1.0.x-dev",
         "drupal/varbase_dev_base": "1.0.x-dev",
         "drupal/varbase_security_base": "1.0.x-dev",
         "drupal/varbase_seo_base": "1.0.x-dev",
