@@ -27,10 +27,6 @@ recipes:
       name: AI
       packages:
         - drupal/varbase_ai_base
-    varbase_i18n_base:
-      name: Internationalization
-      packages:
-        - drupal/varbase_i18n_base
     varbase_search_base:
       name: Search
       packages:
