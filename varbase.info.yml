@@ -19,6 +19,9 @@ recipes:
   # are chosen by the user.
   default:
     - drupal/varbase_starter
+themes:
+  - gin
+  - vartheme_bs5
 
 # This allows you to suppress messages set by the Drupal installer, or various modules,
 # which you might not want to display to users during or after the install process.
