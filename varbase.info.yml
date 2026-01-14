@@ -12,20 +12,15 @@ version: 11.0.x-dev
 forms:
   - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
   - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'
-
 recipes:
   required: []
-  # A list of recipe package names that will be applied if no additional recipes
-  # are chosen by the user.
   default:
     - drupal/varbase_starter
 themes:
   - gin
   - vartheme_bs5
-
-# This allows you to suppress messages set by the Drupal installer, or various modules,
-# which you might not want to display to users during or after the install process.
-# Each item in this list can either be a string, which is the untranslated message
-# to suppress, or an array of two untranslated strings for pluralized messages which
-# have singular and plural forms.
-hide_messages: []
+hide_messages:
+  - ['One translation file imported. %number translations were added, %update translations were updated and %delete translations were removed.', '@count translation files imported. %number translations were added, %update translations were updated and %delete translations were removed.']
+  - 'The configuration was successfully updated. There are %number configuration objects updated.'
+  - 'Check <a href=":translate_status">available translations</a> for your language(s).'
+  - 'Honeypot installed successfully. Please <a href=":url">configure Honeypot</a> to protect your forms from spam bots.'
