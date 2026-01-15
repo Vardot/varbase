@@ -23,17 +23,7 @@
         }
     },
     "require": {
-        "drupal/core": "^11.3",
-        "drupal/drupal_cms_admin_ui": "^2",
-        "drupal/drupal_cms_anti_spam": "^2",
-        "drupal/drupal_cms_authentication": "^2",
-        "drupal/drupal_cms_helper": "^2",
-        "drupal/drupal_cms_media": "^2",
-        "drupal/drupal_cms_page": "^2",
-        "drupal/drupal_cms_privacy_basic": "^2",
-        "drupal/drupal_cms_search": "^2",
-        "drupal/drupal_cms_seo_basic": "^2",
-        "drupal/easy_email_express": "^1.0.2",
+        "drupal/core": "~11.3.0",
         "drupal/varbase_starter": "1.0.x-dev"
     }
 }
