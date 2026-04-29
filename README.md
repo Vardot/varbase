@@ -29,9 +29,9 @@ instructions.
 # Install with Composer
 
 
-To install the most recent stable release of **Varbase `11.0.x`** run this command:
+To install the most recent release of **Varbase `11.0.x`** run this command:
 ```
-composer create-project drupal/varbase_project:~11 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project drupal/varbase_project:~11.0.0 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of **Varbase `11.0.x`** run this command:
