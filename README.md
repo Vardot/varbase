@@ -1,4 +1,4 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/11.0.x.svg)](https://app.circleci.com/pipelines/github/Vardot/varbase) **Varbase 11.0.x**
+[![Vardot](https://circleci.com/gh/Vardot/varbase-project/tree/11.0.x.svg)](https://app.circleci.com/pipelines/github/Vardot/varbase) **Varbase 11.0.0-alpha2**
 
 
 [![](https://www.drupal.org/files/project-images/varbase-medium-logo-color-with-padding.png)](https://www.drupal.org/project/varbase)
@@ -31,12 +31,12 @@ instructions.
 
 To install the most recent stable release of **Varbase `11.0.x`** run this command:
 ```
-composer create-project Vardot/varbase-project:~11.0.0-alpha1 PROJECT_DIR_NAME --no-dev --no-interaction
+composer create-project drupal/varbase_project:~11 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
 To install the dev version of **Varbase `11.0.x`** run this command:
 ```
-composer create-project vardot/varbase-project:11.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project drupal/varbase_project:11.0.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
 ```
 
 ## [Automated Functional Testing](https://github.com/Vardot/varbase-project/blob/11.0.x/tests/README.md)

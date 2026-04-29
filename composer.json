@@ -1,8 +1,8 @@
 {
-    "name": "drupal/varbase",
+    "name": "vardot/varbase",
     "description": "Varbase",
     "type": "drupal-profile",
-    "version": "11.0.x-dev",
+    "version": "11.0.0-alpha2",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/varbase",
     "authors": [
