@@ -8,7 +8,7 @@ distribution:
   install:
     theme: varbase_installer_theme
     finish_url: '/'
-version: 11.0.0-alpha3
+version: 11.0.x-dev
 forms:
   - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
   - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'

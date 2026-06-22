@@ -2,7 +2,7 @@
     "name": "vardot/varbase",
     "description": "Varbase",
     "type": "drupal-profile",
-    "version": "11.0.0-alpha3",
+    "version": "11.0.x-dev",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/varbase",
     "authors": [
@@ -24,6 +24,6 @@
     },
     "require": {
         "drupal/core": "~11.3.0",
-        "drupal/varbase_starter": "~1.0"
+        "drupal/varbase_starter": "1.0.x-dev"
     }
 }
