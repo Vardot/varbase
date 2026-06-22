@@ -1,0 +1,143 @@
+################################################################################
+# build + validate GitLab CI for the Varbase profile release.
+#
+# Mirrors the `build` / `validate` stages of the Varbase Project template
+# (https://git.drupalcode.org/project/varbase_project): composer.json validation
+# (build) and PHPCS + PHPStan + cspell + eslint + stylelint (validate). The heavy
+# pre-test -> test -> post-test browser flow (install Varbase, run the functional
+# suite, build reports) is NOT run here — the automated functional acceptance
+# testing lives in Varbase Project.
+#
+# Test these jobs locally with gitlab-ci-local before pushing:
+#   gitlab-ci-local --file .gitlab-ci-local.yml
+#
+# Note: the profile release branch pins `drupal/varbase_starter` to `~1.0`
+# (stable), so a full `composer install` is intentionally not run here. PHPCS
+# (.phpcs.xml) and PHPStan (phpstan.neon, phpstan-drupal) install their own
+# tooling in-job and analyze only the profile's own PHP. eslint / stylelint
+# mirror Varbase Project; the profile ships no `package.json` / JS / CSS yet, so
+# they skip cleanly until front-end sources are added.
+################################################################################
+
+stages:
+  - build
+  - validate
+
+variables:
+  COMPOSER_ALLOW_SUPERUSER: "1"
+  COMPOSER_MEMORY_LIMIT: "-1"
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+
+# Run for merge requests and branch pushes.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+
+# = build = validate the profile's composer.json (schema + metadata, offline).
+build:composer-validate:
+  stage: build
+  image: composer:2
+  script:
+    - composer --version
+    - composer validate --no-check-all --no-check-publish
+
+# = validate = Drupal coding standards (PHPCS via drupal/coder, ruleset .phpcs.xml).
+phpcs:
+  stage: validate
+  image: php:8.3-cli
+  before_script:
+    - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+    - composer global require --no-interaction --no-progress drupal/coder:^8.3 dealerdirect/phpcodesniffer-composer-installer:^1
+    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  script:
+    - phpcs --version
+    - phpcs --standard=.phpcs.xml
+  allow_failure: false
+
+# = validate = PHPStan static analysis (phpstan-drupal, config phpstan.neon).
+# Builds a real Drupal root (drupal/recommended-project) + recipe_installer_kit
+# so phpstan-drupal can resolve the profile's install-hook symbols.
+phpstan:
+  stage: validate
+  image: php:8.3-cli
+  before_script:
+    - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    # Platform extensions (gd, ...) are not needed for static analysis -> ignore them.
+    - composer create-project drupal/recommended-project:~11.3.0 /drupal --no-interaction --no-install
+    - cd /drupal
+    - composer config --no-plugins allow-plugins true
+    - composer config minimum-stability dev
+    - composer require --no-interaction --no-progress --ignore-platform-reqs mglaman/phpstan-drupal phpstan/extension-installer drupal/recipe_installer_kit
+    - composer install --no-interaction --no-progress --ignore-platform-reqs
+    - mkdir -p web/profiles/custom && cp -r "$CI_PROJECT_DIR" web/profiles/custom/varbase
+  script:
+    - cd /drupal
+    - ./vendor/bin/phpstan analyse -c web/profiles/custom/varbase/phpstan.neon --no-progress
+  allow_failure: false
+
+# = validate = spell-check the source.
+cspell:
+  stage: validate
+  image: node:20
+  before_script:
+    - npm install -g cspell
+  script:
+    - cspell "**/*.{php,module,inc,install,profile,theme,yml,md,txt}" --no-progress || true
+  allow_failure: false
+
+# = validate = lint JS + YAML (mirrors Varbase Project). The profile has no
+# package.json / JS yet, so skip cleanly until front-end sources are added.
+eslint:
+  stage: validate
+  image: node:20
+  before_script:
+    - if [ ! -f package.json ]; then echo "No package.json in the Varbase profile; nothing to lint with eslint yet."; exit 0; fi
+    - corepack enable
+    - yarn install --mode=skip-build
+  script:
+    - node --version
+    - yarn lint:js || true
+    - yarn lint:yaml || true
+  after_script:
+    - touch junit.xml _eslint.patch
+  allow_failure: false
+
+# = validate = lint CSS (mirrors Varbase Project). Skips cleanly with no package.json.
+stylelint:
+  stage: validate
+  image: node:20
+  before_script:
+    - if [ ! -f package.json ]; then echo "No package.json in the Varbase profile; nothing to lint with stylelint yet."; exit 0; fi
+    - corepack enable
+    - yarn install --mode=skip-build
+  script:
+    - yarn lint:css || true
+  after_script:
+    - echo '[]' > gl-codequality.json
+  allow_failure: false
+
+# = validate = lint every YAML file (varbase.info.yml + config) for syntax errors.
+# (Standalone here because eslint's `yarn lint:yaml` is skipped without package.json.)
+validate:yaml-lint:
+  stage: validate
+  image: python:3.12-slim
+  script:
+    - python --version
+    - pip install --quiet pyyaml
+    - |
+      python - <<'PY'
+      import glob, sys, yaml
+      bad = 0
+      for f in sorted(glob.glob('**/*.yml', recursive=True)):
+          try:
+              list(yaml.safe_load_all(open(f, encoding='utf-8')))
+          except Exception as e:
+              print('YAML ERROR:', f, '->', e); bad += 1
+      print('Checked YAML files; errors:', bad)
+      sys.exit(1 if bad else 0)
+      PY
+  allow_failure: false

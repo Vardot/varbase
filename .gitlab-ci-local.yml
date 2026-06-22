@@ -1,0 +1,56 @@
+# Slim pipeline for `gitlab-ci-local` (https://github.com/firecow/gitlab-ci-local).
+#
+# Mirrors the validate-stage jobs of .gitlab-ci.yml that are reproducible
+# locally (no Drupal site build / services): PHPCS (Drupal coding standards),
+# cspell and the YAML lint. PHPStan is heavier (builds a Drupal root) and lives
+# only in the full .gitlab-ci.yml.
+#
+# Usage:
+#   gitlab-ci-local --file .gitlab-ci-local.yml            # all jobs
+#   gitlab-ci-local --file .gitlab-ci-local.yml phpcs      # one job
+
+stages:
+  - validate
+
+phpcs:
+  stage: validate
+  image: php:8.3-cli
+  before_script:
+    - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
+    - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    - composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+    - composer global require --no-interaction --no-progress drupal/coder:^8.3 dealerdirect/phpcodesniffer-composer-installer:^1
+    - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  script:
+    - phpcs --version
+    - phpcs --standard=.phpcs.xml
+  allow_failure: false
+
+cspell:
+  stage: validate
+  image: node:20
+  before_script:
+    - npm install -g cspell
+  script:
+    - cspell "**/*.{php,module,inc,install,profile,theme,yml,md,txt}" --no-progress || true
+  allow_failure: false
+
+validate:yaml-lint:
+  stage: validate
+  image: python:3.12-slim
+  script:
+    - python --version
+    - pip install --quiet pyyaml
+    - |
+      python - <<'PY'
+      import glob, sys, yaml
+      bad = 0
+      for f in sorted(glob.glob('**/*.yml', recursive=True)):
+          try:
+              list(yaml.safe_load_all(open(f, encoding='utf-8')))
+          except Exception as e:
+              print('YAML ERROR:', f, '->', e); bad += 1
+      print('Checked YAML files; errors:', bad)
+      sys.exit(1 if bad else 0)
+      PY
+  allow_failure: false

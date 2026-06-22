@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Theme hooks and preprocess functions for the Varbase installer theme.
+ */
+
 declare(strict_types=1);
 
 use Drupal\Component\Serialization\Json;
@@ -74,7 +79,7 @@ function varbase_installer_theme_form_installer_site_name_form_alter(array &$for
 function varbase_installer_theme_form_installer_site_template_form_alter(array &$form): void {
   $form['help'] = [
     '#prefix' => '<p class="cms-installer__subhead">',
-    '#markup' => t('Site templates provide a starting point with styling and features already included. You can customize the look and feel and add new features using Drupal\'s powerful extensibility.'),
+    '#markup' => t("Site templates provide a starting point with styling and features already included. You can customize the look and feel and add new features using Drupal's powerful extensibility."),
     '#suffix' => '</p>',
     '#weight' => -100,
   ];

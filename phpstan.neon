@@ -1,0 +1,30 @@
+# Configuration file for PHPStan static code checking, see https://phpstan.org .
+# Scans the Varbase profile's own PHP (profile + installer theme).
+includes:
+  - phar://phpstan.phar/conf/bleedingEdge.neon
+
+parameters:
+
+  level: 1
+
+  # Shared ruleset: not every ignored pattern matches the profile's small codebase.
+  reportUnmatchedIgnoredErrors: false
+
+  paths:
+    - varbase.profile
+    - theme
+
+  excludePaths:
+    - */vendor/*
+    - */node_modules/*
+
+  ignoreErrors:
+    # new static() is a best practice in Drupal, so we cannot fix that.
+    - "#^Unsafe usage of new static#"
+
+    # Ignore common errors for now.
+    - "#Drupal calls should be avoided in classes, use dependency injection instead#"
+    - "#^Plugin definitions cannot be altered.#"
+    - "#^Missing cache backend declaration for performance.#"
+    - "#cache tag might be unclear and does not contain the cache key in it.#"
+    - "#^Class .* extends @internal class#"

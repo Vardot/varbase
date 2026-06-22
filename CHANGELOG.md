@@ -1,3 +1,86 @@
+# 11.0.0-alpha3
+
+### Highlighted important changes since [Varbase 11.0.0-alpha2](https://www.drupal.org/project/varbase/releases/11.0.0-alpha2):
+* chore: [#3603617](https://www.drupal.org/i/3603617) New approved Varbase branding, logo, wordmark, and favicon across the whole suite (profile, recipes, theme, and modules)
+* feat: [#3588156](https://www.drupal.org/i/3588156) New Varbase Design System 2026 in Vartheme BS5, fonts, colors, and sizes
+* task: [#3600830](https://www.drupal.org/i/3600830) Standardize all SDC components to one authoring convention and add AGENTS.md
+* ci: [#3592934](https://www.drupal.org/i/3592934) Switch CI from CircleCI to GitLab CI and run the automated functional acceptance testing there (Canvas webform and menu coverage)
+
+### Added since [Varbase 11.0.0-alpha2](https://www.drupal.org/project/varbase/releases/11.0.0-alpha2):
+* feat: [#3590794](https://www.drupal.org/i/3590794) Change colors and typography as per the new design
+* feat: [#3590562](https://www.drupal.org/i/3590562) Configure new fonts, colors, and other styles
+* feat: [#3590641](https://www.drupal.org/i/3590641) Add media assets for the new Varbase Design System 2026
+* feat: [#3590894](https://www.drupal.org/i/3590894) Add new accent colors to the root and Base
+* feat: [#3590891](https://www.drupal.org/i/3590891) Add Subtle Text color to the Text component
+* feat: [#3591037](https://www.drupal.org/i/3591037) Align typography scale and button semantics introduced in the UI refresh
+* feat: [#3588154](https://www.drupal.org/i/3588154) Add size and colors to the Icon component
+* feat: [#3588158](https://www.drupal.org/i/3588158) Add more border radius options to the Button component
+* feat: [#3589547](https://www.drupal.org/i/3589547) Add border radius and padding support to the Media Banner component
+* feat: [#3589543](https://www.drupal.org/i/3589543) Add border radius to the Group component
+* feat: [#3589659](https://www.drupal.org/i/3589659) Add border radius and other improvements to the Section component
+* feat: [#3590670](https://www.drupal.org/i/3590670) Add border radius and limited background colors to the Text Card component
+* feat: [#3589666](https://www.drupal.org/i/3589666) Improve the Image component
+* feat: [#3588226](https://www.drupal.org/i/3588226) Improve the Featured Card component
+* feat: [#3593199](https://www.drupal.org/i/3593199) Add a small media overlay slot for tags and flags on the Featured Card component
+* feat: [#3588174](https://www.drupal.org/i/3588174) Add media overlay slot support to the Impressed Card component for tags, flags, and categories
+* feat: [#3593309](https://www.drupal.org/i/3593309) Add optional uploaded icon image support to the Text Card component
+* feat: [#3590809](https://www.drupal.org/i/3590809) Improve the Card Logo component as per the new design
+* feat: [#3588159](https://www.drupal.org/i/3588159) Change the Hero Slider design
+* feat: [#3593396](https://www.drupal.org/i/3593396) Add link animations and sticky header
+* feat: [#3591790](https://www.drupal.org/i/3591790) Pre-place the Share component on the Blog full content template and wire the Icons API to Vartheme
+* feat: [#3593398](https://www.drupal.org/i/3593398) Change images and logo in the foundation Storybook
+* feat: [#3588391](https://www.drupal.org/i/3588391) Improve the Heading component Storybook
+* feat: [#3588692](https://www.drupal.org/i/3588692) Improve the Hero Card component Storybook
+* feat: [#3588399](https://www.drupal.org/i/3588399) Remove custom CSS from the Blockquote component
+
+### Changed since [Varbase 11.0.0-alpha2](https://www.drupal.org/project/varbase/releases/11.0.0-alpha2):
+* chore: [#3590555](https://www.drupal.org/i/3590555) Rename the Hero Billboard component to Media Banner component
+* chore: [#3590568](https://www.drupal.org/i/3590568) Rename the Horizontal Ruler component to Divider component
+* chore: [#3593324](https://www.drupal.org/i/3593324) Implement the change of design for the Accordion component
+* chore: [#3593308](https://www.drupal.org/i/3593308) Remove custom CSS from the Taxonomy component and use Bootstrap utilities only
+* chore: [#3588227](https://www.drupal.org/i/3588227) Improve RTL support for Drupal Canvas with logical CSS properties and alignment labels
+* chore: [#3600979](https://www.drupal.org/i/3600979) Redesign the Business Contact webform to the new Varbase Design System 2026
+* chore: [#3596375](https://www.drupal.org/i/3596375) Remove the Canvas media view mode SDC plugin and schema.json from Varbase Media
+* chore: [#3590651](https://www.drupal.org/i/3590651) Change Blog views and cards config to follow the new Varbase Design System 2026
+* chore: [#3590662](https://www.drupal.org/i/3590662) Improve blog exposed filter labels
+* feat: [#3591793](https://www.drupal.org/i/3591793) Add Share component override and vartheme_social icon pack
+* chore: [#3603587](https://www.drupal.org/i/3603587) New approved Varbase brand logo, wordmark, and favicon for Varbase Starter
+* chore: [#3603616](https://www.drupal.org/i/3603616) New approved Varbase brand logo, wordmark, and favicon for Vartheme BS5
+* chore: [#3603615](https://www.drupal.org/i/3603615) New approved Varbase brand logo, wordmark, and favicon for Varbase Social Single Sign-On
+* chore: [#3603614](https://www.drupal.org/i/3603614) New approved Varbase brand logo, wordmark, and favicon for Varbase Components
+* chore: [#3603613](https://www.drupal.org/i/3603613) New approved Varbase brand logo, wordmark, and favicon for Varbase Media
+* chore: [#3603611](https://www.drupal.org/i/3603611) New approved Varbase brand logo, wordmark, and favicon for Varbase Recipes
+* chore: [#3603610](https://www.drupal.org/i/3603610) New approved Varbase brand logo, wordmark, and favicon for Varbase Admin Base
+* chore: [#3603609](https://www.drupal.org/i/3603609) New approved Varbase brand logo, wordmark, and favicon for Varbase AI Base
+* chore: [#3603608](https://www.drupal.org/i/3603608) New approved Varbase brand logo, wordmark, and favicon for Varbase AI Context
+* chore: [#3603607](https://www.drupal.org/i/3603607) New approved Varbase brand logo, wordmark, and favicon for Varbase AI Editor Assistant
+* chore: [#3603606](https://www.drupal.org/i/3603606) New approved Varbase brand logo, wordmark, and favicon for Varbase AI Image Alt
+* chore: [#3603604](https://www.drupal.org/i/3603604) New approved Varbase brand logo, wordmark, and favicon for Varbase AI Safety
+* chore: [#3603603](https://www.drupal.org/i/3603603) New approved Varbase brand logo, wordmark, and favicon for Varbase AI Taxonomy Tagging
+* chore: [#3603602](https://www.drupal.org/i/3603602) New approved Varbase brand logo, wordmark, and favicon for Varbase API Base
+* chore: [#3603601](https://www.drupal.org/i/3603601) New approved Varbase brand logo, wordmark, and favicon for Varbase Auth Base
+* chore: [#3603600](https://www.drupal.org/i/3603600) New approved Varbase brand logo, wordmark, and favicon for Varbase Content Base
+* chore: [#3603598](https://www.drupal.org/i/3603598) New approved Varbase brand logo, wordmark, and favicon for Varbase Demo Content
+* chore: [#3603597](https://www.drupal.org/i/3603597) New approved Varbase brand logo, wordmark, and favicon for Varbase Development Base
+* chore: [#3603596](https://www.drupal.org/i/3603596) New approved Varbase brand logo, wordmark, and favicon for Varbase Editor Base
+* chore: [#3603595](https://www.drupal.org/i/3603595) New approved Varbase brand logo, wordmark, and favicon for Varbase Internationalization Base
+* chore: [#3603594](https://www.drupal.org/i/3603594) New approved Varbase brand logo, wordmark, and favicon for Varbase Media Assets
+* chore: [#3603593](https://www.drupal.org/i/3603593) New approved Varbase brand logo, wordmark, and favicon for Varbase Media Base
+* chore: [#3603591](https://www.drupal.org/i/3603591) New approved Varbase brand logo, wordmark, and favicon for Varbase Page Base
+* chore: [#3603590](https://www.drupal.org/i/3603590) New approved Varbase brand logo, wordmark, and favicon for Varbase Performance Base
+* chore: [#3603589](https://www.drupal.org/i/3603589) New approved Varbase brand logo, wordmark, and favicon for Varbase Security Base
+* chore: [#3603588](https://www.drupal.org/i/3603588) New approved Varbase brand logo, wordmark, and favicon for Varbase SEO Base
+* chore: [#3603585](https://www.drupal.org/i/3603585) New approved Varbase brand logo, wordmark, and favicon for Varbase Users Base
+* chore: [#3603584](https://www.drupal.org/i/3603584) New approved Varbase brand logo, wordmark, and favicon for Varbase Webform Base
+* chore: [#3603583](https://www.drupal.org/i/3603583) New approved Varbase brand logo, wordmark, and favicon for Varbase Workflow Base
+* chore: [#3604111](https://www.drupal.org/i/3604111) New approved Varbase brand logo, wordmark, and favicon for Varbase Blog Base
+* chore: [#3604079](https://www.drupal.org/i/3604079) New approved Varbase brand logo, wordmark, and favicon for Varbase Project
+
+### Fixes since [Varbase 11.0.0-alpha2](https://www.drupal.org/project/varbase/releases/11.0.0-alpha2):
+* fix: [#3589364](https://www.drupal.org/i/3589364) Prevent Drupal dependencies from automatically applying patches in the Varbase Project Template
+* fix: [#3595562](https://www.drupal.org/i/3595562) Fix Section component boolean/select props out of sync in the Canvas editor form
+* fix: [#3593323](https://www.drupal.org/i/3593323) Add me-3 mb-3 spacing classes to the inline button variant for multi-button sibling flow
+
 # 11.0.0-alpha1
 
 ### Highlighted important changes since [Varbase 10.1.0](https://www.drupal.org/project/varbase/releases/10.1.0):

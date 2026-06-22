@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Enables modules and site configuration for the Varbase profile.
+ */
+
 declare(strict_types=1);
 
 use Drupal\Core\Form\FormStateInterface;
