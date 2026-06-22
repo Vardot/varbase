@@ -1,13 +1,14 @@
-[![pipeline status](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/commits/11.0.x)
-[![coverage report](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/coverage.svg)](https://git.drupalcode.org/project/varbase_project/-/commits/11.0.x)
-[![Latest Release](https://git.drupalcode.org/project/varbase_project/-/badges/release.svg)](https://git.drupalcode.org/project/varbase_project/-/releases)
-
-**Varbase 11.0.0-alpha3**
-
-
 [![](images/varbase-logo.png)](https://www.drupal.org/project/varbase)
 
 ## Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready)
+
+[![pipeline status](https://git.drupalcode.org/project/varbase/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase/-/commits/11.0.x)
+[![Latest Release](https://git.drupalcode.org/project/varbase/-/badges/release.svg)](https://git.drupalcode.org/project/varbase/-/releases)
+
+**Varbase Project** template - full automated functional acceptance testing:
+
+[![pipeline status](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/commits/11.0.x)
+[![Latest Release](https://git.drupalcode.org/project/varbase_project/-/badges/release.svg)](https://git.drupalcode.org/project/varbase_project/-/releases)
 
 The powerful Drupal distribution for faster development, with editor experience
 in mind. Brought to you by [Vardot](https://www.vardot.com/).
