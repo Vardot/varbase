@@ -1,45 +1,45 @@
 {
-  "name": "vardot/varbase",
-  "description": "Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready) | by Vardot",
-  "type": "drupal-profile",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Vardot",
-      "homepage": "https://www.drupal.org/vardot",
-      "role": "Maintainer"
+    "name": "vardot/varbase",
+    "description": "Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready) | by Vardot",
+    "type": "drupal-profile",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Vardot",
+            "homepage": "https://www.drupal.org/vardot",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "http://drupal.org/project/issues/varbase",
+        "source": "http://cgit.drupalcode.org/varbase"
+    },
+    "require": {
+        "vardot/varbase-patches": "9.2.x-dev",
+        "vardot/varbase-replaces": "9.2.x-dev",
+        "drupal/varbase_core": "9.2.x-dev",
+        "drupal/varbase_api": "9.2.x-dev",
+        "drupal/varbase_media": "9.2.x-dev",
+        "drupal/varbase_editor": "9.2.x-dev",
+        "drupal/varbase_landing": "9.2.x-dev",
+        "drupal/varbase_layout_builder": "10.0.x-dev",
+        "drupal/varbase_bootstrap_paragraphs": "9.2.x-dev",
+        "drupal/varbase_heroslider_media": "9.2.x-dev",
+        "drupal/varbase_carousels": "9.2.x-dev",
+        "drupal/varbase_blog": "9.2.x-dev",
+        "drupal/varbase_search": "9.2.x-dev",
+        "drupal/varbase_seo": "9.2.x-dev",
+        "drupal/varbase_auth": "9.2.x-dev",
+        "drupal/varbase_total_control": "9.2.x-dev",
+        "drupal/varbase_styleguide": "9.2.x-dev",
+        "drupal/varbase_email": "9.2.x-dev",
+        "drupal/varbase_workflow": "2.2.x-dev",
+        "drupal/vartheme_bs4": "9.0.x-dev",
+        "drupal/vartheme_claro": "3.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Varbase\\composer\\": "src/composer"
+        }
     }
-  ],
-  "support": {
-    "issues": "http://drupal.org/project/issues/varbase",
-    "source": "http://cgit.drupalcode.org/varbase"
-  },
-  "require": {
-    "vardot/varbase-patches": "9.2.x-dev",
-    "vardot/varbase-replaces": "9.2.x-dev",
-    "drupal/varbase_core": "9.1.x-dev",
-    "drupal/varbase_api": "9.1.x-dev",
-    "drupal/varbase_media": "9.1.x-dev",
-    "drupal/varbase_editor": "9.2.x-dev",
-    "drupal/varbase_landing": "9.1.x-dev",
-    "drupal/varbase_layout_builder": "10.0.x-dev",
-    "drupal/varbase_bootstrap_paragraphs": "9.1.x-dev",
-    "drupal/varbase_heroslider_media": "9.1.x-dev",
-    "drupal/varbase_carousels": "9.1.x-dev",
-    "drupal/varbase_blog": "9.1.x-dev",
-    "drupal/varbase_search": "9.1.x-dev",
-    "drupal/varbase_seo": "9.1.x-dev",
-    "drupal/varbase_auth": "9.1.x-dev",
-    "drupal/varbase_total_control": "9.1.x-dev",
-    "drupal/varbase_styleguide": "9.1.x-dev",
-    "drupal/varbase_email": "9.1.x-dev",
-    "drupal/varbase_workflow": "2.1.x-dev",
-    "drupal/vartheme_bs4": "9.0.x-dev",
-    "drupal/vartheme_claro": "3.0.x-dev"
-  },
-  "autoload": {
-    "psr-4": {
-      "Varbase\\composer\\": "src/composer"
-    }
-  }
 }
