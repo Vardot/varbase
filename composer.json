@@ -34,8 +34,8 @@
         "drupal/varbase_styleguide": "9.2.x-dev",
         "drupal/varbase_email": "9.2.x-dev",
         "drupal/varbase_workflow": "2.2.x-dev",
-        "drupal/vartheme_bs4": "9.0.x-dev",
-        "drupal/vartheme_claro": "3.0.x-dev"
+        "drupal/vartheme_bs4": "9.2.x-dev",
+        "drupal/vartheme_claro": "3.1.x-dev"
     },
     "autoload": {
         "psr-4": {
