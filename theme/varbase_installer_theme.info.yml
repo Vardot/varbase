@@ -1,6 +1,6 @@
 name: Varbase Installer Theme
 type: theme
-core_version_requirement: '^11.3'
+core_version_requirement: '^11.4'
 description: 'Themes the Varbase installer. Not to be used in production.'
 base theme: claro
 libraries-extend:

@@ -23,7 +23,7 @@
         }
     },
     "require": {
-        "drupal/core": "~11.3.0",
+        "drupal/core": "~11.4.0",
         "drupal/varbase_starter": "1.0.x-dev"
     }
 }

@@ -12,6 +12,11 @@
 stages:
   - validate
 
+variables:
+  # Drupal 11.4.0 released 2026-07-01; pinned templates ref $CORE_STABLE is still 11.3.
+  DRUPAL_CORE: "11.4.0"
+  IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
+
 phpcs:
   stage: validate
   image: php:8.3-cli

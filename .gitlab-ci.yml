@@ -24,6 +24,9 @@ stages:
   - validate
 
 variables:
+  # Drupal 11.4.0 released 2026-07-01; pinned templates ref $CORE_STABLE is still 11.3.
+  DRUPAL_CORE: "11.4.0"
+  IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
   COMPOSER_ALLOW_SUPERUSER: "1"
   COMPOSER_MEMORY_LIMIT: "-1"
   YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
@@ -68,7 +71,7 @@ phpstan:
     - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     # Platform extensions (gd, ...) are not needed for static analysis -> ignore them.
-    - composer create-project drupal/recommended-project:~11.3.0 /drupal --no-interaction --no-install
+    - composer create-project drupal/recommended-project:~$DRUPAL_CORE /drupal --no-interaction --no-install
     - cd /drupal
     - composer config --no-plugins allow-plugins true
     - composer config minimum-stability dev
