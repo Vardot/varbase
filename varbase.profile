@@ -697,14 +697,14 @@ function varbase_clear_caches($clear = TRUE) {
     \Drupal::service('plugin.manager.menu.local_action')->clearCachedDefinitions();
 
     // Invalidating.
-    \Drupal::service('cache.menu')->invalidateAll();
-    \Drupal::service('cache.render')->invalidateAll();
+    \Drupal::service('cache.menu')->deleteAll();
+    \Drupal::service('cache.render')->deleteAll();
 
     // Rebuilding.
     \Drupal::service('plugin.manager.menu.link')->rebuild();
 
     // Rebuild permissions. The content access permissions need to be rebuilt.
-    node_access_rebuild();
+    \Drupal::service('\Drupal\node\NodeAccessRebuild')->rebuild();
 
     // Rebuild the menu router based on all rebuilt data.
     // Important: This rebuild must happen last, so the menu router is guaranteed
