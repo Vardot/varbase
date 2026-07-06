@@ -107,7 +107,6 @@
     <exec command="${drush} en varbase_media_twitter --yes" dir="${docroot}" />
     <exec command="${drush} en social_auth_google --yes" dir="${docroot}" />
     <exec command="${drush} en social_auth_facebook --yes" dir="${docroot}" />
-    <exec command="${drush} en social_auth_twitter --yes" dir="${docroot}" />
     <exec command="${drush} en social_auth_linkedin --yes" dir="${docroot}" />
     <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${docroot}" />
     <exec command="${drush} config-set system.performance js.preprocess 0 --yes --format=boolean" dir="${docroot}" />
