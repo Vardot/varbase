@@ -1,4 +1,6 @@
-[![Vardot](https://circleci.com/gh/Vardot/varbase/tree/9.1.x.svg?style=shield)](https://app.circleci.com/pipelines/github/Vardot/varbase/1260/workflows/6d4e9f49-c32a-407b-ab1b-66829b02de7d) **Varbase 9.1.13**
+[![pipeline status](https://git.drupalcode.org/project/varbase/badges/9.2.x/pipeline.svg)](https://git.drupalcode.org/project/varbase/-/pipelines)
+[![Varbase](https://img.shields.io/badge/Varbase-9.2.0-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase/-/pipelines?ref=9.2.x)
+[![Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/badges/9.2.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/pipelines)
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
 
@@ -17,41 +19,41 @@ in every project.
 * Speeds up development.
 * Offers standardized configuration and best-practices.
 * Comes with a lot of needed functionalities/modules for every-day Drupal site.
-* [Tested, tested, and tested.](https://app.circleci.com/pipelines/github/Vardot/varbase)
+* [Tested, tested, and tested.](https://git.drupalcode.org/project/varbase/-/pipelines)
 
-Starting a new project? Consider Varbase ~10.0
-The 9.1.x is only to support old projects
+Starting a new project? Consider Varbase ~11.0.0
+Varbase 9.2.x is the Drupal ~11.4-only continuation of the Varbase 9.1.x line.
 
 
 # Install with Composer
 
-Recommended to start new projects with Varbase ~10.1.0
+Recommended to start new projects with Varbase ~11.0.0
 
-To install the most recent stable release of Varbase 9.1.x run this command:
+To install the most recent stable release of Varbase 9.2.x run this command:
 ```
-composer create-project Vardot/varbase-project:~9.1.0 PROJECT_DIR_NAME --no-dev --no-interaction
-```
-
-To install the dev version of Varbase 9.1.x run this command:
-```
-composer create-project vardot/varbase-project:9.1.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+composer create-project drupal/varbase_project:~9.2.0 PROJECT_DIR_NAME --no-dev --no-interaction
 ```
 
-## [Create a new Vartheme sub theme for a project](https://github.com/Vardot/varbase/tree/9.1.x/scripts/README.md)
+To install the dev version of Varbase 9.2.x run this command:
+```
+composer create-project drupal/varbase_project:9.2.x-dev PROJECT_DIR_NAME --stability dev --no-interaction
+```
 
-## [Automated Functional Testing](https://github.com/Vardot/varbase/blob/9.1.x/tests/README.md)
+## [Create a new Vartheme sub theme for a project](https://git.drupalcode.org/project/varbase/-/tree/9.2.x/scripts/README.md)
 
-## [Varbase 9.1.x Developer Guide](https://docs.varbase.vardot.com)
+## [Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/-/blob/9.2.x/tests/README.md)
 
-## [CHANGELOG for Varbase](https://github.com/Vardot/varbase/blob/9.1.x/CHANGELOG.md)
+## [Varbase 9.2.x Developer Guide](https://docs.varbase.vardot.com)
 
-## [Varbase Gherkin features](https://github.com/Vardot/varbase/blob/9.1.x/tests/features/varbase/README.md)
+## [CHANGELOG for Varbase](https://git.drupalcode.org/project/varbase/-/blob/9.2.x/CHANGELOG.md)
+
+## [Varbase Gherkin features](https://git.drupalcode.org/project/varbase_project/-/tree/9.2.x/tests/features/varbase)
 
 ## [Varbase Developer Guide](https://docs.varbase.vardot.com)
 
-## [General instructions on how to update Varbase](https://github.com/Vardot/varbase/blob/9.1.x/UPDATE.md)
+## [General instructions on how to update Varbase](https://git.drupalcode.org/project/varbase/-/blob/9.2.x/UPDATE.md)
 
-## [Local development with Lando](https://docs.varbase.vardot.com/developers/installing-varbase/installing-varbase-with-lando)
+## [Local development with Lando](https://docs.varbase.vardot.com/developers/installing-varbase)
 
 1. Install Lando locally, steps for installing can be found [here](https://docs.lando.dev/basics/installation.html).
 2. Run `lando start`.

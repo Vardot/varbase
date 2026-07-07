@@ -1,3 +1,81 @@
+# 9.2.0
+
+This is the first stable **minor release of Varbase 9.2** and is ready for use on production sites. It is the **Drupal ~11.4-only** continuation of the Varbase 9.1.x line (9.1.13 → 9.2.0) and drops Drupal 10. Varbase 9.2.0 uses `vartheme_bs4 ~9.2.0`. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.0.x).
+
+### Highlighted important changes since [Varbase 9.1.13](https://www.drupal.org/project/varbase/releases/9.1.13):
+* task: [#3606799](https://www.drupal.org/i/3606799) Require Drupal **~11.4** and drop Drupal 10 support across the Varbase 9.2.x suite
+* refactor: [#3608347](https://www.drupal.org/i/3608347) Convert the procedural hooks to **OOP hook classes** ([#3442349](https://www.drupal.org/node/3442349)) across the profile and all modules
+* task: [#3608646](https://www.drupal.org/i/3608646) Switch to **Default Varbase recipes** and drop the Module Installer Factory class for permissions
+* task: [#3606797](https://www.drupal.org/i/3606797) Release **Vartheme (Bootstrap 4 - SASS) 9.2.0** for Drupal ~11.4
+
+### Added since [Varbase 9.1.13](https://www.drupal.org/project/varbase/releases/9.1.13):
+* All new features are in **Varbase ~11.0.0**
+
+### Changed since [Varbase 9.1.13](https://www.drupal.org/project/varbase/releases/9.1.13):
+* fix: [#3606834](https://www.drupal.org/i/3606834) Remove the **Action** module (removed from Drupal 11 core)
+* fix: [#3606837](https://www.drupal.org/i/3606837) Remove the **Statistics** module (removed from Drupal 11 core) from Varbase Blog
+* fix: [#3606838](https://www.drupal.org/i/3606838) Remove the **Google Analytics Reports** module from Varbase Total Control
+* task: [#3608518](https://www.drupal.org/i/3608518) Remove the **Twitter (X)** option from the social authentications install step
+* task: [#3608748](https://www.drupal.org/i/3608748) Drop **social_auth_twitter** references in the Varbase profile
+* task: [#3608749](https://www.drupal.org/i/3608749) Drop **social_auth_twitter** references in Varbase Social Single Sign-On
+* task: [#3608589](https://www.drupal.org/i/3608589) Update Drupal 10 references to Drupal 11 in the welcome tour and default content
+* refactor: [#3608369](https://www.drupal.org/i/3608369) Convert the procedural tokens/hooks to the OOP hook class for **Varbase Core**
+* refactor: [#3608373](https://www.drupal.org/i/3608373) Convert the procedural helpers/tokens to the OOP hook class for **Varbase Media**
+* refactor: [#3608315](https://www.drupal.org/i/3608315) Remove the #[LegacyHook] shims for full OOP hooks for **Varbase SEO**
+* refactor: [#3608316](https://www.drupal.org/i/3608316) Convert the procedural hooks to OOP hook classes for **Varbase Search**
+* refactor: [#3608326](https://www.drupal.org/i/3608326) Remove the #[LegacyHook] shims for full OOP hooks for **Varbase API**
+* refactor: [#3608370](https://www.drupal.org/i/3608370) Remove the #[LegacyHook] shims and procedural files for full OOP hooks for **Varbase Social Single Sign-On**
+* refactor: [#3608321](https://www.drupal.org/i/3608321) Remove the #[LegacyHook] shims for full OOP hooks for **Varbase Email**
+* refactor: [#3608329](https://www.drupal.org/i/3608329) Convert the procedural hooks to OOP hook classes for **Varbase Style Guide**
+* refactor: [#3608376](https://www.drupal.org/i/3608376) Remove the #[LegacyHook] shims for full OOP hooks for **Varbase Total Control**
+* refactor: [#3608375](https://www.drupal.org/i/3608375) Remove the #[LegacyHook] shims for full OOP hooks for **Varbase Media Hero Slider**
+* refactor: [#3608324](https://www.drupal.org/i/3608324) Convert the procedural hooks to OOP hook classes for **Varbase Editor**
+* refactor: [#3608325](https://www.drupal.org/i/3608325) Convert the procedural hooks to OOP hook classes for **Varbase Workflow**
+* refactor: [#3608319](https://www.drupal.org/i/3608319) Remove the #[LegacyHook] shims for full OOP hooks for **Varbase Blog**
+* refactor: [#3608322](https://www.drupal.org/i/3608322) Convert the procedural hooks to OOP hook classes for **Varbase Landing Page**
+* refactor: [#3608379](https://www.drupal.org/i/3608379) Remove the #[LegacyHook] shims for full OOP hooks for **Vartheme (Bootstrap 4 - SASS)**
+* task: [#3608608](https://www.drupal.org/i/3608608) Switch to a Default Varbase API recipe and drop the Module Installer Factory class
+* task: [#3608640](https://www.drupal.org/i/3608640) Switch to a Default Varbase Total Control recipe and drop the Module Installer Factory class
+* task: [#3608639](https://www.drupal.org/i/3608639) Switch to a Default Varbase Carousels recipe and drop the Module Installer Factory class
+* task: [#3608635](https://www.drupal.org/i/3608635) Switch to a Default Varbase Bootstrap Paragraphs recipe and drop the Module Installer Factory class
+* task: [#3608632](https://www.drupal.org/i/3608632) Switch to a Default Varbase Blog recipe and drop the Module Installer Factory class
+* task: [#3608641](https://www.drupal.org/i/3608641) Switch to a Default Varbase Workflow recipe and drop the Module Installer Factory class
+* test: [#3608527](https://www.drupal.org/i/3608527) Migrate the Behat features to webship-js and support local DDEV automated testing for **Varbase Project Template**
+* task: [#3608744](https://www.drupal.org/i/3608744) Drop **social_auth_twitter** references in the Varbase Project template
+
+### Updates since [Varbase 9.1.13](https://www.drupal.org/project/varbase/releases/9.1.13):
+* task: [#3606373](https://www.drupal.org/i/3606373) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Core**
+* task: [#3606619](https://www.drupal.org/i/3606619) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Media**
+* task: [#3606647](https://www.drupal.org/i/3606647) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase SEO**
+* task: [#3606677](https://www.drupal.org/i/3606677) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Search**
+* task: [#3606269](https://www.drupal.org/i/3606269) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase API**
+* task: [#3606340](https://www.drupal.org/i/3606340) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Social Single Sign-On**
+* task: [#3606683](https://www.drupal.org/i/3606683) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Email**
+* task: [#3606691](https://www.drupal.org/i/3606691) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Style Guide**
+* task: [#3606694](https://www.drupal.org/i/3606694) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Total Control Dashboard**
+* task: [#3606701](https://www.drupal.org/i/3606701) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Carousels**
+* task: [#3606707](https://www.drupal.org/i/3606707) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Media Hero Slider**
+* task: [#3606716](https://www.drupal.org/i/3606716) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Bootstrap Paragraphs**
+* task: [#3606370](https://www.drupal.org/i/3606370) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Blog**
+* task: [#3606720](https://www.drupal.org/i/3606720) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Landing Page (Paragraphs)**
+* task: [#3606777](https://www.drupal.org/i/3606777) Require Drupal ~11.4 and drop Drupal 10 support for **Varbase Editor**
+* task: [#3606791](https://www.drupal.org/i/3606791) Start a 2.2.x branch (Drupal ~11.4, drop Drupal 10) for **Varbase Workflow**
+* task: [#3606654](https://www.drupal.org/i/3606654) Support Drupal ~11.4 while keeping Drupal ~10 for **Varbase Layout Builder**
+* task: [#3607843](https://www.drupal.org/i/3607843) Bump the **varbase_content_planner** submodule to Drupal ~11.4.0
+* task: [#3606815](https://www.drupal.org/i/3606815) Start a 9.2.x branch (Drupal ~11.4, drop Drupal 10) for **Varbase Project Template**
+
+### Fixes since [Varbase 9.1.13](https://www.drupal.org/project/varbase/releases/9.1.13):
+* fix: [#3607041](https://www.drupal.org/i/3607041) Bootstrap JavaScript jQuery 4 compatibility on Drupal ~11 (Vartheme BS4)
+* fix: [#3608307](https://www.drupal.org/i/3608307) Homepage and Landing demo blocks do not import because the basic block content type is missing its body field (Varbase Core)
+* fix: [#3608104](https://www.drupal.org/i/3608104) Carousel block view display fails config validation on Drupal 11.4 / Blazy 3.x (Varbase Carousels)
+* fix: [#3578506](https://www.drupal.org/i/3578506) InvalidConfigException: rtl_default is not a supported key for CKEditor BiDi Buttons (Varbase Editor)
+* fix: [#3608534](https://www.drupal.org/i/3608534) Drop the removed includes/helpers.inc include from varbase_auth.install (Varbase Social Single Sign-On)
+* fix: [#3608535](https://www.drupal.org/i/3608535) Remove the Drupal-11-removed statistics permission from role configs (Varbase Blog)
+* fix: [#3608581](https://www.drupal.org/i/3608581) Grant Editor the translate landing_page_lb node permission (Varbase Layout Builder)
+* fix: [#3608306](https://www.drupal.org/i/3608306) Landing page Components field does not render when vbp_text_and_image installs first (Varbase Bootstrap Paragraphs)
+* fix: [#3608599](https://www.drupal.org/i/3608599) Move Landing page bundle configs to the default recipe config dir (Varbase Landing Page)
+* fix: [#3608495](https://www.drupal.org/i/3608495) Allow the **symfony/runtime** Composer plugin for Drupal 11.4 (Varbase Project Template)
+
 # 9.1.13
 
 This is a **patch (bugfix) release of Varbase 9** and is ready for use on production sites. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.0.x).
@@ -891,8 +969,8 @@ This is an upgrade path release of **Varbase 9** to upgrade to **Drupal 10** and
 > * [Drush 11 is end of life](https://www.drush.org/12.x/install/#drupal-compatibility)
 
 > #### What to do about Drupal 9's and Drush 11's end of life?
-> * [Updating Varbase ~9.0 to Drupal 10](https://docs.varbase.vardot.com/developers/updating-varbase/version-update-guides/updating-varbase-9.0-to-drupal-10)
-> * [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers/updating-varbase/updating-drush-to-the-latest-stable-version)
+> * [Updating Varbase ~9.0 to Drupal 10](https://docs.varbase.vardot.com/developers)
+> * [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers)
 
 All old **Varbase 9.0.x** sites are ready to upgrade to **latest Drupal ~10 version** with **Varbase 9.1.x**
 
@@ -1035,8 +1113,8 @@ This is a patch (bugfix) release of **Varbase 9** and is ready for use on produc
 > * [Drush 11 is end of life](https://www.drush.org/12.x/install/#drupal-compatibility)
 
 > #### What to do about Drupal 9's and Drush 11's end of life?
-> * [Updating Varbase ~9.0 to Drupal 10](https://docs.varbase.vardot.com/developers/updating-varbase/version-update-guides/updating-varbase-9.0-to-drupal-10)
-> * [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers/updating-varbase/updating-drush-to-the-latest-stable-version)
+> * [Updating Varbase ~9.0 to Drupal 10](https://docs.varbase.vardot.com/developers)
+> * [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers)
 
 All old **Varbase 9.0.x** sites are ready to upgrade to **latest Drupal ~10 version** with **Varbase 9.1.x**
 
@@ -1297,7 +1375,7 @@ This is a patch (bugfix) release of **Varbase 9** and is ready for use on produc
 
 * Issue [#3392564](https://www.drupal.org/i/3392564):
         Updated the **Varbase `9.0.x`** branch to use **Drupal `~10.1.0`**
-* [Updating Varbase `~9.0` to Drupal `10`](https://docs.varbase.vardot.com/developers/updating-varbase/version-update-guides/updating-varbase-9.0-to-drupal-10)
+* [Updating Varbase `~9.0` to Drupal `10`](https://docs.varbase.vardot.com/developers)
 * Issue [#3392444](https://www.drupal.org/i/3392444):
          Revamped the `9.1.x` branch for Varbase Core module to work with
          **Drupal** `~10.1.0` and custom needed changes for a smoother upgrade process
@@ -1306,7 +1384,7 @@ This is a patch (bugfix) release of **Varbase 9** and is ready for use on produc
         **Drupal** `~10.1.0` and custom needed changes for a smoother upgrade process
 * Issue [#3394196](https://www.drupal.org/i/3394196):
         Updated default used **Drush** from `~11.0` to `~12.0`
-* [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers/updating-varbase/updating-drush-to-the-latest-stable-version)
+* [Updating Drush to the Latest Stable Version](https://docs.varbase.vardot.com/developers)
 
 
 > Absolutely, additional checks and status updates are required for extra used contrib modules and themes in the projects.
@@ -1961,7 +2039,7 @@ This is a patch (bugfix) release of Varbase 9 and is ready for use on production
 * Updated Lando project configs for Vardot/varbase-project
         template to use **PHP 8.1** [#154](https://github.com/Vardot/varbase-project/pull/154)
 * Updated Platform.sh app configs for Vardot/platformsh-varbase
-        template to use **PHP 8.1** [#35](https://github.com/Vardot/platformsh-varbase/pull/35)
+        template to use **PHP 8.1** [#35](https://github.com/Vardot/platformsh-varbase)
 
 ### Added since Varbase 9.0.8:
 * No additions in this release, All additions and major
@@ -5408,7 +5486,7 @@ file to clear the security flag for Drupal.org packaging
 * Issue [#3103717](https://www.drupal.org/node/3103717):
                   Fixed replace drupal-composer/drupal-scaffold with
                   drupal/core-composer-scaffold and remove post install cmd scripts
-* [Vardot/varbase-project](https://github.com/Vardot/varbase-project)
+* [Vardot/varbase-project](https://git.drupalcode.org/project/varbase_project)
                   template : Fixed replace
                   drupal-composer/drupal-scaffold with
                   drupal/core-composer-scaffold
@@ -8856,7 +8934,7 @@ file to clear the security flag for Drupal.org packaging
 * Issue [#3103717](https://www.drupal.org/node/3103717):
                   Fixed replace drupal-composer/drupal-scaffold with
                   drupal/core-composer-scaffold and remove post install cmd scripts
-* [Vardot/varbase-project](https://github.com/Vardot/varbase-project)
+* [Vardot/varbase-project](https://git.drupalcode.org/project/varbase_project)
                   template : Fixed replace
                   drupal-composer/drupal-scaffold with
                   drupal/core-composer-scaffold
