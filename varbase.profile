@@ -13,6 +13,7 @@ use Drupal\varbase\Form\AssemblerForm;
 use Drupal\varbase\Form\DevelopmentToolsAssemblerForm;
 use Vardot\Entity\EntityDefinitionUpdateManager;
 use Drupal\path_alias\Entity\PathAlias;
+use Drupal\node\NodeAccessRebuild;
 use Drupal\Component\Utility\Environment;
 
 /**
@@ -704,7 +705,7 @@ function varbase_clear_caches($clear = TRUE) {
     \Drupal::service('plugin.manager.menu.link')->rebuild();
 
     // Rebuild permissions. The content access permissions need to be rebuilt.
-    \Drupal::service('\Drupal\node\NodeAccessRebuild')->rebuild();
+    \Drupal::service(NodeAccessRebuild::class)->rebuild();
 
     // Rebuild the menu router based on all rebuilt data.
     // Important: This rebuild must happen last, so the menu router is guaranteed
