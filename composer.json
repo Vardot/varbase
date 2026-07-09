@@ -18,7 +18,7 @@
     "vardot/varbase-patches": "10.1.x-dev",
     "vardot/varbase-replaces": "10.1.x-dev",
     "drupal/varbase_core": "10.1.x-dev",
-    "drupal/varbase_components": "3.0.x-dev",
+    "drupal/varbase_components": "3.1.x-dev",
     "drupal/varbase_api": "10.1.x-dev",
     "drupal/varbase_ai": "2.0.x-dev",
     "drupal/varbase_media": "10.1.x-dev",
@@ -36,7 +36,7 @@
     "drupal/varbase_email": "10.1.x-dev",
     "drupal/varbase_workflow": "3.1.x-dev",
     "drupal/varbase_demo": "1.1.x-dev",
-    "drupal/vartheme_bs5": "4.0.x-dev"
+    "drupal/vartheme_bs5": "4.1.x-dev"
   },
   "autoload": {
     "psr-4": {
