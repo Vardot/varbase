@@ -1,3 +1,51 @@
+# 11.0.0-beta1
+
+### Highlighted important changes since Varbase 11.0.0-alpha3:
+* task: Support Drupal ~11.4 across the whole Varbase suite — the profile, Starter, all the base recipes, the AI recipes, the Vartheme (Bootstrap 5) theme, and the Varbase modules
+* feat: [#3607697](https://www.drupal.org/i/3607697) Add reusable Canvas Patterns (sections) to Varbase Starter
+* feat: [#3609964](https://www.drupal.org/i/3609964) Keep administrative components out of the Drupal Canvas component library
+* ci: [#3594223](https://www.drupal.org/i/3594223) Add automated functional acceptance testing for Canvas Override (Playwright + Cucumber-js), Drupal Core + Drupal CMS support, and MkDocs documentation
+* docs: Add a CHANGELOG.md and an AGENTS.md and run CI on tag pushes with README pipeline and release badges across every recipe, module, and the theme
+
+### Added since Varbase 11.0.0-alpha3:
+* feat: [#3607697](https://www.drupal.org/i/3607697) Add reusable Canvas Patterns (sections) to Varbase Starter
+* feat: [#3609964](https://www.drupal.org/i/3609964) Keep administrative components out of the Drupal Canvas component library
+* ci: [#3594223](https://www.drupal.org/i/3594223) Add automated functional acceptance testing for Canvas Override (Playwright + Cucumber-js), Drupal Core + Drupal CMS support, and MkDocs documentation
+
+### Changed since Varbase 11.0.0-alpha3:
+* chore: [#3607727](https://www.drupal.org/i/3607727) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase profile
+* chore: [#3607733](https://www.drupal.org/i/3607733) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Starter recipe
+* chore: [#3607741](https://www.drupal.org/i/3607741) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase AI Base recipe
+* chore: [#3607742](https://www.drupal.org/i/3607742) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase AI Context recipe
+* chore: [#3607746](https://www.drupal.org/i/3607746) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase AI Editor Assistant recipe
+* chore: [#3607747](https://www.drupal.org/i/3607747) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase AI Image Alt recipe
+* chore: [#3607750](https://www.drupal.org/i/3607750) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase AI Safety recipe
+* chore: [#3607751](https://www.drupal.org/i/3607751) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase AI Taxonomy Tagging recipe
+* chore: [#3607740](https://www.drupal.org/i/3607740) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Admin Base recipe
+* chore: [#3607752](https://www.drupal.org/i/3607752) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase API Base recipe
+* chore: [#3607753](https://www.drupal.org/i/3607753) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Auth Base recipe
+* chore: [#3607754](https://www.drupal.org/i/3607754) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Blog Base recipe
+* chore: [#3607755](https://www.drupal.org/i/3607755) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Content Base recipe
+* chore: [#3607756](https://www.drupal.org/i/3607756) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Demo Content recipe
+* chore: [#3607757](https://www.drupal.org/i/3607757) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Dev Base recipe
+* chore: [#3607758](https://www.drupal.org/i/3607758) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Editor Base recipe
+* chore: [#3607760](https://www.drupal.org/i/3607760) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Internationalization Base recipe
+* chore: [#3607761](https://www.drupal.org/i/3607761) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Media Assets recipe
+* chore: [#3607762](https://www.drupal.org/i/3607762) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Media Base recipe
+* chore: [#3607764](https://www.drupal.org/i/3607764) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Page Base recipe
+* chore: [#3607766](https://www.drupal.org/i/3607766) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Performance Base recipe
+* chore: [#3607767](https://www.drupal.org/i/3607767) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Security Base recipe
+* chore: [#3607768](https://www.drupal.org/i/3607768) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase SEO Base recipe
+* chore: [#3607770](https://www.drupal.org/i/3607770) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Users Base recipe
+* chore: [#3607771](https://www.drupal.org/i/3607771) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Webform Base recipe
+* chore: [#3607772](https://www.drupal.org/i/3607772) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Workflow Base recipe
+* chore: [#3607734](https://www.drupal.org/i/3607734) Update Drupal Core from ~11.3.0 to ~11.4.0 in the Vartheme BS5 theme
+* chore: [#3607789](https://www.drupal.org/i/3607789) Update Drupal Core from ~11.3.0 to ~11.4.0 in the VMI module on the 5.0.x branch
+
+### Fixed since Varbase 11.0.0-alpha3:
+* fix: [#3607733](https://www.drupal.org/i/3607733) Fix stale active_version and the missing alignment prop field definition for the Card Logo component (part of the Varbase Starter core update)
+* fix: [#3608868](https://www.drupal.org/i/3608868) Remote-video default content makes live oEmbed validation calls during site:install, causing intermittent install failures (Varbase Media Assets)
+
 # 11.0.0-alpha3
 
 ### Highlighted important changes since [Varbase 11.0.0-alpha2](https://www.drupal.org/project/varbase/releases/11.0.0-alpha2):
