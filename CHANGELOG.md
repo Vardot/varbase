@@ -1,3 +1,72 @@
+# 10.1.1
+
+### Highlighted important changes since [10.1.0](https://www.drupal.org/project/varbase/releases/10.1.0):
+* [#3607727](https://www.drupal.org/i/3607727) chore: Update **Drupal core** from `~11.3.0` to `~11.4.0` across the whole Varbase 10.1.x suite
+
+### Added since [10.1.0](https://www.drupal.org/project/varbase/releases/10.1.0):
+* [#3609187](https://www.drupal.org/i/3609187) test: Add a meaningful automated functional test suite for the Hero Slider content type
+
+### Changed since [10.1.0](https://www.drupal.org/project/varbase/releases/10.1.0):
+* [#3608270](https://www.drupal.org/i/3608270) task: Remove legacy Behat tests and CircleCI (testing moved to varbase_project + webship-js)
+* [#3564681](https://www.drupal.org/i/3564681) docs: Change the UPDATE.md as we officially paved the way for Automatic Updates in Varbase projects
+* [#3609502](https://www.drupal.org/i/3609502) task: Update vartheme_bs5 to 4.1.x-dev and varbase_components to 3.1.x-dev
+* [#3609291](https://www.drupal.org/i/3609291) task: Start a 1.1.x branch to support Drupal ~11.4 and remove the module composer patches
+* [#3609275](https://www.drupal.org/i/3609275) task: Start a 10.1.x branch to support Drupal ~11.4 and drop the vardot/varbase-patches dependency
+* [#3609210](https://www.drupal.org/i/3609210) task: Use the Varbase Components 3.1.0 release and drop the interim dev pin on the 10.1.x branch
+* [#3609162](https://www.drupal.org/i/3609162) task: Bundle the FAQ module, require Drupal ~11.4 only, and drop the vardot/varbase-patches dependency on the 10.1.x branch
+* [#3609207](https://www.drupal.org/i/3609207) task: Use the Varbase Components 3.1.0 release and drop the interim dev pin on the 10.1.x branch
+* [#3609159](https://www.drupal.org/i/3609159) task: Require Drupal ~11.4 only and drop the vardot/varbase-patches dependency on the 10.1.x branch
+* [#3608320](https://www.drupal.org/i/3608320) refactor: Convert the procedural hooks to OOP hook classes in the Varbase Demo module
+* [#3609251](https://www.drupal.org/i/3609251) refactor: Convert hooks to the Drupal 11 OOP hook system and validate on Drupal ~11.4 for the Varbase 9.2.x line
+* [#3609150](https://www.drupal.org/i/3609150) task: Drop the vardot/varbase-patches dependency so Varbase AI resolves on the Varbase 9.2.x (Drupal ~11.4) line
+* [#3607831](https://www.drupal.org/i/3607831) task: Add Drupal core ~11.4.0 support in the Varbase AI module (2.0.x)
+* [#3609216](https://www.drupal.org/i/3609216) task: Start a 4.1.x branch requiring Varbase Components ~3.1 for the Drupal ~11.4 SDC fix
+* [#3608328](https://www.drupal.org/i/3608328) refactor: Convert the procedural hooks to OOP hook classes in the Vartheme BS5 theme
+* [#3608326](https://www.drupal.org/i/3608326) refactor: Convert the procedural hooks to OOP hook classes in the Varbase API module
+* [#3608370](https://www.drupal.org/i/3608370) refactor: Remove the #[LegacyHook] shims and procedural files for full OOP hooks in the Varbase Auth module
+* [#3609191](https://www.drupal.org/i/3609191) refactor: Remove the dead includes/helpers.inc include from varbase_auth.install (file deleted in the OOP hooks conversion)
+* [#3608324](https://www.drupal.org/i/3608324) refactor: Convert the procedural hooks to OOP hook classes in the Varbase Editor module
+* [#3608322](https://www.drupal.org/i/3608322) refactor: Convert the procedural hooks to OOP hook classes in the Varbase Landing Page module
+* [#3608321](https://www.drupal.org/i/3608321) refactor: Convert the procedural hooks to OOP hook classes in the Varbase Email module
+* [#3608316](https://www.drupal.org/i/3608316) refactor: Convert the procedural hooks to OOP hook classes in the Varbase Search module
+* [#3608319](https://www.drupal.org/i/3608319) refactor: Convert the procedural hooks to OOP hook classes in the Varbase Blog module
+* [#3608315](https://www.drupal.org/i/3608315) refactor: Convert the procedural hooks to OOP hook classes in the Varbase SEO module
+* [#3608373](https://www.drupal.org/i/3608373) refactor: Convert the procedural hooks and helpers to OOP hook classes in the Varbase Media module
+* [#3608369](https://www.drupal.org/i/3608369) refactor: Convert the procedural hooks to OOP hook classes in the Varbase Core module
+* [#3566390](https://www.drupal.org/i/3566390) chore: Update CKEditor 5 Plugin Pack from ~1.4.0 to ~1.5.0
+* [#3566085](https://www.drupal.org/i/3566085) feat: Add Dashboard Navigation block to Navigation sidebar on update
+
+### Updates since [10.1.0](https://www.drupal.org/project/varbase/releases/10.1.0):
+* [#3607727](https://www.drupal.org/i/3607727) chore: Update Drupal core from ~11.3.0 to ~11.4.0 on the 10.1.x branch
+* [#3607734](https://www.drupal.org/i/3607734) chore: Update Drupal Core from ~11.3.0 to ~11.4.0 in the Vartheme BS5 theme
+* [#3607735](https://www.drupal.org/i/3607735) chore: Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Auth module
+* [#3607737](https://www.drupal.org/i/3607737) chore: Update Drupal Core from ~11.3.0 to ~11.4.0 in the Varbase Media module
+* [#3607836](https://www.drupal.org/i/3607836) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Heroslider Media module (1.1.x)
+* [#3607844](https://www.drupal.org/i/3607844) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Demo module (1.1.x)
+* [#3607841](https://www.drupal.org/i/3607841) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Dashboards module (2.0.x)
+* [#3607829](https://www.drupal.org/i/3607829) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase API module (10.1.x)
+* [#3607832](https://www.drupal.org/i/3607832) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Editor module (10.1.x)
+* [#3607833](https://www.drupal.org/i/3607833) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Landing module (10.1.x)
+* [#3607835](https://www.drupal.org/i/3607835) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Bootstrap Paragraphs module (10.1.x)
+* [#3606707](https://www.drupal.org/i/3606707) chore: Update Drupal Core from ~11.3.0 to ~11.4.0 on the 9.2.x branch for Media Hero Slider
+* [#3607837](https://www.drupal.org/i/3607837) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Carousels module (10.1.x)
+* [#3607842](https://www.drupal.org/i/3607842) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Email module (10.1.x)
+* [#3607839](https://www.drupal.org/i/3607839) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Search module (10.1.x)
+* [#3607838](https://www.drupal.org/i/3607838) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Blog module (10.1.x)
+* [#3607834](https://www.drupal.org/i/3607834) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Layout Builder module (10.2.x)
+* [#3607840](https://www.drupal.org/i/3607840) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase SEO module (10.1.x)
+* [#3607828](https://www.drupal.org/i/3607828) chore: Update Drupal core from ~11.3.0 to ~11.4.0 in the Varbase Core module (10.1.x)
+
+### Fixes since [10.1.0](https://www.drupal.org/project/varbase/releases/10.1.0):
+* [#3609165](https://www.drupal.org/i/3609165) fix: Resolve the NodeAccessRebuild service by its class-name id (fresh-install ServiceNotFoundException)
+* [#3609140](https://www.drupal.org/i/3609140) fix: Fresh install fails: recipe re-imports config/install node.type.varbase_heroslider - RecipePreExistingConfigException on Drupal 11.4
+* [#3578506](https://www.drupal.org/i/3578506) fix: InvalidConfigException: rtl_default is not a supported key for CKEditor BiDi Buttons in basic_html and full_html
+* [#3578526](https://www.drupal.org/i/3578526) fix: Missing plugin configuration for Bidi Buttons in email_html editor causes InvalidConfigException during recipe install
+* [#3563537](https://www.drupal.org/i/3563537) fix: Add title tag and lang attribute to iframe for accessibility
+* [#3569005](https://www.drupal.org/i/3569005) fix: warning message related admin-reset-styles.css file
+* [#3523080](https://www.drupal.org/i/3523080) fix: Hidden CKEditor 5 table configuration options
+* [#3564723](https://www.drupal.org/i/3564723) fix: Layout Builder preview renders with admin theme instead of frontend theme after adding sections or updating paragraphs
+
 # 10.1.0
 
 ### Highlighted important changes since [10.1.0-rc1](https://www.drupal.org/project/varbase/releases/10.1.0-rc1):
