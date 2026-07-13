@@ -10,6 +10,7 @@ distribution:
     finish_url: '/'
 version: 11.0.x-dev
 forms:
+  - '\Drupal\varbase\Installer\Form\SiteTemplateForm'
   - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
   - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'
 recipes:
