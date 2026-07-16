@@ -1,3 +1,15 @@
+# 11.0.0-beta2
+
+### Highlighted important changes since Varbase 11.0.0-beta1:
+* feat: [#3610649](https://www.drupal.org/i/3610649) Let users choose a site template in the installer
+* fix: [#3610705](https://www.drupal.org/i/3610705) Create user 1 as webmaster in the browser installer, like ddev install-varbase does
+
+### Added since Varbase 11.0.0-beta1:
+* feat: [#3610649](https://www.drupal.org/i/3610649) Let users choose a site template in the installer
+
+### Fixed since Varbase 11.0.0-beta1:
+* fix: [#3610705](https://www.drupal.org/i/3610705) Create user 1 as webmaster in the browser installer, like ddev install-varbase does
+
 # 11.0.0-beta1
 
 ### Highlighted important changes since Varbase 11.0.0-alpha3:
