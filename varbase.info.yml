@@ -17,9 +17,11 @@ recipes:
   required: []
   default:
     - drupal/varbase_starter
-themes:
-  - gin
-  - vartheme_bs5
+# Explicitly provide an empty list of themes: this prevents the installer from
+# injecting Stark into it, and lets each site template install and set its own
+# front-end and admin themes.
+# @see install_profile_info()
+themes: []
 hide_messages:
   - ['One translation file imported. %number translations were added, %update translations were updated and %delete translations were removed.', '@count translation files imported. %number translations were added, %update translations were updated and %delete translations were removed.']
   - 'The configuration was successfully updated. There are %number configuration objects updated.'
