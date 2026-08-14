@@ -1,3 +1,53 @@
+# 9.2.1
+
+This is a patch release for existing **Varbase 9.2.x** (Drupal ~11.4) sites. It is **not** for starting new projects — start a new project on the latest **Varbase ~11.0.0**. It moves the Automated Functional Testing suites of the profile, every Varbase module and **Vartheme (Bootstrap 4 - SASS)** onto **Varbase E2E** (`@vardot/varbase-e2e ^2`, Playwright + Cucumber-js), and clears the PHPStan findings raised by the updated analyzers. Varbase 9.2.1 uses `vartheme_bs4 ~9.2.0`. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.2.x).
+
+### At a glance
+* A maintenance release of the Varbase 9.2.x suite — no new functionality (all new features land in Varbase 11), and no content or content-model changes.
+* The Automated Functional Testing suites of the profile, every Varbase module and Vartheme (Bootstrap 4 - SASS) now run on **Varbase E2E** (`@vardot/varbase-e2e ^2`, Playwright + Cucumber-js).
+* Clears the PHPStan findings raised by the updated analyzers, and drops the obsolete `drupal/entity` patch that broke builds after Entity API 8.x-1.7.
+
+### Highlighted important changes since [Varbase 9.2.0](https://www.drupal.org/project/varbase/releases/9.2.0):
+* task: [#3615764](https://www.drupal.org/i/3615764) Switch the **Automated Functional Testing** suites across the Varbase 9.2.x suite to **Varbase E2E** (Playwright + Cucumber-js)
+* task: [#3616637](https://www.drupal.org/i/3616637) Update **@vardot/varbase-e2e** to the latest **2.x** in every Varbase 9.2.x project
+* fix: [#3615801](https://www.drupal.org/i/3615801) Resolve the **PHPStan** findings raised by the updated analyzers
+* task: [#3615792](https://www.drupal.org/i/3615792) Release **Vartheme (Bootstrap 4 - SASS) 9.2.2**
+
+### Added since [Varbase 9.2.0](https://www.drupal.org/project/varbase/releases/9.2.0):
+* All new features are in **Varbase ~11.0.0**
+
+### Changed since [Varbase 9.2.0](https://www.drupal.org/project/varbase/releases/9.2.0):
+* task: [#3616857](https://www.drupal.org/i/3616857) Pin every Varbase 9.2.x component constraint to its stable release and release **Varbase 9.2.1**
+* task: Uses **[Varbase Patches 9.2.99](https://github.com/Vardot/varbase-patches/releases/tag/9.2.99)**, which drops the obsolete `drupal/entity` patch that broke builds after **Entity API 8.x-1.7**
+* task: [#3616114](https://www.drupal.org/i/3616114) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Core** — released **9.2.2**
+* task: [#3615764](https://www.drupal.org/i/3615764) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase API** — released **9.2.2**
+* task: [#3615782](https://www.drupal.org/i/3615782) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Media** — released **9.2.2**
+* task: [#3615774](https://www.drupal.org/i/3615774) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Editor** — released **9.2.16**
+* task: [#3615780](https://www.drupal.org/i/3615780) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Landing Page** — released **9.2.6**
+* task: [#3615766](https://www.drupal.org/i/3615766) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Bootstrap Paragraphs** — released **9.2.2**
+* task: [#3615779](https://www.drupal.org/i/3615779) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Media Hero Slider** — released **9.2.2**
+* task: [#3615767](https://www.drupal.org/i/3615767) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Carousels** — released **9.2.2**
+* task: [#3615765](https://www.drupal.org/i/3615765) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Blog** — released **9.2.2**
+* task: [#3615787](https://www.drupal.org/i/3615787) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Search** — released **9.2.2**
+* task: [#3615788](https://www.drupal.org/i/3615788) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase SEO** — released **9.2.2**
+* task: [#3616629](https://www.drupal.org/i/3616629) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Social Single Sign-On** — released **9.2.2**
+* task: [#3615790](https://www.drupal.org/i/3615790) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Total Control** — released **9.2.2**
+* task: [#3615789](https://www.drupal.org/i/3615789) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Style Guide** — released **9.2.2**
+* task: [#3615775](https://www.drupal.org/i/3615775) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Email** — released **9.2.2**
+* task: [#3615792](https://www.drupal.org/i/3615792) Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Vartheme (Bootstrap 4 - SASS)** — released **9.2.2**
+
+### Updates since [Varbase 9.2.0](https://www.drupal.org/project/varbase/releases/9.2.0):
+* Update for Drupal Core and modules
+
+### Fixes since [Varbase 9.2.0](https://www.drupal.org/project/varbase/releases/9.2.0):
+* fix: [#3615801](https://www.drupal.org/i/3615801) Resolve the PHPStan findings raised by the updated analyzers (Varbase API)
+* fix: [#3615798](https://www.drupal.org/i/3615798) Resolve the PHPStan findings raised by the updated analyzers (Varbase Media)
+* fix: [#3615797](https://www.drupal.org/i/3615797) Resolve the PHPStan findings raised by the updated analyzers (Varbase Editor)
+* fix: [#3615795](https://www.drupal.org/i/3615795) Resolve the PHPStan findings raised by the updated analyzers (Varbase Bootstrap Paragraphs)
+* fix: [#3615799](https://www.drupal.org/i/3615799) Resolve the PHPStan findings raised by the updated analyzers (Varbase Search)
+* fix: [#3615803](https://www.drupal.org/i/3615803) Resolve the PHPStan findings raised by the updated analyzers (Varbase Total Control)
+* fix: [#3616860](https://www.drupal.org/i/3616860) Use the Drupal serialization Yaml decoder instead of Symfony `Yaml::parse()` (Varbase profile and Config Bit)
+* fix: [#3616629](https://www.drupal.org/i/3616629) Replace the leftover `WEBSHIP_REPORT_DISABLE` environment variable with `VARBASE_E2E_REPORT_DISABLE` (Varbase Social Single Sign-On)
 # 9.2.0
 
 This is the first stable **minor release of Varbase 9.2** and is ready for use on production sites. It is the **Drupal ~11.4-only** continuation of the Varbase 9.1.x line (9.1.13 → 9.2.0) and drops Drupal 10. Varbase 9.2.0 uses `vartheme_bs4 ~9.2.0`. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.0.x).

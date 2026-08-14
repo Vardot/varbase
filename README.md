@@ -1,5 +1,5 @@
 [![pipeline status](https://git.drupalcode.org/project/varbase/badges/9.2.x/pipeline.svg)](https://git.drupalcode.org/project/varbase/-/pipelines)
-[![Varbase](https://img.shields.io/badge/Varbase-9.2.0-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase/-/pipelines?ref=9.2.x)
+[![Varbase](https://img.shields.io/badge/Varbase-9.2.1-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase/-/pipelines?ref=9.2.x)
 [![Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/badges/9.2.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/pipelines)
 
 [![](https://www.drupal.org/files/styles/grid-3/public/project-images/Medium-Logo%20Color%20with%20padding.png)](https://www.drupal.org/project/varbase)
