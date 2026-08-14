@@ -2,7 +2,8 @@
 
 namespace Drupal\varbase\Config;
 
-use Symfony\Component\Yaml\Yaml;
+use Drupal\Component\Serialization\Yaml;
+use Symfony\Component\Yaml\Yaml as SymfonyYaml;
 use Drupal\Core\Config\Config;
 use Drupal\Core\Config\ConfigCrudEvent;
 use Drupal\Core\Config\ConfigEvents;
@@ -213,7 +214,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       $config_template_file_contents = str_replace($supportedConfigType['token'], $token_variant, $config_template_file_contents);
 
       // Parse the yml file content to an array of data.
-      $config_template_file_data = (array) Yaml::parse($config_template_file_contents);
+      $config_template_file_data = (array) Yaml::decode($config_template_file_contents);
 
       if (isset($config_template_file_data['config_bits'])
         && is_array($config_template_file_data['config_bits'])) {
@@ -602,7 +603,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
     $full_config_bit_file_name = \Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_file_name;
     if (file_exists($full_config_bit_file_name)) {
       // Pars the config bit file and have it as an array if it was not.
-      $config_bit_data = (array) Yaml::parse(file_get_contents($full_config_bit_file_name));
+      $config_bit_data = (array) Yaml::decode(file_get_contents($full_config_bit_file_name));
       if (isset($config_bit_data['config_bit'])) {
         return $config_bit_data['config_bit'];
       }
@@ -779,7 +780,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && $config_bit_data['action']['add']['target'] == $target
         && isset($config_bit_data['action']['add'][$target])) {
 
-      $config_target_data = Yaml::parse(file_get_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for']));
+      $config_target_data = Yaml::decode(file_get_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for']));
 
       $configs_to_add = $config_bit_data['action']['add'][$target];
       foreach ($configs_to_add as $config_to_add) {
@@ -789,7 +790,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       }
 
       // Dump the array to string of Yaml format.
-      $updated_config_target = Yaml::dump($config_target_data, 2, 2);
+      $updated_config_target = SymfonyYaml::dump($config_target_data, 2, 2);
 
       // Save the updated config to the target file.
       file_put_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for'], $updated_config_target);
@@ -831,7 +832,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
         && isset($config_bit_data['action']['remove'][$target])) {
 
       // Read the Yaml config file. which this config bit for.
-      $config_target_data = Yaml::parse(file_get_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for']));
+      $config_target_data = Yaml::decode(file_get_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for']));
 
       $configs_to_remove = $config_bit_data['action']['remove'][$target];
       foreach ($configs_to_remove as $config_to_remove) {
@@ -842,7 +843,7 @@ class ConfigBit implements EventSubscriberInterface, ContainerInjectionInterface
       }
 
       // Save the updated config to the target file.
-      $updated_config_target = Yaml::dump($config_target_data, 2, 2);
+      $updated_config_target = SymfonyYaml::dump($config_target_data, 2, 2);
 
       // Save the updated config to the target file.
       file_put_contents(\Drupal::service('extension.list.' . $type)->getPath($project) . '/' . $config_bit_data['for'], $updated_config_target);

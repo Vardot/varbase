@@ -5,7 +5,7 @@
  * Enables modules and site configuration for a Varbase site installation.
  */
 
-use Symfony\Component\Yaml\Yaml;
+use Drupal\Component\Serialization\Yaml;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\varbase\Config\ConfigBit;
@@ -602,7 +602,7 @@ function varbase_after_install_finished(array &$install_state) {
   $profile_path_managed = \Drupal::service('extension.list.profile')->getPath('varbase') . '/config/managed/';
   $managed_config_path = $profile_path_managed . 'block.block.vartheme_bs4_copyright.yml';
   $managed_config_content = file_get_contents($managed_config_path);
-  $managed_config_data = (array) Yaml::parse($managed_config_content);
+  $managed_config_data = (array) Yaml::decode($managed_config_content);
   $managed_config_factory = \Drupal::configFactory()->getEditable('block.block.vartheme_bs4_copyright');
   $managed_config_factory->setData($managed_config_data)->save(TRUE);
 
