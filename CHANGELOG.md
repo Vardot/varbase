@@ -1,3 +1,51 @@
+# 10.1.2
+
+### Highlighted important changes since [10.1.1](https://www.drupal.org/project/varbase/releases/10.1.1):
+* [#3615711](https://www.drupal.org/i/3615711) task: Switch the **Automated Functional Testing** suites across the Varbase 10.1.x suite to **Varbase E2E** (Playwright + Cucumber-js)
+* [#3616637](https://www.drupal.org/i/3616637) task: Update **@vardot/varbase-e2e** to the latest **2.x** in every Varbase 10.1.x project
+* [#3615796](https://www.drupal.org/i/3615796) fix: Resolve the **PHPStan** findings raised by the updated analyzers across the suite
+* [#3615793](https://www.drupal.org/i/3615793) task: Release **Vartheme BS5 4.1.1**
+
+### Changed since [10.1.1](https://www.drupal.org/project/varbase/releases/10.1.1):
+* [#3616114](https://www.drupal.org/i/3616114) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Core** — released **10.1.65**
+* [#3615764](https://www.drupal.org/i/3615764) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase API** — released **10.1.2**
+* [#3615782](https://www.drupal.org/i/3615782) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Media** — released **10.1.3**
+* [#3615774](https://www.drupal.org/i/3615774) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Editor** — released **10.1.7**
+* [#3615780](https://www.drupal.org/i/3615780) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Landing Page** — released **10.1.2**
+* [#3615766](https://www.drupal.org/i/3615766) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Bootstrap Paragraphs** — released **10.1.2**
+* [#3615767](https://www.drupal.org/i/3615767) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Carousels** — released **10.1.2**
+* [#3615765](https://www.drupal.org/i/3615765) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Blog** — released **10.1.2**
+* [#3615787](https://www.drupal.org/i/3615787) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Search** — released **10.1.2**
+* [#3615788](https://www.drupal.org/i/3615788) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase SEO** — released **10.1.2**
+* [#3616629](https://www.drupal.org/i/3616629) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Social Single Sign-On** — released **10.1.2**
+* [#3615775](https://www.drupal.org/i/3615775) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Email** — released **10.1.2**
+* [#3615781](https://www.drupal.org/i/3615781) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Layout Builder** — released **10.2.3**
+* [#3615770](https://www.drupal.org/i/3615770) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Components** — released **3.1.1**
+* [#3615791](https://www.drupal.org/i/3615791) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Workflow** — released **3.1.2**
+* [#3615761](https://www.drupal.org/i/3615761) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase AI** — released **2.0.9**
+* [#3615772](https://www.drupal.org/i/3615772) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Dashboards** — released **2.0.3**
+* [#3615773](https://www.drupal.org/i/3615773) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Demo** — released **1.1.2**
+* [#3615778](https://www.drupal.org/i/3615778) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Varbase Hero Slider** — released **1.1.3**
+* [#3615793](https://www.drupal.org/i/3615793) task: Switch the Automated Functional Testing suite to **Varbase E2E** and update **@vardot/varbase-e2e** to the latest 2.x for **Vartheme BS5** — released **4.1.1**
+* [#3609254](https://www.drupal.org/i/3609254) ci: Build the CI composer job against Drupal 11.4.0 on the 3.1.x branch (Varbase Components)
+* [#3614572](https://www.drupal.org/i/3614572) task: Add the default .gitlab and .github issue and merge request templates (2/5) — 3.1.x (Varbase Components)
+* [#3608318](https://www.drupal.org/i/3608318) task: Convert the procedural hooks to OOP hook classes in the Varbase Hero Slider module (Varbase Hero Slider)
+
+### Updates since [10.1.1](https://www.drupal.org/project/varbase/releases/10.1.1):
+* [#3616924](https://www.drupal.org/i/3616924) task: Pin every Varbase 10.1.x cross-dependency to its released version and release **Varbase 10.1.2**
+* task: Uses **Varbase Patches 10.1.88** and **Varbase Replaces 10.1.4**
+
+### Fixes since [10.1.1](https://www.drupal.org/project/varbase/releases/10.1.1):
+* [#3615801](https://www.drupal.org/i/3615801) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase API)
+* [#3615798](https://www.drupal.org/i/3615798) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Media)
+* [#3615795](https://www.drupal.org/i/3615795) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Bootstrap Paragraphs)
+* [#3615799](https://www.drupal.org/i/3615799) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Search)
+* [#3615800](https://www.drupal.org/i/3615800) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Layout Builder)
+* [#3615796](https://www.drupal.org/i/3615796) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Components)
+* [#3615805](https://www.drupal.org/i/3615805) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Workflow)
+* [#3615802](https://www.drupal.org/i/3615802) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Dashboards)
+* [#3615804](https://www.drupal.org/i/3615804) fix: Resolve the PHPStan findings raised by the updated analyzers (Varbase Demo)
+* [#3615761](https://www.drupal.org/i/3615761) fix: Regenerate the lock file so the browser test dependency resolves to @vardot/varbase-e2e (Varbase AI)
 # 10.1.1
 
 ### Highlighted important changes since [10.1.0](https://www.drupal.org/project/varbase/releases/10.1.0):
