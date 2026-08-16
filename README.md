@@ -3,7 +3,7 @@
 ## Varbase: The Ultimate Drupal CMS Starter Kit (Bootstrap Ready)
 
 [![pipeline status](https://git.drupalcode.org/project/varbase/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase/-/pipelines)
-[![Varbase](https://img.shields.io/badge/Varbase-11.0.0--beta2-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase/-/pipelines?ref=11.0.0-beta2)
+[![Varbase](https://img.shields.io/badge/Varbase-11.0.0--rc1-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase/-/pipelines?ref=11.0.0-rc1)
 [![Automated Functional Testing](https://git.drupalcode.org/project/varbase_project/badges/11.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_project/-/pipelines)
 
 

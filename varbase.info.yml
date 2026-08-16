@@ -9,7 +9,7 @@ distribution:
     theme: varbase_installer_theme
     # No leading slash: install_goto() prepends the base path, so '/' yields '//'.
     finish_url: ''
-version: 11.0.x-dev
+version: 11.0.0-rc1
 forms:
   - '\Drupal\varbase\Installer\Form\SiteTemplateForm'
   - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
