@@ -1,10 +1,17 @@
 # 11.0.0-rc1
 
+### At a glance
+* The whole **Varbase 11.0.x** suite moves to **release candidates**, with every dependency pinned to a released version. No `x-dev` constraint remains in the profile.
+* A **header search** box now sits in the **Varbase Starter** header behind an icon toggle, backed by new search components and a bar panel style in **Vartheme (Bootstrap 5)**, with a reworked search results page.
+* The **Automated Functional Testing** suites across the Varbase 11.0.x suite run on **Varbase E2E** (`@vardot/varbase-e2e ^2`, Playwright + Cucumber-js), on a faster CI pipeline.
+* The default ECA modeler switches from **BPMN.iO** to the **Workflow Modeler**.
+* Each site template now installs and sets its own front-end and admin themes.
+
 ### Highlighted important changes since Varbase 11.0.0-beta2:
-* task: The whole Varbase 11.0.x suite moves to release candidates, with every dependency pinned to a released version: Varbase Starter 1.0.0-rc1, Vartheme (Bootstrap 5) 5.0.0-rc4, Varbase Components 4.0.0-rc1, and every base and AI recipe.
-* feat: [#3615236](https://www.drupal.org/i/3615236) Add the header search box to the Varbase Starter header region, backed by new search components and an icon toggle bar panel style in Vartheme (Bootstrap 5).
-* feat: [#3616468](https://www.drupal.org/i/3616468) Add Varbase E2E automated functional testing coverage and a faster CI pipeline, provisioning the API, Auth, i18n and AI stacks in it.
-* feat: [#3612486](https://www.drupal.org/i/3612486) Switch the default ECA modeler from BPMN.iO to the Workflow Modeler.
+* task: The whole Varbase 11.0.x suite moves to **release candidates**, with every dependency pinned to a released version: **Varbase Starter** 1.0.0-rc1, **Vartheme (Bootstrap 5)** 5.0.0-rc4, **Varbase Components** 4.0.0-rc1, and every base and AI recipe.
+* feat: [#3615236](https://www.drupal.org/i/3615236) Add the header search box to the **Varbase Starter** header region, backed by new search components and an icon toggle bar panel style in **Vartheme (Bootstrap 5)**.
+* feat: [#3616468](https://www.drupal.org/i/3616468) Add **Varbase E2E** automated functional testing coverage and a faster CI pipeline, provisioning the API, Auth, i18n and AI stacks in it.
+* feat: [#3612486](https://www.drupal.org/i/3612486) Switch the default ECA modeler from **BPMN.iO** to the **Workflow Modeler**.
 * feat: [#3614696](https://www.drupal.org/i/3614696) Let each site template install and set its own front-end and admin themes.
 
 ### Release notes of every Varbase package in Varbase 11.0.0-rc1
@@ -14,41 +21,41 @@
 * fix: [#3614810](https://www.drupal.org/i/3614810) Remove the leading slash from the profile finish_url, so the browser installer no longer lands on a double slash.
 
 #### Varbase Starter 1.0.0-rc1
-* feat: [#3615236](https://www.drupal.org/i/3615236) Add the header search box to the Varbase Starter header region.
-* feat: [#3614678](https://www.drupal.org/i/3614678) Add Varbase Patches to the composer requirements, with a Drupal CMS wiring script.
-* feat: [#3616468](https://www.drupal.org/i/3616468) Add Varbase E2E automated functional testing coverage and a faster CI pipeline, and provision the API, Auth, i18n and AI stacks in it.
+* feat: [#3615236](https://www.drupal.org/i/3615236) Add the header search box to the **Varbase Starter** header region.
+* feat: [#3614678](https://www.drupal.org/i/3614678) Add **Varbase Patches** to the composer requirements, with a **Drupal CMS** wiring script.
+* feat: [#3616468](https://www.drupal.org/i/3616468) Add **Varbase E2E** automated functional testing coverage and a faster CI pipeline, and provision the API, Auth, i18n and AI stacks in it.
 * fix: [#3617241](https://www.drupal.org/i/3617241) Give the search results page a heading, its own search box and one readable result per row. Each row now renders a single linked heading at the design system's small heading step, followed by the excerpt, with the result summary below the search box and even spacing between results.
 * fix: [#3617241](https://www.drupal.org/i/3617241) Add the search index view modes and displays for the content types and taxonomy terms.
 * fix: [#3617356](https://www.drupal.org/i/3617356) Re-mint the stale Canvas component version pins. Four component config entities and three component instances pinned versions that no longer matched the components as they ship, including the header search toggle.
 * fix: [#3614795](https://www.drupal.org/i/3614795) Remove the leading slash from the site template finish_url, so the browser installer no longer lands on a double slash.
 
 #### Vartheme (Bootstrap 5) 5.0.0-rc4
-* feat: [#3611865](https://www.drupal.org/i/3611865) Add a Views exposed filters Single Directory Component
+* feat: [#3611865](https://www.drupal.org/i/3611865) Add a Views exposed filters **Single Directory Component**
 * fix: [#3614510](https://www.drupal.org/i/3614510) Configurable heading level on the Share component for correct heading order
-* feat: [#3593698](https://www.drupal.org/i/3593698) Add a bar panel style to the Icon Toggle component for the header search bar. The panel is driven by the Bootstrap 5.3 Dropdown and is region-agnostic, and it keeps an `expand_in_editor` opt-out for the editor.
+* feat: [#3593698](https://www.drupal.org/i/3593698) Add a bar panel style to the **Icon Toggle** component for the header search bar. The panel is driven by the **Bootstrap 5.3** Dropdown and is region-agnostic, and it keeps an `expand_in_editor` opt-out for the editor.
 * feat: [#3614492](https://www.drupal.org/i/3614492) Implement Search Components to Support Varbase Canvas.
-* fix: [#3616382](https://www.drupal.org/i/3616382) Icon Toggle Component Design Issue Fixed.
+* fix: [#3616382](https://www.drupal.org/i/3616382) **Icon Toggle** Component Design Issue Fixed.
 * fix: [#3615235](https://www.drupal.org/i/3615235) Align the theme packageManager pin with the Varbase project so the asset build runs.
 * fix: [#3617110](https://www.drupal.org/i/3617110) Remove the duplicate `default` and `examples` keys in `icon-toggle.component.yml`, where `expand_in_editor` had been spliced into the middle of `placement`. The YAML parser rejects duplicate keys, so component discovery threw a `DiscoveryException` and a fresh Varbase 11 install stopped at 97% with an HTTP 500. Also restores the missing `start` value on the `placement` enumeration.
 * fix: [#3617112](https://www.drupal.org/i/3617112) Show the `bar` panel header search below 992px. Theme header rules out-specified the component's own `position` and `background-color`, so the bar rendered transparent and off-screen. It is now fixed to the viewport, opaque, spans the viewport width, and adds no horizontal overflow.
 * fix: [#3617142](https://www.drupal.org/i/3617142) Render the same `bar` panel as a flat band above 992px. The same specificity collision one breakpoint up drew it as a rounded, shadowed card instead of the flat band the design calls for.
-* fix: [#3617450](https://www.drupal.org/i/3617450) Make the exposed filter bar layout reusable instead of binding it to a single form ID. The layout now lives in a `.vb-filter-bar` class carried by a new `views-view-search` Single Directory Component, which prints the view title, then the exposed filter bar, then the result summary, and then the rows. The ghost submit and reset actions now outrank Bootstrap's `.btn.btn-primary` without needing an ID selector, any exposed text filter grows to fill the bar and stacks full width below the `md` breakpoint, and a results view renders its empty state as a readable notice. The blog filter bar keeps its existing appearance with no configuration change.
+* fix: [#3617450](https://www.drupal.org/i/3617450) Make the exposed filter bar layout reusable instead of binding it to a single form ID. The layout now lives in a `.vb-filter-bar` class carried by a new `views-view-search` **Single Directory Component**, which prints the view title, then the exposed filter bar, then the result summary, and then the rows. The ghost submit and reset actions now outrank Bootstrap's `.btn.btn-primary` without needing an ID selector, any exposed text filter grows to fill the bar and stacks full width below the `md` breakpoint, and a results view renders its empty state as a readable notice. The blog filter bar keeps its existing appearance with no configuration change.
 
 #### Varbase Components 4.0.0-rc1
 * feat: [#3611182](https://www.drupal.org/i/3611182) Add the components_exposed_form views exposed form plugin and config schema for the component views plugins.
 * feat: [#3611182](https://www.drupal.org/i/3611182) Add an always-show Reset option to the Components exposed form.
 * task: [#3614572](https://www.drupal.org/i/3614572) Add the default GitLab and GitHub issue and merge request templates.
 * fix: [#3611854](https://www.drupal.org/i/3611854) Use the Drupal serialization `Yaml::decode()` instead of `Symfony Yaml::parse()`.
-* task: [#3615770](https://www.drupal.org/i/3615770) Switch the Varbase functional testing suite to Varbase E2E.
-* task: [#3615770](https://www.drupal.org/i/3615770) Update @vardot/varbase-e2e to the latest 2.x.
-* fix: [#3615796](https://www.drupal.org/i/3615796) Resolve the PHPStan findings raised by the updated analyzers.
+* task: [#3615770](https://www.drupal.org/i/3615770) Switch the Varbase functional testing suite to **Varbase E2E**.
+* task: [#3615770](https://www.drupal.org/i/3615770) Update **@vardot/varbase-e2e** to the latest 2.x.
+* fix: [#3615796](https://www.drupal.org/i/3615796) Resolve the **PHPStan** findings raised by the updated analyzers.
 
 #### Varbase Recipes 1.0.0-beta4
-* feat: [#3610877](https://www.drupal.org/i/3610877) Add config actions to repoint Drupal Canvas component trees and Views component styles onto the site default theme.
-* feat: [#3610877](https://www.drupal.org/i/3610877) Set a Drupal Canvas component tree only when its components exist.
+* feat: [#3610877](https://www.drupal.org/i/3610877) Add config actions to repoint **Drupal Canvas** component trees and Views component styles onto the site default theme.
+* feat: [#3610877](https://www.drupal.org/i/3610877) Set a **Drupal Canvas** component tree only when its components exist.
 * fix: [#3611878](https://www.drupal.org/i/3611878) Repoint the exposed form component at the target theme.
 * fix: [#3613297](https://www.drupal.org/i/3613297) Skip with a warning instead of fataling when the targeted editor does not exist.
-* fix: [#3610935](https://www.drupal.org/i/3610935) Satisfy PHPStan on the 1.0.x branch.
+* fix: [#3610935](https://www.drupal.org/i/3610935) Satisfy **PHPStan** on the 1.0.x branch.
 
 #### Varbase Admin Base 1.0.0-rc1
 * task: [#3617008](https://www.drupal.org/i/3617008) Set the recipe version to 1.0.0-rc1, pin drupal/varbase_recipes to ~1.0.0, and release with the Varbase 11.0.0-rc1 suite. No functional changes since 1.0.0-beta1.
@@ -57,16 +64,16 @@
 * task: [#3617007](https://www.drupal.org/i/3617007) Set the recipe version to 1.0.0-rc1 and release with the Varbase 11.0.0-rc1 suite. No functional changes since 1.0.0-beta1.
 
 #### Varbase Content Base 1.0.0-rc1
-* feat: [#3612486](https://www.drupal.org/i/3612486) Switch the default ECA modeler from BPMN.iO to the Workflow Modeler.
-* test: [#3612501](https://www.drupal.org/i/3612501) Add functional tests for the ECA Workflow Modeler swap.
-* task: [#3615771](https://www.drupal.org/i/3615771) Switch the Varbase functional testing suite to Varbase E2E.
-* task: [#3615771](https://www.drupal.org/i/3615771) Update @vardot/varbase-e2e to the latest 2.x.
+* feat: [#3612486](https://www.drupal.org/i/3612486) Switch the default ECA modeler from **BPMN.iO** to the **Workflow Modeler**.
+* test: [#3612501](https://www.drupal.org/i/3612501) Add functional tests for the ECA **Workflow Modeler** swap.
+* task: [#3615771](https://www.drupal.org/i/3615771) Switch the Varbase functional testing suite to **Varbase E2E**.
+* task: [#3615771](https://www.drupal.org/i/3615771) Update **@vardot/varbase-e2e** to the latest 2.x.
 
 #### Varbase Page Base 1.0.0-rc1
 * task: [#3617019](https://www.drupal.org/i/3617019) Set the recipe version to 1.0.0-rc1, pin the Varbase Content Base, Media Base, SEO Base, and Workflow Base dependencies to ~1.0.0, and release with the Varbase 11.0.0-rc1 suite. No functional changes since 1.0.0-beta1.
 
 #### Varbase Blog Base 1.0.0-rc1
-* fix: [#3610904](https://www.drupal.org/i/3610904) Re-pin the Drupal Canvas templates to the active component versions.
+* fix: [#3610904](https://www.drupal.org/i/3610904) Re-pin the **Drupal Canvas** templates to the active component versions.
 * fix: [#3610904](https://www.drupal.org/i/3610904) Give the four hand-authored templates real UUIDs.
 
 #### Varbase Media Base 1.0.0-rc1
@@ -122,25 +129,25 @@
 
 #### Varbase AI Editor Assistant 2.0.0-rc2
 * task: [#3617022](https://www.drupal.org/i/3617022) Set the recipe version to 2.0.0-rc1 and release with the Varbase 11.0.0-rc1 suite. No functional changes since 2.0.0-beta1.
-* fix: [#3617233](https://www.drupal.org/i/3617233) Recipe validation fails on the editor config action because the Text Editor module is missing from install.
+* fix: [#3617233](https://www.drupal.org/i/3617233) Recipe validation fails on the editor config action because the **Text Editor** module is missing from install.
 
 #### Varbase AI Image Alt 2.0.0-rc1
 * task: [#3614570](https://www.drupal.org/i/3614570) Add the default GitLab and GitHub issue and merge request templates.
 
 #### Varbase AI Taxonomy Tagging 2.0.0-rc2
 * task: [#3617023](https://www.drupal.org/i/3617023) Set the recipe version to 2.0.0-rc1 and release with the Varbase 11.0.0-rc1 suite. No functional changes since 2.0.0-beta2.
-* fix: [#3617217](https://www.drupal.org/i/3617217) Recipe validation fails on the field config actions because the Field module is missing from install.
+* fix: [#3617217](https://www.drupal.org/i/3617217) Recipe validation fails on the field config actions because the **Field** module is missing from install.
 
 #### Varbase AI Figma Base 1.0.0-rc2
 * task: [#3614569](https://www.drupal.org/i/3614569) Add the default GitLab and GitHub issue and merge request templates.
-* task: [#3615763](https://www.drupal.org/i/3615763) Switch the Varbase functional testing suite to Varbase E2E.
-* task: [#3615763](https://www.drupal.org/i/3615763) Update @vardot/varbase-e2e to the latest 2.x.
-* fix: [#3617234](https://www.drupal.org/i/3617234) Do not ship the tests directory: the packaged test fixture recipe breaks Drupal CMS installer validation.
+* task: [#3615763](https://www.drupal.org/i/3615763) Switch the Varbase functional testing suite to **Varbase E2E**.
+* task: [#3615763](https://www.drupal.org/i/3615763) Update **@vardot/varbase-e2e** to the latest 2.x.
+* fix: [#3617234](https://www.drupal.org/i/3617234) Do not ship the tests directory: the packaged test fixture recipe breaks **Drupal CMS** installer validation.
 
 #### Varbase AI Figma 1.0.0-rc1
 * task: [#3614568](https://www.drupal.org/i/3614568) Add the default GitLab and GitHub issue and merge request templates.
-* task: [#3615762](https://www.drupal.org/i/3615762) Switch the Varbase functional testing suite to Varbase E2E.
-* task: [#3615762](https://www.drupal.org/i/3615762) Update @vardot/varbase-e2e to the latest 2.x.
+* task: [#3615762](https://www.drupal.org/i/3615762) Switch the Varbase functional testing suite to **Varbase E2E**.
+* task: [#3615762](https://www.drupal.org/i/3615762) Update **@vardot/varbase-e2e** to the latest 2.x.
 
 Varbase Media 11.0.0-beta1 and Varbase Auth 11.0.0-beta1 ship unchanged since Varbase 11.0.0-beta2.
 
