@@ -2,7 +2,7 @@
     "name": "vardot/varbase",
     "description": "Varbase",
     "type": "drupal-profile",
-    "version": "11.0.x-dev",
+    "version": "11.0.0",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/varbase",
     "authors": [
@@ -28,11 +28,11 @@
         "drupal/entity_clone": "~2",
         "drupal/rabbit_hole": "~2",
         "drupal/ultimate_cron": "~2",
-        "drupal/varbase_starter": "1.0.x-dev",
-        "drupal/varbase_ai_base": "1.0.x-dev",
-        "drupal/varbase_api_base": "1.0.x-dev",
-        "drupal/varbase_auth_base": "1.0.x-dev",
-        "drupal/varbase_dev_base": "1.0.x-dev",
-        "drupal/varbase_i18n_base": "1.0.x-dev"
+        "drupal/varbase_starter": "~1.0.0",
+        "drupal/varbase_ai_base": "~1.0.0",
+        "drupal/varbase_api_base": "~1.0.0",
+        "drupal/varbase_auth_base": "~1.0.0",
+        "drupal/varbase_dev_base": "~1.0.0",
+        "drupal/varbase_i18n_base": "~1.0.0"
     }
 }

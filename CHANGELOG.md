@@ -1,3 +1,299 @@
+# 11.0.0
+
+### At a glance
+* The **Varbase 11.0.x** suite reaches its first **stable** release, on Drupal `~11.4.0`.
+* The three site templates, **Varbase Starter**, **Educare** and **Horizon Aid**, now resolve and install on a stock **Drupal CMS** project at Composer's default stability.
+* The profile becomes the home for the packages and configuration that the site templates and the base recipes stopped requiring, so an existing Varbase site keeps every one of them.
+* Every first-party dependency in the profile is pinned to a released version. No `x-dev` constraint remains.
+* The profile itself still needs a root at `minimum-stability: dev`, because four upstream packages have no stable release for the major it requires. **Varbase Project** already sets that root.
+* Nothing in the newly required set is enabled or applied by the profile. These are requirements only, so a site decides for itself what to turn on.
+
+### Highlighted important changes since Varbase 11.0.0-rc1:
+* task: [#3621480](https://www.drupal.org/i/3621480) The profile is now the home for what the site templates and base recipes stopped requiring. It requires `drupal/advanced_text_formatter`, `drupal/entity_clone`, `drupal/rabbit_hole`, `drupal/ultimate_cron`, `drupal/varbase_dev_base` and the AI, API, authentication and multilingual base recipes, so an existing Varbase site keeps every one of them.
+* task: [#3621480](https://www.drupal.org/i/3621480) Ship the seventeen `ultimate_cron.job.*` files the recipes had to delete, as optional config in `config/optional`. They are inert while **Ultimate Cron** is absent, and Drupal recreates every job by itself if the module is ever enabled.
+* task: [#3621736](https://www.drupal.org/i/3621736) Pin every first-party dependency to a released version instead of a dev branch: **Varbase Starter** at `~1.0.0`, and the AI, API, authentication, development and multilingual base recipes at `~1.0.0`.
+* fix: [#3621334](https://www.drupal.org/i/3621334) Remove the four never-applied base recipes from **Varbase Starter**, so the template resolves on Stable for **Drupal CMS**.
+* fix: [#3621449](https://www.drupal.org/i/3621449), [#3621450](https://www.drupal.org/i/3621450), [#3621451](https://www.drupal.org/i/3621451), [#3621492](https://www.drupal.org/i/3621492) and [#3621493](https://www.drupal.org/i/3621493) Temporarily remove **Entity Clone**, **Rabbit Hole**, **Advanced Text Formatter** and **Ultimate Cron** from the base recipes until they have stable releases. The profile keeps all four, so no existing site loses them.
+
+### Stability of Varbase 11.0.0
+Varbase 11.0.0 is a stable release, but it does not resolve on a project using Composer's default `minimum-stability: stable`. Four of its requirements have no stable release for the major the profile needs:
+
+* `drupal/entity_clone: ~2`, where the newest release is 2.2.0-beta1 and the project has no stable release at all.
+* `drupal/rabbit_hole: ~2`, where the newest release is 2.0.0-beta2. Its stable releases are on the older 8.x-1.x line, which `~2` cannot take.
+* `drupal/ultimate_cron: ~2`, where the newest release is 8.x-2.0-beta1 and the stable releases are Drupal 7 only.
+* `drupal/advanced_text_formatter: ~3`, where the newest release is 3.0.0-rc2 and the newest stable is 2.1.1.
+
+That is by design. The profile is consumed through [Varbase Project](https://www.drupal.org/project/varbase_project), whose root sets `minimum-stability: dev` with `prefer-stable: true`. Those four packages live in the profile precisely so that removing them from the site templates and base recipes could not take them away from existing sites, which is what made the templates installable on **Drupal CMS**. Upstream stable releases are requested in [#2660208](https://www.drupal.org/i/2660208), [#3621376](https://www.drupal.org/i/3621376), [#3621362](https://www.drupal.org/i/3621362) and [#3189738](https://www.drupal.org/i/3189738). When they land, the four constraints can point at stable tags and the profile resolves at default stability too.
+
+### Release notes of every Varbase package in Varbase 11.0.0
+
+#### Varbase profile 11.0.0
+* task: [#3621480](https://www.drupal.org/i/3621480) Keep the modules, base recipes and configuration removed from the site templates in the profile: `drupal/advanced_text_formatter`, `drupal/entity_clone`, `drupal/rabbit_hole`, `drupal/ultimate_cron`, the **Varbase AI Base**, **Varbase API Base**, **Varbase Auth Base** and **Varbase i18n Base** recipes, and the **Varbase Dev Base** recipe.
+* task: [#3621480](https://www.drupal.org/i/3621480) Keep the seventeen `ultimate_cron.job.*` files as optional config in `config/optional`, so Drupal recreates every job by itself if **Ultimate Cron** is ever enabled.
+* task: [#3621736](https://www.drupal.org/i/3621736) Pin **Varbase Starter** and the AI, API, authentication, development and multilingual base recipes to `~1.0.0`. **Varbase Starter** had already been pinned at 11.0.0-rc1 and was moved back to a dev branch by [#3621480](https://www.drupal.org/i/3621480), so this restores that pin rather than setting it for the first time.
+
+#### Varbase Starter 1.0.1
+* fix: [#3621334](https://www.drupal.org/i/3621334) Remove the four never-applied base recipes, so the template resolves on Stable for **Drupal CMS**.
+* task: [#3621399](https://www.drupal.org/i/3621399) Update `@vardot/varbase-e2e` to `^2.0.4`.
+* fix: [#3621553](https://www.drupal.org/i/3621553) Temporarily remove the **Entity Clone** functional testing coverage.
+* task: [#3621622](https://www.drupal.org/i/3621622) Pin every base recipe and **Vartheme (Bootstrap 5)** to their released versions instead of dev branches.
+* fix: [#3617456](https://www.drupal.org/i/3617456) Create the header search block after the display that provides it.
+* refactor: [#3618246](https://www.drupal.org/i/3618246) Move vardot/varbase-patches out of the recipe `composer.json` to the wiring script only.
+* refactor: [#3618246](https://www.drupal.org/i/3618246) Remove the **Drupal CMS** wiring script and inline the wiring in CI.
+* test: [#3618332](https://www.drupal.org/i/3618332) Add functional testing coverage for **Drupal Canvas** page translations.
+* fix: [#3619772](https://www.drupal.org/i/3619772) Re-export the **Vartheme (Bootstrap 5)** icon component config for the **Canvas Icon Picker**.
+* fix: [#3619772](https://www.drupal.org/i/3619772) Re-export the icon component config for the whole **Bootstrap Icons** pack.
+* task: [#3620193](https://www.drupal.org/i/3620193) Add **Varbase Canvas Base** recipe.
+* task: [#3620066](https://www.drupal.org/i/3620066) Stop declaring the **Canvas Icon Picker** here.
+* feat: [#3620357](https://www.drupal.org/i/3620357) Drop the `drupal-libraries-sync` script and assert the library files in CI, now that the libraries come from Composer.
+* task: [#3620442](https://www.drupal.org/i/3620442) Pin block component versions to active in the header and footer page regions.
+* fix: [#3621003](https://www.drupal.org/i/3621003) Reshoot the installer card screenshot at 500x400 and rewrite the site template description.
+* chore: [#3621019](https://www.drupal.org/i/3621019) Remove the **Varbase Dev Base** dependency from the **Varbase Starter** recipe `composer.json`.
+* fix: [#3621018](https://www.drupal.org/i/3621018) Apply the **Varbase Canvas Base** recipe after **Varbase Content Base** in the **Varbase Starter** recipe.
+* fix: [#3621200](https://www.drupal.org/i/3621200) Add a site name level 1 heading to the **Varbase Starter** home Canvas page.
+* Automated Functional Testing pipeline: [953044](https://git.drupalcode.org/project/varbase_starter/-/pipelines/953044) passed.
+* [Varbase Starter 1.0.1 Automated Functional Acceptance Testing report 2026-09-08 (HTML)](https://project.pages.drupalcode.org/-/varbase_starter/-/jobs/12057561/artifacts/tests/reports/varbase-starter--1-0-x--automated-functional-testing-report--2026-09-08--09-45.html)
+* [Varbase Starter 1.0.1 Automated Functional Acceptance Testing report 2026-09-08 (PDF)](https://git.drupalcode.org/project/varbase_starter/-/jobs/12057561/artifacts/file/tests/reports/varbase-starter--1-0-x--automated-functional-testing-report--2026-09-08--09-45.pdf)
+
+#### Educare 1.0.1
+* fix: [#3621335](https://www.drupal.org/i/3621335) Remove the four never-applied base recipes, so the template resolves on Stable for **Drupal CMS**.
+* fix: [#3621385](https://www.drupal.org/i/3621385) Take the refused, allowed and page-title steps from `varbase-e2e`.
+* task: [#3621623](https://www.drupal.org/i/3621623) Pin every base recipe and the **Educare** theme to their released versions instead of dev branches.
+* task: [#3615980](https://www.drupal.org/i/3615980) Switch the **Educare** functional testing suite to **Varbase E2E**.
+* ci: [#3616081](https://www.drupal.org/i/3616081) Merge the per-suite test reports into one Create reports pipeline job.
+* perf: [#3615980](https://www.drupal.org/i/3615980) Reduce CI usage - shared Install + cache/DB-restore, gating, `varbase-e2e`, ^2.
+* feat: [#3614680](https://www.drupal.org/i/3614680) Add **Varbase Patches** to the composer requirements and a **Drupal CMS** wiring script.
+* refactor: [#3615980](https://www.drupal.org/i/3615980) Rename install job to Install **Educare** site template.
+* test: [#3614680](https://www.drupal.org/i/3614680) Add a pre-test that builds and installs **Educare** on **Drupal CMS**, and fix the patches wiring.
+* fix: [#3616545](https://www.drupal.org/i/3616545) List real events and news in the home page Stories section.
+* fix: [#3615980](https://www.drupal.org/i/3615980) Show the Feature/Scenario/Step breakdown in the CI test logs.
+* refactor: [#3616588](https://www.drupal.org/i/3616588) Move the Stories view displays to **Varbase News Base** and **Varbase Events Base**.
+* ci: [#3616588](https://www.drupal.org/i/3616588) Stop the **Drupal CMS** job republishing the shared build cache.
+* fix: [#3616545](https://www.drupal.org/i/3616545) Replace the static event and news cards in Canvas pages with views blocks.
+* fix: [#3616545](https://www.drupal.org/i/3616545) List real programs on the Home page instead of six static cards.
+* fix: [#3617242](https://www.drupal.org/i/3617242) Add the search index view modes and displays for the content types and taxonomy terms.
+* feat: [#3617501](https://www.drupal.org/i/3617501) Add the header search box and give the search results page a heading and one result per row.
+* fix: [#3617362](https://www.drupal.org/i/3617362) Require a released **Varbase Patches** instead of the 11.0.x-dev branch.
+* task: [#3617362](https://www.drupal.org/i/3617362) Update the **Educare** site template recipe version to 1.0.0-alpha2.
+* refactor: [#3618244](https://www.drupal.org/i/3618244) Remove the **Drupal CMS** wiring script.
+* refactor: [#3618244](https://www.drupal.org/i/3618244) Keep the drupal-libraries sync script in the recipe.
+* task: [#3620242](https://www.drupal.org/i/3620242) Move Search after **Varbase Content Base** in `recipe.yml`.
+* task: [#3620331](https://www.drupal.org/i/3620331) Remove the **Varbase Dev Base** recipe from `composer.json`.
+* feat: [#3620058](https://www.drupal.org/i/3620058) Re-export the Canvas component configs for the **Canvas Icon Picker**.
+* task: [#3620349](https://www.drupal.org/i/3620349) Remove the dead `drupal-libraries-sync`.js script.
+* task: [#3620438](https://www.drupal.org/i/3620438) Pin block component versions to active.
+* task: [#3620996](https://www.drupal.org/i/3620996) Frame the installer screenshot to the card ratio and rewrite the description.
+* test: [#3621202](https://www.drupal.org/i/3621202) Name the colour contrast and top-level heading accessibility rules in the home page regression scenarios.
+* Automated Functional Testing pipeline: [953006](https://git.drupalcode.org/project/educare/-/pipelines/953006) passed.
+* [Educare 1.0.1 Automated Functional Acceptance Testing report 2026-09-08 (HTML)](https://project.pages.drupalcode.org/-/educare/-/jobs/12056986/artifacts/tests/reports/educare--1-0-x--automated-functional-testing-report--2026-09-08--09-24.html)
+* [Educare 1.0.1 Automated Functional Acceptance Testing report 2026-09-08 (PDF)](https://git.drupalcode.org/project/educare/-/jobs/12056986/artifacts/file/tests/reports/educare--1-0-x--automated-functional-testing-report--2026-09-08--09-24.pdf)
+
+#### Horizon Aid 1.0.1
+* fix: [#3621336](https://www.drupal.org/i/3621336) Remove the three never-applied base recipes, so the template resolves on Stable for **Drupal CMS**.
+* test: [#3621203](https://www.drupal.org/i/3621203) Name the colour contrast and top-level heading accessibility rules in the home page regression scenarios.
+* task: [#3621015](https://www.drupal.org/i/3621015) Set the **Horizon Aid** site template recipe version to 1.0.0-beta1.
+* fix: [#3620998](https://www.drupal.org/i/3620998) Reshoot the installer card at 500x400 and rewrite the description.
+* task: [#3620964](https://www.drupal.org/i/3620964) Set the **Horizon Aid** site template recipe version to 1.0.0-alpha2 and pin every cross-dependency to a released constraint.
+* fix: [#3620725](https://www.drupal.org/i/3620725) Drop the swagger-ui library assertion the removed requirement satisfied.
+* fix: [#3620725](https://www.drupal.org/i/3620725) Remove the **Varbase API Base** requirement.
+* fix: [#3620437](https://www.drupal.org/i/3620437) Pin the header SDC component versions to active.
+* fix: [#3620437](https://www.drupal.org/i/3620437) Pin block component versions to active.
+* task: [#3620353](https://www.drupal.org/i/3620353) Install the front-end libraries with Composer, not `drupal-libraries-sync`.
+* fix: [#3620330](https://www.drupal.org/i/3620330) Remove the **Varbase Dev Base** requirement.
+* feat: [#3620065](https://www.drupal.org/i/3620065) Re-export the Canvas component configs for the **Canvas Icon Picker**.
+* task: [#3620223](https://www.drupal.org/i/3620223) Move Search after **Varbase Content Base** in `recipe.yml`.
+* task: [#3618301](https://www.drupal.org/i/3618301) Add quick smoke checks to the **Drupal CMS** install job in CI.
+* refactor: [#3618245](https://www.drupal.org/i/3618245) Remove the **Drupal CMS** wiring script and its composer asset, inline the setup in CI.
+* refactor: [#3618245](https://www.drupal.org/i/3618245) Remove vardot/varbase-patches from the site template recipe's `composer.json` and wire it from the script only.
+* feat: [#3614681](https://www.drupal.org/i/3614681) Add **Varbase Patches** to the composer requirements.
+* feat: [#3617244](https://www.drupal.org/i/3617244) Add the header search toggle and make the results page readable.
+* fix: [#3617244](https://www.drupal.org/i/3617244) Add the search index view modes and displays for the content types and taxonomy terms.
+* perf: [#3615987](https://www.drupal.org/i/3615987) Adopt the shared fast CI and show every test step.
+* feat: [#3615987](https://www.drupal.org/i/3615987) Extend the Varbase functional testing suite to every shipped section.
+* fix: [#3616336](https://www.drupal.org/i/3616336) Keep the footer heading in document order on every page.
+* fix: [#3616336](https://www.drupal.org/i/3616336) Fix missing Donate h1 and Our Impact figure contrast.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Point the About and Countries call-to-action buttons at real pages.
+* fix: [#3615208](https://www.drupal.org/i/3615208) Show a description on the Where We Work country cards.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Follow the design's text spacing on the country page and give each country fuller copy.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Drop the breadcrumb from the home page.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Keep the Instagram icon on the Share rail after Varbase Blog Base seeds the icon map.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Give every country, programme and resource an image of its own subject.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Make the resources listing text visible and match the design.
+* feat: [#3615987](https://www.drupal.org/i/3615987) Add the **Varbase E2E** automated functional testing suite.
+* fix: [#3615293](https://www.drupal.org/i/3615293) Match the Share rail's platforms and order to the design, with Instagram as a plain link.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Give the Latest News rail dark card text via a light view mode.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Add the breadcrumb to every top-level page and drop the countries result summary.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Match the delivery cards' reading order to their visual order.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Enable the Quicklinks footer menu and fix the logo variant.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Give the Latest Updates cards their badge, teaser and readable colour.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Resolve the programme page's component versions instead of shipping 'active'.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Drop the share button that a recipe cannot create.
+* feat: [#3607228](https://www.drupal.org/i/3607228) Put the design's icons on the delivery cards and space them.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Give the delivery cards the design title scale and spacing.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Keep every resource photograph distinct within its sector.
+* feat: [#3607228](https://www.drupal.org/i/3607228) Lay the resource pages out to the design, with distinct photographs.
+* feat: [#3607228](https://www.drupal.org/i/3607228) Build the programme page to the design, with the fields it needs.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Style the programs listing and give the program page a Canvas layout.
+* fix: [#3614797](https://www.drupal.org/i/3614797) Remove the leading slash from the site template finish_url.
+* fix: [#3614665](https://www.drupal.org/i/3614665) Make a fresh install of the site template complete.
+* feat: [#3614664](https://www.drupal.org/i/3614664) Build the global footer region in Canvas to the design.
+* fix: [#3614658](https://www.drupal.org/i/3614658) Order the header menu to the design and drop the duplicate Events link.
+* feat: [#3614639](https://www.drupal.org/i/3614639) Show the filter reset, and match the listing spacing and summary to the design.
+* feat: [#3614494](https://www.drupal.org/i/3614494) Fill the event banner from its fields: category, date and registration link.
+* feat: [#3614494](https://www.drupal.org/i/3614494) Set the share platforms to the design's set and order.
+* feat: [#3614494](https://www.drupal.org/i/3614494) Match the More Events block to the design.
+* fix: [#3614494](https://www.drupal.org/i/3614494) Repair the install, tag the demo events and build the event full page.
+* feat: [#3614099](https://www.drupal.org/i/3614099) Add the Events listing, its card view mode, the Topic filter and demo content.
+* fix: [#3613856](https://www.drupal.org/i/3613856) Remove the superseded stand-in posts and their orphaned tags.
+* feat: [#3613864](https://www.drupal.org/i/3613864) Feed the Home page sections from views instead of hand-placed cards.
+* feat: [#3613856](https://www.drupal.org/i/3613856) Ship the full Resources demo content so the listing, its filters and its pager can be seen.
+* fix: [#3613826](https://www.drupal.org/i/3613826) Stop duplicating **Drupal CMS** recipe content and ship the missing Terms and Conditions page.
+* task: [#3613821](https://www.drupal.org/i/3613821) Show the **Horizon Aid** home page as the site template screenshot in the installer.
+* feat: [#3613697](https://www.drupal.org/i/3613697) Add a Program content type and render the programmes page from the programs view.
+* fix: [#3613791](https://www.drupal.org/i/3613791) Make the On the Ground text readable and render See Other Countries as a grid.
+* feat: [#3613682](https://www.drupal.org/i/3613682) Add **Varbase Events Base** and render the event listings from the events view.
+* feat: [#3613658](https://www.drupal.org/i/3613658) Ship all twelve countries and render the country listings from the view.
+* task: [#3613654](https://www.drupal.org/i/3613654) Drop the dummy detail pages and the placeholder copy from the shipped pages.
+* feat: [#3613646](https://www.drupal.org/i/3613646) Add a Country content type with its listing, cards and full page layout.
+* fix: [#3607228](https://www.drupal.org/i/3607228) Make the **Horizon Aid** site template install and replace the **Varbase Starter** leftovers.
+* docs: [#3607228](https://www.drupal.org/i/3607228) Show the **Horizon Aid** logo at the top of the README.
+* task: [#3607228](https://www.drupal.org/i/3607228) Recipe logo (icon), admin/navigation logo override, and Composer install steps.
+* task: [#3607228](https://www.drupal.org/i/3607228) Use the transparent brand icon image.
+* docs: [#3607228](https://www.drupal.org/i/3607228) Update the README badge and add the DDEV require steps for 1.0.x-dev.
+* task: [#3607228](https://www.drupal.org/i/3607228) Add the **Horizon Aid** brand assets and the Reviewed-by-a-human GitLab template checkpoint.
+* Automated Functional Testing pipeline: [952995](https://git.drupalcode.org/project/horizonaid/-/pipelines/952995) passed.
+* [Horizon Aid 1.0.1 Automated Functional Acceptance Testing report 2026-09-08 (HTML)](https://project.pages.drupalcode.org/-/horizonaid/-/jobs/12056838/artifacts/tests/reports/horizonaid--1-0-x--automated-functional-testing-report--2026-09-08--09-30.html)
+* [Horizon Aid 1.0.1 Automated Functional Acceptance Testing report 2026-09-08 (PDF)](https://git.drupalcode.org/project/horizonaid/-/jobs/12056838/artifacts/file/tests/reports/horizonaid--1-0-x--automated-functional-testing-report--2026-09-08--09-30.pdf)
+
+#### Vartheme (Bootstrap 5) 5.0.2
+* fix: [#3620673](https://www.drupal.org/i/3620673) Encode the space in the dynamic responsive image placeholder, so the `srcset` candidate is not dropped.
+* feat: [#3619736](https://www.drupal.org/i/3619736) Use the **Canvas Icon Picker** for the icon props of the components.
+* feat: [#3619736](https://www.drupal.org/i/3619736) Use the whole **Bootstrap Icons** pack for the icon props.
+* fix: [#3621197](https://www.drupal.org/i/3621197) Fix the footer social icon contrast to meet WCAG 2.1 AA.
+* fix: [#3621201](https://www.drupal.org/i/3621201) Visually hide the front page h1 so a Canvas landing page can carry one.
+
+#### Canvas Override 1.0.0
+* fix: [#3621487](https://www.drupal.org/i/3621487) Require node update access on the **Canvas Override** and Reset layout routes.
+* fix: [#3621557](https://www.drupal.org/i/3621557) Fail safely with a 403 instead of a 500 when Canvas cannot edit an entity.
+* fix: [#3621488](https://www.drupal.org/i/3621488) Delete the pending Canvas auto-save and create a new revision when resetting a layout.
+* fix: [#3621490](https://www.drupal.org/i/3621490) Record complete cacheability in `entityViewAlter()` and `menuLocalTasksAlter()`.
+* fix: [#3621475](https://www.drupal.org/i/3621475) Guard the reset HTMX URL generation against `RouteNotFoundException`.
+* docs: [#3621472](https://www.drupal.org/i/3621472) Remove the non-existent `/node/{node}/canvas/default` route from the README.
+* task: [#3621370](https://www.drupal.org/i/3621370) Update `@vardot/varbase-e2e` to `^2.0.4`.
+* fix: [#3620603](https://www.drupal.org/i/3620603) Fail safely when Canvas ships ComponentTreeLoader as final.
+* revert: [#3620603](https://www.drupal.org/i/3620603) Restore the ComponentTreeLoader subclass and unconditional service swap.
+* feat: [#3620603](https://www.drupal.org/i/3620603) Edit per-content layouts on a backing canvas_page when Canvas is unpatched.
+* feat: [#3590567](https://www.drupal.org/i/3590567) Add a confirmation step before resetting a Canvas layout.
+* fix: [#3618040](https://www.drupal.org/i/3618040) Accept a NULL bundle in hook_entity_bundle_field_info_alter().
+* fix: [#3620603](https://www.drupal.org/i/3620603) Skip the ComponentTreeLoader swap when Canvas ships it final.
+* test: [#3616302](https://www.drupal.org/i/3616302) Add regression test coverage for the config import fix.
+* fix: [#3616302](https://www.drupal.org/i/3616302) Convert presave to insert/update, add config sync check.
+* task: [#3616116](https://www.drupal.org/i/3616116) Switch the **Canvas Override** functional testing suite to **Varbase E2E**.
+* fix: [#3586587](https://www.drupal.org/i/3586587) Don't restore entity key or revision metadata fields on save.
+* fix: [#3615665](https://www.drupal.org/i/3615665) Page data panel is never hidden in the Canvas editor.
+* fix: [#3615667](https://www.drupal.org/i/3615667) Add the missing field_tags storage to the Marketing campaign test recipe.
+* ci: [#3594223](https://www.drupal.org/i/3594223) Add automated functional acceptance testing for **Canvas Override** with webship-js (Playwright + Cucumber-js), Drupal Core + **Drupal CMS** support, and MkDocs documentation.
+* feat: [#3583263](https://www.drupal.org/i/3583263) Add MkDocs configuration to enable GitLab Pages documentation build.
+* feat: [#3583255](https://www.drupal.org/i/3583255) Add per-content-type permissions for **Canvas Override**, Reset Canvas layout, and Edit Canvas default template tabs.
+* chore: [#3582111](https://www.drupal.org/i/3582111) Rewrite **Canvas Override** documentation for site builders, remove unmaintainable kernel tests, and reorganize FunctionalJavascript tests with single concerns.
+* test: [#3582111](https://www.drupal.org/i/3582111) Improve unit test coverage for per-bundle permission generation.
+* fix: [#3582111](https://www.drupal.org/i/3582111) Use content terminology instead of node in user-facing text.
+* docs: [#3582111](https://www.drupal.org/i/3582111) Add documentation user guide for **Canvas Override** module.
+* chore: [#3582111](https://www.drupal.org/i/3582111) Apply Canvas issue no. 3567225 patch in CI to support per-entity layout extensibility.
+* chore: [#3582111](https://www.drupal.org/i/3582111) Add linting configuration, cspell dictionary, GitLab CI templates, and phpcs standards for code quality checks.
+* fix: [#3582111](https://www.drupal.org/i/3582111) Hide Edit template tab when **Canvas Override** is enabled.
+* fix: [#3582111](https://www.drupal.org/i/3582111) required field validation errors during publish.
+* chore: [#3582111](https://www.drupal.org/i/3582111) Add granular permissions system and comprehensive test coverage for **Canvas Override**.
+* chore: [#3582111](https://www.drupal.org/i/3582111) Lock field_canvas_layout field storage to prevent editing or deletion from field management UI.
+* fix: [#3582111](https://www.drupal.org/i/3582111) Canvas editor form for canvas_override-enabled content types: whitelist Page data fields and remove scheduler widget crash.
+
+#### Varbase Components 4.0.1
+* task: [#3621406](https://www.drupal.org/i/3621406) Update `@vardot/varbase-e2e` to `^2.0.4`.
+
+#### Varbase Admin Base 1.0.1
+* fix: [#3621449](https://www.drupal.org/i/3621449) Temporarily remove **Entity Clone** until it has a stable release.
+* feat: [#3620064](https://www.drupal.org/i/3620064) Add **Canvas Icon Picker** and set the default icon packs.
+* feat: [#3620360](https://www.drupal.org/i/3620360) Require the vardot/jquery.fancytree library, so the recipe brings the Fancytree library Taxonomy Manager loads.
+* fix: [#3620414](https://www.drupal.org/i/3620414) Install smart_date early to avoid a **Drupal CMS** install deadlock.
+* task: [#3620446](https://www.drupal.org/i/3620446) Fix the drupal/smart_date constraint to ~4.3.0.
+* fix: [#3620483](https://www.drupal.org/i/3620483) Remove the empty metatag_display_extender from the two admin views.
+
+#### Varbase Content Base 1.0.1
+* fix: [#3621450](https://www.drupal.org/i/3621450) Temporarily remove **Entity Clone** until it has a stable release.
+* fix: [#3621492](https://www.drupal.org/i/3621492) Temporarily remove **Rabbit Hole** and **Advanced Text Formatter** until they have stable releases.
+* fix: [#3621558](https://www.drupal.org/i/3621558) Require the released **View Modes Inventory** 5.0.0 instead of the dev branch.
+* task: [#3620192](https://www.drupal.org/i/3620192) Remove the canvas_override install and requirement, as we moved it to the **Varbase Canvas Base** recipe.
+* feat: [#3620191](https://www.drupal.org/i/3620191) Add the Search index view mode for nodes to the **Varbase Content Base** recipe.
+* feat: [#3620361](https://www.drupal.org/i/3620361) Require the vardot/aos library, so the recipe brings the AOS library **Varbase Components** loads.
+* fix: [#3620408](https://www.drupal.org/i/3620408) Remove the edit canvas global regions permission from Site Admin.
+* fix: [#3621426](https://www.drupal.org/i/3621426) Pin @cucumber/cucumber so the functional test suite can run.
+
+#### Varbase Blog Base 1.0.1
+* fix: [#3621559](https://www.drupal.org/i/3621559) Require the released **Webshare** 2.0.0 instead of the dev branch.
+
+#### Varbase News Base 1.0.1
+* task: [#3621415](https://www.drupal.org/i/3621415) Update `@vardot/varbase-e2e` to `^2.0.4`.
+* docs: [#3620356](https://www.drupal.org/i/3620356) Correct the CI comment that described the removed drupal-libraries yarn sync.
+* task: [#3615785](https://www.drupal.org/i/3615785) Update `@vardot/varbase-e2e` to the latest 2.x (1.0.x).
+* feat: [#3616585](https://www.drupal.org/i/3616585) Add a Featured news posts block display to the news view.
+* fix: [#3616334](https://www.drupal.org/i/3616334) Correct invalid card-featured prop values so the news featured cards render.
+* task: [#3615785](https://www.drupal.org/i/3615785) Switch the Varbase functional testing suite to **Varbase E2E** (1.0.x).
+* test: [#3610876](https://www.drupal.org/i/3610876) Add a Varbase functional testing suite for the **Varbase News Base** recipe.
+* fix: [#3610876](https://www.drupal.org/i/3610876) Install **Vartheme (Bootstrap 5)** and correct the invalid component UUIDs.
+
+#### Varbase Events Base 1.0.1
+* task: [#3621411](https://www.drupal.org/i/3621411) Update `@vardot/varbase-e2e` to `^2.0.4`.
+* docs: [#3620355](https://www.drupal.org/i/3620355) Correct the CI comment that described the removed drupal-libraries yarn sync.
+* task: [#3615776](https://www.drupal.org/i/3615776) Update `@vardot/varbase-e2e` to the latest 2.x (1.0.x).
+* feat: [#3616587](https://www.drupal.org/i/3616587) Add an Upcoming events block display to the events view.
+* task: [#3615776](https://www.drupal.org/i/3615776) Switch the Varbase functional testing suite to **Varbase E2E** (1.0.x).
+* task: [#3610873](https://www.drupal.org/i/3610873) Repoint the events exposed form to the site default theme.
+* fix: [#3610873](https://www.drupal.org/i/3610873) Match the events listing exposed-filter labels to the design.
+* ci: [#3611860](https://www.drupal.org/i/3611860) Remove the temporary **Varbase Components** issue-fork pin from the functional testing CI.
+* fix: [#3610873](https://www.drupal.org/i/3610873) Install the Smart Date module with the recipe.
+* ci: [#3611896](https://www.drupal.org/i/3611896) Bootstrap composer-drupal-lenient in CI so CKEditor Media Resize resolves against Drupal core 11.4.
+* test: [#3610873](https://www.drupal.org/i/3610873) Add a Varbase functional testing suite for the **Varbase Events Base** recipe.
+* feat: [#3610873](https://www.drupal.org/i/3610873) Grant event content and taxonomy permissions to the Varbase roles.
+* fix: [#3610873](https://www.drupal.org/i/3610873) Drop the Industry filter and name the exposed filters after the event fields.
+* fix: [#3610873](https://www.drupal.org/i/3610873) Install **Vartheme (Bootstrap 5)**, which the recipe's Canvas templates render through.
+
+#### Varbase Canvas Base 1.0.1
+* fix: [#3621562](https://www.drupal.org/i/3621562) Require the released **Canvas Override** 1.0.0 instead of the dev branch.
+* fix: [#3620177](https://www.drupal.org/i/3620177) Do not grant permissions in the **Varbase Canvas Base** recipe.
+
+#### Varbase Media Base 1.0.0
+* feat: [#3620363](https://www.drupal.org/i/3620363) Require the vardot/dropzone library, so the Dropzone files DropzoneJS loads are actually on disk.
+
+#### Varbase Editor Base 1.0.0
+* feat: [#3620362](https://www.drupal.org/i/3620362) Require the vardot/ckeditor5-media-embed-drupal library at the GPL-licensed 47.6.2 that Drupal core 11.4 bundles.
+
+#### Varbase SEO Base 1.0.1
+* fix: [#3621451](https://www.drupal.org/i/3621451) Temporarily remove **Entity Clone** until it has a stable release.
+* fix: [#3620423](https://www.drupal.org/i/3620423) Install metatag_views for the shipped views display extender.
+* fix: [#3621035](https://www.drupal.org/i/3621035) Grant the SEO Admin role the meta tag and sitemap administration permissions.
+
+#### Varbase Performance Base 1.0.1
+* fix: [#3621493](https://www.drupal.org/i/3621493) Temporarily remove **Ultimate Cron** until it has a stable release, with its sixteen cron job config files. Cron runs through core Automated Cron, which this recipe already configures.
+
+#### Varbase API Base 1.0.0
+* feat: [#3620376](https://www.drupal.org/i/3620376) Require the vardot/swagger-ui library, so the recipe brings its own front-end library.
+
+#### Varbase i18n Base 1.0.0
+* feat: [#3618242](https://www.drupal.org/i/3618242) Add the Translation Management Tool (TMGMT) and **Drupal Canvas** page translation to the Varbase Internationalization Base recipe.
+* feat: [#3618698](https://www.drupal.org/i/3618698) Add the AI Translation Management (TMGMT) module to the recipe.
+* feat: [#3619859](https://www.drupal.org/i/3619859) Install the Canvas Translate module by default.
+* feat: [#3619860](https://www.drupal.org/i/3619860) Install the Config Language Lock module by default.
+
+#### Varbase AI Figma Base 1.0.1
+* refactor: [#3621381](https://www.drupal.org/i/3621381) Drop the redundant local access-denied step.
+
+#### Varbase AI Figma 1.0.3
+* fix: [#3621094](https://www.drupal.org/i/3621094) Declare a version for the path repository in the functional testing jobs.
+* fix: [#3621159](https://www.drupal.org/i/3621159) Seed the AI Context items through AiContextItem::setScope().
+* task: [#3621172](https://www.drupal.org/i/3621172) Require AI Figma 1.0.1 or later.
+* fix: [#3621380](https://www.drupal.org/i/3621380) Take the access-denied step from `varbase-e2e` 2.0.4.
+
+
 # 11.0.0-rc1
 
 ### At a glance
