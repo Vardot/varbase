@@ -32,6 +32,7 @@
         "drupal/varbase_ai_base": "1.0.x-dev",
         "drupal/varbase_api_base": "1.0.x-dev",
         "drupal/varbase_auth_base": "1.0.x-dev",
+        "drupal/varbase_dev_base": "1.0.x-dev",
         "drupal/varbase_i18n_base": "1.0.x-dev"
     }
 }
