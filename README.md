@@ -74,6 +74,6 @@ composer create-project vardot/varbase-project:9.0.x-dev PROJECT_DIR_NAME --stab
 
 
 Join Our Slack Team for Feedback and Support
-http://slack.varbase.vardot.com/
+https://varbase.slack.com
 
 Sponsored and developed by [Vardot](https://www.drupal.org/vardot).
