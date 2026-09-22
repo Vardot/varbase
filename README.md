@@ -72,6 +72,6 @@ composer create-project drupal/varbase_project:11.0.x-dev PROJECT_DIR_NAME --sta
 > - [Gitpod](https://gitpod.io/#https://github.com/vardot/varbase-project)
 
 Join Our Slack Team for Feedback and Support
-http://slack.varbase.vardot.com/
+https://varbase.slack.com
 
 Sponsored and developed by [Vardot](https://www.drupal.org/vardot).
