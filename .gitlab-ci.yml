@@ -30,6 +30,8 @@ variables:
   COMPOSER_ALLOW_SUPERUSER: "1"
   COMPOSER_MEMORY_LIMIT: "-1"
   YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+  # Opt out of Drupal CMS telemetry in CI installs.
+  DRUPAL_CMS_TELEMETRY: "0"
 
 # Run for merge requests and branch pushes.
 workflow:
