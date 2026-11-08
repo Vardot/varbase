@@ -88,7 +88,7 @@ phpstan:
 # = validate = spell-check the source.
 cspell:
   stage: validate
-  image: node:20
+  image: node:24
   before_script:
     - npm install -g cspell
   script:
@@ -99,7 +99,7 @@ cspell:
 # package.json / JS yet, so skip cleanly until front-end sources are added.
 eslint:
   stage: validate
-  image: node:20
+  image: node:24
   before_script:
     - if [ ! -f package.json ]; then echo "No package.json in the Varbase profile; nothing to lint with eslint yet."; exit 0; fi
     - corepack enable
@@ -115,7 +115,7 @@ eslint:
 # = validate = lint CSS (mirrors Varbase Project). Skips cleanly with no package.json.
 stylelint:
   stage: validate
-  image: node:20
+  image: node:24
   before_script:
     - if [ ! -f package.json ]; then echo "No package.json in the Varbase profile; nothing to lint with stylelint yet."; exit 0; fi
     - corepack enable
