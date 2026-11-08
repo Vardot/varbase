@@ -33,7 +33,7 @@ phpcs:
 
 cspell:
   stage: validate
-  image: node:20
+  image: node:24
   before_script:
     - npm install -g cspell
   script:

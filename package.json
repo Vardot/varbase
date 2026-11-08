@@ -4,8 +4,8 @@
   "license": "GPL-2.0-or-later",
   "private": true,
   "engines": {
-    "yarn": ">= 4.9.3",
-    "node": ">= 20.0"
+    "yarn": ">= 4.18.1",
+    "node": ">= 24.0"
   },
   "keywords": [
     "Drupal",
@@ -23,7 +23,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "~11.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.39.0",
     "cspell": "^8.16.1",
     "css-loader": "^7.1.2",
@@ -42,14 +42,14 @@
     "file-loader": "^6.2.0",
     "glob": "^11.0.0",
     "img-loader": "^4.0.0",
-    "js-cookie": "3.0.x",
+    "js-cookie": "^3.0.0",
     "jsdom": "^25.0.1",
-    "loadjs": "4.2.x",
+    "loadjs": "^4.2.0",
     "mini-css-extract-plugin": "^2.9.2",
     "minimist": "^1.2.8",
     "mkdirp": "^3.0.1",
     "nightwatch": "^3.9.2",
-    "normalize.css": "8.0.x",
+    "normalize.css": "^8.0.0",
     "postcss": "^8.4.49",
     "postcss-header": "^3.0.3",
     "postcss-import": "^16.1.0",
@@ -64,18 +64,18 @@
     "sass": "^1.83.0",
     "sass-loader": "^16.0.4",
     "sass-resources-loader": "^2.2.5",
-    "shepherd.js": "~10.0.1",
-    "sortablejs": "1.15.x",
+    "shepherd.js": "^10.0.1",
+    "sortablejs": "^1.15.0",
     "stylelint": "^16.12.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^5.0.2",
     "svg-inline-loader": "^0.8.2",
     "svg-spritemap-webpack-plugin": "^4.5.0",
-    "tabbable": "~6.0.0",
+    "tabbable": "^6.0.0",
     "terser": "^5.37.0",
     "terser-webpack-plugin": "^5.3.11",
-    "underscore": "~1.13.7",
+    "underscore": "^1.13.7",
     "url-loader": "^4.1.1",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
@@ -95,5 +95,5 @@
     "last 1 Samsung version",
     "Firefox ESR"
   ],
-  "packageManager": "yarn@4.9.3"
+  "packageManager": "yarn@4.18.1"
 }
