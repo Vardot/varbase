@@ -54,3 +54,9 @@ errors.log
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# JavaScript lockfiles are not committed: installs resolve from package.json
+# (packageManager yarn@4.18.1, engines).
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
