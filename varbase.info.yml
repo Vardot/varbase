@@ -7,7 +7,7 @@ distribution:
   name: Varbase
   install:
     theme: vartheme_claro
-version: 9.2.1
+version: 9.2.2
 install:
   - system
   - user

@@ -1,3 +1,13 @@
+# 9.2.2
+
+This is a patch release for existing **Varbase 9.2.x** (Drupal ~11.4) sites. It is **not** for starting new projects, start a new project on the latest **Varbase ~11.0.0**. Node.js 24 or newer is now required for the front-end tooling and CI, as Node.js 20 is end of life. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.2.x).
+
+### Highlighted important changes since [Varbase 9.2.1](https://www.drupal.org/project/varbase/releases/9.2.1):
+* task: [#3635511](https://www.drupal.org/i/3635511) Update **Node.js** to >= 24.0 and **Yarn** to 4.18.1
+
+### Added since [Varbase 9.2.1](https://www.drupal.org/project/varbase/releases/9.2.1):
+* All new features are in **Varbase ~11.0.0**
+
 # 9.2.1
 
 This is a patch release for existing **Varbase 9.2.x** (Drupal ~11.4) sites. It is **not** for starting new projects — start a new project on the latest **Varbase ~11.0.0**. It moves the Automated Functional Testing suites of the profile, every Varbase module and **Vartheme (Bootstrap 4 - SASS)** onto **Varbase E2E** (`@vardot/varbase-e2e ^2`, Playwright + Cucumber-js), and clears the PHPStan findings raised by the updated analyzers. Varbase 9.2.1 uses `vartheme_bs4 ~9.2.0`. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.2.x).
