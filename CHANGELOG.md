@@ -1,3 +1,11 @@
+# 10.1.3
+
+### Changed since [10.1.2](https://www.drupal.org/project/varbase/releases/10.1.2):
+* [#3635511](https://www.drupal.org/i/3635511) task: Update Node.js to >= 24.0 and Yarn to 4.18.1
+
+### Fixes since [10.1.2](https://www.drupal.org/project/varbase/releases/10.1.2):
+* [#3638362](https://www.drupal.org/i/3638362) fix: Require a drupal/ai release without open security advisories, through **Varbase AI 2.0.15**
+
 # 10.1.2
 
 ### Highlighted important changes since [10.1.1](https://www.drupal.org/project/varbase/releases/10.1.1):
