@@ -1,3 +1,9 @@
+# 11.0.1
+
+### Changes since Varbase 11.0.0
+* task: [#3633820](https://www.drupal.org/i/3633820) Document the Drupal CMS telemetry opt-out in the README and set `DRUPAL_CMS_TELEMETRY=0` in GitLab CI.
+* task: [#3635511](https://www.drupal.org/i/3635511) Update Node.js to >= 24.0 in GitLab CI.
+
 # 11.0.0
 
 ### At a glance
