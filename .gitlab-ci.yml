@@ -49,7 +49,7 @@ build:composer-validate:
 # = validate = Drupal coding standards (PHPCS via drupal/coder, ruleset .phpcs.xml).
 phpcs:
   stage: validate
-  image: php:8.3-cli
+  image: php:8.5-cli
   before_script:
     - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -66,7 +66,7 @@ phpcs:
 # so phpstan-drupal can resolve the profile's install-hook symbols.
 phpstan:
   stage: validate
-  image: php:8.3-cli
+  image: php:8.5-cli
   before_script:
     - apt-get update -y > /dev/null && apt-get install -y -qq git unzip > /dev/null
     - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
