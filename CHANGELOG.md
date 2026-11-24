@@ -1,3 +1,13 @@
+# 9.2.3
+
+This is a patch release for existing **Varbase 9.2.x** (Drupal ~11.4) sites. It is **not** for starting new projects, start a new project on the latest **Varbase ~11.0.0**. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.2.x).
+
+### Highlighted important changes since [Varbase 9.2.2](https://www.drupal.org/project/varbase/releases/9.2.2):
+* task: [#3638902](https://www.drupal.org/i/3638902) Change default PHP version to **PHP 8.5** in GitLab CI
+
+### Added since [Varbase 9.2.2](https://www.drupal.org/project/varbase/releases/9.2.2):
+* All new features are in **Varbase ~11.0.0**
+
 # 9.2.2
 
 This is a patch release for existing **Varbase 9.2.x** (Drupal ~11.4) sites. It is **not** for starting new projects, start a new project on the latest **Varbase ~11.0.0**. Node.js 24 or newer is now required for the front-end tooling and CI, as Node.js 20 is end of life. [Learn more about Varbase 9](https://docs.varbase.vardot.com/9.2.x).
