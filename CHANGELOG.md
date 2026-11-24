@@ -1,3 +1,8 @@
+# 10.1.4
+
+### Changed since [10.1.3](https://www.drupal.org/project/varbase/releases/10.1.3):
+* [#3638902](https://www.drupal.org/i/3638902) task: Change default PHP version to PHP 8.5 in GitLab CI
+
 # 10.1.3
 
 ### Changed since [10.1.2](https://www.drupal.org/project/varbase/releases/10.1.2):
