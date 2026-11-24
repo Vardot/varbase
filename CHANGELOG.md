@@ -1,3 +1,8 @@
+# 11.0.2
+
+### Changes since Varbase 11.0.1
+* task: [#3638902](https://www.drupal.org/i/3638902) Change default PHP version to PHP 8.5 in GitLab CI.
+
 # 11.0.1
 
 ### Changes since Varbase 11.0.0
