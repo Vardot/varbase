@@ -1,3 +1,8 @@
+# 11.0.4
+
+### Changes since Varbase 11.0.3
+* task: [#3641416](https://www.drupal.org/i/3641416) Require Varbase Starter `^1.0.13`.
+
 # 11.0.3
 
 ### Changes since Varbase 11.0.2
