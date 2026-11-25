@@ -1,3 +1,8 @@
+# 11.0.3
+
+### Changes since Varbase 11.0.2
+* task: [#3641416](https://www.drupal.org/i/3641416) Use caret constraints with `^11.4 || ^12.0` to allow Drupal 11.5 and Drupal 12.
+
 # 11.0.2
 
 ### Changes since Varbase 11.0.1
