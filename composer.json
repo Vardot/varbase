@@ -23,11 +23,11 @@
         }
     },
     "require": {
-        "drupal/core": "~11.4.0",
-        "drupal/advanced_text_formatter": "~3",
-        "drupal/entity_clone": "~2",
-        "drupal/rabbit_hole": "~2",
-        "drupal/ultimate_cron": "~2",
+        "drupal/core": "^11.4 || ^12.0",
+        "drupal/advanced_text_formatter": "^3",
+        "drupal/entity_clone": "^2",
+        "drupal/rabbit_hole": "^2",
+        "drupal/ultimate_cron": "^2",
         "drupal/varbase_starter": "1.0.x-dev",
         "drupal/varbase_ai_base": "1.0.x-dev",
         "drupal/varbase_api_base": "1.0.x-dev",
