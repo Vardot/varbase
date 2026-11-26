@@ -14,10 +14,11 @@ forms:
   - '\Drupal\varbase\Installer\Form\SiteTemplateForm'
   - '\Drupal\RecipeKit\Installer\Form\RecipesForm'
   - '\Drupal\RecipeKit\Installer\Form\SiteNameForm'
-recipes:
-  required: []
-  default:
-    - drupal/varbase_starter
+# No `recipes:` key: Drupal 11.5 applies a profile's `recipes:` itself and
+# expects a flat list, while Recipe Installer Kit reads `required` and
+# `default` from it. The site template is applied by varbase_apply_recipes(),
+# which falls back to Varbase Starter.
+# @see varbase_apply_recipes()
 # Explicitly provide an empty list of themes: this prevents the installer from
 # injecting Stark into it, and lets each site template install and set its own
 # front-end and admin themes.
